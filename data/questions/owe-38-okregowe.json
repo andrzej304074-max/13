@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe38-o-01",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody okręgowe",
+    "question": "Zwiększenie poziomu produkcji w krótkim okresie nie jest możliwe przez:",
+    "options": [
+      "zwiększenie liczby zatrudnionych osób",
+      "wydłużenie czasu pracy już zatrudnionych pracowników",
+      "stworzenie nowej linii produkcyjnej",
+      "zwiększenie premii za godziny nadliczbowe"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "W krótkim okresie przynajmniej jeden czynnik (zwykle kapitał – maszyny, linie produkcyjne) jest stały. Produkcję można zwiększyć, zatrudniając więcej ludzi lub wydłużając czas pracy (nadgodziny), ale budowa nowej linii produkcyjnej to zmiana kapitału, możliwa dopiero w długim okresie."
+  },
+  {
+    "id": "owe38-o-02",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody okręgowe",
+    "question": "Koncepcja dochodu permanentnego została sformułowana przez:",
+    "options": [
+      "A. Smitha",
+      "M. Kaleckiego",
+      "H. Minsky’ego",
+      "M. Friedmana"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Hipotezę dochodu permanentnego sformułował Milton Friedman (1957): konsumpcja zależy od dochodu trwałego (oczekiwanego w długim okresie), a nie od bieżących, przejściowych wahań dochodu."
+  },
+  {
+    "id": "owe38-o-03",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody okręgowe",
+    "question": "Deflacja długu to zjawisko polegające na:",
+    "options": [
+      "wzroście wartości realnej zadłużenia w związku ze spadkiem ogólnego poziomu cen",
+      "wzroście wartości nominalnej zadłużenia w związku ze spadkiem ogólnego poziomu cen",
+      "wzroście wartości nominalnej zadłużenia gospodarstw domowych w rezultacie polityki niskich stóp procentowych banku centralnego",
+      "przesunięciu krzywej podaży kredytu w lewo"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Deflacja długu (I. Fisher, 1933) to wzrost realnej wartości zadłużenia, gdy ogólny poziom cen spada – nominalna kwota długu się nie zmienia, ale jej realny ciężar rośnie. Dłużnicy ograniczają wydatki i wyprzedają aktywa, co pogłębia deflację i recesję."
+  },
+  {
+    "id": "owe38-o-04",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody okręgowe",
+    "question": "Autarkię opisują następujące równania: C = 200 + 0,5YD; I = 800; G = 400; T = 600 (gdzie: C – konsumpcja, YD – dochód rozporządzalny; I – inwestycje; G – wydatki rządowe; T – podatki minus transfery budżetowe otrzymywane przez konsumenta). Oszczędności prywatne (Sp) i publiczne (Spub) wynoszą:",
+    "options": [
+      "Sp = 800; Spub = 800",
+      "Sp = 1000; Spub = −200",
+      "Sp = 600; Spub = 200",
+      "Sp = 400; Spub = 400"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Y = 200 + 0,5 · (Y − 600) + 800 + 400 = 1100 + 0,5Y, więc Y = 2200. Dochód rozporządzalny YD = 2200 − 600 = 1600, konsumpcja C = 200 + 0,5 · 1600 = 1000. Oszczędności prywatne Sp = YD − C = 600, publiczne Spub = T − G = 600 − 400 = 200. Łącznie 800 = I."
+  },
+  {
+    "id": "owe38-o-05",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody okręgowe",
+    "question": "W modelu IS-LM przesunięcie krzywej LM w prawo oznacza:",
+    "options": [
+      "zaostrzenie polityki pieniężnej",
+      "łagodzenie polityki pieniężnej",
+      "zaostrzenie polityki fiskalnej",
+      "łagodzenie polityki fiskalnej"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Krzywa LM przedstawia równowagę na rynku pieniądza. Przesuwa się w prawo, gdy rośnie podaż pieniądza – czyli przy łagodzeniu (ekspansji) polityki pieniężnej. Przy każdym dochodzie stopa procentowa jest wtedy niższa."
+  },
+  {
+    "id": "owe38-o-06",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody okręgowe",
+    "question": "Akcept bankowy to:",
+    "options": [
+      "inaczej weksel bankowy",
+      "instrument właścicielski",
+      "instrument niepodlegający obrotowi na rynku wtórnym",
+      "papier wartościowy stanowiący wyłączne zabezpieczenie transakcji banków komercyjnych z bankiem centralnym"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Akcept bankowy to weksel trasowany, na którym bank złożył akcept – zobowiązał się do zapłaty w terminie wykupu. Dzięki gwarancji banku jest bezpiecznym instrumentem rynku pieniężnego, którym można obracać na rynku wtórnym."
+  },
+  {
+    "id": "owe38-o-07",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody okręgowe",
+    "question": "Jeżeli wzrost dochodu nie wpływa na poziom konsumpcji dobra X, to:",
+    "options": [
+      "krzywe obojętności muszą mieć kształt litery „L”",
+      "dobro jest dobrem niższego rzędu",
+      "elastyczność dochodowa jest równa 1",
+      "krzywa Engla jest linią pionową"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Krzywa Engla pokazuje zależność ilości kupowanego dobra od dochodu. Jeśli wzrost dochodu nie zmienia konsumpcji, ilość jest stała przy każdym dochodzie – na wykresie (dochód na osi pionowej, ilość na poziomej) krzywa Engla jest linią pionową, a elastyczność dochodowa wynosi 0."
+  },
+  {
+    "id": "owe38-o-08",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody okręgowe",
+    "question": "NBP nabywając papiery wartościowe w ramach strukturalnych operacji otwartego rynku w latach 2020–2021, bezpośrednio oddziaływał na:",
+    "options": [
+      "stopy overnight na rynku międzybankowym",
+      "rentowność bonów pieniężnych",
+      "cenę rządowych papierów wartościowych",
+      "zmniejszenie poziomu nadpłynności strukturalnej sektora bankowego"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "W latach 2020–2021 NBP w ramach strukturalnych operacji otwartego rynku skupował na rynku wtórnym obligacje skarbowe i gwarantowane przez Skarb Państwa. Zwiększony popyt bezpośrednio podnosił ich ceny (obniżał rentowności), co obniżało długoterminowe stopy procentowe. Operacje te zwiększały (a nie zmniejszały) nadpłynność sektora bankowego."
+  },
+  {
+    "id": "owe38-o-09",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody okręgowe",
+    "question": "Które ze stwierdzeń prawidłowo opisuje funkcjonowanie mechanizmu transmisji polityki pieniężnej?",
+    "options": [
+      "silne ograniczenie konkurencji na rynku bankowym poprawia funkcjonowanie mechanizmu transmisji polityki pieniężnej",
+      "znaczący udział kredytów o zmiennej stopie procentowej ogranicza funkcjonowanie kanału przepływów gotówkowych",
+      "wysoki poziom otwartości handlowej gospodarki wzmacnia funkcjonowanie kanału kursowego",
+      "silne sztywności cen i płac osłabiają wpływ polityki pieniężnej na wielkości realne"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Kanał kursowy działa przez wpływ stóp procentowych na kurs walutowy, a kursu – na ceny importu, eksport i inflację. Im bardziej otwarta gospodarka (większy udział handlu zagranicznego w PKB), tym silniej zmiany kursu wpływają na gospodarkę. Sztywności cen i płac wzmacniają (a nie osłabiają) wpływ polityki pieniężnej na wielkości realne."
+  },
+  {
+    "id": "owe38-o-10",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody okręgowe",
+    "question": "Do dóbr normalnych zaliczamy dobra:",
+    "options": [
+      "luksusowe",
+      "pośrednie",
+      "niższego rzędu",
+      "Giffena"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Dobra normalne to dobra, na które popyt rośnie wraz z dochodem – dzielą się na podstawowe (elastyczność dochodowa między 0 a 1) i luksusowe (powyżej 1). Dobra niższego rzędu, w tym dobra Giffena, mają ujemną elastyczność dochodową."
+  },
+  {
+    "id": "owe38-o-11",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody okręgowe",
+    "question": "Monopol naturalny charakteryzuje się:",
+    "options": [
+      "niskim poziomem kosztów alternatywnych",
+      "doskonale elastyczną krzywą podaży",
+      "relatywnie wysokim poziomem kosztów krańcowych",
+      "wysokim poziomem kosztów stałych"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Monopol naturalny występuje w branżach z bardzo wysokimi kosztami stałymi (np. budowa sieci wodociągowej, energetycznej, kolejowej) i niskimi kosztami krańcowymi. Koszt przeciętny maleje w całym zakresie popytu, więc jedna firma zaspokaja rynek taniej niż kilka."
+  },
+  {
+    "id": "owe38-o-12",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody okręgowe",
+    "question": "Im wyższe są oczekiwania inflacyjne, tym:",
+    "options": [
+      "bardziej stroma jest długookresowa krzywa Phillipsa",
+      "niższy jest poziom bezrobocia naturalnego",
+      "wyższy jest poziom bezrobocia frykcyjnego",
+      "wyżej położona jest krótkookresowa krzywa Phillipsa"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Krótkookresowa krzywa Phillipsa jest wyznaczona dla danych oczekiwań inflacyjnych. Gdy oczekiwania rosną, pracownicy żądają wyższych płac, a firmy podnoszą ceny – przy każdym poziomie bezrobocia inflacja jest wyższa, czyli krzywa przesuwa się w górę."
+  },
+  {
+    "id": "owe38-o-13",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody okręgowe",
+    "question": "Fundamentem powstania Europejskiej Wspólnoty Węgla i Stali był:",
+    "options": [
+      "plan Marshalla",
+      "traktat rzymski",
+      "traktat z Maastricht",
+      "plan Schumana"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Europejska Wspólnota Węgla i Stali (1951, traktat paryski) powstała na podstawie planu Schumana – deklaracji francuskiego ministra spraw zagranicznych Roberta Schumana z 9 maja 1950 r., proponującej wspólny nadzór nad produkcją węgla i stali Francji i Niemiec. Traktaty rzymskie (1957) utworzyły EWG i Euratom."
+  },
+  {
+    "id": "owe38-o-14",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody okręgowe",
+    "question": "Recesja w gospodarce skutkowała wzrostem bezrobocia. Ze względu na długi okres pozostawania bez pracy część osób utraciła swoje dotychczasowe kwalifikacje. Obecnie pomimo ożywienia bezrobocie dalej pozostaje na podwyższonym poziomie. Jest to związane z efektem:",
+    "options": [
+      "chomikowania pracy",
+      "bezrobocia cyklicznego",
+      "histerezy bezrobocia",
+      "bazy"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Histereza bezrobocia oznacza, że bezrobocie po recesji utrzymuje się na wysokim poziomie także w okresie ożywienia, bo długotrwale bezrobotni tracą kwalifikacje i kontakty, a pracodawcy niechętnie ich zatrudniają. Bezrobocie cykliczne przekształca się w strukturalne, podnosząc stopę naturalną."
+  },
+  {
+    "id": "owe38-o-15",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody okręgowe",
+    "question": "W 2002 r. 12 państw członkowskich UE wprowadziło banknoty i monety euro do obiegu. Która z odpowiedzi dotycząca wprowadzenia euro do obrotu bezgotówkowego w 1999 r. jest prawdziwa?",
+    "options": [
+      "państw, które wprowadziły euro do obiegu bezgotówkowego w 1999 r., było 15, gdyż ostatecznie euro nie zdecydowały się wprowadzić: Szwecja, Dania i Wielka Brytania",
+      "państw, które wprowadziły euro do obiegu bezgotówkowego w 1999 r., było 12, czyli wszystkie państwa, które wprowadziły euro do obiegu gotówkowego w 2002 r.",
+      "państw, które wprowadziły euro do obiegu bezgotówkowego w 1999 r., było 13, gdyż w 2000 r. Wielka Brytania ze względu na ataki spekulacyjne musiała opuścić wąż walutowy",
+      "państw, które wprowadziły euro do obiegu bezgotówkowego w 1999 r., było 11"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "1 stycznia 1999 r. euro wprowadziło do obiegu bezgotówkowego 11 państw: Austria, Belgia, Finlandia, Francja, Hiszpania, Holandia, Irlandia, Luksemburg, Niemcy, Portugalia i Włochy. Grecja dołączyła w 2001 r., dlatego w 2002 r. banknoty i monety euro wprowadziło 12 państw."
+  },
+  {
+    "id": "owe38-o-16",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody okręgowe",
+    "question": "Do wyliczenia wartości referencyjnej dla kryterium konwergencji stóp procentowych (Maastricht) wykorzystuje się dane dotyczące państw członkowskich:",
+    "options": [
+      "strefy euro o najbardziej stabilnym poziomie długoterminowych stóp procentowych",
+      "strefy euro o najbardziej stabilnych cenach",
+      "UE o najbardziej stabilnych cenach",
+      "UE o najbardziej stabilnym poziomie długoterminowych stóp procentowych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Kryterium stóp procentowych z Maastricht: długoterminowa stopa procentowa kraju kandydującego nie może przekraczać o więcej niż 2 pkt proc. średniej z trzech państw członkowskich UE o najbardziej stabilnych cenach (najniższej inflacji) – liczonych w całej UE, a nie tylko w strefie euro."
+  },
+  {
+    "id": "owe38-o-17",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody okręgowe",
+    "question": "Jeżeli w przedsiębiorstwie, niezależnie od wartości produkcji (q > 0), koszt krańcowy jest równy kosztowi przeciętnemu, to wiemy, że:",
+    "options": [
+      "koszt krańcowy jest funkcją malejącą",
+      "koszt krańcowy jest funkcją rosnącą",
+      "krzywa kosztu przeciętnego będzie wskazywać na występowanie korzyści skali",
+      "koszt stały jest równy 0"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Koszt przeciętny = (koszt stały + koszt zmienny) / q. Jeśli koszt krańcowy równa się przeciętnemu przy każdej produkcji, koszt przeciętny jest stały, co jest możliwe tylko wtedy, gdy nie ma kosztów stałych (TC = c · q). Wtedy MC = AC = c."
+  },
+  {
+    "id": "owe38-o-18",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody okręgowe",
+    "question": "Krzywa zagregowanego popytu przesunie się równolegle w dół, gdy:",
+    "options": [
+      "spadnie krańcowa skłonność do konsumpcji",
+      "spadnie krańcowa skłonność do oszczędzania",
+      "spadnie poziom eksportu",
+      "wzrośnie poziom wydatków publicznych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Równoległe przesunięcie krzywej zagregowanego popytu (wydatków) w dół oznacza spadek wydatków autonomicznych, np. eksportu. Spadek krańcowej skłonności do konsumpcji zmienia nachylenie (a nie położenie) krzywej, a wzrost wydatków publicznych przesuwa ją w górę."
+  },
+  {
+    "id": "owe38-o-19",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody okręgowe",
+    "question": "Jeżeli w konkurencji doskonałej przedsiębiorstwo X osiąga zysk normalny, to:",
+    "options": [
+      "na rynek najprawdopodobniej wejdą kolejne podmioty",
+      "przedsiębiorstwo X powinno obniżyć cenę",
+      "jego utarg całkowity jest równy całkowitemu kosztowi ekonomicznemu",
+      "przedsiębiorstwo X powinno zintensyfikować kampanię reklamową, aby zwiększyć sprzedaż"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Zysk normalny oznacza zerowy zysk ekonomiczny: utarg całkowity pokrywa wszystkie koszty ekonomiczne – jawne i alternatywne (w tym wynagrodzenie dla właściciela). Nowe firmy nie mają powodu wchodzić na rynek, a w konkurencji doskonałej firma nie ustala ceny i nie musi się reklamować."
+  },
+  {
+    "id": "owe38-o-20",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody okręgowe",
+    "question": "Która sytuacja spowoduje równoległe przesunięcie w dół krzywej podaży dobra X?",
+    "options": [
+      "unowocześnienie procesu produkcji dobra X skutkujące zwiększeniem efektów skali w nim występujących",
+      "wprowadzenie podatku ad valorem obciążającego producentów dobra X",
+      "wprowadzenie podatku kwotowego płaconego przez producentów dobra X",
+      "wprowadzenie subsydiów produkcyjnych w stałej wysokości na jednostkę dobra X"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Subsydium w stałej kwocie na jednostkę obniża koszt każdej jednostki o tę samą kwotę – krzywa podaży przesuwa się równolegle w dół (w prawo). Podatek kwotowy przesuwa ją w górę, a podatek ad valorem zmienia jej nachylenie."
+  },
+  {
+    "id": "owe38-o-21",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody okręgowe",
+    "question": "Nowa keynesowska krzywa zagregowanej podaży:",
+    "options": [
+      "jest linią poziomą",
+      "jest linią o stałym nachyleniu",
+      "jest doskonale nieelastyczna przy poziomie produkcji zapewniającym pełne zatrudnienie",
+      "ukazuje zależność między poziomem produkcji a poziomem zagregowanego (globalnego) popytu"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Według klucza nowa keynesowska krzywa zagregowanej podaży przy niskiej produkcji jest płaska lub łagodnie rosnąca (ceny są lepkie, a wolne moce pozwalają zwiększać produkcję), a przy poziomie pełnego zatrudnienia staje się pionowa – doskonale nieelastyczna, bo produkcji nie można już zwiększyć."
+  },
+  {
+    "id": "owe38-o-22",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody okręgowe",
+    "question": "Wydatki, których poziom nie zależy od wysokości dochodu, to wydatki:",
+    "options": [
+      "autonomiczne",
+      "dyskrecjonalne",
+      "ostrożnościowe",
+      "zagregowane"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Wydatki autonomiczne to wydatki niezależne od bieżącego dochodu – np. konsumpcja autonomiczna, inwestycje autonomiczne, wydatki rządowe i eksport. W modelu keynesowskim ich zmiany są mnożone przez mnożnik wydatków."
+  },
+  {
+    "id": "owe38-o-23",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody okręgowe",
+    "question": "Za pomocą selektora jednostek GE jednostki można podzielić na:",
+    "options": [
+      "dostarczycieli zysków i dojne krowy",
+      "dojne krowy, pieski, znaki zapytania, gwiazdy",
+      "dostarczycieli zysku, przegranych, zwycięzców, przeciętniaków, znaki zapytania",
+      "generatorów strat, dostarczycieli zysków, przeciętniaków, znaki zapytania, przegranych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Selektor jednostek GE (macierz McKinseya) dzieli jednostki według atrakcyjności branży i pozycji konkurencyjnej na m.in.: zwycięzców, przegranych, przeciętniaków, znaki zapytania i dostarczycieli (producentów) zysku. Dojne krowy, psy, znaki zapytania i gwiazdy to kategorie macierzy BCG."
+  },
+  {
+    "id": "owe38-o-24",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody okręgowe",
+    "question": "Odsetek nie przynoszą:",
+    "options": [
+      "listy zastawne i MBS-y",
+      "certyfikaty depozytowe i ABS-y",
+      "bony skarbowe i obligacje zerokuponowe",
+      "listy zastawne i depozyty banków komercyjnych w banku centralnym"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Bony skarbowe i obligacje zerokuponowe nie wypłacają odsetek – są sprzedawane z dyskontem (poniżej wartości nominalnej), a zyskiem inwestora jest różnica między ceną zakupu a wartością nominalną otrzymaną przy wykupie."
+  },
+  {
+    "id": "owe38-o-25",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody okręgowe",
+    "question": "PNN to:",
+    "options": [
+      "PKB plus dochody netto czynników produkcji z reszty świata",
+      "PKB minus podatki pośrednie",
+      "PNB minus amortyzacja",
+      "PNB minus podatki pośrednie"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Produkt narodowy netto (PNN) = produkt narodowy brutto (PNB) − amortyzacja (zużycie kapitału trwałego). PNB = PKB + dochody netto czynników produkcji z zagranicy."
+  },
+  {
+    "id": "owe38-o-26",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody okręgowe",
+    "question": "Papierami wartościowymi, które z definicji mają chronić oszczędzających przed inflacją, są:",
+    "options": [
+      "CDO",
+      "konsole",
+      "obligacje wieczyste",
+      "TIPS-y"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "TIPS (Treasury Inflation-Protected Securities) to amerykańskie obligacje skarbowe, których wartość nominalna jest indeksowana inflacją (CPI), więc chronią oszczędzających przed utratą siły nabywczej. W Polsce podobną rolę pełnią obligacje oszczędnościowe indeksowane inflacją (COI, EDO)."
+  },
+  {
+    "id": "owe38-o-27",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody okręgowe",
+    "question": "Która z odpowiedzi wskazuje cechę wspólną dla struktury konglomeratowej i struktury wielowydziałowej organizacji?",
+    "options": [
+      "jednostki organizacji nie są ze sobą powiązane",
+      "jednostki organizacji są ze sobą ściśle powiązane",
+      "obie struktury powstają w wyniku dywersyfikacji zależnej",
+      "obie struktury opierają się na grupowaniu stanowisk pracy według wyrobu"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Zarówno struktura konglomeratowa (typu H), jak i wielowydziałowa (typu M) grupują stanowiska i jednostki według wyrobu (produktu). Różnią się stopniem powiązania jednostek: w konglomeracie są niepowiązane (dywersyfikacja niezależna), a w strukturze wielowydziałowej – powiązane (dywersyfikacja zależna)."
+  },
+  {
+    "id": "owe38-o-28",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody okręgowe",
+    "question": "Zgodnie z klasyfikacją ról kierowniczych H. Mintzberga, do której roli należy zaliczyć działanie menedżera polegające na rozwiązywaniu konfliktu między podwładnymi?",
+    "options": [
+      "reprezentanta",
+      "osoby przeciwdziałającej zakłóceniom",
+      "obserwatora",
+      "przywódcy"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "H. Mintzberg wśród ról decyzyjnych wyróżnił rolę osoby przeciwdziałającej zakłóceniom (rozwiązującej problemy) – kierownik reaguje na konflikty, kryzysy i nieoczekiwane problemy, np. rozwiązuje spory między podwładnymi."
+  },
+  {
+    "id": "owe38-o-29",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody okręgowe",
+    "question": "Kontrola biurokratyczna w organizacji charakteryzuje się:",
+    "options": [
+      "silnym akcentowaniem samokontroli",
+      "szeroką i nieformalną partycypacją w procesie kontroli",
+      "sztywną hierarchią",
+      "niskim stopniem sformalizowania"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Kontrola biurokratyczna opiera się na formalnych zasadach, procedurach, regulaminach i sztywnej hierarchii władzy – kontroluje przełożony. Kontrola z udziałem pracowników (klanowa) opiera się na samokontroli, normach grupowych i partycypacji."
+  },
+  {
+    "id": "owe38-o-30",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody okręgowe",
+    "question": "Teorię charyzmatycznego przywództwa zaproponował:",
+    "options": [
+      "A. Maslow",
+      "F. Taylor",
+      "R. House",
+      "M. Weber"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Teorię przywództwa charyzmatycznego (1977) zaproponował Robert House – opisał przywódców, którzy dzięki wizji, pewności siebie i silnej osobowości wzbudzają podziw i lojalność podwładnych. M. Weber wprowadził wcześniej pojęcie władzy charyzmatycznej (w socjologii), ale teorię przywództwa w zarządzaniu sformułował House."
+  }
+]

@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe37-o-01",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody okręgowe",
+    "question": "Zgodnie ze złotą zasadą bilansową majątek trwały powinien być w całości finansowany:",
+    "options": [
+      "kapitałem własnym i zobowiązaniami długoterminowymi",
+      "kapitałem własnym",
+      "kapitałem własnym i zobowiązaniami krótkoterminowymi",
+      "zobowiązaniami długoterminowymi"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Złota reguła bilansowa mówi, że majątek trwały powinien być w całości finansowany kapitałem własnym (kapitał własny ≥ aktywa trwałe). Srebrna reguła bilansowa jest łagodniejsza – dopuszcza finansowanie majątku trwałego kapitałem stałym, czyli kapitałem własnym i zobowiązaniami długoterminowymi."
+  },
+  {
+    "id": "owe37-o-02",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody okręgowe",
+    "question": "Która z odpowiedzi wskazuje, że w gospodarce występuje ożywienie?",
+    "options": [
+      "indeks PMI znajduje się w przedziale od 40 do 43 punktów",
+      "luka popytowa jest dodatnia",
+      "w gospodarce występuje wyłącznie bezrobocie keynesowskie",
+      "relacja ceny miedzi do złota jest na niskim poziomie"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Dodatnia luka popytowa (PKB rzeczywisty powyżej potencjalnego) oznacza, że gospodarka rozwija się szybko i wykorzystuje moce ponad przeciętny poziom – to sytuacja ożywienia (rozkwitu). PMI w przedziale 40–43 pkt (poniżej 50) i wyłącznie bezrobocie keynesowskie wskazują na recesję."
+  },
+  {
+    "id": "owe37-o-03",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody okręgowe",
+    "question": "Wzrost dochodu konsumenta skutkuje:",
+    "options": [
+      "przesunięciem krzywej obojętności w lewo",
+      "zmianą nachylenia linii ograniczenia budżetowego",
+      "przesunięciem krzywej obojętności w prawo",
+      "przesunięciem linii ograniczenia budżetowego"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Linia ograniczenia budżetowego zależy od dochodu i cen. Wzrost dochodu przy niezmienionych cenach przesuwa ją równolegle na zewnątrz (nachylenie, czyli relacja cen, się nie zmienia). Krzywe obojętności zależą od preferencji, a nie od dochodu."
+  },
+  {
+    "id": "owe37-o-04",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody okręgowe",
+    "question": "Autarkię opisują następujące równania: C = 100 + 0,5YD; I = 600; G = 200; T = 100 (gdzie: C – konsumpcja, YD – dochód rozporządzalny; I – inwestycje; G – wydatki rządowe; T – podatki minus transfery budżetowe otrzymywane przez konsumenta). Ile wynosi PKB?",
+    "options": [
+      "1 000",
+      "1 500",
+      "1 700",
+      "1 800"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Y = C + I + G = 100 + 0,5 · (Y − 100) + 600 + 200 = 850 + 0,5Y. Stąd 0,5Y = 850, czyli Y = 1700."
+  },
+  {
+    "id": "owe37-o-05",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody okręgowe",
+    "question": "Stały wzrost wydatków publicznych (zarówno w ujęciu bezwzględnym, jak i w relacji do PKB) jest określany mianem prawa:",
+    "options": [
+      "Kaleckiego",
+      "Keynesa",
+      "Lernera",
+      "Wagnera"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Prawo Wagnera (Adolph Wagner, XIX w.) mówi, że wraz z rozwojem gospodarczym i społecznym udział wydatków publicznych w PKB systematycznie rośnie – państwo przejmuje coraz więcej zadań (edukacja, ochrona zdrowia, infrastruktura, zabezpieczenie społeczne)."
+  },
+  {
+    "id": "owe37-o-06",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody okręgowe",
+    "question": "Do pasywów banku centralnego zaliczamy:",
+    "options": [
+      "złoto",
+      "pieniądz w obiegu",
+      "dłużne papiery wartościowe rezydentów",
+      "należności w walutach obcych od nierezydentów"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Pasywa banku centralnego to jego zobowiązania – przede wszystkim pieniądz (gotówka) w obiegu, który jest zobowiązaniem emitenta, oraz rezerwy banków komercyjnych. Złoto, papiery dłużne i należności walutowe to aktywa (m.in. rezerwy dewizowe)."
+  },
+  {
+    "id": "owe37-o-07",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody okręgowe",
+    "question": "Które twierdzenie dotyczące konkurencji monopolistycznej jest prawdziwe?",
+    "options": [
+      "w długim okresie przedsiębiorstwo może osiągać zysk nadzwyczajny",
+      "w krótkim okresie przedsiębiorstwo nie może osiągać zysku nadzwyczajnego",
+      "w długim okresie cena występująca na rynku jest równa przeciętnemu kosztowi całkowitemu przedsiębiorstwa",
+      "w długim okresie minimum przeciętnego kosztu całkowitego wyznacza wielkość produkcji przedsiębiorstwa"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "W długim okresie w konkurencji monopolistycznej nowe firmy wchodzą na rynek, dopóki zysk ekonomiczny nie spadnie do zera – cena równa się przeciętnemu kosztowi całkowitemu (krzywa popytu jest styczna do krzywej ATC). Firma produkuje jednak mniej niż przy minimum ATC (nadwyżka mocy)."
+  },
+  {
+    "id": "owe37-o-08",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody okręgowe",
+    "question": "O wystąpieniu stałych przychodów względem skali produkcji informuje:",
+    "options": [
+      "pionowa krzywa długookresowego kosztu całkowitego",
+      "pozioma krzywa długookresowego przeciętnego kosztu całkowitego",
+      "pozioma krzywa długookresowego kosztu całkowitego",
+      "pozioma krzywa przeciętnego kosztu stałego"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Stałe przychody względem skali oznaczają, że proporcjonalny wzrost wszystkich nakładów zwiększa produkcję w tej samej proporcji, więc koszt przeciętny w długim okresie się nie zmienia – krzywa długookresowego kosztu przeciętnego jest pozioma."
+  },
+  {
+    "id": "owe37-o-09",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody okręgowe",
+    "question": "Aktualna cena rynkowa jednej akcji spółki ABC wynosi 10 zł. Ostatnio wypłacona dywidenda na jedną akcję wyniosła 1 zł, a oczekiwane tempo wzrostu dywidendy to 2%. Ile wynosi koszt kapitału własnego w przedsiębiorstwie ABC?",
+    "options": [
+      "2,00%",
+      "5,00%",
+      "12,00%",
+      "12,20%"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Model Gordona: koszt kapitału własnego = D₁ / P + g, gdzie D₁ = 1 · 1,02 = 1,02 zł. Koszt = 1,02 / 10 + 2% = 10,2% + 2% = 12,2%."
+  },
+  {
+    "id": "owe37-o-10",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody okręgowe",
+    "question": "Sytuacja, w której znacząca grupa depozytariuszy w tym samym czasie pragnie wycofać swoje środki finansowe z danej instytucji, to:",
+    "options": [
+      "dzień trzech wiedźm",
+      "wakacje bankowe",
+      "run na bank",
+      "flash crash"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Run na bank to masowe, jednoczesne wycofywanie depozytów przez klientów, którzy obawiają się o wypłacalność banku. Ponieważ banki utrzymują tylko część depozytów w rezerwie, nawet wypłacalny bank może stracić płynność. Dzień trzech wiedźm to dzień wygasania wielu instrumentów pochodnych, a flash crash – nagły, krótkotrwały krach."
+  },
+  {
+    "id": "owe37-o-11",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody okręgowe",
+    "question": "Przedsiębiorstwo X jest monopolistą i nie różnicuje ceny. Jaka będzie konsekwencja doskonałego różnicowania ceny przez to przedsiębiorstwo?",
+    "options": [
+      "zmniejszy się wielkość zbędnej straty społecznej",
+      "wzrośnie poziom nadwyżki konsumenta",
+      "krzywa podaży monopolisty będzie bardziej elastyczna",
+      "krzywa podaży monopolisty będzie mniej elastyczna"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Przy doskonałym różnicowaniu cen monopolista sprzedaje każdą jednostkę po maksymalnej cenie, jaką nabywca gotów jest zapłacić. Produkuje wtedy tyle, co rynek konkurencyjny (do punktu, w którym cena = MC), więc zbędna strata społeczna znika. Nadwyżka konsumenta spada jednak do zera – cała trafia do monopolisty."
+  },
+  {
+    "id": "owe37-o-12",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody okręgowe",
+    "question": "Altcoinem jest:",
+    "options": [
+      "bitcoin",
+      "złoto",
+      "USD",
+      "ethereum"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Altcoin (alternative coin) to każda kryptowaluta inna niż bitcoin – np. ethereum, litecoin, solana. Złoto i dolar nie są kryptowalutami."
+  },
+  {
+    "id": "owe37-o-13",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody okręgowe",
+    "question": "Zgodnie ze szkołą monetarną wielkością relatywnie stałą występującą w równaniu ilościowej teorii pieniądza jest:",
+    "options": [
+      "poziom cen",
+      "poziom podaży pieniądza",
+      "szybkość obiegu pieniądza",
+      "dochód nominalny"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Monetaryści (M. Friedman) zakładają, że szybkość obiegu pieniądza (V) w równaniu MV = PY jest względnie stała i przewidywalna. Wtedy zmiany ilości pieniądza przekładają się bezpośrednio na zmiany dochodu nominalnego (PY), a w długim okresie – na ceny."
+  },
+  {
+    "id": "owe37-o-14",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody okręgowe",
+    "question": "Ujemna luka popytowa będzie prowadziła do:",
+    "options": [
+      "wzrostu wartości dodatniego salda cyklicznego sektora finansów publicznych",
+      "spadku wartości salda strukturalnego sektora finansów publicznych",
+      "spadku bezrobocia naturalnego",
+      "spadku inflacji"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Ujemna luka popytowa oznacza, że gospodarka produkuje poniżej potencjału – popyt jest za słaby, bezrobocie przekracza naturalne, a presja na wzrost cen i płac słabnie. Prowadzi to do spadku inflacji (dezinflacji). Saldo cykliczne finansów publicznych staje się wtedy ujemne."
+  },
+  {
+    "id": "owe37-o-15",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody okręgowe",
+    "question": "Krańcowa skłonność do konsumpcji wynosi 0,6. Ile wynosi krańcowa skłonność do oszczędzania?",
+    "options": [
+      "-0,6",
+      "0,4",
+      "1,7",
+      "6,0"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Krańcowe skłonności do konsumpcji i do oszczędzania sumują się do 1: MPS = 1 − MPC = 1 − 0,6 = 0,4."
+  },
+  {
+    "id": "owe37-o-16",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody okręgowe",
+    "question": "Które stwierdzenie dotyczące długiego okresu jest prawdziwe?",
+    "options": [
+      "przeciętny koszt zmienny jest równy przeciętnemu kosztowi całkowitemu",
+      "zysk księgowy monopolisty jest zawsze równy zero",
+      "zysk księgowy przedsiębiorstwa konkurencyjnego jest równy zero",
+      "produkcja monopolisty doskonale różnicującego cenę zawsze odpowiada wielkości minimalnej skali efektywnej"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W długim okresie wszystkie koszty są zmienne – nie ma kosztów stałych. Dlatego przeciętny koszt zmienny równa się przeciętnemu kosztowi całkowitemu. Zysk księgowy w długim okresie może być dodatni zarówno u monopolisty, jak i firmy konkurencyjnej (zerowy jest zysk ekonomiczny firmy konkurencyjnej)."
+  },
+  {
+    "id": "owe37-o-17",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody okręgowe",
+    "question": "W przypadku dóbr doskonale substytucyjnych krzywa obojętności:",
+    "options": [
+      "ma kształt litery „L”",
+      "jest ściśle wypukła",
+      "charakteryzuje się stałą krańcową stopą substytucji",
+      "jest rosnąca"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Doskonałe substytuty konsument wymienia w stałej proporcji niezależnie od posiadanych ilości – krańcowa stopa substytucji jest stała, a krzywa obojętności jest prostą o ujemnym nachyleniu. Kształt litery L mają krzywe dla dóbr doskonale komplementarnych."
+  },
+  {
+    "id": "owe37-o-18",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody okręgowe",
+    "question": "W modelu duopolu Cournota punkt przecięcia krzywych funkcji reakcji przedsiębiorstw wyznacza równowagę:",
+    "options": [
+      "Bertranda",
+      "Nasha",
+      "Sweezy’ego",
+      "Friedmana"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "W modelu Cournota każda firma wybiera produkcję najlepszą przy danej produkcji rywala (funkcja reakcji). W punkcie przecięcia funkcji reakcji żadna firma nie chce zmienić decyzji, skoro rywal jej nie zmienia – to równowaga Nasha."
+  },
+  {
+    "id": "owe37-o-19",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody okręgowe",
+    "question": "Zgodnie z twierdzeniem Coase’a wolny rynek powinien, przy pewnych założeniach, samodzielnie uporać się z problemem występowania:",
+    "options": [
+      "efektów zewnętrznych",
+      "negatywnej selekcji",
+      "asymetrii informacji",
+      "kosztów transakcyjnych"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Twierdzenie Coase'a: jeśli prawa własności są jasno określone, a koszty transakcyjne niskie, strony same wynegocjują efektywne rozwiązanie problemu efektów zewnętrznych (np. zanieczyszczeń) – bez interwencji państwa – niezależnie od tego, komu przypisano prawa."
+  },
+  {
+    "id": "owe37-o-20",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody okręgowe",
+    "question": "Równoległe przesunięcie krzywej podaży danego produktu w prawo może być spowodowane wprowadzeniem:",
+    "options": [
+      "podatku ad valorem płaconego przez producentów",
+      "podatku kwotowego płaconego przez producentów",
+      "ceny minimalnej na rynku tego produktu",
+      "subwencji dla producentów w stałej wysokości na jednostkę tego produktu"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Subwencja w stałej kwocie na jednostkę obniża koszt każdej jednostki o tę samą kwotę, więc krzywa podaży przesuwa się równolegle w dół (w prawo). Podatek kwotowy przesuwa ją równolegle w górę (w lewo), a podatek ad valorem zmienia jej nachylenie."
+  },
+  {
+    "id": "owe37-o-21",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody okręgowe",
+    "question": "Krańcowa stopa technicznej substytucji pracy kapitałem wynosi 2. Oznacza to, że:",
+    "options": [
+      "dla zachowania kosztów całkowitych w przedsiębiorstwie na niezmienionym poziomie zwiększeniu nakładów pracy o 2 jednostki musi towarzyszyć ograniczenie nakładów kapitału o 4 jednostki",
+      "dla zachowania kosztów całkowitych w przedsiębiorstwie na niezmienionym poziomie zwiększeniu nakładów pracy o 2 jednostki musi towarzyszyć ograniczenie nakładów kapitału o 1 jednostkę",
+      "dla zachowania poziomu produkcji w przedsiębiorstwie na niezmienionym poziomie zmianie nakładów pracy musi towarzyszyć zmiana nakładów kapitału",
+      "izokwanta produkcji przecina oś rzędnych w punkcie o współrzędnych (0,2)"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Krańcowa stopa technicznej substytucji (MRTS) pokazuje, ile jednego czynnika trzeba dodać, gdy zmniejsza się nakład drugiego, aby produkcja pozostała bez zmian (ruch wzdłuż izokwanty). Odpowiedzi A i B mówią o kosztach (to izokoszta, nie izokwanta)."
+  },
+  {
+    "id": "owe37-o-22",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody okręgowe",
+    "question": "Przedsiębiorstwo X zajmuje pozycję monopsonistyczną na rynku pracy. Jego krzywa kosztu przeciętnego pracy jest opisana równaniem ACL = 2L + 2000 (gdzie: ACL – koszt przeciętny pracy; L – liczba zatrudnionych pracowników). Która z odpowiedzi przedstawia przebieg krzywej kosztu krańcowego pracy (MCL) tego przedsiębiorstwa?",
+    "options": [
+      "MCL = −2L + 2000",
+      "MCL = 4L + 2000",
+      "MCL = 4L + 4000",
+      "MCL = L + 2000"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Koszt całkowity pracy = ACL · L = 2L² + 2000L. Krańcowy koszt pracy to jego pochodna: MCL = 4L + 2000. Przy liniowej krzywej podaży pracy krzywa MCL ma ten sam wyraz wolny i dwukrotnie większe nachylenie."
+  },
+  {
+    "id": "owe37-o-23",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody okręgowe",
+    "question": "W procesie sekurytyzacji powstają:",
+    "options": [
+      "swapy walutowe",
+      "akcje uprzywilejowane",
+      "weksle",
+      "ABS-y"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Sekurytyzacja to przekształcenie puli niepłynnych aktywów (np. kredytów hipotecznych, należności) w papiery wartościowe zabezpieczone tymi aktywami – ABS (asset-backed securities), w tym MBS dla hipotek. Swapy, akcje i weksle nie powstają w tym procesie."
+  },
+  {
+    "id": "owe37-o-24",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody okręgowe",
+    "question": "Który z wymienionych rodzajów funduszy inwestycyjnych koncentruje swoją działalność na rynku nieruchomości?",
+    "options": [
+      "ETF",
+      "REIT",
+      "vulture fund",
+      "hedge fund"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "REIT (real estate investment trust) to fundusz inwestujący w nieruchomości przynoszące dochód (biurowce, magazyny, mieszkania na wynajem) i wypłacający inwestorom większość zysków. Vulture fund kupuje długi podmiotów w tarapatach, a hedge fund stosuje różne, często ryzykowne strategie."
+  },
+  {
+    "id": "owe37-o-25",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody okręgowe",
+    "question": "Pracownicy w kopalni złota zarabiają 100 tys. zł za wydobycie 100 kg kruszcu. Kopalnia sprzedaje je przedsiębiorstwu produkującemu biżuterię za 400 tys. zł. Następnie jubiler, za wytworzenie biżuterii z zakupionego złota, płaci swoim pracownikom 300 tys. zł. Jubiler wyprodukowaną biżuterię sprzedaje bezpośrednio konsumentom za 1 mln zł. Ile wynosi PKB?",
+    "options": [
+      "400 tys. zł",
+      "700 tys. zł",
+      "1 000 tys. zł",
+      "1 800 tys. zł"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "PKB to wartość dóbr finalnych – biżuterii sprzedanej konsumentom za 1 mln zł. Taki sam wynik daje suma wartości dodanej: kopalnia 400 tys. zł + jubiler (1000 − 400) = 600 tys. zł = 1000 tys. zł. Złoto to dobro pośrednie, więc nie liczy się go osobno."
+  },
+  {
+    "id": "owe37-o-26",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody okręgowe",
+    "question": "Na którym z podejść do grupowania stanowisk pracy oparta jest w największym stopniu struktura konglomeratowa organizacji?",
+    "options": [
+      "według wyrobu",
+      "według klienta",
+      "na podstawie funkcji",
+      "według lokalizacji"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Struktura konglomeratowa (holdingowa, typu H) składa się z niepowiązanych ze sobą jednostek, z których każda wytwarza inne produkty (działa w innej branży) – stanowiska są więc grupowane przede wszystkim według wyrobu."
+  },
+  {
+    "id": "owe37-o-27",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody okręgowe",
+    "question": "Rozpiętość kierowania to:",
+    "options": [
+      "liczba osób podlegających bezpośrednio jednemu menedżerowi",
+      "liczba menedżerów operacyjnych przypadających na jednego pracownika",
+      "zakres obowiązków (funkcji) pełnionych przez menedżera",
+      "liczba osób podlegających bezpośrednio i pośrednio jednemu menedżerowi"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Rozpiętość kierowania (zasięg kierowania) to liczba osób bezpośrednio podległych jednemu kierownikowi. Duża rozpiętość oznacza spłaszczoną strukturę, mała – wysmukłą (wiele szczebli)."
+  },
+  {
+    "id": "owe37-o-28",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody okręgowe",
+    "question": "Występujący w procesie oceny pracowników błąd aureoli polega na sytuacji, w której:",
+    "options": [
+      "ocena pracownika w jednym wymiarze (cesze) ma wpływ na oceny tego pracownika według innych wymiarów",
+      "całościowa ocena pracownika jest opierana wyłącznie na ostatnich wynikach pracy podwładnego",
+      "osobom stojącym wyżej w hierarchii służbowej są przyznawane wyższe oceny",
+      "osobom sympatycznym i lubianym przez oceniającego są przyznawane wyższe oceny"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Błąd (efekt) aureoli, czyli efekt halo, polega na tym, że ocena pracownika w jednym wymiarze (np. sympatyczny wygląd, jedna wyróżniająca się cecha) wpływa na jego ocenę w innych, niezwiązanych wymiarach. Ocenianie tylko na podstawie ostatnich wyników to błąd świeżości."
+  },
+  {
+    "id": "owe37-o-29",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody okręgowe",
+    "question": "Keiretsu to konglomeraty o rozbudowanej strukturze organizacyjnej właściwe dla gospodarki:",
+    "options": [
+      "USA",
+      "Korei Południowej",
+      "Chin",
+      "Japonii"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Keiretsu to japońskie grupy powiązanych przedsiębiorstw (zwykle skupione wokół banku lub dużego producenta), w których firmy mają wzajemne udziały i trwałe relacje dostawca–odbiorca, np. grupa Mitsubishi czy Toyota z dostawcami. Ich koreańskim odpowiednikiem są czebole."
+  },
+  {
+    "id": "owe37-o-30",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody okręgowe",
+    "question": "Wśród pięciu sił konkurencji wyróżnionych przez M.E. Portera nie ma:",
+    "options": [
+      "rywalizacji ze strony konkurentów",
+      "zagrożenia substytutami",
+      "siły nabywców",
+      "zagrożenia wynikającego ze zmian regulacyjnych"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Pięć sił Portera to: rywalizacja między istniejącymi konkurentami, groźba wejścia nowych firm, zagrożenie substytutami, siła przetargowa dostawców i siła przetargowa nabywców. Zmiany regulacyjne należą do makrootoczenia (np. analiza PEST), a nie do modelu pięciu sił."
+  }
+]

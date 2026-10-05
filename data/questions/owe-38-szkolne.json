@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe38-s-01",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody szkolne",
+    "question": "Dobro, w przypadku którego wzrostowi jego ceny towarzyszy wzrost wielkości popytu na nie, to dobro:",
+    "options": [
+      "Friedmana",
+      "Griffina",
+      "Kuznetsa",
+      "Veblena"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Według klucza poprawną odpowiedzią jest dobro Veblena – dobro prestiżowe, które kupuje się chętniej, gdy drożeje, bo wysoka cena podkreśla status (np. luksusowe zegarki, biżuteria). Uwaga: podobnie zachowuje się też dobro Giffena (szczególne dobro niższego rzędu), ale w odpowiedziach podano nieistniejące „dobro Griffina”."
+  },
+  {
+    "id": "owe38-s-02",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody szkolne",
+    "question": "Która z sytuacji opisuje występowanie monopsonu?",
+    "options": [
+      "przedsiębiorstwo X jest jedynym dostawcą sieci 5G w kraju A",
+      "przedsiębiorstwo X funkcjonuje w ramach porozumienia tworzącego kartel na rynku ropy naftowej",
+      "przedsiębiorstwo X jest biorcą ceny na rynku",
+      "elektrownia X jest jedynym nabywcą węgla brunatnego w kraju A"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Monopson to rynek z jednym nabywcą i wieloma sprzedawcami. Elektrownia, która jako jedyna kupuje węgiel brunatny w kraju, jest monopsonistą. Jedyny dostawca sieci 5G to monopolista, a kartel to porozumienie sprzedawców."
+  },
+  {
+    "id": "owe38-s-03",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody szkolne",
+    "question": "Która z wymienionych krzywych kosztów całkowitych nie dotyczy długiego okresu (gdzie: q – ilość produkowanego dobra)?",
+    "options": [
+      "TC = 6q² + 2q",
+      "TC = 6q² − 2q",
+      "TC = 6q² + 2q + 200",
+      "TC = 6q³ + 6q² + 6q"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "W długim okresie wszystkie koszty są zmienne – nie ma kosztów stałych, więc przy zerowej produkcji koszt całkowity wynosi 0. Funkcja TC = 6q² + 2q + 200 ma składnik stały 200 (koszty stałe), więc dotyczy krótkiego okresu."
+  },
+  {
+    "id": "owe38-s-04",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody szkolne",
+    "question": "Przedsiębiorstwo X działa na rynku doskonale konkurencyjnym. Które stwierdzenie jest prawdziwe?",
+    "options": [
+      "w długim okresie przedsiębiorstwo X nie może osiągać zysku normalnego",
+      "koszty alternatywne przedsiębiorstwa X są uwzględniane przy kalkulacji zysku ekonomicznego",
+      "przedsiębiorstwo X, zwiększając ilość dóbr dostarczanych na rynek, może wpłynąć na spadek ich ceny",
+      "przedsiębiorstwo X, aby sprzedać więcej dóbr, musi obniżyć ich cenę"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Zysk ekonomiczny = przychody − koszty jawne − koszty alternatywne (np. utracone wynagrodzenie właściciela i odsetki od zaangażowanego kapitału). Firma w konkurencji doskonałej w długim okresie osiąga zysk normalny (zerowy ekonomiczny) i nie wpływa na cenę – jest cenobiorcą."
+  },
+  {
+    "id": "owe38-s-05",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody szkolne",
+    "question": "Obrona narodowa jest przykładem:",
+    "options": [
+      "dobra prywatnego",
+      "zasobu wspólnego",
+      "monopolu naturalnego",
+      "dobra publicznego"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Obrona narodowa to klasyczny przykład dobra publicznego: jest niekonkurencyjna (ochrona jednej osoby nie zmniejsza ochrony innych) i niewykluczalna (nie da się wyłączyć z ochrony mieszkańców, którzy nie płacą podatków)."
+  },
+  {
+    "id": "owe38-s-06",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody szkolne",
+    "question": "Wskaźnikiem wykorzystywanym w analizie technicznej na rynku kapitałowym jest:",
+    "options": [
+      "ROA",
+      "ROE",
+      "RSI",
+      "WACC"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "RSI (indeks siły względnej) to oscylator analizy technicznej, oparty na historycznych zmianach cen – wskazuje wykupienie lub wyprzedanie rynku. ROA, ROE i WACC to wskaźniki analizy finansowej (fundamentalnej)."
+  },
+  {
+    "id": "owe38-s-07",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody szkolne",
+    "question": "Której pozycji nie znajdziemy w bilansie płatniczym?",
+    "options": [
+      "rachunku bieżącego",
+      "salda błędów i opuszczeń",
+      "salda sektora instytucji rządowych i samorządowych",
+      "rachunku kapitałowego"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Bilans płatniczy obejmuje rachunek bieżący, rachunek kapitałowy, rachunek finansowy oraz saldo błędów i opuszczeń. Saldo sektora instytucji rządowych i samorządowych (deficyt lub nadwyżka finansów publicznych) to kategoria fiskalna, a nie pozycja bilansu płatniczego."
+  },
+  {
+    "id": "owe38-s-08",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody szkolne",
+    "question": "Krzywa Laffera wskazuje, że:",
+    "options": [
+      "im wyższy poziom długu publicznego, tym wyższy jest poziom inflacji",
+      "im wyższy poziom inflacji, tym wyższy poziom długu publicznego",
+      "relatywnie wysoki poziom stawek podatkowych może ograniczać dochód podatkowy",
+      "niskim poziomom inflacji towarzyszy wysoki poziom bezrobocia"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Krzywa Laffera pokazuje, że wzrost stawek podatkowych zwiększa dochody budżetu tylko do pewnego poziomu. Powyżej niego dalsze podwyżki zniechęcają do pracy, inwestowania i zwiększają unikanie podatków, więc dochody podatkowe spadają."
+  },
+  {
+    "id": "owe38-s-09",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody szkolne",
+    "question": "Osobą czynną zawodowo nie jest osoba:",
+    "options": [
+      "korzystająca z urlopu macierzyńskiego",
+      "bezrobotna",
+      "utrzymująca się wyłącznie z dochodów z kapitału",
+      "obecnie niezatrudniona, ale aktywnie poszukująca pracy"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Osoby czynne (aktywne) zawodowo to pracujący i bezrobotni (szukający pracy). Osoba na urlopie macierzyńskim jest pracująca. Ktoś, kto utrzymuje się wyłącznie z dochodów z kapitału i nie pracuje ani nie szuka pracy, jest bierny zawodowo."
+  },
+  {
+    "id": "owe38-s-10",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody szkolne",
+    "question": "Elastyczność dochodowa popytu na dobro X wynosi 0,5. Oznacza to, że:",
+    "options": [
+      "wzrost ceny dobra X o 1% będzie skutkować spadkiem wielkości popytu na to dobro o 0,5%",
+      "wzrost dochodu konsumenta o 1% będzie skutkować spadkiem popytu na dobro X o 0,5%",
+      "dobro X jest dobrem wyższego rzędu",
+      "dobro X jest dobrem normalnym"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Elastyczność dochodowa 0,5 (dodatnia) oznacza, że wzrost dochodu o 1% zwiększa popyt o 0,5% – to dobro normalne, a dokładniej dobro podstawowe (0 < E < 1). Dobra wyższego rzędu (luksusowe) mają elastyczność większą od 1, a niższego rzędu – ujemną."
+  },
+  {
+    "id": "owe38-s-11",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody szkolne",
+    "question": "Która z odpowiedzi prawidłowo przedstawia sytuację występowania nadwyżki handlowej w danym kraju?",
+    "options": [
+      "produkt krajowy brutto jest większy od sumy wydatków konsumpcyjnych, inwestycji i wydatków publicznych",
+      "oszczędności publiczne są większe od prywatnych",
+      "odpływy kapitałowe netto są mniejsze od zera",
+      "oszczędności są równe inwestycjom"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "PKB = C + I + G + NX. Jeżeli PKB jest większy od sumy konsumpcji, inwestycji i wydatków publicznych, to eksport netto (NX = Y − C − I − G) jest dodatni – występuje nadwyżka handlowa. Wtedy też oszczędności przewyższają inwestycje, a odpływy kapitałowe netto są dodatnie."
+  },
+  {
+    "id": "owe38-s-12",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody szkolne",
+    "question": "Koszt zdartych zelówek pojawia się w warunkach:",
+    "options": [
+      "pułapki płynności",
+      "runu na banki",
+      "inflacji",
+      "ujemnej luki popytowej"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Koszt zdartych zelówek to koszt inflacji: gdy pieniądz szybko traci wartość, ludzie trzymają mniej gotówki i częściej chodzą do banku (dosłownie zdzierają buty), ponosząc koszty czasu i transakcji."
+  },
+  {
+    "id": "owe38-s-13",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody szkolne",
+    "question": "Do warunków sprzyjających ograniczeniu kosztów przyjęcia wspólnej waluty zalicza się:",
+    "options": [
+      "niską mobilność kapitału",
+      "silną suwerenność fiskalną państw członkowskich",
+      "wysoką mobilność siły roboczej",
+      "niską elastyczność płac realnych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Według teorii optymalnych obszarów walutowych (R. Mundell) koszty utraty własnej polityki kursowej są mniejsze, gdy gospodarki mogą się dostosować do szoków w inny sposób: dzięki wysokiej mobilności siły roboczej i kapitału, elastycznym płacom i cenom oraz transferom fiskalnym."
+  },
+  {
+    "id": "owe38-s-14",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody szkolne",
+    "question": "W modelu krzyża keynesowskiego stan równowagi wyznacza punkt przecięcia:",
+    "options": [
+      "krzywej zagregowanego popytu z krzywą Phillipsa",
+      "krzywej zagregowanego popytu z linią 45°",
+      "krzywej Phillipsa z krzywą LM",
+      "krzywej dochodu permanentnego z krzywą wydatków rozporządzalnych"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "W modelu krzyża keynesowskiego równowaga występuje tam, gdzie planowane wydatki zagregowane (C + I + G) równają się produkcji (dochodowi) – na wykresie to przecięcie krzywej zagregowanego popytu (wydatków) z linią 45° (Y = AE)."
+  },
+  {
+    "id": "owe38-s-15",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody szkolne",
+    "question": "Przykładem operacji otwartego rynku wykorzystywanej przez NBP jest:",
+    "options": [
+      "emisja bonów pieniężnych",
+      "udzielanie kredytu lombardowego",
+      "rezerwa obowiązkowa",
+      "stosowanie limitów kredytowych"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Operacje otwartego rynku NBP to przede wszystkim emisja (sprzedaż) bonów pieniężnych NBP, a także operacje repo i reverse repo czy skup obligacji. Kredyt lombardowy to operacja depozytowo-kredytowa (instrument na koniec dnia), a rezerwa obowiązkowa – osobny instrument."
+  },
+  {
+    "id": "owe38-s-16",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody szkolne",
+    "question": "Które stwierdzenie dotyczące realizowanego obecnie przez NBP celu inflacyjnego jest prawdziwe?",
+    "options": [
+      "procentowa roczna zmiana indeksu cen towarów i usług konsumpcyjnych w Polsce powinna kształtować się w przedziale od 0 do 2,5%",
+      "ma on charakter średniookresowy",
+      "wartość celu inflacyjnego w Polsce nie jest podawana do wiadomości publicznej",
+      "cel inflacyjny jest uchwalany przez Radę Ministrów"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Cel inflacyjny NBP wynosi 2,5% z pasmem ± 1 pkt proc. i ma charakter średniookresowy – NBP dąży do sprowadzenia inflacji do celu w średnim okresie, a nie w każdym miesiącu. Cel ustala Rada Polityki Pieniężnej (nie rząd) i jest on publicznie ogłoszony."
+  },
+  {
+    "id": "owe38-s-17",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody szkolne",
+    "question": "Miarą inflacji jest:",
+    "options": [
+      "indeks Giniego",
+      "wskaźnik PPI",
+      "denominator PKB",
+      "agregat M3"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Inflację mierzy się wskaźnikami cen: CPI (towarów i usług konsumpcyjnych), PPI (cen produkcji sprzedanej przemysłu) oraz deflatorem PKB. Współczynnik Giniego mierzy nierówności, a M3 to agregat podaży pieniądza."
+  },
+  {
+    "id": "owe38-s-18",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody szkolne",
+    "question": "Które z wymienionych instrumentów finansowych są wykorzystywane w celu ograniczenia problemu agencji?",
+    "options": [
+      "weksle trasowane",
+      "opcje menedżerskie",
+      "ABS-y",
+      "listy zastawne"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Problem agencji polega na rozbieżności interesów właścicieli i menedżerów. Opcje menedżerskie (prawo do zakupu akcji spółki po ustalonej cenie) wiążą wynagrodzenie menedżerów z wartością akcji, więc zachęcają ich do działania w interesie akcjonariuszy."
+  },
+  {
+    "id": "owe38-s-19",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody szkolne",
+    "question": "Przedstawicielem ekonomii behawioralnej jest:",
+    "options": [
+      "R. Thaler",
+      "R. Lucas",
+      "M. Friedman",
+      "F. von Hayek"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Richard Thaler (Nagroda Nobla 2017) to jeden z twórców ekonomii behawioralnej – badał ograniczoną racjonalność, preferencje społeczne i brak samokontroli (koncepcja „szturchania”, nudge). Lucas to nowa ekonomia klasyczna, Friedman – monetaryzm, a Hayek – szkoła austriacka."
+  },
+  {
+    "id": "owe38-s-20",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody szkolne",
+    "question": "Premię płaci:",
+    "options": [
+      "zawsze zajmujący pozycję długą w kontrakcie forward",
+      "nabywca CDS",
+      "zawsze zajmujący pozycję krótką w kontrakcie futures",
+      "posiadacz akcji niemej"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Nabywca CDS (swapu ryzyka kredytowego) płaci sprzedawcy okresową premię (spread), a w zamian otrzymuje odszkodowanie, jeśli jednostka referencyjna stanie się niewypłacalna. W kontraktach forward i futures nie ma premii – obie strony mają obowiązek zawarcia transakcji."
+  },
+  {
+    "id": "owe38-s-21",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody szkolne",
+    "question": "Nadzór nad rynkiem kapitałowym w Polsce sprawuje:",
+    "options": [
+      "Minister Aktywów Państwowych",
+      "Komisja Nadzoru Finansowego",
+      "Europejski Bank Centralny",
+      "Komitet Rynku Papierów Wartościowych i Giełd"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Nadzór nad rynkiem kapitałowym w Polsce (a także bankowym, ubezpieczeniowym i emerytalnym) sprawuje Komisja Nadzoru Finansowego. Komisja Papierów Wartościowych i Giełd działała do 2006 r., zanim jej zadania przejęła KNF."
+  },
+  {
+    "id": "owe38-s-22",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody szkolne",
+    "question": "Pod koniec czerwca 2024 r. kurs walutowy EUR/USD wynosił 1,07, natomiast pod koniec września 2024 r. był równy 1,11. Oznacza to, że w analizowanym okresie miała miejsce:",
+    "options": [
+      "aprecjacja dolara",
+      "rewaluacja euro",
+      "dewaluacja euro",
+      "deprecjacja dolara"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Kurs EUR/USD to liczba dolarów za 1 euro. Wzrost z 1,07 do 1,11 oznacza, że za euro trzeba płacić więcej dolarów – euro zyskało, a dolar stracił na wartości (deprecjacja dolara przy kursie płynnym)."
+  },
+  {
+    "id": "owe38-s-23",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody szkolne",
+    "question": "Wartość wskaźnika bieżącej płynności jest tym wyższa, im:",
+    "options": [
+      "wyższa jest wartość zobowiązań długoterminowych",
+      "wyższa jest wartość zapasów",
+      "wyższa jest wartość kredytów kupieckich zaciągniętych przez dane przedsiębiorstwo",
+      "niższa jest wartość zapasów"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Wskaźnik bieżącej płynności = aktywa obrotowe / zobowiązania krótkoterminowe. Zapasy są częścią aktywów obrotowych, więc ich wzrost (przy reszcie bez zmian) podnosi wskaźnik. Kredyt kupiecki zaciągnięty przez firmę to zobowiązanie krótkoterminowe – obniża wskaźnik."
+  },
+  {
+    "id": "owe38-s-24",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody szkolne",
+    "question": "Kapitał obrotowy netto jest równy:",
+    "options": [
+      "różnicy majątku obrotowego i zobowiązań krótkoterminowych",
+      "sumie kapitału stałego i majątku obrotowego",
+      "sumie majątku obrotowego i zobowiązań krótkoterminowych",
+      "różnicy kapitału własnego i majątku trwałego"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Kapitał obrotowy netto = majątek (aktywa) obrotowy − zobowiązania krótkoterminowe (lub równoważnie: kapitał stały − majątek trwały). Pokazuje, jaka część aktywów obrotowych jest finansowana kapitałem długoterminowym."
+  },
+  {
+    "id": "owe38-s-25",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody szkolne",
+    "question": "Cele ustalane na średnim szczeblu i dla menedżerów średniego szczebla organizacji to cele:",
+    "options": [
+      "strategiczne",
+      "operacyjne",
+      "taktyczne",
+      "misyjne"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Cele taktyczne ustala się na średnim szczeblu zarządzania dla kierowników średniego szczebla – są średniookresowe i dotyczą realizacji celów strategicznych w poszczególnych częściach organizacji. Cele strategiczne wyznacza najwyższe kierownictwo, a operacyjne – kierownicy niższego szczebla."
+  },
+  {
+    "id": "owe38-s-26",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody szkolne",
+    "question": "Która z wymienionych metod jest przykładem technik zarządzania portfelem?",
+    "options": [
+      "metoda delficka",
+      "analiza 4P",
+      "analiza 4F",
+      "selektor jednostek GE"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Techniki zarządzania portfelem (analiza portfelowa) pomagają oceniać i podejmować decyzje o jednostkach biznesu organizacji – to np. macierz BCG i selektor jednostek GE (McKinseya). Metoda delficka służy prognozowaniu, a 4P to marketing mix."
+  },
+  {
+    "id": "owe38-s-27",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody szkolne",
+    "question": "Przedsiębiorstwo X prowadzi swoją działalność w wybranym segmencie rynku. Zgodnie z typologią strategii w ujęciu Portera jest to strategia:",
+    "options": [
+      "odróżniania się",
+      "biernej reakcji",
+      "koncentrowania się na niszy rynkowej",
+      "analityka"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Porter wyróżnił trzy strategie konkurencji: przywództwo kosztowe, wyróżnianie się (dyferencjację) i koncentrację na niszy rynkowej (wybranym segmencie). Działanie w wybranym segmencie rynku to strategia koncentracji. „Analityk” i „bierna reakcja” należą do typologii Milesa i Snowa."
+  },
+  {
+    "id": "owe38-s-28",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody szkolne",
+    "question": "Do wielkiej piątki cech osobowości nie zalicza się:",
+    "options": [
+      "ugodowości",
+      "sumienności",
+      "ekstrawersji",
+      "poczucia własnej skuteczności"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Model wielkiej piątki obejmuje: ugodowość, sumienność, negatywną emocjonalność (neurotyczność), ekstrawersję i otwartość na doświadczenia. Poczucie własnej skuteczności to inna cecha, spoza tego modelu."
+  },
+  {
+    "id": "owe38-s-29",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody szkolne",
+    "question": "Komunikacja pionowa w organizacji:",
+    "options": [
+      "odbywa się między osobami na tym samym szczeblu w organizacji",
+      "zwykle nie przebiega zgodnie z linią zależności służbowej",
+      "odbywa się między menedżerami i ich podwładnymi",
+      "to nieformalny system powiązań między osobami w organizacji"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Komunikacja pionowa przebiega w górę i w dół hierarchii – między przełożonymi a podwładnymi, zgodnie z liniami zależności służbowej (polecenia w dół, raporty w górę). Komunikacja na tym samym szczeblu to komunikacja pozioma, a sieć nieformalna to „poczta pantoflowa”."
+  },
+  {
+    "id": "owe38-s-30",
+    "type": "single",
+    "edition": "XXXVIII OWE (2024/2025), zawody szkolne",
+    "question": "PKB jest:",
+    "options": [
+      "równy sumie wartości dóbr finalnych i pośrednich wytworzonych w gospodarce w danym okresie",
+      "sumą wartości dodanej w gospodarce w danym okresie",
+      "równy sumie wartości dóbr pośrednich wytworzonych w gospodarce w danym okresie",
+      "równy sumie dochodów z pracy i kapitału pomniejszonej o podatki pośrednie"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "PKB to suma wartości dodanej wytworzonej w gospodarce w danym okresie – czyli wartość dóbr finalnych (bez podwójnego liczenia dóbr pośrednich). Dodawanie dóbr pośrednich do finalnych zawyżałoby wynik."
+  }
+]
