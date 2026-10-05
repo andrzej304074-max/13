@@ -1,0 +1,500 @@
+[
+  {
+    "id": "owe34-c-01",
+    "type": "multi",
+    "edition": "XXXIV OWE (2020/2021), zawody centralne",
+    "question": "WIG to indeks:",
+    "options": [
+      "akcyjny",
+      "cenowy",
+      "dochodowy",
+      "towarowy"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "WIG to indeks akcyjny (A) i dochodowy (C) – uwzględnia ceny akcji oraz dochody z dywidend i praw poboru. Indeksy cenowe to np. WIG20, a indeksy towarowe dotyczą cen surowców."
+  },
+  {
+    "id": "owe34-c-02",
+    "type": "multi",
+    "edition": "XXXIV OWE (2020/2021), zawody centralne",
+    "question": "Gotówka w obiegu wchodzi w skład:",
+    "options": [
+      "bazy monetarnej",
+      "agregatu monetarnego M1",
+      "agregatu monetarnego M2",
+      "agregatu monetarnego M3"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "Gotówka w obiegu wchodzi do bazy monetarnej (A) i do wszystkich agregatów: M1 (gotówka + depozyty bieżące – B), M2 (C) i M3 (D), bo każdy kolejny agregat zawiera poprzedni."
+  },
+  {
+    "id": "owe34-c-03",
+    "type": "multi",
+    "edition": "XXXIV OWE (2020/2021), zawody centralne",
+    "question": "Adam zainwestował 500 000 zł w otwarcie restauracji. Zysk księgowy wyniósł w pierwszym roku działalności 50 000 zł. Jednocześnie Adam musiał zrezygnować z pracy mechanika, która przynosiłaby mu roczny dochód z tytułu pensji w wysokości 30 000 zł. Roczna rynkowa stopa procentowa wynosi 2%. Ile wynosi zysk ekonomiczny uzyskany przez Adama w związku z otwarciem restauracji?",
+    "options": [
+      "10 000",
+      "20 000",
+      "50 000",
+      "90 000"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Zysk ekonomiczny = zysk księgowy − koszty alternatywne = 50 000 − 30 000 (utracona pensja) − 10 000 (2% od 500 000 zł) = 10 000 zł (A)."
+  },
+  {
+    "id": "owe34-c-04",
+    "type": "multi",
+    "edition": "XXXIV OWE (2020/2021), zawody centralne",
+    "question": "Instrumentem pochodnym jest:",
+    "options": [
+      "opcja",
+      "weksel",
+      "akcept bankierski",
+      "certyfikat depozytowy"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Opcja to instrument pochodny – jej wartość zależy od ceny instrumentu bazowego (A). Weksel, akcept bankierski i certyfikat depozytowy to instrumenty rynku pieniężnego."
+  },
+  {
+    "id": "owe34-c-05",
+    "type": "multi",
+    "edition": "XXXIV OWE (2020/2021), zawody centralne",
+    "question": "Które z poniższych stwierdzeń dotyczących działalności Narodowego Banku Polskiego jest prawdziwe?",
+    "options": [
+      "założenia polityki pieniężnej są uchwalane przez Sejm",
+      "w celu ograniczenia nadpłynności w sektorze bankowym NBP od 2013 r. wykorzystuje limity kredytowe",
+      "NBP realizuje politykę pieniężną w oparciu o strategię kontroli podaży pieniądza",
+      "operacje podstawowe NBP mają formę emisji bonów pieniężnych z 7-dniowym terminem zapadalności"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Założenia polityki pieniężnej uchwala Rada Polityki Pieniężnej, nie Sejm (A). NBP stosuje strategię bezpośredniego celu inflacyjnego, a nie kontroli podaży pieniądza (C), i nie używa limitów kredytowych (B). Operacje podstawowe NBP to emisja 7-dniowych bonów pieniężnych, która ściąga nadpłynność z banków (D)."
+  },
+  {
+    "id": "owe34-c-06",
+    "type": "multi",
+    "edition": "XXXIV OWE (2020/2021), zawody centralne",
+    "question": "Współautorem teorii bezrobocia NAIRU jest:",
+    "options": [
+      "J. M. Keynes",
+      "R. Layard",
+      "K. Wicksell",
+      "A. Smith"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Teorię bezrobocia NAIRU (nieprzyspieszającej inflacji) rozwinęli R. Layard, S. Nickell i R. Jackman (B). Termin NAIRU wprowadzili F. Modigliani i L. Papademos (1975)."
+  },
+  {
+    "id": "owe34-c-07",
+    "type": "multi",
+    "edition": "XXXIV OWE (2020/2021), zawody centralne",
+    "question": "Które stwierdzenie dotyczące peer economy jest prawdziwe?",
+    "options": [
+      "właściwe są dla niej wyłącznie relacje B2C",
+      "to gospodarka oparta na centralnej jednostce koordynującej proces transakcji",
+      "kluczową jej cechą jest dostępność zamiast własności",
+      "jest to system, który łączy sprzedających i kupujących, ułatwiając bezpośrednią wymianę między równymi podmiotami"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Peer economy (gospodarka „równy z równym”, P2P) to system bezpośrednich transakcji między równymi podmiotami (D), np. osobami prywatnymi (relacje C2C, nie tylko B2C – A), bez centralnego pośrednika (B). Według klucza zasada „dostęp zamiast własności” (C) to cecha gospodarki współdzielenia, a nie peer economy."
+  },
+  {
+    "id": "owe34-c-08",
+    "type": "multi",
+    "edition": "XXXIV OWE (2020/2021), zawody centralne",
+    "question": "Które zdanie dotyczące monopolu jest prawdziwe?",
+    "options": [
+      "krzywa utargu krańcowego monopolisty ma nachylenie ujemne",
+      "rosnąca krzywa przeciętnego kosztu całkowitego stanowi źródło monopolu",
+      "zysk monopolowy oblicza się z wykorzystaniem formuły: (cena monopolowa – przeciętny koszt całkowity) × liczba sprzedanych dóbr",
+      "źródłem monopolu naturalnego jest brak występowania korzyści skali"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "Krzywa utargu krańcowego monopolisty opada, bo żeby sprzedać więcej, musi obniżyć cenę wszystkich jednostek (A). Zysk monopolu = (P − ATC) × Q (C). Źródłem monopolu naturalnego jest występowanie silnych korzyści skali (malejący, a nie rosnący ATC) – B i D są fałszywe."
+  },
+  {
+    "id": "owe34-c-09",
+    "type": "multi",
+    "edition": "XXXIV OWE (2020/2021), zawody centralne",
+    "question": "Które stwierdzenie dotyczące mnożnika kreacji pieniądza jest prawdziwe?",
+    "options": [
+      "wartość mnożnika kreacji pieniądza jest tym większa, im mniejsza jest stopa rezerwy obowiązkowej",
+      "mnożnik kreacji pieniądza przyjmuje wartości od 0 do 1",
+      "wartość mnożnika kreacji pieniądza jest tym większa, im większa jest skłonność do utrzymywania zasobów gotówkowych",
+      "mnożnik kreacji pieniądza to iloczyn agregatów monetarnych M2 i M1"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Mnożnik kreacji pieniądza jest tym większy, im niższa stopa rezerwy obowiązkowej (A) i im mniejsza skłonność do trzymania gotówki (C – fałsz). Zwykle przyjmuje wartości większe od 1 (B – fałsz) i jest ilorazem podaży pieniądza i bazy monetarnej (D – fałsz)."
+  },
+  {
+    "id": "owe34-c-10",
+    "type": "multi",
+    "edition": "XXXIV OWE (2020/2021), zawody centralne",
+    "question": "Przedstawicielami ekonomii behawioralnej są:",
+    "options": [
+      "D. Kahneman oraz A. Tversky",
+      "D. Kahneman oraz M. Friedman",
+      "L. von Mises oraz J. Tobin",
+      "E. Maskin oraz E. Fama"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "D. Kahneman i A. Tversky stworzyli teorię perspektywy i są głównymi przedstawicielami ekonomii behawioralnej (A). M. Friedman to monetarysta, L. von Mises – szkoła austriacka, E. Fama – hipoteza rynku efektywnego."
+  },
+  {
+    "id": "owe34-c-11",
+    "type": "multi",
+    "edition": "XXXIV OWE (2020/2021), zawody centralne",
+    "question": "Członków Rady Polityki Pieniężnej wybierają:",
+    "options": [
+      "Sejm",
+      "Senat",
+      "Prezes Rady Ministrów",
+      "Prezydent Rzeczypospolitej"
+    ],
+    "correct": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Rada Polityki Pieniężnej składa się z Prezesa NBP i 9 członków powoływanych w równej liczbie (po 3) przez Prezydenta RP (D), Sejm (A) i Senat (B). Premier nie powołuje członków RPP (C)."
+  },
+  {
+    "id": "owe34-c-12",
+    "type": "multi",
+    "edition": "XXXIV OWE (2020/2021), zawody centralne",
+    "question": "Które stwierdzenie dotyczące zysku ekonomicznego jest prawdziwe?",
+    "options": [
+      "w przypadku monopolisty zysk ekonomiczny jest zawsze równy zyskowi normalnemu",
+      "w krótkim okresie przedsiębiorstwo działające na rynku doskonale konkurencyjnym może osiągać zysk ekonomiczny",
+      "pojęcie zysku ekonomicznego jest tożsame z zyskiem księgowym",
+      "w długim okresie przedsiębiorstwo będące monopolistą może osiągać zysk ekonomiczny"
+    ],
+    "correct": [
+      1,
+      3
+    ],
+    "explanation": "W krótkim okresie firma w konkurencji doskonałej może osiągać zysk ekonomiczny (B), który w długim okresie znika przez wejście konkurentów. Monopolista chroniony barierami wejścia może go utrzymywać także w długim okresie (D, A – fałsz). Zysk ekonomiczny uwzględnia koszty alternatywne, więc różni się od księgowego (C)."
+  },
+  {
+    "id": "owe34-c-13",
+    "type": "multi",
+    "edition": "XXXIV OWE (2020/2021), zawody centralne",
+    "question": "Przedsiębiorstwo X zaciągnęło na rok kredyt bankowy w wysokości 200 000 zł o stopie procentowej wynoszącej 10% w skali roku. Roczny zysk brutto przedsiębiorstwa X w okresie kredytowania wyniósł 2 mln zł. Stawka podatku dochodowego wynosi 19%. Ile wynosi tarcza podatkowa?",
+    "options": [
+      "3 800 zł",
+      "16 200 zł",
+      "20 000 zł",
+      "180 000 zł"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Tarcza podatkowa to oszczędność podatkowa wynikająca z zaliczenia odsetek do kosztów: odsetki = 10% × 200 000 = 20 000 zł, a tarcza = 19% × 20 000 = 3 800 zł (A)."
+  },
+  {
+    "id": "owe34-c-14",
+    "type": "multi",
+    "edition": "XXXIV OWE (2020/2021), zawody centralne",
+    "question": "Konsekwencjami wyższej niż przewidywana inflacji mogą być:",
+    "options": [
+      "zmiana rozkładu obciążeń podatkowych",
+      "ukryta redystrybucja dochodów",
+      "spadek realnej wartości długu",
+      "utrudnienie długoterminowego planowania"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "Nieoczekiwana inflacja: zmienia rozkład obciążeń podatkowych, np. przez nieindeksowane progi (A), redystrybuuje dochody od wierzycieli i osób o stałych dochodach do dłużników (B), obniża realną wartość długu (C) i utrudnia planowanie długoterminowe (D)."
+  },
+  {
+    "id": "owe34-c-15",
+    "type": "multi",
+    "edition": "XXXIV OWE (2020/2021), zawody centralne",
+    "question": "Które zdanie dotyczące funkcjonującego w Polsce podatku akcyzowego jest prawdziwe (stan na rok 2021)?",
+    "options": [
+      "podatek akcyzowy jest podatkiem bezpośrednim",
+      "podatek akcyzowy jest podatkiem majątkowym",
+      "dochody z tytułu podatku akcyzowego stanowią dochód budżetu Unii Europejskiej",
+      "podatek akcyzowy w Polsce podlega harmonizacji w ramach Unii Europejskiej w zakresie wybranych grup towarów"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Akcyza jest podatkiem pośrednim (A – fałsz) i konsumpcyjnym, nie majątkowym (B). Jej wpływy trafiają do budżetu państwa, a nie UE (C). Akcyza na wybrane wyroby (paliwa, alkohol, wyroby tytoniowe, energia elektryczna) jest zharmonizowana w UE (D)."
+  },
+  {
+    "id": "owe34-c-16",
+    "type": "multi",
+    "edition": "XXXIV OWE (2020/2021), zawody centralne",
+    "question": "Krzywa popytu na pewne dobro jest opisana równaniem q = −p + 10, a krzywa podaży q = p − 2 (gdzie: p – cena za sztukę w zł; q – ilość w sztukach). Które z poniższych zdań prawidłowo opisuje sytuację bezpośrednio po wprowadzeniu ceny minimalnej na rynku tego dobra w wysokości 7 zł za sztukę?",
+    "options": [
+      "na rynku wystąpi nadwyżka ilości oferowanej nad ilością zapotrzebowania",
+      "na rynku wystąpi nadwyżka ilości zapotrzebowanej nad ilością oferowaną",
+      "spadnie cena tego dobra",
+      "na rynku wystąpi równowaga"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Równowaga: −p + 10 = p − 2, czyli p = 6 zł i q = 4. Cena minimalna 7 zł jest wyższa od ceny równowagi, więc podaż (5) przekracza popyt (3) – powstaje nadwyżka (A)."
+  },
+  {
+    "id": "owe34-c-17",
+    "type": "multi",
+    "edition": "XXXIV OWE (2020/2021), zawody centralne",
+    "question": "Inwestycje netto to inwestycje brutto pomniejszone o:",
+    "options": [
+      "wydatki na odtworzenie istniejącego kapitału rzeczowego",
+      "należny podatek VAT",
+      "naliczony podatek VAT",
+      "wartość podatku od dochodu przedsiębiorstw"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Inwestycje netto = inwestycje brutto − amortyzacja, czyli wydatki na odtworzenie zużytego kapitału rzeczowego (A). VAT i podatek dochodowy nie mają tu znaczenia."
+  },
+  {
+    "id": "owe34-c-18",
+    "type": "multi",
+    "edition": "XXXIV OWE (2020/2021), zawody centralne",
+    "question": "Które ze stwierdzeń dotyczących wartości mnożnika wydatków rządowych w gospodarce jest prawdziwe?",
+    "options": [
+      "w przypadku autarkii wartość mnożnika jest równa odwrotności sumy krańcowej skłonności do konsumpcji oraz krańcowej skłonności do opodatkowania",
+      "w przypadku autarkii wartość mnożnika jest równa sumie krańcowej skłonności do oszczędzania oraz krańcowej skłonności do opodatkowania",
+      "jeżeli wartość mnożnika wydatków rządowych jest mniejsza od 0, to występują niekeynesowskie efekty polityki fiskalnej",
+      "jeżeli wartość mnożnika wydatków rządowych jest większa od 1, to występują niekeynesowskie efekty polityki fiskalnej"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Wartość mnożnika w autarkii z podatkami to odwrotność wyrażenia 1 − c(1 − t), a nie suma krańcowych skłonności (A, B). Jeśli mnożnik jest ujemny – np. cięcie wydatków zwiększa PKB dzięki poprawie oczekiwań – mówi się o niekeynesowskich efektach polityki fiskalnej (C). Mnożnik większy od 1 to efekt keynesowski (D)."
+  },
+  {
+    "id": "owe34-c-19",
+    "type": "multi",
+    "edition": "XXXIV OWE (2020/2021), zawody centralne",
+    "question": "Funkcja zysku (π) przedsiębiorstwa Y opisana jest równaniem π = −q² + 10q − 10, a krzywa popytu na jego produkty jest opisana równaniem q = −p + 20 (gdzie: p – cena za tonę w zł; q – ilość w tonach). Która z odpowiedzi przedstawia równanie krzywej kosztu krańcowego tego przedsiębiorstwa?",
+    "options": [
+      "MC = 10",
+      "MC = 10q + 10",
+      "MC = −q² + 10q",
+      "MC = −q³ + 10q"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Z popytu p = 20 − q utarg TR = 20q − q². Koszt całkowity TC = TR − π = 20q − q² − (−q² + 10q − 10) = 10q + 10. Koszt krańcowy MC = dTC/dq = 10 (A)."
+  },
+  {
+    "id": "owe34-c-20",
+    "type": "multi",
+    "edition": "XXXIV OWE (2020/2021), zawody centralne",
+    "question": "Jeżeli przyjmiemy, że pandemia COVID-19 ma charakter negatywnego wstrząsu strukturalnego dla rynku pracy, to:",
+    "options": [
+      "przesunie ona krzywą Beveridge’a w prawo",
+      "przesunie ona krzywą Beveridge’a w lewo",
+      "nie wpłynie na położenie krzywej Beveridge’a",
+      "wzrostowi bezrobocia będzie towarzyszyć znaczący spadek stopy wolnych miejsc pracy"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Negatywny wstrząs strukturalny pogarsza dopasowanie bezrobotnych do wolnych miejsc pracy, więc ta sama liczba wakatów współistnieje z wyższym bezrobociem – krzywa Beveridge'a przesuwa się w prawo (A). Spadek wakatów przy wzroście bezrobocia (D) to ruch wzdłuż krzywej, typowy dla wstrząsu popytowego."
+  },
+  {
+    "id": "owe34-c-21",
+    "type": "multi",
+    "edition": "XXXIV OWE (2020/2021), zawody centralne",
+    "question": "Do podstawowych teorii struktury terminowej stóp procentowych zaliczamy:",
+    "options": [
+      "teorię gier",
+      "teorię oczekiwań",
+      "teorię preferencji płynności",
+      "teorię parytetu stóp procentowych"
+    ],
+    "correct": [
+      1,
+      2
+    ],
+    "explanation": "Podstawowe teorie struktury terminowej stóp procentowych to: teoria oczekiwań (B), teoria preferencji płynności (premii za płynność – C) i teoria segmentacji rynku. Parytet stóp procentowych dotyczy kursów walutowych (D)."
+  },
+  {
+    "id": "owe34-c-22",
+    "type": "multi",
+    "edition": "XXXIV OWE (2020/2021), zawody centralne",
+    "question": "Krzywa podaży pracy opisana jest równaniem W = L + 6, natomiast krzywa popytu na pracę to W = −L + 10 (gdzie: W – płaca; L – wielkość zatrudnienia). Ile wynosi wartość renty ekonomicznej?",
+    "options": [
+      "2",
+      "6",
+      "8",
+      "10"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Równowaga: L + 6 = −L + 10, czyli L = 2 i W = 8. Renta ekonomiczna to pole między płacą równowagi a krzywą podaży: ½ × 2 × (8 − 6) = 2 (A)."
+  },
+  {
+    "id": "owe34-c-23",
+    "type": "multi",
+    "edition": "XXXIV OWE (2020/2021), zawody centralne",
+    "question": "Które stwierdzenie dotyczące postępu technicznego jest prawdziwe?",
+    "options": [
+      "powoduje on przesunięcie krzywej możliwości produkcyjnych w prawo",
+      "obrazuje go ruch wzdłuż krzywej możliwości produkcyjnych",
+      "nie ma on wpływu na położenie krzywej możliwości produkcyjnych",
+      "powoduje on przesunięcie krzywej korzyści skali (uczenia się) w prawo"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Postęp techniczny zwiększa możliwości wytwórcze, więc przesuwa krzywą możliwości produkcyjnych na zewnątrz (w prawo – A). Ruch wzdłuż krzywej (B) oznacza zmianę struktury produkcji przy danych zasobach."
+  },
+  {
+    "id": "owe34-c-24",
+    "type": "multi",
+    "edition": "XXXIV OWE (2020/2021), zawody centralne",
+    "question": "Które zdanie dotyczące wystąpienia pułapki inwestycji w modelu IS-LM jest prawdziwe:",
+    "options": [
+      "inwestycje są niewrażliwe na zmiany stopy procentowej",
+      "przesunięcie krzywej LM w prawo będzie skutkować obniżeniem poziomu produkcji oraz stopy procentowej",
+      "krzywa IS przebiega pionowo",
+      "krzywa LM przebiega poziomo"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "Pułapka inwestycyjna występuje, gdy inwestycje nie reagują na stopę procentową (A), więc krzywa IS jest pionowa (C). Przesunięcie LM w prawo obniża wtedy stopę procentową, ale nie zmienia produkcji (B). Pozioma krzywa LM to cecha pułapki płynności (D)."
+  },
+  {
+    "id": "owe34-c-25",
+    "type": "multi",
+    "edition": "XXXIV OWE (2020/2021), zawody centralne",
+    "question": "Pewną autarkię opisują następujące równania: C = 200 + 0,5YD; I = 200; G = 300; T = 400 (gdzie: C – konsumpcja; YD – dochód rozporządzalny; I – inwestycje; G – wydatki publiczne; T – podatki minus transfery budżetowe otrzymywane przez konsumenta). Które stwierdzenie dotyczące opisanej gospodarki jest prawdziwe?",
+    "options": [
+      "suma oszczędności prywatnych i publicznych równa jest inwestycjom",
+      "oszczędności prywatne są równe oszczędnościom publicznym",
+      "oszczędności prywatne wynoszą 100",
+      "oszczędności publiczne wynoszą 200"
+    ],
+    "correct": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "YD = Y − 400, więc Y = 200 + 0,5(Y − 400) + 200 + 300, skąd Y = 1000 i YD = 600. Konsumpcja = 200 + 300 = 500, więc oszczędności prywatne = 600 − 500 = 100 (C). Oszczędności publiczne = T − G = 400 − 300 = 100, czyli są równe prywatnym (B, D – fałsz). Ich suma (200) równa się inwestycjom (A)."
+  },
+  {
+    "id": "owe34-c-26",
+    "type": "multi",
+    "edition": "XXXIV OWE (2020/2021), zawody centralne",
+    "question": "Krzywa popytu na produkt pewnego monopolisty jest opisana równaniem p = −q + 40 (gdzie: p – cena za tonę w zł; q – ilość w tonach). Dodatkowo wiemy, że doskonale różnicuje on cenę, a jego krzywa kosztu krańcowego jest opisana równaniem MC = 20. Ile wynosi zbędna strata społeczna (czysta strata)?",
+    "options": [
+      "0",
+      "25",
+      "40",
+      "100"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Monopolista doskonale różnicujący cenę sprzedaje każdej osobie po jej cenie rezerwacji, aż cena zrówna się z MC = 20 (q = 20) – tyle samo co w konkurencji doskonałej. Zbędna strata społeczna wynosi 0 (A)."
+  },
+  {
+    "id": "owe34-c-27",
+    "type": "multi",
+    "edition": "XXXIV OWE (2020/2021), zawody centralne",
+    "question": "Które zdanie dotyczące etapów procesu racjonalnego podejmowania decyzji jest prawdziwe?",
+    "options": [
+      "pierwszym etapem procesu racjonalnego podejmowania decyzji jest rozpoznanie i zdefiniowanie sytuacji decyzyjnej",
+      "ostatnim etapem procesu racjonalnego podejmowania decyzji jest wdrożenie wybranego wariantu",
+      "jednym z etapów procesu racjonalnego podejmowania decyzji jest identyfikacja alternatywnych możliwości",
+      "jednym z etapów procesu racjonalnego podejmowania decyzji jest obserwacja i ocena wyników"
+    ],
+    "correct": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Model racjonalnego podejmowania decyzji: rozpoznanie i zdefiniowanie sytuacji decyzyjnej (A), identyfikacja alternatyw (C), ocena alternatyw, wybór najlepszej, wdrożenie i – na końcu – obserwacja i ocena wyników (D). Wdrożenie nie jest więc etapem ostatnim (B)."
+  },
+  {
+    "id": "owe34-c-28",
+    "type": "multi",
+    "edition": "XXXIV OWE (2020/2021), zawody centralne",
+    "question": "Przedsiębiorstwo produkujące smartfony sprzedaje je wyłącznie do punktów sprzedaży detalicznej. W kolejnym roku działalności zamierza ono otworzyć wiele sklepów firmowych. Takie działanie to:",
+    "options": [
+      "integracja pionowa „wstecz”",
+      "fuzja",
+      "przejęcie",
+      "integracja pionowa „w przód”"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Integracja pionowa „w przód” to przejmowanie kolejnych ogniw łańcucha w stronę klienta – np. otwarcie własnej sieci sprzedaży detalicznej przez producenta (D). Integracja „wstecz” dotyczy dostawców (A). Firma nie łączy się z innym podmiotem, więc to nie fuzja ani przejęcie."
+  },
+  {
+    "id": "owe34-c-29",
+    "type": "multi",
+    "edition": "XXXIV OWE (2020/2021), zawody centralne",
+    "question": "Które stwierdzenie dotyczące M. Webera jest prawdziwe?",
+    "options": [
+      "był on jednym z głównych twórców zarządzania administracyjnego",
+      "był on twórcą teorii X",
+      "w jego opinii dobór optymalnego sposobu zarządzania organizacją determinowany jest przez jej otoczenie",
+      "w jego opinii biurokratyczna forma organizacji jest logiczna, racjonalna i sprawna"
+    ],
+    "correct": [
+      0,
+      3
+    ],
+    "explanation": "M. Weber jest zaliczany do twórców zarządzania administracyjnego (A) i uważał organizację biurokratyczną za logiczną, racjonalną i sprawną (D). Teorię X stworzył D. McGregor (B), a uzależnianie zarządzania od otoczenia to podejście sytuacyjne (C)."
+  },
+  {
+    "id": "owe34-c-30",
+    "type": "multi",
+    "edition": "XXXIV OWE (2020/2021), zawody centralne",
+    "question": "Autorem teorii najmniej preferowanego współpracownika jest:",
+    "options": [
+      "F. Fiedler",
+      "D. McGregor",
+      "A. Maslow",
+      "M. Weber"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Teorię LPC (najmniej preferowanego współpracownika), czyli sytuacyjny model przywództwa, stworzył F. Fiedler (A). Na podstawie oceny „najmniej lubianego współpracownika” określa się, czy przywódca jest zorientowany na zadania, czy na relacje."
+  }
+]

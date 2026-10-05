@@ -1,0 +1,505 @@
+[
+  {
+    "id": "owe31-c-01",
+    "type": "multi",
+    "edition": "XXXI OWE (2017/2018), zawody centralne",
+    "question": "Wystąpienie którego z efektów jest przyczyną opadającej krzywej zagregowanego popytu?",
+    "options": [
+      "efekt „jałowego biegu”",
+      "efekt wzbogacenia",
+      "efekt stopy procentowej",
+      "efekt kursu walutowego"
+    ],
+    "correct": [
+      1,
+      2,
+      3
+    ],
+    "explanation": "Krzywa AD opada z trzech powodów: efektu wzbogacenia (Pigou – niższe ceny zwiększają realną wartość majątku, B), efektu stopy procentowej (Keynesa – niższe ceny zmniejszają popyt na pieniądz i stopy procentowe, C) i efektu kursu walutowego (Mundella–Fleminga – niższe stopy osłabiają walutę i zwiększają eksport netto, D). Efekt „jałowego biegu” nie istnieje w tym kontekście (A)."
+  },
+  {
+    "id": "owe31-c-02",
+    "type": "multi",
+    "edition": "XXXI OWE (2017/2018), zawody centralne",
+    "question": "Prawdą jest, że:",
+    "options": [
+      "bezrobocie cykliczne wynika stąd, że ludzie potrzebują czasu na znalezienie pracy, która im najbardziej odpowiada",
+      "bezrobocie frykcyjne jest przede wszystkim konsekwencją niedostatecznego popytu efektywnego",
+      "na poziom bezrobocia frykcyjnego występujący w gospodarce ma wpływ jakość usług pośrednictwa pracy",
+      "wzrost bezrobocia wywołany wstrząsem popytowo–strukturalnym ma częściowo charakter strukturalny i frykcyjny"
+    ],
+    "correct": [
+      2,
+      3
+    ],
+    "explanation": "Czas na znalezienie odpowiedniej pracy to cecha bezrobocia frykcyjnego, nie cyklicznego (A), a niedostateczny popyt efektywny powoduje bezrobocie cykliczne, nie frykcyjne (B). Sprawne pośrednictwo pracy skraca poszukiwania, więc wpływa na bezrobocie frykcyjne (C). Wstrząs popytowo-strukturalny (spadek popytu w jednych branżach) wymaga przepływu pracowników między sektorami, więc wywołane nim bezrobocie jest częściowo strukturalne i frykcyjne (D)."
+  },
+  {
+    "id": "owe31-c-03",
+    "type": "multi",
+    "edition": "XXXI OWE (2017/2018), zawody centralne",
+    "question": "Atrybucja to:",
+    "options": [
+      "proces obserwacji zachowania i przypisywania mu określonych przyczyn",
+      "reakcja jednostki na silny bodziec",
+      "proces odrzucania informacji, które są dla danej osoby niewygodne lub są sprzeczne z jej przekonaniami",
+      "skłonność danej osoby do pesymizmu"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Atrybucja (teoria atrybucji, F. Heider) to proces obserwowania zachowań i przypisywania im przyczyn – wewnętrznych (cechy osoby) lub zewnętrznych (sytuacja) – A. Odrzucanie niewygodnych informacji to selektywna percepcja / dysonans poznawczy (C)."
+  },
+  {
+    "id": "owe31-c-04",
+    "type": "multi",
+    "edition": "XXXI OWE (2017/2018), zawody centralne",
+    "question": "Elastyczność cenowa podaży jest tym większa im:",
+    "options": [
+      "dłuższy jest analizowany horyzont czasowy",
+      "większa jest mobilność czynników produkcji",
+      "mniejsza jest łatwość przechowywania zapasów",
+      "krótszy jest analizowany horyzont czasowy"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "Podaż jest bardziej elastyczna, gdy producenci mają więcej czasu na dostosowanie (A – dłuższy horyzont, D – fałsz) i gdy czynniki produkcji łatwo przesuwać między zastosowaniami (B). Łatwość przechowywania zapasów zwiększa elastyczność, więc C jest fałszywe."
+  },
+  {
+    "id": "owe31-c-05",
+    "type": "multi",
+    "edition": "XXXI OWE (2017/2018), zawody centralne",
+    "question": "Które zdanie dotyczące krzywej wykonalności (feasibility curve) jest prawdziwe:",
+    "options": [
+      "pokazuje ona maksymalną wielkość konsumpcji dóbr prywatnych osiągalną przy różnym poziomie produkcji dóbr publicznych i przy danym kształcie systemu podatkowego",
+      "na jej nachylenie wpływa wyłącznie poziom techniki",
+      "w przypadku zastosowania podatku Pigou pokrywa się ona z krzywą możliwości produkcyjnych społeczeństwa",
+      "przecina ona krzywą możliwości produkcyjnych społeczeństwa w punkcie, w którym wielkość konsumpcji dóbr prywatnych zrównuje się z wielkością konsumpcji dóbr publicznych"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Krzywa wykonalności pokazuje maksymalną konsumpcję dóbr prywatnych osiągalną przy różnej produkcji dóbr publicznych i danym systemie podatkowym (A). Leży wewnątrz krzywej możliwości produkcyjnych, bo podatki zniekształcające powodują straty efektywności – na jej przebieg wpływa nie tylko technika (B), a pokrywałaby się z KMP tylko przy podatkach niezniekształcających (np. ryczałtowych), a nie podatku Pigou (C)."
+  },
+  {
+    "id": "owe31-c-06",
+    "type": "multi",
+    "edition": "XXXI OWE (2017/2018), zawody centralne",
+    "question": "Które zdanie dotyczące modelu „bumelowania” jest prawdziwe:",
+    "options": [
+      "wysokość płacy będącej podstawowym warunkiem „niebumelowania” w pracy jest tym większa, im wyższy jest zasiłek dla bezrobotnych",
+      "model ten wyjaśnia kształtowanie się płac motywujących",
+      "bezrobocie ma zawsze charakter dobrowolny, gdyż jest efektem „bumelowania” w pracy",
+      "im bardziej rynek pracy zbliża się do pełnego zatrudnienia, tym wyższy musi być poziom płac warunkujących „niebumelowanie” w pracy"
+    ],
+    "correct": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Model bumelowania (Shapiro–Stiglitz) wyjaśnia płace motywujące (efektywnościowe) – B. Firma płaci powyżej poziomu równowagi, by utrata pracy była dla „bumelującego” kosztowna. Im wyższy zasiłek (A) i im bliżej pełnego zatrudnienia (łatwiej o nową pracę – D), tym wyższa musi być płaca zapobiegająca bumelowaniu. Powstające bezrobocie jest przymusowe, a nie dobrowolne (C)."
+  },
+  {
+    "id": "owe31-c-07",
+    "type": "multi",
+    "edition": "XXXI OWE (2017/2018), zawody centralne",
+    "question": "Pan X zainwestował 2 mln zł w otwarcie domu weselnego. Dodatkowo musiał zrezygnować ze stanowiska grafika, które przyniosłoby mu roczny dochód w wysokości 20 000 zł. Ponadto wiemy, że może on ulokować środki na 2% w skali roku. Jaka jest wartość kosztu alternatywnego w pierwszym roku działalności (w zł)?",
+    "options": [
+      "60 000",
+      "2 020 000",
+      "2 040 000",
+      "2 060 000"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Koszt alternatywny = utracona pensja grafika (20 000 zł) + utracone odsetki od 2 mln zł (2% × 2 000 000 = 40 000 zł) = 60 000 zł (A). Sama kwota inwestycji nie jest kosztem rocznym."
+  },
+  {
+    "id": "owe31-c-08",
+    "type": "multi",
+    "edition": "XXXI OWE (2017/2018), zawody centralne",
+    "question": "Prawdą jest, że (stan na rok 2018):",
+    "options": [
+      "stopa procentowa oszacowana zgodnie z regułą Taylora (stopa procentowa Taylora) może przyjmować wartość ujemną",
+      "System Rezerwy Federalnej USA jako pierwszy bank centralny na świecie zastosował strategię bezpośredniego celu inflacyjnego",
+      "rezerwa obowiązkowa jest narzędziem polityki pieniężnej wykorzystywanym przez NBP",
+      "celem operacyjnym NBP jest kształtowanie stawki POLONIA w pobliżu stopy referencyjnej NBP"
+    ],
+    "correct": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Stopa wyznaczona regułą Taylora może być ujemna przy niskiej inflacji i dużej ujemnej luce produkcyjnej (A). Jako pierwszy strategię celu inflacyjnego przyjął Bank Rezerw Nowej Zelandii (1990), a nie Fed (B). Rezerwa obowiązkowa jest instrumentem NBP (C), a celem operacyjnym NBP było utrzymywanie stawki POLONIA w pobliżu stopy referencyjnej (D)."
+  },
+  {
+    "id": "owe31-c-09",
+    "type": "multi",
+    "edition": "XXXI OWE (2017/2018), zawody centralne",
+    "question": "Które zdanie dotyczące oryginalnego modelu duopolu Bertranda jest prawdziwe:",
+    "options": [
+      "produkty oferowane przez duopolistów charakteryzują się wysoką substytucyjnością",
+      "równowagę Nasha wyznacza cena większa od kosztu krańcowego przedsiębiorstw",
+      "duopol osiąga równowagę Nasha przy takiej cenie, jaka wystąpiłaby w przypadku istnienia konkurencji doskonałej",
+      "duopol osiąga równowagę Nasha przy wielkości podaży branży równej połowie tej, jaka wystąpiłaby w przypadku istnienia konkurencji doskonałej"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "W oryginalnym modelu Bertranda duopoliści sprzedają produkt jednorodny (doskonałe substytuty – A) i konkurują ceną. Każdy obniża cenę poniżej ceny rywala, aż cena spadnie do kosztu krańcowego – jak w konkurencji doskonałej (C). Cena nie jest więc wyższa od MC (B), a podaż branży równa się podaży konkurencyjnej (D – fałsz)."
+  },
+  {
+    "id": "owe31-c-10",
+    "type": "multi",
+    "edition": "XXXI OWE (2017/2018), zawody centralne",
+    "question": "W skład kapitału stałego przedsiębiorstwa wchodzą:",
+    "options": [
+      "kapitał rezerwowy, kapitał zapasowy oraz czynne rozliczenia międzyokresowe",
+      "kapitał własny i zobowiązania długoterminowe",
+      "kapitał podstawowy i fundusze specjalne",
+      "kapitał własny, kapitał rezerwowy i zobowiązania krótkoterminowe"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Kapitał stały to długoterminowe źródła finansowania: kapitał własny i zobowiązania długoterminowe (B). Zobowiązania krótkoterminowe (D) i rozliczenia międzyokresowe czynne – będące aktywami (A) – do niego nie należą."
+  },
+  {
+    "id": "owe31-c-11",
+    "type": "multi",
+    "edition": "XXXI OWE (2017/2018), zawody centralne",
+    "question": "Które zdanie dotyczące krótkiej sprzedaży akcji jest prawdziwe:",
+    "options": [
+      "jest ona całkowicie zakazana na Giełdzie Papierów Wartościowych w Warszawie",
+      "stosujący ją inwestor zakłada szybki wzrost ceny akcji danej spółki",
+      "jednym z jej rodzajów jest niepokryta (bez pokrycia) krótka sprzedaż",
+      "funkcja zysku inwestora stosującego krótką sprzedaż akcji jest identyczna jak w przypadku wystawienia opcji kupna z pokryciem"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Krótka sprzedaż to sprzedaż pożyczonych akcji w oczekiwaniu na spadek ich ceny (B – fałsz). Na GPW jest dozwolona na określonych zasadach (A – fałsz). Wyróżnia się krótką sprzedaż pokrytą (z pożyczonymi akcjami) i niepokrytą (naked – C). Krótka sprzedaż ma potencjalnie nieograniczoną stratę i zysk zależny liniowo od spadku ceny, a wystawca opcji kupna z pokryciem zarabia co najwyżej premię – profile wypłat się różnią (D)."
+  },
+  {
+    "id": "owe31-c-12",
+    "type": "multi",
+    "edition": "XXXI OWE (2017/2018), zawody centralne",
+    "question": "Przeciętny koszt całkowity oraz koszt krańcowy przedsiębiorstwa X będącego monopolistą są stałe i wynoszą 10 zł. Krzywa popytu na produkty przedsiębiorstwa X jest opisana równaniem p = −2q + 40 (gdzie: p – cena za tonę w zł; q – ilość w tonach). Ile wynosi zysk całkowity monopolisty, jeżeli wiemy, że doskonale różnicuje on cenę?",
+    "options": [
+      "−15",
+      "100",
+      "150",
+      "225"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Przy doskonałym różnicowaniu ceny monopolista sprzedaje każdą jednostkę po cenie rezerwacji, aż cena spadnie do MC: −2q + 40 = 10, czyli q = 15. Zysk to cała nadwyżka nad kosztami: ½ × 15 × (40 − 10) = 225 zł (D)."
+  },
+  {
+    "id": "owe31-c-13",
+    "type": "multi",
+    "edition": "XXXI OWE (2017/2018), zawody centralne",
+    "question": "Bazując na (zmodyfikowanym) prawie Okuna, oszacuj wielkość naturalnej stopy bezrobocia w państwie X, w którym: PKB rzeczywisty = 9,7 mld USD, PKB potencjalny = 10 mld USD, stopa bezrobocia = 9%:",
+    "options": [
+      "3%",
+      "6%",
+      "8%",
+      "9%"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Luka PKB = (9,7 − 10) / 10 = −3%. Według prawa Okuna (współczynnik 3) każdy punkt procentowy bezrobocia ponad naturalne odpowiada 3% luki, więc bezrobocie przekracza naturalne o 1 p.p.: u* = 9% − 1% = 8% (C)."
+  },
+  {
+    "id": "owe31-c-14",
+    "type": "multi",
+    "edition": "XXXI OWE (2017/2018), zawody centralne",
+    "question": "W ramach strategii wyjścia (exit strategy) z antykryzysowej polityki pieniężnej System Rezerwy Federalnej USA zdecydował się na:",
+    "options": [
+      "bezwarunkową sprzedaż 60% wszystkich posiadanych obligacji skarbowych",
+      "bezwarunkową sprzedaż 85% wszystkich posiadanych MBS-ów",
+      "stopniowe podnoszenie podstawowych stóp procentowych",
+      "ograniczenie skali nabywania nowych obligacji skarbowych ze środków pochodzących z zapadających obligacji skarbowych będących w portfelu Fed"
+    ],
+    "correct": [
+      2,
+      3
+    ],
+    "explanation": "Strategia wyjścia Fedu po kryzysie 2008 r. polegała na stopniowym podnoszeniu stóp procentowych (od grudnia 2015 r. – C) i stopniowym ograniczaniu reinwestowania środków z zapadających papierów (od października 2017 r. – D). Fed nie sprzedawał bezwarunkowo większości posiadanych obligacji ani MBS-ów (A, B)."
+  },
+  {
+    "id": "owe31-c-15",
+    "type": "multi",
+    "edition": "XXXI OWE (2017/2018), zawody centralne",
+    "question": "W przypadku dóbr doskonale komplementarnych (przyjmując, że są to dobra, które konsument konsumuje w stałej proporcji) ścieżka ekspansji dochodowej może być:",
+    "options": [
+      "linią półprostą o kącie nachylenia równym 45°",
+      "linią półprostą o kącie nachylenia mniejszym niż 45°",
+      "linią łamaną, która początkowo ma nachylenie ujemne, a w punkcie przecięcia z osią OX staje się linią o nachyleniu równym 0",
+      "linią półprostą równoległą do osi OX"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "Przy doskonałej komplementarności konsument kupuje dobra w stałej proporcji, więc wraz ze wzrostem dochodu optymalne koszyki leżą na półprostej z początku układu. Jej nachylenie zależy od proporcji: 45° przy proporcji 1:1 (A), mniej niż 45°, gdy na osi OX jest dobro konsumowane w większej ilości (B). Linia równoległa do osi OX (D) czy łamana (C) nie oznacza stałej proporcji."
+  },
+  {
+    "id": "owe31-c-16",
+    "type": "multi",
+    "edition": "XXXI OWE (2017/2018), zawody centralne",
+    "question": "Duński model rynku pracy charakteryzuje się:",
+    "options": [
+      "niskimi świadczeniami socjalnymi dla bezrobotnych",
+      "działaniami polegającymi na znaczącym ograniczeniu aktywnej polityki rynku pracy",
+      "elastycznymi zasadami zwalniania i zatrudniania pracowników",
+      "mechanizmem uzależnienia płacy minimalnej od średniej płacy występującej w danej branży"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Duński model flexicurity łączy elastyczne zasady zatrudniania i zwalniania (C) z wysokimi zasiłkami dla bezrobotnych (A – fałsz) i rozbudowaną aktywną polityką rynku pracy (B – fałsz). W Danii nie ma ustawowej płacy minimalnej – płace ustalają układy zbiorowe (D)."
+  },
+  {
+    "id": "owe31-c-17",
+    "type": "multi",
+    "edition": "XXXI OWE (2017/2018), zawody centralne",
+    "question": "W teorii ekonomii występowanie histerezy bezrobocia wyjaśnia się:",
+    "options": [
+      "występowaniem płaskiej krzywej Phillipsa",
+      "działaniami tzw. insiderów",
+      "zjawiskiem ubytku kapitału rzeczowego",
+      "problemem dychotomii klasycznej"
+    ],
+    "correct": [
+      1,
+      2
+    ],
+    "explanation": "Histereza bezrobocia oznacza, że wysokie bezrobocie z przeszłości podnosi bezrobocie równowagi. Wyjaśnia się ją m.in. modelem insiderów–outsiderów (zatrudnieni negocjują wysokie płace, nie dbając o bezrobotnych – B) i ubytkiem kapitału rzeczowego (oraz ludzkiego) w czasie recesji (C)."
+  },
+  {
+    "id": "owe31-c-18",
+    "type": "multi",
+    "edition": "XXXI OWE (2017/2018), zawody centralne",
+    "question": "Krzywa podaży pracy opisana jest równaniem W = 0,5L + 25, natomiast krzywa popytu na pracę to W = −0,5L + 50 (gdzie: W – płaca; L – wielkość zatrudnienia). Ile wynosi wartość dochodu transferowego?",
+    "options": [
+      "156,25",
+      "937,50",
+      "781,25",
+      "1406,25"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Równowaga: 0,5L + 25 = −0,5L + 50, czyli L = 25 i W = 37,5. Dochód transferowy to pole pod krzywą podaży pracy do zatrudnienia równowagi: 25 × 25 + ½ × 25 × 12,5 = 625 + 156,25 = 781,25 (C). Renta ekonomiczna wynosiłaby 156,25 (A)."
+  },
+  {
+    "id": "owe31-c-19",
+    "type": "multi",
+    "edition": "XXXI OWE (2017/2018), zawody centralne",
+    "question": "Wielkość trójkąta Harbergera zależy od:",
+    "options": [
+      "wielkości podatku nałożonego na konsumpcję danego dobra",
+      "nachylenia krzywej popytu skompensowanego",
+      "nachylenia krzywej jednakowego kosztu",
+      "nachylenia izokoszty"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "Trójkąt Harbergera to zbędna strata społeczna wywołana podatkiem. Jego pole zależy od wysokości podatku (A) i od nachylenia (elastyczności) krzywej popytu skompensowanego (B) – im bardziej elastyczny popyt, tym większa strata."
+  },
+  {
+    "id": "owe31-c-20",
+    "type": "multi",
+    "edition": "XXXI OWE (2017/2018), zawody centralne",
+    "question": "Waluta którego z wymienionych państw znajdowała się w 2018 r. w ERM II (Exchange Rate Mechanism)?",
+    "options": [
+      "Rumunii",
+      "Szwecji",
+      "Danii",
+      "Czech"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Do ERM II należy korona duńska (od 1999 r. – C). Rumunia, Szwecja i Czechy nie uczestniczą w mechanizmie. W 2020 r. dołączyły lew bułgarski i kuna chorwacka, później zastąpione przez euro."
+  },
+  {
+    "id": "owe31-c-21",
+    "type": "multi",
+    "edition": "XXXI OWE (2017/2018), zawody centralne",
+    "question": "Występowanie sztywności nominalnych cen i płac w gospodarce uniemożliwia wystąpienie:",
+    "options": [
+      "efektu Pigou",
+      "efektu majątkowego",
+      "efektu Schumpetera",
+      "efektu mnożnikowego"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "Sztywne ceny i płace nominalne blokują efekt Pigou i efekt majątkowy, które działają przez spadek cen zwiększający realną wartość majątku (A, B). Efekt mnożnikowy działa właśnie przy sztywnych cenach (D), a efekt Schumpetera nie zależy od sztywności (C)."
+  },
+  {
+    "id": "owe31-c-22",
+    "type": "multi",
+    "edition": "XXXI OWE (2017/2018), zawody centralne",
+    "question": "Które zdanie dotyczące finansowania świadczeń zdrowotnych w ramach modelu Bismarcka jest prawdziwe:",
+    "options": [
+      "finansowanie opieki zdrowotnej jest przede wszystkim sprawą indywidualną obywateli",
+      "za organizację ochrony ubezpieczeniowej odpowiedzialne są władze publiczne",
+      "źródłem finansowania publicznych usług zdrowotnych są podatki wpływające do budżetu państwa",
+      "finansowanie odbywa się według modelu rezydualnego"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "W modelu Bismarcka ochrona zdrowia opiera się na obowiązkowych ubezpieczeniach finansowanych ze składek, zorganizowanych i nadzorowanych przez władze publiczne (B). Finansowanie z podatków to model Beveridge'a (C), finansowanie indywidualne – model rynkowy (A), a model rezydualny opiera się na pomocy tylko najbiedniejszym (D)."
+  },
+  {
+    "id": "owe31-c-23",
+    "type": "multi",
+    "edition": "XXXI OWE (2017/2018), zawody centralne",
+    "question": "Które zdanie dotyczące krzywej Beveridge’a jest prawdziwe:",
+    "options": [
+      "przedstawia ona zależność występującą między liczbą bezrobotnych a wielkością świadczeń socjalnych, jakie otrzymują osoby pozostające bez pracy",
+      "wstrząs popytowy powoduje przesunięcie krzywej Beveridge’a na wykresie w prawo",
+      "wstrząs popytowy powoduje przesunięcie krzywej Beveridge’a na wykresie w lewo",
+      "efekt histerezy bezrobocia przedstawia fragment krzywej Beveridge’a będący linią o nachyleniu dodatnim"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Krzywa Beveridge'a pokazuje zależność między stopą bezrobocia a stopą wolnych miejsc pracy, a nie zasiłkami (A). Wstrząs popytowy to ruch wzdłuż krzywej, a nie jej przesunięcie (B, C). Histerezę przedstawia fragment o dodatnim nachyleniu – bezrobocie rośnie mimo wzrostu liczby wolnych miejsc (D)."
+  },
+  {
+    "id": "owe31-c-24",
+    "type": "multi",
+    "edition": "XXXI OWE (2017/2018), zawody centralne",
+    "question": "Prawdą jest, że:",
+    "options": [
+      "miarą inflacji bazowej wykorzystywaną przez NBP jest inflacja po wyłączeniu cen najbardziej zmiennych",
+      "wartość deflatora PKB jest zawsze równa wartości wskaźnika cen towarów i usług konsumpcyjnych",
+      "bezpośrednią przyczyną pułapki płynności jest hiperinflacja",
+      "inflacja zwiększa koszty zmieniania jadłospisów ponoszone przez przedsiębiorstwa"
+    ],
+    "correct": [
+      0,
+      3
+    ],
+    "explanation": "NBP publikuje kilka miar inflacji bazowej, w tym inflację po wyłączeniu cen najbardziej zmiennych (A). Deflator PKB obejmuje wszystkie dobra wytworzone w kraju, a CPI – koszyk konsumpcyjny, więc się różnią (B). Pułapka płynności występuje przy bardzo niskich stopach, nie przy hiperinflacji (C). Inflacja zwiększa koszty zmiany cenników, czyli koszty menu (D)."
+  },
+  {
+    "id": "owe31-c-25",
+    "type": "multi",
+    "edition": "XXXI OWE (2017/2018), zawody centralne",
+    "question": "Prawdą jest, że:",
+    "options": [
+      "miernikiem fiskalizmu jest różnica między nominalną a efektywną stopą opodatkowania",
+      "zgodnie z regułą edynburską silna progresja podatkowa powinna występować w podatkach dochodowych",
+      "autorem reguły edynburskiej jest D. Ricardo",
+      "miernikiem fiskalizmu jest zakres ingerencji systemu finansów publicznych w PKB"
+    ],
+    "correct": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Według klucza miernikiem fiskalizmu jest zarówno różnica między nominalną a efektywną stopą opodatkowania (A), jak i zakres ingerencji finansów publicznych w PKB (udział dochodów lub wydatków publicznych w PKB – D). Reguła edynburska, przypisywana w kluczu D. Ricardo (C), głosi, że podatki powinny być niskie, by nie naruszać kapitału i nie hamować akumulacji – nie zaleca silnej progresji (B)."
+  },
+  {
+    "id": "owe31-c-26",
+    "type": "multi",
+    "edition": "XXXI OWE (2017/2018), zawody centralne",
+    "question": "Prawdą jest, że (stan na rok 2018):",
+    "options": [
+      "w Polsce jednostka budżetowa jest powiązana z budżetem państwa metodą brutto",
+      "przykładem jednostki sektora finansów publicznych funkcjonującej w Polsce jest samorządowy fundusz celowy",
+      "w Polsce wydatki elastyczne stanowią powyżej 80% wszystkich wydatków budżetu państwa",
+      "przykładem wydatku sztywnego występującego w budżecie państwa w Polsce są koszty obsługi zadłużenia"
+    ],
+    "correct": [
+      0,
+      3
+    ],
+    "explanation": "Jednostka budżetowa jest powiązana z budżetem metodą brutto – wszystkie jej wydatki pokrywa budżet, a dochody do niego odprowadza (A). Koszty obsługi długu to wydatek sztywny, wynikający z zawartych umów (D). Samorządowe fundusze celowe zlikwidowano w 2010 r. (B), a wydatki elastyczne stanowią mniejszość wydatków budżetu – sztywne przekraczają 70% (C)."
+  },
+  {
+    "id": "owe31-c-27",
+    "type": "multi",
+    "edition": "XXXI OWE (2017/2018), zawody centralne",
+    "question": "Do głównych twórców zarządzania administracyjnego zaliczamy:",
+    "options": [
+      "Chestera Barnarda",
+      "Maxa Webera",
+      "Lyndalla Urwicka",
+      "Harringtona Emersona"
+    ],
+    "correct": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Do twórców zarządzania administracyjnego (nurt klasyczny skupiony na całej organizacji) zalicza się H. Fayola, M. Webera (B), L. Urwicka (C) i C. Barnarda (A). H. Emerson, autor „12 zasad wydajności”, należy do nurtu naukowego zarządzania (Taylor)."
+  },
+  {
+    "id": "owe31-c-28",
+    "type": "multi",
+    "edition": "XXXI OWE (2017/2018), zawody centralne",
+    "question": "Prawdą jest, że:",
+    "options": [
+      "liczba faz procesu innowacyjnego wyróżnianych w innowacji dotyczącej produktów jest większa niż w innowacji dotyczącej procesów",
+      "liczba faz procesu innowacyjnego wyróżnianych w innowacji dotyczącej produktów jest mniejsza niż w innowacji dotyczącej procesów",
+      "innowacje dotyczące produktów i procesów są typami innowacji technicznych",
+      "innowacje w zakresie procesów mają największy pozytywny wpływ na wyniki organizacji w fazie schyłku"
+    ],
+    "correct": [
+      2,
+      3
+    ],
+    "explanation": "Innowacje produktowe i procesowe to dwa rodzaje innowacji technicznych (C). Według R. Griffina innowacje procesowe najsilniej poprawiają wyniki w późnych fazach rozwoju, w tym w fazie schyłku, gdy liczy się obniżka kosztów (D). Liczba faz procesu innowacyjnego jest w obu przypadkach taka sama (A, B – fałsz)."
+  },
+  {
+    "id": "owe31-c-29",
+    "type": "multi",
+    "edition": "XXXI OWE (2017/2018), zawody centralne",
+    "question": "Które zdanie dotyczące dwuczynnikowej teorii motywacji jest prawdziwe:",
+    "options": [
+      "jej podstawy zostały stworzone przez F. Herzberga",
+      "na kontinuum zadowolenia wpływają czynniki higieny",
+      "proces motywowania pracownika składa się z dwóch czynników, ale tylko jednego etapu",
+      "na kontinuum niezadowolenia wpływają czynniki motywacji"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Dwuczynnikową teorię motywacji stworzył F. Herzberg (A). Czynniki motywacji (np. osiągnięcia, uznanie) wpływają na kontinuum zadowolenia, a czynniki higieny (np. płaca, warunki pracy) – na kontinuum niezadowolenia (B, D – fałsz)."
+  },
+  {
+    "id": "owe31-c-30",
+    "type": "multi",
+    "edition": "XXXI OWE (2017/2018), zawody centralne",
+    "question": "Które zdanie dotyczące faz cyklu życia produktu jest prawdziwe:",
+    "options": [
+      "w fazie wprowadzania produktu zarządzanie zapasami nie stanowi żadnego problemu",
+      "w fazie dojrzałości produktu zaczyna maleć liczba nowych firm wytwarzających dany produkt",
+      "w modelu życia produktu wyróżniamy 4 fazy",
+      "w fazie wzrostu produktu istotne jest stosowanie strategii ograniczających tempo wchodzenia konkurentów na rynek"
+    ],
+    "correct": [
+      1,
+      2,
+      3
+    ],
+    "explanation": "W modelu cyklu życia produktu wyróżnia się 4 fazy: wprowadzenie, wzrost, dojrzałość i schyłek (C). W fazie wzrostu firma stara się ograniczyć tempo wchodzenia konkurentów (D), a w fazie dojrzałości zaczyna maleć liczba nowych producentów (B). Przy wprowadzaniu produktu popyt jest niepewny, więc zarządzanie zapasami jest trudne (A – fałsz)."
+  }
+]

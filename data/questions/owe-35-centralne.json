@@ -1,0 +1,495 @@
+[
+  {
+    "id": "owe35-c-01",
+    "type": "multi",
+    "edition": "XXXV OWE (2021/2022), zawody centralne",
+    "question": "W kanale stopy procentowej kluczowe dla oddziaływania zmiany nominalnej stopy procentowej na wielkości realne jest istnienie:",
+    "options": [
+      "efektu zarażania",
+      "sztywności cen",
+      "niedoskonałej substytucyjności aktywów finansowych",
+      "efektu stadnego"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Bank centralny zmienia nominalną stopę procentową. Aby wpłynęło to na realne stopy, a przez nie na inwestycje i produkcję, ceny muszą być sztywne – w krótkim okresie inflacja nie dostosowuje się od razu (B)."
+  },
+  {
+    "id": "owe35-c-02",
+    "type": "multi",
+    "edition": "XXXV OWE (2021/2022), zawody centralne",
+    "question": "Które stwierdzenie dotyczące wpływu zmiany ceny na wielkość popytu zgłaszanego przez konsumenta jest prawdziwe?",
+    "options": [
+      "w przypadku dóbr normalnych efekt dochodowy i efekt substytucyjny działają w innych kierunkach",
+      "w przypadku dóbr niższego rzędu efekt dochodowy i efekt substytucyjny działają w innych kierunkach",
+      "w przypadku dóbr Giffena efekt dochodowy i efekt substytucyjny działają w innych kierunkach",
+      "w przypadku dóbr Giffena efekt dochodowy nie występuje"
+    ],
+    "correct": [
+      1,
+      2
+    ],
+    "explanation": "Dla dóbr normalnych oba efekty działają w tym samym kierunku (A – fałsz). Dla dóbr niższego rzędu efekt dochodowy działa przeciwnie do substytucyjnego (B). Dobra Giffena to skrajny przypadek dóbr niższego rzędu – efekt dochodowy jest przeciwny i silniejszy od substytucyjnego (C, D – fałsz)."
+  },
+  {
+    "id": "owe35-c-03",
+    "type": "multi",
+    "edition": "XXXV OWE (2021/2022), zawody centralne",
+    "question": "Które stwierdzenie dotyczące monopolu jest prawdziwe?",
+    "options": [
+      "niezależnie od stosowania dyskryminacji cenowej w sytuacji monopolu nadwyżka konsumenta nie występuje (jest równa 0)",
+      "krzywa podaży monopolisty w krótkim okresie odpowiada jego krzywej kosztu krańcowego",
+      "krzywa podaży monopolisty w długim okresie odpowiada jego krzywej kosztu krańcowego powyżej punktu, w którym przecina on krzywą przeciętnego kosztu całkowitego",
+      "monopolista maksymalizuje zysk całkowity, gdy koszt krańcowy jest równy utargowi krańcowemu"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Monopolista maksymalizuje zysk przy MR = MC (D). Monopolista nie ma krzywej podaży, bo ilość zależy od kształtu popytu (B, C). Nadwyżka konsumenta znika tylko przy doskonałej dyskryminacji cenowej (A)."
+  },
+  {
+    "id": "owe35-c-04",
+    "type": "multi",
+    "edition": "XXXV OWE (2021/2022), zawody centralne",
+    "question": "Krzywa podaży baterii A++ opisana jest równaniem p = q + 11, a krzywa popytu na nie to p = -2q + 38 (gdzie: p – cena w zł za sztukę; q – ilość w sztukach). Państwo zdecydowało się nałożyć na producentów podatek w wysokości 6 zł od sprzedanej baterii. Ile w takiej sytuacji wynosi obciążenie podatkowe konsumentów?",
+    "options": [
+      "26 zł",
+      "28 zł",
+      "36 zł",
+      "81 zł"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Równowaga: q + 11 = −2q + 38, czyli q = 9 i p = 20 zł. Po podatku podaż ma postać p = q + 17, więc q + 17 = −2q + 38, czyli q = 7 i p = 24 zł. Konsumenci płacą o 4 zł więcej na baterii, więc ich obciążenie = 4 × 7 = 28 zł (B)."
+  },
+  {
+    "id": "owe35-c-05",
+    "type": "multi",
+    "edition": "XXXV OWE (2021/2022), zawody centralne",
+    "question": "Adam konsumuje dwa rodzaje dóbr: A i B. Pierwotnie jego krzywa ograniczenia budżetowego była opisana równaniem: 1000 = 20A + 40B (gdzie: A, B – ilość konsumowanego dobra odpowiednio A i B). Jednak obecnie przyjęła ona postać: 2000 = 20A + 40B. Która z odpowiedzi przedstawia możliwą przyczynę takiej zmiany?",
+    "options": [
+      "wzrost dochodu konsumenta o 1000",
+      "dwukrotny wzrost ceny zarówno dobra A, jak i B",
+      "spadek ceny wyłącznie dobra A",
+      "spadek ceny wyłącznie dobra B"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Wydatek na zakup rośnie z 1000 do 2000 przy niezmienionych cenach (20 i 40), więc linia budżetu przesuwa się równolegle na zewnątrz – dochód wzrósł o 1000 (A). Dwukrotny wzrost cen obu dóbr zwęziłby możliwości (B), a zmiana ceny jednego dobra zmieniłaby nachylenie (C, D)."
+  },
+  {
+    "id": "owe35-c-06",
+    "type": "multi",
+    "edition": "XXXV OWE (2021/2022), zawody centralne",
+    "question": "W gospodarce autarkicznej, w warunkach braku państwa, funkcja oszczędności jest opisana równaniem S = -100 + 0,3Y (gdzie: S – oszczędności; Y – produkt krajowy brutto; C – konsumpcja). Która z odpowiedzi przedstawia funkcję konsumpcji?",
+    "options": [
+      "C = -100 + 0,3Y",
+      "C = 100 – 0,7Y",
+      "C = -100 – 0,3Y",
+      "C = 100 + 0,7Y"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "W gospodarce bez państwa Y = C + S, więc C = Y − S = Y − (−100 + 0,3Y) = 100 + 0,7Y (D). Krańcowa skłonność do konsumpcji = 1 − 0,3 = 0,7, a konsumpcja autonomiczna = 100."
+  },
+  {
+    "id": "owe35-c-07",
+    "type": "multi",
+    "edition": "XXXV OWE (2021/2022), zawody centralne",
+    "question": "Nadzór nad rynkiem kapitałowym w Polsce sprawuje:",
+    "options": [
+      "Narodowy Bank Polski",
+      "Komisja Nadzoru Finansowego",
+      "Komisja Papierów Wartościowych",
+      "Komitet Kontroli Obrotu Papierami Wartościowymi"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Nadzór nad rynkiem kapitałowym w Polsce sprawuje Komisja Nadzoru Finansowego (B). Komisja Papierów Wartościowych (i Giełd) działała przed 2006 r. – jej zadania przejęła KNF."
+  },
+  {
+    "id": "owe35-c-08",
+    "type": "multi",
+    "edition": "XXXV OWE (2021/2022), zawody centralne",
+    "question": "Które stwierdzenie dotyczące krańcowej skłonności do konsumpcji jest prawdziwe?",
+    "options": [
+      "im wyższa krańcowa skłonność do konsumpcji, tym bardziej stroma jest krzywa ilustrująca funkcję konsumpcji",
+      "im wyższa krańcowa skłonność do konsumpcji, tym wyższa jest konsumpcja autonomiczna",
+      "krańcowa skłonność do konsumpcji jest równa odwrotności krańcowej skłonności do oszczędzania",
+      "nie może być równa 2"
+    ],
+    "correct": [
+      0,
+      3
+    ],
+    "explanation": "Krańcowa skłonność do konsumpcji (MPC) to nachylenie funkcji konsumpcji – im wyższa, tym bardziej stroma krzywa (A). Nie wpływa na konsumpcję autonomiczną (B). MPC + MPS = 1, więc MPC to nie odwrotność MPS (C). MPC mieści się zwykle między 0 a 1, więc nie może wynosić 2 (D)."
+  },
+  {
+    "id": "owe35-c-09",
+    "type": "multi",
+    "edition": "XXXV OWE (2021/2022), zawody centralne",
+    "question": "W gospodarce autarkicznej stopa opodatkowania wynosi 0,25, a krańcowa skłonność do oszczędzania 0,20. Ile wynosi mnożnik podatkowy w tej gospodarce?",
+    "options": [
+      "- 0,95",
+      "-2,00",
+      "-2,22",
+      "-5,00"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "MPC = 1 − 0,2 = 0,8. Mnożnik podatkowy przy podatku proporcjonalnym = −MPC / (1 − MPC(1 − t)) = −0,8 / (1 − 0,8 × 0,75) = −0,8 / 0,4 = −2 (B)."
+  },
+  {
+    "id": "owe35-c-10",
+    "type": "multi",
+    "edition": "XXXV OWE (2021/2022), zawody centralne",
+    "question": "Krzywa Engla:",
+    "options": [
+      "odzwierciedla zależność między popytem a wysokością dochodu",
+      "w przypadku dóbr luksusowych jest nachylona ujemnie",
+      "w przypadku dóbr Giffena jest nachylona ujemnie",
+      "w przypadku dóbr luksusowych jest pionowa"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "Krzywa Engla pokazuje zależność popytu od dochodu (A). Dla dóbr niższego rzędu, w tym dóbr Giffena, opada (C). Dla dóbr luksusowych rośnie, i to coraz szybciej – nie jest ujemna ani pionowa (B, D)."
+  },
+  {
+    "id": "owe35-c-11",
+    "type": "multi",
+    "edition": "XXXV OWE (2021/2022), zawody centralne",
+    "question": "Strategia inwestycyjna short strangle wykorzystująca opcje, w których instrumentem podstawowym jest akcja pewnej spółki, polega na:",
+    "options": [
+      "wystawieniu opcji call i opcji put z tymi samymi cenami wykonania",
+      "zakupie opcji call i opcji put z różnymi cenami wykonania",
+      "wystawieniu opcji call i opcji put z różnymi cenami wykonania",
+      "zakupie opcji call i opcji put z tymi samymi cenami wykonania"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Short strangle to wystawienie (sprzedaż) opcji call i opcji put z różnymi cenami wykonania (C) – inwestor zarabia premie, gdy cena akcji pozostaje w przedziale między cenami wykonania. Wystawienie opcji z tą samą ceną wykonania to short straddle (A)."
+  },
+  {
+    "id": "owe35-c-12",
+    "type": "multi",
+    "edition": "XXXV OWE (2021/2022), zawody centralne",
+    "question": "Które z wymienionych źródeł dochodów budżetu państwa w Polsce jest najbardziej wydajne (stan na rok 2021)?",
+    "options": [
+      "podatek od dochodów osób prawnych",
+      "podatek od dochodów osób fizycznych",
+      "podatek od niektórych instytucji finansowych",
+      "wpłata z zysku NBP"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Spośród wymienionych źródeł najwięcej do budżetu państwa przynosił w 2021 r. podatek dochodowy od osób fizycznych (B). Największym źródłem dochodów budżetu jest VAT, którego nie ma wśród odpowiedzi."
+  },
+  {
+    "id": "owe35-c-13",
+    "type": "multi",
+    "edition": "XXXV OWE (2021/2022), zawody centralne",
+    "question": "Która z odpowiedzi wskazuje podstawowy obszar działalności funduszy private equity?",
+    "options": [
+      "inwestowanie w stosunkowo młode, perspektywiczne, ale jednocześnie obciążone wyższym ryzykiem przedsiębiorstwa, których akcje nie są przedmiotem obrotu na giełdzie",
+      "pośrednictwo między inwestorami przy transakcjach na rynku kapitałowym",
+      "inwestowanie w znajdujące się w obrocie giełdowym papiery wartościowe prywatnych przedsiębiorstw (bez udziału Skarbu Państwa)",
+      "inwestowanie w tzw. blue chips, niezależnie od struktury ich akcjonariatu"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Fundusze private equity inwestują w spółki nienotowane na giełdzie – zwłaszcza perspektywiczne przedsiębiorstwa obciążone wyższym ryzykiem – by po kilku latach sprzedać udziały z zyskiem (A). Pośrednictwo w transakcjach to rola domów maklerskich (B)."
+  },
+  {
+    "id": "owe35-c-14",
+    "type": "multi",
+    "edition": "XXXV OWE (2021/2022), zawody centralne",
+    "question": "Na rynku działają dwa przedsiębiorstwa X i Y będące duopolistami Bertranda konkurującymi cenowo. Każdy z nich produkuje po stałym koszcie krańcowym równym 30 zł. Krzywa popytu rynkowego dla tych duopolistów jest opisana równaniem p = −2q + 50 (gdzie: p – cena za jednostkę w zł; q – ilość jednostek). Ile wyniesie cena dobra produkowanego przez te przedsiębiorstwa w sytuacji równowagi (Nasha) na tym rynku?",
+    "options": [
+      "10 zł",
+      "15 zł",
+      "30 zł",
+      "40 zł"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "W modelu Bertranda firmy obniżają ceny, aż cena zrówna się z kosztem krańcowym. Cena równowagi Nasha = MC = 30 zł (C)."
+  },
+  {
+    "id": "owe35-c-15",
+    "type": "multi",
+    "edition": "XXXV OWE (2021/2022), zawody centralne",
+    "question": "W pewnym kraju PKB rzeczywisty = 19,7 mld USD, PKB potencjalny = 20 mld USD, a naturalna stopa bezrobocia = 7%. Bazując na zmodyfikowanym prawie Okuna, oszacuj faktyczną stopę bezrobocia w tym kraju:",
+    "options": [
+      "3,0%",
+      "7,0%",
+      "7,5%",
+      "8,5%"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Luka PKB = (19,7 − 20) / 20 = −1,5%. Przy współczynniku Okuna 3 bezrobocie przekracza naturalne o 0,5 p.p.: 7% + 0,5% = 7,5% (C)."
+  },
+  {
+    "id": "owe35-c-16",
+    "type": "multi",
+    "edition": "XXXV OWE (2021/2022), zawody centralne",
+    "question": "Które stwierdzenie dotyczące produktu narodowego netto w cenach rynkowych jest prawdziwe?",
+    "options": [
+      "obejmuje on podatki pośrednie",
+      "jest to produkt narodowy brutto w cenach rynkowych pomniejszony o amortyzację",
+      "jest to produkt narodowy netto w cenach bazowych skorygowany o dochody z pracy na własny rachunek",
+      "jest to produkt krajowy brutto w cenach rynkowych skorygowany o dochody netto z własności za granicą"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "PNN w cenach rynkowych = PNB w cenach rynkowych − amortyzacja (B). Cena rynkowa obejmuje podatki pośrednie (A). C i D opisują inne korekty i są błędne."
+  },
+  {
+    "id": "owe35-c-17",
+    "type": "multi",
+    "edition": "XXXV OWE (2021/2022), zawody centralne",
+    "question": "Posiadaczowi akcji zwykłej przysługuje prawo:",
+    "options": [
+      "do dywidendy",
+      "poboru",
+      "do udziału w masie likwidacyjnej",
+      "do głosu na walnym zgromadzeniu"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "Akcja zwykła daje prawa majątkowe – do dywidendy (A), poboru nowych akcji (B) i do udziału w majątku po likwidacji spółki (C) – oraz prawo korporacyjne: głosu na walnym zgromadzeniu (D)."
+  },
+  {
+    "id": "owe35-c-18",
+    "type": "multi",
+    "edition": "XXXV OWE (2021/2022), zawody centralne",
+    "question": "Członkiem Komitetu Stabilności Finansowej jest z urzędu:",
+    "options": [
+      "Prezes Narodowego Banku Polskiego",
+      "Prezes Zarządu Banku Gospodarstwa Krajowego",
+      "Prezes Zarządu Bankowego Funduszu Gwarancyjnego",
+      "Prezes Zarządu Giełdy Papierów Wartościowych w Warszawie"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "Komitet Stabilności Finansowej tworzą z urzędu: Minister Finansów, Prezes NBP (przewodniczący – A), Przewodniczący KNF i Prezes Zarządu BFG (C). Nie należą do niego prezesi BGK ani GPW."
+  },
+  {
+    "id": "owe35-c-19",
+    "type": "multi",
+    "edition": "XXXV OWE (2021/2022), zawody centralne",
+    "question": "Autorami dwumianowego modelu wyceny opcji są:",
+    "options": [
+      "F. Black i M. Scholes",
+      "F. Black, M. Scholes i R. Merton",
+      "J. Cox, S. Ross i M. Rubinstein",
+      "F. Modigliani i M. Miller"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Dwumianowy model wyceny opcji opracowali J. Cox, S. Ross i M. Rubinstein w 1979 r. (C). F. Black i M. Scholes (z R. Mertonem) stworzyli ciągły model Blacka–Scholesa (A, B)."
+  },
+  {
+    "id": "owe35-c-20",
+    "type": "multi",
+    "edition": "XXXV OWE (2021/2022), zawody centralne",
+    "question": "Rynek NewConnect powstał w celu umożliwienia:",
+    "options": [
+      "obrotu obligacjami skarbowymi na rynku wtórnym",
+      "emisji obligacji dużym instytucjom finansowym",
+      "pozyskania kapitału dla małych i średnich przedsiębiorstw",
+      "pozyskania kapitału akcyjnego wyłącznie spółkom zagranicznym"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "NewConnect to prowadzony przez GPW od 2007 r. rynek alternatywny dla małych i średnich, często młodych spółek, które chcą pozyskać kapitał przy mniejszych wymogach niż na rynku głównym (C)."
+  },
+  {
+    "id": "owe35-c-21",
+    "type": "multi",
+    "edition": "XXXV OWE (2021/2022), zawody centralne",
+    "question": "W przypadku zerokuponowej obligacji Skarbu Państwa o terminie wykupu 2 lata, wartości nominalnej 1000 zł, której cena to 942 zł, stopa dochodu w okresie do wykupu (YTM) wynosi:",
+    "options": [
+      "3,03%",
+      "5,80%",
+      "6,16%",
+      "9,42%"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Dla obligacji zerokuponowej 942 = 1000 / (1 + r)², więc (1 + r)² = 1,0616 i r = 1,0303 − 1 ≈ 3,03% rocznie (A). 6,16% to dochód za cały dwuletni okres (C)."
+  },
+  {
+    "id": "owe35-c-22",
+    "type": "multi",
+    "edition": "XXXV OWE (2021/2022), zawody centralne",
+    "question": "Według G. Akerlofa asymetria informacji może prowadzić do:",
+    "options": [
+      "negatywnej selekcji",
+      "odwrócenia krzywej dochodowości",
+      "kryzysów walutowych pierwszej generacji",
+      "histerezy bezrobocia"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "G. Akerlof („The Market for Lemons”, 1970) pokazał, że asymetria informacji prowadzi do negatywnej selekcji – dobra wysokiej jakości wypierane są przez gorsze (A)."
+  },
+  {
+    "id": "owe35-c-23",
+    "type": "multi",
+    "edition": "XXXV OWE (2021/2022), zawody centralne",
+    "question": "Na rynku Catalyst notowane są:",
+    "options": [
+      "obligacje komunalne",
+      "obligacje skarbowe",
+      "listy zastawne",
+      "prawa do akcji"
+    ],
+    "correct": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Catalyst to rynek instrumentów dłużnych prowadzony przez GPW i BondSpot. Notowane są na nim obligacje komunalne (A), skarbowe (B), korporacyjne i listy zastawne (C). Prawa do akcji notuje się na rynku akcji (D)."
+  },
+  {
+    "id": "owe35-c-24",
+    "type": "multi",
+    "edition": "XXXV OWE (2021/2022), zawody centralne",
+    "question": "Które stwierdzenie dotyczące obligacji przychodowych jest prawdziwe?",
+    "options": [
+      "emitentami tego typu obligacji w Polsce są jednostki samorządu terytorialnego",
+      "w przypadku tego typu obligacji obligatariuszowi przysługuje prawo do wcześniejszego wykupu",
+      "w przypadku tego typu obligacji emitentowi przysługuje prawo do wcześniejszego wykupu",
+      "tego typu obligacje mogą być emitowane wyłącznie przez banki hipoteczne"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Obligacje przychodowe emitują w Polsce głównie jednostki samorządu terytorialnego i ich spółki (A). Wierzyciel zaspokaja się z przychodów finansowanego przedsięwzięcia. Mogą je emitować nie tylko banki hipoteczne (D), a prawo wcześniejszego wykupu nie jest ich cechą konieczną (B, C)."
+  },
+  {
+    "id": "owe35-c-25",
+    "type": "multi",
+    "edition": "XXXV OWE (2021/2022), zawody centralne",
+    "question": "Na doskonale konkurencyjnym rynku mleka, będącym w stanie długookresowej równowagi, każde z przedsiębiorstw osiąga zysk normalny, a cena 1 litra mleka wynosi 18 zł. Które stwierdzenie jest prawdziwe?",
+    "options": [
+      "w przypadku każdego przedsiębiorstwa minimalna wartość długookresowego kosztu całkowitego wynosi 18 zł",
+      "koszt krańcowy produkcji mleka w każdym przedsiębiorstwie jest mniejszy od 18 zł",
+      "w przypadku każdego przedsiębiorstwa wartość długookresowego kosztu przeciętnego produkcji 1 litra mleka wynosi 18 zł",
+      "występowanie zysku normalnego na rynku produkcji mleka zachęci kolejne podmioty do wejścia na ten rynek"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "W długookresowej równowadze konkurencji doskonałej cena = minimum długookresowego kosztu przeciętnego, więc LAC = 18 zł (C). Koszt krańcowy też wynosi 18 zł (B – fałsz). Zysk normalny (zerowy zysk ekonomiczny) nie przyciąga nowych firm (D). A dotyczy kosztu całkowitego, a nie przeciętnego."
+  },
+  {
+    "id": "owe35-c-26",
+    "type": "multi",
+    "edition": "XXXV OWE (2021/2022), zawody centralne",
+    "question": "Które stwierdzenie dotyczące hierarchii potrzeb Maslowa jest prawdziwe?",
+    "options": [
+      "jest ona kluczowym osiągnięciem zarządzania naukowego",
+      "w jej ramach można wyróżnić potrzebę przynależności",
+      "niezależnie od zaspokojenia innych potrzeb (np. fizjologicznych) głównym czynnikiem motywacyjnym danej osoby jest zawsze potrzeba samorealizacji",
+      "potrzeba szacunku znajduje się na szczycie hierarchii Maslowa"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Piramida Maslowa obejmuje potrzeby fizjologiczne, bezpieczeństwa, przynależności (B), szacunku i – na szczycie – samorealizacji (D – fałsz). Należy do nurtu behawioralnego, a nie zarządzania naukowego (A). Potrzeby wyższe motywują dopiero po zaspokojeniu niższych (C)."
+  },
+  {
+    "id": "owe35-c-27",
+    "type": "multi",
+    "edition": "XXXV OWE (2021/2022), zawody centralne",
+    "question": "Twórcą klasycznej teorii cyklu życia produktu jest:",
+    "options": [
+      "M. Weber",
+      "R. Solow",
+      "T. Levitt",
+      "L. Walras"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Klasyczną koncepcję cyklu życia produktu spopularyzował T. Levitt („Exploit the Product Life Cycle”, 1965) – C."
+  },
+  {
+    "id": "owe35-c-28",
+    "type": "multi",
+    "edition": "XXXV OWE (2021/2022), zawody centralne",
+    "question": "Które stwierdzenie dotyczące siatki przywództwa jest prawdziwe?",
+    "options": [
+      "jest to narzędzie zarządzania naukowego",
+      "jest to narzędzie oceny stylów kierowania",
+      "zgodnie z podejściem przedstawionym w jej ramach idealnym stylem zarządzania przywódczego jest zarządzanie zespołowe",
+      "zgodnie z podejściem przedstawionym w jej ramach idealnym stylem zarządzania przywódczego jest zarządzanie zrównoważone"
+    ],
+    "correct": [
+      1,
+      2
+    ],
+    "explanation": "Siatka kierownicza (Blake i Mouton) to narzędzie oceny stylów kierowania wg troski o ludzi i o produkcję (B). Za idealny uznaje się styl zespołowy (9,9 – C), a nie zrównoważony (5,5 – D)."
+  },
+  {
+    "id": "owe35-c-29",
+    "type": "multi",
+    "edition": "XXXV OWE (2021/2022), zawody centralne",
+    "question": "Które stwierdzenie dotyczące teorii ścieżki do celu jest prawdziwe?",
+    "options": [
+      "jest ona rozwinięciem teorii motywowania opartej na oczekiwaniach",
+      "jej twórcą jest H. Emerson",
+      "partycypacyjne zachowanie przywódcy jest jednym z rodzajów zachowań wyróżnionych w ramach tej teorii",
+      "teoria ta identyfikuje dziesięć rodzajów zachowań przywódcy"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "Teoria ścieżki do celu (R. House) wywodzi się z teorii oczekiwań (A). Wyróżnia 4 zachowania przywódcy: dyrektywne, wspierające, partycypacyjne (C) i zorientowane na osiągnięcia – nie 10 (D). H. Emerson nie jest jej autorem (B)."
+  },
+  {
+    "id": "owe35-c-30",
+    "type": "multi",
+    "edition": "XXXV OWE (2021/2022), zawody centralne",
+    "question": "Które stwierdzenie dotyczące F.W. Taylora jest prawdziwe?",
+    "options": [
+      "jest on autorem teorii dwuczynnikowej",
+      "wspólnie z D. McGregorem opracował teorię X",
+      "jest przedstawicielem klasycznego podejścia do zarządzania",
+      "był zwolennikiem akordowego systemu wynagrodzeń"
+    ],
+    "correct": [
+      2,
+      3
+    ],
+    "explanation": "F.W. Taylor, twórca naukowego zarządzania, reprezentuje klasyczne podejście do zarządzania (C). Był zwolennikiem akordowego systemu płac – wynagrodzenie zależne od wydajności (D). Teorię dwuczynnikową stworzył Herzberg (A), a teorię X – McGregor (B)."
+  }
+]

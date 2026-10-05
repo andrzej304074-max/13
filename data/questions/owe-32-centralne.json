@@ -1,0 +1,505 @@
+[
+  {
+    "id": "owe32-c-01",
+    "type": "multi",
+    "edition": "XXXII OWE (2018/2019), zawody centralne",
+    "question": "WIG20 to indeks:",
+    "options": [
+      "w którym nie może uczestniczyć więcej niż 5 spółek, których akcjonariuszem jest Skarb Państwa",
+      "przy obliczaniu którego bierze się pod uwagę dochody z tytułu dywidend",
+      "typu cenowego",
+      "obliczany na podstawie wartości portfela akcji 20 spółek, które w poprzednim roku osiągnęły największy poziom wskaźnika zysku na akcję"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "WIG20 jest indeksem cenowym – uwzględnia tylko zmiany cen akcji, bez dywidend (C, B – fałsz). Obejmuje 20 największych i najpłynniejszych spółek, nie spółek o najwyższym zysku na akcję (D). Ograniczenie dotyczy maksymalnie 5 spółek z jednego sektora, a nie spółek Skarbu Państwa (A)."
+  },
+  {
+    "id": "owe32-c-02",
+    "type": "multi",
+    "edition": "XXXII OWE (2018/2019), zawody centralne",
+    "question": "Które zdanie dotyczące interwencji walutowych jest prawdziwe:",
+    "options": [
+      "w związku z realizacją strategii bezpośredniego celu inflacyjnego Narodowy Bank Polski nie może dokonywać interwencji walutowych",
+      "Narodowy Bank Polski w latach 1999–2019 przynajmniej raz interweniował na rynku walutowym",
+      "niesterylizowana interwencja na rynku walutowym wpływa na krajową podaż pieniądza",
+      "decyzję o interwencji na rynku walutowym w Polsce zatwierdza każdorazowo Rada Polityki Pieniężnej"
+    ],
+    "correct": [
+      1,
+      2
+    ],
+    "explanation": "Strategia celu inflacyjnego nie zakazuje NBP interwencji walutowych (A – fałsz). NBP interweniował np. w 2010 r. (B). Niesterylizowana interwencja zmienia krajową podaż pieniądza (C). O interwencjach decyduje Zarząd NBP, a nie RPP (D)."
+  },
+  {
+    "id": "owe32-c-03",
+    "type": "multi",
+    "edition": "XXXII OWE (2018/2019), zawody centralne",
+    "question": "Krzywa popytu na hamburgery jest opisana równaniem p = −q + 10, a krzywa podaży p = q + 2 (gdzie: p – cena za sztukę w zł; q – ilość w sztukach). Ilość w punkcie równowagi wynosi 4, a cena 6 zł. W kolejnym roku fiskalnym w związku z programem walki z otyłością wprowadzony zostanie podatek płacony przez sprzedawców hamburgerów w wysokości 2 zł od sztuki. Równanie nowej krzywej podaży to p = q + 4, a ilość w punkcie równowagi wyniesie 3 sztuki. Jaka jest wartość obciążenia podatkowego sprzedawców (w zł)?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "6"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Przed podatkiem cena wynosi 6 zł. Po podatku konsumenci płacą p = −3 + 10 = 7 zł, a sprzedawcy dostają 7 − 2 = 5 zł, czyli o 1 zł mniej na sztuce. Obciążenie sprzedawców = 1 zł × 3 szt. = 3 zł (C)."
+  },
+  {
+    "id": "owe32-c-04",
+    "type": "multi",
+    "edition": "XXXII OWE (2018/2019), zawody centralne",
+    "question": "W spółce X wskaźnik zyskowności jednej akcji wynosi 20, a zysk netto 2000 (dane w zł). Dodatkowo wiemy, że 80% zysku netto zostało przeznaczone na dywidendę. Ile wynosi wskaźnik dywidendy na akcję (w zł)?",
+    "options": [
+      "2",
+      "8",
+      "16",
+      "80"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Zysk na akcję = 20 zł, więc liczba akcji = 2000 / 20 = 100. Dywidenda = 80% × 2000 = 1600 zł, czyli 1600 / 100 = 16 zł na akcję (C)."
+  },
+  {
+    "id": "owe32-c-05",
+    "type": "multi",
+    "edition": "XXXII OWE (2018/2019), zawody centralne",
+    "question": "Które zdanie dotyczące finansów publicznych w Polsce jest prawdziwe:",
+    "options": [
+      "wszystkie wydatki publiczne w Polsce ujęte są w ustawie budżetowej",
+      "jeżeli wraz z rozpoczęciem roku budżetowego nie ma uchwalonej ani ustawy budżetowej, ani ustawy o prowizorium budżetowym, to wydatkowanie środków budżetowych odbywa się na podstawie projektu ustawy budżetowej",
+      "w wyjątkowych przypadkach dochody i wydatki państwa w okresie krótszym niż rok może określać ustawa o prowizorium budżetowym",
+      "deficyt budżetowy można finansować pożyczką w Narodowym Banku Polskim"
+    ],
+    "correct": [
+      1,
+      2
+    ],
+    "explanation": "Nie wszystkie wydatki publiczne są w ustawie budżetowej – są też fundusze celowe, samorządy, agencje (A). Gdy na początku roku nie ma ani ustawy budżetowej, ani prowizorium, wydatki realizuje się na podstawie projektu ustawy budżetowej (B). Prowizorium może określać dochody i wydatki na okres krótszy niż rok (C). Konstytucja zakazuje finansowania deficytu kredytem w NBP (D)."
+  },
+  {
+    "id": "owe32-c-06",
+    "type": "multi",
+    "edition": "XXXII OWE (2018/2019), zawody centralne",
+    "question": "Zbędna strata społeczna nie występuje w przypadku:",
+    "options": [
+      "rynku monopolistycznego z doskonałym różnicowaniem ceny",
+      "rynku monopolistycznego z jednolitą ceną",
+      "konkurencji doskonałej",
+      "wszystkich struktur rynkowych"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "Zbędna strata społeczna nie występuje w konkurencji doskonałej (C) i u monopolisty doskonale różnicującego cenę, który sprzedaje aż do P = MC (A). Monopolista z jednolitą ceną ogranicza produkcję i powoduje stratę (B)."
+  },
+  {
+    "id": "owe32-c-07",
+    "type": "multi",
+    "edition": "XXXII OWE (2018/2019), zawody centralne",
+    "question": "Które zdanie dotyczące izokwanty produkcji jest prawdziwe:",
+    "options": [
+      "określa ona wszystkie kombinacje czynników wytwórczych umożliwiające wytworzenie danej wielkości produkcji",
+      "miarą jej nachylenia jest iloczyn produktów krańcowych czynników wytwórczych",
+      "miarą jej nachylenia jest suma produktów krańcowych czynników wytwórczych",
+      "uwzględnia ona koszty czynników produkcji"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Izokwanta to zbiór kombinacji czynników dających tę samą wielkość produkcji (A). Jej nachylenie (krańcowa stopa technicznej substytucji) to iloraz produktów krańcowych, a nie ich iloczyn czy suma (B, C). Kosztów nie uwzględnia – to rola izokoszty (D)."
+  },
+  {
+    "id": "owe32-c-08",
+    "type": "multi",
+    "edition": "XXXII OWE (2018/2019), zawody centralne",
+    "question": "Wartość mnożnika wydatków rządowych w gospodarce otwartej jest tym większa, im:",
+    "options": [
+      "większa jest krańcowa skłonność do oszczędzania",
+      "większa jest krańcowa skłonność do konsumpcji",
+      "mniejsza jest krańcowa skłonność do importu",
+      "mniejsza jest stopa opodatkowania"
+    ],
+    "correct": [
+      1,
+      2,
+      3
+    ],
+    "explanation": "Mnożnik w gospodarce otwartej = 1 / (1 − c(1 − t) + m). Rośnie, gdy rośnie krańcowa skłonność do konsumpcji (B) i gdy maleją krańcowa skłonność do importu (C) oraz stopa podatkowa (D). Wyższa skłonność do oszczędzania zmniejsza mnożnik (A)."
+  },
+  {
+    "id": "owe32-c-09",
+    "type": "multi",
+    "edition": "XXXII OWE (2018/2019), zawody centralne",
+    "question": "W Polsce prospekt emisyjny udostępniany do publicznej wiadomości w ramach oferty publicznej podlega zatwierdzeniu przez:",
+    "options": [
+      "Komitet Stabilności Finansowej",
+      "Krajowy Depozyt Papierów Wartościowych",
+      "Radę ds. Funkcjonowania Rynku Kapitałowego",
+      "Komisję Nadzoru Finansowego"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Prospekt emisyjny w ofercie publicznej w Polsce zatwierdza Komisja Nadzoru Finansowego (D)."
+  },
+  {
+    "id": "owe32-c-10",
+    "type": "multi",
+    "edition": "XXXII OWE (2018/2019), zawody centralne",
+    "question": "Terminem „dzień trzech wiedźm” na Giełdzie Papierów Wartościowych w Warszawie określa się:",
+    "options": [
+      "pierwszy piątek ostatniego miesiąca kwartału",
+      "dzień, w którym wygasają serie kontraktów terminowych m.in. na indeksy",
+      "dzień, w którym następuje publikacja raportów rocznych przez trzy największe spółki z WIG20",
+      "dzień, w którym ze względu na niską zmienność zawiesza się notowanie akcji danej spółki"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "„Dzień trzech wiedźm” to trzeci piątek ostatniego miesiąca kwartału, gdy jednocześnie wygasają serie kontraktów terminowych i opcji (m.in. na indeksy) – B. Często towarzyszy mu podwyższona zmienność."
+  },
+  {
+    "id": "owe32-c-11",
+    "type": "multi",
+    "edition": "XXXII OWE (2018/2019), zawody centralne",
+    "question": "Prawdą jest, że:",
+    "options": [
+      "prawo do akcji to inne określenie prawa poboru",
+      "prawo do akcji nie może być przedmiotem obrotu na rynku kapitałowym",
+      "prawo do akcji wygasa z chwilą zarejestrowania akcji nowej emisji spółki publicznej w depozycie papierów wartościowych",
+      "prawo do akcji powstaje z chwilą dokonania przydziału nowej emisji akcji spółki publicznej"
+    ],
+    "correct": [
+      2,
+      3
+    ],
+    "explanation": "Prawo do akcji (PDA) to papier wartościowy, z którego wynika uprawnienie do otrzymania nowych akcji. Powstaje z chwilą przydziału akcji nowej emisji (D) i wygasa z chwilą ich rejestracji w depozycie (C). Może być przedmiotem obrotu na giełdzie (B – fałsz) i różni się od prawa poboru (A)."
+  },
+  {
+    "id": "owe32-c-12",
+    "type": "multi",
+    "edition": "XXXII OWE (2018/2019), zawody centralne",
+    "question": "Które zdanie dotyczące ETF (Exchange Traded Fund) jest prawdziwe:",
+    "options": [
+      "tytuły uczestnictwa w tego typu funduszach są papierami wartościowymi",
+      "cechuje je aktywny styl zarządzania",
+      "tytuły uczestnictwa w tego typu funduszach są notowane na giełdzie",
+      "cechuje je pasywny styl zarządzania"
+    ],
+    "correct": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "ETF to fundusz, którego tytuły uczestnictwa są papierami wartościowymi (A) notowanymi na giełdzie (C). Zwykle zarządzany jest pasywnie – odwzorowuje indeks (D, B – fałsz)."
+  },
+  {
+    "id": "owe32-c-13",
+    "type": "multi",
+    "edition": "XXXII OWE (2018/2019), zawody centralne",
+    "question": "Po raz pierwszy terminu „choroba holenderska” użyto w kontekście problemów, które dotknęły:",
+    "options": [
+      "małą gospodarkę zamkniętą posiadającą znaczące złoża surowców naturalnych",
+      "małą gospodarkę otwartą posiadającą znaczące złoża surowców naturalnych",
+      "dużą gospodarkę otwartą nieposiadającą złóż surowców naturalnych",
+      "dużą gospodarkę zamkniętą posiadającą znaczące złoża surowców naturalnych"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Termin „choroba holenderska” powstał w latach 70. XX w. dla Holandii – małej gospodarki otwartej – po odkryciu złóż gazu na Morzu Północnym. Eksport gazu umocnił walutę i osłabił konkurencyjność przemysłu przetwórczego (B)."
+  },
+  {
+    "id": "owe32-c-14",
+    "type": "multi",
+    "edition": "XXXII OWE (2018/2019), zawody centralne",
+    "question": "W przypadku której pary dóbr można oczekiwać, że wartość elastyczności mieszanej popytu będzie dodatnia:",
+    "options": [
+      "długopis i pióro",
+      "narty i buty do nart",
+      "bilety do kina i popcorn",
+      "bułka do hotdoga i parówka"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Elastyczność mieszana jest dodatnia dla substytutów – wzrost ceny jednego dobra zwiększa popyt na drugie. Długopis i pióro to substytuty (A). Pozostałe pary to dobra komplementarne (ujemna elastyczność mieszana)."
+  },
+  {
+    "id": "owe32-c-15",
+    "type": "multi",
+    "edition": "XXXII OWE (2018/2019), zawody centralne",
+    "question": "Które z poniższych państw wystąpiło z ERM (Exchange Rate Mechanism) na początku lat 90. XX w.:",
+    "options": [
+      "Grecja",
+      "Wielka Brytania",
+      "Dania",
+      "Polska"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Wielka Brytania (wraz z Włochami) opuściła ERM we wrześniu 1992 r. („czarna środa”) po ataku spekulacyjnym na funta (B). Polska nie była w UE, a Grecja przystąpiła do ERM dopiero w 1998 r."
+  },
+  {
+    "id": "owe32-c-16",
+    "type": "multi",
+    "edition": "XXXII OWE (2018/2019), zawody centralne",
+    "question": "Opcja jest in-the-money, jeżeli:",
+    "options": [
+      "natychmiastowe jej wykonanie prowadziłoby do dodatniego przepływu pieniężnego dla jej wystawcy",
+      "obecna cena akcji, na które wystawiona jest opcja kupna, jest większa od ceny wykonania tej opcji",
+      "obecna cena akcji, na które wystawiona jest opcja sprzedaży, jest mniejsza od ceny wykonania tej opcji",
+      "natychmiastowe jej wykonanie prowadziłoby do dodatniego przepływu pieniężnego dla jej posiadacza"
+    ],
+    "correct": [
+      1,
+      2,
+      3
+    ],
+    "explanation": "Opcja jest „w pieniądzu”, gdy jej natychmiastowe wykonanie dałoby posiadaczowi dodatni przepływ (D): dla opcji kupna – gdy cena akcji przekracza cenę wykonania (B), dla opcji sprzedaży – gdy jest od niej niższa (C). A opisuje odwrotną sytuację z perspektywy wystawcy."
+  },
+  {
+    "id": "owe32-c-17",
+    "type": "multi",
+    "edition": "XXXII OWE (2018/2019), zawody centralne",
+    "question": "Które z poniższych stwierdzeń odnosi się do krótkiego okresu:",
+    "options": [
+      "pod Warszawą powstały trzy nowe firmy produkujące pompy ciepła",
+      "firma z Nowego Sącza skonstruowała nowy rodzaj wagonu kolejowego o maksymalnej ładowności 60 ton",
+      "z uwagi na dużą konkurencję liczba producentów cukierków spadła o 12%",
+      "w odpowiedzi na wzrost zamówień pracownicy fabryki okien pracują w nadgodzinach"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Krótki okres to czas, w którym część czynników (np. maszyny, liczba firm) jest stała, a zmienia się tylko wykorzystanie czynników zmiennych – np. godzin pracy (D). Wejście i wyjście firm z branży (A, C) oraz nowe technologie (B) to zmiany długookresowe."
+  },
+  {
+    "id": "owe32-c-18",
+    "type": "multi",
+    "edition": "XXXII OWE (2018/2019), zawody centralne",
+    "question": "Które zdanie dotyczące międzynarodowej pozycji inwestycyjnej netto w Polsce jest prawdziwe (stan na rok 2019):",
+    "options": [
+      "w przypadku sektora rządowego i samorządowego występuje ujemna międzynarodowa pozycja inwestycyjna netto",
+      "międzynarodowa pozycja inwestycyjna netto Polski jest permanentnie dodatnia",
+      "wartość międzynarodowej pozycji inwestycyjnej netto Polski oznacza, że jest ona dłużnikiem netto w stosunku do zagranicy",
+      "na zmniejszanie wartości międzynarodowej pozycji inwestycyjnej netto Polski w ostatnich latach największy wpływ ma zwiększanie się oficjalnych aktywów rezerwowych Narodowego Banku Polskiego"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "Międzynarodowa pozycja inwestycyjna netto Polski jest trwale ujemna – Polska jest dłużnikiem netto wobec zagranicy (C, B – fałsz). Ujemna jest też pozycja sektora rządowego i samorządowego, głównie przez zagraniczne inwestycje w polskie obligacje (A). Wzrost aktywów rezerwowych zmniejsza zadłużenie netto, a za poprawę pozycji odpowiadały głównie inne czynniki (D)."
+  },
+  {
+    "id": "owe32-c-19",
+    "type": "multi",
+    "edition": "XXXII OWE (2018/2019), zawody centralne",
+    "question": "Która z wymienionych pozycji polskiego bilansu płatniczego wchodzi w skład rachunku finansowego:",
+    "options": [
+      "inwestycje portfelowe – aktywa",
+      "inwestycje bezpośrednie – pasywa",
+      "rachunek kapitałowy – przychody",
+      "saldo dochodów wtórnych"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "Rachunek finansowy obejmuje inwestycje bezpośrednie, portfelowe, pozostałe, pochodne i aktywa rezerwowe – zarówno aktywa (A), jak i pasywa (B). Rachunek kapitałowy to osobna część bilansu (C), a dochody wtórne należą do rachunku bieżącego (D)."
+  },
+  {
+    "id": "owe32-c-20",
+    "type": "multi",
+    "edition": "XXXII OWE (2018/2019), zawody centralne",
+    "question": "Przemysł wydobywczy węgla w małym kraju X składa się wyłącznie z jednego przedsiębiorstwa. Krzywa popytu krajowego jest opisana równaniem p = −8q + 100 (gdzie: p – cena za tonę w zł; q – ilość w tonach), a cena światowa tony węgla wynosi 28 zł. Krzywa kosztu krańcowego tego przedsiębiorstwa to MC = 8q + 20. W celu ochrony producenta krajowego rząd rozważa wprowadzenie cła albo kwoty importowej. Niezależnie od zastosowanego rozwiązania celem rządu jest uzyskanie importu na poziomie 4 ton. Które z poniższych zdań dotyczących zastosowania alternatywnych narzędzi ochronnych w tym przypadku jest prawdziwe?",
+    "options": [
+      "wprowadzenie cła prowadzić będzie do niższej produkcji krajowej w porównaniu do kwoty importowej",
+      "wprowadzenie kwoty importowej prowadzi do niższej produkcji krajowej w porównaniu do cła",
+      "wprowadzenie kwoty importowej skutkuje wyższą ceną krajową w porównaniu do cła",
+      "wprowadzenie cła skutkuje wyższą ceną krajową w porównaniu do kwoty importowej"
+    ],
+    "correct": [
+      1,
+      2
+    ],
+    "explanation": "Import 4 t przy cle: cena P musi spełniać popyt − podaż = (100 − P)/8 − (P − 20)/8 = 4, więc P = 44 zł, a produkcja krajowa = (44 − 20)/8 = 3 t. Przy kwocie firma staje się monopolistą na popycie rezydualnym p = −8(q + 4) + 100 = −8q + 68; MR = −16q + 68 = MC = 8q + 20, więc q = 2 t i p = 52 zł. Kwota daje niższą produkcję (B) i wyższą cenę (C)."
+  },
+  {
+    "id": "owe32-c-21",
+    "type": "multi",
+    "edition": "XXXII OWE (2018/2019), zawody centralne",
+    "question": "Która z poniższych cen maksymalizuje utarg całkowity (wydatki całkowite), jeżeli krzywa popytu na dane dobro opisana jest wzorem p = −q + 100 (gdzie: p – cena za sztukę w zł; q – ilość w sztukach)?",
+    "options": [
+      "0",
+      "25",
+      "50",
+      "100"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Utarg całkowity jest maksymalny przy jednostkowej elastyczności popytu – dla liniowej krzywej w połowie jej długości. TR = p(100 − p) jest maksymalne przy p = 50 zł (C)."
+  },
+  {
+    "id": "owe32-c-22",
+    "type": "multi",
+    "edition": "XXXII OWE (2018/2019), zawody centralne",
+    "question": "Który z banków centralnych w okresie od początku kryzysu finansowego subprime do 2019 r. nie nabywał dłużnych papierów rządowych w ramach prowadzonej polityki pieniężnej?",
+    "options": [
+      "System Rezerwy Federalnej USA",
+      "Bank Anglii",
+      "Narodowy Bank Polski",
+      "Europejski Bank Centralny"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Fed, Bank Anglii i EBC w ramach luzowania ilościowego kupowały obligacje rządowe. NBP do 2019 r. tego nie robił (C) – pierwszy skup obligacji skarbowych przeprowadził dopiero w marcu 2020 r. (pandemia COVID-19)."
+  },
+  {
+    "id": "owe32-c-23",
+    "type": "multi",
+    "edition": "XXXII OWE (2018/2019), zawody centralne",
+    "question": "Za zarządzanie rezerwami dewizowymi w Polsce odpowiada:",
+    "options": [
+      "Minister Rozwoju",
+      "Narodowy Bank Polski",
+      "Bankowy Fundusz Gwarancyjny",
+      "Komitet Stabilności Finansowej"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Rezerwami dewizowymi Polski zarządza Narodowy Bank Polski (B) – wynika to z ustawy o NBP."
+  },
+  {
+    "id": "owe32-c-24",
+    "type": "multi",
+    "edition": "XXXII OWE (2018/2019), zawody centralne",
+    "question": "Która z funkcji popytu cechuje się stałą elastycznością:",
+    "options": [
+      "Q = 3P⁻³",
+      "Q = 2P⁻²",
+      "Q = −P + 1",
+      "Q = −2P⁻² + 2"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "Elastyczność stała jest dla funkcji potęgowych Q = aP^b – elastyczność równa się wykładnikowi b: dla A wynosi −3, dla B −2. Dla funkcji liniowej (C) i funkcji z dodaną stałą (D) elastyczność zmienia się wzdłuż krzywej."
+  },
+  {
+    "id": "owe32-c-25",
+    "type": "multi",
+    "edition": "XXXII OWE (2018/2019), zawody centralne",
+    "question": "PNB to:",
+    "options": [
+      "PKB plus dochody netto czynników produkcji z reszty świata",
+      "PKB minus amortyzacja",
+      "PKB plus amortyzacja",
+      "PKB minus amortyzacja plus podatki pośrednie"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "PNB = PKB + dochody netto czynników produkcji z zagranicy (A). Odjęcie amortyzacji daje produkt netto (B), a odjęcie podatków pośrednich – wartość w cenach czynników."
+  },
+  {
+    "id": "owe32-c-26",
+    "type": "multi",
+    "edition": "XXXII OWE (2018/2019), zawody centralne",
+    "question": "Opracowanie planów taktycznych obejmuje:",
+    "options": [
+      "rozpoznanie i zrozumienie nadrzędnych planów strategicznych i celów taktycznych",
+      "określenie odpowiednich zasobów i terminów",
+      "obserwację bieżących działań podjętych dla osiągnięcia celu",
+      "pozyskanie i afirmację informacji i zasobów"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "Według R. Griffina opracowanie planów taktycznych obejmuje rozpoznanie i zrozumienie nadrzędnych planów strategicznych i celów taktycznych (A) oraz określenie odpowiednich zasobów i terminów (B), a także uwzględnienie zaangażowania zasobów ludzkich. Obserwacja bieżących działań (C) należy do realizacji i kontroli planu."
+  },
+  {
+    "id": "owe32-c-27",
+    "type": "multi",
+    "edition": "XXXII OWE (2018/2019), zawody centralne",
+    "question": "Które zdanie przedstawia cechę idealnej biurokracji w rozumieniu M. Webera:",
+    "options": [
+      "organizacja powinna stworzyć spójny zestaw zasad w celu zapewnienia jednolitego wykonywania zadań",
+      "menedżerowie powinni prowadzić przedsiębiorstwo w sposób bezosobowy",
+      "menedżerowie powinni nawiązywać silne osobiste więzi z podwładnymi, tak aby lepiej zrozumieć ich postępowanie",
+      "organizacja powinna przyjąć wyraźny podział pracy"
+    ],
+    "correct": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Idealna biurokracja Webera to: jasny podział pracy (D), spójny system zasad zapewniający jednolitość (A), hierarchia, bezosobowe kierowanie (B) i awans według kompetencji. Silne osobiste więzi (C) są z nią sprzeczne."
+  },
+  {
+    "id": "owe32-c-28",
+    "type": "multi",
+    "edition": "XXXII OWE (2018/2019), zawody centralne",
+    "question": "Do typowych podstaw zależności przy wprowadzaniu dywersyfikacji zależnej zalicza się:",
+    "options": [
+      "podobne technologie",
+      "wspólne umiejętności marketingu i dystrybucji",
+      "wspólną markę firmową i reputację",
+      "wspólnych klientów"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "Dywersyfikacja zależna to rozszerzanie działalności na dziedziny powiązane z dotychczasową. Typowe podstawy powiązań to: podobna technologia (A), wspólne umiejętności marketingowe i dystrybucyjne (B), wspólna marka i reputacja (C) oraz wspólni klienci (D)."
+  },
+  {
+    "id": "owe32-c-29",
+    "type": "multi",
+    "edition": "XXXII OWE (2018/2019), zawody centralne",
+    "question": "Podstawowe funkcje zarządzania to:",
+    "options": [
+      "planowanie i podejmowanie decyzji",
+      "organizowanie",
+      "kontrolowanie",
+      "koncypowanie"
+    ],
+    "correct": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Podstawowe funkcje zarządzania (Griffin) to: planowanie i podejmowanie decyzji (A), organizowanie (B), przewodzenie (kierowanie ludźmi) i kontrolowanie (C). „Koncypowanie” (D) nią nie jest."
+  },
+  {
+    "id": "owe32-c-30",
+    "type": "multi",
+    "edition": "XXXII OWE (2018/2019), zawody centralne",
+    "question": "Które zdanie dotyczące faz rozwoju grupy jest prawdziwe:",
+    "options": [
+      "przejście z fazy normowania do fazy działania następuje poprzez wybuch aktywności",
+      "wyróżnia się 6 typowych etapów rozwoju grupy",
+      "faza konstytuowania się poprzedza fazę szturmowania",
+      "w fazie normowania członkowie grupy wzajemnie akceptują swoje role, łączy ich poczucie jedności"
+    ],
+    "correct": [
+      2,
+      3
+    ],
+    "explanation": "Model Tuckmana: formowanie (konstytuowanie się), szturmowanie (burzenie), normowanie i działanie (wykonywanie) – formowanie poprzedza szturmowanie (C). W fazie normowania członkowie akceptują swoje role i rośnie poczucie jedności (D). Typowo wyróżnia się 4 (ewentualnie 5) etapów, nie 6 (B)."
+  }
+]

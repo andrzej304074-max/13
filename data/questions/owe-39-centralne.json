@@ -1,0 +1,507 @@
+[
+  {
+    "id": "owe39-c-01",
+    "type": "multi",
+    "edition": "XXXIX OWE (2025/2026), zawody centralne",
+    "question": "Zakładając, że rozwój sztucznej inteligencji zwiększy strukturalne niedopasowania na rynku pracy, skutkiem tego będzie:",
+    "options": [
+      "sytuacja, którą na rysunku można zilustrować jako przesunięcie w prawo długookresowej krzywej Phillipsa",
+      "wzrost bezrobocia frykcyjnego",
+      "sytuacja, którą na rysunku można zilustrować jako przesunięcie w dół krzywej Beveridge’a",
+      "spadek bezrobocia keynesowskiego"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Większe niedopasowanie strukturalne podnosi naturalną stopę bezrobocia, co na wykresie oznacza przesunięcie pionowej, długookresowej krzywej Phillipsa w prawo (A). Rośnie bezrobocie strukturalne (nie frykcyjne – B), a krzywa Beveridge'a przesuwa się na zewnątrz, nie w dół (C)."
+  },
+  {
+    "id": "owe39-c-02",
+    "type": "multi",
+    "edition": "XXXIX OWE (2025/2026), zawody centralne",
+    "question": "Współautorem teorii nudge jest:",
+    "options": [
+      "M. Friedman",
+      "M. Kalecki",
+      "R. Thaler",
+      "D. Ricardo"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Teorię „szturchania” (nudge) – projektowania wyborów kierujących ludzi ku lepszym decyzjom bez ograniczania wolności – sformułowali R. Thaler i C. Sunstein (2008) – C. Thaler otrzymał Nagrodę Nobla w 2017 r."
+  },
+  {
+    "id": "owe39-c-03",
+    "type": "multi",
+    "edition": "XXXIX OWE (2025/2026), zawody centralne",
+    "question": "Zgodnie z hipotezą Lindera:",
+    "options": [
+      "kraj eksportuje te towary, które znajdują zbyt na rynku krajowym",
+      "handel międzynarodowy ma miejsce wtedy, gdy popyt w uczestniczących w nim krajach się pokrywa",
+      "handel międzynarodowy odbywa się jedynie między krajami o znaczących różnicach w poziomie rozwoju technologicznego",
+      "im bardziej zbliżony poziom rozwoju między krajami uczestniczącymi w wymianie handlowej, tym jest ona mniej intensywna"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "Hipoteza Lindera (1961): kraj eksportuje dobra, które najpierw znalazły zbyt na rynku krajowym (A), a handel jest najintensywniejszy między krajami o podobnym popycie, czyli zbliżonym poziomie dochodów (B, D – fałsz). Nie zakłada dużych różnic technologicznych (C)."
+  },
+  {
+    "id": "owe39-c-04",
+    "type": "multi",
+    "edition": "XXXIX OWE (2025/2026), zawody centralne",
+    "question": "Krzywa kosztu krańcowego przedsiębiorstwa jest opisana równaniem MC = 10. Które z równań krzywych kosztów może występować w tym przedsiębiorstwie (gdzie: q – ilość produkowanego dobra; ATC – całkowity koszt przeciętny; TC – koszt całkowity; AVC – zmienny koszt przeciętny)?",
+    "options": [
+      "TC = 10q + 10",
+      "TC = 10q",
+      "ATC = 100q⁻¹ + 10",
+      "AVC = 10q² + 10"
+    ],
+    "correct": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Stały MC = 10 oznacza koszt zmienny 10q i dowolny koszt stały: TC = 10q + 10 (A), TC = 10q (B) oraz ATC = 100/q + 10, czyli TC = 10q + 100 (C). AVC = 10q² + 10 dałoby rosnący koszt krańcowy (D)."
+  },
+  {
+    "id": "owe39-c-05",
+    "type": "multi",
+    "edition": "XXXIX OWE (2025/2026), zawody centralne",
+    "question": "Które stwierdzenie dotyczące wartości bezwzględnej elastyczności cenowej popytu jest prawdziwe?",
+    "options": [
+      "jest ona większa, gdy efekt dochodowy wzmacnia efekt substytucyjny",
+      "im mniejszy jest udział danego dobra w całkowitych wydatkach konsumenta, tym jest ona mniejsza",
+      "wzrasta ona wraz z dostępnością substytutów",
+      "mieści się ona w przedziale od 0 do 1"
+    ],
+    "correct": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Gdy efekt dochodowy wzmacnia substytucyjny (dobra normalne), reakcja popytu na cenę jest silniejsza (A). Elastyczność jest mniejsza, gdy dobro stanowi mały udział w wydatkach (B), i rośnie wraz z dostępnością substytutów (C). Może przekraczać 1 (popyt elastyczny – D)."
+  },
+  {
+    "id": "owe39-c-06",
+    "type": "multi",
+    "edition": "XXXIX OWE (2025/2026), zawody centralne",
+    "question": "Które stwierdzenie dotyczące zysku ekonomicznego jest prawdziwe?",
+    "options": [
+      "w długim okresie duopolista w modelu Bertranda osiąga dodatni zysk ekonomiczny",
+      "monopolista doskonale różnicujący cenę w krótkim okresie osiąga zysk ekonomiczny równy zero",
+      "przedsiębiorstwo na rynku doskonale konkurencyjnym może w krótkim okresie osiągać zysk ekonomiczny",
+      "jeżeli zysk normalny jest dodatni, to zysk ekonomiczny musi być równy zero"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Firma w konkurencji doskonałej może w krótkim okresie osiągać zysk ekonomiczny (C). Duopolista Bertranda ustala cenę = MC i ma zerowy zysk ekonomiczny (A). Monopolista doskonale różnicujący cenę osiąga duży zysk (B). Zysk normalny to koszt alternatywny kapitału, więc nie przesądza o zysku ekonomicznym (D)."
+  },
+  {
+    "id": "owe39-c-07",
+    "type": "multi",
+    "edition": "XXXIX OWE (2025/2026), zawody centralne",
+    "question": "Efekt terms of trade związany z wprowadzeniem cła może wystąpić tylko wtedy, gdy:",
+    "options": [
+      "stawka cła jest niewielka",
+      "cło będzie skutecznie chronić raczkujące gałęzie przemysłu",
+      "kraj wprowadzający cło jest krajem dużym",
+      "jest spełniony warunek Marshalla-Lernera"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Efekt terms of trade (poprawa relacji wymiany) występuje, gdy kraj nakładający cło jest duży – spadek jego importu obniża ceny światowe (C). Mały kraj jest cenobiorcą i nie wpływa na ceny światowe."
+  },
+  {
+    "id": "owe39-c-08",
+    "type": "multi",
+    "edition": "XXXIX OWE (2025/2026), zawody centralne",
+    "question": "Ograniczenie wydatków rządowych (G) przy jednoczesnym zmniejszeniu przychodów z tytułu podatków pomniejszonych o transfery budżetowe otrzymywane przez gospodarstwa domowe (podatki netto, T) o tę samą wartość:",
+    "options": [
+      "skutkuje spadkiem dochodu narodowego równego wartości zmniejszenia wydatków rządowych",
+      "nie wpływa na wartość dochodu narodowego",
+      "powoduje zwiększenie dochodu rozporządzalnego gospodarstw domowych",
+      "skutkuje zwiększeniem dochodu narodowego równego wartości zmniejszenia podatków netto"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Mnożnik zrównoważonego budżetu wynosi 1: jednoczesny spadek G i T o tę samą kwotę obniża dochód narodowy o kwotę spadku wydatków (A). Dochód rozporządzalny Y − T się nie zwiększa, bo spadek Y równa się spadkowi T (C)."
+  },
+  {
+    "id": "owe39-c-09",
+    "type": "multi",
+    "edition": "XXXIX OWE (2025/2026), zawody centralne",
+    "question": "Do czynników determinujących poziom bezrobocia NAIRU zaliczamy:",
+    "options": [
+      "restrykcyjność ustawodawstwa określającego stopień ochrony stosunku pracy",
+      "stopień uzwiązkowienia na rynku pracy",
+      "wysokość zasiłku dla bezrobotnych",
+      "poziom wydajności pracy"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "Poziom NAIRU zależy od instytucji rynku pracy: ochrony stosunku pracy (A), uzwiązkowienia (B), wysokości zasiłków (C) oraz – według klucza – wydajności pracy, która wpływa na relację płac i cen (D)."
+  },
+  {
+    "id": "owe39-c-10",
+    "type": "multi",
+    "edition": "XXXIX OWE (2025/2026), zawody centralne",
+    "question": "Zależność relacji wymiennych (cenowych) od wielkości eksportu i importu danego kraju przedstawia krzywa:",
+    "options": [
+      "J",
+      "oferty",
+      "popytu rezydualnego",
+      "transformacji"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Krzywa oferty (Marshalla–Edgewortha) pokazuje, ile kraj chce eksportować i importować przy różnych relacjach cen (terms of trade) – B. Krzywa J opisuje dynamikę bilansu handlowego po deprecjacji (A)."
+  },
+  {
+    "id": "owe39-c-11",
+    "type": "multi",
+    "edition": "XXXIX OWE (2025/2026), zawody centralne",
+    "question": "Przedsiębiorstwo wykorzystuje dwa rodzaje czynników produkcji, które nabywa na doskonale konkurencyjnych rynkach. W ubiegłym roku, aby wytworzyć 20 jednostek dobra, działając efektywnie, potrzebowało 4 jednostek nakładu x1 i 6 jednostek nakładu x2. Obecnie, aby wyprodukować tę samą ilość dobra, zużywa 3 jednostki nakładu x1 i 4 jednostki nakładu x2 (ceteris paribus). Które stwierdzenie prawidłowo opisuje porównanie obecnej sytuacji z ubiegłoroczną?",
+    "options": [
+      "izokwanta produkcji przesunęła się w prawo",
+      "nastąpiła zmiana technologii produkcji",
+      "koszt produkcji 20 jednostek dobra zmniejszył się",
+      "nastąpiła zmiana nachylenia izokoszty"
+    ],
+    "correct": [
+      1,
+      2
+    ],
+    "explanation": "Ta sama produkcja wymaga mniej obu czynników, więc nastąpił postęp technologiczny (B), a izokwanta przesunęła się w stronę początku układu (w lewo – A fałsz). Ceny czynników się nie zmieniły, więc koszt wytworzenia 20 jednostek spadł (C), a nachylenie izokoszty się nie zmieniło (D)."
+  },
+  {
+    "id": "owe39-c-12",
+    "type": "multi",
+    "edition": "XXXIX OWE (2025/2026), zawody centralne",
+    "question": "Konsument nabywa dwa dobra x i y. Jego linię ograniczenia budżetowego opisuje równanie y = 100 - 2x. Które stwierdzenie jest prawdziwe?",
+    "options": [
+      "konsument może maksymalnie nabyć 100 jednostek dobra y",
+      "konsument może maksymalnie nabyć 50 jednostek dobra x",
+      "cena dobra y musi wynosić 100",
+      "dobro y jest dwa razy droższe niż dobro x"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "Z y = 100 − 2x: przy x = 0 konsument kupi maksymalnie 100 jednostek y (A), a przy y = 0 – 50 jednostek x (B). Nachylenie −2 = −px/py, więc x jest dwa razy droższe od y (D – fałsz). Cena y zależy od dochodu, którego nie znamy (C)."
+  },
+  {
+    "id": "owe39-c-13",
+    "type": "multi",
+    "edition": "XXXIX OWE (2025/2026), zawody centralne",
+    "question": "Forward guidance jest wykorzystywany przez banki centralne w celu:",
+    "options": [
+      "obniżenia krótkoterminowych stóp procentowych",
+      "kształtowania nachylenia krzywej dochodowości",
+      "wpływania na poziom długoterminowych stóp procentowych",
+      "zarządzania rezerwami walutowymi"
+    ],
+    "correct": [
+      1,
+      2
+    ],
+    "explanation": "Forward guidance, czyli zapowiedzi przyszłej polityki, wpływa na oczekiwania co do stóp, a przez to na poziom stóp długoterminowych (C) i nachylenie krzywej dochodowości (B). Krótkie stopy bank centralny zmienia bezpośrednio decyzjami (A)."
+  },
+  {
+    "id": "owe39-c-14",
+    "type": "multi",
+    "edition": "XXXIX OWE (2025/2026), zawody centralne",
+    "question": "Których kryteriów nominalnej konwergencji Polska (zgodnie z Monitorem konwergencji z Unią Gospodarczą i Walutową Ministerstwa Finansów z grudnia 2025 r.) nie spełnia?",
+    "options": [
+      "stabilności cen",
+      "stabilności kursu walutowego",
+      "stóp procentowych",
+      "stabilności fiskalnej"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "Według Monitora konwergencji MF z grudnia 2025 r. Polska nie spełniała żadnego kryterium nominalnej konwergencji: stabilności cen (inflacja powyżej wartości referencyjnej – A), kursu (złoty poza ERM II – B), długoterminowych stóp procentowych (C) i finansów publicznych (procedura nadmiernego deficytu – D)."
+  },
+  {
+    "id": "owe39-c-15",
+    "type": "multi",
+    "edition": "XXXIX OWE (2025/2026), zawody centralne",
+    "question": "Produkcja każdej jednostki pewnego pierwiastka ziem rzadkich wiąże się z emisją szkodliwych substancji do środowiska. Które stwierdzenie dotyczące sytuacji na tym rynku jest prawdziwe?",
+    "options": [
+      "krzywa kosztu społecznego przebiega powyżej krzywej popytu",
+      "krzywa kosztu społecznego przebiega poniżej krzywej kosztu prywatnego",
+      "krzywa podaży przebiega poniżej krzywej kosztu prywatnego",
+      "ilość efektywna w wymiarze społecznym jest mniejsza od ilości równowagi"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Szkodliwa emisja to negatywny efekt zewnętrzny – koszt społeczny przewyższa prywatny (B – fałsz). Rynek produkuje więc więcej, niż wynosi optimum społeczne – ilość efektywna jest mniejsza od ilości równowagi (D)."
+  },
+  {
+    "id": "owe39-c-16",
+    "type": "multi",
+    "edition": "XXXIX OWE (2025/2026), zawody centralne",
+    "question": "Jeżeli każdy kwintyl liczby podmiotów w rozkładzie dochodów otrzymuje 20% dochodu całkowitego w gospodarce, to:",
+    "options": [
+      "współczynnik Giniego jest równy 0",
+      "współczynnik Giniego jest równy 1",
+      "krzywa Laffera przebiega pod kątem 45°",
+      "krzywa Lorenza przebiega poniżej krzywej równości absolutnej"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Gdy każda piąta część populacji ma 20% dochodu, dochód rozkłada się równo: krzywa Lorenza pokrywa się z linią równości absolutnej (D – fałsz), a współczynnik Giniego wynosi 0 (A). Krzywa Laffera dotyczy podatków (C)."
+  },
+  {
+    "id": "owe39-c-17",
+    "type": "multi",
+    "edition": "XXXIX OWE (2025/2026), zawody centralne",
+    "question": "Które ze stwierdzeń jest zgodne z koncepcją histerezy bezrobocia?",
+    "options": [
+      "na poziom bezrobocia równowagi w danym okresie wpływają wyłącznie bieżące czynniki o charakterze strukturalnym",
+      "negatywne wstrząsy na rynku pracy z przeszłości wpływają na aktualny poziom bezrobocia równowagi",
+      "silny i długotrwały spadek globalnego popytu nie wpływa na poziom bezrobocia równowagi w okresach przyszłych",
+      "restrykcyjna polityka pieniężna może prowadzić do zwiększenia poziomu bezrobocia równowagi w okresach przyszłych"
+    ],
+    "correct": [
+      1,
+      3
+    ],
+    "explanation": "Histereza oznacza, że przeszłe negatywne wstrząsy (np. długa recesja, restrykcyjna polityka pieniężna) trwale podnoszą bezrobocie równowagi (B, D). Bezrobotni tracą kwalifikacje, a insiderzy blokują outsiderów. Stoi to w sprzeczności z A i C."
+  },
+  {
+    "id": "owe39-c-18",
+    "type": "multi",
+    "edition": "XXXIX OWE (2025/2026), zawody centralne",
+    "question": "Przedsiębiorstwa A i B działają na tym samym rynku. W zależności od przyjętych strategii reklamowych ich zyski przedstawiają się następująco. Jeśli A prowadzi kampanię reklamową, a B nie, to zysk A = 1500, zysk B = 100. Jeśli B prowadzi kampanię reklamową, a A nie, to zysk A = 50, zysk B = 700. Jeśli oba przedsiębiorstwa prowadzą kampanie reklamowe, to zysk A = 900, zysk B = 400. Jeśli żadne z nich nie prowadzi kampanii, to zysk A = 1200, zysk B = 800. Które stwierdzenie jest prawdziwe?",
+    "options": [
+      "w przedstawionej sytuacji nie występuje równowaga Nasha",
+      "równowaga Nasha występuje w sytuacji, gdy oba przedsiębiorstwa będą się reklamować",
+      "B nie posiada strategii dominującej",
+      "strategią dominującą dla A jest prowadzenie kampanii reklamowej"
+    ],
+    "correct": [
+      1,
+      2,
+      3
+    ],
+    "explanation": "A: gdy B reklamuje, A woli reklamę (900 > 50), gdy B nie – też (1500 > 1200), więc reklama to strategia dominująca A (D). B: gdy A reklamuje, B woli reklamę (400 > 100), gdy A nie – woli jej brak (800 > 700), więc B nie ma strategii dominującej (C). Równowaga Nasha: obie firmy reklamują się (B)."
+  },
+  {
+    "id": "owe39-c-19",
+    "type": "multi",
+    "edition": "XXXIX OWE (2025/2026), zawody centralne",
+    "question": "Kraj X jest małą gospodarką. Krzywa popytu krajowego na latawce jest opisana równaniem q = −0,25p + 20, natomiast krzywa podaży krajowej to q = 0,25p − 1 (gdzie: q – ilość w sztukach; p – cena za sztukę). Cena światowa latawca jest równa 12, a ich przywóz do kraju X jest obecnie wolny od ceł. Ile wyniesie efekt redystrybucyjny nałożenia cła na poziomie 8 na jeden latawiec?",
+    "options": [
+      "8",
+      "16",
+      "24",
+      "88"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Przy cenie 12 podaż krajowa = 0,25 × 12 − 1 = 2. Po cle cena = 20, a podaż = 4. Efekt redystrybucyjny to przejęcie części nadwyżki konsumentów przez producentów krajowych: 8 × (2 + 4) / 2 = 24 (C). Wpływy z cła (efekt budżetowy) to 8 × 11 = 88 (D)."
+  },
+  {
+    "id": "owe39-c-20",
+    "type": "multi",
+    "edition": "XXXIX OWE (2025/2026), zawody centralne",
+    "question": "Konsument spożywa obecnie 12 sałatek i 6 hamburgerów (koszyk A). Jednocześnie wiemy, że tę samą użyteczność całkowitą konsument uzyskałby również przy spożyciu 8 sałatek i 8 hamburgerów (koszyk B). Które stwierdzenie jest prawdziwe?",
+    "options": [
+      "koszyki A i B leżą na tej samej krzywej obojętności",
+      "koszyki A i B muszą kosztować tyle samo",
+      "użyteczność krańcowa hamburgera jest większa niż sałatki",
+      "krańcowa stopa substytucji sałatek i hamburgerów przy zmianie koszyka A na B wynosi ok. 0,66"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "Koszyki o tej samej użyteczności leżą na jednej krzywej obojętności (A); nie muszą kosztować tyle samo (B). Konsument rezygnuje z 4 sałatek za 2 hamburgery, więc hamburger ma dla niego dwukrotnie większą użyteczność krańcową (C). Krańcowa stopa substytucji wynosi 2 (lub 0,5), a nie 0,66 (D)."
+  },
+  {
+    "id": "owe39-c-21",
+    "type": "multi",
+    "edition": "XXXIX OWE (2025/2026), zawody centralne",
+    "question": "Które stwierdzenie dotyczące opcji jest prawdziwe?",
+    "options": [
+      "opcja amerykańska może być wykonana wyłącznie w terminie jej wygaśnięcia",
+      "opcja europejska to opcja, w której cena wykonania może ulec zmianie na wniosek wystawcy",
+      "długa pozycja w opcji call pozwala zabezpieczyć się przed ryzykiem związanym ze wzrostem wartości instrumentu podstawowego",
+      "zysk nabywcy opcji put to premia"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Opcja amerykańska może być wykonana w dowolnym momencie do wygaśnięcia, a europejska tylko w dniu wygaśnięcia (A, B – fałsz). Długa pozycja w opcji call zabezpiecza przed wzrostem ceny instrumentu bazowego (C). Premię płaci nabywca – dla niego to koszt, nie zysk (D)."
+  },
+  {
+    "id": "owe39-c-22",
+    "type": "multi",
+    "edition": "XXXIX OWE (2025/2026), zawody centralne",
+    "question": "Nadwyżka dochodu generowanego przez czynnik produkcji ponad jego dochód transferowy to:",
+    "options": [
+      "renta ekonomiczna",
+      "dochód rozporządzalny",
+      "zysk naturalny",
+      "strata społeczna"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Renta ekonomiczna to nadwyżka dochodu czynnika produkcji ponad dochód transferowy, czyli minimum potrzebne, by czynnik pozostał w danym zastosowaniu (A)."
+  },
+  {
+    "id": "owe39-c-23",
+    "type": "multi",
+    "edition": "XXXIX OWE (2025/2026), zawody centralne",
+    "question": "Które stwierdzenie dotyczące obligacji jest prawdziwe?",
+    "options": [
+      "„cena czysta” obligacji jest zawsze większa od jej „ceny brudnej”",
+      "w terminie wykupu obligacji zerokuponowej obligatariusz otrzymuje sumę równą jej wartości nominalnej",
+      "w przypadku obligacji zerokuponowej odsetki są wypłacane w dniu emisji",
+      "wartość odsetek oblicza się, mnożąc cenę, którą obligatariusz zapłacił za daną obligację, przez jej kupon"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "W terminie wykupu obligacji zerokuponowej posiadacz otrzymuje jej wartość nominalną (B). Dochodem jest różnica między ceną nabycia (z dyskontem) a nominałem, bez wypłaty odsetek (C – fałsz). Cena brudna = cena czysta + narosłe odsetki, więc jest nie mniejsza od czystej (A). Odsetki liczy się od wartości nominalnej, a nie ceny zakupu (D)."
+  },
+  {
+    "id": "owe39-c-24",
+    "type": "multi",
+    "edition": "XXXIX OWE (2025/2026), zawody centralne",
+    "question": "Pewną gospodarkę opisują następujące równania: Y = 1000; C = 200 + 0,5YD; I = 400; G = 350; T = 200, gdzie: C – konsumpcja; YD – dochód rozporządzalny; I – inwestycje; G – wydatki publiczne; T – podatki minus transfery budżetowe otrzymywane przez konsumenta. Ile wynoszą odpływy kapitałowe netto (NCO) w tej gospodarce?",
+    "options": [
+      "NCO = –350",
+      "NCO = –150",
+      "NCO = 150",
+      "NCO = 350"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "YD = 1000 − 200 = 800, C = 200 + 400 = 600. Oszczędności narodowe S = Y − C − G = 1000 − 600 − 350 = 50. Eksport netto = S − I = 50 − 400 = −350, a NCO = NX = −350 (A) – kraj importuje kapitał."
+  },
+  {
+    "id": "owe39-c-25",
+    "type": "multi",
+    "edition": "XXXIX OWE (2025/2026), zawody centralne",
+    "question": "Bank centralny może przeprowadzać transakcje repo w celu:",
+    "options": [
+      "umocnienia wartości waluty krajowej",
+      "zwiększenia płynności sektora bankowego",
+      "złagodzenia warunków finansowania podmiotów gospodarczych",
+      "ograniczenia akcji kredytowej"
+    ],
+    "correct": [
+      1,
+      2
+    ],
+    "explanation": "W transakcji repo bank centralny kupuje od banków papiery z przyrzeczeniem odkupu, dostarczając im pieniądza. Zwiększa to płynność sektora bankowego (B) i łagodzi warunki finansowania (C), a nie ogranicza kredytu (D)."
+  },
+  {
+    "id": "owe39-c-26",
+    "type": "multi",
+    "edition": "XXXIX OWE (2025/2026), zawody centralne",
+    "question": "Które stwierdzenie dotyczące wdrażania strategii zaproponowanych przez R. Milesa i C. Snowa jest prawdziwe?",
+    "options": [
+      "przyjęcie strategii poszukiwacza często związane jest z wdrożeniem zdecentralizowanej struktury organizacji",
+      "realizując strategię analityka, organizacja koncentruje się wyłącznie na utrzymaniu swojej działalności na dotychczasowym poziomie",
+      "typem strategii najsilniej ukierunkowanej na obronę przed konkurencją jest strategia biernej reakcji",
+      "typem strategii najsilniej ukierunkowanej na innowacje jest strategia poszukiwacza"
+    ],
+    "correct": [
+      0,
+      3
+    ],
+    "explanation": "W typologii Milesa i Snowa „poszukiwacz” (prospector) jest najbardziej nastawiony na innowacje (D) i zwykle wymaga zdecentralizowanej, elastycznej struktury (A). Najsilniej na obronę nastawiona jest strategia obrońcy (C – fałsz). Analityk łączy utrzymanie dotychczasowej działalności z ostrożnym wchodzeniem na nowe rynki (B – fałsz)."
+  },
+  {
+    "id": "owe39-c-27",
+    "type": "multi",
+    "edition": "XXXIX OWE (2025/2026), zawody centralne",
+    "question": "Które z wymiarów wchodzą w skład otoczenia ogólnego organizacji?",
+    "options": [
+      "techniczny",
+      "polityczno-prawny",
+      "międzynarodowy",
+      "społeczno-kulturalny"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "Według R. Griffina otoczenie ogólne tworzą wymiary: ekonomiczny, techniczny (A), polityczno-prawny (B), międzynarodowy (C) i społeczno-kulturowy (D)."
+  },
+  {
+    "id": "owe39-c-28",
+    "type": "multi",
+    "edition": "XXXIX OWE (2025/2026), zawody centralne",
+    "question": "Analiza typu SWOT uwzględnia:",
+    "options": [
+      "mocne strony organizacji",
+      "wyłącznie ryzyka wynikające ze zmienności środowiska zewnętrznego",
+      "słabe strony organizacji",
+      "wyłącznie czynniki o charakterze wewnętrznym"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "SWOT uwzględnia czynniki wewnętrzne – mocne (A) i słabe (C) strony – oraz zewnętrzne: szanse i zagrożenia. Nie ogranicza się do jednej grupy czynników (B, D)."
+  },
+  {
+    "id": "owe39-c-29",
+    "type": "multi",
+    "edition": "XXXIX OWE (2025/2026), zawody centralne",
+    "question": "Jedną ze słabości macierzy BCG jest:",
+    "options": [
+      "koncentrowanie się wyłącznie na potencjale wzrostu danego rynku",
+      "koncentrowanie się przede wszystkim na potrzebach kapitałowych i natężeniu konkurencji",
+      "uwzględnianie zbyt wąskiego zakresu czynników przy klasyfikacji jednostek",
+      "nadmierne uproszczenie zależności między udziałem danej jednostki w rynku a osiąganymi przez nią zyskami"
+    ],
+    "correct": [
+      2,
+      3
+    ],
+    "explanation": "Słabości macierzy BCG to klasyfikacja na podstawie tylko dwóch czynników – udziału w rynku i tempa jego wzrostu (C) – oraz nadmierne uproszczenie związku między udziałem w rynku a zyskownością (D)."
+  },
+  {
+    "id": "owe39-c-30",
+    "type": "multi",
+    "edition": "XXXIX OWE (2025/2026), zawody centralne",
+    "question": "Cele taktyczne organizacji:",
+    "options": [
+      "ustalane są na najwyższym szczeblu kierownictwa",
+      "ukazują jej podstawowy priorytet",
+      "koncentrują się na krótkookresowych problemach",
+      "ustalane są na średnim szczeblu organizacji"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Cele taktyczne ustala średni szczebel kierownictwa (D). Wynikają z celów strategicznych (ustalanych przez najwyższy szczebel – A) i dotyczą realizacji strategii, a nie podstawowego priorytetu organizacji (B). Na problemach krótkookresowych koncentrują się cele operacyjne (C)."
+  }
+]
