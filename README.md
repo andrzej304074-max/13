@@ -22,7 +22,8 @@ sprawdzone i pominięte. Punkty (+2/−1, 0,5 za pole) są pokazywane obok.
 
 Statystyki (`/stats`) sumują wyniki **wszystkich** testów wszystkich użytkowników i pokazują dwa wykresy postępu:
 procent kolejnych testów oraz dokładność w blokach po N kolejnych sprawdzonych lub pominiętych pytań
-(N do wyboru: 10, 20, 25, 40, 50, 100, 150, 200; domyślnie 100, wybór zapamiętuje przeglądarka)
+(N do wyboru: 10, 20, 25, 40, 50, 100, 150, 200; domyślnie 100). Przełącznik „Oba typy / Jednokrotny / Wielokrotny”
+zawęża wynik, historię i oba wykresy do wybranego typu; oba wybory zapamiętuje przeglądarka.
 (w wielokrotnym wyborze dokładność pytania to trafne pola / 4). Brak logowania.
 
 ## Pytania

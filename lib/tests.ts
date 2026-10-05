@@ -226,7 +226,14 @@ const COUNTED = "(t.finished_at IS NOT NULL OR (t.mode = 'endless' AND t.max_sco
 
 const pct = (score: number, max: number) => (max > 0 ? Math.round((score / max) * 1000) / 10 : 0);
 
-export async function getStats(requestedBlockSize: number = DEFAULT_BLOCK_SIZE): Promise<Stats> {
+/**
+ * @param typeFilter – gdy podany, historia testów i wykres dokładności obejmują tylko pytania tego typu
+ *   (podsumowania `overall`/`byType` są zawsze liczone dla obu typów).
+ */
+export async function getStats(
+  requestedBlockSize: number = DEFAULT_BLOCK_SIZE,
+  typeFilter: QuestionType | null = null,
+): Promise<Stats> {
   const blockSize = (BLOCK_SIZES as readonly number[]).includes(requestedBlockSize) ? requestedBlockSize : DEFAULT_BLOCK_SIZE;
   // Domknij testy, którym minął czas (np. ktoś zamknął kartę).
   await query(
@@ -252,7 +259,9 @@ export async function getStats(requestedBlockSize: number = DEFAULT_BLOCK_SIZE):
      FROM (${perTest}) p GROUP BY type`,
   );
   const { rows: hist } = await query<PerTest>(
-    `SELECT * FROM (${perTest} ORDER BY at DESC LIMIT 100) h ORDER BY at ASC`,
+    `SELECT * FROM (SELECT * FROM (${perTest}) p WHERE ($1::text IS NULL OR type = $1) ORDER BY at DESC LIMIT 100) h
+     ORDER BY at ASC`,
+    [typeFilter],
   );
 
   // Każde sprawdzone/pominięte pytanie ma dokładność 0–1 (w wielokrotnym: trafne pola / 4), kolejność wg czasu odpowiedzi.
@@ -263,11 +272,13 @@ export async function getStats(requestedBlockSize: number = DEFAULT_BLOCK_SIZE):
                    ELSE a.points / 2 END AS accuracy,
               row_number() OVER (ORDER BY a.answered_at, a.test_id, a.question_id) - 1 AS rn
        FROM answers a JOIN tests t ON t.id = a.test_id
+       WHERE ($1::text IS NULL OR t.type = $1)
      )
      SELECT * FROM (
        SELECT rn / ${blockSize} AS block, COUNT(*) AS questions, AVG(accuracy) AS accuracy
        FROM q GROUP BY 1 ORDER BY 1 DESC LIMIT 100
      ) b ORDER BY block ASC`,
+    [typeFilter],
   );
 
   const empty = (): StatsTotals => ({ score: 0, maxScore: 0, correct: 0, total: 0, percent: 0, tests: 0 });

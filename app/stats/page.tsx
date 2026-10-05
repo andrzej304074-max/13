@@ -6,6 +6,14 @@ import { BLOCK_SIZES, DEFAULT_BLOCK_SIZE } from "@/lib/scoring";
 import type { Stats } from "@/lib/tests";
 
 const BLOCK_KEY = "owe:blockSize";
+const TYPE_KEY = "owe:statsType";
+
+type Filter = "all" | "single" | "multi";
+const FILTERS: { value: Filter; label: string }[] = [
+  { value: "all", label: "Oba typy" },
+  { value: "single", label: "Jednokrotny" },
+  { value: "multi", label: "Wielokrotny" },
+];
 
 const TYPE_LABEL = { single: "jednokrotny", multi: "wielokrotny" } as const;
 
@@ -20,6 +28,7 @@ export default function StatsPage() {
   const [error, setError] = useState<string | null>(null);
 
   const [blockSize, setBlockSize] = useState<number | null>(null);
+  const [filter, setFilter] = useState<Filter>("all");
 
   // Wybrany rozmiar bloku zapamiętywany lokalnie w przeglądarce.
   useEffect(() => {
@@ -28,13 +37,25 @@ export default function StatsPage() {
       const v = Number(localStorage.getItem(BLOCK_KEY));
       if ((BLOCK_SIZES as readonly number[]).includes(v)) saved = v;
     } catch {}
+    try {
+      const f = localStorage.getItem(TYPE_KEY);
+      if (f === "single" || f === "multi") setFilter(f);
+    } catch {}
     setBlockSize(saved);
   }, []);
 
   useEffect(() => {
     if (blockSize === null) return;
-    api<Stats>(`/api/stats?block=${blockSize}`).then(setStats).catch((e) => setError(e.message));
-  }, [blockSize]);
+    const typeParam = filter === "all" ? "" : `&type=${filter}`;
+    api<Stats>(`/api/stats?block=${blockSize}${typeParam}`).then(setStats).catch((e) => setError(e.message));
+  }, [blockSize, filter]);
+
+  function chooseFilter(f: Filter) {
+    setFilter(f);
+    try {
+      localStorage.setItem(TYPE_KEY, f);
+    } catch {}
+  }
 
   function chooseBlock(n: number) {
     setBlockSize(n);
@@ -48,30 +69,47 @@ export default function StatsPage() {
 
   const { overall, byType, history, blocks } = stats;
   const size = stats.blockSize;
+  const main = filter === "all" ? overall : byType[filter];
+  const unitLabel = filter === "multi" ? "trafnych pól" : filter === "single" ? "poprawnych pytań" : "poprawnych";
   return (
     <div className="stack">
       <h1>Statystyki</h1>
       <p className="muted">Procent poprawnych odpowiedzi ze wszystkich testów wszystkich użytkowników – w wielokrotnym wyborze liczy się każde
         trafne pole A–D. W testach 30/50 pytań liczą się wszystkie pytania testu, w trybie „bez limitu” tylko sprawdzone
         lub pominięte.</p>
-      <div className="card">
-        <div className="big">{fmtPct(overall.percent)}</div>
-        <p className="muted" style={{ margin: 0 }}>
-          {overall.correct} / {overall.total} poprawnych · {fmtPoints(overall.score)} / {fmtPoints(overall.maxScore)} pkt ·{" "}
-          {testsLabel(overall.tests)}
-        </p>
-      </div>
-      <div className="stat-grid">
-        {(["single", "multi"] as const).map((t) => (
-          <div className="stat" key={t}>
-            <div className="value">{fmtPct(byType[t].percent)}</div>
-            <div className="label">
-              {TYPE_LABEL[t]} · {byType[t].correct}/{byType[t].total} {t === "multi" ? "pól" : "pytań"} ·{" "}
-              {fmtPoints(byType[t].score)}/{fmtPoints(byType[t].maxScore)} pkt · {testsLabel(byType[t].tests)}
-            </div>
-          </div>
+      <div className="seg" role="group" aria-label="Typ pytań">
+        {FILTERS.map((f) => (
+          <button
+            key={f.value}
+            className={f.value === filter ? "active" : ""}
+            aria-pressed={f.value === filter}
+            onClick={() => chooseFilter(f.value)}
+          >
+            {f.label}
+          </button>
         ))}
       </div>
+      <div className="card">
+        <div className="big">{fmtPct(main.percent)}</div>
+        <p className="muted" style={{ margin: 0 }}>
+          {filter !== "all" && `${TYPE_LABEL[filter]} · `}
+          {main.correct} / {main.total} {unitLabel} · {fmtPoints(main.score)} / {fmtPoints(main.maxScore)} pkt ·{" "}
+          {testsLabel(main.tests)}
+        </p>
+      </div>
+      {filter === "all" && (
+        <div className="stat-grid">
+          {(["single", "multi"] as const).map((t) => (
+            <div className="stat" key={t}>
+              <div className="value">{fmtPct(byType[t].percent)}</div>
+              <div className="label">
+                {TYPE_LABEL[t]} · {byType[t].correct}/{byType[t].total} {t === "multi" ? "pól" : "pytań"} ·{" "}
+                {fmtPoints(byType[t].score)}/{fmtPoints(byType[t].maxScore)} pkt · {testsLabel(byType[t].tests)}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
 
       <h2>Postęp (% kolejnych testów)</h2>
       {history.length === 0 ? (
@@ -118,7 +156,8 @@ export default function StatsPage() {
       ) : (
         <div className="card">
           <p className="muted" style={{ margin: "0 0 8px", fontSize: "0.85rem" }}>
-            Każda kropka to {size} kolejnych sprawdzonych lub pominiętych pytań (wszystkie testy i typy). W wielokrotnym
+            Każda kropka to {size} kolejnych sprawdzonych lub pominiętych pytań
+            {filter === "all" ? " (wszystkie testy, oba typy)" : ` (tylko ${filter === "single" ? "jednokrotny" : "wielokrotny"} wybór)`}. W wielokrotnym
             wyborze dokładność pytania to trafne pola / 4. Pusta kropka – blok jeszcze niepełny.
           </p>
           <Chart
