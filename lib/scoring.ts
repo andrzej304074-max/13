@@ -4,6 +4,7 @@ export const OPTION_COUNT = 4;
 export const MAX_POINTS_PER_QUESTION = 2;
 export const ALLOWED_COUNTS = [30, 50] as const;
 export type TestSize = (typeof ALLOWED_COUNTS)[number];
+export const ENDLESS = "endless" as const;
 
 /** Czas trwania testu w minutach: 30 pytań → 40 min, 50 pytań → 60 min. */
 export function durationMinutes(count: TestSize): number {

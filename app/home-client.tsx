@@ -11,15 +11,16 @@ const TYPES: { value: QuestionType; label: string; hint: string }[] = [
   { value: "single", label: "Jednokrotny wybór", hint: "1 poprawna odpowiedź · +2 / −1 pkt" },
   { value: "multi", label: "Wielokrotny wybór", hint: "0,5 pkt za każde trafne pole · max 2 pkt" },
 ];
-const SIZES = [
+const SIZES: { value: number | "endless"; label: string; hint: string }[] = [
   { value: 30, label: "30 pytań", hint: "40 minut" },
   { value: 50, label: "50 pytań", hint: "60 minut" },
+  { value: "endless", label: "Bez limitu", hint: "bez limitu czasu · bez cofania · liczą się tylko rozwiązane" },
 ];
 
 export default function HomeClient({ counts }: { counts: Record<QuestionType, number> }) {
   const router = useRouter();
   const [type, setType] = useState<QuestionType>(counts.single > 0 || counts.multi === 0 ? "single" : "multi");
-  const [count, setCount] = useState(30);
+  const [count, setCount] = useState<number | "endless">(30);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [stats, setStats] = useState<Stats | null>(null);
@@ -74,7 +75,7 @@ export default function HomeClient({ counts }: { counts: Record<QuestionType, nu
         ))}
       </div>
       <h2>Liczba pytań</h2>
-      <div className="choices">
+      <div className="choices three">
         {SIZES.map((s) => (
           <button key={s.value} className={`choice ${count === s.value ? "active" : ""}`} onClick={() => setCount(s.value)}>
             <strong>{s.label}</strong>

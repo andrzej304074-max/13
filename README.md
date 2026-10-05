@@ -10,7 +10,9 @@ Next.js (App Router) + Postgres (Neon), gotowa do wdrożenia na Vercel.
 | Jednokrotny wybór | +2 pkt za poprawną, −1 pkt za błędną, 0 bez odpowiedzi |
 | Wielokrotny wybór | 0,5 pkt za każde z pól A–D o poprawnym stanie (zaznaczone gdy poprawne, puste gdy błędne), max 2 pkt |
 
-Test: 30 pytań → 40 minut, 50 pytań → 60 minut. Po kliknięciu „Sprawdź” widać, które odpowiedzi były dobre,
+Test: 30 pytań → 40 minut, 50 pytań → 60 minut. Trzecia opcja, **Bez limitu**, losuje pytania z całej puli danego typu
+bez limitu czasu; nie można się cofać ani przeskakiwać pytań, a do statystyk liczą się wyłącznie pytania sprawdzone
+(„Sprawdź”) lub pominięte („Pomiń” = 0 z 2 pkt) – na bieżąco, nawet bez kliknięcia „Zakończ test”. Po kliknięciu „Sprawdź” widać, które odpowiedzi były dobre,
 ile punktów przyznano i wyjaśnienie. Punktacja i limit czasu są liczone na serwerze.
 
 Statystyki (`/stats`) sumują wyniki **wszystkich** zakończonych testów wszystkich użytkowników

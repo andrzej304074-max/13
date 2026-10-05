@@ -27,7 +27,7 @@ export default function StatsPage() {
   return (
     <div className="stack">
       <h1>Statystyki</h1>
-      <p className="muted">Wyniki sumowane ze wszystkich zakończonych testów wszystkich użytkowników.</p>
+      <p className="muted">Wyniki sumowane ze wszystkich testów wszystkich użytkowników. W trybie „bez limitu” liczą się tylko pytania sprawdzone lub pominięte.</p>
       <div className="card">
         <div className="big">{fmtPct(overall.percent)}</div>
         <p className="muted" style={{ margin: 0 }}>
@@ -52,20 +52,20 @@ export default function StatsPage() {
         <>
           <div className="card"><Chart points={history.map((h) => h.percent)} /></div>
           <div className="card">
-            <table>
+            <div className="table-wrap"><table>
               <thead><tr><th>#</th><th>Data</th><th>Typ</th><th>Punkty</th><th>%</th></tr></thead>
               <tbody>
                 {[...history].reverse().map((h, i) => (
                   <tr key={h.id}>
                     <td>{history.length - i}</td>
                     <td>{new Date(h.finishedAt).toLocaleString("pl-PL", { dateStyle: "short", timeStyle: "short" })}</td>
-                    <td>{TYPE_LABEL[h.type]}</td>
+                    <td>{TYPE_LABEL[h.type]}{h.mode === "endless" ? " · bez limitu" : ""}</td>
                     <td>{fmtPoints(h.score)} / {fmtPoints(h.maxScore)}</td>
                     <td>{fmtPct(h.percent)}</td>
                   </tr>
                 ))}
               </tbody>
-            </table>
+            </table></div>
           </div>
         </>
       )}

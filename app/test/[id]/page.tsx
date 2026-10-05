@@ -4,9 +4,9 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { api, fmtPct, fmtPoints, LETTERS, rememberTest } from "@/lib/client";
-import type { AnswerFeedback, TestState } from "@/lib/types";
+import type { AnswerFeedback, PublicQuestion, TestState } from "@/lib/types";
 
-type AnswerResponse = AnswerFeedback & { totalScore: number };
+type AnswerResponse = AnswerFeedback & { totalScore: number; nextQuestion?: PublicQuestion | null };
 
 function fmtTime(ms: number) {
   const s = Math.max(0, Math.ceil(ms / 1000));
@@ -48,9 +48,10 @@ export default function TestPage() {
   }, [id]);
 
   const finished = !!test?.finishedAt;
-  const remaining = test ? new Date(test.deadline).getTime() - now : 0;
+  const endless = test?.mode === "endless";
+  const remaining = test?.deadline ? new Date(test.deadline).getTime() - now : Infinity;
 
-  const running = !!test && !finished;
+  const running = !!test && !finished && !endless;
 
   useEffect(() => {
     if (!running) return;
@@ -70,7 +71,7 @@ export default function TestPage() {
   const q = test.questions[index];
   const fb = answers.get(q.id);
   const isMulti = q.type === "multi";
-  const allAnswered = test.answers.length === test.questions.length;
+  const allAnswered = !endless && test.answers.length === test.questions.length;
 
   function toggle(i: number) {
     if (fb) return;
@@ -78,15 +79,26 @@ export default function TestPage() {
     else setSelected([i]);
   }
 
-  async function check() {
+  async function check(skip = false) {
     setBusy(true);
     setError(null);
     try {
       const res = await api<AnswerResponse>(`/api/tests/${id}/answer`, {
         method: "POST",
-        body: JSON.stringify({ questionId: q.id, selected }),
+        body: JSON.stringify({ questionId: q.id, selected, skip }),
       });
-      setTest((t) => t && { ...t, answers: [...t.answers, res], score: res.totalScore });
+      const { totalScore, nextQuestion, ...answer } = res;
+      setTest(
+        (t) =>
+          t && {
+            ...t,
+            answers: [...t.answers, answer],
+            score: totalScore,
+            maxScore: t.mode === "endless" ? (t.answers.length + 1) * 2 : t.maxScore,
+            questions: nextQuestion ? [...t.questions, nextQuestion] : t.questions,
+          },
+      );
+      if (skip) go(index + 1);
     } catch (e) {
       setError((e as Error).message);
     } finally {
@@ -124,11 +136,17 @@ export default function TestPage() {
   return (
     <div>
       <div className="bar">
-        <span>Pytanie {index + 1}/{test.questions.length}</span>
+        <span>Pytanie {index + 1}{endless ? "" : `/${test.questions.length}`}</span>
         <span>Punkty: <strong>{fmtPoints(test.score)}</strong> / {fmtPoints(test.maxScore)}</span>
-        <span className={`timer ${remaining < 60_000 ? "low" : ""}`}>⏱ {fmtTime(remaining)}</span>
+        {endless ? (
+          <span className="muted">bez limitu</span>
+        ) : (
+          <span className={`timer ${remaining < 60_000 ? "low" : ""}`}>⏱ {fmtTime(remaining)}</span>
+        )}
       </div>
-      <div className="progress"><div style={{ width: `${(test.answers.length / test.questions.length) * 100}%` }} /></div>
+      {!endless && (
+        <div className="progress"><div style={{ width: `${(test.answers.length / test.questions.length) * 100}%` }} /></div>
+      )}
 
       <div className="card">
         <p className="muted" style={{ margin: "0 0 8px", fontSize: "0.85rem" }}>
@@ -144,7 +162,13 @@ export default function TestPage() {
           </button>
         ))}
 
-        {fb && (
+        {fb?.skipped && (
+          <div className="feedback">
+            <div className="points">Pominięte · 0 pkt · Poprawna odpowiedź: {fb.correct.map((c) => LETTERS[c]).join(", ")}</div>
+            <p style={{ margin: "8px 0 0" }}>{fb.explanation}</p>
+          </div>
+        )}
+        {fb && !fb.skipped && (
           <div className="feedback">
             <div className={`points ${fb.points > 0 ? "pos" : fb.points < 0 ? "neg" : ""}`}>
               {fb.points > 0 ? "+" : ""}{fmtPoints(fb.points)} pkt
@@ -156,15 +180,20 @@ export default function TestPage() {
         {error && <p className="error">{error}</p>}
 
         <div className="row" style={{ marginTop: 16 }}>
-          <button className="btn secondary" onClick={() => go(index - 1)} disabled={index === 0}>←</button>
+          {!endless && (
+            <button className="btn secondary" onClick={() => go(index - 1)} disabled={index === 0}>←</button>
+          )}
           {!fb ? (
-            <button className="btn" onClick={check} disabled={busy || (!isMulti && selected.length === 0)}>
+            <button className="btn" onClick={() => check()} disabled={busy || (!isMulti && selected.length === 0)}>
               Sprawdź
             </button>
           ) : index < test.questions.length - 1 ? (
             <button className="btn" onClick={() => go(index + 1)}>Dalej →</button>
           ) : null}
-          {!fb && index < test.questions.length - 1 && (
+          {!fb && endless && (
+            <button className="btn secondary" onClick={() => check(true)} disabled={busy}>Pomiń</button>
+          )}
+          {!fb && !endless && index < test.questions.length - 1 && (
             <button className="btn secondary" onClick={() => go(index + 1)}>Pomiń</button>
           )}
           <span className="spacer" />
@@ -172,7 +201,7 @@ export default function TestPage() {
             className={allAnswered ? "btn" : "btn secondary"}
             disabled={busy}
             onClick={() => {
-              if (allAnswered || confirm("Zakończyć test? Pytania bez odpowiedzi dostaną 0 pkt.")) finish();
+              if (endless || allAnswered || confirm("Zakończyć test? Pytania bez odpowiedzi dostaną 0 pkt.")) finish();
             }}
           >
             Zakończ test
@@ -192,12 +221,15 @@ function Summary({ test }: { test: TestState }) {
       <div className="card">
         <div className="big">{fmtPct(percent)}</div>
         <p className="muted" style={{ margin: 0 }}>
-          {fmtPoints(test.score)} / {fmtPoints(test.maxScore)} pkt · odpowiedzi: {test.answers.length}/{test.questions.length}
+          {fmtPoints(test.score)} / {fmtPoints(test.maxScore)} pkt ·{" "}
+          {test.mode === "endless"
+            ? `rozwiązane: ${test.answers.filter((a) => !a.skipped).length}, pominięte: ${test.answers.filter((a) => a.skipped).length}`
+            : `odpowiedzi: ${test.answers.length}/${test.questions.length}`}
         </p>
       </div>
       <h2>Przegląd pytań</h2>
       <div className="card">
-        <table>
+        <div className="table-wrap"><table>
           <thead><tr><th>#</th><th>Pytanie</th><th>Twoja</th><th>Poprawna</th><th>Pkt</th></tr></thead>
           <tbody>
             {test.questions.map((q, i) => {
@@ -206,14 +238,14 @@ function Summary({ test }: { test: TestState }) {
                 <tr key={q.id}>
                   <td>{i + 1}</td>
                   <td>{q.question}</td>
-                  <td>{a ? a.selected.map((s) => LETTERS[s]).join(", ") || "—" : "—"}</td>
+                  <td>{a?.skipped ? "pom." : a ? a.selected.map((s) => LETTERS[s]).join(", ") || "—" : "—"}</td>
                   <td>{(test.solutions?.[q.id] ?? []).map((c) => LETTERS[c]).join(", ")}</td>
                   <td>{a ? fmtPoints(a.points) : 0}</td>
                 </tr>
               );
             })}
           </tbody>
-        </table>
+        </table></div>
       </div>
       <div className="row">
         <Link className="btn" href="/">Nowy test</Link>
