@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe33-s-01",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody szkolne",
+    "question": "Autorem teorii preferencji płynności jest:",
+    "options": [
+      "O. Blanchard",
+      "M. Friedman",
+      "J.K. Galbraith",
+      "J.M. Keynes"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Teorię preferencji płynności sformułował J.M. Keynes w „Ogólnej teorii zatrudnienia, procentu i pieniądza” (1936): popyt na pieniądz wynika z motywu transakcyjnego, przezornościowego i spekulacyjnego, a stopa procentowa jest ceną za rezygnację z płynności."
+  },
+  {
+    "id": "owe33-s-02",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody szkolne",
+    "question": "Podstawowym celem działalności Narodowego Banku Polskiego jest:",
+    "options": [
+      "wyłącznie wspieranie polityki gospodarczej rządu",
+      "utrzymanie stabilnego poziomu cen",
+      "utrzymanie stabilności sektora finansowego",
+      "utrzymanie stabilnego kursu walutowego"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Zgodnie z Konstytucją RP i ustawą o NBP podstawowym celem NBP jest utrzymanie stabilnego poziomu cen, przy jednoczesnym wspieraniu polityki gospodarczej rządu, o ile nie ogranicza to tego celu."
+  },
+  {
+    "id": "owe33-s-03",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody szkolne",
+    "question": "Która z poniższych funkcji kosztu całkowitego przedsiębiorstwa jest właściwa dla długiego okresu (gdzie: TC – koszt całkowity, Q – liczba wyprodukowanych jednostek)?",
+    "options": [
+      "TC = 8Q",
+      "TC = 0,5Q⁻² + 200",
+      "TC = 2Q³ + 1200",
+      "TC = 1200"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W długim okresie wszystkie koszty są zmienne – nie ma kosztów stałych, więc przy zerowej produkcji koszt całkowity wynosi 0. Spełnia to tylko TC = 8Q. Pozostałe funkcje mają składnik stały (200 lub 1200), który oznacza koszty stałe, występujące tylko w krótkim okresie."
+  },
+  {
+    "id": "owe33-s-04",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody szkolne",
+    "question": "Która z wymienionych składek na ubezpieczenia społeczne płaconych z tytułu stosunku pracy wyrażonych w formie stopy procentowej jest najwyższa?",
+    "options": [
+      "składka na ubezpieczenia rentowe",
+      "składka na ubezpieczenie emerytalne",
+      "składka na ubezpieczenie chorobowe",
+      "składka na ubezpieczenie wypadkowe"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Składki na ubezpieczenia społeczne przy umowie o pracę: emerytalna 19,52% (po połowie pracodawca i pracownik), rentowa 8% (6,5% pracodawca, 1,5% pracownik), chorobowa 2,45% (pracownik), wypadkowa zwykle ok. 0,67–3,33% (pracodawca). Najwyższa jest składka emerytalna."
+  },
+  {
+    "id": "owe33-s-05",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody szkolne",
+    "question": "Senioratem określa się inaczej rentę:",
+    "options": [
+      "emisyjną",
+      "społeczną",
+      "konsumenta",
+      "socjalną"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Seniorat (renta emisyjna, ang. seigniorage) to dochód emitenta pieniądza (banku centralnego, państwa) wynikający z tego, że koszt wytworzenia pieniądza jest dużo niższy od jego wartości nominalnej – lub, szerzej, dochód z emisji pieniądza."
+  },
+  {
+    "id": "owe33-s-06",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody szkolne",
+    "question": "W konkurencji monopolistycznej występujące na rynku dobra są:",
+    "options": [
+      "zróżnicowane",
+      "jednorodne",
+      "homogeniczne",
+      "zawsze doskonale komplementarne"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W konkurencji monopolistycznej każda firma oferuje produkt nieco inny niż konkurenci (marka, jakość, lokalizacja) – dobra są zróżnicowane, choć są bliskimi substytutami. Jednorodne (homogeniczne) dobra to cecha konkurencji doskonałej."
+  },
+  {
+    "id": "owe33-s-07",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody szkolne",
+    "question": "Jeśli krzywa obojętności dóbr X i Y jest linią prostą o nachyleniu ujemnym pod kątem 45 stopni, mamy bez wątpienia do czynienia z dobrami:",
+    "options": [
+      "podstawowymi",
+      "Giffena",
+      "doskonale substytucyjnymi",
+      "Veblena"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Prostoliniowa krzywa obojętności o nachyleniu −1 oznacza, że konsument zawsze wymienia dobra w stosunku 1:1, niezależnie od posiadanych ilości – stała krańcowa stopa substytucji. To cecha dóbr doskonale substytucyjnych."
+  },
+  {
+    "id": "owe33-s-08",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody szkolne",
+    "question": "Które stwierdzenie dotyczące kosztu alternatywnego w ekonomii jest prawdziwe?",
+    "options": [
+      "jest to jedna z kategorii kosztów rodzajowych",
+      "w rachunku zysków i strat uwzględniany jest on w pozycji pozostałe koszty operacyjne (PKO)",
+      "jest to inaczej koszt utraconych możliwości",
+      "w rachunku zysków i strat uwzględniany jest on w pozycji koszty finansowe, gdyż dotyczy przede wszystkim utraconych odsetek"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Koszt alternatywny (koszt utraconych możliwości) to wartość najlepszej odrzuconej możliwości wykorzystania zasobów. Jest kategorią ekonomiczną, a nie księgową – nie występuje w rachunku zysków i strat ani wśród kosztów rodzajowych."
+  },
+  {
+    "id": "owe33-s-09",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody szkolne",
+    "question": "Wiemy, że ilościowy próg rentowności pewnego przedsiębiorstwa wynosi 1000 sztuk. Jego koszty stałe wynoszą 100 zł, natomiast koszt zmienny na jednostkę wynosi 20 zł. Po jakiej cenie za sztukę przedsiębiorstwo sprzedaje swoje produkty (w zł)?",
+    "options": [
+      "0,10",
+      "5,00",
+      "20,10",
+      "20,50"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Ilościowy próg rentowności: Q = koszty stałe / (cena − jednostkowy koszt zmienny). Stąd 1000 = 100 / (P − 20), więc P − 20 = 0,1, czyli P = 20,10 zł."
+  },
+  {
+    "id": "owe33-s-10",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody szkolne",
+    "question": "W którym z modeli duopolu zakłada się, że jedno z występujących na rynku przedsiębiorstw ma przewagę pierwszego ruchu?",
+    "options": [
+      "duopolu Cournota",
+      "duopolu Sweezy’ego",
+      "duopolu Stackelberga",
+      "duopolu Bertranda"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "W modelu Stackelberga jedna firma (lider) jako pierwsza decyduje o wielkości produkcji, a druga (naśladowca) dostosowuje się do tej decyzji – lider ma przewagę pierwszego ruchu. W modelu Cournota firmy decydują jednocześnie o ilościach, w Bertranda – o cenach, a model Sweezy'ego (załamanej krzywej popytu) wyjaśnia sztywność cen."
+  },
+  {
+    "id": "owe33-s-11",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody szkolne",
+    "question": "Transakcje repo to operacje dokonywane na rynku:",
+    "options": [
+      "kapitałowym",
+      "instrumentów pochodnych",
+      "pieniężnym",
+      "walutowym"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Transakcje repo (sprzedaż papierów wartościowych z przyrzeczeniem odkupu) to krótkoterminowe operacje rynku pieniężnego – w praktyce pożyczki zabezpieczone papierami. Stosują je m.in. banki centralne w operacjach otwartego rynku."
+  },
+  {
+    "id": "owe33-s-12",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody szkolne",
+    "question": "Cechą charakterystyczną konkurencji doskonałej jest:",
+    "options": [
+      "występowanie wysokich barier wejścia",
+      "brak możliwości wpływania na cenę przez pojedyncze przedsiębiorstwo",
+      "brak dostępu konsumentów do pełnej informacji",
+      "niska mobilność czynników produkcji w długim okresie"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "W konkurencji doskonałej działa bardzo wiele małych firm sprzedających jednorodny produkt, więc pojedyncza firma nie ma wpływu na cenę – jest cenobiorcą. Bariery wejścia nie istnieją, a uczestnicy rynku mają pełną informację."
+  },
+  {
+    "id": "owe33-s-13",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody szkolne",
+    "question": "Różnica między kwotą, jaką nabywca jest skłonny zapłacić, a kwotą przez niego zapłaconą to:",
+    "options": [
+      "nadwyżka konsumenta",
+      "dyskonto konsumenta",
+      "kwota netto",
+      "nadwyżka producenta"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Nadwyżka konsumenta to różnica między maksymalną kwotą, jaką nabywca byłby skłonny zapłacić za dobro, a ceną, którą faktycznie płaci. Nadwyżka producenta to różnica między ceną a minimalną kwotą, za jaką producent byłby skłonny sprzedać."
+  },
+  {
+    "id": "owe33-s-14",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody szkolne",
+    "question": "Które z niżej wymienionych dóbr najlepiej spełnia kryteria stawiane dobrom publicznym?",
+    "options": [
+      "infrastruktura przeciwpowodziowa",
+      "środowisko naturalne",
+      "zatłoczone drogi płatne",
+      "telewizja kablowa"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Dobro publiczne jest niekonkurencyjne i niewykluczalne. Infrastruktura przeciwpowodziowa (wały) chroni wszystkich mieszkańców jednocześnie i nie da się nikogo wykluczyć z ochrony. Zatłoczone drogi płatne i telewizja kablowa są wykluczalne, a środowisko naturalne ma cechy zasobu wspólnego (konkurencyjność)."
+  },
+  {
+    "id": "owe33-s-15",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody szkolne",
+    "question": "Które równanie dotyczące bilansu przedsiębiorstwa jest prawdziwe?",
+    "options": [
+      "wartość aktywów + wartość pasywów = suma bilansowa",
+      "wartość aktywów = wartości pasywów – kapitał własny",
+      "wartość aktywów = wartość pasywów + kapitał własny",
+      "wartość aktywów = suma bilansowa"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Bilans przedsiębiorstwa: suma aktywów = suma pasywów = suma bilansowa. Kapitał własny jest częścią pasywów (pasywa = kapitał własny + kapitał obcy), więc pozostałe równania są błędne."
+  },
+  {
+    "id": "owe33-s-16",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody szkolne",
+    "question": "Wskaż dwóch największych partnerów handlowych Polski pod względem udziału w wartości importu towarów (wg kraju pochodzenia, dane za 2018 r.):",
+    "options": [
+      "Niemcy, USA",
+      "Chiny, USA",
+      "Chiny, Rosja",
+      "Niemcy, Chiny"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "W 2018 r. największy udział w imporcie towarów do Polski (wg kraju pochodzenia) miały Niemcy (ok. 22%) i Chiny (ok. 12%), przed Rosją i Włochami."
+  },
+  {
+    "id": "owe33-s-17",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody szkolne",
+    "question": "Hipoteza racjonalnych oczekiwań została sformułowana przez:",
+    "options": [
+      "M. Friedmana",
+      "M. Kaleckiego",
+      "J.M. Keynesa",
+      "R. Lucasa"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Hipotezę racjonalnych oczekiwań wprowadził J. Muth (1961), a rozwinął i spopularyzował w makroekonomii Robert Lucas (nowa ekonomia klasyczna, Nagroda Nobla 1995). Zakłada, że ludzie wykorzystują wszystkie dostępne informacje i nie popełniają systematycznych błędów prognoz."
+  },
+  {
+    "id": "owe33-s-18",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody szkolne",
+    "question": "Na rynku monopolistycznym z jednolitą ceną krzywa popytu na dobro produkowane przez monopolistę opisana jest równaniem q = −0,25p + 100 (gdzie: p – cena za sztukę w zł; q – ilość w sztukach). Które z równań opisuje krzywą utargu krańcowego przedsiębiorstwa X?",
+    "options": [
+      "MR = −0,5q + 100",
+      "MR = −4q + 400",
+      "MR = −8q + 400",
+      "MR = −4q² + 400q"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Z q = −0,25p + 100 wyznaczamy cenę: p = 400 − 4q. Przychód = p · q = 400q − 4q², więc utarg krańcowy (pochodna) MR = 400 − 8q. Dla liniowej krzywej popytu MR ma ten sam wyraz wolny i dwa razy większe nachylenie."
+  },
+  {
+    "id": "owe33-s-19",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody szkolne",
+    "question": "Pewna gospodarka jest autarkią bez udziału państwa. Opisują ją następujące równania behawioralne: C = 80 + 0,5YD; I = 300 (gdzie: C – konsumpcja; YD – dochód rozporządzalny; I – inwestycje). Ile wynosi konsumpcja autonomiczna?",
+    "options": [
+      "80",
+      "380",
+      "460",
+      "760"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W funkcji konsumpcji C = 80 + 0,5YD konsumpcja autonomiczna (niezależna od dochodu) to wyraz wolny – 80. Liczba 0,5 to krańcowa skłonność do konsumpcji."
+  },
+  {
+    "id": "owe33-s-20",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody szkolne",
+    "question": "Realny kurs walutowy jest równy:",
+    "options": [
+      "sumie krajowego poziomu cen i zagranicznego poziomu cen, pomnożonej przez wartość deflatora PKB",
+      "sumie krajowego poziomu cen i zagranicznego poziomu cen, podzielonej przez nominalny kurs walutowy",
+      "sumie krajowego poziomu cen i zagranicznego poziomu cen, pomnożonej przez nominalny kurs walutowy",
+      "iloczynowi nominalnego kursu walutowego i krajowego poziomu cen, podzielonemu przez zagraniczny poziom cen"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Realny kurs walutowy = nominalny kurs walutowy · krajowy poziom cen / zagraniczny poziom cen (przy kwotowaniu jako cena waluty krajowej w walucie obcej). Pokazuje, ile zagranicznych dóbr można kupić za równowartość krajowych dóbr – mierzy konkurencyjność cenową."
+  },
+  {
+    "id": "owe33-s-21",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody szkolne",
+    "question": "Pierwsza rewolucja przemysłowa rozpoczęła się w:",
+    "options": [
+      "XVIII w.",
+      "XIX w.",
+      "XX w.",
+      "XXI w."
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Pierwsza rewolucja przemysłowa rozpoczęła się w Wielkiej Brytanii w drugiej połowie XVIII w. (maszyna parowa J. Watta, mechanizacja przędzalnictwa i tkactwa)."
+  },
+  {
+    "id": "owe33-s-22",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody szkolne",
+    "question": "Termin „Przemysł 4.0” został wykorzystany po raz pierwszy w odniesieniu do procesów zachodzących w gospodarce:",
+    "options": [
+      "polskiej",
+      "chińskiej",
+      "amerykańskiej",
+      "niemieckiej"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Termin „Przemysł 4.0” (Industrie 4.0) wprowadzono w Niemczech – po raz pierwszy przedstawiono go na targach w Hanowerze w 2011 r. jako element niemieckiej strategii high-tech. Oznacza cyfryzację i automatyzację produkcji (internet rzeczy, systemy cyber-fizyczne)."
+  },
+  {
+    "id": "owe33-s-23",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody szkolne",
+    "question": "Które stwierdzenie dotyczące technologii łańcucha bloków jest prawdziwe?",
+    "options": [
+      "podstawową zaletą technologii łańcucha bloków jest umożliwienie wydawania większej ilości środków niż dany podmiot posiada (tzw. skuteczne podwójne wydawanie)",
+      "używany przez bitcoin łańcuch bloków ma charakter prywatny (jedynie twórca bitcoina może wziąć udział w tworzeniu nowych bloków)",
+      "łańcuch bloków to baza danych rozproszona pomiędzy węzłami sieci peer-to-peer w internecie do przechowywania transakcji",
+      "w technologii łańcucha bloków występuje jedna, centralna instytucja rozliczeniowa (clearing house)"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Blockchain (łańcuch bloków) to rozproszona baza danych przechowywana jednocześnie przez wiele węzłów sieci peer-to-peer, w której transakcje są zapisywane w połączonych kryptograficznie blokach. Nie ma centralnej instytucji rozliczeniowej, a technologia zapobiega (a nie umożliwia) podwójnemu wydawaniu; łańcuch bitcoina jest publiczny."
+  },
+  {
+    "id": "owe33-s-24",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody szkolne",
+    "question": "K. Schwab omawiając problem czwartej rewolucji przemysłowej, wyróżnił następujące rodzaje megatrendów:",
+    "options": [
+      "fizyczne, druk 3D, zaawansowaną robotyzację",
+      "cyfrowe, biologiczne, kosmonautykę",
+      "cyfrowe, biologiczne, chemiczne",
+      "fizyczne, cyfrowe, biologiczne"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Klaus Schwab (twórca Światowego Forum Ekonomicznego) w książce „Czwarta rewolucja przemysłowa” (2016) wyróżnił trzy grupy megatrendów: fizyczne (np. pojazdy autonomiczne, druk 3D, robotyka, nowe materiały), cyfrowe (np. internet rzeczy, blockchain) i biologiczne (np. genetyka, biologia syntetyczna)."
+  },
+  {
+    "id": "owe33-s-25",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody szkolne",
+    "question": "Wiemy, że w przedsiębiorstwie X (dane w mln zł): majątek trwały wynosi 100, kapitał obrotowy netto 210, zobowiązania długoterminowe 10, a zysk netto 30. Ile wynosi ROE (%)?",
+    "options": [
+      "2,10",
+      "4,76",
+      "9,09",
+      "10,00"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Kapitał obrotowy netto = kapitał stały − majątek trwały, więc kapitał stały = 100 + 210 = 310 mln zł. Kapitał własny = kapitał stały − zobowiązania długoterminowe = 310 − 10 = 300 mln zł. ROE = zysk netto / kapitał własny = 30 / 300 = 10%."
+  },
+  {
+    "id": "owe33-s-26",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody szkolne",
+    "question": "Ile kategorii wyróżnia się w hierarchii potrzeb według Maslowa?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Hierarchia potrzeb Maslowa obejmuje 5 kategorii: fizjologiczne, bezpieczeństwa, przynależności, szacunku i samorealizacji."
+  },
+  {
+    "id": "owe33-s-27",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody szkolne",
+    "question": "Przedstawicielem behawiorystycznego podejścia do zarządzania jest:",
+    "options": [
+      "H. Gantt",
+      "D. McGregor",
+      "F. Fukuyama",
+      "M. Weber"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Douglas McGregor (teoria X i Y) należy do nurtu behawioralnego (stosunków międzyludzkich i zasobów ludzkich), który bada zachowania i motywację ludzi w organizacji. Gantt to szkoła klasyczna (naukowe zarządzanie), Weber – teoria biurokracji, a Fukuyama to politolog."
+  },
+  {
+    "id": "owe33-s-28",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody szkolne",
+    "question": "Macierz BCG dzieli strategiczne jednostki operacyjne organizacji na:",
+    "options": [
+      "gwiazdy, znaki zapytania, dojne krowy, pieski",
+      "gwiazdy, znaki zapytania, supernowe, osły",
+      "gwiazdy, znaki zapytania, komety, czarne dziury",
+      "gwiazdy, wykrzykniki, supernowe, osły"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Macierz BCG dzieli jednostki biznesu według udziału w rynku i tempa wzrostu rynku na: gwiazdy (duży udział, szybki wzrost), znaki zapytania (mały udział, szybki wzrost), dojne krowy (duży udział, wolny wzrost) i psy (mały udział, wolny wzrost)."
+  },
+  {
+    "id": "owe33-s-29",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody szkolne",
+    "question": "W selektorze jednostek General Electric ocena jednostki dokonywana jest według:",
+    "options": [
+      "2 wymiarów",
+      "3 wymiarów",
+      "4 wymiarów",
+      "5 wymiarów"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Macierz General Electric (McKinseya) ocenia jednostki biznesu według dwóch wymiarów: atrakcyjności sektora (rynku) i pozycji konkurencyjnej (siły) jednostki. Każdy wymiar ma 3 poziomy, co daje macierz 3 × 3 (9 pól)."
+  },
+  {
+    "id": "owe33-s-30",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody szkolne",
+    "question": "W grupie nominalnej wykorzystywanej do zespołowego podejmowania decyzji:",
+    "options": [
+      "członkami grupy są osoby niemające doświadczenia w przedmiocie stanowiącym przyczynę uformowania grupy",
+      "na każdym etapie rozwiązywania zadania członkowie grupy mogą dyskutować bez ograniczeń",
+      "członkowie grupy spotykają się ze sobą",
+      "przed członkami grupy stawiane są zadania, których rozwiązanie nie wymaga znalezienia twórczych i innowacyjnych pomysłów"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Technika grupy nominalnej: członkowie spotykają się, ale najpierw każdy samodzielnie i na piśmie formułuje pomysły, potem przedstawia je po kolei bez dyskusji, następnie omawia się je, a na końcu każdy indywidualnie i anonimowo je ocenia (głosuje). Ogranicza to presję grupy. W metodzie delfickiej członkowie się nie spotykają."
+  }
+]

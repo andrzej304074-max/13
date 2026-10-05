@@ -19,9 +19,15 @@ import owe29o from "./owe-29-okregowe.json";
 import owe29s from "./owe-29-szkolne.json";
 import owe30o from "./owe-30-okregowe.json";
 import owe30s from "./owe-30-szkolne.json";
+import owe31o from "./owe-31-okregowe.json";
+import owe31s from "./owe-31-szkolne.json";
+import owe32o from "./owe-32-okregowe.json";
+import owe32s from "./owe-32-szkolne.json";
+import owe33s from "./owe-33-szkolne.json";
 
 // Każdy plik to część testowa jednego zestawu OWE. Nowy plik dopisz tutaj.
 export const QUESTIONS = [
   owe21o, owe21s, owe22o, owe22s, owe23o, owe23s, owe24o, owe24s, owe25o, owe25s,
   owe26o, owe26s, owe27o, owe27s, owe28o, owe28s, owe29o, owe29s, owe30o, owe30s,
+  owe31o, owe31s, owe32o, owe32s, owe33s,
 ].flat() as Question[];

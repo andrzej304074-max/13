@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe32-s-01",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody szkolne",
+    "question": "Którą z funkcji wskazał R.A. Musgrave jako jedną z funkcji finansów publicznych?",
+    "options": [
+      "funkcję proefektywnościową",
+      "funkcję stabilizacyjną",
+      "funkcję innowacyjną",
+      "funkcję kreatywnej destrukcji"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "R.A. Musgrave wyróżnił trzy funkcje finansów publicznych: alokacyjną (dostarczanie dóbr publicznych), redystrybucyjną (korygowanie podziału dochodów) i stabilizacyjną (łagodzenie wahań koniunktury, utrzymanie zatrudnienia i stabilności cen)."
+  },
+  {
+    "id": "owe32-s-02",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody szkolne",
+    "question": "Za twórcę teorii przewagi komparatywnej uważany jest:",
+    "options": [
+      "F. von Hayek",
+      "A. Smith",
+      "D. Ricardo",
+      "A. Greenspan"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Teorię przewagi komparatywnej (względnej) sformułował David Ricardo (1817): kraj powinien specjalizować się w produkcji tych dóbr, które wytwarza relatywnie taniej (z najniższym kosztem alternatywnym), nawet jeśli nie ma w nich przewagi absolutnej. Przewagę absolutną opisał wcześniej Adam Smith."
+  },
+  {
+    "id": "owe32-s-03",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody szkolne",
+    "question": "W przypadku gdy krzywa kosztu całkowitego przedsiębiorstwa jest opisana równaniem TC = 10Q:",
+    "options": [
+      "krzywa całkowitych kosztów przeciętnych jest funkcją stałą",
+      "krzywa kosztów krańcowych jest funkcją rosnącą",
+      "krzywa kosztów krańcowych jest funkcją malejącą",
+      "krzywa przeciętnego kosztu stałego jest funkcją malejącą"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Przy TC = 10Q nie ma kosztów stałych, a każda jednostka kosztuje 10. Przeciętny koszt całkowity = TC/Q = 10 – stały, a koszt krańcowy też wynosi stale 10. Przeciętny koszt stały wynosi zero."
+  },
+  {
+    "id": "owe32-s-04",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody szkolne",
+    "question": "Którą z wymienionych składek na ubezpieczenia społeczne ponosi wyłącznie pracodawca (płatnik składek) w sytuacji, gdy pracownik jest zatrudniony na podstawie umowy o pracę:",
+    "options": [
+      "składka rentowa",
+      "składka emerytalna",
+      "składka wypadkowa",
+      "składka chorobowa"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Przy umowie o pracę składkę wypadkową w całości finansuje pracodawca (jej stopa zależy od ryzyka w branży). Składkę emerytalną i rentową dzielą pracodawca i pracownik, a chorobową płaci w całości pracownik."
+  },
+  {
+    "id": "owe32-s-05",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody szkolne",
+    "question": "W krótkim okresie na rynku konkurencyjnym krzywa podaży każdego z przedsiębiorstw ma postać P = 200 + 2000qn, a krzywa podaży całej branży to P = 200 + 200q, gdzie P – cena, qn – ilość produkowana przez pojedyncze przedsiębiorstwo, a q – ilość produkowana przez całą branżę. Ile przedsiębiorstw funkcjonuje obecnie na rynku?",
+    "options": [
+      "10",
+      "20",
+      "200",
+      "2000"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Podaż branży to suma podaży n jednakowych firm: przy danej cenie q = n · qn. Z P = 200 + 2000qn wynika qn = (P − 200)/2000, więc q = n(P − 200)/2000, czyli P = 200 + (2000/n)q. Skoro 2000/n = 200, to n = 10 firm."
+  },
+  {
+    "id": "owe32-s-06",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody szkolne",
+    "question": "Przykładem dóbr niższego rzędu są:",
+    "options": [
+      "dobra Giffena",
+      "dobra Smitha",
+      "dobra Veblena",
+      "dobra Pareto"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Dobro Giffena to szczególny przypadek dobra niższego rzędu: wzrost ceny zwiększa popyt, bo silny efekt dochodowy przeważa nad efektem substytucyjnym. Dobra Veblena to dobra luksusowe (prestiżowe), a pojęcia „dóbr Smitha” i „dóbr Pareto” nie istnieją."
+  },
+  {
+    "id": "owe32-s-07",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody szkolne",
+    "question": "Na Giełdzie Papierów Wartościowych w Warszawie notowane są:",
+    "options": [
+      "bony pieniężne emitowane przez NBP",
+      "opcje binarne na akcje spółek z WIG20",
+      "kontrakty terminowe, których instrumentem bazowym jest kurs USD/PLN",
+      "obligacje wyemitowane przez osoby fizyczne"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Na GPW notowane są m.in. akcje, obligacje, certyfikaty, prawa poboru oraz instrumenty pochodne – kontrakty terminowe na indeksy, akcje i kursy walut (USD/PLN, EUR/PLN, CHF/PLN). Bony pieniężne NBP nie są notowane na GPW, a osoby fizyczne nie mogą emitować obligacji."
+  },
+  {
+    "id": "owe32-s-08",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody szkolne",
+    "question": "Krzywa popytu na węgiel jest opisana równaniem p = −2q + 40, a krzywa podaży p = q + 2 (gdzie: p – cena za tonę w zł; q – ilość w tonach). W kolejnym roku fiskalnym zostanie wprowadzony podatek kwotowy płacony przez sprzedawców węgla w wysokości 2 zł od sprzedanej tony. Która z odpowiedzi jest bezpośrednim efektem takiego podatku?",
+    "options": [
+      "krzywa podaży przyjmie równanie p = 2q + 2",
+      "krzywa popytu przyjmie równanie p = −2q + 42",
+      "krzywa podaży przyjmie równanie p = q + 4",
+      "krzywa podaży przyjmie równanie p = 3q + 2"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Podatek kwotowy płacony przez sprzedawców podnosi ich koszt każdej tony o 2 zł – krzywa podaży przesuwa się równolegle w górę o 2: p = q + 2 + 2 = q + 4. Krzywa popytu się nie zmienia."
+  },
+  {
+    "id": "owe32-s-09",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody szkolne",
+    "question": "Która z odpowiedzi przedstawia kryterium wejścia na rynek dla przedsiębiorstwa w przypadku rynku konkurencyjnego (gdzie: P – cena; ATC – przeciętny koszt całkowity; AVC – przeciętny koszt zmienny; MR – utarg krańcowy):",
+    "options": [
+      "MR < AVC",
+      "P < AVC",
+      "P > ATC",
+      "P = MR"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Na rynku konkurencyjnym nowe firmy wchodzą, gdy mogą osiągnąć zysk ekonomiczny – czyli gdy cena przewyższa minimalny przeciętny koszt całkowity (P > ATC). P < AVC to kryterium wstrzymania produkcji."
+  },
+  {
+    "id": "owe32-s-10",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody szkolne",
+    "question": "Przyjmując, że w pewnym modelu gospodarki poziom inwestycji jest ustalany poza tym modelem, to inwestycje są w modelu zmienną:",
+    "options": [
+      "endogeniczną",
+      "objaśnianą",
+      "egzogeniczną",
+      "izokosztową"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Zmienna egzogeniczna jest ustalana poza modelem (przyjmuje się ją jako daną), a endogeniczna – wyznaczana w modelu. Inwestycje ustalone poza modelem są więc zmienną egzogeniczną."
+  },
+  {
+    "id": "owe32-s-11",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody szkolne",
+    "question": "Zlecenie maklerskie PKC na Giełdzie Papierów Wartościowych w Warszawie charakteryzuje się tym, że:",
+    "options": [
+      "w systemie notowań ciągłych może być składane jedynie w fazie dogrywki",
+      "nie może być składane w systemie notowań ciągłych niezależnie od fazy notowań",
+      "nie zawiera ono limitu ceny",
+      "może być składane jedynie w systemie kursu jednolitego"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Zlecenie PKC (po każdej cenie) to zlecenie bez limitu ceny – ma być zrealizowane niezależnie od ceny, w całości, z najwyższym priorytetem. Można je składać zarówno w systemie notowań ciągłych, jak i jednolitych."
+  },
+  {
+    "id": "owe32-s-12",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody szkolne",
+    "question": "Które z wymienionych dóbr można uznać za zasoby wspólne:",
+    "options": [
+      "batoniki czekoladowe",
+      "ryby w oceanie",
+      "straż pożarną",
+      "odzież"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Zasoby wspólne są niewykluczalne (trudno zabronić korzystania), ale konkurencyjne (to, co złowi jeden, nie złowi drugi) – np. ryby w oceanie czy łowiska. Grozi im nadmierna eksploatacja („tragedia wspólnego pastwiska”)."
+  },
+  {
+    "id": "owe32-s-13",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody szkolne",
+    "question": "Państwo pobiera podatek w wysokości 10% od dochodów do kwoty 20 000 zł i w wysokości 20% od nadwyżki ponad tę kwotę. Jaka będzie wysokość przeciętnej stopy podatkowej osoby osiągającej dochód równy 40 000 zł:",
+    "options": [
+      "9,5%",
+      "10%",
+      "15%",
+      "20%"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Podatek: 10% · 20 000 = 2000 zł oraz 20% · (40 000 − 20 000) = 4000 zł, łącznie 6000 zł. Przeciętna stopa podatkowa = 6000 / 40 000 = 15%. Krańcowa stopa podatkowa wynosi 20%."
+  },
+  {
+    "id": "owe32-s-14",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody szkolne",
+    "question": "W pewnym przedsiębiorstwie kapitał własny wynosi 1 mln zł, zobowiązania długoterminowe 1 mln zł, a majątek trwały 0,5 mln zł. Ile wynosi kapitał obrotowy netto tego przedsiębiorstwa:",
+    "options": [
+      "1 mln zł",
+      "1,5 mln zł",
+      "2 mln zł",
+      "2,5 mln zł"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Kapitał obrotowy netto = kapitał stały (kapitał własny + zobowiązania długoterminowe) − aktywa trwałe = (1 + 1) − 0,5 = 1,5 mln zł. To część aktywów obrotowych finansowana kapitałem długoterminowym."
+  },
+  {
+    "id": "owe32-s-15",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody szkolne",
+    "question": "Na Giełdzie Papierów Wartościowych w Warszawie za spółki blue chips uważane są przedsiębiorstwa wchodzące w skład indeksu:",
+    "options": [
+      "NCIndex",
+      "BCWIG",
+      "WIG20",
+      "sWIG80"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Blue chips to akcje największych, najbardziej płynnych i renomowanych spółek. Na GPW są to spółki z indeksu WIG20 (20 największych spółek). sWIG80 obejmuje małe spółki, a NCIndex – spółki z NewConnect."
+  },
+  {
+    "id": "owe32-s-16",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody szkolne",
+    "question": "Stagflacja jest to okres:",
+    "options": [
+      "wzrostu produkcji połączonego ze wzrostem cen",
+      "spadku produkcji połączony ze spadkiem cen",
+      "stagnacji produkcji i wzrostu cen",
+      "stagnacji produkcji i spadku cen"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Stagflacja to jednoczesne występowanie stagnacji (lub spadku) produkcji i wysokiej inflacji (wzrostu cen). Często wynika z szoku podażowego, np. wzrostu cen ropy w latach 70."
+  },
+  {
+    "id": "owe32-s-17",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody szkolne",
+    "question": "Krzywa popytu na pewne dobro jest opisana równaniem q = −p + 4, a krzywa podaży q = p (gdzie: p – cena za sztukę w zł; q – ilość w sztukach). Które z poniższych zdań prawidłowo opisuje sytuację bezpośrednio po wprowadzeniu ceny minimalnej na rynku tego dobra w wysokości 3 zł za sztukę:",
+    "options": [
+      "na rynku wystąpi nadwyżka ilości oferowanej nad ilością zapotrzebowania",
+      "na rynku wystąpi nadwyżka ilości zapotrzebowanej nad ilością oferowaną",
+      "spadnie cena tego dobra",
+      "na rynku wystąpi równowaga"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Bez regulacji równowaga: −p + 4 = p, więc p = 2, q = 2. Przy cenie minimalnej 3 zł (powyżej równowagi) popyt wynosi q = 1, a podaż q = 3 – powstaje nadwyżka podaży nad popytem (2 sztuki)."
+  },
+  {
+    "id": "owe32-s-18",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody szkolne",
+    "question": "Organem spółki akcyjnej jest:",
+    "options": [
+      "zgromadzenie obligatariuszy",
+      "zgromadzenie wspólników",
+      "zarząd",
+      "zrzeszenie wspólników"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Organami spółki akcyjnej są: zarząd (prowadzi sprawy spółki i reprezentuje ją), rada nadzorcza (stały nadzór) i walne zgromadzenie (akcjonariuszy). Zgromadzenie wspólników to organ spółki z o.o."
+  },
+  {
+    "id": "owe32-s-19",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody szkolne",
+    "question": "Wielkości makroekonomiczne w pewnym państwie kształtują się następująco: konsumpcja = 4600; inwestycje = 1400; odsetki od długu publicznego = 200; zakupy rządowe = 600; transfery rządowe = 500; podatki = 1100. Ile wynosi PKB ?",
+    "options": [
+      "6400",
+      "6600",
+      "7300",
+      "8400"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "PKB metodą wydatków = C + I + G (+ NX) = 4600 + 1400 + 600 = 6600 (brak danych o handlu zagranicznym). Transfery i odsetki od długu publicznego to płatności, które nie są zakupem dóbr i usług, więc nie wchodzą do G."
+  },
+  {
+    "id": "owe32-s-20",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody szkolne",
+    "question": "Antycypacyjna polityka strukturalna w gospodarce polega na:",
+    "options": [
+      "ułatwianiu przedsiębiorcom dostosowania się do nowych warunków gospodarowania w przyszłości",
+      "wykorzystywaniu automatycznych stabilizatorów koniunktury w ramach pasywnej polityki fiskalnej",
+      "przeciwdziałaniu negatywnym trendom demograficznym poprzez wykorzystanie transferów socjalnych",
+      "silnym ograniczeniu działalności sektora finansowego w celu ograniczenia jego niestabilności"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Antycypacyjna polityka strukturalna wyprzedza zmiany: państwo przewiduje przyszłe kierunki rozwoju (np. technologiczne) i pomaga przedsiębiorstwom się do nich dostosować – wspiera innowacje, kształcenie, infrastrukturę. Polityka adaptacyjna reaguje na zmiany już zachodzące."
+  },
+  {
+    "id": "owe32-s-21",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody szkolne",
+    "question": "Przyjmując koncepcję długookresowej krzywej Phillipsa według M. Friedmana oraz E. Phelpsa, konsekwencją zwiększenia tempa wzrostu podaży pieniądza w długim okresie jest:",
+    "options": [
+      "spadek stopy bezrobocia poniżej poziomu naturalnego",
+      "wzrost stopy bezrobocia powyżej poziomu naturalnego",
+      "wzrost stopy inflacji",
+      "wzrost stopy deflacji"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Według Friedmana i Phelpsa w długim okresie krzywa Phillipsa jest pionowa na poziomie naturalnej stopy bezrobocia. Szybszy wzrost podaży pieniądza może tylko chwilowo obniżyć bezrobocie, a w długim okresie powoduje jedynie wyższą inflację."
+  },
+  {
+    "id": "owe32-s-22",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody szkolne",
+    "question": "Cło ad valorem jest:",
+    "options": [
+      "nakładane jako procent od wartości importowanego dobra",
+      "wprowadzane przez kraj eksportujący zwykle na wniosek kraju importującego",
+      "przykładem bariery pozataryfowej",
+      "stałą kwotową opłatą od każdej jednostki importowanego towaru"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Cło ad valorem to cło procentowe – naliczane jako procent wartości importowanego towaru (np. 10%). Cło specyficzne (kwotowe) to stała kwota od jednostki towaru. Cła to bariery taryfowe; pozataryfowe to np. kontyngenty i normy."
+  },
+  {
+    "id": "owe32-s-23",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody szkolne",
+    "question": "W przypadku występowania dynamicznych rosnących przychodów skali krzywa doświadczenia (uczenia się) jest:",
+    "options": [
+      "malejąca",
+      "rosnąca",
+      "stała",
+      "doskonale nieelastyczna"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Krzywa doświadczenia (uczenia się) pokazuje, że wraz ze wzrostem skumulowanej produkcji koszt jednostkowy spada, bo pracownicy i firma uczą się produkować efektywniej. Przy dynamicznych korzyściach skali krzywa ta jest malejąca."
+  },
+  {
+    "id": "owe32-s-24",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody szkolne",
+    "question": "Sterylizowana interwencja walutowa banku centralnego:",
+    "options": [
+      "nie wpływa na krajową podaż pieniądza",
+      "nie wpływa na strukturę bilansu banku centralnego",
+      "nigdy nie wpływa na zagraniczne aktywa banku centralnego",
+      "powoduje wzrost ilości gotówki w obiegu w kraju banku centralnego dokonującego interwencji"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Interwencja sterylizowana polega na tym, że bank centralny kupuje (lub sprzedaje) walutę, a jednocześnie neutralizuje wpływ tej operacji na ilość pieniądza krajowego operacją otwartego rynku w przeciwnym kierunku. Krajowa podaż pieniądza się więc nie zmienia, choć zmienia się struktura bilansu banku (rezerwy walutowe)."
+  },
+  {
+    "id": "owe32-s-25",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody szkolne",
+    "question": "Eksport polskich towarów o największej wartości trafiał w 2018 r. do:",
+    "options": [
+      "Niemiec",
+      "USA",
+      "Chin",
+      "Wielkiej Brytanii"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Niemcy są od lat największym odbiorcą polskiego eksportu – trafia tam ok. 27–28% eksportu towarów. Kolejne miejsca zajmowały m.in. Czechy, Wielka Brytania i Francja."
+  },
+  {
+    "id": "owe32-s-26",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody szkolne",
+    "question": "Producent soku porzeczkowego rozpoczął produkcję opakowań kartonowych, które wcześniej nabywał od innych przedsiębiorstw. Takie działanie przedsiębiorstwa to:",
+    "options": [
+      "integracja pionowa „wstecz”",
+      "integracja pionowa „w przód”",
+      "segmentacja rynku",
+      "wrogie przejęcie"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Integracja pionowa wstecz polega na przejmowaniu (lub podejmowaniu) działalności wcześniejszych ogniw łańcucha dostaw – producent soku sam wytwarza opakowania, które wcześniej kupował. Integracja w przód to wchodzenie w dystrybucję i sprzedaż."
+  },
+  {
+    "id": "owe32-s-27",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody szkolne",
+    "question": "Dokument opracowywany przez przedsiębiorcę w toku przygotowań do uruchomienia nowego przedsięwzięcia przedstawiający jego strategię i strukturę to:",
+    "options": [
+      "analiza portfelowa",
+      "analiza techniczna",
+      "macierz BCG",
+      "biznesplan"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Biznesplan to dokument przygotowywany przed uruchomieniem przedsięwzięcia: opisuje pomysł, rynek, konkurencję, strategię marketingową, strukturę organizacyjną, plan finansowy i ryzyka. Służy przedsiębiorcy i np. bankom czy inwestorom."
+  },
+  {
+    "id": "owe32-s-28",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody szkolne",
+    "question": "Wskaż prawdziwe zdanie dotyczące komunikacji w organizacji zgodnej z wzorcem litery Y:",
+    "options": [
+      "każda osoba utrzymuje w nim kontakt tylko z jedną osobą",
+      "jest on mniej scentralizowany niż wzorzec „koła od wozu”",
+      "każda osoba utrzymuje w nim kontakt dokładnie z dwiema osobami",
+      "jest on silniej zdecentralizowany niż wzorzec „każdy z każdym”"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "We wzorcu komunikacji Y jedna osoba jest centralnym węzłem, ale informacja przechodzi też przez pośredników (łańcuch). Jest mniej scentralizowany niż „koło” (wszyscy komunikują się tylko przez jedną osobę), ale bardziej niż wzorzec „każdy z każdym”."
+  },
+  {
+    "id": "owe32-s-29",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody szkolne",
+    "question": "Jak według typologii strategii w ujęciu Milesa i Snowa nazywa się strategia polegająca na utrzymaniu obecnie posiadanych rynków i poziomu zadowolenia klienta z umiarkowanym akcentem na innowacje?",
+    "options": [
+      "poszukiwacza",
+      "obrońcy",
+      "analityka",
+      "biernej reakcji"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "W typologii Milesa i Snowa „analityk” łączy cechy obrońcy i poszukiwacza: utrzymuje dotychczasowe rynki i zadowolenie klientów, a jednocześnie umiarkowanie wprowadza innowacje (często naśladując sprawdzone rozwiązania konkurentów)."
+  },
+  {
+    "id": "owe32-s-30",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody szkolne",
+    "question": "Co jest czynnikiem motywacji w teorii dwuczynnikowej F. Herzberga:",
+    "options": [
+      "warunki pracy",
+      "stosunki interpersonalne",
+      "odpowiedzialność",
+      "bezpieczeństwo"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Według teorii dwuczynnikowej F. Herzberga motywatorami są czynniki związane z treścią pracy: osiągnięcia, uznanie, sama praca, odpowiedzialność i awans. Warunki pracy, płaca, stosunki interpersonalne i bezpieczeństwo to czynniki higieny – ich brak powoduje niezadowolenie, ale nie motywują."
+  }
+]

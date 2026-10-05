@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe31-s-01",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody szkolne",
+    "question": "Realizowaną przez Narodowy Bank Polski strategią polityki pieniężnej jest:",
+    "options": [
+      "strategia kontroli podaży pieniądza",
+      "strategia kontroli stóp procentowych",
+      "strategia bezpośredniego celu inflacyjnego",
+      "strategia kursu walutowego"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "NBP od 1999 r. stosuje strategię bezpośredniego celu inflacyjnego: Rada Polityki Pieniężnej ogłasza cel (od 2004 r. 2,5% ± 1 pkt proc.) i ustala stopy procentowe tak, by inflacja się do niego zbliżała. Kurs złotego jest płynny, a podaż pieniądza nie jest celem polityki."
+  },
+  {
+    "id": "owe31-s-02",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody szkolne",
+    "question": "Jednym z twórców teoretycznych podstaw koncepcji banku centralnego jako pożyczkodawcy ostatniej instancji jest:",
+    "options": [
+      "W. Bagehot",
+      "M. Friedman",
+      "J.M. Keynes",
+      "F. von Hayek"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Walter Bagehot w książce „Lombard Street” (1873) sformułował zasadę, że w czasie paniki bank centralny powinien jako pożyczkodawca ostatniej instancji udzielać bankom wypłacalnym nieograniczonych kredytów, pod dobre zabezpieczenie i na wysoki procent."
+  },
+  {
+    "id": "owe31-s-03",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody szkolne",
+    "question": "W swojej współczesnej formule płaca minimalna po raz pierwszy została wprowadzona w:",
+    "options": [
+      "Wielkiej Brytanii",
+      "USA",
+      "Nowej Zelandii",
+      "Francji"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Pierwszą ustawową płacę minimalną we współczesnej formie wprowadziła Nowa Zelandia w 1894 r. (ustawa o arbitrażu przemysłowym). W Wielkiej Brytanii wprowadzono ją w 1909 r. (dla wybranych branż), a w USA na poziomie federalnym – w 1938 r."
+  },
+  {
+    "id": "owe31-s-04",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody szkolne",
+    "question": "Elementem którego z filarów systemu emerytalnego w Polsce są Indywidualne Konta Zabezpieczenia Emerytalnego:",
+    "options": [
+      "I filara",
+      "II filara",
+      "III filara",
+      "IV filara"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Polski system emerytalny ma trzy filary: I – obowiązkowy, repartycyjny (ZUS), II – obowiązkowy kapitałowy (OFE, subkonto w ZUS), III – dobrowolny (IKE, IKZE, PPE, a od 2019 r. także PPK). IKZE należą więc do III filara."
+  },
+  {
+    "id": "owe31-s-05",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody szkolne",
+    "question": "W ramach procesu sekurytyzacji powstają:",
+    "options": [
+      "warranty",
+      "bony skarbowe",
+      "swapy na zwłokę w spłacie kredytu (credit default swaps)",
+      "zabezpieczone skrypty dłużne (collateralized debt obligations)"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Sekurytyzacja to przekształcanie niepłynnych aktywów (np. portfela kredytów) w papiery wartościowe zabezpieczone tymi aktywami i sprzedawane inwestorom. Powstają w ten sposób m.in. papiery ABS i CDO (collateralized debt obligations). CDS to instrument pochodny, a nie produkt sekurytyzacji."
+  },
+  {
+    "id": "owe31-s-06",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody szkolne",
+    "question": "Źródłem bezrobocia przymusowego według J.M. Keynesa jest:",
+    "options": [
+      "występowanie deficytu bliźniaczego",
+      "deprecjacja waluty krajowej",
+      "nadmiar podaży pieniądza w gospodarce",
+      "niedostateczna wielkość efektywnego popytu na towary w gospodarce"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Według J.M. Keynesa bezrobocie przymusowe wynika z niedostatecznego efektywnego (zagregowanego) popytu: przedsiębiorstwa produkują tyle, ile mogą sprzedać, więc przy niskim popycie zatrudniają mniej osób, niż chce pracować za obowiązującą płacę."
+  },
+  {
+    "id": "owe31-s-07",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody szkolne",
+    "question": "Właściciel fabryki butów chce zmniejszyć nakład pracy o 7 roboczogodzin, nie zmieniając przy tym wielkości produkcji. O ile maszynogodzin musi zwiększyć się nakład kapitału, jeżeli obecnie wynosi on 10 maszynogodzin, a wartość bezwzględna krańcowej stopy substytucji technicznej zastąpienia kapitału pracą jest równa 2:",
+    "options": [
+      "2",
+      "3,5",
+      "4",
+      "14"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Krańcowa stopa substytucji technicznej (MRTS) równa 2 oznacza, że jedną roboczogodzinę pracy zastępują 2 maszynogodziny kapitału przy tej samej produkcji. Zmniejszenie pracy o 7 roboczogodzin wymaga więc zwiększenia kapitału o 7 · 2 = 14 maszynogodzin."
+  },
+  {
+    "id": "owe31-s-08",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody szkolne",
+    "question": "Dobra Giffena to:",
+    "options": [
+      "wszystkie dobra podrzędne",
+      "dobra, w przypadku których efekt dochodowy przeważa nad efektem substytucyjnym",
+      "dobra, w przypadku których krzywa popytu jest nachylona ujemnie",
+      "dobra, w przypadku których wzrost ceny nie ma wpływu na wielkość popytu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Dobro Giffena to szczególne dobro podrzędne, na które popyt rośnie, gdy rośnie jego cena: efekt dochodowy (ujemny dla dobra podrzędnego) jest silniejszy niż efekt substytucyjny. Krzywa popytu ma wtedy dodatnie nachylenie. Nie każde dobro podrzędne jest dobrem Giffena."
+  },
+  {
+    "id": "owe31-s-09",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody szkolne",
+    "question": "Przedsiębiorstwa A i B różnią się wyłącznie wysokością kosztów stałych, przy czym są one wyższe w przedsiębiorstwie B. Oznacza to, że:",
+    "options": [
+      "minimalna skala efektywna produkcji przyjmuje wartość większą w przedsiębiorstwie A",
+      "krzywe kosztu krańcowego w obu przedsiębiorstwach są identyczne",
+      "nachylenie krzywej przeciętnego kosztu zmiennego w przedsiębiorstwie A jest mniejsze niż w przedsiębiorstwie B",
+      "nachylenie krzywej przeciętnego kosztu zmiennego w przedsiębiorstwie A jest większe niż w przedsiębiorstwie B"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Koszt krańcowy zależy tylko od zmian kosztu zmiennego, bo koszty stałe nie zmieniają się wraz z produkcją. Skoro firmy różnią się wyłącznie kosztami stałymi, ich krzywe kosztu krańcowego (i przeciętnego kosztu zmiennego) są identyczne. Różnią się krzywe kosztu przeciętnego całkowitego."
+  },
+  {
+    "id": "owe31-s-10",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody szkolne",
+    "question": "Krzywa popytu na energooszczędne żarówki opisana jest równaniem q = −p + 20, a krzywa podaży q = 2p − 1. Decyzją rządu producenci otrzymają dotacje do produkowanych żarówek energooszczędnych. W efekcie jej wprowadzenia:",
+    "options": [
+      "krzywa popytu ulegnie przesunięciu w prawo",
+      "krzywa popytu ulegnie przesunięciu w lewo",
+      "nowa cena równowagi będzie niższa od początkowej dokładnie o wartość całej dotacji",
+      "nowa ilość w punkcie równowagi będzie większa od początkowej"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Dotacja dla producentów obniża ich koszty, więc krzywa podaży przesuwa się w prawo (w dół). Krzywa popytu się nie zmienia. W nowej równowadze cena spada, ale o mniej niż wartość dotacji (korzyść dzielą konsumenci i producenci), a ilość równowagi rośnie."
+  },
+  {
+    "id": "owe31-s-11",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody szkolne",
+    "question": "Przykładem kartelu jest:",
+    "options": [
+      "NAFTA",
+      "OPEC",
+      "WTO",
+      "IMF"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Kartel to porozumienie producentów w celu ustalania cen lub limitów produkcji. Przykładem jest OPEC – Organizacja Państw Eksportujących Ropę Naftową, która ustala limity wydobycia. NAFTA to strefa wolnego handlu, WTO – Światowa Organizacja Handlu, a IMF (MFW) – Międzynarodowy Fundusz Walutowy."
+  },
+  {
+    "id": "owe31-s-12",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody szkolne",
+    "question": "Cechą charakterystyczną konkurencji monopolistycznej jest występowanie:",
+    "options": [
+      "wysokich barier wejścia na rynek",
+      "zróżnicowanych produktów",
+      "tylko jednego producenta",
+      "wyłącznie konkurencji cenowej"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Konkurencja monopolistyczna łączy cechy konkurencji i monopolu: wiele firm i niskie bariery wejścia, ale produkty są zróżnicowane (marka, jakość, lokalizacja), więc każda firma ma pewną władzę nad ceną. Firmy konkurują nie tylko ceną, ale też jakością i reklamą."
+  },
+  {
+    "id": "owe31-s-13",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody szkolne",
+    "question": "Merkantylizm wskazywał na konieczność:",
+    "options": [
+      "wspomagania przez państwo eksportu surowców",
+      "osiągnięcia i utrwalenia dodatniego bilansu handlowego poprzez wspieranie eksportu przez państwo",
+      "ograniczenia roli państwa do strażnika prawa",
+      "ograniczania przez państwo eksportu wyrobów przemysłowych, zwłaszcza o wysokim stopniu przetworzenia"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Merkantylizm (XVI–XVIII w.) uważał, że bogactwo kraju to zasoby złota i srebra, a sposobem ich pomnażania jest dodatni bilans handlowy. Państwo powinno więc wspierać eksport (zwłaszcza wyrobów przetworzonych) i ograniczać import, np. cłami."
+  },
+  {
+    "id": "owe31-s-14",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody szkolne",
+    "question": "W równaniu wymiany Fishera (równanie ilościowe) jako zmienna występuje:",
+    "options": [
+      "stopa bezrobocia (wg BAEL)",
+      "stopa procentowa banku centralnego",
+      "szybkość obiegu pieniądza",
+      "PKB per capita"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Równanie wymiany Fishera: M · V = P · T (lub P · Y), gdzie M – ilość pieniądza, V – szybkość obiegu pieniądza, P – poziom cen, T – liczba transakcji (lub Y – realny produkt)."
+  },
+  {
+    "id": "owe31-s-15",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody szkolne",
+    "question": "Dwa przedsiębiorstwa P i G będące jedynymi dostawcami energii elektrycznej w kraju X współpracują w zakresie ustalania ceny sprzedaży 1 kWh. Gdy P i G konsekwentnie współpracują (realizują uzgodnioną politykę cenową), każde z nich osiąga zysk na poziomie 100 jednostek. Jeżeli P i G jednocześnie próbują działań niezgodnych z porozumieniem, to obydwa osiągają zysk na poziomie 99 jednostek. Jeżeli natomiast jedno z przedsiębiorstw działa zgodnie z porozumieniem, a drugie łamie je, to osiągają one zysk odpowiednio 0 jednostek i 198 jednostek. Która z odpowiedzi jest prawidłowa?",
+    "options": [
+      "dominującą strategią zarówno dla P, jak i G jest współpraca, gdyż pozwala osiągnąć najwyższe zyski",
+      "przy przedstawionych założeniach P nie ma strategii dominującej",
+      "dominującą strategią zarówno dla P, jak i G jest zdrada",
+      "przy przedstawionych założeniach G nie ma strategii dominującej"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "To dylemat więźnia. Dla każdej firmy niezależnie od wyboru drugiej lepiej jest łamać porozumienie: gdy druga współpracuje, zdrada daje 198 zamiast 100; gdy druga zdradza, zdrada daje 99 zamiast 0. Zdrada jest więc strategią dominującą dla obu, choć wspólna współpraca dałaby im więcej."
+  },
+  {
+    "id": "owe31-s-16",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody szkolne",
+    "question": "Krzywa Engla:",
+    "options": [
+      "to krzywa zależności między konsumowaną ilością dobra X a ceną jego substytutu",
+      "w przypadku dóbr niższego rzędu ma nachylenie ujemne",
+      "w przypadku dóbr normalnych ma nachylenie ujemne",
+      "to inne określenie cenowej ścieżki konsumpcji"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Krzywa Engla pokazuje zależność między dochodem konsumenta a ilością kupowanego dobra. Dla dóbr normalnych jest rosnąca (dodatnie nachylenie), a dla dóbr niższego rzędu – malejąca (ujemne nachylenie), bo wraz ze wzrostem dochodu kupuje się ich mniej."
+  },
+  {
+    "id": "owe31-s-17",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody szkolne",
+    "question": "Najdłużej trwającymi cyklami koniunkturalnymi są cykle:",
+    "options": [
+      "Kitchina",
+      "Juglara",
+      "Kuznetsa",
+      "Kondratiewa"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Cykle Kondratiewa (fale długie) trwają ok. 40–60 lat. Cykle Kuznetsa (budowlane) – ok. 15–25 lat, Juglara (inwestycyjne) – ok. 7–11 lat, a Kitchina (zapasowe) – ok. 3–4 lata."
+  },
+  {
+    "id": "owe31-s-18",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody szkolne",
+    "question": "Teoria lepkich płac wyjaśnia:",
+    "options": [
+      "wznoszący przebieg długookresowej krzywej zagregowanej podaży (funkcja rosnąca)",
+      "opadający przebieg długookresowej krzywej zagregowanej podaży (funkcja malejąca)",
+      "wznoszący przebieg krótkookresowej krzywej zagregowanej podaży",
+      "istnienie neutralności pieniądza"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Teoria lepkich płac zakłada, że płace nominalne dostosowują się powoli (np. przez umowy). Gdy ceny rosną, a płace nie, realne koszty pracy spadają i firmom opłaca się produkować więcej – dlatego krótkookresowa krzywa zagregowanej podaży jest rosnąca. Długookresowa krzywa podaży jest pionowa."
+  },
+  {
+    "id": "owe31-s-19",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody szkolne",
+    "question": "Według Narodowego Banku Polskiego wielkość opóźnień w transmisji impulsów polityki pieniężnej do sfery realnej gospodarki w Polsce wynosi około:",
+    "options": [
+      "3–4 miesiące",
+      "4–6 kwartałów",
+      "14–16 kwartałów",
+      "4 lata"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Według NBP impulsy polityki pieniężnej (np. zmiana stóp procentowych) oddziałują na gospodarkę z opóźnieniem: na produkcję po ok. 4–6 kwartałach, a na inflację – jeszcze później. Dlatego RPP musi podejmować decyzje z wyprzedzeniem."
+  },
+  {
+    "id": "owe31-s-20",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody szkolne",
+    "question": "W przypadku autarkii zawsze występuje następująca tożsamość (gdzie: Y – łączne dochody w gospodarce; C – konsumpcja; I – inwestycje; G – wydatki publiczne; NX – eksport netto):",
+    "options": [
+      "S=Y+C−G",
+      "S=I",
+      "NX > 0",
+      "Y = (1 + S) + I + G"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Autarkia to gospodarka zamknięta, bez handlu zagranicznego (NX = 0). Wtedy Y = C + I + G, a oszczędności narodowe S = Y − C − G, więc S = I – oszczędności zawsze równają się inwestycjom."
+  },
+  {
+    "id": "owe31-s-21",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody szkolne",
+    "question": "Instrumentem pochodnym jest:",
+    "options": [
+      "akcja uprzywilejowana co do głosu",
+      "warrant",
+      "list zastawny",
+      "certyfikat inwestycyjny"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Instrument pochodny (derywat) to instrument, którego wartość zależy od wartości innego instrumentu bazowego. Warrant daje prawo do kupna lub sprzedaży instrumentu bazowego po ustalonej cenie – jest instrumentem pochodnym. Akcje, listy zastawne i certyfikaty inwestycyjne nim nie są."
+  },
+  {
+    "id": "owe31-s-22",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody szkolne",
+    "question": "Wskaźnik rentowności kapitału własnego:",
+    "options": [
+      "jest to różnica pomiędzy poziomem zysku netto a wielkością kapitału własnego",
+      "informuje, ile jednostek kapitału własnego przypada na jedną jednostkę zysku netto",
+      "jest równy iloczynowi wskaźnika rentowności majątku i mnożnika kapitału własnego",
+      "zawsze przyjmuje wartości większe od 0"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "ROE (rentowność kapitału własnego) = zysk netto / kapitał własny. Zgodnie z modelem DuPonta ROE = ROA · mnożnik kapitału własnego (aktywa / kapitał własny). ROE może być ujemne, gdy firma ponosi stratę."
+  },
+  {
+    "id": "owe31-s-23",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody szkolne",
+    "question": "Bitcoin to:",
+    "options": [
+      "rodzaj pieniądza zdawkowego",
+      "pieniądz papierowy",
+      "pieniądz kruszcowy",
+      "kryptowaluta"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Bitcoin to pierwsza zdecentralizowana kryptowaluta (2009), działająca w oparciu o technologię blockchain, bez centralnego emitenta. Nie jest pieniądzem zdawkowym, papierowym ani kruszcowym."
+  },
+  {
+    "id": "owe31-s-24",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody szkolne",
+    "question": "Które zdanie dotyczące oscylatora RSI (relative strength index, indeks siły względnej) jest prawdziwe?",
+    "options": [
+      "RSI przyjmuje wartości od −1 do 1",
+      "RSI jest miernikiem stanu wykupienia lub wyprzedania rynku",
+      "RSI jest miarą wpływu, jaką na wartość indeksu giełdowego mają notowania akcji danej spółki",
+      "im wyższe wartości RSI, tym silniejszy jest sygnał kupna dla inwestora"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "RSI (indeks siły względnej) to oscylator analizy technicznej przyjmujący wartości od 0 do 100. Wartości powyżej 70 sugerują wykupienie rynku (możliwy spadek – sygnał sprzedaży), a poniżej 30 – wyprzedanie (możliwy wzrost – sygnał kupna)."
+  },
+  {
+    "id": "owe31-s-25",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody szkolne",
+    "question": "Wskaż cztery elementy marketingu mix:",
+    "options": [
+      "produkt, usługa, klient, dostawca",
+      "produkt, cena, promocja, dystrybucja",
+      "dostawca, produkt, marka, klient",
+      "dostawca, cena, promocja, klient"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Marketing mix 4P to: produkt (product), cena (price), promocja (promotion) i dystrybucja (place)."
+  },
+  {
+    "id": "owe31-s-26",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody szkolne",
+    "question": "Weberowski model zarządzania sprawami publicznymi cechuje się:",
+    "options": [
+      "w pełni inkluzywnymi relacjami z otoczeniem",
+      "sieciową zasadą zarządzania",
+      "biurokratyczną strukturą organizacji",
+      "częściowo inkluzywnymi relacjami z otoczeniem"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Weberowski model administracji publicznej opiera się na biurokracji: hierarchii, ścisłych przepisach, formalnych procedurach, podziale kompetencji i bezosobowości. Modele sieciowe i inkluzywne (np. governance) są późniejsze."
+  },
+  {
+    "id": "owe31-s-27",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody szkolne",
+    "question": "W stanie niepewności podejmowanie decyzji odbywa się:",
+    "options": [
+      "przy wyższym poziomie niejasności niż w stanie ryzyka",
+      "w sytuacji, gdy podejmujący decyzję wie z rozsądnym stopniem pewności jakie są możliwości i warunki towarzyszące każdej z decyzji",
+      "przy niższym niebezpieczeństwie podjęcia błędnej decyzji niż w stanie pewności",
+      "w sytuacji, w której dostępność poszczególnych możliwości jest znana z pewnym szacunkowym prawdopodobieństwem"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W warunkach niepewności decydent nie zna prawdopodobieństw możliwych wyników (lub nawet samych wariantów), więc niejasność jest większa niż w warunkach ryzyka, gdzie prawdopodobieństwa są znane lub szacowalne. W warunkach pewności skutki decyzji są znane."
+  },
+  {
+    "id": "owe31-s-28",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody szkolne",
+    "question": "Analiza SWOT to:",
+    "options": [
+      "ocena mocnych i słabych stron organizacji, a także szans oraz zagrożeń ze strony otoczenia, w jakim ona działa",
+      "proces uczenia się przez porównywanie, jak inne organizacje realizują określone zadania na szczególnie wysokim poziomie jakościowym",
+      "metoda oceny jednostki operacyjnej organizacji według kryterium stopy zwrotu oraz udziału organizacji w danym segmencie rynku",
+      "metoda oceny postępu realizacji celów przez organizację"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Analiza SWOT ocenia mocne (Strengths) i słabe strony (Weaknesses) organizacji oraz szanse (Opportunities) i zagrożenia (Threats) w otoczeniu. Odpowiedź B opisuje benchmarking, a C – macierz BCG."
+  },
+  {
+    "id": "owe31-s-29",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody szkolne",
+    "question": "Ile podstawowych szczebli celów wyróżniamy w zarządzaniu organizacjami?",
+    "options": [
+      "2 (misja i cele operacyjne)",
+      "3 (cele strategiczne, cele taktyczne i cele operacyjne)",
+      "4 (misja, cele strategiczne, cele taktyczne i cele operacyjne)",
+      "5 (misja, cele strategiczne, cele taktyczne, cele pośrednie i cele operacyjne)"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "W zarządzaniu wyróżnia się cztery szczeble celów: misję (ogólny sens istnienia), cele strategiczne (długookresowe, dla całej organizacji), taktyczne (średniookresowe, dla części organizacji) i operacyjne (krótkookresowe, konkretne zadania)."
+  },
+  {
+    "id": "owe31-s-30",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody szkolne",
+    "question": "Merchandising to:",
+    "options": [
+      "wykorzystywanie osób do formalnego reprezentowania organizacji wobec organów politycznych w celu wywierania wpływu na proces legislacyjny",
+      "formuła wykorzystywania MLM (multi-level marketing)",
+      "jedno z podejść do motywowania pracowników",
+      "ogół aktywnych działań podejmowanych w punkcie sprzedaży związanych m.in. z ekspozycją towarów na półce w celu oddziaływania na nabywcę i poprawienia wyników sprzedaży"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Merchandising to działania w miejscu sprzedaży – ekspozycja towarów na półkach, rozmieszczenie działów, oznakowanie, materiały promocyjne – mające skłonić klienta do zakupu i zwiększyć sprzedaż. Odpowiedź A opisuje lobbing."
+  }
+]

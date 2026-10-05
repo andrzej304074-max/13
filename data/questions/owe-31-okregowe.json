@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe31-o-01",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody okręgowe",
+    "question": "Przy założeniu występowania pozytywnych efektów zewnętrznych związanych z edukacją:",
+    "options": [
+      "krzywa wartości społecznej edukacji znajduje się powyżej krzywej wartości prywatnej",
+      "ilość usług edukacyjnych optymalna ze społecznego punktu widzenia jest mniejsza od ustalonej przez wolny rynek",
+      "krzywa wartości społecznej edukacji powstaje poprzez przesunięcie krzywej kosztu prywatnego w lewo o wartość efektów zewnętrznych",
+      "krzywa wartości społecznej edukacji powstaje poprzez przesunięcie krzywej kosztu prywatnego w prawo o wartość efektów zewnętrznych"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Pozytywne efekty zewnętrzne edukacji (np. lepiej wykształcone społeczeństwo, innowacje, niższa przestępczość) sprawiają, że korzyść społeczna jest większa niż prywatna – krzywa wartości społecznej leży powyżej krzywej wartości prywatnej. Rynek dostarcza wtedy za mało edukacji w porównaniu z optimum społecznym."
+  },
+  {
+    "id": "owe31-o-02",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody okręgowe",
+    "question": "Główną przyczyną obniżenia relacji państwowego długu publicznego do PKB w Polsce w 2014 r. było:",
+    "options": [
+      "zmniejszenie zadłużenia sektora samorządowego",
+      "znacząca nadwyżka budżetu państwa",
+      "silna rewaluacja złotego",
+      "umorzenie obligacji skarbowych będących uprzednio w posiadaniu otwartych funduszy emerytalnych"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "W 2014 r. w ramach reformy OFE przeniesiono do ZUS i umorzono obligacje skarbowe posiadane przez otwarte fundusze emerytalne (ok. 150 mld zł). Dług publiczny w relacji do PKB jednorazowo wyraźnie spadł, choć zobowiązania emerytalne państwa pozostały."
+  },
+  {
+    "id": "owe31-o-03",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody okręgowe",
+    "question": "Który z poniższych krajów dokonał jednostronnej euroizacji?",
+    "options": [
+      "Łotwa",
+      "Wielka Brytania",
+      "Dania",
+      "Czarnogóra"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Euroizacja jednostronna to przyjęcie euro jako oficjalnej waluty bez członkostwa w strefie euro i bez zgody UE. Zrobiły tak Czarnogóra i Kosowo (wcześniej używające marki niemieckiej). Łotwa przyjęła euro jako członek UE w 2014 r., a Wielka Brytania i Dania mają własne waluty."
+  },
+  {
+    "id": "owe31-o-04",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody okręgowe",
+    "question": "Krzywa popytu na kakao opisana jest równaniem q = −p + 20, a krzywa podaży q = 1,25p − 2, gdzie p – to cena w tys. USD, a q – to ilość w tonach. W ostatnich miesiącach świat obiegła informacja o wynikach badań naukowców o wyjątkowo prozdrowotnych właściwościach tego artykułu. Która z poniższych odpowiedzi może być bezpośrednim efektem takiego odkrycia?",
+    "options": [
+      "krzywa podaży przyjmie postać q = 1,25p − 4",
+      "krzywa podaży przyjmie postać q = 1,25p − 8",
+      "krzywa popytu przyjmie postać q = −p + 10",
+      "krzywa popytu przyjmie postać q = −p + 25"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Odkrycie prozdrowotnych właściwości kakao zwiększa jego atrakcyjność dla konsumentów, więc rośnie popyt – krzywa popytu przesuwa się w prawo. Odpowiada temu wzrost wyrazu wolnego: q = −p + 25 zamiast q = −p + 20. Podaż bezpośrednio się nie zmienia."
+  },
+  {
+    "id": "owe31-o-05",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody okręgowe",
+    "question": "Która z zależności prawidłowo opisuje sytuację na rynku, na którym występuje monopol (P – cena monopolowa, MR – utarg krańcowy, MC – koszt krańcowy)?",
+    "options": [
+      "P < MC",
+      "P > MR",
+      "MR = P",
+      "MC = P"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Monopolista, żeby sprzedać więcej, musi obniżyć cenę wszystkich jednostek, więc utarg krańcowy jest mniejszy od ceny (P > MR). Ponieważ produkuje tam, gdzie MR = MC, cena jest też wyższa od kosztu krańcowego (P > MC)."
+  },
+  {
+    "id": "owe31-o-06",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody okręgowe",
+    "question": "W celu ograniczenia hiperinflacji występującej w Polsce na początku transformacji systemowej zastosowano:",
+    "options": [
+      "sztywny kurs walutowy",
+      "bezpośredni cel inflacyjny",
+      "płynny kurs walutowy",
+      "sztywny deflator PKB"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W planie Balcerowicza (1990) hiperinflację ograniczano m.in. przez sztywny kurs złotego wobec dolara (9500 zł za 1 USD) jako „kotwicę nominalną”, restrykcyjną politykę pieniężną i fiskalną oraz kontrolę płac (popiwek). Strategię celu inflacyjnego wprowadzono dopiero w 1999 r."
+  },
+  {
+    "id": "owe31-o-07",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody okręgowe",
+    "question": "Które stwierdzenie dotyczące poprawy w sensie Pareto jest prawdziwe?",
+    "options": [
+      "poprawa w sensie Pareto to sytuacja, w której państwo niweluje negatywne efekty zewnętrzne poprzez zastosowanie podatku Pigou",
+      "poprawa w sensie Pareto jest to zwiększenie asymetrii informacyjnej na rynku",
+      "brak możliwości poprawy w sensie Pareto oznacza brak efektywności ekonomicznej na rynku",
+      "poprawa w sensie Pareto występuje wtedy, gdy w wyniku pewnego działania następuje polepszenie sytuacji co najmniej jednego podmiotu ekonomicznego bez pogorszenia jej w przypadku innego podmiotu"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Poprawa w sensie Pareto to zmiana, która poprawia sytuację co najmniej jednej osoby, nie pogarszając sytuacji żadnej innej. Stan, w którym taka poprawa nie jest już możliwa, to optimum Pareto – oznacza efektywność, a nie jej brak."
+  },
+  {
+    "id": "owe31-o-08",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody okręgowe",
+    "question": "Które zdanie dotyczące spółki komandytowej jest prawdziwe?",
+    "options": [
+      "odpowiedzialność komplementariusza jest ograniczona do wysokości sumy komandytowej",
+      "komandytariusz zawsze odpowiada bez ograniczenia za zobowiązania spółki",
+      "spółka komandytowa jest spółką osobową",
+      "spółka komandytowa posiada osobowość prawną"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Spółka komandytowa jest spółką osobową (bez osobowości prawnej, choć z zdolnością prawną). Komplementariusz odpowiada za zobowiązania bez ograniczenia, a komandytariusz – tylko do wysokości sumy komandytowej."
+  },
+  {
+    "id": "owe31-o-09",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody okręgowe",
+    "question": "Funkcja kosztu całkowitego przedsiębiorstwa X ma postać TC = 50Q + 200. Która z kategorii kosztów nie będzie zależeć od poziomu produkcji?",
+    "options": [
+      "przeciętnego kosztu stałego",
+      "kosztu całkowitego",
+      "kosztu krańcowego",
+      "przeciętnego kosztu całkowitego"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Koszt krańcowy to pochodna kosztu całkowitego: dla TC = 50Q + 200 wynosi stale 50, niezależnie od produkcji. Koszt całkowity, przeciętny koszt stały (200/Q) i przeciętny koszt całkowity (50 + 200/Q) zmieniają się wraz z Q."
+  },
+  {
+    "id": "owe31-o-10",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody okręgowe",
+    "question": "Dobra społecznie niepożądane, to dobra, w przypadku których:",
+    "options": [
+      "w warunkach wolnego rynku cena społeczna jest równa cenie rynkowej",
+      "w warunkach wolnego rynku są konsumowane w zbyt dużej ilości",
+      "konsumpcja niesie ze sobą wyłącznie koszty indywidualne",
+      "w warunkach wolnego rynku cena społeczna jest niższa od ceny rynkowej"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Dobra społecznie niepożądane (np. alkohol, papierosy) mają ujemne efekty zewnętrzne lub szkodzą samym konsumentom, którzy tego nie doceniają. Na wolnym rynku są więc konsumowane w zbyt dużej ilości w porównaniu z optimum społecznym – dlatego państwo nakłada na nie akcyzę lub ograniczenia."
+  },
+  {
+    "id": "owe31-o-11",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody okręgowe",
+    "question": "W kraju X liczba osób w wieku produkcyjnym wynosi 100 mln ludzi. Ponadto stopa bezrobocia jest równa 10%, a zasób siły roboczej to 80 mln osób. Ile wynosi wskaźnik aktywności zawodowej?",
+    "options": [
+      "72%",
+      "80%",
+      "89%",
+      "90%"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Współczynnik aktywności zawodowej = zasób siły roboczej (aktywni zawodowo) / ludność w wieku produkcyjnym (tu: populacja odniesienia) = 80 / 100 = 80%. Stopa bezrobocia nie jest potrzebna do obliczenia tego wskaźnika."
+  },
+  {
+    "id": "owe31-o-12",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody okręgowe",
+    "question": "Które zdanie dotyczące stopy bezrobocia NAIRU jest prawdziwe?",
+    "options": [
+      "stopa bezrobocia NAIRU to różnica między bezrobociem rejestrowanym a bezrobociem według BAEL",
+      "jeżeli faktyczna stopa bezrobocia jest wyższa od stopy bezrobocia NAIRU, to w gospodarce nasilają się procesy deflacyjne",
+      "podniesienie płac realistycznych w wyniku wzrostu wydajności pracy wpłynie na wzrost stopy bezrobocia NAIRU (ceteris paribus)",
+      "wielkość stopy bezrobocia NAIRU zależy przede wszystkim od zmian łącznego popytu na towary w danej gospodarce"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "NAIRU to stopa bezrobocia nieprzyspieszająca inflacji. Gdy faktyczne bezrobocie jest wyższe od NAIRU, na rynku pracy jest nadwyżka siły roboczej, presja płacowa słabnie i inflacja spada (nasilają się procesy dezinflacyjne/deflacyjne). Gdy bezrobocie jest niższe – inflacja przyspiesza."
+  },
+  {
+    "id": "owe31-o-13",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody okręgowe",
+    "question": "W modelu duopolu Cournota, w którym dla każdego przedsiębiorstwa wielkość produkcji spełnia nierówność q > 0:",
+    "options": [
+      "krzywa całkowitego popytu rynkowego jest tożsama z krzywą popytu rezydualnego",
+      "krzywa całkowitego popytu rynkowego leży poniżej krzywej popytu rezydualnego",
+      "funkcje reakcji (dotyczące wielkości produkcji) obu przedsiębiorstw w pełni pokrywają się, osiągając równowagę Nasha",
+      "wielkość produkcji maksymalizująca zysk całkowity duopolisty jest mniejsza od ilości wyznaczonej przez przecięcie krzywej popytu rezydualnego z krzywą kosztu krańcowego"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "W modelu Cournota każdy duopolista wybiera ilość, traktując produkcję rywala jako daną i dostosowując się do popytu rezydualnego. Maksymalizuje zysk tam, gdzie utarg krańcowy z popytu rezydualnego równa się kosztowi krańcowemu – produkcja ta jest mniejsza od ilości, przy której popyt rezydualny przecina krzywą kosztu krańcowego."
+  },
+  {
+    "id": "owe31-o-14",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody okręgowe",
+    "question": "Zgodnie z modelem selekcji negatywnej objaśniającym kształtowanie się płac motywujących:",
+    "options": [
+      "w procesie rekrutacji pracowników do przedsiębiorstw nie występuje zjawisko asymetrii informacyjnej",
+      "bezrobocie ma zawsze charakter dobrowolny niezależnie od relacji pomiędzy płacą motywującą a płacą „oczyszczającą” rynek pracy",
+      "w przypadku stawek płac znacząco niższych od poziomu płacy motywującej krzywa popytu na pracę jest rosnąca",
+      "aspiracje płacowe kandydatów do podjęcia pracy są ujemnie skorelowane z poziomem ich wydajności pracy"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "W modelu selekcji negatywnej płaca wpływa na jakość kandydatów: przy niskiej płacy zgłaszają się głównie słabi pracownicy. Przy płacach znacznie niższych od płacy motywującej podniesienie płacy przyciąga lepszych pracowników, więc firmy chcą zatrudniać więcej – krzywa popytu na pracę jest rosnąca."
+  },
+  {
+    "id": "owe31-o-15",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody okręgowe",
+    "question": "Które zdanie dotyczące deflatora PKB jest prawdziwe?",
+    "options": [
+      "przyjmuje on wartość od –1 do 1",
+      "jest to różnica między potencjalnym a rzeczywistym PKB",
+      "jest to iloraz potencjalnego i rzeczywistego PKB pomnożony przez 100",
+      "może przyjmować wartość mniejszą od 100"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Deflator PKB = PKB nominalny / PKB realny · 100. W roku bazowym wynosi 100, powyżej 100 oznacza wzrost cen względem roku bazowego, a poniżej 100 – spadek cen (deflację). Może więc przyjąć wartość mniejszą od 100."
+  },
+  {
+    "id": "owe31-o-16",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody okręgowe",
+    "question": "Dane finansowe pewnego przedsiębiorstwa kształtują się w sposób następujący: wskaźnik bieżącej płynności finansowej = 1,2; wskaźnik szybkiej płynności finansowej = 0,7; zobowiązania krótkoterminowe = 10 mln zł. Jaka jest wartość zapasów przedsiębiorstwa (w mln zł)?",
+    "options": [
+      "19",
+      "12",
+      "7",
+      "5"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Wskaźnik bieżącej płynności = aktywa obrotowe / zobowiązania krótkoterminowe, więc aktywa obrotowe = 1,2 · 10 = 12 mln zł. Wskaźnik szybkiej płynności = (aktywa obrotowe − zapasy) / zobowiązania krótkoterminowe, więc aktywa bez zapasów = 0,7 · 10 = 7 mln zł. Zapasy = 12 − 7 = 5 mln zł."
+  },
+  {
+    "id": "owe31-o-17",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody okręgowe",
+    "question": "Krzywa popytu monopsonisty na pracę (DL) opisana jest równaniem W = 32 − 2L, a jego krzywa kosztu przeciętnego pracy (ACL) to W = 2 + 2L (gdzie: W – płaca, L – wielkość zatrudnienia w tys. osób). Ile wyniesie wielkość zatrudnienia maksymalizująca zysk całkowity monopsonisty?",
+    "options": [
+      "5 tysięcy osób",
+      "7,5 tysiąca osób",
+      "17 tysięcy osób",
+      "22 tysiące osób"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Monopsonista zatrudnia tam, gdzie krańcowy koszt pracy (MCL) równa się popytowi na pracę (wartości produktu krańcowego). Koszt całkowity pracy = W · L = 2L + 2L², więc MCL = 2 + 4L. Z równania 2 + 4L = 32 − 2L: 6L = 30, L = 5 tys. osób (płaca z krzywej podaży: W = 2 + 2 · 5 = 12)."
+  },
+  {
+    "id": "owe31-o-18",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody okręgowe",
+    "question": "Które zdanie dotyczące krzywej Lorenza jest prawdziwe?",
+    "options": [
+      "krzywa Lorenza przedstawia relację pomiędzy skumulowanym odsetkiem gospodarstw domowych a skumulowanym odsetkiem ich zadłużenia",
+      "w gospodarce wolnorynkowej jest ona zawsze funkcją liniową",
+      "jeżeli współczynnik Giniego jest równy 1, to krzywa Lorenza pokrywa się z linią równości absolutnej",
+      "w warunkach równości absolutnej krzywa Lorenza jest linią prostą o nachyleniu 45°"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Krzywa Lorenza pokazuje, jaki skumulowany odsetek dochodów przypada na skumulowany odsetek ludności (od najbiedniejszych). Przy idealnej równości jest przekątną nachyloną pod kątem 45°. Im bardziej odchyla się od przekątnej, tym większa nierówność (wyższy współczynnik Giniego); Gini = 1 oznacza skrajną nierówność."
+  },
+  {
+    "id": "owe31-o-19",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody okręgowe",
+    "question": "W krótkim okresie na rynku konkurencyjnym funkcjonuje 10 przedsiębiorstw, a krzywa podaży każdego z przedsiębiorstw ma postać P = 20 + 500Qn, gdzie P – cena, Qn – ilość produkowana przez pojedyncze przedsiębiorstwo, a Q – ilość produkowana przez całą branżę. Krzywa podaży całej branży ma postać:",
+    "options": [
+      "P = 20 + 50Q",
+      "P = 20 + 500Q",
+      "P = 20 + 5000Q",
+      "P = 200 + 5000Q"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Podaż branży to suma podaży firm przy każdej cenie. Dla jednej firmy Qn = (P − 20) / 500, więc dla 10 firm Q = 10 · (P − 20) / 500 = (P − 20) / 50. Stąd P = 20 + 50Q."
+  },
+  {
+    "id": "owe31-o-20",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody okręgowe",
+    "question": "Uwzględniając klasyfikację wydatków publicznych według funkcji (COFOG), w Polsce kategorią wydatków, na którą w sektorze instytucji rządowych i samorządowych przeznacza się rocznie najwięcej środków, jest (stan na rok 2017):",
+    "options": [
+      "działalność ogólnopaństwowa",
+      "obrona narodowa",
+      "ochrona środowiska",
+      "ochrona socjalna"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Według klasyfikacji funkcji rządowych (COFOG) największą kategorią wydatków sektora instytucji rządowych i samorządowych w Polsce jest ochrona socjalna (emerytury, renty, zasiłki, świadczenia rodzinne) – stanowi ok. 40% wydatków publicznych (ok. 16–17% PKB)."
+  },
+  {
+    "id": "owe31-o-21",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody okręgowe",
+    "question": "Autorem pojęcia „twórczej destrukcji” opisującego funkcjonowanie kapitalizmu był:",
+    "options": [
+      "J. Schumpeter",
+      "A. Smith",
+      "D. Ricardo",
+      "D. Hume"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Pojęcie „twórczej destrukcji” spopularyzował Joseph Schumpeter („Kapitalizm, socjalizm, demokracja”, 1942): innowacje przedsiębiorców niszczą stare produkty, firmy i technologie, tworząc nowe – i to jest istota rozwoju kapitalizmu."
+  },
+  {
+    "id": "owe31-o-22",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody okręgowe",
+    "question": "Do głównych postulatów nowego konserwatyzmu fiskalnego należą:",
+    "options": [
+      "zwiększenie obciążeń fiskalnych w celu redystrybucji dochodów w gospodarce",
+      "wykorzystywanie salda budżetowego jako narzędzia redukcji wahań cyklu koniunkturalnego",
+      "zmniejszenie skali redystrybucji PKB przez sektor finansów publicznych",
+      "zwiększenie państwa dobrobytu (welfare state)"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Nowy konserwatyzm fiskalny (np. reaganomika, thatcheryzm) postuluje ograniczenie roli państwa: niższe podatki, mniejsze wydatki publiczne, mniejszą redystrybucję PKB przez budżet i zrównoważone finanse publiczne, zamiast keynesowskiego sterowania koniunkturą."
+  },
+  {
+    "id": "owe31-o-23",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody okręgowe",
+    "question": "Problem kosztu zdartych zelówek związany jest z występowaniem zjawiska:",
+    "options": [
+      "deficytu bliźniaczego",
+      "inflacji",
+      "rewaluacji",
+      "globalizacji"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Koszt zdartych zelówek (shoe-leather cost) to koszt inflacji: gdy pieniądz szybko traci wartość, ludzie trzymają mniej gotówki i częściej chodzą do banku po pieniądze (dosłownie zdzierając buty) – tracą czas i ponoszą koszty transakcyjne."
+  },
+  {
+    "id": "owe31-o-24",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody okręgowe",
+    "question": "Zjawisko reshoringu polega na:",
+    "options": [
+      "nieustannym doskonaleniu organizacji poprzez monitoring i ciągłą kontrolę, tak aby wyeliminować niezgodności i zapobiegać im",
+      "konwersji zadłużenia zagranicznego na krajowe",
+      "wyodrębnianiu ze struktury przedsiębiorstwa niektórych funkcji, a następnie delegowaniu ich do podmiotów zagranicznych",
+      "procesach odwrotnych do offshoringu"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Reshoring to przenoszenie z powrotem do kraju macierzystego produkcji lub usług wcześniej przeniesionych za granicę (offshoring), np. z powodu rosnących kosztów pracy w Azji, problemów z jakością lub łańcuchami dostaw."
+  },
+  {
+    "id": "owe31-o-25",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody okręgowe",
+    "question": "W porównaniu z zarządzaniem, w przywództwie:",
+    "options": [
+      "silniejszy nacisk położony jest na zatrudnianie pracowników",
+      "słabszy nacisk położony jest na nadawaniu kierunku działaniom ludzi",
+      "słabszy nacisk położony jest na alokację zasobów niezbędnych do uzyskania zakładanych wyników",
+      "słabszy nacisk położony jest na motywowanie pracowników"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Zarządzanie skupia się na planowaniu, organizowaniu, alokacji zasobów, budżetach i kontroli. Przywództwo kładzie większy nacisk na wyznaczanie kierunku, inspirowanie i motywowanie ludzi, a mniejszy – na alokację zasobów potrzebnych do osiągnięcia wyników."
+  },
+  {
+    "id": "owe31-o-26",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody okręgowe",
+    "question": "Zgodnie z modelem Vrooma-Yettona-Jago:",
+    "options": [
+      "autokratyczny styl podejmowania decyzji jest właściwy w każdej sytuacji",
+      "grupowy styl podejmowania decyzji jest właściwy w każdej sytuacji",
+      "styl konsultacyjny podejmowania decyzji zakłada, że decyzję podejmuje grupa (menedżer i podwładni)",
+      "wyróżnia się pięć stylów podejmowania decyzji"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Model Vrooma–Yettona–Jago pomaga wybrać sposób podejmowania decyzji w zależności od sytuacji (m.in. znaczenia decyzji, potrzeby akceptacji podwładnych). Wyróżnia pięć stylów: dwa autokratyczne (AI, AII), dwa konsultacyjne (CI, CII) i grupowy (GII). Żaden styl nie jest najlepszy zawsze."
+  },
+  {
+    "id": "owe31-o-27",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody okręgowe",
+    "question": "M-commerce jest to:",
+    "options": [
+      "jedna z form eksportu pośredniego",
+      "wykorzystywanie bezprzewodowych urządzeń cyfrowych (np. smartfon) w transakcjach internetowych",
+      "forma finansowania średniej wielkości przedsiębiorstw handlowych",
+      "zespół działań marketingowych ukierunkowanych na zwiększenie świadomości danej marki u klientów"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "M-commerce (mobile commerce) to handel elektroniczny prowadzony za pomocą urządzeń mobilnych – smartfonów i tabletów, np. zakupy w aplikacjach i płatności mobilne (BLIK)."
+  },
+  {
+    "id": "owe31-o-28",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody okręgowe",
+    "question": "Zgodnie z teorią motywacji ERG :",
+    "options": [
+      "ludzie są motywowani do poszukiwania sprawiedliwości społecznej w nagrodach, jakie otrzymują za osiągnięcia",
+      "ludzkie potrzeby są pogrupowane w trzech ewentualnie nakładających się kategoriach: egzystencji, kontaktów społecznych i wzrostu",
+      "jeżeli jednostka nie zrealizuje danej potrzeby, to odczuwa frustrację, która mobilizuje ją do przejścia do zaspokajania tylko wyższych potrzeb",
+      "jeżeli jednostka nie zrealizuje danej potrzeby, to odczuwa frustrację, jednak taka sytuacja nie wpływa na poziom potrzeb (wyższe lub niższe), którego zaspokojenia poszukuje jednostka"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Teoria ERG (C. Alderfer) grupuje potrzeby w trzy kategorie: egzystencji, kontaktów społecznych i wzrostu (rozwoju). W przeciwieństwie do Maslowa potrzeby mogą działać jednocześnie, a niezaspokojenie potrzeby wyższej może powodować powrót do zaspokajania niższej (frustracja–regres)."
+  },
+  {
+    "id": "owe31-o-29",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody okręgowe",
+    "question": "Zgodnie z hierarchią potrzeb Maslowa ludzie muszą zaspokajać grupy potrzeb w kolejności:",
+    "options": [
+      "bezpieczeństwa, fizjologiczne, szacunku, przynależności, samorealizacji",
+      "fizjologiczne, bezpieczeństwa, szacunku, przynależności, samorealizacji",
+      "fizjologiczne, bezpieczeństwa, przynależności, szacunku, samorealizacji",
+      "fizjologiczne, bezpieczeństwa, przynależności, samorealizacji, szacunku"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Hierarchia Maslowa (od podstawy): potrzeby fizjologiczne, bezpieczeństwa, przynależności (miłości), szacunku (uznania) i samorealizacji."
+  },
+  {
+    "id": "owe31-o-30",
+    "type": "single",
+    "edition": "XXXI OWE (2017/2018), zawody okręgowe",
+    "question": "W modelu IS-LM przesunięcie krzywej IS w lewo oznacza:",
+    "options": [
+      "zaostrzenie polityki pieniężnej",
+      "łagodzenie polityki pieniężnej",
+      "zaostrzenie polityki fiskalnej",
+      "łagodzenie polityki fiskalnej"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Krzywa IS przedstawia równowagę na rynku dóbr. Przesuwa się w lewo, gdy maleje popyt autonomiczny – np. przy zaostrzeniu polityki fiskalnej (cięcie wydatków państwa, podwyżka podatków). Polityka pieniężna przesuwa krzywą LM."
+  }
+]

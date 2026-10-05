@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe32-o-01",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody okręgowe",
+    "question": "Uzasadniona ekonomicznie wielkość partii dostawy materiałów:",
+    "options": [
+      "jest tym większa, im koszty realizacji dostawy są mniejsze",
+      "nie zależy od kosztów realizacji dostawy",
+      "jest tym większa, im jednostkowy koszt utrzymania zapasów jest mniejszy",
+      "nie zależy od jednostkowych kosztów utrzymania zapasów"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Ekonomiczna wielkość zamówienia (model Wilsona): EOQ = √(2 · popyt · koszt zamówienia / jednostkowy koszt utrzymania zapasu). Partia jest tym większa, im mniejszy jest jednostkowy koszt utrzymania zapasów i im wyższy koszt realizacji dostawy."
+  },
+  {
+    "id": "owe32-o-02",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody okręgowe",
+    "question": "Politykę walutową w Polsce ustala:",
+    "options": [
+      "Rada Ministrów w porozumieniu z Radą Polityki Pieniężnej",
+      "Prezes Rady Ministrów w porozumieniu z Prezesem Narodowego Banku Polskiego",
+      "Prezes Narodowego Banku Polskiego",
+      "Prezydent Rzeczypospolitej Polskiej w porozumieniu z Radą Ministrów"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Zgodnie z ustawą o NBP politykę kursową (walutową) ustala Rada Ministrów w porozumieniu z Radą Polityki Pieniężnej, a NBP ją realizuje. Od 2000 r. w Polsce obowiązuje płynny kurs złotego."
+  },
+  {
+    "id": "owe32-o-03",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody okręgowe",
+    "question": "Zgodnie z warunkiem Marshalla-Lernera, jeśli rachunek obrotów bieżących jest początkowo równy zero, to realna deprecjacja waluty powoduje nadwyżkę na rachunku obrotów bieżących, o ile suma elastyczności cenowych popytu na eksport i import jest:",
+    "options": [
+      "mniejsza od 0",
+      "równa 0",
+      "równa 1",
+      "większa od 1"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Warunek Marshalla–Lernera: realna deprecjacja poprawia bilans obrotów bieżących, jeśli suma wartości bezwzględnych cenowych elastyczności popytu na eksport i import jest większa od 1. Wtedy wzrost wolumenu eksportu i spadek importu przeważają nad tym, że import drożeje."
+  },
+  {
+    "id": "owe32-o-04",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody okręgowe",
+    "question": "Które zdanie dotyczące polityki pieniężnej w Polsce jest prawdziwe?",
+    "options": [
+      "w Polsce od 2004 r. występuje permanentny problem z brakiem płynności sektora bankowego",
+      "stopa depozytowa NBP oraz stopa oprocentowania kredytu lombardowego NBP wyznaczają pasmo wahań stóp procentowych overnight na rynku międzybankowym",
+      "stopa referencyjna NBP ustalana jest na poziomie niższym niż stopa depozytowa NBP",
+      "stopa redyskontowa NBP określa rentowność podstawowych operacji otwartego rynku polegających na emisji 30-dniowych bonów pieniężnych NBP"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Stopa depozytowa NBP (dolna granica) i stopa kredytu lombardowego (górna granica) tworzą korytarz dla krótkoterminowych stóp na rynku międzybankowym – banki nie pożyczą sobie taniej niż depozyt w NBP ani drożej niż lombard. Stopa referencyjna leży pośrodku i wyznacza rentowność 7-dniowych bonów pieniężnych NBP."
+  },
+  {
+    "id": "owe32-o-05",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody okręgowe",
+    "question": "Na rynku kapitałowym skrót IPO oznacza:",
+    "options": [
+      "skup akcji własnych",
+      "inwestorskie plany oszczędnościowe",
+      "indywidualne programy emerytalne",
+      "pierwszą ofertę publiczną"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "IPO (initial public offering) to pierwsza oferta publiczna – debiut spółki na giełdzie, w którym po raz pierwszy oferuje ona swoje akcje szerokiemu gronu inwestorów."
+  },
+  {
+    "id": "owe32-o-06",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody okręgowe",
+    "question": "Państwo X w ramach prowadzonej od kilku lat polityki kursu walutowego utrzymuje stały kurs wymiany swojej waluty w stosunku do waluty kraju Y. Dodatkowo wiemy, że ostatnim roku w państwie X występowała hiperinflacja, natomiast w państwie Y inflacja miała charakter pełzający. Oznacza to (ceteris paribus), że w przypadku państwa X:",
+    "options": [
+      "realna deprecjacja waluty kraju X względem waluty kraju Y",
+      "realna aprecjacja waluty kraju X względem waluty kraju Y",
+      "nominalna aprecjacja waluty kraju X względem waluty kraju Y",
+      "nominalna deprecjacja waluty kraju X względem waluty kraju Y"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Realny kurs walutowy uwzględnia różnice w poziomach cen. Jeśli kurs nominalny jest stały, a ceny w kraju X rosną znacznie szybciej niż w Y, towary z X stają się relatywnie droższe – waluta X realnie się umacnia (realna aprecjacja). Pogarsza to konkurencyjność eksportu X."
+  },
+  {
+    "id": "owe32-o-07",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody okręgowe",
+    "question": "Dobro A i dobro B są doskonałymi substytutami, a cena dobra A jest wyższa od ceny dobra B. Ścieżka ekspansji dochodowej na wykresie, na którym ilość konsumowanego dobra A zaznaczono na osi odciętych, a dobra B na osi rzędnych, jest:",
+    "options": [
+      "linią półprostą o kącie nachylenia równym 45°",
+      "linią leżącą na osi odciętych",
+      "linią leżącą na osi rzędnych",
+      "linią półprostą o kącie nachylenia równym relacji ceny dobra A do ceny dobra B"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Doskonałe substytuty konsument zastępuje w stałej proporcji (tu 1:1). Racjonalny konsument kupuje tylko tańsze dobro – B. Gdy dochód rośnie, zwiększa się tylko konsumpcja B, więc ścieżka ekspansji dochodowej leży na osi B (osi rzędnych)."
+  },
+  {
+    "id": "owe32-o-08",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody okręgowe",
+    "question": "Które zdanie dotyczące rynku NewConnect jest prawdziwe?",
+    "options": [
+      "jest on rynkiem regulowanym",
+      "jest on alternatywnym systemem obrotu",
+      "został stworzony w celu umożliwienia zdobycia kapitału przez duże i renomowane przedsiębiorstwa",
+      "notowane są na nim spółki jawne"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "NewConnect (od 2007 r.) to prowadzony przez GPW alternatywny system obrotu (ASO), a nie rynek regulowany. Jest przeznaczony dla młodych, małych i rozwijających się spółek (akcyjnych lub komandytowo-akcyjnych), a nie dla dużych firm i spółek jawnych."
+  },
+  {
+    "id": "owe32-o-09",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody okręgowe",
+    "question": "Krzywa popytu na produkty przedsiębiorstwa Y jest opisana równaniem q = −p + 10 (gdzie: p – cena za tonę w zł; q – ilość w tonach), a jego funkcja kosztów TC = 2q + 2. Która z odpowiedzi prawidłowo przedstawia funkcję zysku (π) przedsiębiorstwa Y:",
+    "options": [
+      "π = −p − 2q + 8",
+      "π = −q² + 8q − 2",
+      "π = −3q + 8",
+      "π = −3q2 + 8q"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Zysk = przychód − koszt. Z popytu p = 10 − q, więc przychód = (10 − q) · q = 10q − q². Zysk π = 10q − q² − (2q + 2) = −q² + 8q − 2."
+  },
+  {
+    "id": "owe32-o-10",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody okręgowe",
+    "question": "Krzywa popytu na produkty przedsiębiorstwa X będącego monopolistą jest opisana równaniem p = −2q + 40 (gdzie: p – cena za tonę w zł; q – ilość w tonach). Dodatkowo wiemy, że przedsiębiorstwo X doskonale różnicuje cenę. Które z równań opisuje krzywą utargu krańcowego przedsiębiorstwa X?",
+    "options": [
+      "MR = −4q + 80",
+      "MR = −4q + 40",
+      "MR = −2q + 40",
+      "MR = −2q"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Przy doskonałej dyskryminacji cenowej monopolista sprzedaje każdą jednostkę po maksymalnej cenie, jaką nabywca jest skłonny zapłacić, więc sprzedaż kolejnej jednostki nie obniża ceny poprzednich. Utarg krańcowy pokrywa się wtedy z krzywą popytu: MR = −2q + 40."
+  },
+  {
+    "id": "owe32-o-11",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody okręgowe",
+    "question": "Krzywa popytu na ropę jest opisana równaniem p = −4q + 20, a krzywa podaży p = 2q + 2 (gdzie: p – cena za baryłkę w zł; q – ilość w baryłkach). W kolejnym roku fiskalnym zostanie wprowadzony podatek ad valorem płacony przez sprzedawców ropy w wysokości 20%. Bezpośrednim skutkiem wprowadzenia podatku będzie:",
+    "options": [
+      "zmiana nachylenia krzywej podaży",
+      "równoległe przesunięcie krzywej podaży do góry",
+      "zmiana nachylenia krzywej popytu",
+      "równoległe przesunięcie krzywej popytu do dołu"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Podatek ad valorem (procentowy) od ceny powoduje, że sprzedawca musi uzyskać cenę wyższą o 20% od dotychczasowej: p = 1,2 · (2q + 2) = 2,4q + 2,4. Krzywa podaży nie przesuwa się równolegle – zmienia się jej nachylenie. Podatek kwotowy przesunąłby ją równolegle."
+  },
+  {
+    "id": "owe32-o-12",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody okręgowe",
+    "question": "Różnicowanie produktu jest jedną z głównych cech której ze struktur rynkowych:",
+    "options": [
+      "oligopolu Cournota",
+      "konkurencji doskonałej",
+      "konkurencji monopolistycznej",
+      "oligopsonu"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Różnicowanie produktów (marka, jakość, design, lokalizacja) to główna cecha konkurencji monopolistycznej – dzięki niemu firma ma ujemnie nachyloną krzywą popytu i pewną władzę nad ceną. W konkurencji doskonałej produkty są jednorodne."
+  },
+  {
+    "id": "owe32-o-13",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody okręgowe",
+    "question": "Na rynku działają dwa przedsiębiorstwa X i Y będące duopolistami Bertranda. Każdy z nich produkuje po stałym koszcie krańcowym równym 10 zł. Krzywa popytu rynkowego dla tych duopolistów jest opisana równaniem p = −2q + 50 (gdzie: p – cena za jednostkę w zł; q – ilość jednostek). Ile wyniesie produkcja przedsiębiorstwa X w sytuacji równowagi (Nasha) na tym rynku?",
+    "options": [
+      "5",
+      "10",
+      "20",
+      "30"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "W modelu Bertranda przy identycznych produktach i stałym koszcie krańcowym firmy konkurują ceną aż do poziomu P = MC = 10 zł. Wtedy 10 = −2q + 50, więc popyt rynkowy q = 20. Firmy dzielą rynek po połowie – firma X produkuje 10 jednostek."
+  },
+  {
+    "id": "owe32-o-14",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody okręgowe",
+    "question": "Dogmat (test) Milla-Bastable’a określa warunki:",
+    "options": [
+      "jakie powinien spełniać przemysł, aby protekcjonizm wychowawczy miał ekonomiczne uzasadnienie",
+      "przy których konkurencyjna dewaluacja nie będzie prowadziła do wojny walutowej",
+      "jakie powinny być spełnione, aby stosowanie ceł odwetowych było skuteczne",
+      "jakie powinny być spełnione, aby interwencja walutowa była skuteczna"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Test Milla–Bastable'a określa, kiedy protekcjonizm wychowawczy (ochrona „młodego przemysłu”) jest uzasadniony: chroniona gałąź musi w przyszłości stać się konkurencyjna bez ochrony (test Milla), a przyszłe korzyści muszą przewyższyć koszty ochrony poniesione przez społeczeństwo (test Bastable'a)."
+  },
+  {
+    "id": "owe32-o-15",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody okręgowe",
+    "question": "W banku X oprocentowanie rachunku oszczędnościowego to 4% rocznie, a roczna stopa inflacji wynosi 2%. W tej sytuacji realna wartość depozytów w ciągu roku wzrosła o około:",
+    "options": [
+      "2%",
+      "4%",
+      "6%",
+      "8%"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Realna stopa procentowa ≈ stopa nominalna − inflacja = 4% − 2% = 2% (dokładnie: 1,04 / 1,02 − 1 ≈ 1,96%). Realna wartość depozytów wzrosła więc o ok. 2%."
+  },
+  {
+    "id": "owe32-o-16",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody okręgowe",
+    "question": "Jacek wpłacił 100 zł na 3-letnią lokatę bankową, w której roczna stopa procentowa wynosi 10%, a okres kapitalizacji jest roczny (odsetki obliczane są po upływie każdego roku). Ile wyniesie kapitał końcowy Jacka po upływie terminu 3 lat:",
+    "options": [
+      "30",
+      "70",
+      "130",
+      "133,1"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Przy rocznej kapitalizacji kapitał końcowy = 100 · 1,1³ = 100 · 1,331 = 133,10 zł. Odsetki są doliczane co roku i w kolejnych latach same też przynoszą odsetki (procent składany)."
+  },
+  {
+    "id": "owe32-o-17",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody okręgowe",
+    "question": "Koszt zdartych zelówek związany jest z wystąpieniem zjawiska:",
+    "options": [
+      "bessy giełdowej",
+      "sekularnej stagnacji",
+      "inflacji",
+      "niedoboru płynności"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Koszt zdartych zelówek to koszt inflacji: przy szybko rosnących cenach ludzie trzymają mniej gotówki i częściej wypłacają pieniądze z banku – tracą czas i ponoszą koszty transakcyjne (dosłownie „zdzierają buty”)."
+  },
+  {
+    "id": "owe32-o-18",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody okręgowe",
+    "question": "Która z odpowiedzi przedstawia kryterium wstrzymania produkcji przez przedsiębiorstwo działające na rynku konkurencyjnym (gdzie: P – cena; ATC – przeciętny koszt całkowity; AVC – przeciętny koszt zmienny; MC – koszt krańcowy):",
+    "options": [
+      "P < AVC",
+      "P < ATC",
+      "P > ATC",
+      "P = MC"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Firma na rynku konkurencyjnym wstrzymuje produkcję w krótkim okresie, gdy cena nie pokrywa przeciętnego kosztu zmiennego (P < AVC) – produkując, traciłaby więcej, niż wynoszą koszty stałe. Jeśli AVC < P < ATC, produkuje ze stratą, bo pokrywa część kosztów stałych."
+  },
+  {
+    "id": "owe32-o-19",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody okręgowe",
+    "question": "W Polsce w II kw. 2018 r. dane (w mln zł) dotyczące wybranych pozycji w bilansie płatniczym kształtowały się następująco: saldo obrotów towarowych: −117; saldo usług: 23 926; saldo dochodów pierwotnych: –20 815; saldo dochodów wtórnych: −514; inwestycje bezpośrednie - aktywa: −4 762. Ile wynosi saldo rachunku bieżącego (w mln zł)?",
+    "options": [
+      "−2 282",
+      "2 480",
+      "7 242",
+      "23 809"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Saldo rachunku bieżącego = saldo towarów + saldo usług + saldo dochodów pierwotnych + saldo dochodów wtórnych = −117 + 23 926 − 20 815 − 514 = 2480 mln zł. Inwestycje bezpośrednie należą do rachunku finansowego, a nie bieżącego."
+  },
+  {
+    "id": "owe32-o-20",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody okręgowe",
+    "question": "Produkt narodowy netto to produkt narodowy brutto:",
+    "options": [
+      "powiększony o transfery jednostronne",
+      "pomniejszony o transfery jednostronne",
+      "pomniejszony o amortyzację",
+      "powiększony o podatki pośrednie"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Produkt narodowy netto (PNN) = produkt narodowy brutto (PNB) − amortyzacja (zużycie kapitału trwałego). Odjęcie podatków pośrednich (i dodanie dotacji) od PNN daje dochód narodowy."
+  },
+  {
+    "id": "owe32-o-21",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody okręgowe",
+    "question": "Które zdanie dotyczące koncepcji krzywej J w ekonomii międzynarodowej jest prawdziwe:",
+    "options": [
+      "opisuje ona opóźnienie czasowe, z którym realna deprecjacja poprawia bilans obrotów bieżących",
+      "opisuje ona opóźnienie czasowe, z którym realna aprecjacja poprawia bilans obrotów bieżących",
+      "zgodnie z nią długookresowym efektem realnej aprecjacji jest poprawa bilansu obrotów bieżących",
+      "zgodnie z nią natychmiastowym efektem realnej deprecjacji jest poprawa bilansu obrotów bieżących"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Krzywa J opisuje reakcję bilansu obrotów bieżących na realną deprecjację: najpierw się pogarsza (import natychmiast drożeje, a wolumeny handlu dostosowują się z opóźnieniem), a dopiero później poprawia – wykres przypomina literę J."
+  },
+  {
+    "id": "owe32-o-22",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody okręgowe",
+    "question": "W ekonomii międzynarodowej terminem „grzechu pierworodnego” określany jest problem:",
+    "options": [
+      "niemożności krajów rozwijających się do zaciągania długu denominowanego we własnej walucie",
+      "braku zbilansowania salda rachunków bieżących, który w konsekwencji prowadzi do deficytu bliźniaczego",
+      "występowania nadmiernego deficytu budżetowego (pierwotnego), który w konsekwencji prowadzi do deficytu bliźniaczego",
+      "braku niezależności banku centralnego, który w konsekwencji prowadzi do zbyt ekspansywnej polityki pieniężnej"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "„Grzech pierworodny” (B. Eichengreen, R. Hausmann) to niezdolność krajów rozwijających się do zadłużania się za granicą we własnej walucie. Muszą pożyczać w walutach obcych, przez co deprecjacja ich waluty zwiększa ciężar długu i grozi kryzysem."
+  },
+  {
+    "id": "owe32-o-23",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody okręgowe",
+    "question": "Które zdanie dotyczące współczynnika Giniego jest prawdziwe:",
+    "options": [
+      "wartość 0 przyjmuje on w państwach o wysokich nierównościach dochodowych",
+      "jego wartość jest tym większa, im większe jest pole obszaru między linią równości absolutnej a krzywą Lorenza",
+      "w Polsce wynosi on 1",
+      "silna progresja w podatkach dochodowych ma na celu zwiększenie jego wartości"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Współczynnik Giniego to stosunek pola między linią równości absolutnej a krzywą Lorenza do całego pola pod linią równości. Im większe to pole, tym większa nierówność i wyższy Gini (0 – pełna równość, 1 – skrajna nierówność). W Polsce wynosi ok. 0,28–0,30, a progresja podatkowa ma go obniżać."
+  },
+  {
+    "id": "owe32-o-24",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody okręgowe",
+    "question": "Występowanie ujemnie nachylonej krzywej doświadczenia (uczenia się) jest podnoszone jako argument w dyskusji dotyczącej regulacji handlu międzynarodowego najczęściej przez zwolenników:",
+    "options": [
+      "protekcjonizmu wychowawczego",
+      "„zielonego” protekcjonizmu",
+      "wolnego handlu",
+      "szkoły neoklasycznej"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Krzywa doświadczenia (spadek kosztów jednostkowych wraz z doświadczeniem produkcyjnym) jest argumentem zwolenników protekcjonizmu wychowawczego: młody przemysł, chroniony przez pewien czas, zdobędzie doświadczenie, obniży koszty i stanie się konkurencyjny."
+  },
+  {
+    "id": "owe32-o-25",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody okręgowe",
+    "question": "Który podatek stanowi dochód budżetu państwa w Polsce?",
+    "options": [
+      "podatek rolny",
+      "podatek akcyzowy",
+      "podatek leśny",
+      "podatek od nieruchomości"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Akcyza (podatek akcyzowy) jest w całości dochodem budżetu państwa. Podatki rolny, leśny i od nieruchomości to podatki lokalne – dochody gmin."
+  },
+  {
+    "id": "owe32-o-26",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody okręgowe",
+    "question": "Cechą charakterystyczną organizacji systemu 1 (wg R. Likerta), czyli podstawowej biurokratycznej formy organizacji, jest:",
+    "options": [
+      "otwarty proces interakcji",
+      "silny nacisk na samokontrolę",
+      "ograniczenie procesu motywacji wyłącznie do motywów fizycznych, bezpieczeństwa i ekonomicznych",
+      "rozproszenie procesu kontroli w całej organizacji"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "System 1 Likerta (autorytarno-eksploatatorski) to sztywna, scentralizowana organizacja: decyzje na szczycie, komunikacja z góry na dół, motywowanie przez strach, kary i zaspokajanie potrzeb fizycznych, bezpieczeństwa i ekonomicznych. System 4 (partycypacyjny) opiera się na zaufaniu i współudziale."
+  },
+  {
+    "id": "owe32-o-27",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody okręgowe",
+    "question": "Który ze szczebli kontroli koncentruje się na procesach, przy wykorzystaniu których organizacja przekształca zasoby w produkty i usługi?",
+    "options": [
+      "strategiczna",
+      "finansowa",
+      "strukturalna",
+      "operacyjna"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Kontrola operacyjna dotyczy bieżących procesów, w których organizacja przekształca zasoby w produkty i usługi (np. kontrola jakości, zapasów, produkcji). Kontrola strategiczna dotyczy realizacji strategii, finansowa – zasobów finansowych, a strukturalna – struktury organizacji."
+  },
+  {
+    "id": "owe32-o-28",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody okręgowe",
+    "question": "Które zdanie dotyczące „poczty pantoflowej” w teorii zarządzania jest prawdziwe:",
+    "options": [
+      "jednym z jej rodzajów jest łańcuch plotki",
+      "jednym z jej rodzajów jest zarządzanie przez krążenie po firmie",
+      "zawsze przyjmuje formę komunikacji pozawerbalnej",
+      "jest to formalna sieć komunikacji wśród ludzi należących do organizacji"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Poczta pantoflowa (grapevine) to nieformalna sieć komunikacji w organizacji, przekazująca informacje i plotki poza oficjalnymi kanałami. Wyróżnia się m.in. łańcuch plotki (jedna osoba przekazuje wielu), łańcuch prosty, przypadkowy i grupowy. Może mieć formę werbalną."
+  },
+  {
+    "id": "owe32-o-29",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody okręgowe",
+    "question": "Osobowość typu B, wyróżniona w kontekście analizy zjawiska stresu, cechuje się:",
+    "options": [
+      "mniejszym poświęceniem się pracy",
+      "silnym poczuciem czasu",
+      "silnym poczuciem obowiązku wobec zadań",
+      "silną agresją i niecierpliwością"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Osobowość typu B (M. Friedman i R. Rosenman) cechuje spokój, cierpliwość, mniejsza rywalizacja i mniejsze poświęcanie się pracy – osoby takie są mniej podatne na stres. Typ A to pośpiech, niecierpliwość, rywalizacja, agresja i silne zaangażowanie w pracę."
+  },
+  {
+    "id": "owe32-o-30",
+    "type": "single",
+    "edition": "XXXII OWE (2018/2019), zawody okręgowe",
+    "question": "Przedstawicielem behawiorystycznego podejścia do zarządzania jest:",
+    "options": [
+      "W. Taylor",
+      "F. Gilbreth",
+      "E. Mayo",
+      "H. Fayol"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Do podejścia behawioralnego (szkoły stosunków międzyludzkich) należy Elton Mayo – autor eksperymentów w zakładach Hawthorne, które pokazały wpływ czynników społecznych i psychologicznych na wydajność. Taylor, Gilbreth i Fayol to przedstawiciele szkoły klasycznej."
+  }
+]
