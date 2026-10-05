@@ -1,0 +1,338 @@
+[
+  {
+    "id": "s001",
+    "type": "single",
+    "edition": "Przykład",
+    "question": "Koszt alternatywny to:",
+    "options": [
+      "suma wszystkich kosztów stałych przedsiębiorstwa",
+      "wartość najlepszej alternatywy, z której zrezygnowano, dokonując wyboru",
+      "koszt wytworzenia dodatkowej jednostki produktu",
+      "różnica między ceną a kosztem przeciętnym"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Koszt alternatywny (koszt utraconych możliwości) to wartość najlepszej z odrzuconych możliwości. Definicja: jest to korzyść, którą można było uzyskać, wybierając najlepszą alternatywę zamiast podjętej decyzji. Koszt wytworzenia dodatkowej jednostki to koszt krańcowy."
+  },
+  {
+    "id": "s002",
+    "type": "single",
+    "edition": "Przykład",
+    "question": "Jeżeli popyt na dobro jest doskonale nieelastyczny, to wzrost ceny tego dobra spowoduje:",
+    "options": [
+      "spadek wielkości popytu do zera",
+      "proporcjonalny spadek wielkości popytu",
+      "brak zmiany wielkości popytu",
+      "wzrost wielkości popytu"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Popyt doskonale nieelastyczny oznacza, że współczynnik cenowej elastyczności popytu wynosi 0 — wielkość popytu w ogóle nie reaguje na zmiany ceny. Krzywa popytu jest wtedy pionowa."
+  },
+  {
+    "id": "s003",
+    "type": "single",
+    "edition": "Przykład",
+    "question": "Inflacja to:",
+    "options": [
+      "spadek ogólnego poziomu cen",
+      "wzrost ogólnego poziomu cen w gospodarce w danym okresie",
+      "wzrost ceny jednego, wybranego dobra",
+      "wzrost kursu waluty krajowej"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Inflacja to proces wzrostu ogólnego (przeciętnego) poziomu cen dóbr i usług w gospodarce. Mierzy się ją najczęściej wskaźnikiem cen towarów i usług konsumpcyjnych (CPI). Spadek ogólnego poziomu cen to deflacja."
+  },
+  {
+    "id": "s004",
+    "type": "single",
+    "edition": "Przykład",
+    "question": "Stopa bezrobocia to stosunek liczby bezrobotnych do:",
+    "options": [
+      "liczby ludności ogółem",
+      "liczby osób pracujących",
+      "liczby osób aktywnych zawodowo (siły roboczej)",
+      "liczby osób w wieku produkcyjnym"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Stopa bezrobocia = bezrobotni / aktywni zawodowo × 100%. Aktywni zawodowo (siła robocza) to suma pracujących i bezrobotnych. Osoby bierne zawodowo nie są uwzględniane w mianowniku."
+  },
+  {
+    "id": "s005",
+    "type": "single",
+    "edition": "Przykład",
+    "question": "Produkt krajowy brutto (PKB) to:",
+    "options": [
+      "wartość dóbr i usług finalnych wytworzonych na terytorium kraju w danym okresie",
+      "wartość dóbr i usług wytworzonych przez obywateli kraju, niezależnie od miejsca",
+      "suma dochodów budżetu państwa",
+      "wartość wszystkich transakcji, w tym dóbr pośrednich"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "PKB to rynkowa wartość wszystkich dóbr i usług finalnych wytworzonych na terytorium danego kraju w określonym czasie (zwykle roku), niezależnie od tego, kto jest właścicielem czynników produkcji. Wartość wytworzona przez obywateli kraju bez względu na miejsce to PNB (DNB)."
+  },
+  {
+    "id": "s006",
+    "type": "single",
+    "edition": "Przykład",
+    "question": "Monopol to struktura rynku, w której:",
+    "options": [
+      "działa wielu sprzedawców oferujących produkty jednorodne",
+      "działa kilku dużych sprzedawców",
+      "występuje jeden sprzedawca dobra niemającego bliskich substytutów",
+      "występuje jeden nabywca"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Monopol to struktura rynku z jednym sprzedawcą dobra, które nie ma bliskich substytutów, przy wysokich barierach wejścia. Rynek z jednym nabywcą to monopson, z kilkoma dużymi sprzedawcami — oligopol."
+  },
+  {
+    "id": "s007",
+    "type": "single",
+    "edition": "Przykład",
+    "question": "Podniesienie przez bank centralny stopy referencyjnej ma zazwyczaj na celu:",
+    "options": [
+      "pobudzenie akcji kredytowej",
+      "ograniczenie inflacji",
+      "zwiększenie deficytu budżetowego",
+      "osłabienie waluty krajowej"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Wzrost stopy referencyjnej podnosi koszt kredytu i zachęca do oszczędzania, co ogranicza popyt i presję inflacyjną. Jest to przykład restrykcyjnej polityki pieniężnej. W Polsce stopy ustala Rada Polityki Pieniężnej."
+  },
+  {
+    "id": "s008",
+    "type": "single",
+    "edition": "Przykład",
+    "question": "Dobro niższego rzędu (podrzędne) to dobro, na które popyt:",
+    "options": [
+      "rośnie wraz ze wzrostem dochodu",
+      "maleje wraz ze wzrostem dochodu",
+      "nie zależy od dochodu",
+      "rośnie wraz ze wzrostem jego ceny"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Dobro niższego rzędu ma ujemną dochodową elastyczność popytu: gdy dochód konsumenta rośnie, popyt na nie maleje (konsument zastępuje je lepszymi dobrami). Dobro, na które popyt rośnie wraz z ceną, to np. dobro Giffena."
+  },
+  {
+    "id": "s009",
+    "type": "single",
+    "edition": "Przykład",
+    "question": "Spółka z ograniczoną odpowiedzialnością w Polsce wymaga kapitału zakładowego w wysokości co najmniej:",
+    "options": [
+      "1 000 zł",
+      "5 000 zł",
+      "50 000 zł",
+      "100 000 zł"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Zgodnie z Kodeksem spółek handlowych minimalny kapitał zakładowy sp. z o.o. wynosi 5 000 zł, a wartość nominalna udziału nie może być niższa niż 50 zł. Dla prostej spółki akcyjnej minimum to 1 zł, a dla spółki akcyjnej — 100 000 zł."
+  },
+  {
+    "id": "s010",
+    "type": "single",
+    "edition": "Przykład",
+    "question": "Deficyt budżetowy występuje, gdy:",
+    "options": [
+      "dochody budżetu państwa przewyższają wydatki",
+      "wydatki budżetu państwa przewyższają dochody",
+      "import przewyższa eksport",
+      "dług publiczny maleje"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Deficyt budżetowy to nadwyżka wydatków budżetu państwa nad jego dochodami w danym roku. Sytuacja odwrotna to nadwyżka budżetowa. Nadwyżka importu nad eksportem to ujemne saldo bilansu handlowego, a nie deficyt budżetowy."
+  },
+  {
+    "id": "m001",
+    "type": "multi",
+    "edition": "Przykład",
+    "question": "Które z poniższych czynników spowodują przesunięcie krzywej popytu na dane dobro w prawo?",
+    "options": [
+      "wzrost dochodów konsumentów (dobro normalne)",
+      "wzrost ceny dobra substytucyjnego",
+      "spadek ceny tego dobra",
+      "wzrost ceny dobra komplementarnego"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "Krzywa popytu przesuwa się w prawo przy wzroście dochodów (dla dobra normalnego) oraz przy wzroście ceny substytutu. Zmiana ceny samego dobra powoduje ruch wzdłuż krzywej, a nie jej przesunięcie. Wzrost ceny dobra komplementarnego przesuwa krzywą w lewo."
+  },
+  {
+    "id": "m002",
+    "type": "multi",
+    "edition": "Przykład",
+    "question": "Które z poniższych są funkcjami pieniądza?",
+    "options": [
+      "środek wymiany",
+      "miernik wartości",
+      "środek przechowywania wartości",
+      "gwarancja zatrudnienia"
+    ],
+    "correct": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Klasyczne funkcje pieniądza to: środek wymiany (cyrkulacyjna), miernik wartości (jednostka rozrachunkowa), środek przechowywania wartości (tezauryzacyjna) oraz środek płatniczy. Pieniądz nie gwarantuje zatrudnienia."
+  },
+  {
+    "id": "m003",
+    "type": "multi",
+    "edition": "Przykład",
+    "question": "Które z poniższych narzędzi należą do instrumentów polityki pieniężnej banku centralnego?",
+    "options": [
+      "operacje otwartego rynku",
+      "stopa rezerwy obowiązkowej",
+      "stawki podatku VAT",
+      "stopy procentowe banku centralnego"
+    ],
+    "correct": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Instrumenty polityki pieniężnej to m.in. stopy procentowe banku centralnego, operacje otwartego rynku i rezerwa obowiązkowa. Stawki podatków są narzędziem polityki fiskalnej, prowadzonej przez rząd i parlament."
+  },
+  {
+    "id": "m004",
+    "type": "multi",
+    "edition": "Przykład",
+    "question": "Które z poniższych cech charakteryzują rynek konkurencji doskonałej?",
+    "options": [
+      "duża liczba sprzedawców i nabywców",
+      "produkt jednorodny",
+      "wysokie bariery wejścia na rynek",
+      "pełna informacja uczestników rynku"
+    ],
+    "correct": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Konkurencja doskonała zakłada: wielu sprzedawców i nabywców, jednorodny produkt, swobodę wejścia i wyjścia z rynku oraz pełną informację. Przedsiębiorstwo jest cenobiorcą. Wysokie bariery wejścia są cechą monopolu i oligopolu."
+  },
+  {
+    "id": "m005",
+    "type": "multi",
+    "edition": "Przykład",
+    "question": "Które z poniższych pozycji zalicza się do aktywów w bilansie przedsiębiorstwa?",
+    "options": [
+      "środki pieniężne w kasie",
+      "kapitał zakładowy",
+      "należności od odbiorców",
+      "zobowiązania wobec dostawców"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "Aktywa to zasoby kontrolowane przez jednostkę, np. środki pieniężne, należności, zapasy, środki trwałe. Kapitał zakładowy to kapitał własny, a zobowiązania wobec dostawców to kapitał obcy — obie pozycje należą do pasywów, czyli źródeł finansowania."
+  },
+  {
+    "id": "m006",
+    "type": "multi",
+    "edition": "Przykład",
+    "question": "Które z poniższych zdarzeń mogą prowadzić do wzrostu kursu złotego (aprecjacji) wobec euro?",
+    "options": [
+      "wzrost stóp procentowych w Polsce",
+      "napływ inwestycji zagranicznych do Polski",
+      "wzrost importu z krajów strefy euro",
+      "spadek zaufania inwestorów do polskiej gospodarki"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "Aprecjacja złotego następuje, gdy rośnie popyt na złotego: przy wyższych stopach procentowych (atrakcyjność lokat) i napływie kapitału zagranicznego. Wzrost importu zwiększa popyt na euro, a spadek zaufania powoduje odpływ kapitału — oba sprzyjają deprecjacji złotego."
+  },
+  {
+    "id": "m007",
+    "type": "multi",
+    "edition": "Przykład",
+    "question": "Które z poniższych podatków są podatkami pośrednimi?",
+    "options": [
+      "VAT",
+      "akcyza",
+      "podatek dochodowy od osób fizycznych (PIT)",
+      "cło"
+    ],
+    "correct": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Podatki pośrednie są wliczane w cenę towarów i usług, a ich ciężar przerzucany jest na konsumenta: VAT, akcyza, cło. PIT i CIT to podatki bezpośrednie — obciążają dochód podatnika bezpośrednio."
+  },
+  {
+    "id": "m008",
+    "type": "multi",
+    "edition": "Przykład",
+    "question": "Które z poniższych stwierdzeń dotyczących kosztów stałych są prawdziwe?",
+    "options": [
+      "nie zmieniają się wraz z wielkością produkcji w krótkim okresie",
+      "występują także przy zerowej produkcji",
+      "przykładem jest czynsz za wynajem hali",
+      "przeciętny koszt stały rośnie wraz ze wzrostem produkcji"
+    ],
+    "correct": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Koszty stałe w krótkim okresie nie zależą od wielkości produkcji i są ponoszone nawet przy produkcji zerowej (np. czynsz, amortyzacja). Przeciętny koszt stały (koszt stały / wielkość produkcji) maleje wraz ze wzrostem produkcji."
+  },
+  {
+    "id": "m009",
+    "type": "multi",
+    "edition": "Przykład",
+    "question": "Które z poniższych są cechami spółki jawnej?",
+    "options": [
+      "jest spółką osobową",
+      "wspólnicy odpowiadają za zobowiązania spółki całym swoim majątkiem (subsydiarnie)",
+      "wymaga minimalnego kapitału zakładowego 5 000 zł",
+      "posiada osobowość prawną"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "Spółka jawna jest spółką osobową; wspólnicy odpowiadają za jej zobowiązania bez ograniczenia całym majątkiem, subsydiarnie (gdy egzekucja z majątku spółki okaże się bezskuteczna). Nie ma wymogu kapitału zakładowego i nie posiada osobowości prawnej (ma zdolność prawną)."
+  },
+  {
+    "id": "m010",
+    "type": "multi",
+    "edition": "Przykład",
+    "question": "Które z poniższych zjawisk mogą być skutkiem wysokiej inflacji?",
+    "options": [
+      "spadek realnej wartości oszczędności",
+      "wzrost realnej wartości długów",
+      "utrudnienie kalkulacji ekonomicznej",
+      "korzyść dla dłużników o stałym oprocentowaniu"
+    ],
+    "correct": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Wysoka inflacja obniża siłę nabywczą pieniądza: realna wartość oszczędności i długów spada (dłużnicy zyskują, wierzyciele tracą), a niepewność cen utrudnia kalkulację ekonomiczną i planowanie. Realna wartość długów maleje, nie rośnie."
+  }
+]
