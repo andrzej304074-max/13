@@ -1,0 +1,466 @@
+[
+  {
+    "id": "owe36-o-01",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody okręgowe",
+    "question": "Które stwierdzenie dotyczące zjawiska credit crunch jest prawdziwe?",
+    "options": [
+      "uwidocznia się ono w przesunięciu krzywej popytu na kredyt w lewo",
+      "wynika ono ze spadku popytu na kredyt w konsekwencji spowolnienia gospodarczego",
+      "uwidocznia się ono przesunięciem krzywej podaży kredytu w prawo",
+      "jego przyczyną może być wzrost awersji instytucji finansowych do ryzyka"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Credit crunch (zakleszczenie kredytowe) to gwałtowne ograniczenie podaży kredytu przez banki – krzywa podaży kredytu przesuwa się w lewo – często mimo popytu na kredyt. Przyczyną bywa wzrost awersji do ryzyka instytucji finansowych, straty i potrzeba odbudowy kapitału (jak w kryzysie 2008 r.)."
+  },
+  {
+    "id": "owe36-o-03",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody okręgowe",
+    "question": "Według W. Bagehota bank centralny, pełniąc funkcję pożyczkodawcy ostatniej instancji, powinien żądać „karnego oprocentowania” od środków udostępnionych bankom komercyjnym. Czemu to oprocentowanie ma zapobiegać?",
+    "options": [
+      "negatywnej selekcji",
+      "pokusie nadużycia",
+      "asymetrii informacji",
+      "pułapce płynności"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Bagehot zalecał, by bank centralny w kryzysie pożyczał bankom bez ograniczeń, ale na karne (wysokie) oprocentowanie i pod dobre zabezpieczenie. Wysokie oprocentowanie ma zapobiegać pokusie nadużycia – banki nie powinny traktować pomocy banku centralnego jako taniego źródła finansowania i podejmować nadmiernego ryzyka."
+  },
+  {
+    "id": "owe36-o-04",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody okręgowe",
+    "question": "Poziom celu inflacyjnego w Polsce został wyznaczony przez:",
+    "options": [
+      "Parlament RP",
+      "Prezesa NBP",
+      "Radę Polityki Pieniężnej",
+      "Prezydenta RP"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Cel inflacyjny (2,5% z przedziałem ± 1 pkt proc.) ustaliła Rada Polityki Pieniężnej w średniookresowej strategii polityki pieniężnej (od 2004 r.). RPP odpowiada za politykę pieniężną zgodnie z ustawą o NBP."
+  },
+  {
+    "id": "owe36-o-05",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody okręgowe",
+    "question": "Jeśli wskaźnik mieszanej cenowej elastyczności popytu na dobra A i B jest ujemny, to rozpatrywane dobra są:",
+    "options": [
+      "substytucyjne",
+      "doskonale substytucyjne",
+      "dobrami Giffena",
+      "komplementarne"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Ujemna mieszana elastyczność cenowa oznacza, że wzrost ceny jednego dobra zmniejsza popyt na drugie – dobra są używane razem, czyli komplementarne (np. samochód i paliwo). Dla substytutów elastyczność mieszana jest dodatnia."
+  },
+  {
+    "id": "owe36-o-06",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody okręgowe",
+    "question": "W gospodarce produkowane jest 10 tys. bochenków chleba o cenie jednostkowej równej 4 zł, a ilość pieniądza w obiegu wynosi 1000 zł. Oszacuj szybkość obiegu pieniądza, wykorzystując ilościowe równanie pieniądza:",
+    "options": [
+      "0,40",
+      "40,00",
+      "100,04",
+      "2250,00"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Równanie wymiany: M · V = P · Q, więc V = P · Q / M = 4 zł · 10 000 / 1000 zł = 40 000 / 1000 = 40."
+  },
+  {
+    "id": "owe36-o-07",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody okręgowe",
+    "question": "Autarkię opisują następujące równania: C = 200 + 0,5YD; I = 400; G = 100; T = 80 (gdzie: C – konsumpcja, YD – dochód rozporządzalny; I – inwestycje; G – wydatki rządowe; T – podatki minus transfery budżetowe otrzymywane przez konsumenta). Ile wynosi wartość wydatków autonomicznych w tej gospodarce?",
+    "options": [
+      "200",
+      "660",
+      "700",
+      "780"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Wydatki autonomiczne to wydatki niezależne od dochodu: konsumpcja autonomiczna pomniejszona o wpływ podatków (200 − 0,5 · 80 = 160) + inwestycje (400) + wydatki rządowe (100) = 660."
+  },
+  {
+    "id": "owe36-o-08",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody okręgowe",
+    "question": "Które stwierdzenie dotyczące zjawiska drenażu mózgów jest prawdziwe?",
+    "options": [
+      "dotyczy ono przede wszystkim państw rozwiniętych",
+      "oznacza ono emigrację wykształconych pracowników z krajów biedniejszych do bogatszych",
+      "charakteryzuje je wzrost poziomu kapitału ludzkiego w krajach rozwijających się",
+      "to inne określenie „choroby holenderskiej”"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Drenaż mózgów (brain drain) to emigracja wykształconych, wykwalifikowanych pracowników (lekarzy, inżynierów, naukowców) z krajów biedniejszych do bogatszych. Kraj pochodzenia traci kapitał ludzki, w który zainwestował. „Choroba holenderska” to coś innego – skutki boomu surowcowego dla przemysłu."
+  },
+  {
+    "id": "owe36-o-09",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody okręgowe",
+    "question": "Banki kwotują następujące kursy EUR/USD: bank A: 1,0521–1,0550; bank B: 1,0518–1,0555. Który bank należy wybrać, chcąc kupić dolary za euro, i jaki będzie kurs walutowy dla tej transakcji?",
+    "options": [
+      "bank A, kurs walutowy: EUR/USD 1,0521",
+      "bank A, kurs walutowy: EUR/USD 1,0550",
+      "bank B, kurs walutowy: EUR/USD 1,0518",
+      "bank B, kurs walutowy: EUR/USD 1,0555"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Kurs EUR/USD to cena 1 euro w dolarach. Kupując dolary za euro, sprzedajemy euro – bank kupuje od nas euro po niższym kursie (kupna, bid). Najkorzystniejszy jest najwyższy kurs kupna: bank A płaci 1,0521 USD za 1 EUR, bank B – tylko 1,0518. Wybieramy bank A, kurs 1,0521."
+  },
+  {
+    "id": "owe36-o-10",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody okręgowe",
+    "question": "Jednym z założeń teorii niepisanych (nieformalnych) kontraktów jest:",
+    "options": [
+      "brak zróżnicowania stopnia awersji do ryzyka między pracownikami a pracodawcami",
+      "posiadanie silnie zdywersyfikowanych aktywów przez pracowników w porównaniu z pracodawcami",
+      "brak zróżnicowania w zakresie stopnia dywersyfikacji aktywów między pracownikami a pracodawcami",
+      "większa awersja do ryzyka pracowników niż pracodawców"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Teoria niepisanych (implicytnych) kontraktów (C. Azariadis, M. Baily) zakłada, że pracownicy mają większą awersję do ryzyka niż pracodawcy (ich majątek jest słabo zdywersyfikowany – opiera się głównie na pracy). Dlatego firmy oferują stabilne płace, częściowo „ubezpieczając” pracowników, co wyjaśnia sztywność płac."
+  },
+  {
+    "id": "owe36-o-11",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody okręgowe",
+    "question": "Konsekwencją występowania kosztów zmieniania jadłospisów jest:",
+    "options": [
+      "brak odchyleń poziomu produkcji faktycznej od naturalnej",
+      "pionowa długookresowa krzywa Phillipsa",
+      "lepkość cen",
+      "inflacja"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Koszty zmieniania jadłospisów (menu costs) – koszty drukowania nowych cenników, zmiany oznaczeń itp. – zniechęcają firmy do częstych zmian cen. W efekcie ceny dostosowują się powoli, czyli są lepkie (sztywne), co tłumaczy krótkookresowy wpływ polityki pieniężnej na produkcję."
+  },
+  {
+    "id": "owe36-o-12",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody okręgowe",
+    "question": "Która z odpowiedzi wskazuje na występowanie iluzji pieniężnej w gospodarce?",
+    "options": [
+      "krzywa podaży pracy jest nachylona ujemnie",
+      "krzywa podaży pracy jest nachylona dodatnio",
+      "gospodarstwa domowe w swoich decyzjach nie uwzględniają zmian cen",
+      "związki zawodowe w negocjacjach z pracodawcami biorą pod uwagę poziom inflacji"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Iluzja pieniężna występuje, gdy ludzie podejmują decyzje na podstawie wielkości nominalnych, nie uwzględniając zmian cen – np. cieszą się z podwyżki płacy o 5% przy inflacji 10%. Związki zawodowe uwzględniające inflację w negocjacjach nie ulegają tej iluzji."
+  },
+  {
+    "id": "owe36-o-13",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody okręgowe",
+    "question": "Które stwierdzenie dotyczące realnej podaży pieniądza jest prawdziwe?",
+    "options": [
+      "jest to stosunek nominalnej bazy monetarnej do poziomu cen",
+      "określa ona ilość dóbr, którą można kupić przy danym zasobie pieniądza",
+      "jest ona równa odwrotności szybkości obiegu pieniądza",
+      "jest to stosunek nominalnej podaży pieniądza do produktu krajowego brutto"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Realna podaż pieniądza = nominalna podaż pieniądza / poziom cen (M / P). Pokazuje siłę nabywczą zasobu pieniądza – ilość dóbr, którą można za niego kupić."
+  },
+  {
+    "id": "owe36-o-14",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody okręgowe",
+    "question": "Przedstawiciele nowej makroekonomii klasycznej (m.in. R.E. Lucas) stoją na stanowisku, że oczekiwana przez podmioty gospodarcze zmiana wielkości pieniężnych:",
+    "options": [
+      "oddziałuje na poziom bezrobocia naturalnego",
+      "oddziałuje wyłącznie na poziom bezrobocia faktycznego",
+      "oddziałuje na poziom produkcji",
+      "nie wpływa na wielkości realne"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Nowa makroekonomia klasyczna (R. Lucas, T. Sargent) łączy racjonalne oczekiwania z elastycznymi cenami. Oczekiwana (przewidziana) zmiana podaży pieniądza zostaje od razu uwzględniona w cenach i płacach, więc nie wpływa na wielkości realne (produkcję, zatrudnienie) – tylko na ceny. Realne skutki mogą mieć jedynie zmiany nieoczekiwane."
+  },
+  {
+    "id": "owe36-o-15",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody okręgowe",
+    "question": "W kraju występuje wysoka inflacja. W porównaniu ze styczniem w lutym ceny dóbr A i B (na wykresie odpowiednio oś rzędnych i odciętych) nabywanych przez konsumenta X wzrosły o 20%. Jednocześnie jego dochód również wzrósł o 20%. Jaki wpływ będzie mieć opisana sytuacja na optimum konsumenta?",
+    "options": [
+      "jeżeli założymy, że dobro A jest dobrem Giffena, to optimum konsumenta przesunie się w kierunku osi rzędnych",
+      "jeżeli założymy, że dobro A jest dobrem Giffena, to optimum konsumenta przesunie się w kierunku osi odciętych",
+      "położenie optimum konsumenta nie ulegnie zmianie",
+      "jeżeli dobro A jest dobrem niższego rzędu, to optimum konsumenta przesunie się w kierunku osi rzędnych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Jeżeli ceny obu dóbr i dochód wzrosły o ten sam procent (20%), to linia ograniczenia budżetowego pozostaje dokładnie w tym samym miejscu (te same maksymalne ilości i ta sama relacja cen). Optimum konsumenta się nie zmienia, niezależnie od rodzaju dóbr."
+  },
+  {
+    "id": "owe36-o-16",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody okręgowe",
+    "question": "Podstawową kategorią analityczną dla podaży pieniądza w Polsce wykorzystywaną przez NBP jest:",
+    "options": [
+      "M0",
+      "M1",
+      "M2",
+      "M3"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Od marca 2002 r. podstawową kategorią analityczną i publikacyjną podaży pieniądza w Polsce jest szeroki pieniądz M3 (gotówka, depozyty, operacje repo i krótkoterminowe dłużne papiery wartościowe)."
+  },
+  {
+    "id": "owe36-o-17",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody okręgowe",
+    "question": "W gospodarce autarkicznej, w warunkach braku państwa, funkcja oszczędności jest opisana równaniem S = −100 + 0,2Y (gdzie: S – oszczędności; Y – produkt krajowy brutto). Ile wynosi mnożnik inwestycyjny?",
+    "options": [
+      "−100,00",
+      "0,20",
+      "1,25",
+      "5,00"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "W gospodarce zamkniętej bez państwa mnożnik inwestycyjny = 1 / krańcowa skłonność do oszczędzania. Z funkcji S = −100 + 0,2Y: MPS = 0,2, więc mnożnik = 1 / 0,2 = 5."
+  },
+  {
+    "id": "owe36-o-18",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody okręgowe",
+    "question": "Kraje X i Y produkują dwa rodzaje dóbr A i B. Ich krzywe możliwości produkcyjnych są opisane równaniami odpowiednio 2AX + 4BX = 10000, 2AY + 4BY = 20000 (gdzie AX, BX – produkcja dóbr w kraju X; AY, BY – produkcja dóbr w kraju Y). Ile mogą one maksymalnie łącznie wyprodukować dobra A, jeżeli chcą, by łączna produkcja dobra B wyniosła 4 000?",
+    "options": [
+      "1 000",
+      "7 000",
+      "26 000",
+      "30 000"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Kraj X: A = 5000 − 2B, kraj Y: A = 10 000 − 2B. Oba mają ten sam koszt alternatywny (1 jednostka B = 2 jednostki A), więc nie ma znaczenia, który kraj produkuje B. Łącznie: A = 15 000 − 2 · (łączne B) = 15 000 − 2 · 4000 = 7000."
+  },
+  {
+    "id": "owe36-o-19",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody okręgowe",
+    "question": "Które stwierdzenie dotyczące efektu Tanziego–Olivery jest prawdziwe?",
+    "options": [
+      "polega on na wzroście dochodów budżetu państwa w konsekwencji występowania wysokiej inflacji",
+      "polega on na spadku realnych wydatków budżetu państwa w konsekwencji występowania wysokiej inflacji",
+      "może on prowadzić do wzrostu deficytu budżetowego w sytuacji wysokiej inflacji",
+      "oznacza on ograniczenie kosztów obsługi długu publicznego w sytuacji wysokiej inflacji"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Efekt Tanziego–Olivery: przy wysokiej inflacji podatki pobierane są z opóźnieniem w stosunku do momentu powstania zobowiązania, więc realna wartość wpływów podatkowych spada. Przy wydatkach indeksowanych do cen prowadzi to do wzrostu deficytu budżetowego."
+  },
+  {
+    "id": "owe36-o-20",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody okręgowe",
+    "question": "Które stwierdzenie dotyczące krzywej kosztów przeciętnych w długim okresie jest prawdziwe?",
+    "options": [
+      "zawsze przecina krzywe krótkookresowych kosztów przeciętnych w ich minimach",
+      "przedstawia zależność występującą między poziomem produkcji a wysokością kosztu przeciętnego przy danej wielkości zakładu",
+      "jeżeli jest ona rosnąca, to w danym przedsiębiorstwie występują korzyści skali",
+      "ukazuje zależność między produkcją i kosztem przeciętnym przy założeniu, że wszystkie czynniki produkcji są zmienne"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Długookresowa krzywa kosztów przeciętnych pokazuje najniższy możliwy koszt przeciętny dla każdej wielkości produkcji, gdy wszystkie czynniki (także wielkość zakładu) są zmienne. Jest obwiednią krzywych krótkookresowych (styka się z nimi, ale nie zawsze w ich minimach); jej rosnący odcinek oznacza niekorzyści skali."
+  },
+  {
+    "id": "owe36-o-21",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody okręgowe",
+    "question": "Produkt zróżnicowany, brak barier wejścia i dużo producentów na rynku to cechy:",
+    "options": [
+      "monopolu",
+      "konkurencji doskonałej",
+      "konkurencji monopolistycznej",
+      "oligopolu Bertranda"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Konkurencja monopolistyczna: wielu producentów, brak barier wejścia, ale produkt zróżnicowany (marka, jakość, design). Przy produkcie jednorodnym byłaby to konkurencja doskonała."
+  },
+  {
+    "id": "owe36-o-22",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody okręgowe",
+    "question": "Krzywa popytu na pewien produkt jest opisana równaniem p = −2q + 40, a krzywa podaży to p = 2q + 14 (gdzie: p – cena w zł; q – ilość w sztukach). W przypadku produkcji tego dobra występują negatywne efekty zewnętrzne. Która z odpowiedzi przedstawia możliwy przebieg krzywej kosztu społecznego związany z jego wytwarzaniem?",
+    "options": [
+      "p = −2q + 36",
+      "p = −2q + 44",
+      "p = 2q + 10",
+      "p = 2q + 18"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Negatywne efekty zewnętrzne (np. zanieczyszczenie) sprawiają, że koszt społeczny produkcji jest wyższy niż koszt prywatny. Krzywa kosztu społecznego leży więc powyżej krzywej podaży (kosztu prywatnego) p = 2q + 14 – np. p = 2q + 18. Pozostałe odpowiedzi to przesunięcia krzywej popytu lub krzywa poniżej podaży."
+  },
+  {
+    "id": "owe36-o-23",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody okręgowe",
+    "question": "Instrumentami finansowymi rynku pieniężnego są:",
+    "options": [
+      "MBS-y",
+      "CDS-y",
+      "bony skarbowe",
+      "certyfikaty inwestycyjne"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Rynek pieniężny obejmuje instrumenty krótkoterminowe (do 1 roku), np. bony skarbowe, bony pieniężne NBP, certyfikaty depozytowe, lokaty międzybankowe. MBS-y (papiery zabezpieczone hipotekami) i certyfikaty inwestycyjne należą do rynku kapitałowego, a CDS-y to instrumenty pochodne."
+  },
+  {
+    "id": "owe36-o-24",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody okręgowe",
+    "question": "Które stwierdzenie dotyczące krzywych obojętności dla pary dóbr doskonale komplementarnych jest prawdziwe?",
+    "options": [
+      "są one liniami prostymi",
+      "mają kształt litery „L”",
+      "kąt, pod którym się przecinają, jest równy 45°",
+      "mają kształt litery „S”"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Dobra doskonale komplementarne konsumuje się w stałej proporcji (np. lewy i prawy but). Dodatkowa ilość tylko jednego dobra nie zwiększa użyteczności, dlatego krzywe obojętności mają kształt litery L. Krzywe obojętności nigdy się nie przecinają."
+  },
+  {
+    "id": "owe36-o-25",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody okręgowe",
+    "question": "Które stwierdzenie dotyczące ciągłej skali zachowań przywódczych jest prawdziwe?",
+    "options": [
+      "została ona zaproponowana przez R. Tannenbauma i F. Taylora",
+      "została ona zaproponowana przez H. Gantta i W.H. Schmidta",
+      "w tej skali wyróżnia się siedem szczebli przywództwa",
+      "zgodnie z tą koncepcją wpływ na zachowania przywódcze mają wyłącznie cechy menadżera"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Kontinuum (ciągła skala) zachowań przywódczych R. Tannenbauma i W.H. Schmidta obejmuje siedem stylów – od decyzji podejmowanej i ogłaszanej przez kierownika, po pozwolenie podwładnym działać samodzielnie w ustalonych granicach. Wybór stylu zależy od kierownika, podwładnych i sytuacji."
+  },
+  {
+    "id": "owe36-o-26",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody okręgowe",
+    "question": "Według J.D. Thompsona dwoma wymiarami opisującymi otoczenie organizacji są:",
+    "options": [
+      "stopień zmienności i stopień jednorodności",
+      "stopień zmienności i siła nabywców",
+      "stopień zmienności i stopień stabilności",
+      "stopień jednorodności i siła konkurencji"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "J.D. Thompson opisywał otoczenie organizacji dwoma wymiarami: stopniem zmienności (stabilne – dynamiczne) i stopniem jednorodności (proste/jednorodne – złożone/niejednorodne). Ich połączenie daje cztery rodzaje otoczenia o różnym stopniu niepewności."
+  },
+  {
+    "id": "owe36-o-27",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody okręgowe",
+    "question": "Ile podstawowych form techniki wykorzystywanej przez organizację do przekształcenia nakładów w wyniki wyróżniła J. Woodward?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Joan Woodward wyróżniła trzy podstawowe formy (rodzaje) technologii: produkcję jednostkową i małoseryjną, produkcję wielkoseryjną i masową oraz produkcję procesową (ciągłą). Wykazała, że różnym technologiom odpowiadają różne struktury organizacyjne."
+  },
+  {
+    "id": "owe36-o-28",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody okręgowe",
+    "question": "Według M. Webera modelem struktury organizacji, do którego powinny dążyć wszystkie organizacje, jest:",
+    "options": [
+      "model biurokratyczny",
+      "model behawioralny",
+      "model organiczny",
+      "model elastyczny"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Max Weber uważał, że idealnym, najbardziej racjonalnym modelem organizacji jest biurokracja – oparta na hierarchii władzy, formalnych zasadach, podziale pracy, bezosobowości i kompetencjach – i że wszystkie organizacje powinny do niego dążyć."
+  },
+  {
+    "id": "owe36-o-29",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody okręgowe",
+    "question": "Osobowość typu A, wyróżniona w kontekście analizy zjawiska stresu, w porównaniu do osobowości typu B, cechuje się:",
+    "options": [
+      "słabszym poczuciem obowiązku wobec zadań",
+      "słabszym poczuciem czasu",
+      "niższym poziomem agresji i niecierpliwości",
+      "silniejszym poświęceniem się pracy"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Osobowość typu A (M. Friedman, R. Rosenman) cechuje się silnym zaangażowaniem i poświęceniem pracy, rywalizacją, pośpiechem, niecierpliwością i agresją – jest bardziej podatna na stres. Typ B jest spokojniejszy i mniej skupiony na pracy."
+  },
+  {
+    "id": "owe36-o-30",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody okręgowe",
+    "question": "Funkcja produkcji przedsiębiorstwa jest opisana równaniem: Q = 4L, gdzie Q – wielkość produkcji w ciągu miesiąca, L – liczba pracowników zatrudnianych w okresie miesiąca na pełny etat. Krzywa popytu na produkty przedsiębiorstwa to P = 2000 – 2Q (gdzie: P – cena jednostkowa w zł). Wskaż równanie krańcowego przychodu z pracy w tym przedsiębiorstwie (gdzie: MRPL – krańcowy przychód z pracy).",
+    "options": [
+      "MRPL = 2000 – 2L",
+      "MRPL = 2000 – 8L",
+      "MRPL = 8000 – 8L",
+      "MRPL = 8000 – 64L"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "MRPL = MR · MPL. Utarg TR = (2000 − 2Q) · Q, więc MR = 2000 − 4Q. Przy Q = 4L: MR = 2000 − 16L, a MPL = 4. MRPL = 4 · (2000 − 16L) = 8000 − 64L."
+  }
+]

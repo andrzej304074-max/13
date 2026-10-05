@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe36-s-01",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody szkolne",
+    "question": "Produkt homogeniczny, brak barier wejścia i wielu producentów na rynku to cechy:",
+    "options": [
+      "monopolu",
+      "konkurencji doskonałej",
+      "konkurencji monopolistycznej",
+      "oligopolu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Konkurencja doskonała to rynek z wieloma producentami, produktem homogenicznym (jednorodnym) i brakiem barier wejścia i wyjścia. Gdy produkt jest zróżnicowany, mamy konkurencję monopolistyczną."
+  },
+  {
+    "id": "owe36-s-02",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody szkolne",
+    "question": "Krzywa utargu krańcowego monopolisty (nieróżnicującego ceny) opisana jest równaniem: MR = −2q + 10 (gdzie: MR – utarg krańcowy w zł; q – ilość w sztukach). Które z równań opisuje krzywą popytu tego monopolisty (gdzie: p – cena w zł za sztukę)?",
+    "options": [
+      "p = −q + 10",
+      "p = −2q + 10",
+      "p = −2q + 20",
+      "p = −2q² + 10"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Dla liniowego popytu p = a − bq utarg TR = aq − bq², więc MR = a − 2bq: krzywa MR ma ten sam wyraz wolny i dwukrotnie większe nachylenie. Skoro MR = −2q + 10, to a = 10, b = 1, czyli p = −q + 10."
+  },
+  {
+    "id": "owe36-s-03",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody szkolne",
+    "question": "Bank A udzielił kredytu hipotecznego oprocentowanego stałą stopą procentową Panu X. Ryzyko stopy procentowej z tytułu tej operacji:",
+    "options": [
+      "ponosi Pan X",
+      "ponosi Bank A",
+      "nie jest ponoszone ani przez Pana X, ani przez Bank A",
+      "ponosi zarówno Pan X, jak i Bank A"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Przy stałym oprocentowaniu rata kredytobiorcy się nie zmienia. Jeśli stopy rynkowe wzrosną, bank nadal otrzymuje niższe, stałe oprocentowanie, a sam musi płacić drożej za finansowanie – ryzyko stopy procentowej ponosi więc bank. Przy oprocentowaniu zmiennym ponosiłby je kredytobiorca."
+  },
+  {
+    "id": "owe36-s-04",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody szkolne",
+    "question": "Które z poniższych dóbr najlepiej spełnia kryteria stawiane dobrom Veblena?",
+    "options": [
+      "złoty naszyjnik",
+      "chleb",
+      "bilet do kina",
+      "insulina"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Dobra Veblena to dobra luksusowe kupowane dla prestiżu (konsumpcja ostentacyjna) – wysoka cena czyni je bardziej pożądanymi, np. biżuteria, drogie zegarki, samochody luksusowe. Chleb, bilety do kina i insulina to dobra codziennego użytku lub niezbędne."
+  },
+  {
+    "id": "owe36-s-05",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody szkolne",
+    "question": "Który z cykli koniunkturalnych trwa najkrócej?",
+    "options": [
+      "Juglara",
+      "Kitchina",
+      "Kondratiewa",
+      "Kuznetsa"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Cykle koniunkturalne według długości: Kitchina (zapasowe) – ok. 3–4 lata, Juglara (inwestycyjne) – ok. 7–11 lat, Kuznetsa (budowlane) – ok. 15–25 lat, Kondratiewa (fale długie) – ok. 40–60 lat. Najkrótszy jest cykl Kitchina."
+  },
+  {
+    "id": "owe36-s-06",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody szkolne",
+    "question": "Które stwierdzenie dotyczące PKB per capita jest prawdziwe?",
+    "options": [
+      "państwem z najwyższym poziomem PKB per capita jest obecnie Chińska Republika Ludowa",
+      "im wyższa dynamika wzrostu liczby ludności danego państwa, tym wyższy jest PKB per capita",
+      "PKB per capita pozwala precyzyjnie określić stopień nierówności dochodowych występujących w danym kraju",
+      "PKB per capita to wartość produktu krajowego brutto przypadająca na jednego mieszkańca"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "PKB per capita = PKB / liczba mieszkańców. Szybki wzrost liczby ludności obniża go (przy danym PKB), nie mierzy on nierówności dochodowych, a najwyższy PKB per capita mają małe, bogate kraje (np. Luksemburg, Irlandia, Szwajcaria), a nie Chiny."
+  },
+  {
+    "id": "owe36-s-07",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody szkolne",
+    "question": "Inwestorzy zagraniczni wycofują swój kapitał z kraju X poprzez znaczącą sprzedaż obligacji skarbowych tego państwa. Konsekwencją tego będzie:",
+    "options": [
+      "wzrost rentowności obligacji na rynku wtórnym oraz spadek wartości waluty krajowej tego państwa",
+      "wzrost cen obligacji na rynku wtórnym oraz spadek wartości waluty krajowej tego państwa",
+      "wzrost cen obligacji na rynku wtórnym oraz wzrost wartości waluty krajowej tego państwa",
+      "spadek rentowności obligacji na rynku wtórnym oraz wzrost wartości waluty krajowej tego państwa"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Masowa sprzedaż obligacji obniża ich ceny na rynku wtórnym, a więc podnosi ich rentowność. Inwestorzy wymieniają uzyskaną walutę krajową na waluty obce, by wycofać kapitał – rośnie popyt na waluty obce i podaż waluty krajowej, więc jej wartość spada (deprecjacja)."
+  },
+  {
+    "id": "owe36-s-08",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody szkolne",
+    "question": "Stopę bezrobocia niepowodującą przyspieszenia inflacji w teorii ekonomii określa się akronimem:",
+    "options": [
+      "HICP",
+      "NAIRU",
+      "BTC",
+      "BAEL"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "NAIRU (non-accelerating inflation rate of unemployment) to stopa bezrobocia nieprzyspieszająca inflacji – gdy bezrobocie jest od niej niższe, inflacja rośnie. HICP to zharmonizowany wskaźnik cen, BAEL – Badanie Aktywności Ekonomicznej Ludności."
+  },
+  {
+    "id": "owe36-s-09",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody szkolne",
+    "question": "Które stwierdzenie dotyczące systemu podatkowego w Polsce jest prawdziwe?",
+    "options": [
+      "podatnikami PIT są wyłącznie osoby zatrudnione na podstawie umowy o pracę",
+      "podatek od nieruchomości jest przykładem podatku pośredniego",
+      "w Polsce funkcjonuje co najmniej jeden podatek pośredni",
+      "w Polsce nie funkcjonują podatki (opłaty) sektorowe"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "W Polsce działają podatki pośrednie – VAT, akcyza, podatek od gier. Podatnikami PIT są wszystkie osoby fizyczne uzyskujące dochody (nie tylko pracownicy), podatek od nieruchomości jest podatkiem bezpośrednim (majątkowym), a podatki sektorowe istnieją (np. podatek bankowy, opłata cukrowa)."
+  },
+  {
+    "id": "owe36-s-10",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody szkolne",
+    "question": "Konsekwencją podwyżki stopy procentowej przez bank centralny będzie:",
+    "options": [
+      "obniżenie oprocentowania depozytów osób fizycznych w bankach komercyjnych",
+      "zwiększenie konsumpcji gospodarstw domowych posiadających kredyty hipoteczne",
+      "wzrost kosztów obsługi długu Skarbu Państwa",
+      "wzrost popytu na kredyt ze strony przedsiębiorstw prywatnych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Podwyżka stopy procentowej banku centralnego podnosi rentowność nowych obligacji skarbowych i oprocentowanie obligacji o zmiennym kuponie, więc rosną koszty obsługi długu Skarbu Państwa. Rośnie też oprocentowanie depozytów i kredytów, a popyt na kredyt i konsumpcja kredytobiorców maleją."
+  },
+  {
+    "id": "owe36-s-11",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody szkolne",
+    "question": "Które stwierdzenie dotyczące wskaźnika ROA jest prawdziwe?",
+    "options": [
+      "jego wartość mieści się w przedziale od 0 do 1%",
+      "jest to relacja zysku przedsiębiorstwa do jego zobowiązań",
+      "jego wartość jest zawsze wyższa od wartości wskaźnika ROE w tym samym przedsiębiorstwie",
+      "jego wartość może być ujemna"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "ROA (zwrot z aktywów) = zysk netto / aktywa. Gdy firma ponosi stratę, wskaźnik jest ujemny. Może przekraczać 1%, a zwykle jest niższy niż ROE (bo aktywa są większe niż kapitał własny)."
+  },
+  {
+    "id": "owe36-s-12",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody szkolne",
+    "question": "Rozwój platform internetowych z ofertami pracy, ułatwiających zarówno poszukiwanie nowych miejsc pracy przyszłym pracownikom, jak i dobór kandydatów pracodawcom, może pozytywnie wpłynąć na bezrobocie:",
+    "options": [
+      "strukturalne",
+      "frykcyjne",
+      "cykliczne",
+      "popytowe"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Internetowe platformy z ofertami pracy ułatwiają dopasowanie pracowników do wolnych miejsc pracy i skracają czas poszukiwań, więc ograniczają przede wszystkim bezrobocie frykcyjne."
+  },
+  {
+    "id": "owe36-s-13",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody szkolne",
+    "question": "Który z wymienionych papierów wartościowych daje jego posiadaczowi prawo uczestnictwa w walnym zgromadzeniu wraz z prawem głosu?",
+    "options": [
+      "obligacja",
+      "obligacja zerokuponowa",
+      "akcja zwykła",
+      "list zastawny"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Akcja zwykła daje akcjonariuszowi prawo do udziału w walnym zgromadzeniu i do głosowania (zwykle 1 akcja = 1 głos), a także prawo do dywidendy. Obligacje i listy zastawne to papiery dłużne – dają prawo do odsetek i zwrotu kapitału, ale nie do głosu."
+  },
+  {
+    "id": "owe36-s-14",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody szkolne",
+    "question": "Zgodnie z założeniami polityki pieniężnej na rok 2022 podstawową operacją otwartego rynku Narodowego Banku Polskiego jest:",
+    "options": [
+      "emisja rocznych obligacji",
+      "skup obligacji, których emitentem jest Skarb Państwa",
+      "emisja 7-dniowych bonów pieniężnych",
+      "kredyt lombardowy udzielany bankom"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Podstawową operacją otwartego rynku NBP jest emisja 7-dniowych bonów pieniężnych NBP, których rentowność odpowiada stopie referencyjnej. Służy ona absorbowaniu nadpłynności sektora bankowego i utrzymywaniu krótkoterminowych stóp w pobliżu stopy referencyjnej."
+  },
+  {
+    "id": "owe36-s-15",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody szkolne",
+    "question": "W gospodarce autarkicznej, w warunkach braku państwa, funkcja konsumpcji jest opisana równaniem C = 200 + 0,5Y (gdzie: Y – produkt krajowy brutto; C – konsumpcja), a Y = 2000. Ile wynosi wartość konsumpcji autonomicznej?",
+    "options": [
+      "200",
+      "1000",
+      "1200",
+      "przedstawione w treści pytania informacje nie pozwalają oszacować konsumpcji autonomicznej"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Konsumpcja autonomiczna to część konsumpcji niezależna od dochodu – wyraz wolny funkcji konsumpcji: 200. Przy Y = 2000 łączna konsumpcja wynosi 200 + 0,5 · 2000 = 1200, ale część autonomiczna to nadal 200."
+  },
+  {
+    "id": "owe36-s-16",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody szkolne",
+    "question": "Przyjmuje się, że w gospodarce występuje hiperinflacja, jeżeli poziom inflacji przekracza miesięcznie:",
+    "options": [
+      "20%",
+      "25%",
+      "50%",
+      "150%"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Według klasycznej definicji P. Cagana hiperinflacja to inflacja przekraczająca 50% miesięcznie. Wtedy pieniądz bardzo szybko traci wartość i ludzie uciekają od pieniądza."
+  },
+  {
+    "id": "owe36-s-17",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody szkolne",
+    "question": "W kraju X wartość współczynnika Giniego w okresie ostatnich 10 lat wzrosła z 0,24 do 0,44. Oznacza to, że w kraju X:",
+    "options": [
+      "wzrósł udział międzynarodowej wymiany handlowej w PKB",
+      "spadł udział międzynarodowej wymiany handlowej w PKB",
+      "wzrosła stopa zatrudnienia",
+      "zwiększyły się nierówności dochodowe"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Współczynnik Giniego mierzy nierówności dochodowe w skali od 0 (pełna równość) do 1 (pełna nierówność). Wzrost z 0,24 do 0,44 oznacza wyraźny wzrost nierówności dochodowych."
+  },
+  {
+    "id": "owe36-s-18",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody szkolne",
+    "question": "M. Friedman uważał, że przyczyną inflacji jest:",
+    "options": [
+      "niestabilny rynek finansowy",
+      "wysokie bezrobocie",
+      "zbyt szybkie tempo wzrostu podaży pieniądza",
+      "zbyt wysoki popyt na pieniądz"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Milton Friedman (monetarysta) twierdził, że „inflacja jest zawsze i wszędzie zjawiskiem pieniężnym” – jej przyczyną jest zbyt szybki wzrost podaży pieniądza w stosunku do wzrostu produkcji."
+  },
+  {
+    "id": "owe36-s-19",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody szkolne",
+    "question": "Pierwotnie ilość konsumowanych jabłek wynosiła 10 kg. W konsekwencji wzrostu ich ceny o 16% spadła ona o 2 kg. Ile wynosi cenowa elastyczność popytu na jabłka?",
+    "options": [
+      "0,16",
+      "0,80",
+      "1,25",
+      "5,00"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Ilość spadła o 2 kg z 10 kg, czyli o 20%. Elastyczność cenowa popytu = 20% / 16% = 1,25 (co do wartości bezwzględnej) – popyt jest elastyczny."
+  },
+  {
+    "id": "owe36-s-20",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody szkolne",
+    "question": "Które z równań odpowiada koncepcji krzywej Laffera (gdzie: T – dochód podatkowy; t – stawka podatku)?",
+    "options": [
+      "T = 2t",
+      "T = −2t",
+      "T = −t² + t",
+      "T = t² + t"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Krzywa Laffera: wpływy podatkowe są zerowe przy stawce 0% i 100%, a pomiędzy nimi osiągają maksimum. Funkcja T = −t² + t (dla t od 0 do 1) daje T = 0 przy t = 0 i t = 1 oraz maksimum przy t = 0,5 – ma kształt odwróconej paraboli, jak krzywa Laffera."
+  },
+  {
+    "id": "owe36-s-21",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody szkolne",
+    "question": "Pod koniec września 2022 r. miała miejsce silna wyprzedaż brytyjskich obligacji (gilts). Która z odpowiedzi może opisywać przyczynę tej sytuacji?",
+    "options": [
+      "rekordowa nadwyżka na rachunku obrotów bieżących w Wielkiej Brytanii",
+      "zapowiedź znacznego zmniejszenia obciążeń fiskalnych (podatków) skutkującego zwiększeniem potrzeb pożyczkowych rządu",
+      "rządowe plany ograniczenia podaży obligacji",
+      "znaczne obniżenie stopy procentowej przez Bank Anglii"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "We wrześniu 2022 r. rząd Wielkiej Brytanii (L. Truss) ogłosił tzw. mini-budżet z dużymi obniżkami podatków, finansowanymi długiem. Rynek obawiał się wzrostu potrzeb pożyczkowych, więc nastąpiła silna wyprzedaż obligacji (gilts), spadek ich cen, wzrost rentowności i interwencja Banku Anglii."
+  },
+  {
+    "id": "owe36-s-22",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody szkolne",
+    "question": "Bank centralny zdecydował o podniesieniu swojej stopy referencyjnej o 25 punktów bazowych. Ile wynosi ona obecnie, jeżeli przed podwyżką była równa 11,25%?",
+    "options": [
+      "11,50%",
+      "13,75%",
+      "14,06%",
+      "36,25%"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "25 punktów bazowych to 0,25 punktu procentowego. 11,25% + 0,25 pkt proc. = 11,50%."
+  },
+  {
+    "id": "owe36-s-23",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody szkolne",
+    "question": "Przykładem negatywnego szoku podażowego oddziałującego na poziom cen w polskiej gospodarce jest:",
+    "options": [
+      "wzrost cen ropy naftowej",
+      "wzrost popytu krajowego gospodarstw domowych",
+      "odkrycie nowych złóż gazu łupkowego w Polsce",
+      "spadek cen żywności na rynkach światowych"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Negatywny szok podażowy podnosi koszty produkcji i zmniejsza podaż – np. wzrost cen ropy naftowej, z której Polska importuje większość. Wzrost popytu to szok popytowy, a odkrycie złóż gazu i spadek cen żywności to pozytywne szoki podażowe."
+  },
+  {
+    "id": "owe36-s-24",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody szkolne",
+    "question": "Pierwszy szok (kryzys) naftowy wystąpił:",
+    "options": [
+      "pod koniec lat 50. XX w.",
+      "na początku lat 70. XX w.",
+      "pod koniec lat 80. XX w.",
+      "na początku lat 90. XX w."
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Pierwszy kryzys naftowy wybuchł w 1973 r., gdy kraje arabskie (OAPEC) wprowadziły embargo na dostawy ropy do państw wspierających Izrael w wojnie Jom Kipur. Cena ropy wzrosła wtedy ok. czterokrotnie. Drugi kryzys naftowy nastąpił w 1979 r."
+  },
+  {
+    "id": "owe36-s-25",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody szkolne",
+    "question": "Które stwierdzenie dotyczące deficytu budżetowego w Polsce jest prawdziwe?",
+    "options": [
+      "deficyt budżetowy w Polsce przedstawia sytuację finansową całego sektora finansów publicznych",
+      "zgodnie z obowiązującymi rozwiązaniami prawnymi Narodowy Bank Polski może finansować deficyt budżetowy",
+      "im wyższe jest oprocentowanie dłużnych rządowych papierów wartościowych, tym większa jest różnica między wartościami pierwotnego deficytu budżetowego a rzeczywistego (nominalnego) deficytu budżetowego",
+      "zgodnie z Konstytucją RP deficyt budżetowy nie może przekraczać 10% PKB"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Deficyt pierwotny nie obejmuje kosztów obsługi długu (odsetek), a deficyt nominalny (rzeczywisty) je obejmuje. Im wyższe oprocentowanie obligacji, tym większe odsetki i większa różnica między tymi deficytami. Deficyt budżetu państwa nie obejmuje całego sektora finansów publicznych, a NBP nie może finansować deficytu."
+  },
+  {
+    "id": "owe36-s-26",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody szkolne",
+    "question": "Przedsiębiorstwo planuje produkcję nowego typu plecaka. Z badań rynku wynika, że jego cena jednostkowa wyniesie 150 zł. Koszt zmienny w przeliczeniu na jednostkę produkcji wyniesie 100 zł. Koszty stałe są szacowane na poziomie 200 000 zł rocznie. Ile plecaków rocznie powinno sprzedać przedsiębiorstwo, aby osiągnąć próg rentowności (punkt krytyczny) (w sztukach)?",
+    "options": [
+      "50",
+      "800",
+      "1600",
+      "4000"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Ilościowy próg rentowności = koszty stałe / (cena − jednostkowy koszt zmienny) = 200 000 / (150 − 100) = 200 000 / 50 = 4000 plecaków."
+  },
+  {
+    "id": "owe36-s-27",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody szkolne",
+    "question": "Najsilniej scentralizowanym typem sieci komunikacji w pięcioosobowych grupach jest wzorzec:",
+    "options": [
+      "„koła od wozu”",
+      "„Y”",
+      "„łańcucha”",
+      "„okręgu”"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "We wzorcu „koła od wozu” (gwiazdy) wszystkie informacje przechodzą przez jedną osobę w centrum, a pozostali członkowie komunikują się tylko z nią. To najsilniej scentralizowana sieć komunikacji. Najmniej scentralizowane są „okrąg” i „każdy z każdym”."
+  },
+  {
+    "id": "owe36-s-28",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody szkolne",
+    "question": "Strategia dywersyfikacji niezależnej polega na:",
+    "options": [
+      "prowadzeniu przez organizację kilku niepowiązanych ze sobą jednostek operacyjnych",
+      "wytwarzaniu przez przedsiębiorstwo tylko jednego produktu lub usługi na jednym rynku geograficznym",
+      "prowadzeniu przez organizację kilku jednostek operacyjnych w jakiś sposób wzajemnie ze sobą powiązanych",
+      "próbie uzyskania przez organizację przewagi konkurencyjnej przez obniżenie kosztów poniżej poziomu kosztów konkurujących z nią firm"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Dywersyfikacja niezależna (niepowiązana, konglomeratowa) polega na prowadzeniu kilku niepowiązanych ze sobą rodzajów działalności (np. produkcja żywności i usługi finansowe). Prowadzenie powiązanych jednostek to dywersyfikacja powiązana, jeden produkt na jednym rynku – strategia jednego produktu."
+  },
+  {
+    "id": "owe36-s-29",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody szkolne",
+    "question": "Z perspektywy organizacji regulatorzy stanowią część:",
+    "options": [
+      "otoczenia zadaniowego",
+      "otoczenia ogólnego",
+      "otoczenia fizycznego",
+      "środowiska wewnętrznego"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Otoczenie zadaniowe (celowe) to podmioty, z którymi organizacja bezpośrednio współdziała: konkurenci, klienci, dostawcy, sojusznicy strategiczni, właściciele, związki zawodowe i regulatorzy (np. urzędy, organizacje nadzorcze)."
+  },
+  {
+    "id": "owe36-s-30",
+    "type": "single",
+    "edition": "XXXVI OWE (2022/2023), zawody szkolne",
+    "question": "Która z wymienionych teorii odpowiada poglądom naukowego zarządzania:",
+    "options": [
+      "teoria X",
+      "teoria Maslowa",
+      "teoria Y",
+      "teoria Z"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Naukowe zarządzanie (F.W. Taylor) zakładało, że pracownicy są leniwi i motywuje ich głównie pieniądz, dlatego trzeba ich ściśle kontrolować – to odpowiada założeniom teorii X D. McGregora. Teoria Y i teoria Maslowa należą do podejścia behawioralnego."
+  }
+]

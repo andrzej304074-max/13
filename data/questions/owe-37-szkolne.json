@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe37-s-01",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody szkolne",
+    "question": "W pewnym kraju w 2022 r. nominalny PKB wyniósł 120 mln USD, a realny PKB – 100 mln USD. Ile wyniósł deflator PKB w tym kraju?",
+    "options": [
+      "–20",
+      "20",
+      "83",
+      "120"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Deflator PKB = PKB nominalny / PKB realny · 100 = 120 / 100 · 100 = 120. Oznacza to, że ceny są o 20% wyższe niż w roku bazowym."
+  },
+  {
+    "id": "owe37-s-02",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody szkolne",
+    "question": "Cykl środków pieniężnych w przedsiębiorstwie jest tym dłuższy, im:",
+    "options": [
+      "krótszy jest cykl operacyjny",
+      "wyższa jest wartość wskaźnika obrotu zapasów w dniach",
+      "niższa jest wartość inkasa należności w dniach",
+      "wyższa jest wartość wskaźnika okresu spłaty zobowiązań w dniach"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Cykl konwersji gotówki = cykl zapasów (rotacja zapasów w dniach) + cykl należności (inkaso w dniach) − cykl zobowiązań (spłata zobowiązań w dniach). Jest tym dłuższy, im dłużej zapasy czekają na sprzedaż i im wolniej spływają należności, a tym krótszy, im później firma płaci dostawcom."
+  },
+  {
+    "id": "owe37-s-03",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody szkolne",
+    "question": "Zgodnie ze szkołą keynesowską, chcąc ograniczyć wielkość luki deflacyjnej, państwo powinno:",
+    "options": [
+      "zwiększyć stawki podatków dochodowych",
+      "ograniczyć deficyt budżetowy",
+      "zwiększyć poziom wydatków publicznych",
+      "zwiększyć stawki podatków od konsumpcji"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Luka deflacyjna (recesyjna) oznacza, że popyt globalny jest za niski, by zapewnić pełne zatrudnienie. Keyneści zalecają ekspansywną politykę fiskalną – zwiększenie wydatków publicznych (lub obniżkę podatków), co przez mnożnik zwiększa produkcję. Podwyżki podatków i ograniczanie deficytu pogłębiłyby lukę."
+  },
+  {
+    "id": "owe37-s-04",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody szkolne",
+    "question": "Krzywa popytu na produkt pojedynczego przedsiębiorstwa na rynku doskonale konkurencyjnym jest linią:",
+    "options": [
+      "pionową",
+      "poziomą",
+      "o nachyleniu ujemnym",
+      "o nachyleniu dodatnim"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Na rynku doskonale konkurencyjnym firma jest cenobiorcą – może sprzedać dowolną ilość po cenie rynkowej, więc krzywa popytu na jej produkt jest pozioma (doskonale elastyczna) na poziomie ceny."
+  },
+  {
+    "id": "owe37-s-05",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody szkolne",
+    "question": "Osoba bierna zawodowo to inaczej osoba:",
+    "options": [
+      "bezrobotna",
+      "oczekująca na podjęcie zatrudnienia",
+      "pozostająca poza zasobem siły roboczej",
+      "niepodnosząca swoich kwalifikacji zawodowych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Osoby bierne zawodowo to osoby, które nie pracują i nie szukają pracy (np. uczniowie, emeryci, osoby zajmujące się domem) – pozostają poza zasobem siły roboczej. Bezrobotni należą do aktywnych zawodowo."
+  },
+  {
+    "id": "owe37-s-06",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody szkolne",
+    "question": "Elastyczność cenowa podaży rowerów wynosi 1,2. O ile wzrośnie wielkość podaży rowerów, jeżeli ich cena wzrośnie o 1%?",
+    "options": [
+      "0,2%",
+      "1,2%",
+      "2%",
+      "120%"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Cenowa elastyczność podaży = % zmiana ilości oferowanej / % zmiana ceny. Przy elastyczności 1,2 wzrost ceny o 1% zwiększa podaż o 1,2%."
+  },
+  {
+    "id": "owe37-s-07",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody szkolne",
+    "question": "Reguła Taylora odnosi się do sposobu prowadzenia polityki:",
+    "options": [
+      "pieniężnej",
+      "strukturalnej",
+      "fiskalnej",
+      "zarządzania długiem publicznym"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Reguła Taylora (J. Taylor, 1993) opisuje, jak bank centralny powinien ustalać stopę procentową w zależności od odchylenia inflacji od celu i luki produkcyjnej – dotyczy polityki pieniężnej."
+  },
+  {
+    "id": "owe37-s-08",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody szkolne",
+    "question": "Rząd w odpowiedzi na recesję przyjął pakiet zwiększający poziom wydatków publicznych. Takie działanie jest przede wszystkim ukierunkowane na ograniczenie bezrobocia:",
+    "options": [
+      "frykcyjnego",
+      "keynesowskiego",
+      "NAIRU",
+      "naturalnego"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Bezrobocie keynesowskie (koniunkturalne, cykliczne) wynika ze zbyt niskiego popytu globalnego w recesji. Zwiększenie wydatków publicznych pobudza popyt i ogranicza właśnie to bezrobocie. Bezrobocie frykcyjne i naturalne (NAIRU) nie zależą od popytu globalnego."
+  },
+  {
+    "id": "owe37-s-09",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody szkolne",
+    "question": "M. Friedman i E. Phelps sformułowali hipotezę, zgodnie z którą w długim okresie stopa bezrobocia, niezależnie od wysokości inflacji, dąży do poziomu:",
+    "options": [
+      "równego 0%",
+      "stopy realnego wzrostu gospodarczego",
+      "stopy nominalnego wzrostu gospodarczego",
+      "stopy bezrobocia naturalnego"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Według Friedmana i Phelpsa w długim okresie stopa bezrobocia wraca do poziomu naturalnego niezależnie od inflacji – długookresowa krzywa Phillipsa jest pionowa, a polityka ekspansywna obniża bezrobocie tylko przejściowo."
+  },
+  {
+    "id": "owe37-s-10",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody szkolne",
+    "question": "Cztery zasady podatkowe A. Smitha to:",
+    "options": [
+      "równomierność, pewność, dogodność, taniość",
+      "jawność, pewność, dogodność, taniość",
+      "proporcjonalność, ciągłość skali, dogodność, łatwość",
+      "regresywność, jawność, pewność, prostota"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Adam Smith sformułował cztery kanony podatkowe: równomierności (sprawiedliwości – podatek proporcjonalny do możliwości), pewności (jasno określony), dogodności (płatny w dogodnym czasie i formie) i taniości (niskie koszty poboru)."
+  },
+  {
+    "id": "owe37-s-11",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody szkolne",
+    "question": "Krzywa kosztu całkowitego w przedsiębiorstwie jest opisana równaniem TC = 0,4q² + 50q + 500. Ile wynosi przeciętny koszt zmienny, jeżeli q = 100?",
+    "options": [
+      "90",
+      "400",
+      "500",
+      "1400"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Koszt zmienny VC = 0,4q² + 50q (bez kosztu stałego 500). Przeciętny koszt zmienny AVC = VC / q = 0,4q + 50 = 0,4 · 100 + 50 = 90."
+  },
+  {
+    "id": "owe37-s-12",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody szkolne",
+    "question": "Podatek ad valorem obciążający sprzedawców będzie skutkował:",
+    "options": [
+      "przesunięciem równoległym krzywej podaży względem osi OX",
+      "zmianą nachylenia krzywej podaży",
+      "zmianą położenia punktu równowagi rynkowej w ramach pierwotnej krzywej podaży",
+      "przesunięciem równoległym krzywej popytu względem osi OX"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Podatek ad valorem to procent ceny. Kwota podatku rośnie wraz z ceną, więc nowa krzywa podaży (np. p = (1 + t) · stara cena) nie przesuwa się równolegle, tylko zmienia nachylenie – staje się bardziej stroma. Podatek kwotowy przesuwa krzywą równolegle."
+  },
+  {
+    "id": "owe37-s-13",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody szkolne",
+    "question": "Oczekiwane tempo inflacji zgodnie z hipotezą o statycznych oczekiwaniach inflacyjnych jest:",
+    "options": [
+      "zależne od tempa wzrostu podaży pieniądza",
+      "zależne od tempa inflacji w poprzednich okresach",
+      "zależne od stopy bezrobocia",
+      "niezależne od tempa zmian płacy nominalnej"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Przy oczekiwaniach statycznych podmioty zakładają, że inflacja będzie stała (np. zerowa lub równa dotychczasowej stałej wartości) – nie zmieniają oczekiwań pod wpływem nowych informacji, np. zmian płac nominalnych. Oczekiwania zależne od inflacji z przeszłości to oczekiwania adaptacyjne."
+  },
+  {
+    "id": "owe37-s-14",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody szkolne",
+    "question": "Inwestor wykorzystujący wyłącznie analizę techniczną w decyzji o nabyciu akcji danej spółki będzie kierował się wskaźnikiem:",
+    "options": [
+      "ROE",
+      "MIRR",
+      "RSI",
+      "EBITDA"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "RSI (indeks siły względnej) to wskaźnik analizy technicznej, oparty na historycznych zmianach cen – sygnalizuje wykupienie lub wyprzedanie rynku. ROE, MIRR i EBITDA to wskaźniki analizy fundamentalnej i finansowej."
+  },
+  {
+    "id": "owe37-s-15",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody szkolne",
+    "question": "Pozycja „środki trwałe w budowie” jest elementem:",
+    "options": [
+      "bilansu",
+      "rachunku zysków i strat",
+      "rachunku przepływów pieniężnych",
+      "zestawienia zmian w kapitale własnym"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Środki trwałe w budowie to nakłady na budowę lub montaż nowych środków trwałych, które nie zostały jeszcze oddane do użytku. Wykazuje się je w aktywach trwałych bilansu (w rzeczowych aktywach trwałych)."
+  },
+  {
+    "id": "owe37-s-16",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody szkolne",
+    "question": "Obligacje zerokuponowe:",
+    "options": [
+      "przynoszą ich posiadaczowi stały dochód w postaci odsetek",
+      "nie mają wartości nominalnej",
+      "mogą być emitowane przez przedsiębiorstwa",
+      "nie podlegają wykupowi"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Obligacje zerokuponowe nie wypłacają odsetek – sprzedaje się je poniżej wartości nominalnej (z dyskontem), a przy wykupie inwestor otrzymuje wartość nominalną. Mogą je emitować państwa (np. bony skarbowe, obligacje OK) i przedsiębiorstwa."
+  },
+  {
+    "id": "owe37-s-17",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody szkolne",
+    "question": "Budżet państwa w Polsce jest uchwalany przez:",
+    "options": [
+      "Radę Fiskalną",
+      "Radę Ministrów",
+      "Ministra Finansów",
+      "Sejm"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Ustawę budżetową na wniosek Rady Ministrów (projekt przygotowuje minister finansów) uchwala Sejm, a następnie rozpatruje Senat i podpisuje Prezydent. Rada Fiskalna (projekt) miałaby funkcje doradcze."
+  },
+  {
+    "id": "owe37-s-18",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody szkolne",
+    "question": "Trzy rodzaje motywów popytu na pieniądz wyróżnione przez J.M. Keynesa to:",
+    "options": [
+      "gospodarczy, spekulacyjny, inwestycyjny",
+      "transakcyjny, ostrożnościowy, spekulacyjny",
+      "żyrowy, inwestycyjny, spekulacyjny",
+      "transakcyjny, przezornościowy, ostrożnościowy"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Keynes wyróżnił trzy motywy popytu na pieniądz: transakcyjny (bieżące zakupy), przezornościowy (ostrożnościowy – na nieprzewidziane wydatki) i spekulacyjny (oczekiwanie na zmiany stóp procentowych i cen obligacji)."
+  },
+  {
+    "id": "owe37-s-19",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody szkolne",
+    "question": "Branding jest istotny w przypadku przedsiębiorstwa działającego:",
+    "options": [
+      "na rynku doskonale konkurencyjnym",
+      "jako monopsonista",
+      "jako monopolista nieróżnicujący ceny",
+      "na rynku będącym konkurencją monopolistyczną"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Branding (budowanie marki) jest kluczowy w konkurencji monopolistycznej, gdzie firmy wyróżniają swoje produkty marką, jakością i reklamą, by zdobyć lojalnych klientów. W konkurencji doskonałej produkty są jednorodne, a monopolista nie musi walczyć o klientów."
+  },
+  {
+    "id": "owe37-s-20",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody szkolne",
+    "question": "Przedsiębiorstwo X działa na rynku doskonale konkurencyjnym i maksymalizuje swój zysk całkowity w krótkim okresie. Które z równań jest zawsze prawdziwe (gdzie: MC – koszt krańcowy; MR – utarg krańcowy; P – cena; TC – koszt całkowity; AR – utarg przeciętny; ATC – przeciętny koszt całkowity; AVC – przeciętny koszt zmienny)?",
+    "options": [
+      "MR = P = TC = MC",
+      "MR = AR = P = MC",
+      "MR = P = ATC = MC",
+      "MR = MC = AVC = P"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "W konkurencji doskonałej firma maksymalizuje zysk, gdy MR = MC, a ponieważ jest cenobiorcą, utarg krańcowy i przeciętny równają się cenie: MR = AR = P = MC. Cena równa się ATC tylko w długookresowej równowadze, a AVC – tylko w punkcie zamknięcia."
+  },
+  {
+    "id": "owe37-s-21",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody szkolne",
+    "question": "Minimalna skala efektywna produkcji to wielkość produkcji, przy której najniższą wartość osiąga:",
+    "options": [
+      "koszt całkowity",
+      "koszt krańcowy",
+      "przeciętny koszt stały",
+      "przeciętny koszt całkowity"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Minimalna skala efektywna (MES) to najmniejsza wielkość produkcji, przy której przeciętny koszt całkowity (długookresowy) osiąga minimum – firma wykorzystała już korzyści skali."
+  },
+  {
+    "id": "owe37-s-22",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody szkolne",
+    "question": "Ideę kapitału społecznego rozpropagował:",
+    "options": [
+      "D. Ricardo",
+      "F. Fukuyama",
+      "M. Kalecki",
+      "R. Lucas"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Pojęcie kapitału społecznego (zaufanie, normy i sieci współpracy w społeczeństwie, które ułatwiają działania zbiorowe) spopularyzowali m.in. Francis Fukuyama („Zaufanie”, 1995), Robert Putnam i James Coleman."
+  },
+  {
+    "id": "owe37-s-23",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody szkolne",
+    "question": "Wartość wskaźnika bieżącej płynności finansowej jest tym wyższa, im:",
+    "options": [
+      "wyższa jest wartość aktywów trwałych",
+      "niższa jest wartość aktywów obrotowych",
+      "wyższa jest wartość zobowiązań długoterminowych",
+      "niższa jest wartość zobowiązań krótkoterminowych"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Wskaźnik bieżącej płynności = aktywa obrotowe / zobowiązania krótkoterminowe. Jest tym wyższy, im wyższe aktywa obrotowe i im niższe zobowiązania krótkoterminowe. Aktywa trwałe i zobowiązania długoterminowe nie wchodzą do wzoru."
+  },
+  {
+    "id": "owe37-s-24",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody szkolne",
+    "question": "Łączne wydatki na kapitał rzeczowy w danym kraju w pewnym okresie to:",
+    "options": [
+      "produkcja potencjalna",
+      "inwestycje netto",
+      "inwestycje greenfield",
+      "inwestycje brutto"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Inwestycje brutto to łączne wydatki na kapitał rzeczowy (maszyny, budynki, zapasy) w danym okresie, łącznie z odtworzeniem zużytego kapitału. Inwestycje netto = inwestycje brutto − amortyzacja."
+  },
+  {
+    "id": "owe37-s-25",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody szkolne",
+    "question": "W danym kraju występuje deficyt handlowy, gdy:",
+    "options": [
+      "oszczędności > inwestycje",
+      "produkt krajowy brutto = konsumpcja + inwestycje + wydatki rządowe",
+      "eksport netto > 0",
+      "odpływy kapitałowe netto < 0"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Deficyt handlowy oznacza ujemny eksport netto (import > eksport). Ponieważ odpływy kapitałowe netto równają się eksportowi netto (NCO = NX), deficyt handlowy oznacza NCO < 0 – napływ kapitału z zagranicy. Wtedy też oszczędności krajowe są mniejsze od inwestycji (S < I)."
+  },
+  {
+    "id": "owe37-s-26",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody szkolne",
+    "question": "Wśród ról odgrywanych przez menedżera wyróżnionych przez H. Mintzberga nie znajdziemy:",
+    "options": [
+      "dysponenta zasobów",
+      "sygnalisty",
+      "obserwatora",
+      "rzecznika"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "H. Mintzberg wyróżnił dziesięć ról kierowniczych w trzech grupach: interpersonalne (reprezentant, przywódca, łącznik), informacyjne (obserwator, propagator, rzecznik) i decyzyjne (przedsiębiorca, rozwiązujący problemy, dysponent zasobów, negocjator). Roli „sygnalisty” nie ma."
+  },
+  {
+    "id": "owe37-s-27",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody szkolne",
+    "question": "Opracowanie strategii promocyjnej produktu dla ostatniego kwartału danego roku jest przykładem celu:",
+    "options": [
+      "strategicznego",
+      "taktycznego",
+      "operacyjnego",
+      "misyjnego"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Cele operacyjne są krótkookresowe i konkretne, dotyczą bieżących działań na niższych szczeblach, np. strategii promocji produktu na najbliższy kwartał. Cele taktyczne są średniookresowe, a strategiczne – długookresowe i dotyczą całej organizacji."
+  },
+  {
+    "id": "owe37-s-28",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody szkolne",
+    "question": "Wprowadzony przez F.W. Taylora akordowy system wynagrodzeń miał pierwotnie ograniczyć skalę:",
+    "options": [
+      "pracoholizmu",
+      "luddyzmu",
+      "rotacji pracowników",
+      "zjawiska pozorowania pracy"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "F.W. Taylor walczył z „pozorowaniem pracy” (soldiering) – celowym spowalnianiem tempa przez robotników. Akordowy system płac, w którym wynagrodzenie zależy od liczby wykonanych jednostek, miał motywować do większej wydajności."
+  },
+  {
+    "id": "owe37-s-29",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody szkolne",
+    "question": "Przyjęcie przez przedsiębiorstwo postawy obronnej wobec swoich społecznych zobowiązań oznacza, że:",
+    "options": [
+      "w swojej działalności nie przestrzega ono obowiązującego prawa",
+      "postrzega ono siebie jako obywatela w społeczeństwie",
+      "regularnie emituje zielone obligacje (green bonds)",
+      "w swojej działalności realizuje wyłącznie wymogi wynikające z obowiązujących aktów prawnych"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Postawa obronna wobec społecznej odpowiedzialności oznacza, że firma robi tylko to, co nakazuje prawo – spełnia wymogi prawne, ale nic ponad nie. Postawa obstrukcyjna to łamanie prawa, a reaktywna i proaktywna oznaczają wychodzenie poza wymogi prawa."
+  },
+  {
+    "id": "owe37-s-30",
+    "type": "single",
+    "edition": "XXXVII OWE (2023/2024), zawody szkolne",
+    "question": "Przedstawicielem naukowego zarządzania jest:",
+    "options": [
+      "M. Weber",
+      "F. Gilbreth",
+      "A. Maslow",
+      "D. McGregor"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Frank Gilbreth (wraz z żoną Lillian) był przedstawicielem naukowego zarządzania – badał ruchy robocze (studium ruchów) i eliminował zbędne ruchy, by zwiększyć wydajność. Weber to teoria biurokracji, a Maslow i McGregor – podejście behawioralne."
+  }
+]

@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe35-o-01",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody okręgowe",
+    "question": "W odpowiedzi na gospodarcze konsekwencje pandemii COVID-19 Narodowy Bank Polski zdecydował się na wprowadzenie:",
+    "options": [
+      "ujemnej nominalnej stopy depozytowej",
+      "kredytu wekslowego",
+      "kredytu lombardowego",
+      "operacji typu swap walutowy"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "W marcu 2020 r., w reakcji na pandemię, Zarząd NBP wprowadził nowy instrument – kredyt wekslowy, służący refinansowaniu kredytów udzielanych przez banki przedsiębiorstwom (ostatecznie banki z niego nie skorzystały). Kredyt lombardowy i swapy walutowe istniały wcześniej, a stopa depozytowa NBP nigdy nie była ujemna (w 2020 r. spadła do 0%)."
+  },
+  {
+    "id": "owe35-o-02",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody okręgowe",
+    "question": "Przedsiębiorstwo Y jest producentem soków jabłkowych. Dla zapewnienia ciągłości produkcji soków rocznie przedsiębiorstwo potrzebuje 10 ton jabłek. Dodatkowo wiemy, że zużycie jabłek w ciągu roku rozkłada się równomiernie, koszt utrzymania zapasu 1 kg jabłek w ciągu roku równy jest 10 zł, a koszt realizacji jednej dostawy to 500 zł. Ile wynosi optymalna wielkość partii dostawy (w kg)?",
+    "options": [
+      "10,00",
+      "707,11",
+      "1000,00",
+      "1000000,00"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Ekonomiczna wielkość zamówienia (model Wilsona): EOQ = √(2 · D · Kz / Ku), gdzie D = 10 000 kg (roczne zapotrzebowanie), Kz = 500 zł (koszt dostawy), Ku = 10 zł (roczny koszt utrzymania 1 kg). EOQ = √(2 · 10 000 · 500 / 10) = √1 000 000 = 1000 kg."
+  },
+  {
+    "id": "owe35-o-03",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody okręgowe",
+    "question": "Jeżeli elastyczność cenowa podaży wynosi 2, to wzrost ceny o 1% powoduje:",
+    "options": [
+      "wzrost ilości oferowanej o 2%",
+      "wzrost ilości oferowanej o 2",
+      "wzrost podaży o 0,02%",
+      "wzrost ilości oferowanej o 0,02%"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Cenowa elastyczność podaży = % zmiana ilości oferowanej / % zmiana ceny. Przy elastyczności 2 wzrost ceny o 1% zwiększa ilość oferowaną o 2 · 1% = 2%."
+  },
+  {
+    "id": "owe35-o-04",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody okręgowe",
+    "question": "W gospodarce istnieje równowaga na rynkach dóbr, pieniądza i pracy. W wyniku postępu technicznego krzywa globalnej podaży ulega przesunięciu. Które stwierdzenie jest prawdziwe?",
+    "options": [
+      "postęp techniczny przesuwa krzywą globalnej podaży w lewo",
+      "zachowanie poziomu cen na niezmienionym poziomie wymaga obniżenia stopy procentowej przez bank centralny",
+      "zachowanie stopy inflacji na niezmienionym poziomie wymaga działań banku centralnego mających na celu przesunięcie krzywej globalnego popytu w lewo",
+      "postęp techniczny nie oddziałuje na stopę inflacji w punkcie równowagi"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Postęp techniczny zwiększa możliwości produkcyjne – krzywa globalnej podaży przesuwa się w prawo, co obniża poziom cen. Aby ceny pozostały bez zmian, bank centralny musi zwiększyć popyt globalny (przesunąć AD w prawo), czyli obniżyć stopę procentową."
+  },
+  {
+    "id": "owe35-o-05",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody okręgowe",
+    "question": "Które stwierdzenie dotyczące mieszanej elastyczności cenowej popytu jest prawdziwe?",
+    "options": [
+      "nie może ona przyjmować wartości dodatnich",
+      "nie może ona przyjmować wartości ujemnych",
+      "w przypadku dóbr Veblena jest ona zawsze ujemna",
+      "jest ona miarą siły reakcji popytu na jedno dobro na zmianę ceny innego dobra"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Mieszana (krzyżowa) elastyczność cenowa popytu mierzy reakcję popytu na jedno dobro na zmianę ceny innego dobra: E = % zmiana popytu na A / % zmiana ceny B. Dla substytutów jest dodatnia, dla dóbr komplementarnych – ujemna."
+  },
+  {
+    "id": "owe35-o-06",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody okręgowe",
+    "question": "Automatycznym stabilizatorem koniunktury jest:",
+    "options": [
+      "progresywna skala w podatku dochodowym od osób fizycznych",
+      "pakiet inwestycji publicznych wprowadzony w odpowiedzi na recesję",
+      "obniżka podstawowej stopy rezerwy obowiązkowej przez bank centralny",
+      "obniżka stawki podatku dochodowego od osób prawnych w celu pobudzenia inwestycji prywatnych"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Automatyczne stabilizatory działają bez decyzji polityków. Progresywny podatek dochodowy w recesji automatycznie zmniejsza obciążenia szybciej niż spadają dochody (a w ożywieniu – zwiększa), łagodząc wahania popytu. Pakiety inwestycyjne, obniżki podatków i stóp rezerw to świadome decyzje (polityka dyskrecjonalna)."
+  },
+  {
+    "id": "owe35-o-07",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody okręgowe",
+    "question": "Na doskonale konkurencyjnym rynku zboża krzywa popytu jest opisana równaniem p = −4q + 60, długookresowa krzywa podaży rynkowej (gałęzi) jest pozioma, a wielkość produkcji w stanie długookresowej równowagi wynosi 6 ton (gdzie: p – cena 1 tony w zł; q – wielkość produkcji w tonach). Które z równań prawidłowo opisuje krzywą utargu krańcowego dla przedsiębiorstwa X działającego na tym rynku (gdzie: MR – utarg krańcowy)?",
+    "options": [
+      "MR = 6",
+      "MR = 36",
+      "MR = −8q + 60",
+      "na podstawie przedstawionych informacji nie można wyznaczyć krzywej utargu krańcowego przedsiębiorstwa X"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Pozioma długookresowa krzywa podaży gałęzi oznacza, że cena równowagi jest stała i wynika z popytu przy q = 6: p = −4 · 6 + 60 = 36 zł. Na rynku doskonale konkurencyjnym pojedyncza firma jest cenobiorcą – jej utarg krańcowy równa się cenie: MR = 36."
+  },
+  {
+    "id": "owe35-o-08",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody okręgowe",
+    "question": "Indeksem sektorowym jest:",
+    "options": [
+      "WIG20",
+      "sWIG80",
+      "WIGdiv",
+      "WIG-nieruchomości"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Indeks sektorowy obejmuje spółki z jednej branży – np. WIG-nieruchomości, WIG-banki, WIG-energia. WIG20 to indeks największych spółek, sWIG80 – małych spółek, a WIGdiv – spółek wypłacających dywidendy."
+  },
+  {
+    "id": "owe35-o-09",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody okręgowe",
+    "question": "Poprawa informacji o rynku pracy oraz jakości usług pośrednictwa pracy wpłynie najsilniej na ograniczenie bezrobocia:",
+    "options": [
+      "cyklicznego",
+      "frykcyjnego",
+      "keynesowskiego",
+      "wynikającego z niedostatecznego popytu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Bezrobocie frykcyjne wynika z czasu potrzebnego na znalezienie pracy i dopasowanie pracowników do wolnych miejsc. Lepsza informacja o rynku pracy i sprawniejsze pośrednictwo skracają ten czas, więc najsilniej ograniczają właśnie bezrobocie frykcyjne. Bezrobocie cykliczne (keynesowskie) wynika ze zbyt niskiego popytu."
+  },
+  {
+    "id": "owe35-o-10",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody okręgowe",
+    "question": "Które stwierdzenie dotyczące konkurencji monopolistycznej jest prawdziwe?",
+    "options": [
+      "nowe przedsiębiorstwa nie mogą swobodnie wchodzić na rynek",
+      "na rynku konkuruje ze sobą niewiele przedsiębiorstw",
+      "działanie pojedynczego przedsiębiorstwa nie wywiera znaczącego wpływu na przeciętną cenę na rynku",
+      "w krótkim okresie przedsiębiorstwo nie może osiągać zysku nadzwyczajnego"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "W konkurencji monopolistycznej działa wiele firm, a wejście na rynek jest swobodne. Każda firma jest mała w stosunku do rynku, więc jej decyzje nie wpływają istotnie na przeciętną cenę rynkową (choć ma pewną swobodę ustalania ceny własnego, zróżnicowanego produktu). W krótkim okresie może osiągać zysk nadzwyczajny."
+  },
+  {
+    "id": "owe35-o-11",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody okręgowe",
+    "question": "Krzywa popytu na pracę opisana jest równaniem W = −20L + 140. Krzywa opisująca liczbę pracowników skłonnych przyjąć ofertę pracy przy różnych stawkach płacy realnej ma postać W = 50L, a krzywa opisująca wielkość zasobu siły roboczej to: W = 500L − 2900 (gdzie: W – płaca realna na godzinę w zł; L – liczba pracowników w tys.). Ile wynosi wielkość bezrobocia naturalnego w stanie równowagi (w tys. osób)?",
+    "options": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Równowaga na rynku pracy: popyt = liczba osób gotowych przyjąć pracę: −20L + 140 = 50L, więc L = 2 tys., W = 100 zł. Zasób siły roboczej przy W = 100: 500L − 2900 = 100, więc L = 6 tys. Bezrobocie naturalne (osoby w zasobie siły roboczej, które nie chcą pracować za płacę równowagi) = 6 − 2 = 4 tys."
+  },
+  {
+    "id": "owe35-o-12",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody okręgowe",
+    "question": "Autorem hipotezy (teorii) rynków efektywnych jest:",
+    "options": [
+      "G. Akerlof",
+      "W. Bagehot",
+      "E. Fama",
+      "R. Shiller"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Autorem hipotezy rynków efektywnych jest Eugene Fama (1970, Nagroda Nobla 2013): ceny aktywów odzwierciedlają wszystkie dostępne informacje, więc nie można systematycznie „pokonywać rynku”. R. Shiller był jej krytykiem (finanse behawioralne)."
+  },
+  {
+    "id": "owe35-o-13",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody okręgowe",
+    "question": "Przedsiębiorstwa X i Y działają na tym samym rynku. Jeżeli oba przedsiębiorstwa nie będą reklamować swojego produktu, to ich udział w rynku wyniesie po 50%, a zysk po 200 mln zł. Jeśli jednak oba zdecydują się reklamować swój produkt, to zysk zarówno w przypadku przedsiębiorstwa X, jak i Y wyniesie 150 mln zł (każdemu z nich przypada połowa rynku, jednak występują tu koszty reklamy, które ograniczają zysk). Jeżeli natomiast jedno z przedsiębiorstw zdecyduje się reklamować swój produkt, a konkurent nie będzie prowadził kampanii reklamowej, to przejmie ono większą część rynku i osiągnie zysk na poziomie 250 mln zł. W tej sytuacji zysk drugiego przedsiębiorstwa (niewykorzystującego reklamy) wyniesie 100 mln zł. Które stwierdzenie jest prawdziwe?",
+    "options": [
+      "niezależnie od decyzji przedsiębiorstwa Y, przedsiębiorstwu X nie opłaca się prowadzić kampanii reklamowej",
+      "wykorzystanie reklamy jest strategią dominującą dla przedsiębiorstwa X",
+      "niestosowanie kampanii reklamowej jest strategią dominującą tylko dla przedsiębiorstwa X",
+      "niestosowanie kampanii reklamowej jest strategią dominującą dla przedsiębiorstw X i Y"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Strategia dominująca to najlepsza decyzja niezależnie od wyboru rywala. Gdy rywal nie reklamuje się: reklama daje 250, brak reklamy 200 – lepiej reklamować. Gdy rywal się reklamuje: reklama daje 150, brak reklamy 100 – lepiej reklamować. Reklama jest więc strategią dominującą dla X (i dla Y), choć oba zarobiłyby więcej, nie reklamując się (dylemat więźnia)."
+  },
+  {
+    "id": "owe35-o-14",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody okręgowe",
+    "question": "Gospodarkę kraju X opisują następujące równania: Y = 2000; C = 1500; G = 200; I = 100; IM = 400 (gdzie: Y – produkt krajowy brutto, C – konsumpcja; G – wydatki rządowe; I – inwestycje; IM – import). Ile wynoszą odpływy kapitałowe netto w tym kraju?",
+    "options": [
+      "200",
+      "400",
+      "600",
+      "1600"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Eksport netto = Y − C − I − G = 2000 − 1500 − 100 − 200 = 200. W gospodarce otwartej odpływy kapitałowe netto (NCO) równają się eksportowi netto (NCO = NX), więc wynoszą 200. (Eksport = NX + IM = 600.)"
+  },
+  {
+    "id": "owe35-o-15",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody okręgowe",
+    "question": "Część rynku kapitałowego, gdzie dokonuje się sprzedaży papierów wartościowych nowo wyemitowanych przez uprawnione podmioty gospodarcze, to rynek:",
+    "options": [
+      "wtórny",
+      "pieniężny",
+      "terminowy",
+      "pierwotny"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Rynek pierwotny to rynek, na którym emitent po raz pierwszy sprzedaje nowo wyemitowane papiery wartościowe (np. w ofercie publicznej, IPO) i pozyskuje kapitał. Na rynku wtórnym inwestorzy handlują już istniejącymi papierami między sobą."
+  },
+  {
+    "id": "owe35-o-16",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody okręgowe",
+    "question": "Na rynku ryżu działają dwa przedsiębiorstwa, które zawiązały kartel. Krzywa popytu na ryż to p = −2q + 400, a krzywa kosztu krańcowego obu przedsiębiorstw to MC = 200 (gdzie: p – cena za tonę w zł; q – ilość w tonach). Które stwierdzenie prawidłowo opisuje sytuację po zawiązaniu kartelu?",
+    "options": [
+      "cena 1 tony ryżu wyniesie 200 zł",
+      "aby maksymalizować zysk kartelu, łączna wielkość produkcji obu przedsiębiorstw powinna odpowiadać ilości monopolowej",
+      "cena 1 tony ryżu wyniesie 50 zł",
+      "wielkość podaży ryżu całego kartelu wyniesie 100 ton"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Kartel działa jak jeden monopolista: maksymalizuje łączny zysk, produkując ilość monopolową, przy której MR = MC. MR = −4q + 400 = 200, więc q = 50 ton, a cena p = −2 · 50 + 400 = 300 zł. Odpowiedzi A, C i D są więc błędne."
+  },
+  {
+    "id": "owe35-o-17",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody okręgowe",
+    "question": "Terminem „obligacje śmieciowe” (junk bonds) określa się papiery wartościowe:",
+    "options": [
+      "emitowane przez spółki komunalne",
+      "o wysokim ratingu",
+      "którymi obrót odbywa się poza rynkiem regulowanym",
+      "charakteryzujące się wysokim ryzykiem kredytowym"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Obligacje śmieciowe (junk bonds, high yield) to obligacje o niskim ratingu (poniżej poziomu inwestycyjnego, np. poniżej BBB−), obarczone wysokim ryzykiem kredytowym (niewypłacalności emitenta). W zamian oferują wysokie oprocentowanie."
+  },
+  {
+    "id": "owe35-o-18",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody okręgowe",
+    "question": "Instrumentami finansowymi rynku kapitałowego są:",
+    "options": [
+      "listy zastawne",
+      "kontrakty FRA",
+      "opcje binarne",
+      "bony skarbowe"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Rynek kapitałowy obejmuje instrumenty średnio- i długoterminowe, np. akcje, obligacje i listy zastawne (długoterminowe papiery emitowane przez banki hipoteczne). Bony skarbowe to instrument rynku pieniężnego, a kontrakty FRA i opcje binarne to instrumenty pochodne."
+  },
+  {
+    "id": "owe35-o-19",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody okręgowe",
+    "question": "Współtwórcą modelu CAPM (Capital Asset Pricing Model) jest:",
+    "options": [
+      "F. Black",
+      "R. Thaler",
+      "D. Kahneman",
+      "W. Sharpe"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Model wyceny aktywów kapitałowych (CAPM) opracował William Sharpe (1964, Nagroda Nobla 1990), a także J. Lintner i J. Mossin. Według niego oczekiwana stopa zwrotu = stopa wolna od ryzyka + β · premia za ryzyko rynkowe. Thaler i Kahneman to przedstawiciele ekonomii behawioralnej."
+  },
+  {
+    "id": "owe35-o-20",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody okręgowe",
+    "question": "Krzywa popytu na pewien produkt była opisana równaniem p = −2q + 40, a krzywa podaży to p = 2q + 14 (gdzie: p – cena w zł; q – ilość w sztukach). Na jakim poziomie rząd ustanowił cenę maksymalną, skoro wiemy, że niedobór produktu na rynku wynosi 7 sztuk?",
+    "options": [
+      "20,0",
+      "23,5",
+      "27,0",
+      "34,0"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Przy cenie maksymalnej p: popyt Qd = (40 − p) / 2, podaż Qs = (p − 14) / 2. Niedobór Qd − Qs = (54 − 2p) / 2 = 27 − p = 7, więc p = 20 zł. (Bez regulacji równowaga byłaby przy p = 27 zł, q = 6,5.)"
+  },
+  {
+    "id": "owe35-o-21",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody okręgowe",
+    "question": "Jednym z twórców rewolucji marginalistycznej był:",
+    "options": [
+      "R. Lucas",
+      "D. Ricardo",
+      "R. Owen",
+      "L. Walras"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Rewolucja marginalistyczna (lata 70. XIX w.) wprowadziła do ekonomii analizę krańcową i subiektywną teorię wartości opartą na użyteczności krańcowej. Jej twórcami byli Léon Walras, William Stanley Jevons i Carl Menger."
+  },
+  {
+    "id": "owe35-o-22",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody okręgowe",
+    "question": "Krzywa Lorenza w kraju X jest prostą o nachyleniu 45°, dochód całkowity w tym kraju wynosi 2 mln zł, a liczba gospodarstw domowych wynosi 2 tys. Ile wynosi dochód każdego gospodarstwa w kraju X?",
+    "options": [
+      "500",
+      "1000",
+      "2000",
+      "9000"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Krzywa Lorenza będąca przekątną (45°) oznacza pełną równość dochodów – każde gospodarstwo ma ten sam dochód: 2 000 000 zł / 2000 gospodarstw = 1000 zł."
+  },
+  {
+    "id": "owe35-o-23",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody okręgowe",
+    "question": "Popyt kobiet na rowery opisany jest równaniem p = −2q + 20, natomiast w przypadku mężczyzn ma postać p = −0,5q + 10 (gdzie: p – cena jednego roweru w zł; q – ilość w sztukach). Ile wyniesie łączna wielkość popytu na rowery, jeżeli cena jednego roweru będzie wynosić 16 zł?",
+    "options": [
+      "2",
+      "10",
+      "12",
+      "14"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Przy cenie 16 zł: popyt kobiet q = (20 − 16) / 2 = 2. Mężczyźni są skłonni zapłacić najwyżej 10 zł (p = 10 przy q = 0), więc przy cenie 16 zł nie kupią żadnego roweru. Łączny popyt = 2 + 0 = 2."
+  },
+  {
+    "id": "owe35-o-24",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody okręgowe",
+    "question": "Które stwierdzenie dotyczące rozliczeń międzyokresowych kosztów czynnych jest prawdziwe?",
+    "options": [
+      "dotyczą one kosztów, które zostaną poniesione w przyszłości",
+      "ich stosowanie związane jest z zachowaniem zasady współmierności przychodów i kosztów",
+      "są one wykazywane wyłącznie w rachunku zysków i strat",
+      "nie są one uwzględniane w bilansie przedsiębiorstwa"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Czynne rozliczenia międzyokresowe kosztów to wydatki poniesione z góry, które dotyczą przyszłych okresów (np. ubezpieczenie zapłacone za cały rok, prenumerata). Wykazuje się je w aktywach bilansu i stopniowo zalicza do kosztów kolejnych okresów – zgodnie z zasadą współmierności przychodów i kosztów."
+  },
+  {
+    "id": "owe35-o-25",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody okręgowe",
+    "question": "Zaostrzenie polityki pieniężnej w modelu IS-LM wyraża się przesunięciem krzywej:",
+    "options": [
+      "IS w lewo",
+      "IS w prawo",
+      "LM w prawo",
+      "LM w lewo"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Zaostrzenie polityki pieniężnej (spadek podaży pieniądza, wzrost stóp) przesuwa krzywą LM w lewo (w górę): przy każdym dochodzie stopa procentowa jest wyższa. Polityka fiskalna przesuwa krzywą IS."
+  },
+  {
+    "id": "owe35-o-26",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody okręgowe",
+    "question": "Model Vrooma-Yettona-Jago:",
+    "options": [
+      "koncentruje się na określeniu, w jakim zakresie w procesie przywództwa mają uczestniczyć podwładni",
+      "określany jest mianem teorii ścieżki do celu",
+      "określa przede wszystkim metody motywacji pracowników w sytuacji biurokratycznej struktury organizacji",
+      "koncentruje się na analizie zachowania przywódcy w zależności od stopnia dojrzałości szeregowych członków organizacji"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Model Vrooma–Yettona–Jago pomaga określić, w jakim stopniu przywódca powinien włączać podwładnych w podejmowanie decyzji – od decyzji autokratycznych, przez konsultacje, po decyzje grupowe – w zależności od cech sytuacji. Teoria ścieżki do celu to inna koncepcja (R. House), a dojrzałość podwładnych bada model Herseya–Blancharda."
+  },
+  {
+    "id": "owe35-o-27",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody okręgowe",
+    "question": "Do głównych teorii sytuacyjnych opisujących zachowania przywódcze w organizacji zaliczamy:",
+    "options": [
+      "teorię sprawiedliwości",
+      "teorię Y",
+      "teorię najmniej preferowanego współpracownika",
+      "teorię X"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Do sytuacyjnych teorii przywództwa należą m.in.: teoria najmniej preferowanego współpracownika (LPC) F. Fiedlera, teoria ścieżki do celu, model Vrooma–Yettona–Jago i model Herseya–Blancharda. Teorie X i Y (McGregor) dotyczą założeń o naturze ludzi, a teoria sprawiedliwości – motywacji."
+  },
+  {
+    "id": "owe35-o-28",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody okręgowe",
+    "question": "Które stwierdzenie dotyczące klasycznego podejścia do zarządzania jest prawdziwe?",
+    "options": [
+      "głównym jego przedstawicielem jest D. McGregor",
+      "wyróżnia się w nim podejście behawioralne",
+      "jest to podejście bardziej odpowiednie w przypadku organizacji stabilnych i prostych, niż w przypadku organizacji dynamicznych i złożonych",
+      "podejmowana w ramach tego podejścia analiza organizacji koncentruje się na interakcjach zachodzących między członkami organizacji"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Klasyczne podejście (naukowe zarządzanie, zarządzanie administracyjne) zakłada racjonalne, sformalizowane zasady, które najlepiej sprawdzają się w organizacjach stabilnych i prostych. Słabo pasuje do organizacji dynamicznych i złożonych. McGregor i interakcje między ludźmi to podejście behawioralne."
+  },
+  {
+    "id": "owe35-o-29",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody okręgowe",
+    "question": "Która z wymienionych osób była zwolennikiem behawiorystycznego podejścia do zarządzania?",
+    "options": [
+      "M. Weber",
+      "M. Parker Follett",
+      "F. Taylor",
+      "L. Gilbreth"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Mary Parker Follett należała do prekursorów podejścia behawioralnego – podkreślała znaczenie relacji międzyludzkich, grup i współpracy w organizacji. Weber to teoria biurokracji, a Taylor i Lillian Gilbreth – naukowe zarządzanie."
+  },
+  {
+    "id": "owe35-o-30",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody okręgowe",
+    "question": "Wykres Gantta jest charakterystyczny dla teorii:",
+    "options": [
+      "naukowego zarządzania",
+      "zarządzania administracyjnego",
+      "behawiorystycznego podejścia do zarządzania",
+      "dwuczynnikowej"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Wykres Gantta (Henry Gantt, początek XX w.) to narzędzie planowania i kontroli harmonogramu prac. Henry Gantt był współpracownikiem F.W. Taylora i przedstawicielem naukowego zarządzania."
+  }
+]

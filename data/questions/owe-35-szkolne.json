@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe35-s-01",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody szkolne",
+    "question": "Które stwierdzenie dotyczące użyteczności całkowitej jest prawdziwe?",
+    "options": [
+      "określa ona przyrost użyteczności będący konsekwencją skonsumowania dodatkowej jednostki produktu",
+      "jest to zadowolenie płynące ze skonsumowania określonej ilości produktu",
+      "zgodnie z teorią wyboru konsumenta użyteczność całkowita zawsze maleje wraz ze wzrostem ilości konsumowanych dóbr",
+      "wartość użyteczności całkowitej danego konsumenta jest równa nachyleniu jego krzywej obojętności"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Użyteczność całkowita to łączne zadowolenie (satysfakcja) z konsumpcji określonej ilości dobra. Przyrost użyteczności z dodatkowej jednostki to użyteczność krańcowa. Użyteczność całkowita zwykle rośnie wraz z konsumpcją (coraz wolniej), a maleje dopiero po przekroczeniu punktu nasycenia."
+  },
+  {
+    "id": "owe35-s-02",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody szkolne",
+    "question": "W hipotetycznej gospodarce produkowane są wyłącznie kapelusze. W 2020 r. producent działający w tej gospodarce wyprodukował kapelusze o wartości 10000 zł, z czego 4/5 sprzedał gospodarstwom domowym, a 1/5 stanowiła jego zapasy. Które stwierdzenie jest prawdziwe?",
+    "options": [
+      "wydatki na dobra pośrednie wyniosły 2000 zł",
+      "dochód czynników wytwórczych w gospodarce wyniósł 8000 zł",
+      "wydatki na dobra finalne wyniosły 1200 zł",
+      "wartość PKB wyniosła 10000 zł"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "PKB to wartość wszystkich wytworzonych dóbr finalnych – także tych, które trafiły do zapasów (przyrost zapasów to część inwestycji). Kapelusze o wartości 10 000 zł to cała produkcja finalna, więc PKB = 10 000 zł (8000 zł konsumpcji + 2000 zł przyrostu zapasów). (W oryginalnym kluczu podano „1/4”, co nie sumuje się z 4/5 – poprawiono na 1/5; nie zmienia to odpowiedzi.)"
+  },
+  {
+    "id": "owe35-s-03",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody szkolne",
+    "question": "Przedsiębiorstwo działające na rynku konkurencji monopolistycznej sprzedaje 100 jednostek dobra X. Które równanie pozwoli prawidłowo oszacować zysk całkowity tego przedsiębiorstwa przy danym poziomie produkcji (gdzie: Z – zysk całkowity; AVC – przeciętny koszt zmienny; MR – utarg krańcowy; MC – koszt krańcowy; AFC – przeciętny koszt stały; ATC – przeciętny koszt całkowity; P – cena jednostkowa)?",
+    "options": [
+      "Z = 100(P – AVC – AFC)",
+      "Z = 100MR – ATC",
+      "Z = 100P – (AVC + AFC)",
+      "Z = 100(MR – MC)"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Zysk całkowity = utarg całkowity − koszt całkowity = P · q − ATC · q = q · (P − ATC). Ponieważ ATC = AVC + AFC, przy q = 100: Z = 100 · (P − AVC − AFC)."
+  },
+  {
+    "id": "owe35-s-04",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody szkolne",
+    "question": "W krótkim okresie na rynku doskonale konkurencyjnym funkcjonuje 2000 przedsiębiorstw. W przypadku każdego z nich krzywa podaży przyjmuje postać: p = 1000qn + 100 (gdzie: p – cena w zł za sztukę; qn – ilość produkowana przez pojedyncze przedsiębiorstwo; q – ilość produkowana przez całą branżę). Które równanie przedstawia krzywą podaży całej branży?",
+    "options": [
+      "p = 0,5q + 100",
+      "p = 0,5q + 0,05",
+      "p = 2000q + 100",
+      "p = 1000q + 100"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Podaż branży to suma podaży wszystkich firm. Z p = 1000qn + 100 mamy qn = (p − 100) / 1000. Dla 2000 firm: q = 2000 · (p − 100) / 1000 = 2(p − 100), więc p = 0,5q + 100."
+  },
+  {
+    "id": "owe35-s-05",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody szkolne",
+    "question": "W przypadku doskonałej konkurencji, braku ograniczeń w dostępie do zasobów oraz przy jednakowych krzywych kosztów całkowitych poszczególnych przedsiębiorstw krzywa długookresowej podaży rynku (gałęzi) jest:",
+    "options": [
+      "rosnąca",
+      "malejąca",
+      "pionowa",
+      "pozioma"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Gdy firmy mają identyczne koszty, a zasoby są dostępne bez ograniczeń, w długim okresie nowe firmy wchodzą na rynek przy każdej cenie wyższej od minimum przeciętnego kosztu całkowitego. Gałąź może więc zwiększać produkcję przy stałej cenie (równej minimum ATC) – długookresowa krzywa podaży jest pozioma."
+  },
+  {
+    "id": "owe35-s-06",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody szkolne",
+    "question": "W autarkii bez udziału państwa gospodarstwa domowe przeznaczają 0,75 dodatkowego dochodu na konsumpcję. Ile wynosi mnożnik inwestycyjny?",
+    "options": [
+      "0,25",
+      "0,75",
+      "1,33",
+      "4,00"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Krańcowa skłonność do konsumpcji MPC = 0,75, więc MPS = 0,25. Mnożnik inwestycyjny = 1 / (1 − MPC) = 1 / 0,25 = 4."
+  },
+  {
+    "id": "owe35-s-07",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody szkolne",
+    "question": "Tomek przez 20 lat pracował w kopalni węgla kamiennego jako górnik. Ze względu na politykę proekologiczną rządu kopalnia została zlikwidowana, a Tomek w wieku 50 lat stał się bezrobotny. Jest to bezrobocie:",
+    "options": [
+      "naturalne",
+      "frykcyjne",
+      "strukturalne",
+      "keynesowskie"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Bezrobocie strukturalne wynika z niedopasowania kwalifikacji pracowników do potrzeb gospodarki – likwidacja całej branży (górnictwa) sprawia, że górnik musi się przekwalifikować, by znaleźć pracę. To nie jest chwilowa zmiana pracy (bezrobocie frykcyjne) ani skutek recesji."
+  },
+  {
+    "id": "owe35-s-08",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody szkolne",
+    "question": "Stopa bezrobocia w Polsce w lipcu 2021 r. wyniosła 6% wobec 6,2% w czerwcu 2021 r. Oznacza to, że zmniejszyła się ona o:",
+    "options": [
+      "0,02 punktu procentowego",
+      "2 punkty bazowe",
+      "0,2 punktu procentowego",
+      "200 punktów bazowych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Różnicę między dwiema wartościami wyrażonymi w procentach podaje się w punktach procentowych: 6,2% − 6% = 0,2 punktu procentowego, czyli 20 punktów bazowych."
+  },
+  {
+    "id": "owe35-s-09",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody szkolne",
+    "question": "Krzywa kosztu całkowitego w przedsiębiorstwie jest opisana równaniem TC = 0,5q² + 200q + 100. Ile wynosi przeciętny koszt stały, jeżeli q = 50?",
+    "options": [
+      "2",
+      "202",
+      "100",
+      "10100"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Koszt stały to wyraz wolny funkcji kosztu: FC = 100. Przeciętny koszt stały = FC / q = 100 / 50 = 2 zł."
+  },
+  {
+    "id": "owe35-s-10",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody szkolne",
+    "question": "Autarkię opisują następujące równania: Y = 1200; C = 1000; I = 200 (gdzie: Y – produkt krajowy brutto, C – konsumpcja; I – inwestycje). Ile wynoszą oszczędności w tej gospodarce?",
+    "options": [
+      "200",
+      "800",
+      "1000",
+      "2400"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W autarkii bez państwa Y = C + I, a oszczędności S = Y − C = 1200 − 1000 = 200. Równają się inwestycjom (S = I)."
+  },
+  {
+    "id": "owe35-s-11",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody szkolne",
+    "question": "Która z opisanych sytuacji najbardziej sprzyja redukcji zadłużenia państwa?",
+    "options": [
+      "silny spadek poziomu cen w gospodarce",
+      "inflacja faktyczna wyższa od oczekiwanej",
+      "recesja gospodarcza w kraju",
+      "wysoki deficyt strukturalny sektora finansów publicznych"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Inflacja wyższa od oczekiwanej zmniejsza realną wartość długu zaciągniętego po stałym, nominalnym oprocentowaniu – dłużnik (np. państwo) zyskuje kosztem wierzycieli, a relacja długu do PKB spada, bo nominalny PKB rośnie. Deflacja, recesja i wysoki deficyt strukturalny zwiększają ciężar długu."
+  },
+  {
+    "id": "owe35-s-12",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody szkolne",
+    "question": "Monopol naturalny to sytuacja, w której dobro:",
+    "options": [
+      "stanowi przedmiot rywalizacji i może podlegać zastrzeżeniu dostępu",
+      "może podlegać zastrzeżeniu dostępu, ale nie stanowi przedmiotu rywalizacji",
+      "stanowi przedmiot rywalizacji, ale nie może podlegać zastrzeżeniu dostępu",
+      "nie stanowi przedmiotu rywalizacji i nie może podlegać zastrzeżeniu dostępu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Monopol naturalny dotyczy dóbr, z których korzystania można wykluczyć (np. odcinając od sieci wodociągowej), ale które nie są przedmiotem rywalizacji – dodatkowy użytkownik nie zmniejsza korzyści innych, a jego obsługa kosztuje bardzo mało. To dobra klubowe (np. wodociągi, sieci energetyczne)."
+  },
+  {
+    "id": "owe35-s-13",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody szkolne",
+    "question": "Koszty zmieniania jadłospisów związane są z występowaniem zjawiska:",
+    "options": [
+      "deflacji długu",
+      "negatywnej selekcji",
+      "aprecjacji waluty krajowej",
+      "inflacji"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Koszty zmieniania jadłospisów (menu costs) to koszty częstej zmiany cen – drukowania nowych cenników, katalogów, przeprogramowania kas. Są jednym z kosztów inflacji."
+  },
+  {
+    "id": "owe35-s-14",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody szkolne",
+    "question": "Za prowadzenie polityki pieniężnej w Polsce odpowiada:",
+    "options": [
+      "Sejm",
+      "Rada Ministrów",
+      "Rada Polityki Pieniężnej",
+      "Bank Gospodarstwa Krajowego"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Politykę pieniężną w Polsce prowadzi NBP, a jej założenia i stopy procentowe ustala Rada Polityki Pieniężnej. Rada Ministrów i Sejm odpowiadają za politykę fiskalną."
+  },
+  {
+    "id": "owe35-s-15",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody szkolne",
+    "question": "Które stwierdzenie dotyczące wskaźnika ROE jest prawdziwe?",
+    "options": [
+      "nie przyjmuje on wartości ujemnych",
+      "im niższa jest jego wartość, tym dana spółka ma lepszą kondycję finansową",
+      "wyraża on wielkość zysku netto przypadającą na jednostkę kapitału własnego",
+      "wyraża on wielkość kapitału własnego przypadającą na jednostkę zysku netto"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "ROE (return on equity) = zysk netto / kapitał własny – wyraża zysk netto przypadający na jednostkę kapitału własnego. Im wyższe ROE, tym lepiej; przy stracie wskaźnik jest ujemny."
+  },
+  {
+    "id": "owe35-s-16",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody szkolne",
+    "question": "Krzywa podaży biletów kolejowych pierwotnie była opisana równaniem p = q + 10 (gdzie: p – cena w zł za sztukę; q – ilość w sztukach). Wskutek działań państwa uległa ona zmianie i obecnie jest opisana równaniem p = q + 6. Jakie działanie państwa mogło spowodować taką zmianę?",
+    "options": [
+      "wprowadzenie subwencji dla przewoźników kolejowych w wysokości 4 zł na bilet",
+      "wprowadzenie ceny maksymalnej biletu kolejowego na poziomie 6 zł",
+      "obłożenie przewoźników kolejowych podatkiem w wysokości 4 zł od biletu",
+      "obłożenie przewoźników kolejowych podatkiem w wysokości 6 zł od biletu"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Nowa krzywa podaży leży o 4 zł niżej (p = q + 6 zamiast p = q + 10) – przy każdej ilości przewoźnicy zgadzają się na cenę niższą o 4 zł. Tak działa subwencja (dotacja) 4 zł na bilet: obniża koszty i przesuwa podaż w dół (w prawo). Podatek przesunąłby krzywą w górę."
+  },
+  {
+    "id": "owe35-s-17",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody szkolne",
+    "question": "Do pasywów przedsiębiorstwa zaliczamy:",
+    "options": [
+      "rozliczenia międzyokresowe kosztów czynne",
+      "środki trwałe",
+      "obligacje skarbowe",
+      "rezerwy na zobowiązania"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Pasywa to źródła finansowania majątku: kapitał własny oraz zobowiązania i rezerwy na zobowiązania (przyszłe, prawdopodobne zobowiązania, np. na odprawy emerytalne). Środki trwałe, obligacje skarbowe (inwestycje) i czynne rozliczenia międzyokresowe kosztów to aktywa."
+  },
+  {
+    "id": "owe35-s-18",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody szkolne",
+    "question": "Które stwierdzenie dotyczące splitu akcji jest prawdziwe?",
+    "options": [
+      "jego rezultatem jest zwiększenie wartości nominalnej akcji będących w obrocie",
+      "jego rezultatem jest zwiększenie kapitału własnego spółki",
+      "powoduje on zmniejszenie liczby akcji znajdujących się w obrocie",
+      "jednym z motywów jego zastosowania jest uzyskanie większej płynności obrotu akcjami na giełdzie"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Split akcji to podział jednej akcji na kilka akcji o niższej wartości nominalnej (np. 1 akcja po 10 zł na 10 akcji po 1 zł). Liczba akcji rośnie, a ich cena spada, przez co akcje stają się tańsze i bardziej płynne. Kapitał własny i wartość spółki się nie zmieniają."
+  },
+  {
+    "id": "owe35-s-19",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody szkolne",
+    "question": "Które stwierdzenie dotyczące asymetrii informacji jest prawdziwe?",
+    "options": [
+      "nigdy nie powoduje negatywnej selekcji na rynku",
+      "może skutkować wystąpieniem zjawiska pokusy nadużycia",
+      "jest podstawowym założeniem hipotezy efektywności informacyjnej rynków finansowych",
+      "występuje ona na rynku konkurencji doskonałej"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Asymetria informacji występuje, gdy jedna strona transakcji wie więcej niż druga. Przed zawarciem umowy prowadzi do negatywnej selekcji, a po jej zawarciu – do pokusy nadużycia (moral hazard). Konkurencja doskonała i hipoteza rynków efektywnych zakładają pełną informację."
+  },
+  {
+    "id": "owe35-s-20",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody szkolne",
+    "question": "Długookresowa krzywa Phillipsa jest:",
+    "options": [
+      "parabolą",
+      "linią pionową",
+      "linią poziomą",
+      "krzywą rosnącą"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Według Friedmana i Phelpsa w długim okresie gospodarka wraca do naturalnej stopy bezrobocia niezależnie od tempa inflacji – długookresowa krzywa Phillipsa jest pionowa."
+  },
+  {
+    "id": "owe35-s-21",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody szkolne",
+    "question": "Które stwierdzenie dotyczące elastyczności dochodowej popytu jest prawdziwe?",
+    "options": [
+      "dla dóbr normalnych, im mniejsza skala przesunięcia krzywej popytu w prawo spowodowana wzrostem dochodu o 1%, tym mniejsza jest elastyczność dochodowa popytu",
+      "w przypadku dóbr niższego rzędu elastyczność dochodowa popytu jest większa od 1",
+      "dobra Veblena cechuje ujemna elastyczność dochodowa popytu",
+      "jest to stosunek względnej zmiany dochodu do względnej zmiany wielkości zapotrzebowania na dobro"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Elastyczność dochodowa popytu = % zmiana popytu / % zmiana dochodu. Dla dóbr normalnych wzrost dochodu przesuwa krzywą popytu w prawo – im mniejsze to przesunięcie przy wzroście dochodu o 1%, tym mniejsza elastyczność. Dla dóbr niższego rzędu elastyczność jest ujemna."
+  },
+  {
+    "id": "owe35-s-22",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody szkolne",
+    "question": "Pozycją, która występuje zarówno w bilansie, jak i rachunku zysków i strat, jest:",
+    "options": [
+      "podatek dochodowy",
+      "środki trwałe w budowie",
+      "zysk (strata) brutto",
+      "zysk (strata) netto"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Zysk (strata) netto jest ostatnią pozycją rachunku zysków i strat, a jednocześnie pozycją kapitału własnego w pasywach bilansu (wynik finansowy netto roku obrotowego)."
+  },
+  {
+    "id": "owe35-s-23",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody szkolne",
+    "question": "Luka popytowa to względna różnica między:",
+    "options": [
+      "realnym a nominalnym PKB (odniesiona do poziomu nominalnego PKB)",
+      "nominalnym a realnym PKB (odniesiona do poziomu realnego PKB)",
+      "rzeczywistym a potencjalnym PKB (odniesiona do poziomu potencjalnego PKB)",
+      "naturalnym a potencjalnym PKB (odniesiona do poziomu potencjalnego PKB)"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Luka popytowa (luka PKB, luka produkcyjna) = (PKB rzeczywisty − PKB potencjalny) / PKB potencjalny. Dodatnia oznacza przegrzanie gospodarki, ujemna – niewykorzystanie możliwości produkcyjnych."
+  },
+  {
+    "id": "owe35-s-24",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody szkolne",
+    "question": "Indeksem giełdowym nie jest:",
+    "options": [
+      "Dow Jones Industrial Average",
+      "S&P 500",
+      "Catalyst",
+      "FTSE 100"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Catalyst to rynek obligacji prowadzony przez GPW i BondSpot, a nie indeks giełdowy. Dow Jones Industrial Average, S&P 500 (USA) i FTSE 100 (Wielka Brytania) to indeksy."
+  },
+  {
+    "id": "owe35-s-25",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody szkolne",
+    "question": "Autorem teorii portfela wielu spółek jest:",
+    "options": [
+      "R. Merton",
+      "H. Markowitz",
+      "F. Modigliani",
+      "W.F. Sharpe"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Nowoczesną teorię portfela (1952) stworzył Harry Markowitz (Nagroda Nobla 1990): dywersyfikacja inwestycji między wiele aktywów pozwala zmniejszyć ryzyko portfela przy danej oczekiwanej stopie zwrotu. W.F. Sharpe rozwinął na jej podstawie model CAPM."
+  },
+  {
+    "id": "owe35-s-26",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody szkolne",
+    "question": "W ramach której z wymienionych analiz menadżerowie dokonują rozróżnienia na wewnętrzne mocne i słabe strony, a także zewnętrzne szanse i zagrożenia?",
+    "options": [
+      "czterech wymiarów Portera",
+      "macierzy BCG",
+      "analizy typu SWOT",
+      "analizy ABC"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Analiza SWOT zestawia wewnętrzne mocne (Strengths) i słabe strony (Weaknesses) organizacji z zewnętrznymi szansami (Opportunities) i zagrożeniami (Threats). Macierz BCG ocenia portfel jednostek, a analiza ABC – np. zapasy według wartości."
+  },
+  {
+    "id": "owe35-s-27",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody szkolne",
+    "question": "Planowanie i podejmowanie decyzji, organizowanie, kontrolowanie i przewodzenie (kierowanie ludźmi) to:",
+    "options": [
+      "podstawowe funkcje zarządzania",
+      "etapy procesu twórczej destrukcji",
+      "etapy metody delfickiej",
+      "podstawowe funkcje marketingu"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Podstawowe funkcje zarządzania (wg R.W. Griffina) to: planowanie i podejmowanie decyzji, organizowanie, przewodzenie (kierowanie ludźmi) i kontrolowanie."
+  },
+  {
+    "id": "owe35-s-28",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody szkolne",
+    "question": "Czwartą rewolucję przemysłową charakteryzuje:",
+    "options": [
+      "znaczące ograniczenie ekonomii współdzielenia",
+      "przyspieszenie procesu cyfryzacji gospodarki",
+      "odejście od pieniądza fiducjarnego",
+      "powstanie instrumentów pochodnych"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Czwarta rewolucja przemysłowa (Przemysł 4.0) to cyfryzacja gospodarki: internet rzeczy, sztuczna inteligencja, big data, automatyzacja i robotyzacja, druk 3D, systemy cyber-fizyczne. Sprzyja rozwojowi ekonomii współdzielenia."
+  },
+  {
+    "id": "owe35-s-29",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody szkolne",
+    "question": "Na najniższym stopniu w hierarchii potrzeb A. Maslow umieścił:",
+    "options": [
+      "potrzebę bezpieczeństwa",
+      "potrzeby fizjologiczne",
+      "potrzebę samorealizacji",
+      "potrzebę szacunku"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Na najniższym poziomie piramidy Maslowa są potrzeby fizjologiczne (jedzenie, picie, sen, schronienie). Wyżej są potrzeby bezpieczeństwa, przynależności, szacunku i samorealizacji."
+  },
+  {
+    "id": "owe35-s-30",
+    "type": "single",
+    "edition": "XXXV OWE (2021/2022), zawody szkolne",
+    "question": "Która z odpowiedzi przedstawia tzw. wielką piątkę cech osobowości?",
+    "options": [
+      "ugodowość, sumienność, negatywna emocjonalność, ekstrawersja, otwartość",
+      "ugodowość, makiawelizm, negatywna emocjonalność, ekstrawersja, otwartość",
+      "autorytaryzm, makiawelizm, negatywna emocjonalność, ekstrawersja, poczucie własnej wartości",
+      "skłonność do ryzyka, makiawelizm, negatywna emocjonalność, ekstrawersja, otwartość"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Model „wielkiej piątki” opisuje osobowość pięcioma cechami: ugodowość, sumienność, negatywna emocjonalność (neurotyczność), ekstrawersja i otwartość na doświadczenia. Makiawelizm i autorytaryzm to inne cechy, spoza tego modelu."
+  }
+]
