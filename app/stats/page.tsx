@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { api, fmtPct, fmtPoints } from "@/lib/client";
+import { BLOCK_SIZE } from "@/lib/scoring";
 import type { Stats } from "@/lib/tests";
 
 const TYPE_LABEL = { single: "jednokrotny", multi: "wielokrotny" } as const;
@@ -23,7 +24,7 @@ export default function StatsPage() {
   if (error) return <p className="error">{error}</p>;
   if (!stats) return <p className="muted">Ładowanie…</p>;
 
-  const { overall, byType, history } = stats;
+  const { overall, byType, history, blocks } = stats;
   return (
     <div className="stack">
       <h1>Statystyki</h1>
@@ -54,7 +55,13 @@ export default function StatsPage() {
         <p className="muted">Brak zakończonych testów.</p>
       ) : (
         <>
-          <div className="card"><Chart points={history.map((h) => h.percent)} /></div>
+          <div className="card">
+            <Chart
+              points={history.map((h) => h.percent)}
+              ariaLabel="Wynik procentowy kolejnych testów"
+              label={(i) => `Test ${i + 1}: ${fmtPct(history[i].percent)}`}
+            />
+          </div>
           <div className="card">
             <div className="table-wrap"><table>
               <thead><tr><th>#</th><th>Data</th><th>Typ</th><th>Poprawne</th><th>Punkty</th><th>%</th></tr></thead>
@@ -74,11 +81,42 @@ export default function StatsPage() {
           </div>
         </>
       )}
+
+      <h2>Postęp (dokładność co {BLOCK_SIZE} pytań)</h2>
+      {blocks.length === 0 ? (
+        <p className="muted">Brak odpowiedzi.</p>
+      ) : (
+        <div className="card">
+          <p className="muted" style={{ margin: "0 0 8px", fontSize: "0.85rem" }}>
+            Każda kropka to {BLOCK_SIZE} kolejnych sprawdzonych lub pominiętych pytań (wszystkie testy i typy). W wielokrotnym
+            wyborze dokładność pytania to trafne pola / 4. Pusta kropka – blok jeszcze niepełny.
+          </p>
+          <Chart
+            points={blocks.map((b) => b.percent)}
+            ariaLabel={`Dokładność w blokach po ${BLOCK_SIZE} pytań`}
+            partialLast={blocks[blocks.length - 1].questions < BLOCK_SIZE}
+            label={(i) => {
+              const done = blocks.slice(0, i).reduce((s, b) => s + b.questions, 0);
+              return `Pytania ${done + 1}–${done + blocks[i].questions}: ${fmtPct(blocks[i].percent)}`;
+            }}
+          />
+        </div>
+      )}
     </div>
   );
 }
 
-function Chart({ points }: { points: number[] }) {
+function Chart({
+  points,
+  label,
+  ariaLabel,
+  partialLast = false,
+}: {
+  points: number[];
+  label: (i: number) => string;
+  ariaLabel: string;
+  partialLast?: boolean;
+}) {
   const [hover, setHover] = useState<number | null>(null);
   const W = 420, H = 200, L = 36, R = 12, T = 12, B = 24;
   // Procent poprawnych odpowiedzi zawsze mieści się w 0–100%.
@@ -92,7 +130,7 @@ function Chart({ points }: { points: number[] }) {
   const step = points.length > 1 ? (W - L - R) / (points.length - 1) : W;
 
   return (
-    <svg className="chart" viewBox={`0 0 ${W} ${H}`} role="img" aria-label="Wynik procentowy kolejnych testów" onMouseLeave={() => setHover(null)}>
+    <svg className="chart" viewBox={`0 0 ${W} ${H}`} role="img" aria-label={ariaLabel} onMouseLeave={() => setHover(null)}>
       {ticks.map((v) => (
         <g key={v}>
           <line className="grid" x1={L} x2={W - R} y1={y(v)} y2={y(v)} strokeWidth={v === 0 ? 1.5 : 1} />
@@ -102,13 +140,18 @@ function Chart({ points }: { points: number[] }) {
       <path className="line" d={path} strokeLinejoin="round" strokeLinecap="round" />
       {points.map((p, i) => (
         <g key={i}>
-          <circle className="dot" cx={x(i)} cy={y(p)} r={hover === i ? 5 : 4} />
+          <circle
+            className={partialLast && i === points.length - 1 ? "dot partial" : "dot"}
+            cx={x(i)}
+            cy={y(p)}
+            r={hover === i ? 5 : 4}
+          />
           <rect x={x(i) - step / 2} y={T} width={step} height={H - T - B} fill="transparent" onMouseEnter={() => setHover(i)} />
         </g>
       ))}
       {hover !== null && (
         <text x={Math.min(Math.max(x(hover), L + 30), W - R - 30)} y={H - 6} textAnchor="middle" style={{ fill: "var(--text)", fontWeight: 600 }}>
-          Test {hover + 1}: {fmtPct(points[hover])}
+          {label(hover)}
         </text>
       )}
     </svg>

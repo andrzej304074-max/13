@@ -118,6 +118,7 @@ th { color: var(--muted); font-weight: 500; font-size: 0.85rem; }
 .chart .grid { stroke: var(--border); }
 .chart .line { stroke: var(--accent); fill: none; stroke-width: 2; }
 .chart .dot { fill: var(--accent); }
+.chart .dot.partial { fill: var(--surface); stroke: var(--accent); stroke-width: 2; }
 .chart text { fill: var(--muted); font-size: 12px; }
 @media (max-width: 560px) {
   .choices, .choices.three { grid-template-columns: 1fr; }

@@ -5,6 +5,7 @@ import {
   durationMinutes,
   MAX_POINTS_PER_QUESTION,
   scoreAnswer,
+  BLOCK_SIZE,
   UNITS_PER_QUESTION,
   validateSelection,
   type TestSize,
@@ -214,6 +215,8 @@ export interface Stats {
     total: number;
     percent: number;
   }[];
+  /** Dokładność w kolejnych blokach po {@link BLOCK_SIZE} odpowiedzianych pytań (ostatni blok może być niepełny). */
+  blocks: { questions: number; percent: number }[];
 }
 
 /** Testy liczone do statystyk: zakończone oraz rozpoczęte testy bez limitu z co najmniej jedną odpowiedzią. */
@@ -247,6 +250,21 @@ export async function getStats(): Promise<Stats> {
   );
   const { rows: hist } = await query<PerTest>(
     `SELECT * FROM (${perTest} ORDER BY at DESC LIMIT 100) h ORDER BY at ASC`,
+  );
+
+  // Każde sprawdzone/pominięte pytanie ma dokładność 0–1 (w wielokrotnym: trafne pola / 4), kolejność wg czasu odpowiedzi.
+  const { rows: blockRows } = await query<{ questions: string; accuracy: number }>(
+    `WITH q AS (
+       SELECT CASE WHEN a.skipped THEN 0
+                   WHEN t.type = 'single' THEN (a.points = 2)::int
+                   ELSE a.points / 2 END AS accuracy,
+              row_number() OVER (ORDER BY a.answered_at, a.test_id, a.question_id) - 1 AS rn
+       FROM answers a JOIN tests t ON t.id = a.test_id
+     )
+     SELECT * FROM (
+       SELECT rn / ${BLOCK_SIZE} AS block, COUNT(*) AS questions, AVG(accuracy) AS accuracy
+       FROM q GROUP BY 1 ORDER BY 1 DESC LIMIT 100
+     ) b ORDER BY block ASC`,
   );
 
   const empty = (): StatsTotals => ({ score: 0, maxScore: 0, correct: 0, total: 0, percent: 0, tests: 0 });
@@ -284,5 +302,6 @@ export async function getStats(): Promise<Stats> {
       total: Number(t.total),
       percent: pct(Number(t.correct), Number(t.total)),
     })),
+    blocks: blockRows.map((b) => ({ questions: Number(b.questions), percent: Math.round(b.accuracy * 1000) / 10 })),
   };
 }

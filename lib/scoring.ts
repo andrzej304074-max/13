@@ -26,6 +26,9 @@ export function scoreMulti(selected: number[], correct: number[]): number {
   return points;
 }
 
+/** Liczba pytań w jednym punkcie wykresu dokładności na stronie statystyk. */
+export const BLOCK_SIZE = 100;
+
 /** Jednostki do procentu poprawności: pytanie (jednokrotny) albo pole A–D (wielokrotny). */
 export const UNITS_PER_QUESTION: Record<QuestionType, number> = { single: 1, multi: OPTION_COUNT };
 
