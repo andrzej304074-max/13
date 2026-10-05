@@ -1,0 +1,498 @@
+[
+  {
+    "id": "owe28-c-01",
+    "type": "multi",
+    "edition": "XXVIII OWE (2014/2015), zawody centralne",
+    "question": "Ilość soku jabłkowego, którą chcą kupić studenci, opisuje równanie: P = 20 – 0,04Qd, gdzie Qd to liczba butelek soku nabywanych w ciągu tygodnia, a P to cena butelki soku w zł. Na podstawie tych informacji możemy stwierdzić, że:",
+    "options": [
+      "jeżeli sok byłby dostępny za darmo, studenci konsumowaliby 500 butelek",
+      "wzrost liczby kupowanych butelek soku wpływa na zmniejszenie ceny",
+      "przy cenie butelki soku wynoszącej 8 zł studenci wydają na zakupy łącznie 2400 zł",
+      "każdy wzrost ceny o 1 zł prowadzi do spadku liczby kupowanych butelek soku o 25 szt."
+    ],
+    "correct": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Z P = 20 − 0,04Q mamy Q = 500 − 25P. Przy P = 0 studenci kupią 500 butelek (A). Przy P = 8 zł kupią 300 butelek i wydadzą 2400 zł (C). Każdy wzrost ceny o 1 zł zmniejsza ilość o 25 butelek (D). B odwraca zależność – to cena wpływa na ilość, a nie odwrotnie."
+  },
+  {
+    "id": "owe28-c-02",
+    "type": "multi",
+    "edition": "XXVIII OWE (2014/2015), zawody centralne",
+    "question": "Która z poniższych sytuacji spowoduje przesunięcie granicy możliwości produkcyjnych w lewo w kierunku początku układu współrzędnych?",
+    "options": [
+      "z uwagi na utratę rynków zbytu wiele przedsiębiorstw zbankrutowało",
+      "większość pracowników w trakcie godzin pracy robi przedświąteczne zakupy",
+      "młodzi wykształceni ludzie wyjeżdżają za granicę",
+      "społeczeństwo niezadowolone z rządów rozpoczyna strajk generalny"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Granica możliwości produkcyjnych przesuwa się do środka, gdy zmniejszają się zasoby – np. emigracja młodych, wykształconych ludzi (C). Bankructwa, robienie zakupów w pracy i strajk to niewykorzystanie istniejących zasobów – punkt pod granicą, a nie przesunięcie granicy."
+  },
+  {
+    "id": "owe28-c-03",
+    "type": "multi",
+    "edition": "XXVIII OWE (2014/2015), zawody centralne",
+    "question": "Współczynnik cenowej elastyczności popytu dla jaj przepiórczych wynosi –1,1. Które z poniższych stwierdzeń jest interpretacją tego wyniku?",
+    "options": [
+      "spadek cen jaj przepiórczych o 1% prowadzi do wzrostu wielkości zapotrzebowania o 1,1%",
+      "wzrost cen jaj przepiórczych o 1,1% wywołuje spadek wartości zakupów jaj przepiórczych o 1 zł",
+      "spadek wielkości popytu o 11% powoduje wzrost cen o 10%",
+      "wzrost cen jaj przepiórczych o 1 zł zmniejszy zapotrzebowanie na jaja przepiórcze o 1,1%"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Elastyczność –1,1 oznacza, że zmiana ceny o 1% zmienia wielkość popytu o 1,1% w przeciwnym kierunku – spadek ceny o 1% zwiększa zapotrzebowanie o 1,1% (A). Elastyczność dotyczy zmian procentowych, a nie złotówek (B, D)."
+  },
+  {
+    "id": "owe28-c-04",
+    "type": "multi",
+    "edition": "XXVIII OWE (2014/2015), zawody centralne",
+    "question": "Po wygaśnięciu patentu na substancję czynną w leku oryginalnym na rynku pojawiają się zamienniki (leki generyczne). W tej sytuacji:",
+    "options": [
+      "zwiększy się nadwyżka konsumenta",
+      "zmniejszy się efektywność produkcji",
+      "pogorszy się alokacja czynników wytwórczych",
+      "wystąpią pozytywne efekty zewnętrzne, które pozwolą rozwiązać problem niekompletności rynku"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Pojawienie się tańszych leków generycznych zwiększa konkurencję, obniża ceny i zwiększa ilość kupowanych leków – rośnie nadwyżka konsumenta (A). Rynek staje się bardziej efektywny."
+  },
+  {
+    "id": "owe28-c-05",
+    "type": "multi",
+    "edition": "XXVIII OWE (2014/2015), zawody centralne",
+    "question": "Wzrost cen paliwa spowoduje w firmie transportowej zmianę położenia krzywej:",
+    "options": [
+      "przeciętnych kosztów całkowitych",
+      "kosztów krańcowych",
+      "przeciętnych kosztów stałych",
+      "zysku krańcowego"
+    ],
+    "correct": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Paliwo to koszt zmienny firmy transportowej. Jego podrożenie przesuwa krzywe przeciętnych kosztów całkowitych (A) i kosztów krańcowych (B), a według klucza także zysku krańcowego (D), który zależy od kosztu krańcowego. Przeciętny koszt stały (C) się nie zmienia."
+  },
+  {
+    "id": "owe28-c-06",
+    "type": "multi",
+    "edition": "XXVIII OWE (2014/2015), zawody centralne",
+    "question": "Popyt na czynnik wytwórczy zależy głównie od:",
+    "options": [
+      "wielkości podaży tego czynnika wytwórczego",
+      "dostępności tego czynnika wytwórczego",
+      "stopnia elastyczności cenowej podaży czynników wytwórczych będących substytutami dla rozpatrywanego czynnika wytwórczego",
+      "popytu na dobra i usługi, które są wytwarzane za pomocą tego czynnika"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Popyt na czynnik wytwórczy jest popytem pochodnym – zależy przede wszystkim od popytu na dobra i usługi wytwarzane z jego pomocą (D)."
+  },
+  {
+    "id": "owe28-c-07",
+    "type": "multi",
+    "edition": "XXVIII OWE (2014/2015), zawody centralne",
+    "question": "Popyt na produkty przedsiębiorstwa działającego na rynku konkurencji monopolistycznej będzie tym bardziej elastyczny, im:",
+    "options": [
+      "większe będą bariery wejścia",
+      "większy będzie stopień zróżnicowania produktu",
+      "większa będzie liczba konkurujących przedsiębiorstw",
+      "niższe będą ceny"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Popyt na produkty firmy w konkurencji monopolistycznej jest tym bardziej elastyczny, im więcej jest bliskich substytutów, czyli konkurujących firm (C). Większe zróżnicowanie produktów (B) i wyższe bariery wejścia (A) zmniejszają elastyczność."
+  },
+  {
+    "id": "owe28-c-08",
+    "type": "multi",
+    "edition": "XXVIII OWE (2014/2015), zawody centralne",
+    "question": "Cechą charakterystyczną czystych dóbr publicznych jest:",
+    "options": [
+      "stały koszt krańcowy wytworzenia jednostki dobra",
+      "dodatnio nachylona krzywa popytu",
+      "nierywalizacyjny charakter konsumpcji",
+      "brak kosztów alternatywnych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Czyste dobra publiczne cechuje niekonkurencyjność (nierywalizacyjność) konsumpcji – korzystanie przez jedną osobę nie zmniejsza korzyści innych (C) – oraz niewykluczalność."
+  },
+  {
+    "id": "owe28-c-09",
+    "type": "multi",
+    "edition": "XXVIII OWE (2014/2015), zawody centralne",
+    "question": "Pewną gospodarkę opisuje równanie C = 50 + 0,9Y, gdzie C to konsumpcja, a Y dochód do dyspozycji. Jeśli dochód do dyspozycji wynosi 1200, to poziom oszczędności w gospodarce wyniesie:",
+    "options": [
+      "50",
+      "70",
+      "120",
+      "170"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Oszczędności S = Y − C = 1200 − (50 + 0,9 · 1200) = 1200 − 1130 = 70 (B)."
+  },
+  {
+    "id": "owe28-c-10",
+    "type": "multi",
+    "edition": "XXVIII OWE (2014/2015), zawody centralne",
+    "question": "W sytuacji równowagi w gospodarce pojawienie się nadwyżki budżetowej daje zasadniczo taki sam efekt jak zwiększenie:",
+    "options": [
+      "konsumpcji",
+      "inwestycji",
+      "oszczędności",
+      "eksportu"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Nadwyżka budżetowa oznacza, że państwo oszczędza (dochody > wydatki) – podobnie jak wzrost oszczędności, zmniejsza popyt globalny (C). Konsumpcja, inwestycje i eksport go zwiększają."
+  },
+  {
+    "id": "owe28-c-11",
+    "type": "multi",
+    "edition": "XXVIII OWE (2014/2015), zawody centralne",
+    "question": "Których z niżej podanych par deficytów dotyczy zjawisko określane mianem deficytów bliźniaczych?",
+    "options": [
+      "budżetowego i handlowego",
+      "płatniczego i strukturalnego",
+      "rachunku obrotów bieżących i budżetowego",
+      "budżetowego i bilansu płatniczego"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Deficyty bliźniacze to jednoczesne występowanie deficytu budżetowego i deficytu na rachunku obrotów bieżących (C). Deficyt budżetowy może prowadzić do deficytu obrotów bieżących przez wzrost popytu i importu oraz umocnienie waluty."
+  },
+  {
+    "id": "owe28-c-12",
+    "type": "multi",
+    "edition": "XXVIII OWE (2014/2015), zawody centralne",
+    "question": "Reguła Taylora w polityce pieniężnej zakłada:",
+    "options": [
+      "dokonywanie zmian stopy procentowej w reakcji na zmianę poziomu realnego PKB i inflacji",
+      "uwzględnienie w podejmowanych decyzjach tylko stopnia realizacji celu inflacyjnego",
+      "podejmowanie lepszych decyzji na podstawie swobodnej oceny aktualnej i przyszłej sytuacji w gospodarce niż na podstawie modeli o ograniczonej liczbie zmiennych",
+      "skoncentrowanie się na stabilizacji kursu walutowego"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Reguła Taylora: bank centralny zmienia stopę procentową w reakcji na odchylenie inflacji od celu i lukę produkcyjną (zmiany realnego PKB względem potencjalnego) – A."
+  },
+  {
+    "id": "owe28-c-13",
+    "type": "multi",
+    "edition": "XXVIII OWE (2014/2015), zawody centralne",
+    "question": "Współczynnik Giniego:",
+    "options": [
+      "mierzy względny poziom ubóstwa ludności",
+      "umożliwia porównanie dochodów najbogatszych gospodarstw domowych (powyżej 90. percentyla) z dochodami najbiedniejszych (poniżej 10. percentyla)",
+      "jest miarą nierówności dochodowych w społeczeństwie",
+      "pozwala określić głębokość ubóstwa"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Współczynnik Giniego mierzy nierówności rozkładu dochodów w społeczeństwie, od 0 (pełna równość) do 1 (pełna nierówność) – C. Relację dochodów najbogatszych i najbiedniejszych 10% mierzy wskaźnik decylowy."
+  },
+  {
+    "id": "owe28-c-14",
+    "type": "multi",
+    "edition": "XXVIII OWE (2014/2015), zawody centralne",
+    "question": "Inflacja towarzyszy spadkowi produkcji realnej i zatrudnienia w gospodarce. Które z podanych określeń najlepiej opisuje powyższe stwierdzenie?",
+    "options": [
+      "prawo Okuna",
+      "stagflacja",
+      "krzywa Phillipsa",
+      "luka recesyjna"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Stagflacja to jednoczesne występowanie inflacji i stagnacji lub spadku produkcji oraz zatrudnienia (B)."
+  },
+  {
+    "id": "owe28-c-15",
+    "type": "multi",
+    "edition": "XXVIII OWE (2014/2015), zawody centralne",
+    "question": "Jeżeli stopa rezerw obowiązkowych wynosi 3,5%, a bank komercyjny utrzymuje rezerwę obowiązkową w banku centralnym w kwocie 5 mld zł oraz dobrowolną rezerwę nadwyżkową w kwocie 1 mld zł, to wartość depozytów na żądanie w banku komercyjnym wynosi:",
+    "options": [
+      "142,86 mld zł",
+      "143,86 mld zł",
+      "170,43 mld zł",
+      "171,43 mld zł"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Rezerwa obowiązkowa = stopa rezerw × depozyty, więc depozyty = 5 mld / 0,035 ≈ 142,86 mld zł (A). Rezerwa nadwyżkowa (dobrowolna) nie wpływa na wyliczenie."
+  },
+  {
+    "id": "owe28-c-16",
+    "type": "multi",
+    "edition": "XXVIII OWE (2014/2015), zawody centralne",
+    "question": "Papiery dłużne przyznające prawo do zaspokojenia roszczeń z przychodów lub majątku przedsięwzięć, które zostały sfinansowane ze środków uzyskanych z emisji, to:",
+    "options": [
+      "listy zastawne",
+      "obligacje przychodowe",
+      "kwity depozytowe",
+      "warranty dłużne zabezpieczone nieruchomościami z odwróconą hipoteką"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Obligacje przychodowe (np. emitowane przez samorządy) dają prawo do zaspokojenia z przychodów lub majątku przedsięwzięcia sfinansowanego z emisji – np. z opłat za korzystanie z wybudowanej drogi (B)."
+  },
+  {
+    "id": "owe28-c-17",
+    "type": "multi",
+    "edition": "XXVIII OWE (2014/2015), zawody centralne",
+    "question": "Które z poniższych zleceń występują na Giełdzie Papierów Wartościowych w Warszawie?",
+    "options": [
+      "zlecenia peg",
+      "zlecenia cross",
+      "zlecenia z warunkiem wielkości ujawnianej",
+      "zlecenia switch"
+    ],
+    "correct": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Na GPW występują m.in. zlecenia peg (z limitem dynamicznie powiązanym z najlepszą ofertą – A), cross (zlecenia krzyżowe, tego samego członka giełdy po obu stronach – B) i z warunkiem wielkości ujawnianej (iceberg – C). Zleceń „switch” nie ma."
+  },
+  {
+    "id": "owe28-c-18",
+    "type": "multi",
+    "edition": "XXVIII OWE (2014/2015), zawody centralne",
+    "question": "Dywidenda może być wypłacana:",
+    "options": [
+      "tylko w formie pieniężnej z zysku netto",
+      "tylko w formie pieniężnej z zysku netto lub kapitału zapasowego",
+      "tylko w formie pieniężnej z zysku netto lub niepodzielonych zysków z lat poprzednich",
+      "zarówno w formie pieniężnej, jak i w postaci akcji"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Dywidendę można wypłacić w formie pieniężnej lub w postaci akcji (dywidenda akcyjna – D). Źródłem wypłaty może być zysk netto, niepodzielone zyski z lat ubiegłych i kapitały utworzone z zysku."
+  },
+  {
+    "id": "owe28-c-19",
+    "type": "multi",
+    "edition": "XXVIII OWE (2014/2015), zawody centralne",
+    "question": "W Polsce dodatek aktywizacyjny przysługuje:",
+    "options": [
+      "tylko osobom młodocianym, które podnoszą kwalifikacje",
+      "bezrobotnym, którzy mają prawo do zasiłku i z własnej inicjatywy podjęli zatrudnienie",
+      "bezrobotnym skierowanym przez powiatowy urząd pracy do prac interwencyjnych lub robót publicznych",
+      "osobom biernym zawodowo dłużej niż 24 miesiące, które podejmują pracę zarobkową u ostatniego pracodawcy"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Dodatek aktywizacyjny przysługuje bezrobotnemu, który ma prawo do zasiłku i z własnej inicjatywy podjął zatrudnienie (lub w niektórych przypadkach podjął pracę za niższym wynagrodzeniem) – B. Zachęca do szybszego podjęcia pracy."
+  },
+  {
+    "id": "owe28-c-20",
+    "type": "multi",
+    "edition": "XXVIII OWE (2014/2015), zawody centralne",
+    "question": "Suwak bezpieczeństwa w systemie emerytalnym polega na (stan na rok 2014):",
+    "options": [
+      "wstrzymaniu odprowadzania składek do OFE na 10 lat przed osiągnięciem przez ubezpieczonego wieku emerytalnego",
+      "waloryzacji indywidualnego subkonta ubezpieczonych w ZUS o minimum 2%, nawet gdy średni nominalny wzrost PKB będzie mniejszy",
+      "możliwości indywidualnego wyboru poziomu ryzyka środków lokowanych przez OFE",
+      "comiesięcznym systematycznym przekazywaniu środków zgromadzonych na rachunku w OFE do ZUS przed osiągnięciem ustawowego wieku emerytalnego"
+    ],
+    "correct": [
+      0,
+      3
+    ],
+    "explanation": "„Suwak bezpieczeństwa” (od 2014 r.) oznacza, że na 10 lat przed osiągnięciem wieku emerytalnego składki przestają trafiać do OFE (A), a zgromadzone w OFE środki są stopniowo, co miesiąc przekazywane do ZUS (D)."
+  },
+  {
+    "id": "owe28-c-21",
+    "type": "multi",
+    "edition": "XXVIII OWE (2014/2015), zawody centralne",
+    "question": "Co określa polityka rachunkowości w przedsiębiorstwie?",
+    "options": [
+      "rok obrotowy",
+      "specyfikację systemu informatycznego, gdy księgi rachunkowe prowadzone są z użyciem komputera",
+      "walutę główną, jeśli nie jest to polski złoty, w której prowadzone są księgi rachunkowe",
+      "metody wyceny aktywów i pasywów"
+    ],
+    "correct": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Polityka rachunkowości jednostki określa m.in. rok obrotowy (A), metody wyceny aktywów i pasywów (D) oraz – przy księgach prowadzonych komputerowo – opis systemu informatycznego (B). Księgi prowadzi się w złotych (C – fałsz)."
+  },
+  {
+    "id": "owe28-c-22",
+    "type": "multi",
+    "edition": "XXVIII OWE (2014/2015), zawody centralne",
+    "question": "Wypłata gotówki z kasy przedsiębiorstwa i wpłata jej na rachunek bankowy przedsiębiorstwa powoduje w bilansie przedsiębiorstwa:",
+    "options": [
+      "wzrost wartości aktywów",
+      "wzrost wartości aktywów i wzrost wartości pasywów",
+      "wzrost wartości aktywów i spadek wartości pasywów",
+      "jedynie zmianę struktury aktywów"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Przeniesienie gotówki z kasy na rachunek bankowy zmienia tylko strukturę aktywów – maleje gotówka w kasie, rosną środki na rachunku (D). Suma bilansowa się nie zmienia."
+  },
+  {
+    "id": "owe28-c-23",
+    "type": "multi",
+    "edition": "XXVIII OWE (2014/2015), zawody centralne",
+    "question": "Wskaż prawdziwe zdanie dotyczące wprowadzanej w ubezpieczeniach komunikacyjnych bezpośredniej likwidacji szkód:",
+    "options": [
+      "skróci czas likwidacji szkody, ponieważ naprawy uszkodzonego w wypadku samochodu będą dokonywane przez ubezpieczyciela w miejscu zdarzenia lub w sieci autoryzowanych przez niego warsztatów naprawczych",
+      "likwidację szkody będzie przeprowadzał zawsze zakład ubezpieczeń sprawcy zdarzenia",
+      "dotyczyć będzie jedynie sytuacji, gdy w zdarzeniu będą brały udział dwa pojazdy",
+      "pozwoli ubezpieczycielom na odejście od konkurencji cenowej na rzecz konkurencji jakościowej"
+    ],
+    "correct": [
+      2,
+      3
+    ],
+    "explanation": "Bezpośrednia likwidacja szkód (BLS) to szybsze rozliczanie szkód przez ubezpieczyciela poszkodowanego (a nie sprawcy – B fałsz), który następnie rozlicza się z ubezpieczycielem sprawcy. Dotyczy tylko kolizji dwóch pojazdów (C) i ma zachęcać do konkurencji jakością obsługi zamiast ceną (D)."
+  },
+  {
+    "id": "owe28-c-24",
+    "type": "multi",
+    "edition": "XXVIII OWE (2014/2015), zawody centralne",
+    "question": "Na dochody jednostek samorządu terytorialnego składają się:",
+    "options": [
+      "w przypadku gmin i województw udziały we wpływach z podatku dochodowego od osób fizycznych (PIT)",
+      "w przypadku powiatów i województw udziały we wpływach z podatku dochodowego od osób prawnych (CIT)",
+      "w przypadku województw udziały we wpływach z podatku od wartości dodanej (VAT)",
+      "w przypadku powiatów udziały we wpływach z podatku dochodowego od osób fizycznych (PIT)"
+    ],
+    "correct": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Dochodami samorządów są udziały we wpływach z podatków dochodowych: PIT – gminy, powiaty i województwa (A, D), CIT – gminy, powiaty i województwa (B). Samorządy nie mają udziałów w VAT (C – fałsz)."
+  },
+  {
+    "id": "owe28-c-25",
+    "type": "multi",
+    "edition": "XXVIII OWE (2014/2015), zawody centralne",
+    "question": "Które z poniższych stwierdzeń są prawdziwe w odniesieniu do odwrotnego obciążenia VAT?",
+    "options": [
+      "sprzedawca odpowiada za prawidłowość obliczenia kwoty podatku umieszczonej na fakturze dokumentującej sprzedaż",
+      "dotyczy wszystkich rodzajów towarów, które są eksportowane",
+      "naliczenia podatku dokonuje „z urzędu” administracja podatkowa",
+      "podatnikiem jest nabywca prowadzący działalność gospodarczą"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Odwrotne obciążenie VAT (reverse charge) polega na tym, że podatek rozlicza nabywca prowadzący działalność gospodarczą, a nie sprzedawca (D). Stosuje się je dla wybranych towarów (np. stal, złom, elektronika), by przeciwdziałać wyłudzeniom VAT."
+  },
+  {
+    "id": "owe28-c-26",
+    "type": "multi",
+    "edition": "XXVIII OWE (2014/2015), zawody centralne",
+    "question": "Cykl życia produktu obejmuje następujące fazy:",
+    "options": [
+      "wprowadzenie na rynek, wzrost, nasycenie i spadek",
+      "wprowadzenie na rynek, wzrost, konsolidacja i spadek",
+      "wprowadzenie na rynek, wzrost, nasycenie i dojrzałość",
+      "wprowadzenie na rynek, nasycenie, dojrzałość i spadek"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Klasyczny cykl życia produktu obejmuje fazy: wprowadzenie na rynek, wzrost, nasycenie (dojrzałość) i spadek (schyłek) – A."
+  },
+  {
+    "id": "owe28-c-27",
+    "type": "multi",
+    "edition": "XXVIII OWE (2014/2015), zawody centralne",
+    "question": "Masowa kastomizacja wiąże się z:",
+    "options": [
+      "wykorzystaniem modularności w świadczeniu usług",
+      "udostępnianiem klientom do wyboru gotowych modeli produktu po cenach niższych niż ceny produktów wytwarzanych masowo",
+      "wysoką elastycznością czynników wytwórczych",
+      "szybkością reagowania na zmiany rynkowe"
+    ],
+    "correct": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Masowa kastomizacja (personalizacja) łączy produkcję masową z indywidualnym dopasowaniem produktu do klienta. Wymaga modułowości (A), elastyczności czynników wytwórczych (C) i szybkiej reakcji na potrzeby rynku (D). Produkty spersonalizowane nie są zwykle tańsze od masowych (B)."
+  },
+  {
+    "id": "owe28-c-28",
+    "type": "multi",
+    "edition": "XXVIII OWE (2014/2015), zawody centralne",
+    "question": "Które z poniższych porozumień pomiędzy przedsiębiorstwami należy uznać za zabronione?",
+    "options": [
+      "zwycięzca przetargu zatrudnia przegranego przy realizacji zlecenia, rekompensując mu przez to świadome złożenie gorszej oferty lub rezygnację z udziału w przetargu",
+      "producent narzuca dystrybutorom sztywne ceny sprzedaży",
+      "przedsiębiorstwa zawierają porozumienie dotyczące podziału rynku według kryteriów terytorialnych w ten sposób, że jedno z nich zobowiązuje się względem innego do powstrzymania się od prowadzenia działalności na danym terytorium w interesie tego drugiego",
+      "żadne z powyższych porozumień nie jest zabronione, ponieważ zasada wolności gospodarczej jest wpisana do Konstytucji Rzeczypospolitej"
+    ],
+    "correct": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Prawo konkurencji zakazuje porozumień ograniczających konkurencję: zmowy przetargowej (A), narzucania sztywnych cen odsprzedaży przez producenta (B) i podziału rynku (C). Wolność gospodarcza nie oznacza zgody na takie porozumienia (D)."
+  },
+  {
+    "id": "owe28-c-29",
+    "type": "multi",
+    "edition": "XXVIII OWE (2014/2015), zawody centralne",
+    "question": "Na koniec długich negocjacji kontraktu handlowego jedna ze stron przedkłada do podpisu przygotowany projekt umowy, w którym ustalone w czasie rozmów warunki zostały pozamieniane na mniej korzystne dla strony przeciwnej, niż zostało to wcześniej uzgodnione. Zmiany nie są duże, ale strona przygotowująca projekt umowy próbuje uzyskać dodatkowe korzyści. Taka technika negocjacyjna nazywana jest techniką:",
+    "options": [
+      "spalonej ziemi",
+      "złotej szalki",
+      "faktów dokonanych",
+      "pustego portfela"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Technika faktów dokonanych polega na przedstawieniu drugiej stronie sytuacji już przesądzonej (np. zmienionej umowy do podpisu) w nadziei, że ta nie zauważy zmian lub nie będzie chciała zaczynać negocjacji od nowa (C)."
+  },
+  {
+    "id": "owe28-c-30",
+    "type": "multi",
+    "edition": "XXVIII OWE (2014/2015), zawody centralne",
+    "question": "Jest to przyrostowa metodyka prowadzenia projektów, w której zespół pracuje w określonym przedziale czasowym zwanym przebiegiem (sprintem), a efektem każdego przebiegu jest dostarczenie kolejnej, ulepszonej wersji produktu. Zgodnie z tą metodyką przeprowadzane są codzienne spotkania, na których omawiana jest realizacja zadań. Jak nazywa się ta metodyka?",
+    "options": [
+      "Sprint2Go",
+      "Prince2",
+      "Six Sigma",
+      "Scrum"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Scrum to zwinna (agile) metodyka zarządzania projektami: praca w krótkich iteracjach (sprintach) zakończonych działającą wersją produktu, codzienne krótkie spotkania (daily scrum), role Product Owner, Scrum Master i zespół (D). Prince2 to metodyka „tradycyjna”."
+  }
+]

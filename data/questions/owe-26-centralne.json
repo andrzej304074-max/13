@@ -1,0 +1,502 @@
+[
+  {
+    "id": "owe26-c-01",
+    "type": "multi",
+    "edition": "XXVI OWE (2012/2013), zawody centralne",
+    "question": "W którym przypadku wzrośnie podaż na krajowym rynku koszulek bawełnianych?",
+    "options": [
+      "gdy spadnie wysokość wynagrodzenia szwaczek",
+      "gdy wzrosną dochody konsumentów",
+      "gdy wzrośnie cena koszulek bawełnianych",
+      "gdy spadnie eksport koszulek bawełnianych do innych krajów"
+    ],
+    "correct": [
+      0,
+      3
+    ],
+    "explanation": "Podaż rośnie, gdy spadają koszty produkcji – np. płace szwaczek (A) – albo gdy na rynek krajowy trafia więcej towaru, bo spadł eksport (D). Wzrost dochodów konsumentów zmienia popyt (B), a wzrost ceny koszulek to ruch wzdłuż krzywej podaży (zwiększenie wielkości podaży), a nie wzrost podaży (C)."
+  },
+  {
+    "id": "owe26-c-02",
+    "type": "multi",
+    "edition": "XXVI OWE (2012/2013), zawody centralne",
+    "question": "W przypadku którego z wymienionych dóbr można uznać, że popyt jest nieelastyczny cenowo?",
+    "options": [
+      "insuliny",
+      "soli kuchennej",
+      "małej paczki chusteczek higienicznych",
+      "srebrnej biżuterii"
+    ],
+    "correct": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Popyt jest nieelastyczny, gdy dobro jest niezbędne, nie ma substytutów lub stanowi mały ułamek wydatków: insulina (A – lek ratujący życie), sól (B – niezbędna, tania) i mała paczka chusteczek (C – znikomy wydatek). Srebrna biżuteria (D) to dobro luksusowe z elastycznym popytem."
+  },
+  {
+    "id": "owe26-c-03",
+    "type": "multi",
+    "edition": "XXVI OWE (2012/2013), zawody centralne",
+    "question": "Które z podanych stwierdzeń są prawdziwe w odniesieniu do krzywych obojętności?",
+    "options": [
+      "dwie różne krzywe nigdy nie mogą się przecinać",
+      "prezentują one różne kombinacje ilościowe dóbr lub usług, które charakteryzują się dla konsumenta jednakowym poziomem użyteczności krańcowej",
+      "wraz ze wzrostem dochodów realnych konsumenta przesuwają się w prawo",
+      "zawsze są funkcjami wypukłymi o nachyleniu ujemnym"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Krzywe obojętności nie mogą się przecinać (A). Łączą koszyki o tej samej użyteczności całkowitej (nie krańcowej – B), zależą od preferencji, a nie od dochodu (C), i nie zawsze są wypukłe i opadające – np. dla dóbr niechcianych czy neutralnych (D)."
+  },
+  {
+    "id": "owe26-c-04",
+    "type": "multi",
+    "edition": "XXVI OWE (2012/2013), zawody centralne",
+    "question": "W przedsiębiorstwie z branży przetwórstwa owocowego nastąpił wzrost cen owoców wykorzystywanych w produkcji. Konsekwencją tego będzie zmiana położenia krzywej kosztów:",
+    "options": [
+      "krańcowych",
+      "przeciętnych kosztów zmiennych",
+      "przeciętnych kosztów całkowitych",
+      "przeciętnych kosztów stałych"
+    ],
+    "correct": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Owoce to koszt zmienny. Wzrost ich cen przesuwa krzywe kosztu krańcowego (A), przeciętnego kosztu zmiennego (B) i przeciętnego kosztu całkowitego (C). Przeciętny koszt stały (D) się nie zmienia."
+  },
+  {
+    "id": "owe26-c-05",
+    "type": "multi",
+    "edition": "XXVI OWE (2012/2013), zawody centralne",
+    "question": "Które stwierdzenie jest prawdziwe?",
+    "options": [
+      "przedsiębiorstwo zaprzestanie działalności, jeśli w długim okresie będzie osiągało zysk ekonomiczny równy zero",
+      "przedsiębiorstwo wstrzyma działalność, jeśli w krótkim okresie utarg całkowity będzie pokrywał w całości koszty zmienne i tylko część kosztów stałych",
+      "przedsiębiorstwo nie będzie prowadzić działalności w krótkim okresie, jeśli cena produkowanych dóbr będzie niższa niż przeciętne koszty całkowite",
+      "jeśli przedsiębiorstwo osiąga zysk normalny, zawsze będzie prowadzić działalność"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Zysk normalny (zerowy zysk ekonomiczny) oznacza, że firma pokrywa wszystkie koszty, w tym alternatywne – opłaca się kontynuować działalność (D), więc A jest fałszywe. W krótkim okresie firma produkuje, dopóki pokrywa koszty zmienne – także gdy cena jest niższa od ATC (B i C fałszywe)."
+  },
+  {
+    "id": "owe26-c-06",
+    "type": "multi",
+    "edition": "XXVI OWE (2012/2013), zawody centralne",
+    "question": "Jeśli następuje wzrost popytu na ziemię, przy założeniu jej całkowitej nieelastyczności cenowej, to:",
+    "options": [
+      "zmianie ulegnie efektywność wykorzystania ziemi",
+      "zwiększą się dochody właścicieli ziemi z tytułu jej dzierżawy",
+      "zmniejszy się stawka renty gruntowej",
+      "zwiększy się przychód krańcowy z produktu ziemi"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Przy doskonale nieelastycznej (stałej) podaży ziemi wzrost popytu na nią podnosi wyłącznie cenę, czyli rentę gruntową – rosną dochody właścicieli z dzierżawy (B). Ilość ziemi i sposób jej wykorzystania się nie zmieniają."
+  },
+  {
+    "id": "owe26-c-07",
+    "type": "multi",
+    "edition": "XXVI OWE (2012/2013), zawody centralne",
+    "question": "W optimum Pareta:",
+    "options": [
+      "dostępne dla społeczeństwa zasoby są wykorzystywane w sposób efektywny",
+      "alokacja dóbr i usług następuje w taki sposób, że podstawowe potrzeby konsumpcyjne wszystkich jednostek są zaspokojone",
+      "nie jest możliwe zwiększenie dobrobytu chociażby jednej jednostki bez jednoczesnego zmniejszenia dobrobytu innej jednostki lub jednostek",
+      "poziom użyteczności u każdej jednostki w zbiorowości jest taki sam"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "Optimum Pareto to stan efektywnej alokacji zasobów (A), w którym nie można poprawić sytuacji nikogo bez pogorszenia sytuacji kogoś innego (C). Nie oznacza równości użyteczności (D) ani zaspokojenia potrzeb wszystkich (B) – dotyczy efektywności, nie sprawiedliwości."
+  },
+  {
+    "id": "owe26-c-08",
+    "type": "multi",
+    "edition": "XXVI OWE (2012/2013), zawody centralne",
+    "question": "Jeśli produkcja węgla kamiennego wywołuje nieinternalizowane koszty zewnętrzne, to skutkiem tego jest:",
+    "options": [
+      "zbyt duża produkcja węgla przy zbyt wysokiej cenie",
+      "zbyt duża produkcja węgla przy zbyt niskiej cenie",
+      "zbyt mała produkcja węgla przy zbyt wysokiej cenie",
+      "społecznie efektywna wielkość produkcji węgla, lecz przy zbyt niskiej cenie"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Gdy producenci nie ponoszą kosztów zewnętrznych (np. zanieczyszczenia), ich koszty prywatne są niższe niż społeczne. Węgiel jest więc za tani, a produkuje się go za dużo w porównaniu z optimum społecznym (B)."
+  },
+  {
+    "id": "owe26-c-09",
+    "type": "multi",
+    "edition": "XXVI OWE (2012/2013), zawody centralne",
+    "question": "Rozporządzalne dochody osobiste są równe dochodom osobistym pomniejszonym o:",
+    "options": [
+      "płatności transferowe",
+      "podatki pośrednie",
+      "oszczędności",
+      "podatki od dochodów osobistych"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Dochód rozporządzalny = dochody osobiste − podatki od dochodów osobistych (bezpośrednie). Transfery już są wliczone w dochody osobiste, a oszczędności to część dochodu rozporządzalnego."
+  },
+  {
+    "id": "owe26-c-10",
+    "type": "multi",
+    "edition": "XXVI OWE (2012/2013), zawody centralne",
+    "question": "Generalnie ekonomiści zgodni są co do tego, że:",
+    "options": [
+      "nagłe zmiany podaży pieniądza mogą znacząco wpływać na zagregowany popyt",
+      "polityka monetarna ma relatywnie mniejsze znaczenie niż polityka fiskalna w stabilizowaniu gospodarki",
+      "kontrola podaży pieniądza jest wystarczającym środkiem kontroli inflacji",
+      "zmiany podaży pieniądza nie są jedyną przyczyną inflacji"
+    ],
+    "correct": [
+      0,
+      3
+    ],
+    "explanation": "Większość ekonomistów zgadza się, że gwałtowne zmiany podaży pieniądza wpływają na popyt globalny (A) i że inflacja może mieć także inne przyczyny niż pieniądz, np. szoki kosztowe (D). Kontrowersyjne są tezy o przewadze polityki fiskalnej (B) i wystarczalności kontroli pieniądza (C)."
+  },
+  {
+    "id": "owe26-c-11",
+    "type": "multi",
+    "edition": "XXVI OWE (2012/2013), zawody centralne",
+    "question": "Przykładem dyskrecjonalnej polityki ekonomicznej jest:",
+    "options": [
+      "zwiększenie wpływów budżetowych z podatku dochodowego w związku z szybkim wzrostem płac nominalnych w sytuacji progresywnego systemu podatkowego",
+      "wypłata zasiłków dla bezrobotnych",
+      "podwyżka akcyzy na benzynę i olej napędowy",
+      "podniesienie stopy rezerw obowiązkowych"
+    ],
+    "correct": [
+      2,
+      3
+    ],
+    "explanation": "Polityka dyskrecjonalna to celowe decyzje władz: podwyżka akcyzy na paliwa (C) czy podniesienie stopy rezerw obowiązkowych (D). Automatyczny wzrost wpływów z progresywnego podatku (A) i zasiłki dla bezrobotnych (B) to automatyczne stabilizatory."
+  },
+  {
+    "id": "owe26-c-12",
+    "type": "multi",
+    "edition": "XXVI OWE (2012/2013), zawody centralne",
+    "question": "Wśród przyczyn bezrobocia strukturalnego można wymienić:",
+    "options": [
+      "niewydolne pośrednictwo pracy",
+      "błędną politykę fiskalną",
+      "dynamiczny rozwój nowoczesnych dziedzin przemysłu",
+      "wprowadzenie płacy minimalnej"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Bezrobocie strukturalne wynika z niedopasowania kwalifikacji do potrzeb gospodarki – np. gdy dynamicznie rozwijają się nowoczesne branże, a upadają tradycyjne (C). Niewydolne pośrednictwo pracy sprzyja bezrobociu frykcyjnemu (A), a błędna polityka fiskalna – koniunkturalnemu."
+  },
+  {
+    "id": "owe26-c-13",
+    "type": "multi",
+    "edition": "XXVI OWE (2012/2013), zawody centralne",
+    "question": "Prawdą jest, że:",
+    "options": [
+      "występowanie ujemnej różnicy pomiędzy krajową a światową stopą procentową sprzyja odpływowi kapitału z kraju",
+      "występowanie ujemnej różnicy pomiędzy krajową a światową stopą procentową sprzyja napływowi kapitału do kraju",
+      "występowanie dodatniej różnicy pomiędzy krajową a światową stopą procentową sprzyja odpływowi kapitału z kraju",
+      "występowanie dodatniej różnicy pomiędzy krajową a światową stopą procentową sprzyja napływowi kapitału do kraju"
+    ],
+    "correct": [
+      0,
+      3
+    ],
+    "explanation": "Kapitał płynie tam, gdzie zarobi więcej. Gdy krajowa stopa procentowa jest niższa od światowej, kapitał odpływa za granicę (A); gdy jest wyższa – napływa do kraju (D)."
+  },
+  {
+    "id": "owe26-c-14",
+    "type": "multi",
+    "edition": "XXVI OWE (2012/2013), zawody centralne",
+    "question": "Która z poniższych kategorii wydatków podlega największym wahaniom w cyklu koniunkturalnym?",
+    "options": [
+      "wydatki rządowe",
+      "wydatki konsumpcyjne",
+      "wydatki inwestycyjne",
+      "wydatki na zakupy importowanych towarów i usług"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Wydatki inwestycyjne są najbardziej zmienne w cyklu koniunkturalnym – zależą od oczekiwań co do przyszłych zysków i działa na nie zasada akceleracji (C). Konsumpcja jest stosunkowo stabilna, a wydatki rządowe zmieniają się głównie decyzjami politycznymi."
+  },
+  {
+    "id": "owe26-c-15",
+    "type": "multi",
+    "edition": "XXVI OWE (2012/2013), zawody centralne",
+    "question": "Krótkookresowa krzywa zagregowanej podaży może zmienić swoje położenie pod wpływem zmiany:",
+    "options": [
+      "cen dóbr i usług w gospodarce",
+      "płac nominalnych i cen innych czynników wytwórczych",
+      "wydajności pracy",
+      "zagregowanego popytu"
+    ],
+    "correct": [
+      1,
+      2
+    ],
+    "explanation": "Krótkookresowa krzywa podaży zagregowanej przesuwa się pod wpływem zmian kosztów produkcji – płac nominalnych i cen innych czynników (B) – oraz wydajności pracy (C). Zmiana poziomu cen to ruch wzdłuż krzywej (A), a popyt zagregowany przesuwa krzywą AD (D)."
+  },
+  {
+    "id": "owe26-c-16",
+    "type": "multi",
+    "edition": "XXVI OWE (2012/2013), zawody centralne",
+    "question": "Hipoteka:",
+    "options": [
+      "może zabezpieczać wierzytelność, która może powstać dopiero w przyszłości",
+      "nie może zostać ustanowiona bez woli właściciela obciążanej nieruchomości",
+      "może zabezpieczać tylko jedną wierzytelność wynikającą z jednego stosunku prawnego",
+      "może zostać ustanowiona na prawie wieczystego użytkowania"
+    ],
+    "correct": [
+      0,
+      3
+    ],
+    "explanation": "Hipoteka może zabezpieczać także wierzytelności przyszłe (A) i może być ustanowiona na użytkowaniu wieczystym (D). Może powstać bez woli właściciela – np. hipoteka przymusowa (B) – i może zabezpieczać kilka wierzytelności (hipoteka łączna, C)."
+  },
+  {
+    "id": "owe26-c-17",
+    "type": "multi",
+    "edition": "XXVI OWE (2012/2013), zawody centralne",
+    "question": "Traktat o stabilności, koordynacji i zarządzaniu w Unii Gospodarczej i Walutowej, zwany też paktem fiskalnym, zakłada:",
+    "options": [
+      "konieczność średniookresowego zrównoważenia lub doprowadzenia do nadwyżki salda sektora publicznego",
+      "zredukowanie długu sektora instytucji rządowych i samorządowych w stosunku do produktu krajowego brutto do wartości poniżej 60%",
+      "podjęcie wysiłków na rzecz pobudzenia konkurencyjności i zwiększenia stopnia konwergencji",
+      "nieograniczone udzielanie bankom komercyjnym nisko oprocentowanych pożyczek przez Europejski Bank Centralny w ramach LTRO"
+    ],
+    "correct": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Pakt fiskalny (2012) zobowiązuje do zrównoważonego lub nadwyżkowego budżetu w średnim okresie (deficyt strukturalny do 0,5% PKB – A), redukcji długu powyżej 60% PKB (B) i działań na rzecz konkurencyjności i konwergencji (C). Pożyczki LTRO EBC (D) to osobny instrument polityki pieniężnej."
+  },
+  {
+    "id": "owe26-c-18",
+    "type": "multi",
+    "edition": "XXVI OWE (2012/2013), zawody centralne",
+    "question": "Inwestor giełdowy porównuje wskaźniki finansowe dwóch spółek giełdowych. W przypadku pierwszej z nich (spółka X) wskaźnik P/E wynosi 2, a wskaźnik P/BV równy jest 1,5, natomiast wskaźniki drugiej rozpatrywanej spółki (Y) to odpowiednio 2,5 oraz 1,7. Które z poniższych stwierdzeń jest prawdziwe?",
+    "options": [
+      "cena spółki X jest na pewno wyższa niż cena spółki Y",
+      "za każde 2,5 zł zysku spółki Y inwestor płaci 1 zł",
+      "wartość księgowa przypadająca na akcję spółki Y jest na pewno większa niż wartość ta przypadająca na akcję spółki X",
+      "wartość księgowa spółki X jest mniejsza niż jej wartość rynkowa"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "P/BV = cena / wartość księgowa na akcję. P/BV spółki X równe 1,5 oznacza, że jej wartość rynkowa jest o 50% wyższa od wartości księgowej (D). Z samych wskaźników nie można wnioskować o wysokości cen akcji czy wartości księgowej (A, C), a P/E = 2,5 oznacza, że za 1 zł zysku Y płaci się 2,50 zł (B)."
+  },
+  {
+    "id": "owe26-c-19",
+    "type": "multi",
+    "edition": "XXVI OWE (2012/2013), zawody centralne",
+    "question": "Spółka akcyjna wyemitowała 1 mln akcji, które zostały sprzedane w ofercie publicznej po 16 zł każda. Cena nominalna jednej akcji to 10 zł. Które z poniższych stwierdzeń opisuje, co stało się w tej sytuacji?",
+    "options": [
+      "spółka zrealizowała zysk operacyjny w kwocie 6 mln zł",
+      "uzyskana kwota z nadwyżki ceny sprzedaży nad ceną nominalną powiększyła kapitał zapasowy",
+      "kapitał zakładowy (akcyjny) wzrósł o 16 mln zł",
+      "taka sytuacja nie jest możliwa, ponieważ niedozwolona jest sprzedaż akcji po cenie wyższej od nominalnej"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Emisja 1 mln akcji po 16 zł: kapitał zakładowy rośnie o wartość nominalną (1 mln × 10 zł = 10 mln zł), a nadwyżka ceny emisyjnej nad nominalną (agio, 6 mln zł) zasila kapitał zapasowy (B). To nie jest zysk operacyjny (A)."
+  },
+  {
+    "id": "owe26-c-20",
+    "type": "multi",
+    "edition": "XXVI OWE (2012/2013), zawody centralne",
+    "question": "Dochodem jednostki samorządu terytorialnego są wpływy z:",
+    "options": [
+      "podatku od osób fizycznych opłacanego w formie karty podatkowej",
+      "podatku od czynności cywilnoprawnych",
+      "podatku leśnego",
+      "podatku od gier"
+    ],
+    "correct": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Dochodami gmin są m.in. podatek od osób fizycznych w formie karty podatkowej (A), podatek od czynności cywilnoprawnych (B) i podatek leśny (C). Podatek od gier (D) jest dochodem budżetu państwa."
+  },
+  {
+    "id": "owe26-c-21",
+    "type": "multi",
+    "edition": "XXVI OWE (2012/2013), zawody centralne",
+    "question": "W przypadku opcji europejskiej z góry określona jest maksymalna wysokość:",
+    "options": [
+      "straty nabywcy opcji kupna",
+      "zysku wystawcy opcji kupna",
+      "straty nabywcy opcji sprzedaży",
+      "zysku wystawcy opcji sprzedaży"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "Nabywca opcji (kupna lub sprzedaży) może stracić najwyżej zapłaconą premię (A, C), a wystawca opcji może zarobić najwyżej otrzymaną premię (B, D). Dlatego wszystkie odpowiedzi są prawidłowe."
+  },
+  {
+    "id": "owe26-c-22",
+    "type": "multi",
+    "edition": "XXVI OWE (2012/2013), zawody centralne",
+    "question": "Jak bankowcy w banku krajowym nazywają prowadzony przez nich dewizowy rachunek depozytowy banku zagranicznego?",
+    "options": [
+      "rachunek loro",
+      "rachunek nostro",
+      "rachunek costro",
+      "rachunek vigo"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Rachunek loro („wasz u nas”) to rachunek prowadzony przez bank krajowy dla banku zagranicznego (A). Rachunek nostro („nasz u was”) to rachunek banku krajowego prowadzony przez bank zagraniczny."
+  },
+  {
+    "id": "owe26-c-23",
+    "type": "multi",
+    "edition": "XXVI OWE (2012/2013), zawody centralne",
+    "question": "Biuro Informacji Kredytowej:",
+    "options": [
+      "gromadzi i udostępnia informacje tylko o niesolidnych dłużnikach",
+      "jest własnością Skarbu Państwa",
+      "wpisując do rejestru osobę, która nie spłaciła kredytu, nie potrzebuje jej zgody",
+      "może wymieniać się z biurami informacji gospodarczej informacjami o zobowiązaniach z innych tytułów niż zobowiązania kredytowe"
+    ],
+    "correct": [
+      2,
+      3
+    ],
+    "explanation": "BIK gromadzi informacje o wszystkich kredytobiorcach – także terminowo spłacających (A – fałsz) – i jest własnością banków (ZBP), a nie Skarbu Państwa (B). Nie potrzebuje zgody klienta na przetwarzanie danych o niespłaconym kredycie (C) i może wymieniać dane z biurami informacji gospodarczej (D)."
+  },
+  {
+    "id": "owe26-c-24",
+    "type": "multi",
+    "edition": "XXVI OWE (2012/2013), zawody centralne",
+    "question": "W rachunkowości zasada, w myśl której w księgach rachunkowych jednostki należy ująć wszystkie przychody i koszty dotyczące danego okresu, niezależnie od terminu ich zapłaty, nazywa się:",
+    "options": [
+      "zasadą ostrożności",
+      "zasadą memoriałową",
+      "zasadą kontynuacji działania",
+      "zasadą współmierności"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Zasada memoriałowa nakazuje ujmować w księgach wszystkie przychody i koszty dotyczące danego okresu, niezależnie od terminu zapłaty (B). Zasada współmierności łączy koszty z przychodami, które przyniosły."
+  },
+  {
+    "id": "owe26-c-25",
+    "type": "multi",
+    "edition": "XXVI OWE (2012/2013), zawody centralne",
+    "question": "Proces przekształcania niepłynnych i nierynkowych aktywów finansowych w instrumenty finansowe, które mogą być przedmiotem transakcji na rynku kapitałowym, to:",
+    "options": [
+      "sekurytyzacja",
+      "arbitraż",
+      "swap",
+      "clearing"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Sekurytyzacja to przekształcanie niepłynnych aktywów (np. portfeli kredytów, należności) w papiery wartościowe, którymi można handlować na rynku kapitałowym (A)."
+  },
+  {
+    "id": "owe26-c-26",
+    "type": "multi",
+    "edition": "XXVI OWE (2012/2013), zawody centralne",
+    "question": "Złoty spadochron to:",
+    "options": [
+      "strategia rynkowa firmy polegająca na kierowaniu nowej oferty tylko do najzamożniejszych klientów",
+      "potoczne określenie kluczowych menedżerów rekrutowanych spoza firmy",
+      "rodzaj długoterminowych kontraktów zabezpieczających firmę przed spadkiem liczby zamówień w sytuacji pogorszenia koniunktury",
+      "jeden ze sposobów obrony firmy przed wrogim przejęciem"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Złoty spadochron to umowa gwarantująca menedżerom wysokie odprawy w razie utraty stanowiska po przejęciu spółki. Podnosi koszty przejęcia, więc jest jednym ze sposobów obrony przed wrogim przejęciem (D)."
+  },
+  {
+    "id": "owe26-c-27",
+    "type": "multi",
+    "edition": "XXVI OWE (2012/2013), zawody centralne",
+    "question": "Do badania kompetencji pracowników można wykorzystać:",
+    "options": [
+      "assessment center",
+      "projekcję treści wieloznacznych",
+      "wystandaryzowaną kartę walidacji",
+      "metodę 360 stopni"
+    ],
+    "correct": [
+      0,
+      3
+    ],
+    "explanation": "Do oceny kompetencji pracowników stosuje się m.in. assessment center (A – zadania symulacyjne oceniane przez obserwatorów) i metodę 360 stopni (D – ocena przez przełożonych, współpracowników, podwładnych i klientów)."
+  },
+  {
+    "id": "owe26-c-28",
+    "type": "multi",
+    "edition": "XXVI OWE (2012/2013), zawody centralne",
+    "question": "Organizacja oparta na tworzeniu, nabywaniu i przekazywaniu wiedzy, a także gotowa na zmianę swojego zachowania pod wpływem nowych okoliczności rynkowych to organizacja:",
+    "options": [
+      "ucząca się",
+      "zorientowana strategicznie",
+      "ultrakonkurencyjna",
+      "przedsiębiorcza"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Organizacja ucząca się (P. Senge) stale tworzy, zdobywa i przekazuje wiedzę oraz zmienia swoje zachowanie pod wpływem nowej wiedzy i zmian w otoczeniu (A)."
+  },
+  {
+    "id": "owe26-c-29",
+    "type": "multi",
+    "edition": "XXVI OWE (2012/2013), zawody centralne",
+    "question": "Które stwierdzenie najlepiej charakteryzuje misję przedsiębiorstwa?",
+    "options": [
+      "określa najważniejsze obszary działania przedsiębiorstwa",
+      "definiuje cel lub powód istnienia przedsiębiorstwa",
+      "wyznacza ramowy zakres odpowiedzialności ścisłego kierownictwa przedsiębiorstwa",
+      "wskazuje, do czego dąży przedsiębiorstwo w średnio- i długookresowym horyzoncie"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Misja określa ogólny cel i powód istnienia przedsiębiorstwa – po co istnieje, komu i jakim wartościom służy (B). Kierunki dążenia w średnim i długim okresie (D) opisują wizja i cele strategiczne."
+  },
+  {
+    "id": "owe26-c-30",
+    "type": "multi",
+    "edition": "XXVI OWE (2012/2013), zawody centralne",
+    "question": "W macierzy Boston Consulting Group mianem „psy” określa się produkty przedsiębiorstwa, które charakteryzują się:",
+    "options": [
+      "relatywnie niskim udziałem w rynku, który wolno się rozwija",
+      "relatywnie wysokim udziałem w rynku, który wolno się rozwija",
+      "relatywnie niskim udziałem w rynku, który szybko się rozwija",
+      "relatywnie wysokim udziałem w rynku, który szybko się rozwija"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W macierzy BCG „psy” to produkty o niskim względnym udziale w wolno rosnącym rynku (A) – zwykle przynoszą małe zyski i są kandydatami do wycofania."
+  }
+]

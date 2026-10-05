@@ -1,0 +1,497 @@
+[
+  {
+    "id": "owe30-c-01",
+    "type": "multi",
+    "edition": "XXX OWE (2016/2017), zawody centralne",
+    "question": "Bankiem centralnym, który posłużył jako rozwiązanie modelowe dla Europejskiego Banku Centralnego, był:",
+    "options": [
+      "Deutsche Bundesbank (niemiecki bank centralny)",
+      "Banque de France (Bank Francji)",
+      "System Rezerwy Federalnej USA",
+      "Banca d’Italia (Bank Włoch)"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Europejski Bank Centralny wzorowano na niemieckim Bundesbanku – niezależnym banku centralnym, nastawionym przede wszystkim na stabilność cen; siedziba EBC mieści się we Frankfurcie (A)."
+  },
+  {
+    "id": "owe30-c-02",
+    "type": "multi",
+    "edition": "XXX OWE (2016/2017), zawody centralne",
+    "question": "W obliczu kryzysu finansowego w 2008 r. Narodowy Bank Polski zdecydował się na:",
+    "options": [
+      "wykorzystanie swapów walutowych",
+      "podniesienie podstawowej stopy rezerwy obowiązkowej",
+      "wydłużenie terminu zapadalności transakcji repo",
+      "zwiększenie wysokości stosowanych wskaźników haircuts"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "W kryzysie 2008 r. NBP przyjął „Pakiet zaufania”: m.in. swapy walutowe, by dostarczyć bankom walut obcych (A), i operacje repo o dłuższym terminie zapadalności (C), by zapewnić płynność złotowa. Nie podnosił stopy rezerw i nie zaostrzał haircutów."
+  },
+  {
+    "id": "owe30-c-03",
+    "type": "multi",
+    "edition": "XXX OWE (2016/2017), zawody centralne",
+    "question": "W przypadku wystąpienia pułapki płynności nieefektywne staje się stosowanie:",
+    "options": [
+      "polityki pieniężnej",
+      "polityki fiskalnej",
+      "automatycznych stabilizatorów koniunktury",
+      "pakietów zwiększających wydatki rządowe na zakup dóbr i usług"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W pułapce płynności stopy procentowe są bliskie zera i zwiększanie podaży pieniądza nie obniża ich dalej – polityka pieniężna staje się nieskuteczna (A). Skuteczna pozostaje polityka fiskalna."
+  },
+  {
+    "id": "owe30-c-04",
+    "type": "multi",
+    "edition": "XXX OWE (2016/2017), zawody centralne",
+    "question": "H. Minsky jest autorem:",
+    "options": [
+      "koncepcji niewidzialnej ręki rynku",
+      "hipotezy o niestabilności rynków finansowych",
+      "hipotezy rynków efektywnych",
+      "teorii racjonalnych oczekiwań"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Hyman Minsky sformułował hipotezę niestabilności finansowej: długie okresy stabilności zachęcają do coraz ryzykowniejszego zadłużania (od finansowania zabezpieczonego, przez spekulacyjne, po Ponziego), co prowadzi do kryzysów (B)."
+  },
+  {
+    "id": "owe30-c-05",
+    "type": "multi",
+    "edition": "XXX OWE (2016/2017), zawody centralne",
+    "question": "Prawdą jest, że:",
+    "options": [
+      "bezrobocie frykcyjne wynika stąd, że ludzie potrzebują czasu na znalezienie pracy, która im najbardziej odpowiada",
+      "bezrobocie frykcyjne to inaczej bezrobocie naturalne",
+      "bezpośrednim rezultatem wahań cyklu koniunkturalnego jest bezrobocie strukturalne",
+      "zgodnie z prawem Okuna poziom bezrobocia naturalnego zależy od wielkości nadwyżki na rachunku obrotów bieżących"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Bezrobocie frykcyjne wynika z czasu potrzebnego na znalezienie pracy najlepiej dopasowanej do kwalifikacji i oczekiwań (A). Jest tylko częścią bezrobocia naturalnego (B), wahania koniunktury powodują bezrobocie cykliczne (C), a prawo Okuna dotyczy związku bezrobocia z luką PKB (D)."
+  },
+  {
+    "id": "owe30-c-06",
+    "type": "multi",
+    "edition": "XXX OWE (2016/2017), zawody centralne",
+    "question": "Które z poniższych dóbr cechuje się najniższą elastycznością cenową popytu:",
+    "options": [
+      "insulina",
+      "bilety do kina",
+      "piłki tenisowe",
+      "książki przygodowe"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Insulina jest niezbędna do życia i nie ma substytutów, więc popyt na nią jest najmniej elastyczny cenowo (A). Bilety do kina, piłki tenisowe i książki to dobra, z których łatwo zrezygnować."
+  },
+  {
+    "id": "owe30-c-07",
+    "type": "multi",
+    "edition": "XXX OWE (2016/2017), zawody centralne",
+    "question": "Które z poniższych stwierdzeń charakteryzuje q-Tobina:",
+    "options": [
+      "to relacja rynkowej wartości przedsiębiorstwa do wielkości kredytu, jaki dana firma musiałaby zaciągnąć w celu odtworzenia swojego majątku",
+      "im wyższa jest wartość q-Tobina, tym tańsze staje się pozyskiwanie kapitału dla przedsiębiorstwa",
+      "im niższa jest wartość q-Tobina, tym tańsze staje się pozyskiwanie kapitału dla przedsiębiorstwa",
+      "w okresach przyspieszonego wzrostu gospodarczego przyjmuje wartości mniejsze od 0"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "q Tobina = rynkowa wartość firmy / koszt odtworzenia jej majątku (w kluczu ujęty jako kredyt potrzebny do odtworzenia majątku – A). Gdy q jest wysokie, rynek wysoko wycenia firmę, więc pozyskiwanie kapitału przez emisję akcji jest relatywnie tanie (B) i opłaca się inwestować."
+  },
+  {
+    "id": "owe30-c-08",
+    "type": "multi",
+    "edition": "XXX OWE (2016/2017), zawody centralne",
+    "question": "Prawdą jest, że:",
+    "options": [
+      "przykładem odwróconej krzywej dochodowości jest sytuacja, w której rentowność 3-letnich obligacji skarbowych jest wyższa niż rentowność 10-letnich obligacji tego samego emitenta",
+      "odwrócona krzywa dochodowości jest jedynie koncepcją teoretyczną i nie może wystąpić w rzeczywistości",
+      "odwrócona krzywa dochodowości może być wykorzystywana w przewidywaniu recesji, choć skuteczność takich prognoz zmniejsza się w warunkach skrajnie niskich stóp procentowych",
+      "odwrócona krzywa dochodowości to sytuacja, w której rentowność instrumentów finansowych o takim samym ryzyku kredytowym jest większa w przypadku instrumentów długoterminowych niż krótkoterminowych"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "Odwrócona krzywa dochodowości to sytuacja, gdy rentowność obligacji krótkoterminowych przewyższa długoterminowe (np. 3-latki powyżej 10-latek – A). Występuje w praktyce i często zapowiada recesję, choć przy bardzo niskich stopach jest to mniej wiarygodny sygnał (C). D opisuje normalną krzywą."
+  },
+  {
+    "id": "owe30-c-09",
+    "type": "multi",
+    "edition": "XXX OWE (2016/2017), zawody centralne",
+    "question": "Które z poniższych zdań dotyczących dóbr Veblena jest prawdziwe:",
+    "options": [
+      "w przypadku dóbr Veblena krzywa popytu jest doskonale elastyczna",
+      "występowanie dóbr Veblena jest rezultatem owczego pędu",
+      "w przypadku dóbr Veblena krzywa popytu ma nachylenie dodatnie",
+      "dobra Veblena to inaczej dobra niższego rzędu"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Dobra Veblena to dobra prestiżowe, na które popyt rośnie wraz z ceną – krzywa popytu ma nachylenie dodatnie (C). Nie są dobrami niższego rzędu (D), a efekt owczego pędu (B) to inne zjawisko."
+  },
+  {
+    "id": "owe30-c-10",
+    "type": "multi",
+    "edition": "XXX OWE (2016/2017), zawody centralne",
+    "question": "Miarą inflacji bazowej jest/są:",
+    "options": [
+      "inflacja po wyłączeniu cen żywności i energii",
+      "inflacja po wyłączeniu cen administrowanych",
+      "wskaźnik cen konsumpcyjnych",
+      "inflacja po wyłączeniu cen najmniej zmiennych"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "Inflacja bazowa wyklucza najbardziej zmienne lub niezależne od polityki pieniężnej ceny. NBP publikuje m.in. inflację po wyłączeniu cen żywności i energii (A) oraz po wyłączeniu cen administrowanych (B). D jest błędne – wyłącza się ceny najbardziej, a nie najmniej zmienne."
+  },
+  {
+    "id": "owe30-c-11",
+    "type": "multi",
+    "edition": "XXX OWE (2016/2017), zawody centralne",
+    "question": "Załóżmy, że wielkość agregatu M1 wynosi 800 mld zł, wkłady w bankach płatne na żądanie (depozyty bieżące) wynoszą 600 mld zł, a pieniądz bezgotówkowy banków komercyjnych na rachunkach w banku centralnym 50 mld zł. Mnożnik kreacji pieniądza wynosi więc:",
+    "options": [
+      "0,06",
+      "0,75",
+      "1,42",
+      "3,20"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "M1 = gotówka + depozyty bieżące, więc gotówka = 800 − 600 = 200 mld zł. Baza monetarna = gotówka + rezerwy banków = 200 + 50 = 250 mld zł. Mnożnik kreacji pieniądza = M1 / baza = 800 / 250 = 3,2 (D)."
+  },
+  {
+    "id": "owe30-c-12",
+    "type": "multi",
+    "edition": "XXX OWE (2016/2017), zawody centralne",
+    "question": "Podstawowe problemy związane ze stosowaniem reguły Taylora w prowadzeniu polityki pieniężnej to:",
+    "options": [
+      "konieczność szacowania wielkości luki popytowej",
+      "konieczność szacowania wielkości naturalnej stopy procentowej",
+      "konieczność szacowania wielkości nominalnego salda sektora instytucji rządowych i samorządowych",
+      "konieczność szacowania wielkości salda pierwotnego sektora instytucji rządowych i samorządowych"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "Reguła Taylora wymaga oszacowania luki popytowej (produkcyjnej – A) i naturalnej (neutralnej) stopy procentowej (B) – obie wielkości są nieobserwowalne i trudne do oszacowania. Salda sektora finansów publicznych (C, D) nie występują w regule."
+  },
+  {
+    "id": "owe30-c-13",
+    "type": "multi",
+    "edition": "XXX OWE (2016/2017), zawody centralne",
+    "question": "W związku z wahaniami cyklu koniunkturalnego zmianie ulega bezpośrednio (ceteris paribus):",
+    "options": [
+      "saldo nominalne sektora instytucji rządowych i samorządowych",
+      "saldo cykliczne sektora instytucji rządowych i samorządowych",
+      "saldo strukturalne sektora instytucji rządowych i samorządowych",
+      "saldo strukturalne tylko sektora samorządowego"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "Wahania koniunktury zmieniają saldo cykliczne finansów publicznych (B – np. w recesji spadają podatki, rosną zasiłki), a przez nie także saldo nominalne (A). Saldo strukturalne z definicji jest oczyszczone z wpływu cyklu (C, D)."
+  },
+  {
+    "id": "owe30-c-14",
+    "type": "multi",
+    "edition": "XXX OWE (2016/2017), zawody centralne",
+    "question": "W ramach układu kalkulacyjnego kosztów koszty zarządu zalicza się do:",
+    "options": [
+      "płac bezpośrednich",
+      "innych kosztów bezpośrednich",
+      "kosztów bezpośrednich",
+      "kosztów pośrednich"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "W układzie kalkulacyjnym koszty ogólnego zarządu to koszty pośrednie – nie da się ich przypisać bezpośrednio do konkretnych produktów (D)."
+  },
+  {
+    "id": "owe30-c-15",
+    "type": "multi",
+    "edition": "XXX OWE (2016/2017), zawody centralne",
+    "question": "W ramach programu luzowania ilościowego (Large-Scale Asset Purchases) System Rezerwy Federalnej USA nabywał:",
+    "options": [
+      "obligacje rządowe",
+      "obligacje wyemitowane przez największe przedsiębiorstwa wchodzące w skład indeksu S&P 500",
+      "obligacje wyemitowane przez bank Lehman Brothers",
+      "certyfikaty depozytowe wyemitowane przez banki inwestycyjne"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W ramach programów luzowania ilościowego (LSAP, 2008–2014) Fed kupował długoterminowe obligacje rządowe USA (A) oraz papiery zabezpieczone hipotekami (MBS) i dług agencji rządowych."
+  },
+  {
+    "id": "owe30-c-16",
+    "type": "multi",
+    "edition": "XXX OWE (2016/2017), zawody centralne",
+    "question": "Za prowadzeniem ekspansywnej polityki pieniężnej przemawia:",
+    "options": [
+      "płaska krzywa Phillipsa",
+      "doskonale nieelastyczna krzywa Phillipsa",
+      "występowanie ujemnej luki popytowej",
+      "występowanie dodatniej luki popytowej"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "Ekspansywna polityka pieniężna jest uzasadniona przy ujemnej luce popytowej (gospodarka poniżej potencjału – C). Płaska krzywa Phillipsa (A) oznacza, że pobudzanie gospodarki powoduje niewielki wzrost inflacji, więc koszt takiej polityki jest mały."
+  },
+  {
+    "id": "owe30-c-17",
+    "type": "multi",
+    "edition": "XXX OWE (2016/2017), zawody centralne",
+    "question": "Które z poniższych zdań dotyczących cykli koniunkturalnych jest prawdziwe:",
+    "options": [
+      "cykle Kondratiewa związane są z odkryciami lub ważnymi innowacjami technicznymi oraz procesem ich rozprzestrzeniania się",
+      "cykle Kitchina to cykle krótkie trwające 3—4 lata",
+      "cykle Juglara trwają od 40 do 60 lat",
+      "cykle Kuznetsa związane są ze zmianami zapasów oraz cen hurtowych przez przedsiębiorstwa"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "Cykle Kondratiewa (40–60 lat) wiążą się z przełomowymi innowacjami i ich rozprzestrzenianiem (A), a cykle Kitchina to krótkie cykle zapasowe trwające 3–4 lata (B). Cykle Juglara trwają 7–11 lat (C – fałsz), a cykle Kuznetsa (15–25 lat) wiążą się z budownictwem i demografią (D – fałsz)."
+  },
+  {
+    "id": "owe30-c-18",
+    "type": "multi",
+    "edition": "XXX OWE (2016/2017), zawody centralne",
+    "question": "Początkowo funkcja popytu na rowery opisana była wzorem q = −p + 10, funkcja podaży rowerów q = p, a punkt równowagi E = (5, 5). W związku z modą na zdrowe życie krzywa popytu uległa przesunięciu i obecnie opisana jest wzorem q = −p + 12, stąd punkt równowagi E’ = (6, 6). Oblicz przyrost nadwyżki producenta dla nowych sprzedawców:",
+    "options": [
+      "0,5",
+      "1",
+      "2",
+      "12"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Nowi sprzedawcy to ci, którzy wchodzą na rynek przy wzroście ilości z 5 do 6 sztuk. Ich nadwyżka producenta to trójkąt między nową ceną (6) a krzywą podaży (p = q) dla ilości od 5 do 6: ½ · 1 · (6 − 5) = 0,5 (A)."
+  },
+  {
+    "id": "owe30-c-19",
+    "type": "multi",
+    "edition": "XXX OWE (2016/2017), zawody centralne",
+    "question": "Prawdą jest, że:",
+    "options": [
+      "zgodnie ze złotą zasadą budżetową majątek trwały powinien być w całości sfinansowany kapitałem własnym",
+      "kapitał obrotowy jest dodatni, gdy kapitał stały jest większy od majątku trwałego",
+      "nadwyżka ze sprzedaży akcji powyżej ich wartości nominalnej powiększa kapitał podstawowy spółki",
+      "efekt dźwigni finansowej zawsze pozytywnie wpływa na rentowność kapitału własnego"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Kapitał obrotowy netto = kapitał stały − majątek trwały; jest dodatni, gdy kapitał stały przewyższa majątek trwały (B). Złota zasada dotyczy finansowania bilansowego, nie budżetowego (A), nadwyżka ze sprzedaży akcji (agio) zasila kapitał zapasowy (C), a dźwignia finansowa może też obniżać ROE (D)."
+  },
+  {
+    "id": "owe30-c-20",
+    "type": "multi",
+    "edition": "XXX OWE (2016/2017), zawody centralne",
+    "question": "W gospodarce zamkniętej całkowite wydatki kształtują się w sposób następujący: konsumpcja = 2400; inwestycje = 800; zakupy rządowe = 600; transfery rządowe = 400; podatki = 1000. Wielkość oszczędności prywatnych to:",
+    "options": [
+      "600",
+      "800",
+      "2400",
+      "3800"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Y = C + I + G = 2400 + 800 + 600 = 3800. Dochód rozporządzalny = Y − podatki + transfery = 3800 − 1000 + 400 = 3200. Oszczędności prywatne = 3200 − 2400 = 800 (B)."
+  },
+  {
+    "id": "owe30-c-21",
+    "type": "multi",
+    "edition": "XXX OWE (2016/2017), zawody centralne",
+    "question": "Zaznacz zdanie lub zdania prawidłowo przedstawiające cechy typowych krzywych obojętności:",
+    "options": [
+      "konsument woli wyżej położone krzywe obojętności od niżej położonych krzywych obojętności",
+      "krzywe obojętności mają ujemne nachylenie",
+      "krzywe obojętności przecinają się",
+      "krzywe obojętności są wygięte w kierunku początku układu współrzędnych"
+    ],
+    "correct": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Typowe krzywe obojętności: wyżej położona krzywa oznacza większą użyteczność (A), mają ujemne nachylenie (B) i są wypukłe w kierunku początku układu (D – malejąca krańcowa stopa substytucji). Nie przecinają się (C)."
+  },
+  {
+    "id": "owe30-c-22",
+    "type": "multi",
+    "edition": "XXX OWE (2016/2017), zawody centralne",
+    "question": "Zgodnie z twierdzeniem Coase’a:",
+    "options": [
+      "podmioty prywatne są w stanie samodzielnie rozwiązać problem efektów zewnętrznych, jeżeli mogą negocjować na temat alokacji zasobów, nie ponosząc przy tym kosztów transakcyjnych",
+      "głosowanie większościowe zawsze doprowadzi do wyboru rozwiązania preferowanego przez środkowego głosującego",
+      "podmioty prywatne są w stanie samodzielnie rozwiązać problem asymetrii informacyjnej, jeżeli mogą negocjować na temat alokacji zasobów, nie ponosząc przy tym kosztów transakcyjnych",
+      "podmioty prywatne nie są w stanie samodzielnie rozwiązać problemu asymetrii informacyjnej, niezależnie od występowania kosztów transakcyjnych"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Twierdzenie Coase'a: jeśli prawa własności są określone, a koszty transakcyjne zerowe, prywatne strony same wynegocjują efektywne rozwiązanie problemu efektów zewnętrznych (A). Nie dotyczy asymetrii informacji (C, D), a B opisuje twierdzenie o medianowym wyborcy."
+  },
+  {
+    "id": "owe30-c-23",
+    "type": "multi",
+    "edition": "XXX OWE (2016/2017), zawody centralne",
+    "question": "Podatkami stanowiącymi dochód własny gmin w Polsce są:",
+    "options": [
+      "podatek od nieruchomości",
+      "podatek leśny",
+      "podatek od towarów i usług",
+      "akcyza"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "Dochodami własnymi gmin są m.in. podatek od nieruchomości (A) i podatek leśny (B). VAT i akcyza (C, D) to dochody budżetu państwa."
+  },
+  {
+    "id": "owe30-c-24",
+    "type": "multi",
+    "edition": "XXX OWE (2016/2017), zawody centralne",
+    "question": "Zgodnie z teorią wyboru konsumenta:",
+    "options": [
+      "efekt dochodowy zawsze niweluje działanie efektu substytucji",
+      "w przypadku gdy jedno z rozpatrywanych dóbr jest dla konsumenta dobrem niechcianym, krzywe obojętności są funkcjami rosnącymi",
+      "w optimum konsumenta krańcowa stopa substytucji zrównuje się ze stosunkiem cen dóbr",
+      "w przypadku dobra niższego rzędu zwiększenie dochodu konsumenta skutkuje zwiększeniem się popytu na to dobro"
+    ],
+    "correct": [
+      1,
+      2
+    ],
+    "explanation": "Gdy jedno dobro jest niechciane, aby zachować tę samą użyteczność, trzeba zwiększać oba dobra – krzywe obojętności są rosnące (B). W optimum krańcowa stopa substytucji równa się stosunkowi cen (C). Efekt dochodowy nie zawsze niweluje substytucyjny (A), a popyt na dobro niższego rzędu maleje przy wzroście dochodu (D)."
+  },
+  {
+    "id": "owe30-c-25",
+    "type": "multi",
+    "edition": "XXX OWE (2016/2017), zawody centralne",
+    "question": "Przedsiębiorstwo X dokonało splitu akcji. Które z poniższych zdań jest prawdziwe:",
+    "options": [
+      "zwiększył się jego wskaźnik ROE",
+      "jego wskaźnik ROE nie uległ zmianie",
+      "zmniejszył się jego wskaźnik zyskowności jednej akcji (EPS)",
+      "zmniejszył się jego wskaźnik stopy wypłaty dywidendy (DPR)"
+    ],
+    "correct": [
+      1,
+      2
+    ],
+    "explanation": "Split zwiększa liczbę akcji bez zmiany kapitału własnego i zysku, więc zysk na jedną akcję (EPS) maleje (C), a ROE się nie zmienia (B). Stopa wypłaty dywidendy (dywidenda / zysk) też się nie zmienia (D)."
+  },
+  {
+    "id": "owe30-c-26",
+    "type": "multi",
+    "edition": "XXX OWE (2016/2017), zawody centralne",
+    "question": "Które z poniższych określeń charakteryzuje macierzową formę struktury organizacyjnej:",
+    "options": [
+      "nazywana jest również strukturą typu U",
+      "jest to struktura organizacyjna wykorzystywana przez organizacje składające się z wielu niepowiązanych ze sobą jednostek",
+      "nazywana jest również strukturą typu H",
+      "jest to struktura organizacyjna oparta na dwóch nakładających się kryteriach podziału na wydziały"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Struktura macierzowa łączy dwa nakładające się kryteria podziału – np. funkcjonalne i projektowe (produktowe) – a pracownik podlega dwóm przełożonym (D). Struktura typu U to struktura funkcjonalna, typu H – konglomeratowa."
+  },
+  {
+    "id": "owe30-c-27",
+    "type": "multi",
+    "edition": "XXX OWE (2016/2017), zawody centralne",
+    "question": "Do tzw. „wielkiej piątki” cech osobowości zaliczamy:",
+    "options": [
+      "sumienność",
+      "autorytaryzm",
+      "otwartość",
+      "poczucie własnej wartości"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "Model wielkiej piątki obejmuje: sumienność (A), otwartość na doświadczenia (C), ugodowość, ekstrawersję i neurotyczność (negatywną emocjonalność). Autorytaryzm i poczucie własnej wartości to inne cechy."
+  },
+  {
+    "id": "owe30-c-28",
+    "type": "multi",
+    "edition": "XXX OWE (2016/2017), zawody centralne",
+    "question": "Do otoczenia zadaniowego organizacji zalicza się:",
+    "options": [
+      "klientów",
+      "pracowników",
+      "właścicieli",
+      "dostawców"
+    ],
+    "correct": [
+      0,
+      3
+    ],
+    "explanation": "Otoczenie zadaniowe to podmioty zewnętrzne, z którymi organizacja bezpośrednio współdziała: klienci (A), dostawcy (D), konkurenci, regulatorzy. Pracownicy i właściciele należą do środowiska wewnętrznego."
+  },
+  {
+    "id": "owe30-c-29",
+    "type": "multi",
+    "edition": "XXX OWE (2016/2017), zawody centralne",
+    "question": "W ramach sieci komunikacji zgodnej z wzorcem „koła od wozu”:",
+    "options": [
+      "żaden z członków grupy nie zajmuje pozycji centralnej",
+      "komunikacja odbywa się bezpośrednio pomiędzy wszystkimi członkami zespołu",
+      "każdy z członków zespołu bezpośrednio komunikuje się z co najmniej trzema innymi członkami",
+      "cała komunikacja przebiega przez osobę zajmującą centralną pozycję"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "We wzorcu „koła od wozu” (gwiazdy) jedna osoba zajmuje pozycję centralną i cała komunikacja przebiega przez nią (D) – pozostali nie komunikują się ze sobą bezpośrednio."
+  },
+  {
+    "id": "owe30-c-30",
+    "type": "multi",
+    "edition": "XXX OWE (2016/2017), zawody centralne",
+    "question": "„Rada Polityki Pieniężnej nie zamierza podwyższać stopy banku centralnego z obecnego poziomu 0,5% przynajmniej do czasu, gdy stopa bezrobocia nie spadnie poniżej 7%”. Taki komunikat jest przykładem:",
+    "options": [
+      "luzowania ilościowego",
+      "luzowania jakościowego",
+      "asymetrycznego korytarza stóp procentowych",
+      "forward guidance"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Forward guidance to zapowiadanie przez bank centralny przyszłej polityki pieniężnej, często powiązanej z warunkami gospodarczymi – np. „nie podniesiemy stóp, dopóki bezrobocie nie spadnie poniżej 7%” (D)."
+  }
+]

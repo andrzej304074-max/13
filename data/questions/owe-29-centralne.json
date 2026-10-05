@@ -1,0 +1,499 @@
+[
+  {
+    "id": "owe29-c-01",
+    "type": "multi",
+    "edition": "XXIX OWE (2015/2016), zawody centralne",
+    "question": "Jakie konsekwencje dla krajowego rynku musztardy będzie miał spadek jej eksportu (ceteris paribus)?",
+    "options": [
+      "zmniejszenie importu",
+      "wzrost podaży",
+      "spadek ceny rynkowej",
+      "wzrost popytu"
+    ],
+    "correct": [
+      1,
+      2
+    ],
+    "explanation": "Spadek eksportu sprawia, że więcej musztardy trafia na rynek krajowy – podaż krajowa rośnie (B), a cena rynkowa spada (C). Popyt krajowy się nie zmienia."
+  },
+  {
+    "id": "owe29-c-02",
+    "type": "multi",
+    "edition": "XXIX OWE (2015/2016), zawody centralne",
+    "question": "Paradoks Veblena:",
+    "options": [
+      "jest tożsamy z efektem owczego pędu",
+      "wyjaśnia sytuację, w której wzrost ceny powoduje wzrost wielkości popytu",
+      "jest wyjątkiem od prawa podaży",
+      "uchyla założenie ceteris paribus"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Paradoks (efekt) Veblena: wzrost ceny dobra prestiżowego zwiększa wielkość popytu, bo wyższa cena podnosi jego status (B). To wyjątek od prawa popytu (nie podaży – C). Efekt owczego pędu (A) wynika z naśladowania innych, a nie z ceny."
+  },
+  {
+    "id": "owe29-c-03",
+    "type": "multi",
+    "edition": "XXIX OWE (2015/2016), zawody centralne",
+    "question": "Funkcję popytu indywidualnego na dobro B można wyznaczyć z krzywych obojętności konsumenta i jego linii ograniczenia budżetowego poprzez zmianę:",
+    "options": [
+      "wyłącznie preferencji konsumenta",
+      "dochodu realnego i ceny dóbr innych niż dobra B",
+      "preferencji konsumenta i dochodu realnego",
+      "wyłącznie ceny dobra B"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Krzywą popytu indywidualnego wyznacza się, zmieniając wyłącznie cenę dobra B (przy stałych preferencjach, dochodzie i cenach innych dóbr) i znajdując kolejne punkty optimum konsumenta – tzw. ścieżkę cena–konsumpcja (D)."
+  },
+  {
+    "id": "owe29-c-04",
+    "type": "multi",
+    "edition": "XXIX OWE (2015/2016), zawody centralne",
+    "question": "Załóżmy, że konsument, znajdując się w równowadze, wydaje na każde dobro taką samą kwotę. Które z poniższych stwierdzeń jest prawdziwe?",
+    "options": [
+      "ceny rozpatrywanych dóbr muszą być identyczne",
+      "użyteczność całkowita każdego dobra musi być identyczna",
+      "jeżeli cena pierwszego dobra jest cztery razy większa niż cena drugiego dobra, to użyteczność krańcowa ostatniej konsumowanej jednostki pierwszego dobra musi być cztery razy większa od użyteczności krańcowej ostatniej konsumowanej jednostki drugiego dobra",
+      "taka sytuacja nie jest możliwa"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "W równowadze konsumenta MU₁ / P₁ = MU₂ / P₂. Jeśli cena pierwszego dobra jest 4 razy wyższa, to użyteczność krańcowa ostatniej jednostki pierwszego dobra musi być 4 razy wyższa (C). Taka sama kwota wydana na każde dobro nie wymaga równych cen (A) ani równych użyteczności całkowitych (B)."
+  },
+  {
+    "id": "owe29-c-05",
+    "type": "multi",
+    "edition": "XXIX OWE (2015/2016), zawody centralne",
+    "question": "Krańcowa stopa technicznej substytucji pracy kapitałem to iloraz:",
+    "options": [
+      "zmiany wielkości nakładu pracy i zmiany wielkości nakładu kapitału",
+      "produkcyjności krańcowej pracy i produkcyjności krańcowej kapitału",
+      "produkcyjności krańcowej kapitału i produkcyjności krańcowej pracy",
+      "produkcyjności krańcowej pracy i ceny kapitału"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "Krańcowa stopa technicznej substytucji pracy kapitałem pokazuje, o ile można zmniejszyć nakład pracy przy zwiększeniu kapitału o jednostkę, by produkcja się nie zmieniła: ∆L / ∆K (A), co równa się ilorazowi produktów krańcowych MPK / MPL (C)."
+  },
+  {
+    "id": "owe29-c-06",
+    "type": "multi",
+    "edition": "XXIX OWE (2015/2016), zawody centralne",
+    "question": "Które z podanych równań są prawdziwe?",
+    "options": [
+      "zysk ekonomiczny – koszty alternatywne = zysk księgowy",
+      "zysk ekonomiczny = zysk księgowy – koszty alternatywne",
+      "koszty alternatywne = zysk ekonomiczny – koszty księgowe",
+      "zysk normalny = zysk księgowy – koszty alternatywne"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Zysk ekonomiczny = zysk księgowy − koszty alternatywne (B). Pozostałe równania są przekształcone błędnie; zysk normalny oznacza zerowy zysk ekonomiczny."
+  },
+  {
+    "id": "owe29-c-07",
+    "type": "multi",
+    "edition": "XXIX OWE (2015/2016), zawody centralne",
+    "question": "Wartość krańcowego produktu pracy to:",
+    "options": [
+      "iloczyn krańcowego produktu pracy (w jednostkach fizycznych) i kosztów wytworzenia produktu",
+      "iloczyn krańcowego produktu pracy (w jednostkach fizycznych) i ceny sprzedaży wytworzonego produktu",
+      "iloczyn krańcowego produktu pracy (w jednostkach fizycznych) i stawki płacy",
+      "różnica pomiędzy krańcowym przychodem z pracy a zmianą kosztów krańcowych przedsiębiorstwa związanych z zatrudnieniem kolejnego pracownika"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Wartość krańcowego produktu pracy (VMPL) = krańcowy produkt pracy (w sztukach) × cena sprzedaży produktu (B). W konkurencji doskonałej na rynku dóbr równa się krańcowemu przychodowi z pracy."
+  },
+  {
+    "id": "owe29-c-08",
+    "type": "multi",
+    "edition": "XXIX OWE (2015/2016), zawody centralne",
+    "question": "Wraz ze wzrostem dochodów typowego konsumenta można oczekiwać, że użyteczność całkowita jego dochodów będzie:",
+    "options": [
+      "rosła w tempie bardziej niż proporcjonalnym",
+      "malała w tempie bardziej niż proporcjonalnym",
+      "rosła w tempie mniej niż proporcjonalnym",
+      "malała w tempie mniej niż proporcjonalnym"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Zgodnie z prawem malejącej użyteczności krańcowej każda kolejna złotówka dochodu daje coraz mniejszy przyrost satysfakcji – użyteczność całkowita dochodu rośnie, ale wolniej niż dochód (C)."
+  },
+  {
+    "id": "owe29-c-09",
+    "type": "multi",
+    "edition": "XXIX OWE (2015/2016), zawody centralne",
+    "question": "Produkt krajowy brutto to:",
+    "options": [
+      "konsumpcja + inwestycje netto + wydatki rządowe (z transferami) + eksport netto",
+      "konsumpcja + inwestycje brutto + wydatki rządowe (bez transferów) + eksport netto",
+      "konsumpcja + inwestycje brutto + wydatki rządowe (z transferami) – eksport netto",
+      "konsumpcja + inwestycje netto + wydatki rządowe (bez transferów) – eksport netto"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "PKB (metoda wydatkowa) = konsumpcja + inwestycje brutto + wydatki rządowe na dobra i usługi (bez transferów) + eksport netto (B). Transfery (np. zasiłki) nie są zakupem dóbr i usług."
+  },
+  {
+    "id": "owe29-c-10",
+    "type": "multi",
+    "edition": "XXIX OWE (2015/2016), zawody centralne",
+    "question": "Krótkookresowa krzywa zagregowanej podaży przedstawia zależność między poziomem cen a poziomem:",
+    "options": [
+      "realnego PKB",
+      "nominalnego PKB",
+      "realnej stopy procentowej",
+      "inwestycji brutto"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Krótkookresowa krzywa zagregowanej podaży pokazuje zależność między ogólnym poziomem cen a realnym PKB (wielkością produkcji) – A."
+  },
+  {
+    "id": "owe29-c-11",
+    "type": "multi",
+    "edition": "XXIX OWE (2015/2016), zawody centralne",
+    "question": "Zastrzeżenia do wskaźnika cen towarów i usług konsumpcyjnych wynikają z tego, że nie uwzględnia on:",
+    "options": [
+      "zmian jakościowych produktów",
+      "cen dóbr importowanych",
+      "substytucji w procesie konsumpcji",
+      "wydatków na dobra trwałego użytku"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "Wskaźnik CPI jest krytykowany m.in. za to, że nie uwzględnia w pełni poprawy jakości produktów (A) i zastępowania przez konsumentów drożejących dóbr tańszymi (substytucji – C). Dlatego może zawyżać inflację. Uwzględnia ceny importowanych dóbr i dobra trwałe."
+  },
+  {
+    "id": "owe29-c-12",
+    "type": "multi",
+    "edition": "XXIX OWE (2015/2016), zawody centralne",
+    "question": "Warianty polityki gospodarczej możliwe do jednoczesnej realizacji w długim okresie to:",
+    "options": [
+      "niezależna polityka pieniężna, swobodny przepływ kapitału, płynny kurs walutowy",
+      "niezależna polityka pieniężna, swobodny przepływ kapitału, sztywny kurs walutowy",
+      "niezależna polityka pieniężna, kontrola przepływu kapitału, sztywny kurs walutowy",
+      "ograniczona suwerenność w zakresie polityki pieniężnej, swobodny przepływ kapitału, sztywny kurs walutowy"
+    ],
+    "correct": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Trylemat (niemożliwa trójca) Mundella–Fleminga: nie można jednocześnie mieć niezależnej polityki pieniężnej, swobodnego przepływu kapitału i sztywnego kursu (B – fałsz). Można wybrać dwa z trzech: niezależna polityka + swobodny kapitał + kurs płynny (A), niezależna polityka + kontrola kapitału + kurs sztywny (C) lub swobodny kapitał + kurs sztywny + rezygnacja z niezależności (D)."
+  },
+  {
+    "id": "owe29-c-13",
+    "type": "multi",
+    "edition": "XXIX OWE (2015/2016), zawody centralne",
+    "question": "Co ulegnie zmianie, jeśli 67-letni mężczyzna zwalnia się z pracy i przechodzi na emeryturę?",
+    "options": [
+      "zasób siły roboczej",
+      "stopa bezrobocia",
+      "wskaźnik aktywności zawodowej",
+      "populacja biernych zawodowo"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "Przejście na emeryturę oznacza przejście z grupy pracujących do biernych zawodowo. Zmniejsza się zasób siły roboczej (A), a więc zmienia się stopa bezrobocia (mianownik – B) i wskaźnik aktywności zawodowej (C), a rośnie populacja biernych zawodowo (D)."
+  },
+  {
+    "id": "owe29-c-14",
+    "type": "multi",
+    "edition": "XXIX OWE (2015/2016), zawody centralne",
+    "question": "Do wad systemu zarządu walutą (currency board) zalicza się:",
+    "options": [
+      "skokowy wzrost inflacji",
+      "całkowitą utratę niezależności polityki pieniężnej",
+      "niemożność realizacji przez bank centralny funkcji instytucji pożyczkodawcy ostatniej instancji",
+      "wysokie ryzyko kursowe"
+    ],
+    "correct": [
+      1,
+      2
+    ],
+    "explanation": "Zarząd waluty (currency board) to system, w którym emisja waluty krajowej jest w pełni pokryta rezerwami walutowymi po sztywnym kursie. Bank centralny traci niezależną politykę pieniężną (B) i nie może być pożyczkodawcą ostatniej instancji (C). Ryzyko kursowe i inflacja zwykle maleją."
+  },
+  {
+    "id": "owe29-c-15",
+    "type": "multi",
+    "edition": "XXIX OWE (2015/2016), zawody centralne",
+    "question": "W której z wymienionych spółek zgodnie z kodeksem spółek handlowych może zostać powołana rada nadzorcza?",
+    "options": [
+      "spółka jawna",
+      "spółka partnerska",
+      "spółka komandytowa",
+      "spółka komandytowo-akcyjna"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Rada nadzorcza może zostać powołana (fakultatywnie lub obowiązkowo przy większej liczbie akcjonariuszy) w spółce komandytowo-akcyjnej (D). W spółkach jawnej, partnerskiej i komandytowej Kodeks spółek handlowych jej nie przewiduje."
+  },
+  {
+    "id": "owe29-c-16",
+    "type": "multi",
+    "edition": "XXIX OWE (2015/2016), zawody centralne",
+    "question": "Problem podwójnego opodatkowania w spółkach kapitałowych dotyczy:",
+    "options": [
+      "podatku dochodowego od osób prawnych i podatku od dochodów kapitałowych",
+      "podatku od wartości dodanej (VAT) i podatku akcyzowego",
+      "podatku dochodowego od osób prawnych i podatku od nieruchomości",
+      "podatku od wartości dodanej (VAT) i podatku od nieruchomości"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Podwójne opodatkowanie w spółkach kapitałowych polega na tym, że zysk spółki jest opodatkowany CIT, a następnie wypłacona z niego dywidenda – podatkiem od dochodów kapitałowych u akcjonariusza (A)."
+  },
+  {
+    "id": "owe29-c-17",
+    "type": "multi",
+    "edition": "XXIX OWE (2015/2016), zawody centralne",
+    "question": "Asymetryczność skutków polityki pieniężnej przejawia się:",
+    "options": [
+      "większą skutecznością polityki antyinflacyjnej niż polityki pobudzania gospodarki",
+      "większą możliwością kontroli agregatów monetarnych niż stabilności kursu walutowego",
+      "większym wpływem na gospodarkę przeszłych decyzji niż bieżącej polityki pieniężnej",
+      "silniejszym oddziaływaniem na sferę finansową niż realną gospodarki"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Asymetria polityki pieniężnej: łatwiej jest hamować gospodarkę i inflację podwyżkami stóp, niż pobudzać ją obniżkami (bank centralny „może pociągnąć za sznurek, ale nie może go pchać”) – A."
+  },
+  {
+    "id": "owe29-c-18",
+    "type": "multi",
+    "edition": "XXIX OWE (2015/2016), zawody centralne",
+    "question": "Menedżer firmy, jadąc w trudnych warunkach atmosferycznych, wpadł w poślizg na śliskiej nawierzchni i uszkodził służbowy samochód. Koszt naprawy pękniętego zderzaka to 3 tys. zł. W polisie auto casco sumę ubezpieczenia określono na 80 tys. zł, franszyzę integralną ubezpieczyciel ustalił na 500 zł, natomiast franszyza redukcyjna została zniesiona. W tej sytuacji wysokość odszkodowania wypłacona przez ubezpieczyciela wyniesie:",
+    "options": [
+      "0 zł",
+      "500 zł",
+      "2500 zł",
+      "3000 zł"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Franszyza integralna 500 zł oznacza, że ubezpieczyciel nie wypłaca odszkodowań za szkody do 500 zł, ale szkody powyżej tej kwoty pokrywa w całości. Szkoda wynosi 3000 zł, a franszyzy redukcyjnej nie ma, więc odszkodowanie to 3000 zł (D)."
+  },
+  {
+    "id": "owe29-c-19",
+    "type": "multi",
+    "edition": "XXIX OWE (2015/2016), zawody centralne",
+    "question": "Jak nazywa się jednodniowa lokata na rynku międzybankowym, w której przypadku bank przekazuje pieniądze na lokatę w drugim dniu roboczym po zawarciu transakcji, a zwrotu domaga się następnego dnia roboczego?",
+    "options": [
+      "D/N",
+      "O/N",
+      "S/N",
+      "T/N"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "S/N (spot/next) to lokata, w której środki przekazuje się w dniu spot (drugi dzień roboczy po zawarciu transakcji), a zwraca następnego dnia roboczego (C). O/N zaczyna się w dniu zawarcia, a T/N – następnego dnia."
+  },
+  {
+    "id": "owe29-c-20",
+    "type": "multi",
+    "edition": "XXIX OWE (2015/2016), zawody centralne",
+    "question": "W Polsce podstawą opodatkowania w podatku rolnym jest:",
+    "options": [
+      "średnia cena skupu 1 kwintala żyta",
+      "wartość ewidencyjna gruntu",
+      "klasa użytku rolnego (gruntu)",
+      "liczba hektarów fizycznych lub liczba hektarów przeliczeniowych gruntu rolnego"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Podstawą opodatkowania podatkiem rolnym jest liczba hektarów przeliczeniowych gruntów gospodarstwa rolnego (uwzględniająca klasę gruntu i okręg podatkowy) lub liczba hektarów fizycznych dla pozostałych gruntów rolnych (D). Średnia cena żyta służy do ustalenia stawki."
+  },
+  {
+    "id": "owe29-c-21",
+    "type": "multi",
+    "edition": "XXIX OWE (2015/2016), zawody centralne",
+    "question": "Karolina złożyła zlecenie giełdowe z limitem ceny sprzedaży, który dynamicznie przyjmuje wartość równą limitowi ceny najlepszego zlecenia sprzedaży w arkuszu zleceń. Jaki to rodzaj zlecenia?",
+    "options": [
+      "stop loss",
+      "peg",
+      "cross",
+      "wykonaj albo anuluj"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Zlecenie peg (z limitem aktywowanym dynamicznie) ma limit ceny, który automatycznie dopasowuje się do najlepszej oferty po tej samej stronie arkusza (B)."
+  },
+  {
+    "id": "owe29-c-22",
+    "type": "multi",
+    "edition": "XXIX OWE (2015/2016), zawody centralne",
+    "question": "Wskaż prawdziwe stwierdzenia dotyczące polisolokat:",
+    "options": [
+      "pozwalają uniknąć instytucjom finansowym zapłaty podatku dochodowego",
+      "w sytuacji upadłości instytucji finansowej inwestor lokujący środki na polisolokacie jest słabiej chroniony niż w przypadku tradycyjnej lokaty bankowej",
+      "na polisolokacie nie można nominalnie stracić, z uwagi na część ubezpieczeniową, która jest ukryta w lokacie",
+      "polisolokata, choć oferowana przez banki, jest w istocie ubezpieczeniem na życie i dożycie z ubezpieczeniowymi funduszami kapitałowymi"
+    ],
+    "correct": [
+      1,
+      3
+    ],
+    "explanation": "Polisolokata to w istocie ubezpieczenie na życie i dożycie z ubezpieczeniowym funduszem kapitałowym, sprzedawane przez banki (D). Środki nie są chronione przez BFG jak lokata bankowa, więc ochrona w razie upadłości jest słabsza (B). Można na niej stracić (C – fałsz), a jej celem było unikanie podatku od zysków przez klientów, nie instytucje (A)."
+  },
+  {
+    "id": "owe29-c-23",
+    "type": "multi",
+    "edition": "XXIX OWE (2015/2016), zawody centralne",
+    "question": "Procedura przymusowego wykupu akcji:",
+    "options": [
+      "możliwa jest tylko w przypadku spółek publicznych",
+      "wymaga, aby akcjonariuszy większościowych, którzy zamierzają przymusowo wykupić akcje mniejszościowych akcjonariuszy, było nie więcej niż pięciu",
+      "następuje bez zgody akcjonariusza, do którego skierowane jest żądanie wykupu",
+      "możliwa jest tylko, gdy przemawia za tym ważny interes prawny lub ekonomiczny spółki"
+    ],
+    "correct": [
+      1,
+      2
+    ],
+    "explanation": "Przymusowy wykup akcji (squeeze-out) pozwala akcjonariuszom większościowym (nie więcej niż pięciu, posiadającym co najmniej 95% kapitału – B) wykupić akcje mniejszości bez ich zgody (C). Jest możliwy także w spółkach niepublicznych (A) i nie wymaga uzasadnienia ważnym interesem (D)."
+  },
+  {
+    "id": "owe29-c-24",
+    "type": "multi",
+    "edition": "XXIX OWE (2015/2016), zawody centralne",
+    "question": "Nieobowiązkowe elementy zwykłej faktury VAT to (stan na rok 2016):",
+    "options": [
+      "podpis wystawcy",
+      "pieczęć wystawcy",
+      "adnotacja „kopia / oryginał”",
+      "sformułowanie „faktura VAT”"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "W 2016 r. na fakturze VAT nie trzeba było umieszczać podpisu wystawcy (A), pieczęci (B), oznaczenia „oryginał/kopia” (C) ani nawet nazwy „faktura VAT” (D) – wystarczy słowo „faktura” i obowiązkowe dane."
+  },
+  {
+    "id": "owe29-c-25",
+    "type": "multi",
+    "edition": "XXIX OWE (2015/2016), zawody centralne",
+    "question": "Do kosztów transakcyjnych zalicza się:",
+    "options": [
+      "koszty badań rynku",
+      "koszty negocjacji",
+      "koszty ochrony kapitału intelektualnego",
+      "koszty zarządzania łańcuchem dostaw"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "Koszty transakcyjne to koszty zawierania i wykonywania transakcji rynkowych, np. koszty wyszukiwania informacji i badań rynku (A) oraz negocjacji (B). Ochrona kapitału intelektualnego i zarządzanie łańcuchem dostaw to koszty działalności."
+  },
+  {
+    "id": "owe29-c-26",
+    "type": "multi",
+    "edition": "XXIX OWE (2015/2016), zawody centralne",
+    "question": "Wykorzystywanie forward guidance przez bank centralny polega na:",
+    "options": [
+      "komunikowaniu otoczeniu, jaką politykę pieniężną zamierza prowadzić bank centralny w dłuższym horyzoncie czasowym",
+      "skupie interwencyjnym obligacji w celu wyprzedzającego przeciwdziałania recesji",
+      "sygnalizowaniu optymalnego kursu walutowego poprzez incydentalne interwencje walutowe",
+      "stabilizowaniu długookresowego kursu walutowego dzięki utrzymywaniu stałego odsetka rezerw walutowych w postaci złota dewizowego"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Forward guidance to komunikowanie przez bank centralny, jaką politykę pieniężną (np. ścieżkę stóp procentowych) zamierza prowadzić w przyszłości, by wpływać na oczekiwania rynku (A)."
+  },
+  {
+    "id": "owe29-c-27",
+    "type": "multi",
+    "edition": "XXIX OWE (2015/2016), zawody centralne",
+    "question": "W 2015 r. koledzy ze studiów rozpoczęli działalność w branży mobilnych kawiarni. Na razie zainteresowanie klientów jest znikome. Intensywny rozwój sieci sprzedaży – zakupy odpowiednich pojazdów oraz zapasów kawy – finansują kredytem inwestycyjnym oraz obrotowym w rachunku bieżącym. Wskaż prawdziwe warianty w sprawozdaniu z przepływu środków pieniężnych ich firmy:",
+    "options": [
+      "dodatnie przepływy z działalności operacyjnej i ujemne przepływy z działalności inwestycyjnej",
+      "ujemne przepływy z działalności inwestycyjnej i dodatnie przepływy z działalności finansowej",
+      "ujemne przepływy z działalności inwestycyjnej i ujemne przepływy z działalności finansowej",
+      "ujemne przepływy z działalności operacyjnej i dodatnie przepływy z działalności finansowej"
+    ],
+    "correct": [
+      1,
+      3
+    ],
+    "explanation": "Nowa firma z małą sprzedażą ma ujemne przepływy operacyjne (D), dużo inwestuje w pojazdy (ujemne przepływy inwestycyjne – B), a finansuje się kredytami (dodatnie przepływy finansowe – B, D)."
+  },
+  {
+    "id": "owe29-c-28",
+    "type": "multi",
+    "edition": "XXIX OWE (2015/2016), zawody centralne",
+    "question": "Marta zamierza otworzyć sklep internetowy i prosi Cię o poradę. Wskaż, które z poniższych stwierdzeń są prawdziwe:",
+    "options": [
+      "reklamacje klientów, którzy zgubili paragon, z mocy prawa są nieważne",
+      "użycie w celu sprawdzenia parametrów technicznych zakupionej przez internet myjki ciśnieniowej nie wyklucza możliwości jej zwrotu sprzedawcy",
+      "każdy sklep internetowy musi oferować opcję „zapłata przy odbiorze”",
+      "towar kupiony na wyprzedaży w sklepie internetowym nie może zostać zwrócony przez klienta, nawet jeśli przekaże on sprzedawcy w ustawowym terminie prawidłowe oświadczenie o odstąpieniu od umowy zawartej na odległość"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Konsument kupujący przez internet może sprawdzić towar w zakresie potrzebnym do stwierdzenia jego cech i działania, nie tracąc prawa do zwrotu (B). Paragon nie jest jedynym dowodem zakupu (A), opcja płatności przy odbiorze nie jest obowiązkowa (C), a prawo do odstąpienia dotyczy też towarów z wyprzedaży (D)."
+  },
+  {
+    "id": "owe29-c-29",
+    "type": "multi",
+    "edition": "XXIX OWE (2015/2016), zawody centralne",
+    "question": "Do zalet której z poniższych metod inwentycznych zalicza się możliwość bezpośredniej wymiany poglądów między członkami grupy?",
+    "options": [
+      "analiza morfologiczna",
+      "metoda delficka",
+      "dyskusja 66",
+      "metoda Gordona"
+    ],
+    "correct": [
+      2,
+      3
+    ],
+    "explanation": "Bezpośrednia wymiana poglądów między członkami grupy jest zaletą dyskusji 66 (grupy po 6 osób dyskutują 6 minut – C) i metody Gordona (moderowana dyskusja nad problemem ujętym ogólnie – D). W metodzie delfickiej eksperci się nie spotykają, a analiza morfologiczna to metoda indywidualna."
+  },
+  {
+    "id": "owe29-c-30",
+    "type": "multi",
+    "edition": "XXIX OWE (2015/2016), zawody centralne",
+    "question": "Pogląd, że w zależności od sytuacji należy zastosować inny sposób zarządzania, a kierownicy nie mogą stosować tylko jednej koncepcji zarządzania, charakterystyczny jest dla:",
+    "options": [
+      "podejścia systemowego",
+      "szkoły behawioralnej",
+      "kierunku sytuacyjnego",
+      "naukowej organizacji pracy"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Kierunek (podejście) sytuacyjny zakłada, że nie ma jednego najlepszego sposobu zarządzania – właściwe rozwiązania zależą od sytuacji, otoczenia, technologii i wielkości organizacji (C)."
+  }
+]

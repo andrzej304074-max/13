@@ -1,0 +1,492 @@
+[
+  {
+    "id": "owe27-c-01",
+    "type": "multi",
+    "edition": "XXVII OWE (2013/2014), zawody centralne",
+    "question": "Wskaż prawdziwe stwierdzenia:",
+    "options": [
+      "popyt może wzrosnąć pod wpływem wzrostu ceny",
+      "dostępność dobra determinuje popyt",
+      "wzrost ceny zawsze prowadzi do spadku zapotrzebowania na dobro",
+      "zmiana ceny może nie wywołać zmiany wielkości popytu"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Zmiana ceny powoduje zmianę wielkości popytu (ruch wzdłuż krzywej), a nie popytu (A – fałsz). Wielkość popytu może się nie zmienić przy zmianie ceny, gdy popyt jest doskonale nieelastyczny (D). Wzrost ceny nie zawsze obniża zapotrzebowanie (C – np. dobra Giffena i Veblena)."
+  },
+  {
+    "id": "owe27-c-02",
+    "type": "multi",
+    "edition": "XXVII OWE (2013/2014), zawody centralne",
+    "question": "Preferencje pewnego konsumenta dotyczące dóbr X i Y opisują krzywe obojętności U1 i U2. Jeżeli na krzywej obojętności U1 znajdują się koszyki dóbr o współrzędnych (1, 1), (1, 2), (1, 3), a na krzywej U2 koszyki dóbr o współrzędnych (2, 1), (2, 2), (2, 3), to dla tego konsumenta:",
+    "options": [
+      "jedno z dóbr jest niepożądane",
+      "jedno z dóbr jest neutralne",
+      "dobra są doskonale substytucyjne",
+      "dobra są doskonale komplementarne"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Na krzywych obojętności ilość X jest stała (U1: X = 1, U2: X = 2), a ilość Y dowolna – zwiększenie Y nie zmienia użyteczności, więc Y jest dobrem neutralnym (B). Krzywe są pionowe, a wyższa użyteczność wymaga więcej X."
+  },
+  {
+    "id": "owe27-c-03",
+    "type": "multi",
+    "edition": "XXVII OWE (2013/2014), zawody centralne",
+    "question": "Korzyści skali występują zawsze, gdy:",
+    "options": [
+      "cena rynkowa nie zmienia się mimo wzrostu popytu",
+      "firma realizuje zysk nadzwyczajny",
+      "w miarę wzrostu rozmiarów produkcji wytworzenie jednej jednostki produktu kosztuje coraz mniej",
+      "koszty przeciętne są niższe niż cena rynkowa"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Korzyści skali występują, gdy wzrost rozmiarów produkcji obniża koszt przeciętny – każda jednostka kosztuje coraz mniej (C). Nie wynikają z relacji ceny i kosztów (B, D) ani ze stabilności cen (A)."
+  },
+  {
+    "id": "owe27-c-04",
+    "type": "multi",
+    "edition": "XXVII OWE (2013/2014), zawody centralne",
+    "question": "Rozpatrując przebieg krzywej przeciętnych kosztów całkowitych, można stwierdzić, że:",
+    "options": [
+      "nie może być ona położona poniżej krzywej przeciętnych kosztów stałych",
+      "jej odległość od krzywej przeciętnych kosztów zmiennych zawsze jest stała",
+      "w długim okresie może być krzywą o nachyleniu ujemnym",
+      "będzie zawsze funkcją rosnącą, jeśli koszty krańcowe są funkcją rosnącą"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "ATC = AFC + AVC, więc krzywa ATC zawsze leży nad krzywą AFC (A). W długim okresie może opadać (korzyści skali – C). Odległość między ATC a AVC to AFC, która maleje wraz z produkcją (B – fałsz), a ATC może spadać mimo rosnącego MC, dopóki MC < ATC (D – fałsz)."
+  },
+  {
+    "id": "owe27-c-05",
+    "type": "multi",
+    "edition": "XXVII OWE (2013/2014), zawody centralne",
+    "question": "Zrównanie się utargu krańcowego z kosztem krańcowym jest warunkiem równowagi przedsiębiorstwa działającego na rynku:",
+    "options": [
+      "konkurencji doskonałej w krótkim okresie",
+      "oligopolu zarówno w krótkim, jak i długim okresie",
+      "monopolu w długim okresie",
+      "konkurencji monopolistycznej w krótkim okresie"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "Warunek MR = MC to warunek maksymalizacji zysku dla każdej firmy, w każdej strukturze rynku i w każdym okresie: w konkurencji doskonałej (A), oligopolu (B), monopolu (C) i konkurencji monopolistycznej (D)."
+  },
+  {
+    "id": "owe27-c-06",
+    "type": "multi",
+    "edition": "XXVII OWE (2013/2014), zawody centralne",
+    "question": "Zjawisko wyczerpywania się łowisk w wyniku zbyt intensywnych połowów ekonomiści nazywają:",
+    "options": [
+      "teorematem Coase’a",
+      "neokolonializmem gospodarczym",
+      "prawem malejących przychodów",
+      "tragedią wspólnego pastwiska"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Tragedia wspólnego pastwiska (G. Hardin) to nadmierna eksploatacja zasobu wspólnego (niewykluczalnego, ale konkurencyjnego), np. łowisk – każdy łowi jak najwięcej, bo korzyści są prywatne, a koszty wyczerpania zasobu – wspólne (D)."
+  },
+  {
+    "id": "owe27-c-07",
+    "type": "multi",
+    "edition": "XXVII OWE (2013/2014), zawody centralne",
+    "question": "W których sytuacjach podjęte decyzje są poprawne?",
+    "options": [
+      "przedsiębiorstwo działające na rynku zmonopolizowanym wstrzymało produkcję, ponieważ cena rynkowa spadła poniżej przeciętnych kosztów zmiennych",
+      "monopolista w krótkim okresie kontynuuje działalność pomimo notowania strat, jeśli wielkość strat jest mniejsza od kosztów zmiennych",
+      "przedsiębiorstwo działające na rynku konkurencji doskonałej kontynuuje działalność, nawet jeśli osiąga tylko zerowy zysk ekonomiczny",
+      "jeśli utarg całkowity nie pokrywa kosztów stałych przedsiębiorstwa, wstrzymuje ono produkcję"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "Każda firma (także monopolista) powinna wstrzymać produkcję w krótkim okresie, gdy cena spadnie poniżej przeciętnego kosztu zmiennego (A). Firma w konkurencji doskonałej z zerowym zyskiem ekonomicznym (zysk normalny) kontynuuje działalność (C). B jest fałszywe (warunkiem jest strata mniejsza od kosztów stałych), a D – też (wystarczy pokrycie kosztów zmiennych)."
+  },
+  {
+    "id": "owe27-c-08",
+    "type": "multi",
+    "edition": "XXVII OWE (2013/2014), zawody centralne",
+    "question": "Dziedzina ekonomii, która zajmuje się sądami wartościującymi dotyczącymi m.in. poziomu ceny, dochodów, zróżnicowania dochodowego i kierunków polityki rządu, to:",
+    "options": [
+      "mikroekonomia",
+      "makroekonomia",
+      "ekonomia pozytywna",
+      "ekonomia normatywna"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Ekonomia normatywna formułuje sądy wartościujące – co jest dobre, sprawiedliwe, jaka powinna być polityka (D). Ekonomia pozytywna opisuje i wyjaśnia, „jak jest”."
+  },
+  {
+    "id": "owe27-c-09",
+    "type": "multi",
+    "edition": "XXVII OWE (2013/2014), zawody centralne",
+    "question": "Jeśli roczna realna stopa wzrostu PKB wynosi 4%, to wartość realnego PKB podwoi się po około:",
+    "options": [
+      "12,5 roku",
+      "17,5 roku",
+      "21 latach",
+      "25 latach"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Reguła 70: liczba lat potrzebna do podwojenia wielkości ≈ 70 / stopa wzrostu w % = 70 / 4 = 17,5 roku (B). Dokładnie: ln 2 / ln 1,04 ≈ 17,7 roku."
+  },
+  {
+    "id": "owe27-c-10",
+    "type": "multi",
+    "edition": "XXVII OWE (2013/2014), zawody centralne",
+    "question": "Bank Rezerw Federalnych skupuje na rynku międzybankowym papiery skarbowe za 4 mld USD, a uzyskane środki inwestorzy deponują od razu na rachunkach bankowych. Przy założeniu, że stopa rezerw obowiązkowych wynosi 25%, skutkiem tej transakcji będzie:",
+    "options": [
+      "natychmiastowy wzrost podaży pieniądza o 4 mld USD i możliwość dalszej kreacji pieniądza przez banki komercyjne do kwoty 16 mld USD",
+      "natychmiastowy wzrost podaży pieniądza o 4 mld USD i możliwość dalszej kreacji pieniądza przez banki komercyjne do kwoty 12 mld USD",
+      "natychmiastowy spadek podaży pieniądza o 4 mld USD i możliwość dalszego spadku podaży pieniądza w efekcie działania mnożnika kreacji pieniądza do kwoty 16 mld USD",
+      "możliwość zmiany podaży pieniądza, jednak jej kierunek i rozmiary zależne są od relacji rynkowej stopy procentowej do stopy inflacji"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Skup papierów przez Fed zwiększa podaż pieniądza od razu o 4 mld USD (depozyty inwestorów). Mnożnik = 1 / 0,25 = 4, więc łączna podaż może wzrosnąć do 16 mld USD, czyli banki mogą dodatkowo wykreować 16 − 4 = 12 mld USD (B)."
+  },
+  {
+    "id": "owe27-c-11",
+    "type": "multi",
+    "edition": "XXVII OWE (2013/2014), zawody centralne",
+    "question": "W którym z wymienionych sektorów gospodarki można oczekiwać największego spadku produkcji w sytuacji wystąpienia recesji?",
+    "options": [
+      "ochrona zdrowia",
+      "rolnictwo",
+      "budownictwo",
+      "przemysł odzieżowy"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "W recesji najsilniej spada popyt na dobra inwestycyjne i trwałe, a więc produkcja w budownictwie (C). Ochrona zdrowia i rolnictwo (żywność) są mało wrażliwe na koniunkturę."
+  },
+  {
+    "id": "owe27-c-12",
+    "type": "multi",
+    "edition": "XXVII OWE (2013/2014), zawody centralne",
+    "question": "Utrzymywanie konsumpcji na niezmienionym poziomie mimo spadku dochodów nazywa się efektem:",
+    "options": [
+      "posiadania",
+      "rygla",
+      "heurystyki",
+      "perspektywy"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Efekt rygla (zapadki) to utrzymywanie dotychczasowego poziomu konsumpcji mimo spadku dochodów – gospodarstwa domowe przyzwyczajają się do wyższego standardu życia (B)."
+  },
+  {
+    "id": "owe27-c-13",
+    "type": "multi",
+    "edition": "XXVII OWE (2013/2014), zawody centralne",
+    "question": "Hipoteza Fishera dotyczy współzależności między:",
+    "options": [
+      "stopą procentową a stopą inflacji",
+      "stopą procentową a stopą bezrobocia",
+      "stopą inflacji a stopą bezrobocia",
+      "stopą opodatkowania dochodów a dynamiką realnego PKB"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Hipoteza (efekt) Fishera: nominalna stopa procentowa ≈ realna stopa procentowa + oczekiwana inflacja. Wzrost inflacji podnosi stopy nominalne (A)."
+  },
+  {
+    "id": "owe27-c-14",
+    "type": "multi",
+    "edition": "XXVII OWE (2013/2014), zawody centralne",
+    "question": "Rozwój sprzedaży ubezpieczeń przez internet zmusił Adama do rezygnacji z posady agenta ubezpieczeniowego. Następnie rozpoczął on studia podyplomowe, aby uzyskać dyplom MBA. Po ukończeniu studiów, z dyplomem w ręku, szuka teraz pracy w charakterze dyrektora sprzedaży. W obecnej sytuacji Adam:",
+    "options": [
+      "jest cyklicznie bezrobotny",
+      "jest frykcyjnie bezrobotny",
+      "jest strukturalnie bezrobotny",
+      "nie jest zaliczany do zasobu siły roboczej"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Adam stracił pracę, bo jego zawód zanikł wskutek zmian w gospodarce (sprzedaż przez internet), i musi się przekwalifikować – to bezrobocie strukturalne (C). Według klucza nadal jest strukturalnie bezrobotny, bo szuka pracy w innej, nowej dla siebie roli."
+  },
+  {
+    "id": "owe27-c-15",
+    "type": "multi",
+    "edition": "XXVII OWE (2013/2014), zawody centralne",
+    "question": "Zgodnie z założeniami teorii realnego cyklu koniunkturalnego:",
+    "options": [
+      "czynniki monetarne oddziałują na zagregowany popyt, co prowadzi do nierównowagi makroekonomicznej",
+      "recesja w gospodarce jest raczej wynikiem spadku podaży w długim okresie niż spadku zagregowanego popytu",
+      "spadek płac realnych w okresie recesji prowadzi do wzrostu realnej stopy bezrobocia",
+      "odpowiednia kombinacja polityki fiskalnej i monetarnej pozwala na powrót gospodarki do stanu równowagi i wzrost realnego PKB"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Teoria realnego cyklu koniunkturalnego (F. Kydland, E. Prescott) zakłada, że wahania wynikają z realnych szoków podażowych (np. technologicznych), a nie z wahań popytu – recesja to raczej efekt spadku podaży (B). Czynniki monetarne nie mają realnego wpływu, a polityka stabilizacyjna jest zbędna."
+  },
+  {
+    "id": "owe27-c-16",
+    "type": "multi",
+    "edition": "XXVII OWE (2013/2014), zawody centralne",
+    "question": "Która z wymienionych rund negocjacyjnych w ramach WTO / GATT rozpoczęła się najpóźniej?",
+    "options": [
+      "peruwiańska",
+      "urugwajska",
+      "katarska",
+      "milenijna"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Rundy GATT/WTO: urugwajska (1986–1994), a następnie katarska – Doha Development Round (2001), najpóźniejsza (C). „Rundy peruwiańskiej” nie było, a „runda milenijna” (1999, Seattle) nie została rozpoczęta."
+  },
+  {
+    "id": "owe27-c-17",
+    "type": "multi",
+    "edition": "XXVII OWE (2013/2014), zawody centralne",
+    "question": "Na czym polega efekt cappuccino po przyjęciu euro?",
+    "options": [
+      "na substytucji droższych krajowych artykułów konsumpcyjnych tańszymi z zagranicy",
+      "na trwałym wzroście cen towarów importowych (głównie kawy) w związku z koniecznością dostosowania stawek celnych do poziomu obowiązującego w strefie euro",
+      "na skokowym wzroście cen niektórych towarów detalicznych",
+      "na zdominowaniu krajowego rynku spożywczego przez międzynarodowe koncerny wskutek otwarcia gospodarki na dotowaną żywność"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Efekt cappuccino polega na skokowym wzroście cen niektórych tanich towarów i usług (np. kawy w kawiarniach) po przyjęciu euro – sprzedawcy zaokrąglają ceny w górę przy przeliczaniu (C)."
+  },
+  {
+    "id": "owe27-c-18",
+    "type": "multi",
+    "edition": "XXVII OWE (2013/2014), zawody centralne",
+    "question": "Co nie podlega amortyzacji?",
+    "options": [
+      "wartościowy obraz Jacka Malczewskiego zakupiony do gabinetu prezesa",
+      "namiot do imprez plenerowych dla pracowników",
+      "działka gruntu pod budowę nowej siedziby firmy",
+      "samochód w leasingu finansowym"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "Amortyzacji nie podlegają m.in. grunty (C) oraz dzieła sztuki (np. obraz – A), bo nie tracą wartości w wyniku zużycia. Namiot i samochód w leasingu finansowym (u korzystającego) się amortyzuje."
+  },
+  {
+    "id": "owe27-c-19",
+    "type": "multi",
+    "edition": "XXVII OWE (2013/2014), zawody centralne",
+    "question": "Hurtownik otrzymał na rachunek walutowy od kontrahenta zagranicznego 100-proc. zaliczkę na poczet przyszłej dostawy towarów w kwocie 5000 euro, którą rozliczono po kursie 4,29 zł/euro. W dniu dostawy towarów kurs wyniósł 4,35 zł/euro i taki kurs przyjęto do rozliczenia transakcji. W tej sytuacji:",
+    "options": [
+      "hurtownik poniósł koszty finansowe",
+      "hurtownik uzyskał przychód finansowy",
+      "różnice kursowe nie wpłynęły w ogóle na wynik finansowy hurtownika, gdyż kontrahent zagraniczny wpłacił 100% zaliczki",
+      "różnice kursowe dotyczą wyłącznie kontrahenta zagranicznego, gdyż on inicjował transakcję"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Zaliczkę w walucie przeliczono po 4,29 zł/EUR, a dostawę po 4,35 zł/EUR. Według klucza powstała ujemna różnica kursowa, czyli koszt finansowy hurtownika (A)."
+  },
+  {
+    "id": "owe27-c-20",
+    "type": "multi",
+    "edition": "XXVII OWE (2013/2014), zawody centralne",
+    "question": "Jaki rodzaj stawki podatkowej ma podatek CIT w Polsce?",
+    "options": [
+      "liniowy",
+      "progresywny",
+      "degresywny",
+      "kwotowy"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Podatek CIT w Polsce ma stawkę liniową – w 2014 r. jednolite 19% dochodu (A)."
+  },
+  {
+    "id": "owe27-c-21",
+    "type": "multi",
+    "edition": "XXVII OWE (2013/2014), zawody centralne",
+    "question": "Na czym polegają gwarancje de minimis?",
+    "options": [
+      "na poręczeniu przez Bank Gospodarstwa Krajowego kredytów dla przedsiębiorstw, które nie posiadają wystarczającego zabezpieczenia ich spłaty",
+      "na zagwarantowaniu przez państwo zakupu wybranych artykułów rolnych od rolników indywidualnych w sytuacji nagłego załamania się cen",
+      "na udzieleniu dodatkowych zwrotnych dotacji dla firm ubiegających się o środki z programów unijnych, tak aby osiągnąć minimalny poziom wykorzystania środków unijnych",
+      "na zagwarantowaniu eksporterom przez Ministerstwo Gospodarki minimalnego poziomu kursu walutowego, przy którym nie będą oni notować strat"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Gwarancje de minimis to poręczenia (gwarancje) Banku Gospodarstwa Krajowego dla kredytów obrotowych i inwestycyjnych małych i średnich firm, które nie mają wystarczającego zabezpieczenia (A). Nazwa pochodzi od zasad pomocy publicznej de minimis."
+  },
+  {
+    "id": "owe27-c-22",
+    "type": "multi",
+    "edition": "XXVII OWE (2013/2014), zawody centralne",
+    "question": "Wskaż prawdziwe stwierdzenia dotyczące otwartych funduszy inwestycyjnych (FIO) i zamkniętych funduszy inwestycyjnych (FIZ):",
+    "options": [
+      "FIZ mogą inwestować w szersze spektrum instrumentów finansowych w porównaniu z FIO",
+      "z certyfikatami inwestycyjnymi FIZ może wiązać się prawo głosu",
+      "limity koncentracji inwestycji w przypadku FIZ i FIO są identyczne",
+      "wyjście z inwestycji w FIZ jest trudniejsze niż w FIO"
+    ],
+    "correct": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "FIZ mogą inwestować w szerszy zakres aktywów niż FIO (A, np. nieruchomości, udziały w spółkach z o.o.), certyfikaty FIZ mogą dawać prawo głosu na zgromadzeniu inwestorów (B), a wyjście z FIZ jest trudniejsze – jednostki odkupuje się tylko w określonych terminach (D). Limity inwestycyjne FIZ są łagodniejsze niż FIO (C – fałsz)."
+  },
+  {
+    "id": "owe27-c-23",
+    "type": "multi",
+    "edition": "XXVII OWE (2013/2014), zawody centralne",
+    "question": "W przypadku procedury nadmiernego deficytu prawdą jest, że:",
+    "options": [
+      "dotyczy ona ograniczenia deficytu budżetowego każdego kraju przed wejściem do strefy euro",
+      "wiąże się ona z możliwością nałożenia kar przez Unię Europejską za znaczne rozluźnienie dyscypliny finansowej",
+      "wyklucza ona możliwość notowania deficytów budżetowych, jeśli wskaźnik relacji wartości długu do PKB przekracza 60%",
+      "jest ona sposobem (szczególną procedurą) uchwalania budżetu Unii Europejskiej w danej perspektywie budżetowej, jeśli nie ma kompromisu co do łącznej kwoty wydatków"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Procedura nadmiernego deficytu (UE) jest wszczynana wobec państw członkowskich z deficytem powyżej 3% PKB (lub długiem powyżej 60%); może kończyć się sankcjami finansowymi (B). Nie wyklucza deficytu w ogóle (C)."
+  },
+  {
+    "id": "owe27-c-24",
+    "type": "multi",
+    "edition": "XXVII OWE (2013/2014), zawody centralne",
+    "question": "Ochrona własności przemysłowej w Polsce obejmuje:",
+    "options": [
+      "wynalazki, jednak tylko te, które są efektywne ekonomicznie",
+      "wzory przemysłowe",
+      "słowny znak towarowy",
+      "kompozycje kolorystyczne lub przestrzenne"
+    ],
+    "correct": [
+      1,
+      2,
+      3
+    ],
+    "explanation": "Prawo własności przemysłowej chroni m.in. wzory przemysłowe (B) i znaki towarowe – słowne (C), a także kompozycje kolorystyczne i przestrzenne (D). Wynalazki są chronione niezależnie od efektywności ekonomicznej (A – fałsz)."
+  },
+  {
+    "id": "owe27-c-25",
+    "type": "multi",
+    "edition": "XXVII OWE (2013/2014), zawody centralne",
+    "question": "Pewna pizzeria, powielając menu różnych popularnych sieci restauracji, wprowadziła do swojej oferty pizzę z serem zapiekanym w rantach. Takie działanie to:",
+    "options": [
+      "strategia małych kroków",
+      "dyfuzja innowacji",
+      "innowacja procesowa",
+      "kreatywna destrukcja"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Dyfuzja innowacji to rozprzestrzenianie się nowego rozwiązania – kolejne firmy przejmują innowację wprowadzoną przez innych, np. pizzerie kopiujące ser zapiekany w rantach (B)."
+  },
+  {
+    "id": "owe27-c-26",
+    "type": "multi",
+    "edition": "XXVII OWE (2013/2014), zawody centralne",
+    "question": "Strategia cen zorientowanych na popyt:",
+    "options": [
+      "zmusza w pierwszej kolejności do optymalizacji kosztów",
+      "skupia się wyłącznie na wzroście sprzedaży i zwiększeniu wykorzystania zdolności produkcyjnych",
+      "uwzględnia konkurencję",
+      "koncentruje się na oczekiwaniach nabywcy co do ceny produktu"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Ceny zorientowane na popyt ustala się na podstawie tego, ile klienci są skłonni zapłacić – ich oczekiwań i postrzeganej wartości produktu (D). Ceny oparte na kosztach i na konkurencji to inne podejścia."
+  },
+  {
+    "id": "owe27-c-27",
+    "type": "multi",
+    "edition": "XXVII OWE (2013/2014), zawody centralne",
+    "question": "Wartość zaktualizowana dodatnich przyszłych przepływów pieniężnych jest tym większa, im:",
+    "options": [
+      "wcześniej się one pojawiają i niższa jest stosowana do dyskonta stopa",
+      "wcześniej się one pojawiają i wyższa jest stosowana do dyskonta stopa",
+      "później się one pojawiają i niższa jest stosowana do dyskonta stopa",
+      "później się one pojawiają i wyższa jest stosowana do dyskonta stopa"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Wartość bieżąca przepływu = przepływ / (1 + r)ⁿ. Jest tym większa, im wcześniej przepływ się pojawia (mniejsze n) i im niższa stopa dyskontowa (A)."
+  },
+  {
+    "id": "owe27-c-28",
+    "type": "multi",
+    "edition": "XXVII OWE (2013/2014), zawody centralne",
+    "question": "Kiedy strategia dumpingu ma sens ekonomiczny?",
+    "options": [
+      "jeśli kryterium wyboru oferenta w przetargu na realizację zamówienia publicznego ma charakter pozacenowy",
+      "zawsze, jeśli można sprzedawać produkty z zyskiem poniżej kosztów ich wytworzenia",
+      "gdy istnieją wysokie bariery wejścia na rynek",
+      "kiedy wszyscy bezpośredni konkurenci to przedsiębiorstwa zagraniczne"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Dumping (sprzedaż poniżej kosztów) ma sens, jeśli po wyeliminowaniu konkurentów firma może podnieść ceny i odzyskać straty – czyli gdy wysokie bariery wejścia nie pozwolą konkurentom wrócić na rynek (C)."
+  },
+  {
+    "id": "owe27-c-29",
+    "type": "multi",
+    "edition": "XXVII OWE (2013/2014), zawody centralne",
+    "question": "W piramidzie potrzeb A.H. Maslowa:",
+    "options": [
+      "w wierzchołku znajduje się potrzeba samorealizacji",
+      "najbardziej elementarna jest potrzeba szacunku, ponieważ poważanie należy się każdemu, nawet jeśli nie są zaspokojone potrzeby fizjologiczne i bezpieczeństwa",
+      "potrzeby są ułożone od najmniej odczuwalnych (podstawa piramidy) do tych, które odczuwamy i chcemy zaspokoić w największym stopniu",
+      "dla optymalnego samopoczucia człowieka nie ma znaczenia, w jakiej kolejności i kiedy będą zaspokajane potrzeby, byleby zostały one wszystkie zaspokojone"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Na szczycie piramidy Maslowa jest potrzeba samorealizacji (A), a u podstawy – potrzeby fizjologiczne. Potrzeby niższe zwykle muszą być zaspokojone przed wyższymi, więc kolejność ma znaczenie (D – fałsz)."
+  },
+  {
+    "id": "owe27-c-30",
+    "type": "multi",
+    "edition": "XXVII OWE (2013/2014), zawody centralne",
+    "question": "Zgodnie z koncepcją krzywej uczenia się:",
+    "options": [
+      "podstawowe zadania i procesy w organizacji są łatwe do nauczenia się",
+      "organizacje wykonują swoje zadania tym lepiej, im częściej je powtarzają",
+      "konieczna jest okresowa wymiana części kadr dla utrzymania dopływu świeżych pomysłów",
+      "następuje spadek kosztów całkowitych w miarę wzrostu rozmiarów produkcji"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Krzywa uczenia się (doświadczenia) pokazuje, że wraz z powtarzaniem zadań i rosnącym doświadczeniem organizacja wykonuje je coraz sprawniej – szybciej i taniej (B). Spadają koszty jednostkowe, a nie całkowite (D)."
+  }
+]
