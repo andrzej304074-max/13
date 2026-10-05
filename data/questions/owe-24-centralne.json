@@ -1,0 +1,509 @@
+[
+  {
+    "id": "owe24-c-01",
+    "type": "multi",
+    "edition": "XXIV OWE (2010/2011), zawody centralne",
+    "question": "Liniowa krzywa możliwości produkcyjnych:",
+    "options": [
+      "dowodzi, że mamy do czynienia z rzadkością zasobów",
+      "przedstawia różne kombinacje nakładów czynników wytwórczych, które mogą być zastosowane do produkcji określonej ilości dóbr i usług",
+      "dowodzi, że mamy do czynienia z malejącym kosztem alternatywnym",
+      "charakteryzuje się stałą krańcową stopą transformacji"
+    ],
+    "correct": [
+      0,
+      3
+    ],
+    "explanation": "Krzywa możliwości produkcyjnych pokazuje, że zasoby są ograniczone (rzadkie) i więcej jednego dobra można uzyskać tylko kosztem drugiego (A). Jeśli jest liniowa, koszt alternatywny (krańcowa stopa transformacji) jest stały (D), a nie malejący (C). B opisuje izokwantę."
+  },
+  {
+    "id": "owe24-c-02",
+    "type": "multi",
+    "edition": "XXIV OWE (2010/2011), zawody centralne",
+    "question": "Efekt substytucyjny jest to:",
+    "options": [
+      "zmiana rozmiarów zakupów danego dobra lub usługi jako rezultat spadku dochodu realnego gospodarstwa domowego",
+      "skutek zmiany pieniężnego dochodu gospodarstwa domowego przy niezmienionych cenach dóbr i usług",
+      "zmiana rozmiarów zakupów jako rezultat zmiany relacji cen przy niezmienionym dochodzie realnym osiąganym przez gospodarstwo domowe",
+      "zmiana rozmiarów zakupów dóbr i usług jako rezultat wzrostu dochodu realnego gospodarstwa domowego"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Efekt substytucyjny to zmiana wielkości zakupów wynikająca wyłącznie ze zmiany relacji cen (dobro, które podrożało, zastępuje się tańszym), przy niezmienionym dochodzie realnym (C). Zmiana zakupów wynikająca ze zmiany dochodu realnego to efekt dochodowy."
+  },
+  {
+    "id": "owe24-c-03",
+    "type": "multi",
+    "edition": "XXIV OWE (2010/2011), zawody centralne",
+    "question": "Jeżeli przedsiębiorstwo minimalizuje koszty przy danym poziomie produkcji, produkt krańcowy kapitału wynosi 10 jednostek i jest dwa razy większy od produktu krańcowego pracy, a cena jednostki pracy wynosi 20 jednostek pieniężnych – to wynika stąd, że cena jednostki kapitału musi wynosić:",
+    "options": [
+      "5 jednostek pieniężnych",
+      "10 jednostek pieniężnych",
+      "20 jednostek pieniężnych",
+      "40 jednostek pieniężnych"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Firma minimalizuje koszty, gdy produkt krańcowy w przeliczeniu na złotówkę jest taki sam dla obu czynników: MPK / r = MPL / w. MPK = 10, MPL = 5, w = 20, więc 10 / r = 5 / 20, czyli r = 40."
+  },
+  {
+    "id": "owe24-c-04",
+    "type": "multi",
+    "edition": "XXIV OWE (2010/2011), zawody centralne",
+    "question": "Długookresowa krzywa kosztów przeciętnych:",
+    "options": [
+      "stanowi obwiednię krótkookresowych krzywych kosztów przeciętnych dla poszczególnych poziomów produkcji",
+      "przedstawia minimalny koszt wytwarzania różnych wielkości produkcji w warunkach pełnej zmienności czynników wytwórczych",
+      "obrazuje przeciętne koszty produkcji na poziomie niższym od występujących w krótkim okresie z uwagi na brak kosztów alternatywnych",
+      "zawsze jest funkcją malejącą"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "Długookresowa krzywa kosztów przeciętnych to obwiednia krzywych krótkookresowych (A) – pokazuje minimalny koszt przeciętny dla każdej wielkości produkcji, gdy wszystkie czynniki są zmienne (B). Nie zawsze maleje (D) – może rosnąć przy niekorzyściach skali, a koszty alternatywne występują także w długim okresie (C)."
+  },
+  {
+    "id": "owe24-c-05",
+    "type": "multi",
+    "edition": "XXIV OWE (2010/2011), zawody centralne",
+    "question": "Założenie ceteris paribus dla prawa popytu oznacza, że:",
+    "options": [
+      "tylko jedna determinanta popytu ulega zmianie, pozostałe zaś nie zmieniają się",
+      "determinanty popytu mogą się zmieniać, ale inne czynniki pozostają niezmienne",
+      "nic nie ulega zmianie",
+      "żadna z determinant popytu nie ulega zmianie"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Prawo popytu opisuje zależność między ceną a wielkością popytu przy założeniu, że żadna z pozostałych determinant popytu (dochody, ceny innych dóbr, gusty, oczekiwania) się nie zmienia (D) – zmienia się tylko cena samego dobra."
+  },
+  {
+    "id": "owe24-c-06",
+    "type": "multi",
+    "edition": "XXIV OWE (2010/2011), zawody centralne",
+    "question": "Krzywa podaży monopolu:",
+    "options": [
+      "to krzywa kosztu krańcowego powyżej przeciętnych kosztów zmiennych",
+      "to krzywa kosztu krańcowego powyżej minimum przeciętnych kosztów całkowitych",
+      "jest opadająca, bo zwiększenie ilości sprzedanego dobra wymaga obniżenia jego ceny",
+      "nie istnieje"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Krzywa podaży pokazuje, ile firma zaoferuje przy każdej danej cenie. Monopolista sam ustala cenę na podstawie krzywej popytu (wybiera punkt, gdzie MR = MC), więc nie ma jednoznacznej zależności cena–ilość – krzywa podaży monopolu nie istnieje (D)."
+  },
+  {
+    "id": "owe24-c-07",
+    "type": "multi",
+    "edition": "XXIV OWE (2010/2011), zawody centralne",
+    "question": "Działania podmiotów gospodarczych zmierzające do monopolizacji rynku określonego czynnika wytwórczego celem uzyskania możliwości kształtowania opłaty za jego produkcyjne udostępnienie to:",
+    "options": [
+      "pogoń za rentą",
+      "dyskryminacja cenowa",
+      "przewaga komparatywna",
+      "pusta strata"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Pogoń za rentą (rent seeking) to działania mające na celu uzyskanie nadzwyczajnych dochodów (renty) nie przez tworzenie wartości, lecz przez monopolizację rynku, zdobycie przywilejów, licencji, ochrony od państwa itp. (A)."
+  },
+  {
+    "id": "owe24-c-08",
+    "type": "multi",
+    "edition": "XXIV OWE (2010/2011), zawody centralne",
+    "question": "Jeśli krańcowy przychód z pracy przewyższa płacę, to przedsiębiorstwo działające w warunkach doskonałej konkurencji i dążące do maksymalizacji zysku powinno:",
+    "options": [
+      "zwiększyć płacę",
+      "zwiększyć zatrudnienie",
+      "zmniejszyć zatrudnienie",
+      "pozostawić płace i zatrudnienie na dotychczasowym poziomie"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Gdy krańcowy przychód z pracy (MRPL) przewyższa płacę, zatrudnienie dodatkowego pracownika zwiększa zysk – firma powinna zwiększać zatrudnienie (B), aż MRPL zrówna się z płacą. W konkurencji doskonałej na rynku pracy firma nie ustala płacy."
+  },
+  {
+    "id": "owe24-c-09",
+    "type": "multi",
+    "edition": "XXIV OWE (2010/2011), zawody centralne",
+    "question": "Zgodnie z hipotezą dochodu permanentnego Friedmana można spodziewać się, że nieoczekiwany wzrost dochodu będzie prowadził do:",
+    "options": [
+      "wzrostu konsumpcji",
+      "wzrostu oszczędności",
+      "wzrostu poziomu dochodu permanentnego",
+      "zmiany aspiracji konsumpcyjnych"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "Według hipotezy dochodu permanentnego nieoczekiwany (przejściowy) wzrost dochodu tylko nieznacznie zmienia dochód permanentny, więc konsumpcja rośnie tylko trochę (A), a większość dodatkowego dochodu jest oszczędzana (B). Poziom dochodu permanentnego zasadniczo się nie zmienia (C)."
+  },
+  {
+    "id": "owe24-c-10",
+    "type": "multi",
+    "edition": "XXIV OWE (2010/2011), zawody centralne",
+    "question": "Krzywa Lorenza wykorzystywana jest do analizy:",
+    "options": [
+      "wpływu nieoczekiwanych zmian cen na wielkość zagregowanej podaży",
+      "wpływu stopy opodatkowania na deficyt sektora budżetowego",
+      "nierówności dochodowych gospodarstw domowych",
+      "koncentracji i siły monopolowej przedsiębiorstw w branży"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Krzywa Lorenza pokazuje, jaki skumulowany odsetek dochodów przypada na skumulowany odsetek gospodarstw domowych – służy do analizy nierówności dochodowych (C). Na jej podstawie oblicza się współczynnik Giniego."
+  },
+  {
+    "id": "owe24-c-11",
+    "type": "multi",
+    "edition": "XXIV OWE (2010/2011), zawody centralne",
+    "question": "Zgodnie z teorią płac efektywnościowych:",
+    "options": [
+      "przedsiębiorstwa wypłacają wynagrodzenia przewyższające płacę równowagi, aby zmniejszyć rotację kadr",
+      "przedsiębiorstwa działają efektywnie, jeśli minimalizują wielkość kosztów związanych z zatrudnieniem pracowników",
+      "zasadne jest wypłacanie wyższych wynagrodzeń pracownikom, jeśli nadzór nad nimi jest kosztowny i niedoskonały",
+      "w sytuacji nadwyżki podaży potencjalnych pracowników, zaoferowanie przez przedsiębiorstwo wyższego wynagrodzenia pozwala przyciągnąć lepszych kandydatów"
+    ],
+    "correct": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Teoria płac efektywnościowych tłumaczy, dlaczego firmy płacą więcej niż płaca równowagi: by zmniejszyć rotację pracowników (A), zachęcić do wysiłku, gdy nadzór jest kosztowny (C – model „wymigiwania się”), i przyciągnąć lepszych kandydatów (D – selekcja negatywna). Nie chodzi o minimalizację kosztów zatrudnienia (B)."
+  },
+  {
+    "id": "owe24-c-12",
+    "type": "multi",
+    "edition": "XXIV OWE (2010/2011), zawody centralne",
+    "question": "Luka deflacyjna występuje wtedy, gdy:",
+    "options": [
+      "popyt globalny przewyższa podaż globalną",
+      "realna stawka płac jest większa od krańcowego produktu pracy",
+      "popyt na pieniądz jest wyższy od podaży pieniądza",
+      "suma wydatków globalnych jest mniejsza od wartości wytworzonej produkcji zapewniającej pełne zatrudnienie"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Luka deflacyjna (recesyjna) występuje, gdy planowane wydatki globalne są mniejsze od wartości produkcji przy pełnym zatrudnieniu – popyt jest zbyt słaby, by zapewnić pełne zatrudnienie (D)."
+  },
+  {
+    "id": "owe24-c-13",
+    "type": "multi",
+    "edition": "XXIV OWE (2010/2011), zawody centralne",
+    "question": "Jeśli dochód (Y) opodatkowany jest podatkiem liniowym (t), to zmiana stopy opodatkowania o ∆t spowoduje zmianę przychodów z podatków (∆T) o:",
+    "options": [
+      "Y∆t – t∆Y",
+      "Y∆t + t∆Y + ∆t∆Y",
+      "(Y – ∆T)∆t",
+      "Y∆t"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Przychody z podatku T = t · Y. Po zmianie: (t + ∆t)(Y + ∆Y) = tY + Y∆t + t∆Y + ∆t∆Y, więc ∆T = Y∆t + t∆Y + ∆t∆Y (B). Uwzględnia to, że zmiana stopy może też zmienić dochód (podstawę opodatkowania)."
+  },
+  {
+    "id": "owe24-c-14",
+    "type": "multi",
+    "edition": "XXIV OWE (2010/2011), zawody centralne",
+    "question": "Który z poniższych mechanizmów transmisji stanowi wyjaśnienie teorii deficytów bliźniaczych?",
+    "options": [
+      "wzrost popytu finalnego i wzrost importu",
+      "wzrost produkcji globalnej i wzrost deficytu budżetowego",
+      "wzrost stopy procentowej i napływ kapitału spekulacyjnego",
+      "konieczność zaciągania pożyczek zagranicznych na sfinansowanie deficytu budżetowego"
+    ],
+    "correct": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Teoria deficytów bliźniaczych łączy deficyt budżetowy z deficytem obrotów bieżących. Mechanizmy: wzrost wydatków państwa zwiększa popyt finalny i import (A); deficyt podnosi stopy procentowe, przyciąga kapitał zagraniczny i umacnia walutę, co pogarsza bilans handlowy (C); deficyt finansuje się pożyczkami zagranicznymi (D)."
+  },
+  {
+    "id": "owe24-c-15",
+    "type": "multi",
+    "edition": "XXIV OWE (2010/2011), zawody centralne",
+    "question": "Wzrost eksportu powoduje:",
+    "options": [
+      "zwiększenie salda bilansu obrotów bieżących",
+      "zmniejszenie salda bilansu obrotów bieżących",
+      "zwiększenie salda bilansu obrotów kapitałowych",
+      "zmniejszenie salda bilansu obrotów kapitałowych"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Eksport jest pozycją dodatnią bilansu handlowego, który wchodzi do rachunku obrotów bieżących. Wzrost eksportu (ceteris paribus) zwiększa saldo obrotów bieżących (A)."
+  },
+  {
+    "id": "owe24-c-16",
+    "type": "multi",
+    "edition": "XXIV OWE (2010/2011), zawody centralne",
+    "question": "W Krajowym Rejestrze Sądowym dokonuje się rejestracji:",
+    "options": [
+      "spółek cywilnych",
+      "spółek jawnych",
+      "spółek partnerskich",
+      "spółek komandytowych"
+    ],
+    "correct": [
+      1,
+      2,
+      3
+    ],
+    "explanation": "W rejestrze przedsiębiorców Krajowego Rejestru Sądowego rejestruje się spółki handlowe: jawne (B), partnerskie (C), komandytowe (D), a także kapitałowe. Spółka cywilna nie jest spółką handlową i nie ma osobowości – wspólnicy wpisują się do CEIDG (A)."
+  },
+  {
+    "id": "owe24-c-17",
+    "type": "multi",
+    "edition": "XXIV OWE (2010/2011), zawody centralne",
+    "question": "Cienka kapitalizacja to przykład:",
+    "options": [
+      "zmniejszenia obciążeń podatkowych w grupach kapitałowych",
+      "oszustw polegających na tworzeniu firm-wydmuszek",
+      "celowego zawyżania wartości księgowej przedsiębiorstwa przez wprowadzanie do bilansu pozycji niematerialnych i prawnych o znacznej wartości",
+      "notowań spółki giełdowej, której wolumen obrotu akcjami jest niski z uwagi na brak dostatecznie rozproszonego akcjonariatu"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Cienka kapitalizacja polega na finansowaniu spółki zależnej pożyczkami od spółki powiązanej zamiast kapitałem własnym – odsetki są kosztem podatkowym, a dywidendy nie. W ten sposób grupy kapitałowe zmniejszają obciążenia podatkowe (A); przepisy ograniczają tę praktykę."
+  },
+  {
+    "id": "owe24-c-18",
+    "type": "multi",
+    "edition": "XXIV OWE (2010/2011), zawody centralne",
+    "question": "Kapitał obrotowy netto to różnica pomiędzy:",
+    "options": [
+      "aktywami obrotowymi i zapasami",
+      "kapitałem stałym i aktywami trwałymi",
+      "zobowiązaniami długoterminowymi a należnościami krótkoterminowymi",
+      "aktywami obrotowymi i zobowiązaniami bieżącymi"
+    ],
+    "correct": [
+      1,
+      3
+    ],
+    "explanation": "Kapitał obrotowy netto można liczyć na dwa sposoby: kapitał stały − aktywa trwałe (B) lub aktywa obrotowe − zobowiązania bieżące (krótkoterminowe – D). Oba dają ten sam wynik."
+  },
+  {
+    "id": "owe24-c-19",
+    "type": "multi",
+    "edition": "XXIV OWE (2010/2011), zawody centralne",
+    "question": "Do elementów techniki podatkowej zalicza się:",
+    "options": [
+      "przedmiot podatku",
+      "ulgi podatkowe",
+      "skalę podatkową",
+      "podmiot opodatkowania"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "Elementy konstrukcji (techniki) podatku to m.in.: podmiot (kto płaci – D), przedmiot (co jest opodatkowane – A), podstawa opodatkowania, stawki i skala podatkowa (C), ulgi i zwolnienia (B) oraz terminy płatności."
+  },
+  {
+    "id": "owe24-c-20",
+    "type": "multi",
+    "edition": "XXIV OWE (2010/2011), zawody centralne",
+    "question": "Zadania aktuariusza w zakładzie ubezpieczeń to:",
+    "options": [
+      "ustalanie odpowiedzialności osób trzecich za szkodę",
+      "określanie uposażonych z polisy na życie",
+      "ustalanie wartości rezerw techniczno-ubezpieczeniowych",
+      "wyliczanie marginesu wypłacalności"
+    ],
+    "correct": [
+      2,
+      3
+    ],
+    "explanation": "Aktuariusz to specjalista od matematyki ubezpieczeniowej – szacuje ryzyko, kalkuluje składki, ustala wysokość rezerw techniczno-ubezpieczeniowych (C) i oblicza margines wypłacalności zakładu ubezpieczeń (D)."
+  },
+  {
+    "id": "owe24-c-21",
+    "type": "multi",
+    "edition": "XXIV OWE (2010/2011), zawody centralne",
+    "question": "W przypadku ogłoszenia upadłości konsumenckiej (stan na rok 2011):",
+    "options": [
+      "dłużnik może liczyć na całkowite umorzenie długów",
+      "dłużnikowi przez pięć lat nie wolno zaciągać nowych kredytów i pożyczek",
+      "następuje wyprzedaż całego majątku dłużnika oprócz jego lokalu mieszkalnego, w którym zamieszkuje",
+      "dłużnik nie może skutecznie ogłaszać upadłości częściej niż co 10 lat"
+    ],
+    "correct": [
+      1,
+      3
+    ],
+    "explanation": "Według przepisów z 2011 r. po ogłoszeniu upadłości konsumenckiej dłużnik przez pięć lat nie mógł zaciągać nowych kredytów i pożyczek (B), a ponownie ogłosić upadłość mógł nie wcześniej niż po 10 latach (D). Umorzenie długów nie było automatyczne i pełne (A), a sprzedawano także majątek, w tym mieszkanie (C)."
+  },
+  {
+    "id": "owe24-c-22",
+    "type": "multi",
+    "edition": "XXIV OWE (2010/2011), zawody centralne",
+    "question": "Inwestor w określonym horyzoncie czasowym systematycznie kupował jednostki funduszu inwestycyjnego, których cena z okresu na okres spadała. Pewnego dnia inwestor zmuszony był wycofać część środków z tej inwestycji. W momencie podjęcia decyzji, wskutek nagłej hossy na rynku, cena jednostki rozrachunkowej wzrosła trzykrotnie i przekroczyła cenę zakupu w pierwszym okresie inwestycji. Wskaż, przy której metodzie rozliczenia tej transakcji inwestor zapłaciłby najniższą kwotę podatku od zysków kapitałowych:",
+    "options": [
+      "LIFO",
+      "FIFO",
+      "HIFO",
+      "średnia ważona cena zakupu"
+    ],
+    "correct": [
+      1,
+      2
+    ],
+    "explanation": "Cena jednostek spadała, więc najdroższe jednostki kupiono na początku. Przy sprzedaży część jednostek rozlicza się po cenie zakupu – im wyższy koszt nabycia, tym mniejszy zysk i podatek. FIFO (pierwsze kupione = najdroższe, B) i HIFO (najwyższy koszt najpierw, C) dają najwyższy koszt, a więc najniższy podatek."
+  },
+  {
+    "id": "owe24-c-23",
+    "type": "multi",
+    "edition": "XXIV OWE (2010/2011), zawody centralne",
+    "question": "W analizie technicznej identyfikowane są formacje:",
+    "options": [
+      "flagi i chorągiewki",
+      "trójkąta",
+      "trapezu równoramiennego",
+      "klina"
+    ],
+    "correct": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "W analizie technicznej wyróżnia się formacje cenowe, m.in. flagi i chorągiewki (A), trójkąty (B), kliny (D), głowę z ramionami, podwójne szczyty i dna, prostokąty. „Trapez równoramienny” (C) nie jest typową formacją."
+  },
+  {
+    "id": "owe24-c-24",
+    "type": "multi",
+    "edition": "XXIV OWE (2010/2011), zawody centralne",
+    "question": "W strukturze zasobów pieniądza w Polsce depozyty przedsiębiorstw o pierwotnym terminie do dwóch lat (włącznie) ujmowane są w agregacie pieniężnym:",
+    "options": [
+      "M0",
+      "M1",
+      "M2",
+      "M3"
+    ],
+    "correct": [
+      2,
+      3
+    ],
+    "explanation": "Depozyty przedsiębiorstw z pierwotnym terminem do 2 lat należą do M2 (C), a ponieważ M3 obejmuje całe M2, także do M3 (D). M1 zawiera tylko gotówkę i depozyty bieżące, a M0 – gotówkę i rezerwy banków."
+  },
+  {
+    "id": "owe24-c-25",
+    "type": "multi",
+    "edition": "XXIV OWE (2010/2011), zawody centralne",
+    "question": "Rezerwy dewizowe posiadane przez bank centralny:",
+    "options": [
+      "umożliwiają realizację polityki kursowej",
+      "są czynnikiem współtworzącym zaufanie do pozycji finansowej kraju",
+      "są przechowywane wyłącznie w postaci depozytów walutowych i złota",
+      "pozwalają na regulowanie zobowiązań zagranicznych budżetu państwa wynikających z zobowiązań międzynarodowych"
+    ],
+    "correct": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Rezerwy dewizowe banku centralnego pozwalają prowadzić politykę kursową (interwencje walutowe – A), budują zaufanie do wypłacalności kraju (B) i umożliwiają regulowanie zobowiązań zagranicznych państwa (D). Są utrzymywane także w papierach wartościowych (np. obligacjach rządów), a nie tylko w depozytach i złocie (C)."
+  },
+  {
+    "id": "owe24-c-26",
+    "type": "multi",
+    "edition": "XXIV OWE (2010/2011), zawody centralne",
+    "question": "Zamożny klient banku komercyjnego, który korzysta z usługi concierge, może:",
+    "options": [
+      "całodobowo kontaktować się z dyrektorem oddziału banku i negocjować z nim warunki lokowania oszczędności",
+      "sprawdzić, w której aptece dostępny jest zażywany przez niego lek antyalergiczny",
+      "przechowywać swoje kosztowności (np. sztabki złota) bezpośrednio w skarbcu centrali banku",
+      "skorzystać z pomocy w organizacji przyjęcia z okazji rocznicy ślubu"
+    ],
+    "correct": [
+      1,
+      3
+    ],
+    "explanation": "Concierge to usługa „osobistego asystenta” dla zamożnych klientów (np. przy kartach premium): pomoc w sprawach codziennych, jak znalezienie leku w aptece (B), rezerwacje, organizacja przyjęć i podróży (D). Nie dotyczy negocjowania warunków lokat (A) ani przechowywania kosztowności w skarbcu (C)."
+  },
+  {
+    "id": "owe24-c-27",
+    "type": "multi",
+    "edition": "XXIV OWE (2010/2011), zawody centralne",
+    "question": "Graficzne przedstawienie powiązań pomiędzy czynnikami działającymi na proces i skutkami, które one powodują, to wykres:",
+    "options": [
+      "Hijmansa",
+      "Gantta",
+      "Ishikawy",
+      "Neymana"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Wykres Ishikawy (diagram przyczynowo-skutkowy, „rybiej ości”) przedstawia przyczyny (czynniki), które prowadzą do określonego skutku lub problemu, np. wady produktu. Wykres Gantta to harmonogram prac."
+  },
+  {
+    "id": "owe24-c-28",
+    "type": "multi",
+    "edition": "XXIV OWE (2010/2011), zawody centralne",
+    "question": "Podstawowe typy strategii konkurencji według modelu Portera to:",
+    "options": [
+      "strategia biernej akcji",
+      "strategia przywództwa pod względem kosztów",
+      "strategia odróżniania się",
+      "strategia koncentracji na niszy rynkowej"
+    ],
+    "correct": [
+      1,
+      2,
+      3
+    ],
+    "explanation": "M. Porter wyróżnił trzy podstawowe strategie konkurencji: przywództwo kosztowe (B), wyróżnianie się (dyferencjację – C) i koncentrację na niszy rynkowej (D). „Bierna reakcja” to typ z typologii Milesa i Snowa."
+  },
+  {
+    "id": "owe24-c-29",
+    "type": "multi",
+    "edition": "XXIV OWE (2010/2011), zawody centralne",
+    "question": "Wzrost rozmiarów organizacji wiąże się z intensyfikacją takich cech strukturalnych, jak:",
+    "options": [
+      "liczba szczebli zarządzania",
+      "koncyliacyjne formy rozstrzygania sporów",
+      "standaryzacja działań",
+      "sformalizowanie działań organizacyjnych"
+    ],
+    "correct": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Wraz ze wzrostem organizacji rośnie liczba szczebli zarządzania (A), standaryzacja (C) i formalizacja działań (D) – duże organizacje potrzebują więcej procedur, by koordynować pracę. Koncyliacyjne formy rozstrzygania sporów (B) nie są cechą strukturalną związaną ze wzrostem."
+  },
+  {
+    "id": "owe24-c-30",
+    "type": "multi",
+    "edition": "XXIV OWE (2010/2011), zawody centralne",
+    "question": "W teorii X i Y opracowanej przez McGregora zakłada się, że:",
+    "options": [
+      "motywowanie pracowników oparte jest na przymusie (teoria X)",
+      "pracownicy są odpowiednio zmotywowani, kreatywni i odpowiedzialni (teoria Y)",
+      "dobry menedżer musi wykorzystywać metodę „kija i marchewki” (zarówno teoria X, jak i teoria Y)",
+      "dla prawidłowego kształtowania stosunków międzyludzkich w organizacji niezbędne jest stosowanie teorii X"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "Teoria X (D. McGregor) zakłada, że ludzie nie lubią pracy, więc trzeba ich zmuszać i kontrolować (A). Teoria Y zakłada, że pracownicy są zmotywowani, twórczy i odpowiedzialni (B). Menedżer powinien raczej opierać się na teorii Y, a „kij i marchewka” to cecha podejścia X."
+  }
+]

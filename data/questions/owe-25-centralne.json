@@ -1,0 +1,479 @@
+[
+  {
+    "id": "owe25-c-01",
+    "type": "multi",
+    "edition": "XXV OWE (2011/2012), zawody centralne",
+    "question": "Które z poniższych stwierdzeń jest prawidłowe?",
+    "options": [
+      "dobra wolne nie są wykorzystywane do zaspokajania potrzeb ludzkich",
+      "czas wolny ma koszt alternatywny",
+      "zjawisko rzadkości nie dotyczy społeczeństw wysokorozwiniętych",
+      "pojęcie rzadkości dotyczy przede wszystkim dóbr luksusowych"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Czas wolny ma koszt alternatywny – to dochód, który można by uzyskać, pracując w tym czasie (B). Dobra wolne (np. powietrze) zaspokajają potrzeby, ale nie są rzadkie (A). Rzadkość dotyczy wszystkich społeczeństw i wszystkich dóbr ekonomicznych (C, D – fałsz)."
+  },
+  {
+    "id": "owe25-c-02",
+    "type": "multi",
+    "edition": "XXV OWE (2011/2012), zawody centralne",
+    "question": "Jeśli wiadomo, że wzrost dochodu realnego konsumenta z 500 do 550 zł wywołał wzrost popytu na pewne dobro z 75 szt. do 80 szt., to:",
+    "options": [
+      "jest to dobro normalne",
+      "popyt na to dobro jest elastyczny",
+      "jest to dobro Giffena",
+      "jest to dobro podstawowe"
+    ],
+    "correct": [
+      0,
+      3
+    ],
+    "explanation": "Dochód wzrósł o 10%, a popyt o 6,67% (z 75 do 80), więc elastyczność dochodowa ≈ 0,67. Jest dodatnia, czyli to dobro normalne (A), a mniejsza od 1, czyli dobro podstawowe (D). Elastyczność cenowa nie jest znana (B), a dobro Giffena ma ujemną elastyczność dochodową (C)."
+  },
+  {
+    "id": "owe25-c-03",
+    "type": "multi",
+    "edition": "XXV OWE (2011/2012), zawody centralne",
+    "question": "Jeżeli rząd ustanowił czynsz maksymalny za wynajmowane mieszkania na poziomie o 20% niższym od poziomu odpowiadającego warunkom równowagi rynkowej, a elastyczność cenowa podaży mieszkań wynosi 0,75, to o ile w przybliżeniu wzrosłaby w takiej sytuacji liczba wynajmowanych mieszkań, gdyby czynsze zostały uwolnione spod kontroli administracyjnej?",
+    "options": [
+      "o 15%",
+      "o 19%",
+      "o 25%",
+      "o 38%"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Czynsz maksymalny jest o 20% niższy od równowagi, więc uwolnienie czynszów podniesie je do poziomu równowagi – o 25% w stosunku do czynszu maksymalnego (1 / 0,8 = 1,25). Przy elastyczności podaży 0,75 liczba wynajmowanych mieszkań wzrośnie o 0,75 · 25% ≈ 19% (B)."
+  },
+  {
+    "id": "owe25-c-04",
+    "type": "multi",
+    "edition": "XXV OWE (2011/2012), zawody centralne",
+    "question": "Gospodarstwo domowe postępując racjonalnie:",
+    "options": [
+      "dokonuje takiego wyboru, aby zgodnie ze swoimi upodobaniami osiągnąć najwyższą możliwą użyteczność całkowitą z procesu konsumpcji dóbr i usług",
+      "porównuje użyteczność krańcową dóbr i usług, które zdecydowało się nabyć, z ich jakością",
+      "maksymalizuje swoje zadowolenie, kiedy stosunek użyteczności całkowitych rozpatrywanych dóbr lub usług zrównuje się ze stosunkiem ich cen",
+      "dąży do osiągnięcia takiego poziomu konsumpcji danego dobra lub usługi, przy którym jego/jej użyteczność krańcowa wynosi 0"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Racjonalne gospodarstwo domowe maksymalizuje użyteczność całkowitą zgodnie ze swoimi preferencjami, przy danym dochodzie i cenach (A). W optimum relacja użyteczności krańcowych (nie całkowitych – C) równa się relacji cen, a użyteczność krańcowa nie musi wynosić 0 (D)."
+  },
+  {
+    "id": "owe25-c-05",
+    "type": "multi",
+    "edition": "XXV OWE (2011/2012), zawody centralne",
+    "question": "Przedsiębiorstwo osiąga maksymalny zysk, gdy:",
+    "options": [
+      "utarg całkowity jest największy",
+      "utarg krańcowy zrównuje się z utargiem przeciętnym i utarg krańcowy spada",
+      "koszt krańcowy zrównuje się z utargiem przeciętnym i koszt krańcowy spada",
+      "koszt krańcowy zrównuje się z utargiem krańcowym i koszt krańcowy rośnie"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Zysk jest maksymalny, gdy utarg krańcowy równa się kosztowi krańcowemu (MR = MC), a koszt krańcowy w tym punkcie rośnie (D). Maksymalny utarg (A) to inne kryterium, a gdy MC spada, punkt MR = MC oznacza minimum zysku."
+  },
+  {
+    "id": "owe25-c-06",
+    "type": "multi",
+    "edition": "XXV OWE (2011/2012), zawody centralne",
+    "question": "Przedsiębiorstwo działające na doskonale konkurencyjnym rynku pracy, napotykające opadającą krzywą popytu na swoje produkty:",
+    "options": [
+      "zwiększać będzie zatrudnienie do momentu zrównania się kosztu krańcowego pracy z wartością krańcowego produktu pracy",
+      "zwiększać będzie zatrudnienie do momentu zrównania się kosztu krańcowego pracy z krańcowym przychodem z pracy",
+      "cechuje równość wartości krańcowego produktu pracy i krańcowego przychodu z pracy",
+      "cechuje równość kosztu krańcowego pracy i płacy"
+    ],
+    "correct": [
+      1,
+      3
+    ],
+    "explanation": "Na doskonale konkurencyjnym rynku pracy firma płaci płacę rynkową, więc koszt krańcowy pracy równa się płacy (D). Ponieważ firma ma opadającą krzywą popytu na produkty (nie jest cenobiorcą na rynku dóbr), zatrudnia do momentu, gdy koszt krańcowy pracy zrówna się z krańcowym przychodem z pracy MRPL = MR · MPL (B), który jest niższy od wartości produktu krańcowego P · MPL (dlatego A i C są fałszywe)."
+  },
+  {
+    "id": "owe25-c-07",
+    "type": "multi",
+    "edition": "XXV OWE (2011/2012), zawody centralne",
+    "question": "Czyste dobra publiczne to dobra:",
+    "options": [
+      "które nie są przedmiotem rywalizacji w procesie konsumpcji i spełniają warunek niemożności wykluczenia kogokolwiek z konsumpcji",
+      "możliwe do dostarczania w optymalnych ilościach przez prywatne podmioty działające w systemie rynkowym",
+      "które dotyka zjawisko nieefektywności zwane tragedią wspólnego pastwiska",
+      "które stanowią obciążenie dla systemu ekonomicznego, ponieważ ich dostarczanie wiąże się z koniecznością opodatkowania obywateli, przez co zmniejszają dobrobyt społeczny"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Czyste dobra publiczne są niekonkurencyjne w konsumpcji i niewykluczalne (A). Rynek dostarcza ich za mało (problem gapowicza – B fałszywe), a tragedia wspólnego pastwiska dotyczy zasobów wspólnych (C)."
+  },
+  {
+    "id": "owe25-c-08",
+    "type": "multi",
+    "edition": "XXV OWE (2011/2012), zawody centralne",
+    "question": "Optimum w sensie Pareto oznacza taki sposób podziału dóbr, że:",
+    "options": [
+      "wszystkie podmioty są w posiadaniu choćby minimalnej ilości dóbr",
+      "uwzględniony jest interes społeczny",
+      "nie można już poprawić sytuacji jednego podmiotu, nie pogarszając sytuacji któregokolwiek z pozostałych podmiotów",
+      "można poprawić sytuację przynajmniej jednego podmiotu, jednak wymaga to pogorszenia sytuacji większości podmiotów"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Optimum Pareto to stan, w którym nie można już poprawić sytuacji żadnej osoby bez pogorszenia sytuacji kogoś innego (C). Jest to kryterium efektywności, a nie sprawiedliwości podziału (A, B)."
+  },
+  {
+    "id": "owe25-c-09",
+    "type": "multi",
+    "edition": "XXV OWE (2011/2012), zawody centralne",
+    "question": "Jeśli kraj A może miesięcznie wyprodukować 10 tys. komputerów lub 40 tys. rowerów, a kraj B może miesięcznie wyprodukować 20 tys. komputerów lub 100 tys. rowerów i oba kraje postanowiły prowadzić wymianę handlową, to wówczas:",
+    "options": [
+      "kraj A powinien produkować komputery",
+      "kraj A powinien produkować rowery",
+      "kraj B powinien produkować komputery",
+      "kraj B powinien produkować rowery"
+    ],
+    "correct": [
+      0,
+      3
+    ],
+    "explanation": "Koszt alternatywny komputera: w A = 40 / 10 = 4 rowery, w B = 100 / 20 = 5 rowerów. A wytwarza komputery relatywnie taniej, więc powinien się w nich specjalizować (A), a B – w rowerach, w których jego koszt alternatywny jest niższy (0,2 komputera wobec 0,25 w A – D)."
+  },
+  {
+    "id": "owe25-c-10",
+    "type": "multi",
+    "edition": "XXV OWE (2011/2012), zawody centralne",
+    "question": "Parytet siły nabywczej pieniądza jest wykorzystywany do:",
+    "options": [
+      "porównania poziomu życia w różnych krajach",
+      "obliczania realnego PKB na podstawie nominalnego",
+      "określenia stopnia pokrycia pieniądza w złocie",
+      "prognozowania kapitałochłonności wzrostu gospodarczego"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Parytet siły nabywczej (PSN, PPP) przelicza wielkości ekonomiczne (np. PKB na osobę) tak, by uwzględnić różnice w poziomie cen między krajami. Pozwala porównywać poziom życia w różnych krajach (A)."
+  },
+  {
+    "id": "owe25-c-11",
+    "type": "multi",
+    "edition": "XXV OWE (2011/2012), zawody centralne",
+    "question": "Które z poniższych stwierdzeń wyjaśnia zjawisko histerezy na rynku pracy?",
+    "options": [
+      "wobec ożywienia w gospodarce występująca presja zatrudnionych na wzrost płac powoduje, że pracodawcy są skłonni zatrudniać mniej osób",
+      "długotrwała recesja powoduje wzrost bierności wśród poszukujących pracę i zmniejszenie liczby szukających pracy nawet pomimo ożywienia w gospodarce",
+      "zapowiedzi masowych zwolnień obniżają motywację pracowników i ich produkcyjność krańcową",
+      "ograniczenie inwestycji w kapitał rzeczowy w okresie recesji utrudnia powrót do wysokiego poziomu zatrudnienia w sytuacji polepszenia koniunktury"
+    ],
+    "correct": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Histereza oznacza, że po recesji bezrobocie utrzymuje się wysoko nawet w ożywieniu. Wyjaśnienia: zatrudnieni (insiderzy) wymuszają wzrost płac, więc pracodawcy zatrudniają mniej nowych osób (A); długotrwale bezrobotni stają się bierni i tracą kwalifikacje (B); w recesji spadają inwestycje w kapitał, więc później brakuje miejsc pracy (D)."
+  },
+  {
+    "id": "owe25-c-13",
+    "type": "multi",
+    "edition": "XXV OWE (2011/2012), zawody centralne",
+    "question": "Inflacja bazowa to:",
+    "options": [
+      "indeks wzrostu cen towarów i usług konsumpcyjnych oczyszczony z wpływu nagłych szoków podażowych, a także wolny od sezonowego wpływu zmian niektórych cen",
+      "wskaźnik cen konsumpcyjnych obliczony według ujednoliconej metodologii Unii Europejskiej i oparty na strukturze spożycia indywidualnego w sektorze gospodarstw domowych",
+      "deflator produktu krajowego brutto",
+      "przeciętna zmiana cen czynników wytwórczych wykorzystywanych przez krajowych producentów"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Inflacja bazowa to wskaźnik inflacji pokazujący trwałą tendencję zmian cen – oczyszczony z wpływu cen najbardziej zmiennych i zależnych od czynników niezależnych od polityki pieniężnej (np. żywności, energii), szoków podażowych i wahań sezonowych (A). B opisuje wskaźnik HICP."
+  },
+  {
+    "id": "owe25-c-14",
+    "type": "multi",
+    "edition": "XXV OWE (2011/2012), zawody centralne",
+    "question": "Terms of trade dla danego kraju to stosunek:",
+    "options": [
+      "względnej kapitałochłonności eksportu do względnej kapitałochłonności importu",
+      "wskaźnika cen eksportowych do wskaźnika cen importowych",
+      "kursu waluty krajowej do koszyka walut zagranicznych",
+      "wielkości eksportu do wielkości importu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Terms of trade (towarowe warunki wymiany) = indeks cen eksportu / indeks cen importu · 100 (B). Jego wzrost oznacza, że za tę samą ilość eksportu można kupić więcej importu."
+  },
+  {
+    "id": "owe25-c-15",
+    "type": "multi",
+    "edition": "XXV OWE (2011/2012), zawody centralne",
+    "question": "Jeżeli w pewnym europejskim kraju występuje deficyt bilansu płatniczego, to:",
+    "options": [
+      "popyt na waluty obce jest wysoki i występuje presja na ich aprecjację",
+      "popyt na waluty obce jest wysoki i występuje presja na ich deprecjację",
+      "popyt na waluty obce jest niski i występuje presja na ich aprecjację",
+      "podaż walut obcych jest wysoka i występuje presja na ich aprecjację"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Deficyt bilansu płatniczego oznacza, że więcej pieniędzy wypływa z kraju, niż do niego wpływa – popyt na waluty obce przewyższa ich podaż, więc waluty obce drożeją (presja na ich aprecjację, a deprecjację waluty krajowej – A)."
+  },
+  {
+    "id": "owe25-c-16",
+    "type": "multi",
+    "edition": "XXV OWE (2011/2012), zawody centralne",
+    "question": "Termin bailout to inaczej:",
+    "options": [
+      "ogłoszenie faktycznej niewypłacalności",
+      "rodzaj programu pomocowego",
+      "opóźnienia w regulowaniu zobowiązań",
+      "zmiana sposobu zabezpieczenia długu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Bailout to program pomocowy (ratunkowy) – np. dokapitalizowanie banku przez państwo czy pomoc finansowa udzielona zadłużonemu krajowi przez inne kraje i instytucje (B). Przeciwieństwem jest bail-in – pokrycie strat przez wierzycieli i akcjonariuszy."
+  },
+  {
+    "id": "owe25-c-17",
+    "type": "multi",
+    "edition": "XXV OWE (2011/2012), zawody centralne",
+    "question": "Członkiem giełdy w Polsce może być:",
+    "options": [
+      "dom maklerski zawierający transakcje giełdowe na rachunek własny lub na rachunek klienta i prowadzący działalność maklerską na terytorium Rzeczypospolitej Polskiej",
+      "czynna zawodowo osoba fizyczna posiadająca licencję maklera papierów wartościowych",
+      "każdy akcjonariusz Giełdy Papierów Wartościowych w Warszawie SA",
+      "każdy bank, fundusz inwestycyjny lub otwarty fundusz emerytalny prowadzący działalność w Polsce"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Członkami giełdy (GPW) mogą być m.in. domy maklerskie i banki prowadzące działalność maklerską, które zawierają transakcje na własny rachunek lub na rachunek klientów (A). Osoba fizyczna z licencją maklera nie może być członkiem giełdy – pracuje w domu maklerskim."
+  },
+  {
+    "id": "owe25-c-18",
+    "type": "multi",
+    "edition": "XXV OWE (2011/2012), zawody centralne",
+    "question": "Z jakiej formy opodatkowania podatkiem dochodowym może skorzystać mały przedsiębiorca prowadzący działalność w zakresie detalicznego handlu kwiatami (stan na rok 2012)?",
+    "options": [
+      "karta podatkowa",
+      "ryczałt od przychodów ewidencjonowanych",
+      "podatek według skali 18% i 32%",
+      "19-procentowy podatek liniowy"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "W 2012 r. mały przedsiębiorca z detalicznym handlem kwiatami mógł wybrać kartę podatkową (handel detaliczny kwiatami był w niej przewidziany, przy spełnieniu warunków – A), ryczałt od przychodów ewidencjonowanych (B), opodatkowanie według skali 18% i 32% (C) lub podatek liniowy 19% (D)."
+  },
+  {
+    "id": "owe25-c-19",
+    "type": "multi",
+    "edition": "XXV OWE (2011/2012), zawody centralne",
+    "question": "Wskaż prawidłową odpowiedź dotyczącą obowiązkowego ubezpieczenia wypadkowego w systemie powszechnego ubezpieczenia społecznego:",
+    "options": [
+      "jest płacone z tytułu wszystkich umów, które są opodatkowane podatkiem dochodowym od osób fizycznych",
+      "stanowi przychód Narodowego Funduszu Zdrowia",
+      "podlega odliczaniu od wynagrodzenia pracownika zatrudnionego na umowę o pracę",
+      "stopa procentowa ubezpieczenia nie jest jednakowa dla wszystkich przedsiębiorstw"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Składka na ubezpieczenie wypadkowe jest finansowana w całości przez pracodawcę, a jej stopa zależy od ryzyka zawodowego w danej branży i wypadkowości w firmie – nie jest jednakowa dla wszystkich (D). Trafia do Funduszu Ubezpieczeń Społecznych (ZUS), a nie do NFZ."
+  },
+  {
+    "id": "owe25-c-20",
+    "type": "multi",
+    "edition": "XXV OWE (2011/2012), zawody centralne",
+    "question": "Nadzór nad prawidłowością uchwały dotyczącej zaciągania zobowiązań wpływających na wysokość długu publicznego przez jednostki samorządu terytorialnego sprawuje:",
+    "options": [
+      "wójt, burmistrz lub prezydent",
+      "marszałek województwa",
+      "minister finansów",
+      "regionalna izba obrachunkowa"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Nadzór nad zgodnością z prawem uchwał samorządów w sprawach finansowych, w tym dotyczących zaciągania zobowiązań wpływających na dług, sprawuje regionalna izba obrachunkowa (D)."
+  },
+  {
+    "id": "owe25-c-21",
+    "type": "multi",
+    "edition": "XXV OWE (2011/2012), zawody centralne",
+    "question": "Wartość księgowa spółki wyliczana jest jako:",
+    "options": [
+      "różnica pomiędzy aktywami a zobowiązaniami",
+      "suma aktywów trwałych i obrotowych",
+      "suma zysku netto i amortyzacji powiększona o opłacony kapitał własny",
+      "różnica pomiędzy należnościami a zobowiązaniami"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Wartość księgowa spółki to aktywa minus zobowiązania (i rezerwy na zobowiązania), czyli kapitał własny (A)."
+  },
+  {
+    "id": "owe25-c-22",
+    "type": "multi",
+    "edition": "XXV OWE (2011/2012), zawody centralne",
+    "question": "Wskaż prawidłowe stwierdzenie w odniesieniu do wewnętrznej stopy zwrotu (IRR):",
+    "options": [
+      "jest równa średniemu ważonemu kosztowi kapitału",
+      "nie uwzględnia zmian wartości pieniądza w czasie",
+      "uwzględnia wpływ wartości nakładów początkowych na opłacalność przedsięwzięcia",
+      "nie może być bezpośrednio stosowana do oceny przedsięwzięć, które charakteryzują się ujemnymi przepływami pieniężnymi nie tylko w okresie początkowym, ale w trakcie trwania projektu"
+    ],
+    "correct": [
+      2,
+      3
+    ],
+    "explanation": "Wewnętrzna stopa zwrotu (IRR) to stopa dyskontowa, przy której NPV projektu wynosi 0 – uwzględnia wartość pieniądza w czasie i nakłady początkowe (C). Przy projektach, w których ujemne przepływy pojawiają się także w trakcie (zmiana znaku przepływów), może istnieć kilka IRR, więc nie stosuje się jej bezpośrednio (D). IRR nie jest równa WACC (A) – porównuje się ją z WACC."
+  },
+  {
+    "id": "owe25-c-23",
+    "type": "multi",
+    "edition": "XXV OWE (2011/2012), zawody centralne",
+    "question": "Wskaźnik „stopa dywidendy” informuje o:",
+    "options": [
+      "realnej zyskowności spółki",
+      "dywidendzie przypadającej na 1 akcję w relacji do ceny rynkowej akcji",
+      "dywidendzie przypadającej na 1 akcję w relacji do zysku netto spółki",
+      "relacji kwoty dywidendy do majątku spółki"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Stopa dywidendy = dywidenda na akcję / cena rynkowa akcji (B). Relacja dywidendy do zysku netto to wskaźnik wypłaty dywidendy (C)."
+  },
+  {
+    "id": "owe25-c-24",
+    "type": "multi",
+    "edition": "XXV OWE (2011/2012), zawody centralne",
+    "question": "Zgodnie z podejściem behawioralnym w finansach zakłada się, że:",
+    "options": [
+      "sposób prezentacji alternatyw ma znaczenie dla decyzji podejmowanych przez inwestorów",
+      "inwestorzy wybiórczo postrzegają informacje rynkowe",
+      "nadmierna pewność siebie dotyczy tylko inwestorów indywidualnych",
+      "gracze giełdowi umieją identyfikować anomalie rynkowe, więc starają się jak najszybciej sprzedać taniejące akcje"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "Finanse behawioralne pokazują, że inwestorzy nie są w pełni racjonalni: sposób przedstawienia wyborów wpływa na decyzje (efekt ramy, framing – A), a informacje są postrzegane wybiórczo (B). Nadmierna pewność siebie dotyczy także profesjonalistów (C), a inwestorzy często zbyt długo trzymają tracące akcje (efekt dyspozycji – D fałszywe)."
+  },
+  {
+    "id": "owe25-c-25",
+    "type": "multi",
+    "edition": "XXV OWE (2011/2012), zawody centralne",
+    "question": "Danymi przedsiębiorstw, które są solidnymi i wiarygodnymi kredytobiorcami, dysponuje:",
+    "options": [
+      "Krajowa Izba Rozliczeniowa",
+      "Związek Banków Polskich",
+      "Narodowy Bank Polski",
+      "Biuro Informacji Kredytowej"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Biuro Informacji Kredytowej gromadzi dane o historii kredytowej klientów banków i SKOK-ów – zarówno pozytywne (terminowe spłaty), jak i negatywne (D). Banki wykorzystują je do oceny zdolności kredytowej."
+  },
+  {
+    "id": "owe25-c-26",
+    "type": "multi",
+    "edition": "XXV OWE (2011/2012), zawody centralne",
+    "question": "Przykładem project finance może być:",
+    "options": [
+      "finansowanie przez konsorcjum banków budowy drapacza chmur w Warszawie za pomocą kredytu zabezpieczonego hipoteką i przyszłymi wpływami z najmu powierzchni biurowych",
+      "zakup przez dojrzałe przedsiębiorstwo derywatów w celu ulokowania nadwyżek finansowych",
+      "rodzaj piramidy finansowej podobnej do systemu konsorcyjnego (argentyńskiego)",
+      "powołanie spółki zależnej przez KGHM w celu uruchomienia nowej kopalni srebra w Kanadzie"
+    ],
+    "correct": [
+      0,
+      3
+    ],
+    "explanation": "Project finance to finansowanie konkretnego przedsięwzięcia (zwykle przez wyodrębnioną spółkę celową), w którym spłata długu opiera się przede wszystkim na przyszłych przepływach z projektu – np. budowa biurowca spłacana z czynszów (A) czy nowa kopalnia realizowana przez spółkę zależną (D)."
+  },
+  {
+    "id": "owe25-c-27",
+    "type": "multi",
+    "edition": "XXV OWE (2011/2012), zawody centralne",
+    "question": "Problem wynikający z rozdzielenia funkcji właścicielskich i menedżerskich przez ekonomistów określany jest jako:",
+    "options": [
+      "krótkowzroczna rentowność",
+      "syndrom bizantyjski",
+      "jazda bez trzymanki",
+      "problem agencji"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Problem agencji (pryncypał–agent) wynika z rozdzielenia własności od zarządzania: menedżerowie (agenci) mogą realizować własne cele zamiast celów właścicieli (pryncypałów) – D."
+  },
+  {
+    "id": "owe25-c-28",
+    "type": "multi",
+    "edition": "XXV OWE (2011/2012), zawody centralne",
+    "question": "Menedżer stosujący styl przywództwa sytuacyjnego koncentruje się na:",
+    "options": [
+      "terminowej realizacji zadań",
+      "pracy zespołowej i kształtowaniu właściwych relacji międzyludzkich pomiędzy swoimi podwładnymi",
+      "jak najlepszym wykorzystaniu swoich podwładnych do rozwoju własnych umiejętności",
+      "diagnozie kompetencji pracownika i jego motywacji"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Przywództwo sytuacyjne (P. Hersey, K. Blanchard) zakłada, że styl kierowania należy dostosować do dojrzałości pracownika – jego kompetencji i motywacji – więc menedżer koncentruje się na ich diagnozie (D) i wybiera styl: instruowanie, sprzedawanie, uczestniczenie lub delegowanie."
+  },
+  {
+    "id": "owe25-c-29",
+    "type": "multi",
+    "edition": "XXV OWE (2011/2012), zawody centralne",
+    "question": "Które z niżej wymienionych działań jest stosowane do obrony przed wrogim przejęciem?",
+    "options": [
+      "sprzedaż kluczowych aktywów",
+      "wprowadzenie ograniczenia możliwości zmian w radzie nadzorczej",
+      "emisja nowych akcji skierowana do wybranych inwestorów",
+      "interwencja „czarnego rycerza”"
+    ],
+    "correct": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Obrona przed wrogim przejęciem: sprzedaż kluczowych aktywów, które interesują przejmującego („klejnoty koronne” – A), ograniczenie możliwości zmian w radzie nadzorczej (B), emisja akcji dla przyjaznych inwestorów (C). Biały rycerz to przyjazny inwestor ratujący spółkę, a „czarny rycerz” (D) to właśnie wrogi przejmujący."
+  },
+  {
+    "id": "owe25-c-30",
+    "type": "multi",
+    "edition": "XXV OWE (2011/2012), zawody centralne",
+    "question": "System informatyczny służący wspomaganiu zarządzania przedsiębiorstwem dzięki gromadzeniu danych m.in. z działu zaopatrzenia, produkcji, księgowości i kadr to:",
+    "options": [
+      "CRM",
+      "ERP",
+      "MPR",
+      "SCM"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "ERP (Enterprise Resource Planning) to zintegrowany system informatyczny wspomagający zarządzanie całym przedsiębiorstwem – łączy dane z zaopatrzenia, produkcji, sprzedaży, finansów, księgowości i kadr (B). CRM dotyczy relacji z klientami, a SCM – łańcucha dostaw."
+  }
+]

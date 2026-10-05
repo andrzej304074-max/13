@@ -1,0 +1,497 @@
+[
+  {
+    "id": "owe22-c-01",
+    "type": "multi",
+    "edition": "XXII OWE (2008/2009), zawody centralne",
+    "question": "Jeżeli na rynku dachówek ceramicznych nastąpiło jednoczesne zwiększenie się popytu i spadek podaży, to w efekcie mogło się zdarzyć, że:",
+    "options": [
+      "ilość sprzedanego produktu zwiększyła się, a cena wzrosła",
+      "ilość sprzedanego produktu zmniejszyła się, a cena obniżyła się",
+      "ilość sprzedanego produktu zwiększyła się, a cena obniżyła się",
+      "ilość sprzedanego produktu zmniejszyła się, a cena wzrosła"
+    ],
+    "correct": [
+      0,
+      3
+    ],
+    "explanation": "Wzrost popytu podnosi cenę i ilość, a spadek podaży podnosi cenę i obniża ilość. Cena na pewno wzrośnie, a ilość może wzrosnąć (gdy silniejszy jest wzrost popytu – A) lub spaść (gdy silniejszy jest spadek podaży – D). Spadek ceny (B, C) jest niemożliwy."
+  },
+  {
+    "id": "owe22-c-02",
+    "type": "multi",
+    "edition": "XXII OWE (2008/2009), zawody centralne",
+    "question": "Które z czynników determinują niską elastyczność cenową podaży?",
+    "options": [
+      "oferowane dobro jest dla konsumenta dobrem podstawowym",
+      "wysoka cena (rozpatrując określoną krzywą podaży)",
+      "niskie koszty magazynowania dobra",
+      "brak rezerwy mocy produkcyjnych"
+    ],
+    "correct": [
+      1,
+      3
+    ],
+    "explanation": "Podaż jest mało elastyczna, gdy producenci nie mogą szybko zwiększyć produkcji: przy braku rezerw mocy produkcyjnych (D) oraz – na danej krzywej podaży – przy wysokiej cenie, gdy firmy pracują blisko granicy możliwości (B). Niskie koszty magazynowania zwiększają elastyczność podaży, a charakter dobra dla konsumenta dotyczy popytu."
+  },
+  {
+    "id": "owe22-c-03",
+    "type": "multi",
+    "edition": "XXII OWE (2008/2009), zawody centralne",
+    "question": "Preferencje pewnego konsumenta dotyczące dóbr X i Y opisują krzywe obojętności U1 i U2. Jeżeli na krzywej obojętności U1 znajdują się koszyki dóbr o współrzędnych (1, 1), (2, 2), (3, 3), a na krzywej U2 koszyki dóbr o współrzędnych (2, 1), (3, 2), (4, 3), to dla tego konsumenta:",
+    "options": [
+      "jedno z dóbr jest niepożądane",
+      "jedno z dóbr jest neutralne",
+      "dobra są doskonale substytucyjne",
+      "dobra są doskonale komplementarne"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Na obu krzywych zwiększenie ilości jednego dobra o 1 wymaga zwiększenia drugiego o 1, by użyteczność była stała – krzywe obojętności są rosnące. Koszyk (2,1) leży na wyższej krzywej U2 niż (1,1), więc więcej X zwiększa użyteczność, a więcej Y (przy danym X) ją obniża – Y jest dobrem niepożądanym (A)."
+  },
+  {
+    "id": "owe22-c-04",
+    "type": "multi",
+    "edition": "XXII OWE (2008/2009), zawody centralne",
+    "question": "Regulacja cen monopolu naturalnego przez państwo oparta na kosztach przeciętnych:",
+    "options": [
+      "likwiduje stratę społeczną z tytułu monopolu",
+      "oznacza realizację przez przedsiębiorstwo jedynie zysku normalnego",
+      "jest tożsama z doskonałą dyskryminacją cenową monopolu",
+      "oznacza wyższą cenę rynkową dobra aniżeli regulacja oparta na kosztach krańcowych"
+    ],
+    "correct": [
+      1,
+      3
+    ],
+    "explanation": "Regulacja oparta na koszcie przeciętnym (P = ATC) daje firmie zerowy zysk ekonomiczny, czyli tylko zysk normalny (B). Ponieważ w monopolu naturalnym ATC > MC, cena jest wyższa niż przy regulacji opartej na koszcie krańcowym (D). Strata społeczna nie znika całkowicie (A), bo cena przewyższa koszt krańcowy."
+  },
+  {
+    "id": "owe22-c-05",
+    "type": "multi",
+    "edition": "XXII OWE (2008/2009), zawody centralne",
+    "question": "Zastosowanie metody Coase’a w korygowaniu negatywnych efektów zewnętrznych jest możliwe wówczas, gdy:",
+    "options": [
+      "koszty negocjacji są większe od zera",
+      "strony uczestniczące w negocjacjach mają równe pozycje przetargowe",
+      "znany jest sprawca negatywnych efektów zewnętrznych",
+      "liczba zainteresowanych partnerów (stron) jest relatywnie duża"
+    ],
+    "correct": [
+      1,
+      2
+    ],
+    "explanation": "Rozwiązanie Coase'a (negocjacje między stronami) działa, gdy znany jest sprawca szkody (C), strony mają podobną siłę przetargową (B), koszty negocjacji są bliskie zeru, a liczba stron jest mała. Wysokie koszty negocjacji (A) i duża liczba stron (D) uniemożliwiają porozumienie."
+  },
+  {
+    "id": "owe22-c-06",
+    "type": "multi",
+    "edition": "XXII OWE (2008/2009), zawody centralne",
+    "question": "Wskaż, które ze stwierdzeń dotyczących krótkiego okresu w teorii ekonomii są prawdziwe:",
+    "options": [
+      "trwa zawsze 12 miesięcy",
+      "nakłady wszystkich czynników wytwórczych są stałe",
+      "innowacje techniczne występują w ograniczonym zakresie",
+      "występują koszty stałe"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "W krótkim okresie przynajmniej jeden czynnik produkcji jest stały, dlatego występują koszty stałe (D). Krótki okres nie ma określonej długości kalendarzowej (A), a nie wszystkie czynniki są stałe (B)."
+  },
+  {
+    "id": "owe22-c-07",
+    "type": "multi",
+    "edition": "XXII OWE (2008/2009), zawody centralne",
+    "question": "Zmiana ceny materiałów wykorzystywanych w procesie produkcji (ceteris paribus) wpłynie na zmianę położenia krzywej:",
+    "options": [
+      "przeciętnego kosztu stałego",
+      "kosztu całkowitego",
+      "przeciętnego kosztu zmiennego",
+      "kosztu krańcowego"
+    ],
+    "correct": [
+      1,
+      2,
+      3
+    ],
+    "explanation": "Materiały to koszt zmienny. Wzrost ich ceny przesuwa krzywe kosztu całkowitego (B), przeciętnego kosztu zmiennego (C) i kosztu krańcowego (D). Przeciętny koszt stały (A) się nie zmienia."
+  },
+  {
+    "id": "owe22-c-08",
+    "type": "multi",
+    "edition": "XXII OWE (2008/2009), zawody centralne",
+    "question": "Na rynku doskonale konkurencyjnym firma minimalizująca krótkookresowe straty kontynuuje produkcję do momentu, gdy cena zrówna się z:",
+    "options": [
+      "kosztem krańcowym",
+      "przeciętnym kosztem zmiennym",
+      "kosztem zmiennym",
+      "przeciętnym kosztem całkowitym"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Firma w konkurencji doskonałej produkuje w krótkim okresie nawet ze stratą, dopóki cena pokrywa przeciętny koszt zmienny (pokrywa wtedy część kosztów stałych). Gdy cena spadnie do poziomu minimum AVC (punkt zamknięcia), zaprzestaje produkcji (B)."
+  },
+  {
+    "id": "owe22-c-09",
+    "type": "multi",
+    "edition": "XXII OWE (2008/2009), zawody centralne",
+    "question": "W sytuacji występowania zjawiska pułapki płynności:",
+    "options": [
+      "skuteczność polityki pieniężnej prowadzonej przez bank centralny jest znacznie ograniczona",
+      "podmioty rynkowe oczekują spadku cen obligacji, wobec czego tezauryzują nadwyżki pieniądza",
+      "zbyt duża podaż pieniądza prowadzi do wzrostu rzeczywistego PKB ponad jego potencjalny poziom",
+      "zmniejszenie krańcowej stopy opodatkowania wywołuje spadek wydatków inwestycyjnych"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "W pułapce płynności stopy procentowe są tak niskie, że podmioty oczekują ich wzrostu, czyli spadku cen obligacji, i wolą trzymać gotówkę (tezauryzować – B). Dodatkowy pieniądz z banku centralnego nie obniża już stóp, więc polityka pieniężna jest mało skuteczna (A)."
+  },
+  {
+    "id": "owe22-c-10",
+    "type": "multi",
+    "edition": "XXII OWE (2008/2009), zawody centralne",
+    "question": "W wyniku lepszej koniunktury w krajach Unii Europejskiej następuje wzrost eksportu w Polsce. W tej sytuacji najbardziej prawdopodobna jest następująca sekwencja zdarzeń:",
+    "options": [
+      "presja na rewaluację waluty krajowej – wzrost podaży pieniądza – wzrost wielkości produkcji globalnej",
+      "presja na rewaluację waluty krajowej – spadek podaży pieniądza – wzrost wielkości produkcji globalnej",
+      "presja na dewaluację waluty krajowej – wzrost podaży pieniądza – wzrost wielkości produkcji globalnej",
+      "presja na dewaluację waluty krajowej – spadek podaży pieniądza – spadek wielkości produkcji globalnej"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Wzrost eksportu zwiększa napływ walut obcych i popyt na złotego – pojawia się presja na umocnienie (w języku klucza: rewaluację) złotego. Jeśli bank centralny przeciwdziała umocnieniu, skupując waluty, zwiększa podaż pieniądza krajowego, a wyższy eksport zwiększa produkcję globalną (A)."
+  },
+  {
+    "id": "owe22-c-11",
+    "type": "multi",
+    "edition": "XXII OWE (2008/2009), zawody centralne",
+    "question": "Wielkość popytu na pieniądz zgłaszanego pod wpływem motywu transakcyjnego (ceteris paribus) zależy od:",
+    "options": [
+      "wielkości produkcji w gospodarce",
+      "wysokości realnej stopy procentowej",
+      "tempa inflacji",
+      "kosztu alternatywnego trzymania zasobu środka płatniczego"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "Popyt na pieniądz z motywu transakcyjnego zależy od wartości nominalnej transakcji – czyli od wielkości produkcji (realnego dochodu – A) i poziomu cen, a więc tempa inflacji (C). Stopa procentowa i koszt alternatywny trzymania pieniądza wpływają głównie na popyt spekulacyjny."
+  },
+  {
+    "id": "owe22-c-12",
+    "type": "multi",
+    "edition": "XXII OWE (2008/2009), zawody centralne",
+    "question": "Przesunięcie długookresowej krzywej Phillipsa oznacza:",
+    "options": [
+      "zmianę rzeczywistej stopy inflacji",
+      "zmianę nominalnej podaży pieniądza",
+      "zmianę naturalnej stopy bezrobocia",
+      "zmianę fazy cyklu koniunkturalnego"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Długookresowa krzywa Phillipsa jest pionowa na poziomie naturalnej stopy bezrobocia. Przesuwa się, gdy zmienia się naturalna stopa bezrobocia (C) – np. wskutek zmian na rynku pracy, zasiłków, kwalifikacji."
+  },
+  {
+    "id": "owe22-c-13",
+    "type": "multi",
+    "edition": "XXII OWE (2008/2009), zawody centralne",
+    "question": "W pewnym kraju konsumpcja wynosi 600 mld USD, inwestycje 400 mld USD, amortyzacja 150 mld USD, podatki pośrednie 100 mld USD, dochód netto z tytułu własności za granicą 200 mld USD, produkt narodowy brutto 1100 mld USD. Ile wynosi produkt narodowy netto?",
+    "options": [
+      "800 mld USD",
+      "900 mld USD",
+      "950 mld USD",
+      "1000 mld USD"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Produkt narodowy netto = produkt narodowy brutto − amortyzacja = 1100 − 150 = 950 mld USD. Pozostałe dane są zbędne (podatki pośrednie odejmuje się dopiero przy liczeniu dochodu narodowego)."
+  },
+  {
+    "id": "owe22-c-14",
+    "type": "multi",
+    "edition": "XXII OWE (2008/2009), zawody centralne",
+    "question": "Wzrost importu (ceteris paribus) powoduje:",
+    "options": [
+      "zwiększenie salda bilansu obrotów bieżących",
+      "zmniejszenie salda bilansu obrotów bieżących",
+      "zwiększenie salda bilansu obrotów kapitałowych",
+      "zmniejszenie salda bilansu obrotów kapitałowych"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Import jest pozycją ujemną w bilansie handlowym, który wchodzi do rachunku obrotów bieżących. Wzrost importu (ceteris paribus) zmniejsza więc saldo obrotów bieżących (B)."
+  },
+  {
+    "id": "owe22-c-15",
+    "type": "multi",
+    "edition": "XXII OWE (2008/2009), zawody centralne",
+    "question": "Przesunięcie funkcji konsumpcji pod wpływem zmiany zasobów majątkowych gospodarstw domowych i wydatków na każdym poziomie rozporządzalnych dochodów osobistych jest ilustracją efektu:",
+    "options": [
+      "rygla",
+      "akceleracji",
+      "dochodowego",
+      "bogactwa"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Efekt bogactwa (majątkowy) polega na tym, że zmiana wartości majątku gospodarstw domowych (np. akcji, nieruchomości) zmienia ich konsumpcję przy każdym poziomie dochodu – przesuwa funkcję konsumpcji (D)."
+  },
+  {
+    "id": "owe22-c-16",
+    "type": "multi",
+    "edition": "XXII OWE (2008/2009), zawody centralne",
+    "question": "Analiza rachunku przepływów pieniężnych pewnego przedsiębiorstwa wykazuje ujemne przepływy pieniężne z działalności operacyjnej i finansowej, natomiast przepływy z działalności inwestycyjnej są dodatnie. Który z poniższych opisów charakteryzuje sytuację tego przedsiębiorstwa?",
+    "options": [
+      "przedsiębiorstwo przeżywa trudności finansowe i utrzymuje płynność poprzez wyprzedaż majątku trwałego",
+      "przedsiębiorstwo rozpoczęło inwestycje lub dokonało przejęcia innego podmiotu",
+      "przedsiębiorstwo jest w fazie szybkiego rozwoju i nie jest w stanie pokryć wydatków na rozwój z wypracowanych zysków",
+      "przedsiębiorstwo zaciąga kredyty w celu sfinansowania bieżącej działalności"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Ujemne przepływy operacyjne (firma nie generuje gotówki z działalności) i finansowe (spłaca długi, a nie pozyskuje kapitału) przy dodatnich przepływach inwestycyjnych (sprzedaż majątku) oznaczają, że firma ma kłopoty finansowe i utrzymuje płynność, wyprzedając majątek trwały (A)."
+  },
+  {
+    "id": "owe22-c-17",
+    "type": "multi",
+    "edition": "XXII OWE (2008/2009), zawody centralne",
+    "question": "Pewna spółka akcyjna pod koniec roku zakupiła u swojego dostawcy towary handlowe z odroczonym o 30 dni terminem płatności. Na ten zakup spółka otrzymała od dostawcy rabat sezonowy. Powyższe zdarzenie gospodarcze spowodowało w spółce akcyjnej wzrost:",
+    "options": [
+      "kosztów operacyjnych",
+      "zysku operacyjnego",
+      "należności krótkoterminowych",
+      "aktywów obrotowych"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Zakup towarów handlowych zwiększa zapasy, czyli aktywa obrotowe (D), a jednocześnie zobowiązania wobec dostawcy (płatność odroczona). Koszty powstaną dopiero przy sprzedaży towarów, a należności (C) to prawa do otrzymania pieniędzy, a nie zobowiązania."
+  },
+  {
+    "id": "owe22-c-18",
+    "type": "multi",
+    "edition": "XXII OWE (2008/2009), zawody centralne",
+    "question": "Które z poniższych stwierdzeń są prawdziwe dla obligacji zerokuponowych?",
+    "options": [
+      "nie przynoszą posiadaczowi obligacji odsetek",
+      "muszą być sprzedawane z dyskontem",
+      "posiadacz obligacji ma zawsze możliwość jej zamiany na akcje firmy emitującej obligacje",
+      "mogą być emitowane wyłącznie przez Skarb Państwa"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "Obligacje zerokuponowe nie wypłacają odsetek (A) i dlatego muszą być sprzedawane z dyskontem – poniżej wartości nominalnej (B), a zyskiem jest różnica do nominału. Emitują je także przedsiębiorstwa, a zamiana na akcje dotyczy obligacji zamiennych."
+  },
+  {
+    "id": "owe22-c-19",
+    "type": "multi",
+    "edition": "XXII OWE (2008/2009), zawody centralne",
+    "question": "Podmiot zawiera umowę kupna GBP za PLN z natychmiastowym terminem dostawy i jednocześnie umowę sprzedaży GBP za PLN z terminem dostawy za 6 miesięcy. Jak nazywa się taki rodzaj transakcji?",
+    "options": [
+      "forward",
+      "opcja",
+      "futures",
+      "swap"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Swap walutowy (FX swap) to jednoczesne kupno waluty z natychmiastową dostawą (spot) i jej sprzedaż z dostawą w przyszłości (forward) – lub odwrotnie (D)."
+  },
+  {
+    "id": "owe22-c-20",
+    "type": "multi",
+    "edition": "XXII OWE (2008/2009), zawody centralne",
+    "question": "Bank komercyjny, dokonując procesu sekurytyzacji:",
+    "options": [
+      "inwestuje wolne środki pieniężne na rynkach surowców",
+      "przenosi odpowiedzialność za ewentualne napady rabunkowe na zewnętrzną firmę ochroniarską",
+      "zamyka otwarte pozycje walutowe w celu ograniczenia ryzyka kursowego",
+      "dokonuje przeniesienia wierzytelności na spółkę kapitałową w celu emisji przez ten podmiot papierów wartościowych"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Sekurytyzacja polega na przeniesieniu przez bank wierzytelności (np. portfela kredytów) na wyodrębnioną spółkę celową (SPV), która emituje papiery wartościowe zabezpieczone tymi wierzytelnościami (D)."
+  },
+  {
+    "id": "owe22-c-21",
+    "type": "multi",
+    "edition": "XXII OWE (2008/2009), zawody centralne",
+    "question": "Maksymalne, prawnie dopuszczone, oprocentowanie kredytów konsumpcyjnych w Polsce wynosi (stan na rok 2008):",
+    "options": [
+      "czterokrotność redyskontowej stopy procentowej NBP",
+      "czterokrotność lombardowej stopy procentowej NBP",
+      "czterokrotność referencyjnej stopy procentowej NBP",
+      "pięciokrotność stopy rezerw obowiązkowych NBP"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "W 2008 r. ustawa antylichwiarska (Kodeks cywilny) ograniczała maksymalne oprocentowanie kredytów konsumpcyjnych do czterokrotności stopy kredytu lombardowego NBP (B). Od 2016 r. maksymalne odsetki to dwukrotność odsetek ustawowych (stopa referencyjna NBP + 3,5 pkt proc.)."
+  },
+  {
+    "id": "owe22-c-22",
+    "type": "multi",
+    "edition": "XXII OWE (2008/2009), zawody centralne",
+    "question": "Do zadań której z niżej wymienionych jednostek należy ochrona środowiska w Polsce?",
+    "options": [
+      "gmina",
+      "powiat",
+      "województwo",
+      "Agencja Restrukturyzacji i Modernizacji Rolnictwa"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "Zgodnie z kluczem zadania z zakresu ochrony środowiska realizują wszystkie wymienione jednostki: gminy (np. gospodarka odpadami, wodociągi), powiaty, województwa (programy ochrony środowiska, fundusze) i Agencja Restrukturyzacji i Modernizacji Rolnictwa (wspieranie działań rolnośrodowiskowych)."
+  },
+  {
+    "id": "owe22-c-23",
+    "type": "multi",
+    "edition": "XXII OWE (2008/2009), zawody centralne",
+    "question": "Które z poniższych informacji są uregulowane w ordynacji podatkowej?",
+    "options": [
+      "postępowanie w sprawie o indywidualną interpretację przepisów prawa podatkowego",
+      "maksymalny wymiar danin publicznych",
+      "odpowiedzialność podatkowa członków rodziny podatnika",
+      "organy i zakres kontroli skarbowej"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "Ordynacja podatkowa reguluje ogólne zasady prawa podatkowego, m.in. postępowanie w sprawie indywidualnych interpretacji przepisów (A) i odpowiedzialność podatkową osób trzecich, w tym członków rodziny podatnika (C). Kontrolę skarbową regulowała osobna ustawa, a maksymalnego wymiaru danin publicznych nie określa się w ordynacji."
+  },
+  {
+    "id": "owe22-c-24",
+    "type": "multi",
+    "edition": "XXII OWE (2008/2009), zawody centralne",
+    "question": "Złota reguła finansów publicznych stanowi, że:",
+    "options": [
+      "dług publiczny można zwiększyć jedynie w celu sfinansowania wydatków inwestycyjnych",
+      "nadwyżki dochodów nad wydatkami budżetu powinno lokować się w instrumenty oparte na metalach szlachetnych",
+      "deficyt budżetowy należy finansować wyłącznie przez zaciągnięcie pożyczek na międzynarodowych rynkach finansowych",
+      "można zwiększać dług publiczny krajowy, ponieważ państwo nie może ogłosić niewypłacalności wobec swoich obywateli"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Złota reguła finansów publicznych mówi, że państwo może zadłużać się tylko w celu finansowania inwestycji (które zwiększą przyszłe dochody), a wydatki bieżące powinny być pokrywane dochodami bieżącymi (A)."
+  },
+  {
+    "id": "owe22-c-25",
+    "type": "multi",
+    "edition": "XXII OWE (2008/2009), zawody centralne",
+    "question": "Które z poniższych stwierdzeń dotyczące polityki określanej mianem „konsensusu waszyngtońskiego” jest prawdziwe?",
+    "options": [
+      "obejmowała ona działania mające na celu przyspieszenie rozwoju gospodarczego w krajach słabo rozwiniętych",
+      "zasadnicze znaczenie przypisywano w niej deregulacji, liberalizacji i nacjonalizacji",
+      "zalecano prowadzenie łagodnej polityki monetarnej",
+      "zalecano prowadzenie twardej polityki fiskalnej"
+    ],
+    "correct": [
+      0,
+      3
+    ],
+    "explanation": "Konsensus waszyngtoński (J. Williamson, 1989) to zestaw zaleceń MFW i Banku Światowego dla krajów rozwijających się (A): dyscyplina fiskalna – twarda polityka fiskalna (D), liberalizacja handlu, deregulacja i prywatyzacja (nie nacjonalizacja – B), a także ograniczanie inflacji (nie łagodna polityka monetarna – C)."
+  },
+  {
+    "id": "owe22-c-26",
+    "type": "multi",
+    "edition": "XXII OWE (2008/2009), zawody centralne",
+    "question": "Organizacja fraktalna to:",
+    "options": [
+      "jednostka gospodarcza, której pozycja konkurencyjna i zdolność generowania zysku jest zagrożona wskutek kumulacji negatywnych zjawisk",
+      "jednostka gospodarcza, w której praca człowieka zastępowana jest pracą komputerów i technologiami opartymi na sztucznej inteligencji",
+      "jednostka gospodarcza składająca się z samopodobnych i samoorganizujących się jednostek, z których każda jest w stanie wykonywać swoje zadania w tak dużym zakresie, jak całe przedsiębiorstwo",
+      "jednostka gospodarcza nieposiadająca określonej siedziby, w której zamiast szefów funkcjonują koordynatorzy poszczególnych procesów, a najważniejsze decyzje podejmowane są na podstawie metod heurystycznych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Organizacja fraktalna składa się z samopodobnych, samoorganizujących się jednostek (fraktali), z których każda potrafi realizować zadania podobnie jak całe przedsiębiorstwo, jest samodzielna i dynamicznie dostosowuje się do otoczenia (C)."
+  },
+  {
+    "id": "owe22-c-27",
+    "type": "multi",
+    "edition": "XXII OWE (2008/2009), zawody centralne",
+    "question": "Jeżeli firma zamiast obniżać ceny wraz ze spadkiem kosztów produkcji, utrzymuje je przez pewien czas na wysokim poziomie w celu przyspieszenia zwrotu zainwestowanego kapitału, to spółka stosuje strategię:",
+    "options": [
+      "dumpingu",
+      "dominacji",
+      "przechwycenia",
+      "parasola"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Strategia parasola polega na utrzymywaniu wysokich cen mimo spadku kosztów produkcji, by szybciej odzyskać zainwestowany kapitał – firma „rozpina parasol” cenowy, pod którym mogą funkcjonować też mniej efektywni konkurenci (D)."
+  },
+  {
+    "id": "owe22-c-28",
+    "type": "multi",
+    "edition": "XXII OWE (2008/2009), zawody centralne",
+    "question": "System HACCP (ang. Hazard Analysis and Critical Control Points):",
+    "options": [
+      "pozwala na analizę i redukcję ryzyka niewypłacalności partnera biznesowego",
+      "określa zagrożenia dla bezpieczeństwa produktów spożywczych podczas wszystkich etapów ich dystrybucji",
+      "służy głównie do redukcji odpadów w przedsiębiorstwach z sektora rolno-spożywczego",
+      "jest warunkiem znakowania produktów spożywczych certyfikatem „żywność ekologiczna”"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "HACCP (analiza zagrożeń i krytycznych punktów kontroli) to system zapewnienia bezpieczeństwa żywności – identyfikuje zagrożenia na wszystkich etapach produkcji i dystrybucji żywności i kontroluje krytyczne punkty (B)."
+  },
+  {
+    "id": "owe22-c-29",
+    "type": "multi",
+    "edition": "XXII OWE (2008/2009), zawody centralne",
+    "question": "Które z poniższych kampanii reklamowych są przykładem ambient marketingu?",
+    "options": [
+      "gazetka promocyjna sklepów meblowych dostarczana co miesiąc do skrzynek pocztowych",
+      "reklama ogólnopolskiego dziennika umieszczona na uchwytach w środkach komunikacji miejskiej",
+      "reklama sieci telefonii mobilnej na wózkach w hipermarketach",
+      "reklama proszku do prania przed prognozą pogody w telewizji publicznej"
+    ],
+    "correct": [
+      1,
+      2
+    ],
+    "explanation": "Ambient marketing to nietypowe, kreatywne umieszczanie reklam w otoczeniu odbiorcy, w miejscach, gdzie się ich nie spodziewa – np. na uchwytach w autobusach (B) czy na wózkach w hipermarketach (C). Gazetka i spot telewizyjny (A, D) to tradycyjne formy reklamy."
+  },
+  {
+    "id": "owe22-c-30",
+    "type": "multi",
+    "edition": "XXII OWE (2008/2009), zawody centralne",
+    "question": "Jeżeli zapotrzebowanie na pracę jest nieregularne i zależy od zmiennych okoliczności, a kontrola i ewidencja czasu poświęconego wykonywaniu pracy ze względu na miejsce wykonywania pracy jest niemożliwa (lub znacznie utrudniona), to najlepszym systemem czasu pracy w takim wypadku będzie:",
+    "options": [
+      "zadaniowy czas pracy",
+      "weekendowy czas pracy",
+      "równoważny (do 24 godzin na dobę) czas pracy",
+      "przerywany czas pracy"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Zadaniowy czas pracy (Kodeks pracy) stosuje się, gdy praca jest nieregularna, a kontrola czasu jej wykonywania – utrudniona (np. przedstawiciele handlowi). Pracownik rozliczany jest z wykonania zadań, a nie z godzin pracy (A)."
+  }
+]

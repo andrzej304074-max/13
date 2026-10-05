@@ -116,7 +116,7 @@ export default function TestPage() {
     if (picked && right) return "✓ dobrze";
     if (picked && !right) return "✗ źle";
     if (!picked && right) return isMulti ? "✗ pominięta" : "poprawna";
-    return isMulti ? "✓ dobrze" : null;
+    return isMulti ? "✓ słusznie puste" : null;
   }
 
   return (

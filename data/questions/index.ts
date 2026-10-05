@@ -1,4 +1,9 @@
 import type { Question } from "@/lib/types";
+import owe21c from "./owe-21-centralne.json";
+import owe22c from "./owe-22-centralne.json";
+import owe23c from "./owe-23-centralne.json";
+import owe24c from "./owe-24-centralne.json";
+import owe25c from "./owe-25-centralne.json";
 import owe21o from "./owe-21-okregowe.json";
 import owe21s from "./owe-21-szkolne.json";
 import owe22o from "./owe-22-okregowe.json";
@@ -45,4 +50,5 @@ export const QUESTIONS = [
   owe31o, owe31s, owe32o, owe32s, owe33o, owe33s,
   owe34o, owe34s, owe35o, owe35s, owe36o, owe36s, owe37o, owe37s,
   owe38o, owe38s, owe39o, owe39s,
+  owe21c, owe22c, owe23c, owe24c, owe25c,
 ].flat() as Question[];

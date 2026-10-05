@@ -1,0 +1,500 @@
+[
+  {
+    "id": "owe23-c-01",
+    "type": "multi",
+    "edition": "XXIII OWE (2009/2010), zawody centralne",
+    "question": "Na pewnym rynku doszło do jednoczesnego zwiększenia się popytu i spadku podaży. W efekcie mogło się zdarzyć, że:",
+    "options": [
+      "ilość sprzedanego produktu zwiększyła się, a cena wzrosła",
+      "ilość sprzedanego produktu zmniejszyła się, a cena obniżyła się",
+      "ilość sprzedanego produktu zwiększyła się, a cena obniżyła się",
+      "ilość sprzedanego produktu zmniejszyła się, a cena wzrosła"
+    ],
+    "correct": [
+      0,
+      3
+    ],
+    "explanation": "Wzrost popytu podnosi cenę i ilość, a spadek podaży podnosi cenę i obniża ilość. Cena na pewno wzrośnie, a ilość może wzrosnąć (A) albo spaść (D) – w zależności od tego, które zmiany są silniejsze."
+  },
+  {
+    "id": "owe23-c-02",
+    "type": "multi",
+    "edition": "XXIII OWE (2009/2010), zawody centralne",
+    "question": "Ustalenie przez rząd ceny maksymalnej dla producentów energii spowoduje:",
+    "options": [
+      "powstanie nadwyżki rynkowej",
+      "zwiększenie wielkości popytu na energię",
+      "zwiększenie wpływów producentów energii",
+      "konieczność limitowania zakupów energii"
+    ],
+    "correct": [
+      1,
+      3
+    ],
+    "explanation": "Cena maksymalna poniżej równowagi zwiększa wielkość popytu (B), a zmniejsza podaż – powstaje niedobór, więc konieczne jest limitowanie (reglamentacja) zakupów (D). Nie powstaje nadwyżka (A), a wpływy producentów spadają (C)."
+  },
+  {
+    "id": "owe23-c-03",
+    "type": "multi",
+    "edition": "XXIII OWE (2009/2010), zawody centralne",
+    "question": "Pewien racjonalnie postępujący konsument wysyła codziennie SMS-y premium (o podwyższonej opłacie) w loterii, w której każdego dnia można wygrać główną nagrodę w wysokości 10 tys. zł. Za pierwszego SMS-a w danym dniu konsument jest skłonny zapłacić 7,00 zł, za drugiego 5,00 zł, za trzeciego 3,50 zł, a za czwartego 1,50 zł. Spośród poniższych zdań wskaż te prawdziwe:",
+    "options": [
+      "przy cenie jednego SMS-a na poziomie 3,66 zł konsument osiągnie nadwyżkę w wysokości 12,00 zł",
+      "konsument wyśle trzy SMS-y, jeśli cena będzie wynosić 2,44 zł",
+      "jeżeli konsument za wysłanie dwóch SMS-ów musi zapłacić w sumie 11,00 zł, to wyśle dwa SMS-y i osiągnie nadwyżkę w wysokości 1,00 zł",
+      "gdy cena jednego SMS-a wyniesie 1,00 zł, konsument wyśle cztery SMS-y, osiągając nadwyżkę w wysokości 17,00 zł"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Konsument kupuje SMS, gdy cena nie przekracza jego gotowości do zapłaty. Przy cenie 2,44 zł wyśle 3 SMS-y (7; 5; 3,50 ≥ 2,44 – B). Przy cenie 3,66 zł wyśle 2 SMS-y z nadwyżką (7 − 3,66) + (5 − 3,66) = 4,68 zł, nie 12 zł (A). Przy cenie 1 zł nadwyżka wynosi 6 + 4 + 2,50 + 0,50 = 13 zł, nie 17 zł (D). Przy cenie 5,50 zł za SMS opłaca się tylko pierwszy SMS (C)."
+  },
+  {
+    "id": "owe23-c-04",
+    "type": "multi",
+    "edition": "XXIII OWE (2009/2010), zawody centralne",
+    "question": "Przy poruszaniu się wzdłuż wypukłej izokwanty:",
+    "options": [
+      "wielkość produkcji całkowitej nie zmienia się",
+      "krańcowa stopa technicznej substytucji maleje",
+      "substytucja pomiędzy czynnikami produkcji staje się coraz trudniejsza",
+      "zmianie ulega produkcyjność krańcowa rozpatrywanych czynników wytwórczych"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "Wzdłuż izokwanty produkcja jest stała (A). Gdy izokwanta jest wypukła, krańcowa stopa technicznej substytucji maleje (B) – zastępowanie jednego czynnika drugim staje się coraz trudniejsze (C), bo zmieniają się produkty krańcowe czynników (D). Wszystkie odpowiedzi są prawidłowe."
+  },
+  {
+    "id": "owe23-c-05",
+    "type": "multi",
+    "edition": "XXIII OWE (2009/2010), zawody centralne",
+    "question": "Koszty utopione:",
+    "options": [
+      "to inaczej koszty alternatywne",
+      "są nieistotne przy analizie różnych wariantów decyzyjnych",
+      "są istotne przy analizie różnych wariantów decyzyjnych",
+      "są poniesionym wydatkiem, którego nie można odzyskać"
+    ],
+    "correct": [
+      1,
+      3
+    ],
+    "explanation": "Koszty utopione to wydatki już poniesione, których nie można odzyskać (D). Ponieważ ich nie da się zmienić, nie powinny wpływać na wybór między wariantami decyzji (B). To nie jest koszt alternatywny (A)."
+  },
+  {
+    "id": "owe23-c-06",
+    "type": "multi",
+    "edition": "XXIII OWE (2009/2010), zawody centralne",
+    "question": "W ramach długookresowej równowagi wolnokonkurencyjnej gałęzi optimum ekonomiczne przedsiębiorstwa na tym rynku:",
+    "options": [
+      "znajduje się na lewo od optimum technicznego",
+      "znajduje się na prawo od optimum technicznego",
+      "pokrywa się z optimum technicznym",
+      "oznacza osiągnięcie przez przedsiębiorstwo wyłącznie zysku normalnego"
+    ],
+    "correct": [
+      2,
+      3
+    ],
+    "explanation": "W długookresowej równowadze konkurencji doskonałej cena równa się minimum przeciętnego kosztu całkowitego, więc optimum ekonomiczne (MR = MC) pokrywa się z optimum technicznym (minimum ATC) – C – a firma osiąga tylko zysk normalny (D)."
+  },
+  {
+    "id": "owe23-c-07",
+    "type": "multi",
+    "edition": "XXIII OWE (2009/2010), zawody centralne",
+    "question": "Jeżeli wzrostowi płacy realnej towarzyszy spadek liczby godzin przeznaczanych na wykonywanie pracy, to:",
+    "options": [
+      "efekt substytucyjny jest większy od dochodowego",
+      "efekt dochodowy jest większy od substytucyjnego",
+      "użyteczność krańcowa dóbr uzyskanych dzięki dodatkowej godzinie pracy okazała się większa od użyteczności krańcowej ostatniej godziny czasu wolnego",
+      "użyteczność krańcowa dodatkowej godziny wypoczynku okazała się większa od użyteczności krańcowej dóbr uzyskanych dzięki ostatniej godzinie pracy"
+    ],
+    "correct": [
+      1,
+      3
+    ],
+    "explanation": "Wzrost płacy ma dwa efekty: substytucyjny (czas wolny drożeje, więc pracuje się więcej) i dochodowy (przy wyższym dochodzie można sobie pozwolić na więcej wypoczynku). Spadek liczby godzin pracy oznacza, że przeważa efekt dochodowy (B), a krańcowa użyteczność godziny wypoczynku przewyższa użyteczność dóbr kupionych za płacę z ostatniej godziny pracy (D)."
+  },
+  {
+    "id": "owe23-c-08",
+    "type": "multi",
+    "edition": "XXIII OWE (2009/2010), zawody centralne",
+    "question": "Rozmiary popytu firmy na pracę wyznacza graficznie punkt przecięcia się:",
+    "options": [
+      "krzywej krańcowego produktu pracy z krzywą krańcowego kosztu pracy",
+      "krzywej wartości krańcowego produktu pracy z krzywą utargu krańcowego pochodzącego ze sprzedaży produktów wytworzonych za jej pomocą",
+      "krzywej krańcowego produktu pracy z krzywą krańcowego przychodu z pracy",
+      "krzywej krańcowego przychodu z pracy z krzywą obrazującą kształtowanie się stawki płacy przy różnych rozmiarach zatrudnienia"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Firma zatrudnia do momentu, w którym krańcowy przychód z pracy (MRPL) zrówna się z kosztem zatrudnienia kolejnego pracownika – na wykresie to przecięcie krzywej MRPL z krzywą płacy (podaży pracy dla firmy – D)."
+  },
+  {
+    "id": "owe23-c-09",
+    "type": "multi",
+    "edition": "XXIII OWE (2009/2010), zawody centralne",
+    "question": "W modelu gospodarki bez udziału państwa oszczędności są równe:",
+    "options": [
+      "sumie inwestycji i eksportu netto",
+      "różnicy inwestycji i eksportu netto",
+      "sumie inwestycji i eksportu",
+      "różnicy inwestycji i importu"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W gospodarce otwartej bez państwa Y = C + I + NX, a oszczędności S = Y − C, więc S = I + NX (A). Nadwyżka oszczędności nad inwestycjami odpowiada nadwyżce handlowej (odpływowi kapitału za granicę)."
+  },
+  {
+    "id": "owe23-c-10",
+    "type": "multi",
+    "edition": "XXIII OWE (2009/2010), zawody centralne",
+    "question": "W gospodarce funkcjonującej przy niepełnym wykorzystaniu zasobów czynników wytwórczych nastąpił wzrost planowanych wydatków inwestycyjnych o 2000. Krańcowa skłonność do oszczędzania w tej gospodarce wynosi 0,2. O ile ostatecznie zmieni się wielkość produkcji w gospodarce?",
+    "options": [
+      "1 600",
+      "2 500",
+      "3 600",
+      "10 000"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Mnożnik inwestycyjny = 1 / MPS = 1 / 0,2 = 5. Wzrost inwestycji o 2000 zwiększy produkcję o 2000 · 5 = 10 000 (przy niepełnym wykorzystaniu zasobów, czyli bez wzrostu cen)."
+  },
+  {
+    "id": "owe23-c-11",
+    "type": "multi",
+    "edition": "XXIII OWE (2009/2010), zawody centralne",
+    "question": "Aprecjacja złotego przyczyniłaby się do wzrostu deficytu handlu zagranicznego w Polsce, ponieważ:",
+    "options": [
+      "podrożałyby dobra importowane do Polski",
+      "wzrosłoby tempo inflacji",
+      "eksport dóbr z Polski stałby się mniej opłacalny",
+      "wzrósłby poziom rezerw walutowych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Aprecjacja złotego oznacza, że za każdą jednostkę waluty obcej eksporter dostaje mniej złotych, a polskie towary są droższe za granicą – eksport staje się mniej opłacalny (C). Jednocześnie import tanieje, a nie drożeje (A), więc deficyt handlowy rośnie."
+  },
+  {
+    "id": "owe23-c-12",
+    "type": "multi",
+    "edition": "XXIII OWE (2009/2010), zawody centralne",
+    "question": "Na czym polega monetyzacja długu publicznego?",
+    "options": [
+      "konwersji wymagalnych wierzytelności sektora publicznego na dłużne, skarbowe papiery wartościowe",
+      "częściowej lub całkowitej odmowie spłaty długu publicznego",
+      "emisji obligacji skarbowych, które są następnie sprzedawane bankowi centralnemu",
+      "zmniejszeniu wielkości inwestycji sektora prywatnego spowodowanej zwiększonym finansowaniem wydatków publicznych deficytem budżetowym"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Monetyzacja długu publicznego to finansowanie długu (deficytu) przez bank centralny – rząd emituje obligacje, które kupuje bank centralny, kreując pieniądz (C). W Polsce Konstytucja zakazuje finansowania deficytu przez NBP. D opisuje efekt wypychania."
+  },
+  {
+    "id": "owe23-c-13",
+    "type": "multi",
+    "edition": "XXIII OWE (2009/2010), zawody centralne",
+    "question": "Krzywa Beveridge'a obrazuje zależność pomiędzy:",
+    "options": [
+      "ilością wakatów a wielkością bezrobocia",
+      "stopą inflacji a stopą bezrobocia",
+      "wielkością luki PKB a stopą bezrobocia przymusowego",
+      "stopą oprocentowania kredytów inwestycyjnych a stopą bezrobocia"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Krzywa Beveridge'a pokazuje ujemną zależność między liczbą wolnych miejsc pracy (wakatów) a bezrobociem (A). Jej przesunięcie na zewnątrz oznacza gorsze dopasowanie na rynku pracy."
+  },
+  {
+    "id": "owe23-c-14",
+    "type": "multi",
+    "edition": "XXIII OWE (2009/2010), zawody centralne",
+    "question": "Slumpflacja to równoczesne występowanie:",
+    "options": [
+      "inflacji przejściowej i strukturalnej",
+      "bezrobocia przejściowego i strukturalnego",
+      "recesji gospodarczej i inflacji",
+      "stagnacji gospodarczej, inflacji i wysokiego bezrobocia"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Slumpflacja to jednoczesne występowanie recesji (spadku produkcji, slump) i inflacji (C)."
+  },
+  {
+    "id": "owe23-c-15",
+    "type": "multi",
+    "edition": "XXIII OWE (2009/2010), zawody centralne",
+    "question": "Gospodarka znajduje się w równowadze zewnętrznej. Gdy światowa stopa procentowa wzrośnie powyżej poziomu krajowego, zakładając doskonałą mobilność kapitału, wówczas w gospodarce pojawi się:",
+    "options": [
+      "nadwyżka w bilansie płatniczym wywołana wyłącznie nadwyżką w rachunku kapitałowym",
+      "deficyt w bilansie płatniczym spowodowany nadwyżką w rachunku kapitałowym i deficytem handlowym",
+      "deficyt w bilansie płatniczym spowodowany wyłącznie deficytem w bilansie handlowym",
+      "deficyt w bilansie płatniczym spowodowany deficytem w rachunku kapitałowym"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Gdy światowa stopa procentowa przewyższa krajową, przy pełnej mobilności kapitał odpływa za granicę, gdzie zarobi więcej – powstaje deficyt w rachunku kapitałowym, a więc deficyt bilansu płatniczego (D)."
+  },
+  {
+    "id": "owe23-c-16",
+    "type": "multi",
+    "edition": "XXIII OWE (2009/2010), zawody centralne",
+    "question": "Do jakiej kwoty gwarantowane są depozyty złotowe zgromadzone przez spółkę akcyjną w krajowym banku w Polsce (stan na rok 2010)?",
+    "options": [
+      "50 000 €",
+      "100 000 €",
+      "250 000 €",
+      "depozyty złotowe podlegają nieograniczonej ochronie, ponieważ Narodowy Bank Polski jest emitentem złotego jako prawnego środka płatniczego na terenie Polski"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W 2010 r. Bankowy Fundusz Gwarancyjny gwarantował w pełni depozyty do równowartości 50 000 euro na deponenta w jednym banku, w tym depozyty spółek (A). Od końca 2010 r. limit wynosi 100 000 euro."
+  },
+  {
+    "id": "owe23-c-17",
+    "type": "multi",
+    "edition": "XXIII OWE (2009/2010), zawody centralne",
+    "question": "Indywidualne Konta Emerytalne (stan na rok 2010):",
+    "options": [
+      "prowadzone są przez Zakład Ubezpieczeń Społecznych",
+      "mogą być prowadzone w formie wyodrębnionego rachunku bankowego lub wyodrębnionego rachunku papierów wartościowych w biurze maklerskim",
+      "zgromadzonych na nich środków nie można wypłacić wcześniej niż po przejściu na emeryturę",
+      "każda osoba może gromadzić środki na kilku takich kontach w III filarze systemu emerytalnego"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "IKE prowadzą m.in. banki (wyodrębniony rachunek bankowy), domy maklerskie (rachunek papierów wartościowych – B), fundusze inwestycyjne i ubezpieczyciele – a nie ZUS (A). Środki można wypłacić przed emeryturą (tracąc ulgę podatkową – C), a każda osoba może mieć tylko jedno IKE (D – fałsz)."
+  },
+  {
+    "id": "owe23-c-18",
+    "type": "multi",
+    "edition": "XXIII OWE (2009/2010), zawody centralne",
+    "question": "Wadą systemu emerytalnego w Polsce było (stan na rok 2010):",
+    "options": [
+      "nieterminowe księgowanie przez otwarte fundusze emerytalne składek na kontach ubezpieczonych",
+      "wysokie koszty akwizycji",
+      "konstrukcja średniej ważonej minimalnej stopy zwrotu, która prowadzi do stosowania przez zarządzających otwartymi funduszami emerytalnymi zbliżonej polityki inwestycyjnej",
+      "brak kontroli polityki inwestycyjnej otwartych funduszy emerytalnych"
+    ],
+    "correct": [
+      1,
+      2
+    ],
+    "explanation": "Wadami OFE w latach 2009–2010 były m.in. wysokie koszty akwizycji (pozyskiwania klientów) i opłat (B) oraz mechanizm minimalnej wymaganej stopy zwrotu liczonej jako średnia ważona wyników wszystkich OFE – fundusze bały się odstawać od średniej, więc prowadziły bardzo podobną politykę inwestycyjną (C)."
+  },
+  {
+    "id": "owe23-c-19",
+    "type": "multi",
+    "edition": "XXIII OWE (2009/2010), zawody centralne",
+    "question": "Zgodnie z procedurami ostrożnościowymi i sanacyjnymi zapisanymi w ustawie o finansach publicznych, przy jakim poziomie relacji kwoty państwowego długu publicznego do produktu krajowego brutto w ustawie budżetowej na kolejny rok nie przewiduje się wzrostu wynagrodzeń pracowników państwowej sfery budżetowej (stan na rok 2010)?",
+    "options": [
+      "większym od 50% i nie większym od 55%",
+      "większym od 55% i mniejszym od 60%",
+      "równym lub większym niż 60%",
+      "realizowane procedury ostrożnościowe i sanacyjne nie mają wpływu na wzrost wynagrodzeń pracowników państwowej sfery budżetowej"
+    ],
+    "correct": [
+      1,
+      2
+    ],
+    "explanation": "Według ustawy o finansach publicznych (stan na 2010 r.), gdy relacja długu publicznego do PKB przekroczy 55%, w kolejnym budżecie nie przewiduje się wzrostu wynagrodzeń w państwowej sferze budżetowej – dotyczy to zarówno progu 55–60% (B), jak i 60% i więcej (C), gdzie procedury są jeszcze ostrzejsze."
+  },
+  {
+    "id": "owe23-c-20",
+    "type": "multi",
+    "edition": "XXIII OWE (2009/2010), zawody centralne",
+    "question": "Pożyczki społecznościowe:",
+    "options": [
+      "są preferencyjnym rodzajem pożyczek udzielanych mniejszościom narodowym przez banki",
+      "zawierane są bezpośrednio pomiędzy posiadającym oszczędności a pożyczkobiorcą za pośrednictwem platform internetowych",
+      "nie podlegają ustawie antylichwiarskiej ograniczającej wysokość maksymalnego oprocentowania kredytów",
+      "mogą być zaciągane nawet przez osoby wpisane na listę nieterminowo spłacających swoje zobowiązania w Biurze Informacji Kredytowej"
+    ],
+    "correct": [
+      1,
+      3
+    ],
+    "explanation": "Pożyczki społecznościowe (peer-to-peer, social lending) zawierane są bezpośrednio między osobami prywatnymi za pośrednictwem platform internetowych (B). Ponieważ decyzję podejmuje pożyczkodawca, a nie bank, mogą je uzyskać także osoby z negatywną historią w BIK (D). Podlegają ograniczeniom maksymalnego oprocentowania (C – fałsz)."
+  },
+  {
+    "id": "owe23-c-21",
+    "type": "multi",
+    "edition": "XXIII OWE (2009/2010), zawody centralne",
+    "question": "Do zadań Komisji Nadzoru Finansowego należy:",
+    "options": [
+      "podejmowanie działań mających na celu rozwój konkurencyjności rynku funduszy emerytalnych",
+      "wydawanie zgody na powołanie prezesa zarządu banku w formie spółki akcyjnej",
+      "wykluczenie papierów wartościowych z obrotu na rynku regulowanym",
+      "wydawanie zezwoleń na wykonywanie działalności reasekuracyjnej"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "KNF nadzoruje rynek bankowy, kapitałowy, ubezpieczeniowy i emerytalny. Do jej zadań należy m.in.: działania na rzecz rozwoju i konkurencyjności rynku finansowego, w tym rynku funduszy emerytalnych (A), zgoda na powołanie prezesa zarządu banku (B), wykluczanie papierów z obrotu na rynku regulowanym (C) i zezwolenia na działalność reasekuracyjną (D)."
+  },
+  {
+    "id": "owe23-c-22",
+    "type": "multi",
+    "edition": "XXIII OWE (2009/2010), zawody centralne",
+    "question": "Które z poniższych stwierdzeń są prawdziwe w odniesieniu do kontraktów forward?",
+    "options": [
+      "są notowane na rynku giełdowym",
+      "ich rozliczenie może wymagać fizycznej dostawy przedmiotu kontraktu",
+      "podlegają standaryzacji ze względu na wielkość kontraktu",
+      "są rozliczane w określonym czasie w przyszłości po z góry ustalonej cenie"
+    ],
+    "correct": [
+      1,
+      3
+    ],
+    "explanation": "Kontrakty forward są zawierane poza giełdą (OTC) i nie są standaryzowane – warunki ustalają strony (A, C – fałsz). Rozlicza się je w określonym terminie w przyszłości po cenie ustalonej z góry (D), a rozliczenie może wymagać fizycznej dostawy przedmiotu kontraktu (B)."
+  },
+  {
+    "id": "owe23-c-23",
+    "type": "multi",
+    "edition": "XXIII OWE (2009/2010), zawody centralne",
+    "question": "Przedsiębiorstwo otrzymało w grudniu fakturę z tytułu rocznego czynszu za wynajem powierzchni biurowych na następny rok i zapłaciło ją w całości. Na którym z poniższych kont zostanie zaksięgowana ta operacja?",
+    "options": [
+      "usługi obce",
+      "koszty zarządu",
+      "czynne rozliczenia międzyokresowe kosztów",
+      "bierne rozliczenia międzyokresowe kosztów"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Czynsz zapłacony w grudniu z góry za następny rok to koszt przyszłego okresu. Ujmuje się go na koncie czynnych rozliczeń międzyokresowych kosztów (aktywa), a następnie co miesiąc przenosi do kosztów (C) – zgodnie z zasadą współmierności."
+  },
+  {
+    "id": "owe23-c-24",
+    "type": "multi",
+    "edition": "XXIII OWE (2009/2010), zawody centralne",
+    "question": "Stopień dźwigni operacyjnej informuje o zmianie poziomu zysku operacyjnego pod wpływem zmiany:",
+    "options": [
+      "przychodów ze sprzedaży firmy",
+      "wielkości wydatków na reprezentację i reklamę",
+      "udziału kapitału obcego w źródłach finansowania działalności firmy",
+      "liczby udziałów po podwyższeniu kapitału własnego przez dotychczasowych właścicieli"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Stopień dźwigni operacyjnej (DOL) = % zmiana zysku operacyjnego / % zmiana przychodów ze sprzedaży. Pokazuje, jak silnie zysk operacyjny reaguje na zmianę sprzedaży – im wyższe koszty stałe, tym silniejsza dźwignia (A). Udział kapitału obcego (C) dotyczy dźwigni finansowej."
+  },
+  {
+    "id": "owe23-c-25",
+    "type": "multi",
+    "edition": "XXIII OWE (2009/2010), zawody centralne",
+    "question": "Analiza strukturalna sektora na podstawie pięciu sił M. Portera nie uwzględnia:",
+    "options": [
+      "groźby pojawienia się substytutów",
+      "stopnia regulacji branży przez państwo",
+      "siły przetargowej nabywców",
+      "otoczenia makroekonomicznego, w którym funkcjonuje przedsiębiorstwo"
+    ],
+    "correct": [
+      1,
+      3
+    ],
+    "explanation": "Model pięciu sił Portera analizuje: rywalizację w sektorze, groźbę wejścia nowych firm, groźbę substytutów oraz siłę przetargową dostawców i nabywców. Nie uwzględnia bezpośrednio stopnia regulacji przez państwo (B) ani otoczenia makroekonomicznego (D) – te bada się np. analizą PEST."
+  },
+  {
+    "id": "owe23-c-26",
+    "type": "multi",
+    "edition": "XXIII OWE (2009/2010), zawody centralne",
+    "question": "Przykładem product placement jest:",
+    "options": [
+      "podział przez przedsiębiorstwo rynku na segmenty i zaoferowanie klientom w każdym z nim produktu „szytego na miarę”",
+      "kampania reklamowa w hipermarkecie towarzysząca wprowadzaniu nowego, nieznanego dotąd produktu",
+      "używanie przez bohaterów serialu telewizyjnego określonej marki płynu do naczyń",
+      "zmiana, na podstawie badań rynkowych, w funkcjach technicznych produktu bezpośrednio przed jego wprowadzeniem na rynek"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Product placement to lokowanie produktu – umieszczanie konkretnej marki w filmach, serialach czy grach, np. bohaterowie używają określonego płynu do naczyń (C). A opisuje segmentację, a B – promocję w miejscu sprzedaży."
+  },
+  {
+    "id": "owe23-c-27",
+    "type": "multi",
+    "edition": "XXIII OWE (2009/2010), zawody centralne",
+    "question": "Czym jest franszyza?",
+    "options": [
+      "formą współpracy, najczęściej w postaci umowy licencyjnej, pomiędzy odrębnymi prawnie i finansowo przedsiębiorstwami prowadzącymi działalność w handlu lub usługach",
+      "działalnością finansową polegającą na odkupywaniu od firm bezspornych i udokumentowanych wierzytelności z tytułu faktur, które inne podmioty mają wobec tych firm",
+      "regułą w umowach handlowych oznaczającą, że sprzedający wydaje towar kupującemu w miejscu przeznaczenia, pokrywając koszty jego pakowania, załadunku oraz transportu do miejsca przeznaczenia",
+      "rodzajem postanowienia w umowie ubezpieczenia, które ogranicza odpowiedzialność ubezpieczyciela z tytułu należnego odszkodowania o określony procent"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Franszyza (franchise) w ubezpieczeniach to postanowienie umowy ograniczające odpowiedzialność ubezpieczyciela: szkody poniżej określonej kwoty lub procentu nie są wypłacane (franszyza integralna) albo odszkodowanie jest pomniejszane (franszyza redukcyjna) – D. A opisuje franczyzę, B – faktoring, a C – regułę Incoterms."
+  },
+  {
+    "id": "owe23-c-28",
+    "type": "multi",
+    "edition": "XXIII OWE (2009/2010), zawody centralne",
+    "question": "Kafeteryjny system wynagradzania:",
+    "options": [
+      "dopuszcza, że w ramach wynagrodzenia pracownik może wybrać określony pakiet świadczeń w formie niepieniężnej",
+      "stosowany jest wyłącznie w przypadku pracowników, którzy pracują na stanowiskach handlowców lub agentów ubezpieczeniowych",
+      "jest metodą podziału wynagrodzenia przypadającego na wspólnie pracujący zespół",
+      "może być stosowany wyłącznie w odniesieniu do kadry menedżerskiej"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "System kafeteryjny pozwala pracownikom samodzielnie wybierać z „menu” świadczeń pozapłacowych (np. karnet sportowy, ubezpieczenie, szkolenie) w ramach przyznanego budżetu (A). Może dotyczyć wszystkich pracowników, a nie tylko menedżerów czy handlowców."
+  },
+  {
+    "id": "owe23-c-29",
+    "type": "multi",
+    "edition": "XXIII OWE (2009/2010), zawody centralne",
+    "question": "Które z poniższych cech odnoszą się do klastrów (gron)?",
+    "options": [
+      "występują powiązania tylko pomiędzy przedsiębiorstwami, które nie są bezpośrednimi konkurentami",
+      "nawiązywana jest współpraca przedsiębiorstw z izbami przemysłowymi i instytutami naukowo-badawczymi",
+      "nieformalne powiązania pomiędzy organizacjami w ramach klastra pozwalają na utrzymanie przewagi konkurencyjnej regionów",
+      "występują procesy kolektywnego uczenia się i dyfuzji innowacji"
+    ],
+    "correct": [
+      1,
+      2,
+      3
+    ],
+    "explanation": "Klaster (grono, M. Porter) to geograficzne skupisko powiązanych firm, dostawców i instytucji (uczelni, instytutów badawczych, izb – B), które jednocześnie konkurują i współpracują. Sprzyja wspólnemu uczeniu się i dyfuzji innowacji (D) oraz budowie przewagi konkurencyjnej regionu (C). Obejmuje też bezpośrednich konkurentów (A – fałsz)."
+  },
+  {
+    "id": "owe23-c-30",
+    "type": "multi",
+    "edition": "XXIII OWE (2009/2010), zawody centralne",
+    "question": "Zachowanie przywódcze, które łączy dużą troskę o ludzi, a niewielką o produkcję, to przykład zarządzania:",
+    "options": [
+      "zubożonego",
+      "autorytarnego",
+      "zespołowego",
+      "klubowego"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "W siatce kierowniczej Blake'a i Mouton styl „klubowy” (1.9) to duża troska o ludzi przy małej trosce o produkcję (D). Zubożony to mała troska o oba, autorytarny – duża o produkcję, a zespołowy – duża o oba."
+  }
+]

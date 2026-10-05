@@ -1,0 +1,502 @@
+[
+  {
+    "id": "owe21-c-01",
+    "type": "multi",
+    "edition": "XXI OWE (2007/2008), zawody centralne",
+    "question": "Który z niżej wymienionych czynników nie narusza założenia ceteris paribus dla prawa podaży na krajowym rynku odtwarzaczy MP3?",
+    "options": [
+      "wzrost dochodów realnych konsumentów",
+      "spadek cen komponentów wykorzystywanych do produkcji odtwarzaczy MP3",
+      "wzrost importu odtwarzaczy MP3 po obniżeniu ceł importowych",
+      "wszystkie wyżej wymienione czynniki naruszają to założenie"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Prawo podaży mówi o zależności ilości oferowanej od ceny przy niezmienionych pozostałych czynnikach podaży (kosztach, technologii, liczbie producentów). Dochody konsumentów wpływają na popyt, a nie na podaż, więc ich zmiana nie narusza założenia ceteris paribus dla podaży (A). Spadek cen komponentów (B) i wzrost importu (C) zmieniają podaż."
+  },
+  {
+    "id": "owe21-c-02",
+    "type": "multi",
+    "edition": "XXI OWE (2007/2008), zawody centralne",
+    "question": "Wprowadzenie cen maksymalnych na danym rynku:",
+    "options": [
+      "prowadzi nieuchronnie do reglamentacji dobra",
+      "ma sens tylko w przypadku ustalenia ceny maksymalnej poniżej ceny równowagi",
+      "wymaga zastosowania instrumentów likwidacji nadwyżki rynkowej",
+      "uzasadniane jest ochroną interesów producentów (sprzedawców)"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "Cena maksymalna ma sens tylko poniżej ceny równowagi (B) – wtedy powstaje niedobór (popyt > podaż), który prowadzi do reglamentacji, kolejek lub „szarego rynku” (A). Nie powstaje nadwyżka (C), a cenę maksymalną wprowadza się w interesie nabywców, a nie producentów (D)."
+  },
+  {
+    "id": "owe21-c-03",
+    "type": "multi",
+    "edition": "XXI OWE (2007/2008), zawody centralne",
+    "question": "Które z poniższych stwierdzeń są ilustracją efektu gapowicza?",
+    "options": [
+      "unikanie zapłaty abonamentu radiowo-telewizyjnego",
+      "zakup w promocji przeterminowanego mleka w hipermarkecie",
+      "wejście do parku narodowego bez wykupienia biletu wstępu",
+      "brak reakcji przedsiębiorstwa na obniżkę cen przez konkurentów"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "Efekt gapowicza to korzystanie z dobra bez płacenia, gdy trudno wykluczyć niepłacących: oglądanie telewizji bez abonamentu (A) i wejście do parku bez biletu (C). Zakup przeterminowanego mleka (B) i brak reakcji na obniżki konkurentów (D) to inne zjawiska."
+  },
+  {
+    "id": "owe21-c-04",
+    "type": "multi",
+    "edition": "XXI OWE (2007/2008), zawody centralne",
+    "question": "Wszystkie koszyki dóbr leżące pod krzywą obojętności, na której znajduje się punkt optimum konsumenta, są dla niego:",
+    "options": [
+      "mniej użyteczne, lecz osiągalne",
+      "tak samo użyteczne i osiągalne",
+      "mniej użyteczne i osiągalne lub też nieosiągalne",
+      "nieosiągalne, ale tak samo użyteczne"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Koszyki leżące pod krzywą obojętności optimum dają mniejszą użyteczność. Część z nich leży poniżej linii budżetowej (są osiągalne), a część – ponad nią, ale pod krzywą obojętności (są nieosiągalne). Dlatego są mniej użyteczne i osiągalne lub nieosiągalne (C)."
+  },
+  {
+    "id": "owe21-c-05",
+    "type": "multi",
+    "edition": "XXI OWE (2007/2008), zawody centralne",
+    "question": "Izokwanta:",
+    "options": [
+      "określa różne kombinacje ilościowe dwóch czynników wytwórczych, przy których przedsiębiorstwo realizuje cały swój zasób środków finansowych",
+      "charakteryzuje różne koszyki produkowanych przez przedsiębiorstwo dóbr o jednakowym poziomie przychodu ze sprzedaży",
+      "to krzywa, której kształt zależy od produkcyjności krańcowej rozpatrywanych czynników wytwórczych",
+      "to krzywa obrazująca kombinacje ilościowe dóbr X i Y możliwe do wytworzenia przez przedsiębiorstwo przy danych nakładach czynników wytwórczych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Izokwanta to zbiór kombinacji dwóch czynników dających tę samą wielkość produkcji; jej kształt (nachylenie) wynika z relacji produktów krańcowych czynników – krańcowej stopy technicznej substytucji (C). A opisuje izokosztę, B – krzywą izoprzychodu, a D – krzywą możliwości produkcyjnych."
+  },
+  {
+    "id": "owe21-c-06",
+    "type": "multi",
+    "edition": "XXI OWE (2007/2008), zawody centralne",
+    "question": "Które z poniższych stwierdzeń są prawdziwe?",
+    "options": [
+      "jeżeli przedsiębiorstwo nie osiąga zysku księgowego, to nie może osiągnąć zysku ekonomicznego",
+      "zysk normalny to sytuacja, gdy koszty ekonomiczne zrównują się z utargiem całkowitym",
+      "zyskowi księgowemu może towarzyszyć strata ekonomiczna",
+      "zerowy zysk ekonomiczny oznacza, że zysk księgowy przedsiębiorstwa nie pokrywa kosztów alternatywnych"
+    ],
+    "correct": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Zysk ekonomiczny = zysk księgowy − koszty alternatywne, więc bez zysku księgowego nie ma zysku ekonomicznego (A), a dodatniemu zyskowi księgowemu może towarzyszyć strata ekonomiczna (C). Zysk normalny to sytuacja, gdy utarg pokrywa wszystkie koszty ekonomiczne (B). Zerowy zysk ekonomiczny oznacza, że zysk księgowy dokładnie pokrywa koszty alternatywne (D – fałsz)."
+  },
+  {
+    "id": "owe21-c-07",
+    "type": "multi",
+    "edition": "XXI OWE (2007/2008), zawody centralne",
+    "question": "Na rynku konkurencji monopolistycznej:",
+    "options": [
+      "funkcjonuje wiele firm",
+      "utargi przeciętne firm zrównują się z ich utargami krańcowymi",
+      "występuje zróżnicowanie produktu",
+      "w długim okresie firmy są cenobiorcami"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "Konkurencja monopolistyczna: wiele firm (A) i zróżnicowane produkty (C). Każda firma ma ujemnie nachyloną krzywą popytu, więc utarg krańcowy jest mniejszy od przeciętnego (B – fałsz), a firmy nie są cenobiorcami (D – fałsz)."
+  },
+  {
+    "id": "owe21-c-08",
+    "type": "multi",
+    "edition": "XXI OWE (2007/2008), zawody centralne",
+    "question": "Efekt rygla to:",
+    "options": [
+      "brak motywacji gospodarstw domowych do dalszego zwiększania swoich dochodów w przypadku, gdy znajdują się one w najwyższym progu podatkowym",
+      "zwiększenie wielkości zakupów danego dobra lub usługi pomimo wzrostu ceny rynkowej",
+      "blokowanie wejścia na rynek konkurentom poprzez stosowanie dyskryminacji cenowej i intensywnej reklamy",
+      "utrzymanie przez gospodarstwo domowe aktualnego poziomu konsumpcji pomimo spadku dochodów realnych"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Efekt rygla (zapadki, J. Duesenberry) polega na tym, że gdy dochody spadają, gospodarstwa domowe starają się utrzymać dotychczasowy, wyższy poziom konsumpcji (np. kosztem oszczędności), bo przyzwyczaiły się do niego."
+  },
+  {
+    "id": "owe21-c-09",
+    "type": "multi",
+    "edition": "XXI OWE (2007/2008), zawody centralne",
+    "question": "Kto zyskuje na nieoczekiwanej inflacji?",
+    "options": [
+      "budżet państwa",
+      "emitenci obligacji zerokuponowych",
+      "płatnicy podatków",
+      "wszystkie powyższe odpowiedzi są prawidłowe"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "Nieoczekiwana inflacja przenosi bogactwo od wierzycieli do dłużników: zyskują emitenci długu o stałej wartości nominalnej – budżet państwa (zadłużony, a także zyskujący na wyższych nominalnych wpływach podatkowych) i emitenci obligacji zerokuponowych (A, B). Podatnicy tracą (np. przez taksflację), więc D jest fałszywe."
+  },
+  {
+    "id": "owe21-c-10",
+    "type": "multi",
+    "edition": "XXI OWE (2007/2008), zawody centralne",
+    "question": "Gdy przy określaniu poziomu dochodu i produkcji odpowiadającego stanowi równowagi uwzględni się udział państwa w gospodarce, wówczas:",
+    "options": [
+      "poziom równowagi będzie zawsze większy niż bez udziału państwa",
+      "odpływy z obiegu okrężnego w gospodarce równają się sumie planowanych inwestycji i planowanych wydatków państwa",
+      "wydatki całkowite w gospodarce składają się z wydatków konsumpcyjnych, inwestycji i wydatków państwa",
+      "dopływy do obiegu okrężnego w gospodarce równają się sumie planowanych oszczędności i podatków"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "W gospodarce z państwem wydatki całkowite to C + I + G (C). Odpływy (przecieki) z obiegu to oszczędności i podatki, a dopływy (zastrzyki) – inwestycje i wydatki państwa, więc w B i D pomylono je ze sobą. Poziom równowagi z państwem nie musi być wyższy (A) – zależy od relacji G i podatków."
+  },
+  {
+    "id": "owe21-c-11",
+    "type": "multi",
+    "edition": "XXI OWE (2007/2008), zawody centralne",
+    "question": "Zgodnie z definicją podaży pieniądza Narodowego Banku Polskiego zakup przez gospodarstwo domowe ze środków zgromadzonych na rachunku a’vista jednostek uczestnictwa w funduszach inwestycyjnych rynku pieniężnego oznacza:",
+    "options": [
+      "wzrost M3 i spadek M0",
+      "wzrost M3 i M1",
+      "spadek M1 i brak wpływu na M3",
+      "spadek M2 i wzrost M3"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "M1 obejmuje gotówkę i depozyty bieżące (a vista), a M3 – dodatkowo m.in. jednostki funduszy rynku pieniężnego. Zakup jednostek takiego funduszu ze środków z rachunku a vista zmniejsza M1, ale M3 się nie zmienia – środki tylko przechodzą między składnikami M3 (C)."
+  },
+  {
+    "id": "owe21-c-12",
+    "type": "multi",
+    "edition": "XXI OWE (2007/2008), zawody centralne",
+    "question": "Prawo Okuna stwierdza, że:",
+    "options": [
+      "wzrost luki PKB o 1 punkt procentowy zmniejsza poziom inflacji o około 0,2–0,3 punktu procentowego",
+      "wzrost stopy bezrobocia o 1 punkt procentowy powyżej naturalnej stopy bezrobocia powiększa lukę PKB o około 2–3 punkty procentowe",
+      "zmniejszenie luki PKB o 1 punkt procentowy zwiększa deficyt bilansu handlowego o około 2–3 procent",
+      "wzrost wydatków budżetowych o 1 procent zmniejsza lukę PKB o około 2–3 punkty procentowe"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Prawo Okuna (A. Okun): wzrost stopy bezrobocia o 1 pkt proc. ponad stopę naturalną wiąże się z powiększeniem ujemnej luki PKB o ok. 2–3 pkt proc. (produkcja spada poniżej potencjalnej)."
+  },
+  {
+    "id": "owe21-c-13",
+    "type": "multi",
+    "edition": "XXI OWE (2007/2008), zawody centralne",
+    "question": "Slumpflacja to równoczesne występowanie:",
+    "options": [
+      "inflacji przejściowej i strukturalnej",
+      "inflacji popytowej i kosztowej",
+      "recesji gospodarczej i inflacji",
+      "stagnacji gospodarczej, inflacji i wysokiego bezrobocia"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Slumpflacja to połączenie recesji (slump – załamanie, spadek produkcji) i inflacji. Jest głębsza niż stagflacja, w której produkcja stoi w miejscu (stagnacja), a nie spada."
+  },
+  {
+    "id": "owe21-c-14",
+    "type": "multi",
+    "edition": "XXI OWE (2007/2008), zawody centralne",
+    "question": "Fundusz parasolowy to rodzaj funduszu inwestycyjnego, który:",
+    "options": [
+      "inwestuje w pogodowe instrumenty pochodne (derywaty pogodowe)",
+      "umożliwia uniknięcie zapłaty podatku od zysków kapitałowych w przypadku konwersji jednostek",
+      "zapewnia osiągnięcie stałego, gwarantowanego zysku",
+      "uwzględnia w portfelu inwestycyjnym w jednakowym stopniu inwestycje z różnych regionów geograficznych"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Fundusz parasolowy składa się z wielu subfunduszy o różnych strategiach. Przeniesienie (konwersja) środków między subfunduszami w ramach jednego funduszu parasolowego nie powoduje obowiązku zapłaty podatku od zysków kapitałowych – podatek płaci się dopiero przy wypłacie (B)."
+  },
+  {
+    "id": "owe21-c-15",
+    "type": "multi",
+    "edition": "XXI OWE (2007/2008), zawody centralne",
+    "question": "Do aktywnych zawodowo (siły roboczej) zalicza się:",
+    "options": [
+      "wyłącznie osoby pracujące",
+      "wszystkie osoby bezrobotne i pracujące",
+      "wszystkie osoby pracujące z wyłączeniem osób pozostających na zasiłku chorobowym i strajkujących",
+      "wszystkie osoby bezrobotne i pracujące z wyłączeniem pracowników pozostających na zasiłku chorobowym i strajkujących"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Aktywni zawodowo (zasób siły roboczej) to wszyscy pracujący i bezrobotni (B). Pracujący to także osoby czasowo nieobecne w pracy – na zwolnieniu chorobowym czy strajkujące, więc nie należy ich wyłączać (C, D)."
+  },
+  {
+    "id": "owe21-c-16",
+    "type": "multi",
+    "edition": "XXI OWE (2007/2008), zawody centralne",
+    "question": "Wskaż skutki rozwiązania przez Narodowy Bank Polski rezerwy rewaluacyjnej:",
+    "options": [
+      "zmniejszenie rezerw walutowych",
+      "aprecjacja złotówki",
+      "zmniejszenie pasywów NBP",
+      "wszystkie powyższe odpowiedzi są prawidłowe"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Rezerwa rewaluacyjna NBP powstaje z niezrealizowanych zysków z wyceny rezerw walutowych (przy słabym złotym). Według klucza jej rozwiązanie wiąże się z umocnieniem złotego (aprecjacja – wartość rezerw w złotych spada), zmniejszeniem wartości rezerw walutowych w złotych i zmniejszeniem pasywów NBP – wszystkie odpowiedzi są prawidłowe."
+  },
+  {
+    "id": "owe21-c-17",
+    "type": "multi",
+    "edition": "XXI OWE (2007/2008), zawody centralne",
+    "question": "Obligacje śmieciowe:",
+    "options": [
+      "mogą być emitowane tylko przez spółki komunalne zajmujące się utrzymaniem czystości",
+      "charakteryzują się wysokim oprocentowaniem i ponadprzeciętnym ryzykiem",
+      "służą do finansowania wkładu własnego beneficjentów europejskich programów w zakresie ochrony środowiska",
+      "często są wykorzystywane do gromadzenia środków w celu przejęcia lub wykupu upadającej firmy"
+    ],
+    "correct": [
+      1,
+      3
+    ],
+    "explanation": "Obligacje śmieciowe (junk bonds) mają niski rating, czyli ponadprzeciętne ryzyko, więc oferują wysokie oprocentowanie (B). Często emitowano je w celu sfinansowania przejęć lewarowanych lub wykupu (np. upadających) firm (D). Nie mają nic wspólnego ze spółkami komunalnymi czy ochroną środowiska."
+  },
+  {
+    "id": "owe21-c-18",
+    "type": "multi",
+    "edition": "XXI OWE (2007/2008), zawody centralne",
+    "question": "Regionalne Izby Obrachunkowe:",
+    "options": [
+      "wydają opinie o możliwości sfinansowania deficytu budżetowego",
+      "kontrolują gospodarkę finansową związków gmin i powiatów",
+      "wyliczają wysokość subwencji ogólnej dla gmin",
+      "dokonują kontroli zamówień publicznych w jednostkach samorządu terytorialnego"
+    ],
+    "correct": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Regionalne izby obrachunkowe nadzorują i kontrolują gospodarkę finansową samorządów i ich związków (B), wydają opinie m.in. o możliwości sfinansowania deficytu (A) i kontrolują zamówienia publiczne w JST (D). Subwencję ogólną dla gmin wylicza minister finansów (C – fałsz)."
+  },
+  {
+    "id": "owe21-c-19",
+    "type": "multi",
+    "edition": "XXI OWE (2007/2008), zawody centralne",
+    "question": "Jaką metodą rozliczane są przychody i wydatki budżetowe?",
+    "options": [
+      "metodą memoriałową",
+      "metodą kasową",
+      "metodą FIFO (pierwsze przyszło, pierwsze wyszło)",
+      "metodą AVCO (średnia ważona kosztów)"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Budżet państwa rozlicza się metodą kasową: dochody i wydatki ujmuje się w momencie faktycznego wpływu lub wypływu pieniędzy (B). Metoda memoriałowa (według okresu, którego dotyczą) obowiązuje w rachunkowości przedsiębiorstw, a FIFO i AVCO to metody wyceny zapasów."
+  },
+  {
+    "id": "owe21-c-20",
+    "type": "multi",
+    "edition": "XXI OWE (2007/2008), zawody centralne",
+    "question": "Prokura to:",
+    "options": [
+      "rodzaj postępowania prokuratorskiego w sprawach o przestępstwa gospodarcze",
+      "szczególny rodzaj pełnomocnictwa upoważniający do dokonywania czynności związanych z prowadzeniem przedsiębiorstwa",
+      "uprawnienie wierzyciela do żądania w określonych sytuacjach od członków zarządu solidarnej spłaty długów spółki",
+      "ustawowe upoważnienie dla ministra finansów do zaciągania zobowiązań w imieniu skarbu państwa"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Prokura to szczególne pełnomocnictwo udzielane przez przedsiębiorcę wpisanego do rejestru, upoważniające do czynności sądowych i pozasądowych związanych z prowadzeniem przedsiębiorstwa (B)."
+  },
+  {
+    "id": "owe21-c-21",
+    "type": "multi",
+    "edition": "XXI OWE (2007/2008), zawody centralne",
+    "question": "W razie niewypłacalności pracodawcy z funduszu gwarantowanych świadczeń pracowniczych zaspokajane są:",
+    "options": [
+      "wynagrodzenia za pracę",
+      "ekwiwalenty pieniężne za urlop wypoczynkowy",
+      "składki na ubezpieczenia społeczne",
+      "ekwiwalenty za korzystanie z własnego telefonu komórkowego na potrzeby pracodawcy"
+    ],
+    "correct": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Fundusz Gwarantowanych Świadczeń Pracowniczych w razie niewypłacalności pracodawcy wypłaca m.in. zaległe wynagrodzenia (A), ekwiwalent za niewykorzystany urlop (B) i opłaca od nich składki na ubezpieczenia społeczne (C). Nie pokrywa zwrotu kosztów używania prywatnego telefonu (D)."
+  },
+  {
+    "id": "owe21-c-22",
+    "type": "multi",
+    "edition": "XXI OWE (2007/2008), zawody centralne",
+    "question": "W pewnej firmie podjęto decyzję o jej restrukturyzacji. Jak w rachunku przepływów środków pieniężnych zostanie odzwierciedlona sprzedaż części majątku przedsiębiorstwa w wyniku zmiany profilu działalności oraz jednoczesne zaciągnięcie nowych kredytów na sfinansowanie ekspansji na nowy rynek?",
+    "options": [
+      "wartość przepływów z działalności inwestycyjnej będzie dodatnia",
+      "wartość przepływów z działalności inwestycyjnej będzie ujemna",
+      "wartość przepływów z działalności finansowej będzie dodatnia",
+      "wartość przepływów z działalności finansowej będzie ujemna"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "Sprzedaż części majątku (aktywów trwałych) daje wpływy z działalności inwestycyjnej – przepływy inwestycyjne są dodatnie (A). Zaciągnięcie kredytów to wpływ z działalności finansowej – przepływy finansowe są dodatnie (C)."
+  },
+  {
+    "id": "owe21-c-23",
+    "type": "multi",
+    "edition": "XXI OWE (2007/2008), zawody centralne",
+    "question": "Corporate governance to:",
+    "options": [
+      "jedna z metod zarządzania przedsiębiorstwem",
+      "zbiór dobrych praktyk w zakresie relacji pomiędzy właścicielami a menedżerami firmy",
+      "nadzór korporacji międzynarodowych przez lokalne władze podatkowe",
+      "prowadzenie przez władze spółki przejrzystej polityki informacyjnej o podejmowanych działaniach"
+    ],
+    "correct": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Corporate governance (ład korporacyjny) to system zasad kierowania spółką i nadzoru nad nią: dobre praktyki w relacjach właściciele–menedżerowie (B), przejrzysta polityka informacyjna (D); według klucza jest też jedną z metod zarządzania przedsiębiorstwem (A). Nie dotyczy nadzoru władz podatkowych (C)."
+  },
+  {
+    "id": "owe21-c-24",
+    "type": "multi",
+    "edition": "XXI OWE (2007/2008), zawody centralne",
+    "question": "Klauzula najwyższego uprzywilejowania to:",
+    "options": [
+      "uprawnienia i udogodnienia przyznawane państwom w międzynarodowej wymianie towarowej",
+      "styl zarządzania, który dopuszcza możliwość bezpośredniego kontaktu każdego pracownika z prezesem firmy",
+      "zapis w umowach kooperacyjnych umożliwiający korzystanie ze wspólnego kanału dystrybucji przez kilka firm",
+      "szczególny sposób obsługi klientów private banking"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Klauzula najwyższego uprzywilejowania (KNU) w handlu międzynarodowym zobowiązuje państwo do przyznania partnerowi takich samych preferencji (np. ceł), jakie daje jakiemukolwiek innemu państwu (A). To podstawowa zasada WTO."
+  },
+  {
+    "id": "owe21-c-25",
+    "type": "multi",
+    "edition": "XXI OWE (2007/2008), zawody centralne",
+    "question": "Do zadań Krajowego Depozytu Papierów Wartościowych należą:",
+    "options": [
+      "pośredniczenie w przekazywaniu kwoty dywidendy od emitenta do biur maklerskich prowadzących rachunki klientów",
+      "świadczenie usługi przechowywania zapasów gotówki dla Narodowego Banku Polskiego (skarbiec banku centralnego)",
+      "rejestrowanie i przechowywanie w formie elektronicznego zapisu papierów wartościowych pochodzących z publicznych emisji",
+      "prowadzenie systemu rozrachunku w czasie rzeczywistym na międzybankowym rynku obligacji skarbowych"
+    ],
+    "correct": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Krajowy Depozyt Papierów Wartościowych prowadzi depozyt papierów wartościowych w formie zapisów elektronicznych (zdematerializowanych – C), rozrachunek transakcji, w tym na rynku obligacji skarbowych (D), oraz obsługuje wypłatę dywidend przez uczestników (A). Nie przechowuje gotówki NBP (B)."
+  },
+  {
+    "id": "owe21-c-26",
+    "type": "multi",
+    "edition": "XXI OWE (2007/2008), zawody centralne",
+    "question": "Wymień dwóch głównych, poza Niemcami, partnerów Polski w obrotach handlu zagranicznego w 2006 r. (dotyczy eksportu z Polski):",
+    "options": [
+      "Rosja i USA",
+      "Rosja i Włochy",
+      "Rosja i Francja",
+      "Włochy i Francja"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "W 2006 r. największym odbiorcą polskiego eksportu były Niemcy, a kolejne miejsca zajmowały Włochy i Francja (D). Rosja i USA miały mniejszy udział w polskim eksporcie."
+  },
+  {
+    "id": "owe21-c-27",
+    "type": "multi",
+    "edition": "XXI OWE (2007/2008), zawody centralne",
+    "question": "Syndrom szklanego sufitu (pułapu) w organizacji można scharakteryzować jako:",
+    "options": [
+      "utrudnianie awansu kobietom na wyższe stanowiska kierownicze",
+      "niedostrzeganie przez menedżerów pojawiających się szans rynkowych",
+      "permanentne nadzorowanie pracowników, co w konsekwencji obniża ich wydajność pracy",
+      "zorientowanie wszystkich pracowników na konstruktywną krytykę podejmowanych przez menedżerów decyzji"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Szklany sufit to niewidoczna bariera utrudniająca kobietom (a także np. mniejszościom) awans na najwyższe stanowiska kierownicze, mimo kwalifikacji (A)."
+  },
+  {
+    "id": "owe21-c-28",
+    "type": "multi",
+    "edition": "XXI OWE (2007/2008), zawody centralne",
+    "question": "Wskaż heurystyczne metody rozwiązywania problemów w organizacjach:",
+    "options": [
+      "burza mózgów",
+      "metoda delficka",
+      "metoda scenariuszowa",
+      "techniki algorytmiczne"
+    ],
+    "correct": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Metody heurystyczne opierają się na intuicji, kreatywności i doświadczeniu (a nie na ścisłych algorytmach): burza mózgów (A), metoda delficka (B), metoda scenariuszowa (C). Techniki algorytmiczne (D) to przeciwieństwo heurystyk."
+  },
+  {
+    "id": "owe21-c-29",
+    "type": "multi",
+    "edition": "XXI OWE (2007/2008), zawody centralne",
+    "question": "Podstawowe role i umiejętności menedżerów sformułowane przez H. Mintzberga to:",
+    "options": [
+      "eksperckie",
+      "informacyjne",
+      "interpersonalne",
+      "decyzyjne"
+    ],
+    "correct": [
+      1,
+      2,
+      3
+    ],
+    "explanation": "H. Mintzberg wyróżnił trzy grupy ról kierowniczych: interpersonalne (C), informacyjne (B) i decyzyjne (D). Role „eksperckie” (A) nie należą do jego klasyfikacji."
+  },
+  {
+    "id": "owe21-c-30",
+    "type": "multi",
+    "edition": "XXI OWE (2007/2008), zawody centralne",
+    "question": "Marketing wirusowy to:",
+    "options": [
+      "sytuacja, w której potencjalni klienci sami między sobą rozpowszechniają informacje dotyczące produktu, usługi lub firmy",
+      "negatywna kampania marketingowa prowadząca do zdyskredytowania konkurentów w oczach opinii publicznej",
+      "ogół działań firm farmaceutycznych, które w celu zwiększenia sprzedaży wymyślają coraz to nowe choroby",
+      "kampania reklamowa polegająca na rozsyłaniu przez przedsiębiorstwo spamu za pośrednictwem poczty elektronicznej"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Marketing wirusowy polega na tym, że sami klienci (internauci) przekazują sobie nawzajem informacje o produkcie lub firmie – jak wirus – np. udostępniając zabawny film reklamowy (A). Spam (D) nie jest marketingiem wirusowym."
+  }
+]
