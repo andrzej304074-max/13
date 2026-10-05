@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe30-o-01",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody okręgowe",
+    "question": "Przykładem podatku pośredniego funkcjonującego w Polsce jest (stan na rok 2016):",
+    "options": [
+      "podatek od nieruchomości",
+      "podatek rolny",
+      "cło",
+      "podatek od gier"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Do podatków pośrednich w polskim budżecie zalicza się VAT, akcyzę i podatek od gier – są wliczone w cenę towaru lub usługi (np. zakładu), a ich ciężar ponosi konsument. Podatki od nieruchomości i rolny to podatki bezpośrednie (majątkowe). Cło jest daniną publiczną pobieraną przy imporcie z krajów spoza UE, w polskiej klasyfikacji budżetowej nie należy do podatków."
+  },
+  {
+    "id": "owe30-o-02",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody okręgowe",
+    "question": "W 2016 r. Europejski Bank Centralny podjął decyzję o dołączeniu do listy aktywów nabywanych w ramach Assets Purchase Programme (APP):",
+    "options": [
+      "obligacji rządowych z rynku pierwotnego",
+      "obligacji rządowych z rynku wtórnego",
+      "obligacji emitowanych przez podmioty niebędące bankami",
+      "papierów wartościowych zabezpieczonych aktywami (ABS-ów)"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "W 2016 r. EBC rozszerzył program skupu aktywów (APP) o program CSPP – zakup obligacji korporacyjnych emitowanych przez przedsiębiorstwa niebędące bankami. Obligacje rządowe z rynku wtórnego (PSPP) i papiery ABS skupowano już wcześniej, a skup obligacji rządowych z rynku pierwotnego jest zakazany traktatem."
+  },
+  {
+    "id": "owe30-o-03",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody okręgowe",
+    "question": "Które z poniższych określeń charakteryzuje realizowaną w Polsce strategię polityki pieniężnej (stan na rok 2016)?",
+    "options": [
+      "cel pośredni wyrażony jako numeryczny cel inflacyjny",
+      "pełne respektowanie reguły M. Friedmana",
+      "nadrzędność stabilności cen w stosunku do innych celów",
+      "założenie o braku występowania opóźnień w kanałach transmisji"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Polska strategia bezpośredniego celu inflacyjnego zakłada nadrzędność stabilności cen wobec innych celów (zgodnie z ustawą o NBP). Cel inflacyjny jest celem bezpośrednim, a nie pośrednim; RPP nie stosuje reguły Friedmana (stałego tempa wzrostu pieniądza) i uwzględnia opóźnienia w mechanizmie transmisji."
+  },
+  {
+    "id": "owe30-o-04",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody okręgowe",
+    "question": "Zjawisko inercyjności inflacji:",
+    "options": [
+      "wynika bezpośrednio z poziomu bezrobocia niższego od bezrobocia naturalnego",
+      "jest konsekwencją odwróconej krzywej dochodowości",
+      "utrudnia prowadzenie polityki pieniężnej",
+      "w Polsce nie występowało od 1991 r."
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Inercyjność (bezwładność) inflacji oznacza, że inflacja utrzymuje się siłą rozpędu – przez oczekiwania inflacyjne i indeksację płac i cen. Bank centralny musi wtedy długo i silnie oddziaływać na oczekiwania, co utrudnia prowadzenie polityki pieniężnej. W Polsce inflacja była inercyjna m.in. w latach 90."
+  },
+  {
+    "id": "owe30-o-05",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody okręgowe",
+    "question": "Co jest spółką publiczną w Polsce:",
+    "options": [
+      "tylko spółki notowane na Giełdzie Papierów Wartościowych w Warszawie",
+      "tylko spółki z większościowym udziałem Skarbu Państwa",
+      "tylko spółki, w przypadku których co najmniej jedna akcja jest zdematerializowana",
+      "tylko spółki, w przypadku których emisji dokonano w ramach emisji publicznej"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Zgodnie z ustawą o ofercie publicznej spółka publiczna to spółka, której co najmniej jedna akcja jest zdematerializowana (zapisana w KDPW) i dopuszczona do obrotu zorganizowanego – nie tylko na rynku głównym GPW, ale np. na NewConnect. Struktura właścicielska nie ma znaczenia."
+  },
+  {
+    "id": "owe30-o-06",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody okręgowe",
+    "question": "Które ze stwierdzeń dotyczących opcji amerykańskich jest prawdziwe:",
+    "options": [
+      "mogą być przedmiotem obrotu wyłącznie na rynku amerykańskim",
+      "prawo ich realizacji przypada w dowolnym dniu między dniem ich nabycia a dniem wygaśnięcia",
+      "termin ich realizacji przypada na dzień wygaśnięcia",
+      "to inaczej opcje binarne"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Opcja amerykańska może być wykonana w dowolnym dniu do daty wygaśnięcia, a europejska – tylko w dniu wygaśnięcia. Nazwy nie odnoszą się do miejsca obrotu. Opcje binarne to inny rodzaj opcji (wypłata stałej kwoty albo nic)."
+  },
+  {
+    "id": "owe30-o-07",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody okręgowe",
+    "question": "Miękkie ograniczenie budżetowe występuje w przypadku:",
+    "options": [
+      "budżetu państwa",
+      "sektora małych i średnich przedsiębiorstw",
+      "przedsiębiorstw będących własnością Skarbu Państwa",
+      "samorządowych funduszy celowych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Miękkie ograniczenie budżetowe (J. Kornai) występuje, gdy przedsiębiorstwo może liczyć na pomoc państwa (dotacje, umorzenia, dokapitalizowanie) w razie strat – nie musi się więc w pełni dostosowywać do swoich dochodów. Dotyczy zwłaszcza firm państwowych, które państwo ratuje przed upadłością."
+  },
+  {
+    "id": "owe30-o-08",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody okręgowe",
+    "question": "Raty annuitetowe:",
+    "options": [
+      "cechują się stałą wartością w okresie kredytowania niezależnie od kształtowania się stopy referencyjnej kredytu",
+      "to inaczej raty malejące",
+      "to inaczej raty stałe",
+      "występują wyłącznie przy kredytach ze stałą stopą procentową"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Rata annuitetowa (równa, stała) to rata, w której suma części kapitałowej i odsetkowej jest taka sama w każdym okresie (na początku przeważają odsetki, potem kapitał). Przy oprocentowaniu zmiennym wysokość raty zmienia się po zmianie stopy referencyjnej. Raty malejące to raty o stałej części kapitałowej."
+  },
+  {
+    "id": "owe30-o-09",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody okręgowe",
+    "question": "W ujęciu krótkookresowym krzywa podaży przedsiębiorstwa doskonale konkurencyjnego stanowi:",
+    "options": [
+      "fragment krzywej kosztu krańcowego (MC) powyżej krzywej przeciętnego kosztu zmiennego (AVC)",
+      "fragment krzywej przeciętnego kosztu zmiennego (AVC) poniżej krzywej kosztu krańcowego (MC)",
+      "fragment krzywej przeciętnego kosztu całkowitego (ATC) poniżej krzywej kosztu krańcowego (MC)",
+      "fragment krzywej przeciętnego kosztu całkowitego (ATC) powyżej krzywej kosztu krańcowego (MC)"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W krótkim okresie firma konkurencyjna produkuje, dopóki cena pokrywa przeciętny koszt zmienny (AVC). Jej krzywą podaży jest więc część krzywej kosztu krańcowego (MC) leżąca powyżej minimum AVC. W długim okresie granicą jest minimum przeciętnego kosztu całkowitego."
+  },
+  {
+    "id": "owe30-o-10",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody okręgowe",
+    "question": "Funkcja popytu na rowery opisana jest wzorem q = - p + 10, a punkt równowagi wynosi E=(5,5). Oblicz wartość (w zł) nadwyżki konsumenta:",
+    "options": [
+      "2,5",
+      "10",
+      "12,5",
+      "25"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Z funkcji q = −p + 10 cena maksymalna (przy q = 0) wynosi 10 zł. Nadwyżka konsumenta to pole trójkąta między krzywą popytu a ceną równowagi: ½ · 5 · (10 − 5) = 12,5 zł."
+  },
+  {
+    "id": "owe30-o-11",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody okręgowe",
+    "question": "Dochód transferowy:",
+    "options": [
+      "jest to nadwyżka dochodu generowanego przez czynnik produkcji nad jego rentą ekonomiczną",
+      "na wykresie przedstawiającym funkcję podaży i popytu na pracę jest to obszar nad krzywą popytu na pracę",
+      "na wykresie przedstawiającym funkcję podaży i popytu na pracę jest to obszar nad krzywą podaży pracy",
+      "jest to minimalna zapłata niezbędna do utrzymania czynnika w obecnym obszarze zastosowania"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Dochód transferowy to minimalna płatność, jaką trzeba zapłacić czynnikowi produkcji, aby nie przeniósł się do innego zastosowania (jego koszt alternatywny); na wykresie – obszar pod krzywą podaży. Nadwyżka ponad dochód transferowy to renta ekonomiczna (obszar nad krzywą podaży, a pod ceną)."
+  },
+  {
+    "id": "owe30-o-12",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody okręgowe",
+    "question": "Jaka jest różnica pomiędzy sytuacją, w której monopolista ustala jednolitą cenę, a rynkiem monopolowym z doskonałym zróżnicowaniem ceny:",
+    "options": [
+      "w porównaniu z pierwszym przypadkiem w drugim nadwyżka konsumenta jest większa",
+      "w porównaniu z pierwszym przypadkiem w drugim mniejszy jest zysk monopolisty",
+      "w obu przypadkach nadwyżka konsumenta jest taka sama",
+      "w przeciwieństwie do pierwszego przypadku w drugim zwiększa się nadwyżka całkowita"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Przy doskonałej dyskryminacji cenowej monopolista sprzedaje każdą jednostkę po maksymalnej cenie, jaką nabywca jest skłonny zapłacić. Produkuje wtedy tyle, co rynek konkurencyjny, więc nie ma straty martwej – nadwyżka całkowita jest większa niż przy jednolitej cenie, choć cała trafia do monopolisty (nadwyżka konsumenta wynosi zero)."
+  },
+  {
+    "id": "owe30-o-13",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody okręgowe",
+    "question": "Podatek Pigou:",
+    "options": [
+      "jest nakładany w celu ograniczenia monopoli naturalnych",
+      "w Polsce występuje w postaci podatku dochodowego od osób fizycznych",
+      "jest nakładany w celu skompensowania negatywnych efektów zewnętrznych",
+      "jest nakładany w celu skompensowania negatywnych efektów asymetrii informacyjnej"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Podatek Pigou (A.C. Pigou) to podatek nakładany na działalność wywołującą negatywne efekty zewnętrzne (np. zanieczyszczenie), w wysokości kosztu zewnętrznego. Sprawia, że sprawca uwzględnia w swoich decyzjach koszty ponoszone przez innych (internalizacja efektów zewnętrznych)."
+  },
+  {
+    "id": "owe30-o-14",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody okręgowe",
+    "question": "Funkcja kosztu całkowitego ma postać TC = 2Q + 100. Ile wynosi koszt krańcowy, jeżeli Q=5:",
+    "options": [
+      "2",
+      "22",
+      "102",
+      "110"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Koszt krańcowy to przyrost kosztu całkowitego przy produkcji jednej dodatkowej jednostki – pochodna TC po Q. Dla TC = 2Q + 100 wynosi stale 2, niezależnie od Q. Liczba 100 to koszt stały."
+  },
+  {
+    "id": "owe30-o-15",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody okręgowe",
+    "question": "Konstytucyjny limit wielkości państwowego długu publicznego wynosi",
+    "options": [
+      "3 % PKB",
+      "3/5 PKB",
+      "1 bln zł",
+      "dwukrotność wartości bazy monetarnej"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Art. 216 ust. 5 Konstytucji RP zakazuje zaciągania pożyczek, w wyniku których państwowy dług publiczny przekroczy 3/5 (60%) wartości rocznego PKB. 3% PKB to kryterium deficytu z Maastricht."
+  },
+  {
+    "id": "owe30-o-16",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody okręgowe",
+    "question": "Załóżmy, że wielkość agregatu M1 wynosi 800 mld zł, wkłady w bankach płatne na żądanie (depozyty bieżące) wynoszą 600 mld zł, a pieniądz bezgotówkowy banków komercyjnych na rachunkach w banku centralnym 45 mld zł. Baza monetarna wynosi więc:",
+    "options": [
+      "200 mld zł",
+      "245 mld zł",
+      "645 mld zł",
+      "755 mld zł"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "M1 = gotówka w obiegu + depozyty bieżące, więc gotówka w obiegu = 800 − 600 = 200 mld zł. Baza monetarna = gotówka w obiegu + rezerwy banków w banku centralnym = 200 + 45 = 245 mld zł."
+  },
+  {
+    "id": "owe30-o-17",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody okręgowe",
+    "question": "Wielkość zbędnej straty spowodowanej podatkiem:",
+    "options": [
+      "jest tym większa, im mniejsza jest elastyczność podaży",
+      "zależy wyłącznie od elastyczności popytu",
+      "zależy wyłączne od elastyczności podaży",
+      "jest tym większa, im większa jest elastyczność popytu"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Zbędna strata (strata martwa, deadweight loss) z podatku wynika z tego, że podatek zmniejsza ilość wymienianych dóbr. Im bardziej elastyczny popyt (lub podaż), tym silniej ilość reaguje na podatek i tym większa jest strata martwa. Dlatego zbędna strata zależy od elastyczności obu krzywych."
+  },
+  {
+    "id": "owe30-o-18",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody okręgowe",
+    "question": "Które ze stwierdzeń dotyczących bonów skarbowych w Polsce jest prawdziwe:",
+    "options": [
+      "emitowane są przez Ministerstwo Skarbu Państwa",
+      "sprzedawane są z dyskontem",
+      "ich pierwotny termin zapadalności może przekraczać 52 tygodnie",
+      "to instrumenty pochodne"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Bony skarbowe to krótkoterminowe (do 52 tygodni) papiery dłużne Skarbu Państwa, emitowane przez ministra finansów. Są sprzedawane z dyskontem – poniżej wartości nominalnej – a zyskiem inwestora jest różnica między ceną zakupu a wartością nominalną wypłacaną przy wykupie."
+  },
+  {
+    "id": "owe30-o-19",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody okręgowe",
+    "question": "W przypadku spółki z ograniczoną odpowiedzialnością kapitał zakładowy powinien wynieść co najmniej:",
+    "options": [
+      "1 000 zł",
+      "5 000 zł",
+      "100 000 zł",
+      "500 000 zł"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Minimalny kapitał zakładowy spółki z ograniczoną odpowiedzialnością wynosi 5000 zł (od 2009 r.), a wartość nominalna udziału nie może być niższa niż 50 zł. Dla spółki akcyjnej minimum wynosi 100 000 zł."
+  },
+  {
+    "id": "owe30-o-20",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody okręgowe",
+    "question": "Spółką kapitałową jest:",
+    "options": [
+      "spółka jawna",
+      "spółka akcyjna",
+      "spółka partnerska",
+      "spółka komandytowa"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Spółki kapitałowe w Polsce to spółka z ograniczoną odpowiedzialnością, spółka akcyjna i (od 2021 r.) prosta spółka akcyjna – mają osobowość prawną, a wspólnicy nie odpowiadają za ich zobowiązania. Spółki jawna, partnerska, komandytowa i komandytowo-akcyjna to spółki osobowe."
+  },
+  {
+    "id": "owe30-o-21",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody okręgowe",
+    "question": "Zgodnie z zasadą neutralności pieniądza:",
+    "options": [
+      "zmniejszenie podaży pieniądza prowadzi do wzrostu stopy inflacji",
+      "zmiana podaży pieniądza prowadzi do zmiany stopy inflacji, ale nie ma wpływu na zmienne realne",
+      "zmiana wielkości popytu na pieniądz nie wpływa na szybkość jego obiegu, a tym samym nie wpływa na zmienne realne",
+      "zmiana prędkości obiegu pieniądza neutralizuje wpływ zmiany podaży pieniądza na zmienne realne"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Zasada neutralności pieniądza mówi, że w długim okresie zmiana podaży pieniądza wpływa tylko na zmienne nominalne (poziom cen, inflację), a nie na zmienne realne – produkcję, zatrudnienie czy realne stopy procentowe."
+  },
+  {
+    "id": "owe30-o-22",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody okręgowe",
+    "question": "Na rynku instrumentów pochodnych kwotowany jest kontrakt CDS, którego jednostką referencyjną jest pewne przedsiębiorstwo. 5-letni spread CDS wynosi 330 pb. Oczekiwana stopa odzysku na wypadek niewypłacalności przedsiębiorstwa wynosi 40%. Oszacuj przeciętne roczne prawdopodobieństwo niewypłacalności tego przedsiębiorstwa w okresie kolejnych 5 lat:",
+    "options": [
+      "3,3%",
+      "5,5%",
+      "8,25%",
+      "33%"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Przybliżona zależność: spread CDS ≈ prawdopodobieństwo niewypłacalności × (1 − stopa odzysku). Stąd roczne prawdopodobieństwo niewypłacalności ≈ 3,3% / (1 − 0,4) = 3,3% / 0,6 = 5,5%."
+  },
+  {
+    "id": "owe30-o-23",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody okręgowe",
+    "question": "Która z odpowiedzi prawidłowo określa cechy specjalnych praw ciągnienia (Special Drawing Rights – SDR)?",
+    "options": [
+      "są one emitowane regularnie co 5 lat",
+      "są to pieniądze gotówkowe, których wartość określana jest na podstawie koszyka walut",
+      "ich wartość określana jest w USD",
+      "są to pieniądze bezgotówkowe"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "SDR (specjalne prawa ciągnienia) to rezerwowa jednostka rozrachunkowa MFW (od 1969 r.), istniejąca wyłącznie w formie zapisów na rachunkach – bez gotówki. Jej wartość wyznacza koszyk walut (dolar, euro, juan, jen, funt), a emisje (alokacje) są nieregularne."
+  },
+  {
+    "id": "owe30-o-24",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody okręgowe",
+    "question": "Instytucją, która powstała na mocy ustaleń konferencji z Bretton Woods, jest:",
+    "options": [
+      "Bank Rozrachunków Międzynarodowych",
+      "Europejski Bank Odbudowy i Rozwoju",
+      "Międzynarodowy Fundusz Walutowy",
+      "Europejski Bank Centralny"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Na konferencji w Bretton Woods (1944) utworzono Międzynarodowy Fundusz Walutowy i Międzynarodowy Bank Odbudowy i Rozwoju (Bank Światowy) oraz system stałych kursów walut powiązanych z dolarem. Bank Rozrachunków Międzynarodowych powstał w 1930 r., EBOiR – w 1991 r., a EBC – w 1998 r."
+  },
+  {
+    "id": "owe30-o-25",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody okręgowe",
+    "question": "Politykę ujemnej nominalnej stopy depozytowej banku centralnego prowadził w 2016 r.:",
+    "options": [
+      "System Rezerwy Federalne USA",
+      "Bank Anglii",
+      "Narodowy Bank Polski",
+      "Europejski Bank Centralny"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "W 2016 r. stopa depozytowa EBC była ujemna (−0,4%) – banki płaciły za trzymanie nadwyżek w banku centralnym, co miało zachęcać do kredytowania. Fed, Bank Anglii i NBP miały dodatnie stopy. EBC zakończył politykę ujemnych stóp w 2022 r."
+  },
+  {
+    "id": "owe30-o-26",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody okręgowe",
+    "question": "Nazwa grupy przedsiębiorstw silnie ze sobą powiązanych oraz występujących wobec siebie w roli dostawcy i stanowiących specyficzny element gospodarki japońskiej to:",
+    "options": [
+      "nenko",
+      "bushido",
+      "czembole",
+      "keiretsu"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Keiretsu to japońskie grupy powiązanych przedsiębiorstw (często wokół banku lub dużego producenta), w których firmy mają wzajemne udziały i działają jako stali dostawcy i odbiorcy (np. Toyota z dostawcami). Czebole to podobne, ale rodzinne konglomeraty koreańskie."
+  },
+  {
+    "id": "owe30-o-27",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody okręgowe",
+    "question": "Zarządzanie autorytarne charakteryzuje się:",
+    "options": [
+      "dużą troską o ludzi, a niewielką o produkcję",
+      "dużą troską o ludzi, jak i o produkcję",
+      "małą troską o ludzi, jak i o produkcję",
+      "małą troską o ludzi, a dużą o produkcję"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "W siatce kierowniczej Blake'a i Mouton styl autorytarny (9.1) oznacza dużą troskę o produkcję (wyniki, zadania) i małą o ludzi. Styl klubowy to odwrotność (1.9), zubożony – mała troska o oba (1.1), a zespołowy – duża troska o oba (9.9)."
+  },
+  {
+    "id": "owe30-o-28",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody okręgowe",
+    "question": "Fazę akceptacji w cyklu życia przedsiębiorstwa cechują:",
+    "options": [
+      "niewielkie przepływy środków pieniężnych",
+      "stabilny zrównoważony wzrost",
+      "rentowność wyższa niż w fazie przełomu",
+      "rentowność wyższa niż w fazie dojrzałości"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W cyklu życia przedsiębiorstwa faza akceptacji (wczesna faza, gdy firma zdobywa pierwszych klientów i pozycję na rynku) wiąże się z małymi przychodami i dużymi wydatkami, więc przepływy pieniężne są niewielkie. Stabilny wzrost i wysoka rentowność cechują późniejsze fazy."
+  },
+  {
+    "id": "owe30-o-29",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody okręgowe",
+    "question": "Piesek w macierzy BCG oznacza jednostkę o:",
+    "options": [
+      "dużym względnym udziale w rynku oraz wysokiej dynamice rynku",
+      "dużym względnym udziale w rynku oraz niskiej dynamice rynku",
+      "małym względnym udziale w rynku oraz wysokiej dynamice rynku",
+      "małym względnym udziale rynku oraz niskiej dynamice rynku"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "„Pies” („piesek”) w macierzy BCG to jednostka o małym względnym udziale w wolno rosnącym rynku – zwykle przynosi niskie zyski i kandyduje do wycofania. Duży udział i szybki wzrost to „gwiazda”, duży udział i wolny wzrost – „dojna krowa”, mały udział i szybki wzrost – „znak zapytania”."
+  },
+  {
+    "id": "owe30-o-30",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody okręgowe",
+    "question": "Przedsiębiorstwo działające zgodnie ze strategią obrońcy (typologia Milesa i Snowa):",
+    "options": [
+      "pobudza kreatywność i elastyczność oraz często przyjmuje zdecentralizowaną strukturę",
+      "koncentruje się na obniżeniu kosztów i poprawie wyników aktualnie wytwarzanych produktów",
+      "próbuje wytwarzać swoje obecne produkty i wprowadzać pewne innowacje w nowych produktach",
+      "dryfuje zgodnie z biegiem wydarzeń"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "W typologii Milesa i Snowa „obrońca” działa na wąskim, stabilnym rynku i broni swojej pozycji przez efektywność – obniżanie kosztów i doskonalenie obecnych produktów. „Poszukiwacz” stawia na innowacje i elastyczność, „analityk” łączy oba podejścia, a „reaktor” dryfuje bez spójnej strategii."
+  }
+]

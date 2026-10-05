@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe28-s-01",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody szkolne",
+    "question": "Ekonomia zajmuje się przede wszystkim:",
+    "options": [
+      "odkrywaniem coraz nowszych sposobów, jak nie stracić pieniędzy, prowadząc firmę",
+      "udowadnianiem, że gospodarki wolnorynkowe są lepsze niż gospodarki, w których dochodzi do interwencji państwa",
+      "poszukiwaniem takich wyborów, które pozwolą efektywnie wykorzystać ograniczone zasoby",
+      "ustalaniem najbardziej sprawiedliwego podziału dostępnych dóbr i usług"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Ekonomia to nauka o tym, jak ludzie i społeczeństwa wybierają sposób wykorzystania rzadkich (ograniczonych) zasobów do zaspokojenia nieograniczonych potrzeb. Centralnym problemem jest efektywne gospodarowanie, a nie udowadnianie wyższości jakiegoś systemu czy ustalanie „sprawiedliwego” podziału (to kwestie normatywne)."
+  },
+  {
+    "id": "owe28-s-02",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody szkolne",
+    "question": "Nadzwyczaj dobre plony pomidorów spowodują:",
+    "options": [
+      "wzrost podaży pomidorów",
+      "wzrost ceny rynkowej pomidorów",
+      "spadek popytu na pomidory",
+      "wzrost cen ogórków"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Dobre plony oznaczają, że rolnicy mogą zaoferować więcej pomidorów przy każdej cenie – rośnie podaż (krzywa podaży przesuwa się w prawo). W efekcie cena pomidorów spada, a popyt (krzywa popytu) się nie zmienia."
+  },
+  {
+    "id": "owe28-s-03",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody szkolne",
+    "question": "Jeśli popyt na pewien produkt jest elastyczny, to wartość bezwzględna współczynnika elastyczności cenowej popytu wynosi:",
+    "options": [
+      "mniej niż zero",
+      "więcej niż zero",
+      "mniej niż jeden",
+      "więcej niż jeden"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Popyt elastyczny oznacza, że wielkość popytu zmienia się procentowo bardziej niż cena – wartość bezwzględna współczynnika cenowej elastyczności popytu jest większa od 1. Gdy |Ed| < 1, popyt jest nieelastyczny, a gdy |Ed| = 1 – jednostkowy."
+  },
+  {
+    "id": "owe28-s-04",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody szkolne",
+    "question": "Kombinacje ilościowe dóbr, które konsument może nabyć przy danym dochodzie i aktualnym poziomie cen w gospodarce, tworzą:",
+    "options": [
+      "izokosztę",
+      "linię ograniczenia budżetowego",
+      "krzywą jednakowej użyteczności",
+      "krzywą cena-konsumpcja"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Linia ograniczenia budżetowego pokazuje wszystkie koszyki dóbr, które konsument może kupić, wydając cały dochód przy danych cenach. Izokoszta dotyczy firmy (kombinacje czynników o tym samym koszcie), krzywa obojętności – koszyków o tej samej użyteczności."
+  },
+  {
+    "id": "owe28-s-05",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody szkolne",
+    "question": "W długim okresie:",
+    "options": [
+      "wszystkie koszty są stałe",
+      "koszty całkowite są równe kosztom zmiennym",
+      "koszty zmienne są równe kosztom stałym",
+      "koszty stałe są zawsze większe niż koszty zmienne"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "W długim okresie wszystkie czynniki produkcji można zmienić, więc nie ma kosztów stałych – wszystkie koszty są zmienne. Koszt całkowity równa się więc kosztowi zmiennemu."
+  },
+  {
+    "id": "owe28-s-06",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody szkolne",
+    "question": "Występowanie zysków ekonomicznych i strat ekonomicznych:",
+    "options": [
+      "jest nieuniknione w procesie alokacji zasobów w gospodarce",
+      "pozwala na bardziej sprawiedliwy podział dochodów w długim okresie",
+      "nie ma wpływu na wielkość produkcji w gospodarce, bo zależy ona od efektywnego popytu",
+      "jest brane pod uwagę przy wyznaczaniu korzyści skali"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Zyski i straty ekonomiczne są sygnałami dla rynku: zyski przyciągają zasoby (nowe firmy, kapitał) do branż, na które jest popyt, a straty skłaniają do wycofania zasobów z branż mniej potrzebnych. Są więc nieodłącznym elementem procesu alokacji zasobów w gospodarce rynkowej."
+  },
+  {
+    "id": "owe28-s-07",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody szkolne",
+    "question": "Cechy którego z poniższych rynków są najbardziej zbliżone do modelu konkurencji doskonałej?",
+    "options": [
+      "węgla kamiennego",
+      "obuwia sportowego",
+      "sprzętu komputerowego",
+      "akcji korporacji międzynarodowej notowanych na giełdzie"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Konkurencja doskonała wymaga wielu kupujących i sprzedających, jednorodnego produktu, pełnej informacji i swobody wejścia. Najbliżej tego modelu jest rynek akcji dużej spółki notowanej na giełdzie: akcje są identyczne, inwestorów jest bardzo wielu, a pojedynczy inwestor nie wpływa na cenę."
+  },
+  {
+    "id": "owe28-s-08",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody szkolne",
+    "question": "Popyt na pracę zależy głównie od:",
+    "options": [
+      "wielkości podaży pracy",
+      "popytu na dobra i usługi, które są wytwarzane za pomocą tego czynnika wytwórczego",
+      "elastyczności cenowej tego czynnika wytwórczego",
+      "podaży pozostałych czynników wytwórczych"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Popyt na pracę jest popytem pochodnym – firmy zatrudniają ludzi, bo chcą wytwarzać dobra i usługi, na które jest popyt. Gdy rośnie popyt na produkty, rośnie zapotrzebowanie na pracę potrzebną do ich wytworzenia."
+  },
+  {
+    "id": "owe28-s-09",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody szkolne",
+    "question": "Andrzej zamierza kupić na dużym, międzynarodowym portalu aukcyjnym gitarę elektryczną znanego rockmana. Który z niżej wymienionych nagłówków z prasy ekonomicznej Andrzej przyjąłby w tej sytuacji z zadowoleniem?",
+    "options": [
+      "„Dolar umacnia się”",
+      "„Złotówka osłabła”",
+      "„Deprecjacja dolara”",
+      "nie ma to dla niego znaczenia, bo i tak transakcja zostanie przeliczona przez bank na złote"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Na międzynarodowym portalu ceny są najczęściej w dolarach. Deprecjacja dolara oznacza, że za każdego dolara trzeba zapłacić mniej złotych – gitara będzie dla Andrzeja tańsza. Umocnienie dolara i osłabienie złotego podrożyłyby zakup."
+  },
+  {
+    "id": "owe28-s-10",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody szkolne",
+    "question": "W przypadku której metody obliczania PKB uzyskamy największy wynik?",
+    "options": [
+      "metoda sumowania produktów",
+      "metoda sumowania dochodów",
+      "metoda sumowania wydatków",
+      "w każdej z powyższych metod uzyskamy taki sam wynik"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "PKB można liczyć trzema metodami: produkcji (wartości dodanej), dochodów i wydatków. Każda złotówka wydatków jest czyimś dochodem i odpowiada wartości wytworzonych dóbr, więc teoretycznie wszystkie metody dają ten sam wynik (w praktyce różnice wynikają tylko z błędów statystycznych)."
+  },
+  {
+    "id": "owe28-s-11",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody szkolne",
+    "question": "Jeśli w 2012 r. stopa bezrobocia wyniosła 15%, a w 2013 r. 12%, to w tym okresie nastąpiła zmiana o:",
+    "options": [
+      "3 procent",
+      "3 punkty procentowe",
+      "20 punktów procentowych",
+      "30 punktów bazowych"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Różnicę między dwiema wartościami podanymi w procentach wyraża się w punktach procentowych: 15% − 12% = 3 punkty procentowe. W procentach stopa bezrobocia spadła o 20% (3/15), a 3 punkty procentowe to 300 punktów bazowych."
+  },
+  {
+    "id": "owe28-s-12",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody szkolne",
+    "question": "Im większa jest skłonność gospodarstwa domowego do konsumpcji, tym:",
+    "options": [
+      "wyższa jest stopa bezrobocia cyklicznego",
+      "mniejsza jest skłonność do oszczędzania",
+      "wyższa jest stopa procentowa w gospodarce",
+      "niższy jest poziom cen w gospodarce"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Każdą dodatkową złotówkę dochodu gospodarstwo domowe albo konsumuje, albo oszczędza: krańcowa skłonność do konsumpcji i do oszczędzania sumują się do 1 (MPC + MPS = 1). Im większa skłonność do konsumpcji, tym mniejsza do oszczędzania."
+  },
+  {
+    "id": "owe28-s-13",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody szkolne",
+    "question": "Funkcjonowanie współczesnego systemu bankowego oparte jest przede wszystkim na:",
+    "options": [
+      "rezerwach całkowitych",
+      "rezerwach częściowych",
+      "rezerwach złota i SDR",
+      "kredytach redyskontowych"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "System rezerw częściowych oznacza, że banki utrzymują w rezerwie tylko część przyjętych depozytów, a resztę pożyczają. Dzięki temu mogą kreować pieniądz (mnożnik kreacji pieniądza). W systemie rezerw całkowitych banki trzymałyby 100% depozytów."
+  },
+  {
+    "id": "owe28-s-14",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody szkolne",
+    "question": "W gospodarce szara strefa obejmuje:",
+    "options": [
+      "działalność w specjalnych strefach ekonomicznych",
+      "zatrudnianie pracowników „na czarno”",
+      "zakłady, których działalność ze względu na interes państwa jest niejawna",
+      "wszystkie towary, których produkcja jest zakazana"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Szara strefa to legalna działalność gospodarcza ukrywana przed państwem, aby uniknąć podatków i składek – np. zatrudnianie pracowników „na czarno”, sprzedaż bez rachunku. Produkcja dóbr zakazanych (np. narkotyków) to czarny rynek, a strefy ekonomiczne i zakłady objęte tajemnicą działają legalnie."
+  },
+  {
+    "id": "owe28-s-15",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody szkolne",
+    "question": "Jeśli w jednym kraju dochód per capita wynosi 10 tys. euro, a w drugim kraju 12 tys. euro, to przy założeniu identycznej dynamiki PKB (ceteris paribus) absolutna różnica wartości dochodu per capita:",
+    "options": [
+      "będzie się zmniejszać",
+      "pozostanie niezmienna",
+      "będzie się powiększać",
+      "może zarówno się zwiększyć, jak i zmniejszyć"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Przy jednakowym tempie wzrostu PKB (np. g) różnica bezwzględna zmienia się proporcjonalnie: 12 000·(1+g) − 10 000·(1+g) = 2000·(1+g). Jeśli PKB rośnie (g > 0), różnica się zwiększa, a jeśli spada (g < 0) – zmniejsza. Bez znajomości kierunku zmian nie można przesądzić wyniku."
+  },
+  {
+    "id": "owe28-s-16",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody szkolne",
+    "question": "W 1999 r. Piotrek założył lokatę terminową o stałym oprocentowaniu i terminie zapadalności 2 lata z kapitalizacją roczną. Kwota lokaty to 1000 zł. Roczne oprocentowanie wynosiło wówczas 15%, a roczna stopa inflacji 12%. Ile odsetek w przybliżeniu otrzymał Piotrek po upływie okresu lokaty?",
+    "options": [
+      "60 zł",
+      "260 zł",
+      "300 zł",
+      "320 zł"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Lokata z roczną kapitalizacją: 1000 · 1,15 · 1,15 = 1322,50 zł. Odsetki = 1322,50 − 1000 ≈ 322,50 zł, czyli ok. 320 zł. Inflacja wpływa na realną wartość zysku, ale nie na kwotę nominalnie otrzymanych odsetek."
+  },
+  {
+    "id": "owe28-s-17",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody szkolne",
+    "question": "Zaciągając kredyt w banku, jego koszt najlepiej określić na podstawie:",
+    "options": [
+      "tylko oprocentowania nominalnego",
+      "oprocentowania nominalnego i prowizji",
+      "oprocentowania nominalnego oraz długości okresu kredytowania",
+      "rzeczywistej rocznej stopy oprocentowania"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Rzeczywista roczna stopa oprocentowania (RRSO) uwzględnia wszystkie koszty kredytu: odsetki, prowizje, opłaty, ubezpieczenia, a także czas ich ponoszenia. Dzięki temu pozwala porównywać różne oferty kredytów. Banki muszą ją podawać w umowach i reklamach."
+  },
+  {
+    "id": "owe28-s-18",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody szkolne",
+    "question": "Hipoteka to:",
+    "options": [
+      "każda nieruchomość, która może być przedmiotem zabezpieczenia kredytu bankowego",
+      "rodzaj ograniczonego prawa rzeczowego na nieruchomości",
+      "sposób gromadzenia danych dotyczących zadłużonych nieruchomości",
+      "hipotetyczna kwota, którą można uzyskać ze sprzedaży nieruchomości"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Hipoteka to ograniczone prawo rzeczowe na nieruchomości, ustanawiane w celu zabezpieczenia wierzytelności (np. kredytu). Jeśli dłużnik nie spłaci długu, wierzyciel może dochodzić zaspokojenia z nieruchomości, niezależnie od tego, kto jest jej właścicielem."
+  },
+  {
+    "id": "owe28-s-19",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody szkolne",
+    "question": "Na które z poniższych stanowisk w strukturach Unii Europejskiej nie został dotychczas wybrany Polak?",
+    "options": [
+      "Przewodniczący Komisji Europejskiej",
+      "Komisarz Europejski ds. Budżetu i Programowania Finansowego",
+      "Przewodniczący Parlamentu Europejskiego",
+      "Przewodniczący Rady Europejskiej"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Polacy pełnili funkcje: przewodniczącego Parlamentu Europejskiego (Jerzy Buzek, 2009–2012), komisarza ds. budżetu (Janusz Lewandowski, 2010–2014) i przewodniczącego Rady Europejskiej (Donald Tusk, wybrany w 2014 r.). Żaden Polak nie był przewodniczącym Komisji Europejskiej."
+  },
+  {
+    "id": "owe28-s-20",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody szkolne",
+    "question": "Miernikiem stopy zwrotu z aktywów jest wskaźnik:",
+    "options": [
+      "ROA",
+      "ROE",
+      "ROS",
+      "P/E"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "ROA (return on assets) = zysk netto / aktywa – mierzy rentowność (stopę zwrotu) z majątku. ROE to zwrot z kapitału własnego, ROS – rentowność sprzedaży, a P/E – relacja ceny akcji do zysku na akcję."
+  },
+  {
+    "id": "owe28-s-21",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody szkolne",
+    "question": "Podstawowa stawka CIT w Polsce wynosi (stan na rok 2014):",
+    "options": [
+      "18%",
+      "19%",
+      "22%",
+      "23%"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Podstawowa stawka podatku dochodowego od osób prawnych (CIT) w Polsce wynosi 19% (od 2004 r.). Od 2017 r. mali podatnicy mogą stosować obniżoną stawkę (obecnie 9%)."
+  },
+  {
+    "id": "owe28-s-22",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody szkolne",
+    "question": "Bessa na giełdzie to okres, w którym:",
+    "options": [
+      "nie odbywają się sesje giełdowe",
+      "pojawiają się nowe publiczne oferty",
+      "następuje długotrwały spadek kursów",
+      "zawieszone są notowania danego waloru w związku z niezrównoważeniem rynku"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Bessa to okres długotrwałych spadków kursów na giełdzie, któremu towarzyszy pesymizm inwestorów. Przeciwieństwem jest hossa – okres długotrwałych wzrostów. Symbolem bessy jest niedźwiedź (rynek niedźwiedzi), a hossy – byk."
+  },
+  {
+    "id": "owe28-s-23",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody szkolne",
+    "question": "Który z poniższych indeksów nie był notowany na GPW w 2014 r.?",
+    "options": [
+      "WIG20",
+      "WIG50",
+      "WIG250",
+      "WIRR"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "WIRR był indeksem najmniejszych spółek GPW (rynek równoległy); zastąpiono go indeksem sWIG80 w 2007 r. W 2014 r. notowane były m.in. WIG20, WIG50 i WIG250."
+  },
+  {
+    "id": "owe28-s-24",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody szkolne",
+    "question": "Które z poniższych stwierdzeń jest prawdziwe w odniesieniu do podatku pośredniego?",
+    "options": [
+      "płacą go wyłącznie pośrednicy",
+      "wpłacany jest w formie zaliczek, które są rozliczane w rocznym zeznaniu podatkowym",
+      "koszty jego poboru obciążają pośrednio sprzedawcę i nabywcę",
+      "podmiot ponoszący ciężar ekonomiczny tego podatku nie płaci go bezpośrednio do urzędu skarbowego"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Podatek pośredni (np. VAT, akcyza) jest wliczony w cenę – jego ciężar ponosi konsument (podatnik ekonomiczny), ale do urzędu skarbowego wpłaca go sprzedawca (podatnik prawny). Konsument nie płaci go więc bezpośrednio do urzędu."
+  },
+  {
+    "id": "owe28-s-25",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody szkolne",
+    "question": "Które z poniższych stwierdzeń jest prawdziwe?",
+    "options": [
+      "zależność pomiędzy ceną obligacji i stopą procentową jest jednokierunkowa",
+      "zależność pomiędzy ceną obligacji i stopą procentową jest odwrotnie proporcjonalna",
+      "nie występuje stała zależność pomiędzy ceną obligacji i stopą procentową",
+      "zmiany stopy procentowej odnoszą się tylko do rynku akcji, nie wpływają natomiast na rynek obligacji"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Cena obligacji i rynkowa stopa procentowa zmieniają się w przeciwnych kierunkach (zależność odwrotna): gdy stopy rosną, starsze obligacje o niższym oprocentowaniu tanieją, a gdy stopy spadają – drożeją."
+  },
+  {
+    "id": "owe28-s-26",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody szkolne",
+    "question": "Patrycja i Beata rozważają uruchomienie sklepu internetowego. W jakiej formie organizacyjnej założenie działalności gospodarczej w Polsce będzie najtańsze?",
+    "options": [
+      "spółka cywilna",
+      "spółka jawna",
+      "spółka z ograniczoną odpowiedzialnością",
+      "spółka komandytowa"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Spółka cywilna to umowa między wspólnikami – nie wymaga wpisu do KRS, kapitału zakładowego ani notariusza; wspólnicy rejestrują się w CEIDG, co jest bezpłatne. Spółki handlowe wymagają wpisu do KRS (opłaty), a spółka z o.o. – kapitału co najmniej 5000 zł."
+  },
+  {
+    "id": "owe28-s-27",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody szkolne",
+    "question": "Założenie, że organizację należy traktować jako podmiot złożony i wielowymiarowy, a jej wyniki nie są prostą sumą efektów poszczególnych podsystemów, jest charakterystyczne dla podejścia:",
+    "options": [
+      "behawioralnego",
+      "holistycznego",
+      "procesowego",
+      "sytuacyjnego"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Podejście holistyczne (systemowe) traktuje organizację jako całość złożoną z powiązanych podsystemów; efekt całości różni się od sumy efektów części (synergia). Podejście sytuacyjne mówi, że właściwe rozwiązania zależą od sytuacji, a procesowe – koncentruje się na procesach."
+  },
+  {
+    "id": "owe28-s-28",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody szkolne",
+    "question": "Zasady BHP w działalności przedsiębiorstwa dotyczą:",
+    "options": [
+      "zarządzania dostawami towarów",
+      "liczby produktów w portfolio, która powinna być wyznaczana zgodnie z zasadą 80/20",
+      "sposobu obsługi klientów, tak aby zapewnić ich zadowolenie w możliwie najkrótszym czasie przy jednocześnie relatywnie niskiej cenie usług",
+      "ergonomii stanowiska pracy i jego bezpieczeństwa technicznego"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "BHP (bezpieczeństwo i higiena pracy) to zasady zapewniające pracownikom bezpieczne i higieniczne warunki pracy: ergonomię stanowisk, bezpieczeństwo maszyn, oświetlenie, ochronę przed zagrożeniami. Pracodawca odpowiada za ich przestrzeganie zgodnie z Kodeksem pracy."
+  },
+  {
+    "id": "owe28-s-29",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody szkolne",
+    "question": "Która z poniższych form wejścia na rynek zagraniczny charakteryzuje się najmniejszym ryzykiem, kontrolą i zaangażowaniem zasobów po stronie eksportera?",
+    "options": [
+      "eksport pośredni",
+      "joint venture",
+      "franchising",
+      "filia handlowa"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Eksport pośredni polega na sprzedaży za granicę przez pośredników (np. firmy handlowe w kraju). Eksporter nie musi angażować własnych zasobów za granicą, więc ponosi najmniejsze ryzyko, ale ma też najmniejszą kontrolę nad sprzedażą. Joint venture, franchising i filia wymagają większego zaangażowania."
+  },
+  {
+    "id": "owe28-s-30",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody szkolne",
+    "question": "Osoba upoważniona przez przedsiębiorcę do dokonywania czynności związanych z prowadzeniem przedsiębiorstwa to:",
+    "options": [
+      "mitoman",
+      "cichy wspólnik",
+      "prokurent",
+      "figurant"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Prokura to szczególne pełnomocnictwo udzielane przez przedsiębiorcę wpisanego do rejestru. Prokurent może dokonywać wszelkich czynności sądowych i pozasądowych związanych z prowadzeniem przedsiębiorstwa (z wyjątkiem m.in. zbycia przedsiębiorstwa i obciążania nieruchomości bez osobnego umocowania)."
+  }
+]

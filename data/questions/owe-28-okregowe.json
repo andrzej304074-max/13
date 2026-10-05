@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe28-o-01",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody okręgowe",
+    "question": "Jeżeli w pewnej gospodarce obecnie realizowana struktura produkcji znajduje się na granicy jej możliwości produkcyjnych, to wzrost produkcji dóbr kapitałowych:",
+    "options": [
+      "musi odbyć się kosztem produkcji dóbr konsumpcyjnych",
+      "wymusi stosowanie bardziej kapitałochłonnych metod produkcji",
+      "wywoła spadek podaży pracy",
+      "będzie negatywnie oddziaływał na efektywność wykorzystania czynników wytwórczych w długim okresie"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Jeśli gospodarka produkuje na granicy możliwości produkcyjnych, wszystkie zasoby są w pełni wykorzystane. Więcej dóbr kapitałowych można wytworzyć tylko przesuwając zasoby z produkcji dóbr konsumpcyjnych – kosztem alternatywnym jest rezygnacja z części konsumpcji."
+  },
+  {
+    "id": "owe28-o-02",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody okręgowe",
+    "question": "Stosunek użyteczności krańcowej dobra A do jego ceny przewyższa odpowiedni stosunek dla dobra B. Przy założeniu, że konsument wydaje cały swój dochód, dla zmaksymalizowania łącznej satysfakcji powinien on kupić:",
+    "options": [
+      "mniej dobra A i więcej dobra B",
+      "więcej dobra A i mniej dobra B",
+      "tyle samo dobra A, ile dobra B",
+      "więcej dobra B, jeśli jego cena rośnie"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Konsument maksymalizuje użyteczność, gdy MU_A/P_A = MU_B/P_B. Jeśli dla A ten stosunek jest wyższy, każda złotówka wydana na A daje więcej satysfakcji niż wydana na B. Powinien więc kupić więcej A i mniej B – wtedy MU_A spada, a MU_B rośnie, aż stosunki się zrównają."
+  },
+  {
+    "id": "owe28-o-03",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody okręgowe",
+    "question": "Przykładem efektu gapowicza jest:",
+    "options": [
+      "realizowanie przez rybaków połowów większych, niż wynosi przyznany im limit",
+      "brak internalizacji kosztów jazdy samochodem bez włączonych świateł (wobec zwiększonego ryzyka kolizji) na wysokość składki ubezpieczeniowej",
+      "nieopłacenie abonamentu radiowo-telewizyjnego",
+      "zmniejszenie nadwyżki konsumenta w sytuacji otrzymania kary administracyjnej za nieodśnieżenie ogólnodostępnego chodnika przed posesją"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Efekt gapowicza (free rider) polega na korzystaniu z dobra bez ponoszenia jego kosztów, gdy nie da się łatwo wykluczyć niepłacących. Nieopłacanie abonamentu RTV przy dalszym oglądaniu telewizji publicznej to typowy przykład. Przełowienie to „tragedia wspólnego pastwiska”."
+  },
+  {
+    "id": "owe28-o-04",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody okręgowe",
+    "question": "Jeżeli rząd ustalił cenę powyżej ceny równowagi rynkowej, to:",
+    "options": [
+      "krzywa popytu przesunie się w prawo",
+      "podaż wzrośnie",
+      "wielkość podaży będzie przewyższać wielkość zapotrzebowania",
+      "pojawi się niedobór rynkowy"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Cena minimalna ustalona powyżej ceny równowagi sprawia, że producenci chcą sprzedać więcej, a konsumenci kupić mniej – powstaje nadwyżka (wielkość podaży przewyższa wielkość popytu). Krzywe popytu i podaży się nie przesuwają; niedobór powstaje przy cenie maksymalnej poniżej równowagi."
+  },
+  {
+    "id": "owe28-o-05",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody okręgowe",
+    "question": "Jeśli firma działająca na doskonale konkurencyjnym rynku w długim okresie nie zwiększa wielkości produkcji ani jej nie ogranicza, to można stwierdzić, że:",
+    "options": [
+      "firma osiąga korzyści skali",
+      "zysk normalny wynosi zero",
+      "zysk księgowy jest równy kosztom niejawnym",
+      "pozytywne efekty zewnętrzne są równe negatywnym efektom zewnętrznym"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Firma w długookresowej równowadze konkurencji doskonałej osiąga zerowy zysk ekonomiczny – zarabia tylko zysk normalny. Oznacza to, że zysk księgowy (przychody − koszty jawne) jest równy kosztom niejawnym (alternatywnym), np. utraconemu wynagrodzeniu właściciela i odsetkom od jego kapitału."
+  },
+  {
+    "id": "owe28-o-06",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody okręgowe",
+    "question": "Firmę możemy uznać za monopolistę naturalnego, jeśli:",
+    "options": [
+      "krzywa popytu na jej produkty jest nieelastyczna",
+      "dla każdej wielkości produkcji osiąga korzyści skali",
+      "produkuje dobra podrzędne",
+      "jej siła monopolowa wynika jedynie z autorytatywnej decyzji rządu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Monopol naturalny występuje, gdy jedna firma może zaspokoić cały popyt taniej niż kilka firm – bo przy każdej wielkości produkcji (w zakresie popytu) osiąga korzyści skali, a koszt przeciętny maleje. Przykłady: sieci wodociągowe, przesył energii, kolej."
+  },
+  {
+    "id": "owe28-o-07",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody okręgowe",
+    "question": "Ludzie generalnie preferują konsumpcję dzisiejszą niż przyszłą. Konsekwencją tego jest:",
+    "options": [
+      "ujemnie nachylona krzywa popytu funduszy pożyczkowych",
+      "dodatnio nachylona krzywa popytu funduszy pożyczkowych",
+      "ujemnie nachylona krzywa podaży funduszy pożyczkowych",
+      "dodatnio nachylona krzywa podaży funduszy pożyczkowych"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Ludzie wolą konsumować dziś niż jutro (preferencja czasowa), więc aby oszczędzać (pożyczać innym), oczekują wynagrodzenia – odsetek. Im wyższa stopa procentowa, tym więcej są skłonni oszczędzać, więc krzywa podaży funduszy pożyczkowych jest dodatnio nachylona."
+  },
+  {
+    "id": "owe28-o-08",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody okręgowe",
+    "question": "Teoria agencji odnosi się do:",
+    "options": [
+      "podwójnego opodatkowania zysków przedsiębiorstw wypłacanych w formie dywidend",
+      "różnic w interesach akcjonariuszy i obligatariuszy",
+      "ograniczonej odpowiedzialności właścicieli spółek kapitałowych",
+      "konsekwencji oddzielenia funkcji właścicielskich od funkcji menedżerskich"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Teoria agencji (pryncypała–agenta) dotyczy problemów wynikających z oddzielenia własności od zarządzania: menedżerowie (agenci) mogą realizować własne cele zamiast celów właścicieli (pryncypałów). Rozwiązaniem są systemy motywacyjne i nadzór (np. rada nadzorcza)."
+  },
+  {
+    "id": "owe28-o-09",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody okręgowe",
+    "question": "Zniesienie wysokich ceł na żywność eksportowaną z Unii Europejskiej do USA spowoduje:",
+    "options": [
+      "spadek zatrudnienia w sektorze spożywczym w USA",
+      "wzrost cen żywności w USA",
+      "zwiększenie zysków sektora spożywczego w USA",
+      "poprawę bilansu handlowego USA"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Zniesienie ceł w USA na żywność z UE obniży cenę importowanej żywności. Amerykańscy konsumenci kupią jej więcej, a amerykańscy producenci żywności stracą część rynku – spadną ich sprzedaż, zyski i zatrudnienie. Import wzrośnie, więc bilans handlowy USA się nie poprawi."
+  },
+  {
+    "id": "owe28-o-10",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody okręgowe",
+    "question": "Dekapitalizacja majątku produkcyjnego w gospodarce występuje, gdy:",
+    "options": [
+      "inwestycje brutto są większe niż inwestycje netto",
+      "inwestycje netto są dodatnie, ale są mniejsze niż inwestycje brutto",
+      "inwestycje brutto nie zmniejszają się względem poprzedniego okresu",
+      "amortyzacja przewyższa inwestycje brutto"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Dekapitalizacja to zmniejszanie się zasobu kapitału trwałego – występuje, gdy zużycie kapitału (amortyzacja) jest większe niż nakłady na nowy kapitał (inwestycje brutto), czyli inwestycje netto są ujemne."
+  },
+  {
+    "id": "owe28-o-11",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody okręgowe",
+    "question": "Jeżeli krańcowa skłonność do oszczędzania w gospodarce wynosi 0,4, a rząd zamierza przesunąć krzywą zagregowanego popytu w lewo o 50 mld zł, to może to osiągnąć poprzez zmniejszenie wydatków o:",
+    "options": [
+      "20 mld zł",
+      "30 mld zł",
+      "83 mld zł",
+      "125 mld zł"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Mnożnik wydatków = 1 / MPS = 1 / 0,4 = 2,5. Aby zmniejszyć zagregowany popyt o 50 mld zł, wystarczy obniżyć wydatki rządowe o 50 / 2,5 = 20 mld zł."
+  },
+  {
+    "id": "owe28-o-12",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody okręgowe",
+    "question": "Wskaż prawdziwe zdanie:",
+    "options": [
+      "zwiększenie poziomu zapasów w gospodarce oznacza zwiększenie PKB",
+      "nachylenie krzywej popytu globalnego zależy od poziomu konsumpcji autonomicznej",
+      "w gospodarce zamkniętej bez udziału państwa oszczędności mogą nie być równe inwestycjom",
+      "definicja produkcji potencjalnej nie dopuszcza możliwości istnienia bezrobocia naturalnego"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Zmiana zapasów to część inwestycji (I) w PKB liczonym metodą wydatkową – wyprodukowane i niesprzedane dobra też są produkcją bieżącego okresu. W gospodarce zamkniętej bez państwa oszczędności zawsze równają się inwestycjom (ex post), a w produkcji potencjalnej występuje bezrobocie naturalne."
+  },
+  {
+    "id": "owe28-o-13",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody okręgowe",
+    "question": "Zgodnie z poglądami monetarystów zmiana podaży pieniądza spowoduje zmianę:",
+    "options": [
+      "prędkości obiegu pieniądza, co w konsekwencji zmieni poziom nominalnego PKB",
+      "wydatków inwestycyjnych, co w konsekwencji zmieni poziom realnego PKB",
+      "stopy procentowej, co w konsekwencji zmieni poziom długookresowego realnego PKB",
+      "zagregowanego popytu, co w konsekwencji zmieni poziom nominalnego PKB"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Monetaryści (M. Friedman) uważają, że szybkość obiegu pieniądza jest stabilna, więc zmiana podaży pieniądza zmienia bezpośrednio zagregowany popyt i nominalny PKB (MV = PY). W długim okresie wpływa tylko na ceny, a nie na realny PKB."
+  },
+  {
+    "id": "owe28-o-14",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody okręgowe",
+    "question": "Prawo Okuna:",
+    "options": [
+      "mówi, że redystrybucja dochodów za pomocą polityki fiskalnej prowadzi ostatecznie do spadku efektywności gospodarki",
+      "stwierdza, że różnica pomiędzy realnym a nominalnym wzrostem PKB zależy od stopnia inflacji",
+      "głosi, że istnieje zależność pomiędzy stopą bezrobocia przymusowego a luką PKB",
+      "obrazuje wymienność pomiędzy stopą bezrobocia a stopą inflacji"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Prawo Okuna (A. Okun) opisuje zależność między bezrobociem a produkcją: wzrost stopy bezrobocia (koniunkturalnego) o 1 pkt proc. ponad stopę naturalną wiąże się z luką PKB rzędu ok. 2–3% (produkcja poniżej potencjalnej). Zależność bezrobocie–inflacja opisuje krzywa Phillipsa."
+  },
+  {
+    "id": "owe28-o-15",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody okręgowe",
+    "question": "Które z poniższych stwierdzeń jest prawdziwe dla sytuacji gospodarczej Polski w latach 1992–2012?",
+    "options": [
+      "nie w każdym roku występował deficyt budżetu państwa",
+      "od 1995 r. wynagrodzenia realne nieprzerwanie rosły",
+      "stopa bezrobocia w żadnym roku nie przekroczyła 17%",
+      "od 2005 r. wartość eksportu towarów z Polski przekraczała wartość importu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "W latach 1995–2012 przeciętne wynagrodzenie realne w Polsce rosło co roku. Pozostałe zdania są fałszywe: deficyt budżetu państwa występował w każdym roku, stopa bezrobocia przekraczała 17% (np. ok. 20% w latach 2002–2003), a import towarów przewyższał eksport."
+  },
+  {
+    "id": "owe28-o-16",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody okręgowe",
+    "question": "Prędkość obiegu pieniądza w gospodarce to:",
+    "options": [
+      "średnia liczba transakcji obsługiwanych przez jednostkę pieniądza w ciągu roku",
+      "popyt na pieniądz podzielony przez krańcową skłonność do konsumpcji",
+      "iloraz poziomu cen i wartości dóbr w gospodarce",
+      "stosunek podaży pieniądza do poziomu cen"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Prędkość (szybkość) obiegu pieniądza (V) to przeciętna liczba transakcji, w których bierze udział jednostka pieniądza w ciągu roku. Z równania wymiany: V = nominalny PKB / ilość pieniądza (PY/M)."
+  },
+  {
+    "id": "owe28-o-17",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody okręgowe",
+    "question": "Kasa Rolniczego Ubezpieczenia Społecznego (KRUS) to system:",
+    "options": [
+      "powszechny",
+      "o zdefiniowanym świadczeniu",
+      "o zdefiniowanej składce",
+      "kapitałowy"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "KRUS to odrębny system ubezpieczenia społecznego rolników, finansowany w dużej mierze z budżetu państwa. Działa na zasadzie zdefiniowanego świadczenia – wysokość emerytury rolniczej zależy od emerytury podstawowej i okresów ubezpieczenia, a nie od wpłaconych składek. ZUS (po 1999 r.) to system zdefiniowanej składki."
+  },
+  {
+    "id": "owe28-o-18",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody okręgowe",
+    "question": "Obecnie Narodowy Bank Polski stosuje strategię:",
+    "options": [
+      "bezpośredniej kontroli podaży pieniądza",
+      "przewidywalnej zmiany stopy procentowej",
+      "stabilnego kursu walutowego",
+      "bezpośredniego celu inflacyjnego"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "NBP od 1999 r. stosuje strategię bezpośredniego celu inflacyjnego (inflation targeting): RPP ogłasza cel inflacyjny (od 2004 r. 2,5% ± 1 pkt proc.) i ustala stopy procentowe tak, by go osiągnąć. Kurs złotego jest płynny."
+  },
+  {
+    "id": "owe28-o-19",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody okręgowe",
+    "question": "Co nie należy do zadań Rady Polityki Pieniężnej w Polsce?",
+    "options": [
+      "przyjmowanie rocznego sprawozdania finansowego NBP",
+      "ustalanie stopy rezerw obowiązkowych",
+      "ustalanie zasad operacji otwartego rynku",
+      "opiniowanie sprawozdania z wykonania budżetu państwa"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Rada Polityki Pieniężnej m.in. ustala stopy procentowe NBP i stopę rezerwy obowiązkowej, określa zasady operacji otwartego rynku, przyjmuje założenia polityki pieniężnej i zatwierdza roczne sprawozdanie finansowe NBP. Sprawozdanie z wykonania budżetu państwa ocenia NIK, a zatwierdza Sejm."
+  },
+  {
+    "id": "owe28-o-20",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody okręgowe",
+    "question": "Strategia inwestowania na giełdzie polegająca na przewidywaniu kierunków zmian na całym rynku kapitałowym i częstych zmianach składu portfela inwestycyjnego nazywana jest strategią:",
+    "options": [
+      "probabilistyczną",
+      "szklanej kuli",
+      "wyczucia rynku (market timingu)",
+      "zachowania kapitału"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Market timing (wyczucie rynku) to strategia aktywna polegająca na przewidywaniu zmian koniunktury na całym rynku i częstym zmienianiu składu portfela – np. przenoszeniu środków z akcji do obligacji przed spodziewanymi spadkami. Wymaga trafnych prognoz, co jest bardzo trudne."
+  },
+  {
+    "id": "owe28-o-21",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody okręgowe",
+    "question": "Stopa dywidendy dla akcji pewnej spółki notowanej na giełdzie wynosi 6%, co oznacza, że:",
+    "options": [
+      "z każdej złotówki zysku spółka wypłaca 0,06 zł dywidendy",
+      "stosunek zysku przypadającego na 1 akcję do aktualnej ceny rynkowej akcji wynosi 6 do 100",
+      "firma musi wypłacać akcjonariuszom 6 zł dywidendy dla każdych 100 zł wartości nominalnej akcji",
+      "żadna z powyższych odpowiedzi nie jest prawdziwa"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Stopa dywidendy = dywidenda na akcję / cena rynkowa akcji. 6% oznacza, że roczna dywidenda stanowi 6% ceny akcji. Odpowiedź A opisuje stopę wypłaty dywidendy z zysku, B – odwrotność P/E (zysk do ceny), a spółka nie ma obowiązku wypłacania dywidendy – dlatego żadna odpowiedź nie jest prawdziwa."
+  },
+  {
+    "id": "owe28-o-22",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody okręgowe",
+    "question": "Wskaż nieprawdziwe stwierdzenie dotyczące podatku katastralnego:",
+    "options": [
+      "w większym stopniu obciąża ludzi majętnych niż biednych",
+      "wymusza bardziej racjonalną gospodarkę nieruchomościami",
+      "wymaga uporządkowania zapisów w księgach wieczystych i wyceny nieruchomości",
+      "stwarza bodźce dla właścicieli do inwestowania i zwiększania wartości nieruchomości"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Podatek katastralny (od wartości nieruchomości) obciąża bardziej majętnych, wymaga wyceny nieruchomości i porządku w księgach, zachęca do racjonalnego gospodarowania nieruchomościami. Ponieważ rośnie razem z wartością nieruchomości, zniechęca (a nie zachęca) do inwestowania w jej podniesienie."
+  },
+  {
+    "id": "owe28-o-23",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody okręgowe",
+    "question": "Duża ogólnopolska firma przejmuje małą firmę o ugruntowanej pozycji na rynku lokalnym. Cena przejęcia (nabycia) to 5 mln zł, a wartość aktywów firmy przejmowanej wyceniona według wartości godziwej to 4,5 mln zł. Różnica powstała w firmie, która dokonuje przejęcia, zwiększy:",
+    "options": [
+      "pozostałe przychody operacyjne",
+      "kapitał rezerwowy",
+      "wartości niematerialne i prawne",
+      "należności długoterminowe"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Nadwyżka ceny przejęcia nad wartością godziwą aktywów netto przejmowanej firmy (5 − 4,5 = 0,5 mln zł) to wartość firmy (goodwill). U nabywcy wykazuje się ją w bilansie jako wartość niematerialną (wartości niematerialne i prawne)."
+  },
+  {
+    "id": "owe28-o-24",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody okręgowe",
+    "question": "Czy bank może udzielić kredytu podmiotowi, który nie ma zdolności kredytowej?",
+    "options": [
+      "tak, zawsze",
+      "tak, w szczególnych przypadkach bank może samodzielnie podjąć taką decyzję",
+      "jedynie za zgodą Komisji Nadzoru Finansowego",
+      "nie jest to możliwe w żadnych okolicznościach"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Zgodnie z Prawem bankowym bank uzależnia kredyt od zdolności kredytowej, ale może udzielić kredytu podmiotowi bez zdolności kredytowej, jeśli przedstawi on realny program naprawczy i ustanowi szczególne zabezpieczenia, a sytuacja finansowa banku na to pozwala. Bank podejmuje tę decyzję samodzielnie."
+  },
+  {
+    "id": "owe28-o-25",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody okręgowe",
+    "question": "Klin podatkowy to:",
+    "options": [
+      "wyrażona w procentach różnica między całkowitymi kosztami pracy a płacą netto",
+      "dodatnia zależność pomiędzy efektywną stopą opodatkowania a wielkością szarej strefy",
+      "procentowy spadek zysków netto przedsiębiorstw wywołany podniesieniem stopy opodatkowania o 1 punkt procentowy",
+      "przeciętna wartość ulg i odliczeń, z których korzystają podatnicy podatku dochodowego od osób fizycznych"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Klin podatkowy to różnica między całkowitym kosztem pracy ponoszonym przez pracodawcę (wynagrodzenie brutto + składki pracodawcy) a płacą netto otrzymywaną przez pracownika, wyrażona w procentach kosztów pracy. Obejmuje podatek dochodowy i składki."
+  },
+  {
+    "id": "owe28-o-26",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody okręgowe",
+    "question": "Połączenie hiszpańskiej sieci pralni chemicznych z australijską siecią drogerii to przykład:",
+    "options": [
+      "synergii techniczno-kulturowej",
+      "fuzji wertykalnej",
+      "globalnego efektu sieciowego",
+      "integracji konglomeratowej"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Integracja (fuzja) konglomeratowa to połączenie firm z niezwiązanych branż – np. sieci pralni chemicznych z siecią drogerii. Fuzja wertykalna (pionowa) łączy firmy z kolejnych etapów łańcucha produkcji, a horyzontalna – firmy z tej samej branży."
+  },
+  {
+    "id": "owe28-o-27",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody okręgowe",
+    "question": "W przypadku zwrotu przez konsumenta w ustawowo określonym terminie towaru zakupionego przez internet sprzedawca zobowiązany jest zwrócić nabywcy:",
+    "options": [
+      "cenę towaru wraz z opłaconymi przez konsumenta kosztami przesyłki towaru od sprzedawcy do konsumenta, jednak nie wyższymi niż koszt najtańszego oferowanego przez sprzedawcę sposobu dostawy",
+      "wyłącznie cenę towaru",
+      "cenę towaru pomniejszoną o łączne koszty przesyłki od sprzedawcy do konsumenta",
+      "cenę towaru pomniejszoną o uzasadnione koszty pakowania towaru"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Zgodnie z ustawą o prawach konsumenta (od 25 grudnia 2014 r.) konsument może odstąpić od umowy zawartej przez internet w ciągu 14 dni. Sprzedawca musi zwrócić cenę i koszty dostawy do konsumenta – ale tylko do wysokości najtańszego oferowanego sposobu dostawy. Koszt odesłania towaru zwykle ponosi konsument."
+  },
+  {
+    "id": "owe28-o-28",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody okręgowe",
+    "question": "Który z poniższych czynników nie jest wymieniany w modelu pięciu sił Portera?",
+    "options": [
+      "konkurencja w sektorze",
+      "oddziaływanie dostawców i nabywców",
+      "siła przetargowa rządu",
+      "zagrożenie ze strony substytutów"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Model pięciu sił M. Portera ocenia atrakcyjność sektora na podstawie: rywalizacji obecnych konkurentów, groźby wejścia nowych firm, zagrożenia substytutami oraz siły przetargowej dostawców i nabywców. Rządu nie ma wśród pięciu sił."
+  },
+  {
+    "id": "owe28-o-29",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody okręgowe",
+    "question": "Konsekwencją pomyślnie wdrożonej techniki just-in-time jest:",
+    "options": [
+      "łatwość wykorzystania różnych wariantów podzespołów na danym etapie procesu produkcji",
+      "znaczne zwiększenie liczby dostawców",
+      "całkowite zastąpienie zapasów w przedsiębiorstwie zapasami „w drodze”",
+      "korzystanie z usług dostawców zlokalizowanych blisko przedsiębiorstwa"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Just in time (dostawy „na czas”) wymaga częstych, małych dostaw dokładnie wtedy, gdy są potrzebne – dlatego firmy współpracują z niewielką liczbą sprawdzonych dostawców, najlepiej zlokalizowanych blisko zakładu (np. parki dostawców przy fabrykach samochodów)."
+  },
+  {
+    "id": "owe28-o-30",
+    "type": "single",
+    "edition": "XXVIII OWE (2014/2015), zawody okręgowe",
+    "question": "Wskaż prawdziwe zdanie dotyczące wzbogacania pracy (job enrichment) i rozszerzania pracy (job enlargement):",
+    "options": [
+      "wzbogacanie pracy polega na przydzielaniu różnorodnych zadań do wykonania związanych z danym stanowiskiem pracy, a rozszerzanie pracy wiąże się z przydzielaniem zadań z wyższego poziomu zarządzania",
+      "wzbogacanie pracy ma wymiar motywacyjny, podczas gdy rozszerzanie pracy to głównie urozmaicenie monotonnych czynności dla danego stanowiska",
+      "wzbogacanie pracy wiąże się ze zmniejszeniem odpowiedzialności pracownika, podczas gdy dodatkowe obowiązki związane z rozszerzaniem pracy nie zmieniają poziomu odpowiedzialności",
+      "wzbogacanie pracy można stosować w odniesieniu do wszystkich pracowników, a rozszerzanie pracy tylko do pracowników na stanowiskach kierowniczych"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Wzbogacanie pracy (job enrichment) to zwiększanie odpowiedzialności i samodzielności pracownika (planowanie, kontrola własnej pracy) – ma wymiar motywacyjny (F. Herzberg). Rozszerzanie pracy (job enlargement) to dodawanie zadań tego samego poziomu, by urozmaicić monotonną pracę."
+  }
+]

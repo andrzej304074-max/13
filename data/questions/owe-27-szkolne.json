@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe27-s-01",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody szkolne",
+    "question": "Jeżeli zwiększenie ceny pewnego dobra o 10% prowadzi do spadku wielkości popytu o 6%, to z pewnością mamy do czynienia z:",
+    "options": [
+      "popytem nieelastycznym",
+      "popytem elastycznym",
+      "dobrem podstawowym",
+      "dobrem luksusowym"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Cenowa elastyczność popytu = % zmiana ilości / % zmiana ceny = −6% / 10% = −0,6. |Ed| < 1, więc popyt jest nieelastyczny. Na tej podstawie nie da się powiedzieć, czy dobro jest podstawowe czy luksusowe – do tego potrzebna jest elastyczność dochodowa."
+  },
+  {
+    "id": "owe27-s-02",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody szkolne",
+    "question": "Jeśli na pewnym rynku zaobserwowano wzrost ceny rynkowej przy jednoczesnym spadku ilości równowagi rynkowej, a funkcja popytu i podaży ma typowy przebieg, można przypuszczać, że musiał nastąpić:",
+    "options": [
+      "zarówno wzrost popytu, jak i wzrost podaży",
+      "spadek popytu przy niezmienionej podaży",
+      "wzrost podaży przy niezmienionym popycie",
+      "spadek podaży przy niezmienionym popycie"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Wzrost ceny przy spadku ilości równowagi to typowy skutek spadku podaży (przesunięcia krzywej podaży w lewo) przy niezmienionym popycie, np. po nieurodzaju. Spadek popytu obniżyłby i cenę, i ilość, a wzrost podaży – obniżył cenę i zwiększył ilość."
+  },
+  {
+    "id": "owe27-s-03",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody szkolne",
+    "question": "Zgodnie z pierwszym prawem Gossena wzrost konsumpcji dobra o jednostkę prowadzi zwykle do:",
+    "options": [
+      "spadku użyteczności krańcowej",
+      "wzrostu ceny",
+      "wzrostu podaży",
+      "spadku dochodów do dyspozycji"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "I prawo Gossena (prawo malejącej użyteczności krańcowej): każda kolejna jednostka tego samego dobra konsumowana w danym czasie daje coraz mniejszą dodatkową satysfakcję. Np. pierwsza szklanka wody dla spragnionego cieszy bardziej niż piąta."
+  },
+  {
+    "id": "owe27-s-04",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody szkolne",
+    "question": "Jeśli przedsiębiorstwo zwiększa nakład zmiennego czynnika wytwórczego w krótkim okresie, to:",
+    "options": [
+      "produkt krańcowy początkowo spada, a później rośnie",
+      "produkt przeciętny początkowo rośnie, a później spada",
+      "produkt całkowity nie może spaść",
+      "wielkość zysku całkowitego nieprzerwanie rośnie"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Przy zwiększaniu czynnika zmiennego produkt przeciętny najpierw rośnie, a po przekroczeniu maksimum (gdzie MP = AP) zaczyna spadać – to skutek prawa malejących przychodów. Produkt krańcowy najpierw rośnie, potem spada, a produkt całkowity może w końcu spaść (gdy MP < 0)."
+  },
+  {
+    "id": "owe27-s-05",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody szkolne",
+    "question": "Korzyści skali produkcji to:",
+    "options": [
+      "wszystkie korzyści, jakie przedsiębiorstwo czerpie z rozszerzania działalności produkcyjnej",
+      "przyrost zysku, jaki firma osiąga ze wzrostu wielkości produkcji w długim okresie",
+      "sytuacja, kiedy wzrost rozmiarów produkcji w długim okresie powoduje obniżenie ponoszonych przez przedsiębiorstwo kosztów przeciętnych",
+      "wszystkie powyższe warianty odpowiedzi są błędne"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Korzyści skali (rosnące przychody ze skali) występują, gdy zwiększanie rozmiarów produkcji w długim okresie obniża koszt przeciętny – np. dzięki specjalizacji, tańszym zakupom hurtowym, lepszemu wykorzystaniu maszyn."
+  },
+  {
+    "id": "owe27-s-06",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody szkolne",
+    "question": "Która z poniższych cech nie dotyczy konkurencji monopolistycznej?",
+    "options": [
+      "bariery wejścia na rynek są niewielkie",
+      "krzywa popytu na produkty przedsiębiorstwa jest ujemnie nachylona",
+      "produkty są niezróżnicowane (homogeniczne)",
+      "przedsiębiorstwo znajdujące się w równowadze długookresowej osiąga wyłącznie zysk normalny"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "W konkurencji monopolistycznej produkty są zróżnicowane (marka, jakość, lokalizacja), dlatego każda firma ma ujemnie nachyloną krzywą popytu. Bariery wejścia są niskie, więc w długim okresie zysk ekonomiczny spada do zera. Produkty jednorodne to cecha konkurencji doskonałej."
+  },
+  {
+    "id": "owe27-s-07",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody szkolne",
+    "question": "Utarg przeciętny zawsze równy jest:",
+    "options": [
+      "utargowi krańcowemu",
+      "iloczynowi zysku jednostkowego i liczby sprzedanych jednostek produktu",
+      "kosztowi przeciętnemu",
+      "cenie"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Utarg przeciętny = utarg całkowity / liczba sprzedanych jednostek = (cena · ilość) / ilość = cena (przy jednolitej cenie). Równy utargowi krańcowemu jest tylko w konkurencji doskonałej."
+  },
+  {
+    "id": "owe27-s-08",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody szkolne",
+    "question": "Indywidualna podaż pracy determinowana jest przez:",
+    "options": [
+      "przeciętne wynagrodzenie w gospodarce",
+      "preferencje jednostki względem czasu pracy i czasu wolnego",
+      "liczbę przedsiębiorstw, które są skłonne zatrudnić pracowników",
+      "popyt na dobra wytwarzane przez pracownika"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Indywidualna podaż pracy zależy od decyzji, ile czasu poświęcić na pracę, a ile na czas wolny – od preferencji jednostki i płacy, jaką może uzyskać. Wyższa płaca zwiększa koszt alternatywny czasu wolnego (efekt substytucyjny), ale też dochód (efekt dochodowy)."
+  },
+  {
+    "id": "owe27-s-09",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody szkolne",
+    "question": "Równowaga na rynku produktów w ujęciu makroekonomicznym zdefiniowana jest jako stan, w którym:",
+    "options": [
+      "oszczędności równają się konsumpcji",
+      "planowane zagregowane wydatki równają się wytworzonej produkcji",
+      "konsumpcja równa się inwestycjom",
+      "zagregowane nakłady równają się konsumpcji pomniejszonej o inwestycje"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Równowaga na rynku dóbr w makroekonomii (model keynesowski) występuje, gdy planowane zagregowane wydatki (C + I + G + NX) są równe wielkości produkcji (dochodu). Wtedy firmy sprzedają wszystko, co wyprodukowały, i nie mają powodu zmieniać produkcji."
+  },
+  {
+    "id": "owe27-s-10",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody szkolne",
+    "question": "PKB per capita mierzy wielkość produktu krajowego brutto przypadającą na:",
+    "options": [
+      "zatrudnionego",
+      "mieszkańca",
+      "jednostkę kapitału wyrażoną w walucie narodowej",
+      "osobę pełnoletnią"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "PKB per capita = PKB / liczba mieszkańców kraju. To podstawowy, choć niedoskonały, miernik poziomu życia. PKB na zatrudnionego mierzy wydajność pracy."
+  },
+  {
+    "id": "owe27-s-11",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody szkolne",
+    "question": "Zjawisko taksflacji może przyczynić się do:",
+    "options": [
+      "zwiększenia deficytu budżetowego",
+      "zmniejszenia siły nabywczej gospodarstw domowych",
+      "wzrostu deficytu handlowego",
+      "zwiększenia konkurencyjności eksporterów po nałożeniu dodatkowych obciążeń podatkowych na importerów"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Taksflacja to wzrost obciążeń podatkowych w wyniku inflacji przy niezmienionych progach podatkowych – nominalnie rosnące dochody wpadają w wyższe progi, choć realnie nie rosną. Podatnicy płacą więcej podatku, więc ich siła nabywcza spada, a deficyt budżetu maleje."
+  },
+  {
+    "id": "owe27-s-12",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody szkolne",
+    "question": "Kiedy występuje inflacja?",
+    "options": [
+      "gdy nastąpił wzrost ceny choćby jednego dobra lub usługi",
+      "tylko wtedy, gdy nastąpił wzrost cen wszystkich dóbr lub usług",
+      "w sytuacji wzrostu przeciętnego poziomu cen",
+      "wówczas, gdy zwiększyła się baza monetarna"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Inflacja to wzrost przeciętnego (ogólnego) poziomu cen w gospodarce. Nie oznacza, że drożeje wszystko – niektóre ceny mogą spadać, ale średnio ceny rosną. Wzrost ceny jednego dobra to tylko zmiana cen względnych."
+  },
+  {
+    "id": "owe27-s-13",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody szkolne",
+    "question": "Baza monetarna to suma:",
+    "options": [
+      "gotówki w obiegu i rezerw banków komercyjnych w banku centralnym",
+      "gotówki w obiegu oraz gotówki i wkładów na żądanie w bankach komercyjnych",
+      "złota i walut wymienialnych będących w posiadaniu banku centralnego",
+      "wartości netto aktywów sektora bankowego"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Baza monetarna (pieniądz rezerwowy, M0) = gotówka w obiegu + rezerwy banków komercyjnych w banku centralnym. To pieniądz emitowany bezpośrednio przez bank centralny, na którym banki komercyjne opierają kreację pieniądza."
+  },
+  {
+    "id": "owe27-s-14",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody szkolne",
+    "question": "Polityka fiskalna przejawia się w:",
+    "options": [
+      "próbach regulacji niektórych cen przez rząd",
+      "wykorzystaniu podatków, wydatków rządowych oraz długu publicznego do osiągnięcia pożądanego poziomu dochodu narodowego",
+      "dążeniu rządu do zrównania dochodów budżetowych z wydatkami w każdej fazie cyklu koniunkturalnego",
+      "przymusie prowadzenia wszystkich operacji gospodarczych z użyciem kas fiskalnych"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Polityka fiskalna to działania rządu dotyczące podatków, wydatków publicznych i zarządzania długiem, mające wpływać na poziom dochodu narodowego, zatrudnienia i cen. Prowadzi ją rząd i parlament, a politykę pieniężną – bank centralny."
+  },
+  {
+    "id": "owe27-s-15",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody szkolne",
+    "question": "Jeżeli roczna rynkowa stopa procentowa wynosi 5%, to wartość zerokuponowej obligacji skarbowej o cenie nominalnej 100 zł za rok jest dziś równa:",
+    "options": [
+      "95,00 zł",
+      "95,24 zł",
+      "100,00 zł",
+      "105,00 zł"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Wartość obecna obligacji zerokuponowej = wartość nominalna / (1 + r) = 100 / 1,05 ≈ 95,24 zł. Inwestor płaci dziś 95,24 zł, a za rok otrzyma 100 zł, co daje 5% zwrotu."
+  },
+  {
+    "id": "owe27-s-16",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody szkolne",
+    "question": "Wskaż prawidłowe stwierdzenie dotyczące pieniądza fiducjarnego:",
+    "options": [
+      "jest to pieniądz wyłącznie elektroniczny, który nie może mieć formy papierowej (banknotów)",
+      "nie może być emitowany przez banki centralne",
+      "pozbawiony jest funkcji cyrkulacyjnej",
+      "nie ma pokrycia w metalach szlachetnych"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Pieniądz fiducjarny (dekretowy) to pieniądz, którego wartość opiera się na zaufaniu do emitenta i przepisach prawa, a nie na pokryciu w złocie czy innych kruszcach. Współczesne banknoty i pieniądz bankowy są pieniądzem fiducjarnym, emitowanym m.in. przez banki centralne."
+  },
+  {
+    "id": "owe27-s-17",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody szkolne",
+    "question": "Podstawowym celem działania Narodowego Banku Polskiego jest dbałość o:",
+    "options": [
+      "dynamikę PKB",
+      "poziom bezrobocia",
+      "stabilność cen",
+      "dobrobyt społeczny"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Zgodnie z ustawą o NBP podstawowym celem banku centralnego jest utrzymanie stabilnego poziomu cen, przy jednoczesnym wspieraniu polityki gospodarczej rządu, jeśli nie ogranicza to tego celu."
+  },
+  {
+    "id": "owe27-s-18",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody szkolne",
+    "question": "Który z poniższych krajów przyjął euro (stan na rok 2014)?",
+    "options": [
+      "Dania",
+      "Szwecja",
+      "Bułgaria",
+      "Łotwa"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Łotwa przyjęła euro 1 stycznia 2014 r. Dania ma klauzulę opt-out, a Szwecja nie spełnia kryteriów (nie przystąpiła do ERM II). Uwaga: Bułgaria przyjęła euro później – 1 stycznia 2026 r."
+  },
+  {
+    "id": "owe27-s-19",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody szkolne",
+    "question": "Ile wynosi kurs USD/CHF, jeśli średni kurs GBP/USD na rynku walutowym wynosi 1,6038, a średni kurs GBP/CHF to 1,4985?",
+    "options": [
+      "0,9343",
+      "1,0703",
+      "1,4001",
+      "2,4033"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "USD/CHF = GBP/CHF ÷ GBP/USD = 1,4985 / 1,6038 ≈ 0,9343. Funt kosztuje 1,6038 USD i 1,4985 CHF, więc 1 USD = 1,4985 / 1,6038 CHF (kurs krzyżowy)."
+  },
+  {
+    "id": "owe27-s-20",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody szkolne",
+    "question": "Do wyliczenia ilościowego progu rentowności (BEP) konieczna jest znajomość wartości:",
+    "options": [
+      "zysku netto, kosztów stałych i ceny",
+      "kosztów stałych, jednostkowych kosztów zmiennych i ceny",
+      "zysku netto, kosztów zmiennych i kosztów stałych",
+      "jednostkowych kosztów stałych, jednostkowych kosztów zmiennych i marży zysku"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Ilościowy próg rentowności = koszty stałe / (cena − jednostkowy koszt zmienny). Potrzebne są więc: koszty stałe, jednostkowe koszty zmienne i cena. Zysk netto nie jest potrzebny – w BEP wynosi zero."
+  },
+  {
+    "id": "owe27-s-21",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody szkolne",
+    "question": "Fakultatywnym elementem faktury VAT w Polsce jest:",
+    "options": [
+      "kwota należności brutto ogółem",
+      "podpis i pieczęć sprzedawcy",
+      "data sprzedaży",
+      "numer identyfikujący fakturę"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Ustawa o VAT określa obowiązkowe elementy faktury: m.in. datę wystawienia, kolejny numer, dane i NIP stron, datę sprzedaży (jeśli inna niż data wystawienia), nazwę towaru, ilość, cenę, stawkę i kwotę podatku oraz kwotę należności ogółem. Podpis i pieczęć sprzedawcy nie są wymagane – są fakultatywne."
+  },
+  {
+    "id": "owe27-s-22",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody szkolne",
+    "question": "Jeśli w miarę zmniejszania się podstawy opodatkowania stawki podatkowe rosną, mamy do czynienia z podatkiem:",
+    "options": [
+      "progresywnym",
+      "liniowym",
+      "regresywnym",
+      "pogłównym"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Podatek regresywny to podatek, którego stawka maleje wraz ze wzrostem podstawy opodatkowania (lub rośnie, gdy podstawa maleje) – relatywnie bardziej obciąża mniej zamożnych. W podatku progresywnym stawka rośnie z podstawą, w liniowym jest stała, a pogłówne to stała kwota od osoby."
+  },
+  {
+    "id": "owe27-s-23",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody szkolne",
+    "question": "Do kosztów pośrednich nie można zaliczyć kosztów:",
+    "options": [
+      "zakupu",
+      "wydziałowych",
+      "usług obcych",
+      "ogólnego zarządu"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Koszty pośrednie nie dają się bezpośrednio przypisać do konkretnego produktu – to np. koszty wydziałowe, ogólnego zarządu i zakupu (rozlicza się je kluczami). Usługi obce (np. obróbka materiału przez inną firmę na rzecz danego wyrobu) to koszt rodzajowy, który zwykle przypisuje się bezpośrednio do produktów."
+  },
+  {
+    "id": "owe27-s-24",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody szkolne",
+    "question": "Czego nie można ubezpieczyć?",
+    "options": [
+      "utraty zysków operacyjnych wskutek zdarzeń losowych",
+      "odwołania imprezy kulturalnej wskutek niekorzystnych zjawisk atmosferycznych",
+      "zużycia maszyn w hucie stali",
+      "życia i zdrowia górników"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Ubezpieczyć można ryzyko zdarzeń losowych, przyszłych i niepewnych – np. utratę zysków wskutek pożaru, odwołanie imprezy z powodu pogody, życie i zdrowie. Normalne zużycie maszyn jest zdarzeniem pewnym i przewidywalnym (ujmuje się je przez amortyzację), więc nie podlega ubezpieczeniu."
+  },
+  {
+    "id": "owe27-s-25",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody szkolne",
+    "question": "Który instrument finansowy nie jest przedmiotem obrotu na Giełdzie Papierów Wartościowych w Warszawie?",
+    "options": [
+      "prawa poboru",
+      "kontrakty terminowe na USD",
+      "certyfikaty inwestycyjne",
+      "udziały w spółkach z ograniczoną odpowiedzialnością"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Na GPW notuje się m.in. akcje, prawa poboru, certyfikaty inwestycyjne, obligacje oraz instrumenty pochodne, np. kontrakty terminowe na waluty (w 2014 r. także na USD). Udziały w spółkach z o.o. nie są papierami wartościowymi i nie mogą być przedmiotem obrotu giełdowego."
+  },
+  {
+    "id": "owe27-s-26",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody szkolne",
+    "question": "Elementem podstawowej koncepcji marketing-mix (tzw. 4P) jest:",
+    "options": [
+      "zyskowność",
+      "dystrybucja",
+      "proces",
+      "personel"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Marketing mix 4P obejmuje: produkt (product), cenę (price), dystrybucję (place) i promocję (promotion). Proces i personel to dodatkowe elementy rozszerzonej koncepcji 7P (dla usług), a zyskowność jest celem firmy."
+  },
+  {
+    "id": "owe27-s-27",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody szkolne",
+    "question": "Przykładem tayloryzmu może być organizacja pracy:",
+    "options": [
+      "informatyka zatrudnionego w dziale rozwoju Google",
+      "radcy prawnego",
+      "projektanta ogrodów",
+      "pracownika montowni samochodów"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Tayloryzm (naukowa organizacja pracy F.W. Taylora) to szczegółowy podział pracy na proste, powtarzalne czynności wykonywane według normy czasowej, z płacą zależną od wydajności. Najlepiej pasuje do pracy przy taśmie montażowej, a nie do pracy twórczej (informatyk, projektant, prawnik)."
+  },
+  {
+    "id": "owe27-s-28",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody szkolne",
+    "question": "Rebranding oznacza:",
+    "options": [
+      "rozpoczęcie działalności przez przedsiębiorstwo w nowym segmencie rynku pod dotychczasową marką",
+      "sprzedaż przez przedsiębiorstwo marek, które znajdują się w fazie schyłkowej",
+      "strategię marketingową zmierzającą do zmiany postrzegania marki przez klientów, inwestorów i konkurencję",
+      "sezonową zmianę opakowań produktów związaną np. ze świętami Bożego Narodzenia"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Rebranding to zmiana wizerunku marki – nazwy, logo, identyfikacji wizualnej lub sposobu komunikacji – w celu zmiany jej postrzegania przez klientów, inwestorów i konkurencję (np. Idea → Orange)."
+  },
+  {
+    "id": "owe27-s-29",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody szkolne",
+    "question": "Komórki organizacyjne pewnej międzynarodowej firmy zgrupowane są w duże, autonomiczne jednostki, które odpowiedzialne są za dany asortyment towarowy. Jaką strukturę organizacyjną ma ta firma?",
+    "options": [
+      "dywizjonalną",
+      "funkcjonalną",
+      "liniową",
+      "macierzową"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Struktura dywizjonalna dzieli firmę na duże, względnie samodzielne jednostki (dywizje) odpowiadające za konkretny asortyment produktów, rynek lub region. Dywizje mają własne działy funkcjonalne i odpowiadają za wyniki, a centrala zajmuje się strategią."
+  },
+  {
+    "id": "owe27-s-30",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody szkolne",
+    "question": "Strategia, w której firma zwiększa sprzedaż obecnie wytwarzanego produktu na tym samym rynku głównie poprzez obniżkę cen, to strategia:",
+    "options": [
+      "ucieczki do przodu",
+      "rozwoju rynku",
+      "dywersyfikacji horyzontalnej",
+      "penetracji"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Strategia penetracji rynku (macierz Ansoffa: obecny produkt, obecny rynek) polega na zwiększaniu sprzedaży dotychczasowych produktów dotychczasowym klientom – np. przez obniżki cen, promocje, intensywniejszą reklamę. Rozwój rynku to wejście z obecnym produktem na nowe rynki."
+  }
+]

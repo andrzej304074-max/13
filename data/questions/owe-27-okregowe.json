@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe27-o-01",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody okręgowe",
+    "question": "Okres długi w ekonomii:",
+    "options": [
+      "to okres, w którym uwidacznia się działanie prawa malejących przychodów",
+      "nie może być krótszy niż 1 rok",
+      "definiowany jest poprzez możliwość zmiany nakładów wszystkich czynników wytwórczych zaangażowanych w procesie produkcji",
+      "to okres, w którym krzywa możliwości produkcyjnych zmienia swój kształt z wklęsłej na wypukłą"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Okres długi definiuje się nie kalendarzowo, lecz przez możliwość dostosowania: to okres, w którym firma może zmienić nakłady wszystkich czynników wytwórczych (także np. wielkość fabryki). W krótkim okresie przynajmniej jeden czynnik jest stały – i wtedy działa prawo malejących przychodów."
+  },
+  {
+    "id": "owe27-o-02",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody okręgowe",
+    "question": "Dobro wolne:",
+    "options": [
+      "dane jest przez naturę w stanie niewymagającym przetworzenia dla celów konsumpcyjnych, a ponadto cechuje się powszechną dostępnością",
+      "może być wytwarzane w dowolnych ilościach, bez obawy o wystąpienie w jego produkcji zjawiska malejących przychodów",
+      "jest dostarczane przez państwo nieodpłatnie wszystkim obywatelom",
+      "to każde dobro, które nie jest zużywane jednorazowo"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Dobro wolne występuje w przyrodzie w ilości przekraczającej potrzeby, jest powszechnie dostępne i nie wymaga przetworzenia (np. powietrze, światło słoneczne). Nie ma ceny i nie jest przedmiotem wyboru ekonomicznego. Dobra dostarczane nieodpłatnie przez państwo to dobra publiczne, a nie wolne."
+  },
+  {
+    "id": "owe27-o-03",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody okręgowe",
+    "question": "Wprowadzenie cen minimalnych na danym rynku:",
+    "options": [
+      "prowadzi nieuchronnie do reglamentacji dobra",
+      "spowodowane jest występowaniem trwałej nadwyżki wielkości podaży nad wielkością popytu",
+      "utrudnia w długim okresie właściwą alokację czynników wytwórczych",
+      "uzasadniane jest ochroną interesów konsumentów (nabywców)"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Cena minimalna powyżej ceny równowagi (np. płaca minimalna, ceny skupu) powoduje trwałą nadwyżkę podaży i fałszuje sygnały cenowe – zasoby trafiają do produkcji, na którą nie ma popytu. Utrudnia to właściwą alokację czynników wytwórczych. Ceny minimalne chronią producentów, nie konsumentów."
+  },
+  {
+    "id": "owe27-o-04",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody okręgowe",
+    "question": "Ilość dobra niższego rzędu, na które konsument zgłasza zapotrzebowanie:",
+    "options": [
+      "rośnie, gdy spada cena",
+      "spada, gdy cena dobra substytucyjnego spada",
+      "rośnie, gdy dochód realny konsumenta spada",
+      "spada, gdy użyteczność całkowita z konsumpcji tego dobra rośnie"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Dobro niższego rzędu (podrzędne) to dobro, na które popyt rośnie, gdy dochód realny spada (i maleje, gdy dochód rośnie) – konsument zastępuje nim droższe dobra. Ma ujemną dochodową elastyczność popytu."
+  },
+  {
+    "id": "owe27-o-05",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody okręgowe",
+    "question": "Produkt przeciętny jest maksymalny wówczas, gdy:",
+    "options": [
+      "produkt krańcowy jest maksymalny",
+      "produkt krańcowy równa się produktowi przeciętnemu",
+      "produkt całkowity jest maksymalny",
+      "produkt krańcowy wynosi zero"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Produkt przeciętny rośnie, dopóki produkt krańcowy jest od niego większy, a maleje, gdy jest mniejszy. Maksimum osiąga więc w punkcie, w którym produkt krańcowy równa się przeciętnemu (krzywa MP przecina AP w jej szczycie)."
+  },
+  {
+    "id": "owe27-o-06",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody okręgowe",
+    "question": "Za barierę wejścia na rynek nie można uznać:",
+    "options": [
+      "patentów",
+      "korzyści skali",
+      "wyłącznego dostępu do specyficznych czynników wytwórczych",
+      "dużej liczby konkurentów działających na rynku"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Bariery wejścia utrudniają nowym firmom wejście na rynek: patenty, korzyści skali (duży koszt przeciętny przy małej skali), wyłączny dostęp do surowców, licencje, wysokie koszty początkowe. Duża liczba konkurentów nie jest barierą wejścia – świadczy raczej o tym, że wejście jest łatwe."
+  },
+  {
+    "id": "owe27-o-07",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody okręgowe",
+    "question": "Jeśli ekonomista mówi „o cenach stałych”, oznacza to, że:",
+    "options": [
+      "w badanym okresie nie mogła wystąpić inflacja",
+      "dokonano urealnienia cen i są one porównywalne",
+      "wystąpił efekt zapadki i konsumenci nie zareagowali na zmianę dochodów",
+      "koszty zmiany cenników byłyby dla przedsiębiorstw większe niż wpływy z wyższego utargu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Ceny stałe (porównywalne) to ceny z wybranego roku bazowego, używane do wyceny produkcji z różnych lat. Dzięki temu usuwa się wpływ inflacji i można porównywać realne wielkości (np. realny PKB) w czasie."
+  },
+  {
+    "id": "owe27-o-08",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody okręgowe",
+    "question": "Optimum ekonomiczne przedsiębiorstwa wolnokonkurencyjnego wymaga zrównania się:",
+    "options": [
+      "ceny z utargiem krańcowym",
+      "ceny z kosztem krańcowym",
+      "ceny z utargiem przeciętnym",
+      "ceny z utargiem całkowitym"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Optimum ekonomiczne to wielkość produkcji maksymalizująca zysk: MR = MC. W konkurencji doskonałej utarg krańcowy równa się cenie, więc warunek ma postać P = MC. Cena zawsze równa się utargowi przeciętnemu, więc odpowiedź C nie jest warunkiem optimum."
+  },
+  {
+    "id": "owe27-o-09",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody okręgowe",
+    "question": "Bochenek chleba, zanim trafi ostatecznie do konsumenta, przechodzi kilka faz procesu gospodarczego. Na poszczególnych etapach ceny jednostkowe (w przeliczeniu na 1 bochenek) uzyskiwane przez sprzedawców kształtują się następująco: rolnik 0,90 zł, młynarz 1,20 zł, hurtownik mąki 1,30 zł, piekarz 1,80 zł, sprzedawca pieczywa 2,00 zł. Jaka wartość bochenka chleba zostanie uwzględniona w PKB?",
+    "options": [
+      "1,10 zł",
+      "2,00 zł",
+      "2,90 zł",
+      "7,20 zł"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "PKB uwzględnia tylko dobra finalne, aby uniknąć podwójnego liczenia. Chleb to dobro finalne o wartości 2,00 zł – ta kwota zawiera już wartość pracy rolnika, młynarza, hurtownika i piekarza. Taki sam wynik daje suma wartości dodanych na każdym etapie: 0,90 + 0,30 + 0,10 + 0,50 + 0,20 = 2,00 zł."
+  },
+  {
+    "id": "owe27-o-10",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody okręgowe",
+    "question": "Mnożnik podatkowy jest:",
+    "options": [
+      "mniejszy niż mnożnik wydatków rządowych",
+      "zwykle większy niż mnożnik wydatków rządowych",
+      "zawsze równy mnożnikowi wydatków rządowych",
+      "albo większy, albo mniejszy od mnożnika wydatków rządowych"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Wydatki rządowe w całości zwiększają popyt, a obniżka podatków zwiększa dochód rozporządzalny, z którego część jest oszczędzana – tylko część (MPC) trafia na zakupy. Dlatego mnożnik podatkowy (MPC/MPS) jest co do wartości mniejszy od mnożnika wydatków (1/MPS)."
+  },
+  {
+    "id": "owe27-o-11",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody okręgowe",
+    "question": "Zgodnie z hipotezą racjonalnych oczekiwań przedsiębiorca, prognozując poziom przyszłej inflacji:",
+    "options": [
+      "zawsze trafnie przewiduje jej poziom",
+      "opiera się tylko na danych historycznych, ponieważ nie zawierają one elementów subiektywnych",
+      "nigdy nie dopuści do niedoszacowania jej poziomu",
+      "nie ulegnie iluzji pieniężnej"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Według hipotezy racjonalnych oczekiwań podmioty wykorzystują wszystkie dostępne informacje (także o polityce rządu i banku centralnego) i nie popełniają systematycznych błędów prognoz – mogą się mylić, ale losowo. Nie ulegają więc iluzji pieniężnej, czyli nie mylą wielkości nominalnych z realnymi."
+  },
+  {
+    "id": "owe27-o-12",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody okręgowe",
+    "question": "Stagflacja jest wynikiem:",
+    "options": [
+      "wzrostu zagregowanego popytu",
+      "spadku krótkookresowej zagregowanej podaży",
+      "spadku zagregowanego popytu",
+      "wzrostu krótkookresowej zagregowanej podaży"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Stagflacja (stagnacja + inflacja) to jednoczesny spadek produkcji i wzrost cen. Wywołuje ją negatywny szok podażowy – spadek krótkookresowej zagregowanej podaży (np. gwałtowny wzrost cen ropy w latach 70.). Spadek popytu obniżałby i produkcję, i ceny."
+  },
+  {
+    "id": "owe27-o-13",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody okręgowe",
+    "question": "Histereza bezrobocia polega na:",
+    "options": [
+      "zmniejszeniu stopy bezrobocia w związku z zarobkowymi emigracjami pracowników",
+      "utrzymywaniu się wysokiego bezrobocia w okresie ożywienia z uwagi na słabszą pozycję konkurencyjną na rynku pracy długookresowo bezrobotnych",
+      "podejmowaniu przez pracowników pracy na stanowiskach poniżej ich kwalifikacji zawodowych",
+      "ujmowaniu w oficjalnych statystykach bezrobotnych, którzy w rzeczywistości pracują"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Histereza bezrobocia oznacza, że wysokie bezrobocie utrzymuje się nawet po ustąpieniu jego przyczyny (np. w okresie ożywienia), bo długotrwale bezrobotni tracą kwalifikacje, nawyki pracy i kontakty, a pracodawcy niechętnie ich zatrudniają. Bezrobocie cykliczne przechodzi w strukturalne."
+  },
+  {
+    "id": "owe27-o-14",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody okręgowe",
+    "question": "Do pasywów banku centralnego zalicza się:",
+    "options": [
+      "gotówkę w obiegu i udzielone przez bank centralny kredyty",
+      "gotówkę w obiegu i wartość rezerw obowiązkowych",
+      "wartość rezerw obowiązkowych i udzielone przez bank centralny kredyty",
+      "depozyty od pozostałych monetarnych instytucji i zakupione przez bank centralny złoto monetarne"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Pasywa banku centralnego to jego zobowiązania: gotówka w obiegu (banknoty są zobowiązaniem banku centralnego) oraz środki banków komercyjnych na rachunkach w banku centralnym (rezerwa obowiązkowa). Udzielone kredyty i złoto to aktywa banku centralnego."
+  },
+  {
+    "id": "owe27-o-15",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody okręgowe",
+    "question": "Jaka jest wartość agregatu M1, jeżeli wartość gotówki w obiegu wynosi 100 mld €, wartość jednostek funduszy pieniężnych równa się 200 mld €, depozyty bieżące to 300 mld €, a depozyty terminowe mają wartość 200 mld €?",
+    "options": [
+      "100 mld €",
+      "300 mld €",
+      "400 mld €",
+      "500 mld €"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "M1 = gotówka w obiegu + depozyty bieżące (płatne na żądanie) = 100 + 300 = 400 mld €. Depozyty terminowe wchodzą do M2, a jednostki funduszy rynku pieniężnego – do M3."
+  },
+  {
+    "id": "owe27-o-16",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody okręgowe",
+    "question": "Jeśli kredytobiorca ma problemy finansowe, może przejściowo zawiesić spłatę kredytu. W takim wypadku powinien wystąpić do banku o:",
+    "options": [
+      "karencję",
+      "prolongatę",
+      "promesę",
+      "redyskonto"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Karencja to okres, w którym kredytobiorca nie spłaca kapitału (czasem także odsetek) – może dotyczyć początku kredytowania lub zostać przyznana przejściowo, gdy klient ma kłopoty. Prolongata to przesunięcie terminu spłaty, a promesa – przyrzeczenie udzielenia kredytu."
+  },
+  {
+    "id": "owe27-o-17",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody okręgowe",
+    "question": "Jeśli działalność banku koncentruje się na emisji papierów wartościowych i handlu nimi, a także na gwarancjach i doradztwie w sprawach fuzji i przejęć, to jest to bank:",
+    "options": [
+      "akcyjny",
+      "inwestycyjny",
+      "giełdowy",
+      "uniwersalny"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Bank inwestycyjny zajmuje się operacjami na rynku kapitałowym: emisją papierów wartościowych (underwriting), handlem nimi, doradztwem przy fuzjach i przejęciach, gwarancjami emisji. Bank uniwersalny łączy działalność depozytowo-kredytową z inwestycyjną."
+  },
+  {
+    "id": "owe27-o-18",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody okręgowe",
+    "question": "Które z niżej wymienionych działań nie jest zabronione na giełdzie papierów wartościowych?",
+    "options": [
+      "nabywanie znacznych pakietów akcji bez zgody Komisji Nadzoru Finansowego",
+      "manipulacja kursem waloru przez wąską grupę inwestorów mająca na celu sztuczną zmianę jego ceny",
+      "spekulacja giełdowa",
+      "wykorzystywanie przy podejmowaniu decyzji inwestycyjnych informacji o wynikach finansowych z nieupublicznionych jeszcze sprawozdań finansowych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Spekulacja – zakup lub sprzedaż w celu zarobienia na zmianie cen – jest na giełdzie dozwolona i zapewnia płynność rynku. Zabronione są: manipulacja kursem, wykorzystywanie informacji poufnych (niepublikowanych wyników) i nieujawnianie nabycia znacznych pakietów akcji."
+  },
+  {
+    "id": "owe27-o-19",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody okręgowe",
+    "question": "Osoby fizyczne lokujące środki w funduszach inwestycyjnych:",
+    "options": [
+      "są objęte ochroną Bankowego Funduszu Gwarancyjnego, jeśli jest to fundusz rynku pieniężnego",
+      "mają zagwarantowany stały zysk, jeśli wybiorą fundusz benchmarkowy",
+      "mogą dziedziczyć jednostki uczestnictwa w otwartych funduszach inwestycyjnych",
+      "na podstawie ogólnodostępnych raportów mogą ustalić, które operacje finansowe zarządzających funduszem miały największy wpływ na wyniki funduszu"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Jednostki uczestnictwa w funduszach inwestycyjnych otwartych podlegają dziedziczeniu, a uczestnik może wskazać osoby, którym w razie śmierci zostaną wypłacone środki (dyspozycja na wypadek śmierci). Fundusze nie są objęte gwarancjami BFG i nie gwarantują zysku."
+  },
+  {
+    "id": "owe27-o-20",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody okręgowe",
+    "question": "Wskaż prawdziwe stwierdzenie w odniesieniu do roku obrotowego w rachunkowości:",
+    "options": [
+      "zawsze pokrywa się z rokiem kalendarzowym",
+      "w szczególnym przypadku może być dłuższy niż 12 miesięcy",
+      "jego długość określana jest na podstawie szybkości rotacji zapasów",
+      "nie jest możliwa jego zmiana po rozpoczęciu działalności przez przedsiębiorstwo"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Rok obrotowy to zwykle rok kalendarzowy lub inny okres 12 miesięcy. Wyjątkowo – przy rozpoczęciu działalności w drugiej połowie roku – pierwszy rok obrotowy może zostać połączony z następnym i trwać dłużej niż 12 miesięcy (podobnie przy zmianie roku obrotowego)."
+  },
+  {
+    "id": "owe27-o-21",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody okręgowe",
+    "question": "Który z wymienionych krajów przystąpił do Unii Europejskiej (Europejskiej Wspólnoty Gospodarczej) najwcześniej?",
+    "options": [
+      "Grecja",
+      "Hiszpania",
+      "Irlandia",
+      "Portugalia"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Irlandia (wraz z Wielką Brytanią i Danią) przystąpiła do EWG w 1973 r. Grecja – w 1981 r., a Hiszpania i Portugalia – w 1986 r."
+  },
+  {
+    "id": "owe27-o-22",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody okręgowe",
+    "question": "Mechanizm Kursów Walutowych ERM II (stan na rok 2014):",
+    "options": [
+      "dopuszcza możliwość wahań kursowych w stosunku do kursu centralnego o nie więcej niż ±25%",
+      "jest dla krajów ubiegających się o przyjęcie do strefy euro jednym z fakultatywnych kryteriów konwergencji",
+      "uniemożliwia atak spekulacyjny na walutę krajową",
+      "obejmuje obecnie kurs litewskiego lita"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "ERM II to mechanizm kursowy, w którym kurs waluty jest powiązany z euro i może się wahać o ±15% wokół kursu centralnego; udział w nim przez 2 lata jest obowiązkowym kryterium konwergencji. W 2014 r. był w nim m.in. lit litewski (Litwa przyjęła euro 1 stycznia 2015 r.) oraz korona duńska."
+  },
+  {
+    "id": "owe27-o-23",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody okręgowe",
+    "question": "Co nie jest objęte podatkiem akcyzowym w Polsce?",
+    "options": [
+      "węgiel",
+      "energia elektryczna",
+      "samochody osobowe",
+      "jachty pełnomorskie"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "W Polsce akcyzą objęte są m.in. paliwa, alkohol, wyroby tytoniowe, energia elektryczna, węgiel i gaz (od 2012–2013 r.) oraz samochody osobowe. Jachty nie są objęte akcyzą."
+  },
+  {
+    "id": "owe27-o-24",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody okręgowe",
+    "question": "Wskaż prawdziwe stwierdzenie:",
+    "options": [
+      "składka na ubezpieczenie rentowe płacona przez pracownika jest mniejsza niż składka na ubezpieczenie rentowe płacona przez pracodawcę",
+      "składka na ubezpieczenie zdrowotne płacona jest tylko w przypadku, gdy pracownik ma więcej niż 26 lat",
+      "składka na ubezpieczenie emerytalne płacona przez pracodawcę nie jest dla przedsiębiorstwa kosztem uzyskania przychodu",
+      "składka na ubezpieczenie chorobowe jest zawsze obowiązkowa, ponieważ możliwość wystąpienia choroby nie zależy od rodzaju umowy"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Składka rentowa wynosi łącznie 8% podstawy (od 2012 r.): pracownik płaci 1,5%, a pracodawca 6,5% – więc część pracownika jest mniejsza. Składki pracodawcy są kosztem uzyskania przychodu, składka zdrowotna jest płacona niezależnie od wieku, a chorobowa jest np. dobrowolna przy umowie zlecenia."
+  },
+  {
+    "id": "owe27-o-25",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody okręgowe",
+    "question": "Co nazywane jest w Polsce „janosikowym”?",
+    "options": [
+      "podatek technologiczny płacony przez firmy biotechnologiczne i z sektora wysokich technologii",
+      "prawo jednostek samorządu terytorialnego do decydowania o wysokości podatków i opłat lokalnych",
+      "progresywna skala w opodatkowaniu podatkiem dochodowym od osób fizycznych",
+      "obowiązkowa wpłata do budżetu państwa, którą płacą najbogatsze samorządy na rzecz pozostałych"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "„Janosikowe” to potoczna nazwa wpłat najbogatszych samorządów (o dochodach podatkowych na mieszkańca powyżej średniej) do budżetu państwa, które są następnie rozdzielane między biedniejsze samorządy (subwencja równoważąca/regionalna). Nazwa nawiązuje do Janosika, który „zabierał bogatym i dawał biednym”."
+  },
+  {
+    "id": "owe27-o-26",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody okręgowe",
+    "question": "Kierownictwo supermarketu zleciło obserwowanie przebiegu pracy kasjerów i rejestrowanie czasu trwania poszczególnych czynności, jak również przerw pomiędzy nimi. Taka metoda badania efektywności i optymalizacji procesów biznesowych to:",
+    "options": [
+      "fotografia dnia roboczego",
+      "parametryzacja typu stop&go",
+      "assessment center",
+      "testy zegarkowe"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Fotografia dnia roboczego to metoda badania pracy polegająca na ciągłej obserwacji i rejestrowaniu wszystkich czynności pracownika oraz przerw w ciągu dnia. Pozwala wykryć straty czasu i usprawnić organizację pracy."
+  },
+  {
+    "id": "owe27-o-27",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody okręgowe",
+    "question": "Jaką metodę zarządzania wykorzystuje przedsiębiorstwo, jeżeli decyzje dotyczące wysokości budżetu projektów podejmują sami pracownicy, a menedżerowie okazują powszechnie szacunek wobec pomysłów i sugestii swoich podwładnych?",
+    "options": [
+      "zarządzanie przez cele",
+      "zarządzanie przez wartości",
+      "zarządzanie adaptacyjne",
+      "zarządzanie przez partycypację"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Zarządzanie przez partycypację (uczestnictwo) polega na włączaniu pracowników w podejmowanie decyzji – np. o budżetach projektów – i szanowaniu ich pomysłów. Zwiększa zaangażowanie i motywację. Zarządzanie przez cele opiera się na wspólnym ustalaniu celów i rozliczaniu z wyników."
+  },
+  {
+    "id": "owe27-o-28",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody okręgowe",
+    "question": "W analizie SWOT litera „T” odnosi się do:",
+    "options": [
+      "zaufania",
+      "zagrożeń",
+      "zadań",
+      "techniki"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "SWOT: Strengths – mocne strony, Weaknesses – słabe strony, Opportunities – szanse, Threats – zagrożenia (z otoczenia)."
+  },
+  {
+    "id": "owe27-o-29",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody okręgowe",
+    "question": "Opracowując biznesplan, można pominąć:",
+    "options": [
+      "opis umiejętności i kompetencji personelu",
+      "analizę źródeł finansowania bezpośrednich konkurentów",
+      "scenariusze, w których nie przewiduje się osiągnięcia zysku",
+      "harmonogram realizacji przedsięwzięcia"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Biznesplan powinien zawierać m.in. opis przedsięwzięcia i zespołu, analizę rynku i konkurencji, plan marketingowy, harmonogram i prognozy finansowe (także scenariusze pesymistyczne). Szczegółowa analiza źródeł finansowania konkurentów nie jest potrzebna i zwykle jest niedostępna."
+  },
+  {
+    "id": "owe27-o-30",
+    "type": "single",
+    "edition": "XXVII OWE (2013/2014), zawody okręgowe",
+    "question": "Six sigma to:",
+    "options": [
+      "metodyka prowadzenia projektów biznesowych, która koncentruje się na jakości",
+      "zasada głosząca, że dla zachowania efektywności działania maksymalna liczba szczebli zarządzania w przedsiębiorstwie nie powinna przekraczać sześciu",
+      "strategia marketingowa rekomendująca prowadzenie zróżnicowanej polityki w zakresie cen i warunków płatności",
+      "zestaw sześciu wskaźników, które pozwalają zidentyfikować ryzyko bankructwa przedsiębiorstwa"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Six Sigma to metodyka doskonalenia procesów (spopularyzowana przez Motorolę i General Electric), której celem jest ograniczenie liczby błędów do ok. 3,4 na milion możliwości. Projekty prowadzi się według schematu DMAIC (zdefiniuj, zmierz, przeanalizuj, usprawnij, kontroluj), z naciskiem na jakość."
+  }
+]
