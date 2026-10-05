@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe39-s-01",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody szkolne",
+    "question": "Zgodnie z paradoksem oszczędzania, ograniczenie wydatków autonomicznych na konsumpcję gospodarstw domowych będzie skutkować:",
+    "options": [
+      "zmniejszeniem poziomu oszczędności w punkcie równowagi",
+      "zwiększeniem poziomu oszczędności w punkcie równowagi",
+      "zmniejszeniem poziomu dochodu zapewniającego równowagę",
+      "zwiększeniem dochodu rozporządzalnego gospodarstw domowych w punkcie równowagi"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Paradoks oszczędzania (Keynes): gdy gospodarstwa ograniczają konsumpcję autonomiczną, spada popyt globalny, a przez mnożnik – dochód zapewniający równowagę. W efekcie łączne oszczędności nie rosną (w prostym modelu pozostają równe inwestycjom), a dochód spada."
+  },
+  {
+    "id": "owe39-s-02",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody szkolne",
+    "question": "Powodem podjęcia decyzji o dewaluacji krajowej waluty przez władze monetarne jest chęć:",
+    "options": [
+      "poprawy sytuacji finansowej importerów",
+      "zmniejszenia wartości zagranicznego długu publicznego wyrażonej w walucie krajowej",
+      "poprawy konkurencyjności cenowej eksporterów na rynkach zagranicznych",
+      "ograniczenia inflacji w krajowej gospodarce"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Dewaluacja to urzędowe obniżenie wartości waluty krajowej w systemie kursu stałego. Towary krajowe stają się tańsze dla zagranicy, co poprawia konkurencyjność cenową eksporterów. Pogarsza sytuację importerów, zwiększa wartość długu zagranicznego w walucie krajowej i podnosi inflację."
+  },
+  {
+    "id": "owe39-s-03",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody szkolne",
+    "question": "Funduszem inwestycyjnym zarządzanym pasywnie, którego jednostki uczestnictwa są notowane na giełdzie, jest:",
+    "options": [
+      "fundusz hedgingowy",
+      "ETF (exchange-traded fund)",
+      "fundusz PE (private equity)",
+      "fundusz inwestycyjny otwarty"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "ETF (exchange-traded fund) to fundusz notowany na giełdzie, który zazwyczaj pasywnie odwzorowuje indeks (np. WIG20, S&P 500). Ma niskie opłaty i można go kupić jak akcję. Fundusze hedgingowe i private equity są zarządzane aktywnie i nie są notowane."
+  },
+  {
+    "id": "owe39-s-04",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody szkolne",
+    "question": "Ujemna różnica między dochodami publicznymi a wydatkami publicznymi to:",
+    "options": [
+      "dług brutto sektora finansów publicznych",
+      "dług netto sektora finansów publicznych",
+      "deficyt sektora finansów publicznych",
+      "zobowiązanie sektora finansów publicznych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Deficyt sektora finansów publicznych to nadwyżka wydatków publicznych nad dochodami publicznymi (ujemna różnica dochodów i wydatków). Dług to skumulowane deficyty z przeszłości."
+  },
+  {
+    "id": "owe39-s-05",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody szkolne",
+    "question": "Cechą charakterystyczną konkurencji doskonałej jest:",
+    "options": [
+      "stosowanie reklamy przez konkurujące przedsiębiorstwa",
+      "funkcjonowanie patentów na rynku",
+      "homogeniczny charakter produkowanych dóbr",
+      "niewielka liczba podmiotów na rynku"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Konkurencja doskonała: wiele firm, produkt jednorodny (homogeniczny), swoboda wejścia, pełna informacja. Reklama, patenty i niewielka liczba firm to cechy innych struktur rynku."
+  },
+  {
+    "id": "owe39-s-06",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody szkolne",
+    "question": "Krzywa kosztu całkowitego w przedsiębiorstwie jest opisana równaniem TC = 20q + 500 (gdzie: TC – koszt całkowity; q – wielkość produkcji). Ile wynosi koszt krańcowy, jeżeli q = 100?",
+    "options": [
+      "20",
+      "100",
+      "500",
+      "520"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Koszt krańcowy to pochodna kosztu całkowitego. Dla TC = 20q + 500 wynosi stale 20, niezależnie od wielkości produkcji."
+  },
+  {
+    "id": "owe39-s-07",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody szkolne",
+    "question": "W przypadku dóbr Veblena i dóbr Giffena krzywa:",
+    "options": [
+      "podaży ma nachylenie ujemne",
+      "obojętności ma nachylenie dodatnie",
+      "popytu jest rosnąca",
+      "obojętności jest pionowa"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Dla dóbr Veblena (luksusowych, prestiżowych) i dóbr Giffena (szczególnych dóbr podrzędnych) wzrost ceny może zwiększać wielkość popytu – krzywa popytu ma wtedy dodatnie nachylenie (jest rosnąca), co jest wyjątkiem od prawa popytu."
+  },
+  {
+    "id": "owe39-s-08",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody szkolne",
+    "question": "Narzędziem polityki fiskalnej w Polsce są:",
+    "options": [
+      "stopy procentowe i podatki",
+      "wydatki publiczne i rezerwa obowiązkowa",
+      "stopy procentowe i wydatki publiczne",
+      "podatki i cła"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Polityka fiskalna to działania państwa dotyczące dochodów i wydatków publicznych: podatki, cła, opłaty, wydatki budżetowe, dług. Stopy procentowe i rezerwa obowiązkowa to narzędzia polityki pieniężnej (NBP)."
+  },
+  {
+    "id": "owe39-s-09",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody szkolne",
+    "question": "W przypadku której z par dóbr elastyczność mieszana popytu ma wartość dodatnią:",
+    "options": [
+      "samochód i paliwo",
+      "masło i margaryna",
+      "buty do nart i narty",
+      "przynęta wędkarska i wędka"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Elastyczność mieszana (krzyżowa) jest dodatnia dla substytutów: gdy drożeje masło, ludzie kupują więcej margaryny. Samochód i paliwo, buty i narty, przynęta i wędka to dobra komplementarne – ich elastyczność mieszana jest ujemna."
+  },
+  {
+    "id": "owe39-s-10",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody szkolne",
+    "question": "Koszt utraconych możliwości to inne określenie kosztu:",
+    "options": [
+      "istotnego",
+      "utopionego",
+      "krańcowego",
+      "alternatywnego"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Koszt utraconych możliwości to inaczej koszt alternatywny – wartość najlepszej odrzuconej możliwości. Koszt utopiony to koszt już poniesiony, którego nie da się odzyskać."
+  },
+  {
+    "id": "owe39-s-11",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody szkolne",
+    "question": "Zależność między inflacją a bezrobociem ukazuje krzywa:",
+    "options": [
+      "Lorenza",
+      "Laffera",
+      "Kuznetsa",
+      "Phillipsa"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Krzywa Phillipsa (A.W. Phillips, 1958) pokazuje zależność między inflacją (pierwotnie tempem wzrostu płac) a bezrobociem: w krótkim okresie niższe bezrobocie wiąże się z wyższą inflacją. Krzywa Lorenza dotyczy nierówności, Laffera – podatków, a Kuznetsa – nierówności i rozwoju."
+  },
+  {
+    "id": "owe39-s-12",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody szkolne",
+    "question": "PKB w gospodarce autarkicznej nie można policzyć, sumując:",
+    "options": [
+      "wartość dodaną wszystkich podmiotów w gospodarce",
+      "wartość wszystkich wytworzonych dóbr pośrednich i finalnych w gospodarce",
+      "wydatki konsumpcyjne, inwestycje i wydatki rządowe",
+      "PKN i wartość amortyzacji"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "PKB można liczyć jako sumę wartości dodanej, sumę wydatków na dobra finalne (C + I + G w autarkii) lub dochodów; PKB = PKN + amortyzacja. Sumowanie wartości wszystkich dóbr, także pośrednich, prowadziłoby do podwójnego liczenia, więc nie daje PKB."
+  },
+  {
+    "id": "owe39-s-13",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody szkolne",
+    "question": "W pewnej gospodarce krzywa konsumpcji określona jest równaniem C = 500 + 0,2YD (gdzie: C – konsumpcja; YD – dochód rozporządzalny). Ile wynosi poziom konsumpcji autonomicznej, jeżeli YD wynosi 1000?",
+    "options": [
+      "200",
+      "500",
+      "700",
+      "1000"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Konsumpcja autonomiczna to część konsumpcji niezależna od dochodu – wyraz wolny funkcji konsumpcji: 500. Przy YD = 1000 całkowita konsumpcja wynosi 500 + 0,2 · 1000 = 700, ale część autonomiczna nadal wynosi 500."
+  },
+  {
+    "id": "owe39-s-14",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody szkolne",
+    "question": "Wyłączne prawo emisji pieniądza w Polsce przysługuje:",
+    "options": [
+      "Radzie Ministrów",
+      "ministrowi finansów",
+      "Narodowemu Bankowi Polskiemu",
+      "ministrowi aktywów państwowych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Zgodnie z art. 227 Konstytucji RP wyłączne prawo emisji pieniądza w Polsce przysługuje Narodowemu Bankowi Polskiemu."
+  },
+  {
+    "id": "owe39-s-15",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody szkolne",
+    "question": "Deflacja to:",
+    "options": [
+      "spadek tempa wzrostu cen",
+      "przyspieszenie wzrostu cen",
+      "spadek ogólnego poziomu cen",
+      "ograniczenie tempa wzrostu gospodarczego"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Deflacja to spadek ogólnego (przeciętnego) poziomu cen. Spadek tempa wzrostu cen to dezinflacja – ceny nadal rosną, tylko wolniej."
+  },
+  {
+    "id": "owe39-s-16",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody szkolne",
+    "question": "Inwestycje typu greenfield:",
+    "options": [
+      "mają przede wszystkim charakter krótkoterminowy",
+      "koncentrują się na rolnictwie",
+      "są finansowane przez Komisję Europejską wyłącznie w ramach Zielonego Ładu",
+      "to jedna z form bezpośrednich inwestycji zagranicznych"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Inwestycja typu greenfield to forma bezpośredniej inwestycji zagranicznej polegająca na budowie od podstaw nowego zakładu za granicą („na zielonej łące”). Alternatywą jest brownfield – zakup istniejącej firmy lub zakładu."
+  },
+  {
+    "id": "owe39-s-17",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody szkolne",
+    "question": "Światowy kryzys finansowy lat 2007–2009 rozpoczął się od:",
+    "options": [
+      "dewaluacji amerykańskiego dolara",
+      "pęknięcia bańki spekulacyjnej na rynku nieruchomości w USA",
+      "pęknięcia bańki spekulacyjnej na rynku akcji spółek internetowych",
+      "upadku Enronu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Globalny kryzys finansowy 2007–2009 zaczął się od pęknięcia bańki na rynku nieruchomości w USA i kryzysu kredytów hipotecznych subprime, które – dzięki sekurytyzacji – trafiły do portfeli banków na całym świecie (upadek Lehman Brothers w 2008 r.). Pęknięcie bańki internetowej to rok 2000, a upadek Enronu – 2001."
+  },
+  {
+    "id": "owe39-s-18",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody szkolne",
+    "question": "Konsekwencją asymetrii informacji w modelu Akerlofa jest wystąpienie:",
+    "options": [
+      "tragedii wspólnego pastwiska",
+      "negatywnej selekcji",
+      "efektu Cantillona",
+      "pułapki średniego dochodu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "G. Akerlof w artykule „Rynek cytryn” (1970) pokazał, że asymetria informacji (sprzedawca wie więcej o jakości używanego samochodu niż kupujący) prowadzi do negatywnej selekcji: dobre produkty wypadają z rynku, a zostają słabe."
+  },
+  {
+    "id": "owe39-s-19",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody szkolne",
+    "question": "Cechą wspólną konkurencji monopolistycznej i monopolu jest:",
+    "options": [
+      "brak konkurencji o charakterze pozacenowym",
+      "opadająca krzywa utargu krańcowego",
+      "brak kosztów stałych",
+      "brak korzyści skali"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Zarówno monopolista, jak i firma w konkurencji monopolistycznej mają ujemnie nachyloną krzywą popytu, więc ich krzywa utargu krańcowego opada (MR < P). W konkurencji doskonałej MR jest stały i równy cenie."
+  },
+  {
+    "id": "owe39-s-20",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody szkolne",
+    "question": "S&P 500, FTSE 100 i DAX 40 to przykłady:",
+    "options": [
+      "wskaźników analizy technicznej",
+      "agencji ratingowych",
+      "indeksów giełdowych",
+      "funduszy hedgingowych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "S&P 500 (500 dużych spółek z USA), FTSE 100 (100 największych spółek z giełdy londyńskiej) i DAX 40 (40 największych spółek z giełdy we Frankfurcie) to indeksy giełdowe."
+  },
+  {
+    "id": "owe39-s-21",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody szkolne",
+    "question": "Eksport pomniejszony o import to:",
+    "options": [
+      "nadwyżka bilansu płatniczego",
+      "saldo pierwotne",
+      "eksport netto",
+      "spread handlowy"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Eksport netto (saldo handlu zagranicznego) = eksport − import. Wchodzi do PKB liczonego metodą wydatkową."
+  },
+  {
+    "id": "owe39-s-22",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody szkolne",
+    "question": "Twórcą teorii przewagi komparatywnej jest:",
+    "options": [
+      "A. Smith",
+      "J. Mill",
+      "D. Ricardo",
+      "T. Malthus"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Teorię przewagi komparatywnej (względnej) sformułował David Ricardo w 1817 r.: kraje powinny specjalizować się w dobrach, które wytwarzają z najniższym kosztem alternatywnym, nawet bez przewagi absolutnej. Adam Smith opisał przewagę absolutną."
+  },
+  {
+    "id": "owe39-s-23",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody szkolne",
+    "question": "Do pomiaru inflacji nie jest wykorzystywany:",
+    "options": [
+      "wskaźnik CPI",
+      "deflator PKB",
+      "wskaźnik PPI",
+      "wskaźnik P/E"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Inflację mierzy się wskaźnikiem cen konsumpcyjnych (CPI), wskaźnikiem cen produkcji (PPI) i deflatorem PKB. P/E (cena do zysku na akcję) to wskaźnik wyceny akcji, a nie miara inflacji."
+  },
+  {
+    "id": "owe39-s-24",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody szkolne",
+    "question": "Za twórcę koncepcji protekcjonizmu wychowawczego uważany jest:",
+    "options": [
+      "F. List",
+      "D. Ricardo",
+      "D. Rodrik",
+      "I. Fisher"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Za twórcę protekcjonizmu wychowawczego uważa się Friedricha Lista (XIX w.): młode gałęzie przemysłu należy czasowo chronić cłami, aż staną się konkurencyjne na rynku międzynarodowym."
+  },
+  {
+    "id": "owe39-s-25",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody szkolne",
+    "question": "Które stwierdzenie dotyczące bilansu przedsiębiorstwa jest prawdziwe?",
+    "options": [
+      "wartość aktywów jest zawsze równa sumie przychodów wygenerowanych przez przedsiębiorstwo od początku jego funkcjonowania",
+      "gotówka w kasie jest ujmowana po stronie pasywów",
+      "bilans ukazuje zestawienie składników majątku przedsiębiorstwa oraz źródeł jego finansowania",
+      "bilans przedstawia zestawienie przychodów i kosztów przedsiębiorstwa w danym okresie"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Bilans to zestawienie aktywów (składników majątku) i pasywów (źródeł ich finansowania) na określony dzień – suma aktywów równa się sumie pasywów. Gotówka w kasie to aktywa, a przychody i koszty przedstawia rachunek zysków i strat."
+  },
+  {
+    "id": "owe39-s-26",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody szkolne",
+    "question": "Pewien minister finansów prognozę w zakresie dochodów podatkowych sporządza na podstawie uśrednionej opinii niezależnych, niekomunikujących się nawzajem i autonomicznych ekspertów. Ten model grupowego podejmowania decyzji to przykład grupy:",
+    "options": [
+      "zadaniowej",
+      "interaktywnej",
+      "nominalnej",
+      "delfickiej"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Metoda delficka polega na zbieraniu opinii niezależnych, niekomunikujących się ze sobą ekspertów w kilku rundach ankiet i uśrednianiu ich prognoz. Grupa nominalna spotyka się, ale ogranicza dyskusję, a grupa interaktywna swobodnie dyskutuje."
+  },
+  {
+    "id": "owe39-s-27",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody szkolne",
+    "question": "Zarządzający jednym z wydziałów przedsiębiorstwa chce tak przeorganizować przepływ informacji w podległej jednostce, aby mógł otrzymywać i przekazywać wszystkie informacje w ramach wewnątrzwydziałowej komunikacji. Jaki typ sieci komunikacji cechuje taki przepływ?",
+    "options": [
+      "koło od wozu",
+      "Y",
+      "łańcuch",
+      "okrąg"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W sieci „koło od wozu” (gwiazda) wszystkie informacje przechodzą przez jedną centralną osobę (tu kierownika), która komunikuje się z każdym, a pozostali komunikują się tylko z nią. To najbardziej scentralizowana sieć komunikacji."
+  },
+  {
+    "id": "owe39-s-28",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody szkolne",
+    "question": "Zarządzający przedsiębiorstwem chcą, aby w ramach planowanych zmian w strukturze organizacji utworzono liczną grupę jednostek organizacyjnych posiadających znaczną samodzielność decyzyjną. Jednocześnie, biorąc pod uwagę możliwość wspólnego wykorzystania zasobów przedsiębiorstwa przez nowo utworzone jednostki, część obszarów działalności powinna pozostać scentralizowana. Wskazane cele w najwyższym stopniu pozwoli osiągnąć struktura:",
+    "options": [
+      "typu H",
+      "konglomeratowa",
+      "wielowydziałowa",
+      "funkcjonalna"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Struktura wielowydziałowa (dywizjonalna, typu M) tworzy wiele samodzielnych wydziałów (dywizji), np. produktowych, a jednocześnie część funkcji (finanse, badania, kadry) pozostaje scentralizowana, by wspólnie wykorzystywać zasoby. W strukturze typu H (holdingowej, konglomeratowej) jednostki są niezależne i niepowiązane."
+  },
+  {
+    "id": "owe39-s-29",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody szkolne",
+    "question": "Do podstawowych cech modelu biurokratycznego w organizacji zaliczamy:",
+    "options": [
+      "dużą elastyczność w działalności operacyjnej",
+      "brak wyraźnego podziału pracy",
+      "brak hierarchicznej relacji między kierownictwem a podwładnymi",
+      "specjalizację w zakresie wykonywanych zadań"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Model biurokratyczny (M. Weber) cechuje się m.in. specjalizacją i wyraźnym podziałem pracy, hierarchią władzy, formalnymi zasadami i procedurami, bezosobowością i awansem według kwalifikacji. Jego wadą jest mała elastyczność."
+  },
+  {
+    "id": "owe39-s-30",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody szkolne",
+    "question": "Kierownictwo pewnej spółki w podejściu do motywowania pracowników linii produkcyjnej kieruje się hierarchią potrzeb według Maslowa. Wyniki ostatniej ankiety przeprowadzonej wśród pracowników wykazały, że ich potrzeby fizjologiczne są zaspokojone. Jakie działanie podejmie kierownictwo przedsiębiorstwa w celu zwiększenia motywacji pracowników do pracy?",
+    "options": [
+      "zorganizuje wspólne wakacje pracownicze",
+      "wprowadzi system podejmowania decyzji angażujący pracowników",
+      "zmniejszy stały komponent wynagrodzenia, jednocześnie zwiększając jego zmienną część",
+      "wdroży pracowniczy program emerytalny"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Według Maslowa po zaspokojeniu potrzeb fizjologicznych motywują potrzeby bezpieczeństwa – np. poczucie stabilności i zabezpieczenia na przyszłość. Program emerytalny (PPE) odpowiada na tę potrzebę. Wspólne wakacje to potrzeba przynależności, a udział w decyzjach – potrzeby wyższego rzędu."
+  }
+]

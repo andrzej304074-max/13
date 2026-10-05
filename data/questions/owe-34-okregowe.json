@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe34-o-01",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody okręgowe",
+    "question": "Która ze stóp procentowych NBP określa dolną granicę wahań stóp procentowych overnight na rynku międzybankowym?",
+    "options": [
+      "stopa referencyjna",
+      "stopa depozytowa",
+      "stopa redyskontowa weksli",
+      "stopa lombardowa"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Stopa depozytowa NBP to oprocentowanie lokat overnight banków w NBP – żaden bank nie pożyczy innemu taniej, niż może ulokować w NBP, więc wyznacza ona dolną granicę korytarza stóp overnight. Górną granicę wyznacza stopa kredytu lombardowego."
+  },
+  {
+    "id": "owe34-o-02",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody okręgowe",
+    "question": "Koszt własny sprzedaży w układzie kalkulacyjnym kosztów jest równy sumie:",
+    "options": [
+      "technicznego kosztu wytworzenia i kosztów bezpośrednich",
+      "zakładowego kosztu wytworzenia i kosztów sprzedaży",
+      "kosztów wydziałowych, kosztów zarządu i kosztów sprzedaży",
+      "kosztów wydziałowych i kosztów sprzedaży"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "W układzie kalkulacyjnym: koszt wytworzenia produktów sprzedanych (zakładowy koszt wytworzenia – koszty bezpośrednie i wydziałowe) + koszty ogólnego zarządu + koszty sprzedaży = koszt własny sprzedaży. Według klucza koszt własny sprzedaży to zakładowy koszt wytworzenia powiększony o koszty sprzedaży."
+  },
+  {
+    "id": "owe34-o-03",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody okręgowe",
+    "question": "Które zdanie dotyczące powszechnie dostępnego cyfrowego pieniądza banku centralnego (CBDC) jest prawdziwe?",
+    "options": [
+      "obecnie przykładem CBDC jest jedynie dolar amerykański",
+      "przykładem CBDC jest bitcoin",
+      "wprowadzenie CBDC oznacza całkowitą utratę renty menniczej przez bank centralny",
+      "wprowadzenie CBDC oznacza wyemitowanie przez bank centralny pieniądza w formie elektronicznej, którego wykorzystywanie nie jest ograniczone wyłącznie do podmiotów bankowych"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "CBDC (central bank digital currency) to cyfrowy pieniądz emitowany przez bank centralny, dostępny powszechnie – dla gospodarstw domowych i firm, a nie tylko dla banków (jak rezerwy). Przykładem jest cyfrowy juan czy projekt cyfrowego euro. Bitcoin nie jest CBDC, a bank centralny nadal uzyskuje rentę emisyjną."
+  },
+  {
+    "id": "owe34-o-04",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody okręgowe",
+    "question": "Do podstawowych modeli wyceny opcji zaliczamy:",
+    "options": [
+      "model Blacka-Scholesa-Mertona",
+      "model Tobina",
+      "model Friedmana-Phelpsa",
+      "model Greenspana-Guidottiego"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Podstawowym modelem wyceny opcji europejskich jest model Blacka–Scholesa–Mertona (1973). Uwzględnia cenę instrumentu bazowego, cenę wykonania, czas do wygaśnięcia, stopę wolną od ryzyka i zmienność ceny."
+  },
+  {
+    "id": "owe34-o-05",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody okręgowe",
+    "question": "Cena akcji spółki X wynosi obecnie 100 zł. Którą ze strategii inwestycyjnych przyjmie inwestor chcący maksymalizować swój dochód w dniu wygaśnięcia opcji europejskiej na akcje spółki X, jeżeli oczekuje on, że cena akcji w tym dniu spadnie do 40 zł?",
+    "options": [
+      "inwestor zakupi opcję kupna jednej akcji spółki X z ceną wykonania 100 zł",
+      "inwestor zakupi opcję kupna jednej akcji spółki X z ceną wykonania 40 zł",
+      "inwestor wystawi opcję sprzedaży jednej akcji z ceną wykonania 100 zł",
+      "inwestor zakupi opcję sprzedaży jednej akcji spółki X z ceną wykonania 100 zł"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Inwestor oczekujący spadku ceny powinien kupić opcję sprzedaży (put) z ceną wykonania 100 zł. Jeśli cena spadnie do 40 zł, kupi akcję za 40 zł na rynku i sprzeda ją po 100 zł, zarabiając 60 zł (minus premia). Wystawienie opcji put przy spadku ceny przyniosłoby stratę."
+  },
+  {
+    "id": "owe34-o-06",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody okręgowe",
+    "question": "Pionowa długookresowa krzywa Phillipsa:",
+    "options": [
+      "pokazuje, że między inflacją a bezrobociem w długim okresie występuje odwrotna zależność",
+      "oznacza, że ludzie w długim okresie zwracają uwagę wyłącznie na zmienne nominalne",
+      "pokazuje, że niezależnie od tempa inflacji, w długim okresie gospodarka powraca w końcu do naturalnej stopy bezrobocia",
+      "występuje wyłącznie w sytuacji, gdy faktyczna stopa inflacji nie jest równa oczekiwanej stopie inflacji"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Pionowa długookresowa krzywa Phillipsa (Friedman, Phelps) oznacza, że w długim okresie nie ma wymienności między inflacją a bezrobociem: gospodarka wraca do naturalnej stopy bezrobocia niezależnie od tempa inflacji. Polityka ekspansywna podnosi tylko inflację."
+  },
+  {
+    "id": "owe34-o-07",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody okręgowe",
+    "question": "Krzywa Engla dla pewnego dobra jest półprostą o nachyleniu 45° wychodzącą z początku układu współrzędnych. Które stwierdzenie jest prawdziwe?",
+    "options": [
+      "dane dobro jest dobrem niższego rzędu",
+      "mieszana elastyczność cenowa popytu na to dobro jest równa –1",
+      "elastyczność dochodowa popytu na to dobro jest równa 1",
+      "elastyczność dochodowa popytu na to dobro jest równa 0"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Krzywa Engla wychodząca z początku układu pod kątem 45° oznacza, że ilość dobra rośnie proporcjonalnie do dochodu (q = k · I). Procentowy wzrost dochodu daje taki sam procentowy wzrost popytu, więc elastyczność dochodowa wynosi 1."
+  },
+  {
+    "id": "owe34-o-08",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody okręgowe",
+    "question": "Które stwierdzenie dotyczące bonów pieniężnych w Polsce jest prawdziwe?",
+    "options": [
+      "bony pieniężne w Polsce są od 2004 r. sprzedawane z premią",
+      "bony pieniężne są wykorzystywane jako instrument regulujący płynność",
+      "rentowność bonów pieniężnych zawsze odpowiada rentowności 10-letnich obligacji Skarbu Państwa",
+      "bony pieniężne są emitowane przez Ministerstwo Finansów"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Bony pieniężne NBP to krótkoterminowe papiery emitowane przez NBP w operacjach otwartego rynku (głównie 7-dniowe), służące do absorbowania nadmiernej płynności sektora bankowego. Ich rentowność odpowiada stopie referencyjnej NBP."
+  },
+  {
+    "id": "owe34-o-09",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody okręgowe",
+    "question": "Która z odpowiedzi prawidłowo przedstawia sytuację przedsiębiorstwa w stanie długookresowej równowagi na rynku konkurencji doskonałej (gdzie: Z – zysk ekonomiczny; Zk – zysk księgowy; P – cena; ATC – przeciętny koszt całkowity; q – wielkość sprzedaży; TR – utarg całkowity, MR – utarg krańcowy)?",
+    "options": [
+      "Z>0",
+      "ATC = P",
+      "MR > ATC",
+      "Zk = 0"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "W długookresowej równowadze konkurencji doskonałej zysk ekonomiczny wynosi zero, więc cena równa się przeciętnemu kosztowi całkowitemu (P = ATC = MC = MR, w minimum ATC). Zysk księgowy jest dodatni – równy kosztom alternatywnym."
+  },
+  {
+    "id": "owe34-o-10",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody okręgowe",
+    "question": "Ujemna wartość firmy prezentowana jest w:",
+    "options": [
+      "aktywach trwałych",
+      "aktywach obrotowych",
+      "pasywach",
+      "należnościach długoterminowych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Ujemna wartość firmy powstaje, gdy cena nabycia jest niższa od wartości godziwej przejętych aktywów netto. Zgodnie z ustawą o rachunkowości ujmuje się ją w pasywach (jako rozliczenia międzyokresowe przychodów) i stopniowo rozlicza."
+  },
+  {
+    "id": "owe34-o-11",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody okręgowe",
+    "question": "Współautorem koncepcji akceleratora finansowego jest:",
+    "options": [
+      "J.M. Keynes",
+      "M. Friedman",
+      "B. Bernanke",
+      "P. Milgrom"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Akcelerator finansowy (B. Bernanke, M. Gertler, S. Gilchrist) opisuje, jak zmiany wartości zabezpieczeń i sytuacji finansowej firm wzmacniają wahania koniunktury: w recesji spada wartość majątku, kredyt drożeje i inwestycje spadają jeszcze bardziej."
+  },
+  {
+    "id": "owe34-o-12",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody okręgowe",
+    "question": "Sytuacja, w której zarząd banku udziela kredytów podmiotom o niskiej wiarygodności kredytowej, zakładając, że w sytuacji materializacji ryzyka kredytowego otrzyma pomoc finansową od rządu to:",
+    "options": [
+      "negatywna selekcja",
+      "problem gapowicza",
+      "pokusa nadużycia",
+      "dylemat więźnia"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Pokusa nadużycia (moral hazard) to podejmowanie nadmiernego ryzyka przez kogoś, kto wie, że skutki ewentualnych strat poniesie ktoś inny – np. bank, który liczy na pomoc rządu („zbyt duży, by upaść”). Negatywna selekcja dotyczy asymetrii informacji przed zawarciem umowy."
+  },
+  {
+    "id": "owe34-o-13",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody okręgowe",
+    "question": "Które stwierdzenie dotyczące sprawozdania z wykonania założeń polityki pieniężnej składanego Sejmowi przez Radę Polityki Pieniężnej (RPP) jest prawdziwe?",
+    "options": [
+      "nieprzyjęcie sprawozdania przez Sejm RP skutkuje odwołaniem Prezesa NBP",
+      "nieprzyjęcie sprawozdania przez Sejm RP skutkuje odwołaniem członków RPP, ale tylko tych wybranych wcześniej przez Sejm",
+      "nieprzyjęcie sprawozdania przez Sejm RP skutkuje odwołaniem Zarządu NBP",
+      "w oparciu o sprawozdanie Sejm RP nie może zadecydować o zmianie składu osobowego organów NBP"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Sprawozdanie RPP z wykonania założeń polityki pieniężnej jest przedstawiane Sejmowi, ale jego nieprzyjęcie nie powoduje odwołania prezesa NBP, członków RPP ani zarządu – gwarantuje to niezależność banku centralnego. Sejm nie może więc na jego podstawie zmienić składu organów NBP."
+  },
+  {
+    "id": "owe34-o-14",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody okręgowe",
+    "question": "Jeżeli przyjąć, że wprowadzony w Polsce tzw. podatek cukrowy ma cele pozafiskalne, to można go określić mianem podatku:",
+    "options": [
+      "Belki",
+      "Keynesa",
+      "Tobina",
+      "Pigou"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Podatek Pigou to podatek nakładany na działalność wywołującą negatywne efekty zewnętrzne, aby je ograniczyć. Opłata cukrowa (od 2021 r.) ma zmniejszyć spożycie słodzonych napojów i koszty zdrowotne otyłości – jeśli ma cele pozafiskalne, jest przykładem podatku Pigou."
+  },
+  {
+    "id": "owe34-o-15",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody okręgowe",
+    "question": "Punkt zwrotny w kryzysie finansowym charakteryzujący się nagłym wzrostem awersji do ryzyka oraz załamaniem się piramidy zadłużenia określa się terminem momentu:",
+    "options": [
+      "Gossena",
+      "Minsky’ego",
+      "von Misesa",
+      "Sharpe’a"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Moment Minsky'ego (od H. Minsky'ego) to punkt zwrotny w cyklu kredytowym: po okresie spekulacyjnego zadłużania się następuje nagły wzrost awersji do ryzyka, wyprzedaż aktywów i załamanie piramidy zadłużenia, co zapoczątkowuje kryzys."
+  },
+  {
+    "id": "owe34-o-16",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody okręgowe",
+    "question": "Sytuacja w Republice Weimarskiej na początku lat 20. XX w. ukazała, że stwierdzenie zawarte w prawie Kopernika-Greshama nie sprawdza się w warunkach:",
+    "options": [
+      "deflacji",
+      "hiperinflacji",
+      "ożywienia gospodarczego",
+      "stagflacji"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Prawo Kopernika–Greshama mówi, że „pieniądz gorszy wypiera z obiegu pieniądz lepszy” – ludzie zatrzymują lepszy pieniądz, a płacą gorszym. W warunkach hiperinflacji (Niemcy 1923) działało odwrotnie: nikt nie chciał przyjmować bezwartościowego pieniądza, a w transakcjach wypierały go waluty obce i towary."
+  },
+  {
+    "id": "owe34-o-17",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody okręgowe",
+    "question": "Załóżmy, że dochód konsumenta wynosi 100 zł i przeznacza on go na zakup dwóch dóbr: A i B. Cena jednostkowa obu dóbr wynosi 10 zł. Rząd postanawia wprowadzić świadczenie rzeczowe polegające na przekazaniu każdemu obywatelowi bonu na zakup dwóch jednostek dobra A. Jak będzie wyglądać nowa linia budżetowa analizowanego konsumenta?",
+    "options": [
+      "przecina oś odciętych i rzędnych w tej samej odległości od początku układu współrzędnych",
+      "ma dwa punkty wspólne z pierwotną linią budżetową",
+      "jest linią łamaną",
+      "przechodzi przez początek układu współrzędnych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Bez bonu konsument może kupić 10 jednostek A lub 10 B. Bon na 2 jednostki A pozwala mu kupić do 10 jednostek B, mając jednocześnie 2 A, ale nie zwiększa możliwości kupienia B ponad 10 – nowa linia budżetowa ma poziomy odcinek, a potem przebiega równolegle do starej, czyli jest linią łamaną."
+  },
+  {
+    "id": "owe34-o-18",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody okręgowe",
+    "question": "Krzywa popytu na produkt pewnego monopolisty jest opisana równaniem p = −2q + 40 (gdzie: p – cena za tonę w zł; q – ilość w tonach). Dodatkowo wiemy, że nie różnicuje on cen, a jego krzywa kosztu krańcowego jest opisana równaniem MC = 20. Ile wynosi zbędna strata społeczna (czysta strata)?",
+    "options": [
+      "0",
+      "25",
+      "50",
+      "100"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Monopolista: MR = 40 − 4q = MC = 20, więc q = 5, p = 30. W konkurencji: p = MC = 20, więc q = 10. Strata martwa to trójkąt między popytem a MC dla ilości od 5 do 10: ½ · (30 − 20) · (10 − 5) = 25."
+  },
+  {
+    "id": "owe34-o-19",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody okręgowe",
+    "question": "Pewien koncern medyczny odkrył szczepionkę na wirusa SARS-CoV-2 i ma już przygotowaną linię produkcyjną szczepionki. Ustalając cenę szczepionki kieruje się on zasadą optymalnego narzutu na koszt krańcowy. Jakie koszty w takiej sytuacji uwzględnia on przy ustalaniu ceny szczepionki?",
+    "options": [
+      "wypłacone wynagrodzenia pracowników badawczych zatrudnionych w związku z pracami nad wynalezieniem szczepionki",
+      "koszty surowca zużytego w procesie pracy nad wynalezieniem szczepionki",
+      "koszty wybudowania istniejącej fabryki",
+      "wynagrodzenia pracowników zatrudnionych przy produkcji szczepionki"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Przy ustalaniu ceny metodą narzutu na koszt krańcowy liczy się koszt wytworzenia kolejnej jednostki – np. wynagrodzenia pracowników produkcji i surowce. Koszty badań i budowy fabryki już poniesiono (koszty utopione), więc nie wpływają na koszt krańcowy."
+  },
+  {
+    "id": "owe34-o-20",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody okręgowe",
+    "question": "Krzywa popytu na usługi pewnego przedsiębiorstwa jest opisana równaniem P = −Q + 100 (gdzie: P – cena za jedną usługę w zł; Q – ilość świadczonych usług). Funkcja produkcji tego przedsiębiorstwa w krótkim okresie to: Q = 4L (gdzie: L – liczba pracowników zatrudnionych na pełen etat). Krańcowy przychód z pracy (MRPL) tego przedsiębiorstwa przedstawia równanie:",
+    "options": [
+      "MRPL = 4",
+      "MRPL = −2Q + 100",
+      "MRPL = −4Q+ 400",
+      "MRPL = −8Q + 400"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "MRPL = MR · MPL. Z popytu P = 100 − Q utarg TR = 100Q − Q², więc MR = 100 − 2Q. Z Q = 4L: MPL = 4. MRPL = 4 · (100 − 2Q) = 400 − 8Q."
+  },
+  {
+    "id": "owe34-o-21",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody okręgowe",
+    "question": "Przedsiębiorstwo produkuje sok jabłkowy w dwóch zakładach: A i B, a od dostawców otrzymuje rocznie 15 ton jabłek. Funkcje produkcji dla zakładów A i B kształtują się odpowiednio: QA = 20XA − 0,5XA² oraz QB = 20XB − XB² (gdzie: Qi – wielkość produkcji w danym zakładzie; Xi – liczba ton jabłek alokowana w danym zakładzie, i = A lub B). Ile ton jabłek powinno trafić do zakładu A, aby zmaksymalizować produkcję całkowitą przedsiębiorstwa?",
+    "options": [
+      "15",
+      "10",
+      "7,5",
+      "0"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Produkcję maksymalizuje się, gdy produkty krańcowe jabłek w obu zakładach są równe: 20 − XA = 20 − 2XB oraz XA + XB = 15. Stąd XA = 2XB, więc 3XB = 15, XB = 5, XA = 10 ton."
+  },
+  {
+    "id": "owe34-o-22",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody okręgowe",
+    "question": "Które stwierdzenie jest zgodne z koncepcją pułapki malthuzjańskiej?",
+    "options": [
+      "ziemia nie jest czynnikiem produkcji",
+      "niezależnie od podaży ziemi oraz liczby ludności krańcowa wydajność pracy w rolnictwie systematycznie wzrasta",
+      "podaż ziemi jest stała",
+      "podaż siły roboczej jest stała"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Pułapka maltuzjańska (T. Malthus): ludność rośnie w postępie geometrycznym, a produkcja żywności – wolniej, bo podaż ziemi jest stała, a krańcowa wydajność pracy w rolnictwie maleje. Wzrost dochodu na osobę jest „zjadany” przez wzrost liczby ludności i wraca on do poziomu minimum egzystencji."
+  },
+  {
+    "id": "owe34-o-23",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody okręgowe",
+    "question": "Które stwierdzenie dotyczące realnego popytu na pieniądz jest prawdziwe?",
+    "options": [
+      "im wyższe koszty utrzymania pieniądza, tym realny popyt na pieniądz jest większy",
+      "załamanie się realnego popytu na gotówkę (ucieczka od pieniądza) związane jest silnie ze zjawiskiem deflacji",
+      "im większy jest wzrost gospodarczy w danym kraju, tym szybciej rośnie realny popyt na pieniądz",
+      "koszt utrzymania pieniądza nie determinuje realnego popytu na pieniądz, gdyż jest to wielkość nominalna"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Realny popyt na pieniądz rośnie wraz z realnym dochodem (więcej transakcji) i maleje wraz z kosztem utrzymania pieniądza (stopą procentową, inflacją). Im szybszy wzrost gospodarczy, tym szybciej rośnie realny popyt na pieniądz. Ucieczka od pieniądza towarzyszy wysokiej inflacji, nie deflacji."
+  },
+  {
+    "id": "owe34-o-24",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody okręgowe",
+    "question": "Na początku 2020 r. stopa referencyjna Narodowego Banku Polskiego wynosiła 1,5%. W odpowiedzi na sytuację epidemiologiczną w kraju Rada Polityki Pieniężnej zdecydowała się ją obniżyć do poziomu 0,1%. Oznacza to obniżkę o:",
+    "options": [
+      "1,4 procenta",
+      "140 punktów procentowych",
+      "14 punktów bazowych",
+      "140 punktów bazowych"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Różnicę między stopami procentowymi wyraża się w punktach procentowych lub bazowych (1 pkt proc. = 100 pb). 1,5% − 0,1% = 1,4 pkt proc. = 140 punktów bazowych. W procentach stopa spadła o ok. 93%."
+  },
+  {
+    "id": "owe34-o-25",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody okręgowe",
+    "question": "Na pewnej wyspie na oceanie znajduje się jedno jezioro. Jego mieszkańcy nie mają możliwości ograniczyć sobie nawzajem dostępu do jeziora, a ilość słodkiej wody jest ograniczona. Słodka woda w jeziorze to przykład:",
+    "options": [
+      "dobra Giffena",
+      "dobra publicznego",
+      "dobra prywatnego",
+      "zasobu wspólnego"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Zasób wspólny jest niewykluczalny (nikt nie może ograniczyć dostępu innym), ale konkurencyjny (woda zużyta przez jednego mieszkańca nie jest już dostępna dla innych). Grozi mu nadmierna eksploatacja („tragedia wspólnego pastwiska”)."
+  },
+  {
+    "id": "owe34-o-26",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody okręgowe",
+    "question": "Do głównych form kontroli strukturalnej zaliczamy:",
+    "options": [
+      "kontrolę wstępną i kontrolę bieżącą",
+      "kontrolę biurokratyczną i kontrolę z udziałem pracowników",
+      "kontrolę finansową i kontrolę operacyjną",
+      "kontrolę finansową i kontrolę biurokratyczną"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Kontrola strukturalna dotyczy tego, jak elementy struktury organizacji spełniają swoje zadania. Jej dwie główne formy to kontrola biurokratyczna (formalne zasady, procedury, hierarchia) i kontrola z udziałem pracowników (oparta na normach grupowych, kulturze i samokontroli)."
+  },
+  {
+    "id": "owe34-o-27",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody okręgowe",
+    "question": "Które stwierdzenie dotyczące otoczenia organizacji jest prawdziwe?",
+    "options": [
+      "otoczenie zadaniowe obejmuje otoczenie ogólne i otoczenie zewnętrzne",
+      "otoczenie ogólne obejmuje środowisko wewnętrzne i otoczenie zewnętrzne",
+      "otoczenie zewnętrzne obejmuje otoczenie zadaniowe i otoczenie ogólne",
+      "otoczenie ogólne obejmuje środowisko wewnętrzne i otoczenie zadaniowe"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Otoczenie zewnętrzne organizacji obejmuje otoczenie ogólne (makrootoczenie: czynniki ekonomiczne, technologiczne, społeczne, prawne, międzynarodowe) i otoczenie zadaniowe (konkurenci, klienci, dostawcy, regulatorzy). Środowisko wewnętrzne to właściciele, zarząd, pracownicy i kultura."
+  },
+  {
+    "id": "owe34-o-28",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody okręgowe",
+    "question": "Które stwierdzenie dotyczące struktury konglomeratowej organizacji jest prawdziwe?",
+    "options": [
+      "innym jej określeniem jest struktura typu M",
+      "jest to struktura organizacyjna wykorzystywana przez organizacje składające się z wielu niepowiązanych ze sobą jednostek",
+      "jest to struktura organizacyjna oparta na funkcjonalnym podejściu do grupowania",
+      "innym jej określeniem jest struktura typu U"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Struktura konglomeratowa (typu H, holdingowa) jest stosowana przez organizacje złożone z wielu niepowiązanych ze sobą jednostek, z których każda działa w innej branży i jest niemal samodzielna. Struktura typu M to struktura wielowydziałowa (dywizjonalna), a typu U – funkcjonalna."
+  },
+  {
+    "id": "owe34-o-29",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody okręgowe",
+    "question": "Które stwierdzenie dotyczące zarządzania administracyjnego jest prawdziwe?",
+    "options": [
+      "kierunek ten koncentrował się szczególnie na opracowaniu licznych modeli matematycznych",
+      "głównym przedstawicielem tego kierunku jest A. Maslow",
+      "kierunek ten koncentrował się na całej organizacji i sposobach polepszania jej sprawności i skuteczności",
+      "podejście do zarządzania postulowane w ramach tego kierunku jest najbardziej odpowiednie w przypadku organizacji dynamicznych i złożonych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Zarządzanie administracyjne (H. Fayol, M. Weber) koncentrowało się na całej organizacji – jej strukturze, funkcjach kierowniczych i zasadach zarządzania – i na sposobach zwiększania jej sprawności. Maslow to podejście behawioralne, a modele matematyczne – podejście ilościowe."
+  },
+  {
+    "id": "owe34-o-30",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody okręgowe",
+    "question": "Menadżer pewnego zakładu produkcyjnego zbadał i zmierzył czas każdej operacji wykonywanej na poszczególnych stanowiskach pracy, a następnie wprowadził akordowy system wynagrodzeń. Takie działanie menadżera w największym stopniu odpowiada postulatom wygłaszanym w ramach:",
+    "options": [
+      "koncepcji naukowego zarządzania",
+      "teorii Herzberga",
+      "kierunku behawiorystycznego w teorii zarządzania",
+      "teorii dwuczynnikowej"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Pomiar czasu operacji i akordowy system płac to istota naukowego zarządzania F.W. Taylora: znalezienie „jednego najlepszego sposobu” wykonywania pracy i wynagradzanie według wydajności."
+  }
+]

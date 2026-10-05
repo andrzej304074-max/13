@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe39-o-01",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody okręgowe",
+    "question": "Zgodnie z hipotezą o efektywności rynku finansowego:",
+    "options": [
+      "ceny aktywów odzwierciedlają wszystkie publicznie dostępne informacje dotyczące ich wartości",
+      "ceny aktywów są determinowane wyłącznie przez ich ceny historyczne",
+      "koszt pozyskania kapitału obcego jest niższy niż koszt pozyskania kapitału własnego",
+      "rynek kapitałowy jest bardziej efektywny od rynku pieniężnego"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Hipoteza rynku efektywnego (E. Fama) w wersji półsilnej zakłada, że ceny aktywów odzwierciedlają wszystkie publicznie dostępne informacje – nie da się więc systematycznie osiągać ponadprzeciętnych zysków na podstawie analizy tych informacji. Ceny historyczne to wersja słaba."
+  },
+  {
+    "id": "owe39-o-02",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody okręgowe",
+    "question": "W przypadku których struktur rynkowych cena występująca na rynku jest równa przeciętnemu kosztowi całkowitemu w długim okresie?",
+    "options": [
+      "konkurencji doskonałej i konkurencji monopolistycznej",
+      "monopolu doskonale różnicującego cenę i konkurencji doskonałej",
+      "monopolu i konkurencji monopolistycznej",
+      "oligopolu Bertranda i monopolu naturalnego"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W długim okresie w konkurencji doskonałej i monopolistycznej swobodne wejście firm sprowadza zysk ekonomiczny do zera, więc cena równa się przeciętnemu kosztowi całkowitemu (P = ATC). Monopolista może trwale osiągać zysk ekonomiczny (P > ATC)."
+  },
+  {
+    "id": "owe39-o-03",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody okręgowe",
+    "question": "W modelu neoklasycznym wprowadzenie płacy minimalnej powyżej poziomu równowagi będzie skutkowało:",
+    "options": [
+      "przesunięciem krótkookresowej krzywej Phillipsa w prawo",
+      "spadkiem podaży pracy",
+      "przesunięciem długookresowej krzywej Phillipsa w lewo",
+      "przesunięciem krzywej Beveridge’a w dół"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Płaca minimalna powyżej równowagi zwiększa bezrobocie strukturalne, a więc podnosi naturalną stopę bezrobocia (NAIRU). Krótkookresowa krzywa Phillipsa przesuwa się w prawo (przy każdej inflacji wyższe bezrobocie), a długookresowa – też w prawo, a nie w lewo."
+  },
+  {
+    "id": "owe39-o-04",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody okręgowe",
+    "question": "Krzywą konsumpcji opisuje następujące równanie: C = 100 + 0,4YD (gdzie: C – konsumpcja, YD – dochód rozporządzalny). Ile wynosi krańcowa skłonność do oszczędzania?",
+    "options": [
+      "0,4",
+      "0,6",
+      "2,5",
+      "-100"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "MPC = 0,4 (współczynnik przy dochodzie), więc MPS = 1 − 0,4 = 0,6."
+  },
+  {
+    "id": "owe39-o-05",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody okręgowe",
+    "question": "W przedsiębiorstwie produkcyjnym X wykorzystywane są dwa nakłady: praca i kapitał. W krótkim okresie nakład kapitału jest stały i wynosi 100, a nakład pracy jest zmienny. Funkcja produkcji może mieć postać (gdzie: Q – wielkość produkcji, L – nakład pracy, w – płaca za godzinę):",
+    "options": [
+      "Q = 10L",
+      "Q = L + 100",
+      "Q = wL + 100",
+      "Q = wL"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W krótkim okresie kapitał jest stały (K = 100), więc funkcja produkcji zależy tylko od pracy, np. Q = 10L. Płaca (w) jest ceną czynnika, a nie jego nakładem, więc nie występuje w funkcji produkcji."
+  },
+  {
+    "id": "owe39-o-06",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody okręgowe",
+    "question": "Rynek producentów narzędzi budowlanych jest doskonale konkurencyjny. Krzywą podaży na tym rynku w ubiegłym roku opisywało równanie q = p − 100 (gdzie: q – ilość, p – cena za jednostkę). Obecnie równanie to ma postać q = p − 120. Co mogło być przyczyną takiego przesunięcia krzywej?",
+    "options": [
+      "spadek stóp procentowych",
+      "spadek cen surowców",
+      "zwiększenie oczekiwań przedsiębiorstw w zakresie przyszłego wzrostu cen wytwarzanych produktów",
+      "wzrost liczby przedsiębiorstw na rynku"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Zmiana z q = p − 100 na q = p − 120 oznacza, że przy każdej cenie oferuje się o 20 jednostek mniej – podaż spadła (krzywa przesunęła się w lewo). Przyczyną mogą być oczekiwania wzrostu cen produktów w przyszłości (firmy wstrzymują sprzedaż). Spadek stóp, tańsze surowce i więcej firm zwiększyłyby podaż."
+  },
+  {
+    "id": "owe39-o-07",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody okręgowe",
+    "question": "Zastrzeżenie dostępu nie jest możliwe w przypadku:",
+    "options": [
+      "zasobów wspólnych i monopoli naturalnych",
+      "monopoli doskonale różnicujących cenę i dóbr prywatnych",
+      "dóbr publicznych i zasobów wspólnych",
+      "dóbr publicznych i dóbr prywatnych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Dobra publiczne i zasoby wspólne są niewykluczalne – nie da się zastrzec dostępu do nich (np. obrona narodowa, ryby w oceanie). Różnią się konkurencyjnością: zasoby wspólne są konkurencyjne, a dobra publiczne – nie."
+  },
+  {
+    "id": "owe39-o-08",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody okręgowe",
+    "question": "Różnica między nominalnym a pierwotnym saldem sektora finansów publicznych jest tym większa, im:",
+    "options": [
+      "niższe są dochody z tytułu podatków bezpośrednich",
+      "niższe są dochody z tytułu podatków obciążających konsumpcję",
+      "wyższe są stopy procentowe banku centralnego",
+      "wyższy jest poziom inwestycji publicznych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Saldo nominalne = saldo pierwotne − koszty obsługi długu (odsetki). Różnica między nimi jest tym większa, im wyższe są odsetki od długu – a te rosną, gdy rosną stopy procentowe (także stopy banku centralnego, które przekładają się na rentowność obligacji)."
+  },
+  {
+    "id": "owe39-o-09",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody okręgowe",
+    "question": "Które stwierdzenie dotyczące mnożnika podatkowego jest prawdziwe?",
+    "options": [
+      "jego wartość jest zwykle większa od zera",
+      "w wartościach bezwzględnych wartość mnożnika podatkowego jest mniejsza od mnożnika wydatków rządowych",
+      "jego wartość zależy wyłącznie od wysokości stopy procentowej",
+      "mnożnik podatkowy i mnożnik wydatków rządowych zwykle mają ten sam znak"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Mnożnik podatkowy jest ujemny (podwyżka podatków zmniejsza dochód), a mnożnik wydatków – dodatni. Co do wartości bezwzględnej mnożnik podatkowy jest mniejszy (MPC/MPS < 1/MPS), bo część obniżki podatków gospodarstwa oszczędzają."
+  },
+  {
+    "id": "owe39-o-10",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody okręgowe",
+    "question": "Zgodnie z twierdzeniem Stolpera-Samuelsona konsekwencją otwarcia gospodarki na handel międzynarodowy jest:",
+    "options": [
+      "wyjście z pułapki średniego dochodu",
+      "wzrost wynagrodzenia czynnika produkcji obfitego w tym kraju",
+      "wzrost wynagrodzenia czynnika produkcji rzadkiego w tym kraju",
+      "wystąpienie efektu kreacji handlu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Twierdzenie Stolpera–Samuelsona: otwarcie na handel podnosi względną cenę dóbr, w których kraj ma przewagę komparatywną (intensywnie wykorzystujących czynnik obfity w tym kraju). W efekcie rośnie realne wynagrodzenie czynnika obfitego, a spada – czynnika rzadkiego."
+  },
+  {
+    "id": "owe39-o-11",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody okręgowe",
+    "question": "Które stwierdzenie dotyczące krzywych kosztu przedsiębiorstwa jest prawdziwe?",
+    "options": [
+      "krzywą kosztu całkowitego można uzyskać poprzez przesunięcie krzywej całkowitego kosztu zmiennego o wartość kosztu alternatywnego",
+      "jeżeli wartość kosztu krańcowego jest stała w krótkim okresie, to również wartość całkowitego kosztu przeciętnego jest stała",
+      "krzywa długookresowego całkowitego kosztu przeciętnego jest zawsze bardziej stroma niż krzywa krótkookresowego całkowitego kosztu przeciętnego",
+      "krzywa przeciętnego kosztu zmiennego ma co najmniej jeden punkt wspólny z krzywą kosztu krańcowego"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Krzywa kosztu krańcowego przecina krzywą przeciętnego kosztu zmiennego w jej minimum, więc mają co najmniej jeden punkt wspólny. Krzywą kosztu całkowitego uzyskuje się, przesuwając krzywą kosztu zmiennego o koszt stały (nie alternatywny); przy stałym MC przeciętny koszt całkowity maleje (rozkładanie kosztów stałych)."
+  },
+  {
+    "id": "owe39-o-12",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody okręgowe",
+    "question": "Do ilościowych narzędzi polityki handlowej nie zalicza się:",
+    "options": [
+      "kwot importowych",
+      "kontyngentów celnych",
+      "dobrowolnych ograniczeń eksportu (VER)",
+      "podatków granicznych"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Ilościowe (pozataryfowe) narzędzia polityki handlowej ograniczają ilość importu: kwoty (kontyngenty) importowe, kontyngenty celne i dobrowolne ograniczenia eksportu (VER). Podatki graniczne (np. cła) to narzędzia cenowe (taryfowe)."
+  },
+  {
+    "id": "owe39-o-13",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody okręgowe",
+    "question": "Towarowe terms of trade to relacja:",
+    "options": [
+      "zmian (indeksu) cen w eksporcie do zmian (indeksu) cen w imporcie danego kraju",
+      "wolumenu importu do wolumenu eksportu danego kraju",
+      "wartości rocznego importu towarów obciążonych cłami do wartości importu danego kraju",
+      "wartości rocznego eksportu do indeksu cen w imporcie danego kraju"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Towarowe terms of trade = indeks cen eksportu / indeks cen importu · 100. Wzrost oznacza, że za tę samą ilość eksportu kraj może kupić więcej importu – poprawę warunków wymiany."
+  },
+  {
+    "id": "owe39-o-14",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody okręgowe",
+    "question": "Pracownicy w przedsiębiorstwie wydobywającym ropę zarabiają 50 tys. zł za wydobycie surowca. Przedsiębiorstwo wydobywcze sprzedaje go rafinerii za 150 tys. zł. Następnie rafineria za przetworzenie ropy w paliwo do samochodów osobowych płaci swoim pracownikom 200 tys. zł. Rafineria sprzedaje je bezpośrednio konsumentom. Wartość dodana w przypadku rafinerii wynosi 500 tys. zł. Ile wynosi PKB w tej gospodarce?",
+    "options": [
+      "500 tys. zł",
+      "650 tys. zł",
+      "700 tys. zł",
+      "850 tys. zł"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "PKB = suma wartości dodanej wszystkich producentów. Firma wydobywcza: 150 tys. zł (sprzedaż, bez zakupów pośrednich), rafineria: 500 tys. zł (podane w treści). PKB = 150 + 500 = 650 tys. zł – to też wartość paliwa sprzedanego konsumentom (dobro finalne: 150 + 500)."
+  },
+  {
+    "id": "owe39-o-15",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody okręgowe",
+    "question": "Dewaluacja to:",
+    "options": [
+      "zmniejszenie wartości waluty krajowej mające miejsce w systemie kursu stałego",
+      "zwiększenie wartości waluty krajowej mające miejsce w systemie kursu stałego",
+      "zmniejszenie wartości waluty krajowej mające miejsce w systemie kursu płynnego",
+      "zwiększenie wartości waluty krajowej mające miejsce w systemie kursu płynnego"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Dewaluacja to urzędowe obniżenie wartości waluty krajowej w systemie kursu stałego. W systemie kursu płynnego spadek wartości waluty nazywa się deprecjacją, a wzrost – aprecjacją (w kursie stałym – rewaluacją)."
+  },
+  {
+    "id": "owe39-o-16",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody okręgowe",
+    "question": "Który z czynników wzmacnia działanie kanału stopy procentowej w mechanizmie transmisji polityki pieniężnej?",
+    "options": [
+      "wysoki odsetek kredytów hipotecznych ze stałą stopą procentową",
+      "niski poziom zadłużenia gospodarstw domowych w krajowych bankach",
+      "wysoki poziom zadłużenia przedsiębiorstw na międzynarodowych rynkach finansowych",
+      "niski poziom koncentracji sektora bankowego"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Kanał stopy procentowej działa silniej, gdy zmiany stóp banku centralnego szybko przenoszą się na oprocentowanie kredytów i depozytów. Sprzyja temu niska koncentracja sektora bankowego (silna konkurencja między bankami), duży udział kredytów o zmiennym oprocentowaniu i wysokie zadłużenie w krajowych bankach."
+  },
+  {
+    "id": "owe39-o-17",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody okręgowe",
+    "question": "Kluczowym elementem strategii bezpośredniego celu inflacyjnego jest:",
+    "options": [
+      "stosowanie agregatów pieniężnych w roli celu pośredniego",
+      "publiczne ogłaszanie numerycznego celu dla agregatu M3",
+      "zobowiązanie banku centralnego do utrzymania stałego parytetu waluty krajowej wobec złota",
+      "uznanie stabilności cen za nadrzędny cel"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Strategia bezpośredniego celu inflacyjnego zakłada uznanie stabilności cen za nadrzędny cel polityki pieniężnej, publiczne ogłoszenie liczbowego celu inflacyjnego i przejrzystość działań banku centralnego. Nie posługuje się celami pośrednimi, takimi jak agregaty pieniężne."
+  },
+  {
+    "id": "owe39-o-18",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody okręgowe",
+    "question": "Kraj X i kraj Y produkują skarpetki i spodnie przy wykorzystaniu rodzimej siły roboczej. W kraju X w ciągu godziny można wyprodukować 50 skarpetek albo 20 spodni, natomiast w kraju Y — 100 skarpetek albo 100 spodni. Które ze stwierdzeń jest prawdziwe?",
+    "options": [
+      "kraj X posiada przewagę absolutną w produkcji skarpetek",
+      "kraj Y nie posiada przewagi absolutnej w produkcji spodni",
+      "kraj X posiada przewagę komparatywną w produkcji skarpetek",
+      "kraj Y posiada przewagę komparatywną w produkcji obu dóbr"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Koszt alternatywny skarpetki: w X = 20/50 = 0,4 spodni, w Y = 100/100 = 1 para spodni. X wytwarza skarpetki relatywnie taniej, więc ma przewagę komparatywną w skarpetkach (a Y – w spodniach). Przewagę absolutną w obu dobrach ma Y."
+  },
+  {
+    "id": "owe39-o-19",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody okręgowe",
+    "question": "W małej gospodarce rząd wprowadza subsydia wypłacane za jednostkę wyeksportowanego samochodu. Bezpośrednią konsekwencją takiego działania będzie:",
+    "options": [
+      "przesunięcie w dół krajowej krzywej popytu na samochody",
+      "przesunięcie w górę krajowej krzywej popytu na samochody",
+      "spadek liczby samochodów sprzedawanych na krajowym rynku",
+      "spadek ceny samochodów na rynku światowym"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Subsydium do eksportu sprawia, że producentom opłaca się sprzedawać za granicę – za każdy wyeksportowany samochód dostają światową cenę plus subsydium. Ceny krajowe rosną do tego poziomu, więc krajowi konsumenci kupują mniej samochodów. Mała gospodarka nie wpływa na ceny światowe."
+  },
+  {
+    "id": "owe39-o-20",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody okręgowe",
+    "question": "Izokwanty produkcji dla nakładów doskonale komplementarnych:",
+    "options": [
+      "są liniami pionowymi",
+      "są liniami nachylonymi pod kątem 45°",
+      "mają kształt litery „L”",
+      "zwykle przecinają się pod kątem prostym"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Doskonale komplementarne nakłady (np. jeden kierowca na jedną ciężarówkę) trzeba łączyć w stałej proporcji – dodanie samego jednego czynnika nie zwiększa produkcji. Izokwanty mają wtedy kształt litery L (funkcja Leontiefa)."
+  },
+  {
+    "id": "owe39-o-21",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody okręgowe",
+    "question": "Która z operacji banku centralnego będzie skutkować ograniczeniem płynności sektora finansowego w walucie krajowej?",
+    "options": [
+      "przedterminowy wykup obligacji banku centralnego",
+      "skup obligacji rządowych",
+      "sterylizowana interwencja walutowa",
+      "emisja obligacji własnych"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Emisja własnych obligacji (lub bonów pieniężnych) przez bank centralny pobiera pieniądz z banków komercyjnych – zmniejsza płynność sektora. Przedterminowy wykup obligacji i skup obligacji rządowych zwiększają płynność, a interwencja sterylizowana z definicji nie zmienia płynności."
+  },
+  {
+    "id": "owe39-o-22",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody okręgowe",
+    "question": "Miernik Sharpe’a to iloraz premii za ryzyko osiągniętej przez dany portfel i ryzyka całkowitego tego portfela. Jego wartość dla danego okresu wylicza się dzieląc:",
+    "options": [
+      "różnicę występującą między przeciętną wartością stopy zwrotu portfela i przeciętną wartością stopy wolnej od ryzyka przez odchylenie standardowe stopy zwrotu portfela",
+      "różnicę występującą między przeciętną wartością stopy zwrotu portfela i przeciętną wartością stopy wolnej od ryzyka przez przeciętną stopę zwrotu wybranego indeksu giełdowego",
+      "sumę przeciętnej wartości stopy zwrotu portfela i przeciętnej wartości stopy wolnej od ryzyka przez odchylenie standardowe stopy zwrotu portfela",
+      "odchylenie standardowe stopy zwrotu portfela przez przeciętną wartość stopy wolnej od ryzyka"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Wskaźnik Sharpe'a = (średnia stopa zwrotu portfela − średnia stopa wolna od ryzyka) / odchylenie standardowe stopy zwrotu portfela. Mierzy, ile nadwyżkowego zwrotu przypada na jednostkę ryzyka całkowitego – im wyższy, tym lepiej."
+  },
+  {
+    "id": "owe39-o-23",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody okręgowe",
+    "question": "Które stwierdzenie dotyczące stablecoinów jest prawdziwe?",
+    "options": [
+      "ich przykładem jest bitcoin",
+      "to rodzaj kryptowaluty, której cechą charakterystyczną, w jej klasycznej formule, jest stały kurs wobec jednej z głównych walut fiat",
+      "są emitowane wyłącznie przez banki centralne",
+      "to rodzaj kryptowaluty, której cechą charakterystyczną, w jej pierwotnej formule, jest pokrycie emisji złotem"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Stablecoin to kryptowaluta, której kurs jest powiązany (zwykle 1:1) z walutą fiducjarną, np. dolarem (USDT, USDC), dzięki rezerwom lub algorytmom. Bitcoin ma kurs zmienny, a stablecoiny emitują prywatne firmy, nie banki centralne."
+  },
+  {
+    "id": "owe39-o-24",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody okręgowe",
+    "question": "Na którym z podejść do grupowania stanowisk pracy oparta jest struktura organizacyjna typu U?",
+    "options": [
+      "na podstawie lokalizacji",
+      "według wyrobu",
+      "według klienta",
+      "na podstawie funkcji"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Struktura typu U (unitarna, funkcjonalna) grupuje stanowiska według funkcji – produkcja, marketing, finanse, kadry. Grupowanie według wyrobu, klienta lub lokalizacji tworzy strukturę wielowydziałową (typu M)."
+  },
+  {
+    "id": "owe39-o-25",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody okręgowe",
+    "question": "W ramach cyklu łagodzenia polityki pieniężnej bank centralny obniżył swoją podstawową stopę procentową łącznie o 50 punktów bazowych. Ile wynosi ona obecnie, jeżeli przed rozpoczęciem cyklu wynosiła 9,00%?",
+    "options": [
+      "8,95%",
+      "8,50%",
+      "4,50%",
+      "4,00%"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "50 punktów bazowych to 0,5 punktu procentowego. Stopa po obniżkach: 9,00% − 0,50 pkt proc. = 8,50%."
+  },
+  {
+    "id": "owe39-o-26",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody okręgowe",
+    "question": "Która z sytuacji w największym stopniu wskazuje na nadchodzący kryzys gospodarczy?",
+    "options": [
+      "znaczący udział w gospodarce podmiotów, dla których właściwe jest finansowanie typu hedge (wyróżnione przez H. Minsky’ego)",
+      "wzrost cen obligacji o ratingu inwestycyjnym",
+      "spadek spreadu CDS dla długu korporacyjnego",
+      "znaczący wzrost spreadu między rentownością obligacji rządowych a rentownością obligacji korporacyjnych"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Wzrost spreadu między rentownością obligacji korporacyjnych a rządowych oznacza, że inwestorzy żądają większej premii za ryzyko niewypłacalności firm – rośnie awersja do ryzyka i obawy o kondycję przedsiębiorstw, co często zapowiada kryzys. Finansowanie typu hedge u Minsky'ego jest najbezpieczniejsze, a spadek spreadów CDS i wzrost cen obligacji to sygnały spokoju."
+  },
+  {
+    "id": "owe39-o-27",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody okręgowe",
+    "question": "Które stwierdzenie dotyczące metody selektora jednostek GE jest prawdziwe?",
+    "options": [
+      "jej słabą stroną jest to, że uwzględnia węższy zakres czynników determinujących atrakcyjność jednostki operacyjnej niż macierz BCG",
+      "przy ocenie jednostek operacyjnych koncentruje się ona wyłącznie na stopie wzrostu ich rynku oraz udziale, jaki ma w nim organizacja",
+      "pozwala ona ocenić jednostki w oparciu o dwa wymiary: atrakcyjność branży i pozycję konkurencyjną",
+      "jej słabą stroną jest to, że przy ocenie pozycji konkurencyjnej nie uwzględnia informacji dotyczących jakości produktu"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Selektor (macierz) jednostek GE (McKinseya) ocenia jednostki według dwóch wymiarów: atrakcyjności branży i pozycji konkurencyjnej jednostki, z których każdy jest oceniany na podstawie wielu czynników (szerzej niż w macierzy BCG, która uwzględnia tylko udział w rynku i tempo wzrostu)."
+  },
+  {
+    "id": "owe39-o-28",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody okręgowe",
+    "question": "Producent samolotów pasażerskich w ramach projektowania systemów operacyjnych rozważa wybór wariantu fizycznego układu obiektów. Powinien wdrożyć układ według:",
+    "options": [
+      "produktu",
+      "kosztów",
+      "przychodów",
+      "stałego miejsca"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Układ według stałego miejsca (stała pozycja produktu) stosuje się, gdy produkt jest bardzo duży lub ciężki – samoloty, statki, budynki. Produkt pozostaje w jednym miejscu, a pracownicy, maszyny i materiały są do niego przywożone."
+  },
+  {
+    "id": "owe39-o-29",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody okręgowe",
+    "question": "Spłaszczona struktura organizacji w porównaniu do struktury wysmukłej charakteryzuje się:",
+    "options": [
+      "większą liczbą menedżerów niezbędnych do jej obsługi",
+      "większą rozpiętością kierowania",
+      "znacząco wyższymi kosztami utrzymania",
+      "większą liczbą osób w łańcuchu przekazywania informacji"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Struktura spłaszczona ma mało szczebli zarządzania i większą rozpiętość kierowania (więcej podwładnych na kierownika). Wymaga mniej menedżerów, jest tańsza, a informacja przechodzi przez mniej osób. Struktura wysmukła ma wiele szczebli i małą rozpiętość."
+  },
+  {
+    "id": "owe39-o-30",
+    "type": "single",
+    "edition": "XXXIX OWE (2025/2026), zawody okręgowe",
+    "question": "Kto zaproponował klasyfikację wariantów strategii organizacji, wyróżniającą kategorie takie jak poszukiwacz, obrońca, analityk oraz strategia biernej reakcji?",
+    "options": [
+      "R. Miles i C. Snow",
+      "M. Porter",
+      "F. Taylor",
+      "D. McGregor i H. Mintzberg"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Typologię strategii: poszukiwacz, obrońca, analityk i bierna reakcja (reaktor) zaproponowali Raymond Miles i Charles Snow (1978). Porter wyróżnił strategie przywództwa kosztowego, zróżnicowania i koncentracji."
+  }
+]

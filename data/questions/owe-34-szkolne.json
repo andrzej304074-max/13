@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe34-s-01",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody szkolne",
+    "question": "Za twórcę interwencjonizmu państwowego uważany jest:",
+    "options": [
+      "E.S. Phelps",
+      "M. Friedman",
+      "F. von Hayek",
+      "J.M. Keynes"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Za twórcę interwencjonizmu państwowego uważa się Johna Maynarda Keynesa („Ogólna teoria zatrudnienia, procentu i pieniądza”, 1936): w czasie kryzysu państwo powinno zwiększać popyt globalny, np. wydatkami publicznymi. Friedman i Hayek byli zwolennikami wolnego rynku."
+  },
+  {
+    "id": "owe34-s-02",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody szkolne",
+    "question": "Wskaż, która z sytuacji będzie skutkować przesunięciem krzywej popytu na rowery elektryczne w lewo:",
+    "options": [
+      "spadek ceny hulajnóg elektrycznych",
+      "wzrost ceny rowerów elektrycznych",
+      "spadek ceny rowerów elektrycznych",
+      "spadek ceny kasków"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Hulajnogi elektryczne to substytuty rowerów elektrycznych. Gdy hulajnogi tanieją, część klientów wybiera je zamiast rowerów – popyt na rowery maleje (krzywa przesuwa się w lewo). Zmiana ceny samych rowerów to ruch wzdłuż krzywej, a tańsze kaski (dobro komplementarne) zwiększyłyby popyt."
+  },
+  {
+    "id": "owe34-s-03",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody szkolne",
+    "question": "Krzywa kosztu całkowitego w przedsiębiorstwie jest opisana równaniem TC = 2Q + 1000 (gdzie: Q – wielkość produkcji). Prawdą jest, że:",
+    "options": [
+      "koszt krańcowy jest tym większy, im większa jest wielkość produkcji",
+      "przeciętny koszt całkowity jest zawsze mniejszy od 2",
+      "koszt stały jest równy 2",
+      "przeciętny koszt zmienny jest równy 2"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "TC = 2Q + 1000: koszt stały = 1000, koszt zmienny = 2Q, więc przeciętny koszt zmienny = 2Q / Q = 2, a koszt krańcowy też stale wynosi 2. Przeciętny koszt całkowity = 2 + 1000/Q – zawsze większy od 2."
+  },
+  {
+    "id": "owe34-s-04",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody szkolne",
+    "question": "Krańcowa skłonność do oszczędzania wynosi 0,2. Ile wynosi krańcowa skłonność do konsumpcji?",
+    "options": [
+      "-0,8",
+      "-0,2",
+      "0,8",
+      "5,0"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Krańcowa skłonność do konsumpcji i do oszczędzania sumują się do 1, więc MPC = 1 − 0,2 = 0,8."
+  },
+  {
+    "id": "owe34-s-05",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody szkolne",
+    "question": "Dobra w konkurencji doskonałej są:",
+    "options": [
+      "homogeniczne",
+      "heterogeniczne",
+      "zróżnicowane",
+      "zawsze dobrami Giffena"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W konkurencji doskonałej wszystkie firmy wytwarzają identyczne (homogeniczne, jednorodne) produkty, dlatego nabywcy kupują u tego, kto oferuje najniższą cenę, a pojedyncza firma nie ma wpływu na cenę."
+  },
+  {
+    "id": "owe34-s-06",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody szkolne",
+    "question": "Efekt wypychania (wypierania) może wystąpić:",
+    "options": [
+      "jedynie w gospodarce otwartej",
+      "w sytuacji braku ingerencji państwa w mechanizm rynkowy",
+      "w sytuacji, gdy zmiana popytu na pieniądz powoduje zmianę stopy procentowej",
+      "jedynie w sytuacji braku funkcjonowania rynku pieniądza"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Efekt wypychania polega na tym, że wzrost wydatków państwa (finansowany długiem) zwiększa dochód i popyt na pieniądz, co podnosi stopę procentową, a wyższa stopa ogranicza inwestycje prywatne. Występuje więc wtedy, gdy zmiana popytu na pieniądz zmienia stopę procentową – także w gospodarce zamkniętej."
+  },
+  {
+    "id": "owe34-s-07",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody szkolne",
+    "question": "Instrumentem rynku kapitałowego jest:",
+    "options": [
+      "bon pieniężny",
+      "weksel",
+      "certyfikat inwestycyjny",
+      "czek"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Rynek kapitałowy obejmuje instrumenty średnio- i długoterminowe (powyżej roku): akcje, obligacje, certyfikaty inwestycyjne. Bony pieniężne, weksle i czeki to instrumenty krótkoterminowe – należą do rynku pieniężnego lub są instrumentami płatniczymi."
+  },
+  {
+    "id": "owe34-s-08",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody szkolne",
+    "question": "Twórcami teorii naturalnej stopy bezrobocia są:",
+    "options": [
+      "M. Kalecki i O. Lange",
+      "A.C. Pigou i A. Marshall",
+      "F. List i B. Hildebrand",
+      "M. Friedman i E.S. Phelps"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Koncepcję naturalnej stopy bezrobocia sformułowali niezależnie Milton Friedman i Edmund Phelps (1967–1968): w długim okresie bezrobocie wraca do poziomu naturalnego, a krzywa Phillipsa jest pionowa."
+  },
+  {
+    "id": "owe34-s-09",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody szkolne",
+    "question": "Terminem „pieniądz wielkiej mocy” określa się:",
+    "options": [
+      "wyłącznie gotówkę w obiegu",
+      "bazę monetarną",
+      "agregat M1",
+      "agregat M3"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "„Pieniądz wielkiej mocy” (high-powered money) to baza monetarna – gotówka w obiegu i rezerwy banków w banku centralnym. Nazwa wynika z tego, że na jej podstawie banki komercyjne kreują wielokrotnie większą ilość pieniądza (mnożnik)."
+  },
+  {
+    "id": "owe34-s-10",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody szkolne",
+    "question": "Funkcja utargu całkowitego przedsiębiorstwa jest opisana równaniem TR = −2Q² + 200Q (gdzie: Q – wielkość produkcji), natomiast jego krzywa kosztu krańcowego to MC = 100. Przy jakiej wielkości produkcji przedsiębiorstwo maksymalizuje swój zysk całkowity?",
+    "options": [
+      "25",
+      "100",
+      "200",
+      "400"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Zysk jest maksymalny, gdy MR = MC. MR to pochodna utargu: MR = −4Q + 200. Z równania −4Q + 200 = 100 otrzymujemy Q = 25."
+  },
+  {
+    "id": "owe34-s-11",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody szkolne",
+    "question": "Dla Jacka dobra A i B są doskonałymi substytutami, a cena dobra A jest 3-krotnie wyższa niż dobra B. Jacek będzie konsumował:",
+    "options": [
+      "wyłącznie dobro A",
+      "wyłącznie dobro B",
+      "dobra A i B w stosunku 1:1",
+      "dobra A i B w stosunku 1:3"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Doskonałe substytuty konsument wymienia w stałej proporcji (tu 1:1). Racjonalny konsument kupi więc tylko tańsze dobro – B, które jest 3 razy tańsze. Dobra A nie kupi wcale."
+  },
+  {
+    "id": "owe34-s-12",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody szkolne",
+    "question": "Wynik finansowy netto przedsiębiorstwa to wynik finansowy brutto:",
+    "options": [
+      "powiększony o podatek dochodowy",
+      "pomniejszony o podatek dochodowy",
+      "pomniejszony o zysk ekonomiczny",
+      "bez podatku od towarów i usług oraz podatku dochodowego"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Wynik finansowy netto = wynik finansowy brutto − podatek dochodowy (i inne obowiązkowe obciążenia). VAT nie jest kosztem firmy, a zysk ekonomiczny to kategoria teoretyczna, nieujmowana w księgach."
+  },
+  {
+    "id": "owe34-s-13",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody szkolne",
+    "question": "Załóżmy, że krzywa Lorenza w pewnym kraju jest prostą o nachyleniu 45°, a dochód całkowity w tym kraju wynosi 200 mln zł. Które zdanie jest prawdziwe:",
+    "options": [
+      "w tym kraju występują duże nierówności dochodowe",
+      "dochód całkowity w wysokości 200 mln zł przypada na 45% populacji tego kraju",
+      "udział każdego mieszkańca w dochodzie całkowitym tego kraju jest równy odwrotności jego populacji",
+      "dochód całkowity w wysokości 200 mln zł przypada na 55% populacji tego kraju"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Krzywa Lorenza będąca przekątną (nachylenie 45°) oznacza pełną równość dochodów: każdy mieszkaniec ma taki sam dochód. Udział każdego w dochodzie całkowitym wynosi więc 1/N – odwrotność liczby mieszkańców (populacji)."
+  },
+  {
+    "id": "owe34-s-14",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody szkolne",
+    "question": "Załóżmy, że w pewnym kraju produkuje się wyłącznie dobra A i B, a krzywa możliwości produkcyjnych jest opisana równaniem A + 2B = 200 (gdzie: A i B to ilości dóbr). Które stwierdzenie jest prawdziwe:",
+    "options": [
+      "jeżeli w tym kraju produkowane jest 100 jednostek dobra A, to istnieje możliwość produkowania 40 jednostek dobra B",
+      "jeżeli w tym kraju produkowane jest 100 jednostek dobra A, to istnieje możliwość produkowania 100 jednostek dobra B",
+      "w tym kraju produkcja dobra A nigdy nie będzie większa od produkcji dobra B",
+      "w tym kraju produkcja dobra B nigdy nie będzie większa od produkcji dobra A"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Przy produkcji A = 100 z równania krzywej: 100 + 2B = 200, więc B może wynosić maksymalnie 50. Produkcja 40 jednostek B (punkt wewnątrz krzywej) jest więc możliwa. Produkcja 100 jednostek B przy A = 100 wymagałaby 300 jednostek zasobów."
+  },
+  {
+    "id": "owe34-s-15",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody szkolne",
+    "question": "W tym samym okresie liczba sprzedanych biletów na spektakle w miejskim teatrze w pewnej miejscowości wzrosła o 40% i przeciętna cena biletów zwiększyła się o 35%. Które ze stwierdzeń jest prawdziwe przy braku założenia ceteris paribus?",
+    "options": [
+      "elastyczność cenowa popytu na bilety na pewno jest równa 0",
+      "krzywa popytu na bilety musi mieć nachylenie dodatnie",
+      "bilety są na pewno dobrem Veblena",
+      "opisana sytuacja może być konsekwencją wzrostu dochodów mieszkańców"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Jednoczesny wzrost ceny i ilości sprzedanych biletów, bez założenia ceteris paribus, wskazuje na wzrost popytu (przesunięcie krzywej popytu w prawo) – np. wskutek wzrostu dochodów mieszkańców. Nie oznacza to dodatnio nachylonej krzywej popytu ani że bilety są dobrem Veblena."
+  },
+  {
+    "id": "owe34-s-16",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody szkolne",
+    "question": "Reklama jest ważnym narzędziem walki konkurencyjnej w:",
+    "options": [
+      "konkurencji doskonałej",
+      "monopolu",
+      "oligopolu Cournota",
+      "konkurencji monopolistycznej"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "W konkurencji monopolistycznej firmy sprzedają zróżnicowane produkty, więc konkurują nie tylko ceną, ale przede wszystkim marką, jakością i reklamą, która ma przekonać klientów do wyjątkowości produktu. W konkurencji doskonałej reklama nie ma sensu, a monopolista nie musi walczyć o klientów."
+  },
+  {
+    "id": "owe34-s-17",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody szkolne",
+    "question": "Gospodarkę pewnego kraju opisują następujące równania: Y = 1200; C = 1000; G = 200; I = 100; IM = 200 (gdzie: Y – produkt krajowy brutto, C – konsumpcja; G – wydatki rządowe; I – inwestycje; IM – import). Ile wynosi eksport w tym kraju?",
+    "options": [
+      "0",
+      "100",
+      "200",
+      "300"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "PKB = C + I + G + X − IM, więc X = Y − C − I − G + IM = 1200 − 1000 − 100 − 200 + 200 = 100."
+  },
+  {
+    "id": "owe34-s-18",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody szkolne",
+    "question": "W odpowiedzi na sytuację związaną z pandemią koronawirusa SARS-CoV-2 Narodowy Bank Polski:",
+    "options": [
+      "podniósł stopę lombardową",
+      "rozpoczął zakup obligacji Skarbu Państwa na rynku pierwotnym",
+      "rozpoczął skup obligacji Skarbu Państwa na rynku wtórnym",
+      "podniósł podstawową stopę rezerwy obowiązkowej"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "W marcu 2020 r. w reakcji na pandemię NBP obniżył stopy procentowe (do 0,1% w maju), obniżył rezerwę obowiązkową i rozpoczął skup obligacji skarbowych i gwarantowanych przez państwo na rynku wtórnym (program „luzowania ilościowego”). Zakup obligacji na rynku pierwotnym jest zakazany przez Konstytucję."
+  },
+  {
+    "id": "owe34-s-19",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody szkolne",
+    "question": "Które stwierdzenie dotyczące wartości nominalnej akcji jest prawdziwe?",
+    "options": [
+      "wartość nominalna akcji spółek giełdowych zmienia się w każdym dniu notowań",
+      "im wyższa wartość nominalna akcji, tym więcej głosów przypada na daną akcję na walnym zgromadzeniu",
+      "wartość nominalną akcji określa statut spółki",
+      "wartość nominalna jednej akcji nie może być mniejsza niż 100 000 zł"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Wartość nominalną akcji określa statut spółki; nie zmienia się w trakcie notowań (zmienia się cena rynkowa). Minimalna wartość nominalna akcji w spółce akcyjnej wynosi 1 grosz (100 000 zł to minimalny kapitał zakładowy), a liczbę głosów określa liczba akcji i ich uprzywilejowanie."
+  },
+  {
+    "id": "owe34-s-20",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody szkolne",
+    "question": "Częstotliwość, z jaką jednostka pieniądza jest używana do rozliczania transakcji, to:",
+    "options": [
+      "histereza pieniądza",
+      "szybkość obiegu pieniądza",
+      "tezauryzacja",
+      "deflator pieniądza"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Szybkość obiegu pieniądza (V) to przeciętna liczba transakcji, w których bierze udział jednostka pieniądza w danym okresie – V = PY / M."
+  },
+  {
+    "id": "owe34-s-21",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody szkolne",
+    "question": "Załamanie łańcuchów dostaw wskazuje na szok:",
+    "options": [
+      "popytowy",
+      "deflacyjny",
+      "podażowy",
+      "symetryczny"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Załamanie łańcuchów dostaw (jak w czasie pandemii) ogranicza możliwości produkcji i podnosi koszty – to negatywny szok podażowy (przesunięcie krzywej podaży w lewo, wzrost cen i spadek produkcji)."
+  },
+  {
+    "id": "owe34-s-22",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody szkolne",
+    "question": "W dniu 12 marca 2020 r. za 1 USD trzeba było zapłacić średnio 3,86 zł, natomiast 18 maja 2020 r. kurs wyniósł 4,22 zł. Oznacza to, że w okresie lockdownu złoty uległ:",
+    "options": [
+      "aprecjacji",
+      "deprecjacji",
+      "rewaluacji",
+      "dewaluacji"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Wzrost kursu USD/PLN z 3,86 do 4,22 zł oznacza, że za dolara trzeba płacić więcej złotych – złoty stracił na wartości, czyli uległ deprecjacji (przy kursie płynnym). Dewaluacja dotyczy obniżenia kursu w systemie kursu stałego."
+  },
+  {
+    "id": "owe34-s-23",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody szkolne",
+    "question": "Do aktywów przedsiębiorstwa zaliczamy:",
+    "options": [
+      "bierne rozliczenia międzyokresowe kosztów",
+      "przychody operacyjne",
+      "kapitał własny",
+      "wartości niematerialne i prawne"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Wartości niematerialne i prawne (np. licencje, patenty, oprogramowanie, wartość firmy) należą do aktywów trwałych. Kapitał własny i bierne rozliczenia międzyokresowe kosztów są w pasywach, a przychody operacyjne – w rachunku zysków i strat."
+  },
+  {
+    "id": "owe34-s-24",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody szkolne",
+    "question": "W układzie kalkulacyjnym kosztów do kosztów pośrednich zalicza się m.in.:",
+    "options": [
+      "materiały bezpośrednie i koszty wydziałowe",
+      "płace bezpośrednie i amortyzacje",
+      "koszty wydziałowe i koszty zarządu",
+      "koszty sprzedaży i narzuty na wynagrodzenia pracowników produkcji"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "W układzie kalkulacyjnym koszty pośrednie to koszty, których nie można bezpośrednio przypisać do produktu: koszty wydziałowe, ogólnego zarządu i sprzedaży. Materiały bezpośrednie i płace bezpośrednie to koszty bezpośrednie."
+  },
+  {
+    "id": "owe34-s-25",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody szkolne",
+    "question": "Jeżeli procentowa zmiana ilości nabywanego dobra jest mniejsza niż procentowa zmiana jego ceny, to popyt na to dobro jest:",
+    "options": [
+      "doskonale elastyczny",
+      "elastyczny",
+      "nieelastyczny",
+      "doskonale nieelastyczny"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Jeśli procentowa zmiana ilości jest mniejsza niż procentowa zmiana ceny, to |Ed| < 1 – popyt jest nieelastyczny. Doskonale nieelastyczny oznacza brak jakiejkolwiek reakcji ilości."
+  },
+  {
+    "id": "owe34-s-26",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody szkolne",
+    "question": "Autorem koncepcji pięciu sił konkurencji jest:",
+    "options": [
+      "J.D. Thompson",
+      "M.E. Porter",
+      "F.W. Taylor",
+      "D. McGregor"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Model pięciu sił konkurencji opracował Michael E. Porter (1979): rywalizacja w sektorze, groźba wejścia nowych firm, groźba substytutów oraz siła przetargowa dostawców i nabywców."
+  },
+  {
+    "id": "owe34-s-27",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody szkolne",
+    "question": "Otoczenie zadaniowe to:",
+    "options": [
+      "konkurenci, klienci, dostawcy, strategiczni sojusznicy, regulatorzy",
+      "klienci, dostawcy, strategiczni sojusznicy, pracownicy",
+      "konkurenci, strategiczni sojusznicy, właściciele, pracownicy, regulatorzy",
+      "konkurenci, klienci, dostawcy, właściciele, zarząd"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Otoczenie zadaniowe (celowe, bliższe) tworzą podmioty, z którymi organizacja bezpośrednio współdziała: konkurenci, klienci, dostawcy, sojusznicy strategiczni i regulatorzy. Właściciele, zarząd i pracownicy należą do środowiska wewnętrznego."
+  },
+  {
+    "id": "owe34-s-28",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody szkolne",
+    "question": "W ramach klasycznego podejścia do zarządzania wyróżnia się:",
+    "options": [
+      "szkołę stosunków międzyludzkich i naukowego zarządzania",
+      "naukowe zarządzanie i zarządzanie administracyjne",
+      "teorię X i teorię Y",
+      "zarządzanie administracyjne i teorię X"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Klasyczne podejście do zarządzania obejmuje naukowe zarządzanie (F.W. Taylor, małżeństwo Gilbrethów, H. Gantt) oraz zarządzanie administracyjne (H. Fayol, M. Weber). Szkoła stosunków międzyludzkich i teorie X i Y należą do podejścia behawioralnego."
+  },
+  {
+    "id": "owe34-s-29",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody szkolne",
+    "question": "Które ze strategii według M.E. Portera na poziomie jednostki gospodarczej organizacje mogą wykorzystywać?",
+    "options": [
+      "odróżniania się, analityka, obrońcy",
+      "odróżniania się, przywództwa pod względem kosztów, koncentracji na niszy rynkowej",
+      "poszukiwacza, analityka, biernej reakcji",
+      "poszukiwacza, przywództwa pod względem kosztów, obrońcy"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "M.E. Porter wyróżnił trzy strategie konkurencji (na poziomie jednostki gospodarczej): przywództwo kosztowe, wyróżnianie się (dyferencjację) i koncentrację na niszy rynkowej. Poszukiwacz, analityk i obrońca to typologia Milesa i Snowa."
+  },
+  {
+    "id": "owe34-s-30",
+    "type": "single",
+    "edition": "XXXIV OWE (2020/2021), zawody szkolne",
+    "question": "Na przebieg której z rewolucji przemysłowych miał wpływ H. Ford:",
+    "options": [
+      "pierwszej",
+      "drugiej",
+      "trzeciej",
+      "czwartej"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Henry Ford wprowadził w 1913 r. ruchomą linię montażową i masową produkcję samochodów (Model T) – symbol drugiej rewolucji przemysłowej (elektryczność, produkcja masowa)."
+  }
+]

@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe33-o-01",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody okręgowe",
+    "question": "Dywidenda przysługuje posiadaczowi:",
+    "options": [
+      "opcji",
+      "akcji",
+      "bonów pieniężnych",
+      "obligacji zerokuponowych"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Dywidenda to część zysku spółki wypłacana akcjonariuszom, więc przysługuje posiadaczom akcji. Obligacje dają prawo do odsetek (zerokuponowe – do dyskonta), bony pieniężne NBP – do dyskonta, a opcje – do kupna lub sprzedaży instrumentu bazowego."
+  },
+  {
+    "id": "owe33-o-02",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody okręgowe",
+    "question": "Różnica między dochodami a wydatkami budżetowymi pomniejszonymi o koszty obsługi długu publicznego to:",
+    "options": [
+      "saldo memoriałowe budżetu",
+      "saldo strukturalne budżetu",
+      "saldo pierwotne budżetu",
+      "saldo cykliczne budżetu"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Saldo pierwotne budżetu = dochody − wydatki bez kosztów obsługi długu (odsetek). Pokazuje, czy bieżąca polityka fiskalna, niezależnie od zaszłości (długu), generuje nadwyżkę czy deficyt. Saldo strukturalne to saldo skorygowane o wpływ cyklu koniunkturalnego."
+  },
+  {
+    "id": "owe33-o-03",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody okręgowe",
+    "question": "Krzywa Beveridge’a przedstawia zależność między:",
+    "options": [
+      "liczbą bezrobotnych a liczbą wolnych miejsc pracy",
+      "poziomem inflacji a bezrobociem",
+      "rozmiarami deficytu budżetowego a handlowego",
+      "wysokością stopy procentowej a poziomem dochodu rozporządzalnego"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Krzywa Beveridge'a pokazuje ujemną zależność między stopą bezrobocia a stopą wolnych miejsc pracy (wakatów). Jej przesunięcie na zewnątrz oznacza gorsze dopasowanie na rynku pracy. Zależność inflacja–bezrobocie opisuje krzywa Phillipsa."
+  },
+  {
+    "id": "owe33-o-04",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody okręgowe",
+    "question": "Załóżmy, że pewną gospodarkę będącą autarkią opisują następujące równania: C = 100 + 0,5YD; I = 200; G = 150; T = 120 (gdzie: C – konsumpcja; YD – dochód rozporządzalny; I – inwestycje; G – wydatki publiczne; T – podatki minus transfery budżetowe otrzymywane przez konsumenta). Ile wynoszą wydatki autonomiczne w tej gospodarce?",
+    "options": [
+      "300",
+      "390",
+      "450",
+      "510"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Wydatki autonomiczne to wydatki niezależne od dochodu: konsumpcja autonomiczna pomniejszona o wpływ podatków (100 − 0,5 · 120 = 40) + inwestycje (200) + wydatki publiczne (150) = 390. Z równania: Y = 100 + 0,5(Y − 120) + 200 + 150 = 390 + 0,5Y."
+  },
+  {
+    "id": "owe33-o-05",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody okręgowe",
+    "question": "W opinii niektórych ekonomistów czwarta rewolucja przemysłowa doprowadzi do zwiększenia poziomu bezrobocia ze względu na likwidację przestarzałych miejsc pracy spowodowaną automatyzacją procesów produkcji. Tak powstałe bezrobocie będzie mieć charakter:",
+    "options": [
+      "cykliczny",
+      "strukturalny",
+      "frakcyjny",
+      "frykcyjny"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Bezrobocie strukturalne wynika z niedopasowania kwalifikacji pracowników do potrzeb gospodarki – np. gdy automatyzacja likwiduje przestarzałe zawody, a nowe miejsca pracy wymagają innych umiejętności. Bezrobocie cykliczne wynika z recesji, a frykcyjne – ze zmiany pracy."
+  },
+  {
+    "id": "owe33-o-06",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody okręgowe",
+    "question": "Z którą rewolucją przemysłową związane jest wprowadzenie masowej produkcji?",
+    "options": [
+      "pierwszą",
+      "drugą",
+      "trzecią",
+      "czwartą"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Druga rewolucja przemysłowa (koniec XIX – początek XX w.) to elektryczność, silnik spalinowy, chemia i stal, a także masowa produkcja na liniach montażowych (np. Ford Model T). Pierwsza to mechanizacja i maszyna parowa, trzecia – elektronika i automatyzacja, czwarta – cyfryzacja."
+  },
+  {
+    "id": "owe33-o-07",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody okręgowe",
+    "question": "Dobra A i B są doskonale komplementarne i konsument konsumuje je w stałej proporcji 1:1. Pod jakim kątem jest nachylona ścieżka ekspansji dochodowej do osi odciętych?",
+    "options": [
+      "0°",
+      "45°",
+      "90°",
+      "nie da się tego ustalić na podstawie podanych danych"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Doskonale komplementarne dobra konsumowane w proporcji 1:1 – przy wzroście dochodu konsument kupuje zawsze tyle samo A, co B. Ścieżka ekspansji dochodowej to więc prosta y = x, nachylona do osi odciętych pod kątem 45°."
+  },
+  {
+    "id": "owe33-o-08",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody okręgowe",
+    "question": "Które stwierdzenie dotyczące krzywych obojętności w teorii konsumenta jest prawdziwe?",
+    "options": [
+      "krzywe obojętności zawsze muszą mieć nachylenie ujemne",
+      "krzywe obojętności zawsze przecinają się pod kątem prostym",
+      "w przypadku gdy jedno dobro jest dobrem niechcianym, krzywe obojętności mają nachylenie ujemne",
+      "krzywe obojętności nie przecinają się"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Krzywe obojętności (przy założeniu przechodniości preferencji) nie mogą się przecinać – punkt przecięcia oznaczałby, że ten sam koszyk daje dwa różne poziomy użyteczności. Nie zawsze mają ujemne nachylenie: gdy jedno dobro jest niechciane, nachylenie jest dodatnie."
+  },
+  {
+    "id": "owe33-o-09",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody okręgowe",
+    "question": "Która z odpowiedzi prawidłowo przedstawia sytuację przedsiębiorstwa w stanie długookresowej równowagi na rynku konkurencji monopolistycznej (gdzie: Z – zysk ekonomiczny; MC – koszt krańcowy; P – cena; ATC – przeciętny koszt całkowity; q – wielkość sprzedaży; MR – utarg krańcowy)?",
+    "options": [
+      "Z>0",
+      "ATC = P",
+      "MR = ATC",
+      "MC = P"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "W długim okresie w konkurencji monopolistycznej wejście nowych firm sprowadza zysk ekonomiczny do zera, więc cena równa się przeciętnemu kosztowi całkowitemu (P = ATC – styczność krzywej popytu z ATC). Firma produkuje tam, gdzie MR = MC, ale P > MC."
+  },
+  {
+    "id": "owe33-o-10",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody okręgowe",
+    "question": "Cena jednego pluszowego misia wynosi 50 zł, krzywa podaży jest opisana równaniem p = 2q + 2, a krzywa popytu p = −2q + 98 (gdzie: p – cena za sztukę w zł; q – ilość w sztukach). Ze względu na zmianę gustów klientów nowa cena w punkcie równowagi wzrosła do 70 zł. Nowa krzywa popytu opisana jest równaniem p = −2q + 138. Ile wynosi przyrost nadwyżki producenta dla dotychczasowych sprzedawców?",
+    "options": [
+      "20",
+      "476",
+      "480",
+      "864"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Pierwotna równowaga: 2q + 2 = −2q + 98, więc q = 24, p = 50. Nowa: 2q + 2 = −2q + 138, więc q = 34, p = 70. Dotychczasowi sprzedawcy (24 sztuki) zyskują na wyższej cenie: (70 − 50) · 24 = 480 zł. Dodatkowo powstaje nadwyżka nowych sprzedawców (½ · 10 · 20 = 100), ale o nią nie pytano."
+  },
+  {
+    "id": "owe33-o-11",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody okręgowe",
+    "question": "Transakcja reverse repo przeprowadzona przez bank centralny:",
+    "options": [
+      "polega na sprzedaży papierów wartościowych z jednoczesnym zawarciem umowy ich odkupienia w przyszłości",
+      "polega na kupnie papierów wartościowych z jednoczesnym zawarciem umowy ich odsprzedaży w przyszłości",
+      "jej celem jest dostarczenie płynności sektorowi bankowemu",
+      "jest przykładem bezwarunkowej operacji otwartego rynku"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Według klucza w transakcji reverse repo bank centralny sprzedaje papiery wartościowe z umową ich odkupu w przyszłości – pobiera przy tym pieniądz z sektora bankowego, czyli ogranicza (absorbuje) płynność. Jest to operacja warunkowa (odwracalna), a nie bezwarunkowa."
+  },
+  {
+    "id": "owe33-o-12",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody okręgowe",
+    "question": "Pozycja „saldo błędów i opuszczeń” jest elementem:",
+    "options": [
+      "zestawienia aktywów w bilansie przedsiębiorstwa",
+      "bilansu płatniczego",
+      "rachunku zysków i strat",
+      "raportu z badania sprawozdania finansowego biegłego rewidenta"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "„Saldo błędów i opuszczeń” to pozycja bilansu płatniczego, która wyrównuje różnicę między saldem rachunku bieżącego i kapitałowego a saldem rachunku finansowego. Wynika z niedokładności danych statystycznych."
+  },
+  {
+    "id": "owe33-o-13",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody okręgowe",
+    "question": "W przypadku której ze struktur rynkowych przedsiębiorstwo będzie sprzedawać wszystkie swoje produkty po cenie rynkowej równej kosztowi krańcowemu?",
+    "options": [
+      "oligopolu Stackelberga",
+      "oligopolu Bertranda",
+      "monopolu doskonale różnicującego cenę",
+      "oligopolu Cournota"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "W modelu Bertranda firmy produkujące identyczne produkty konkurują ceną. Każda opłaca się obniżać cenę poniżej ceny rywala, aż do poziomu kosztu krańcowego – w równowadze P = MC, jak w konkurencji doskonałej (paradoks Bertranda)."
+  },
+  {
+    "id": "owe33-o-14",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody okręgowe",
+    "question": "Za twórcę koncepcji naturalnej stopy procentowej uważa się:",
+    "options": [
+      "J.M. Keynesa",
+      "M. Friedmana",
+      "K. Wicksella",
+      "A. Greenspana"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Koncepcję naturalnej stopy procentowej sformułował Knut Wicksell (1898): to stopa, przy której oszczędności równają się inwestycjom, a ceny są stabilne. Gdy rynkowa stopa jest niższa od naturalnej, pojawia się presja inflacyjna. Pojęcie to jest podstawą współczesnej polityki pieniężnej."
+  },
+  {
+    "id": "owe33-o-15",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody okręgowe",
+    "question": "Zmiana warunków pożyczki to:",
+    "options": [
+      "sekurytyzacja",
+      "denominacja",
+      "inercja",
+      "konwersja"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Konwersja długu (pożyczki) to zmiana jej warunków – np. oprocentowania, terminu spłaty, waluty – albo zamiana jednego długu na inny. Denominacja to zmiana nominału pieniądza, a sekurytyzacja – zamiana aktywów na papiery wartościowe."
+  },
+  {
+    "id": "owe33-o-16",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody okręgowe",
+    "question": "Realizując ekspansywną politykę pieniężną, Narodowy Bank Polski może:",
+    "options": [
+      "zwiększyć stopę rezerwy obowiązkowej",
+      "zmniejszyć haircut przy określeniu wartości poziomu zabezpieczeń kredytu lombardowego",
+      "podnieść wysokość stopy referencyjnej",
+      "nabywać państwowe obligacje na rynku pierwotnym"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Ekspansywna polityka pieniężna zwiększa płynność i obniża koszt pieniądza. Zmniejszenie haircutu (redukcji wartości) zabezpieczeń kredytu lombardowego pozwala bankom pożyczyć w NBP więcej pod te same papiery. Podwyżka rezerwy obowiązkowej czy stopy referencyjnej to polityka restrykcyjna, a zakup obligacji na rynku pierwotnym jest dla NBP zakazany (art. 220 Konstytucji)."
+  },
+  {
+    "id": "owe33-o-17",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody okręgowe",
+    "question": "Spółka X jest notowana na giełdzie i aktualna cena rynkowa jednej akcji wynosi 100 zł. Dodatkowo wiemy, że ostatnio wypłacona dywidenda na jedną akcję wyniosła 4 zł, a spodziewane tempo wzrostu dywidendy równe jest 5%. Ile wynosi koszt kapitału własnego?",
+    "options": [
+      "4,20%",
+      "5,00%",
+      "6,05%",
+      "9,20%"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Model Gordona: koszt kapitału własnego = D₁ / P + g, gdzie D₁ = 4 · 1,05 = 4,20 zł. Koszt = 4,20 / 100 + 5% = 4,2% + 5% = 9,2%."
+  },
+  {
+    "id": "owe33-o-18",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody okręgowe",
+    "question": "Szybkość obiegu pieniądza obliczamy:",
+    "options": [
+      "dzieląc wartość nominalną produkcji przez ilość pieniądza w obiegu",
+      "dzieląc wartość realną produkcji przez ilość pieniądza w obiegu",
+      "mnożąc wartość realną produkcji i podaż pieniądza (agregat M3)",
+      "mnożąc wartość realną produkcji i bazę monetarną (M0)"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Szybkość obiegu pieniądza (z równania wymiany MV = PY) = nominalny PKB / ilość pieniądza (V = PY / M). Pokazuje, ile razy w ciągu roku przeciętna jednostka pieniądza jest wykorzystywana do zakupu dóbr finalnych."
+  },
+  {
+    "id": "owe33-o-19",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody okręgowe",
+    "question": "Przedsiębiorstwo X sprzedające wózki dziecięce ma następującą funkcję produkcji Q = L − 2L² + 2K − K² (gdzie: Q – to wielkość produkcji przedsiębiorstwa X w ciągu miesiąca, L – to liczba przepracowanych w ciągu miesiąca roboczogodzin, K – to ilość zaangażowanego w ciągu miesiąca kapitału). Dodatkowo wiemy, że koszt czynnika pracy w przedsiębiorstwie w przeliczeniu na godzinę wynosi 40 zł, a koszt jednostki kapitału 80 zł. Które z równań przedstawia zależność opisującą optymalną (najtańszą) kombinację kapitału i pracy umożliwiającą osiągnięcie pożądanego poziomu produkcji?",
+    "options": [
+      "K = 2L + 0,5",
+      "K = 4L",
+      "L = 4K",
+      "L=K"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Optymalna kombinacja czynników: MPL / MPK = w / r. MPL = 1 − 4L, MPK = 2 − 2K, w / r = 40 / 80 = 0,5. Stąd (1 − 4L) / (2 − 2K) = 0,5, czyli 2 − 8L = 2 − 2K, więc K = 4L."
+  },
+  {
+    "id": "owe33-o-20",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody okręgowe",
+    "question": "Przedsiębiorstwo X produkuje wodę mineralną, a rynek, na którym działa, jest doskonale konkurencyjny. Cena jednej butelki wynosi 2 zł. Które ze stwierdzeń jest prawdziwe?",
+    "options": [
+      "utarg krańcowy niezależnie od wielkości sprzedaży nie przewyższy utargu przeciętnego",
+      "im wyższa sprzedaż, tym większy jest utarg przeciętny",
+      "im wyższa sprzedaż, tym większy jest utarg krańcowy",
+      "im wyższa sprzedaż, tym mniejszy jest utarg całkowity"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W konkurencji doskonałej firma sprzedaje każdą jednostkę po tej samej cenie (2 zł), więc utarg krańcowy = utarg przeciętny = cena = 2, niezależnie od wielkości sprzedaży. Utarg krańcowy nigdy nie przewyższy przeciętnego, a utarg całkowity rośnie wraz ze sprzedażą."
+  },
+  {
+    "id": "owe33-o-21",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody okręgowe",
+    "question": "Które stwierdzenie dotyczące sharing economy jest prawdziwe?",
+    "options": [
+      "są to systemy, które ułatwiają dzielenie się nie w pełni wykorzystanymi zasobami lub usługami – odpłatnie lub bezpłatnie – bezpośrednio między podmiotami indywidualnymi lub organizacjami",
+      "jest to innowacja społeczna, która nie jest zgodna z postulatami gospodarki zrównoważonego rozwoju",
+      "w przypadku tej formy działalności w praktyce nie funkcjonuje model B2C",
+      "w przypadku tej formy działalności kluczowe jest przenoszenie prawa własności"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Sharing economy (gospodarka współdzielenia) to modele, w których ludzie i firmy udostępniają innym nie w pełni wykorzystywane zasoby (mieszkania, samochody, narzędzia) – odpłatnie lub bezpłatnie, zwykle przez platformy internetowe. Kluczowe jest korzystanie, a nie przenoszenie własności."
+  },
+  {
+    "id": "owe33-o-22",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody okręgowe",
+    "question": "Które z równań prawidłowo przedstawia zależność występującą między oszczędnościami narodowymi (S), inwestycjami krajowymi (I) oraz odpływami kapitałowymi netto (NCO) w gospodarce otwartej?",
+    "options": [
+      "S = I + NCO",
+      "I = S + NCO",
+      "I × S = NCO",
+      "NCO × I = S"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W gospodarce otwartej oszczędności narodowe finansują inwestycje krajowe albo trafiają za granicę jako odpływ kapitału netto: S = I + NCO. Jeśli S > I, kraj eksportuje kapitał (i ma nadwyżkę w handlu, NX = NCO)."
+  },
+  {
+    "id": "owe33-o-23",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody okręgowe",
+    "question": "Które stwierdzenie dotyczące gospodarki dostępności (access economy) jest prawdziwe?",
+    "options": [
+      "są to systemy, które umożliwiają nieodpłatny transfer własności dóbr",
+      "są to systemy online umożliwiające płatność za transfer własności dóbr",
+      "tego typu systemy (modele działalności) nie funkcjonują w Polsce",
+      "jej przykładem jest wspólny transport (carpooling)"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Gospodarka dostępności (access economy) polega na płaceniu za dostęp do dobra na pewien czas zamiast za jego własność – np. carpooling, carsharing, wypożyczalnie hulajnóg czy streaming. Takie modele działają także w Polsce."
+  },
+  {
+    "id": "owe33-o-24",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody okręgowe",
+    "question": "Które stwierdzenie dotyczące negatywnego szoku podażowego jest prawdziwe?",
+    "options": [
+      "powoduje on przesunięcie krótkookresowej krzywej zagregowanej podaży w prawo",
+      "jego wystąpienie nie wpływa na położenie krótkookresowej krzywej zagregowanej podaży",
+      "powoduje on przesunięcie krótkookresowej krzywej Phillipsa w prawo",
+      "powoduje on przesunięcie krzywej zagregowanego popytu w prawo"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Negatywny szok podażowy (np. wzrost cen ropy) przesuwa krótkookresową krzywą zagregowanej podaży w lewo – rosną ceny i spada produkcja. Na wykresie krzywej Phillipsa oznacza to jej przesunięcie w prawo (w górę): przy każdym poziomie bezrobocia inflacja jest wyższa."
+  },
+  {
+    "id": "owe33-o-25",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody okręgowe",
+    "question": "Zakładając, że popyt na ziemniaki jest doskonale elastyczny (na osi odciętych zaznaczono ilość sprzedawanych kilogramów ziemniaków, a na osi rzędnych cenę jednego kilograma), to krzywa popytu na ziemniaki jest:",
+    "options": [
+      "linią równoległą do osi odciętych",
+      "linią równoległą do osi rzędnych",
+      "linią o nachyleniu 45°",
+      "parabolą"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Popyt doskonale elastyczny oznacza, że przy danej cenie można sprzedać dowolną ilość, a przy wyższej – nic. Krzywa popytu jest wtedy poziomą linią (równoległą do osi odciętych, na której jest ilość)."
+  },
+  {
+    "id": "owe33-o-26",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody okręgowe",
+    "question": "Które stwierdzenie dotyczące rozwinięcia teorii oczekiwań zaproponowanego przez Portera-Lawlera jest prawdziwe?",
+    "options": [
+      "zgodnie z nim większe zadowolenie z pracy może prowadzić do większych osiągnięć",
+      "zgodnie z nim w systemie motywacji nie ma znaczenia sprawiedliwy system nagradzania wykorzystywany w organizacji",
+      "postuluje ono ograniczenie systemu motywacyjnego wyłącznie do systemu kar",
+      "zgodnie z nim większe osiągnięcia mogą prowadzić do większego zadowolenia"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Model Portera–Lawlera rozwinął teorię oczekiwań Vrooma: wysiłek prowadzi do osiągnięć, osiągnięcia do nagród, a nagrody – jeśli są postrzegane jako sprawiedliwe – do zadowolenia. Zgodnie z nim to większe osiągnięcia prowadzą do większego zadowolenia (a nie odwrotnie)."
+  },
+  {
+    "id": "owe33-o-27",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody okręgowe",
+    "question": "Podział rynku na segmenty biorący za podstawę wiedzę klientów o produkcie, ich postawy wobec niego, sposoby zastosowania, a także reakcje na niego, to:",
+    "options": [
+      "segmentacja behawioralna",
+      "segmentacja geograficzna",
+      "segmentacja demograficzna",
+      "segmentacja psychograficzna"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Segmentacja behawioralna dzieli klientów według ich zachowań wobec produktu: wiedzy o nim, postaw, sposobów i częstotliwości używania, lojalności i oczekiwanych korzyści. Segmentacja geograficzna – według miejsca, demograficzna – według wieku, płci, dochodu, a psychograficzna – według stylu życia i osobowości."
+  },
+  {
+    "id": "owe33-o-28",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody okręgowe",
+    "question": "Forma grupowego podejmowania decyzji, w której grupa autonomicznych, niezależnych wypowiadających się ekspertów jest wykorzystywana do sformułowania zgodnej „uśrednionej” opinii, to:",
+    "options": [
+      "zespół interaktywny",
+      "burza mózgów",
+      "grupa delficka",
+      "grupa nominalna"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Grupa (metoda) delficka to grupa niezależnych, anonimowych ekspertów, którzy nie spotykają się ze sobą. W kolejnych rundach wypełniają ankiety i poznają zbiorcze wyniki, aż ich opinie się zbliżą – powstaje uśredniona prognoza lub opinia."
+  },
+  {
+    "id": "owe33-o-29",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody okręgowe",
+    "question": "Lean management to:",
+    "options": [
+      "metoda zarządzania opierająca się na centralizacji decyzji i wzmocnieniu autokratycznego stylu kierowania",
+      "wyszczuplone (odchudzone) zarządzanie",
+      "metoda zarządzania przedsiębiorstwem, której celem jest zwiększenie liczby pracujących przy linii produkcyjnej",
+      "nowa koncepcja zarządzania, która w praktyce po raz pierwszy została zastosowana w Polsce"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Lean management (szczupłe, „odchudzone” zarządzanie) wywodzi się z systemu produkcyjnego Toyoty. Polega na eliminowaniu marnotrawstwa (zbędnych zapasów, czynności, szczebli zarządzania), spłaszczaniu struktur i ciągłym doskonaleniu (kaizen)."
+  },
+  {
+    "id": "owe33-o-30",
+    "type": "single",
+    "edition": "XXXIII OWE (2019/2020), zawody okręgowe",
+    "question": "Wielkie grupy przemysłowo-finansowe, nazywane czebolami, powstały w:",
+    "options": [
+      "Iranie",
+      "Chile",
+      "Wietnamie",
+      "Korei Południowej"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Czebole (chaebol) to wielkie, zwykle rodzinne konglomeraty przemysłowo-finansowe w Korei Południowej, np. Samsung, Hyundai, LG. Ich japońskim odpowiednikiem są keiretsu (wcześniej zaibatsu)."
+  }
+]
