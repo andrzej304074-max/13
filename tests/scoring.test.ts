@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { durationMinutes, scoreMulti, scoreSingle, validateSelection } from "@/lib/scoring";
+import { correctUnits, durationMinutes, scoreMulti, scoreSingle, validateSelection } from "@/lib/scoring";
 
 describe("scoreSingle", () => {
   it("daje 2 pkt za poprawną", () => expect(scoreSingle([2], [2])).toBe(2));
@@ -25,4 +25,11 @@ describe("validateSelection", () => {
   it("akceptuje wiele w wielokrotnym", () => expect(validateSelection("multi", [0, 1, 3])).toBeNull());
   it("odrzuca indeks spoza zakresu", () => expect(validateSelection("multi", [4])).not.toBeNull());
   it("odrzuca duplikaty", () => expect(validateSelection("multi", [1, 1])).not.toBeNull());
+});
+
+describe("correctUnits", () => {
+  it("jednokrotny: 1 za poprawną", () => expect(correctUnits("single", 2)).toBe(1));
+  it("jednokrotny: 0 za błędną", () => expect(correctUnits("single", -1)).toBe(0));
+  it("wielokrotny: liczba trafnych pól", () => expect(correctUnits("multi", 1.5)).toBe(3));
+  it("pominięte: 0", () => expect(correctUnits("multi", 0, true)).toBe(0));
 });

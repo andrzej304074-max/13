@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { api, fmtPct, fmtPoints, LETTERS, rememberTest } from "@/lib/client";
+import { correctUnits, UNITS_PER_QUESTION } from "@/lib/scoring";
 import type { AnswerFeedback, PublicQuestion, TestState } from "@/lib/types";
 
 type AnswerResponse = AnswerFeedback & { totalScore: number; nextQuestion?: PublicQuestion | null };
@@ -95,6 +96,8 @@ export default function TestPage() {
             answers: [...t.answers, answer],
             score: totalScore,
             maxScore: t.mode === "endless" ? (t.answers.length + 1) * 2 : t.maxScore,
+            correct: t.correct + correctUnits(t.type, answer.points, answer.skipped),
+            total: t.mode === "endless" ? t.total + UNITS_PER_QUESTION[t.type] : t.total,
             questions: nextQuestion ? [...t.questions, nextQuestion] : t.questions,
           },
       );
@@ -213,7 +216,8 @@ export default function TestPage() {
 }
 
 function Summary({ test }: { test: TestState }) {
-  const percent = test.maxScore > 0 ? Math.round((test.score / test.maxScore) * 1000) / 10 : 0;
+  const percent = test.total > 0 ? Math.round((test.correct / test.total) * 1000) / 10 : 0;
+  const unit = test.type === "multi" ? "trafne pola" : "poprawne odpowiedzi";
   const answers = new Map(test.answers.map((a) => [a.questionId, a]));
   return (
     <div className="stack">
@@ -221,7 +225,7 @@ function Summary({ test }: { test: TestState }) {
       <div className="card">
         <div className="big">{fmtPct(percent)}</div>
         <p className="muted" style={{ margin: 0 }}>
-          {fmtPoints(test.score)} / {fmtPoints(test.maxScore)} pkt ·{" "}
+          {unit}: {test.correct}/{test.total} · {fmtPoints(test.score)} / {fmtPoints(test.maxScore)} pkt ·{" "}
           {test.mode === "endless"
             ? `rozwiązane: ${test.answers.filter((a) => !a.skipped).length}, pominięte: ${test.answers.filter((a) => a.skipped).length}`
             : `odpowiedzi: ${test.answers.length}/${test.questions.length}`}

@@ -27,11 +27,14 @@ export default function StatsPage() {
   return (
     <div className="stack">
       <h1>Statystyki</h1>
-      <p className="muted">Wyniki sumowane ze wszystkich testów wszystkich użytkowników. W trybie „bez limitu” liczą się tylko pytania sprawdzone lub pominięte.</p>
+      <p className="muted">Procent poprawnych odpowiedzi ze wszystkich testów wszystkich użytkowników – w wielokrotnym wyborze liczy się każde
+        trafne pole A–D. W testach 30/50 pytań liczą się wszystkie pytania testu, w trybie „bez limitu” tylko sprawdzone
+        lub pominięte.</p>
       <div className="card">
         <div className="big">{fmtPct(overall.percent)}</div>
         <p className="muted" style={{ margin: 0 }}>
-          {fmtPoints(overall.score)} / {fmtPoints(overall.maxScore)} pkt · {testsLabel(overall.tests)}
+          {overall.correct} / {overall.total} poprawnych · {fmtPoints(overall.score)} / {fmtPoints(overall.maxScore)} pkt ·{" "}
+          {testsLabel(overall.tests)}
         </p>
       </div>
       <div className="stat-grid">
@@ -39,7 +42,8 @@ export default function StatsPage() {
           <div className="stat" key={t}>
             <div className="value">{fmtPct(byType[t].percent)}</div>
             <div className="label">
-              {TYPE_LABEL[t]} · {fmtPoints(byType[t].score)}/{fmtPoints(byType[t].maxScore)} pkt · {testsLabel(byType[t].tests)}
+              {TYPE_LABEL[t]} · {byType[t].correct}/{byType[t].total} {t === "multi" ? "pól" : "pytań"} ·{" "}
+              {fmtPoints(byType[t].score)}/{fmtPoints(byType[t].maxScore)} pkt · {testsLabel(byType[t].tests)}
             </div>
           </div>
         ))}
@@ -53,13 +57,14 @@ export default function StatsPage() {
           <div className="card"><Chart points={history.map((h) => h.percent)} /></div>
           <div className="card">
             <div className="table-wrap"><table>
-              <thead><tr><th>#</th><th>Data</th><th>Typ</th><th>Punkty</th><th>%</th></tr></thead>
+              <thead><tr><th>#</th><th>Data</th><th>Typ</th><th>Poprawne</th><th>Punkty</th><th>%</th></tr></thead>
               <tbody>
                 {[...history].reverse().map((h, i) => (
                   <tr key={h.id}>
                     <td>{history.length - i}</td>
                     <td>{new Date(h.finishedAt).toLocaleString("pl-PL", { dateStyle: "short", timeStyle: "short" })}</td>
                     <td>{TYPE_LABEL[h.type]}{h.mode === "endless" ? " · bez limitu" : ""}</td>
+                    <td>{h.correct} / {h.total}</td>
                     <td>{fmtPoints(h.score)} / {fmtPoints(h.maxScore)}</td>
                     <td>{fmtPct(h.percent)}</td>
                   </tr>
@@ -76,8 +81,8 @@ export default function StatsPage() {
 function Chart({ points }: { points: number[] }) {
   const [hover, setHover] = useState<number | null>(null);
   const W = 420, H = 200, L = 36, R = 12, T = 12, B = 24;
-  // Wynik może być ujemny (−1 pkt za błędy w jednokrotnym), więc oś zaczyna się poniżej zera, jeśli trzeba.
-  const min = Math.min(0, Math.floor(Math.min(...points) / 25) * 25);
+  // Procent poprawnych odpowiedzi zawsze mieści się w 0–100%.
+  const min = 0;
   const max = 100;
   const x = (i: number) => (points.length === 1 ? L + (W - L - R) / 2 : L + (i * (W - L - R)) / (points.length - 1));
   const y = (v: number) => T + ((max - v) * (H - T - B)) / (max - min);

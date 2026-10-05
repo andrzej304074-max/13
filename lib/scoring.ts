@@ -26,6 +26,15 @@ export function scoreMulti(selected: number[], correct: number[]): number {
   return points;
 }
 
+/** Jednostki do procentu poprawności: pytanie (jednokrotny) albo pole A–D (wielokrotny). */
+export const UNITS_PER_QUESTION: Record<QuestionType, number> = { single: 1, multi: OPTION_COUNT };
+
+/** Liczba poprawnych jednostek w odpowiedzi: 1/0 dla jednokrotnego, trafne pola (0–4) dla wielokrotnego. */
+export function correctUnits(type: QuestionType, points: number, skipped = false): number {
+  if (skipped) return 0;
+  return type === "single" ? (points === 2 ? 1 : 0) : Math.round(points * 2);
+}
+
 export function scoreAnswer(type: QuestionType, selected: number[], correct: number[]): number {
   return type === "single" ? scoreSingle(selected, correct) : scoreMulti(selected, correct);
 }

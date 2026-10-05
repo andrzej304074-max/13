@@ -15,8 +15,12 @@ bez limitu czasu; nie można się cofać ani przeskakiwać pytań, a do statysty
 („Sprawdź”) lub pominięte („Pomiń” = 0 z 2 pkt) – na bieżąco, nawet bez kliknięcia „Zakończ test”. Po kliknięciu „Sprawdź” widać, które odpowiedzi były dobre,
 ile punktów przyznano i wyjaśnienie. Punktacja i limit czasu są liczone na serwerze.
 
-Statystyki (`/stats`) sumują wyniki **wszystkich** zakończonych testów wszystkich użytkowników
-(procent zdobytych punktów względem możliwych do zdobycia) i pokazują wykres postępu. Brak logowania.
+Procent w podsumowaniu i statystykach to **procent poprawnych odpowiedzi**, a nie punktów: w jednokrotnym wyborze
+poprawne pytania / wszystkie pytania, w wielokrotnym – trafne pola A–D / wszystkie pola (4 na pytanie). W testach
+30/50 pytań mianownikiem są wszystkie pytania testu (bez odpowiedzi = niepoprawne), w trybie „Bez limitu” – pytania
+sprawdzone i pominięte. Punkty (+2/−1, 0,5 za pole) są pokazywane obok.
+
+Statystyki (`/stats`) sumują wyniki **wszystkich** testów wszystkich użytkowników i pokazują wykres postępu. Brak logowania.
 
 ## Pytania
 

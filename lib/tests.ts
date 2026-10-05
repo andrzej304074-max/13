@@ -1,6 +1,14 @@
 import { query } from "./db";
 import { drawQuestions, getQuestion, toPublic } from "./questions";
-import { durationMinutes, MAX_POINTS_PER_QUESTION, scoreAnswer, validateSelection, type TestSize } from "./scoring";
+import {
+  correctUnits,
+  durationMinutes,
+  MAX_POINTS_PER_QUESTION,
+  scoreAnswer,
+  UNITS_PER_QUESTION,
+  validateSelection,
+  type TestSize,
+} from "./scoring";
 import type { AnswerFeedback, QuestionType, TestMode, TestState } from "./types";
 
 export class HttpError extends Error {
@@ -97,6 +105,8 @@ function toState(t: TestRow, answers: AnswerRow[]): TestState {
     finishedAt: t.finished_at ? t.finished_at.toISOString() : null,
     score: answers.reduce((s, a) => s + a.points, 0),
     maxScore: endless ? answers.length * MAX_POINTS_PER_QUESTION : t.max_score,
+    correct: answers.reduce((s, a) => s + correctUnits(t.type, a.points, a.skipped), 0),
+    total: (endless ? answers.length : t.question_ids.length) * UNITS_PER_QUESTION[t.type],
     solutions,
   };
 }
@@ -180,14 +190,34 @@ export async function finishTest(id: string): Promise<TestState> {
   return toState(t, await loadAnswers(id));
 }
 
+interface StatsTotals {
+  score: number;
+  maxScore: number;
+  /** Poprawne jednostki / wszystkie jednostki (pytania w jednokrotnym, pola A–D w wielokrotnym). */
+  correct: number;
+  total: number;
+  percent: number;
+  tests: number;
+}
+
 export interface Stats {
-  overall: { score: number; maxScore: number; percent: number; tests: number };
-  byType: Record<QuestionType, { score: number; maxScore: number; percent: number; tests: number }>;
-  history: { id: string; type: QuestionType; mode: TestMode; finishedAt: string; score: number; maxScore: number; percent: number }[];
+  overall: StatsTotals;
+  byType: Record<QuestionType, StatsTotals>;
+  history: {
+    id: string;
+    type: QuestionType;
+    mode: TestMode;
+    finishedAt: string;
+    score: number;
+    maxScore: number;
+    correct: number;
+    total: number;
+    percent: number;
+  }[];
 }
 
 /** Testy liczone do statystyk: zakończone oraz rozpoczęte testy bez limitu z co najmniej jedną odpowiedzią. */
-const COUNTED = "(finished_at IS NOT NULL OR (mode = 'endless' AND max_score > 0))";
+const COUNTED = "(t.finished_at IS NOT NULL OR (t.mode = 'endless' AND t.max_score > 0))";
 
 const pct = (score: number, max: number) => (max > 0 ? Math.round((score / max) * 1000) / 10 : 0);
 
@@ -198,25 +228,50 @@ export async function getStats(): Promise<Stats> {
        score = (SELECT COALESCE(SUM(points), 0) FROM answers a WHERE a.test_id = t.id)
      WHERE finished_at IS NULL AND deadline < now() - interval '5 seconds'`,
   );
-  const { rows: agg } = await query<{ type: QuestionType; score: number; max_score: number; tests: string }>(
-    `SELECT type, SUM(score) AS score, SUM(max_score) AS max_score, COUNT(*) AS tests
-     FROM tests WHERE ${COUNTED} GROUP BY type`,
+  // Dla każdego liczonego testu: poprawne jednostki i liczba wszystkich jednostek (test 30/50 – całe pytania testu,
+  // bez limitu – tylko sprawdzone i pominięte).
+  const perTest = `
+    SELECT t.id, t.type, t.mode, t.score, t.max_score, COALESCE(t.finished_at, t.started_at) AS at,
+      COALESCE(SUM(CASE WHEN a.skipped THEN 0 WHEN t.type = 'single' THEN (a.points = 2)::int ELSE a.points * 2 END), 0)
+        AS correct,
+      (CASE WHEN t.mode = 'endless' THEN COUNT(a.question_id) ELSE cardinality(t.question_ids) END)
+        * (CASE WHEN t.type = 'single' THEN 1 ELSE 4 END) AS total
+    FROM tests t LEFT JOIN answers a ON a.test_id = t.id
+    WHERE ${COUNTED}
+    GROUP BY t.id`;
+  type PerTest = { id: string; type: QuestionType; mode: TestMode; score: number; max_score: number; at: Date; correct: number; total: string };
+  const { rows: agg } = await query<{ type: QuestionType; score: number; max_score: number; correct: number; total: string; tests: string }>(
+    `SELECT type, SUM(score) AS score, SUM(max_score) AS max_score, SUM(correct) AS correct, SUM(total) AS total,
+       COUNT(*) AS tests
+     FROM (${perTest}) p GROUP BY type`,
   );
-  const { rows: hist } = await query<TestRow & { at: Date }>(
-    `SELECT * FROM (SELECT *, COALESCE(finished_at, started_at) AS at FROM tests WHERE ${COUNTED}
-       ORDER BY at DESC LIMIT 100) h
-     ORDER BY at ASC`,
+  const { rows: hist } = await query<PerTest>(
+    `SELECT * FROM (${perTest} ORDER BY at DESC LIMIT 100) h ORDER BY at ASC`,
   );
 
-  const empty = () => ({ score: 0, maxScore: 0, percent: 0, tests: 0 });
+  const empty = (): StatsTotals => ({ score: 0, maxScore: 0, correct: 0, total: 0, percent: 0, tests: 0 });
   const byType = { single: empty(), multi: empty() };
   for (const r of agg) {
-    byType[r.type] = { score: r.score, maxScore: r.max_score, percent: pct(r.score, r.max_score), tests: Number(r.tests) };
+    const correct = Number(r.correct), total = Number(r.total);
+    byType[r.type] = {
+      score: r.score,
+      maxScore: r.max_score,
+      correct,
+      total,
+      percent: pct(correct, total),
+      tests: Number(r.tests),
+    };
   }
-  const score = byType.single.score + byType.multi.score;
-  const maxScore = byType.single.maxScore + byType.multi.maxScore;
+  const sum = (k: "score" | "maxScore" | "correct" | "total" | "tests") => byType.single[k] + byType.multi[k];
   return {
-    overall: { score, maxScore, percent: pct(score, maxScore), tests: byType.single.tests + byType.multi.tests },
+    overall: {
+      score: sum("score"),
+      maxScore: sum("maxScore"),
+      correct: sum("correct"),
+      total: sum("total"),
+      percent: pct(sum("correct"), sum("total")),
+      tests: sum("tests"),
+    },
     byType,
     history: hist.map((t) => ({
       id: t.id,
@@ -225,7 +280,9 @@ export async function getStats(): Promise<Stats> {
       finishedAt: t.at.toISOString(),
       score: t.score,
       maxScore: t.max_score,
-      percent: pct(t.score, t.max_score),
+      correct: Number(t.correct),
+      total: Number(t.total),
+      percent: pct(Number(t.correct), Number(t.total)),
     })),
   };
 }
