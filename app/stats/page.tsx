@@ -2,8 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { api, fmtPct, fmtPoints } from "@/lib/client";
-import { BLOCK_SIZE } from "@/lib/scoring";
+import { BLOCK_SIZES, DEFAULT_BLOCK_SIZE } from "@/lib/scoring";
 import type { Stats } from "@/lib/tests";
+
+const BLOCK_KEY = "owe:blockSize";
 
 const TYPE_LABEL = { single: "jednokrotny", multi: "wielokrotny" } as const;
 
@@ -17,14 +19,35 @@ export default function StatsPage() {
   const [stats, setStats] = useState<Stats | null>(null);
   const [error, setError] = useState<string | null>(null);
 
+  const [blockSize, setBlockSize] = useState<number | null>(null);
+
+  // Wybrany rozmiar bloku zapamiętywany lokalnie w przeglądarce.
   useEffect(() => {
-    api<Stats>("/api/stats").then(setStats).catch((e) => setError(e.message));
+    let saved = DEFAULT_BLOCK_SIZE;
+    try {
+      const v = Number(localStorage.getItem(BLOCK_KEY));
+      if ((BLOCK_SIZES as readonly number[]).includes(v)) saved = v;
+    } catch {}
+    setBlockSize(saved);
   }, []);
+
+  useEffect(() => {
+    if (blockSize === null) return;
+    api<Stats>(`/api/stats?block=${blockSize}`).then(setStats).catch((e) => setError(e.message));
+  }, [blockSize]);
+
+  function chooseBlock(n: number) {
+    setBlockSize(n);
+    try {
+      localStorage.setItem(BLOCK_KEY, String(n));
+    } catch {}
+  }
 
   if (error) return <p className="error">{error}</p>;
   if (!stats) return <p className="muted">Ładowanie…</p>;
 
   const { overall, byType, history, blocks } = stats;
+  const size = stats.blockSize;
   return (
     <div className="stack">
       <h1>Statystyki</h1>
@@ -82,19 +105,26 @@ export default function StatsPage() {
         </>
       )}
 
-      <h2>Postęp (dokładność co {BLOCK_SIZE} pytań)</h2>
+      <h2>Postęp (dokładność co {size} pytań)</h2>
+      <div className="seg" role="group" aria-label="Liczba pytań na kropkę">
+        {BLOCK_SIZES.map((n) => (
+          <button key={n} className={n === size ? "active" : ""} aria-pressed={n === size} onClick={() => chooseBlock(n)}>
+            {n}
+          </button>
+        ))}
+      </div>
       {blocks.length === 0 ? (
         <p className="muted">Brak odpowiedzi.</p>
       ) : (
         <div className="card">
           <p className="muted" style={{ margin: "0 0 8px", fontSize: "0.85rem" }}>
-            Każda kropka to {BLOCK_SIZE} kolejnych sprawdzonych lub pominiętych pytań (wszystkie testy i typy). W wielokrotnym
+            Każda kropka to {size} kolejnych sprawdzonych lub pominiętych pytań (wszystkie testy i typy). W wielokrotnym
             wyborze dokładność pytania to trafne pola / 4. Pusta kropka – blok jeszcze niepełny.
           </p>
           <Chart
             points={blocks.map((b) => b.percent)}
-            ariaLabel={`Dokładność w blokach po ${BLOCK_SIZE} pytań`}
-            partialLast={blocks[blocks.length - 1].questions < BLOCK_SIZE}
+            ariaLabel={`Dokładność w blokach po ${size} pytań`}
+            partialLast={blocks[blocks.length - 1].questions < size}
             label={(i) => {
               const done = blocks.slice(0, i).reduce((s, b) => s + b.questions, 0);
               return `Pytania ${done + 1}–${done + blocks[i].questions}: ${fmtPct(blocks[i].percent)}`;

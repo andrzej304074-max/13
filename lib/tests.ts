@@ -5,7 +5,8 @@ import {
   durationMinutes,
   MAX_POINTS_PER_QUESTION,
   scoreAnswer,
-  BLOCK_SIZE,
+  BLOCK_SIZES,
+  DEFAULT_BLOCK_SIZE,
   UNITS_PER_QUESTION,
   validateSelection,
   type TestSize,
@@ -215,7 +216,8 @@ export interface Stats {
     total: number;
     percent: number;
   }[];
-  /** Dokładność w kolejnych blokach po {@link BLOCK_SIZE} odpowiedzianych pytań (ostatni blok może być niepełny). */
+  /** Dokładność w kolejnych blokach po `blockSize` odpowiedzianych pytań (ostatni blok może być niepełny). */
+  blockSize: number;
   blocks: { questions: number; percent: number }[];
 }
 
@@ -224,7 +226,8 @@ const COUNTED = "(t.finished_at IS NOT NULL OR (t.mode = 'endless' AND t.max_sco
 
 const pct = (score: number, max: number) => (max > 0 ? Math.round((score / max) * 1000) / 10 : 0);
 
-export async function getStats(): Promise<Stats> {
+export async function getStats(requestedBlockSize: number = DEFAULT_BLOCK_SIZE): Promise<Stats> {
+  const blockSize = (BLOCK_SIZES as readonly number[]).includes(requestedBlockSize) ? requestedBlockSize : DEFAULT_BLOCK_SIZE;
   // Domknij testy, którym minął czas (np. ktoś zamknął kartę).
   await query(
     `UPDATE tests t SET finished_at = t.deadline,
@@ -262,7 +265,7 @@ export async function getStats(): Promise<Stats> {
        FROM answers a JOIN tests t ON t.id = a.test_id
      )
      SELECT * FROM (
-       SELECT rn / ${BLOCK_SIZE} AS block, COUNT(*) AS questions, AVG(accuracy) AS accuracy
+       SELECT rn / ${blockSize} AS block, COUNT(*) AS questions, AVG(accuracy) AS accuracy
        FROM q GROUP BY 1 ORDER BY 1 DESC LIMIT 100
      ) b ORDER BY block ASC`,
   );
@@ -302,6 +305,7 @@ export async function getStats(): Promise<Stats> {
       total: Number(t.total),
       percent: pct(Number(t.correct), Number(t.total)),
     })),
+    blockSize,
     blocks: blockRows.map((b) => ({ questions: Number(b.questions), percent: Math.round(b.accuracy * 1000) / 10 })),
   };
 }
