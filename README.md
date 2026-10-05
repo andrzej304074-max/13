@@ -18,23 +18,26 @@ Statystyki (`/stats`) sumują wyniki **wszystkich** zakończonych testów wszyst
 
 ## Pytania
 
-Baza pytań: `data/questions.json`. Format jednego pytania:
+Baza pytań to pliki w `data/questions/` – jeden plik na część testową jednego zestawu OWE
+(np. `owe-21-okregowe.json` = XXI OWE, zawody okręgowe). Każdy nowy plik trzeba dopisać w `data/questions/index.ts`.
+Format jednego pytania:
 
 ```json
 {
-  "id": "s001",
+  "id": "owe21-o-01",
   "type": "single",
-  "edition": "LXVI (2022/2023), etap I",
+  "edition": "XXI OWE (2007/2008), zawody okręgowe",
   "question": "Treść pytania",
   "options": ["A", "B", "C", "D"],
-  "correct": [1],
+  "correct": [0],
   "explanation": "Wyjaśnienie z definicją"
 }
 ```
 
 `type`: `"single"` (dokładnie jedna poprawna) lub `"multi"`; `correct` to indeksy 0–3.
-Po zmianie pliku uruchom `npm run validate-questions`.
-Jeśli w bazie jest mniej pytań danego typu niż 30/50, test zawiera wszystkie dostępne.
+Po zmianie plików uruchom `npm run validate-questions` (sprawdza też, czy każdy plik jest zaimportowany).
+Typ pytań, którego nie ma jeszcze w bazie, jest wyłączony na stronie głównej.
+Jeśli pytań danego typu jest mniej niż 30/50, test zawiera wszystkie dostępne.
 
 ## Uruchomienie lokalne
 

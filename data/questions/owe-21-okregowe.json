@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe21-o-01",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody okręgowe",
+    "question": "Gdy spada cena cementu, to wówczas:",
+    "options": [
+      "wzrasta popyt na betoniarki",
+      "spada cena betoniarek",
+      "wzrasta wielkość podaży cementu",
+      "spada wielkość popytu na betoniarki"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Cement i betoniarki to dobra komplementarne (używane razem). Gdy cement tanieje, buduje się więcej, więc rośnie popyt na betoniarki – cała krzywa popytu przesuwa się w prawo. Spadek ceny cementu przy danej krzywej podaży oznacza spadek, a nie wzrost wielkości podaży cementu."
+  },
+  {
+    "id": "owe21-o-02",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody okręgowe",
+    "question": "Roman lubi bilard i napoje izotoniczne. Który z poniższych warunków musi być spełniony, aby mógł on osiągnąć maksymalną użyteczność całkowitą?",
+    "options": [
+      "użyteczność całkowita czerpana z obydwu dóbr musi być jednakowa",
+      "iloczyn użyteczności krańcowej i ceny jednego dobra powinien być równy iloczynowi użyteczności krańcowej i ceny drugiego dobra",
+      "stosunek użyteczności całkowitej czerpanej z konsumpcji każdego z dóbr do jego ceny powinien być jednakowy dla obu dóbr",
+      "żadna z powyższych odpowiedzi nie jest prawidłowa"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Konsument maksymalizuje użyteczność, gdy stosunek użyteczności krańcowej do ceny jest taki sam dla obu dóbr: MU₁/P₁ = MU₂/P₂ (II prawo Gossena), przy wydaniu całego dochodu. Żadna z odpowiedzi tego nie opisuje: A i C dotyczą użyteczności całkowitej zamiast krańcowej, a B mnoży użyteczność przez cenę zamiast ją dzielić."
+  },
+  {
+    "id": "owe21-o-03",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody okręgowe",
+    "question": "Które z poniższych stwierdzeń jest prawdziwe w odniesieniu do pojęcia „dobro publiczne”?",
+    "options": [
+      "koszt krańcowy związany z dostarczeniem dobra publicznego kolejnemu konsumentowi jest bliski zeru",
+      "każdy konsument dobra publicznego może być w łatwy sposób wykluczony z konsumpcji tego dobra",
+      "dobra publiczne nie mogą być wytwarzane przez sektor prywatny",
+      "dobra publiczne są zużywane wyłącznie przez instytucje rządowe (publiczne)"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Dobro publiczne jest niekonkurencyjne (kolejny konsument nie zmniejsza konsumpcji innych, więc koszt krańcowy obsłużenia go jest bliski zeru) i niewykluczalne (trudno kogoś wykluczyć z konsumpcji, np. obrona narodowa, latarnia morska). Dobra publiczne może wytwarzać także sektor prywatny, a korzystają z nich wszyscy, nie tylko instytucje państwowe."
+  },
+  {
+    "id": "owe21-o-04",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody okręgowe",
+    "question": "Jeżeli funkcja produktu krańcowego znajduje się powyżej funkcji produktu przeciętnego, to funkcja produktu przeciętnego jest:",
+    "options": [
+      "rosnąca",
+      "stała",
+      "malejąca",
+      "nie można tego stwierdzić bez dodatkowych informacji"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Gdy produkt krańcowy (MP) jest większy od przeciętnego (AP), każda kolejna jednostka czynnika dodaje więcej niż dotychczasowa średnia, więc średnia rośnie. AP osiąga maksimum, gdy MP = AP, a gdy MP < AP – maleje."
+  },
+  {
+    "id": "owe21-o-05",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody okręgowe",
+    "question": "W sytuacji wyboru konsumenta pomiędzy dwoma dobrami jego krzywe obojętności będą liniami prostopadłymi do jednej z osi, gdy:",
+    "options": [
+      "dobra są względem siebie komplementarne",
+      "dobra są doskonałymi substytutami",
+      "jedno z dóbr jest dobrem niechcianym",
+      "jedno z dóbr jest konsumentowi obojętne"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Jeśli jedno z dóbr jest konsumentowi obojętne (neutralne), zwiększanie jego ilości nie zmienia użyteczności – liczy się tylko drugie dobro. Krzywe obojętności są wtedy liniami prostopadłymi do osi dobra cenionego. Dla dóbr komplementarnych krzywe mają kształt litery L, dla doskonałych substytutów są ujemnie nachylonymi prostymi, a dla dobra niechcianego – mają dodatnie nachylenie."
+  },
+  {
+    "id": "owe21-o-06",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody okręgowe",
+    "question": "Zysk przedsiębiorstwa wolnokonkurencyjnego osiąga maksimum, wówczas gdy:",
+    "options": [
+      "utarg krańcowy jest równy kosztowi krańcowemu, a koszt krańcowy rośnie",
+      "utarg krańcowy jest równy kosztowi krańcowemu, a koszt krańcowy maleje",
+      "utarg krańcowy wynosi zero",
+      "przeciętny koszt całkowity osiąga minimum"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Zysk jest maksymalny, gdy utarg krańcowy równa się kosztowi krańcowemu (MR = MC; w konkurencji doskonałej MR = cena), a koszt krańcowy w tym punkcie rośnie – przy malejącym MC punkt MR = MC oznacza minimum zysku. MR = 0 to warunek maksymalizacji utargu, a minimum kosztu przeciętnego to optimum techniczne, nie optimum zysku."
+  },
+  {
+    "id": "owe21-o-07",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody okręgowe",
+    "question": "W długim okresie firmy działające na rynku oligopolistycznym mogą:",
+    "options": [
+      "związać się stałymi porozumieniami cenowymi",
+      "porozumiewać się ze sobą w celu podziału rynków zbytu",
+      "prowadzić wojny cenowe",
+      "wszystkie powyższe odpowiedzi są prawidłowe"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Oligopol to rynek kilku dużych, współzależnych firm. Mogą one zawierać porozumienia cenowe (kartel), dzielić między siebie rynki zbytu albo prowadzić wojny cenowe – wszystkie te zachowania opisuje teoria oligopolu (choć zmowy są zwykle zakazane przez prawo konkurencji)."
+  },
+  {
+    "id": "owe21-o-08",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody okręgowe",
+    "question": "Paradoks zapobiegliwości to zjawisko polegające na:",
+    "options": [
+      "jednoczesnym wzroście oszczędności i inwestycji",
+      "jednoczesnym spadku oszczędności i inwestycji",
+      "spadku dochodu narodowego zapewniającego równowagę pod wpływem wzrostu skłonności do oszczędzania",
+      "jednoczesnym zwiększeniu udziału oszczędności mniej ryzykownych w oszczędnościach ogółem i wzroście stopy zwrotu"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Paradoks zapobiegliwości (oszczędzania) opisał J.M. Keynes: gdy wszyscy chcą więcej oszczędzać, spada konsumpcja, a więc popyt globalny i dochód narodowy w stanie równowagi. W efekcie łączne oszczędności mogą wcale nie wzrosnąć – to, co racjonalne dla jednostki, szkodzi całej gospodarce."
+  },
+  {
+    "id": "owe21-o-09",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody okręgowe",
+    "question": "Krzywa Phillipsa obrazuje zależność pomiędzy:",
+    "options": [
+      "stopą inflacji a stopą bezrobocia",
+      "zapotrzebowaniem na pracę a stopą bezrobocia",
+      "wielkością luki PKB a stopą bezrobocia przymusowego",
+      "stopą oprocentowania kredytów inwestycyjnych a stopą bezrobocia"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Krzywa Phillipsa (A.W. Phillips, 1958) pokazuje odwrotną zależność między stopą bezrobocia a tempem wzrostu płac, a w wersji zmodyfikowanej – stopą inflacji: niższe bezrobocie wiąże się z wyższą inflacją (w krótkim okresie)."
+  },
+  {
+    "id": "owe21-o-10",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody okręgowe",
+    "question": "Zgodnie z zasadą akceleracji:",
+    "options": [
+      "wzrost cen produktów przedsiębiorstwa zwiększa rozmiary jego produkcji",
+      "zmiana popytu konsumpcyjnego powoduje o wiele większą zmianę popytu inwestycyjnego",
+      "wzrost poziomu wynagrodzeń zwiększa presję inflacyjną",
+      "wzrost stopy bezrobocia powiększa deficyt finansów publicznych"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Zasada akceleracji mówi, że inwestycje zależą od zmian popytu (produkcji), a nie od jego poziomu. Ponieważ wartość kapitału potrzebnego do produkcji jest wielokrotnie większa niż wartość rocznej produkcji, nawet niewielka zmiana popytu konsumpcyjnego wywołuje dużo większą procentowo zmianę popytu inwestycyjnego."
+  },
+  {
+    "id": "owe21-o-11",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody okręgowe",
+    "question": "Bezrobocie frykcyjne związane jest z:",
+    "options": [
+      "niedopasowaniem wymagań pracodawców i kwalifikacji siły roboczej",
+      "utrzymywaniem się poziomu wynagrodzeń powyżej poziomu równowagi wyznaczonego przez przecięcie się krzywej popytu i podaży pracy",
+      "wejściem gospodarki w fazę recesji",
+      "poszukiwaniem nowego miejsca pracy w związku ze zmianą miejsca zamieszkania"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Bezrobocie frykcyjne wynika z naturalnych przepływów na rynku pracy – czasu potrzebnego na znalezienie nowej pracy, np. po przeprowadzce czy zmianie pracodawcy. Niedopasowanie kwalifikacji do wymagań to bezrobocie strukturalne, płace powyżej poziomu równowagi – bezrobocie klasyczne, a recesja – bezrobocie koniunkturalne."
+  },
+  {
+    "id": "owe21-o-12",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody okręgowe",
+    "question": "Baza monetarna obejmuje:",
+    "options": [
+      "gotówkę w obiegu i rezerwy gotówkowe banków komercyjnych w banku centralnym",
+      "gotówkę w obiegu i depozyty w złotych o terminie zapadalności do 1 miesiąca",
+      "gotówkę w obiegu i depozyty terminowe w złotych i walutach wymienialnych o terminie zapadalności do 1 roku",
+      "gotówkę w obiegu oraz wszystkie wkłady w bankach komercyjnych bez względu na ich walutę i termin zapadalności"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Baza monetarna (pieniądz rezerwowy, M0) to gotówka w obiegu oraz rezerwy banków komercyjnych utrzymywane w banku centralnym. Pozostałe odpowiedzi opisują szersze agregaty podaży pieniądza (M1, M2, M3), które obejmują depozyty."
+  },
+  {
+    "id": "owe21-o-13",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody okręgowe",
+    "question": "PKB per capita:",
+    "options": [
+      "pozwala określić rzeczywistą kapitałochłonność gospodarki",
+      "uwzględnia zarówno dochody netto z własności za granicą, jak i produkcję wytworzoną w szarej strefie",
+      "wyliczony według parytetu siły nabywczej pozwala dokonać międzynarodowego porównania jakości życia poszczególnych obywateli",
+      "nie uwzględnia różnic w podziale dochodów w społeczeństwie"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "PKB per capita to wielkość przeciętna – nie mówi nic o tym, jak dochód jest rozdzielony w społeczeństwie (nierówności mierzy np. współczynnik Giniego). PKB nie obejmuje dochodów netto z własności za granicą (to różnica między PKB a PNB), a nawet liczony według parytetu siły nabywczej nie mierzy jakości życia konkretnych obywateli."
+  },
+  {
+    "id": "owe21-o-14",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody okręgowe",
+    "question": "Goodwill to:",
+    "options": [
+      "rodzaj postawy kierownika, który chętnie akceptuje pomysły swoich podwładnych",
+      "całokształt wiedzy technicznej przedsiębiorstwa umożliwiający produkcję określonego produktu lub usługi",
+      "zbiór dobrych praktyk w zakresie nadzoru właścicielskiego",
+      "wartość nadwyżki ceny zakupu przedsiębiorstwa ponad wartość jego aktywów netto przy przejęciu przedsiębiorstwa"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Goodwill (wartość firmy) to nadwyżka ceny nabycia przedsiębiorstwa nad wartością jego aktywów netto (aktywa minus zobowiązania). Odzwierciedla m.in. renomę, markę, bazę klientów i pozycję rynkową. Nabywca wykazuje go w bilansie jako wartość niematerialną."
+  },
+  {
+    "id": "owe21-o-15",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody okręgowe",
+    "question": "Akredytywa to:",
+    "options": [
+      "jedna z form rozliczeń bezgotówkowych pomiędzy firmami",
+      "odroczenie spłaty kredytu",
+      "dokument potwierdzający posiadanie zdolności kredytowej przez kredytobiorcę",
+      "forma zabezpieczenia kredytu"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Akredytywa (dokumentowa) to forma rozliczeń bezgotówkowych, zwłaszcza w handlu zagranicznym: bank na zlecenie kupującego zobowiązuje się zapłacić sprzedającemu, gdy ten przedstawi określone dokumenty (np. dowody wysyłki towaru). Zabezpiecza obie strony transakcji."
+  },
+  {
+    "id": "owe21-o-16",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody okręgowe",
+    "question": "Osoba przeprowadzająca likwidację podmiotu postawionego w stan likwidacji to:",
+    "options": [
+      "syndyk",
+      "komornik",
+      "sędzia komisarz",
+      "windykator"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Według klucza: syndyk – spośród podanych osób tylko on przeprowadza likwidację majątku podmiotu (w postępowaniu upadłościowym). Uwaga: formalnie likwidację spółki postawionej w stan likwidacji prowadzi likwidator, a syndyk zarządza masą upadłości. Komornik prowadzi egzekucję, sędzia komisarz nadzoruje postępowanie upadłościowe, a windykator ściąga należności."
+  },
+  {
+    "id": "owe21-o-17",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody okręgowe",
+    "question": "Promesa kredytowa to:",
+    "options": [
+      "możliwość wydłużenia okresu kredytowania",
+      "zestawienie wysokości rat kredytu wraz z kosztami jego obsługi",
+      "zawieszenie spłaty kredytu w związku ze złą sytuacją kredytobiorcy",
+      "przyrzeczenie udzielenia kredytu przez bank"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Promesa kredytowa to przyrzeczenie banku, że udzieli kredytu, jeśli klient spełni określone warunki. Przydaje się np. w przetargach lub przy ubieganiu się o dotacje, gdy trzeba wykazać zdolność do sfinansowania przedsięwzięcia."
+  },
+  {
+    "id": "owe21-o-18",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody okręgowe",
+    "question": "Źródłami dochodów budżetu państwa nie są:",
+    "options": [
+      "akcyza na paliwa silnikowe",
+      "cła na importowane wyroby hutnicze",
+      "środki uzyskane ze sprzedaży obligacji skarbu państwa",
+      "opłaty sądowe i skarbowe"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Środki ze sprzedaży obligacji skarbowych to przychód budżetu, a nie dochód – służą finansowaniu deficytu i tworzą dług, który trzeba spłacić. Dochodami budżetu są m.in. podatki (np. akcyza), cła oraz opłaty (sądowe, skarbowe)."
+  },
+  {
+    "id": "owe21-o-19",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody okręgowe",
+    "question": "W Polsce rząd celem pokrycia nieprzewidzianych, bieżących wydatków budżetu państwa może:",
+    "options": [
+      "zaciągnąć niskooprocentowany kredyt w Narodowym Banku Polskim",
+      "wstrzymać regulowanie zobowiązań z tytułu wcześniej zaciągniętych kredytów i pożyczek do czasu zwiększenia dochodów budżetowych",
+      "wykorzystać całą rezerwę ogólną",
+      "wyemitować skarbowe papiery wartościowe ponad górny pułap zapisany w ustawie budżetowej"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Na wydatki nieprzewidziane w ustawie budżetowej tworzy się rezerwę ogólną, którą dysponuje Rada Ministrów – może ją wykorzystać w całości. Konstytucja zakazuje finansowania deficytu kredytem w NBP, a wstrzymanie spłaty długu czy emisja długu ponad limit z ustawy budżetowej są niedopuszczalne."
+  },
+  {
+    "id": "owe21-o-20",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody okręgowe",
+    "question": "Wskaż podstawową cechę funduszy inwestycyjnych typu no load:",
+    "options": [
+      "nie pobierają prowizji od sprzedaży jednostek uczestnictwa",
+      "zawsze osiągają wyniki gorsze od benchmarku",
+      "nie naliczają opłat za zarządzanie aktywami",
+      "są sprzedawane tylko w ofercie prywatnej"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Fundusze typu no-load nie pobierają opłat manipulacyjnych (prowizji) przy sprzedaży ani odkupieniu jednostek uczestnictwa. Nadal pobierają jednak opłatę za zarządzanie aktywami, z której pokrywają swoje koszty."
+  },
+  {
+    "id": "owe21-o-21",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody okręgowe",
+    "question": "W strukturze portfela inwestycyjnego otwartych funduszy emerytalnych największy udział mają (stan na rok 2007):",
+    "options": [
+      "skarbowe instrumenty dłużne",
+      "akcje",
+      "depozyty bankowe i bankowe papiery wartościowe",
+      "inwestycje w zagraniczne akcje i instrumenty dłużne"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W 2007 r. większość aktywów otwartych funduszy emerytalnych stanowiły skarbowe instrumenty dłużne (obligacje i bony skarbowe), a udział akcji ograniczał ustawowy limit (40%). Po reformie z 2014 r. obligacje skarbowe przeniesiono z OFE do ZUS i obecnie w portfelach OFE dominują akcje."
+  },
+  {
+    "id": "owe21-o-22",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody okręgowe",
+    "question": "Minutes to:",
+    "options": [
+      "okres bezpośrednio poprzedzający ogłoszenie przez FED decyzji o wysokości podstawowych stóp procentowych",
+      "faza składania zleceń na otwarcie sesji w notowaniach ciągłych na Giełdzie Papierów Wartościowych w Warszawie",
+      "sytuacja na rynku walutowym, kiedy w danym okresie nie zawiera się żadnych transakcji",
+      "zapis dyskusji na posiedzeniu Rady Polityki Pieniężnej"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "„Minutes” (Opis dyskusji) to publikowane po posiedzeniu sprawozdanie z dyskusji na posiedzeniu decyzyjnym Rady Polityki Pieniężnej. Przedstawia argumenty członków Rady bez podawania nazwisk i zwiększa przejrzystość polityki pieniężnej (praktyka wzorowana na Fed)."
+  },
+  {
+    "id": "owe21-o-23",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody okręgowe",
+    "question": "Wysoką wartość, którego z poniżej podanych wskaźników można uznać za korzystną z punktu widzenia inwestora giełdowego?",
+    "options": [
+      "P/E",
+      "P/CF",
+      "P/BV",
+      "DY"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "DY (dividend yield, stopa dywidendy) = dywidenda na akcję / cena akcji. Wysoka wartość oznacza wysoki dochód z dywidend w stosunku do ceny akcji – korzystne dla inwestora. Wysokie P/E, P/CF czy P/BV oznaczają raczej, że akcja jest droga w relacji do zysku, przepływów pieniężnych lub wartości księgowej."
+  },
+  {
+    "id": "owe21-o-24",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody okręgowe",
+    "question": "Krótka sprzedaż na giełdzie oznacza:",
+    "options": [
+      "sprzedaż opcji kupna ze stratą",
+      "zakup i sprzedaż papierów wartościowych w ciągu danej sesji giełdowej",
+      "zamknięcie pozycji w kontrakcie terminowym",
+      "pożyczenie papierów wartościowych w celu ich sprzedaży"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Krótka sprzedaż (short selling) polega na sprzedaży pożyczonych papierów wartościowych w oczekiwaniu na spadek ich ceny. Inwestor odkupuje je później taniej i oddaje pożyczkodawcy, zarabiając na różnicy cen. Kupno i sprzedaż w ciągu jednej sesji to tzw. day trading."
+  },
+  {
+    "id": "owe21-o-25",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody okręgowe",
+    "question": "Na warszawskiej Giełdzie Papierów Wartościowych publikowany jest indeks mWIG40, który:",
+    "options": [
+      "obejmuje 40 spółek rynku podstawowego o największej kapitalizacji i najwyższych obrotach",
+      "wyliczany jest dla spółek z sektora mediów o kapitalizacji większej niż 40 mln zł",
+      "zastąpił indeks MIDWIG",
+      "obejmuje 40 spółek o najmniejszej kapitalizacji"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "mWIG40 to indeks 40 średnich spółek GPW, który w 2007 r. zastąpił indeks MIDWIG. Indeks największych spółek to WIG20, a mniejszych – sWIG80. Indeks spółek medialnych to WIG-media."
+  },
+  {
+    "id": "owe21-o-26",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody okręgowe",
+    "question": "Działanie firmy Michelin, która przejęła dostawców kauczuku i drutu, można nazwać:",
+    "options": [
+      "dywersyfikacją koncentryczną",
+      "integracją pionową wstecz",
+      "integracją pionową w przód",
+      "specjalizacją selektywną"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Integracja pionowa wstecz polega na przejmowaniu dostawców, czyli wcześniejszych ogniw łańcucha wartości – producent opon Michelin przejął dostawców kauczuku i drutu. Przejmowanie odbiorców i dystrybutorów to integracja pionowa w przód, a wejście w nowe, technologicznie powiązane produkty – dywersyfikacja koncentryczna."
+  },
+  {
+    "id": "owe21-o-27",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody okręgowe",
+    "question": "Rekrutacja wewnętrzna jest przeprowadzana za pomocą:",
+    "options": [
+      "wysłania pisemnych ofert pracy do wybranych osób zatrudnionych w innych przedsiębiorstwach",
+      "zamieszczania ogłoszeń tylko w mediach o zasięgu krajowym",
+      "rozpatrywania kandydatur tylko wśród zatrudnionych pracowników w danej organizacji",
+      "zlecania przeprowadzenia naboru przez „łowców głów” (head hunters)"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Rekrutacja wewnętrzna to szukanie kandydatów wyłącznie wśród obecnych pracowników organizacji (awanse, przeniesienia). Ogłoszenia w mediach, oferty dla pracowników innych firm i zlecanie naboru „łowcom głów” to formy rekrutacji zewnętrznej."
+  },
+  {
+    "id": "owe21-o-28",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody okręgowe",
+    "question": "Outplacement to:",
+    "options": [
+      "program pomocy zwalnianym pracownikom najczęściej finansowany przez pracodawcę",
+      "przenoszenie stanowisk pracy z krajów o wysokich kosztach pracy do krajów o niskich kosztach pracy",
+      "zlecanie przetargów wyspecjalizowanym podmiotom zewnętrznym",
+      "organizowanie spotkań integracyjnych w firmach"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Outplacement (zwolnienia monitorowane) to program pomocy zwalnianym pracownikom – doradztwo zawodowe, szkolenia, pomoc w szukaniu nowej pracy – zwykle finansowany przez pracodawcę. Przenoszenie miejsc pracy do krajów o niższych kosztach to offshoring, a zlecanie zadań firmom zewnętrznym – outsourcing."
+  },
+  {
+    "id": "owe21-o-29",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody okręgowe",
+    "question": "Benchmarking oznacza:",
+    "options": [
+      "porównywanie wyników finansowych przedsiębiorstwa z przeciętnymi wynikami dla branży, w której prowadzi ono działalność",
+      "realizowanie strategii przedsiębiorstwa z uwzględnieniem spojrzenia projakościowego",
+      "analizę siły oddziaływania dostawców i odbiorców na pozycję rynkową przedsiębiorstwa",
+      "porównywanie procesów i praktyk stosowanych w przedsiębiorstwie w odniesieniu do najsilniejszego konkurenta"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Benchmarking to porównywanie własnych procesów i praktyk z najlepszymi w branży (np. najsilniejszym konkurentem lub liderem), aby przejąć sprawdzone rozwiązania. Wzorcem są najlepsi, a nie przeciętne wyniki branży."
+  },
+  {
+    "id": "owe21-o-30",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody okręgowe",
+    "question": "Przedsięwzięcia o małym udziale w szybko rosnącym rynku według macierzy Boston Consulting Group (BCG) reprezentują:",
+    "options": [
+      "„znaki zapytania”",
+      "„gwiazdy”",
+      "„dojne krowy”",
+      "„pieski”"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W macierzy BCG oś pionowa to tempo wzrostu rynku, a pozioma – względny udział w rynku. Mały udział w szybko rosnącym rynku to „znaki zapytania”; duży udział w szybko rosnącym – „gwiazdy”; duży udział w wolno rosnącym – „dojne krowy”; mały udział w wolno rosnącym – „psy” („pieski”)."
+  }
+]

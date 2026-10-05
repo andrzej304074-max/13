@@ -1,7 +1,7 @@
-import rawQuestions from "@/data/questions.json";
+import { QUESTIONS } from "@/data/questions";
 import type { PublicQuestion, Question, QuestionType } from "./types";
 
-const questions = rawQuestions as Question[];
+const questions = QUESTIONS;
 const byId = new Map(questions.map((q) => [q.id, q]));
 
 export function getQuestion(id: string): Question | undefined {

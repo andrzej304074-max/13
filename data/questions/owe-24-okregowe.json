@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe24-o-01",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody okręgowe",
+    "question": "Funkcją ekonomii pozytywnej jest:",
+    "options": [
+      "formułowanie warunków koniecznych do osiągnięcia pożądanych stanów w gospodarce",
+      "ocena zachodzących zjawisk ekonomicznych",
+      "wyjaśnianie zjawisk gospodarczych",
+      "opiniowanie mikroekonomicznej polityki gospodarczej państwa"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Ekonomia pozytywna opisuje i wyjaśnia zjawiska gospodarcze takimi, jakie są („co jest”), bez ich oceniania. Ekonomia normatywna ocenia zjawiska i formułuje zalecenia („co powinno być”) – do niej należą ocena zjawisk, wskazywanie warunków osiągnięcia pożądanych stanów i opiniowanie polityki gospodarczej."
+  },
+  {
+    "id": "owe24-o-02",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody okręgowe",
+    "question": "Wzrost dochodu realnego o 10% przy dochodowej elastyczności popytu na dane dobro wynoszącej 0,9, oznacza, że:",
+    "options": [
+      "zmniejszy się suma całkowitych wydatków konsumenta na to dobro, a udział wydatków na to dobro w całości wydatków zmniejszy się",
+      "zwiększy się suma całkowitych wydatków konsumenta na to dobro, a udział wydatków na to dobro w całości wydatków zmniejszy się",
+      "zmniejszy się suma całkowitych wydatków konsumenta na to dobro, a udział wydatków na to dobro w całości wydatków zwiększy się",
+      "zwiększy się suma całkowitych wydatków konsumenta na to dobro, a udział wydatków na to dobro w całości wydatków zwiększy się"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Dochodowa elastyczność 0,9 oznacza, że wzrost dochodu o 10% zwiększa popyt (i wydatki) na dobro o ok. 9%. Wydatki na to dobro rosną, ale wolniej niż dochód, więc ich udział w wydatkach ogółem maleje. Takie dobra (0 < E < 1) to dobra podstawowe."
+  },
+  {
+    "id": "owe24-o-03",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody okręgowe",
+    "question": "Które z poniższych stwierdzeń jest prawdziwe w odniesieniu do krzywych obojętności?",
+    "options": [
+      "mogą się przecinać",
+      "obrazują stopień substytucyjności rozpatrywanych dóbr",
+      "muszą być funkcją o ujemnym nachyleniu",
+      "ich położenie zależy od wielkości dochodu realnego gospodarstwa domowego"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Krzywe obojętności pokazują, w jakiej proporcji konsument gotów jest zastępować jedno dobro drugim – ich nachylenie to krańcowa stopa substytucji. Krzywe obojętności nie mogą się przecinać, nie zawsze są ujemnie nachylone (np. przy dobru niechcianym), a ich położenie wynika z preferencji, a nie z dochodu."
+  },
+  {
+    "id": "owe24-o-04",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody okręgowe",
+    "question": "Przy poruszaniu się wzdłuż wypukłej izokwanty:",
+    "options": [
+      "wielkość produkcji całkowitej rośnie",
+      "krańcowa stopa technicznej substytucji rośnie",
+      "substytucja pomiędzy czynnikami wytwórczymi staje się coraz trudniejsza",
+      "krańcowa stopa technicznej substytucji nie zmienia się"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Wypukła izokwanta ma malejącą krańcową stopę technicznej substytucji: im więcej jednego czynnika zastępujemy drugim, tym więcej go potrzeba, by zastąpić kolejną jednostkę drugiego – substytucja staje się coraz trudniejsza. Wzdłuż izokwanty wielkość produkcji się nie zmienia."
+  },
+  {
+    "id": "owe24-o-05",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody okręgowe",
+    "question": "Krzywa podaży przedsiębiorstwa wolnokonkurencyjnego w długim okresie:",
+    "options": [
+      "to część krzywej kosztu krańcowego powyżej minimum kosztu przeciętnego",
+      "to krzywa podaży doskonale elastycznej, gdyż cena, po której przedsiębiorstwo sprzedaje kolejne jednostki dobra, jest niezmienna",
+      "to część krzywej kosztu przeciętnego powyżej krzywej utargu krańcowego",
+      "to część krzywej kosztu krańcowego powyżej minimum przeciętnego kosztu stałego"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W długim okresie firma wolnokonkurencyjna pozostaje na rynku tylko, gdy cena pokrywa koszt przeciętny. Jej krzywą podaży jest więc część krzywej kosztu krańcowego leżąca powyżej minimum kosztu przeciętnego. W długim okresie nie ma kosztów stałych, więc odpowiedź z przeciętnym kosztem stałym jest błędna."
+  },
+  {
+    "id": "owe24-o-06",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody okręgowe",
+    "question": "Funkcja krótkookresowego kosztu całkowitego ma postać 20 + 10Q + Q², gdzie Q to wielkość produkcji. Przy wielkości produkcji wynoszącej 5 jednostek produktu koszt stały wyniesie:",
+    "options": [
+      "95",
+      "50",
+      "75",
+      "20"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Koszt stały nie zależy od wielkości produkcji – to wyraz wolny funkcji kosztu całkowitego. Dla TC = 20 + 10Q + Q² koszt stały wynosi 20 przy każdej wielkości produkcji. Przy Q = 5 koszt zmienny = 10·5 + 5² = 75, a koszt całkowity = 95."
+  },
+  {
+    "id": "owe24-o-07",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody okręgowe",
+    "question": "Siła monopsonowa przedsiębiorstwa na rynku pracy polega na zdolności do kształtowania:",
+    "options": [
+      "tylko poziomu płac",
+      "tylko wielkości zatrudnienia",
+      "zarówno poziomu płac, jak i wielkości zatrudnienia",
+      "nie da się udzielić odpowiedzi bez dodatkowych informacji"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Monopson to rynek z jednym (dominującym) nabywcą – na rynku pracy jednym pracodawcą. Dzięki sile rynkowej może on kształtować zarówno poziom płac (niższy niż w konkurencji), jak i wielkość zatrudnienia (mniejszą niż w konkurencji)."
+  },
+  {
+    "id": "owe24-o-08",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody okręgowe",
+    "question": "Które z poniższych stwierdzeń jest prawdziwe?",
+    "options": [
+      "mechanizm rynkowy nie dopuszcza do powstania popytu na dobra społecznie niepożądane",
+      "dobra społecznie niepożądane mogą być w opinii poszczególnych osób uznane za dobra pożądane",
+      "dobro społecznie pożądane to takie, które chciałby posiadać każdy obywatel",
+      "dobro społecznie niepożądane to takie, na które popyt rynkowy zgłaszany przez konsumentów jest zbyt mały w stosunku do potrzeb społecznych"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Dobra społecznie niepożądane (np. narkotyki, papierosy) to dobra, których konsumpcję społeczeństwo ocenia negatywnie, choć poszczególne osoby mogą ich chcieć i zgłaszają na nie popyt. Rynek nie eliminuje tego popytu, dlatego państwo ogranicza go podatkami lub zakazami."
+  },
+  {
+    "id": "owe24-o-09",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody okręgowe",
+    "question": "W wyniku zwiększenia produktu krajowego brutto o zużycie pośrednie otrzymamy:",
+    "options": [
+      "wartość dodaną",
+      "dochód narodowy",
+      "wytworzony produkt globalny",
+      "dobrobyt ekonomiczny netto"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Produkt globalny (globalna wartość produkcji) = PKB + zużycie pośrednie, czyli wartość surowców, materiałów i usług zużytych w produkcji. Odwrotnie: produkt globalny minus zużycie pośrednie daje wartość dodaną."
+  },
+  {
+    "id": "owe24-o-10",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody okręgowe",
+    "question": "Warunkiem równowagi w gospodarce z udziałem państwa jest:",
+    "options": [
+      "zrównanie nieplanowanych inwestycji z oszczędnościami",
+      "zrównanie sumy planowanych oszczędności i podatków netto z sumą planowanych inwestycji i wydatków państwa",
+      "zrównanie sumy wydatków konsumpcyjnych, inwestycji i wydatków państwa z sumą oszczędności i wpływów z podatków",
+      "zrównanie oszczędności z wpływami podatkowymi"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "W gospodarce z udziałem państwa równowaga występuje, gdy planowane „przecieki” z obiegu – oszczędności i podatki netto – równają się planowanym „zastrzykom” – inwestycjom i wydatkom państwa: S + T = I + G."
+  },
+  {
+    "id": "owe24-o-11",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody okręgowe",
+    "question": "Przy sztywnej krzywej podaży globalnej wzrost popytu globalnego wywoła:",
+    "options": [
+      "wzrost wielkości produkcji",
+      "spadek wielkości produkcji",
+      "wzrost poziomu cen",
+      "spadek poziomu cen"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Sztywna (pionowa) krzywa podaży globalnej oznacza, że gospodarka produkuje na poziomie potencjalnym i nie może zwiększyć produkcji. Wzrost popytu globalnego podnosi wtedy wyłącznie poziom cen."
+  },
+  {
+    "id": "owe24-o-12",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody okręgowe",
+    "question": "Konsekwencją deflacji jest:",
+    "options": [
+      "poprawa sytuacji osób zadłużonych",
+      "spadek bezrobocia",
+      "zmniejszenie deficytu budżetowego",
+      "skłonność do odraczania zakupów konsumpcyjnych"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Deflacja to spadek ogólnego poziomu cen. Gdy ludzie oczekują dalszych spadków, odkładają zakupy, co zmniejsza popyt i może pogłębiać recesję. Deflacja zwiększa realną wartość długów (pogarsza sytuację dłużników) i zwykle towarzyszy jej wzrost bezrobocia."
+  },
+  {
+    "id": "owe24-o-13",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody okręgowe",
+    "question": "W którym z poniższych krajów kryzys ekonomiczny w XX w. wywołał inflację liczoną w kwadrylionach?",
+    "options": [
+      "Węgry",
+      "Polska",
+      "Niemcy",
+      "Japonia"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Na Węgrzech w latach 1945–1946 wystąpiła największa znana hiperinflacja: w lipcu 1946 r. ceny podwajały się co ok. 15 godzin, a miesięczna inflacja liczona była w kwadrylionach procent. Pengő zastąpiono wtedy forintem."
+  },
+  {
+    "id": "owe24-o-14",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody okręgowe",
+    "question": "Efekt akceleratora inwestycyjnego wynika z:",
+    "options": [
+      "utrzymywania przez przedsiębiorstwa rezerwy zdolności produkcyjnych",
+      "wysokiej konkurencyjności eksportu i szybkiej liberalizacji handlu zagranicznego",
+      "sprzężenia zwrotnego pomiędzy polityką pieniężną a polityką inwestycyjną",
+      "antycypowania przez przedsiębiorstwa koniunktury gospodarczej"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Akcelerator inwestycyjny wynika z tego, że firmy inwestują, gdy przewidują wzrost popytu i chcą dostosować zasób kapitału do oczekiwanej produkcji. Inwestycje reagują więc na oczekiwane zmiany koniunktury i są dużo bardziej zmienne niż produkcja."
+  },
+  {
+    "id": "owe24-o-15",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody okręgowe",
+    "question": "W pewnej gospodarce dokonano liberalizacji przepływów kapitałowych przy jednoczesnym wprowadzeniu systemu płynnego kursu walutowego. W tej sytuacji:",
+    "options": [
+      "bardziej skuteczna staje się polityka fiskalna",
+      "bardziej skuteczna staje się polityka monetarna",
+      "nie nastąpiło żadne wzmocnienie skuteczności polityki fiskalnej i monetarnej",
+      "zarówno polityka fiskalna, jak i monetarna są mniej skuteczne"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Według modelu Mundella–Fleminga przy swobodnym przepływie kapitału i płynnym kursie polityka pieniężna jest skuteczna: obniżka stóp powoduje odpływ kapitału, deprecjację waluty i wzrost eksportu netto. Polityka fiskalna traci skuteczność – ekspansja fiskalna podnosi stopy, przyciąga kapitał, umacnia walutę i zmniejsza eksport netto. Przy kursie stałym jest odwrotnie."
+  },
+  {
+    "id": "owe24-o-16",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody okręgowe",
+    "question": "Ze składek emerytalnych, przekazywanych do otwartych funduszy emerytalnych w Polsce, przed przeliczeniem składek na jednostki rozrachunkowe potrącane są:",
+    "options": [
+      "opłaty na rzecz depozytariusza związane z przechowywaniem aktywów",
+      "opłaty związane z realizacją transakcji nabywania lub zbywania aktywów funduszu (np. papierów wartościowych)",
+      "opłata za zarządzanie otwartym funduszem",
+      "opłaty dystrybucyjne"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "W latach 2010–2011 ze składki przekazywanej do OFE potrącano opłatę od składki (tzw. opłatę dystrybucyjną, wówczas do 3,5%), a dopiero pozostałą kwotę przeliczano na jednostki rozrachunkowe. Opłatę za zarządzanie oraz koszty depozytariusza i transakcji pokrywano z aktywów funduszu."
+  },
+  {
+    "id": "owe24-o-17",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody okręgowe",
+    "question": "Stawka referencyjna POLONIA to:",
+    "options": [
+      "średnia ważona stawka operacji overnight przeprowadzonych na rynku międzybankowym",
+      "średnia stopa oprocentowania papierów skarbowych emitowanych dla instytucjonalnych inwestorów zagranicznych",
+      "stawka obrazująca dysparytet stóp procentowych pomiędzy Polską a krajami OECD",
+      "stopa, po której Narodowy Bank Polski skłonny jest przeprowadzić w danym dniu operacje repo"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "POLONIA (Polish Overnight Index Average) to stawka referencyjna wyliczana przez NBP jako średnia ważona oprocentowania jednodniowych (overnight) lokat niezabezpieczonych zawartych na rynku międzybankowym. Pokazuje, jak skutecznie NBP utrzymuje krótkoterminowe stawki rynkowe w pobliżu stopy referencyjnej."
+  },
+  {
+    "id": "owe24-o-18",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody okręgowe",
+    "question": "Którą z poniższych pozycji można uznać za koszt uzyskania przychodów w spółce akcyjnej?",
+    "options": [
+      "straty powstałe w wyniku utraty samochodu, jeżeli nie był on objęty dobrowolnym ubezpieczeniem",
+      "koszty prac rozwojowych zakończonych negatywnym wynikiem",
+      "koszty (opłaty) egzekucyjne związane z niewykonaniem zobowiązań",
+      "koszty reprezentacji związane z zakupem napojów alkoholowych"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Ustawa o CIT pozwala zaliczyć do kosztów uzyskania przychodów także koszty prac rozwojowych zakończonych wynikiem negatywnym. Kosztem nie są natomiast m.in. straty w samochodach nieobjętych dobrowolnym ubezpieczeniem, koszty egzekucyjne związane z niewykonaniem zobowiązań oraz koszty reprezentacji, w tym zakup napojów alkoholowych."
+  },
+  {
+    "id": "owe24-o-19",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody okręgowe",
+    "question": "Które z poniższych stwierdzeń jest prawdziwe w odniesieniu do Spółdzielczych Kas Oszczędnościowo-Kredytowych w Polsce (stan na rok 2010)?",
+    "options": [
+      "skorzystanie z ich oferty nie wymaga członkostwa w danej kasie",
+      "odprowadzają rezerwę obowiązkową do Narodowego Banku Polskiego",
+      "prowadzą działalność nienastawioną na zysk",
+      "zgromadzone w kasach depozyty są chronione przez Bankowy Fundusz Gwarancyjny"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Spółdzielcze Kasy Oszczędnościowo-Kredytowe obsługują wyłącznie swoich członków i nie działają dla zysku – nadwyżki służą członkom. W 2010 r. nie odprowadzały rezerwy obowiązkowej do NBP, a ich depozyty nie były chronione przez BFG. Uwaga: od października 2012 r. depozyty w SKOK-ach też objęto gwarancjami BFG."
+  },
+  {
+    "id": "owe24-o-20",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody okręgowe",
+    "question": "W analizie technicznej zmiany cen kursu akcji prognozuje się przede wszystkim na podstawie:",
+    "options": [
+      "historycznych kursów akcji",
+      "wskaźników makroekonomicznych i sektorowych",
+      "sprawozdań finansowych",
+      "stopnia wykorzystania nowoczesnych technologii w spółce w odniesieniu do głównych konkurentów"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Analiza techniczna prognozuje ceny na podstawie historycznych notowań i obrotów (wykresy, formacje, wskaźniki techniczne), zakładając, że pewne wzorce się powtarzają. Wskaźniki makroekonomiczne, sektorowe i sprawozdania finansowe wykorzystuje analiza fundamentalna."
+  },
+  {
+    "id": "owe24-o-21",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody okręgowe",
+    "question": "Monety bulionowe to:",
+    "options": [
+      "wspólna nazwa monet obiegowych o drobnych nominałach",
+      "wycofane z obiegu monety zdawkowe z metali nieszlachetnych",
+      "monety obiegowe ze stopu nordic gold bite w ograniczonym nakładzie dla uczczenia ważnych wydarzeń",
+      "złote monety o nieograniczonym nakładzie emitowane w celach inwestycyjnych"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Monety bulionowe to monety inwestycyjne z metali szlachetnych (najczęściej złota) emitowane w nieograniczonym nakładzie; ich cena zależy głównie od wartości kruszcu – np. Krugerrand, Maple Leaf czy polski Orzeł Bielik. Monety okolicznościowe ze stopu nordic gold to monety kolekcjonerskie."
+  },
+  {
+    "id": "owe24-o-22",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody okręgowe",
+    "question": "Opis dyskusji z posiedzenia Rady Polityki Pieniężnej (tzw. minutes) zawiera:",
+    "options": [
+      "opinie członków Rady dotyczące bieżących i prognozowanych zjawisk gospodarczych",
+      "syntetyczny zapis stanowisk (poglądów) poszczególnych członków Rady w dyskutowanych na posiedzeniu kwestiach",
+      "imienny wykaz złożonych wniosków o zmianę podstawowych stóp procentowych NBP",
+      "wyniki głosowania wraz z wykazem głosów oddanych przez członków Rady"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Opis dyskusji (minutes) z posiedzenia decyzyjnego RPP przedstawia opinie i argumenty członków Rady dotyczące bieżącej i przewidywanej sytuacji gospodarczej, bez podawania nazwisk. Imienne wyniki głosowań publikuje się osobno, z opóźnieniem."
+  },
+  {
+    "id": "owe24-o-23",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody okręgowe",
+    "question": "W przypadku użycia przez osobę do tego nieuprawnioną skradzionej karty płatniczej (bez ujawnienia kodu identyfikacyjnego – PIN):",
+    "options": [
+      "bank nie odpowiada za płatności elektroniczne (internetowe) dokonane po zgłoszeniu utraty karty",
+      "bank ponosi odpowiedzialność za transakcje powyżej kwoty o równowartości 150 euro dokonane przed momentem zgłoszenia utraty karty",
+      "bank ponosi odpowiedzialność wyłącznie za transakcje powyżej wysokości salda konta, do którego została wydana karta debetowa, lub, w przypadku kart kredytowych, powyżej kwoty przyznanego limitu kredytowego",
+      "bank ponosi odpowiedzialność za transakcje dokonane przez osoby nieuprawnione wyłącznie w sytuacji wykupienia specjalnego ubezpieczenia"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Według przepisów obowiązujących w latach 2010–2011 posiadacz karty odpowiadał za transakcje dokonane skradzioną kartą przed zgłoszeniem jej utraty do kwoty równowartości 150 euro – powyżej tej kwoty odpowiadał bank. Za transakcje po zgłoszeniu utraty odpowiada bank. Od 2018 r. limit odpowiedzialności klienta wynosi 50 euro."
+  },
+  {
+    "id": "owe24-o-24",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody okręgowe",
+    "question": "Zbiór praktyk rynkowych opublikowany przez Bazylejski Komitet Nadzoru Bankowego, zwany potocznie Bazylea II, nie reguluje:",
+    "options": [
+      "metod pomiaru poziomu ryzyka dla różnych rodzajów aktywów",
+      "wytycznych dla instytucji nadzorujących banki",
+      "minimalnej wartości współczynnika wypłacalności",
+      "minimalnej różnicy pomiędzy stopami kredytów a depozytów"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Bazylea II opiera się na trzech filarach: minimalnych wymogach kapitałowych (metody pomiaru ryzyka i minimalny współczynnik wypłacalności 8%), procesie nadzorczym (wytyczne dla nadzorców) i dyscyplinie rynkowej. Nie reguluje różnicy między oprocentowaniem kredytów i depozytów – o marży odsetkowej decydują banki."
+  },
+  {
+    "id": "owe24-o-25",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody okręgowe",
+    "question": "Realizując politykę personalną opartą na modelu sita zakłada się, że kluczowym elementem zarządzania personelem jest:",
+    "options": [
+      "szkolenie i rozwój",
+      "motywowanie",
+      "planowanie zatrudnienia",
+      "selekcja"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Model sita zakłada, że o sukcesie firmy decydują najlepsi pracownicy, których trzeba trafnie wybrać – kluczowa jest więc selekcja (dobór kandydatów i „odsiewanie” słabszych). W modelu kuźni najważniejsze są szkolenie i rozwój pracowników."
+  },
+  {
+    "id": "owe24-o-26",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody okręgowe",
+    "question": "Leniency to:",
+    "options": [
+      "możliwość zmniejszenia kary nakładanej przez odpowiedni organ na przedsiębiorstwa biorące udział w niedozwolonym porozumieniu (zmowie) naruszającym konkurencję na rynku",
+      "strategia przedsiębiorstwa dominującego polegająca na niewywieraniu silnej presji konkurencyjnej na mniejsze przedsiębiorstwa działające na tym rynku w celu uniknięcia zarzutów o monopolizację",
+      "zasada, według której drobne uchybienia wykryte podczas kontroli podatkowych nie są karane",
+      "sposób windykacji należności przedsiębiorstwa oparty na polubownym rozstrzyganiu sporów"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Leniency (program łagodzenia kar) pozwala uczestnikowi zakazanego porozumienia, np. kartelu cenowego, który jako pierwszy zgłosi je organowi antymonopolowemu (w Polsce Prezesowi UOKiK) i przedstawi dowody, uniknąć kary lub uzyskać jej obniżenie. Ułatwia to wykrywanie karteli."
+  },
+  {
+    "id": "owe24-o-27",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody okręgowe",
+    "question": "Model Du Ponta można wykorzystać do obliczenia:",
+    "options": [
+      "szybkości spłaty zobowiązań",
+      "stopy dywidendy",
+      "rotacji należności w dniach",
+      "marży uzyskanej na sprzedaży"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Model DuPonta rozkłada rentowność kapitału własnego (ROE) na czynniki: marżę zysku netto na sprzedaży (zysk netto / przychody), rotację aktywów (przychody / aktywa) i mnożnik kapitałowy (aktywa / kapitał własny). Pozwala więc obliczyć marżę na sprzedaży, a nie stopę dywidendy czy rotację należności w dniach."
+  },
+  {
+    "id": "owe24-o-28",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody okręgowe",
+    "question": "Im bardziej demokratyczny system i styl zarządzania, tym większą rolę w procesie motywowania odgrywają:",
+    "options": [
+      "narzędzia perswazji",
+      "wewnętrzne regulaminy",
+      "narzędzia przymusu",
+      "narzędzia o charakterze imperatywnym"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W demokratycznym stylu zarządzania kierownik angażuje pracowników w podejmowanie decyzji i motywuje ich przez przekonywanie (perswazję), dialog i współudział, a nie przez nakazy i przymus typowe dla stylu autokratycznego."
+  },
+  {
+    "id": "owe24-o-29",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody okręgowe",
+    "question": "Daleko idący podział pracy w dłuższym okresie prowadzi do:",
+    "options": [
+      "migracji wartości",
+      "alienacji pracowników",
+      "ujemnej entropii",
+      "syndromu grupowego myślenia"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Daleko posunięty podział pracy (wąska specjalizacja, praca przy taśmie) powoduje monotonię i utratę poczucia sensu pracy oraz wpływu na produkt końcowy – czyli alienację pracowników. Syndrom grupowego myślenia dotyczy podejmowania decyzji w zespołach."
+  },
+  {
+    "id": "owe24-o-30",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody okręgowe",
+    "question": "Główną zaletą strategicznej karty wyników opracowanej przez R.S. Kaplana i D.P. Nortona jest:",
+    "options": [
+      "możliwość takiego przeformułowania strategii przedsiębiorstwa, aby utrzymać wyniki finansowe na założonym poziomie",
+      "zorientowanie na strategię przedsiębiorstwa, a nie uwzględnianie dokonań (wyników) poszczególnych pracowników",
+      "pominięcie w analizach rozbieżnych potrzeb klientów",
+      "wyrażenie wszystkich celów przedsiębiorstwa, w tym również tych o charakterze niefinansowym, w postaci mierzalnych wskaźników"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Strategiczna karta wyników (Balanced Scorecard) przekłada strategię na mierzalne cele i wskaźniki w czterech perspektywach: finansowej, klienta, procesów wewnętrznych oraz rozwoju (uczenia się). Jej główną zaletą jest objęcie pomiarem również celów niefinansowych."
+  }
+]

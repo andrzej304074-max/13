@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe23-o-01",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody okręgowe",
+    "question": "Które z poniższych stwierdzeń jest prawdziwe w odniesieniu do dóbr doskonale substytucyjnych?",
+    "options": [
+      "konsument jest skłonny zastępować jedno dobro drugim według stałej stopy",
+      "krzywe obojętności dla tego rodzaju dóbr nie istnieją",
+      "efekt dochodowy w przypadku zmiany ceny jednego z nich jest zawsze niezerowy",
+      "konsument jest skłonny konsumować dobra w stałej proporcji"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Doskonałe substytuty to dobra, które konsument zastępuje jedno drugim w stałej proporcji (przy stałej krańcowej stopie substytucji), np. 1:1. Ich krzywe obojętności są ujemnie nachylonymi liniami prostymi. Konsumpcja w stałej proporcji dotyczy natomiast dóbr doskonale komplementarnych."
+  },
+  {
+    "id": "owe23-o-02",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody okręgowe",
+    "question": "Przewidywania uczestników rynku co do wzrostu w przyszłości cen czarnych porzeczek spowodują:",
+    "options": [
+      "spadek wielkości podaży",
+      "zwiększenie popytu",
+      "spadek bieżącej ceny rynkowej",
+      "spadek wielkości popytu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Gdy kupujący oczekują wzrostu cen w przyszłości, wolą kupić już teraz – popyt bieżący rośnie (krzywa popytu przesuwa się w prawo). Sprzedawcy mogą przy tym ograniczać bieżącą podaż w oczekiwaniu na wyższe ceny. Oba efekty podnoszą, a nie obniżają bieżącą cenę rynkową."
+  },
+  {
+    "id": "owe23-o-03",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody okręgowe",
+    "question": "Które z poniższych stwierdzeń jest prawdziwe w odniesieniu do linii ograniczenia budżetowego?",
+    "options": [
+      "jej nachylenie zmienia się w zależności od położenia rozpatrywanego koszyka dóbr",
+      "nieodpłatne transfery rzeczowe (np. talony) zmieniają kształt tej krzywej",
+      "jej położenie względem początku układu współrzędnych determinowane jest wyłącznie przez ceny rozpatrywanych dóbr",
+      "zmiana upodobań i gustów konsumentów przesuwa tę krzywą"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Linia ograniczenia budżetowego pokazuje koszyki dostępne przy danym dochodzie i cenach; jej nachylenie (stosunek cen) jest stałe na całej długości. Transfery rzeczowe, np. talony na żywność, dają ilość dobra, której nie można zamienić na inne dobra – linia budżetowa ma wtedy załamanie, czyli zmienia kształt. Położenie linii zależy od dochodu i cen, a gusty wpływają na krzywe obojętności, nie na linię budżetową."
+  },
+  {
+    "id": "owe23-o-04",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody okręgowe",
+    "question": "W krótkim okresie koszt całkowity stanowi:",
+    "options": [
+      "sumę kosztów krańcowych",
+      "sumę kosztu stałego i sumę kosztów krańcowych",
+      "iloczyn przeciętnego kosztu zmiennego i wielkości produkcji",
+      "iloczyn przeciętnego kosztu krańcowego i wielkości produkcji"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Koszt całkowity = koszt stały + koszt zmienny (TC = FC + VC). Koszt zmienny to suma kosztów krańcowych kolejnych jednostek produkcji, więc TC = FC + ΣMC. Iloczyn przeciętnego kosztu zmiennego i wielkości produkcji daje tylko koszt zmienny."
+  },
+  {
+    "id": "owe23-o-05",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody okręgowe",
+    "question": "Optymalna kombinacja czynników wytwórczych znajduje się w punkcie:",
+    "options": [
+      "styczności izokwanty z krzywą kosztu całkowitego",
+      "styczności krzywej kosztu całkowitego z krzywą produkcji całkowitej",
+      "przecięcia izokwanty z linią ograniczenia budżetowego",
+      "żadna z powyższych odpowiedzi nie jest prawidłowa"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Optymalna (najtańsza) kombinacja czynników leży w punkcie styczności izokwanty z izokosztą (linią jednakowego kosztu), gdzie krańcowa stopa technicznej substytucji równa się stosunkowi cen czynników. Żadna odpowiedź nie opisuje tego poprawnie – izokwanta i izokoszta mają się stykać, a nie przecinać."
+  },
+  {
+    "id": "owe23-o-06",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody okręgowe",
+    "question": "Krzywa podaży przedsiębiorstwa wolnokonkurencyjnego w długim okresie to:",
+    "options": [
+      "część krzywej kosztu krańcowego powyżej minimum przeciętnego kosztu całkowitego",
+      "krzywa podaży doskonale elastyczna, gdyż cena, po której przedsiębiorstwo sprzedaje kolejne jednostki dobra, jest niezmienna",
+      "część krzywej kosztu przeciętnego zmiennego powyżej krzywej utargu krańcowego",
+      "część krzywej kosztu przeciętnego całkowitego powyżej krzywej utargu przeciętnego"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W długim okresie firma wolnokonkurencyjna produkuje tylko wtedy, gdy cena pokrywa przeciętny koszt całkowity. Jej krzywą podaży jest więc ta część krzywej kosztu krańcowego, która leży powyżej minimum przeciętnego kosztu całkowitego. W krótkim okresie granicą jest minimum przeciętnego kosztu zmiennego."
+  },
+  {
+    "id": "owe23-o-07",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody okręgowe",
+    "question": "Wskaż, które z poniższych stwierdzeń nie jest ilustracją „problemu pana i sługi” w ekonomii:",
+    "options": [
+      "niepełna informacja dla pacjentów na temat skuteczności szczepionek przeciwko grypie",
+      "brak należytej opieki nad dzieckiem przez nianię",
+      "niedbałe przygotowanie radcy prawnego reprezentującego przedsiębiorstwo do procesu sądowego o zapłatę wymagalnych faktur",
+      "prześladowanie przez szefa podwładnego lub współpracownika w miejscu pracy"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Problem pana i sługi (pryncypała i agenta) występuje, gdy osoba działająca w czyimś imieniu (agent) ma inne cele i więcej informacji niż zleceniodawca, a ten nie może jej w pełni kontrolować – np. niania i rodzice, radca prawny i firma, producent szczepionek i pacjent. Prześladowanie podwładnego przez szefa (mobbing) to patologia w stosunkach pracy, a nie przykład tego problemu."
+  },
+  {
+    "id": "owe23-o-08",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody okręgowe",
+    "question": "Który z niżej wymienionych cykli koniunkturalnych jest najdłuższy?",
+    "options": [
+      "Jevonsa",
+      "Juglara",
+      "Kitchina",
+      "Kondratiewa"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Cykle Kondratiewa (fale długie) trwają ok. 40–60 lat i wiążą się z przełomami technologicznymi. Cykl Juglara (koniunkturalny, inwestycyjny) trwa ok. 7–11 lat, Kitchina (zapasowy) ok. 3–4 lata, a cykl Jevonsa, wiązany z plamami na Słońcu – ok. 10 lat."
+  },
+  {
+    "id": "owe23-o-09",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody okręgowe",
+    "question": "Osiąganie przez kraje słabo rozwinięte o niskiej produktywności pracy wyższych wskaźników wzrostu gospodarczego niż kraje wysoko uprzemysłowione nazywa się efektem:",
+    "options": [
+      "akceleracji",
+      "mnożnikowym",
+      "doganiania",
+      "zewnętrznym"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Efekt doganiania (konwergencji, catching-up) polega na tym, że kraje biedniejsze, o niskiej produktywności, rozwijają się szybciej niż bogate, bo mogą przejmować gotowe technologie i mają wyższą krańcową produktywność kapitału. Z czasem zmniejsza to dystans między nimi."
+  },
+  {
+    "id": "owe23-o-10",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody okręgowe",
+    "question": "Zgodnie z teorią optymalnych obszarów walutowych, która z niżej wymienionych okoliczności nie będzie sprzyjać szybkiemu powrotowi gospodarki do stanu równowagi po szoku makroekonomicznym?",
+    "options": [
+      "mobilność siły roboczej",
+      "mobilność kapitału finansowego",
+      "ustrój oparty na federalizmie fiskalnym",
+      "lepkość płac realnych"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Teoria optymalnych obszarów walutowych (R. Mundell) mówi, że wspólna waluta się sprawdza, gdy gospodarka może dostosować się do szoku bez zmiany kursu: dzięki mobilności pracy i kapitału, elastycznym płacom i cenom oraz transferom fiskalnym (federalizm fiskalny). Lepkość (sztywność) płac realnych utrudnia takie dostosowanie."
+  },
+  {
+    "id": "owe23-o-11",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody okręgowe",
+    "question": "Zniesienie monopolu państwa na produkcję pieniądza proponują w swoich poglądach przedstawiciele:",
+    "options": [
+      "ekonomii neoklasycznej",
+      "monetaryzmu",
+      "szkoły austriackiej",
+      "keynesizmu"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Zniesienie monopolu państwa na emisję pieniądza proponował przedstawiciel szkoły austriackiej F.A. von Hayek w pracy „Denacjonalizacja pieniądza” (1976). Postulował konkurencję między prywatnymi walutami."
+  },
+  {
+    "id": "owe23-o-12",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody okręgowe",
+    "question": "Jeśli produkcja i zatrudnienie rosną szybko, to gospodarka jest w:",
+    "options": [
+      "fazie rozkwitu",
+      "górnym punkcie zwrotnym",
+      "fazie ożywienia",
+      "dolnym punkcie zwrotnym"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Faza ożywienia to wychodzenie gospodarki z kryzysu: produkcja i zatrudnienie szybko rosną. Górny i dolny punkt zwrotny to momenty zmiany kierunku koniunktury, a w fazie rozkwitu gospodarka zbliża się do granicy swoich możliwości."
+  },
+  {
+    "id": "owe23-o-13",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody okręgowe",
+    "question": "Według Schumpetera gospodarkę w fazę ożywienia wprowadza wzrost:",
+    "options": [
+      "stopy zysku",
+      "stopy procentowej",
+      "wdrożeń innowacji",
+      "inflacji"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Według J.A. Schumpetera motorem rozwoju są innowacje wprowadzane przez przedsiębiorców („twórcza destrukcja”). Fala wdrożeń innowacji pobudza inwestycje i wprowadza gospodarkę w fazę ożywienia."
+  },
+  {
+    "id": "owe23-o-14",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody okręgowe",
+    "question": "Które założenie nie jest zgodne z ilościową teorią pieniądza?",
+    "options": [
+      "występuje neutralność pieniądza w gospodarce",
+      "wielkość podaży pieniądza w danej gospodarce jest ustalana przez banki komercyjne",
+      "liczba zawieranych transakcji w krótkim okresie jest stała",
+      "szybkość obiegu pieniądza w krótkim okresie nie zmienia się"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Ilościowa teoria pieniądza opiera się na równaniu Fishera MV = PT. Zakłada stałą w krótkim okresie szybkość obiegu pieniądza (V) i liczbę transakcji (T) oraz neutralność pieniądza – zmiana jego ilości zmienia proporcjonalnie tylko ceny. Podaż pieniądza ustala bank centralny (jest egzogeniczna), a nie banki komercyjne."
+  },
+  {
+    "id": "owe23-o-15",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody okręgowe",
+    "question": "Jeżeli w pewnym okresie inwestorzy zagraniczni podjęli decyzję o wyprzedaniu polskich dłużnych instrumentów finansowych oraz wycofaniu kapitałów z Polski, to konsekwencją tego będzie:",
+    "options": [
+      "wzrost popytu na PLN i deprecjacja walut obcych",
+      "wzrost podaży walut obcych i aprecjacja PLN",
+      "wzrost popytu na waluty obce i deprecjacja PLN",
+      "wzrost podaży PLN i aprecjacja PLN"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Inwestorzy zagraniczni sprzedają polskie obligacje za złote, a następnie wymieniają złote na waluty obce, żeby wycofać kapitał. Rośnie popyt na waluty obce (i podaż złotego), więc złoty traci na wartości – następuje jego deprecjacja."
+  },
+  {
+    "id": "owe23-o-16",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody okręgowe",
+    "question": "Jednostki budżetowe pokrywają swoje wydatki:",
+    "options": [
+      "z dotacji przedmiotowych",
+      "z dotacji podmiotowych",
+      "bezpośrednio z budżetu państwa",
+      "z uzyskanych przychodów własnych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Jednostki budżetowe (np. publiczne szkoły, urzędy) pokrywają wydatki bezpośrednio z budżetu, a uzyskane dochody odprowadzają do budżetu (tzw. rozliczenie metodą brutto). Dotacje przedmiotowe i podmiotowe otrzymują inne podmioty, np. samorządowe zakłady budżetowe czy instytucje kultury."
+  },
+  {
+    "id": "owe23-o-17",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody okręgowe",
+    "question": "Jakiego rodzaju depozytów zgromadzonych w bankach krajowych nie chroni Bankowy Fundusz Gwarancyjny?",
+    "options": [
+      "depozytów funduszy emerytalnych",
+      "depozytów walutowych osób fizycznych",
+      "depozytów złotowych osób prawnych",
+      "depozytów szkolnych kas oszczędnościowych"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W latach 2009–2010 Bankowy Fundusz Gwarancyjny chronił m.in. depozyty osób fizycznych, przedsiębiorców i innych osób prawnych oraz szkolnych kas oszczędnościowych. Z gwarancji wyłączone były depozyty instytucji finansowych – m.in. funduszy emerytalnych, zakładów ubezpieczeń i funduszy inwestycyjnych."
+  },
+  {
+    "id": "owe23-o-18",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody okręgowe",
+    "question": "Dokument przyjęty przez Komisję Nadzoru Finansowego, który zobowiązuje banki, w przypadku udzielania kredytów w walutach obcych, do analizowania zdolności kredytowej klienta przy założeniu, że stopa procentowa dla kredytu walutowego jest równa co najmniej stopie procentowej dla kredytu złotowego, a kapitał kredytu jest wyższy o 20%, to tzw. rekomendacja:",
+    "options": [
+      "R",
+      "S",
+      "T",
+      "W"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Rekomendacja S dotyczy dobrych praktyk przy kredytach zabezpieczonych hipotecznie. Nakazywała bankom badać zdolność kredytową klienta biorącego kredyt walutowy tak, jakby oprocentowanie było równe oprocentowaniu kredytu złotowego, a kwota kapitału wyższa o 20% – aby uwzględnić ryzyko kursowe."
+  },
+  {
+    "id": "owe23-o-19",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody okręgowe",
+    "question": "Na uruchomionym 30 września 2009 r. rynku giełdowym Catalyst nie są notowane:",
+    "options": [
+      "hipoteczne listy zastawne",
+      "obligacje jednostek samorządu terytorialnego",
+      "obligacje korporacyjne",
+      "akcje firm z sektora nowych technologii"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Catalyst (uruchomiony 30 września 2009 r.) to rynek instrumentów dłużnych prowadzony przez GPW i BondSpot. Notowane są na nim obligacje korporacyjne, komunalne (samorządowe), listy zastawne i obligacje skarbowe. Akcje, także spółek technologicznych, notuje się na rynku głównym GPW lub na NewConnect."
+  },
+  {
+    "id": "owe23-o-20",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody okręgowe",
+    "question": "Wycena towarów według metody FIFO oznacza, że ich rozchody wyceniane są:",
+    "options": [
+      "po średniej ważonej cenie zakupu",
+      "po cenach składników, które jednostka nabyła najwcześniej",
+      "po cenach składników, które jednostka nabyła najpóźniej",
+      "w drodze szczegółowej identyfikacji rzeczywistych cen składników, niezależnie od daty ich zakupu lub wytworzenia"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "FIFO (first in, first out – „pierwsze weszło, pierwsze wyszło”) oznacza, że rozchód wycenia się po cenach składników nabytych najwcześniej. LIFO – po cenach składników nabytych najpóźniej, metoda średniej ważonej – po cenie przeciętnej, a szczegółowa identyfikacja – po rzeczywistych cenach konkretnych składników."
+  },
+  {
+    "id": "owe23-o-21",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody okręgowe",
+    "question": "Projekcja inflacji publikowana przez Narodowy Bank Polski to:",
+    "options": [
+      "zbiór prognoz inflacji poszczególnych członków Rady Polityki Pieniężnej",
+      "wyjaśnienie ex post przyczyn wzrostu ogólnego poziomu cen w gospodarce",
+      "scenariusz przyszłej ścieżki inflacji przy założeniu niezmiennych stóp procentowych",
+      "prognoza inflacji przy założeniu, że Rada Polityki Pieniężnej zmienia stopy procentowe zgodnie z dotychczasowym nastawieniem w polityce pieniężnej"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Projekcja inflacji NBP (publikowana w „Raporcie o inflacji”) to scenariusz przyszłej ścieżki inflacji i PKB przygotowany przez ekonomistów NBP przy założeniu niezmienionych stóp procentowych NBP. Jest jedną z przesłanek decyzji RPP, a nie zbiorem prognoz jej członków."
+  },
+  {
+    "id": "owe23-o-22",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody okręgowe",
+    "question": "Główną ideą tzw. lokat „antybelkowych” jest:",
+    "options": [
+      "wykorzystanie dziennej kapitalizacji odsetek, tak aby kwota należnego podatku nie przekroczyła 0,49 zł",
+      "progresywne oprocentowanie lokaty",
+      "powiązanie oprocentowania lokaty z wynikami funduszu inwestycyjnego",
+      "możliwość wypłaty przez klienta środków z lokaty w dowolnym momencie bez utraty odsetek"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Lokaty „antybelkowe” miały dzienną kapitalizację odsetek: odsetki z jednego dnia były tak małe, że po zaokrągleniu podatek od nich (19% „podatku Belki”) wynosił 0 zł. Lukę zamknięto 1 kwietnia 2012 r., zmieniając zasady zaokrąglania podatku."
+  },
+  {
+    "id": "owe23-o-23",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody okręgowe",
+    "question": "Jeżeli w bilansie przedsiębiorstwa występuje nadwyżka pasywów w walutach obcych nad aktywami w walutach obcych, wówczas występuje:",
+    "options": [
+      "krótka otwarta pozycja walutowa",
+      "długa otwarta pozycja walutowa",
+      "krótka pozycja niedopasowania",
+      "długa pozycja niedopasowania"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Otwarta pozycja walutowa powstaje, gdy aktywa i pasywa w walucie obcej nie są zrównoważone. Nadwyżka pasywów (zobowiązań) nad aktywami to pozycja krótka – firma traci, gdy kurs waluty rośnie. Nadwyżka aktywów nad pasywami to pozycja długa."
+  },
+  {
+    "id": "owe23-o-24",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody okręgowe",
+    "question": "Usługa cash back umożliwia:",
+    "options": [
+      "wypłatę gotówki w sklepie podczas dokonywania zakupów za pomocą karty płatniczej",
+      "zwrot przez bank prowizji przy terminowej spłacie kredytu",
+      "uzyskanie dodatkowych przywilejów dla klientów rekomendujących produkty banku innym osobom",
+      "nieograniczoną możliwość wymiany zużytych banknotów w banku centralnym"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Cash back to usługa, dzięki której przy płatności kartą w sklepie można jednocześnie wypłacić gotówkę (do określonego limitu). Pieniądze są pobierane z rachunku powiązanego z kartą."
+  },
+  {
+    "id": "owe23-o-25",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody okręgowe",
+    "question": "Komercjalizacja jest to forma prywatyzacji polegająca na:",
+    "options": [
+      "przekazaniu zarządzania przedsiębiorstwem państwowym na podstawie kontraktu menedżerskiego",
+      "przekształceniu przedsiębiorstwa państwowego w jednoosobową spółkę Skarbu Państwa",
+      "utworzeniu spółki joint venture",
+      "sprzedaży lub likwidacji przedsiębiorstwa"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Komercjalizacja to przekształcenie przedsiębiorstwa państwowego w spółkę handlową (akcyjną lub z o.o.), w której wszystkie udziały ma Skarb Państwa – jednoosobową spółkę Skarbu Państwa. Zwykle jest pierwszym etapem prywatyzacji pośredniej, po którym akcje mogą zostać sprzedane."
+  },
+  {
+    "id": "owe23-o-26",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody okręgowe",
+    "question": "Które z niżej wymienionych działań nie jest przejawem społecznej odpowiedzialności biznesu?",
+    "options": [
+      "wdrożenie programu oszczędzania energii elektrycznej w przedsiębiorstwie",
+      "maksymalizacja zysku przedsiębiorstwa w celu zwiększenia udziału wpływów z podatku dochodowego od osób prawnych w dochodach samorządu lokalnego",
+      "przekazanie przez przedsiębiorstwo niepotrzebnego sprzętu komputerowego na potrzeby biblioteki publicznej",
+      "powołanie w przedsiębiorstwie programu wolontariatu pracowniczego"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Społeczna odpowiedzialność biznesu (CSR) to dobrowolne uwzględnianie przez firmę interesów społecznych i środowiskowych, wykraczające poza wymogi prawa – np. oszczędzanie energii, przekazanie sprzętu bibliotece, wolontariat pracowniczy. Maksymalizacja zysku, nawet jeśli daje wyższe wpływy podatkowe, to zwykły cel działalności gospodarczej, a nie przejaw CSR."
+  },
+  {
+    "id": "owe23-o-27",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody okręgowe",
+    "question": "Zgodnie z obowiązującym w Polsce prawem do pozostałych ubezpieczeń osobowych oraz ubezpieczeń majątkowych (dział II) nie zalicza się ubezpieczenia:",
+    "options": [
+      "choroby",
+      "wypadku",
+      "posagowego",
+      "przewozu osób"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Ubezpieczenia na życie, w tym ubezpieczenia posagowe (zaopatrzenia dzieci), należą do działu I. Dział II obejmuje pozostałe ubezpieczenia osobowe (m.in. wypadku i choroby) oraz ubezpieczenia majątkowe."
+  },
+  {
+    "id": "owe23-o-28",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody okręgowe",
+    "question": "Przedsiębiorstwo wykorzystujące w zarządzaniu koncepcję lean manufacturing:",
+    "options": [
+      "utrzymuje duże zapasy półproduktów w celu zapewnienia ciągłości produkcji",
+      "stosuje głównie heurystyczne metody rozwiązywania problemów",
+      "utrzymuje znaczne rezerwy mocy produkcyjnych, tak aby sprostać każdemu, nawet nieoczekiwanemu zamówieniu",
+      "dąży do ograniczenia w produkcji ilości wadliwych wyrobów"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Lean manufacturing (szczupła produkcja, wywodząca się z systemu produkcyjnego Toyoty) to eliminowanie marnotrawstwa: zbędnych zapasów, nadprodukcji, oczekiwania i braków (wadliwych wyrobów). Firma stosująca lean utrzymuje minimalne zapasy (just in time) i stale doskonali procesy (kaizen), zamiast utrzymywać duże rezerwy."
+  },
+  {
+    "id": "owe23-o-29",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody okręgowe",
+    "question": "Zasada delegowania kompetencji polega na:",
+    "options": [
+      "wyznaczaniu przez menedżera przynajmniej jednego pełnomocnika na czas jego delegacji służbowej",
+      "wykonywaniu przez menedżera obowiązków pracowników, którzy znajdują się w delegacji służbowej",
+      "decentralizacji władzy",
+      "rezygnacji z jednoosobowego kierownictwa"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Delegowanie kompetencji to przekazywanie przez przełożonego uprawnień do podejmowania decyzji (wraz z odpowiedzialnością) na niższe szczeble organizacji, czyli decentralizacja władzy. Nie ma to nic wspólnego z delegacją w sensie wyjazdu służbowego."
+  },
+  {
+    "id": "owe23-o-30",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody okręgowe",
+    "question": "Co jest przykładem strategii dywersyfikacji horyzontalnej?",
+    "options": [
+      "wprowadzenie czajników elektrycznych do oferty producenta robotów kuchennych",
+      "wejście na rynek telefonii komórkowej przez nadawcę programów telewizyjnych",
+      "utworzenie specjalistycznego banku przez producenta samochodów osobowych",
+      "przejęcie wszystkich podmiotów w łańcuchu dostaw przez hipermarket"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Dywersyfikacja horyzontalna (pozioma) polega na poszerzeniu oferty o nowe produkty powiązane z dotychczasowymi i kierowane do tych samych klientów – np. producent robotów kuchennych zaczyna sprzedawać czajniki elektryczne. Wejście w odległe branże (bank założony przez producenta samochodów) to dywersyfikacja konglomeratowa, a przejęcie ogniw łańcucha dostaw – integracja pionowa."
+  }
+]

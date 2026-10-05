@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe22-o-01",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody okręgowe",
+    "question": "Posługując się granicą możliwości produkcyjnych, pojawienie się bezrobocia można wyrazić jako:",
+    "options": [
+      "przesunięcie całej granicy możliwości produkcyjnych w lewo (w dół)",
+      "ruch po krzywej możliwości produkcyjnych w prawo (w dół)",
+      "przesunięcie całej granicy możliwości produkcyjnych w prawo (w górę)",
+      "przejście do punktu położonego poniżej granicy możliwości produkcyjnych"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Bezrobocie oznacza, że gospodarka nie wykorzystuje w pełni swoich zasobów, więc produkuje w punkcie położonym poniżej (wewnątrz) granicy możliwości produkcyjnych. Sama granica się nie przesuwa, bo zasoby pracy nadal istnieją – są tylko niewykorzystane."
+  },
+  {
+    "id": "owe22-o-02",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody okręgowe",
+    "question": "Użyteczność całkowita:",
+    "options": [
+      "określa całkowitą wartość rynkową zakupionych dóbr lub usług",
+      "stanowi łączny wydatek konsumenta na zakup dobra lub usługi",
+      "jest sumą wartości użytkowych skonsumowanych jednostek dobra lub usługi",
+      "określa łączne korzyści, jakie osiąga konsument ze skonsumowanych jednostek dobra lub usługi"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Użyteczność całkowita to łączna satysfakcja (korzyść), jaką konsument osiąga z konsumpcji wszystkich jednostek dobra – suma użyteczności krańcowych. Jest subiektywna, więc nie jest ani wartością rynkową dóbr, ani wydatkiem na ich zakup."
+  },
+  {
+    "id": "owe22-o-03",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody okręgowe",
+    "question": "Co stałoby się z rynkiem telewizorów LCD w Korei, gdyby Kanada wprowadziła cła antydumpingowe na telewizory importowane z Korei (ceteris paribus)?",
+    "options": [
+      "spadłaby ilość równowagi rynkowej",
+      "wzrósłby popyt",
+      "cena równowagi ustaliłaby się na wyższym poziomie",
+      "wzrosłaby wielkość popytu"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Cła w Kanadzie ograniczą eksport koreańskich telewizorów, więc producenci skierują je na rynek krajowy – podaż w Korei wzrośnie (krzywa podaży przesunie się w prawo). Cena równowagi spadnie, a przy niższej cenie wzrośnie wielkość popytu (ruch wzdłuż krzywej popytu). Sam popyt się nie zmienia, a ilość równowagi rośnie."
+  },
+  {
+    "id": "owe22-o-04",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody okręgowe",
+    "question": "Które z poniższych stwierdzeń jest prawdziwe?",
+    "options": [
+      "paradoks Giffena dotyczy dóbr podstawowych, których udział w wydatkach gospodarstw domowych jest relatywnie niewielki",
+      "prawo Engla stwierdza, że wraz ze wzrostem dochodu wydatki na żywność gospodarstw domowych rosną procentowo szybciej niż dochód",
+      "jeżeli wartość bezwzględna współczynnika dochodowej elastyczności popytu na pewne dobro podrzędne wynosi 0,45, to popyt na nie zmienia się w odwrotnym kierunku niż zmiana dochodu",
+      "dobra podstawowe to dobra, które są relatywnie niedrogie"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Dla dobra podrzędnego współczynnik dochodowej elastyczności popytu jest ujemny (tu −0,45), więc popyt zmienia się w kierunku przeciwnym do zmiany dochodu. Paradoks Giffena dotyczy dóbr podrzędnych o dużym udziale w wydatkach, a prawo Engla mówi, że wraz ze wzrostem dochodu udział wydatków na żywność maleje (rosną one wolniej niż dochód)."
+  },
+  {
+    "id": "owe22-o-05",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody okręgowe",
+    "question": "W którym z niżej opisanych przypadków popyt jest elastyczny?",
+    "options": [
+      "spadek ceny wywoła spadek utargu całkowitego",
+      "wzrost ceny nie wywoła zmiany utargu całkowitego",
+      "spadek ceny wywoła wzrost utargu całkowitego",
+      "wartość bezwzględna współczynnika cenowej elastyczności popytu jest większa od 0"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Popyt jest elastyczny, gdy |Ed| > 1 – procentowa zmiana ilości jest większa niż zmiana ceny. Wtedy obniżka ceny zwiększa utarg całkowity, a podwyżka go zmniejsza. Spadek utargu przy obniżce ceny oznacza popyt nieelastyczny, a brak zmiany utargu – elastyczność jednostkową."
+  },
+  {
+    "id": "owe22-o-06",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody okręgowe",
+    "question": "Parki narodowe są przykładem dobra mieszanego, ponieważ charakteryzuje je:",
+    "options": [
+      "możliwość wyłączenia z konsumpcji i brak konkurencyjności",
+      "możliwość wyłączenia z konsumpcji i konkurencyjność",
+      "niemożliwość wyłączenia z konsumpcji i brak konkurencyjności",
+      "niemożliwość wyłączenia z konsumpcji i konkurencyjność"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Dobro mieszane łączy cechy dobra publicznego i prywatnego. Z parku narodowego trudno kogoś wykluczyć (niewykluczalność), ale przy dużej liczbie odwiedzających każdy kolejny pogarsza warunki innym – tłok, niszczenie przyrody (konkurencyjność w konsumpcji). Takie dobra nazywa się zasobami wspólnymi."
+  },
+  {
+    "id": "owe22-o-07",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody okręgowe",
+    "question": "Krzywa popytu na produkty firmy działającej na rynku doskonałej konkurencji:",
+    "options": [
+      "jest tożsama z krzywą popytu rynkowego",
+      "pokrywa się z funkcją utargu krańcowego",
+      "jest ujemnie nachylona",
+      "pokrywa się z krzywą kosztu krańcowego"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "W konkurencji doskonałej firma jest cenobiorcą: może sprzedać dowolną ilość po cenie rynkowej, więc jej krzywa popytu jest pozioma i pokrywa się z utargiem krańcowym i przeciętnym (D = MR = AR = P). Ujemnie nachylona jest krzywa popytu rynkowego, a nie popytu na produkty pojedynczej firmy."
+  },
+  {
+    "id": "owe22-o-08",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody okręgowe",
+    "question": "Dyskryminacja cenowa (różnicowanie cen) ma miejsce wówczas, gdy monopolista sprzedaje ten sam produkt:",
+    "options": [
+      "po cenach maksymalnych",
+      "w tym samym miejscu i czasie po różnych cenach",
+      "po cenach niższych od przeciętnych kosztów produkcji",
+      "tylko klientom na rynku krajowym"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Dyskryminacja cenowa to sprzedaż tego samego produktu różnym nabywcom po różnych cenach, które nie wynikają z różnic w kosztach (np. bilety ulgowe, różne taryfy dla grup klientów). Wymaga siły rynkowej i możliwości rozdzielenia rynków, żeby klienci nie odsprzedawali sobie towaru."
+  },
+  {
+    "id": "owe22-o-09",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody okręgowe",
+    "question": "Którego z poniższych elementów nie uwzględnia się przy obliczaniu PKB?",
+    "options": [
+      "dochodów netto z własności za granicą",
+      "inwestycji",
+      "eksportu netto",
+      "wydatków państwa"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "PKB liczony metodą wydatkową to C + I + G + (X − M): konsumpcja, inwestycje, wydatki państwa i eksport netto. Dochodów netto z własności za granicą nie wlicza się do PKB – dodaje się je przy przejściu do PNB (DNB). PKB mierzy produkcję na terytorium kraju, bez względu na to, do kogo należą czynniki produkcji."
+  },
+  {
+    "id": "owe22-o-10",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody okręgowe",
+    "question": "Zgodnie z ujęciem Keynesa recesja może być skutkiem:",
+    "options": [
+      "zmniejszenia eksportu",
+      "zmniejszenia oszczędności",
+      "zmniejszenia podatków",
+      "wzrostu krańcowej rentowności kapitału"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Według Keynesa poziom produkcji wyznacza popyt globalny (C + I + G + eksport netto). Spadek eksportu zmniejsza popyt globalny i – przez mnożnik – dochód, co może wywołać recesję. Spadek oszczędności, obniżka podatków i wzrost krańcowej efektywności kapitału zwiększają popyt, więc przeciwdziałają recesji."
+  },
+  {
+    "id": "owe22-o-11",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody okręgowe",
+    "question": "Krzywa, która obrazuje różne kombinacje dochodu i stopy procentowej, przy których rynek dóbr i usług znajduje się w równowadze, jest określana jako:",
+    "options": [
+      "LM",
+      "AD",
+      "AS",
+      "IS"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Krzywa IS (Investment–Saving) to zbiór kombinacji dochodu i stopy procentowej, przy których rynek dóbr i usług jest w równowadze (planowane inwestycje = oszczędności). Krzywa LM opisuje równowagę na rynku pieniądza, a AD i AS – zagregowany popyt i podaż."
+  },
+  {
+    "id": "owe22-o-12",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody okręgowe",
+    "question": "Restrykcyjna polityka fiskalna prowadzi do:",
+    "options": [
+      "wzrostu produkcji i wzrostu cen",
+      "wzrostu produkcji i spadku cen",
+      "spadku produkcji i spadku cen",
+      "spadku produkcji i wzrostu cen"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Restrykcyjna polityka fiskalna (cięcie wydatków państwa, podwyżka podatków) zmniejsza popyt globalny – krzywa AD przesuwa się w lewo, co obniża zarówno produkcję, jak i poziom cen."
+  },
+  {
+    "id": "owe22-o-13",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody okręgowe",
+    "question": "Deficyt budżetowy wynikający z działania automatycznych stabilizatorów koniunktury to deficyt:",
+    "options": [
+      "czysty",
+      "strukturalny",
+      "cykliczny",
+      "klasyczny"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Deficyt cykliczny wynika z działania automatycznych stabilizatorów koniunktury: w recesji maleją wpływy z podatków, a rosną wydatki (np. zasiłki dla bezrobotnych); w ożywieniu jest odwrotnie. Deficyt strukturalny to deficyt, który wystąpiłby nawet przy produkcji na poziomie potencjalnym."
+  },
+  {
+    "id": "owe22-o-14",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody okręgowe",
+    "question": "Taksflacja przyczynia się do:",
+    "options": [
+      "ograniczenia deficytu budżetowego",
+      "wzrostu wydatków budżetowych",
+      "wzrostu deficytu handlowego",
+      "zwiększenia wydatków konsumpcyjnych"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Taksflacja to wzrost obciążeń podatkowych spowodowany inflacją przy niezmienionych progach podatkowych: nominalne dochody rosną, podatnicy trafiają do wyższych progów i płacą więcej, choć realnie nie zarabiają więcej. Zwiększa to dochody budżetu, czyli zmniejsza deficyt."
+  },
+  {
+    "id": "owe22-o-15",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody okręgowe",
+    "question": "W przypadku wejścia Polski do strefy euro ustalenie kursu wymiany 1 zł na euro na niższym poziomie niż średniookresowy kurs równowagi byłoby niekorzystne dla:",
+    "options": [
+      "importerów",
+      "budżetu państwa",
+      "eksporterów",
+      "osób, które utrzymują oszczędności w euro"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Kurs zamiany na niższym poziomie niż kurs równowagi (mniej złotych za 1 euro) oznacza przewartościowanego, „za mocnego” złotego. Eksporterzy dostawaliby mniej złotych za każde euro przychodu, a polskie towary byłyby droższe dla zagranicy – ich konkurencyjność by spadła. Zyskaliby natomiast importerzy."
+  },
+  {
+    "id": "owe22-o-16",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody okręgowe",
+    "question": "Które z poniższych stwierdzeń nie jest prawdziwe w odniesieniu do produktu strukturyzowanego?",
+    "options": [
+      "jego cechą charakterystyczną jest to, że zawsze odzwierciedla strukturę transakcji na danym rynku",
+      "jest to instrument finansowy, który powstaje z połączenia obligacji zerokuponowej z opcją",
+      "może dawać 100-procentową gwarancję ochrony zainwestowanego kapitału przy niemal nieograniczonym poziomie zysku",
+      "daje możliwość inwestycji na rynkach surowców bez fizycznego zaangażowania"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Produkt strukturyzowany łączy instrument dłużny (np. obligację zerokuponową lub lokatę) z instrumentem pochodnym (najczęściej opcją). Może gwarantować zwrot kapitału i dawać zysk zależny np. od cen surowców czy indeksów, bez fizycznego kupowania aktywów. Jego nazwa wynika z konstrukcji, a nie z tego, że odzwierciedla strukturę transakcji na rynku."
+  },
+  {
+    "id": "owe22-o-17",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody okręgowe",
+    "question": "Jeżeli inwestor kupuje instrument finansowy na jednym rynku z zamiarem jego jednoczesnej sprzedaży po wyższej cenie na drugim rynku, to taka transakcja nosi nazwę:",
+    "options": [
+      "arbitraż",
+      "hedging",
+      "spekulacja",
+      "reverse repo"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Arbitraż to wykorzystanie różnicy cen tego samego instrumentu na dwóch rynkach: kupno taniej na jednym i jednoczesna sprzedaż drożej na drugim – zysk bez ryzyka. Hedging to zabezpieczenie przed ryzykiem, a spekulacja – zajęcie pozycji w oczekiwaniu na zmianę ceny, z ryzykiem straty."
+  },
+  {
+    "id": "owe22-o-18",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody okręgowe",
+    "question": "Wartość udzielonych kredytów gotówkowych dla gospodarstw domowych w bilansie banku komercyjnego wykazywana jest w:",
+    "options": [
+      "aktywach",
+      "pasywach",
+      "kapitałach własnych",
+      "rozliczeniach międzyokresowych czynnych"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Udzielone kredyty to należności banku od klientów, więc wykazuje się je w aktywach. Pasywa banku to źródła finansowania – przede wszystkim depozyty klientów i kapitał własny."
+  },
+  {
+    "id": "owe22-o-19",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody okręgowe",
+    "question": "Który z niżej wymienionych rodzajów obligacji skarbowych skierowanych do inwestorów indywidualnych nie jest emitowany w Polsce (stan na rok 2008)?",
+    "options": [
+      "dwuletnie obligacje o stałym oprocentowaniu",
+      "czteroletnie obligacje indeksowane stopą inflacji",
+      "pięcioletnie obligacje o zmiennym oprocentowaniu",
+      "dziesięcioletnie obligacje oszczędnościowe"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "W latach 2008–2009 Skarb Państwa oferował inwestorom indywidualnym m.in. 2-letnie obligacje o stałym oprocentowaniu (DOS), 3-letnie o zmiennym (TZ), 4-letnie indeksowane inflacją (COI) i 10-letnie (EDO). Pięcioletnich obligacji o zmiennym oprocentowaniu nie emitowano."
+  },
+  {
+    "id": "owe22-o-20",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody okręgowe",
+    "question": "Proces harmonizacji podatków w Unii Europejskiej dotyczy:",
+    "options": [
+      "stawek podatku od nieruchomości",
+      "podstawy opodatkowania podatkiem dochodowym od osób prawnych",
+      "skali podatkowej podatku dochodowego od osób fizycznych",
+      "żadna z powyższych odpowiedzi nie jest prawidłowa"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Harmonizacja podatków w UE dotyczy przede wszystkim podatków pośrednich – VAT i akcyzy (dyrektywy określają wspólne zasady i minimalne stawki). Podatki bezpośrednie (PIT, CIT, w tym podstawa opodatkowania i skale) oraz podatki lokalne, jak podatek od nieruchomości, pozostają w gestii państw członkowskich – dlatego żadna odpowiedź nie jest prawidłowa."
+  },
+  {
+    "id": "owe22-o-21",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody okręgowe",
+    "question": "Co miałby obciążać podatek Tobina?",
+    "options": [
+      "zyski z lokat terminowych zakładanych w rajach podatkowych",
+      "spekulacyjne transakcje walutowe",
+      "emisję zanieczyszczeń elektromagnetycznych (szumy radiowe) przez sieci telefonii mobilnej",
+      "nadmierną emisję CO2 w spalinach pojazdów mechanicznych"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Podatek Tobina (James Tobin, 1972) to propozycja niewielkiego podatku od transakcji walutowych. Miał ograniczać krótkoterminowe, spekulacyjne przepływy kapitału i stabilizować kursy walut."
+  },
+  {
+    "id": "owe22-o-22",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody okręgowe",
+    "question": "Które z poniższych stwierdzeń dotyczących czeku jest prawdziwe?",
+    "options": [
+      "można zastrzec oprocentowanie dla posiadacza czeku",
+      "czeku nie można poręczyć",
+      "za zapłatę czeku odpowiada tylko bank (trasat)",
+      "możliwa jest realizacja czeku po upływie 10 dni od daty jego wystawienia, o ile go nie odwołano"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Według prawa czekowego czek wystawiony i płatny w Polsce należy przedstawić do zapłaty w ciągu 10 dni od daty wystawienia; jeśli wystawca go nie odwołał, bank (trasat) może go zapłacić również po tym terminie. Zastrzeżenie odsetek w czeku uważa się za nienapisane, czek można poręczyć, a za jego zapłatę odpowiada wystawca, nie bank."
+  },
+  {
+    "id": "owe22-o-23",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody okręgowe",
+    "question": "Wystawca opcji sprzedaży oczekuje:",
+    "options": [
+      "wzrostu cen akcji",
+      "spadku cen akcji",
+      "utrzymania ceny akcji na dotychczasowym poziomie",
+      "cena akcji dla wystawcy opcji nie ma znaczenia, ponieważ w momencie zawarcia transakcji otrzymał on od nabywcy premię opcyjną"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Wystawca opcji sprzedaży (put) dostaje premię i zobowiązuje się kupić akcje po cenie wykonania, jeśli nabywca opcji tego zażąda. Zyskuje, gdy cena akcji rośnie (lub się utrzymuje) – opcja nie zostanie wtedy wykonana, a premia zostaje u niego. Spadek ceny akcji przynosi mu stratę."
+  },
+  {
+    "id": "owe22-o-24",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody okręgowe",
+    "question": "Reasekuracja:",
+    "options": [
+      "pozwala na terytorialną dywersyfikację przyjętych rodzajów ryzyka",
+      "umożliwia zmniejszenie maksymalnej wielkości pojedynczego ryzyka, które może przyjąć zakład ubezpieczeń",
+      "pozwala na przeniesienie odpowiedzialności na ubezpieczającego",
+      "pozwala na przeniesienie odpowiedzialności na ubezpieczonego"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Reasekuracja to przekazanie części ryzyka przez zakład ubezpieczeń innemu zakładowi (reasekuratorowi). Pozwala rozproszyć ryzyko – także terytorialnie, bo reasekuratorzy działają na wielu rynkach – i przyjmować większe ryzyka, niż pozwalałyby na to własne środki (zwiększa, a nie zmniejsza maksymalną wielkość przyjmowanego ryzyka). Nie przenosi odpowiedzialności na ubezpieczającego ani ubezpieczonego."
+  },
+  {
+    "id": "owe22-o-25",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody okręgowe",
+    "question": "Do zadań Ubezpieczeniowego Funduszu Gwarancyjnego należy zaspokajanie roszczeń z tytułu:",
+    "options": [
+      "szkód wyrządzonych przez lekarza w związku z wykonywaniem obowiązków zawodowych, o ile doszło do poważnego rozstroju zdrowia",
+      "alimentów, w sytuacji gdy nie ustalono tożsamości jednego z rodziców",
+      "szkód powstałych na osobie, w sytuacji gdy nie ustalono tożsamości sprawcy wypadku (posiadacza lub kierowcy pojazdu mechanicznego)",
+      "umów z otwartym funduszem emerytalnym, w przypadku ogłoszenia jego upadłości"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Ubezpieczeniowy Fundusz Gwarancyjny wypłaca m.in. świadczenia za szkody na osobie, gdy sprawca wypadku komunikacyjnego jest nieznany, oraz za szkody wyrządzone przez posiadaczy pojazdów lub rolników bez obowiązkowego OC. Alimenty wypłaca Fundusz Alimentacyjny, a UFG nie odpowiada za szkody lekarzy ani za OFE."
+  },
+  {
+    "id": "owe22-o-26",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody okręgowe",
+    "question": "Prakseologia to:",
+    "options": [
+      "dziedzina badań naukowych zajmująca się usuwaniem niesprawności w ludzkich działaniach",
+      "nauka o stosowanych w ekonomii procedurach badawczych",
+      "rodzaj badań porównawczych w zakresie historycznych praktyk stosowanych w najlepszych w danej branży przedsiębiorstwach",
+      "zbiór przepisów określających prawa i obowiązki pracowników związane z wykonywaniem czynności służbowych"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Prakseologia (Tadeusz Kotarbiński, „Traktat o dobrej robocie”) to nauka o sprawnym działaniu. Bada warunki skuteczności, ekonomiczności i sprawności działań ludzkich i wskazuje, jak usuwać ich niesprawności."
+  },
+  {
+    "id": "owe22-o-27",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody okręgowe",
+    "question": "Osoba, która potrafi oddziaływać na zachowanie innych bez uciekania się do autorytetu formalnego lub zajmowanej pozycji, to:",
+    "options": [
+      "dyrektor",
+      "menedżer",
+      "przywódca",
+      "biznesmen"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Przywódca (lider) wpływa na innych dzięki autorytetowi nieformalnemu – charyzmie, wiedzy, zaufaniu – a nie dzięki zajmowanemu stanowisku. Dyrektor czy menedżer opiera się przede wszystkim na władzy formalnej wynikającej z pozycji w strukturze organizacji."
+  },
+  {
+    "id": "owe22-o-28",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody okręgowe",
+    "question": "Mystery shopping to:",
+    "options": [
+      "sposób zaopatrzenia małych sklepów odzieżowych polegający na zakupie końcówek serii markowej odzieży od znanych kreatorów mody",
+      "nowy trend w handlu detalicznym polegający na lokowaniu sklepów wielkopowierzchniowych w centrach miast",
+      "strategia stosowana przy wrogich przejęciach firm",
+      "metoda badania poziomu obsługi klientów w instytucjach finansowych"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Mystery shopping (tajemniczy klient) to metoda badania jakości obsługi: przeszkolona osoba udaje zwykłego klienta, a następnie ocenia przebieg obsługi według ustalonych kryteriów. Stosuje się ją m.in. w bankach i innych instytucjach finansowych, handlu i usługach."
+  },
+  {
+    "id": "owe22-o-29",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody okręgowe",
+    "question": "Zarządzanie przez wyjątki polega na:",
+    "options": [
+      "podejmowaniu decyzji przez kierownictwo jedynie w sytuacji, gdy konieczna jest zmiana długookresowej strategii przedsiębiorstwa",
+      "koncentrowaniu się jedynie na odchyleniach od przyjętych planów i wzorców",
+      "delegowaniu na zespół ekspertów odpowiedzialności za podejmowanie powtarzalnych decyzji",
+      "wyłączeniu z procesu podejmowania decyzji osób niekompetentnych"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Zarządzanie przez wyjątki polega na tym, że kierownictwo zajmuje się tylko sytuacjami nietypowymi – istotnymi odchyleniami od planów i norm – a sprawy rutynowe załatwiają niższe szczeble. Pozwala to kierownikom oszczędzać czas."
+  },
+  {
+    "id": "owe22-o-30",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody okręgowe",
+    "question": "Diagram (wykres) Gantta może znaleźć zastosowanie w planowaniu:",
+    "options": [
+      "realizacji jedynie dużych projektów z branży IT",
+      "wyłącznie działalności developera na rynku nieruchomości komercyjnych",
+      "tylko produkcji masowej kapsli do butelek",
+      "wszystkich typów działalności przedsiębiorstwa"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Wykres Gantta to graficzny harmonogram: na osi czasu pokazuje, kiedy zaczynają się i kończą poszczególne zadania. Można go stosować do planowania każdego rodzaju działalności i projektu, niezależnie od branży."
+  }
+]

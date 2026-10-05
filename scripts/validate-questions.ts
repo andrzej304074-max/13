@@ -1,13 +1,21 @@
-import { readFileSync } from "node:fs";
+import { readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 
-const file = path.join(__dirname, "..", "data", "questions.json");
-const data = JSON.parse(readFileSync(file, "utf8")) as Record<string, unknown>[];
+const dir = path.join(__dirname, "..", "data", "questions");
+const files = readdirSync(dir).filter((f) => f.endsWith(".json")).sort();
+const index = readFileSync(path.join(dir, "index.ts"), "utf8");
 const errors: string[] = [];
 const ids = new Set<string>();
+const data: Record<string, unknown>[] = [];
 
-data.forEach((q, i) => {
-  const where = `#${i} (${String(q.id)})`;
+for (const file of files) {
+  if (!index.includes(`./${file}`)) errors.push(`${file}: brak importu w data/questions/index.ts`);
+  const items = JSON.parse(readFileSync(path.join(dir, file), "utf8")) as Record<string, unknown>[];
+  items.forEach((q) => data.push({ ...q, _file: file }));
+}
+
+data.forEach((q) => {
+  const where = `${String(q._file)} (${String(q.id)})`;
   if (typeof q.id !== "string" || !q.id) errors.push(`${where}: brak id`);
   else if (ids.has(q.id)) errors.push(`${where}: zduplikowane id`);
   else ids.add(q.id);
@@ -28,7 +36,7 @@ data.forEach((q, i) => {
 
 const single = data.filter((q) => q.type === "single").length;
 const multi = data.filter((q) => q.type === "multi").length;
-console.log(`Pytań: ${data.length} (jednokrotnego wyboru: ${single}, wielokrotnego: ${multi})`);
+console.log(`Plików: ${files.length}, pytań: ${data.length} (jednokrotnego wyboru: ${single}, wielokrotnego: ${multi})`);
 if (errors.length) {
   console.error(errors.join("\n"));
   process.exit(1);

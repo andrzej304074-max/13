@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe25-o-01",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody okręgowe",
+    "question": "Posługując się granicą możliwości produkcyjnych, podniesienie wieku emerytalnego do 67 lat można wyrazić jako:",
+    "options": [
+      "ruch po krzywej możliwości produkcyjnych w prawo (w dół)",
+      "przesunięcie całej granicy możliwości produkcyjnych w górę",
+      "przejście do punktu położonego poniżej granicy możliwości produkcyjnych",
+      "ruch po krzywej możliwości produkcyjnych w lewo (w górę)"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Podniesienie wieku emerytalnego zwiększa zasób pracy w gospodarce (ludzie pracują dłużej), a więc jej możliwości wytwórcze – cała granica możliwości produkcyjnych przesuwa się na zewnątrz (w górę). Ruch po krzywej oznacza jedynie zmianę struktury produkcji przy danych zasobach."
+  },
+  {
+    "id": "owe25-o-02",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody okręgowe",
+    "question": "Podniesienie przez rząd akcyzy na paliwa wywołuje wzrost jego ceny na rynku. Które z poniższych zdarzeń jest najbardziej prawdopodobne w krótkim okresie, jeśli funkcja podaży charakteryzuje się większą elastycznością niż funkcja popytu?",
+    "options": [
+      "wzrost akcyzy obciąży wyłącznie producentów (sprzedawców) paliw, ponieważ to oni dokonują wpłat akcyzy do budżetu",
+      "wzrost akcyzy obciąży zarówno producentów (sprzedawców) paliw, jak i nabywców, jednak w większym stopniu zostaną obciążeni nabywcy",
+      "producenci (sprzedawcy) paliw przerzucą cały wzrost cen paliw wywołany wzrostem akcyzy na nabywców",
+      "wzrost akcyzy obciąży zarówno producentów (sprzedawców) paliw, jak i nabywców, jednak w większym stopniu zostaną obciążeni producenci (sprzedawcy)"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Ciężar podatku rozkłada się między kupujących i sprzedających odwrotnie do elastyczności: bardziej obciążona jest strona mniej elastyczna. Popyt na paliwa jest mniej elastyczny niż podaż, więc większą część akcyzy poniosą nabywcy (przez wyższą cenę). O rzeczywistym ciężarze podatku nie decyduje to, kto formalnie wpłaca go do budżetu."
+  },
+  {
+    "id": "owe25-o-03",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody okręgowe",
+    "question": "Spadek podaży papierosów mógł zostać wywołany:",
+    "options": [
+      "spadkiem dochodów konsumentów (zakładając, że papierosy są zaliczane do dóbr normalnych)",
+      "wzrostem cen tytoniu",
+      "spadkiem popytu na papierosy na skutek licznych kampanii społecznych uświadamiających szkodliwość palenia papierosów",
+      "spadkiem stawek płac pracowników zatrudnionych przy produkcji papierosów"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Tytoń to surowiec do produkcji papierosów – wzrost jego ceny podnosi koszty, więc podaż papierosów maleje (krzywa podaży przesuwa się w lewo). Zmiany dochodów i kampanie społeczne wpływają na popyt, a nie na podaż, a spadek płac obniża koszty, czyli zwiększa podaż."
+  },
+  {
+    "id": "owe25-o-04",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody okręgowe",
+    "question": "Zagregowany popyt w gospodarce otwartej obejmuje:",
+    "options": [
+      "wydatki konsumpcyjne, wydatki państwowe i inwestycje",
+      "wydatki konsumpcyjne i wydatki państwowe",
+      "wydatki konsumpcyjne i wydatki państwowe skorygowane o wartość zaciągniętych kredytów",
+      "wydatki konsumpcyjne, inwestycje, wydatki państwowe oraz eksport netto"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Zagregowany popyt w gospodarce otwartej to AD = C + I + G + NX: wydatki konsumpcyjne gospodarstw domowych, inwestycje, wydatki państwa i eksport netto (eksport minus import)."
+  },
+  {
+    "id": "owe25-o-05",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody okręgowe",
+    "question": "Jeżeli przedsiębiorstwo ograniczyło w procesie produkcji pewnego dobra nakłady zmiennego czynnika wytwórczego i w następstwie tego produkt całkowity wzrósł, przy czym nie osiągnął maksymalnych możliwych rozmiarów, to wówczas:",
+    "options": [
+      "produkt przeciętny się zmniejszył",
+      "produkt krańcowy wzrósł i jest dodatni",
+      "produkt krańcowy wzrósł, lecz jest ujemny",
+      "produkt krańcowy się zmniejszył, lecz jest dodatni"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Skoro ograniczenie nakładu czynnika zwiększyło produkt całkowity, to ostatnie jednostki tego czynnika miały ujemny produkt krańcowy (firma była za punktem maksimum produktu całkowitego). Po ograniczeniu nakładu produkt krańcowy wzrósł (jest „mniej ujemny”), ale nadal jest ujemny, bo produkt całkowity jeszcze nie osiągnął maksimum, gdzie MP = 0."
+  },
+  {
+    "id": "owe25-o-06",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody okręgowe",
+    "question": "Według ekonomii klasycznej:",
+    "options": [
+      "liczba miejsc pracy zawsze będzie większa od liczby chętnych do pracy",
+      "gospodarka nigdy nie osiągnie stanu pełnego zatrudnienia",
+      "mechanizm rynkowy podlega automatycznej samoregulacji",
+      "gospodarka wymaga interwencji państwa, aby mogła osiągnąć stan równowagi"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Ekonomia klasyczna (A. Smith, D. Ricardo, J.B. Say) zakłada, że rynek reguluje się sam („niewidzialna ręka rynku”): elastyczne ceny i płace przywracają równowagę, a gospodarka dąży do pełnego zatrudnienia. Interwencja państwa nie jest potrzebna – jej konieczność podkreślał dopiero Keynes."
+  },
+  {
+    "id": "owe25-o-07",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody okręgowe",
+    "question": "Rosnące przychody ze skali produkcji oznaczają:",
+    "options": [
+      "spadek przeciętnych kosztów całkowitych w krótkim okresie, zaś w długim przeciętnych kosztów zmiennych",
+      "spadek przeciętnych kosztów całkowitych w długim okresie",
+      "spadek przeciętnych kosztów zmiennych zarówno w krótkim, jak i w długim okresie",
+      "spadek kosztów krańcowych w długim okresie"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Rosnące przychody ze skali oznaczają, że proporcjonalne zwiększenie wszystkich nakładów zwiększa produkcję bardziej niż proporcjonalnie, więc przeciętny koszt całkowity maleje wraz ze wzrostem skali. To pojęcie długookresowe, bo tylko w długim okresie można zmienić wszystkie czynniki produkcji."
+  },
+  {
+    "id": "owe25-o-08",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody okręgowe",
+    "question": "Które z poniższych stwierdzeń nie jest prawidłowe w odniesieniu do pionowo przebiegającej krzywej zagregowanej podaży?",
+    "options": [
+      "gospodarka zwykle funkcjonuje przy pełnym wykorzystaniu możliwości produkcyjnych",
+      "realny dochód narodowy nie zależy od poziomu cen",
+      "negatywny szok popytowy powoduje spadek przeciętnego poziomu cen",
+      "przeciętny poziom cen jest stały"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Pionowa krzywa zagregowanej podaży oznacza, że produkcja jest na poziomie potencjalnym i nie zależy od poziomu cen. Zmiany popytu zmieniają wtedy tylko ceny – np. negatywny szok popytowy je obniża. Nieprawdą jest więc, że poziom cen jest stały (to cecha poziomej krzywej podaży)."
+  },
+  {
+    "id": "owe25-o-09",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody okręgowe",
+    "question": "Przedsiębiorstwo powinno wstrzymać produkcję w krótkim okresie, gdy utarg całkowity nie wystarcza na pokrycie:",
+    "options": [
+      "kosztów zmiennych",
+      "kosztów całkowitych",
+      "kosztów stałych",
+      "kosztów krańcowych"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W krótkim okresie koszty stałe trzeba ponosić nawet przy zerowej produkcji. Opłaca się więc produkować, dopóki utarg pokrywa koszty zmienne (cena ≥ minimum przeciętnego kosztu zmiennego) – nadwyżka pokrywa wtedy część kosztów stałych. Gdy utarg nie pokrywa kosztów zmiennych, produkcję należy wstrzymać."
+  },
+  {
+    "id": "owe25-o-10",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody okręgowe",
+    "question": "W którym kraju waluta narodowa została zastąpiona euro (stan na rok 2011)?",
+    "options": [
+      "Dania",
+      "Łotwa",
+      "Słowenia",
+      "Szwecja"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Słowenia przyjęła euro 1 stycznia 2007 r. Łotwa weszła do strefy euro później – 1 stycznia 2014 r. Dania ma klauzulę opt-out, a Szwecja nie spełnia kryteriów (nie przystąpiła do ERM II), więc oba kraje zachowały swoje korony."
+  },
+  {
+    "id": "owe25-o-11",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody okręgowe",
+    "question": "Przyczyną zawodności rynku jest:",
+    "options": [
+      "występowanie monopoli naturalnych",
+      "polityka antymonopolowa",
+      "produkcja dóbr przez sektor publiczny",
+      "internalizacja efektów zewnętrznych"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Zawodność rynku (market failure) to sytuacja, w której rynek nie zapewnia efektywnej alokacji zasobów. Jej przyczyny to m.in. monopole (w tym naturalne), efekty zewnętrzne, dobra publiczne i asymetria informacji. Polityka antymonopolowa i internalizacja efektów zewnętrznych to sposoby korygowania zawodności rynku, a nie jej przyczyny."
+  },
+  {
+    "id": "owe25-o-12",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody okręgowe",
+    "question": "Jeżeli produkt krajowy brutto per capita w pewnym europejskim kraju w 2010 r. wzrósł o 3% w porównaniu z poprzednim rokiem, to:",
+    "options": [
+      "liczba imigrantów musiała przekroczyć liczbę emigrantów",
+      "w kraju na pewno wystąpił wzrost gospodarczy",
+      "nie mógł wystąpić spadek produktu krajowego brutto",
+      "przyrost naturalny w kraju mógł być ujemny"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "PKB per capita = PKB / liczba ludności. Może wzrosnąć także wtedy, gdy liczba ludności spada (np. przy ujemnym przyroście naturalnym lub emigracji), nawet jeśli PKB się nie zmienił lub zmalał. Wzrost PKB per capita nie przesądza więc ani o wzroście gospodarczym, ani o kierunku migracji."
+  },
+  {
+    "id": "owe25-o-13",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody okręgowe",
+    "question": "Która z poniższych informacji nie jest potrzebna do obliczenia progu rentowności (break-even point)?",
+    "options": [
+      "kapitał własny",
+      "cena",
+      "jednostkowe koszty zmienne",
+      "koszty stałe"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Próg rentowności (w jednostkach) = koszty stałe / (cena − jednostkowy koszt zmienny). Do jego obliczenia potrzebne są cena, koszty stałe i jednostkowe koszty zmienne – kapitał własny nie jest potrzebny."
+  },
+  {
+    "id": "owe25-o-14",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody okręgowe",
+    "question": "Jak nazywa się kredyt spłacany jednorazowo na zakończenie okresu kredytowania?",
+    "options": [
+      "rewolwingowy",
+      "preferencyjny",
+      "lombardowy",
+      "balonowy"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Kredyt balonowy ma niskie raty w trakcie kredytowania (np. same odsetki), a całość lub większość kapitału spłaca się jednorazowo na końcu (tzw. balon). Kredyt rewolwingowy odnawia się automatycznie po spłacie, preferencyjny ma oprocentowanie dotowane, a lombardowy jest zabezpieczony zastawem na papierach wartościowych lub rzeczach ruchomych."
+  },
+  {
+    "id": "owe25-o-15",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody okręgowe",
+    "question": "Co wyróżnia poglądy keynesistów?",
+    "options": [
+      "ekspansywna polityka fiskalna pomaga wyjść gospodarce z recesji",
+      "budżet państwa powinien być zrównoważony niezależnie od fazy cyklu koniunkturalnego",
+      "polityka monetarna jest jedynym narzędziem zmniejszenia wahań koniunkturalnych",
+      "wzrost wydatków państwowych prowadzi do nieuchronnego wzrostu inflacji, a nie wzrostu gospodarczego"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Keyneści uważają, że w recesji popyt globalny jest za mały i państwo powinno go pobudzać ekspansywną polityką fiskalną (wyższe wydatki, niższe podatki), nawet kosztem deficytu. Zrównoważony budżet niezależnie od koniunktury, prymat polityki monetarnej i przekonanie o inflacyjnym efekcie wydatków państwa to poglądy klasyków i monetarystów."
+  },
+  {
+    "id": "owe25-o-16",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody okręgowe",
+    "question": "Co nie leży w kompetencjach rady nadzorczej w spółce akcyjnej?",
+    "options": [
+      "powoływanie i odwoływanie członków zarządu spółki",
+      "ocena sprawozdania finansowego za ubiegły rok obrotowy w zakresie zgodności z księgami rachunkowymi, jak i ze stanem faktycznym",
+      "zatwierdzanie rocznych planów działania spółki",
+      "decyzja o sposobie użycia kapitału zapasowego i rezerwowego"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Według Kodeksu spółek handlowych o użyciu kapitału zapasowego i rezerwowego decyduje walne zgromadzenie. Rada nadzorcza sprawuje stały nadzór nad spółką: ocenia sprawozdanie finansowe, zwykle powołuje i odwołuje członków zarządu, a statut może jej przyznać także np. zatwierdzanie planów."
+  },
+  {
+    "id": "owe25-o-17",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody okręgowe",
+    "question": "Które z poniższych stwierdzeń dotyczących inflacji nie jest prawdziwe?",
+    "options": [
+      "może być wywołana przez zmiany kursu walutowego",
+      "tempo zmian cen w przypadku inflacji kroczącej jest mniejsze niż w przypadku inflacji galopującej",
+      "nie wpływa na funkcje realizowane przez pieniądz",
+      "w ujęciu monetarnym jest zjawiskiem pieniężnym"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Inflacja wpływa na funkcje pieniądza: obniża jego wartość jako środka przechowywania wartości, a przy wysokiej inflacji pieniądz gorzej pełni też funkcję miernika wartości i środka wymiany. Pozostałe zdania są prawdziwe: inflację może wywołać zmiana kursu (inflacja importowana), inflacja krocząca jest wolniejsza od galopującej, a monetaryści uważają ją za zjawisko pieniężne."
+  },
+  {
+    "id": "owe25-o-18",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody okręgowe",
+    "question": "Firma budowlana zajmuje się tynkowaniem elewacji. Które z poniżej wymienionych rodzajów ryzyka zabezpiecza wykupiona przez firmę polisa ubezpieczenia odpowiedzialności cywilnej deliktowej?",
+    "options": [
+      "ryzyko uszkodzenia przez spadające wiadro z tynkiem zaparkowanego w pobliżu rusztowania samochodu będącego własnością mieszkańca remontowanego budynku",
+      "ryzyko niewykonania w terminie umowy wskutek nadejścia niespodziewanych i długotrwałych mrozów",
+      "ryzyko niewykonania kontraktu w związku z łamaniem przepisów BHP i wstrzymaniem prac przez nadzór budowlany",
+      "ryzyko uszkodzenia dźwigu będącego własnością firmy przez pracownika, który posługiwał się fałszywymi dokumentami potwierdzającymi jego kwalifikacje i umiejętności"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Odpowiedzialność cywilna deliktowa to odpowiedzialność za szkodę wyrządzoną czynem niedozwolonym osobie trzeciej, z którą sprawcy nie łączy umowa – np. zniszczenie samochodu mieszkańca przez spadające wiadro. Niewykonanie umowy to odpowiedzialność kontraktowa, a uszkodzenie mienia samej firmy nie jest szkodą wyrządzoną osobie trzeciej."
+  },
+  {
+    "id": "owe25-o-19",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody okręgowe",
+    "question": "Jeśli baza monetarna wynosi 150 mld, a stopa rezerw obowiązkowych jest ustalona na poziomie 8%, to mnożnik kreacji pieniądza wyniesie:",
+    "options": [
+      "12",
+      "12,5",
+      "1875",
+      "nie da się tego określić bez informacji na temat wielkości gotówki w obiegu pozabankowym"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Mnożnik kreacji pieniądza zależy nie tylko od stopy rezerw obowiązkowych (r), ale też od tego, jaką część pieniędzy ludzie trzymają w gotówce poza bankami (c): m = (1 + c) / (c + r). Gdyby całe pieniądze trafiały do banków, mnożnik wyniósłby 1 / 0,08 = 12,5, ale bez informacji o gotówce w obiegu nie da się go określić."
+  },
+  {
+    "id": "owe25-o-20",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody okręgowe",
+    "question": "Firma zakupiła materiały za 1000 zł netto (VAT 23%), a następnie wykonane z nich produkty sprzedała za 1500 zł netto, przy czym sprzedaż ta opodatkowana jest stawką 8% VAT. Jak będzie wyglądać rozliczenie tej firmy z urzędem skarbowym z tytułu VAT?",
+    "options": [
+      "firma wpłaci 110 zł z tytułu VAT do urzędu skarbowego",
+      "firma wpłaci 120 zł z tytułu VAT do urzędu skarbowego",
+      "urząd skarbowy zwróci nadwyżkę VAT naliczonego nad należnym na rachunek bankowy firmy",
+      "firma nie może sprzedawać produktów ze stawką 8% VAT, jeśli naliczony VAT przy zakupie wyniósł 23%"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "VAT należny od sprzedaży: 1500 zł · 8% = 120 zł. VAT naliczony przy zakupie: 1000 zł · 23% = 230 zł. Naliczony przewyższa należny o 110 zł, więc firma ma prawo do zwrotu tej nadwyżki z urzędu skarbowego (lub do przeniesienia jej na kolejny okres). Różne stawki przy zakupie i sprzedaży są dopuszczalne."
+  },
+  {
+    "id": "owe25-o-21",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody okręgowe",
+    "question": "W sytuacji, gdy w danym roku obrachunkowym zrealizowane dochody okażą się wyższe od prognozowanych kwot, jednostka samorządu terytorialnego:",
+    "options": [
+      "musi obligatoryjnie zmienić plan finansowy, tak aby prognozowane dochody nie były niższe niż zrealizowane dochody",
+      "w żadnym wypadku nie może zwiększyć wydatków o kwotę dodatkowych dochodów, ponieważ wydatki ujęte w budżecie stanowią nieprzekraczalny limit w danym roku",
+      "musi przeznaczyć całą kwotę dodatkowych dochodów na spłatę zadłużenia z lat ubiegłych",
+      "może zwiększyć wydatki o kwotę dodatkowych dochodów, o ile zostanie uchwalona nowelizacja budżetu i nie spowoduje to wzrostu deficytu jednostki"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Budżet jednostki samorządu terytorialnego jest planem: dochody są prognozą, a wydatki – limitem. Gdy dochody okażą się wyższe od planowanych, jednostka może zwiększyć wydatki, ale tylko po zmianie (nowelizacji) uchwały budżetowej i pod warunkiem, że nie zwiększy to deficytu. Nie musi przeznaczać nadwyżki na spłatę długu."
+  },
+  {
+    "id": "owe25-o-22",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody okręgowe",
+    "question": "Metoda wyceny aktywów i pasywów spółki przedstawiona jest w:",
+    "options": [
+      "bilansie",
+      "rachunku zysków i strat (rachunek wyników)",
+      "sprawozdaniu z przepływów pieniężnych",
+      "żadna z powyższych odpowiedzi nie jest prawidłowa"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Przyjęte zasady (polityka) rachunkowości, w tym metody wyceny aktywów i pasywów, przedstawia się we wprowadzeniu do sprawozdania finansowego (obecnie część informacji dodatkowej). Bilans, rachunek zysków i strat oraz rachunek przepływów pieniężnych podają wartości, ale nie opisują metod wyceny."
+  },
+  {
+    "id": "owe25-o-23",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody okręgowe",
+    "question": "Która z poniższych sytuacji jest przykładem transakcji hedgingowej?",
+    "options": [
+      "sprzedaż przez wytwórcę pasz dla zwierząt 5 tys. ton owsa w związku z oczekiwaniem spadku jego ceny w przyszłości",
+      "zakup przez bank euro za dolary amerykańskie w Londynie po kursie 1 EUR = 1,25 USD, przy jednoczesnej sprzedaży euro za dolary amerykańskie w Nowym Jorku po kursie 1 USD = 0,85 EUR",
+      "zaciągnięcie przez eksportera kredytu w walucie kraju, do którego sprzedaje swoje wyroby i w której rozlicza swoje wierzytelności",
+      "każdy zakup kontraktu futures, opcji lub swap jest transakcją hedgingową"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Hedging to zabezpieczenie przed ryzykiem przez zajęcie pozycji przeciwnej. Eksporter z należnościami w walucie obcej, który zaciąga kredyt w tej samej walucie, zyskuje na kredycie, gdy kurs waluty spada, a traci na należnościach – i odwrotnie (zabezpieczenie naturalne). Sprzedaż owsa w oczekiwaniu na spadek ceny to spekulacja, a kupno i sprzedaż waluty na dwóch rynkach – arbitraż."
+  },
+  {
+    "id": "owe25-o-24",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody okręgowe",
+    "question": "Window dressing polega na:",
+    "options": [
+      "zamieszczaniu na stronie internetowej banku dodatkowych elementów do pobrania przez klientów, takich jak gry dla dzieci, tapety i wygaszacze ekranu itp.",
+      "przesyłaniu do głównych akcjonariuszy banku informacji na temat aktualnych wyników finansowych i prognoz celem utrzymania stabilnej struktury właścicielskiej",
+      "poprawie na koniec roku składu portfela papierów wartościowych funduszu inwestycyjnego poprzez sprzedaż walorów notujących straty, a zakupie w ich miejsce walorów, których ceny w ostatnim czasie rosły",
+      "rezygnacji z pobierania opłat przy zakupie jednostek uczestnictwa w funduszach inwestycyjnych na rzecz obciążania kosztami zarządzania bezpośrednio aktywów funduszu"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Window dressing („dekorowanie wystawy”) to praktyka zarządzających funduszami, którzy pod koniec okresu sprawozdawczego sprzedają papiery przynoszące straty i kupują te, które ostatnio drożały, żeby portfel w raporcie wyglądał lepiej. Szerzej – upiększanie sprawozdań na dzień bilansowy."
+  },
+  {
+    "id": "owe25-o-25",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody okręgowe",
+    "question": "W przypadku akcji notowanych w systemie ciągłym na Giełdzie Papierów Wartościowych w Warszawie złożenie zlecenia z limitem ceny oznacza, że:",
+    "options": [
+      "jest to minimalna cena, po której inwestor zgadza się sprzedać akcje",
+      "jest to minimalna cena, po której inwestor zgadza się kupić akcje",
+      "cena realizacji zlecenia nie może różnić się od ustalonego limitu ceny o więcej niż 10%",
+      "takie zlecenie nie może zostać przekazane na giełdę, ponieważ inwestor nie określił limitu jego aktywacji"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Zlecenie z limitem ceny określa najgorszą cenę akceptowaną przez inwestora: przy sprzedaży – minimalną cenę, po której zgadza się sprzedać, a przy kupnie – maksymalną cenę, po której zgadza się kupić. Zlecenie może zostać zrealizowane po cenie limitu lub korzystniejszej."
+  },
+  {
+    "id": "owe25-o-26",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody okręgowe",
+    "question": "Który z poniższych elementów oddziaływania przedsiębiorstwa nie jest zaliczany do koncepcji 4P w marketingu mix?",
+    "options": [
+      "produkt",
+      "zysk",
+      "cena",
+      "dystrybucja"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Marketing mix 4P (E.J. McCarthy) obejmuje: produkt (product), cenę (price), dystrybucję (place) i promocję (promotion). Zysk jest celem działalności firmy, a nie instrumentem marketingu mix."
+  },
+  {
+    "id": "owe25-o-27",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody okręgowe",
+    "question": "Ocena pozycji strategicznej na podstawie macierzy ADL opiera się na analizie:",
+    "options": [
+      "stadium dojrzałości sektora i pozycji konkurencyjnej",
+      "tempa wzrostu rynku i przeciętnej zyskowności konkurentów",
+      "udziału firmy w rynku i atrakcyjności sektora",
+      "poziomu rozwoju technologicznego przedsiębiorstwa i wielkości zapotrzebowania na jego produkty"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Macierz ADL (Arthur D. Little) ocenia działalność według dwóch wymiarów: fazy cyklu życia (dojrzałości) sektora – zarodkowej, wzrostu, dojrzałości i starzenia się – oraz pozycji konkurencyjnej firmy (od dominującej do słabej). Udział w rynku i atrakcyjność sektora to wymiary macierzy McKinseya (GE)."
+  },
+  {
+    "id": "owe25-o-28",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody okręgowe",
+    "question": "Jak kształtują się przepływy pieniężne przedsiębiorstwa szybko rozwijającego się za pomocą środków własnych oraz kapitału obcego?",
+    "options": [
+      "ujemne przepływy z działalności operacyjnej, dodatnie przepływy z działalności inwestycyjnej, ujemne przepływy z działalności finansowej",
+      "dodatnie przepływy z działalności operacyjnej, ujemne przepływy z działalności inwestycyjnej, dodatnie przepływy z działalności finansowej",
+      "dodatnie przepływy z działalności operacyjnej, ujemne przepływy z działalności inwestycyjnej, ujemne przepływy z działalności finansowej",
+      "ujemne przepływy z działalności operacyjnej, dodatnie przepływy z działalności inwestycyjnej, dodatnie przepływy z działalności finansowej"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Szybko rozwijająca się firma zarabia na podstawowej działalności (przepływy operacyjne dodatnie), dużo inwestuje w nowe aktywa (przepływy inwestycyjne ujemne) i pozyskuje kapitał z zewnątrz – kredyty, emisje (przepływy finansowe dodatnie)."
+  },
+  {
+    "id": "owe25-o-29",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody okręgowe",
+    "question": "Firma handlowa podjęła decyzję o uruchomieniu sklepu internetowego. Z punktu widzenia pozycjonowania witryny internetowej, w celu uzyskania najlepszego rezultatu w najmniejszym stopniu powinna skoncentrować się na:",
+    "options": [
+      "doborze odpowiednich słów kluczowych",
+      "zapewnieniu obecności adresu witryny w katalogach stron internetowych",
+      "poprawności technicznej zapisu kodu i skryptów serwisu",
+      "utrzymaniu, przynajmniej w początkowym okresie działalności, niższych cen niż główni konkurenci"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Pozycjonowanie (SEO) to działania zwiększające widoczność strony w wynikach wyszukiwarek: dobór słów kluczowych, poprawny technicznie kod, obecność w katalogach i linki z innych stron. Niższe ceny niż u konkurencji nie wpływają na pozycję strony w wyszukiwarce – to element strategii cenowej."
+  },
+  {
+    "id": "owe25-o-30",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody okręgowe",
+    "question": "Co nie jest uznawane za miękki zasób firmy?",
+    "options": [
+      "dostęp do rynku",
+      "know-how",
+      "kultura organizacyjna",
+      "postawy i motywacje pracowników"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Do zasobów twardych zalicza się zasoby finansowe i rzeczowe, technologie i know-how (wiedza techniczna, którą można opisać i przekazać), a także strategie i struktury. Zasoby miękkie to ludzie z ich kwalifikacjami, postawami i motywacją, kultura organizacyjna, wiedza, marka i dostęp do rynku. Dlatego know-how nie jest zasobem miękkim."
+  }
+]
