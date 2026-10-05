@@ -14,6 +14,8 @@ import owe32c from "./owe-32-centralne.json";
 import owe34c from "./owe-34-centralne.json";
 import owe35c from "./owe-35-centralne.json";
 import owe39c from "./owe-39-centralne.json";
+import owe37c from "./owe-37-centralne.json";
+import owe38c from "./owe-38-centralne.json";
 import owe21o from "./owe-21-okregowe.json";
 import owe21s from "./owe-21-szkolne.json";
 import owe22o from "./owe-22-okregowe.json";
@@ -61,5 +63,5 @@ export const QUESTIONS = [
   owe34o, owe34s, owe35o, owe35s, owe36o, owe36s, owe37o, owe37s,
   owe38o, owe38s, owe39o, owe39s,
   owe21c, owe22c, owe23c, owe24c, owe25c, owe26c, owe27c, owe28c, owe29c, owe30c,
-  owe31c, owe32c, owe34c, owe35c, owe39c,
+  owe31c, owe32c, owe34c, owe35c, owe37c, owe38c, owe39c,
 ].flat() as Question[];

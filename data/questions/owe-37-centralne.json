@@ -1,0 +1,495 @@
+[
+  {
+    "id": "owe37-c-01",
+    "type": "multi",
+    "edition": "XXXVII OWE (2023/2024), zawody centralne",
+    "question": "Wartość wskaźnika pokrycia długu nadwyżką finansową jest tym wyższa, im:",
+    "options": [
+      "niższa jest wartość odsetek płaconych przez przedsiębiorstwo",
+      "niższa jest wartość zysku brutto",
+      "niższa jest wartość amortyzacji",
+      "wyższa jest wartość rat kredytów"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Wskaźnik pokrycia długu nadwyżką finansową = (zysk netto + amortyzacja) / (raty kapitałowe + odsetki). Rośnie, gdy maleją odsetki (A – mniejsza obsługa długu i wyższy zysk). Niższy zysk (B), niższa amortyzacja (C) i wyższe raty (D) go obniżają."
+  },
+  {
+    "id": "owe37-c-02",
+    "type": "multi",
+    "edition": "XXXVII OWE (2023/2024), zawody centralne",
+    "question": "Pracownicy w kopalni srebra zarabiają 50 tys. zł za wydobycie 100 kg kruszcu. Kopalnia sprzedaje je przedsiębiorstwu produkującemu biżuterię za 500 tys. zł. Następnie jubiler, za wytworzenie biżuterii z zakupionego srebra, płaci swoim pracownikom 150 tys. zł. Jubiler wyprodukowaną biżuterię sprzedaje bezpośrednio konsumentom za 750 tys. zł. Ile wynosi suma wartości dodanej kopalni i jubilera?",
+    "options": [
+      "450 tys. zł",
+      "550 tys. zł",
+      "750 tys. zł",
+      "1 250 tys. zł"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Wartość dodana kopalni = 500 tys. zł (nie kupuje półproduktów), a jubilera = 750 − 500 = 250 tys. zł. Razem 750 tys. zł (C) – tyle, ile wynosi wartość dobra finalnego. Płace to część wartości dodanej, nie dodatkowy składnik."
+  },
+  {
+    "id": "owe37-c-03",
+    "type": "multi",
+    "edition": "XXXVII OWE (2023/2024), zawody centralne",
+    "question": "Na adaptacyjny charakter oczekiwań inflacyjnych uwagę zwrócił:",
+    "options": [
+      "M. Friedman",
+      "T. Sargent",
+      "N. Wallace",
+      "F. Kydland"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Oczekiwania adaptacyjne (kształtowane na podstawie przeszłej inflacji) wykorzystał M. Friedman w krytyce krzywej Phillipsa i hipotezie naturalnej stopy bezrobocia (A). T. Sargent i N. Wallace oraz F. Kydland są związani z oczekiwaniami racjonalnymi."
+  },
+  {
+    "id": "owe37-c-04",
+    "type": "multi",
+    "edition": "XXXVII OWE (2023/2024), zawody centralne",
+    "question": "Które stwierdzenie dotyczące krzywej dochodowości jest prawdziwe?",
+    "options": [
+      "krzywa ta przedstawia relacje między stopami procentowymi i różnymi terminami zapadalności",
+      "jedną z koncepcji teoretycznych wyjaśniających jej przebieg jest teoria oczekiwań",
+      "przebieg tej krzywej odzwierciedla oczekiwania rynkowe w zakresie kształtowania się poziomu przyszłych stóp procentowych",
+      "silnie rosnąca krzywa dochodowości oznacza, że rynek oczekuje znaczącego obniżenia stóp procentowych w okresie kolejnych kilku lat"
+    ],
+    "correct": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Krzywa dochodowości pokazuje relację między rentownością instrumentów a ich terminem zapadalności (A). Jej kształt wyjaśnia m.in. teoria oczekiwań (B), więc odzwierciedla oczekiwania co do przyszłych stóp (C). Silnie rosnąca krzywa oznacza oczekiwany wzrost, a nie spadek stóp (D)."
+  },
+  {
+    "id": "owe37-c-05",
+    "type": "multi",
+    "edition": "XXXVII OWE (2023/2024), zawody centralne",
+    "question": "W przedsiębiorstwie zysk ekonomiczny wyniósł 1 mln zł, utarg całkowity – 2 mln zł, a koszty jawne – 600 tys. zł. Ile wynosi wartość kosztów ukrytych w tym przedsiębiorstwie?",
+    "options": [
+      "400 tys. zł",
+      "1 400 tys. zł",
+      "1 600 tys. zł",
+      "2 400 tys. zł"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Zysk ekonomiczny = utarg − koszty jawne − koszty ukryte, więc koszty ukryte = 2 000 − 600 − 1 000 = 400 tys. zł (A)."
+  },
+  {
+    "id": "owe37-c-06",
+    "type": "multi",
+    "edition": "XXXVII OWE (2023/2024), zawody centralne",
+    "question": "Które stwierdzenie dotyczące podstawowej operacji otwartego rynku (OOR) realizowanej przez NBP jest prawdziwe?",
+    "options": [
+      "NBP absorbuje nadwyżki płynności utrzymujące się w krajowym sektorze bankowym w ramach podstawowej OOR",
+      "rentowność papierów wartościowych emitowanych w ramach podstawowej OOR jest równa stopie dyskontowej weksli NBP",
+      "rentowność papierów wartościowych emitowanych w ramach podstawowej OOR jest niższa od stopy kredytu lombardowego NBP",
+      "rentowność papierów wartościowych emitowanych w ramach podstawowej OOR jest wyższa od stopy depozytowej NBP"
+    ],
+    "correct": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Podstawowa OOR NBP to emisja 7-dniowych bonów pieniężnych, która ściąga nadpłynność z banków (A). Rentowność bonów odpowiada stopie referencyjnej, która leży w korytarzu stóp: powyżej stopy depozytowej (D) i poniżej lombardowej (C). Nie jest równa stopie dyskontowej weksli (B)."
+  },
+  {
+    "id": "owe37-c-07",
+    "type": "multi",
+    "edition": "XXXVII OWE (2023/2024), zawody centralne",
+    "question": "Jeżeli przedsiębiorstwo osiąga zysk normalny, to:",
+    "options": [
+      "przychody są równe kosztom jawnym",
+      "koszty alternatywne wynoszą zero",
+      "zysk księgowy jest nieujemny",
+      "zysk księgowy jest mniejszy od kosztów ukrytych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Zysk normalny oznacza zerowy zysk ekonomiczny: zysk księgowy = koszty ukryte (alternatywne). Koszty ukryte nie mogą być ujemne, więc zysk księgowy jest nieujemny (C). Przychody pokrywają koszty jawne i ukryte (A – fałsz), a koszty alternatywne zwykle są dodatnie (B)."
+  },
+  {
+    "id": "owe37-c-08",
+    "type": "multi",
+    "edition": "XXXVII OWE (2023/2024), zawody centralne",
+    "question": "Instrumenty finansowe, których stopa oprocentowania nie jest podana bezpośrednio, lecz jest implikowana przez różnicę pomiędzy ich ceną w dniu zakupu a wartością w dniu wykupu, to:",
+    "options": [
+      "papiery dyskontowe",
+      "certyfikaty inwestycyjne",
+      "TIPS-y",
+      "instrumenty pochodne"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Papiery dyskontowe (np. bony skarbowe, obligacje zerokuponowe) kupuje się poniżej wartości nominalnej, a dochód to różnica między ceną zakupu a wartością wykupu (A). TIPS to obligacje indeksowane inflacją."
+  },
+  {
+    "id": "owe37-c-09",
+    "type": "multi",
+    "edition": "XXXVII OWE (2023/2024), zawody centralne",
+    "question": "Konsekwencją upowszechniania się możliwości poszukiwania pracy przez internet (zwiększającego efektywność dopasowań na rynku pracy) będzie:",
+    "options": [
+      "obniżenie się NAIRU",
+      "zwiększenie stopy bezrobocia naturalnego",
+      "przesunięcie krzywej Beveridge’a w lewo",
+      "przesunięcie długookresowej krzywej Phillipsa w prawo"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "Lepsze dopasowanie bezrobotnych do wakatów zmniejsza bezrobocie frykcyjne i strukturalne, a więc NAIRU, czyli naturalną stopę bezrobocia (A, B – fałsz). Krzywa Beveridge'a przesuwa się w lewo – do środka (C), a długookresowa krzywa Phillipsa – w lewo, nie w prawo (D)."
+  },
+  {
+    "id": "owe37-c-10",
+    "type": "multi",
+    "edition": "XXXVII OWE (2023/2024), zawody centralne",
+    "question": "Zgodnie z teorią racjonalnych oczekiwań R. Lucasa polityka pieniężna może wpływać na zmienne z gospodarki realnej jedynie w sytuacji, gdy:",
+    "options": [
+      "bank centralny stosuje strategię BCI",
+      "bank centralny stosuje system rezerwy cząstkowej",
+      "działania podejmowane przez bank centralny są nieoczekiwane",
+      "w gospodarce występuje recesja"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Według R. Lucasa i teorii racjonalnych oczekiwań podmioty uwzględniają przewidywalną politykę pieniężną, więc wpływa ona tylko na ceny. Na produkcję i zatrudnienie może wpływać tylko polityka nieoczekiwana (C)."
+  },
+  {
+    "id": "owe37-c-11",
+    "type": "multi",
+    "edition": "XXXVII OWE (2023/2024), zawody centralne",
+    "question": "Zgodnie z regułą Taylora stopa procentowa banku centralnego powinna być tym wyższa, im:",
+    "options": [
+      "niższa jest naturalna realna stopa procentowa",
+      "niższa jest prognozowana inflacja",
+      "większa jest różnica między prognozowaną inflacją a celem inflacyjnym banku centralnego",
+      "większa jest luka popytowa"
+    ],
+    "correct": [
+      2,
+      3
+    ],
+    "explanation": "Reguła Taylora: i = r* + π + a(π − π*) + b · luka produkcyjna. Stopa jest wyższa, gdy większa jest nadwyżka inflacji nad celem (C) i dodatnia luka popytowa (D). Wyższa (nie niższa) naturalna stopa realna oraz wyższa prognozowana inflacja podnoszą stopę (A, B – fałsz)."
+  },
+  {
+    "id": "owe37-c-12",
+    "type": "multi",
+    "edition": "XXXVII OWE (2023/2024), zawody centralne",
+    "question": "Podaż pieniądza w gospodarce X wyniosła 500 mld zł; PKB nominalny – 2 bln zł; a PKB realny – 1 bln zł. Ile wynosi szybkość obiegu pieniądza?",
+    "options": [
+      "1",
+      "2",
+      "4",
+      "6"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Z równania wymiany MV = PY: V = PKB nominalny / podaż pieniądza = 2 000 / 500 = 4 (C). Do obliczenia potrzebny jest PKB nominalny, nie realny."
+  },
+  {
+    "id": "owe37-c-13",
+    "type": "multi",
+    "edition": "XXXVII OWE (2023/2024), zawody centralne",
+    "question": "Które stwierdzenie dotyczące krzywej IS jest prawdziwe?",
+    "options": [
+      "zmiana poziomu wydatków autonomicznych zmienia jej nachylenie",
+      "pokazuje ona zależność między stopą procentową a wielkością produkcji",
+      "zmiana poziomu wydatków rządowych zmienia jej nachylenie",
+      "jeżeli jest ona pionowa, to w gospodarce występuje pułapka inwestycji"
+    ],
+    "correct": [
+      1,
+      3
+    ],
+    "explanation": "Krzywa IS pokazuje kombinacje stopy procentowej i produkcji, przy których rynek dóbr jest w równowadze (B). Zmiana wydatków autonomicznych, w tym rządowych, przesuwa ją równolegle, a nie zmienia jej nachylenia (A, C). Pionowa IS oznacza, że inwestycje nie reagują na stopę – pułapka inwestycyjna (D)."
+  },
+  {
+    "id": "owe37-c-14",
+    "type": "multi",
+    "edition": "XXXVII OWE (2023/2024), zawody centralne",
+    "question": "Złamana linia ograniczenia budżetowego jest konsekwencją:",
+    "options": [
+      "wzrostu ceny jedynie jednego z konsumowanych dóbr",
+      "spadku ceny obu konsumowanych dóbr",
+      "wzrostu ceny jednego dobra przy jednoczesnym spadku ceny drugiego dobra",
+      "wprowadzenia bonów rządowych na zakup jednego z dóbr"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Linia budżetu „łamie się”, gdy rząd daje bony na zakup jednego dobra – konsument może kupić tego dobra więcej, ale bonów nie da się przeznaczyć na drugie dobro (D). Zmiany cen tylko obracają lub przesuwają linię prostą (A, B, C)."
+  },
+  {
+    "id": "owe37-c-15",
+    "type": "multi",
+    "edition": "XXXVII OWE (2023/2024), zawody centralne",
+    "question": "Które stwierdzenie dotyczące pomostowego kapitału społecznego jest prawdziwe?",
+    "options": [
+      "jako pierwszy ten typ kapitału społecznego wyróżnił P. Bourdieu",
+      "jego wysoki poziom jest podstawowym czynnikiem kreującym zjawisko amoralnego familizmu",
+      "jest to inne określenie dla wiążącego kapitału społecznego",
+      "ten typ kapitału społecznego spaja osoby lub grupy wcześniej się nieznające"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Pomostowy kapitał społeczny (R. Putnam) łączy osoby i grupy wcześniej się nieznające, różniące się od siebie (D). Wiążący kapitał to więzi w obrębie grup zamkniętych, np. rodziny (C – fałsz). Amoralny familizm (E. Banfield) wynika z przewagi kapitału wiążącego, a nie pomostowego (B)."
+  },
+  {
+    "id": "owe37-c-16",
+    "type": "multi",
+    "edition": "XXXVII OWE (2023/2024), zawody centralne",
+    "question": "Działania „insiderów”, ubytek kapitału ludzkiego i ubytek kapitału rzeczowego są wskazywane jako przyczyny występowania efektu:",
+    "options": [
+      "histerezy bezrobocia",
+      "bazy",
+      "wypychania",
+      "drugiej rundy"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Histereza bezrobocia oznacza, że wysokie bezrobocie z przeszłości podnosi bezrobocie równowagi. Przyczyny to działania insiderów (ochrona zatrudnionych kosztem bezrobotnych), utrata kwalifikacji bezrobotnych (kapitału ludzkiego) i spadek kapitału rzeczowego w recesji (A)."
+  },
+  {
+    "id": "owe37-c-17",
+    "type": "multi",
+    "edition": "XXXVII OWE (2023/2024), zawody centralne",
+    "question": "Autorem teorii preferencji płynności jest:",
+    "options": [
+      "J.M. Keynes",
+      "H. Minsky",
+      "D. Diamond",
+      "C. Goldin"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Teorię preferencji płynności sformułował J.M. Keynes w „Ogólnej teorii” (1936): stopa procentowa to nagroda za rezygnację z płynności, a popyt na pieniądz wynika z motywu transakcyjnego, przezornościowego i spekulacyjnego (A)."
+  },
+  {
+    "id": "owe37-c-18",
+    "type": "multi",
+    "edition": "XXXVII OWE (2023/2024), zawody centralne",
+    "question": "„Zakrzywiona do tyłu” krzywa podaży pracy oznacza, że:",
+    "options": [
+      "im wyższa jest stawka płac, tym wyższa jest wielkość podaży pracy",
+      "w przypadku wysokich stawek płac efekt dochodowy wzrostu płacy przewyższa efekt substytucyjny",
+      "w przypadku wysokich stawek płac efekt substytucyjny wzrostu płacy przewyższa efekt dochodowy",
+      "czas wolny jest dobrem Veblena"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Gdy płaca rośnie, efekt substytucyjny zachęca do pracy (czas wolny drożeje), a efekt dochodowy – do większej ilości czasu wolnego. Przy wysokich płacach efekt dochodowy przeważa i podaż pracy spada – krzywa zakrzywia się do tyłu (B)."
+  },
+  {
+    "id": "owe37-c-19",
+    "type": "multi",
+    "edition": "XXXVII OWE (2023/2024), zawody centralne",
+    "question": "Która z wymienionych sytuacji wyjaśnia rosnący przebieg długookresowej krzywej podaży gałęzi w konkurencji doskonałej?",
+    "options": [
+      "poszczególne przedsiębiorstwa różnią się w zakresie swoich krzywych kosztów",
+      "zasoby potrzebne do produkcji tej gałęzi są dostępne w ograniczonych ilościach",
+      "niektóre przedsiębiorstwa nie są cenobiorcami",
+      "nie występują bariery wejścia na rynek"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "Długookresowa podaż gałęzi rośnie (gałąź o rosnących kosztach), gdy firmy mają różne koszty – wejście firm o wyższych kosztach wymaga wyższej ceny (A) – lub gdy ograniczone zasoby drożeją w miarę rozwoju gałęzi (B). W konkurencji doskonałej wszystkie firmy są cenobiorcami (C), a brak barier wejścia nie wyjaśnia nachylenia (D)."
+  },
+  {
+    "id": "owe37-c-20",
+    "type": "multi",
+    "edition": "XXXVII OWE (2023/2024), zawody centralne",
+    "question": "Krzywa kosztu krańcowego przedsiębiorstwa jest opisana równaniem MC = 8. Ile wynosi całkowity koszt zmienny tego przedsiębiorstwa przy produkcji równej 10?",
+    "options": [
+      "8",
+      "18",
+      "80",
+      "nie można oszacować całkowitych kosztów zmiennych bez dodatkowych danych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Stały koszt krańcowy MC = 8 oznacza, że każda jednostka zwiększa koszty zmienne o 8, więc koszt zmienny przy produkcji 10 wynosi 8 × 10 = 80 (C). Koszt stały pozostaje nieznany, ale nie jest potrzebny."
+  },
+  {
+    "id": "owe37-c-21",
+    "type": "multi",
+    "edition": "XXXVII OWE (2023/2024), zawody centralne",
+    "question": "Dochodowa elastyczność popytu na dobro X wynosi −0,5. Oznacza to, że:",
+    "options": [
+      "wzrost dochodu o 1% prowadzi do spadku popytu o 0,5%",
+      "dobro X jest dobrem niższego rzędu",
+      "spadek dochodu o 1% prowadzi do spadku wielkości popytu o 0,5%",
+      "wzrost dochodu o 1 jednostkę prowadzi do spadku popytu o 0,5 jednostki"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "Ujemna dochodowa elastyczność popytu oznacza dobro niższego rzędu (B): wzrost dochodu o 1% obniża popyt o 0,5% (A), a spadek dochodu o 1% go zwiększa (C – fałsz). Elastyczność dotyczy zmian procentowych, nie jednostkowych (D)."
+  },
+  {
+    "id": "owe37-c-22",
+    "type": "multi",
+    "edition": "XXXVII OWE (2023/2024), zawody centralne",
+    "question": "Która z wymienionych struktur rynkowych charakteryzuje się występowaniem barier wejścia?",
+    "options": [
+      "monopol nieróżnicujący ceny",
+      "konkurencja doskonała",
+      "konkurencja monopolistyczna",
+      "monopol różnicujący ceny"
+    ],
+    "correct": [
+      0,
+      3
+    ],
+    "explanation": "Bariery wejścia są warunkiem trwałości monopolu – zarówno nieróżnicującego ceny (A), jak i różnicującego (D). W konkurencji doskonałej i monopolistycznej wejście jest swobodne (B, C)."
+  },
+  {
+    "id": "owe37-c-23",
+    "type": "multi",
+    "edition": "XXXVII OWE (2023/2024), zawody centralne",
+    "question": "Jeżeli do produkcji danego dobra konieczne jest wykorzystanie nakładów produkcji w stałej proporcji, to:",
+    "options": [
+      "izokoszta jest nachylona ujemnie",
+      "izokwanty są liniami prostymi",
+      "izokwanty mają kształt litery „L”",
+      "funkcja produkcji jest funkcją typu Cobba-Douglasa"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Przy stałych proporcjach nakładów (funkcja produkcji Leontiefa) zwiększenie tylko jednego czynnika nie zwiększa produkcji, więc izokwanty mają kształt litery „L” (C). Proste izokwanty oznaczają doskonałą substytucyjność (B), a funkcja Cobba-Douglasa ma gładkie, wypukłe izokwanty (D)."
+  },
+  {
+    "id": "owe37-c-24",
+    "type": "multi",
+    "edition": "XXXVII OWE (2023/2024), zawody centralne",
+    "question": "Rynek dobra X znajduje się w długookresowej równowadze. Popyt na dobro jest opisany równaniem p = −4q + 100 (gdzie: p — cena za sztukę; q — ilość w sztukach). Długookresowa krzywa podaży gałęzi jest pozioma. Państwo wprowadziło podatek kwotowy na daną gałąź. Które stwierdzenie dotyczące konsekwencji wprowadzenia tego opodatkowania w długim okresie jest prawdziwe?",
+    "options": [
+      "wzrost ceny wywołany wprowadzeniem podatku będzie równy wysokości tego podatku",
+      "wprowadzony podatek w całości obciąży producentów dobra X",
+      "wprowadzony podatek w całości obciąży konsumentów dobra X",
+      "wprowadzenie podatku wpłynie na położenie punktu równowagi"
+    ],
+    "correct": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Przy poziomej długookresowej krzywej podaży cena równa się minimalnemu kosztowi, którego podatek nie zmienia dla producentów. Cena rośnie o pełną kwotę podatku (A), więc cały ciężar ponoszą konsumenci (C, B – fałsz), a ilość równowagi spada (D)."
+  },
+  {
+    "id": "owe37-c-25",
+    "type": "multi",
+    "edition": "XXXVII OWE (2023/2024), zawody centralne",
+    "question": "W kwietniu 2024 r. miał miejsce halving bitcoina. Które ze stwierdzeń dotyczące halvingu jest prawdziwe?",
+    "options": [
+      "oznacza on zmniejszenie nagrody za wydobycie kolejnego bloku w sieci bitcoin o połowę",
+      "jest to mechanizm zabezpieczający bitcoina przed ryzykiem deflacji i polega na systematycznym, okresowym zwiększaniu jego podaży",
+      "miał on miejsce pierwszy raz od momentu powstania bitcoina",
+      "oznacza on spadek ceny bitcoina o połowę w stosunku do jego wartości nominalnej"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Halving to zaprogramowane mniej więcej co 4 lata (co 210 000 bloków) zmniejszenie o połowę nagrody za wydobycie bloku (A), co spowalnia przyrost podaży bitcoina (B – fałsz). Halving z 2024 r. był czwartym (wcześniej: 2012, 2016, 2020 – C) i nie oznacza spadku ceny o połowę (D)."
+  },
+  {
+    "id": "owe37-c-26",
+    "type": "multi",
+    "edition": "XXXVII OWE (2023/2024), zawody centralne",
+    "question": "Na którym z podejść do grupowania stanowisk pracy oparta jest struktura typu M organizacji?",
+    "options": [
+      "według wyrobu",
+      "według lokalizacji",
+      "na podstawie funkcji",
+      "według klientów"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Struktura typu M (wielowydziałowa) grupuje działalność według wyrobów lub linii produktów – każdy wydział jest samodzielną jednostką (A)."
+  },
+  {
+    "id": "owe37-c-27",
+    "type": "multi",
+    "edition": "XXXVII OWE (2023/2024), zawody centralne",
+    "question": "Według M.E. Portera organizacje mogą stosować strategie:",
+    "options": [
+      "odróżniania się; obrońcy; przywództwa pod względem kosztów",
+      "odróżniania się; przywództwa pod względem kosztów; koncentrowania się na niszy rynkowej",
+      "analityka; obrońcy; koncentrowania się na niszy rynkowej",
+      "poszukiwacza; analityka; przywództwa pod względem kosztów"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "M.E. Porter wyróżnił trzy strategie ogólne: zróżnicowania (odróżniania się), przywództwa kosztowego i koncentracji na niszy rynkowej (B). Strategie poszukiwacza, analityka i obrońcy pochodzą z typologii Milesa i Snowa."
+  },
+  {
+    "id": "owe37-c-28",
+    "type": "multi",
+    "edition": "XXXVII OWE (2023/2024), zawody centralne",
+    "question": "Zgodnie z podejściem J.D. Thompsona umiarkowany poziom niepewności występuje, gdy otoczenie przedsiębiorstwa jest:",
+    "options": [
+      "stosunkowo proste i stabilne",
+      "heterogeniczne i dynamiczne",
+      "proste i dynamiczne",
+      "złożone i homogeniczne"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Według J.D. Thompsona niepewność otoczenia zależy od jego złożoności i dynamiki: proste i stabilne – niska, proste i dynamiczne lub złożone i stabilne – umiarkowana (C), złożone i dynamiczne – wysoka."
+  },
+  {
+    "id": "owe37-c-29",
+    "type": "multi",
+    "edition": "XXXVII OWE (2023/2024), zawody centralne",
+    "question": "Które stwierdzenie dotyczące behawiorystycznego podejścia do zarządzania jest prawdziwe?",
+    "options": [
+      "wskazuje, że model biurokratyczny jest najbardziej efektywny w przypadku organizacji złożonych",
+      "jego istotę oddaje zdanie: pracownicy są narzędziami w rękach menadżerów",
+      "podkreśla znaczenie stosunków międzyludzkich w organizacji",
+      "kluczowym jego osiągnięciem była koncepcja akordowego systemu wynagrodzeń"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Podejście behawiorystyczne (m.in. eksperymenty E. Mayo w Hawthorne, ruch stosunków międzyludzkich) podkreśla znaczenie relacji międzyludzkich i czynników społecznych w pracy (C). Model biurokratyczny i system akordowy należą do podejścia klasycznego (A, D)."
+  },
+  {
+    "id": "owe37-c-30",
+    "type": "multi",
+    "edition": "XXXVII OWE (2023/2024), zawody centralne",
+    "question": "Które stwierdzenie dotyczące teorii najmniej preferowanego współpracownika (NPW) jest prawdziwe?",
+    "options": [
+      "przywództwo zawsze powinno być skoncentrowane na podwładnych",
+      "właściwy styl przywództwa zależy od okoliczności, w których znajduje się organizacja",
+      "jest ona przykładem sytuacyjnej teorii przywództwa",
+      "jej autorem jest A. Maslow"
+    ],
+    "correct": [
+      1,
+      2
+    ],
+    "explanation": "Teoria najmniej preferowanego współpracownika F. Fiedlera to sytuacyjna teoria przywództwa (C): skuteczność stylu zależy od sytuacji, czyli relacji z podwładnymi, struktury zadania i władzy przywódcy (B). Autorem nie jest A. Maslow (D)."
+  }
+]

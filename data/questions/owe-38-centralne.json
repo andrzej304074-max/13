@@ -1,0 +1,496 @@
+[
+  {
+    "id": "owe38-c-01",
+    "type": "multi",
+    "edition": "XXXVIII OWE (2024/2025), zawody centralne",
+    "question": "Daniną, która w pierwotnej koncepcji miała obniżyć wolumen transakcji oraz zmienność na rynku walutowym, jest podatek:",
+    "options": [
+      "Minsky’ego",
+      "Pigou",
+      "Tobina",
+      "Kaleckiego"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Podatek Tobina (J. Tobin, 1972) to niewielki podatek od transakcji walutowych, który miał ograniczyć krótkoterminowe spekulacje i zmienność kursów (C). Podatek Pigou dotyczy efektów zewnętrznych."
+  },
+  {
+    "id": "owe38-c-02",
+    "type": "multi",
+    "edition": "XXXVIII OWE (2024/2025), zawody centralne",
+    "question": "Zgodnie z regułą Greenspana-Guidottiego, poziom oficjalnych rezerw walutowych powinien wystarczać na pokrycie:",
+    "options": [
+      "rocznego importu towarów",
+      "rocznego eksportu towarów",
+      "rocznego salda eksportu netto",
+      "zagranicznych zobowiązań krótkoterminowych"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Reguła Greenspana–Guidottiego: rezerwy walutowe powinny pokrywać zagraniczne zobowiązania krótkoterminowe zapadające w ciągu roku (D). Miarą opartą na imporcie jest wskaźnik pokrycia importu."
+  },
+  {
+    "id": "owe38-c-03",
+    "type": "multi",
+    "edition": "XXXVIII OWE (2024/2025), zawody centralne",
+    "question": "Które stwierdzenie dotyczące polityki pieniężnej realizowanej przez NBP jest prawdziwe?",
+    "options": [
+      "7-dniowe bony pieniężne NBP sprzedawane są na przetargach",
+      "cel operacyjny NBP określa Konstytucja RP",
+      "stawka POLONIA nie może być niższa od stopy kredytu lombardowego",
+      "NBP nigdy nie nabywał obligacji skarbowych na rynku wtórnym"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "NBP sprzedaje 7-dniowe bony pieniężne na przetargach (A). Cel operacyjny określa RPP w założeniach polityki pieniężnej, nie Konstytucja (B). POLONIA kształtuje się zwykle poniżej stopy lombardowej (C – fałsz). NBP kupował obligacje skarbowe na rynku wtórnym w latach 2020–2021 (D – fałsz)."
+  },
+  {
+    "id": "owe38-c-04",
+    "type": "multi",
+    "edition": "XXXVIII OWE (2024/2025), zawody centralne",
+    "question": "Która z operacji otwartego rynku pozwoli bankowi centralnemu na zwiększenie płynności sektora bankowego?",
+    "options": [
+      "emisja obligacji",
+      "przedterminowy wykup obligacji",
+      "podstawowa operacja otwartego rynku polegająca na emisji bonów pieniężnych",
+      "obniżenie stopy rezerwy obowiązkowej"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Przedterminowy wykup papierów przez bank centralny przekazuje bankom pieniądze, czyli zwiększa płynność (B). Emisja obligacji czy bonów ją zmniejsza (A, C), a obniżenie stopy rezerwy obowiązkowej to inny instrument niż operacja otwartego rynku (D)."
+  },
+  {
+    "id": "owe38-c-05",
+    "type": "multi",
+    "edition": "XXXVIII OWE (2024/2025), zawody centralne",
+    "question": "Forma integracji gospodarczej, której uczestnicy nie stosują we wzajemnej wymianie handlowej barier celnych lub innych ograniczeń i jednocześnie nie prowadzą wspólnej polityki handlowej wobec państw trzecich, to:",
+    "options": [
+      "unia celna",
+      "strefa wolnego handlu",
+      "unia walutowa",
+      "specjalna strefa ekonomiczna (SSE)"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Strefa wolnego handlu znosi cła i ograniczenia w handlu wzajemnym, ale każdy kraj prowadzi własną politykę handlową wobec państw trzecich (B). Unia celna dodaje wspólną taryfę zewnętrzną (A)."
+  },
+  {
+    "id": "owe38-c-06",
+    "type": "multi",
+    "edition": "XXXVIII OWE (2024/2025), zawody centralne",
+    "question": "Na początku lat 90., ze względu na ataki spekulacyjne, z mechanizmu kursowego ERM wyszła:",
+    "options": [
+      "Austria",
+      "Francja",
+      "Polska",
+      "Wielka Brytania"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Wielka Brytania opuściła ERM we wrześniu 1992 r. („czarna środa”) po atakach spekulacyjnych na funta (D). Wycofały się też Włochy."
+  },
+  {
+    "id": "owe38-c-07",
+    "type": "multi",
+    "edition": "XXXVIII OWE (2024/2025), zawody centralne",
+    "question": "Pierwotną przyczyną kryzysów walutowych pierwszej generacji jest:",
+    "options": [
+      "występowanie efektów stadnych",
+      "występowanie pokusy nadużycia wśród inwestorów indywidualnych",
+      "finansowanie typu Ponziego wśród podmiotów sektora prywatnego",
+      "finansowanie deficytu budżetowego przez bank centralny połączone z polityką sztywnego kursu walutowego"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Model kryzysów pierwszej generacji (P. Krugman, 1979): rząd finansuje deficyt kredytem banku centralnego, utrzymując sztywny kurs. Rezerwy topnieją, aż spekulanci atakują walutę (D)."
+  },
+  {
+    "id": "owe38-c-08",
+    "type": "multi",
+    "edition": "XXXVIII OWE (2024/2025), zawody centralne",
+    "question": "Wyróżnione przez H. Minsky’ego finansowanie typu hedge charakteryzuje podmioty, które ze swoich dochodów:",
+    "options": [
+      "są w stanie opłacić raty kapitałowe i odsetkowe zaciągniętych zobowiązań",
+      "są w stanie opłacić tylko raty kapitałowe zaciągniętych zobowiązań",
+      "są w stanie opłacić tylko raty odsetkowe zaciągniętych zobowiązań",
+      "nie są w stanie opłacić ani rat kapitałowych, ani odsetkowych zaciągniętych zobowiązań"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Według Minsky'ego jednostki zabezpieczone (hedge) z bieżących dochodów spłacają zarówno odsetki, jak i raty kapitałowe (A). Jednostki spekulacyjne płacą tylko odsetki (C), a jednostki Ponziego nie pokrywają nawet odsetek (D)."
+  },
+  {
+    "id": "owe38-c-09",
+    "type": "multi",
+    "edition": "XXXVIII OWE (2024/2025), zawody centralne",
+    "question": "Które stwierdzenie dotyczące procedury nadmiernego deficytu jest prawdziwe?",
+    "options": [
+      "o jej wprowadzeniu decyduje Parlament UE",
+      "dotyczy wyłącznie państw, w przypadku których deficyt strukturalny sektora instytucji rządowych i samorządowych jest mniejszy niż 3% PKB",
+      "jej funkcjonowanie zostało zawieszone w okresie pandemii COVID-19",
+      "dotyczy wyłącznie państw będących pełnoprawnymi członkami Unii Gospodarczej i Walutowej"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "O procedurze nadmiernego deficytu decyduje Rada UE na wniosek Komisji (A – fałsz). Dotyczy wszystkich państw UE, nie tylko strefy euro (D), z deficytem powyżej 3% PKB lub długiem powyżej 60% (B). W pandemii (2020–2023) uruchomiono ogólną klauzulę wyjścia i zawieszono wszczynanie procedury (C)."
+  },
+  {
+    "id": "owe38-c-10",
+    "type": "multi",
+    "edition": "XXXVIII OWE (2024/2025), zawody centralne",
+    "question": "W gospodarce autarkicznej krańcowa skłonność do konsumpcji wynosi 0,8, a stopa opodatkowania 0,15. Ile wynosi mnożnik podatkowy?",
+    "options": [
+      "-2,50",
+      "-0,24",
+      "0,29",
+      "3,13"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Mnożnik podatkowy przy podatku proporcjonalnym = −c / (1 − c(1 − t)) = −0,8 / (1 − 0,8 × 0,85) = −0,8 / 0,32 = −2,5 (A)."
+  },
+  {
+    "id": "owe38-c-11",
+    "type": "multi",
+    "edition": "XXXVIII OWE (2024/2025), zawody centralne",
+    "question": "Zgodnie z teorią płacy motywującej:",
+    "options": [
+      "bezrobocie ma zawsze charakter frykcyjny",
+      "jedynym powodem występowania bezrobocia są strukturalne rozbieżności między podażą i popytem na pracę",
+      "na rynku pracy występuje sztywność płac",
+      "bezrobocie nigdy nie jest przymusowe"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Teoria płacy motywującej (efektywnościowej): firmy płacą powyżej poziomu równowagi, by zwiększyć wydajność. Płace są sztywne i nie spadają mimo bezrobocia (C), które ma charakter przymusowy (D – fałsz)."
+  },
+  {
+    "id": "owe38-c-12",
+    "type": "multi",
+    "edition": "XXXVIII OWE (2024/2025), zawody centralne",
+    "question": "W ramach unii bankowej bezpośredni nadzór nad bankami istotnymi sprawuje:",
+    "options": [
+      "Europejski Bank Centralny",
+      "krajowy organ nadzoru",
+      "Komisja Europejska",
+      "Bank Rozrachunków Międzynarodowych (BIS)"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W ramach unii bankowej (Jednolity Mechanizm Nadzorczy) EBC bezpośrednio nadzoruje istotne banki strefy euro (A), a krajowe organy nadzorują pozostałe banki."
+  },
+  {
+    "id": "owe38-c-13",
+    "type": "multi",
+    "edition": "XXXVIII OWE (2024/2025), zawody centralne",
+    "question": "Unia Europejska opiera się na swobodzie przepływu:",
+    "options": [
+      "towarów",
+      "usług",
+      "kapitału",
+      "ludzi"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "Rynek wewnętrzny UE opiera się na czterech swobodach: przepływu towarów (A), usług (B), kapitału (C) i osób (D)."
+  },
+  {
+    "id": "owe38-c-14",
+    "type": "multi",
+    "edition": "XXXVIII OWE (2024/2025), zawody centralne",
+    "question": "Jednym z autorów, którzy sformułowali teorię optymalnych obszarów walutowych, jest:",
+    "options": [
+      "R. McKinnon",
+      "D. Ricardo",
+      "W. Bagehot",
+      "S. Gesell"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Teorię optymalnych obszarów walutowych sformułowali R. Mundell (1961), R. McKinnon (1963) i P. Kenen (1969) – A."
+  },
+  {
+    "id": "owe38-c-15",
+    "type": "multi",
+    "edition": "XXXVIII OWE (2024/2025), zawody centralne",
+    "question": "W gospodarce autarkicznej niezależny od wielkości dochodu poziom konsumpcji wynosi 200. Z każdej dodatkowej jednostki dochodu konsumenci na oszczędności przeznaczają 0,2 jednostki. Która z odpowiedzi przedstawia równanie krzywej konsumpcji w tej gospodarce (gdzie: Y – produkt krajowy brutto; C – konsumpcja)?",
+    "options": [
+      "C = 0,2 + 200Y",
+      "C = 200 + 0,2Y",
+      "C = 199,8 + 0,8Y",
+      "C = 200 + 0,8Y"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Konsumpcja autonomiczna = 200, krańcowa skłonność do oszczędzania = 0,2, więc krańcowa skłonność do konsumpcji = 0,8. Funkcja konsumpcji: C = 200 + 0,8Y (D)."
+  },
+  {
+    "id": "owe38-c-16",
+    "type": "multi",
+    "edition": "XXXVIII OWE (2024/2025), zawody centralne",
+    "question": "Dwa dobra konsumowane są w stałej proporcji. Oznacza to, że:",
+    "options": [
+      "wzrost ceny jednego z nich będzie skutkować spadkiem popytu na drugie",
+      "są to dobra doskonale komplementarne",
+      "ich linie ograniczenia budżetowego mają kształt litery „L”",
+      "optimum konsumenta musi znajdować się poniżej linii ograniczenia budżetowego"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "Dobra konsumowane w stałej proporcji to doskonałe komplementy (B). Wzrost ceny jednego zmniejsza popyt na oba (A). Kształt litery „L” mają krzywe obojętności, nie linia budżetu (C), a optimum leży na linii budżetu (D)."
+  },
+  {
+    "id": "owe38-c-17",
+    "type": "multi",
+    "edition": "XXXVIII OWE (2024/2025), zawody centralne",
+    "question": "Jednostronnej euroizacji nie przeprowadziła:",
+    "options": [
+      "Chorwacja",
+      "Czarnogóra",
+      "Estonia",
+      "Dania"
+    ],
+    "correct": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Jednostronna euroizacja to używanie euro bez zgody UE i bez członkostwa w strefie euro – zrobiły tak m.in. Czarnogóra i Kosowo. Chorwacja (A) i Estonia (C) przyjęły euro formalnie, a Dania (D) ma kronę w ERM II."
+  },
+  {
+    "id": "owe38-c-18",
+    "type": "multi",
+    "edition": "XXXVIII OWE (2024/2025), zawody centralne",
+    "question": "Do wskaźników wykorzystywanych w analizie fundamentalnej na rynku kapitałowym nie zaliczamy:",
+    "options": [
+      "ADX",
+      "MACD",
+      "P/E",
+      "ROE"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "explanation": "ADX (wskaźnik siły trendu) i MACD (zbieżność/rozbieżność średnich kroczących) to narzędzia analizy technicznej (A, B). P/E i ROE należą do analizy fundamentalnej."
+  },
+  {
+    "id": "owe38-c-19",
+    "type": "multi",
+    "edition": "XXXVIII OWE (2024/2025), zawody centralne",
+    "question": "Inwestor planuje, aby jego portfel inwestycyjny odwzorowywał ruch indeksu WIG-20. Która ze strategii inwestycyjnych będzie najlepsza do osiągnięcia tego celu?",
+    "options": [
+      "nabycie opcji call na indeks WIG-20",
+      "nabycie tytułu uczestnictwa funduszu typu ETF na WIG-20",
+      "wystawienie opcji put na indeks WIG-20",
+      "nabycie jednostek uczestnictwa funduszu zrównoważonego"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "ETF na WIG20 odwzorowuje zmiany indeksu przy niskich kosztach (B). Opcje (A, C) mają niesymetryczne profile wypłat, a fundusz zrównoważony inwestuje w akcje i obligacje według decyzji zarządzającego (D)."
+  },
+  {
+    "id": "owe38-c-20",
+    "type": "multi",
+    "edition": "XXXVIII OWE (2024/2025), zawody centralne",
+    "question": "Które stwierdzenie dotyczące rynku kapitałowego jest prawdziwe?",
+    "options": [
+      "główny rynek warszawskiej giełdy to przykład rynku pierwotnego",
+      "pierwsza oferta publiczna jest określana akronimem IPO",
+      "cena akcji spółki notowanej na giełdzie papierów wartościowych nie może być niższa niż jej wartość nominalna",
+      "wartość nominalna obligacji to cena, po której nabywca kupuje ją na rynku pierwotnym"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "IPO (Initial Public Offering) to pierwsza oferta publiczna akcji (B). Na rynku głównym GPW toczy się obrót wtórny (A). Cena akcji może spaść poniżej wartości nominalnej (C), a cena emisyjna obligacji może różnić się od nominału (D)."
+  },
+  {
+    "id": "owe38-c-21",
+    "type": "multi",
+    "edition": "XXXVIII OWE (2024/2025), zawody centralne",
+    "question": "Jeżeli w produkcji danego dobra dwa rodzaje nakładów są doskonałymi substytutami, to:",
+    "options": [
+      "izokwanty są liniami prostymi",
+      "izokoszty mają kształt litery „L”",
+      "izokwanty mają kształt litery „L”",
+      "izokwanty są liniami wypukłymi"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Gdy nakłady są doskonałymi substytutami, można je zastępować w stałej proporcji, więc izokwanty są liniami prostymi (A). Kształt „L” mają izokwanty dla nakładów doskonale komplementarnych (C)."
+  },
+  {
+    "id": "owe38-c-22",
+    "type": "multi",
+    "edition": "XXXVIII OWE (2024/2025), zawody centralne",
+    "question": "Dochód konsumenta wynosi 1000 zł. Oś odciętych odnosi się do konsumpcji dobra X, a oś rzędnych – konsumpcji dobra Y. Jeżeli linia ograniczenia budżetowego przecina oś odciętych w punkcie 20, to wiemy, że:",
+    "options": [
+      "konsument może maksymalnie nabywać 20 jednostek dobra X",
+      "konsument może maksymalnie nabywać 50 jednostek dobra X",
+      "cena dobra X to 50 zł",
+      "cena dobra X to 20 zł"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "Przecięcie z osią X w punkcie 20 to maksymalna ilość dobra X przy wydaniu całego dochodu (A), czyli cena X = 1000 / 20 = 50 zł (C)."
+  },
+  {
+    "id": "owe38-c-23",
+    "type": "multi",
+    "edition": "XXXVIII OWE (2024/2025), zawody centralne",
+    "question": "Dobra X i Y są doskonałymi substytutami. Cena dobra X była o 2 zł niższa od ceny dobra Y. W ostatnim okresie cena dobra Y spadła o 4 zł. Które stwierdzenie jest prawdziwe?",
+    "options": [
+      "konsument będzie nabywał zarówno dobro X, jak i Y",
+      "zmiana popytu na dobro X jest wywołana w równej mierze efektem dochodowym, jak i substytucyjnym",
+      "cała zmiana wartości popytu na dobro Y jest wywołana efektem dochodowym",
+      "cała zmiana popytu na dobro X jest wywołana efektem substytucyjnym"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Przed zmianą X było o 2 zł tańsze, więc konsument kupował tylko X. Po spadku ceny Y o 4 zł to Y jest o 2 zł tańsze i konsument przechodzi w całości na Y (A – fałsz). Spadek popytu na X wynika wyłącznie z efektu substytucyjnego (D)."
+  },
+  {
+    "id": "owe38-c-24",
+    "type": "multi",
+    "edition": "XXXVIII OWE (2024/2025), zawody centralne",
+    "question": "Na rynku chipów działają tylko dwa przedsiębiorstwa, które zawiązały kartel. Krzywa popytu na chipy to p = −q + 200, a krzywa kosztu krańcowego obu przedsiębiorstw to MC = 100 (gdzie: p – cena w zł za sztukę; q – liczba chipów). Kartel działa w celu maksymalizacji swojego zysku całkowitego. Które stwierdzenie jest prawdziwe?",
+    "options": [
+      "liczba chipów dostarczanych na rynek przez kartel wyniesie 50 sztuk",
+      "cena jednego chipa wyniesie 100 zł",
+      "na rynku nie wystąpi zbędna strata społeczna",
+      "cena chipa na rynku będzie równa cenie monopolowej"
+    ],
+    "correct": [
+      0,
+      3
+    ],
+    "explanation": "Kartel działa jak monopolista: MR = 200 − 2q = MC = 100, czyli q = 50 szt. (A) i p = 150 zł – cena monopolowa (D, B – fałsz). Ilość jest mniejsza niż konkurencyjna (100), więc występuje zbędna strata społeczna (C)."
+  },
+  {
+    "id": "owe38-c-25",
+    "type": "multi",
+    "edition": "XXXVIII OWE (2024/2025), zawody centralne",
+    "question": "Jacek rok temu postanowił zainwestować swoje oszczędności o wartości 1 mln zł w otwarcie sklepu z żywnością ekologiczną. Zysk księgowy wyniósł w pierwszym roku działalności 50 000 zł. Jednocześnie Jacek musiał zrezygnować z pracy fotografa, która przynosiłaby mu roczny dochód w wysokości 10 000 zł. Roczna rynkowa stopa procentowa wynosi 3%. Które stwierdzenie jest prawdziwe?",
+    "options": [
+      "koszt alternatywny Jacka wynosi 950 000 zł",
+      "Jacek osiąga zysk ekonomiczny, który jest większy od 0",
+      "Jacek osiąga na swojej działalności zysk nadzwyczajny",
+      "dane przedstawione w zadaniu pozwalają stwierdzić, że przychody sklepu wynoszą 70 000 zł"
+    ],
+    "correct": [
+      1,
+      2
+    ],
+    "explanation": "Koszt alternatywny = utracona pensja (10 000 zł) + utracone odsetki (3% × 1 mln = 30 000 zł) = 40 000 zł (A – fałsz). Zysk ekonomiczny = 50 000 − 40 000 = 10 000 zł > 0 (B), czyli zysk nadzwyczajny (C). Przychodów nie da się ustalić z danych (D)."
+  },
+  {
+    "id": "owe38-c-26",
+    "type": "multi",
+    "edition": "XXXVIII OWE (2024/2025), zawody centralne",
+    "question": "Które stwierdzenie dotyczące układu obiektów według procesu jest prawdziwe?",
+    "options": [
+      "jest on właściwy dla organizacji wytwarzających bardzo dużą ilość jednego produktu",
+      "jest on charakterystyczny dla większości linii montażowych",
+      "jego cechą charakterystyczną jest ułożenie obiektów wokół jednego obszaru roboczego",
+      "jest on wykorzystywany w sytuacjach, kiedy w toku operacji wytwarzanych jest wiele różnych produktów"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Układ według procesu (technologiczny, gniazdowy) grupuje podobne maszyny i stanowiska – sprawdza się, gdy wytwarza się wiele różnych produktów w małych seriach (D). Masowa produkcja jednego wyrobu i linie montażowe to układ według produktu (A, B), a obiekty wokół jednego miejsca to układ stacjonarny (C)."
+  },
+  {
+    "id": "owe38-c-27",
+    "type": "multi",
+    "edition": "XXXVIII OWE (2024/2025), zawody centralne",
+    "question": "Które stwierdzenie dotyczące teorii X w modelu McGregora jest prawdziwe:",
+    "options": [
+      "prezentuje ona pozytywne podejście do pracownika",
+      "zgodnie z jej założeniami pracownicy są zdolni i chętni do tworzenia innowacji produktowych",
+      "zgodnie z jej założeniami najskuteczniejszym motywatorem dla pracowników jest samorealizacja",
+      "jest ona zgodna z założeniami naukowego zarządzania"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Teoria X McGregora zakłada, że pracownicy nie lubią pracy, unikają odpowiedzialności i trzeba ich kontrolować – zgodnie z założeniami naukowego zarządzania (D). Pozytywny obraz pracownika, kreatywność i samorealizacja to założenia teorii Y (A, B, C)."
+  },
+  {
+    "id": "owe38-c-28",
+    "type": "multi",
+    "edition": "XXXVIII OWE (2024/2025), zawody centralne",
+    "question": "Przykładem sytuacyjnego podejścia do przywództwa jest:",
+    "options": [
+      "model wymiany: przywódca–inny członek organizacji",
+      "teoria cyklu życia",
+      "model Vrooma-Yettona-Jago",
+      "teoria ścieżki do celu"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "Sytuacyjne podejścia do przywództwa (wg R. Griffina) to: teoria LPC Fiedlera, teoria ścieżki do celu (D), model Vrooma–Yettona–Jago (C), model wymiany przywódca–członek (LMX – A) oraz teoria cyklu życia Herseya i Blancharda (B)."
+  },
+  {
+    "id": "owe38-c-29",
+    "type": "multi",
+    "edition": "XXXVIII OWE (2024/2025), zawody centralne",
+    "question": "Która z form grupowania stanowisk pracy w największym zakresie ułatwia koordynację czynności w obrębie każdego wydziału organizacji?",
+    "options": [
+      "na podstawie funkcji",
+      "według wyrobów",
+      "według klientów",
+      "na podstawie lokalizacji"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Grupowanie według funkcji skupia specjalistów z jednej dziedziny w jednym wydziale, co najbardziej ułatwia koordynację w obrębie wydziału (A). Utrudnia jednak koordynację między wydziałami."
+  },
+  {
+    "id": "owe38-c-30",
+    "type": "multi",
+    "edition": "XXXVIII OWE (2024/2025), zawody centralne",
+    "question": "Które stwierdzenie dotyczące decyzji niezaprogramowanych jest prawdziwe?",
+    "options": [
+      "w ich podejmowaniu menedżer nie powinien kierować się intuicją",
+      "są podejmowane znacznie rzadziej niż decyzje zaprogramowane",
+      "charakteryzują się dość słabo wyrażoną strukturą",
+      "stanowią one większość decyzji dotyczących procedur operacyjnych"
+    ],
+    "correct": [
+      1,
+      2
+    ],
+    "explanation": "Decyzje niezaprogramowane dotyczą nowych, nietypowych i słabo ustrukturyzowanych problemów (C) i są podejmowane rzadziej niż rutynowe decyzje zaprogramowane (B), które dominują w procedurach operacyjnych (D – fałsz). Intuicja bywa w nich przydatna (A)."
+  }
+]
