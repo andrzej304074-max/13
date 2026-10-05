@@ -1,0 +1,466 @@
+[
+  {
+    "id": "owe24-s-01",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody szkolne",
+    "question": "Konieczność stosowania w badaniach ekonomicznych klauzuli ceteris paribus wynika z:",
+    "options": [
+      "niepewności co do wystąpienia prognozowanych zachowań ekonomicznych",
+      "możliwości subiektywnego wnioskowania na podstawie występujących zjawisk ekonomicznych",
+      "konieczności wprowadzenia do modelu uproszczeń i uogólnień z uwagi na ogromną złożoność zachodzących procesów gospodarczych",
+      "znajomości wszystkich czynników determinujących przebieg analizowanego zjawiska ekonomicznego"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Klauzula ceteris paribus („przy innych warunkach niezmienionych”) pozwala badać wpływ jednego czynnika, zakładając, że pozostałe się nie zmieniają. Jest konieczna, bo zjawiska gospodarcze zależą od bardzo wielu czynników naraz – model musi upraszczać i uogólniać rzeczywistość."
+  },
+  {
+    "id": "owe24-s-02",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody szkolne",
+    "question": "Przeciętny koszt całkowity wytwarzania pewnego produktu jest równy kosztowi krańcowemu i wynosi 10 zł przy wielkości produkcji na poziomie 8 jednostek. Koszt całkowity 9 jednostek tego produktu wynosi 100 zł. Z powyższych danych wynika, że:",
+    "options": [
+      "przeciętny koszt całkowity spada przy wielkości produkcji wynoszącej 9 jednostek produktu",
+      "koszt krańcowy 9 jednostki produktu wynosi 20 zł",
+      "przeciętny koszt całkowity 9 jednostek produktu wynosi 10 zł",
+      "koszt krańcowy 9 jednostki produktu wynosi 11,11 zł"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Przy 8 jednostkach ATC = 10 zł, więc koszt całkowity TC = 8 · 10 = 80 zł. Koszt krańcowy 9. jednostki = TC(9) − TC(8) = 100 − 80 = 20 zł. Przeciętny koszt 9 jednostek = 100/9 ≈ 11,11 zł – rośnie, bo MC > ATC."
+  },
+  {
+    "id": "owe24-s-03",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody szkolne",
+    "question": "Prawdą jest, że:",
+    "options": [
+      "cena wpływa na wielkość popytu",
+      "popyt wpływa na podaż",
+      "wielkość popytu wpływa na cenę",
+      "cena wpływa na popyt"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Cena wpływa na wielkość popytu (ruch wzdłuż krzywej popytu), a nie na popyt (całą krzywą). Popyt zmieniają inne czynniki, np. dochody, ceny innych dóbr czy gusty. Podobnie popyt (krzywa) wpływa na cenę, a nie jego wielkość."
+  },
+  {
+    "id": "owe24-s-04",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody szkolne",
+    "question": "Jeżeli produkt przeciętny jest większy od produktu krańcowego, to wraz ze zwiększaniem nakładów czynnika wytwórczego produkt krańcowy:",
+    "options": [
+      "rośnie",
+      "jest stały",
+      "maleje",
+      "nie można tego stwierdzić bez dodatkowych informacji"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Produkt przeciętny jest większy od krańcowego, gdy jesteśmy za maksimum produktu przeciętnego – w obszarze działania prawa malejących przychodów, gdzie produkt krańcowy maleje wraz ze wzrostem nakładów czynnika."
+  },
+  {
+    "id": "owe24-s-05",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody szkolne",
+    "question": "W przypadku efektu Veblena:",
+    "options": [
+      "pod uwagę brane są dobra luksusowe",
+      "pod uwagę brane są dobra niższego rzędu",
+      "wzrostowi ceny dobra towarzyszy wzrost wielkości jego podaży",
+      "wzrostowi ceny dobra towarzyszy wzrost popytu na to dobro"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Efekt Veblena (efekt snobizmu, ostentacyjnej konsumpcji – T. Veblen) dotyczy dóbr luksusowych: część konsumentów kupuje je właśnie dlatego, że są drogie, bo podkreślają status. Wzrost ceny może wtedy zwiększać wielkość popytu."
+  },
+  {
+    "id": "owe24-s-06",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody szkolne",
+    "question": "Jeśli płace na rynku pracy wskutek swej lepkości kształtują się powyżej poziomu równowagi, to w gospodarce:",
+    "options": [
+      "nie występuje zjawisko bezrobocia",
+      "występuje jedynie bezrobocie przymusowe",
+      "występuje jedynie bezrobocie dobrowolne",
+      "występuje zarówno bezrobocie dobrowolne, jak i przymusowe"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Jeśli płace są sztywne (lepkie) i utrzymują się powyżej poziomu równowagi, podaż pracy przewyższa popyt na pracę. Powstaje bezrobocie przymusowe (ludzie chcą pracować za obecną płacę, ale nie znajdują pracy), a obok niego zawsze istnieje bezrobocie dobrowolne (osoby, które nie chcą pracować za oferowaną płacę)."
+  },
+  {
+    "id": "owe24-s-07",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody szkolne",
+    "question": "Jeżeli użyteczność całkowita osiąga maksimum, to użyteczność krańcowa jest:",
+    "options": [
+      "ujemna i malejąca",
+      "ujemna i rosnąca",
+      "równa zero",
+      "dodatnia i malejąca"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Użyteczność całkowita rośnie, dopóki użyteczność krańcowa jest dodatnia. Osiąga maksimum w punkcie nasycenia, gdzie kolejna jednostka nie daje dodatkowej satysfakcji – użyteczność krańcowa jest równa zero. Dalsza konsumpcja (MU < 0) zmniejsza użyteczność całkowitą."
+  },
+  {
+    "id": "owe24-s-08",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody szkolne",
+    "question": "Amortyzacja jest to różnica między:",
+    "options": [
+      "produktem krajowym brutto w cenach rynkowych a produktem krajowym brutto w cenach czynników wytwórczych",
+      "inwestycjami brutto a inwestycjami netto",
+      "produktem narodowym brutto a produktem krajowym brutto",
+      "produktem narodowym netto a podatkami pośrednimi"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Inwestycje brutto obejmują wszystkie nakłady na kapitał trwały, a inwestycje netto – tylko przyrost kapitału ponad odtworzenie zużytego. Różnica między nimi to amortyzacja, czyli wartość zużycia kapitału trwałego."
+  },
+  {
+    "id": "owe24-s-09",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody szkolne",
+    "question": "W przedsiębiorstwie działającym w warunkach konkurencji doskonałej krzywa popytu na produkty przedsiębiorstwa pokrywa się z krzywą:",
+    "options": [
+      "utargu całkowitego",
+      "kosztów krańcowych",
+      "przeciętnych kosztów całkowitych",
+      "utargu krańcowego"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Firma w konkurencji doskonałej jest cenobiorcą – sprzedaje każdą jednostkę po tej samej cenie rynkowej, więc jej krzywa popytu jest pozioma i pokrywa się z krzywą utargu krańcowego oraz przeciętnego (D = MR = AR = P)."
+  },
+  {
+    "id": "owe24-s-11",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody szkolne",
+    "question": "Monopson to taka struktura rynku, w której:",
+    "options": [
+      "mamy wielu małych dostawców produktu, a tylko jednego dużego jego odbiorcę",
+      "mamy tylko jednego dużego dostawcę produktu, a wielu małych jego odbiorców",
+      "występuje duża liczba odbiorców produktu",
+      "rynek zdominowany jest wyłącznie przez kilku odbiorców produktu"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Monopson to rynek z jednym nabywcą (odbiorcą) i wieloma sprzedawcami (dostawcami). Przykładem jest jeden duży pracodawca w małej miejscowości (na rynku pracy) lub jedna cukrownia skupująca buraki od wielu rolników. Rynek z jednym dostawcą to monopol."
+  },
+  {
+    "id": "owe24-s-12",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody szkolne",
+    "question": "Zgodnie z hipotezą dochodu absolutnego wielkość wydatków konsumpcyjnych gospodarstw domowych zależy od:",
+    "options": [
+      "bieżącego poziomu uzyskiwanych dochodów przez gospodarstwa domowe",
+      "przeciętnej, oczekiwanej w całym cyklu życia wysokości dochodu gospodarstwa domowego",
+      "bieżącego poziomu uzyskiwanych dochodów i wielkości otrzymanych spadków",
+      "bieżącego poziomu uzyskiwanych dochodów i wielkości zgromadzonego majątku przez gospodarstwa domowe"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Hipoteza dochodu absolutnego (J.M. Keynes) zakłada, że konsumpcja zależy przede wszystkim od bieżącego dochodu (rozporządzalnego) gospodarstw domowych: C = a + c·Y. Zależność od dochodu z całego cyklu życia to hipoteza cyklu życia (F. Modigliani), a od dochodu trwałego – hipoteza dochodu permanentnego."
+  },
+  {
+    "id": "owe24-s-13",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody szkolne",
+    "question": "Z punktu widzenia inwestora rozważającego zakup obligacji wzrost ich cen rynkowych, ceteris paribus:",
+    "options": [
+      "oznacza wzrost rentowności inwestycji w obligacje",
+      "powoduje spadek rentowności inwestycji w obligacje",
+      "prowadzi do wzrostu bądź spadku rentowności inwestycji w obligacje w zależności od tego, czy ich oprocentowanie jest stałe czy zmienne",
+      "nie wpływa na rentowność inwestycji w obligacje"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Odsetki od obligacji są ustalone od wartości nominalnej, więc jeśli cena rynkowa obligacji rośnie, inwestor płaci więcej za ten sam strumień odsetek i tę samą kwotę wykupu – rentowność (stopa zwrotu do wykupu) spada. Ceny obligacji i ich rentowność zmieniają się w przeciwnych kierunkach."
+  },
+  {
+    "id": "owe24-s-14",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody szkolne",
+    "question": "Cukiernia zakupiła za gotówkę 2 tony cukru, które zamierza wykorzystać w produkcji pączków z lukrem. Co jest konsekwencją tego zdarzenia gospodarczego?",
+    "options": [
+      "wzrost kosztów",
+      "wzrost sumy bilansowej",
+      "spadek sumy bilansowej",
+      "zmiana struktury aktywów"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Zakup cukru za gotówkę zmniejsza jeden składnik aktywów (środki pieniężne) i o tyle samo zwiększa drugi (materiały/zapasy). Suma bilansowa się nie zmienia – zmienia się tylko struktura aktywów (operacja aktywna). Kosztem cukier stanie się dopiero wtedy, gdy zostanie zużyty do produkcji."
+  },
+  {
+    "id": "owe24-s-15",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody szkolne",
+    "question": "Które z poniższych zdarzeń może spowodować wzrost rynkowych stóp procentowych kredytów udzielanych przez banki komercyjne?",
+    "options": [
+      "zmniejszenie się stopy inflacji w gospodarce",
+      "zakup przez bank centralny papierów wartościowych od banków komercyjnych w ramach operacji otwartego rynku",
+      "zmniejszenie stopy rezerw obowiązkowych",
+      "wzrost deficytu sektora finansów publicznych"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Wzrost deficytu sektora finansów publicznych zwiększa potrzeby pożyczkowe państwa i popyt na kapitał, co podnosi rynkowe stopy procentowe (efekt wypychania). Spadek inflacji, skup papierów przez bank centralny i obniżenie rezerwy obowiązkowej działają w kierunku obniżenia stóp."
+  },
+  {
+    "id": "owe24-s-16",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody szkolne",
+    "question": "Termin „tezauryzacja pieniądza” oznacza, że:",
+    "options": [
+      "pieniądz jest wycofany z obiegu i stanowi środek przechowywania wartości",
+      "pieniądz służy do zwalniania z zobowiązań publicznoprawnych",
+      "została przywrócona wymienialność pieniądza papierowego na złoto",
+      "bank centralny zwiększa podaż pieniądza w obiegu, co nieuchronnie prowadzi do spadku jego wartości"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Tezauryzacja to gromadzenie pieniądza poza obiegiem jako oszczędności – pieniądz pełni wtedy funkcję środka przechowywania wartości (tezauryzacyjną)."
+  },
+  {
+    "id": "owe24-s-17",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody szkolne",
+    "question": "Mianem stagflacji można określić jednoczesne występowanie:",
+    "options": [
+      "inflacji i stagnacji gospodarczej",
+      "deflacji i stagnacji gospodarczej",
+      "inflacji i deficytu w bilansie płatniczym",
+      "deflacji i wysokiego bezrobocia"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Stagflacja to jednoczesne występowanie stagnacji gospodarczej (lub recesji) i wysokiej inflacji, często przy rosnącym bezrobociu. Klasycznym przykładem są lata 70. XX w. po szokach naftowych. Zjawisko to podważyło prostą krzywą Phillipsa."
+  },
+  {
+    "id": "owe24-s-18",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody szkolne",
+    "question": "Bilans płatniczy jest zrównoważony, gdy:",
+    "options": [
+      "suma salda bilansu obrotów bieżących i salda bilansu obrotów kapitałowych jest równa zero",
+      "wielkość popytu na daną walutę zrównuje się z wielkością jej podaży",
+      "nie trzeba zaciągać pożyczki na rynkach zagranicznych na uregulowanie płatności z tytułu importu towarów i usług",
+      "oficjalne aktywa rezerwowe są równe rozchodom w bilansie obrotów bieżących i bilansie obrotów kapitałowych"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Bilans płatniczy składa się z rachunku obrotów bieżących i rachunku obrotów kapitałowych i finansowych. Jest zrównoważony, gdy suma ich sald wynosi zero – deficyt jednego jest pokrywany nadwyżką drugiego, bez zmiany oficjalnych aktywów rezerwowych."
+  },
+  {
+    "id": "owe24-s-19",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody szkolne",
+    "question": "Drugim pod względem wartości źródłem dochodu budżetu państwa – po podatku od towarów i usług (VAT) – jest w Polsce (stan na rok 2010):",
+    "options": [
+      "podatek dochodowy od osób prawnych",
+      "podatek dochodowy od osób fizycznych",
+      "podatek akcyzowy",
+      "podatek od dochodów kapitałowych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "W 2010 r. drugim co do wielkości źródłem dochodów budżetu państwa (po VAT) była akcyza (ok. 54 mld zł), przed podatkami dochodowymi PIT i CIT. Akcyzą obciążone są m.in. paliwa, alkohol, wyroby tytoniowe i energia elektryczna."
+  },
+  {
+    "id": "owe24-s-20",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody szkolne",
+    "question": "Wskaż cechę charakterystyczną leasingu operacyjnego:",
+    "options": [
+      "cała rata kapitałowa stanowi koszt uzyskania przychodu",
+      "korzystający amortyzuje przedmiot leasingu",
+      "finansujący pokrywa koszty użytkowania przedmiotu leasingu",
+      "przedmiotem umowy leasingu mogą być wyłącznie rzeczy ruchome"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W leasingu operacyjnym właścicielem i podmiotem amortyzującym przedmiot jest finansujący (leasingodawca), a korzystający (leasingobiorca) zalicza całe raty leasingowe do kosztów uzyskania przychodów. W leasingu finansowym przedmiot amortyzuje korzystający, a kosztem jest tylko część odsetkowa raty."
+  },
+  {
+    "id": "owe24-s-21",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody szkolne",
+    "question": "Wprowadzenie (dopuszczenie) papierów wartościowych do obrotu giełdowego wymaga zgody:",
+    "options": [
+      "Rady Ministrów",
+      "Zarządu Giełdy",
+      "Komisji Nadzoru Finansowego",
+      "Krajowego Depozytu Papierów Wartościowych"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "O dopuszczeniu i wprowadzeniu papierów wartościowych do obrotu giełdowego decyduje zarząd giełdy (GPW) na wniosek emitenta. KNF zatwierdza prospekt emisyjny (dopuszczenie do obrotu publicznego), a KDPW prowadzi rejestrację i rozliczenia."
+  },
+  {
+    "id": "owe24-s-22",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody szkolne",
+    "question": "Zgodnie z obowiązującym w Polsce prawem zakład ubezpieczeń może być prowadzony w formie:",
+    "options": [
+      "spółki z ograniczoną odpowiedzialnością",
+      "towarzystwa ubezpieczeń wzajemnych",
+      "dowolnej spółki kapitałowej",
+      "dowolnej spółki komandytowo-akcyjnej, o ile komplementariusz ma siedzibę w kraju należącym do Unii Europejskiej"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Zgodnie z ustawą o działalności ubezpieczeniowej zakład ubezpieczeń może działać w formie spółki akcyjnej, towarzystwa ubezpieczeń wzajemnych (TUW) lub spółki europejskiej. Spółka z o.o. ani spółka komandytowo-akcyjna nie mogą prowadzić działalności ubezpieczeniowej."
+  },
+  {
+    "id": "owe24-s-23",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody szkolne",
+    "question": "Kontrakty futures na WIG 20 nie są standaryzowane ze względu na:",
+    "options": [
+      "wielkość kontraktu",
+      "sposób rozliczenia kontraktu",
+      "termin wygaśnięcia kontraktu",
+      "cenę rozliczenia"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Kontrakty terminowe giełdowe są standaryzowane: określone są instrument bazowy, wielkość kontraktu (mnożnik), terminy wygaśnięcia i sposób rozliczenia (pieniężny). Cena kontraktu kształtuje się na rynku w wyniku transakcji, więc nie jest standaryzowana."
+  },
+  {
+    "id": "owe24-s-24",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody szkolne",
+    "question": "Emitentem bonów skarbowych w Polsce jest:",
+    "options": [
+      "Narodowy Bank Polski",
+      "minister skarbu",
+      "minister finansów",
+      "Bank Gospodarstwa Krajowego"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Bony skarbowe to krótkoterminowe (do 1 roku) papiery dłużne Skarbu Państwa emitowane przez ministra finansów, który zarządza długiem publicznym. NBP organizuje przetargi jako agent emisji, ale nie jest emitentem."
+  },
+  {
+    "id": "owe24-s-25",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody szkolne",
+    "question": "W modelu motywowania opracowanym przez Taylora bodźcem do pracy jest przede wszystkim:",
+    "options": [
+      "wysokość wynagrodzenia",
+      "wpływ współpracowników na równorzędnych stanowiskach pracy",
+      "kultura organizacyjna przedsiębiorstwa",
+      "chęć zaspokojenia potrzeby samorealizacji"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Frederick W. Taylor (twórca naukowego zarządzania) uważał, że głównym motywatorem pracownika jest pieniądz – zaproponował akordowy system płac, w którym wynagrodzenie zależy od wydajności. Czynniki społeczne podkreśliła później szkoła stosunków międzyludzkich (E. Mayo)."
+  },
+  {
+    "id": "owe24-s-26",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody szkolne",
+    "question": "Sprzedaż instytucji finansowej bezspornych i udokumentowanych wierzytelności przedsiębiorstwa z tytułu faktur wystawionych podmiotom trzecim to:",
+    "options": [
+      "prolongata",
+      "inkaso",
+      "faktoring",
+      "akredytywa"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Faktoring to umowa, w której firma (faktorant) sprzedaje instytucji finansowej (faktorowi) swoje wierzytelności od odbiorców z tytułu faktur przed terminem płatności. Firma szybciej otrzymuje pieniądze, a faktor pobiera wynagrodzenie (prowizję i odsetki)."
+  },
+  {
+    "id": "owe24-s-27",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody szkolne",
+    "question": "Które podejście jest kluczowe dla organizacji uczącej się?",
+    "options": [
+      "zarządzanie przez delegowanie",
+      "zarządzanie kapitałem intelektualnym",
+      "zarządzanie wartością dla właścicieli",
+      "zarządzanie przez cele"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Organizacja ucząca się (P. Senge) stale zdobywa, tworzy i przekazuje wiedzę oraz zmienia swoje zachowania pod jej wpływem. Kluczowe jest w niej zarządzanie kapitałem intelektualnym – wiedzą, umiejętnościami i doświadczeniem pracowników oraz zasobami wiedzy organizacji."
+  },
+  {
+    "id": "owe24-s-28",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody szkolne",
+    "question": "Zmiana nazwy sieci telefonii komórkowej Idea na globalną markę Orange to przykład:",
+    "options": [
+      "rebrandingu",
+      "benchmarkingu",
+      "merchandisingu",
+      "pozycjonowania marki"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Rebranding to zmiana marki – jej nazwy, logo, identyfikacji wizualnej lub wizerunku – np. zmiana sieci Idea na Orange w 2005 r. Benchmarking to porównywanie się z najlepszymi, a merchandising – sposób ekspozycji towarów w sklepie."
+  },
+  {
+    "id": "owe24-s-29",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody szkolne",
+    "question": "Wskaż prawidłową odpowiedź dotyczącą hierarchii potrzeb opracowanej przez Maslowa:",
+    "options": [
+      "potrzeby są uporządkowane od najmniej odczuwalnych (nieistotnych) do tych, które człowiek odczuwa i chce zaspokoić w największym stopniu",
+      "u dołu piramidy potrzeb znajduje się potrzeba samorealizacji, potem potrzeba szacunku, przynależności, bezpieczeństwa, a na jej wierzchołku – potrzeby fizjologiczne, jako najmniej ważne",
+      "kolejność występowania potrzeb jest przypadkowa – istotne jest to, aby wszystkie potrzeby zostały zaspokojone, gdyż tylko wówczas człowiek będzie funkcjonował prawidłowo",
+      "potrzeba w postaci ambitnej pracy i eksponowanego stanowiska służbowego stoi w hierarchii wyżej niż płaca zasadnicza"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "W piramidzie potrzeb Maslowa u podstawy są potrzeby fizjologiczne, potem bezpieczeństwa, przynależności, szacunku (uznania), a na szczycie – samorealizacji. Ambitna praca i eksponowane stanowisko zaspokajają potrzeby szacunku i samorealizacji, więc stoją wyżej niż płaca zasadnicza, która zaspokaja potrzeby niższego rzędu."
+  },
+  {
+    "id": "owe24-s-30",
+    "type": "single",
+    "edition": "XXIV OWE (2010/2011), zawody szkolne",
+    "question": "Przykładem outsourcingu kontraktowego w banku komercyjnym jest:",
+    "options": [
+      "podpisanie umowy o organizację imprez integracyjnych pracowników banku z własnym ośrodkiem konferencyjno-szkoleniowym",
+      "utworzenie odrębnej jednostki specjalizującej się w sprzedaży usług oferowanych przez bank",
+      "wydzielenie funkcji konwojowania i ochrony fizycznej majątku banku i przekazanie jej do spółki córki",
+      "przekazanie obsługi strony internetowej i profilu na Facebooku wyspecjalizowanej firmie zewnętrznej"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Outsourcing kontraktowy polega na przekazaniu realizacji określonych funkcji niezależnej firmie zewnętrznej na podstawie umowy (np. obsługa strony internetowej i mediów społecznościowych banku). Wydzielenie funkcji do spółki córki to outsourcing kapitałowy, a korzystanie z własnej jednostki – nie jest outsourcingiem."
+  }
+]

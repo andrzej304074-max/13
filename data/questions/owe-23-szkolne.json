@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe23-s-01",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody szkolne",
+    "question": "Prawo podaży (ceteris paribus) stanowi, że:",
+    "options": [
+      "jeżeli obniża się podaż, obniża się cena",
+      "każda zmiana ceny spowodowana jest zmianą wielkości podaży",
+      "występuje dodatnia zależność między ceną a wielkością podaży",
+      "występuje ujemna zależność między wielkością podaży a ceną"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Prawo podaży: przy innych warunkach niezmienionych im wyższa cena, tym większa wielkość podaży (i odwrotnie) – zależność dodatnia. Wyższa cena zwiększa opłacalność produkcji, więc producenci oferują więcej."
+  },
+  {
+    "id": "owe23-s-02",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody szkolne",
+    "question": "Koszty alternatywne:",
+    "options": [
+      "to wartość najlepszego rozwiązania spośród odrzuconych w wyniku dokonanej alokacji czynnika wytwórczego",
+      "nie są uwzględniane w rachunku ekonomicznym przedsięwzięć gospodarczych",
+      "są tożsame z pojęciem kosztów ekonomicznych",
+      "dotyczą tylko przedsiębiorstw prywatnych"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Koszt alternatywny (koszt utraconych możliwości) to wartość najlepszej z odrzuconych możliwości wykorzystania zasobu. Uwzględnia się go w rachunku ekonomicznym; dotyczy wszystkich podmiotów, a koszty ekonomiczne to koszty jawne plus alternatywne (niejawne), więc nie są z nimi tożsame."
+  },
+  {
+    "id": "owe23-s-03",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody szkolne",
+    "question": "Współczynnik punktowej elastyczności cenowej popytu na sól spożywczą wynosi –0,62. Spadek ceny soli spożywczej (ceteris paribus) doprowadzi do:",
+    "options": [
+      "spadku wielkości popytu oraz wzrostu wydatków na sól spożywczą",
+      "spadku wielkości popytu oraz spadku wydatków na sól spożywczą",
+      "wzrostu wielkości popytu oraz wzrostu wydatków na sól spożywczą",
+      "wzrostu wielkości popytu oraz spadku wydatków na sól spożywczą"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "|Ed| = 0,62 < 1 oznacza popyt nieelastyczny: wielkość popytu zmienia się procentowo mniej niż cena. Spadek ceny soli zwiększy wielkość popytu, ale wydatki (cena × ilość) spadną, bo spadek ceny przeważy nad wzrostem ilości."
+  },
+  {
+    "id": "owe23-s-04",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody szkolne",
+    "question": "W długim okresie monopol powinien produkować taką wielkość produkcji, która odpowiada warunkowi zrównania:",
+    "options": [
+      "ceny z przeciętnym kosztem całkowitym",
+      "ceny z kosztem krańcowym",
+      "utargu krańcowego z kosztem krańcowym i ceną",
+      "kosztu krańcowego z utargiem krańcowym"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Monopol (jak każda firma) maksymalizuje zysk, produkując tyle, aby utarg krańcowy równał się kosztowi krańcowemu (MR = MC); cenę ustala następnie na podstawie krzywej popytu – jest ona wyższa niż MR i MC. Cena równa MC to warunek konkurencji doskonałej."
+  },
+  {
+    "id": "owe23-s-05",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody szkolne",
+    "question": "Bank centralny może zwiększyć podaż pieniądza poprzez:",
+    "options": [
+      "skup obligacji rządowych, obniżenie stopy rezerw obowiązkowych i wzrost stopy redyskontowej",
+      "sprzedaż obligacji rządowych, obniżenie stopy rezerw obowiązkowych i wzrost stopy redyskontowej",
+      "sprzedaż obligacji rządowych, wzrost stopy rezerw obowiązkowych i obniżenie stopy redyskontowej",
+      "skup obligacji rządowych, obniżenie stopy rezerw obowiązkowych i obniżenie stopy redyskontowej"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Podaż pieniądza rośnie, gdy bank centralny: skupuje obligacje (operacje otwartego rynku – wprowadza pieniądz do banków), obniża stopę rezerw obowiązkowych (banki mogą udzielać więcej kredytów) i obniża stopę redyskontową (tańszy pieniądz dla banków)."
+  },
+  {
+    "id": "owe23-s-06",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody szkolne",
+    "question": "Jeżeli wzrost dochodu realnego konsumenta prowadzi do wzrostu popytu na pewne dobro, to jest ono dobrem:",
+    "options": [
+      "podstawowym",
+      "Giffena",
+      "substytucyjnym",
+      "komplementarnym"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Dobro, na które popyt rośnie wraz ze wzrostem dochodu, to dobro normalne (w polskich podręcznikach nazywane dobrem podstawowym lub wyższego rzędu). Dla dobra Giffena wzrost ceny zwiększa popyt; substytucyjność i komplementarność opisują relacje między dobrami, a nie reakcję na dochód."
+  },
+  {
+    "id": "owe23-s-07",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody szkolne",
+    "question": "Funkcja produkcji przedstawia zależność pomiędzy:",
+    "options": [
+      "wielkością kosztów całkowitych a wielkością produkcji wyrażoną ilościowo",
+      "wielkością przychodu ze sprzedaży a wielkością zasobów będących w dyspozycji przedsiębiorstwa",
+      "cenami czynników wytwórczych a wielkością produkcji wyrażoną wartościowo",
+      "wielkością nakładów czynników wytwórczych a efektami w postaci wytworzonych dóbr i usług"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Funkcja produkcji opisuje techniczną zależność między nakładami czynników wytwórczych (pracy, kapitału) a maksymalną wielkością produkcji, jaką można z nich uzyskać, np. Q = f(L, K)."
+  },
+  {
+    "id": "owe23-s-08",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody szkolne",
+    "question": "Inflacja na poziomie 38% to inflacja:",
+    "options": [
+      "pełzająca",
+      "krocząca",
+      "galopująca",
+      "hiperinflacja"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Inflację dzieli się według tempa: pełzająca – do ok. 5% rocznie, krocząca – ok. 5–10%, galopująca – kilkadziesiąt procent (do ok. 200%) rocznie, hiperinflacja – setki i więcej procent. 38% to więc inflacja galopująca."
+  },
+  {
+    "id": "owe23-s-09",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody szkolne",
+    "question": "Która z poniższych kategorii ekonomicznych jest uwzględniana przy obliczaniu PKB per capita?",
+    "options": [
+      "zanieczyszczenie powietrza",
+      "praca wykonywana dla własnych potrzeb w domu",
+      "dochody obcokrajowców",
+      "praca nielegalna"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "PKB obejmuje wartość dóbr i usług finalnych wytworzonych na terytorium kraju – także przez obcokrajowców, dlatego ich dochody (z produkcji w kraju) są w nim uwzględnione. PKB nie obejmuje szkód ekologicznych, pracy domowej na własne potrzeby ani (w zasadzie) pracy nielegalnej."
+  },
+  {
+    "id": "owe23-s-10",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody szkolne",
+    "question": "Wprowadzenie przepisów zmuszających instytucje kredytowe do podawania konsumentom rzeczywistej rocznej stopy oprocentowania jest przykładem:",
+    "options": [
+      "dostarczania dobra prywatnego przez państwo",
+      "ograniczania ułomności rynku w postaci uprzywilejowanej pozycji jednej ze stron",
+      "zmniejszania popytu na dobra społecznie niepożądane",
+      "polityki antymonopolowej wobec sektora kredytowego"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Ułomność (zawodność) rynku występuje m.in. przy asymetrii informacji – instytucja kredytowa wie więcej o kosztach kredytu niż klient. Obowiązek podawania rzeczywistej rocznej stopy oprocentowania (RRSO) zmniejsza tę asymetrię i chroni słabszą stronę – konsumenta."
+  },
+  {
+    "id": "owe23-s-11",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody szkolne",
+    "question": "Dług publiczny może zostać obniżony poprzez zwiększenie:",
+    "options": [
+      "nadwyżki budżetowej",
+      "deficytu budżetowego",
+      "wartości wymagalnych zobowiązań",
+      "emisji obligacji skarbowych sprzedawanych osobom fizycznym"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Dług publiczny to skumulowane deficyty minus nadwyżki z przeszłych lat. Zmniejsza się, gdy państwo osiąga nadwyżkę budżetową i przeznacza ją na spłatę długu. Deficyt, wymagalne zobowiązania i emisja obligacji dług zwiększają."
+  },
+  {
+    "id": "owe23-s-12",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody szkolne",
+    "question": "Do automatycznych stabilizatorów koniunktury zalicza się:",
+    "options": [
+      "wydatki na budowę dróg krajowych i autostrad",
+      "progresywny system podatkowy",
+      "zapasy produktów i towarów przedsiębiorstw",
+      "oprocentowanie kredytów inwestycyjnych"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Automatyczne stabilizatory koniunktury łagodzą wahania bez decyzji polityków: progresywny podatek dochodowy (w recesji podatki spadają szybciej niż dochody, w ożywieniu rosną szybciej) oraz zasiłki dla bezrobotnych. Budowa dróg to polityka dyskrecjonalna."
+  },
+  {
+    "id": "owe23-s-13",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody szkolne",
+    "question": "Pewien inwestor zainwestował 10 tys. zł w akcje spółki X notowanej na giełdzie. W pierwszym tygodniu cena tych akcji zmniejszyła się o 15%, a w drugim o kolejne 15%. Trzeci i czwarty tydzień przyniósł wzrost cen akcji X po 16% w każdym tygodniu. Na koniec czwartego tygodnia wartość akcji, którą posiada inwestor, była:",
+    "options": [
+      "wyższa niż w momencie zakupu",
+      "niższa niż w momencie zakupu",
+      "pozostała bez zmian",
+      "niemożliwa do określenia bez znajomości ceny akcji spółki X"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Wartość po 4 tygodniach: 10 000 · 0,85 · 0,85 · 1,16 · 1,16 ≈ 10 000 · 0,7225 · 1,3456 ≈ 9722 zł – mniej niż w momencie zakupu. Spadek o 15% liczony jest od wyższej podstawy, a wzrost o 16% od niższej, więc procentów nie można po prostu sumować."
+  },
+  {
+    "id": "owe23-s-14",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody szkolne",
+    "question": "Stopa bezrobocia to stosunek liczby bezrobotnych do:",
+    "options": [
+      "liczby pracujących",
+      "liczby ludności w wieku produkcyjnym",
+      "liczby ludności w wieku nieprodukcyjnym",
+      "zasobu siły roboczej"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Stopa bezrobocia = liczba bezrobotnych / zasób siły roboczej (aktywni zawodowo = pracujący + bezrobotni) × 100%. Osoby bierne zawodowo, np. uczniowie czy emeryci, nie są wliczane."
+  },
+  {
+    "id": "owe23-s-15",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody szkolne",
+    "question": "J.M. Keynes był zwolennikiem:",
+    "options": [
+      "liberalizmu gospodarczego",
+      "interwencjonizmu państwowego",
+      "socjalizmu",
+      "monopolizacji gospodarki"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "John Maynard Keynes („Ogólna teoria zatrudnienia, procentu i pieniądza”, 1936) był zwolennikiem interwencjonizmu państwowego: uważał, że w czasie kryzysu państwo powinno pobudzać popyt globalny, np. wydatkami publicznymi, bo rynek sam nie zapewni pełnego zatrudnienia."
+  },
+  {
+    "id": "owe23-s-16",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody szkolne",
+    "question": "Wycena aktywów przedsiębiorstwa w wartości godziwej wymaga, aby transakcja, na podstawie której określa się tę wartość:",
+    "options": [
+      "była zawarta z podmiotem w stanie likwidacji",
+      "była zawarta z podmiotem, który nie ma ujemnej wartości firmy (negative goodwill)",
+      "miała charakter rynkowy",
+      "była zawarta z jednostką zależną kapitałowo"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Wartość godziwa to kwota, za jaką składnik aktywów mógłby zostać wymieniony między dobrze poinformowanymi, niepowiązanymi i zainteresowanymi stronami – czyli w transakcji rynkowej. Transakcje z podmiotem w likwidacji lub z jednostką zależną nie mają charakteru rynkowego."
+  },
+  {
+    "id": "owe23-s-17",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody szkolne",
+    "question": "Założenie, że podaż tworzy swój własny popyt, w teorii ekonomii nazywa się prawem:",
+    "options": [
+      "Okuna",
+      "Saya",
+      "Gossena",
+      "Fishera"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Prawo Saya (J.B. Say): „podaż tworzy swój własny popyt” – produkcja generuje dochody, które zostaną wydane na zakup wytworzonych dóbr, więc ogólna nadprodukcja jest niemożliwa. Prawo Okuna dotyczy bezrobocia i PKB, Gossena – użyteczności, a Fishera – równania wymiany."
+  },
+  {
+    "id": "owe23-s-18",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody szkolne",
+    "question": "Które z niżej wymienionych nie jest kryterium konwergencji w przypadku wejścia do strefy euro?",
+    "options": [
+      "udział w mechanizmie kursowym ERM II z przedziałem wahań kursu waluty krajowej nie większym niż ± 15%",
+      "średnia nominalna długoterminowa stopa procentowa nie wyższa niż 2 punkty procentowe od poziomu wyznaczonego przez średni poziom stóp procentowych w trzech krajach o najniższej stopie inflacji w Unii Europejskiej",
+      "deficyt budżetowy nieprzekraczający 3% PKB danego kraju",
+      "wzrost gospodarczy nie niższy niż 1,5 punktu procentowego od poziomu wyznaczonego przez średni poziom dynamiki PKB w trzech krajach o najniższej dynamice PKB w Unii Europejskiej"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Kryteria konwergencji z Maastricht to: stabilność cen (inflacja), stan finansów publicznych (deficyt do 3% PKB, dług do 60% PKB), udział w ERM II z kursem stabilnym przez 2 lata (wahania ±15%) i długoterminowe stopy procentowe (nie więcej niż 2 pkt proc. powyżej średniej z trzech krajów o najniższej inflacji). Tempo wzrostu PKB nie jest kryterium."
+  },
+  {
+    "id": "owe23-s-19",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody szkolne",
+    "question": "Zgodnie z obowiązującym w Polsce prawem obligacje mogą być emitowane przez:",
+    "options": [
+      "wspólnoty mieszkaniowe",
+      "województwa",
+      "spółki partnerskie",
+      "spółki akcyjne w organizacji"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Zgodnie z ustawą o obligacjach emitentami mogą być m.in. spółki prowadzące działalność gospodarczą (posiadające osobowość prawną), jednostki samorządu terytorialnego – gminy, powiaty i województwa – oraz banki. Wspólnoty mieszkaniowe, spółki partnerskie i spółki w organizacji nie mogą emitować obligacji."
+  },
+  {
+    "id": "owe23-s-20",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody szkolne",
+    "question": "Papier wartościowy emitowany przez zamknięty fundusz inwestycyjny to:",
+    "options": [
+      "certyfikat inwestycyjny",
+      "certyfikat depozytowy",
+      "jednostka uczestnictwa",
+      "bon inwestycyjny"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Fundusze inwestycyjne zamknięte emitują certyfikaty inwestycyjne – papiery wartościowe, które mogą być notowane na giełdzie. Fundusze otwarte zbywają jednostki uczestnictwa (nie są one papierami wartościowymi)."
+  },
+  {
+    "id": "owe23-s-21",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody szkolne",
+    "question": "W co nie mogą inwestować otwarte fundusze emerytalne w Polsce (stan na rok 2009)?",
+    "options": [
+      "kontrakty futures na stopy procentowe",
+      "jednostki uczestnictwa w funduszach inwestycyjnych",
+      "obligacje komunalne niedopuszczone do obrotu publicznego",
+      "listy zastawne"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W 2009 r. ustawa o funduszach emerytalnych ściśle określała, w co mogą inwestować OFE (m.in. obligacje, akcje, listy zastawne, jednostki funduszy inwestycyjnych, depozyty). Instrumenty pochodne, takie jak kontrakty futures na stopy procentowe, nie należały do dozwolonych lokat."
+  },
+  {
+    "id": "owe23-s-22",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody szkolne",
+    "question": "Spłata 31 marca 2009 r. prawie całego zadłużenia wobec Klubu Paryskiego oznacza, że Polska uregulowała:",
+    "options": [
+      "zadłużenie wobec instytucji Unii Europejskiej, które finansowały projekty z dziedziny kultury i sztuki przed 2004 r.",
+      "zadłużenie związane z dofinansowaniem projektów proekologicznych przez fundusz SAPARD",
+      "zadłużenie z lat 70. ubiegłego stulecia wobec zagranicznych wierzycieli rządowych",
+      "przed terminem zadłużenie wobec zagranicznych banków komercyjnych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Klub Paryski to nieformalna grupa państw-wierzycieli (rządów). Polska zaciągnęła u nich kredyty w latach 70. XX w. (epoka Gierka), a w 1991 r. połowę długu umorzono. 31 marca 2009 r. Polska spłaciła przed terminem prawie całe pozostałe zadłużenie."
+  },
+  {
+    "id": "owe23-s-23",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody szkolne",
+    "question": "Które informacje są umieszczane na karcie debetowej?",
+    "options": [
+      "nr rachunku bankowego, do którego została wydana karta",
+      "nr PESEL",
+      "adres zamieszkania właściciela karty",
+      "adres banku wydawcy karty"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Na karcie debetowej umieszcza się m.in. numer karty, imię i nazwisko posiadacza, datę ważności, logo organizacji płatniczej oraz dane wydawcy (nazwę i adres banku, zwykle na rewersie). Ze względów bezpieczeństwa nie umieszcza się na niej numeru rachunku, PESEL ani adresu posiadacza."
+  },
+  {
+    "id": "owe23-s-24",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody szkolne",
+    "question": "Dochodami budżetu gminy są:",
+    "options": [
+      "podatek od gier",
+      "opłata targowa",
+      "podatek akcyzowy",
+      "podatek od posiadania zwierząt gospodarskich"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Dochodami gminy są m.in. podatki i opłaty lokalne: podatek od nieruchomości, rolny, leśny, od środków transportowych, opłata targowa, miejscowa. Podatek od gier i akcyza trafiają do budżetu państwa, a podatku od posiadania zwierząt gospodarskich nie ma."
+  },
+  {
+    "id": "owe23-s-25",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody szkolne",
+    "question": "Proces zarządzania obejmuje:",
+    "options": [
+      "planowanie, podejmowanie decyzji, organizowanie, przewodzenie (kierowanie ludźmi) i kontrolowanie",
+      "planowanie budżetu i jego późniejszą analizę",
+      "realizowanie podstawowych działań zmierzających do osiągnięcia założonego celu",
+      "sterowanie zachowaniami ludzkimi w celu maksymalizacji zysku"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Proces zarządzania obejmuje funkcje: planowanie i podejmowanie decyzji, organizowanie, przewodzenie (kierowanie ludźmi, motywowanie) oraz kontrolowanie – wszystkie służą skutecznemu i efektywnemu osiąganiu celów organizacji (R.W. Griffin)."
+  },
+  {
+    "id": "owe23-s-26",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody szkolne",
+    "question": "Bancassurance to:",
+    "options": [
+      "forma współpracy banków i zakładów ubezpieczeń przy sprzedaży polis na życie",
+      "rodzaj ubezpieczenia zawieranego przez banki w celu ochrony przed kradzieżami gotówki z konwojów",
+      "system stosowany przez wydawców kart kredytowych mający na celu ochronę klientów banków przed internetowymi oszustami",
+      "rodzaj lokaty terminowej, której wysokość oprocentowania uzależniona jest od kursów wybranych instrumentów finansowych"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Bancassurance to współpraca banków z zakładami ubezpieczeń, w której bank sprzedaje swoim klientom produkty ubezpieczeniowe (np. ubezpieczenia na życie powiązane z kredytem lub lokatą). Ubezpieczyciel zyskuje kanał dystrybucji, a bank – prowizje."
+  },
+  {
+    "id": "owe23-s-27",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody szkolne",
+    "question": "Strategię porzucenia stosują przedsiębiorstwa, które:",
+    "options": [
+      "decydują się na sprzedaż produktów po cenach niższych od kosztów własnych produkcji",
+      "dążą jednocześnie do zapewnienia wysokiej jakości i utrzymania niskich kosztów produkcji",
+      "nie osiągnęły dostatecznie dużego udziału w rynku i odpowiedniej pozycji konkurencyjnej, ale chcą osiągnąć maksymalną rentowność",
+      "w ślad za spadkiem kosztów produkcji obniżają ceny"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Strategia porzucenia (żniw, harvest) polega na stopniowym wycofywaniu się z rynku, na którym firma ma słabą pozycję, przy jednoczesnym „wyciskaniu” maksymalnych zysków (ograniczenie nakładów, utrzymanie cen). Stosuje się ją np. wobec „psów” w macierzy BCG."
+  },
+  {
+    "id": "owe23-s-28",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody szkolne",
+    "question": "Sztabowa struktura organizacyjna powstała z połączenia:",
+    "options": [
+      "macierzowej z liniową",
+      "liniowej z funkcjonalną",
+      "dywizjonalnej z funkcjonalną",
+      "zadaniowej z funkcjonalną"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Struktura sztabowo-liniowa łączy strukturę liniową (jednoosobowe kierownictwo, wyraźna linia służbowa) z elementami funkcjonalnymi – przy kierownikach działają komórki sztabowe (specjaliści, doradcy), które doradzają, ale nie wydają poleceń."
+  },
+  {
+    "id": "owe23-s-29",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody szkolne",
+    "question": "Przykładem merchandisingu w hipermarkecie jest:",
+    "options": [
+      "umieszczenie towarów pierwszej potrzeby jak najdalej od wejścia",
+      "umieszczenie towarów dla dzieci (np. słodyczy) w miejscach dla nich niedostępnych, tak aby o ich zakupie mogli decydować rodzice",
+      "urządzenie działów z artykułami sezonowymi w bocznych alejkach, aby zainteresować klientów dodatkowymi artykułami",
+      "celowe zostawianie pustych półek, aby stworzyć pozory atrakcyjności cenowej oferowanych produktów"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Merchandising to sposób prezentacji towarów w sklepie, który ma skłonić klientów do zakupów. Umieszczanie towarów pierwszej potrzeby (np. pieczywa, mleka) daleko od wejścia sprawia, że klient przechodzi przez cały sklep i po drodze kupuje inne produkty."
+  },
+  {
+    "id": "owe23-s-30",
+    "type": "single",
+    "edition": "XXIII OWE (2009/2010), zawody szkolne",
+    "question": "Misja przedsiębiorstwa:",
+    "options": [
+      "określa zbiór mierzalnych parametrów, które chce ono osiągnąć",
+      "stanowi zestaw jego wszystkich celów",
+      "wyznacza horyzont czasowy jego rozwoju",
+      "określa ogólny sens jego istnienia"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Misja przedsiębiorstwa to ogólne określenie sensu i celu jego istnienia – czym się zajmuje, dla kogo i jakie wartości wyznaje. Jest sformułowana ogólnie, bez mierzalnych wskaźników i horyzontu czasowego, które określają cele i plany."
+  }
+]

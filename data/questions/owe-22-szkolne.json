@@ -1,0 +1,562 @@
+[
+  {
+    "id": "owe22-s-01",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Pojęcie rzadkości w teorii ekonomii:",
+    "options": [
+      "jest synonimem ubóstwa",
+      "znajduje zastosowanie wobec wszystkich społeczeństw we wszystkich krajach",
+      "znajduje zastosowanie tylko wobec społeczeństw, w których występuje niewystarczająca ilość zasobów naturalnych",
+      "nie byłoby stosowane, gdybyśmy mieli do czynienia z pełnym zatrudnieniem"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Rzadkość oznacza, że zasoby są ograniczone w stosunku do nieograniczonych potrzeb ludzi. Dotyczy więc wszystkich społeczeństw – także bogatych i przy pełnym zatrudnieniu – i dlatego zawsze trzeba dokonywać wyborów. Rzadkość nie jest synonimem ubóstwa."
+  },
+  {
+    "id": "owe22-s-02",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Przesunięcie krzywej podaży w lewo oznacza:",
+    "options": [
+      "zwiększenie wielkości podaży przy każdej cenie",
+      "niższą cenę w stosunku do każdej wielkości podaży przed zmianą położenia krzywej",
+      "wyższą cenę w stosunku do każdej wielkości podaży przed zmianą położenia krzywej",
+      "żadna z powyższych odpowiedzi nie jest prawidłowa"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Przesunięcie krzywej podaży w lewo to spadek podaży: każdą wielkość podaży producenci oferują teraz tylko po wyższej cenie (a przy każdej cenie oferują mniej). Może je wywołać np. wzrost kosztów produkcji."
+  },
+  {
+    "id": "owe22-s-03",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Równowaga konsumenta występuje w sytuacji, gdy:",
+    "options": [
+      "nachylenie krzywej obojętności jest mniejsze niż nachylenie linii budżetu",
+      "konsument wydał wszystkie dochody, a nachylenie krzywej obojętności jest równe nachyleniu linii budżetu",
+      "konsument wydaje na zakup każdego rodzaju dobra taką samą kwotę pieniędzy",
+      "nadwyżka konsumenta równa się wielkości ponoszonego przez niego wydatku na zakup koszyka dóbr i usług"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Konsument jest w równowadze (maksymalizuje użyteczność), gdy wydaje cały dochód, a krzywa obojętności jest styczna do linii budżetu – ich nachylenia są równe, czyli krańcowa stopa substytucji równa się stosunkowi cen dóbr."
+  },
+  {
+    "id": "owe22-s-04",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Prawo malejących przychodów:",
+    "options": [
+      "dotyczy tylko wielkości produkcji, dla której koszt krańcowy jest ujemny",
+      "nie dotyczy przedsiębiorstw będących monopolistami",
+      "wynika ze stałości nakładów niektórych czynników wytwórczych",
+      "może nie występować w krótkim okresie"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Prawo malejących przychodów: gdy zwiększamy nakład jednego czynnika przy stałych nakładach innych, od pewnego momentu każda kolejna jednostka daje coraz mniejszy przyrost produkcji. Wynika to właśnie ze stałości niektórych czynników, dlatego dotyczy krótkiego okresu i każdej firmy, także monopolisty."
+  },
+  {
+    "id": "owe22-s-05",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Utarg przeciętny w monopolu ma wartości:",
+    "options": [
+      "wyższe niż utarg krańcowy",
+      "wyższe niż utarg całkowity",
+      "dodatnie, ale mniejsze niż utarg krańcowy",
+      "nie można tego określić bez dodatkowych informacji"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W monopolu utarg przeciętny równa się cenie (krzywa popytu). Aby sprzedać więcej, monopolista musi obniżyć cenę wszystkich jednostek, więc utarg krańcowy jest mniejszy od ceny – utarg przeciętny jest zawsze wyższy niż krańcowy."
+  },
+  {
+    "id": "owe22-s-06",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Przeciętne koszty stałe:",
+    "options": [
+      "zawsze maleją wraz ze wzrostem wielkości produkcji",
+      "podobnie jak koszt stały nie zmieniają się wraz ze wzrostem wielkości produkcji",
+      "informują o wysokości kosztu stałego przypadającego na 1 zł utargu",
+      "osiągają minimum dla tej samej wielkości produkcji, przy której przeciętne koszty całkowite osiągają minimum"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Przeciętny koszt stały = koszt stały / wielkość produkcji. Ponieważ koszt stały się nie zmienia, a dzieli się go na coraz więcej jednostek, AFC zawsze maleje wraz ze wzrostem produkcji (nigdy nie osiąga minimum)."
+  },
+  {
+    "id": "owe22-s-07",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Przedsiębiorstwo będzie maksymalizowało zysk z prowadzonej działalności, gdy:",
+    "options": [
+      "produkt przeciętny będzie maksymalny",
+      "koszt krańcowy będzie minimalny",
+      "produkt krańcowy będzie równy zero",
+      "żadna z powyższych odpowiedzi nie jest prawidłowa"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Firma maksymalizuje zysk, gdy utarg krańcowy równa się kosztowi krańcowemu (MR = MC), przy rosnącym MC. Żaden z podanych warunków – maksimum produktu przeciętnego, minimum kosztu krańcowego ani zerowy produkt krańcowy – nie jest warunkiem maksymalizacji zysku."
+  },
+  {
+    "id": "owe22-s-08",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Które z poniższych dóbr nie można uznać za dobro pośrednie?",
+    "options": [
+      "mleko w proszku wykorzystywane w produkcji lodów waniliowych",
+      "energia elektryczna zużyta w zakładzie fryzjerskim",
+      "rower górski dla pięciolatka od św. Mikołaja",
+      "komplet garnków ze stali nierdzewnej w restauracji meksykańskiej"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Dobro pośrednie to dobro zużywane w procesie produkcji innych dóbr lub usług (np. mleko w proszku do lodów, prąd w zakładzie fryzjerskim, garnki w restauracji). Rower kupiony dla dziecka to dobro finalne – trafia do ostatecznego konsumenta."
+  },
+  {
+    "id": "owe22-s-09",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Keynesowska funkcja konsumpcji ilustruje zależność pomiędzy wielkością konsumpcji a:",
+    "options": [
+      "wysokością rynkowej stopy procentowej",
+      "posiadanymi realnymi aktywami",
+      "inwestycjami",
+      "całkowitym dochodem rozporządzalnym ludności"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Keynesowska funkcja konsumpcji: C = a + c·Yd – konsumpcja zależy od bieżącego dochodu rozporządzalnego (a to konsumpcja autonomiczna, c – krańcowa skłonność do konsumpcji). Keynes uważał, że stopa procentowa ma na konsumpcję niewielki wpływ."
+  },
+  {
+    "id": "owe22-s-10",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Jaka polityka monetarna jest zalecana w okresie recesji?",
+    "options": [
+      "restrykcyjna",
+      "stałej aprecjacji kursu waluty krajowej",
+      "drogiego pieniądza",
+      "ekspansywna"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "W recesji zaleca się ekspansywną (tanią) politykę pieniężną: obniżki stóp procentowych, skup papierów wartościowych, obniżenie rezerwy obowiązkowej. Tańszy kredyt pobudza inwestycje i konsumpcję. Polityka restrykcyjna („drogiego pieniądza”) służy walce z inflacją."
+  },
+  {
+    "id": "owe22-s-11",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Do nasilenia procesów inflacyjnych może przyczyniać się:",
+    "options": [
+      "wzrost skłonności do oszczędzania",
+      "zwiększenie podaży pieniądza",
+      "redukcja wydatków rządowych",
+      "spadek prywatnych inwestycji"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Inflacja nasila się, gdy ilość pieniądza rośnie szybciej niż produkcja – więcej pieniędzy „goni” tę samą ilość towarów (ilościowa teoria pieniądza). Wzrost oszczędności, cięcia wydatków rządowych i spadek inwestycji zmniejszają popyt, więc działają antyinflacyjnie."
+  },
+  {
+    "id": "owe22-s-12",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Które z poniższych działań państwa można uznać za automatyczne stabilizatory koniunktury?",
+    "options": [
+      "progresywny system podatkowy",
+      "program robót publicznych",
+      "operacje otwartego rynku",
+      "dotacje dla przedsiębiorstw z branży wysokich technologii"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Automatyczne stabilizatory działają same, bez decyzji polityków: progresywny podatek dochodowy (w recesji dochody spadają, więc podatki spadają szybciej) i zasiłki dla bezrobotnych. Roboty publiczne i dotacje wymagają decyzji (polityka dyskrecjonalna), a operacje otwartego rynku to narzędzie banku centralnego."
+  },
+  {
+    "id": "owe22-s-13",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Jeżeli rynkowa stopa procentowa rośnie, to:",
+    "options": [
+      "spadnie wielkość planowanych inwestycji w przedsiębiorstwach",
+      "wzrośnie wielkość planowanych inwestycji w przedsiębiorstwach",
+      "nie ma ona wpływu na wielkość planowanych inwestycji w przedsiębiorstwach, jeśli źródłem ich finansowania są zyski zatrzymane",
+      "spadnie tylko wielkość planowanych inwestycji w przedsiębiorstwach, których okres ekonomicznego użytkowania jest krótki"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Wyższa stopa procentowa zwiększa koszt finansowania inwestycji i obniża opłacalność projektów (także finansowanych z własnych zysków – bo rośnie koszt alternatywny: można je ulokować na wyższy procent). Dlatego planowane inwestycje spadają – krzywa popytu inwestycyjnego jest ujemnie nachylona."
+  },
+  {
+    "id": "owe22-s-14",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Trwała (naturalna) stopa bezrobocia:",
+    "options": [
+      "odnosi się wyłącznie do osób w wieku poprodukcyjnym",
+      "wynika ze strukturalnego charakteru bezrobocia",
+      "może zostać zmniejszona jedynie przez zwiększenie popytu globalnego do poziomu zapewniającego pełne zatrudnienie",
+      "jest uzależniona wyłącznie od wielkości bezrobocia koniunkturalnego"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Naturalna stopa bezrobocia to bezrobocie, które występuje nawet przy równowadze na rynku pracy – obejmuje bezrobocie frykcyjne i strukturalne (wynikające z niedopasowania kwalifikacji, miejsca zamieszkania itp.). Nie da się jej obniżyć zwiększaniem popytu globalnego; wymaga to reform strukturalnych."
+  },
+  {
+    "id": "owe22-s-15",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "„Podaż pieniądza jest głównym czynnikiem określającym zmiany nominalnego PKB”. Która szkoła w teorii ekonomii sformułowała powyższe założenie?",
+    "options": [
+      "monetaryzm",
+      "keynesizm",
+      "ekonomia podażowa",
+      "ekonomia klasyczna"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Monetaryzm (M. Friedman) uważa, że zmiany podaży pieniądza są głównym czynnikiem określającym zmiany nominalnego PKB, a nieodpowiednia polityka pieniężna wywołuje inflację i wahania koniunktury. Zaleca stałe, umiarkowane tempo wzrostu podaży pieniądza."
+  },
+  {
+    "id": "owe22-s-16",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Cła są dochodami:",
+    "options": [
+      "Głównego Urzędu Ceł",
+      "ministra finansów",
+      "budżetu państwa",
+      "budżetu właściwego samorządu terytorialnego"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Cła pobierane w Polsce trafiają do budżetu państwa, który – jako członek UE – przekazuje 75% ich wartości do budżetu Unii jako tradycyjne zasoby własne, a 25% zatrzymuje jako koszty poboru. Nie są dochodami urzędów, ministra ani samorządów."
+  },
+  {
+    "id": "owe22-s-17",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Podatkiem „Belki” określa się potocznie:",
+    "options": [
+      "podatek VAT obciążający artykuły dla niemowląt",
+      "podatek leśny, którym jest obciążane drewno wycinane przemysłowo",
+      "podatek naliczany przy sprzedaży nieruchomości",
+      "podatek od zysków osiągniętych na rynku kapitałowym"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "„Podatek Belki” (od nazwiska ministra finansów Marka Belki, od 2002 r.) to potoczna nazwa 19-procentowego zryczałtowanego podatku od zysków kapitałowych – m.in. odsetek od lokat bankowych i zysków z inwestycji na rynku kapitałowym."
+  },
+  {
+    "id": "owe22-s-18",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Złamaniem dyscypliny finansów publicznych jest:",
+    "options": [
+      "udzielenie zamówienia publicznego wykonawcy, który nie został wybrany w trybie określonym w przepisach o zamówieniach publicznych",
+      "niewykonanie zobowiązania jednostki sektora finansów publicznych, którego skutkiem jest zapłata odsetek, kar lub opłat",
+      "wydatkowanie dotacji niezgodnie z przeznaczeniem",
+      "wszystkie powyższe odpowiedzi są prawidłowe"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Naruszeniem dyscypliny finansów publicznych są m.in.: udzielenie zamówienia publicznego z pominięciem przepisów o zamówieniach publicznych, niewykonanie w terminie zobowiązania jednostki sektora finansów publicznych skutkujące zapłatą odsetek lub kar oraz wydatkowanie dotacji niezgodnie z przeznaczeniem. Wszystkie odpowiedzi są więc prawidłowe."
+  },
+  {
+    "id": "owe22-s-19",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Do podstawowych praw i obowiązków komandytariusza należy:",
+    "options": [
+      "odpowiedzialność wobec wierzycieli całym swoim majątkiem oraz prawo do udziału w zyskach i stratach spółki",
+      "odpowiedzialność wobec wierzycieli do sumy komandytowej oraz prawo do reprezentowania spółki",
+      "odpowiedzialność wobec wierzycieli do sumy komandytowej, prawo do reprezentowania spółki jedynie jako pełnomocnik oraz prawo do udziału w zyskach i stratach spółki",
+      "odpowiedzialność wobec wierzycieli całym swoim majątkiem, prawo do reprezentowania spółki jedynie jako pełnomocnik oraz prawo do udziału w zyskach i stratach spółki"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "W spółce komandytowej komandytariusz odpowiada wobec wierzycieli tylko do wysokości sumy komandytowej, może reprezentować spółkę wyłącznie jako pełnomocnik i uczestniczy w zyskach i stratach. Bez ograniczenia, całym majątkiem, odpowiada komplementariusz."
+  },
+  {
+    "id": "owe22-s-20",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Które ze stwierdzeń dotyczących karty kredytowej jest prawidłowe?",
+    "options": [
+      "umożliwia wypłatę gotówki z bankomatu",
+      "można z niej korzystać tylko w kraju wydawcy karty",
+      "wydawana jest wyłącznie przez bank, który prowadzi rachunek oszczędnościowo-rozliczeniowy posiadacza karty",
+      "nie może być wydawana firmom z sektora małych i średnich przedsiębiorstw"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Karta kredytowa daje dostęp do limitu kredytowego przyznanego przez wydawcę – można nią płacić (w kraju i za granicą) i wypłacać gotówkę z bankomatów (zwykle z wyższą prowizją i natychmiastowym naliczaniem odsetek). Mogą ją otrzymać także firmy, a wydawca nie musi prowadzić rachunku klienta."
+  },
+  {
+    "id": "owe22-s-21",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Pewna rodzinna firma sprzedaje wełniane bambosze po 25 zł za parę. Jednostkowe koszty zmienne produkcji wynoszą 15 zł. Wiadomo jednocześnie, że próg rentowności (break-even point) firma osiąga przy wielkości produkcji 500 par. Na podstawie powyższych danych oblicz koszty stałe tej firmy:",
+    "options": [
+      "5000 zł",
+      "7500 zł",
+      "12 500 zł",
+      "nie da się przeprowadzić obliczeń bez dodatkowych informacji"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Próg rentowności (BEP) = koszty stałe / (cena − jednostkowy koszt zmienny). Stąd koszty stałe = BEP · (cena − jednostkowy koszt zmienny) = 500 · (25 − 15) = 5000 zł."
+  },
+  {
+    "id": "owe22-s-22",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Które informacje można uzyskać analizując rachunek przepływów pieniężnych przedsiębiorstwa?",
+    "options": [
+      "wielkość zapasów",
+      "rentowność brutto sprzedaży",
+      "wskaźnik rotacji należności",
+      "wielkość zapłaconych odsetek"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Rachunek przepływów pieniężnych pokazuje wpływy i wydatki gotówki w działalności operacyjnej, inwestycyjnej i finansowej – w tym zapłacone odsetki (zwykle w działalności finansowej). Wielkość zapasów wynika z bilansu, rentowność sprzedaży – z rachunku zysków i strat, a rotację należności liczy się z bilansu i RZiS."
+  },
+  {
+    "id": "owe22-s-23",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Trasatem czeku jest:",
+    "options": [
+      "zawsze bank prowadzący rachunek wystawcy czeku",
+      "dowolna osoba fizyczna, o ile posiada tylko rachunek bieżący w banku",
+      "wystawca czeku",
+      "dowolna osoba fizyczna lub prawna, która jest w posiadaniu czeku"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Trasat czeku to podmiot, któremu wystawca poleca zapłatę – zgodnie z prawem czekowym jest nim zawsze bank, w którym wystawca ma rachunek i środki do dyspozycji. Wystawca czeku to trasant."
+  },
+  {
+    "id": "owe22-s-24",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Parkowanie akcji to:",
+    "options": [
+      "sposób długoterminowego inwestowania gospodarstw domowych na giełdzie, który polega na czerpaniu zysków głównie z dywidend",
+      "rodzaj transakcji mających na celu ukrycie prawdziwej struktury akcjonariatu",
+      "sytuacja, w której kurs akcji po silnym wzroście przechodzi do trendu bocznego",
+      "zawieszenie notowań akcji na giełdzie w związku z dużą niestabilnością ich kursu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Parkowanie akcji to nabywanie akcji przez podmiot pośredniczący (np. zaprzyjaźnioną osobę lub firmę) na rzecz rzeczywistego inwestora, aby ukryć prawdziwą strukturę akcjonariatu – np. przed przejęciem kontroli nad spółką lub obejściem obowiązku informacyjnego."
+  },
+  {
+    "id": "owe22-s-25",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Współczynnik adekwatności kapitałowej:",
+    "options": [
+      "jest to stosunek wielkości funduszy własnych netto banku do aktywów ważonych ryzykiem",
+      "informuje o poziomie stabilności finansowej banku oraz o bezpieczeństwie depozytów złożonych przez klientów",
+      "nie powinien być niższy niż 8%",
+      "wszystkie powyższe odpowiedzi są prawidłowe"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Współczynnik adekwatności kapitałowej (wypłacalności) to stosunek funduszy własnych banku do aktywów (i pozycji pozabilansowych) ważonych ryzykiem. Informuje o stabilności banku i bezpieczeństwie depozytów, a jego minimalny poziom wynosi 8%. Wszystkie odpowiedzi są więc prawidłowe."
+  },
+  {
+    "id": "owe22-s-26",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Które z niżej wymienionych ubezpieczeń jest dobrowolne w naszym kraju (stan na rok 2008)?",
+    "options": [
+      "ubezpieczenie odpowiedzialności cywilnej posiadaczy pojazdów mechanicznych za szkody powstałe w związku z ruchem tych pojazdów",
+      "ubezpieczenie uczniów szkół od następstw nieszczęśliwych wypadków",
+      "ubezpieczenie odpowiedzialności cywilnej zarządców nieruchomości za szkody wynikłe w związku z prowadzoną przez nich działalnością",
+      "ubezpieczenie budynków wchodzących w skład gospodarstwa rolnego od ognia i innych zdarzeń losowych"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "W Polsce obowiązkowe są m.in.: OC posiadaczy pojazdów mechanicznych, ubezpieczenia budynków rolniczych od ognia i innych zdarzeń losowych oraz OC rolników. W 2008 r. obowiązkowe było też OC zarządców nieruchomości. Ubezpieczenie NNW uczniów jest dobrowolne."
+  },
+  {
+    "id": "owe22-s-27",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Jeśli pożyczkobiorca otrzymuje środki w dniu zawarcia umowy i zwraca je w następnym dniu, to jest to transakcja:",
+    "options": [
+      "overnight",
+      "tom/next",
+      "spot/next",
+      "reverse repo"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Overnight (O/N) to transakcja na rynku międzybankowym, w której środki są przekazywane w dniu zawarcia umowy i zwracane następnego dnia roboczego. W tom/next środki przekazuje się następnego dnia, a zwraca w kolejnym; w spot/next – od dnia spot (dwa dni robocze) do następnego."
+  },
+  {
+    "id": "owe22-s-28",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Spółka w 2006 r. wypracowała zysk netto równy 700 tys. zł, natomiast w 2007 r. równy 900 tys. zł. Kapitał zakładowy w tym okresie był niezmienny i dzielił się na 1 mln akcji. Średnia cena akcji w 2006 r. wyniosła 10 zł, a w 2007 r. – 12 zł. Wskaźnik P/E spółki w 2007 r. względem 2006 r.:",
+    "options": [
+      "wzrósł",
+      "spadł",
+      "nie zmienił się",
+      "nie można udzielić odpowiedzi bez dodatkowych informacji"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "P/E = cena akcji / zysk na akcję (EPS). 2006: EPS = 700 tys. / 1 mln = 0,70 zł, P/E = 10 / 0,70 ≈ 14,3. 2007: EPS = 0,90 zł, P/E = 12 / 0,90 ≈ 13,3. Wskaźnik P/E spadł, bo zysk rósł szybciej niż cena akcji."
+  },
+  {
+    "id": "owe22-s-29",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Jaki udział w PKB Polski stanowiły nakłady na ochronę środowiska (nakłady na środki trwałe i koszty bieżące) netto w 2006 r. ?",
+    "options": [
+      "0,3%",
+      "0,8%",
+      "3,4%",
+      "5,2%"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Według GUS w 2006 r. łączne wydatki na ochronę środowiska (nakłady na środki trwałe i koszty bieżące) wyniosły ok. 37 mld zł, czyli ok. 3,4% PKB. Same nakłady inwestycyjne (na środki trwałe) stanowiły ok. 0,6% PKB."
+  },
+  {
+    "id": "owe22-s-30",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Zamknięty fundusz inwestycyjny emituje:",
+    "options": [
+      "świadectwa udziałowe",
+      "certyfikaty inwestycyjne",
+      "jednostki uczestnictwa",
+      "akcje uprzywilejowane"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Fundusz inwestycyjny zamknięty emituje certyfikaty inwestycyjne – papiery wartościowe, które mogą być notowane na giełdzie. Fundusze otwarte zbywają jednostki uczestnictwa, które nie są papierami wartościowymi i są odkupywane przez fundusz."
+  },
+  {
+    "id": "owe22-s-31",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Które z niżej wymienionych cech tworzą bazę osobowości w modelu „wielkiej piątki”?",
+    "options": [
+      "ekstrawersja",
+      "sumienność",
+      "otwartość",
+      "wszystkie wyżej wymienione"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Model „wielkiej piątki” (Big Five, P. Costa i R. McCrae) opisuje osobowość za pomocą pięciu cech: ekstrawersji, ugodowości, sumienności, neurotyczności (stabilności emocjonalnej) i otwartości na doświadczenia. Wszystkie wymienione cechy należą do modelu."
+  },
+  {
+    "id": "owe22-s-32",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Jaką nazwę nosi teoria motywacji, według której potrzeby ludzkie są pogrupowane w trzy kategorie: egzystencji, kontaktów społecznych i rozwoju?",
+    "options": [
+      "ERG",
+      "racjonalnych oczekiwań",
+      "spłaszczonej piramidy",
+      "XYZ"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Teoria ERG (C. Alderfer) upraszcza hierarchię Maslowa do trzech grup potrzeb: egzystencji (Existence), kontaktów społecznych (Relatedness) i rozwoju (Growth). W przeciwieństwie do Maslowa dopuszcza jednoczesne działanie kilku potrzeb."
+  },
+  {
+    "id": "owe22-s-33",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Do głównych wad struktury liniowej zaliczamy:",
+    "options": [
+      "naruszenie zasady jednoosobowego kierownictwa",
+      "przeciążenie pracą kierowników",
+      "zatarcie odpowiedzialności za podejmowane decyzje",
+      "nadmierna specjalizacja kierowników"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "W strukturze liniowej każdy pracownik ma jednego przełożonego, który zajmuje się wszystkimi sprawami swojej komórki. Zaletą jest jasna odpowiedzialność, wadą – przeciążenie kierowników różnorodnymi zadaniami (muszą znać się na wszystkim) i długa droga służbowa."
+  },
+  {
+    "id": "owe22-s-34",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Pojęcie „wzbogacanie pracy” oznacza:",
+    "options": [
+      "umożliwienie pracownikom korzystania ze składników majątku przedsiębiorstwa (np. telefon komórkowy, samochód)",
+      "zapłatę dodatkowej premii za zrealizowanie zadań podstawowych przewidzianych w planie pracy i dodatkowo przydzielenie nowych obowiązków w kolejnym cyklu rozliczeniowym",
+      "zwiększenie liczby zadań wykonywanych przez pracowników, jak i rozszerzenie ich kontroli nad stanowiskiem pracy",
+      "uatrakcyjnienie czasu pracy poprzez umożliwienie pracownikom wykonywania w ciągu dnia swoich ulubionych zajęć w trakcie przerw regulaminowych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Wzbogacanie pracy (job enrichment, F. Herzberg) polega na zwiększeniu zakresu zadań i odpowiedzialności pracownika, w tym kontroli nad własnym stanowiskiem – planowania i oceny pracy. Ma zwiększać motywację wewnętrzną. Samo dokładanie zadań tego samego poziomu to poszerzanie pracy (job enlargement)."
+  },
+  {
+    "id": "owe22-s-35",
+    "type": "single",
+    "edition": "XXII OWE (2008/2009), zawody szkolne",
+    "question": "Just in time to:",
+    "options": [
+      "metoda zarządzania zapasami opracowana i wdrożona przez firmę Nike",
+      "metoda normowania czasu pracy przedstawicieli handlowych",
+      "bezmagazynowy i bezzapasowy system zaopatrzenia",
+      "uproszczony system okresowych przeglądów infrastruktury IT"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Just in time („dokładnie na czas”) to system, w którym materiały są dostarczane dokładnie wtedy, gdy są potrzebne w produkcji – bez magazynowania i zapasów. Został opracowany w Toyocie (nie w Nike) i ogranicza koszty utrzymania zapasów."
+  }
+]

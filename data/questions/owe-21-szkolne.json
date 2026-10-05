@@ -1,0 +1,562 @@
+[
+  {
+    "id": "owe21-s-01",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Które z niżej wymienionych kosztów cementowni zalicza się do kosztów zmiennych?",
+    "options": [
+      "amortyzacja",
+      "energia elektryczna",
+      "wynagrodzenie firmy ochroniarskiej",
+      "opłaty leasingowe"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Koszty zmienne zmieniają się razem z wielkością produkcji. Zużycie energii elektrycznej w cementowni rośnie, gdy produkuje się więcej cementu, więc jest kosztem zmiennym. Amortyzacja, opłaty leasingowe i wynagrodzenie firmy ochroniarskiej nie zależą od wielkości produkcji – to koszty stałe."
+  },
+  {
+    "id": "owe21-s-02",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Obrona narodowa jest przykładem dobra publicznego, ponieważ charakteryzuje ją:",
+    "options": [
+      "możliwość wyłączenia z konsumpcji i brak konkurencyjności",
+      "możliwość wyłączenia z konsumpcji i konkurencyjność",
+      "brak możliwości wyłączenia z konsumpcji i brak konkurencyjności",
+      "brak możliwości wyłączenia z konsumpcji i konkurencyjność"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Dobro publiczne jest niewykluczalne (nie da się wyłączyć nikogo z korzystania z niego) i niekonkurencyjne (korzystanie przez jedną osobę nie zmniejsza korzyści innych). Obrona narodowa chroni wszystkich mieszkańców jednocześnie i nie można z niej nikogo wykluczyć."
+  },
+  {
+    "id": "owe21-s-03",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Której z niżej wymienionych pozycji nie można uznać w teorii ekonomii za czynnik wytwórczy?",
+    "options": [
+      "energia elektryczna",
+      "praca pośrednika w obrocie nieruchomościami",
+      "akcje spółki giełdowej",
+      "patent na szczepionkę przeciw grypie"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Czynniki wytwórcze to zasoby bezpośrednio używane do produkcji: praca, ziemia (zasoby naturalne), kapitał (np. maszyny, energia, wiedza w postaci patentów) i przedsiębiorczość. Akcje spółki to aktywo finansowe – tytuł własności – a nie zasób, z którego się coś produkuje."
+  },
+  {
+    "id": "owe21-s-04",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Jeżeli w wyniku utraty rynków zbytu zbankrutowało wiele przedsiębiorstw, to:",
+    "options": [
+      "wystąpi ruch w dół po krzywej możliwości produkcyjnych gospodarki",
+      "cała krzywa możliwości produkcyjnych gospodarki przesunie się w dół",
+      "gospodarka znajdzie się poniżej swojej granicy możliwości produkcyjnych",
+      "cała krzywa możliwości produkcyjnych gospodarki przesunie się w górę"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Bankructwo firm z powodu utraty rynków zbytu oznacza, że część zasobów (ludzi, maszyn) przestaje być wykorzystywana – gospodarka produkuje w punkcie poniżej granicy możliwości produkcyjnych. Zasoby wciąż istnieją, więc sama granica się nie przesuwa."
+  },
+  {
+    "id": "owe21-s-05",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Które z poniższych zdań, przy założeniu ceteris paribus, jest ilustracją prawa popytu?",
+    "options": [
+      "wzrost dochodów nabywców zwiększył popyt na telefony komórkowe",
+      "chłodne lato wywołało spadek cen napojów chłodzących",
+      "wzrost popytu na mięso drobiowe wywołało wzrost jego cen",
+      "spadek cen procesorów komputerowych wywołał wzrost wielkości zapotrzebowania na nie"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Prawo popytu mówi, że przy innych warunkach niezmienionych (ceteris paribus) spadek ceny dobra zwiększa wielkość popytu na nie (i odwrotnie). Odpowiedź D opisuje dokładnie to: tańsze procesory – więcej kupowanych procesorów. Pozostałe przykłady dotyczą przesunięć krzywej popytu (zmiana dochodów, pogody) lub wpływu popytu na cenę."
+  },
+  {
+    "id": "owe21-s-06",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Która z poniższych cech dotyczy monopolu?",
+    "options": [
+      "popyt na produkt monopolisty jest doskonale elastyczny względem zmian ceny",
+      "produkt nie ma bliskich substytutów",
+      "występuje duża liczba firm",
+      "istnieje przymus ekonomiczny stosowania reklamy"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Monopol to rynek z jednym sprzedawcą produktu, który nie ma bliskich substytutów, przy wysokich barierach wejścia. Popyt na produkt monopolisty to ujemnie nachylona krzywa popytu rynkowego, a nie doskonale elastyczna; duża liczba firm cechuje konkurencję doskonałą i monopolistyczną."
+  },
+  {
+    "id": "owe21-s-07",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Jeżeli w wyniku wzrostu ceny dobra A z 2,00 zł do 2,13 zł popyt na dobro B wzrósł z 400 szt. do 486 szt., to cenowa mieszana elastyczność popytu na dobro B wynosi około:",
+    "options": [
+      "–3,5",
+      "+3,3",
+      "+0,3",
+      "–0,3"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Mieszana (krzyżowa) elastyczność cenowa popytu = % zmiana popytu na dobro B / % zmiana ceny dobra A. Popyt na B: (486 − 400)/400 = +21,5%; cena A: (2,13 − 2,00)/2,00 = +6,5%. Elastyczność ≈ 21,5/6,5 ≈ +3,3. Wynik dodatni oznacza, że A i B są substytutami."
+  },
+  {
+    "id": "owe21-s-08",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Jeżeli przedsiębiorstwo znajduje się w optimum technicznym, to:",
+    "options": [
+      "ponosi najniższe koszty stałe",
+      "ponosi najniższy koszt krańcowy",
+      "ponosi najniższy przeciętny koszt całkowity",
+      "osiąga największy utarg przeciętny"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Optimum techniczne to wielkość produkcji, przy której przeciętny koszt całkowity (ATC) jest najniższy – w tym punkcie krzywa kosztu krańcowego przecina krzywą ATC od dołu. Koszty stałe nie zależą od produkcji, a koszt krańcowy osiąga minimum wcześniej niż ATC."
+  },
+  {
+    "id": "owe21-s-09",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Spadek krańcowej skłonności do oszczędzania:",
+    "options": [
+      "zwiększa całkowite oszczędności",
+      "zwiększa konsumpcję",
+      "zmniejsza dochód narodowy",
+      "zmniejsza konsumpcję"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Krańcowa skłonność do oszczędzania (MPS) i do konsumpcji (MPC) sumują się do 1. Spadek MPS oznacza wzrost MPC – z każdej dodatkowej złotówki dochodu więcej przeznacza się na konsumpcję. Rośnie też mnożnik wydatków, więc dochód narodowy raczej wzrośnie niż zmaleje."
+  },
+  {
+    "id": "owe21-s-10",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Zgodnie z koncepcją krzywej Laffera, wzrost stopy opodatkowania:",
+    "options": [
+      "może w ogóle nie zmienić dochodów budżetowych",
+      "zawsze zwiększa dochody budżetowe",
+      "zawsze zmniejsza dochody budżetowe",
+      "na pewno zmieni wielkość dochodów budżetowych"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Krzywa Laffera pokazuje zależność między stopą podatkową a wpływami podatkowymi: przy 0% i 100% wpływy są zerowe, a maksimum leży gdzieś pomiędzy. Podwyżka stopy może więc zwiększyć, zmniejszyć albo – np. w pobliżu maksimum krzywej – praktycznie nie zmienić dochodów budżetu."
+  },
+  {
+    "id": "owe21-s-11",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Rozporządzalne dochody osobiste wyrażają:",
+    "options": [
+      "poziom wydatków gospodarstw domowych na konsumpcję",
+      "dochody osobiste pomniejszone o podatek dochodowy i powiększone o płatności transferowe",
+      "dochody z pracy przed opodatkowaniem",
+      "dochody z czynników wytwórczych będących własnością gospodarstwa domowego pomniejszone o dokonane w danym okresie oszczędności"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Rozporządzalne dochody osobiste to dochody, którymi gospodarstwa domowe mogą swobodnie dysponować: dochody osobiste po odjęciu podatków bezpośrednich (dochodowych) i powiększone o transfery od państwa (np. emerytury, zasiłki). Dzielą się na konsumpcję i oszczędności."
+  },
+  {
+    "id": "owe21-s-12",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Zgodnie z hipotezą dochodu permanentnego wielkość wydatków konsumpcyjnych gospodarstw domowych zależy od:",
+    "options": [
+      "bieżącego poziomu uzyskiwanych dochodów przez gospodarstwa domowe",
+      "przeciętnej, oczekiwanej w całym cyklu życia, wysokości dochodu gospodarstwa domowego",
+      "bieżącego poziomu uzyskiwanych dochodów i wielkości zgromadzonego majątku przez gospodarstwa domowe",
+      "wysokości dochodów, które uzyskiwało gospodarstwo domowe w minionych okresach"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Hipoteza dochodu permanentnego (M. Friedman) zakłada, że konsumpcja zależy od dochodu trwałego – przeciętnego dochodu oczekiwanego w długim okresie – a nie od bieżących, przejściowych wahań dochodu. Zależność konsumpcji od bieżącego dochodu to hipoteza dochodu absolutnego (Keynes)."
+  },
+  {
+    "id": "owe21-s-13",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Wzrost deficytu budżetowego może prowadzić do spadku:",
+    "options": [
+      "inwestycji prywatnych",
+      "stopy procentowej",
+      "kursu walut obcych",
+      "autonomicznych wydatków konsumpcyjnych"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Państwo finansuje deficyt, pożyczając na rynku – zwiększa popyt na kapitał, co podnosi stopy procentowe. Droższy kredyt ogranicza inwestycje prywatne; to efekt wypychania (crowding out). Stopa procentowa raczej rośnie, a nie spada."
+  },
+  {
+    "id": "owe21-s-14",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Jeżeli całkowite wkłady w pewnym banku wynoszą 800 mln zł, a stopa rezerw obowiązkowych wynosi 5%, to całkowita kreacja pieniądza w systemie bankowym z tych wkładów wynosi:",
+    "options": [
+      "760 mln zł",
+      "840 mln zł",
+      "4000 mln zł",
+      "16000 mln zł"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Mnożnik kreacji pieniądza w prostym modelu = 1 / stopa rezerw obowiązkowych = 1 / 0,05 = 20. Całkowita kreacja pieniądza = 800 mln zł · 20 = 16 000 mln zł (z czego 800 mln to wkład pierwotny, a 15 200 mln to pieniądz wykreowany przez kolejne kredyty)."
+  },
+  {
+    "id": "owe21-s-15",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Eksport netto jest to eksport pomniejszony o:",
+    "options": [
+      "wydatki konsumpcyjne",
+      "import",
+      "podatki i cła",
+      "zakupy rządowe dokonane za granicą"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Eksport netto (saldo handlu zagranicznego) = eksport − import. Wchodzi do PKB liczonego metodą wydatkową: PKB = C + I + G + (X − M)."
+  },
+  {
+    "id": "owe21-s-16",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Największy udział (w %) w strukturze finansowania wydatków na prace badawczo-rozwojowe w Polsce ma (stan na rok 2007):",
+    "options": [
+      "budżet państwa",
+      "krajowe podmioty gospodarcze",
+      "organizacje finansowane kapitałem zagranicznym",
+      "organizacje i stowarzyszenia non-profit"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W 2007 r. ok. 58,5% nakładów na badania i rozwój w Polsce finansował budżet państwa, a tylko ok. 24,5% – podmioty gospodarcze (dane GUS). W kolejnych latach struktura się zmieniła i dziś największym źródłem finansowania B+R w Polsce są przedsiębiorstwa."
+  },
+  {
+    "id": "owe21-s-17",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Zgodnie ze strategią lizbońską, priorytetowym działaniem mającym zwiększyć konkurencyjność europejskiego rynku pracy powinno być:",
+    "options": [
+      "zwiększanie udziału kobiet w rynku pracy",
+      "stopniowe podnoszenie płacy minimalnej",
+      "rozszerzanie programów tzw. emerytur pomostowych",
+      "utrzymanie barier w napływie pracowników spoza Unii Europejskiej"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Strategia lizbońska (2000) miała uczynić UE najbardziej konkurencyjną gospodarką świata opartą na wiedzy. Jednym z jej głównych celów było zwiększenie zatrudnienia, w tym wskaźnika zatrudnienia kobiet do 60%. Podnoszenie płacy minimalnej, wcześniejsze emerytury i bariery dla imigrantów działałyby przeciwnie."
+  },
+  {
+    "id": "owe21-s-18",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Nowy system emerytalny w Polsce, wdrożony reformą w 1999 r., uzależnił wysokość emerytury od:",
+    "options": [
+      "stażu pracy i wysokości wynagrodzenia pobieranego w ostatnim roku przed przejściem na emeryturę",
+      "wysokości zgromadzonych składek emerytalnych, płci i wieku, w którym rozpoczyna się pobieranie emerytury",
+      "wysokości zgromadzonych składek emerytalnych oraz wieku, w którym rozpoczyna się pobieranie emerytury",
+      "wyłącznie wysokości zgromadzonych składek emerytalnych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "W systemie emerytalnym od 1999 r. (zdefiniowanej składki) emerytura = zgromadzone składki (kapitał) / średnie dalsze trwanie życia w wieku przejścia na emeryturę. Zależy więc od zgromadzonych składek i wieku przejścia na emeryturę. Tablice dalszego trwania życia są wspólne dla kobiet i mężczyzn, więc płeć nie wpływa bezpośrednio na wysokość świadczenia."
+  },
+  {
+    "id": "owe21-s-19",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Do której z następujących organizacji międzynarodowych Polska nie należy?",
+    "options": [
+      "Grupa G7",
+      "Bank Światowy",
+      "Organizacja Współpracy Gospodarczej i Rozwoju",
+      "Międzynarodowy Fundusz Walutowy"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "G7 to grupa siedmiu najbardziej rozwiniętych gospodarek: USA, Japonii, Niemiec, Francji, Wielkiej Brytanii, Włoch i Kanady – Polska do niej nie należy. Polska jest członkiem Banku Światowego i MFW (od 1986 r.) oraz OECD (od 1996 r.)."
+  },
+  {
+    "id": "owe21-s-20",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Które z niżej wymienionych rodzajów kontraktów terminowych (futures) nie są notowane na Giełdzie Papierów Wartościowych w Warszawie (stan na rok 2007)?",
+    "options": [
+      "kontrakty terminowe na obligacje skarbowe",
+      "kontrakty terminowe na waluty",
+      "kontrakty terminowe na akcje spółek",
+      "kontrakty terminowe na stopy procentowe"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "W 2007 r. na GPW notowano kontrakty terminowe na indeksy (np. WIG20), akcje spółek, waluty (USD, EUR) i obligacje skarbowe. Kontrakty na stopy procentowe (WIBOR) wprowadzono na GPW dopiero w 2013 r."
+  },
+  {
+    "id": "owe21-s-21",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Obserwując rynek walutowy w latach 2000–2007 można zauważyć postępującą:",
+    "options": [
+      "aprecjację dolara amerykańskiego (USD) względem złotego (PLN)",
+      "deprecjację dolara amerykańskiego (USD) względem złotego (PLN)",
+      "rewaluację dolara amerykańskiego (USD) względem złotego (PLN)",
+      "dewaluację dolara amerykańskiego (USD) względem złotego (PLN)"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "W latach 2000–2007 dolar amerykański systematycznie tracił na wartości względem złotego (z ok. 4,3–4,5 zł do ok. 2,5 zł), czyli następowała deprecjacja USD. Rewaluacja i dewaluacja to urzędowe zmiany kursu w systemie kursu stałego, a w Polsce kurs złotego jest płynny."
+  },
+  {
+    "id": "owe21-s-22",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Zgodnie z kodeksem spółek handlowych spółka partnerska może zostać założona przez:",
+    "options": [
+      "każde małżeństwo, o ile nie orzeczono separacji",
+      "tłumaczy przysięgłych",
+      "ślusarzy",
+      "dowolne spółki prawa handlowego, o ile posiadają one uprawnienia do wykonywania wolnego zawodu określonego ustawą"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Spółkę partnerską mogą założyć wyłącznie osoby fizyczne uprawnione do wykonywania wolnych zawodów wymienionych w kodeksie spółek handlowych – m.in. adwokaci, lekarze, architekci, biegli rewidenci i tłumacze przysięgli. Ślusarz nie wykonuje wolnego zawodu, a spółki handlowe nie mogą być partnerami."
+  },
+  {
+    "id": "owe21-s-23",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Sprawozdanie finansowe którego z niżej wymienionych podmiotów nie podlega obowiązkowemu badaniu przez biegłego rewidenta?",
+    "options": [
+      "bank spółdzielczy",
+      "fundusz inwestycyjny",
+      "spółka akcyjna w organizacji",
+      "towarzystwo ubezpieczeń wzajemnych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Obowiązkowemu badaniu przez biegłego rewidenta podlegają m.in. sprawozdania banków (także spółdzielczych), funduszy inwestycyjnych, zakładów ubezpieczeń (w tym TUW) oraz działających spółek akcyjnych. Spółka akcyjna w organizacji jeszcze nie prowadzi pełnej działalności i nie sporządza sprawozdania podlegającego takiemu badaniu."
+  },
+  {
+    "id": "owe21-s-24",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Forfaiting to:",
+    "options": [
+      "prolongowanie terminu płatności weksla",
+      "zbycie przez eksportera wierzytelności o odroczonym terminie płatności",
+      "rodzaj leasingu operacyjnego",
+      "umowa najmu (dzierżawy) znaku handlowego"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Forfaiting to sprzedaż (zbycie) przez eksportera wierzytelności z odroczonym terminem płatności instytucji finansowej (forfaiterowi), zwykle bez prawa regresu. Eksporter od razu dostaje pieniądze, a ryzyko niezapłacenia przez importera przejmuje forfaiter."
+  },
+  {
+    "id": "owe21-s-25",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Wystawca weksla to:",
+    "options": [
+      "trasant",
+      "trasat",
+      "remitent",
+      "indosatariusz"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Trasant to wystawca weksla ciągnionego – osoba, która poleca zapłatę. Trasat to osoba, której polecono zapłacić, remitent – osoba, na której rzecz ma nastąpić zapłata, a indosatariusz – osoba, na którą weksel przeniesiono indosem."
+  },
+  {
+    "id": "owe21-s-26",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Metoda budżetowania brutto właściwa jest dla:",
+    "options": [
+      "zakładów budżetowych",
+      "jednostek budżetowych",
+      "gospodarstw pomocniczych",
+      "funduszy motywacyjnych jednostek budżetowych"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "W metodzie budżetowania brutto jednostka pokrywa wszystkie wydatki bezpośrednio z budżetu, a wszystkie dochody odprowadza do budżetu – tak działają jednostki budżetowe (np. urzędy, szkoły publiczne). Zakłady budżetowe rozliczają się metodą netto – do budżetu trafia tylko wynik."
+  },
+  {
+    "id": "owe21-s-27",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Głównym źródłem dochodów budżetu państwa w Polsce są wpływy z tytułu:",
+    "options": [
+      "podatku od towarów i usług",
+      "podatku dochodowego od osób fizycznych",
+      "podatku dochodowego od osób prawnych",
+      "akcyzy"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Podatek od towarów i usług (VAT) jest największym źródłem dochodów budżetu państwa w Polsce – stanowi ok. połowy wszystkich dochodów podatkowych. Kolejne źródła to akcyza, podatki dochodowe (CIT i PIT)."
+  },
+  {
+    "id": "owe21-s-28",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Stopa rezerwy obowiązkowej w Polsce od wkładów płatnych na każde żądanie i terminowych wynosi (stan na rok 2007):",
+    "options": [
+      "1,5%",
+      "3,5%",
+      "5%",
+      "7,5%"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "W 2007 r. stopa rezerwy obowiązkowej w Polsce dla wkładów a vista i terminowych wynosiła 3,5%. Rezerwa obowiązkowa to część środków zgromadzonych przez bank, którą musi on utrzymywać na rachunku w NBP; jest instrumentem polityki pieniężnej. Jej stopę ustala NBP i z czasem była ona zmieniana."
+  },
+  {
+    "id": "owe21-s-29",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Według kryterium rodzaju podstawy opodatkowania wyodrębnić można podatki:",
+    "options": [
+      "dochodowe, konsumpcyjne i majątkowe",
+      "pośrednie i bezpośrednie",
+      "progresywne, regresywne i liniowe",
+      "centralne i lokalne"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Według przedmiotu (podstawy) opodatkowania podatki dzieli się na dochodowe (np. PIT, CIT), konsumpcyjne – obciążające wydatki (np. VAT, akcyza) – i majątkowe (np. podatek od nieruchomości). Podział na pośrednie i bezpośrednie wynika ze sposobu przerzucania ciężaru, a na progresywne/liniowe – z konstrukcji stawek."
+  },
+  {
+    "id": "owe21-s-30",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Sorbnet to:",
+    "options": [
+      "część systemu komputerowego zrzeszenia banków spółdzielczych umożliwiająca dostęp klientom do rachunków bieżących przez internet",
+      "międzybankowy system rozliczenia płatności oparty na zasadzie rozliczenia netto",
+      "system autoryzacji kart płatniczych",
+      "międzybankowy system rozliczeń wysokokwotowych w czasie rzeczywistym"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "SORBNET to system NBP do rozrachunku płatności wysokokwotowych w czasie rzeczywistym (RTGS – real-time gross settlement): każda płatność jest rozliczana od razu i w pełnej kwocie. Płatności detaliczne w systemie netto rozlicza Elixir (KIR)."
+  },
+  {
+    "id": "owe21-s-31",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Styl kierowania określany jako laissez-faire oznacza, że menedżer:",
+    "options": [
+      "samodzielnie wykonuje większość pracy",
+      "udziela dużej pomocy swoim podwładnym w realizacji ich podstawowych zadań i obowiązków",
+      "nie interesuje się wykonywaniem zadań swoich podwładnych i nie podejmuje żadnych decyzji",
+      "podejmuje tylko te decyzje, które mają charakter strategiczny dla organizacji"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Styl laissez-faire („pozwólcie działać”) to styl, w którym kierownik praktycznie nie kieruje: nie interesuje się pracą podwładnych, nie wyznacza celów i nie podejmuje decyzji – pozostawia zespołowi pełną swobodę."
+  },
+  {
+    "id": "owe21-s-32",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Analiza SWOT służy do:",
+    "options": [
+      "wyceny przedsiębiorstwa, gdy nie da się wykorzystać metody zdyskontowanych przepływów finansowych",
+      "sprawdzenia prawdopodobieństwa bankructwa podmiotu gospodarczego",
+      "oceny słabych i mocnych stron organizacji, szans i zagrożeń dla jej funkcjonowania",
+      "wytyczenia działań jedynie w krótkim okresie"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Analiza SWOT ocenia mocne strony (Strengths) i słabe strony (Weaknesses) organizacji oraz szanse (Opportunities) i zagrożenia (Threats) płynące z otoczenia. Służy do formułowania strategii, a nie do wyceny firmy czy prognozowania bankructwa."
+  },
+  {
+    "id": "owe21-s-33",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Kogo uważa się za założyciela klasycznej szkoły zarządzania, który usystematyzował zachowania kierowników?",
+    "options": [
+      "Peter Drucker",
+      "Henry Ford",
+      "Henri Fayol",
+      "Abraham Maslow"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Henri Fayol to twórca administracyjnego nurtu klasycznej szkoły zarządzania. Wyróżnił funkcje kierownicze: przewidywanie (planowanie), organizowanie, rozkazywanie, koordynowanie i kontrolowanie oraz sformułował 14 zasad zarządzania."
+  },
+  {
+    "id": "owe21-s-34",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "W przypadku jakiej struktury organizacyjnej poszczególne komórki organizacyjne (zespoły robocze) podlegają więcej niż jednemu kierownikowi?",
+    "options": [
+      "funkcjonalna",
+      "liniowa",
+      "konglomeratowa",
+      "macierzowa"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "W strukturze macierzowej pracownicy podlegają jednocześnie dwóm kierownikom: kierownikowi funkcjonalnemu (np. działu) i kierownikowi projektu. W strukturze liniowej obowiązuje zasada jednoosobowego kierownictwa – każdy ma jednego przełożonego."
+  },
+  {
+    "id": "owe21-s-35",
+    "type": "single",
+    "edition": "XXI OWE (2007/2008), zawody szkolne",
+    "question": "Jeżeli podczas współpracy dwóch zespołów pracowniczych efekt produkcyjny jest większy niż suma ich oddzielnego działania, to można mówić o:",
+    "options": [
+      "synergii",
+      "lobbingu",
+      "entropii",
+      "empatii"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Synergia to efekt współdziałania, w którym wynik wspólnego działania jest większy niż suma wyników działań osobnych („2 + 2 = 5”). Entropia oznacza rozpad i nieuporządkowanie systemu, a empatia – zdolność rozumienia uczuć innych."
+  }
+]

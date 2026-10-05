@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe25-s-01",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody szkolne",
+    "question": "Przesunięcie krzywej popytu w lewo oznacza:",
+    "options": [
+      "niższą cenę w stosunku do każdej wielkości popytu przed zmianą położenia krzywej",
+      "wyższą cenę w stosunku do każdej wielkości popytu przed zmianą położenia krzywej",
+      "zwiększenie wielkości popytu przy każdej cenie",
+      "żadna z powyższych odpowiedzi nie jest prawidłowa"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Przesunięcie krzywej popytu w lewo to spadek popytu: przy każdej cenie kupuje się mniej, a każdą dotychczasową ilość nabywcy są skłonni kupić tylko po niższej cenie. Może je wywołać np. spadek dochodów (dla dobra normalnego) albo potanienie substytutu."
+  },
+  {
+    "id": "owe25-s-02",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody szkolne",
+    "question": "Koszty alternatywne w teorii ekonomii:",
+    "options": [
+      "obejmują wyłącznie koszty stałe",
+      "to równowartość dochodów, które dany czynnik produkcji mógłby przynieść, gdyby był zaangażowany w tym przedsiębiorstwie",
+      "obejmują koszty niejawne",
+      "to koszty, które poniosłoby przedsiębiorstwo, gdyby stosowało inną metodę wytwarzania"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Koszty alternatywne to wartość najlepszej odrzuconej możliwości wykorzystania zasobów. W rachunku ekonomicznym obejmują koszty niejawne (ukryte), np. utracone wynagrodzenie właściciela pracującego we własnej firmie czy utracone odsetki od zaangażowanego kapitału. Dotyczą wszystkich zasobów, nie tylko kosztów stałych."
+  },
+  {
+    "id": "owe25-s-03",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody szkolne",
+    "question": "W miarę wzrostu dochodu realnego gospodarstwa domowego:",
+    "options": [
+      "dobra podrzędne nie są w ogóle nabywane",
+      "popyt na dobra podstawowe maleje",
+      "udział wydatków na dobra podstawowe w ogólnej sumie wydatków maleje",
+      "udział wydatków na dobra luksusowe w ogólnej sumie wydatków maleje"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Wraz ze wzrostem dochodu wydatki na dobra podstawowe (np. żywność) rosną wolniej niż dochód, więc ich udział w wydatkach ogółem maleje (prawo Engla). Udział wydatków na dobra luksusowe rośnie, a dobra podrzędne są kupowane w mniejszej ilości, ale nadal mogą być kupowane."
+  },
+  {
+    "id": "owe25-s-04",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody szkolne",
+    "question": "W którym modelu rynku przedsiębiorstwo osiąga dodatni zysk ekonomiczny w długim okresie?",
+    "options": [
+      "konkurencja monopolistyczna",
+      "oligopol",
+      "konkurencja doskonała",
+      "jest to możliwe w każdym modelu rynku"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "W długim okresie w konkurencji doskonałej i monopolistycznej swobodne wejście nowych firm sprowadza zysk ekonomiczny do zera. W oligopolu bariery wejścia (np. skala produkcji, kapitał, patenty) pozwalają firmom utrzymać dodatni zysk ekonomiczny także w długim okresie."
+  },
+  {
+    "id": "owe25-s-05",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody szkolne",
+    "question": "Wskaż, co nie jest elementem mikroekonomicznej teorii wyboru (zachowania) gospodarstwa domowego:",
+    "options": [
+      "popyt gospodarstwa domowego na czynniki wytwórcze",
+      "ceny konsumowanych dóbr i usług",
+      "gusty konsumentów",
+      "założenie, że konsument działa racjonalnie"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Teoria wyboru konsumenta (gospodarstwa domowego) opiera się na cenach dóbr, dochodzie, gustach (preferencjach) i założeniu racjonalności konsumenta, który maksymalizuje użyteczność. Popyt na czynniki wytwórcze zgłaszają przedsiębiorstwa – to element teorii przedsiębiorstwa."
+  },
+  {
+    "id": "owe25-s-06",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody szkolne",
+    "question": "Na rynku czystego monopolu utarg krańcowy jest:",
+    "options": [
+      "mniejszy od ceny jednostkowej produktu oraz większy od utargu przeciętnego",
+      "mniejszy od ceny jednostkowej produktu oraz mniejszy od utargu przeciętnego",
+      "większy od ceny jednostkowej produktu oraz większy od utargu przeciętnego",
+      "większy od ceny jednostkowej produktu oraz mniejszy od utargu przeciętnego"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "W czystym monopolu utarg przeciętny równa się cenie (AR = P), a utarg krańcowy jest od niej mniejszy, bo aby sprzedać kolejną jednostkę, monopolista musi obniżyć cenę wszystkich sprzedawanych jednostek. Zatem MR < P = AR."
+  },
+  {
+    "id": "owe25-s-07",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody szkolne",
+    "question": "Wartość produktu narodowego brutto może się zmniejszyć, jeśli:",
+    "options": [
+      "wydatki konsumpcyjne wzrosną",
+      "inwestycje pozostaną bez zmian",
+      "wzrośnie eksport",
+      "zmaleje import"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "PNB (liczony wydatkowo) = C + I + G + (X − M) + dochody netto z zagranicy. Wzrost konsumpcji i eksportu oraz spadek importu zwiększają PNB. Przy niezmienionych inwestycjach PNB może się natomiast zmniejszyć, jeśli spadną inne składniki – tylko ta odpowiedź dopuszcza spadek."
+  },
+  {
+    "id": "owe25-s-08",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody szkolne",
+    "question": "Użyteczność całkowita:",
+    "options": [
+      "to suma zadowolenia z konsumpcji danej usługi w określonym czasie",
+      "określa relacje pomiędzy ceną danego dobra a dochodami konsumenta",
+      "przyjmuje wartość 0, gdy użyteczność krańcowa jest równa 0",
+      "uzależniona jest od charakteru dobra (podrzędne, normalne, luksusowe)"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Użyteczność całkowita to suma zadowolenia (satysfakcji), jaką konsument czerpie z konsumpcji wszystkich jednostek dobra lub usługi w danym czasie. Gdy użyteczność krańcowa wynosi 0, użyteczność całkowita jest maksymalna, a nie równa zero."
+  },
+  {
+    "id": "owe25-s-09",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody szkolne",
+    "question": "Do automatycznych stabilizatorów koniunktury gospodarczej można zaliczyć:",
+    "options": [
+      "wydatki państwa na budowę autostrad",
+      "wydatki na zasiłki dla bezrobotnych",
+      "podniesienie stawki podatku od towarów i usług (VAT) z 22% do 23%",
+      "płacę minimalną"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Automatyczne stabilizatory koniunktury działają bez decyzji polityków: w recesji rosną wydatki na zasiłki dla bezrobotnych (bo przybywa bezrobotnych), a wpływy podatkowe maleją – to łagodzi spadek popytu. Budowa autostrad czy podwyżka VAT to decyzje polityki dyskrecjonalnej."
+  },
+  {
+    "id": "owe25-s-10",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody szkolne",
+    "question": "Które z poniższych stwierdzeń jest prawdziwe w odniesieniu do stałego czynnika wytwórczego?",
+    "options": [
+      "jego nakład nie wpływa na wielkość produkcji",
+      "występuje tylko w krótkim okresie",
+      "nakład tego czynnika musi pozostawać w stałej proporcji do nakładu pozostałych czynników wytwórczych",
+      "nie występuje, gdy przedmiotem działalności przedsiębiorstwa jest świadczenie usług"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Czynnik stały to czynnik, którego nakładu nie można zmienić w krótkim okresie (np. wielkość fabryki). W długim okresie wszystkie czynniki są zmienne, więc czynnik stały występuje tylko w krótkim okresie – także w firmach usługowych."
+  },
+  {
+    "id": "owe25-s-11",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody szkolne",
+    "question": "Krzywa popytu inwestycyjnego ilustruje:",
+    "options": [
+      "dodatnią zależność między stopą procentową a planowanymi inwestycjami",
+      "ujemną zależność między stopą procentową a planowanymi inwestycjami",
+      "ujemną zależność między stopą procentową a dochodem",
+      "ujemną zależność między ceną a planowanymi inwestycjami"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Krzywa popytu inwestycyjnego pokazuje ujemną zależność między stopą procentową a planowanymi inwestycjami: im wyższa stopa procentowa, tym droższe finansowanie i mniej opłacalnych projektów, więc firmy inwestują mniej."
+  },
+  {
+    "id": "owe25-s-12",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody szkolne",
+    "question": "Przykładem negatywnego szoku podażowego jest:",
+    "options": [
+      "podniesienie stawki podatku dochodowego od osób fizycznych",
+      "obawy przed spożywaniem żywności genetycznie modyfikowanej",
+      "nieurodzaj wywołany chłodnym i deszczowym latem",
+      "spadek dochodów realnych ludności"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Negatywny szok podażowy to zdarzenie, które nagle zmniejsza możliwości produkcyjne lub podnosi koszty produkcji – np. nieurodzaj, wzrost cen ropy, klęska żywiołowa. Zmiany podatku dochodowego, obawy konsumentów i spadek dochodów wpływają przede wszystkim na popyt."
+  },
+  {
+    "id": "owe25-s-13",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody szkolne",
+    "question": "Kapitał obcy w przedsiębiorstwie to:",
+    "options": [
+      "kapitał rezerwowy",
+      "kapitał z aktualizacji wyceny",
+      "rezerwa na świadczenia emerytalne",
+      "niepodzielony zysk z lat ubiegłych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Kapitał obcy to zobowiązania przedsiębiorstwa i rezerwy na zobowiązania – w tym rezerwy na świadczenia emerytalne pracowników (przyszłe zobowiązania wobec nich). Kapitał rezerwowy, z aktualizacji wyceny i niepodzielony zysk z lat ubiegłych to składniki kapitału własnego."
+  },
+  {
+    "id": "owe25-s-14",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody szkolne",
+    "question": "W której ze szkół w ekonomii dominuje pogląd, że rola państwa w gospodarce powinna ograniczyć się przede wszystkim do utrzymania porządku, ochrony zasad wolności gospodarowania i prywatnej własności?",
+    "options": [
+      "etatyzm",
+      "leseferyzm",
+      "keynesizm",
+      "merkantylizm"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Leseferyzm (laissez-faire, „pozwólcie działać”) to doktryna liberalizmu gospodarczego, według której państwo powinno ograniczyć się do roli „nocnego stróża”: utrzymywać porządek, chronić własność prywatną i wolność gospodarowania. Etatyzm, keynesizm i merkantylizm zakładają aktywną rolę państwa."
+  },
+  {
+    "id": "owe25-s-15",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody szkolne",
+    "question": "Które z poniższych stwierdzeń jest prawdziwe?",
+    "options": [
+      "inwestycja w kontrakty futures na kurs akcji spółki X jest obarczona takim samym poziomem ryzyka jak inwestycja w te akcje",
+      "w skład indeksu WIG20 wchodzą tylko akcje spółek, które są rentowne",
+      "inwestując w akcje na giełdzie papierów wartościowych, można uzyskać dodatnią stopę zwrotu, nawet jeśli wartość głównego indeksu maleje",
+      "rentowność inwestycji w akcje zależy wyłącznie od zmian kursów akcji"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Na giełdzie można zarobić nawet przy spadającym indeksie – np. kupując akcje spółek, które drożeją wbrew trendowi, lub otrzymując dywidendy. Kontrakty futures są bardziej ryzykowne niż akcje ze względu na dźwignię finansową, do WIG20 wchodzą spółki według wielkości i płynności, a nie rentowności, a zwrot z akcji obejmuje też dywidendy."
+  },
+  {
+    "id": "owe25-s-16",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody szkolne",
+    "question": "Ekspansywna polityka monetarna w warunkach płynnego kursu walutowego przyczynia się do:",
+    "options": [
+      "spadku popytu globalnego",
+      "aprecjacji waluty krajowej",
+      "spadku importu i eksportu",
+      "obniżenia stopy procentowej"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Ekspansywna polityka pieniężna zwiększa podaż pieniądza i obniża stopy procentowe. Przy płynnym kursie niższe stopy powodują odpływ kapitału i deprecjację waluty krajowej, co zwiększa eksport netto i popyt globalny."
+  },
+  {
+    "id": "owe25-s-17",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody szkolne",
+    "question": "Który z poniższych podatków w Polsce ma charakter progresywny?",
+    "options": [
+      "podatek od towarów i usług (VAT)",
+      "podatek od dochodów osobistych",
+      "podatek od osób prawnych",
+      "podatek od gier"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Podatek dochodowy od osób fizycznych (PIT) ma w Polsce skalę progresywną – wraz ze wzrostem dochodu rośnie stawka podatku (np. w 2011 r. 18% i 32%). VAT ma stawki zależne od rodzaju towaru, a CIT – stawkę liniową."
+  },
+  {
+    "id": "owe25-s-18",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody szkolne",
+    "question": "Jeżeli w hipotetycznej gospodarce, przy pełnym wykorzystaniu zdolności wytwórczych, wydatki budżetowe są większe od dochodów budżetowych, wówczas mamy do czynienia z deficytem:",
+    "options": [
+      "cyklicznym",
+      "strukturalnym",
+      "klasycznym",
+      "politycznym"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Deficyt strukturalny to deficyt, który występuje nawet przy pełnym wykorzystaniu zdolności wytwórczych (na poziomie PKB potencjalnego) – wynika z trwałej nierównowagi między wydatkami a dochodami państwa, a nie z cyklu koniunkturalnego. Deficyt wywołany recesją to deficyt cykliczny."
+  },
+  {
+    "id": "owe25-s-19",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody szkolne",
+    "question": "Która z poniżej wymienionych ulg podatkowych nie występuje w podatku dochodowym od osób fizycznych w Polsce?",
+    "options": [
+      "darowizny na związki zawodowe",
+      "wydatki na zakup leków przez osoby niepełnosprawne o niskim dochodzie",
+      "koszty związane z utrzymaniem psa przewodnika dla osoby niewidomej",
+      "darowizny na cele kultu religijnego"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Podatnik PIT może odliczyć m.in. darowizny na cele kultu religijnego oraz wydatki w ramach ulgi rehabilitacyjnej (np. na leki dla osób niepełnosprawnych czy utrzymanie psa przewodnika). Darowizny na rzecz związków zawodowych nie podlegają odliczeniu."
+  },
+  {
+    "id": "owe25-s-20",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody szkolne",
+    "question": "Umowa, na podstawie której jedna ze stron przekazuje drugiej stronie umowy prawo do korzystania z określonej rzeczy na pewien uzgodniony okres w zamian za ustalone ratalne opłaty, to:",
+    "options": [
+      "kredyt kupiecki",
+      "leasing",
+      "faktoring",
+      "franchising"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Leasing to umowa, w której finansujący (leasingodawca) oddaje korzystającemu (leasingobiorcy) rzecz do używania na określony czas w zamian za raty (opłaty leasingowe). Kredyt kupiecki to odroczenie płatności przez dostawcę, faktoring – sprzedaż wierzytelności, a franchising – korzystanie z marki i know-how franczyzodawcy."
+  },
+  {
+    "id": "owe25-s-21",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody szkolne",
+    "question": "Nadrzędnym celem Narodowego Banku Polskiego jest:",
+    "options": [
+      "utrzymanie stabilnego poziomu cen",
+      "wspieranie polskich eksporterów",
+      "gwarantowanie depozytów zgromadzonych w bankach komercyjnych",
+      "nadzór nad bankami działającymi w Polsce"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Zgodnie z Konstytucją RP i ustawą o NBP podstawowym celem Narodowego Banku Polskiego jest utrzymanie stabilnego poziomu cen (cel inflacyjny 2,5% ± 1 pkt proc.), przy jednoczesnym wspieraniu polityki gospodarczej rządu, o ile nie ogranicza to tego celu. Depozyty gwarantuje BFG, a nadzór nad bankami sprawuje KNF."
+  },
+  {
+    "id": "owe25-s-22",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody szkolne",
+    "question": "Które z poniższych działań nie jest zabronione na giełdzie papierów wartościowych?",
+    "options": [
+      "wykorzystanie informacji wewnętrznych spółki",
+      "manipulowanie kursem akcji",
+      "niepodawanie do publicznej wiadomości informacji o nabyciu znacznego pakietu akcji",
+      "spekulacja"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Spekulacja – kupowanie i sprzedawanie papierów wartościowych w celu zarobku na zmianach cen – jest na giełdzie dozwolona i zapewnia płynność rynku. Zabronione są: wykorzystywanie informacji poufnych (insider trading), manipulacja kursem i nieujawnianie nabycia znacznych pakietów akcji."
+  },
+  {
+    "id": "owe25-s-23",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody szkolne",
+    "question": "Zgodnie z obowiązującym w Polsce prawem obligacje skarbowe mogą być sprzedawane:",
+    "options": [
+      "tylko inwestorom krajowym",
+      "tylko inwestorom zagranicznym",
+      "tylko podmiotom posiadającym status rezydenta",
+      "zarówno inwestorom krajowym, jak i zagranicznym"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Obligacje skarbowe mogą kupować zarówno inwestorzy krajowi, jak i zagraniczni – nierezydenci są ważną grupą nabywców polskich obligacji na rynku hurtowym. Tylko detaliczne obligacje oszczędnościowe są kierowane do osób fizycznych."
+  },
+  {
+    "id": "owe25-s-24",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody szkolne",
+    "question": "Polityka konkurencji w Unii Europejskiej nie jest ukierunkowana na:",
+    "options": [
+      "monitorowanie pomocy państwa dla małych i średnich przedsiębiorstw",
+      "zwalczanie porozumień cenowych",
+      "zwiększanie importu z krajów pozaeuropejskich",
+      "niedopuszczanie do wykorzystywania przez przedsiębiorstwa pozycji dominującej"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Polityka konkurencji UE obejmuje: zwalczanie karteli i porozumień cenowych, zakaz nadużywania pozycji dominującej, kontrolę koncentracji (fuzji) i kontrolę pomocy publicznej. Zwiększanie importu z krajów pozaeuropejskich nie jest jej celem – handel zewnętrzny należy do wspólnej polityki handlowej."
+  },
+  {
+    "id": "owe25-s-25",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody szkolne",
+    "question": "Internacjonalizacja przedsiębiorstwa to:",
+    "options": [
+      "rozszerzenie działalności przedsiębiorstwa na rynki zagraniczne",
+      "przejęcie pakietu kontrolnego w przedsiębiorstwie przez państwo",
+      "usprawnienie procesów biznesowych w przedsiębiorstwie poprzez zastosowanie nowoczesnych technologii",
+      "dostosowanie strategii przedsiębiorstwa do otoczenia rynkowego kraju, w którym działa"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Internacjonalizacja przedsiębiorstwa to proces rozszerzania jego działalności na rynki zagraniczne – od eksportu, przez licencje i franczyzę, po zakładanie oddziałów i spółek za granicą."
+  },
+  {
+    "id": "owe25-s-26",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody szkolne",
+    "question": "Cesja należności to:",
+    "options": [
+      "rodzaj zabezpieczenia kredytu",
+      "odpisanie przedawnionej należności w ciężar kosztów przedsiębiorstwa",
+      "spłata należności w kilku odrębnych ratach",
+      "opóźnienie w przelewie kwoty wierzytelności w związku z niedotrzymaniem pierwotnych warunków umowy"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Cesja należności (przelew wierzytelności) jako zabezpieczenie kredytu polega na przeniesieniu na bank praw do należności, jakie kredytobiorca ma od swoich kontrahentów. Jeśli kredytobiorca nie spłaci kredytu, bank ściąga te należności bezpośrednio od dłużników."
+  },
+  {
+    "id": "owe25-s-27",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody szkolne",
+    "question": "Każdy proces zarządzania rozpoczyna się od funkcji:",
+    "options": [
+      "organizowania",
+      "motywowania",
+      "przewodzenia",
+      "planowania"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Proces zarządzania rozpoczyna się od planowania – wyznaczenia celów i sposobów ich osiągnięcia. Dopiero na jego podstawie organizuje się zasoby, przewodzi ludziom (motywuje) i kontroluje realizację planów."
+  },
+  {
+    "id": "owe25-s-28",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody szkolne",
+    "question": "Wywodzące się z Japonii podejście do zarządzania przedsiębiorstwem, które akcentuje zaangażowanie w doskonalenie firmy oraz chęć ciągłego podnoszenia jakości produktów nosi nazwę:",
+    "options": [
+      "kaizen",
+      "just-in-time",
+      "lean management",
+      "kanban"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Kaizen (jap. „zmiana na lepsze”) to japońska filozofia ciągłego doskonalenia: małe, stałe usprawnienia wprowadzane przez wszystkich pracowników, z naciskiem na jakość. Just-in-time i kanban dotyczą zarządzania zapasami i przepływem produkcji, a lean management – eliminacji marnotrawstwa."
+  },
+  {
+    "id": "owe25-s-29",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody szkolne",
+    "question": "Indeks Lernera mierzy stopień:",
+    "options": [
+      "świadomości marki produktu",
+      "kapitałochłonności produkcji w przedsiębiorstwie",
+      "ściągalności podatków i opłat publicznoprawnych",
+      "monopolizacji rynku"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Indeks Lernera L = (P − MC) / P mierzy siłę rynkową (stopień zmonopolizowania rynku): o ile cena przewyższa koszt krańcowy. W konkurencji doskonałej P = MC, więc L = 0; im bliżej 1, tym większa siła monopolowa."
+  },
+  {
+    "id": "owe25-s-30",
+    "type": "single",
+    "edition": "XXV OWE (2011/2012), zawody szkolne",
+    "question": "Która struktura organizacyjna oparta jest na centralizacji i zasadzie jedności kierownictwa?",
+    "options": [
+      "macierzowa",
+      "liniowa",
+      "funkcjonalna",
+      "funkcjonalno-dywizjonalna"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Struktura liniowa opiera się na zasadzie jedności kierownictwa (każdy pracownik ma jednego przełożonego) i centralizacji decyzji – polecenia płyną z góry na dół wzdłuż linii służbowej. W strukturze macierzowej i funkcjonalnej pracownik ma więcej niż jednego przełożonego."
+  }
+]
