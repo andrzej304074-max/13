@@ -50,11 +50,13 @@ export default function TestPage() {
   const finished = !!test?.finishedAt;
   const remaining = test ? new Date(test.deadline).getTime() - now : 0;
 
+  const running = !!test && !finished;
+
   useEffect(() => {
-    if (!test || finished) return;
+    if (!running) return;
     const t = setInterval(() => setNow(Date.now()), 500);
     return () => clearInterval(t);
-  }, [test, finished]);
+  }, [running]);
 
   useEffect(() => {
     if (test && !finished && remaining <= 0 && !busy) finish();

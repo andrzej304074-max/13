@@ -51,10 +51,17 @@ Tabele tworzą się automatycznie przy pierwszym zapytaniu.
 
 ## Wdrożenie na Vercel
 
-1. Zaimportuj repozytorium w Vercel (framework: Next.js, ustawienia domyślne).
-2. W projekcie: **Storage → Create Database → Neon (Postgres)** i podłącz bazę do projektu —
-   Vercel ustawi zmienną `DATABASE_URL`.
-3. Zrób redeploy.
+1. Zaloguj się na [vercel.com](https://vercel.com) kontem GitHub.
+2. **Add New… → Project**, wybierz to repozytorium i kliknij **Import**
+   (framework wykryje się sam jako Next.js; nic nie zmieniaj). Pierwszy deploy może się nie udać
+   z błędem o `DATABASE_URL` przy otwieraniu strony – to normalne, baza nie jest jeszcze podłączona.
+3. W projekcie: **Storage → Create Database → Neon (Serverless Postgres)** → wybierz region
+   (np. Frankfurt) → **Create**, a potem **Connect Project** z zaznaczonymi środowiskami
+   Production/Preview/Development. Vercel ustawi m.in. zmienną `DATABASE_URL`.
+4. **Deployments → ⋯ przy ostatnim wdrożeniu → Redeploy**, żeby aplikacja dostała nową zmienną.
+5. Otwórz adres `*.vercel.app` – tabele utworzą się same przy pierwszym teście.
+
+Każdy kolejny push na gałąź produkcyjną (Settings → Git → Production Branch) wdraża się automatycznie.
 
 ## Skrypty
 

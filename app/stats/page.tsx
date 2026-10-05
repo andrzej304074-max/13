@@ -6,6 +6,12 @@ import type { Stats } from "@/lib/tests";
 
 const TYPE_LABEL = { single: "jednokrotny", multi: "wielokrotny" } as const;
 
+function testsLabel(n: number) {
+  const tens = n % 100, ones = n % 10;
+  const word = n === 1 ? "test" : ones >= 2 && ones <= 4 && (tens < 12 || tens > 14) ? "testy" : "testów";
+  return `${n} ${word}`;
+}
+
 export default function StatsPage() {
   const [stats, setStats] = useState<Stats | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -25,7 +31,7 @@ export default function StatsPage() {
       <div className="card">
         <div className="big">{fmtPct(overall.percent)}</div>
         <p className="muted" style={{ margin: 0 }}>
-          {fmtPoints(overall.score)} / {fmtPoints(overall.maxScore)} pkt · testów: {overall.tests}
+          {fmtPoints(overall.score)} / {fmtPoints(overall.maxScore)} pkt · {testsLabel(overall.tests)}
         </p>
       </div>
       <div className="stat-grid">
@@ -33,7 +39,7 @@ export default function StatsPage() {
           <div className="stat" key={t}>
             <div className="value">{fmtPct(byType[t].percent)}</div>
             <div className="label">
-              {TYPE_LABEL[t]} · {fmtPoints(byType[t].score)}/{fmtPoints(byType[t].maxScore)} pkt · {byType[t].tests} testów
+              {TYPE_LABEL[t]} · {fmtPoints(byType[t].score)}/{fmtPoints(byType[t].maxScore)} pkt · {testsLabel(byType[t].tests)}
             </div>
           </div>
         ))}
