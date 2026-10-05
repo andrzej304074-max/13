@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe26-o-01",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody okręgowe",
+    "question": "Posługując się koncepcją krzywej możliwości produkcyjnych, podniesienie wieku emerytalnego można wyrazić jako:",
+    "options": [
+      "przesunięcie całej krzywej możliwości produkcyjnych w lewo (w dół)",
+      "ruch po krzywej możliwości produkcyjnych w lewo (w górę)",
+      "przesunięcie całej krzywej możliwości produkcyjnych w prawo (w górę)",
+      "przejście do punktu położonego powyżej krzywej możliwości produkcyjnych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Podniesienie wieku emerytalnego zwiększa zasób pracy w gospodarce (ludzie pracują dłużej), a więc jej możliwości produkcyjne – cała krzywa możliwości produkcyjnych przesuwa się na zewnątrz (w prawo, w górę). Punkt powyżej krzywej jest przy danych zasobach nieosiągalny."
+  },
+  {
+    "id": "owe26-o-02",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody okręgowe",
+    "question": "Krzywa popytu na pewien produkt jest ujemnie nachylona. Jeśli sprzedawca tego produktu obniży jego cenę, to:",
+    "options": [
+      "bez wątpienia pojawi się strata",
+      "na pewno zmieni się wysokość zysku całkowitego",
+      "utarg całkowity może wzrosnąć",
+      "utarg całkowity zawsze się zmniejszy"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Przy ujemnie nachylonej krzywej popytu obniżka ceny zwiększa sprzedaż. Utarg całkowity (cena × ilość) wzrośnie, jeśli popyt jest elastyczny (|Ed| > 1), spadnie przy popycie nieelastycznym – więc może wzrosnąć, ale nie musi. Sama obniżka ceny nie przesądza też o stracie ani zmianie zysku."
+  },
+  {
+    "id": "owe26-o-03",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody okręgowe",
+    "question": "Wskaż prawdziwe stwierdzenie w odniesieniu do nadwyżki konsumenta:",
+    "options": [
+      "jej wartość jest mniejsza niż wyrażona w jednostkach pieniężnych użyteczność całkowita ze skonsumowanych jednostek dobra i zawsze jest mniejsza niż wydatek poniesiony na zakup tych jednostek",
+      "jej wartość jest mniejsza niż wyrażona w jednostkach pieniężnych użyteczność całkowita ze skonsumowanych jednostek dobra i zawsze jest większa niż wydatek poniesiony na zakup tych jednostek",
+      "jej wartość jest większa niż wyrażona w jednostkach pieniężnych użyteczność całkowita ze skonsumowanych jednostek dobra i zawsze jest większa niż wysokość wydatku poniesionego na zakup tych jednostek",
+      "zawsze jest równa różnicy pomiędzy wyrażoną w jednostkach pieniężnych użytecznością całkowitą ze skonsumowanych jednostek dobra a wydatkiem poniesionym na zakup tych jednostek"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Nadwyżka konsumenta to różnica między kwotą, jaką konsument byłby skłonny zapłacić (wyrażoną w pieniądzu użytecznością całkowitą kupionych jednostek), a kwotą, którą faktycznie wydał. Na wykresie to pole pod krzywą popytu, a nad linią ceny."
+  },
+  {
+    "id": "owe26-o-04",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody okręgowe",
+    "question": "Które z zacytowanych stwierdzeń ma charakter normatywny?",
+    "options": [
+      "wprowadzenie restrykcji w handlu międzynarodowym zmniejsza dobrobyt ekonomiczny społeczeństwa",
+      "optymalizacja podatkowa powinna być zabroniona, gdyż pozwala międzynarodowym koncernom unikać płacenia podatków w Polsce",
+      "wprowadzenie płacy minimalnej nie zawsze prowadzi do wzrostu bezrobocia",
+      "wysoki poziom deficytu budżetowego ma wpływ na poziom stóp procentowych w gospodarce"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Stwierdzenie normatywne zawiera ocenę lub postulat – „co powinno być” (np. słowo „powinna”). Optymalizacja „powinna być zabroniona” to opinia. Pozostałe zdania opisują zależności, które można sprawdzić empirycznie – są pozytywne."
+  },
+  {
+    "id": "owe26-o-05",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody okręgowe",
+    "question": "Aby zysk ekonomiczny przedsiębiorstwa działającego w warunkach monopolu był większy niż zysk normalny:",
+    "options": [
+      "przedsiębiorstwo musi stosować dyskryminację cenową",
+      "cena musi przekraczać przeciętne koszty całkowite",
+      "utarg krańcowy musi być wyższy od kosztu krańcowego",
+      "popyt na produkty monopolisty musi być nieelastyczny"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Zysk ekonomiczny jest dodatni (większy od normalnego), gdy przychody przekraczają wszystkie koszty, w tym koszty alternatywne – czyli gdy cena jest wyższa od przeciętnego kosztu całkowitego. Dyskryminacja cenowa czy nieelastyczny popyt nie są do tego konieczne, a MR > MC oznacza tylko, że produkcję warto zwiększyć."
+  },
+  {
+    "id": "owe26-o-06",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody okręgowe",
+    "question": "Z jakim rodzajem podaży ma do czynienia przedsiębiorstwo, jeśli wzrost ceny oferowanego dobra z 10 zł do 11 zł wywoła wzrost wielkości podaży z 900 szt. do 1000 szt.?",
+    "options": [
+      "podażą elastyczną",
+      "podażą nieelastyczną",
+      "podażą jednostkowo elastyczną",
+      "podażą doskonale elastyczną"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Elastyczność podaży = % zmiana ilości / % zmiana ceny. Ilość wzrosła o (1000 − 900) / 900 ≈ 11,1%, a cena o (11 − 10) / 10 = 10%. Es ≈ 1,11 > 1, więc podaż jest elastyczna (wielkość podaży zmienia się procentowo bardziej niż cena)."
+  },
+  {
+    "id": "owe26-o-07",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody okręgowe",
+    "question": "Dysponując wyłącznie izokwantą, przy przejściu z jednego punktu na nieliniowej izokwancie do drugiego punktu na tej samej izokwancie możemy określić:",
+    "options": [
+      "wielkości produkcji całkowitej",
+      "rodzaj przychodów ze skali produkcji",
+      "koszt zaangażowania czynników wytwórczych",
+      "wielkości zysku całkowitego"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Izokwanta łączy kombinacje czynników wytwórczych dające tę samą wielkość produkcji. Przechodząc między punktami tej samej izokwanty, wiemy więc, że produkcja całkowita się nie zmienia. Do oceny kosztów potrzebne byłyby ceny czynników (izokoszta), a do przychodów ze skali – inne izokwanty."
+  },
+  {
+    "id": "owe26-o-08",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody okręgowe",
+    "question": "Kształt krótkookresowej krzywej kosztów zmiennych wynika:",
+    "options": [
+      "z konieczności ponoszenia wyższych kosztów stałych wraz ze zwiększaniem rozmiarów przedsiębiorstwa",
+      "ze zmian technologicznych wprowadzanych przez przedsiębiorstwo",
+      "z działania prawa malejących przychodów",
+      "z ujemnego nachylenia krzywej popytu"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "W krótkim okresie część czynników jest stała. Gdy dokłada się kolejne jednostki czynnika zmiennego, od pewnego momentu działa prawo malejących przychodów – każda kolejna jednostka daje coraz mniejszy przyrost produkcji, więc koszty zmienne rosną coraz szybciej. To nadaje krzywej kosztów zmiennych jej charakterystyczny kształt."
+  },
+  {
+    "id": "owe26-o-09",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody okręgowe",
+    "question": "Głównymi makroekonomicznymi miernikami działalności gospodarczej są: dochód rozporządzalny (DPI), produkt narodowy netto (NNP), produkt narodowy brutto (GNP), produkt narodowy netto w cenach czynników produkcji (NNI). W którym zestawie powyższe miary zostały prawidłowo uszeregowane od największej do najmniejszej?",
+    "options": [
+      "GNP, NNI, NNP",
+      "DPI, GNP, NNI",
+      "NNP, DPI, NNI",
+      "NNP, NNI, DPI"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "GNP (PNB) − amortyzacja = NNP (PNN). NNP − podatki pośrednie (+ dotacje) = NNI (dochód narodowy w cenach czynników). Dochód rozporządzalny (DPI) jest jeszcze mniejszy – to dochody osobiste po podatkach bezpośrednich. Kolejność od największej do najmniejszej: GNP > NNP > NNI > DPI, więc w zestawie D: NNP, NNI, DPI."
+  },
+  {
+    "id": "owe26-o-10",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody okręgowe",
+    "question": "Inflacja popytowa nie zostanie wywołana przez:",
+    "options": [
+      "zwiększenie podaży pieniądza",
+      "boom na rynku kredytowym",
+      "wzrost cen towarów importowanych",
+      "zwiększenie wydatków rządowych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Inflacja popytowa wynika z nadmiernego popytu: wzrostu podaży pieniądza, boomu kredytowego, wzrostu wydatków rządowych. Wzrost cen towarów importowanych podnosi koszty produkcji – wywołuje inflację kosztową (podażową, importowaną), a nie popytową."
+  },
+  {
+    "id": "owe26-o-11",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody okręgowe",
+    "question": "Transferem z budżetu państwa jest:",
+    "options": [
+      "wydatek na budowę składowiska odpadów niebezpiecznych",
+      "inwestowanie wolnych środków budżetu państwa na rachunku depozytowym w banku centralnym",
+      "wypłata zasiłków dla rodziców samotnie wychowujących dzieci",
+      "każda operacja finansowa związana z wydatkami państwa ponoszonymi za granicą"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Transfery to płatności państwa, za które nie otrzymuje ono w zamian dóbr ani usług, np. zasiłki, emerytury, świadczenia socjalne – w tym zasiłki dla samotnych rodziców. Wydatek na budowę składowiska to wydatek inwestycyjny (zakup dóbr i usług)."
+  },
+  {
+    "id": "owe26-o-12",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody okręgowe",
+    "question": "Z którym nurtem w ekonomii utożsamiany jest Michał Kalecki – jeden z najbardziej znanych na świecie polskich ekonomistów?",
+    "options": [
+      "ekonomią klasyczną",
+      "szkołą austriacką",
+      "keynesizmem",
+      "monetaryzmem"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Michał Kalecki (1899–1970) niezależnie od Keynesa, a nawet nieco wcześniej, sformułował teorię efektywnego popytu – podstawę keynesizmu: o poziomie produkcji i zatrudnienia decyduje popyt globalny. Dlatego zalicza się go do nurtu keynesowskiego."
+  },
+  {
+    "id": "owe26-o-13",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody okręgowe",
+    "question": "Pełne zatrudnienie oznacza, że:",
+    "options": [
+      "stopa bezrobocia rejestrowanego wynosi 0%",
+      "każda osoba zgłaszająca gotowość do pracy otrzymuje ją",
+      "w gospodarce nie występuje bezrobocie koniunkturalne",
+      "naturalna stopa bezrobocia wynosi 0%"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Pełne zatrudnienie nie oznacza zerowego bezrobocia. Występuje, gdy nie ma bezrobocia koniunkturalnego (cyklicznego), a pozostaje bezrobocie naturalne – frykcyjne i strukturalne. Stopa bezrobocia równa się wtedy naturalnej stopie bezrobocia."
+  },
+  {
+    "id": "owe26-o-14",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody okręgowe",
+    "question": "Operacje otwartego rynku to:",
+    "options": [
+      "udzielanie przez banki komercyjne wysokokwotowych kredytów, których oprocentowanie jest powiązane ze stopą WIBOR",
+      "udzielanie bankom komercyjnym kredytów przez bank centralny w ramach udostępnionych przez niego linii kredytowych",
+      "interwencje banku centralnego na rynku walutowym",
+      "zakup lub sprzedaż skarbowych papierów wartościowych przez bank centralny"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Operacje otwartego rynku to kupno lub sprzedaż przez bank centralny papierów wartościowych (np. skarbowych lub własnych bonów pieniężnych). Skup zwiększa płynność w bankach i ilość pieniądza, sprzedaż – zmniejsza. To główne narzędzie sterowania krótkoterminowymi stopami procentowymi."
+  },
+  {
+    "id": "owe26-o-15",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody okręgowe",
+    "question": "Ilościowa teoria pieniądza zakłada:",
+    "options": [
+      "wysoką zmienność szybkości obiegu pieniądza",
+      "stałość szybkości obiegu pieniądza i poziomu cen",
+      "stałość szybkości obiegu pieniądza i nominalnego PKB",
+      "stabilność szybkości obiegu pieniądza i realnego PKB"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Ilościowa teoria pieniądza (MV = PY) zakłada, że szybkość obiegu pieniądza (V) jest stabilna, a realny PKB (Y) jest wyznaczany przez czynniki realne i w krótkim okresie stały. Wtedy zmiany ilości pieniądza (M) przekładają się proporcjonalnie na poziom cen (P)."
+  },
+  {
+    "id": "owe26-o-16",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody okręgowe",
+    "question": "Abolicja podatkowa to:",
+    "options": [
+      "darowanie podatnikom części zatajonych należności podatkowych w zamian za przyznanie się i dokonanie wpłaty z tytułu ujawnionych oszustw podatkowych",
+      "rodzaj policji skarbowej zajmującej się zwalczaniem oszustw związanych z produkcją i dystrybucją wyrobów akcyzowych",
+      "czasowe zamrożenie progów podatkowych w związku ze złą sytuacją budżetu",
+      "ruch społeczny w krajach wysoko rozwiniętych żądający ograniczenia zakresu opodatkowania obywateli i roli państwa w gospodarce"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Abolicja podatkowa to umorzenie części zaległości podatkowych (lub odstąpienie od kar) podatnikom, którzy dobrowolnie ujawnią zatajone dochody i zapłacą należny podatek. Ma zwiększyć wpływy i „wyprowadzić z szarej strefy” ukryte dochody."
+  },
+  {
+    "id": "owe26-o-17",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody okręgowe",
+    "question": "Przeprowadzaną systematycznie, niezależną i obiektywną ocenę kontroli zarządczej w Zakładzie Ubezpieczeń Społecznych i Narodowym Funduszu Zdrowia wykonuje:",
+    "options": [
+      "Sejm",
+      "Minister Finansów",
+      "Prezes Rady Ministrów",
+      "audytor wewnętrzny"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Audyt wewnętrzny to niezależna i obiektywna działalność oceniająca adekwatność, skuteczność i efektywność kontroli zarządczej w jednostce. Zgodnie z ustawą o finansach publicznych audyt wewnętrzny prowadzi się m.in. w ZUS i NFZ; wykonuje go audytor wewnętrzny."
+  },
+  {
+    "id": "owe26-o-18",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody okręgowe",
+    "question": "Firma doradcza wystawiła fakturę za świadczone usługi. W wyniku tego zdarzenia w firmie doradczej:",
+    "options": [
+      "zwiększyła się tylko wartość aktywów",
+      "zwiększyła się tylko wartość pasywów",
+      "zwiększyła się wartość aktywów i pasywów",
+      "to zdarzenie nie jest ujawniane w bilansie do czasu zapłaty faktury"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Wystawienie faktury za wykonaną usługę oznacza powstanie należności (wzrost aktywów) i przychodu, który zwiększa wynik finansowy, a więc kapitał własny (wzrost pasywów); jeśli faktura zawiera VAT, rosną też zobowiązania wobec budżetu. Suma bilansowa rośnie po obu stronach."
+  },
+  {
+    "id": "owe26-o-19",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody okręgowe",
+    "question": "Kosztem dla przedsiębiorstwa jest wydatek poniesiony na:",
+    "options": [
+      "zapłatę podatku od środków transportowych",
+      "zapłatę raty kredytu obrotowego",
+      "zakup gruntu pod budowę nowej hali produkcyjnej",
+      "zapłatę opłaty w leasingu finansowym"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Podatek od środków transportowych jest kosztem działalności (koszt rodzajowy – podatki i opłaty). Spłata raty kredytu to zmniejszenie zobowiązania (nie koszt), zakup gruntu to inwestycja (aktywo trwałe, gruntów się nie amortyzuje), a w leasingu finansowym kosztem jest tylko część odsetkowa raty i amortyzacja."
+  },
+  {
+    "id": "owe26-o-20",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody okręgowe",
+    "question": "Wskaż stwierdzenie prawdziwe w odniesieniu do składki na obowiązkowe ubezpieczenie rentowe w Polsce:",
+    "options": [
+      "pozwala pracodawcy obniżyć podstawę opodatkowania podatkiem dochodowym o wartość składek",
+      "jej wysokość zależy od rodzaju prowadzonej działalności i związanego z tym ryzyka",
+      "płacona jest po połowie przez pracownika i pracodawcę",
+      "dotyczy tylko osób po 26. roku życiu, ponieważ wcześniej nie można otrzymać renty z tytułu niezdolności do pracy"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Składki na ubezpieczenia społeczne finansowane przez pracodawcę (w tym jego część składki rentowej) są dla niego kosztem uzyskania przychodu, więc obniżają podstawę opodatkowania. Składka rentowa nie zależy od ryzyka (to cecha składki wypadkowej), nie jest dzielona po połowie (w 2012 r. pracodawca płacił 6,5%, a pracownik 1,5%) i dotyczy wszystkich ubezpieczonych."
+  },
+  {
+    "id": "owe26-o-21",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody okręgowe",
+    "question": "Założenie, że bieżąca cena odzwierciedla wszystkie czynniki mogące wpływać na wycenę akcji, więc wystarczy analizować tylko ceny i obroty, które odzwierciedlają skutki działania czynników, jest charakterystyczne dla analizy:",
+    "options": [
+      "fundamentalnej",
+      "technicznej",
+      "sytuacyjnej",
+      "menedżerskiej"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Analiza techniczna zakłada, że cena odzwierciedla wszystkie informacje (dyskontuje wszystko), ceny poruszają się w trendach, a historia się powtarza – wystarczy więc badać wykresy cen i obrotów. Analiza fundamentalna bada natomiast sytuację spółki, branży i gospodarki."
+  },
+  {
+    "id": "owe26-o-22",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody okręgowe",
+    "question": "Wysokie ryzyko inwestowania w kontrakty futures na WIG20 notowane na Giełdzie Papierów Wartościowych w Warszawie wiąże się przede wszystkim z:",
+    "options": [
+      "niefizycznym charakterem indeksu",
+      "występowaniem dźwigni finansowej",
+      "niską płynnością tego instrumentu finansowego",
+      "brakiem korelacji z aktualną sytuacją na giełdzie"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Kontrakty futures wymagają wpłacenia tylko depozytu zabezpieczającego (kilka–kilkanaście procent wartości kontraktu), a zysk lub strata liczone są od całej wartości kontraktu. Ta dźwignia finansowa wielokrotnie zwiększa wpływ zmiany indeksu na wynik inwestora – można stracić więcej niż wpłacony depozyt."
+  },
+  {
+    "id": "owe26-o-23",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody okręgowe",
+    "question": "Wskaż, które stwierdzenie jest prawdziwe w odniesieniu do obligacji zerokuponowych:",
+    "options": [
+      "są emitowane przez państwa, w przypadku których istnieje duże ryzyko upadłości, a więc i braku wypłaty odsetek",
+      "to takie obligacje, których rentowności nie da się wyliczyć, ponieważ wysokość ich oprocentowania zależna jest od przyszłej zyskowności podmiotu, który je emituje",
+      "niemożliwe jest wyliczenie średniego czasu trwania obligacji, ponieważ obligacja może być przedterminowo wykupiona na żądanie emitenta",
+      "zyskiem inwestora jest jedynie różnica pomiędzy ceną zakupu a ceną nominalną obligacji"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Obligacje zerokuponowe nie wypłacają odsetek (kuponów). Są sprzedawane z dyskontem – poniżej wartości nominalnej – a zyskiem inwestora jest różnica między ceną zakupu a wartością nominalną otrzymaną przy wykupie. Emitują je także państwa o wysokiej wiarygodności (np. bony skarbowe)."
+  },
+  {
+    "id": "owe26-o-24",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody okręgowe",
+    "question": "Która z poniższych czynności nie jest czynnością bankową sensu stricto?",
+    "options": [
+      "przyjmowanie wkładów pieniężnych płatnych na żądanie",
+      "udzielanie kredytów",
+      "wydawanie kart płatniczych",
+      "wydawanie instrumentu pieniądza elektronicznego"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Prawo bankowe dzieli czynności bankowe na sensu stricto (zastrzeżone dla banków – m.in. przyjmowanie wkładów, prowadzenie rachunków, udzielanie kredytów, przeprowadzanie rozliczeń, wydawanie pieniądza elektronicznego) i sensu largo (mogą je wykonywać też inne podmioty). Wydawanie kart płatniczych należało do czynności sensu largo."
+  },
+  {
+    "id": "owe26-o-25",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody okręgowe",
+    "question": "Ryzyko inwestycyjne w ubezpieczeniu na życie z ubezpieczeniowym funduszem kapitałowym ponosi:",
+    "options": [
+      "zakład ubezpieczeń",
+      "ubezpieczony",
+      "zakład ubezpieczeń, ale tylko do poziomu inwestycji określonego wartościowo w polisie",
+      "ubezpieczony, ale tylko w przypadku wyboru funduszu inwestującego w udziałowe papiery wartościowe (akcje)"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "W ubezpieczeniu na życie z ubezpieczeniowym funduszem kapitałowym (UFK) składki są inwestowane w wybrane przez klienta fundusze, a wartość polisy zależy od ich wyników. Ryzyko inwestycyjne ponosi ubezpieczony – ubezpieczyciel nie gwarantuje wyniku inwestycji."
+  },
+  {
+    "id": "owe26-o-26",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody okręgowe",
+    "question": "Warunkiem powodzenia strategii dumpingu jest:",
+    "options": [
+      "przejęcie kontroli nad głównymi kanałami dystrybucji konkurentów",
+      "utrzymywanie kosztów produkcji na poziomie niższym niż konkurencja",
+      "szybkość wdrożenia strategii i wykorzystanie efektu zaskoczenia",
+      "występowanie barier uniemożliwiających ponowne wejście konkurentów na rynek"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Dumping to sprzedaż poniżej kosztów (lub poniżej cen na rynku macierzystym), by wyeliminować konkurentów. Opłaca się tylko wtedy, gdy po ich wyeliminowaniu firma może podnieść ceny i odzyskać straty – czyli gdy bariery wejścia uniemożliwią konkurentom powrót na rynek."
+  },
+  {
+    "id": "owe26-o-27",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody okręgowe",
+    "question": "Podejście sytuacyjne w zarządzaniu:",
+    "options": [
+      "zakłada, że struktury organizacyjne przedsiębiorstw w różnych sektorach, ale w tym samym stadium rozwoju mogą być identyczne",
+      "oznacza, że stosowanie ogólnie przyjętych zasad właściwych w danej sytuacji zawsze daje pozytywne rezultaty",
+      "postuluje tworzenie w przedsiębiorstwie struktur zindywidualizowanych i adaptacyjnych",
+      "zwraca uwagę, że hierarchiczna i scentralizowana struktura organizacyjna nie może sprawdzić się w praktyce jako zbyt zbiurokratyzowana"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Podejście sytuacyjne (kontyngencyjne) zakłada, że nie ma jednego najlepszego sposobu zarządzania – właściwe rozwiązania zależą od sytuacji: otoczenia, technologii, wielkości i strategii firmy. Postuluje więc tworzenie struktur zindywidualizowanych i dopasowanych (adaptacyjnych) do warunków."
+  },
+  {
+    "id": "owe26-o-28",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody okręgowe",
+    "question": "Założenie, że firma może sprawniej i skuteczniej obsłużyć swój wąski strategiczny segment niż konkurenci działający w szerszej skali leży u podstaw strategii:",
+    "options": [
+      "czystej",
+      "dywersyfikacji",
+      "koncentracji",
+      "projakościowej"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Strategia koncentracji (M. Porter) polega na skupieniu się na wąskim segmencie rynku (grupie klientów, regionie, linii produktów) i obsłużeniu go lepiej niż konkurenci działający szeroko – przez niższe koszty lub zróżnicowanie oferty dla tego segmentu."
+  },
+  {
+    "id": "owe26-o-29",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody okręgowe",
+    "question": "Orientacja marketingowa za punkt wyjścia działań przedsiębiorstwa uznaje:",
+    "options": [
+      "dążenie do wysokiej zyskowności w długim okresie",
+      "zdominowanie rynku dzięki przyspieszeniu moralnego zużycia produktów",
+      "zwiększenie jakości usług świadczonych przez firmę",
+      "życzenia, preferencje i oczekiwania konsumentów"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Orientacja marketingowa zakłada, że punktem wyjścia wszystkich działań firmy są potrzeby, preferencje i oczekiwania klientów – firma najpierw bada rynek, a dopiero potem projektuje produkt. Zysk jest efektem zaspokajania tych potrzeb lepiej niż konkurenci."
+  },
+  {
+    "id": "owe26-o-30",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody okręgowe",
+    "question": "Przykładem mobbingu nie jest:",
+    "options": [
+      "grożenie przez pracodawcę pracownikowi zwolnieniem z pracy w wypadku niewykonania przez niego niezgodnych z prawem poleceń służbowych",
+      "nieprzyznanie przez przełożonego nagród i premii motywacyjnych pracownikowi, jeśli często wykonuje on niewłaściwie swoje obowiązki",
+      "częste publiczne wyśmiewanie wyglądu pracownika przez pozostałych współpracowników",
+      "notoryczne otrzymywanie przez pracownika nadmiernej ilości pracy, która jest niemożliwa do wykonania w ustalonym przez przełożonego terminie"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Mobbing (Kodeks pracy) to uporczywe i długotrwałe nękanie lub zastraszanie pracownika, wywołujące u niego zaniżoną ocenę przydatności zawodowej, poniżenie lub izolację. Nieprzyznanie premii pracownikowi, który źle wykonuje obowiązki, to uzasadniona decyzja przełożonego, a nie mobbing."
+  }
+]

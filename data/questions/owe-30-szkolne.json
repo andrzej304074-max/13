@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe30-s-01",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody szkolne",
+    "question": "Autorem koncepcji „niewidzialnej ręki rynku” jest:",
+    "options": [
+      "J.M. Keynes",
+      "M. Friedman",
+      "A. Smith",
+      "J. Stiglitz"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Koncepcję „niewidzialnej ręki rynku” sformułował Adam Smith w „Bogactwie narodów” (1776): jednostki, dążąc do własnej korzyści, nieświadomie przyczyniają się do dobra całego społeczeństwa, a rynek sam koordynuje ich działania. Keynes był zwolennikiem interwencjonizmu, Friedman – twórcą monetaryzmu."
+  },
+  {
+    "id": "owe30-s-02",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody szkolne",
+    "question": "Krzywa Laffera przedstawia zależność pomiędzy:",
+    "options": [
+      "wielkością wydatków sektora finansów publicznych a poziomem wzrostu gospodarczego",
+      "wielkością wydatków sektora finansów publicznych a wartością współczynnika Giniego",
+      "wielkością wydatków sektora finansów publicznych a poziomem inflacji",
+      "wysokością stawki podatku a wielkością dochodów budżetu państwa"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Krzywa Laffera (A. Laffer) pokazuje zależność między stawką podatku a wpływami podatkowymi budżetu. Przy stawce 0% i 100% wpływy są zerowe; do pewnego poziomu wzrost stawki zwiększa wpływy, a powyżej niego – zmniejsza je, bo zniechęca do aktywności i sprzyja unikaniu podatków."
+  },
+  {
+    "id": "owe30-s-03",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody szkolne",
+    "question": "Jeżeli utarg krańcowy jest większy od kosztu krańcowego, to przedsiębiorstwo w celu maksymalizacji zysku całkowitego, przy założeniu konkurencji doskonałej, powinno:",
+    "options": [
+      "ograniczyć produkcję",
+      "ograniczyć utarg krańcowy",
+      "zwiększyć produkcję",
+      "zmniejszyć cenę oferowanych produktów"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Jeśli utarg krańcowy (MR) jest większy od kosztu krańcowego (MC), każda dodatkowa jednostka przynosi więcej, niż kosztuje – zwiększa zysk. Firma powinna więc zwiększać produkcję aż do punktu MR = MC. Przy MR < MC powinna produkcję ograniczyć."
+  },
+  {
+    "id": "owe30-s-04",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody szkolne",
+    "question": "Dochód permanentny gospodarstwa domowego to:",
+    "options": [
+      "wysokość dochodu, który gospodarstwo domowe uzyskiwało w minionych okresach",
+      "przeciętna, oczekiwana w całym cyklu życia wysokość dochodu gospodarstwa domowego",
+      "bieżący dochód gospodarstwa domowego uwzględniający obciążenia podatkowe",
+      "dochód rozporządzalny gospodarstwa domowego"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Dochód permanentny (M. Friedman) to przeciętny dochód, jakiego gospodarstwo domowe oczekuje w długim okresie (w całym cyklu życia). Według hipotezy dochodu permanentnego to od niego, a nie od bieżących, przejściowych wahań dochodu, zależy konsumpcja."
+  },
+  {
+    "id": "owe30-s-05",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody szkolne",
+    "question": "Konsolidacja fiskalna oznacza:",
+    "options": [
+      "scentralizowanie dochodów samorządowych w budżecie państwa",
+      "zwiększanie wydatków socjalnych państwa",
+      "zmniejszanie deficytu sektora finansów publicznych",
+      "zwiększanie długu sektora finansów publicznych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Konsolidacja fiskalna to działania państwa zmierzające do zmniejszenia deficytu (i w efekcie długu) sektora finansów publicznych – przez cięcie wydatków i/lub zwiększanie dochodów. Zwiększanie wydatków socjalnych i długu działa odwrotnie."
+  },
+  {
+    "id": "owe30-s-06",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody szkolne",
+    "question": "Inwestor nabywa CDS, aby zabezpieczyć się bezpośrednio przed:",
+    "options": [
+      "zmianą kursu walutowego",
+      "zmianą krótkoterminowej stopy procentowej",
+      "niewypłacalnością jednostki referencyjnej (np. państwa)",
+      "zmianą ceny akcji konkretnego przedsiębiorstwa na rynku giełdowym"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "CDS (credit default swap) to instrument pochodny zabezpieczający przed ryzykiem kredytowym: nabywca płaci okresowe opłaty, a sprzedawca zobowiązuje się wypłacić odszkodowanie, jeśli jednostka referencyjna (np. państwo lub firma) stanie się niewypłacalna (zdarzenie kredytowe)."
+  },
+  {
+    "id": "owe30-s-07",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody szkolne",
+    "question": "Podatkiem sektorowym jest/są:",
+    "options": [
+      "podatek od towarów i usług",
+      "podatek od czynności cywilnoprawnych",
+      "podatek bankowy",
+      "podatki lokalne"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Podatek sektorowy obciąża wybrany sektor gospodarki. W Polsce od 2016 r. obowiązuje podatek od niektórych instytucji finansowych (tzw. podatek bankowy), płacony m.in. przez banki i ubezpieczycieli od aktywów. VAT, PCC i podatki lokalne mają charakter powszechny."
+  },
+  {
+    "id": "owe30-s-08",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody szkolne",
+    "question": "W Polsce nie obowiązuje (stan na rok 2016):",
+    "options": [
+      "podatek od dochodów od osób prawnych",
+      "akcyza",
+      "podatek od wydobycia niektórych kopalin",
+      "podatek importowy"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "W 2016 r. w Polsce obowiązywały m.in. CIT (podatek dochodowy od osób prawnych), akcyza i podatek od wydobycia niektórych kopalin (miedzi, srebra). Nie ma osobnego „podatku importowego” – import obciążają cło (dla towarów spoza UE), VAT i ewentualnie akcyza."
+  },
+  {
+    "id": "owe30-s-09",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody szkolne",
+    "question": "Równanie prawidłowo opisujące relację pomiędzy krańcową skłonnością do konsumpcji (MPC) a krańcową skłonnością do oszczędzania (MPS) to:",
+    "options": [
+      "MPS + MPC = 1",
+      "MPS + MPC = 0",
+      "MPS / MPC = 1",
+      "MPS − MPC = 1"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Każdą dodatkową złotówkę dochodu gospodarstwa domowe albo konsumują, albo oszczędzają, więc krańcowa skłonność do konsumpcji i do oszczędzania sumują się do jedności: MPC + MPS = 1. Np. MPC = 0,8 oznacza MPS = 0,2."
+  },
+  {
+    "id": "owe30-s-10",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody szkolne",
+    "question": "Małe, rodzinne przedsiębiorstwo produkuje wełniane koce. Jednostkowe koszty zmienne produkcji wynoszą 30 zł. Koszty stałe przedsiębiorstwa wynoszą 10000 zł. Cena jednego koca to 50 zł. Ile na podstawie powyższych danych wynosi ilościowy próg rentowności tego przedsiębiorstwa?",
+    "options": [
+      "500",
+      "333",
+      "200",
+      "125"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Ilościowy próg rentowności = koszty stałe / (cena − jednostkowy koszt zmienny) = 10 000 / (50 − 30) = 10 000 / 20 = 500 koców. Przy tej sprzedaży przychody pokrywają wszystkie koszty, a zysk wynosi zero."
+  },
+  {
+    "id": "owe30-s-11",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody szkolne",
+    "question": "Kto ustala stopę referencyjną NBP?",
+    "options": [
+      "Minister Finansów",
+      "Rada Polityki Pieniężnej",
+      "Premier RP",
+      "Sejm RP"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Stopy procentowe NBP, w tym stopę referencyjną, ustala Rada Polityki Pieniężnej – organ NBP, w którego skład wchodzą prezes NBP i 9 członków powoływanych po równo przez Prezydenta, Sejm i Senat. RPP co roku przyjmuje też założenia polityki pieniężnej."
+  },
+  {
+    "id": "owe30-s-12",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody szkolne",
+    "question": "W rezultacie zapowiedzi Brexitu kurs funta szterlinga względem dolara amerykańskiego uległ:",
+    "options": [
+      "aprecjacji",
+      "deprecjacji",
+      "rewaluacji",
+      "dewaluacji"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Po referendum w sprawie wyjścia Wielkiej Brytanii z UE (czerwiec 2016) funt szterling gwałtownie stracił na wartości wobec dolara – nastąpiła jego deprecjacja (rynkowy spadek kursu przy kursie płynnym). Rewaluacja i dewaluacja to urzędowe zmiany kursu w systemie kursu stałego."
+  },
+  {
+    "id": "owe30-s-13",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody szkolne",
+    "question": "Który z motywów zgodnie z teorią preferencji płynności autorstwa J.M. Keynesa nie wpływa na wielkość popytu na pieniądz?",
+    "options": [
+      "transakcyjny",
+      "spekulacyjny",
+      "ostrożnościowy",
+      "majątkowy"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "W teorii preferencji płynności Keynes wyróżnił trzy motywy trzymania pieniądza: transakcyjny (bieżące zakupy), przezornościowy (ostrożnościowy – na nieprzewidziane wydatki) i spekulacyjny (oczekiwanie na zmianę stóp procentowych i cen obligacji). Motywu „majątkowego” w tej teorii nie ma."
+  },
+  {
+    "id": "owe30-s-14",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody szkolne",
+    "question": "Które ze stwierdzeń nie jest zgodne z definicją podatku?",
+    "options": [
+      "podatek ma charakter pieniężny",
+      "podatek jest odpłatnym świadczeniem na rzecz państwa lub innego związku publicznoprawnego (np. samorządu)",
+      "podatek to ogólne świadczenie na rzecz państwa lub innego związku publicznoprawnego (np. samorządu)",
+      "podatek ma charakter świadczenia bezzwrotnego"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Zgodnie z Ordynacją podatkową podatek to publicznoprawne, nieodpłatne, przymusowe, bezzwrotne świadczenie pieniężne na rzecz Skarbu Państwa lub samorządu, wynikające z ustawy. Podatek jest nieodpłatny – podatnik nie otrzymuje w zamian konkretnego świadczenia wzajemnego."
+  },
+  {
+    "id": "owe30-s-15",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody szkolne",
+    "question": "Które z podanych państw ma najniższy poziom relacji dochodów publicznych do PKB w XXI wieku?",
+    "options": [
+      "Szwecja",
+      "Francja",
+      "Finlandia",
+      "Rumunia"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Rumunia ma jeden z najniższych w UE poziomów dochodów publicznych w relacji do PKB (ok. 30–35%), m.in. z powodu słabej ściągalności podatków. Kraje skandynawskie i Francja mają najwyższe w UE obciążenia fiskalne – dochody publiczne przekraczają tam 50% PKB."
+  },
+  {
+    "id": "owe30-s-16",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody szkolne",
+    "question": "Które z działań nie jest automatycznym stabilizatorem koniunktury?",
+    "options": [
+      "zasiłki dla bezrobotnych",
+      "progresywne stawki w podatku dochodowym",
+      "obniżenie stopy procentowej przez bank centralny",
+      "wydatki na pomoc społeczną"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Automatyczne stabilizatory działają same, bez decyzji polityków: w recesji rosną wydatki na zasiłki dla bezrobotnych i pomoc społeczną, a wpływy z progresywnego podatku dochodowego spadają szybciej niż dochody. Obniżka stóp procentowych to świadoma decyzja banku centralnego (polityka pieniężna), a nie stabilizator automatyczny."
+  },
+  {
+    "id": "owe30-s-17",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody szkolne",
+    "question": "Co jest cechą wspólną konkurencji doskonałej i monopolu?",
+    "options": [
+      "kryterium maksymalizacji zysku przedsiębiorstwa",
+      "liczba przedsiębiorstw na rynku",
+      "możliwość różnicowania cen",
+      "możliwość wejścia na rynek innych przedsiębiorstw w długim okresie"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Zarówno firma w konkurencji doskonałej, jak i monopolista maksymalizują zysk, produkując tyle, że utarg krańcowy równa się kosztowi krańcowemu (MR = MC). Różni je liczba firm, swoboda wejścia na rynek i możliwość różnicowania cen (ma ją tylko monopolista)."
+  },
+  {
+    "id": "owe30-s-18",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody szkolne",
+    "question": "W Polsce instytucją zajmującą się nadzorem makroostrożnościowym jest:",
+    "options": [
+      "Premier RP",
+      "Rządowe Centrum Studiów Strategicznych",
+      "Komisja Papierów Wartościowych",
+      "Komitet Stabilności Finansowej"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Nadzór makroostrożnościowy dotyczy stabilności całego systemu finansowego (ryzyka systemowego), a nie pojedynczych instytucji. W Polsce sprawuje go od 2015 r. Komitet Stabilności Finansowej (prezes NBP, minister finansów, przewodniczący KNF, prezes BFG)."
+  },
+  {
+    "id": "owe30-s-19",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody szkolne",
+    "question": "Dobra publiczne:",
+    "options": [
+      "stanowią przedmiot rywalizacji i mogą podlegać zasadzie wyłączności",
+      "stanowią przedmiot rywalizacji i nie podlegają zasadzie wyłączności",
+      "nie stanowią przedmiotu rywalizacji i nie podlegają zasadzie wyłączności",
+      "nie stanowią przedmiotu rywalizacji i mogą podlegać zasadzie wyłączności"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Dobra publiczne są niekonkurencyjne (nie są przedmiotem rywalizacji – konsumpcja jednej osoby nie zmniejsza konsumpcji innych) i niewykluczalne (nie podlegają zasadzie wyłączności – nie można nikogo wykluczyć z korzystania). Przykłady: obrona narodowa, oświetlenie ulic, latarnia morska."
+  },
+  {
+    "id": "owe30-s-20",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody szkolne",
+    "question": "Obligacje wieczyste:",
+    "options": [
+      "są zerokuponowe",
+      "mają okres wykupu nieprzekraczający 100 lat",
+      "nigdy nie podlegają wykupowi",
+      "to inaczej CDS"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Obligacje wieczyste (perpetuity, konsole) nie mają terminu wykupu – emitent nigdy nie zwraca kapitału, a jedynie bez końca wypłaca odsetki (kupony). Ich wartość to kupon podzielony przez wymaganą stopę zwrotu."
+  },
+  {
+    "id": "owe30-s-21",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody szkolne",
+    "question": "Celem fiskalnym polityki budżetowej państwa jest:",
+    "options": [
+      "łagodzenie skutków niesprawności mechanizmu rynkowego",
+      "ograniczenie cykliczności procesów gospodarczych",
+      "zaspokajanie potrzeb dochodowych państwa",
+      "ograniczenie negatywnych efektów zewnętrznych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Funkcja fiskalna polityki budżetowej polega na gromadzeniu dochodów (głównie podatkowych) potrzebnych do sfinansowania zadań państwa. Łagodzenie zawodności rynku, cykliczności i efektów zewnętrznych to funkcje redystrybucyjna, stabilizacyjna i alokacyjna."
+  },
+  {
+    "id": "owe30-s-22",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody szkolne",
+    "question": "W gospodarce otwartej marginalna skłonność do konsumpcji wynosi 0,6, natomiast marginalna skłonność do importu wynosi 0,1. Zakładamy brak opodatkowania. Ile wynosi wartość mnożnika wydatków budżetowych?",
+    "options": [
+      "0,5",
+      "0,7",
+      "1,42",
+      "2,0"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "W gospodarce otwartej bez podatków mnożnik wydatków = 1 / (1 − MPC + MPI) = 1 / (1 − 0,6 + 0,1) = 1 / 0,5 = 2. Krańcowa skłonność do importu zmniejsza mnożnik, bo część dodatkowych wydatków „wycieka” za granicę."
+  },
+  {
+    "id": "owe30-s-23",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody szkolne",
+    "question": "Wzrost współczynnika Giniego oznacza:",
+    "options": [
+      "zwiększenie nierówności dochodowych w społeczeństwie",
+      "zwiększenie inflacji o charakterze kosztowym",
+      "wzrost jednego z indeksów warszawskiej Giełdy Papierów Wartościowych",
+      "spadek poziomu bezrobocia"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Współczynnik Giniego mierzy nierówność rozkładu dochodów: przyjmuje wartości od 0 (wszyscy mają równe dochody) do 1 (całość dochodu ma jedna osoba). Jego wzrost oznacza więc zwiększenie nierówności dochodowych."
+  },
+  {
+    "id": "owe30-s-24",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody szkolne",
+    "question": "Instytucją, która ma na celu ochronę depozytów klientów banków komercyjnych, jest:",
+    "options": [
+      "Biuro Informacji Gospodarczej",
+      "Bankowy Fundusz Gwarancyjny",
+      "Komisja Papierów Wartościowych",
+      "Bank Gospodarstwa Krajowego"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Bankowy Fundusz Gwarancyjny gwarantuje depozyty w bankach (a od 2013 r. także w SKOK-ach) do równowartości 100 tys. euro na osobę w jednym banku. Od 2016 r. pełni też funkcję organu przymusowej restrukturyzacji banków."
+  },
+  {
+    "id": "owe30-s-25",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody szkolne",
+    "question": "Grupa delficka jako metoda grupowego podejmowania decyzji charakteryzuje się tym, że:",
+    "options": [
+      "jej członkowie otwarcie dyskutują, spierają się i uzgadniają wybór najlepszego rozwiązania",
+      "jej członkowie spotykają się ze sobą, jednak nie mają możliwości swobodnej dyskusji",
+      "jej członkowie nie dysponują wiedzą ekspercką, dzięki czemu mogą proponować nowe, kreatywne rozwiązania",
+      "jej członkowie są grupą autonomicznych, niezależnie wypowiadających się ekspertów"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Metoda delficka polega na anonimowym, kilkuetapowym ankietowaniu niezależnych ekspertów. Eksperci nie spotykają się i nie dyskutują; po każdej rundzie otrzymują zbiorcze wyniki i mogą zmienić zdanie, aż opinie się zbliżą. Unika się w ten sposób presji grupy i dominacji autorytetów."
+  },
+  {
+    "id": "owe30-s-26",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody szkolne",
+    "question": "Która z potrzeb znajduje się na szczycie hierarchii potrzeb według A. Maslowa?",
+    "options": [
+      "samorealizacji",
+      "bezpieczeństwa",
+      "fizjologiczna",
+      "szacunku"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Hierarchia potrzeb Maslowa (od podstawy): potrzeby fizjologiczne, bezpieczeństwa, przynależności (miłości), szacunku (uznania) i na szczycie – samorealizacji, czyli rozwoju własnego potencjału."
+  },
+  {
+    "id": "owe30-s-27",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody szkolne",
+    "question": "Do głównych twórców zarządzania administracyjnego nie zalicza się:",
+    "options": [
+      "M. Weber",
+      "H. Fayol",
+      "F.W. Taylor",
+      "L. Urwick"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Do twórców nurtu administracyjnego (klasycznej teorii organizacji) należą H. Fayol, M. Weber (teoria biurokracji) i L. Urwick. F.W. Taylor to twórca naukowego zarządzania (organizacji pracy na poziomie stanowiska), a nie zarządzania administracyjnego."
+  },
+  {
+    "id": "owe30-s-28",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody szkolne",
+    "question": "Metoda oceny jednostek operacyjnych według stopy wzrostu ich rynku oraz udziału organizacji w rynku to:",
+    "options": [
+      "analiza SWOT",
+      "metoda 4P",
+      "macierz BCG",
+      "analiza VaR"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Macierz BCG (Boston Consulting Group) ocenia jednostki biznesu według tempa wzrostu rynku i względnego udziału w rynku, dzieląc je na „gwiazdy”, „dojne krowy”, „znaki zapytania” i „psy”. Analiza SWOT dotyczy mocnych i słabych stron oraz szans i zagrożeń, a VaR mierzy ryzyko rynkowe."
+  },
+  {
+    "id": "owe30-s-29",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody szkolne",
+    "question": "Zgodnie z teorią X opracowaną przez D. McGregora:",
+    "options": [
+      "ludzie nie wykazują przyrodzonej niechęci do pracy; praca jest naturalną częścią życia",
+      "ludzie wolą, by nimi kierowano, pragną unikać odpowiedzialności, pragną też bezpieczeństwa; ich ambicje są niewielkie",
+      "ludzie są przywiązani do celów w stopniu odpowiadającym osobistym nagrodom, jakie otrzymują za ich osiągnięcie",
+      "ludzie są zdolni do nowatorskiego podejścia do rozwiązywania problemów organizacji"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Teoria X (D. McGregor) zakłada, że ludzie nie lubią pracować, unikają odpowiedzialności, mają małe ambicje i chcą, by nimi kierowano – trzeba ich więc kontrolować i przymuszać. Teoria Y zakłada przeciwnie: praca jest naturalna, a ludzie są twórczy i samodzielni."
+  },
+  {
+    "id": "owe30-s-30",
+    "type": "single",
+    "edition": "XXX OWE (2016/2017), zawody szkolne",
+    "question": "Typem zachowania kierowniczego charakteryzującego się dużą troską o ludzi, a niewielką o produkcję jest:",
+    "options": [
+      "zarządzanie autorytarne",
+      "zarządzanie zubożone",
+      "zarządzanie klubowe",
+      "zarządzanie zespołowe"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "W siatce kierowniczej Blake'a i Mouton styl „klubowy” (1.9) oznacza dużą troskę o ludzi i małą o produkcję (wyniki). Styl zubożony (1.1) to mała troska o oba, autorytarny (9.1) – duża o produkcję i mała o ludzi, a zespołowy (9.9) – duża o oba."
+  }
+]

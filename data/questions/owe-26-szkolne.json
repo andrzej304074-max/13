@@ -1,0 +1,466 @@
+[
+  {
+    "id": "owe26-s-01",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody szkolne",
+    "question": "Co nie jest uznawane w ekonomii za czynnik wytwórczy?",
+    "options": [
+      "cegły do budowy muszli koncertowej",
+      "fortepian w filharmonii",
+      "praca muzyka orkiestry dętej",
+      "obligacje komunalne"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Czynniki wytwórcze to zasoby wykorzystywane bezpośrednio w produkcji: praca (muzyk), kapitał rzeczowy (fortepian, cegły do budowy) i ziemia. Obligacje komunalne to aktywa finansowe (papiery dłużne) – służą finansowaniu, ale same nie są czynnikiem wytwórczym."
+  },
+  {
+    "id": "owe26-s-02",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody szkolne",
+    "question": "Przesunięcie krzywej podaży ziemniaków na rynku krajowym w lewo może nastąpić pod wpływem:",
+    "options": [
+      "wzrostu eksportu ziemniaków",
+      "spadku dochodów realnych konsumentów",
+      "kampanii społecznej informującej o tym, że jedzenie ziemniaków wiąże się z otyłością",
+      "spadku ceny mięsa"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Przesunięcie krzywej podaży na rynku krajowym w lewo oznacza mniejszą ilość ziemniaków oferowanych w kraju przy każdej cenie. Wzrost eksportu kieruje część produkcji za granicę, więc podaż krajowa maleje. Pozostałe czynniki (dochody, kampania, ceny mięsa) wpływają na popyt, a nie na podaż."
+  },
+  {
+    "id": "owe26-s-03",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody szkolne",
+    "question": "Wiedząc, że ograniczenie budżetowe konsumenta opisuje równanie: 2X + 6Y = 120, gdzie X i Y to ilości nabywanych przez konsumenta dóbr, wskaż prawidłową odpowiedź:",
+    "options": [
+      "konsument nie może kupić więcej niż 60 jednostek dobra Y",
+      "cena dobra X wynosi 60",
+      "cena dobra Y wynosi 6",
+      "kupując 15 jednostek X i 15 jednostek dobra Y, konsument osiągnie równowagę"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Linia budżetowa ma postać Px · X + Py · Y = I, więc cena X wynosi 2, cena Y – 6, a dochód – 120. Konsument może kupić najwyżej 120 / 6 = 20 jednostek Y. Koszyk 15X i 15Y kosztuje 30 + 90 = 120 zł, czyli leży na linii budżetu, ale nie wiadomo, czy jest optymalny – nie znamy preferencji konsumenta."
+  },
+  {
+    "id": "owe26-s-04",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody szkolne",
+    "question": "Jeśli przedsiębiorstwo działające na niedoskonale konkurencyjnym rynku podniesie cenę swojego produktu, to:",
+    "options": [
+      "utarg całkowity na pewno spadnie",
+      "utarg całkowity może wzrosnąć",
+      "przedsiębiorstwo straci klientów i zacznie na pewno przynosić straty",
+      "utarg krańcowy może się zmniejszyć"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Firma na rynku niedoskonałym ma ujemnie nachyloną krzywą popytu, więc po podwyżce ceny sprzeda mniej. Jeśli popyt jest nieelastyczny, utarg całkowity (cena × ilość) wzrośnie, a jeśli elastyczny – spadnie. Utarg może więc wzrosnąć, a podwyżka nie musi oznaczać strat."
+  },
+  {
+    "id": "owe26-s-05",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody szkolne",
+    "question": "Wskaż prawdziwe zdanie w odniesieniu do optimum ekonomicznego:",
+    "options": [
+      "odpowiada wielkości produkcji, przy której przedsiębiorstwo będzie minimalizować stratę",
+      "występuje w sytuacji zrównania produkcji całkowitej z wielkością zapotrzebowania na produkt",
+      "występuje jedynie w przedsiębiorstwach działających w warunkach niedoskonałej konkurencji",
+      "nie może wystąpić w długim okresie"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Optimum ekonomiczne to wielkość produkcji, przy której utarg krańcowy równa się kosztowi krańcowemu (MR = MC). Firma maksymalizuje wtedy zysk, a jeśli cena nie pokrywa kosztów – minimalizuje stratę. Występuje na każdym typie rynku, w krótkim i długim okresie."
+  },
+  {
+    "id": "owe26-s-06",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody szkolne",
+    "question": "Korzyści skali produkcji występują wówczas, gdy:",
+    "options": [
+      "przedsiębiorstwo jest monopolistą",
+      "w miarę wzrostu produkcji zmniejszają się koszty zmienne",
+      "mamy do czynienia z długim okresem",
+      "przedsiębiorstwo sprzedaje swoje wyroby po wysokiej cenie"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Korzyści skali (rosnące przychody ze skali) polegają na spadku kosztu przeciętnego przy zwiększaniu skali produkcji, czyli wszystkich czynników jednocześnie. Zmiana wszystkich czynników jest możliwa tylko w długim okresie, dlatego korzyści skali dotyczą długiego okresu."
+  },
+  {
+    "id": "owe26-s-07",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody szkolne",
+    "question": "Która z niżej wymienionych krzywych ma z pewnością dodatnie nachylenie?",
+    "options": [
+      "popytu",
+      "użyteczność krańcowej",
+      "kosztu całkowitego",
+      "utargu przeciętnego"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Koszt całkowity zawsze rośnie wraz z produkcją (każda dodatkowa jednostka wymaga dodatkowych nakładów), więc ta krzywa ma z pewnością dodatnie nachylenie. Krzywe popytu i utargu przeciętnego są zwykle ujemnie nachylone, a użyteczność krańcowa maleje."
+  },
+  {
+    "id": "owe26-s-08",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody szkolne",
+    "question": "Przykładem oligopolu w Polsce jest rynek:",
+    "options": [
+      "telefonii komórkowej",
+      "handlu detalicznego obuwiem",
+      "jednorodzinnego budownictwa mieszkaniowego",
+      "gier liczbowych"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Oligopol to rynek z kilkoma dużymi, współzależnymi firmami i wysokimi barierami wejścia. Przykładem w Polsce jest rynek telefonii komórkowej (kilku operatorów). Handel obuwiem i budownictwo jednorodzinne to rynki z wieloma firmami, a gry liczbowe – monopol (Totalizator Sportowy)."
+  },
+  {
+    "id": "owe26-s-09",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody szkolne",
+    "question": "Który rodzaj inflacji można najłatwiej ograniczyć za pomocą polityki pieniężnej?",
+    "options": [
+      "kosztową",
+      "importowaną",
+      "strukturalną",
+      "popytową"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Polityka pieniężna wpływa przede wszystkim na popyt: wyższe stopy procentowe ograniczają kredyt, konsumpcję i inwestycje. Najskuteczniej ogranicza więc inflację popytową. Przy inflacji kosztowej czy importowanej (np. wzrost cen ropy) ograniczanie popytu pogłębia spadek produkcji."
+  },
+  {
+    "id": "owe26-s-10",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody szkolne",
+    "question": "Jeśli pewien kraj Ameryki Łacińskiej dokonał dewaluacji własnej waluty, a kraje będące jego partnerami handlowymi nie podjęły podobnych działań, to można oczekiwać, że:",
+    "options": [
+      "wzrośnie eksport",
+      "wzrośnie import",
+      "zmniejszy się presja inflacyjna",
+      "zmniejszą się koszty obsługi zadłużenia zagranicznego"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Dewaluacja to urzędowe obniżenie wartości waluty krajowej. Towary tego kraju stają się tańsze dla zagranicy, więc eksport rośnie, a import – droższy, więc maleje. Rośnie też presja inflacyjna (droższy import) i koszt obsługi długu w walutach obcych."
+  },
+  {
+    "id": "owe26-s-11",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody szkolne",
+    "question": "Jeśli nominalny PKB wzrósł z 1000 mld USD do 1200 mld USD, a deflator PKB wzrósł ze 125 do 175, to:",
+    "options": [
+      "realny PKB wzrósł",
+      "realny PKB spadł",
+      "realny PKB pozostał bez zmian",
+      "na podstawie tych danych nie można określić poziomu realnego PKB"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Realny PKB = nominalny PKB / deflator · 100. Przed: 1000 / 125 · 100 = 800 mld USD; po: 1200 / 175 · 100 ≈ 686 mld USD. Ceny wzrosły (o 40%) bardziej niż nominalny PKB (o 20%), więc realny PKB spadł."
+  },
+  {
+    "id": "owe26-s-12",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody szkolne",
+    "question": "Jeżeli krańcowa skłonność do oszczędzania wynosi 0,20, to krańcowa skłonność do konsumpcji wynosi:",
+    "options": [
+      "0,2",
+      "0,8",
+      "1,25",
+      "5"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Krańcowa skłonność do konsumpcji i do oszczędzania sumują się do 1 (MPC + MPS = 1), więc MPC = 1 − 0,2 = 0,8. Z każdej dodatkowej złotówki dochodu 80 groszy trafia na konsumpcję, a 20 groszy do oszczędności."
+  },
+  {
+    "id": "owe26-s-13",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody szkolne",
+    "question": "Bank komercyjny może wykreować pieniądz przez:",
+    "options": [
+      "utworzenie rezerw gotówkowych",
+      "przyjęcie depozytu, a następnie udzielenie kredytu",
+      "jego wydrukowanie",
+      "kreacja pieniądza możliwa jest jedynie przez bank centralny"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Bank komercyjny kreuje pieniądz, udzielając kredytów: przyjęte depozyty (pomniejszone o rezerwę obowiązkową) pożycza, a pożyczone pieniądze wracają do banków jako nowe depozyty, które znowu mogą być pożyczone – w ten sposób powstaje pieniądz bankowy (mnożnik kreacji). Gotówkę emituje tylko bank centralny."
+  },
+  {
+    "id": "owe26-s-14",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody szkolne",
+    "question": "Wskaż, które stwierdzenie jest prawdziwe:",
+    "options": [
+      "wysokie zasiłki dla bezrobotnych motywują do aktywnego poszukiwania pracy",
+      "możliwe jest całkowite wyeliminowanie bezrobocia",
+      "podniesienie realnych wynagrodzeń zmniejsza poziom bezrobocia (ceteris paribus)",
+      "bezrobocie frykcyjne jest nieuniknione"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Bezrobocie frykcyjne (związane ze zmianą pracy, wejściem na rynek pracy, przeprowadzką) występuje zawsze, bo znalezienie odpowiedniej pracy wymaga czasu – jest nieuniknione. Wysokie zasiłki osłabiają motywację do szukania pracy, a wzrost płac realnych (ceteris paribus) raczej zwiększa bezrobocie."
+  },
+  {
+    "id": "owe26-s-16",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody szkolne",
+    "question": "Do dobrowolnych form oszczędzania na emeryturę (tzw. III filar) w Polsce nie zalicza się:",
+    "options": [
+      "indywidualnych kont zabezpieczenia emerytalnego",
+      "indywidualnych kont emerytalnych",
+      "pracowniczych programów emerytalnych",
+      "otwartych funduszy emerytalnych"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "III filar to dobrowolne oszczędzanie na emeryturę: indywidualne konta emerytalne (IKE), indywidualne konta zabezpieczenia emerytalnego (IKZE) i pracownicze programy emerytalne (PPE). Otwarte fundusze emerytalne (OFE) to II filar, obowiązkowy w momencie wprowadzenia."
+  },
+  {
+    "id": "owe26-s-17",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody szkolne",
+    "question": "Stosowany przez media podział na jastrzębie i gołębie dotyczy:",
+    "options": [
+      "inwestorów na giełdzie papierów wartościowych",
+      "skarbników (głównych księgowych) w jednostkach samorządu terytorialnego",
+      "ekspertów w zakresie odnawialnych źródeł energii w Ministerstwie Ochrony Środowiska",
+      "członków Rady Polityki Pieniężnej"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Podział na „jastrzębie” i „gołębie” dotyczy członków rad decydujących o stopach procentowych (w Polsce RPP). Jastrzębie skupiają się na walce z inflacją i opowiadają za wyższymi stopami, a gołębie bardziej dbają o wzrost gospodarczy i zatrudnienie, opowiadając się za niższymi stopami."
+  },
+  {
+    "id": "owe26-s-18",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody szkolne",
+    "question": "Emitentem pieniądza w Polsce jest:",
+    "options": [
+      "Mennica Polska",
+      "Narodowy Bank Polski",
+      "Państwowa Drukarnia Papierów Wartościowych",
+      "Ministerstwo Finansów"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Wyłączne prawo emisji znaków pieniężnych (banknotów i monet) w Polsce ma Narodowy Bank Polski (art. 227 Konstytucji). Mennica Polska bije monety, a Polska Wytwórnia Papierów Wartościowych drukuje banknoty na zlecenie NBP – ale nie są one emitentami."
+  },
+  {
+    "id": "owe26-s-19",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody szkolne",
+    "question": "Które zabezpieczenie nie występuje na będących w obiegu w 2012 r. banknotach o nominale 50 zł?",
+    "options": [
+      "efekt kątowy",
+      "nitka zabezpieczająca",
+      "farba zmienna optycznie",
+      "hologram"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Banknoty serii „Władcy polscy” w nominale 50 zł w obiegu w 2012 r. miały m.in. znak wodny, nitkę zabezpieczającą, efekt kątowy i farbę zmienną optycznie, ale nie miały hologramu. Zmodernizowane banknoty, wprowadzane w kolejnych latach, mają dodatkowe zabezpieczenia."
+  },
+  {
+    "id": "owe26-s-20",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody szkolne",
+    "question": "Przy obliczaniu którego indeksu na Giełdzie Papierów Wartościowych w Warszawie bierze się pod uwagę zarówno ceny zawartych w nim akcji, jak i dochody z dywidend?",
+    "options": [
+      "WIG",
+      "WIG20",
+      "mWIG40",
+      "sWIG80"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "WIG to indeks dochodowy (total return): uwzględnia zarówno zmiany cen akcji, jak i dochody z dywidend i praw poboru. WIG20, mWIG40 i sWIG80 to indeksy cenowe – liczone wyłącznie na podstawie cen akcji."
+  },
+  {
+    "id": "owe26-s-21",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody szkolne",
+    "question": "Wskaż prawdziwe stwierdzenie dotyczące podatku od wartości dodanej (VAT):",
+    "options": [
+      "jego stawka może wynosić 0%",
+      "ciężar tego podatku ponosi zawsze przedsiębiorstwo",
+      "nie są nim obłożone produkty importowane",
+      "podatnikami tego podatku są wyłącznie podmioty zobowiązane do posiadania kas fiskalnych"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "VAT może mieć stawkę 0% – stosuje się ją m.in. przy eksporcie towarów i wewnątrzwspólnotowej dostawie towarów (podatnik nadal może odliczyć VAT naliczony). Ciężar VAT ponosi ostateczny konsument, VAT nalicza się też od importu, a podatnikami są wszyscy prowadzący działalność gospodarczą (poza zwolnionymi), nie tylko posiadacze kas fiskalnych."
+  },
+  {
+    "id": "owe26-s-22",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody szkolne",
+    "question": "Która z niżej wymienionych kategorii wydatków ma największy udział w wydatkach sektora publicznego w Polsce?",
+    "options": [
+      "obrona narodowa",
+      "ochrona środowiska",
+      "ochrona zdrowia",
+      "nauka i szkolnictwo wyższe"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Spośród wymienionych kategorii największy udział w wydatkach sektora publicznego w Polsce ma ochrona zdrowia (ok. 4–5% PKB, głównie wydatki NFZ). Wydatki na obronę narodową wynosiły wtedy ok. 2% PKB, a na naukę i szkolnictwo wyższe oraz ochronę środowiska – mniej."
+  },
+  {
+    "id": "owe26-s-23",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody szkolne",
+    "question": "Łączna kwota długu jednostki samorządu terytorialnego na koniec roku budżetowego nie może być wyższa niż (stan na rok 2012):",
+    "options": [
+      "15-krotność planowanych w danym roku budżetowym spłat rat kredytów i pożyczek oraz wykupów wyemitowanych przez tę jednostkę papierów wartościowych",
+      "50% wartości majątku tej jednostki na koniec roku budżetowego",
+      "60% dochodów ogółem wykonanych przez tę jednostkę w tym roku budżetowym",
+      "kwota ta nie jest sztywno określona, jest jedynie ograniczona zdolnością jednostki do spłaty jej zobowiązań"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "W 2012 r. obowiązywała zasada, że łączna kwota długu jednostki samorządu terytorialnego na koniec roku nie może przekroczyć 60% wykonanych dochodów ogółem (a obsługa długu – 15% dochodów). Od 2014 r. zastąpił ją indywidualny wskaźnik zadłużenia (art. 243 ustawy o finansach publicznych)."
+  },
+  {
+    "id": "owe26-s-24",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody szkolne",
+    "question": "Zestawienie źródeł finansowania składników majątkowych jednostki gospodarczej to:",
+    "options": [
+      "aktywa",
+      "pasywa",
+      "wierzytelności",
+      "cash flow"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Pasywa to źródła finansowania majątku jednostki – kapitały własne i obce (zobowiązania, rezerwy). Aktywa to majątek (składniki majątkowe), a suma aktywów zawsze równa się sumie pasywów."
+  },
+  {
+    "id": "owe26-s-25",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody szkolne",
+    "question": "Przyczyną popularności zatrudniania pracowników przez firmy na podstawie umów cywilnoprawnych w Polsce z pewnością nie jest (stan na rok 2012):",
+    "options": [
+      "brak konieczności ponoszenia przy tych umowach kosztów płatnych urlopów wypoczynkowych",
+      "możliwość nieopłacania niektórych składek na ubezpieczenia społeczne w przeciwieństwie do umów o pracę",
+      "brak rygorów przepisów dotyczących wynagrodzeń minimalnych w umowach cywilnoprawnych",
+      "niższa stawka podatkowa w przypadku umów cywilnoprawnych na kwotę mniejszą niż 2000 zł"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "W 2012 r. przy umowach cywilnoprawnych pracodawca nie musiał dawać płatnych urlopów, mógł nie opłacać niektórych składek (np. przy umowie o dzieło lub zleceniu dla ucznia/studenta), a minimalne wynagrodzenie dotyczyło tylko umów o pracę. Nie było natomiast niższej stawki podatku dla umów do 2000 zł – ryczałt 18% dotyczył tylko umów do 200 zł."
+  },
+  {
+    "id": "owe26-s-26",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody szkolne",
+    "question": "Twórcą koncepcji zarządzania administracyjnego był:",
+    "options": [
+      "Max Weber",
+      "Douglas McGregor",
+      "Ricky Griffin",
+      "Frederick Taylor"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W kluczu za twórcę koncepcji zarządzania administracyjnego uznano Maxa Webera – twórcę teorii biurokracji (racjonalnej, sformalizowanej organizacji opartej na hierarchii i przepisach), zaliczanej do nurtu administracyjnego. Za głównego twórcę tego nurtu uważa się też H. Fayola. Taylor to naukowe zarządzanie, a McGregor – teoria X i Y."
+  },
+  {
+    "id": "owe26-s-27",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody szkolne",
+    "question": "W klasycznym podejściu na proces zarządzania nie składa się:",
+    "options": [
+      "planowanie",
+      "organizowanie",
+      "przetrwanie",
+      "kontrolowanie"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "W klasycznym ujęciu (H. Fayol) proces zarządzania obejmuje funkcje: planowanie, organizowanie, przewodzenie (motywowanie, rozkazywanie, koordynowanie) i kontrolowanie. „Przetrwanie” może być celem organizacji, ale nie jest funkcją zarządzania."
+  },
+  {
+    "id": "owe26-s-28",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody szkolne",
+    "question": "Analiza decyzji inwestycyjnych przedsiębiorstwa przed ich podjęciem ma charakter analizy:",
+    "options": [
+      "ad hoc",
+      "a posteriori",
+      "ex ante",
+      "ex post"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Analiza ex ante („przed faktem”) ocenia przyszłe skutki decyzji przed jej podjęciem – np. rachunek opłacalności inwestycji (NPV, IRR). Analiza ex post („po fakcie”) ocenia skutki działań już zrealizowanych."
+  },
+  {
+    "id": "owe26-s-29",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody szkolne",
+    "question": "Której z poniższych metod nie zaleca się do badania makrootoczenia firmy?",
+    "options": [
+      "analizy luki strategicznej",
+      "metody delfickiej",
+      "metody scenariuszowej",
+      "metody kart kontrolnych"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Do badania makrootoczenia (czynników politycznych, ekonomicznych, społecznych, technologicznych) stosuje się m.in. metodę scenariuszową, delficką, analizę PEST i analizę luki strategicznej. Karty kontrolne to narzędzie statystycznej kontroli jakości procesów produkcyjnych, a nie analizy otoczenia."
+  },
+  {
+    "id": "owe26-s-30",
+    "type": "single",
+    "edition": "XXVI OWE (2012/2013), zawody szkolne",
+    "question": "Proces planowania, realizowania oraz kontroli efektywnego ekonomicznie przepływu produktów i ich magazynowania oraz związanych z nimi informacji, począwszy od miejsca pochodzenia do miejsca konsumpcji, to:",
+    "options": [
+      "lokowanie produktu",
+      "outsourcing",
+      "pozycjonowanie",
+      "logistyka"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Logistyka to proces planowania, realizowania i kontrolowania sprawnego i efektywnego kosztowo przepływu oraz magazynowania surowców, produktów i związanych z nimi informacji – od miejsca pochodzenia do miejsca konsumpcji – zgodnie z wymaganiami klientów."
+  }
+]

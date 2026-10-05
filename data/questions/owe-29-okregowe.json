@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe29-o-01",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody okręgowe",
+    "question": "Na efektywnym rynku:",
+    "options": [
+      "zyski ekonomiczne występują tylko w długim okresie",
+      "każde przedsiębiorstwo osiąga zysk ekonomiczny",
+      "zasoby czynników wytwórczych są nieograniczone",
+      "możliwość osiągnięcia zysku ekonomicznego ma charakter chwilowy"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Na rynku efektywnym (doskonale konkurencyjnym) zysk ekonomiczny może pojawić się tylko na chwilę: przyciąga nowe firmy, które zwiększają podaż i obniżają cenę, aż zysk ekonomiczny spadnie do zera. W długim okresie firmy osiągają jedynie zysk normalny."
+  },
+  {
+    "id": "owe29-o-02",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody okręgowe",
+    "question": "Jeśli popyt na dane dobro jest elastyczny, to:",
+    "options": [
+      "zmniejszenie ceny zwiększy wartość utargu całkowitego",
+      "konsumenci będą słabo reagować na zmianę ceny dobra",
+      "wartość bezwzględna współczynnika elastyczności mieszanej będzie zawierać się w przedziale (0; 1)",
+      "na pewno rozpatrywane dobro jest dobrem luksusowym"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Popyt elastyczny (|Ed| > 1) oznacza, że wielkość popytu zmienia się procentowo bardziej niż cena. Obniżka ceny zwiększa więc utarg całkowity, a podwyżka go zmniejsza. Konsumenci silnie (a nie słabo) reagują na zmianę ceny, a elastyczność mieszana dotyczy reakcji na ceny innych dóbr."
+  },
+  {
+    "id": "owe29-o-03",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody okręgowe",
+    "question": "W pewnym przedsiębiorstwie produkcja całkowita przy zatrudnieniu pierwszego, drugiego i trzeciego pracownika wynosi odpowiednio 36, 52, 58 jednostek. W tej sytuacji:",
+    "options": [
+      "produkt krańcowy wynikający z zatrudnienia drugiego pracownika wynosi 8 jednostek",
+      "produkt przeciętny obliczony przy zatrudnieniu dwóch pracowników wynosi 16 jednostek",
+      "produkt krańcowy związany z zatrudnieniem trzeciego pracownika wynosi 6 jednostek",
+      "produkt całkowity wytworzony przez trzech pracowników wynosi 164 jednostki"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Produkt krańcowy to przyrost produkcji z zatrudnienia kolejnego pracownika: drugiego = 52 − 36 = 16, trzeciego = 58 − 52 = 6. Produkt przeciętny przy dwóch pracownikach = 52 / 2 = 26, a produkt całkowity przy trzech wynosi 58 (nie 164)."
+  },
+  {
+    "id": "owe29-o-04",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody okręgowe",
+    "question": "Jeżeli na pewnym rynku działa jedynie kilka firm, a jedna z nich jest przywódcą cenowym, to w tej sytuacji można oczekiwać, że:",
+    "options": [
+      "cena będzie równa kosztowi krańcowemu przywódcy",
+      "cena będzie niższa niż koszty przeciętne naśladowców",
+      "cena będzie wyższa od kosztu krańcowego przywódcy",
+      "utarg krańcowy będzie przekraczać koszty krańcowe przywódcy"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "W modelu przywództwa cenowego w oligopolu przywódca (dominująca firma) ustala cenę maksymalizującą jego zysk (MR = MC), a mniejsze firmy ją naśladują. Ponieważ przywódca ma ujemnie nachyloną krzywą popytu, jego utarg krańcowy jest niższy od ceny, więc cena jest wyższa od jego kosztu krańcowego."
+  },
+  {
+    "id": "owe29-o-05",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody okręgowe",
+    "question": "Społeczny koszt monopolu jest wynikiem tego, że w porównaniu z doskonałą konkurencją następuje przesunięcie:",
+    "options": [
+      "całej nadwyżki konsumenta do przedsiębiorstwa będącego monopolistą, przy jednoczesnym zwiększeniu sumy tych nadwyżek",
+      "części nadwyżki konsumenta do przedsiębiorstwa będącego monopolistą, przy jednoczesnym zmniejszeniu sumy tych nadwyżek",
+      "części nadwyżki konsumenta do przedsiębiorstwa będącego monopolistą, przy jednoczesnej niezmienionej wielkości sumy tych nadwyżek",
+      "całej nadwyżki konsumenta do przedsiębiorstwa będącego monopolistą, przy jednoczesnym zmniejszeniu sumy tych nadwyżek"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Monopolista produkuje mniej i sprzedaje drożej niż rynek konkurencyjny. Część nadwyżki konsumenta przechodzi do monopolisty (jako dodatkowy zysk), a część po prostu znika – suma nadwyżek konsumenta i producenta się zmniejsza. Ta utracona część (strata martwa, deadweight loss) to społeczny koszt monopolu."
+  },
+  {
+    "id": "owe29-o-06",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody okręgowe",
+    "question": "Jeśli wielkość produkcji maleje, to:",
+    "options": [
+      "przeciętne koszty całkowite zawsze maleją",
+      "koszty krańcowe na pewno maleją",
+      "koszty krańcowe zawsze rosną",
+      "przeciętne koszty stałe zawsze rosną"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Przeciętny koszt stały = koszt stały / wielkość produkcji. Gdy produkcja maleje, ten sam koszt stały rozkłada się na mniej jednostek, więc AFC zawsze rośnie. Koszt przeciętny całkowity i krańcowy mogą przy spadku produkcji zarówno rosnąć, jak i maleć."
+  },
+  {
+    "id": "owe29-o-07",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody okręgowe",
+    "question": "Przykładem dobra klubowego jest:",
+    "options": [
+      "łowisko tuńczyka na wodach międzynarodowych Oceanu Atlantyckiego",
+      "działalność Górskiego Ochotniczego Pogotowia Ratunkowego",
+      "spektakl w teatrze",
+      "obowiązkowy przegląd kominiarski w budynku wielorodzinnym"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Dobro klubowe jest wykluczalne (można ograniczyć dostęp, np. biletem), ale niekonkurencyjne do momentu zatłoczenia – kolejny widz nie zmniejsza korzyści innych, dopóki są wolne miejsca. Przykłady: spektakl w teatrze, kino, telewizja kodowana. Łowisko na wodach międzynarodowych to zasób wspólny."
+  },
+  {
+    "id": "owe29-o-08",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody okręgowe",
+    "question": "Zależność pomiędzy siłą nabywczą pieniądza a poziomem cen jest:",
+    "options": [
+      "dodatnia, ale mniej niż proporcjonalna",
+      "dodatnia i wprost proporcjonalna",
+      "zwykle dodatnia, ale w warunkach hiperinflacji może być ujemna",
+      "zawsze ujemna"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Siła nabywcza pieniądza to ilość dóbr, które można za niego kupić; jest odwrotnością poziomu cen. Gdy ceny rosną, za tę samą kwotę kupuje się mniej – zależność jest zawsze ujemna."
+  },
+  {
+    "id": "owe29-o-09",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody okręgowe",
+    "question": "Jeżeli szybkość obiegu pieniądza jest stała, a ilość pieniądza i wartość realnego PKB podwoiła się, to:",
+    "options": [
+      "poziom cen również się podwoił",
+      "poziom cen pozostał niezmieniony",
+      "ceny spadły",
+      "inflacja zwiększyła się dwukrotnie"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Równanie wymiany: M · V = P · Y. Jeśli V jest stałe, a ilość pieniądza (M) i realny PKB (Y) wzrosły dwukrotnie, to 2M · V = P · 2Y, więc poziom cen (P) pozostaje bez zmian."
+  },
+  {
+    "id": "owe29-o-10",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody okręgowe",
+    "question": "Która z niżej wymienionych funkcji nie jest funkcją pieniądza?",
+    "options": [
+      "środek wymiany",
+      "miernik wartości",
+      "środek okazywania bogactwa",
+      "środek płatniczy"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Funkcje pieniądza to: środek wymiany (cyrkulacyjna), miernik wartości, środek płatniczy (np. regulowanie zobowiązań, podatków) i środek przechowywania wartości (tezauryzacyjna). „Okazywanie bogactwa” nie jest funkcją pieniądza."
+  },
+  {
+    "id": "owe29-o-11",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody okręgowe",
+    "question": "Populacja pewnego europejskiego kraju liczy 25 mln ludzi w wieku produkcyjnym. Jeśli aktywnych ekonomicznie jest 20 mln ludzi, a liczba bezrobotnych to 1,6 mln osób, to:",
+    "options": [
+      "stopa bezrobocia równa jest 6,4%",
+      "stopa bezrobocia równa jest 7,4%",
+      "stopa bezrobocia równa jest 8,0%",
+      "stopa bezrobocia równa jest 8,7%"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Stopa bezrobocia = bezrobotni / aktywni zawodowo × 100% = 1,6 mln / 20 mln = 8%. W mianowniku są aktywni zawodowo (pracujący + bezrobotni), a nie cała ludność w wieku produkcyjnym (25 mln)."
+  },
+  {
+    "id": "owe29-o-12",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody okręgowe",
+    "question": "Luzowanie ilościowe (quantitative easing) w strefie euro polega na:",
+    "options": [
+      "zakupie przez Europejski Bank Centralny długoterminowych obligacji państwowych",
+      "sprzedaży długoterminowych obligacji państwowych w celu obniżenia długoterminowych stóp procentowych",
+      "sprzedaży przez rządy krajów europejskich długoterminowych obligacji państwowych",
+      "zakupie długoterminowych obligacji państwowych w celu podwyższenia długoterminowych stóp procentowych"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Luzowanie ilościowe (QE) to niestandardowa polityka pieniężna: bank centralny (tu EBC, od 2015 r.) na dużą skalę skupuje aktywa – głównie długoterminowe obligacje państwowe – zwiększając ilość pieniądza i obniżając długoterminowe stopy procentowe, by pobudzić kredyt i inflację."
+  },
+  {
+    "id": "owe29-o-13",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody okręgowe",
+    "question": "Naturalna stopa bezrobocia:",
+    "options": [
+      "wzrasta wraz ze zwiększaniem wysokości zasiłków dla bezrobotnych",
+      "zmniejsza się wraz ze zwiększeniem płacy minimalnej w gospodarce",
+      "zależy jedynie od siły związków zawodowych w danej gospodarce",
+      "podlega wahaniom, ale nie mogą być one spowodowane działalnością państwa"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Naturalna stopa bezrobocia (frykcyjne + strukturalne) zależy m.in. od instytucji rynku pracy. Wyższe zasiłki zmniejszają presję na szybkie podjęcie pracy i wydłużają jej szukanie, więc podnoszą naturalną stopę bezrobocia. Podobnie działa wyższa płaca minimalna; polityka państwa może więc wpływać na tę stopę."
+  },
+  {
+    "id": "owe29-o-14",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody okręgowe",
+    "question": "Mnożnik podatkowy jest mniejszy niż mnożnik wydatków rządowych, ponieważ:",
+    "options": [
+      "występuje efekt wypierania",
+      "gospodarstwa domowe oszczędzają część pieniędzy",
+      "w gospodarce występuje bezrobocie",
+      "część wydatków rządowych ma charakter inwestycyjny"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Wydatki rządowe w całości zwiększają popyt globalny, a obniżka podatków zwiększa dochód rozporządzalny, z którego gospodarstwa część oszczędzają – do popytu trafia tylko jego część (MPC). Dlatego mnożnik podatkowy (−MPC/MPS) jest co do wartości mniejszy od mnożnika wydatków (1/MPS)."
+  },
+  {
+    "id": "owe29-o-15",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody okręgowe",
+    "question": "Jeżeli wielkość popytu na pieniądz przekracza rozmiary jego podaży, to podmioty będą:",
+    "options": [
+      "sprzedawać obligacje, a stopy procentowe wzrosną",
+      "sprzedawać obligacje, a stopy procentowe spadną",
+      "kupować obligacje, a stopy procentowe wzrosną",
+      "kupować obligacje, a stopy procentowe spadną"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Gdy popyt na pieniądz przewyższa jego podaż, ludzie chcą mieć więcej gotówki – sprzedają aktywa, np. obligacje. Ceny obligacji spadają, a ich rentowność (stopy procentowe) rośnie – aż wyższe stopy zmniejszą popyt na pieniądz i rynek wróci do równowagi."
+  },
+  {
+    "id": "owe29-o-16",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody okręgowe",
+    "question": "Ile lat wynosi kadencja prezesa NBP?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Prezesa NBP powołuje Sejm na wniosek Prezydenta na 6-letnią kadencję (maksymalnie dwie kadencje). Sześcioletnia jest też kadencja członków RPP."
+  },
+  {
+    "id": "owe29-o-17",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody okręgowe",
+    "question": "Warunkowa forma płatności polegająca na pobraniu przez bank sprzedawcy, na warunkach określonych przez niego, określonej należności w zamian za wydanie wskazanemu podmiotowi (odbiorcy) dokumentów handlowych to:",
+    "options": [
+      "akredytywa",
+      "weksel",
+      "czek gotówkowy",
+      "inkaso"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Inkaso dokumentowe to forma rozliczenia, w której bank (na zlecenie sprzedawcy) wydaje kupującemu dokumenty handlowe (uprawniające do odbioru towaru) dopiero po zapłacie należności lub akceptacji weksla. W akredytywie to bank kupującego zobowiązuje się zapłacić sprzedawcy."
+  },
+  {
+    "id": "owe29-o-18",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody okręgowe",
+    "question": "Lena, księgowa w zakładzie produkcji czekolady, po stronie „Ma” konta „Należności od odbiorców” wpisała kwotę 1000 zł. Która z poniższych operacji została ujęta w ten sposób w księgach rachunkowych?",
+    "options": [
+      "wpływ z tytułu zapłaty za fakturę potwierdzony wyciągiem bankowym",
+      "wystawienie faktury pro forma",
+      "wystawienie faktury VAT za sprzedane produkty",
+      "zaksięgowanie ujemnych różnic kursowych"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Konto „Należności od odbiorców” to konto aktywów: zwiększenia zapisuje się po stronie Wn (np. wystawienie faktury sprzedaży), a zmniejszenia – po stronie Ma. Zapis po stronie Ma oznacza zmniejszenie należności, np. gdy odbiorca zapłacił fakturę (wpływ na rachunek bankowy potwierdzony wyciągiem)."
+  },
+  {
+    "id": "owe29-o-19",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody okręgowe",
+    "question": "Które z poniższych ulg i odliczeń nie występowało w podatku dochodowym od osób fizycznych w 2015 r. w Polsce?",
+    "options": [
+      "z tytułu darowizn na cele pożytku publicznego",
+      "prorodzinna",
+      "na prywatne leczenie",
+      "z tytułu krwiodawstwa"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "W 2015 r. w PIT można było odliczyć m.in. darowizny na cele pożytku publicznego, darowizny na krwiodawstwo (honorowe oddawanie krwi) i ulgę prorodzinną (na dzieci). Nie było ogólnej ulgi na prywatne leczenie – wydatki na leki i rehabilitację mogą odliczać tylko osoby niepełnosprawne (ulga rehabilitacyjna)."
+  },
+  {
+    "id": "owe29-o-20",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody okręgowe",
+    "question": "Andrzej jest zegarmistrzem i opłaca podatek dochodowy w formie karty podatkowej. Jak zmieni się wysokość płaconego przez Andrzeja podatku dochodowego, jeśli jego przychody w ostatnim miesiącu wzrosły o 10%, a koszty o 8% (stan na rok 2015)?",
+    "options": [
+      "wzrośnie",
+      "spadnie",
+      "pozostanie bez zmian",
+      "nie da się udzielić odpowiedzi bez informacji o wysokości nominalnych przychodów i kosztów"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Karta podatkowa to forma opodatkowania, w której podatek jest ustalany decyzją naczelnika urzędu skarbowego w stałej kwocie – zależnie od rodzaju działalności, liczby zatrudnionych i wielkości miejscowości – niezależnie od uzyskiwanych przychodów i kosztów. Zmiana przychodów i kosztów nie zmienia więc podatku. Od 2022 r. nowi przedsiębiorcy nie mogą już wybrać karty podatkowej."
+  },
+  {
+    "id": "owe29-o-21",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody okręgowe",
+    "question": "Emitentem obligacji w Polsce nie może być:",
+    "options": [
+      "spółka komandytowo-akcyjna",
+      "spółdzielcza kasa oszczędnościowo-kredytowa",
+      "powiat",
+      "spółka jawna"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Zgodnie z ustawą o obligacjach (2015) emitentami obligacji mogą być m.in. osoby prawne prowadzące działalność gospodarczą (w tym spółdzielnie, np. SKOK), spółki komandytowo-akcyjne i jednostki samorządu terytorialnego (gminy, powiaty, województwa). Spółka jawna nie może emitować obligacji."
+  },
+  {
+    "id": "owe29-o-22",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody okręgowe",
+    "question": "Zgodnie z analizą techniczną która z poniższych formacji jest sygnałem do sprzedaży waluty na rynku forex?",
+    "options": [
+      "podwójny szczyt",
+      "spodek",
+      "odwrócona głowa i ramiona",
+      "przebicie górnej krawędzi prostokąta"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Formacja podwójnego szczytu (podobna do litery M) w analizie technicznej sygnalizuje odwrócenie trendu wzrostowego na spadkowy – jest sygnałem sprzedaży. Spodek, odwrócona głowa z ramionami i wybicie górą z prostokąta to formacje zapowiadające wzrosty (sygnały kupna)."
+  },
+  {
+    "id": "owe29-o-23",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody okręgowe",
+    "question": "Połowa średnich wydatków ogółu gospodarstw domowych to:",
+    "options": [
+      "minimum egzystencji",
+      "minimum socjalne",
+      "relatywna granica ubóstwa",
+      "ustawowa granica ubóstwa"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Relatywna granica ubóstwa (stosowana przez GUS) to 50% średnich miesięcznych wydatków ogółu gospodarstw domowych. Minimum egzystencji (ubóstwo skrajne) i minimum socjalne wylicza Instytut Pracy i Spraw Socjalnych na podstawie koszyków dóbr, a ustawowa granica ubóstwa to kwota uprawniająca do świadczeń z pomocy społecznej."
+  },
+  {
+    "id": "owe29-o-24",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody okręgowe",
+    "question": "Kontrakt, w którym wystawca gwarantuje nabywcy możliwość dokonania w przyszłości transakcji sprzedaży instrumentu bazowego wystawcy po cenie ustalonej przez obie strony w chwili zawarcia kontraktu, to:",
+    "options": [
+      "warrant",
+      "kontrakt futures",
+      "kontrakt forward",
+      "opcja"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Opcja daje nabywcy prawo (ale nie obowiązek) do kupna (opcja call) lub sprzedaży (opcja put) instrumentu bazowego po cenie ustalonej z góry. Wystawca opcji, który otrzymał premię, musi zrealizować transakcję, jeśli nabywca z prawa skorzysta. Kontrakty futures i forward są natomiast obowiązkiem dla obu stron."
+  },
+  {
+    "id": "owe29-o-25",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody okręgowe",
+    "question": "Współczynnik wypłacalności banku obliczany jest jako:",
+    "options": [
+      "iloraz funduszy własnych oraz sumy aktywów i pozycji pozabilansowych z uwzględnieniem wag ryzyka",
+      "stosunek zysków zatrzymanych do wartości portfela kredytowego",
+      "wyrażony w procentach udział zagrożonych ryzykiem aktywów w sumie bilansowej",
+      "relacja aktywów skorygowanych o odpisy z tytułu utraty wartości do sumy kapitałów własnych"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Współczynnik wypłacalności (adekwatności kapitałowej) to iloraz funduszy własnych banku i sumy aktywów oraz pozycji pozabilansowych ważonych ryzykiem (całkowitego wymogu kapitałowego przeliczonego na aktywa ważone ryzykiem). Minimum wynosi 8%."
+  },
+  {
+    "id": "owe29-o-26",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody okręgowe",
+    "question": "Która z poniższych reakcji konsumenta uwzględniona jest w modelu AIDA?",
+    "options": [
+      "aktywacja",
+      "informacja",
+      "pożądanie",
+      "zamożność"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Model AIDA opisuje etapy reakcji klienta na reklamę: Attention (uwaga), Interest (zainteresowanie), Desire (pożądanie) i Action (działanie, zakup). Pożądanie jest trzecim etapem tego modelu."
+  },
+  {
+    "id": "owe29-o-27",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody okręgowe",
+    "question": "Korzystanie z zewnętrznych źródeł produktów i usług, które normalnie są częścią organizacji, nazywane jest:",
+    "options": [
+      "offshoring",
+      "outsourcing",
+      "netshoring",
+      "backsourcing"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Outsourcing to przekazanie firmom zewnętrznym realizacji funkcji, które wcześniej organizacja wykonywała sama (np. księgowość, IT, sprzątanie). Offshoring to przeniesienie działalności za granicę, a backsourcing – powrót do wykonywania funkcji we własnym zakresie."
+  },
+  {
+    "id": "owe29-o-28",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody okręgowe",
+    "question": "Zbieranie w wystandaryzowanych warunkach informacji o wiedzy, umiejętnościach i postawach kandydatów do pracy oraz ocena ich kompetencji podczas obserwacji to:",
+    "options": [
+      "assessment centre",
+      "coaching",
+      "karoshi",
+      "total quality management"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Assessment centre to metoda oceny kandydatów: w standardowych warunkach wykonują oni zadania symulujące pracę (ćwiczenia grupowe, prezentacje, odgrywanie ról), a wyszkoleni obserwatorzy oceniają ich wiedzę, umiejętności, postawy i kompetencje."
+  },
+  {
+    "id": "owe29-o-29",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody okręgowe",
+    "question": "Judyta kieruje działem HR w pewnym banku. Aktualnie przeprowadza rekrutację na stanowisko kasjera. Judyta uznała, że spośród aplikujących na stanowisko najlepszym kandydatem będzie atrakcyjny brunet o zielonych oczach, ponieważ będzie on odpowiednio solidny, dokładny i uczciwy. Z jakim rodzajem zniekształcenia percepcji mamy do czynienia w tym przypadku?",
+    "options": [
+      "efektem faworyzowania",
+      "efektem halo",
+      "efektem projekcji",
+      "dysonansem poznawczym"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Efekt halo polega na tym, że jedna, wyrazista cecha (np. atrakcyjny wygląd) wpływa na ocenę innych, niezwiązanych z nią cech (rzetelności, uczciwości). Efekt projekcji to przypisywanie innym własnych cech, a dysonans poznawczy – dyskomfort wynikający ze sprzeczności przekonań i zachowań."
+  },
+  {
+    "id": "owe29-o-30",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody okręgowe",
+    "question": "Wskaż właściwą kolejność procesu zarządzania strategicznego:",
+    "options": [
+      "formułowanie strategii, zdefiniowanie nowych celów, analiza SWOT, realizacja strategii",
+      "ocena aktualnej misji, formułowanie strategii, zdefiniowanie nowych celów, analiza SWOT, realizacja strategii",
+      "ocena aktualnej misji, analiza SWOT, zdefiniowanie nowych celów, formułowanie strategii, realizacja strategii",
+      "analiza SWOT, formułowanie strategii, ocena aktualnej misji, zdefiniowanie nowych celów"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Proces zarządzania strategicznego zaczyna się od oceny aktualnej misji (i celów), następnie analizuje się otoczenie i firmę (np. analiza SWOT), na tej podstawie definiuje nowe cele, formułuje strategię, a na końcu ją wdraża (i kontroluje)."
+  }
+]

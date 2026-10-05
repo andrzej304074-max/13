@@ -1,0 +1,482 @@
+[
+  {
+    "id": "owe29-s-01",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody szkolne",
+    "question": "W pewnym mieście pomimo wprowadzenia darmowej komunikacji miejskiej ludzie korzystają z niej rzadko, dojeżdżając wszędzie prywatnymi samochodami. Ten przykład:",
+    "options": [
+      "wskazuje na nieracjonalność jednostek",
+      "przeczy prawu popytu",
+      "potwierdza, że inercja jest silniejsza od wartości pieniądza",
+      "może oznaczać, że większość ludzi myśli ekonomicznie, przeprowadzając analizę korzyści i kosztów"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Racjonalny człowiek porównuje korzyści i koszty. Jazda komunikacją jest darmowa w pieniądzu, ale ma inne koszty – czas, niewygodę, brak elastyczności. Jeśli dla większości ludzi korzyści z samochodu są większe, to wybierają go zgodnie z rachunkiem korzyści i kosztów – to nie przeczy racjonalności ani prawu popytu."
+  },
+  {
+    "id": "owe29-s-02",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody szkolne",
+    "question": "Susza w Afryce Zachodniej bez wątpienia spowoduje katastrofalny spadek dochodów plantatorów kakao. To stwierdzenie:",
+    "options": [
+      "ma charakter pozytywny i jest prawdziwe",
+      "ma charakter pozytywny i jest nieprawdziwe",
+      "ma charakter normatywny i jest prawdziwe",
+      "ma charakter normatywny i jest nieprawdziwe"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Stwierdzenie pozytywne opisuje rzeczywistość (co jest lub będzie) i można je sprawdzić; normatywne zawiera ocenę (co powinno być). Susza zmniejsza zbiory kakao, a dla pojedynczych plantatorów, których plony zniszczyła, oznacza spadek dochodów – zdanie ma charakter pozytywny, a według klucza jest prawdziwe."
+  },
+  {
+    "id": "owe29-s-03",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody szkolne",
+    "question": "W obiegu okrężnym w gospodarce na rynku czynników wytwórczych:",
+    "options": [
+      "gospodarstwa domowe sprzedają czynniki wytwórcze przedsiębiorstwom",
+      "przedsiębiorstwa sprzedają czynniki wytwórcze gospodarstwom domowym",
+      "przedsiębiorstwa udzielają pożyczek gospodarstwom domowym",
+      "gospodarstwa domowe kupują dobra i usługi od przedsiębiorstw"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W modelu ruchu okrężnego gospodarstwa domowe są właścicielami czynników wytwórczych (pracy, ziemi, kapitału) i sprzedają je przedsiębiorstwom na rynku czynników, otrzymując dochody (płace, renty, procenty). Za te dochody kupują dobra i usługi od firm na rynku dóbr."
+  },
+  {
+    "id": "owe29-s-04",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody szkolne",
+    "question": "Które z poniższych stwierdzeń odnosi się do krótkiego okresu?",
+    "options": [
+      "w odpowiedzi na wzrost zamówień pracownicy walcowni stali pracują w nadgodzinach",
+      "pod Poznaniem powstały cztery nowe firmy produkujące gry komputerowe",
+      "z uwagi na dużą konkurencję liczba producentów ogórków spadła o 4%",
+      "firma z Ełku skonstruowała nowy rodzaj pociągu, który może osiągnąć prędkość 200 km/h"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W krótkim okresie przynajmniej jeden czynnik produkcji jest stały (np. wielkość huty), a firma może zmieniać tylko czynniki zmienne – np. czas pracy (nadgodziny). Powstawanie nowych firm, wychodzenie firm z rynku i nowe technologie to zjawiska długiego okresu."
+  },
+  {
+    "id": "owe29-s-05",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody szkolne",
+    "question": "W miarę wzrostu dochodu konsumenta:",
+    "options": [
+      "spada podaż dóbr podrzędnych",
+      "wzrasta podaż dóbr normalnych",
+      "wzrasta popyt na dobra podstawowe",
+      "wzrasta popyt na wszystkie dobra"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Dla dóbr normalnych (podstawowych i luksusowych) wzrost dochodu konsumenta zwiększa popyt, a dla dóbr podrzędnych – zmniejsza go. Dochód konsumenta wpływa na popyt, a nie na podaż, i nie rośnie popyt na wszystkie dobra."
+  },
+  {
+    "id": "owe29-s-06",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody szkolne",
+    "question": "W krótkim okresie w przedsiębiorstwie działającym na rynku konkurencji doskonałej wielkość produkcji zapewniającej maksymalny zysk lub minimalną stratę jest wyznaczona przez:",
+    "options": [
+      "przecięcie krzywej popytu z krzywą przeciętnego kosztu całkowitego",
+      "maksimum produktu przeciętnego",
+      "przecięcie krzywej przeciętnego kosztu całkowitego i krzywej przychodu krańcowego",
+      "maksymalną odległość pomiędzy krzywą przychodu całkowitego a krzywą kosztu całkowitego"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Zysk = przychód całkowity − koszt całkowity, więc jest maksymalny (lub strata minimalna) tam, gdzie pionowa odległość między krzywą przychodu całkowitego a krzywą kosztu całkowitego jest największa. To ten sam punkt, w którym utarg krańcowy równa się kosztowi krańcowemu."
+  },
+  {
+    "id": "owe29-s-07",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody szkolne",
+    "question": "Istotna różnica pomiędzy firmą działającą na rynku konkurencji monopolistycznej a firmą działającą w warunkach monopolu polega na tym, że:",
+    "options": [
+      "pierwsza z nich ma doskonale elastyczną krzywą popytu",
+      "pierwsza z nich w długim okresie nie może produkować przy minimalnych kosztach przeciętnych",
+      "druga z nich ma doskonale nieelastyczną krzywą popytu",
+      "druga z nich nie dąży do maksymalizacji zysku"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "W konkurencji monopolistycznej swobodne wejście nowych firm sprowadza w długim okresie zysk ekonomiczny do zera, a firma produkuje w punkcie styczności ujemnie nachylonej krzywej popytu z krzywą kosztu przeciętnego – czyli przed minimum kosztów przeciętnych (nadwyżka mocy produkcyjnych). Obie firmy mają ujemnie nachyloną krzywą popytu i maksymalizują zysk."
+  },
+  {
+    "id": "owe29-s-08",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody szkolne",
+    "question": "W krótkim okresie monopolista absolutny:",
+    "options": [
+      "zawsze osiąga dodatni zysk ekonomiczny",
+      "zawsze osiąga przynajmniej zysk normalny",
+      "zawsze przynosi straty",
+      "może albo osiągać zysk normalny lub ekonomiczny, albo przynosić straty"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Monopolista nie ma gwarancji zysku: jeśli popyt jest słaby lub koszty wysokie, cena może nie pokrywać kosztu przeciętnego i firma ponosi stratę. W zależności od położenia krzywych popytu i kosztów może więc osiągać zysk ekonomiczny, normalny albo stratę."
+  },
+  {
+    "id": "owe29-s-09",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody szkolne",
+    "question": "Jak brzmi podstawowy argument za występowaniem nierówności dochodowych?",
+    "options": [
+      "istnienie ludzi bogatych poprawia sytuację na rynku pracy, ponieważ liczebność tej grupy jest mniejsza niż osób niezamożnych",
+      "nierówności dochodowe są kluczowe dla zachowania motywacji i stanowią „wynagrodzenie” za zróżnicowaną produktywność ludzi",
+      "występowanie grupy osób bardzo zamożnych jest pożądane z uwagi na ich oddziaływanie na wzorce konsumpcyjne w całym społeczeństwie",
+      "zakupy dużej ilości dóbr luksusowych przez bogatych, poprzez efekt ekonomii skali, prowadzą do stopniowego obniżenia cen tych dóbr, dzięki czemu mogą sobie na nie pozwolić również osoby mniej zamożne"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Główny argument za nierównościami dochodowymi to bodźce: różne dochody wynagradzają różną produktywność, wysiłek, kwalifikacje i ryzyko, a więc motywują do pracy, nauki i przedsiębiorczości. Pełne zrównanie dochodów osłabiłoby te bodźce."
+  },
+  {
+    "id": "owe29-s-10",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody szkolne",
+    "question": "Produkt krajowy brutto prezentuje zagregowaną wartość wytworzonych dóbr i usług finalnych wyrażoną w:",
+    "options": [
+      "procentach",
+      "punktach procentowych",
+      "jednostkach naturalnych",
+      "walucie danego kraju"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "PKB to wartość dóbr i usług finalnych wytworzonych w kraju, wyrażona w pieniądzu – w walucie danego kraju (np. w złotych). Dopiero dzięki wycenie w pieniądzu można zsumować tak różne produkty. Procenty i punkty procentowe opisują np. tempo zmian PKB."
+  },
+  {
+    "id": "owe29-s-11",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody szkolne",
+    "question": "Jeśli w kraju występuje deflacja, to:",
+    "options": [
+      "wszystkie ceny spadają, choć w różnym tempie",
+      "wszystkie ceny spadają w tym samym tempie",
+      "przeciętny poziom cen obniża się, choć niektóre ceny rosną",
+      "dochody realne gospodarstw domowych spadają"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Deflacja to spadek przeciętnego (ogólnego) poziomu cen, mierzonego np. wskaźnikiem CPI. Nie oznacza, że tanieją wszystkie towary – część cen może rosnąć, ale średnio ceny spadają. Przy niezmienionych dochodach nominalnych dochody realne rosną."
+  },
+  {
+    "id": "owe29-s-12",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody szkolne",
+    "question": "Przyjmuje się, że wartość krańcowej skłonności do oszczędzania gospodarstw domowych wynosi:",
+    "options": [
+      "mniej niż 0",
+      "od 0 do 1",
+      "więcej niż jeden",
+      "dowolną wartość dodatnią, ale zawsze nie większą niż wartość krańcowej skłonności do konsumpcji"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Krańcowa skłonność do oszczędzania (MPS) mówi, jaką część dodatkowej złotówki dochodu gospodarstwa oszczędzają. Zakłada się, że wynosi od 0 do 1 – część dochodu jest konsumowana, a część oszczędzana (MPS + MPC = 1)."
+  },
+  {
+    "id": "owe29-s-13",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody szkolne",
+    "question": "Jeśli w gospodarce, która znajduje się w stanie pełnego zatrudnienia, nastąpi spadek zagregowanego popytu, to zgodnie z:",
+    "options": [
+      "ekonomią keynesowską można przewidywać spadek zatrudnienia i PKB",
+      "ekonomią keynesowską można przewidywać spadek cen i płac",
+      "ekonomią klasyczną można przewidywać spadek zatrudnienia i PKB",
+      "ekonomią klasyczną można przewidywać spadek cen i PKB"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W ujęciu keynesowskim płace i ceny są w krótkim okresie sztywne, więc spadek popytu globalnego zmniejsza produkcję (PKB) i zatrudnienie. W ujęciu klasycznym ceny i płace są elastyczne – spadek popytu obniża ceny i płace, a PKB i zatrudnienie pozostają na poziomie pełnego zatrudnienia."
+  },
+  {
+    "id": "owe29-s-14",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody szkolne",
+    "question": "Recesja w gospodarce przyczynia się do powiększania długu publicznego poprzez:",
+    "options": [
+      "spadek dochodu narodowego",
+      "wzrost stóp procentowych",
+      "aprecjację waluty krajowej",
+      "wzrost oszczędności krajowych"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "W recesji spada dochód narodowy, a wraz z nim wpływy podatkowe, rosną zaś wydatki (np. na zasiłki dla bezrobotnych). Rośnie deficyt budżetowy, który trzeba sfinansować nowym długiem – dług publiczny się powiększa."
+  },
+  {
+    "id": "owe29-s-15",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody szkolne",
+    "question": "Kto realizuje założenia polityki pieniężnej w Polsce?",
+    "options": [
+      "Ministerstwo Finansów",
+      "sejm",
+      "Rada Ministrów",
+      "Narodowy Bank Polski"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Politykę pieniężną w Polsce prowadzi Narodowy Bank Polski: Rada Polityki Pieniężnej ustala jej założenia i stopy procentowe, a NBP realizuje je, m.in. przez operacje otwartego rynku. Ministerstwo Finansów i rząd prowadzą politykę fiskalną."
+  },
+  {
+    "id": "owe29-s-16",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody szkolne",
+    "question": "Analityk ocenia sytuację ekonomiczną spółki. Potrzebuje informacji na temat wartości półproduktów i produktów w toku, zysków nadzwyczajnych oraz wydatków na spłaty zaciągniętych kredytów i pożyczek. Powyższe dane znajdzie:",
+    "options": [
+      "w bilansie oraz rachunku zysków i strat",
+      "w bilansie i sprawozdaniu z przepływów pieniężnych",
+      "w bilansie, rachunku zysków i strat oraz sprawozdaniu z przepływów pieniężnych",
+      "wyłącznie w dokumentach źródłowych spółki (fakturach, wyciągach bankowych itp.)"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Wartość półproduktów i produktów w toku (zapasy) jest w bilansie, zyski nadzwyczajne – w rachunku zysków i strat (wg ówczesnych przepisów), a wydatki na spłatę kredytów i pożyczek – w rachunku przepływów pieniężnych (działalność finansowa). Potrzebne są więc wszystkie trzy sprawozdania."
+  },
+  {
+    "id": "owe29-s-17",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody szkolne",
+    "question": "Które z poniższych stwierdzeń jest nieprawdziwe?",
+    "options": [
+      "postępowanie upadłościowe może być wszczęte wobec firmy, która jest zyskowna",
+      "firma może przynosić straty i być wypłacalna",
+      "wniosek o ogłoszenie upadłości może złożyć firma-dłużnik albo każdy z jej wierzycieli",
+      "każda upadłość musi skończyć się likwidacją firmy"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Upadłość nie musi oznaczać likwidacji – w postępowaniu upadłościowym lub restrukturyzacyjnym możliwe jest zawarcie układu z wierzycielami, dzięki któremu firma działa dalej. Prawdziwe są pozostałe zdania: upadłość dotyczy niewypłacalności, a nie braku zysku, więc firma zyskowna może być niewypłacalna, a stratna – wypłacalna."
+  },
+  {
+    "id": "owe29-s-18",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody szkolne",
+    "question": "Wskaż prawdziwe stwierdzenie dotyczące maklera giełdowego w Polsce:",
+    "options": [
+      "warunkiem otrzymania licencji maklerskiej jest zatrudnienie na stanowisku maklera w biurze maklerskim lub towarzystwie funduszy inwestycyjnych",
+      "licencje maklerskie wymagają okresowego odnawiania",
+      "maklerzy mogą wykorzystywać poufne informacje na własny użytek, o ile ich nie upubliczniają",
+      "maklerem nie może zostać osoba uznana prawomocnym orzeczeniem za winną przestępstwa skarbowego"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Maklerem papierów wartościowych może zostać m.in. osoba, która ma pełną zdolność do czynności prawnych, nie była prawomocnie skazana za przestępstwa przeciwko obrotowi gospodarczemu czy skarbowe i zdała egzamin przed komisją KNF. Licencja jest bezterminowa, zatrudnienie nie jest warunkiem jej uzyskania, a wykorzystywanie informacji poufnych jest zakazane."
+  },
+  {
+    "id": "owe29-s-19",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody szkolne",
+    "question": "Nadrzędnym celem działalności Narodowego Banku Polskiego jest utrzymanie stabilnego:",
+    "options": [
+      "poziomu cen",
+      "poziomu stóp procentowych",
+      "kursu złotego względem głównych walut",
+      "poziomu bazy monetarnej w długim okresie"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Zgodnie z art. 227 Konstytucji RP i ustawą o NBP podstawowym celem NBP jest utrzymanie stabilnego poziomu cen (cel inflacyjny 2,5% ± 1 pkt proc.), przy jednoczesnym wspieraniu polityki gospodarczej rządu, o ile nie ogranicza to tego celu."
+  },
+  {
+    "id": "owe29-s-20",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody szkolne",
+    "question": "Do bezpośrednich instrumentów polityki pieniężnej zaliczamy:",
+    "options": [
+      "operacje otwartego rynku",
+      "stopę kredytu lombardowego",
+      "rezerwy obowiązkowe",
+      "pułapy kredytowe"
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Bezpośrednie instrumenty polityki pieniężnej to administracyjne nakazy i limity, np. pułapy (limity) kredytowe czy administracyjne ustalanie oprocentowania. Operacje otwartego rynku, stopa kredytu lombardowego i rezerwa obowiązkowa to instrumenty pośrednie (rynkowe), które działają przez wpływ na płynność i koszt pieniądza."
+  },
+  {
+    "id": "owe29-s-21",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody szkolne",
+    "question": "Które z poniższych wskaźników wykorzystuje się do oceny nierówności dochodowych?",
+    "options": [
+      "George’a Washingtona",
+      "Chudiniego",
+      "Robin Hooda",
+      "kurtozy powszechnej"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Indeks Robin Hooda (Hoovera) pokazuje, jaką część łącznych dochodów trzeba by przenieść od bogatszych do biedniejszych, aby wszyscy mieli równe dochody. Do pomiaru nierówności służą też współczynnik Giniego i krzywa Lorenza. Pozostałe „wskaźniki” nie istnieją."
+  },
+  {
+    "id": "owe29-s-22",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody szkolne",
+    "question": "Student posiada konto oszczędnościowe, na którym środki są oprocentowane w skali roku na 6%, a odsetki są kapitalizowane półrocznie i nie są opodatkowane. Na koniec każdego półrocza student wpłaca 4000 zł. Ile środków zgromadzi student po 2 latach?",
+    "options": [
+      "16 735 zł",
+      "17 237 zł",
+      "17 498 zł",
+      "18 548 zł"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Stopa na półrocze: 6% / 2 = 3%. Wpłaty po 4000 zł na koniec każdego z 4 półroczy: 4000 · 1,03³ + 4000 · 1,03² + 4000 · 1,03 + 4000 = 4370,91 + 4243,60 + 4120,00 + 4000 ≈ 16 735 zł (wzór na wartość przyszłą renty: 4000 · (1,03⁴ − 1) / 0,03)."
+  },
+  {
+    "id": "owe29-s-23",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody szkolne",
+    "question": "Ile progów podatkowych występuje w podatku dochodowym od osób fizycznych dla dochodów opodatkowanych na zasadach ogólnych (stan na rok 2015)?",
+    "options": [
+      "jeden",
+      "dwa",
+      "trzy",
+      "pięć"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "W 2015 r. w skali podatkowej PIT obowiązywały dwie stawki – 18% i 32% (powyżej 85 528 zł dochodu), co w kluczu określono jako dwa progi. Od 2022 r. stawki wynoszą 12% i 32%."
+  },
+  {
+    "id": "owe29-s-24",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody szkolne",
+    "question": "Podmiot, który zobowiązuje się do pokrycia określonej w umowie części odszkodowań i świadczeń wypłaconych z umów ubezpieczenia zawartych przez ubezpieczyciela, to:",
+    "options": [
+      "broker ubezpieczeniowy",
+      "komplementariusz",
+      "reasekurator",
+      "underwriter"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Reasekurator to zakład ubezpieczeń, który przejmuje od ubezpieczyciela część ryzyka – zobowiązuje się pokryć określoną część odszkodowań i świadczeń wypłacanych przez ubezpieczyciela. Broker jest pośrednikiem działającym w imieniu klienta, a underwriter ocenia ryzyko i decyduje o przyjęciu go do ubezpieczenia."
+  },
+  {
+    "id": "owe29-s-25",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody szkolne",
+    "question": "Wskaźnik płynności bieżącej hipermarketu wzrośnie, gdy:",
+    "options": [
+      "zwiększą się zapasy",
+      "zwiększą się zobowiązania",
+      "zmniejszą się należności",
+      "firma wpłaci utarg z kasy na rachunek bankowy"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Wskaźnik płynności bieżącej = aktywa obrotowe / zobowiązania krótkoterminowe. Wzrost zapasów (przy pozostałych pozycjach bez zmian) zwiększa aktywa obrotowe, więc wskaźnik rośnie. Wzrost zobowiązań lub spadek należności go obniża, a wpłata utargu z kasy do banku zmienia tylko strukturę aktywów obrotowych."
+  },
+  {
+    "id": "owe29-s-26",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody szkolne",
+    "question": "Pięciu kolegów ze szkoły planuje rozpocząć działalność gospodarczą w formie spółki z ograniczoną odpowiedzialnością. Gdzie zarejestrują spółkę?",
+    "options": [
+      "w urzędzie gminy właściwym miejscowo ze względu na siedzibę spółki",
+      "w urzędzie skarbowym",
+      "w wydziale gospodarczym sądu rejonowego",
+      "w rejestrze prowadzonym przez ministra gospodarki"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Spółkę z o.o. rejestruje się w Krajowym Rejestrze Sądowym, prowadzonym przez sądy rejonowe (wydziały gospodarcze KRS). Do CEIDG, prowadzonej przez ministra gospodarki, wpisuje się jednoosobowych przedsiębiorców i wspólników spółek cywilnych, a nie spółki z o.o."
+  },
+  {
+    "id": "owe29-s-27",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody szkolne",
+    "question": "Które z niżej wymienionych narzędzi nie jest wykorzystywane w public relations?",
+    "options": [
+      "mailing z aktualną ofertą firmy do dotychczasowych klientów",
+      "lobbing",
+      "działalność rzecznika prasowego",
+      "zarządzanie kryzysowe"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Public relations to budowanie wizerunku i relacji organizacji z otoczeniem: działalność rzecznika prasowego, lobbing, zarządzanie kryzysowe, sponsoring. Wysyłanie klientom aktualnej oferty handlowej (mailing) to marketing bezpośredni (promocja sprzedaży), a nie PR."
+  },
+  {
+    "id": "owe29-s-28",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody szkolne",
+    "question": "Przykładem relacji B2C jest:",
+    "options": [
+      "system automatycznego potwierdzania zamówień pomiędzy dostawcą komponentów a producentem",
+      "wymiana pomiędzy firmami danych o moralności płatniczej klientów (konsumentów)",
+      "usługa druku na żądanie wybranych zdjęć z portali społecznościowych dla gimnazjalistów",
+      "usługa archiwizacji danych dla instytucji bankowych"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "B2C (business-to-consumer) to relacja firma–konsument, np. usługa druku zdjęć dla uczniów. Relacje między firmami (dostawca–producent, wymiana danych między firmami, usługi dla banków) to B2B (business-to-business)."
+  },
+  {
+    "id": "owe29-s-29",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody szkolne",
+    "question": "Styl zarządzania zmierzający do pobudzenia wewnętrznej inicjatywy do działania, wykształcenia twórczego procesu rozwiązywania problemów oraz stymulowania konstruktywnych form współzawodnictwa to:",
+    "options": [
+      "zarządzanie przez wyjątki",
+      "zarządzanie przez pobudzanie",
+      "zarządzanie przez konflikt",
+      "zarządzanie przez wartości"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Zarządzanie przez konflikt zakłada, że kontrolowany, konstruktywny konflikt i współzawodnictwo pobudzają inicjatywę pracowników, twórcze rozwiązywanie problemów i rozwój organizacji. Zarządzanie przez wyjątki dotyczy reagowania tylko na odchylenia od planów."
+  },
+  {
+    "id": "owe29-s-30",
+    "type": "single",
+    "edition": "XXIX OWE (2015/2016), zawody szkolne",
+    "question": "Strategia spijania śmietanki powinna być stosowana:",
+    "options": [
+      "w branży spożywczej dla produktów szybko zbywalnych (FMCG)",
+      "dla innowacyjnych produktów wprowadzanych na rynek",
+      "do blokowania wejścia konkurentów na rynek",
+      "w długim okresie w celu przejęcia klientów firm, które zawyżają ceny"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Strategia „zbierania śmietanki” (skimming) polega na wprowadzeniu nowego, innowacyjnego produktu po wysokiej cenie, by zarobić na klientach gotowych zapłacić najwięcej (np. pasjonatach nowinek), a następnie stopniowym obniżaniu ceny. Wymaga produktu wyróżniającego się i chwilowego braku konkurencji."
+  }
+]
