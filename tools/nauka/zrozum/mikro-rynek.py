@@ -315,7 +315,7 @@ LESSONS = [
       ["Cena maksymalna", "Cena minimalna", "Niedobór (rynkowy)", "Nadwyżka (rynkowa)"],
       [S("OpenStax, Principles of Economics 3e, 3.4 Price Ceilings and Price Floors", OS3 + "3-4-price-ceilings-and-price-floors", D),
        S("URE – taryfy na sprzedaż energii elektrycznej na 2026 r.", "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/13002,Prezes-Urzedu-Regulacji-Energetyki-zatwierdzil-taryfy-na-sprzedaz-i-dystrybucje-.html", D),
-       S("Sejm RP, druk nr 841 – uzasadnienie projektu (mechanizm ceny maksymalnej i Fundusz Wypłaty Różnicy Ceny)", "https://api.sejm.gov.pl/sejm/term10/prints/841/841-uzasadnienie.docx", D),
+       S("Zarządca Rozliczeń S.A. – rekompensaty dla sprzedawców stosujących cenę maksymalną (FAQ)", "https://www.zrsa.pl/prad/faq-prad/", D),
        S("Rozporządzenie RM w sprawie minimalnego wynagrodzenia w 2026 r., Dz.U. 2025 poz. 1242", "https://dziennikustaw.gov.pl/D2025000124201.pdf", D)],
       explain=[
           K("Cena maksymalna działa tylko poniżej równowagi",
