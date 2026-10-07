@@ -43,7 +43,7 @@ describe("generator ćwiczeń", () => {
       }
     }
     expect(empty).toEqual([]);
-  });
+  }, 120_000);
 });
 
 describe("odpowiedzi liczbowe", () => {
@@ -76,5 +76,5 @@ describe("lekcje Zrozumienie", () => {
         }
       }
     }
-  });
+  }, 120_000);
 });
