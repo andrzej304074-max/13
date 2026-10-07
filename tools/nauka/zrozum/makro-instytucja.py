@@ -7,7 +7,8 @@ S294 = S("OpenStax, Principles of Economics 3e, 29.4 Exchange Rate Policies", OS
 IMF = S("IMF – List of Members (daty przystąpienia)", "https://www.imf.org/external/np/sec/memdir/memdate.htm", D)
 WTO = S("WTO – Principles of the trading system", "https://www.wto.org/english/thewto_e/whatis_e/tif_e/fact2_e.htm", D)
 BIS = S("BIS – About BIS", "https://www.bis.org/about/index.htm", D)
-SECO = S("SECO – Organisation for Economic Co-operation and Development (OECD)", "https://www.seco.admin.ch/seco/en/home/Aussenwirtschaftspolitik_Wirtschaftliche_Zusammenarbeit/internationale_organisationen/oecd.html", D)
+SECO = S("Ministerstwo Nauki (gov.pl) – OECD: członkostwo Polski od 22.11.1996", "https://www.gov.pl/web/nauka/oecd-organizacja-wspolpracy-gospodarczej-i-rozwoju2", D)
+DEMA = S("Demagog – OECD liczy 38 państw (Kostaryka – maj 2021)", "https://demagog.org.pl/wypowiedzi/czy-polska-moglaby-zablokowac-akcesje-rosji-i-chin-do-oecd/", D)
 ILO = S("ILO – About the ILO", "https://www.ilo.org/about-ilo", D)
 S211 = S("OpenStax, Principles of Economics 3e, 21.1 How Economists Define and Compute Unemployment Rate", OS3 + "21-1-how-economists-define-and-compute-unemployment-rate", D)
 
@@ -94,7 +95,7 @@ LESSONS = [
     L(2, "OECD, OPEC, MOP, WEF i GUS",
       "Rozumieć rolę OECD jako forum krajów rozwiniętych, OPEC jako kartelu naftowego, MOP jako twórcy standardów pracy, WEF jako forum dyskusji oraz GUS jako źródła statystyki publicznej.",
       ["OECD", "OPEC", "Międzynarodowa Organizacja Pracy (MOP)", "Światowe Forum Ekonomiczne (WEF)", "Główny Urząd Statystyczny (GUS)"],
-      [SECO, ILO, S211],
+      [SECO, DEMA, ILO, S211],
       explain=[
           K("OECD",
             "Organizacja Współpracy Gospodarczej i Rozwoju (od 1961 r., Paryż) – forum 38 krajów rozwiniętych, które porównują polityki, publikują analizy i rekomendacje (np. badanie PISA, raporty gospodarcze, standardy podatkowe). Polska jest członkiem od 22 listopada 1996 r."),

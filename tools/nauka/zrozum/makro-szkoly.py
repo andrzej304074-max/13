@@ -13,7 +13,7 @@ NOB76 = S("Nobel Prize – The Prize in Economic Sciences 1976 (Milton Friedman)
 NOB95 = S("Nobel Prize – The Prize in Economic Sciences 1995 (Robert E. Lucas Jr.)", "https://www.nobelprize.org/prizes/economic-sciences/1995/summary/", D)
 NOB09 = S("Nobel Prize – The Prize in Economic Sciences 2009 (Ostrom, Williamson)", "https://www.nobelprize.org/prizes/economic-sciences/2009/summary/", D)
 NOB74 = S("Nobel Prize – The Prize in Economic Sciences 1974 (Myrdal, Hayek)", "https://www.nobelprize.org/prizes/economic-sciences/1974/summary/", D)
-KONST = S("Konstytucja RP, art. 20 (społeczna gospodarka rynkowa) – ISAP", "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=wdu19970780483", D)
+KONST = S("Konstytucja RP, art. 20 (społeczna gospodarka rynkowa) – tekst, Dz.U. 1997 nr 78 poz. 483 (Sejm, ELI)", "https://api.sejm.gov.pl/eli/acts/DU/1997/483/text.pdf", D)
 
 LESSONS = [
     L(1, "Od merkantylizmu do klasyków",

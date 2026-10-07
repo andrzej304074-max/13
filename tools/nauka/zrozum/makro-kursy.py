@@ -177,7 +177,7 @@ LESSONS = [
     L(3, "Parytety: siły nabywczej i stóp procentowych",
       "Rozumieć teorię parytetu siły nabywczej (bezwzględnego i względnego) oraz parytet stóp procentowych i liczyć na ich podstawie kursy.",
       ["Parytet siły nabywczej (PPP) – teoria kursu", "Parytet stóp procentowych", "Kurs nominalny i realny"],
-      [S291, S293, S("OpenStax, Principles of Economics 3e, 19.5 Comparing GDP among Countries", OS3 + "19-5-comparing-gdp-among-countries", D)],
+      [S291, S293, S("OpenStax, Principles of Economics 3e, 19.4 Comparing GDP among Countries", OS3 + "19-4-comparing-gdp-among-countries", D)],
       explain=[
           K("Prawo jednej ceny i PPP",
             "Jeśli handel jest swobodny, ten sam towar powinien kosztować tyle samo w obu krajach po przeliczeniu walut (prawo jednej ceny). Bezwzględny PPP: kurs = relacja poziomów cen koszyków. Przykład: indeks Big Maca porównuje ceny jednej kanapki na świecie.",

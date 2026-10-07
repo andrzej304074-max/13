@@ -3,7 +3,11 @@
 
 Użycie: python3 -I tools/nauka/check_links.py data/nauka/zrozum.json
 """
-import json, sys, urllib.request
+import json, sys, urllib.parse, urllib.request
+
+# Serwisy, które odpowiadają 403 automatom (ochrona przed botami), a w przeglądarce działają –
+# sprawdzone ręcznie; 403 z tych domen nie jest błędem.
+BOT_403 = ("www.imf.org", "press.princeton.edu", "www.mofa.go.jp", "www.oecd.org")
 
 content = json.load(open(sys.argv[1]))
 urls = sorted({s["u"] for c in content.values() for s in c["sources"]})
@@ -18,6 +22,8 @@ for u in urls:
             code = getattr(ex, "code", type(ex).__name__)
         if code == 200 or isinstance(code, int) and 400 <= code < 500:
             break
+    if code == 403 and urllib.parse.urlsplit(u).hostname in BOT_403:
+        continue
     if code != 200:
         bad += 1
         print(f"{code}  {u}")
