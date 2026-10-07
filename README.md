@@ -63,6 +63,38 @@ Przy starcie testu można wybrać rodzaj pytań (ręczne, automatyczne lub oba) 
 - `data/slownik/manual.json` – pytania pisane ręcznie, składane z `tools/slownik/manual/m*.py`:
   `python3 -I tools/slownik/build_manual.py tools/slownik/manual data/slownik`.
 
+## Nauka (zakładka „Nauka” – kurs w stylu Duolingo)
+
+Kurs zbudowany z haseł słownika (`docs/slownik-owe.pdf`) i wszystkich banków pytań:
+
+- **7 tematów:** Mikroekonomia, Makroekonomia, Polityka gospodarcza, Podstawy finansów, Finanse przedsiębiorstw,
+  Zarządzanie oraz temat przewodni „Gospodarka wobec wyzwań demograficznych”.
+- **Hierarchia:** 84 działy → 296 lekcji (po 1–6 haseł) → 1184 pod-lekcje.
+- **Rodzaje treści** (filtr na stronie tematu): pojęcia, wzory, osoby, instytucje, daty, przepisy.
+- **Pod-lekcje:** 1. Poznaj, 2. Ćwicz, 3. Utrwal, 4. Sprawdzian (pytania olimpijskie i słownikowe dopasowane do haseł lekcji).
+- **Ćwiczenia:** nowe hasło, wybór hasła lub opisu, łączenie par, uzupełnianie luk, prawda/fałsz,
+  wpisywanie (tolerancja polskich znaków i literówek), układanie chronologii, wzory, fiszki, pytania testowe.
+  Błędnie rozwiązane ćwiczenie wraca na koniec pod-lekcji.
+- **Bez blokad:** każdy temat, lekcja i pod-lekcja jest dostępna od razu.
+- **Grywalizacja:**
+  - XP: 10 za poprawną odpowiedź, +5 co 5 z rzędu, +10 za ukończenie, +10 bez błędu;
+  - seria dni i dzienny cel XP (zapamiętany w przeglądarce);
+  - korony 0–5 dla lekcji: koronę daje zaliczenie (≥ 80%) każdej z 4 pod-lekcji, wyższy poziom oznacza więcej wpisywania.
+- **Powtórka słabych haseł:** hasła ze skutecznością poniżej 80%.
+- **Statystyki nauki** (`/nauka/statystyki`): osobne od testów. Pokazują skuteczność, czas pod-lekcji i lekcji,
+  podział na tematy, działy, lekcje, typy ćwiczeń i rodzaje treści, wykres dzienny i najsłabsze hasła.
+  Filtry: temat, dział, lekcja, pod-lekcja, rodzaj treści, typ ćwiczenia, okres.
+
+Postęp i statystyki są wspólne dla wszystkich i zapisywane w tabelach `learn_sessions` i `learn_answers`.
+
+Program kursu (`data/nauka/course.json`) generuje skrypt:
+
+```bash
+python3 -I tools/nauka/build_course.py tools/slownik/glossary . data/nauka
+```
+
+Przypisanie haseł do tematów i działów jest w `tools/nauka/curriculum.py`.
+
 ## Uruchomienie lokalne
 
 ```bash

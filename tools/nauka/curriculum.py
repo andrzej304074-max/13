@@ -1,0 +1,166 @@
+# -*- coding: utf-8 -*-
+"""Program kursu „Nauka”: tematy, działy (z regułami przypisania haseł) i rodzaje treści.
+
+Hasło trafia do tematu według działu słownika (SECTION_TOPIC) lub reguł TOPIC_RULES (dla działów 2–6, 9–14),
+a w temacie – do pierwszego działu (UNITS), którego wzorzec pasuje do tytułu hasła. Hasła bez dopasowania
+trafiają do działu oznaczonego jako „reszta” (ostatni wzorzec ".*").
+"""
+
+TOPICS = [
+    ("mikro", "Mikroekonomia", "🛒", "#2563eb"),
+    ("makro", "Makroekonomia", "🌍", "#7c3aed"),
+    ("polityka", "Polityka gospodarcza", "🏛️", "#dc2626"),
+    ("finanse", "Podstawy finansów", "🏦", "#059669"),
+    ("firma", "Finanse przedsiębiorstw", "📊", "#d97706"),
+    ("zarzadzanie", "Zarządzanie", "🧭", "#0891b2"),
+    ("demografia", "Temat przewodni: Gospodarka wobec wyzwań demograficznych", "👪", "#db2777"),
+]
+
+KINDS = [
+    ("pojecie", "Pojęcia"),
+    ("wzor", "Wzory"),
+    ("osoba", "Osoby"),
+    ("instytucja", "Instytucje"),
+    ("data", "Daty"),
+    ("przepis", "Przepisy"),
+]
+
+# --- działy pojęciowe w tematach: (id, tytuł, [wzorce regex dopasowywane do tytułu hasła, małe litery]) ---
+UNITS = {
+    "mikro": [
+        ("mikro-podstawy", "Podstawy ekonomii i wybór", [r"^ekonomia$|^ekonomia (pozytywna|normatywna)|mikroekonomia|rzadko|^koszt alternatywny|możliwości produkcyjnych|^czynniki wytwórcze|ceteris|dobro wolne|dobro ekonomiczne|dobro konsumpcyjne|problem ekonomiczny|model, teoria|metoda naukowa|spory ekonomist|podział pracy|homo oeconomicus|gospodarka rynkowa, central|niewidzialna|laissez|ruchu okrężnego|punkt procentowy|agregacja|pieniądz a czas|mezoekonomia|branża|metoda idealizacji"]),
+        ("mikro-rynek", "Popyt, podaż i równowaga", [r"^popyt$|prawo popytu|wielkość popytu|^podaż|prawo podaży|równowaga rynkowa|nadwyżka \(rynkowa|niedobór|cena maksymalna|cena minimalna|popyt indywidualny|ceny względne|pajęczyny|subsydium|ceny jako sygnały|incydencja|harbergera|zbędna strata|nadwyżka konsumenta|nadwyżka producenta|mechanizm"]),
+        ("mikro-elastycznosc", "Elastyczność i rodzaje dóbr", [r"elastyczn|substytuty|komplementarne|dobro normalne|dobro luksusowe|niższego rzędu|giffena|veblena|owczego|snoba|dobra pozycyjne"]),
+        ("mikro-konsument", "Teoria konsumenta", [r"użyteczn|gossena|obojętności|stopa substytucji \(mrs|neutralne|budżetowego|engla|cena–konsumpcja|preferencj|slutsk|paradoks wody|ryzyko, niepewność"]),
+        ("mikro-produkcja", "Produkcja i koszty", [r"produkcja \(funkcja|krótki okres|produkt całkowity|malejących przychodów|izokwanta|izokoszta|mrts|optimum producenta|cobba|przychody \(efekty\) skali|korzyści skali|minimalna skala|koszt|optimum techniczne|utarg|zysk|próg rentowności|próg zamknięcia|ścieżka ekspansji|fazy \(stadia|cele przedsiębiorstwa|neoklasyczna teoria przedsiębiorstwa"]),
+        ("mikro-struktury", "Struktury rynku i strategie firm", [r"struktura rynku|konkurencja|krzywa podaży firmy|monopol|bariery wejścia|dyskryminacja|oligopol|duopol|bertranda|cournota|sweezy|kartel|lider cenowy|monopson|teoria gier|strategia dominująca|nasha|więźnia|gry powtarzalne|zaporowe|lernera|koncentracji rynku|stackelberga|kontestowalne|nadwyżka mocy|formy monopolizacji|ekonomia przemysłowa|supergwiazd"]),
+        ("mikro-czynniki", "Rynki czynników produkcji", [r"popyt pochodny|vmpl|krańcowy koszt pracy|podaż pracy|renta ekonomiczna|dochód transferowy|renta gruntowa|kapitał ludzki|kapitał społeczny|amoralny|płaca nominalna|związki zawodowe|kapitał jako czynnik|krańcowej produktywności|zysk jako dochód"]),
+        ("mikro-zawodnosci", "Efektywność, zawodności rynku i państwa", [r"pareto|zawodność|efekty zewnętrzne|koszt społeczny|internalizacja|pigou|coase|dobra publiczne|dobra mieszane|dobra prywatne|gapowicza|wspólnego pastwiska|asymetria informacji|selekcja|pokusa|pryncypała|sygnalizacja|efektywność alokacyjna|równowaga ogólna|regulacja|nacjonalizacja|pogoń za rentą|sprawiedliwego podziału|przełowienie|kumoterstwo|oportunizm|libertarianizm"]),
+        ("mikro-behawioralna", "Ekonomia behawioralna i nowe zjawiska", [r".*"]),
+    ],
+    "makro": [
+        ("makro-pkb", "Rachunek narodowy i PKB", [r"makroekonomia|pkb|produkt narodowy|dochód narodowy|dochód osobisty|deflator|wartość dodana|metody liczenia|ograniczenia pkb|hdi|szara strefa|rachunków narodowych|bogactwo narodowe|okrężnego obiegu"]),
+        ("makro-popyt", "Konsumpcja, inwestycje i mnożnik", [r"konsumpcj|skłonność|hipoteza|efekt demonstracji|zapobiegliwości|inwestycje|akcelerator|tobina|oszczędności narodowe|odpływy|wydatki autonomiczne|mnożnik|luka inflacyjna|model keynesa"]),
+        ("makro-isldas", "IS-LM, AD-AS i równowaga", [r"is-lm|krzywa is|krzywa lm|pułapka|wypychania|zagregowan|efekt majątkowy|efekt pigou|szok podażowy|prawo saya|ad-as|podaży lucasa|produkt potencjalny|przegrzanie"]),
+        ("makro-rynekpracy", "Rynek pracy i bezrobocie", [r"rynek pracy|kontraktów implicytnych|ludność aktywna|bezroboc|aktywności zawodowej|nairu|histereza|insider|płace efektywnościowe|bumelowania|beveridge|phillipsa|okuna"]),
+        ("makro-inflacja", "Inflacja i ceny", [r"inflacj|deflacja|stagflacja|taksflacja|hiperinflacja|koszty inflacji|cpi|hicp|ppi|laspeyresa|ceny stałe|teoria ilościowa|neutralność pieniądza|efekt fishera|indeksacja"]),
+        ("makro-cykl", "Cykl koniunkturalny", [r"cykl|minsky|finansowanie zabezpieczone|niestabilności finansowej|recesja|wskaźniki wyprzedzające|koniunktury|pmi"]),
+        ("makro-wzrost", "Wzrost, rozwój i nierówności", [r"wzrost gospodarczy|rozwój gospodarczy|solowa|konwergencja|reguła 70|endogeniczne|średniego dochodu|holenderska|giniego|decylowy|ubóstwo|kuznetsa|dywidenda demograficzna|przemysł 4.0|rewolucje przemysłowe|zrównoważony rozwój|cyrkularna|drenaż|gospodarki wschodzące|deglobalizacja|twórczej destrukcji"]),
+        ("makro-handel", "Handel międzynarodowy", [r"handel|klauzula|internacjonalizacja przedsiębiorstwa|czebole|partnerzy handlowi|przewaga|heckschera|leontiefa|lindera|vernon|diament portera|terms of trade|krzywa oferty|wolny handel|protekcjonizm|cło|skutki cła|kontyngent|pozataryfowe|dumping|autarkia|luki technologicznej|globalizacja|korporacja transnarodowa|offshoring|monopol handlu"]),
+        ("makro-kursy", "Bilans płatniczy i kursy walut", [r"bilans płatniczy|dochody pierwotne|bilans handlowy|pozycja inwestycyjna|inwestycje bezpośrednie|rezerwy walutowe|kurs|aprecjacja|parytet|system kursu|zarząd waluty|euroizacja|trylemat|mundella|marshalla–lernera|kryzysy walutowe|grzech pierworodny|sdr|bretton woods|standard złota|saldo obrotów|deficyty bliźniacze|zadłużenie zagraniczne|rezydent|incoterms|akredytywa|inkaso"]),
+        ("makro-szkoly", "Szkoły i historia myśli ekonomicznej", [r".*"]),
+    ],
+    "polityka": [
+        ("pol-podstawy", "Cele i narzędzia polityki gospodarczej", [r"polityka gospodarcza|magiczny|cele, podmioty|policy mix|interwencjonizm|polityka stabilizacyjna|ekspansywna i restrykcyjna|opóźnienia|reguły a uznaniowość|debaty|automatyczne stabilizatory|dyskrecjonalna|planowanie gospodarcze|strategie rozwoju|rola państwa|picking|ekonomiczna teoria demokracji|wyboru publicznego|dobra społecznie"]),
+        ("pol-pieniezna", "Polityka pieniężna", [r"strategia bezpośredniego|kotwica|cel operacyjny|stopy procentowe nbp|korytarz|lombardowy|refinansowy|operacje otwartego|bony pieniężne|repo|rezerwa obowiązkowa|interwencja walutowa|transmisji|reguła taylora|forward|luzowanie|zacieśnianie|strategia wyjścia|ujemne stopy|asymetria polityki|jastrzębie|niezależność banku|monetyzacja|polityka kursowa|antyinflacyjna|ltro"]),
+        ("pol-fiskalna", "Polityka fiskalna i reguły budżetowe", [r"polityka fiskalna|konsolidacja|niekeynesowskie|progi ostrożnościowe|reguła wydatkowa|złotej zasady|klauzula wyjścia|procedura nadmiernego|pakt fiskalny|laffera|podaży \(supply|polityka podażowa"]),
+        ("pol-spoleczna", "Polityka społeczna, dochodowa i rynku pracy", [r"polityka dochodowa|flexicurity|aktywna i pasywna|płaca minimalna|klin podatkowy|rodzinna|dialog społeczny|układy zbiorowe|ceny administrowane|polityka cenowa"]),
+        ("pol-sektorowa", "Polityki sektorowe i regionalne", [r"^polityka (strukturalna|ekologiczna|innowacyjna|rolna|inwestycyjna|konkurencji|handlowa|energetyczna|przemysłowa)|euroregiony|^pomoc publiczna|wspólna polityka rolna|specjalne strefy|granice prywatyzacji"]),
+        ("pol-ue", "Integracja europejska i UE", [r"integracja gospodarcza|kreacji i przesunięcia|unia europejska|cztery swobody|instytucje ue|unia gospodarcza|^euro$|kryteria konwergencji|erm|europejski system walutowy|unia bankowa|wspólna polityka rolna|fundusze europejskie|optymalnego obszaru|szok asymetryczny|przyjęcia euro|eurogrupa|efekt cappuccino|brexit|struktura instytucjonalna|schengen|traktat akcesyjny|porozumienia regionalne"]),
+        ("pol-transformacja", "Ustroje i transformacja w Polsce", [r"transformacja systemowa|okrągły|reformy gospodarcze w prl|gospodarka niedoboru|programy dostosowawcze|ustroje|gospodarka wojenna|etatyzm|konsensus waszyngtoński", r".*"]),
+    ],
+    "finanse": [
+        ("fin-obligacje", "Obligacje, procent i wartość pieniądza w czasie", [r"obligacj|bony skarbowe|tips|rentowność do wykupu|cena czysta|duration|krzywa dochodowości|rating|spread|wartość pieniądza w czasie|procent prosty|stopa efektywna|renta \(annuity"]),
+        ("fin-podatki", "Podatki", [r"podat|stawka nominalna|cienka kapitalizacja|fiskalizm|reguły podatkowe|reguła edynburska|(^|\W)vat|faktura|akcyza|cło|pcc|ordynacja|interpretacja|kas\)|krajowa administracja|abolicja|unikanie|cienka|ceny transferowe|podwójne|tarcza"]),
+        ("fin-ubezpieczenia", "Ubezpieczenia", [r"ubezpiecz|autocasco|franszyza|suma ubezpieczenia|reasekuracja|aktuariusz|towarzystwo ubezpieczeń|ufg|bezpośrednia likwidacja|rzecznik finansowy|ufk"]),
+        ("fin-pieniadz", "Pieniądz i jego funkcje", [r"pieniądz|kopernika|tezauryzacja|siła nabywcza|denominacja|dewaluacja|seigniorage|agregaty|baza monetarna|kreacja|mnożnik kreacji|popyt na pieniądz|stopa procentowa nominalna|naturalna \(neutralna|gotówka|emisja banknotów|monety|kryptowaluta|bitcoin|blockchain|stablecoin|cbdc|kurs krzyżowy"]),
+        ("fin-banki", "Banki i system bankowy", [r"bank|pożyczkodawca|skok|operacje bankowe|aktywa i pasywa|współczynnik wypłacalności|bazylejskie|run na bank|restrukturyzacja|bailout|too big|credit crunch|subprime|pakiet zaufania|rozliczenia|blik|zdolność kredytowa|rrso|kredyt|raty|karencja|konsolidacja kredytów|lokata|polisolokata|bancassurance|cash back|nostro|weksel|czek|akcept|promesa|rynek międzybankowy|wibor|polonia|system płatniczy|produkty bankowe|frankowe"]),
+        ("fin-rynek", "Rynek finansowy i kapitałowy", [r"rynek|papier wartościowy|dematerializacja|akcj|wartość nominalna|agio|prawo poboru|prawo do akcji|dywidenda|split|ipo|prospekt|spółka publiczna|squeeze|wezwanie|wrogie|giełd|newconnect|catalyst|kdpw|indeks|wig|blue chips|hossa|zlecenia|notowania|animator|wiedźm|krótka sprzedaż|arbitraż|spekulacja|day trading|analiza fundamentalna|cena/zysk|p/bv|eps|kapitalizacja|formacje|window dressing|system finansowy|instytucje finansowe|internacjonalizacja i globalizacja finansów|zachowania finansowe|inwestor"]),
+        ("fin-inwestycje", "Fundusze, derywaty i ryzyko", [r"fundusz|hedging|strategie opcyjne|dom maklerski|etf|reit|private equity|instrument pochodny|kontrakt terminowy|opcj|swap|fra|cds|cfd|dźwignia finansowa|sekurytyzacja|ryzyko|dywersyfikacja|teoria portfela|capm|rynku efektywnego|bańka|insider|podatek od zysków|faktoring|forfaiting|leasing"]),
+        ("fin-publiczne", "Finanse publiczne i budżet", [r"finanse publiczne|sektor finansów|jednostka budżetowa|fundusz celowy|budżet|prowizorium|zasady budżetowe|dochody i wydatki|wydatki sztywne|wpłata z zysku|deficyt|nadwyżka budżetowa|finansowanie deficytu|dług publiczny|funkcje finansów|subwencja|samorząd|udziały jst|janosikowe|cofog|poza budżetem|partnerstwo publiczno|nik|regionalne izby|dyscyplina|zamówienia publiczne|reguły finansowe jst|obsługa i zarządzanie długiem|fundusz pracy|zasoby własne"]),
+        ("fin-zabezpieczenie", "Zabezpieczenie społeczne i emerytury", [r"emerytal|ike|pracownicze plany|wiek emerytalny|stopa zastąpienia|ochrony zdrowia|świadczenia|aktywizacyjny|transfery socjalne|ubezpieczenia społeczne|ofe|nfz", r".*"]),
+    ],
+    "firma": [
+        ("firma-rachunkowosc", "Rachunkowość i sprawozdania finansowe", [r"rachunkowość|sprawozdanie|bilans|aktywa trwałe|pasywa|kapitał zakładowy|kapitał stały|złota reguła|rozliczenia międzyokresowe|rachunek zysków|wynik finansowy|ebitda|przepływów|zasady rachunkowości|polityka rachunkowości|rok obrotowy|księgi|operacje bilansowe|inwentaryzacja|uproszczone|środki trwałe|wartości niematerialne|wartość firmy|amortyzacj|wycena zapasów|wartość godziwa|audyt"]),
+        ("firma-koszty", "Rachunek kosztów", [r"koszt|rachunek kosztów"]),
+        ("firma-analiza", "Analiza finansowa i wskaźniki", [r"analiza|wskaźnik|dźwignia|wczesnego ostrzegania|struktura majątku|stan i odnowa|wykorzystanie maszyn|zapasy i należności|struktura kapitału \(pasywów"]),
+        ("firma-inwestycje", "Decyzje inwestycyjne i wycena", [r"wacc|npv|irr|okres zwrotu|ocena projektów|wycena|model gordona|eva|cel finansowy|struktura kapitału i teorie|koszt kapitału|dcf|z-score|pi "]),
+        ("firma-finansowanie", "Źródła finansowania i kapitał obrotowy", [r"źródła finansowania|kredyt|zabezpieczenia kredytu|gwarancje|crowdfunding|project finance|należności i zobowiązania|planowanie finansowe|kapitałem obrotowym|cykl operacyjny|emisja papierów|mezzanine|łączenie spółek|ryzyko walutowe|międzynarodowe aspekty|inżynieria|złota reguła finansowania|upadłość"]),
+        ("firma-prawo", "Formy prawne i prawo gospodarcze", [r".*"]),
+    ],
+    "zarzadzanie": [
+        ("zarz-podstawy", "Istota zarządzania i szkoły", [r"^zarządzanie$|funkcje zarządzania|sprawność|umiejętności kierownicze|role kierownicze|szczeble|naukowe zarządzanie|administracyjne|biurokracja|behawiorystyczne|teoria x|teoria z|systemowe|sytuacyjne|organizacja$|technologia a struktura|zasoby organizacji"]),
+        ("zarz-otoczenie", "Otoczenie, etyka i CSR", [r"otoczeni|niepewność|kultura organizacyjna|społeczna odpowiedzialność|interesariusze|etyka|kodeks etyczny|esg|różnorodność|szklany sufit"]),
+        ("zarz-strategia", "Planowanie i strategia", [r"planowanie|misja|smart|przez cele|przez wyjątki|strategi|swot|pięć sił|milesa|macierz|dywersyfikacja|integracja pionowa|fuzja|alians|benchmarking|outsourcing|łańcuch wartości|scenariuszowe|błękitnego|przewaga konkurencyjna|kompetencje wyróżniające|zarządzanie strategiczne|konkurencyjność międzynarodowa|biznes międzynarodowy|inwestycje zagraniczne wychodzące|przedsiębiorczość międzynarodowa"]),
+        ("zarz-organizowanie", "Organizowanie i struktury", [r"organizowanie|grupowanie|rozpiętość|centralizacja|delegowanie|typy struktur|mechanistyczna|ucząca się|projektowanie stanowisk"]),
+        ("zarz-ludzie", "Motywacja, przywództwo i zespoły", [r"motywac|maslowa|erg|herzberga|mcclellanda|oczekiwań|sprawiedliwości|wynagrodzeń|przywództw|cech przywódczych|style kierowania|likerta|siatka|fiedlera|ścieżki do celu|vrooma|cyklu życia \(hersey|lmx|wielka piątka|osobowości|percepcja|stres|grupy i zespoły|myślenie grupowe|konflikt|komunikacj|sieci komunikacyjne|belbina|hrm|zasobami ludzkimi|negocjacje"]),
+        ("zarz-decyzje", "Decyzje, kontrola i jakość", [r"decyzj|twórczego|kontrolowanie|karta wyników|fotografia|operacyjne|just in time|kaizen|reengineering|jakości|iso|six sigma|narzędzia jakości|projektami|zapasami|logistyka|informatyczne|technologie informacyjne|zmianą|wiedzą|eskalacja|intuicja|krzywa doświadczenia"]),
+        ("zarz-marketing", "Marketing", [r"marketing|stp|segmentacja|badania marketingowe|produkt –|cykl życia produktu|marka|strategie cenowe|dystrybucja|promocja|lojalność|clv|wartość klienta|schyłku|adl|concierge"]),
+        ("zarz-przedsiebiorczosc", "Przedsiębiorczość i innowacje", [r".*"]),
+    ],
+    "demografia": [
+        ("demo-miary", "Miary i struktura ludności", [r"^demografia|dzietności|zastępowalność|urodzeń|saldo migracji|trwania życia|struktura wieku|obciążenia|starzenie|piramida|wyż|prognoza|depopulacja|urbanizacja"]),
+        ("demo-teorie", "Teorie demograficzne", [r"przejście|dywidenda|maltuzjańska|płodności|easterlina"]),
+        ("demo-gospodarka", "Starzenie się a gospodarka", [r"zwrot demograficzny|inflacja i stopy|lewisa|sekularna|srebrna|skutki starzenia|opieka|senioralna|transfery międzypokoleniowe"]),
+        ("demo-emerytury", "Systemy emerytalne", [r"emerytal|repartycyjny|ndc|emerytury|waloryzacja|długowieczności|aarona|wiek emerytalny"]),
+        ("demo-migracje", "Migracje", [r"migr|push|remittances|przekazy|mózgów|uchodźcy|cudzoziemców|karta polaka|swobodny przepływ|kraj imigracji"]),
+        ("demo-polityka", "Polityka ludnościowa i rodzinna", [r".*"]),
+    ],
+}
+
+# Działy rodzajowe w każdym temacie (wzory, osoby, instytucje, daty, przepisy)
+KIND_UNITS = [("wzor", "Wzory"), ("osoba", "Osoby"), ("instytucja", "Instytucje"), ("data", "Daty i chronologia"), ("przepis", "Przepisy i stawki")]
+
+# --- przypisanie tematu dla haseł spoza działów jednoznacznych: wzorce na tytuł + definicję ---
+TOPIC_RULES = [
+    ("demografia", r"demograf|ludno|migra|emeryt|dzietno|starzen|uchodź|cudzoziem|goodhart|pradhan|barr|easterlin|notestein|kaa|ravenstein|stark|piore|todaro|aaron|kotlikoff|okólski|fihel|ludności|push–pull|granice wzrostu|67 lat|otwarcie rynków pracy"),
+    ("zarzadzanie", r"zarządz|motywac|przywódz|kierow|organizac|marketing|strateg|potrzeb|hawthorne|herzberg|maslow|taylor|fayol|weber|deming|drucker|kotler|porter|mintzberg|mayo|follett|mcgregor|gantt|gilbreth|emerson|urwick|barnard|likert|fiedler|vroom|adams|alderfer|mcclelland|tuckman|blake|hersey|house|tannenbaum|senge|woodward|thompson|ansoff|miles|levitt|hofstede|belbin|ries|freeman|mauborgne|griffin|kaplan|johanson|zespoł|jakości|innowac|ford|teoria x"),
+    ("firma", r"rachunkow|sprawozdan|bilans |amortyzac|wacc|npv|irr|rentowno|płynno|dźwign|próg rentowno|eoq|wilsona|zapas|należno|kapitał obrotowy|z-score|altman|dcf|gordon|modigliani|myers|spółk|ksh|kodeks spółek|przedsiębiorc|upadło|rachunkowości|ofercie publicznej|własności przemysłowej|prawie autorskim|kodeks cywilny|kodeks pracy|wypowiedzenia|urlop|ceidg|prosta spółka|konstytucja biznesu|parp|rzecznik małych|urząd patentowy|sądy gospodarcze|biura informacji|wskaźniki giełdowe|struktura majątku|środków trwałych|maszyn|struktura kapitału|pokrycia długu|cit|rodo|e-faktur|ksef|kapitału zakładowego|pakietów akcji"),
+    ("finanse", r"bank|kredyt|obligac|akcj|giełd|wig|gpw|ubezpiecz|lokat|pieniądz kreac|mnożnik kreacji|kreacji pieniądza|stopa realna|fisher|wartość pieniądza|ytm|budżet|podat|vat|dług publiczn|finansów publicznych|knf|kir|zbp|ministerstwo finansów|bfg|gwarancja depozytów|kryptoaktyw|mica|markowitz|sharpe|fama|black|scholes|cox|shiller|bagehot|gresham|kopernik|lombard|fed|bank anglii|nbp|bitcoin|newconnect|catalyst|skok|lokaty antybelkowe|komisja nadzoru|agencje ratingowe|musgrave|składki|płaca minimalna w polsce|stawki|skala podatkowa|terminy podatkowe|akcyza|tarcza podatkowa|denominac|reforma w. grabskiego|esbc|ksf|komitet stabilności|klub paryski|eba|esma|eiopa"),
+    ("polityka", r"polityk|ue\b|unii|europejsk|euro\b|strefie euro|maastricht|rzymskie|lizbo|schengen|wto|gatt|bretton|balcerowicz|plan |transform|stabilizac|interwenc|fiskaln|reguła taylora|taylor john|stopy procentow|cel inflacyjny|rpp|ebc|mfw|bank światowy|oecd|okrągł|konstytucja rp|ustawa o finansach|ustawa o narodowym|ochronie konkurencji|prawach konsumenta|kredycie konsumenckim|prawo bankowe|komisja europejska|parlament europejski|rada unii|eurostat|ems|mechanizm stabilności|wilczka|kalecki|lange|kwiatkowski|belka|glapiński|kornai|gomułka|sadowski|łaski|osiatyński|laffer|mundell|mckinnon|keynes|hayek|mises|mazowiecki|eucken|buchanan|downs|rodrik|williamson john|lucas|kydland|barro|friedman|hume|polski ład|500\+|800\+|procedura nadmiernego|ofe|ppk|kas|split payment"),
+    ("makro", r"pkb|inflac|bezroboc|koniunktur|wzrost|keynes|phillips|okun|solow|kuznets|lucas|friedman|kryzys|szok naftowy|bańka|lehman|covid|bilans płatnicz|kurs|handel|ricardo|smith|marks|malthus|quesnay|say|list friedrich|leontief|krugman|dunning|eichengreen|samuelson|hicks|tobin|minsky|wicksell|kondratiew|schumpeter|phelps|layard|stiglitz|beveridge|veblen|galbraith|fukuyama|putnam|kuhn|popper|nowak|gorynia|hildebrand|owen|watt|gesell|axelrod|posner|bernanke|greenspan|diamond douglas|mnożnik|równanie wymiany|reguła 70|giniego|wartość dodana|marginalistyczna|wielki kryzys|opec|mop|wef|bank japonii|g7|g20"),
+    ("mikro", r".*"),
+]
+
+# Tytuły haseł z działów 3–8 i 14, które są instytucjami (rodzaj „instytucja”)
+INSTITUTION_TITLES = r"^(narodowy bank polski|prezes nbp|rada polityki pieniężnej|zarząd nbp|bank gospodarstwa krajowego|bankowy fundusz gwarancyjny|bank rezerwy federalnej|europejski bank centralny|bank anglii|biuro informacji kredytowej|giełda papierów|krajowy depozyt|ubezpieczeniowy fundusz gwarancyjny|rzecznik finansowy|krajowa administracja skarbowa|narodowy fundusz zdrowia|najwyższa izba kontroli|regionalne izby|urząd ochrony konkurencji|ceidg i krs|światowa organizacja handlu|międzynarodowy fundusz walutowy|bank światowy|bank rozrachunków|oecd|europejski bank odbudowy|europejski bank inwestycyjny|opec|klub paryski|instytucje ue|międzynarodowe instytucje ds. migracji|grupa g7)"
+
+# Ręczne przypisania tematu (tytuł hasła → temat), gdy reguły się mylą
+OVERRIDES = {
+    "Keynes John Maynard": "makro", "Friedman Milton": "makro", "Lucas Robert E.": "makro", "Hayek Friedrich von": "makro",
+    "Mises Ludwig von": "makro", "Smith Adam": "mikro", "Marshall Alfred": "mikro", "Pareto Vilfredo": "mikro",
+    "Walras Léon": "mikro", "Menger Carl": "mikro", "Gossen Hermann Heinrich": "mikro", "Coase Ronald": "mikro",
+    "Akerlof George": "mikro", "Nash John": "mikro", "Pigou Arthur Cecil": "mikro", "Hardin Garrett": "mikro",
+    "Thaler Richard": "mikro", "Kahneman Daniel": "mikro", "Tversky Amos": "mikro", "Simon Herbert": "zarzadzanie",
+    "Williamson Oliver": "mikro", "Slutsky Eugen (Jewgienij Słucki)": "mikro", "Stackelberg Heinrich von": "mikro",
+    "Herfindahl Orris, Hirschman Albert O.": "mikro", "Lerner Abba": "mikro", "Baumol William": "mikro",
+    "Stigler George": "mikro", "Cyert Richard, March James": "mikro", "Leibenstein Harvey": "mikro", "Knight Frank": "mikro",
+    "Clark John Bates": "mikro", "Rawls John": "mikro", "Nozick Robert": "mikro", "Bentham Jeremy": "mikro",
+    "Jevons William Stanley": "mikro", "Arrow Kenneth": "mikro", "Becker Gary": "demografia", "Lewis W. Arthur": "demografia",
+    "Hansen Alvin": "demografia", "Summers Lawrence": "demografia", "Diamond Peter": "demografia", "Diamond Douglas": "finanse",
+    "Nordhaus William": "makro", "Robertson Dennis": "makro", "Ricardo David": "makro", "Mill John Stuart": "mikro",
+    "Modigliani Franco, Miller Merton": "firma", "Musgrave Richard": "finanse", "Bain Joe": "mikro", "Frank Robert": "mikro",
+    "Rosen Sherwin": "mikro", "Maskin Eric": "mikro", "Milgrom Paul": "mikro", "Heider Fritz": "zarzadzanie",
+    "Altman Edward": "firma", "Gordon Myron J.": "firma", "Myers Stewart": "firma", "Taylor John B.": "polityka",
+    "Okun Arthur": "makro", "Phillips Alban William": "makro",
+    "Eichengreen Barry": "makro", "Barro Robert": "makro", "Schumpeter Joseph A.": "makro", "Axelrod Robert": "mikro",
+    "Gomułka Stanisław": "makro", "Osiatyński Jerzy": "polityka", "Kuznets Simon": "makro", "List Friedrich": "makro",
+    "Say Jean-Baptiste": "makro", "Shiller Robert": "finanse", "Owen Robert": "makro", "Watt James": "makro",
+    "Gorynia Marian": "mikro", "Posner Michael": "makro", "Balcerowicz Leszek": "polityka", "Kornai János": "makro",
+    "Hildebrand Bruno": "makro", "Buchanan James": "polityka", "Malthus Thomas": "demografia",
+}
+
+# Wymuszone przypisanie tematu dla haseł rodzajowych (wzory, osoby, instytucje, daty, przepisy): (wzorzec tytułu, temat)
+KIND_TOPIC_FORCE = [
+    # wzory (dział 9)
+    (r"^(elastyczność|równowaga rynkowa|podatek na producentów|nadwyżka konsumenta|utarg|koszty – zależności|maksymalizacja zysku|zysk ekonomiczny|renta ekonomiczna|produkt przeciętny)", "mikro"),
+    (r"^(pkb – metoda|dochód rozporządzalny|równowaga w modelu mnożnikowym|mnożniki|inflacja i indeksy|równanie wymiany|prawo okuna|stopa bezrobocia|reguła 70|koszt alternatywny w handlu|skutki cła|kurs realny|współczynnik giniego|wartość dodana)", "makro"),
+    (r"^(reguła taylora)", "polityka"),
+    (r"^(stopa realna|mnożnik kreacji|wartość pieniądza w czasie|ytm|wskaźniki giełdowe)", "finanse"),
+    (r"^(próg rentowności|npv|rentowność|tarcza podatkowa|amortyzacja|eoq|wskaźnik pokrycia|kapitał obrotowy|dźwignie|okres zwrotu|z-score|wycena dcf|struktura majątku|stan i odnowa|wykorzystanie maszyn|zapasy i należności|struktura kapitału)", "firma"),
+    # instytucje
+    (r"^(narodowy bank polski|ministerstwo finansów|komisja nadzoru|komitet stabilności|krajowa izba|związek banków|biura informacji|europejskie urzędy|agencje ratingowe|system rezerwy|bank japonii|europejski system banków|kasa rolniczego|narodowy fundusz zdrowia|regionalne izby|giełda papierów)", "finanse"),
+    (r"^(światowa organizacja handlu|międzynarodowy fundusz|oecd|opec|bank światowy|bank rozrachunków|międzynarodowa organizacja pracy|światowe forum|główny urząd)", "makro"),
+    (r"^(rada ministrów|instytucje ue|komisja europejska|rada unii|parlament europejski|europejski urząd statystyczny|europejski mechanizm|grupa g7)", "polityka"),
+    (r"^(polska agencja rozwoju|polski fundusz rozwoju|rzecznik małych|urząd patentowy|sądy gospodarcze|ceidg)", "firma"),
+    # przepisy
+    (r"^(konstytucja rp|płaca minimalna w polsce|ustawa o ochronie konkurencji)", "polityka"),
+    (r"^(ustawa o narodowym banku|prawo bankowe|ustawa o finansach|ustawa o kredycie|stawki vat|skala podatkowa|gwarancja depozytów|cel inflacyjny|akcyza|ustawa o kryptoaktywach|składki na ubezpieczenia)", "finanse"),
+    # daty
+    (r"^(1817|1867|1803|1758|1776|1871|1890|1899|1929|1936|1944|1958|1971|1973|2000|2008|2020)", "makro"),
+    (r"^(1970)", "mikro"),
+    (r"^(1911|1916|1924–1932|1943|1959|1960)", "zarzadzanie"),
+    (r"^(1968|1986|1989|1997|2004|2016|1947|1951|1957|1961|1979|1992|1993|1995|1996|1998|2010|2011|2013|2017|2019|2022|2023|2024|2026)", "polityka"),
+    (r"^(1526|1694|1873|1913|1924 |1945|1990|1991|1994|1999|2002|2006|2007|2009|2012|2014|2015|2018|2021)", "finanse"),
+    (r"^(1798|1885|1966|1972)", "demografia"),
+]

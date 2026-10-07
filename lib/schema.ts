@@ -29,4 +29,36 @@ ALTER TABLE answers ADD COLUMN IF NOT EXISTS skipped boolean NOT NULL DEFAULT fa
 -- Osobna baza pytań ze słownika pojęć – własne testy i statystyki.
 ALTER TABLE tests ADD COLUMN IF NOT EXISTS bank text NOT NULL DEFAULT 'owe';
 CREATE INDEX IF NOT EXISTS tests_bank_idx ON tests (bank);
+
+-- Zakładka „Nauka”: sesje pod-lekcji i odpowiedzi w ćwiczeniach.
+CREATE TABLE IF NOT EXISTS learn_sessions (
+  id          uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  topic       text NOT NULL,
+  unit        text NOT NULL,
+  lesson      text NOT NULL,
+  sub         int NOT NULL,
+  kind        text NOT NULL,
+  level       int NOT NULL DEFAULT 0,
+  started_at  timestamptz NOT NULL DEFAULT now(),
+  finished_at timestamptz,
+  duration_ms int,
+  correct     int NOT NULL DEFAULT 0,
+  total       int NOT NULL DEFAULT 0,
+  xp          int NOT NULL DEFAULT 0
+);
+CREATE INDEX IF NOT EXISTS learn_sessions_finished_idx ON learn_sessions (finished_at);
+CREATE INDEX IF NOT EXISTS learn_sessions_lesson_idx ON learn_sessions (lesson);
+
+CREATE TABLE IF NOT EXISTS learn_answers (
+  session_id  uuid NOT NULL REFERENCES learn_sessions(id) ON DELETE CASCADE,
+  seq         int NOT NULL,
+  item_id     text NOT NULL,
+  item_kind   text NOT NULL,
+  exercise    text NOT NULL,
+  correct     boolean NOT NULL,
+  ms          int NOT NULL,
+  answered_at timestamptz NOT NULL DEFAULT now(),
+  PRIMARY KEY (session_id, seq)
+);
+CREATE INDEX IF NOT EXISTS learn_answers_item_idx ON learn_answers (item_id);
 `;
