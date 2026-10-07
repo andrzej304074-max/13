@@ -6,11 +6,12 @@ import { useEffect, useState } from "react";
 import { api } from "@/lib/client";
 import { DAILY_GOALS, lastLesson, loadGoal, saveGoal } from "@/lib/nauka-client";
 import type { Progress } from "@/lib/nauka";
-import { SUBLESSONS, type CourseTopic } from "@/lib/nauka-types";
+import { SUBLESSONS, SUBLESSONS_Z, type CourseTopic } from "@/lib/nauka-types";
 
 export interface TopicCard extends CourseTopic {
   units: number;
   lessons: number;
+  zlessons: number;
   items: number;
   kinds: Record<string, number>;
 }
@@ -44,7 +45,8 @@ export function NaukaHome({ topics, kinds, lessonIds }: { topics: TopicCard[]; k
       <h1>Nauka</h1>
       <p className="muted" style={{ marginTop: -8 }}>
         Kurs w stylu Duolingo zbudowany ze słownika pojęć i wszystkich pytań: 6 tematów programu OWE i temat przewodni. Każdy
-        temat ma działy i lekcje, a każda lekcja 4 pod-lekcje ({SUBLESSONS.map((x) => x.title).join(" → ")}). Wszystko jest
+        temat ma działy i lekcje, a każda lekcja 4 pod-lekcje ({SUBLESSONS.map((x) => x.title).join(" → ")}). Lekcje 🧠
+        Zrozumienie tłumaczą mechanizmy krok po kroku ({SUBLESSONS_Z.map((x) => x.title).join(" → ")}). Wszystko jest
         odblokowane – wybierz, od czego chcesz zacząć. Postęp i statystyki są wspólne dla wszystkich.
       </p>
 
@@ -98,9 +100,12 @@ export function NaukaHome({ topics, kinds, lessonIds }: { topics: TopicCard[]; k
             <Link key={t.id} href={`/nauka/${t.id}`} className="topic-card" style={{ ["--topic" as string]: t.color }}>
               <span className="topic-emoji">{t.emoji}</span>
               <strong>{t.title}</strong>
-              <small className="muted">{t.units} działów · {t.lessons} lekcji · {t.lessons * 4} pod-lekcji · {t.items} haseł</small>
               <small className="muted">
-                {kinds.filter((k) => t.kinds[k.id]).map((k) => `${k.title.toLowerCase()} ${t.kinds[k.id]}`).join(" · ")}
+                {t.units} działów · {t.lessons} lekcji haseł{t.zlessons ? ` + 🧠 ${t.zlessons} lekcji zrozumienia` : ""} ·{" "}
+                {(t.lessons + t.zlessons) * 4} pod-lekcji · {t.items} haseł
+              </small>
+              <small className="muted">
+                {kinds.filter((k) => t.kinds[k.id] && k.id !== "zrozumienie").map((k) => `${k.title.toLowerCase()} ${t.kinds[k.id]}`).join(" · ")}
               </small>
               <div className="goal-bar thin"><div style={{ width: `${pct}%` }} /></div>
               <small className="muted">

@@ -6,17 +6,19 @@ import { api, fmtPct, LETTERS } from "@/lib/client";
 import { fmtDuration, rememberLesson } from "@/lib/nauka-client";
 import {
   buildExercises, checkTyped, computeXp, eventOf, acceptedAnswers, questionCorrect, shuffle, yearOf,
-  XP_COMBO_EVERY, type Exercise,
+  exerciseKind, XP_COMBO_EVERY, type Exercise,
 } from "@/lib/nauka-logic";
-import { SUBLESSONS, MAX_LEVEL, type AnswerLog, type CourseItem, type LessonPayload } from "@/lib/nauka-types";
+import { EXERCISE_LABELS, MAX_LEVEL, subsFor, type AnswerLog, type CourseItem, type LessonPayload } from "@/lib/nauka-types";
 import type { FinishResult } from "@/lib/nauka";
 import { scoreAnswer } from "@/lib/scoring";
+import { CaseContext, CheckButton, useEnter, useNumberKeys, type Feedback, type OnResult } from "./ui";
+import { Buckets, Chain, ExplainCard, GraphChoice, NumberTask, Sources } from "./zrozum-views";
 
 const KIND_LABEL: Record<string, string> = {
   pojecie: "Pojęcie", wzor: "Wzór", osoba: "Osoba", instytucja: "Instytucja", data: "Data", przepis: "Przepis",
+  zrozumienie: "Zrozumienie",
 };
 
-type Feedback = { correct: boolean; title: string; detail?: React.ReactNode } | null;
 
 /** Odpowiedź do pokazania w pasku informacji zwrotnej. */
 function answerText(item: CourseItem) {
@@ -68,7 +70,7 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
   const record = useCallback(
     (entries: { item: CourseItem; correct: boolean }[], ex: Exercise, fb: NonNullable<Feedback>) => {
       const ms = Date.now() - shownAt.current;
-      const type = ex.type === "intro" ? null : ex.type;
+      const type = exerciseKind(ex);
       if (!type) return;
       setLog((l) => [
         ...l,
@@ -102,7 +104,7 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
 
   // Enter – „Dalej” po informacji zwrotnej
   useEffect(() => {
-    if (!feedback && current?.type !== "intro") return;
+    if (!feedback && current?.type !== "intro" && current?.type !== "karta") return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Enter") {
         e.preventDefault();
@@ -116,7 +118,7 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
     };
   }, [feedback, current, advance]);
 
-  const subInfo = SUBLESSONS.find((s) => s.no === sub);
+  const subInfo = subsFor(lesson).find((s) => s.no === sub);
   const backHref = payload.review ? "/nauka" : `/nauka/${topic.id}#${lesson.id}`;
 
   if (!queue) return <p className="muted">Przygotowuję ćwiczenia…</p>;
@@ -147,10 +149,17 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
         <span className="learn-xp" title="XP w tej pod-lekcji">⚡ {xp}</span>
       </div>
       <p className="muted learn-crumb">
-        {topic.emoji} {payload.unitTitle} · Lekcja {lesson.no}
+        {topic.emoji} {payload.unitTitle} · {payload.zrozum ? "🧠 Zrozumienie" : "Lekcja"} {lesson.no}
         {!payload.review && ` · ${subInfo?.title}`}
         {combo >= XP_COMBO_EVERY && <span className="combo"> 🔥 {combo} z rzędu</span>}
       </p>
+      {payload.zrozum && pos === 0 && (
+        <details className="lesson-goal">
+          <summary>🎯 {lesson.title}</summary>
+          <p style={{ margin: "6px 0" }}>{payload.zrozum.goal}</p>
+          <Sources sources={payload.zrozum.sources} />
+        </details>
+      )}
       {startError && <p className="error" style={{ fontSize: "0.85rem" }}>Nie udało się rozpocząć zapisu sesji ({startError}) – możesz ćwiczyć, ale wynik nie trafi do statystyk.</p>}
       <ExerciseView key={pos} ex={current!} locked={!!feedback} onResult={record} onNext={advance} />
       {feedback && (
@@ -168,7 +177,6 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
   );
 }
 
-type OnResult = (entries: { item: CourseItem; correct: boolean }[], ex: Exercise, fb: NonNullable<Feedback>) => void;
 
 function ExerciseView({ ex, locked, onResult, onNext }: { ex: Exercise; locked: boolean; onResult: OnResult; onNext: () => void }) {
   switch (ex.type) {
@@ -191,6 +199,16 @@ function ExerciseView({ ex, locked, onResult, onNext }: { ex: Exercise; locked: 
       return <Flashcard ex={ex} locked={locked} onResult={onResult} />;
     case "pytanie":
       return <BankQuestion ex={ex} locked={locked} onResult={onResult} />;
+    case "karta":
+      return <ExplainCard ex={ex} onNext={onNext} />;
+    case "lancuch":
+      return <Chain ex={ex} locked={locked} onResult={onResult} />;
+    case "kategorie":
+      return <Buckets ex={ex} locked={locked} onResult={onResult} />;
+    case "liczba":
+      return <NumberTask ex={ex} locked={locked} onResult={onResult} />;
+    case "wykres":
+      return <GraphChoice ex={ex} locked={locked} onResult={onResult} />;
   }
 }
 
@@ -218,43 +236,6 @@ function Intro({ item, onNext }: { item: CourseItem; onNext: () => void }) {
       </div>
     </div>
   );
-}
-
-/** Wspólny dolny przycisk „Sprawdź” (ukryty po sprawdzeniu). */
-function CheckButton({ disabled, onClick, locked, label = "Sprawdź" }: { disabled: boolean; onClick: () => void; locked: boolean; label?: string }) {
-  if (locked) return null;
-  return (
-    <div className="learn-actions">
-      <button className="btn" disabled={disabled} onClick={onClick}>{label}</button>
-    </div>
-  );
-}
-
-function useNumberKeys(n: number, locked: boolean, pick: (i: number) => void) {
-  useEffect(() => {
-    if (locked) return;
-    const onKey = (e: KeyboardEvent) => {
-      if ((e.target as HTMLElement)?.tagName === "INPUT") return;
-      const i = Number(e.key) - 1;
-      if (Number.isInteger(i) && i >= 0 && i < n) pick(i);
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [n, locked, pick]);
-}
-
-function useEnter(enabled: boolean, fn: () => void) {
-  useEffect(() => {
-    if (!enabled) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Enter") {
-        e.preventDefault();
-        fn();
-      }
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [enabled, fn]);
 }
 
 function Choice({ ex, locked, onResult }: { ex: Extract<Exercise, { type: "wybor" | "wzor" }>; locked: boolean; onResult: OnResult }) {
@@ -300,7 +281,7 @@ function TrueFalse({ ex, locked, onResult }: { ex: Extract<Exercise, { type: "pr
       onResult([{ item: ex.item, correct: ok }], ex, {
         correct: ok,
         title: ok ? (ex.truth ? "Dobrze – to prawda." : "Dobrze – to fałsz.") : ex.truth ? "To była prawda." : "To był fałsz.",
-        detail: <><strong>{ex.item.s}:</strong> {ex.trueDef}</>,
+        detail: ex.term ? <><strong>{ex.term}:</strong> {ex.trueDef}</> : ex.trueDef,
       });
     },
     [locked, ex, onResult],
@@ -308,8 +289,9 @@ function TrueFalse({ ex, locked, onResult }: { ex: Extract<Exercise, { type: "pr
   useNumberKeys(2, locked, (i) => answer(i === 0));
   return (
     <div className="stack">
-      <span className="learn-badge">Prawda czy fałsz?</span>
-      <p className="muted" style={{ margin: 0 }}>Czy to poprawny opis hasła <strong style={{ color: "var(--text)" }}>{ex.term}</strong>?</p>
+      <span className="learn-badge">Prawda czy fałsz?{ex.stat ? ` · ${EXERCISE_LABELS[ex.stat]}` : ""}</span>
+      <CaseContext ctx={ex.ctx} />
+      {ex.term && <p className="muted" style={{ margin: 0 }}>Czy to poprawny opis hasła <strong style={{ color: "var(--text)" }}>{ex.term}</strong>?</p>}
       <div className="card prompt">{ex.statement}</div>
       <div className="tiles">
         {[true, false].map((v, i) => (
@@ -336,7 +318,7 @@ function Cloze({ ex, locked, onResult }: { ex: Extract<Exercise, { type: "luka" 
     onResult([{ item: ex.item, correct: ok }], ex, {
       correct: ok,
       title: ok ? "Dobrze!" : `Brakowało słowa: „${ex.answer}”`,
-      detail: <><strong>{ex.item.s}:</strong> {ex.before}<u>{ex.answer}</u>{ex.after}</>,
+      detail: ex.why ? <>{ex.before}<u>{ex.answer}</u>{ex.after} {ex.why}</> : <><strong>{ex.item.s}:</strong> {ex.before}<u>{ex.answer}</u>{ex.after}</>,
     });
   }, [sel, ex, onResult]);
   useNumberKeys(ex.options.length, locked, (i) => setSel(ex.options[i]));
@@ -344,7 +326,8 @@ function Cloze({ ex, locked, onResult }: { ex: Extract<Exercise, { type: "luka" 
   return (
     <div className="stack">
       <span className="learn-badge">Uzupełnij lukę</span>
-      <p className="muted" style={{ margin: 0 }}>Hasło: <strong style={{ color: "var(--text)" }}>{ex.item.s}</strong></p>
+      <CaseContext ctx={ex.ctx} />
+      {!ex.why && <p className="muted" style={{ margin: 0 }}>Hasło: <strong style={{ color: "var(--text)" }}>{ex.item.s}</strong></p>}
       <div className="card prompt">
         {ex.before}
         <span className={`gap ${locked ? (sel === ex.answer ? "ok" : "bad") : sel ? "filled" : ""}`}>{sel ?? " ".repeat(12)}</span>
@@ -538,17 +521,18 @@ function BankQuestion({ ex, locked, onResult }: { ex: Extract<Exercise, { type: 
     const pts = scoreAnswer(q.type, sel, q.correct);
     onResult([{ item: ex.item, correct: ok }], ex, {
       correct: ok,
-      title: `${ok ? "Dobrze!" : "Nie tym razem."} (${pts > 0 ? "+" : ""}${pts.toLocaleString("pl-PL")} pkt jak w teście)`,
+      title: ex.stat ? (ok ? "Dobrze!" : "Nie tym razem.") : `${ok ? "Dobrze!" : "Nie tym razem."} (${pts > 0 ? "+" : ""}${pts.toLocaleString("pl-PL")} pkt jak w teście)`,
       detail: <>{q.explanation}</>,
     });
   }, [q, sel, ex, onResult]);
   useNumberKeys(4, locked, toggle);
   useEnter(!locked && (sel.length > 0 || q.type === "multi"), check);
   const origin = q.id.startsWith("owe") ? `Olimpiada ${q.edition}` : q.origin === "manual" ? "Słownik – pytanie ręczne" : "Słownik – pytanie automatyczne";
+  const kind = q.type === "single" ? "jednokrotny wybór" : "wielokrotny wybór (zaznacz wszystkie poprawne)";
   return (
     <div className="stack">
-      <span className="learn-badge">Pytanie testowe · {q.type === "single" ? "jednokrotny wybór" : "wielokrotny wybór (zaznacz wszystkie poprawne)"}</span>
-      <p className="muted" style={{ margin: 0, fontSize: "0.85rem" }}>{origin}</p>
+      <span className="learn-badge">{ex.stat ? `${EXERCISE_LABELS[ex.stat]} · ${kind}` : `Pytanie testowe · ${kind}`}</span>
+      {ex.stat ? <CaseContext ctx={ex.ctx} /> : <p className="muted" style={{ margin: 0, fontSize: "0.85rem" }}>{origin}</p>}
       <p className="question">{q.question}</p>
       <div>
         {q.options.map((o, i) => {
@@ -590,7 +574,7 @@ function EndScreen({
         <div className="learn-end-emoji">{percent >= 80 ? "🏆" : percent >= 50 ? "💪" : "📚"}</div>
         <h1 style={{ margin: 0 }}>{percent >= 80 ? again : "Ukończone – warto powtórzyć"}</h1>
         <p className="muted" style={{ margin: 0 }}>
-          {payload.review ? "Powtórka słabych haseł" : `${payload.unitTitle} · Lekcja ${lesson.no} · ${SUBLESSONS[sub - 1].title}`}
+          {payload.review ? "Powtórka słabych haseł" : `${payload.unitTitle} · ${payload.zrozum ? "🧠 Zrozumienie" : "Lekcja"} ${lesson.no} · ${subsFor(lesson)[sub - 1].title}`}
         </p>
       </div>
       <div className="stat-grid">
@@ -605,13 +589,23 @@ function EndScreen({
           </div>
           <p className="muted" style={{ margin: "6px 0 0" }}>
             {levelUp ? `Nowy poziom lekcji: ${level}! ` : ""}
-            Koronę dostajesz, gdy każdą z 4 pod-lekcji zaliczysz ze skutecznością co najmniej 80% (kolejne korony – kolejne zaliczenia; wyższy poziom = więcej wpisywania).
+            Koronę dostajesz, gdy każdą z 4 pod-lekcji zaliczysz ze skutecznością co najmniej 80% (kolejne korony – kolejne zaliczenia{payload.zrozum ? "" : "; wyższy poziom = więcej wpisywania"}).
           </p>
         </div>
       )}
       {error && <p className="error">{error}</p>}
       {!result && !error && <p className="muted">Zapisywanie wyniku…</p>}
-      {wrong.length > 0 && (
+      {payload.zrozum && (
+        <div className="card stack">
+          <strong>🎯 {lesson.title}</strong>
+          <p className="muted" style={{ margin: 0 }}>{payload.zrozum.goal}</p>
+          {payload.zrozum.refs.length > 0 && (
+            <p style={{ margin: 0, fontSize: "0.9rem" }}>Powiązane hasła: {payload.zrozum.refs.map((r) => r.s).join(" · ")}</p>
+          )}
+          <Sources sources={payload.zrozum.sources} />
+        </div>
+      )}
+      {!payload.zrozum && wrong.length > 0 && (
         <>
           <h2>Do powtórki</h2>
           <div className="stack">

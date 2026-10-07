@@ -6,12 +6,12 @@ import { Chart } from "@/app/components/chart";
 import { api, fmtPct } from "@/lib/client";
 import { fmtDuration } from "@/lib/nauka-client";
 import type { NaukaStats } from "@/lib/nauka";
-import { EXERCISE_LABELS, SUBLESSONS } from "@/lib/nauka-types";
+import { EXERCISE_LABELS, SUBLESSONS, SUBLESSONS_Z, subsFor } from "@/lib/nauka-types";
 
 export interface StatsMeta {
   topics: { id: string; title: string; emoji: string }[];
   units: { id: string; title: string; topic: string }[];
-  lessons: { id: string; title: string; unit: string; no: number }[];
+  lessons: { id: string; title: string; unit: string; no: number; type?: "zrozum" }[];
   kinds: { id: string; title: string }[];
 }
 
@@ -47,7 +47,9 @@ export function NaukaStatsView({ meta }: { meta: StatsMeta }) {
     const m = new Map<string, string>();
     for (const t of meta.topics) m.set(t.id, `${t.emoji} ${t.title}`);
     for (const u of meta.units) m.set(u.id, u.title);
-    for (const l of meta.lessons) m.set(l.id, `${meta.units.find((u) => u.id === l.unit)?.title ?? ""} · L${l.no}: ${l.title}`);
+    for (const l of meta.lessons) {
+      m.set(l.id, `${meta.units.find((u) => u.id === l.unit)?.title ?? ""} · ${l.type === "zrozum" ? "🧠 Z" : "L"}${l.no}: ${l.title}`);
+    }
     m.set("powtorka", "🔁 Powtórka słabych haseł");
     return m;
   }, [meta]);
@@ -90,13 +92,13 @@ export function NaukaStatsView({ meta }: { meta: StatsMeta }) {
           <label>Lekcja
             <select className="select" value={f.lesson} disabled={!lessons.length} onChange={(e) => set({ lesson: e.target.value })}>
               <option value="">{lessons.length ? "Wszystkie lekcje" : "— wybierz dział —"}</option>
-              {lessons.map((l) => <option key={l.id} value={l.id}>Lekcja {l.no}: {l.title}</option>)}
+              {lessons.map((l) => <option key={l.id} value={l.id}>{l.type === "zrozum" ? "🧠 Zrozumienie" : "Lekcja"} {l.no}: {l.title}</option>)}
             </select>
           </label>
           <label>Pod-lekcja
             <select className="select" value={f.sub} onChange={(e) => set({ sub: e.target.value })}>
               <option value="">Wszystkie pod-lekcje</option>
-              {SUBLESSONS.map((s) => <option key={s.no} value={s.no}>{s.no}. {s.title}</option>)}
+              {SUBLESSONS.map((s, i) => <option key={s.no} value={s.no}>{s.no}. {s.title} / {SUBLESSONS_Z[i].title}</option>)}
             </select>
           </label>
           <label>Rodzaj treści
@@ -152,7 +154,7 @@ export function NaukaStatsView({ meta }: { meta: StatsMeta }) {
             <tbody>
               {stats.bySub.map((r) => (
                 <tr key={r.sub}>
-                  <td>{r.sub}. {SUBLESSONS[r.sub - 1]?.title ?? ""}</td><td>{r.sessions}</td><td>{fmtPct(r.percent)}</td>
+                  <td>{r.sub}. {SUBLESSONS[r.sub - 1]?.title ?? ""} / {SUBLESSONS_Z[r.sub - 1]?.title ?? ""}</td><td>{r.sessions}</td><td>{fmtPct(r.percent)}</td>
                   <td>{fmtDuration(r.avgMs)}</td><td>{fmtDuration(r.totalMs)}</td>
                 </tr>
               ))}
@@ -231,7 +233,7 @@ export function NaukaStatsView({ meta }: { meta: StatsMeta }) {
                 <tr key={h.id}>
                   <td>{new Date(h.finishedAt).toLocaleString("pl-PL", { dateStyle: "short", timeStyle: "short" })}</td>
                   <td>{h.lesson === "powtorka" ? names.get("powtorka") : <Link href={`/nauka/lekcja/${h.lesson}?sub=${h.sub}`}>{names.get(h.lesson) ?? h.lesson}</Link>}</td>
-                  <td>{h.lesson === "powtorka" ? "–" : SUBLESSONS[h.sub - 1]?.title}</td>
+                  <td>{h.lesson === "powtorka" ? "–" : subsFor(meta.lessons.find((l) => l.id === h.lesson) ?? {})[h.sub - 1]?.title}</td>
                   <td>{h.correct}/{h.total} · {fmtPct(h.total ? Math.round((h.correct / h.total) * 1000) / 10 : 0)}</td>
                   <td>{fmtDuration(h.durationMs)}</td><td>{h.xp}</td>
                 </tr>

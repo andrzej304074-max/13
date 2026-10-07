@@ -1,5 +1,5 @@
 import type { Question } from "./types";
-import type { AnswerLog, CourseItem, ExerciseType, LessonPayload } from "./nauka-types";
+import type { AnswerLog, CourseItem, ExerciseType, GraphSpec, LessonPayload, ZEx } from "./nauka-types";
 
 /* ---------- sprawdzanie wpisanych odpowiedzi ---------- */
 
@@ -110,17 +110,88 @@ export type Exercise =
   | { type: "intro"; item: CourseItem }
   | { type: "wybor"; item: CourseItem; title: string; prompt: string; options: string[]; correct: number; long?: boolean }
   | { type: "wzor"; item: CourseItem; title: string; prompt: string; options: string[]; correct: number; long?: boolean }
-  | { type: "prawda-falsz"; item: CourseItem; term: string; statement: string; truth: boolean; trueDef: string }
-  | { type: "luka"; item: CourseItem; before: string; after: string; options: string[]; answer: string }
+  | { type: "prawda-falsz"; item: CourseItem; term?: string; statement: string; truth: boolean; trueDef: string; ctx?: string; stat?: ExerciseType }
+  | { type: "luka"; item: CourseItem; before: string; after: string; options: string[]; answer: string; why?: string; ctx?: string; stat?: ExerciseType }
   | { type: "wpisz"; item: CourseItem; title: string; prompt: string; hint: string }
   | { type: "pary"; items: CourseItem[]; left: { id: string; text: string }[]; right: { id: string; text: string }[] }
   | { type: "kolejnosc"; items: CourseItem[]; shuffled: CourseItem[] }
   | { type: "fiszka"; item: CourseItem }
-  | { type: "pytanie"; item: CourseItem; question: Question };
+  | { type: "pytanie"; item: CourseItem; question: Question; ctx?: string; stat?: ExerciseType }
+  | { type: "karta"; item: CourseItem; title: string; text: string; w?: string; p?: string; g?: GraphSpec }
+  | { type: "lancuch"; item: CourseItem; q: string; steps: string[]; shuffled: string[]; why?: string; ctx?: string; stat?: ExerciseType }
+  | { type: "kategorie"; item: CourseItem; q: string; cats: string[]; entries: { text: string; cat: number }[]; why?: string; ctx?: string; stat?: ExerciseType }
+  | { type: "liczba"; item: CourseItem; q: string; a: number; tol: number; unit?: string; steps: string[]; ctx?: string; stat?: ExerciseType }
+  | { type: "wykres"; item: CourseItem; q: string; g: GraphSpec; options: string[]; correct: number; why: string; ctx?: string; stat?: ExerciseType };
 
-/** Typ ćwiczenia zapisywany w statystykach (intro nie jest oceniane). */
+/** Typ ćwiczenia zapisywany w statystykach (karty wprowadzające i wyjaśniające nie są oceniane). */
 export function exerciseKind(e: Exercise): ExerciseType | null {
-  return e.type === "intro" ? null : e.type;
+  if (e.type === "intro" || e.type === "karta") return null;
+  return ("stat" in e && e.stat) || e.type;
+}
+
+/* ---------- odpowiedzi liczbowe ---------- */
+
+/** Liczba z tekstu użytkownika: „1 234,5”, „1234.5”, „12%”, „−3” → number (NaN, gdy się nie da). */
+export function parseNumber(s: string): number {
+  const t = s
+    .replace(/[\s\u00a0]/g, "")
+    .replace(/[−–]/g, "-")
+    .replace(",", ".")
+    .replace(/[^0-9.\-]+$/, "");
+  return /^-?\d+(\.\d+)?$|^-?\.\d+$/.test(t) ? Number(t) : NaN;
+}
+
+export function checkNumber(input: string, answer: number, tol: number): boolean {
+  const v = parseNumber(input);
+  return Number.isFinite(v) && Math.abs(v - answer) <= tol + 1e-9;
+}
+
+/* ---------- lekcje „Zrozumienie”: ćwiczenia z ręcznej treści ---------- */
+
+/** Tasuje opcje i zwraca nowe położenie poprawnych odpowiedzi. */
+function shuffleKeyed(opts: string[], ok: number[], rnd: () => number) {
+  const order = shuffle(opts.map((_, i) => i), rnd);
+  return { options: order.map((i) => opts[i]), correct: order.flatMap((i, pos) => (ok.includes(i) ? [pos] : [])) };
+}
+
+export function buildZrozum(exs: ZEx[], item: CourseItem, rnd: () => number = Math.random): Exercise[] {
+  return exs.map((e): Exercise => {
+    switch (e.t) {
+      case "karta":
+        return { type: "karta", item, title: e.title, text: e.text, w: e.w, p: e.p, g: e.g };
+      case "wybor":
+      case "multi": {
+        const k = shuffleKeyed(e.opts, e.t === "wybor" ? [e.ok] : e.ok, rnd);
+        const question: Question = {
+          id: "", type: e.t === "wybor" ? "single" : "multi", edition: "", question: e.q,
+          options: k.options, correct: k.correct, explanation: e.why,
+        };
+        return { type: "pytanie", item, question, ctx: e.ctx, stat: e.stat };
+      }
+      case "pf":
+        return { type: "prawda-falsz", item, statement: e.s, truth: e.v, trueDef: e.why, ctx: e.ctx, stat: e.stat };
+      case "luka": {
+        const [before, after] = e.text.split("___");
+        return { type: "luka", item, before, after, options: shuffle(e.opts, rnd), answer: e.opts[e.ok], why: e.why, ctx: e.ctx, stat: e.stat };
+      }
+      case "lancuch": {
+        let shuffled = shuffle(e.steps, rnd);
+        if (shuffled.every((x, i) => x === e.steps[i])) shuffled = [...e.steps].reverse();
+        return { type: "lancuch", item, q: e.q, steps: e.steps, shuffled, why: e.why, ctx: e.ctx, stat: e.stat };
+      }
+      case "kategorie":
+        return {
+          type: "kategorie", item, q: e.q, cats: e.cats, why: e.why, ctx: e.ctx, stat: e.stat,
+          entries: shuffle(e.items.map(([text, cat]) => ({ text, cat })), rnd),
+        };
+      case "liczba":
+        return { type: "liczba", item, q: e.q, a: e.a, tol: e.tol, unit: e.unit, steps: e.steps, ctx: e.ctx, stat: e.stat };
+      case "wykres": {
+        const k = shuffleKeyed(e.opts, [e.ok], rnd);
+        return { type: "wykres", item, q: e.q, g: e.g, options: k.options, correct: k.correct[0], why: e.why, ctx: e.ctx, stat: e.stat };
+      }
+    }
+  });
 }
 
 export function shuffle<T>(arr: T[], rnd: () => number = Math.random): T[] {
@@ -186,6 +257,7 @@ export interface BuildOptions {
 
 export function buildExercises(p: LessonPayload, opts: BuildOptions = {}): Exercise[] {
   const rnd = opts.rnd ?? Math.random;
+  if (p.zrozum) return buildZrozum(p.zrozum.exercises, p.items[0], rnd);
   const level = opts.level ?? 0;
   // lekcja z 1–2 haseł: dobierz hasła tego samego rodzaju z puli, żeby ćwiczeń było co najmniej kilka
   const extra = p.items.length >= 3 ? [] : p.pool.filter((o) => p.items.some((i) => i.kind === o.kind)).slice(0, 3 - p.items.length);

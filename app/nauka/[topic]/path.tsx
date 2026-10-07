@@ -4,17 +4,20 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { api } from "@/lib/client";
 import type { Progress } from "@/lib/nauka";
-import { MAX_LEVEL, SUBLESSONS, type CourseTopic, type ItemKind } from "@/lib/nauka-types";
+import { MAX_LEVEL, subsFor, type CourseTopic, type ItemKind } from "@/lib/nauka-types";
 
 export interface UnitView {
   id: string;
   title: string;
   kind: ItemKind;
   count: number;
-  lessons: { id: string; no: number; title: string; items: string[]; questions: number }[];
+  zcount: number;
+  lessons: { id: string; no: number; title: string; type?: "zrozum"; goal?: string; items: string[]; questions: number }[];
 }
 
-const KIND_ICON: Record<string, string> = { pojecie: "💡", wzor: "🧮", osoba: "👤", instytucja: "🏢", data: "📅", przepis: "⚖️" };
+const KIND_ICON: Record<string, string> = {
+  pojecie: "💡", wzor: "🧮", osoba: "👤", instytucja: "🏢", data: "📅", przepis: "⚖️", zrozumienie: "🧠",
+};
 /** Przesunięcie węzłów ścieżki – zygzak jak w Duolingo. */
 const OFFSETS = [0, 40, 70, 40, 0, -40, -70, -40];
 
@@ -44,8 +47,18 @@ export function TopicPath({ topic, units, kinds }: { topic: CourseTopic; units: 
     } catch {}
   }
 
-  const counts = Object.fromEntries(kinds.map((k) => [k.id, units.filter((u) => u.kind === k.id).reduce((n, u) => n + u.count, 0)]));
-  const visible = units.filter((u) => kind === "all" || u.kind === kind);
+  // licznik przy filtrze: hasła danego rodzaju, a dla „Zrozumienie” – liczba lekcji zrozumienia
+  const counts = Object.fromEntries(kinds.map((k) => [
+    k.id,
+    k.id === "zrozumienie" ? units.reduce((n, u) => n + u.zcount, 0) : units.filter((u) => u.kind === k.id).reduce((n, u) => n + u.count, 0),
+  ]));
+  const visible = units
+    .filter((u) => kind === "all" || u.kind === kind || (kind === "zrozumienie" && u.zcount > 0))
+    .map((u) => ({
+      ...u,
+      termLessons: u.lessons.filter((l) => l.type !== "zrozum").length,
+      lessons: u.lessons.filter((l) => kind === "all" || (kind === "zrozumienie" ? l.type === "zrozum" : l.type !== "zrozum")),
+    }));
   const tp = progress?.topics[topic.id];
 
   return (
@@ -56,7 +69,8 @@ export function TopicPath({ topic, units, kinds }: { topic: CourseTopic; units: 
         <div>
           <h1 style={{ margin: 0 }}>{topic.title}</h1>
           <p className="muted" style={{ margin: 0 }}>
-            {units.length} działów · {units.reduce((n, u) => n + u.lessons.length, 0)} lekcji
+            {units.length} działów · {units.reduce((n, u) => n + u.lessons.length - u.zcount, 0)} lekcji
+            {counts.zrozumienie ? ` + 🧠 ${counts.zrozumienie}` : ""}
             {tp && ` · 👑 ${tp.crowns} koron · ${tp.crowned}/${tp.lessons} lekcji z koroną`}
           </p>
         </div>
@@ -80,7 +94,7 @@ export function TopicPath({ topic, units, kinds }: { topic: CourseTopic; units: 
               <small>{KIND_ICON[u.kind]} {u.kind === "pojecie" ? "Dział" : "Dział tematyczny"}</small>
               <h2 style={{ margin: 0 }}>{u.title}</h2>
             </div>
-            <small>{u.count} haseł · {u.lessons.length} lekcji</small>
+            <small>{u.count} haseł · {u.termLessons} lekcji{u.zcount ? ` · 🧠 ${u.zcount}` : ""}</small>
           </div>
           <div className="path">
             {u.lessons.map((l, i) => {
@@ -91,27 +105,30 @@ export function TopicPath({ topic, units, kinds }: { topic: CourseTopic; units: 
               return (
                 <div key={l.id} id={l.id} className="path-step">
                   <button
-                    className={`node ${level >= MAX_LEVEL ? "gold" : level > 0 ? "done" : started ? "started" : ""}`}
+                    className={`node ${l.type === "zrozum" ? "z" : ""} ${level >= MAX_LEVEL ? "gold" : level > 0 ? "done" : started ? "started" : ""}`}
                     style={{ transform: `translateX(${OFFSETS[i % OFFSETS.length]}px)` }}
                     onClick={() => setOpen(isOpen ? null : l.id)}
                     aria-expanded={isOpen}
-                    aria-label={`Lekcja ${l.no}: ${l.title}`}
+                    aria-label={`${l.type === "zrozum" ? "Zrozumienie" : "Lekcja"} ${l.no}: ${l.title}`}
                   >
-                    <span className="node-icon">{level >= MAX_LEVEL ? "🏆" : KIND_ICON[u.kind]}</span>
+                    <span className="node-icon">{level >= MAX_LEVEL ? "🏆" : KIND_ICON[l.type === "zrozum" ? "zrozumienie" : u.kind]}</span>
                     {level > 0 && <span className="node-level">👑{level}</span>}
                   </button>
-                  <div className="node-label" style={{ transform: `translateX(${OFFSETS[i % OFFSETS.length]}px)` }}>Lekcja {l.no}</div>
+                  <div className="node-label" style={{ transform: `translateX(${OFFSETS[i % OFFSETS.length]}px)` }}>
+                    {l.type === "zrozum" ? `🧠 ${l.title}` : `Lekcja ${l.no}`}
+                  </div>
                   {isOpen && (
                     <div className="lesson-panel card">
-                      <strong>Lekcja {l.no}: {l.title}</strong>
+                      <strong>{l.type === "zrozum" ? `🧠 Zrozumienie ${l.no}` : `Lekcja ${l.no}`}: {l.title}</strong>
+                      {l.goal && <p style={{ margin: "4px 0 0", fontSize: "0.92rem" }}>🎯 {l.goal}</p>}
                       <p className="muted" style={{ margin: "4px 0 10px", fontSize: "0.9rem" }}>
-                        Hasła: {l.items.join(" · ")}{l.questions ? ` · ${l.questions} pytań do sprawdzianu` : ""}
+                        {l.type === "zrozum" ? "Powiązane hasła" : "Hasła"}: {l.items.join(" · ")}{l.questions ? ` · ${l.questions} pytań do sprawdzianu` : ""}
                       </p>
                       <div className="crowns" aria-label={`Poziom ${level} z ${MAX_LEVEL}`}>
                         {Array.from({ length: MAX_LEVEL }, (_, k) => <span key={k} className={k < level ? "on" : ""}>👑</span>)}
                       </div>
                       <div className="subs">
-                        {SUBLESSONS.map((s) => {
+                        {subsFor(l).map((s) => {
                           const sp = lp?.subs[s.no];
                           return (
                             <Link key={s.no} href={`/nauka/lekcja/${l.id}?sub=${s.no}`} className={`sub ${sp ? (sp.best >= 80 ? "ok" : "tried") : ""}`}>

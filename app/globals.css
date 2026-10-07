@@ -295,3 +295,42 @@ header.top .brand { white-space: nowrap; }
   header.top nav { gap: 10px; font-size: 0.9rem; flex-wrap: wrap; justify-content: flex-end; }
   header.top nav a { white-space: nowrap; }
 }
+
+/* ---------- Nauka: lekcje „Zrozumienie” ---------- */
+.graph { width: 100%; max-width: 420px; height: auto; display: block; margin: 0 auto; }
+.graph-axis { stroke: var(--muted); stroke-width: 1.5; }
+.graph-arrowhead { fill: var(--muted); }
+.graph-axis-label { fill: var(--muted); font-size: 11px; }
+.graph-curve line { stroke-width: 3; stroke-linecap: round; }
+.graph-curve.c-down line { stroke: #2563eb; }
+.graph-curve.c-up line { stroke: #dc2626; }
+.graph-curve.c-vertical line { stroke: #059669; }
+.graph-curve text { font-size: 12px; font-weight: 700; fill: var(--text); }
+.graph-curve.old line { stroke: var(--muted); stroke-dasharray: 6 5; stroke-width: 2; }
+.graph-curve.old text { fill: var(--muted); font-weight: 500; }
+.graph-curve.new line { animation: drawin .6s ease-out; }
+@keyframes drawin { from { opacity: 0; } to { opacity: 1; } }
+.graph-move { stroke: #f59e0b; stroke-width: 2.5; }
+.graph-eq line { stroke: var(--muted); stroke-dasharray: 3 4; }
+.graph-eq circle { fill: var(--text); }
+.graph-eq text { fill: var(--text); font-size: 12px; font-weight: 700; }
+.graph-eq.old circle { fill: var(--muted); }
+.graph-eq.old text { fill: var(--muted); }
+.case-ctx { border-left: 4px solid var(--topic, var(--accent)); background: var(--surface); border-radius: 8px; padding: 10px 12px; font-size: .95rem; }
+.case-ctx small { display: block; color: var(--muted); font-weight: 600; margin-bottom: 2px; }
+.sources { font-size: .85rem; }
+.sources ul { margin: 2px 0 0; padding-left: 18px; }
+.sources small { color: var(--muted); }
+.lesson-goal { font-size: .92rem; margin: -4px 0 12px; }
+.lesson-goal summary { cursor: pointer; font-weight: 600; }
+.buckets { display: grid; gap: 8px; }
+.bucket-row { display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-wrap: wrap; border: 1px solid var(--border); border-radius: 10px; padding: 8px 10px; background: var(--surface); }
+.bucket-row.ok { border-color: var(--good); background: var(--good-bg); }
+.bucket-row.bad { border-color: var(--bad); background: var(--bad-bg); }
+.bucket-row .seg button.right { outline: 2px solid var(--good); }
+.number-row { display: flex; gap: 8px; align-items: center; }
+.number-row .unit { font-weight: 700; color: var(--muted); }
+.node.z { border-radius: 22px; }
+.graph-fig { margin: 0; }
+.graph-legend { text-align: center; font-size: .85rem; color: var(--muted); margin-top: 4px; }
+.bucket-row .seg button { font-size: .85rem; padding: 4px 10px; }

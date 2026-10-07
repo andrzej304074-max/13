@@ -220,6 +220,8 @@ course = {
     "kinds": [{"id": k, "title": kt} for k, kt in C.KINDS],
     "units": units, "lessons": lessons, "items": items,
 }
+# lekcje „Zrozumienie” (ręczne treści z tools/nauka/zrozum) – dopisywane do działów, zawartość w zrozum.json
+load(os.path.join(HERE, "build_zrozum.py")).build(course, ROOT, OUT)
 json.dump(course, open(os.path.join(OUT, "course.json"), "w"), ensure_ascii=False, separators=(",", ":"))
 
 # --- raport ---
@@ -229,6 +231,6 @@ for t in TOPIC_IDS:
     print(f"  {t}: działy {len(us)}, lekcje {sum(len(u['lessons']) for u in us)}, hasła {sum(1 for i in items.values() if i['topic'] == t)}")
     for u in us:
         print(f"     {u['id']:<28} {u['count']:>3} haseł, {len(u['lessons'])} lekcji")
-qn = [len(L["questions"]) for L in lessons.values()]
+qn = [len(L["questions"]) for L in lessons.values() if L.get("type") != "zrozum"]
 print("pytania na lekcję: min", min(qn), "mediana", sorted(qn)[len(qn) // 2], "lekcji z <6 pytaniami:", sum(1 for n in qn if n < 6))
 print("rodzaje:", Counter(i["kind"] for i in items.values()))

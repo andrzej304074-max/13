@@ -1,4 +1,4 @@
-import { COURSE } from "@/data/nauka";
+import { COURSE, ZROZUM } from "@/data/nauka";
 import { getQuestion } from "./questions";
 import type { Question } from "./types";
 import type { CourseItem, CourseLesson, CourseTopic, CourseUnit, LessonPayload } from "./nauka-types";
@@ -30,8 +30,8 @@ export function unitsOf(topic: string): CourseUnit[] {
 function poolFor(lesson: CourseLesson): CourseItem[] {
   const own = new Set(lesson.items);
   const unit = getUnit(lesson.unit);
-  const unitIds = (unit?.lessons ?? []).flatMap((l) => COURSE.lessons[l].items);
-  const topicItems = Object.values(COURSE.items).filter((i) => i.topic === lesson.topic);
+  const unitIds = (unit?.lessons ?? []).filter((l) => COURSE.lessons[l].type !== "zrozum").flatMap((l) => COURSE.lessons[l].items);
+  const topicItems = Object.values(COURSE.items).filter((i) => i.topic === lesson.topic && i.kind !== "zrozumienie");
   const lessonItems = lesson.items.map((i) => COURSE.items[i]);
   const kinds = new Set(lessonItems.map((i) => i.kind));
   const pick = (ids: CourseItem[], n: number) => shuffle(ids.filter((i) => !own.has(i.id))).slice(0, n);
@@ -51,6 +51,20 @@ export function lessonPayload(lessonId: string, sub: number): LessonPayload | nu
   const lesson = getLesson(lessonId);
   if (!lesson) return null;
   const topic = getTopic(lesson.topic)!;
+  if (lesson.type === "zrozum") {
+    const z = ZROZUM[lesson.id];
+    if (!z) return null;
+    return {
+      lesson,
+      unitTitle: getUnit(lesson.unit)?.title ?? "",
+      topic,
+      sub,
+      items: lesson.items.map((i) => COURSE.items[i]),
+      pool: [],
+      questions: [],
+      zrozum: { goal: z.goal, sources: z.sources, refs: z.refs.map((i) => COURSE.items[i]), exercises: z.subs[sub - 1] ?? [] },
+    };
+  }
   const questions = lesson.questions.map(getQuestion).filter((q): q is Question => !!q);
   return {
     lesson,
@@ -65,7 +79,7 @@ export function lessonPayload(lessonId: string, sub: number): LessonPayload | nu
 
 /** Lekcja powtórkowa z podanych (najsłabszych) haseł – ćwiczenia jak w „Utrwal”. */
 export function reviewPayload(itemIds: string[]): LessonPayload | null {
-  const items = itemIds.map(getItem).filter((i): i is CourseItem => !!i).slice(0, 8);
+  const items = itemIds.map(getItem).filter((i): i is CourseItem => !!i && i.kind !== "zrozumienie").slice(0, 8);
   if (items.length === 0) return null;
   const lesson: CourseLesson = {
     id: "powtorka", unit: "powtorka", topic: "powtorka", kind: "pojecie", no: 1,

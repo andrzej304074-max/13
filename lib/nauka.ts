@@ -190,7 +190,8 @@ export async function getProgress(topic: string | null = null): Promise<Progress
 /** Hasła z najniższą skutecznością (min. 2 odpowiedzi, ostatnie 60 dni) – do powtórki. */
 export async function weakItems(limit = 8): Promise<string[]> {
   const { rows } = await query<{ item_id: string }>(
-    `SELECT item_id FROM learn_answers WHERE answered_at > now() - interval '60 days'
+    // lekcje „Zrozumienie” nie mają ćwiczeń generowanych z haseł – powtarza się je w samych lekcjach
+    `SELECT item_id FROM learn_answers WHERE answered_at > now() - interval '60 days' AND item_kind <> 'zrozumienie'
      GROUP BY item_id HAVING COUNT(*) >= 2 AND AVG(correct::int) < 0.8
      ORDER BY AVG(correct::int), COUNT(*) DESC LIMIT $1`,
     [limit],
