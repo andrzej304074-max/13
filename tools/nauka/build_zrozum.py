@@ -214,6 +214,8 @@ def flatten(sub_no, exs):
 
 
 def load_unit(path):
+    if "if False" in open(path, encoding="utf-8").read():
+        raise ContentError(f"{path}: pozostałość edycji („if False”) – usuń zdublowany fragment")
     spec = importlib.util.spec_from_file_location("zrozum_" + os.path.basename(path)[:-3].replace("-", "_"), path)
     m = importlib.util.module_from_spec(spec)
     m.__dict__.update(DSL)
