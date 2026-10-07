@@ -266,6 +266,11 @@ def build(course, root, out_dir, min_lessons=None):
                     for i, e in enumerate(exs):
                         check_ex(e, f"{where}/{s + 1}.{i}")
                     flat = flatten(s, exs)
+                    # powtórzone karty lub pytania w jednej pod-lekcji (np. przypadkowo zdublowany fragment)
+                    keys = [norm(e.get("title") or e.get("q") or e.get("s") or e.get("text")) for e in flat]
+                    dup = {k for k in keys if keys.count(k) > 1}
+                    if dup:
+                        raise ContentError(f"{where}/{s + 1}: powtórzone elementy: {sorted(dup)[:2]}")
                     graded = [e for e in flat if e["t"] != "karta"]
                     if s == 0 and (len(flat) - len(graded) < 4 or len(graded) < 2):
                         raise ContentError(f"{where}/1: wyjaśnienie wymaga ≥ 4 kart i ≥ 2 pytań sprawdzających")

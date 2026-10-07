@@ -10,11 +10,14 @@ urls = sorted({s["u"] for c in content.values() for s in c["sources"]})
 bad = 0
 for u in urls:
     req = urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0 (link check)"})
-    try:
-        with urllib.request.urlopen(req, timeout=20) as r:
-            code = r.status
-    except Exception as ex:  # noqa: BLE001
-        code = getattr(ex, "code", type(ex).__name__)
+    for attempt in range(3):  # chwilowe błędy sieci – ponów
+        try:
+            with urllib.request.urlopen(req, timeout=20) as r:
+                code = r.status
+        except Exception as ex:  # noqa: BLE001
+            code = getattr(ex, "code", type(ex).__name__)
+        if code == 200 or isinstance(code, int) and 400 <= code < 500:
+            break
     if code != 200:
         bad += 1
         print(f"{code}  {u}")

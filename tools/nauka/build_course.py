@@ -228,7 +228,7 @@ json.dump(course, open(os.path.join(OUT, "course.json"), "w"), ensure_ascii=Fals
 print(f"hasła: {len(items)}, działy: {len(units)}, lekcje: {len(lessons)}, pod-lekcje: {4 * len(lessons)}")
 for t in TOPIC_IDS:
     us = [u for u in units if u["topic"] == t]
-    print(f"  {t}: działy {len(us)}, lekcje {sum(len(u['lessons']) for u in us)}, hasła {sum(1 for i in items.values() if i['topic'] == t)}")
+    print(f"  {t}: działy {len(us)}, lekcje {sum(len(u['lessons']) for u in us)}, hasła {sum(1 for i in items.values() if i['topic'] == t and i['kind'] != 'zrozumienie')}, zrozumienie {sum(1 for u in us for l in u['lessons'] if lessons[l].get('type') == 'zrozum')}")
     for u in us:
         print(f"     {u['id']:<28} {u['count']:>3} haseł, {len(u['lessons'])} lekcji")
 qn = [len(L["questions"]) for L in lessons.values() if L.get("type") != "zrozum"]
