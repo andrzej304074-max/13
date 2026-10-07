@@ -134,3 +134,7 @@ th { color: var(--muted); font-weight: 500; font-size: 0.85rem; }
   th, td { padding: 6px 3px; }
 }
 .choice:disabled { opacity: 0.5; cursor: not-allowed; }
+.select {
+  width: 100%; border: 1px solid var(--border); background: var(--surface); color: var(--text);
+  border-radius: 10px; padding: 12px 14px; font: inherit;
+}

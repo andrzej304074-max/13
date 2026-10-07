@@ -25,4 +25,8 @@ CREATE INDEX IF NOT EXISTS tests_finished_idx ON tests (finished_at);
 ALTER TABLE tests ADD COLUMN IF NOT EXISTS mode text NOT NULL DEFAULT 'timed';
 ALTER TABLE tests ALTER COLUMN deadline DROP NOT NULL;
 ALTER TABLE answers ADD COLUMN IF NOT EXISTS skipped boolean NOT NULL DEFAULT false;
+
+-- Osobna baza pytań ze słownika pojęć – własne testy i statystyki.
+ALTER TABLE tests ADD COLUMN IF NOT EXISTS bank text NOT NULL DEFAULT 'owe';
+CREATE INDEX IF NOT EXISTS tests_bank_idx ON tests (bank);
 `;

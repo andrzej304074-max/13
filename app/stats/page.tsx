@@ -7,6 +7,13 @@ import type { Stats } from "@/lib/tests";
 
 const BLOCK_KEY = "owe:blockSize";
 const TYPE_KEY = "owe:statsType";
+const BANK_KEY = "owe:statsBank";
+
+type Bank = "owe" | "slownik";
+const BANKS: { value: Bank; label: string }[] = [
+  { value: "owe", label: "Pytania z olimpiad" },
+  { value: "slownik", label: "Pytania ze słownika" },
+];
 
 type Filter = "all" | "single" | "multi";
 const FILTERS: { value: Filter; label: string }[] = [
@@ -29,6 +36,7 @@ export default function StatsPage() {
 
   const [blockSize, setBlockSize] = useState<number | null>(null);
   const [filter, setFilter] = useState<Filter>("all");
+  const [bank, setBank] = useState<Bank | null>(null);
 
   // Wybrany rozmiar bloku zapamiętywany lokalnie w przeglądarce.
   useEffect(() => {
@@ -41,14 +49,30 @@ export default function StatsPage() {
       const f = localStorage.getItem(TYPE_KEY);
       if (f === "single" || f === "multi") setFilter(f);
     } catch {}
+    // Baza z adresu (?bank=slownik) ma pierwszeństwo przed ostatnio oglądaną.
+    let b: Bank = "owe";
+    const fromUrl = new URLSearchParams(window.location.search).get("bank");
+    try {
+      const v = fromUrl ?? localStorage.getItem(BANK_KEY);
+      if (v === "slownik") b = "slownik";
+    } catch {}
+    setBank(b);
     setBlockSize(saved);
   }, []);
 
   useEffect(() => {
-    if (blockSize === null) return;
+    if (blockSize === null || bank === null) return;
     const typeParam = filter === "all" ? "" : `&type=${filter}`;
-    api<Stats>(`/api/stats?block=${blockSize}${typeParam}`).then(setStats).catch((e) => setError(e.message));
-  }, [blockSize, filter]);
+    api<Stats>(`/api/stats?bank=${bank}&block=${blockSize}${typeParam}`).then(setStats).catch((e) => setError(e.message));
+  }, [blockSize, filter, bank]);
+
+  function chooseBank(b: Bank) {
+    setBank(b);
+    try {
+      localStorage.setItem(BANK_KEY, b);
+      window.history.replaceState(null, "", `/stats?bank=${b}`);
+    } catch {}
+  }
 
   function chooseFilter(f: Filter) {
     setFilter(f);
@@ -74,7 +98,19 @@ export default function StatsPage() {
   return (
     <div className="stack">
       <h1>Statystyki</h1>
-      <p className="muted">Procent poprawnych odpowiedzi ze wszystkich testów wszystkich użytkowników – w wielokrotnym wyborze liczy się każde
+      <div className="seg" role="group" aria-label="Baza pytań">
+        {BANKS.map((b) => (
+          <button
+            key={b.value}
+            className={b.value === bank ? "active" : ""}
+            aria-pressed={b.value === bank}
+            onClick={() => chooseBank(b.value)}
+          >
+            {b.label}
+          </button>
+        ))}
+      </div>
+      <p className="muted">{bank === "slownik" ? "Pytania ze słownika pojęć – statystyki liczone osobno od pytań z olimpiad. " : ""}Procent poprawnych odpowiedzi ze wszystkich testów wszystkich użytkowników – w wielokrotnym wyborze liczy się każde
         trafne pole A–D. W testach 30/50 pytań liczą się wszystkie pytania testu, w trybie „bez limitu” tylko sprawdzone
         lub pominięte.</p>
       <div className="seg" role="group" aria-label="Typ pytań">

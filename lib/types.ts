@@ -3,6 +3,12 @@ export type QuestionType = "single" | "multi";
 /** "timed" – 30/50 pytań z limitem czasu; "endless" – bez limitu pytań i czasu, bez cofania. */
 export type TestMode = "timed" | "endless";
 
+/** Baza pytań: "owe" – pytania z olimpiad, "slownik" – pytania ułożone na podstawie słownika pojęć (docs/slownik-owe.pdf). */
+export type Bank = "owe" | "slownik";
+
+/** Pochodzenie pytań słownikowych: generowane automatycznie z haseł albo pisane ręcznie. */
+export type Origin = "auto" | "manual";
+
 export interface Question {
   id: string;
   type: QuestionType;
@@ -15,6 +21,9 @@ export interface Question {
   correct: number[];
   /** Wyjaśnienie poprawnej odpowiedzi wraz z definicją. */
   explanation: string;
+  /** Tylko pytania słownikowe: numer działu słownika i pochodzenie pytania. */
+  section?: number;
+  origin?: Origin;
 }
 
 /** Pytanie wysyłane do klienta przed sprawdzeniem — bez odpowiedzi. */
@@ -32,6 +41,7 @@ export interface AnswerFeedback {
 
 export interface TestState {
   id: string;
+  bank: Bank;
   type: QuestionType;
   mode: TestMode;
   questions: PublicQuestion[];

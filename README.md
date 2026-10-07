@@ -49,6 +49,20 @@ Po zmianie plików uruchom `npm run validate-questions` (sprawdza też, czy każ
 Typ pytań, którego nie ma jeszcze w bazie, jest wyłączony na stronie głównej.
 Jeśli pytań danego typu jest mniej niż 30/50, test zawiera wszystkie dostępne.
 
+## Pytania ze słownika (zakładka „Słownik”)
+
+Osobna baza pytań ułożonych na podstawie słownika pojęć `docs/slownik-owe.pdf`, z własnymi statystykami
+(przełącznik „Pytania z olimpiad / Pytania ze słownika” na stronie statystyk; kolumna `tests.bank`).
+Przy starcie testu można wybrać rodzaj pytań (ręczne, automatyczne lub oba) i dział słownika (albo wszystkie).
+
+- `tools/slownik/glossary/` – źródła słownika (hasła w `s*.py`); PDF:
+  `python3 -I tools/slownik/glossary/build.py tools/slownik/glossary . docs/slownik-owe.pdf`
+  (wymaga `playwright-core`, Chromium, `pdftotext`).
+- `data/slownik/auto.json` – pytania automatyczne:
+  `python3 -I tools/slownik/gen_questions.py tools/slownik/glossary data/slownik`.
+- `data/slownik/manual.json` – pytania pisane ręcznie, składane z `tools/slownik/manual/m*.py`:
+  `python3 -I tools/slownik/build_manual.py tools/slownik/manual data/slownik`.
+
 ## Uruchomienie lokalne
 
 ```bash

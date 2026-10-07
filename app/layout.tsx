@@ -15,6 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Link href="/" className="brand">Testy OWE</Link>
           <nav>
             <Link href="/">Nowy test</Link>
+            <Link href="/slownik">Słownik</Link>
             <Link href="/stats">Statystyki</Link>
           </nav>
         </header>

@@ -1,5 +1,5 @@
 import { query } from "./db";
-import { drawQuestions, getQuestion, toPublic } from "./questions";
+import { drawQuestions, getQuestion, toPublic, type DrawFilter } from "./questions";
 import {
   correctUnits,
   durationMinutes,
@@ -11,7 +11,7 @@ import {
   validateSelection,
   type TestSize,
 } from "./scoring";
-import type { AnswerFeedback, QuestionType, TestMode, TestState } from "./types";
+import type { AnswerFeedback, Bank, QuestionType, TestMode, TestState } from "./types";
 
 export class HttpError extends Error {
   constructor(public status: number, message: string) {
@@ -21,6 +21,7 @@ export class HttpError extends Error {
 
 interface TestRow {
   id: string;
+  bank: Bank;
   type: QuestionType;
   mode: TestMode;
   question_ids: string[];
@@ -41,21 +42,26 @@ interface AnswerRow {
 /** Pozwala na drobne opóźnienie sieci przy odpowiedzi wysłanej tuż przed końcem czasu. */
 const GRACE_MS = 5_000;
 
-export async function createTest(type: QuestionType, count: TestSize | "endless"): Promise<TestState> {
+export async function createTest(
+  type: QuestionType,
+  count: TestSize | "endless",
+  bank: Bank = "owe",
+  filter: DrawFilter = {},
+): Promise<TestState> {
   const endless = count === "endless";
-  const drawn = drawQuestions(type, endless ? Infinity : count);
+  const drawn = drawQuestions(type, endless ? Infinity : count, bank, filter);
   if (drawn.length === 0) throw new HttpError(400, "Brak pytań tego typu w bazie.");
   const { rows } = endless
     ? await query<TestRow>(
-        `INSERT INTO tests (type, mode, question_ids, deadline, max_score)
-         VALUES ($1, 'endless', $2, NULL, 0) RETURNING *`,
-        [type, drawn.map((q) => q.id)],
+        `INSERT INTO tests (bank, type, mode, question_ids, deadline, max_score)
+         VALUES ($1, $2, 'endless', $3, NULL, 0) RETURNING *`,
+        [bank, type, drawn.map((q) => q.id)],
       )
     : await query<TestRow>(
-        `INSERT INTO tests (type, question_ids, deadline, max_score)
-         VALUES ($1, $2, now() + make_interval(mins => $3), $4)
+        `INSERT INTO tests (bank, type, question_ids, deadline, max_score)
+         VALUES ($1, $2, $3, now() + make_interval(mins => $4), $5)
          RETURNING *`,
-        [type, drawn.map((q) => q.id), durationMinutes(count), drawn.length * MAX_POINTS_PER_QUESTION],
+        [bank, type, drawn.map((q) => q.id), durationMinutes(count), drawn.length * MAX_POINTS_PER_QUESTION],
       );
   return toState(rows[0], []);
 }
@@ -98,6 +104,7 @@ function toState(t: TestRow, answers: AnswerRow[]): TestState {
     : null;
   return {
     id: t.id,
+    bank: t.bank,
     type: t.type,
     mode: t.mode,
     questions: visibleIds.map(getQuestion).filter((q) => q !== undefined).map(toPublic),
@@ -227,12 +234,14 @@ const COUNTED = "(t.finished_at IS NOT NULL OR (t.mode = 'endless' AND t.max_sco
 const pct = (score: number, max: number) => (max > 0 ? Math.round((score / max) * 1000) / 10 : 0);
 
 /**
+ * @param bank – statystyki liczone osobno dla pytań olimpijskich i słownikowych.
  * @param typeFilter – gdy podany, historia testów i wykres dokładności obejmują tylko pytania tego typu
  *   (podsumowania `overall`/`byType` są zawsze liczone dla obu typów).
  */
 export async function getStats(
   requestedBlockSize: number = DEFAULT_BLOCK_SIZE,
   typeFilter: QuestionType | null = null,
+  bank: Bank = "owe",
 ): Promise<Stats> {
   const blockSize = (BLOCK_SIZES as readonly number[]).includes(requestedBlockSize) ? requestedBlockSize : DEFAULT_BLOCK_SIZE;
   // Domknij testy, którym minął czas (np. ktoś zamknął kartę).
@@ -250,18 +259,19 @@ export async function getStats(
       (CASE WHEN t.mode = 'endless' THEN COUNT(a.question_id) ELSE cardinality(t.question_ids) END)
         * (CASE WHEN t.type = 'single' THEN 1 ELSE 4 END) AS total
     FROM tests t LEFT JOIN answers a ON a.test_id = t.id
-    WHERE ${COUNTED}
+    WHERE ${COUNTED} AND t.bank = $1
     GROUP BY t.id`;
   type PerTest = { id: string; type: QuestionType; mode: TestMode; score: number; max_score: number; at: Date; correct: number; total: string };
   const { rows: agg } = await query<{ type: QuestionType; score: number; max_score: number; correct: number; total: string; tests: string }>(
     `SELECT type, SUM(score) AS score, SUM(max_score) AS max_score, SUM(correct) AS correct, SUM(total) AS total,
        COUNT(*) AS tests
      FROM (${perTest}) p GROUP BY type`,
+    [bank],
   );
   const { rows: hist } = await query<PerTest>(
-    `SELECT * FROM (SELECT * FROM (${perTest}) p WHERE ($1::text IS NULL OR type = $1) ORDER BY at DESC LIMIT 100) h
+    `SELECT * FROM (SELECT * FROM (${perTest}) p WHERE ($2::text IS NULL OR type = $2) ORDER BY at DESC LIMIT 100) h
      ORDER BY at ASC`,
-    [typeFilter],
+    [bank, typeFilter],
   );
 
   // Każde sprawdzone/pominięte pytanie ma dokładność 0–1 (w wielokrotnym: trafne pola / 4), kolejność wg czasu odpowiedzi.
@@ -272,13 +282,13 @@ export async function getStats(
                    ELSE a.points / 2 END AS accuracy,
               row_number() OVER (ORDER BY a.answered_at, a.test_id, a.question_id) - 1 AS rn
        FROM answers a JOIN tests t ON t.id = a.test_id
-       WHERE ($1::text IS NULL OR t.type = $1)
+       WHERE t.bank = $2 AND ($1::text IS NULL OR t.type = $1)
      )
      SELECT * FROM (
        SELECT rn / ${blockSize} AS block, COUNT(*) AS questions, AVG(accuracy) AS accuracy
        FROM q GROUP BY 1 ORDER BY 1 DESC LIMIT 100
      ) b ORDER BY block ASC`,
-    [typeFilter],
+    [typeFilter, bank],
   );
 
   const empty = (): StatsTotals => ({ score: 0, maxScore: 0, correct: 0, total: 0, percent: 0, tests: 0 });

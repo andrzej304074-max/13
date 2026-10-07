@@ -252,8 +252,8 @@ function Summary({ test }: { test: TestState }) {
         </table></div>
       </div>
       <div className="row">
-        <Link className="btn" href="/">Nowy test</Link>
-        <Link className="btn secondary" href="/stats">Statystyki</Link>
+        <Link className="btn" href={test.bank === "slownik" ? "/slownik" : "/"}>Nowy test</Link>
+        <Link className="btn secondary" href={`/stats?bank=${test.bank}`}>Statystyki</Link>
       </div>
     </div>
   );
