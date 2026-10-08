@@ -17,13 +17,14 @@ WFF = S("Wikipedia – Functional finance (A. Lerner)", "https://en.wikipedia.or
 GTF = S("K. Górka, M. Łuszczyk, A. Thier, Teorie finansów publicznych w ujęciu historycznym, Studia i Prace WNEiZ US 47(1), 2017", "https://bazhum.muzhp.pl/media/texts/studia-i-prace-wydziau-nauk-ekonomicznych-i-zarzadzania/2017-tom-47-numer-1/studia_i_prace_wydzialu_nauk_ekonomicznych_i_zarzadzania-r2017-t47-n1-s21-33.pdf", D)
 EUIS = S("Eurostat – Glossary: Institutional sector (ESA 2010)", "https://ec.europa.eu/eurostat/statistics-explained/index.php/Glossary:Institutional_sector", D)
 WFIN = S("Wikipedia – Financialization", "https://en.wikipedia.org/wiki/Financialization", D)
+TON = S("Ustawa z 24.08.2006 o podatku tonażowym (Dz.U. 2006 nr 183 poz. 1353), ELI", "https://api.sejm.gov.pl/eli/acts/DU/2006/1353/text.html", D)
 WBF = S("Wikipedia – Behavioral economics / behavioral finance", "https://en.wikipedia.org/wiki/Behavioral_economics", D)
 
 LESSONS = [
     L(1, "Kategorie finansowe: przychód, dochód, wydatek, koszt",
       "Znać podział kategorii finansowych (przychodowe, dochodowe, wydatkowo-kosztowe, podatkowe, dłużne) i odróżniać przychód od dochodu oraz wydatek od kosztu; rozumieć, czym finanse behawioralne różnią się od klasycznego podejścia.",
-      ["Kategorie finansowe", "Finanse behawioralne", "Amortyzacja", "Zysk księgowy"],
-      [P171, WBF],
+      ["Kategorie finansowe", "Finanse behawioralne", "Amortyzacja", "Zysk księgowy", "Podatek od gier i podatek tonażowy"],
+      [P171, WBF, TON],
       explain=[
           K("Finanse – nauka o przepływach pieniądza",
             "Finanse badają gromadzenie i wydatkowanie zasobów pieniężnych przez gospodarstwa domowe, przedsiębiorstwa, państwo i instytucje finansowe. Dzielą się m.in. na finanse publiczne, przedsiębiorstw, gospodarstw domowych i międzynarodowe. Łączą się z ekonomią, prawem, matematyką, socjologią, psychologią (finanse behawioralne) i etyką."),
@@ -36,6 +37,8 @@ LESSONS = [
             "Wydatek to rozchód pieniądza (np. zakup maszyny za 100 tys. zł dziś). Koszt to zużycie zasobów w danym okresie – maszynę rozlicza się w kosztach przez amortyzację, np. po 20 tys. zł rocznie przez 5 lat. Dlatego zysk księgowy w roku zakupu może być wysoki, mimo dużego wydatku."),
           K("Finanse behawioralne",
             "Klasyczne finanse zakładają racjonalnych inwestorów i efektywne rynki. Finanse behawioralne (R. Shiller, R. Thaler, D. Kahneman) pokazują błędy poznawcze: nadmierną pewność siebie, owczy pęd, awersję do strat, księgowość mentalną. Pomagają wyjaśnić bańki i anomalie cenowe."),
+          K("Kategorie podatkowe – podatki sektorowe",
+            "Obok PIT, CIT i VAT istnieją podatki dla wybranych branż. Podatek od gier (ustawa o grach hazardowych z 2009 r.) płacą organizatorzy loterii, zakładów i kasyn – od wpływów lub od różnicy między stawkami a wygranymi, ze stawkami zależnymi od rodzaju gry. Podatek tonażowy (ustawa z 2006 r.) armator może wybrać zamiast podatku dochodowego – liczy się go od zryczałtowanego przychodu zależnego od pojemności netto statków, a nie od faktycznego zysku."),
           PF("Każdy wydatek przedsiębiorstwa jest w tym samym roku jego kosztem.", False,
              why="Np. zakup maszyny trafia do kosztów stopniowo przez amortyzację."),
       ],

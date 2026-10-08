@@ -16,6 +16,17 @@ Kolumna „Pytania OWE” podaje liczbę pytań z XXI–XXXIX OWE, w których po
 - N.G. Mankiw, M.P. Taylor, „Mikroekonomia” i „Makroekonomia” (PWE);
 - S. Owsiak, „Finanse” (PWE 2015).
 
+**Podsumowanie (stan na 8.10.2026)**
+
+| Podręcznik | Rozdziały | Pozycji w mapie | Było | Dodane | Pominięte |
+|---|---|---|---|---|---|
+| Mankiw, Taylor – „Mikroekonomia” | 1–22 | 180 | 163 | 12 | 5 |
+| Mankiw, Taylor – „Makroekonomia” | 1–15 | 155 | 146 | 8 | 1 |
+| Owsiak – „Finanse” | 2–16 | 156 | 118 | 36 | 2 |
+
+Wcześniejsze uzupełnienia według samych tytułów podrozdziałów (47 haseł Mikro i 25 Makro) mają w mapie status „było”.
+Każde hasło pojęciowe tematów Mikroekonomia, Makroekonomia, Polityka gospodarcza i Finanse ma lekcję „Zrozumienie”.
+
 ## Mikroekonomia – N.G. Mankiw, M.P. Taylor (rozdz. 1–22)
 
 ### Rozdz. 1. Dziesięć zasad ekonomii
@@ -539,3 +550,236 @@ Kolumna „Pytania OWE” podaje liczbę pytań z XXI–XXXIX OWE, w których po
 | Podatek konsumpcyjny | pojęcie | było | Podatek konsumpcyjny (reforma podatkowa sprzyjająca oszczędzaniu) | 0 | podręcznik |
 | Zrównoważony budżet, reguły fiskalne | pojęcie | było | Progi ostrożnościowe i konstytucyjny limit długu; Stabilizująca reguła wydatkowa | 0 | podręcznik |
 | Ekwiwalencja ricardiańska | pojęcie | dodane | Ekwiwalencja ricardiańska | 0 | Crossref – R. Barro, „Are Government Bonds Net Wealth?” (JPE 1974); Wikipedia – Ricardian equivalence |
+
+## Podstawy finansów – S. Owsiak, „Finanse” (PWE 2015) (rozdz. 2–16)
+
+### Rozdz. 2. Systematyka dyscyplin finansowych
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Finanse jako dyscyplina (systematyka) | pojęcie | było | Dyscyplina finansów publicznych | 4 | podręcznik |
+| Finanse publiczne, przedsiębiorstw, gospodarstw domowych, międzynarodowe | pojęcie | było | Finanse publiczne | 0 | podręcznik |
+| Finanse behawioralne | pojęcie | dodane | Finanse behawioralne | 0 | Wikipedia – Behavioral economics/finance; R. Shiller, „Irrational Exuberance” (2000) – zob. hasło Shiller Robert |
+| Ekonomia behawioralna | pojęcie | było | Ekonomia behawioralna | 0 | podręcznik |
+
+### Rozdz. 3. Kategorie finansowe
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Kategorie finansowe | pojęcie | dodane | Kategorie finansowe | 0 | S. Owsiak, „Finanse” (PWE 2015), rozdz. 3 – spis treści; materiały dydaktyczne z podstaw finansów (Slideserve – Podstawy finansów) |
+| Cena (względna i nominalna, maksymalna i minimalna) | pojęcie | było | Cena maksymalna; Ceny względne i nominalne | 0 | podręcznik |
+| Przychód (utarg) | pojęcie | było | Utarg (przychód) całkowity, przeciętny i krańcowy | 0 | podręcznik |
+| Dochód | pojęcie | było | Dochód narodowy; Dochód osobisty i dochód rozporządzalny | 8 | podręcznik |
+| Zysk | pojęcie | było | Zysk księgowy; Zysk ekonomiczny (nadzwyczajny) | 28 | podręcznik |
+| Procent (odsetki), stopa procentowa | pojęcie | było | Stopa procentowa nominalna i realna; Procent prosty i składany | 0 | podręcznik |
+| Renta pieniężna | pojęcie | było | Raty równe (annuitetowe) i malejące; Renta (annuity) i perpetuita | 8 | podręcznik |
+| Wydatek a koszt | pojęcie | było | Koszty bezpośrednie i pośrednie | 9 | podręcznik |
+| Amortyzacja | pojęcie | było | Amortyzacja | 0 | podręcznik |
+| Podatek – elementy konstrukcji | pojęcie | było | Podatek; Elementy konstrukcji podatku | 1 | podręcznik |
+| Pożyczka a kredyt | pojęcie | dodane | Pożyczka a kredyt | 0 | Kodeks cywilny art. 720 (Standardy Prawa; Dz.U. 2015 poz. 1311 – forma dokumentowa > 1000 zł); Prawo bankowe art. 69 (KNF – Kredyt bankowy i pożyczka; Infor) |
+| Deficyt i dług | pojęcie | było | Deficyt budżetowy i deficyt sektora finansów publicznych; Dług publiczny | 10 | podręcznik |
+
+### Rozdz. 4. Przegląd teorii finansów
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Klasyczna teoria finansów (tani rząd) | pojęcie | dodane | Klasyczna i liberalna teoria finansów | 0 | K. Górka i in., „Teorie finansów publicznych…” (Studia i Prace WNEiZ US 2017); NowyEbib – Liberalna myśl finansowa |
+| Liberalna teoria finansów | pojęcie | dodane | Klasyczna i liberalna teoria finansów | 0 | jw. |
+| Teoria bankowa i obiegowa | pojęcie | dodane | Teoria bankowa i obiegowa (spór szkoły bankowej z obiegową) | 0 | Wikipedia – British Currency School; Mises Wiki – Currency school; History of Economic Thought (hetwebsite) – Fullarton |
+| Henry Thornton | osoba | pominięte | – | 0 | osoba poboczna dla OWE (brak w pytaniach); spór szkół omówiony w haśle „Teoria bankowa i obiegowa” |
+| 1844 – Peel's Bank Charter Act | data | dodane | 1844 – ustawa bankowa R. Peela (Bank Charter Act) | 0 | jw. |
+| Teoria ilościowa pieniądza | pojęcie | było | Teoria ilościowa pieniądza (równanie wymiany Fishera) | 0 | podręcznik |
+| Popyt na pieniądz (Keynes – motywy) | pojęcie | było | Popyt na pieniądz (preferencja płynności); Model Baumola–Tobina (transakcyjny popyt na pieniądz) | 10 | podręcznik |
+| Model Baumola–Tobina | model | dodane | Model Baumola–Tobina (transakcyjny popyt na pieniądz); Model Baumola–Tobina – wzór | 0 | Crossref – W. Baumol, QJE 1952; J. Tobin, REStat 1956; Wikipedia – Baumol–Tobin model |
+| William Baumol, James Tobin | osoba | było | Tobin James; Baumol William | 0 | podręcznik |
+| Monetaryzm (Friedman) | pojęcie | było | Monetaryzm | 0 | podręcznik |
+| Milton Friedman | osoba | było | Friedman Milton | 0 | podręcznik |
+| Teoria finansowania antycyklicznego, finanse funkcjonalne | pojęcie | dodane | Teoria finansowania antycyklicznego (finanse funkcjonalne) | 0 | Wikipedia – Functional finance (A. Lerner 1943); OpenStax 30.4 (polityka fiskalna antycykliczna) |
+| Abba Lerner (finanse funkcjonalne) | osoba | było | Lerner Abba | 0 | podręcznik |
+| Hipoteza rynku efektywnego | pojęcie | było | Hipoteza rynku efektywnego | 2 | podręcznik |
+| Eugene Fama | osoba | było | Fama Eugene | 0 | podręcznik |
+| CAPM | model | było | Model CAPM | 2 | podręcznik |
+| Teoria optymalnych obszarów walutowych | pojęcie | było | Teoria optymalnego obszaru walutowego | 0 | podręcznik |
+| Reguła Taylora | pojęcie | było | Reguła Taylora | 0 | podręcznik |
+
+### Rozdz. 5. Pieniądz jako tworzywo zjawisk finansowych
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Funkcje pieniądza | pojęcie | było | Pieniądz | 0 | podręcznik |
+| Historia pieniądza (towarowy, kruszcowy, papierowy, fiducjarny) | pojęcie | było | Pieniądz towarowy, kruszcowy i fiducjarny | 0 | podręcznik |
+| Standard złota | pojęcie | było | Standard złota | 0 | podręcznik |
+| 1526 – „Monetae cudendae ratio” (Kopernik) | data | było | 1526 – „Monetae cudendae ratio” M. Kopernika | 0 | podręcznik |
+| Kreowanie pieniądza (ujęcie kontowe i formalne) | pojęcie | było | Kreacja pieniądza (system rezerwy cząstkowej) | 2 | podręcznik |
+| Mnożnik kreacji pieniądza | wzór | było | Mnożnik kreacji pieniądza – wzór | 0 | podręcznik |
+| Europejski System Walutowy, ECU | pojęcie | było | Europejski System Walutowy (ESW) i ERM; 1979 – Europejski System Walutowy i drugi szok naftowy | 0 | podręcznik |
+| Raport Delorsa | pojęcie | dodane | Raport Delorsa (1989) | 0 | EBC – Historia UGW (etapy 1990/1994/1999); Jacques Delors Centre – 25 years after the Delors Report; CVCE |
+| Traktat z Maastricht, kryteria konwergencji | pojęcie | było | Kryteria konwergencji (z Maastricht) | 1 | podręcznik |
+| Unia Gospodarcza i Walutowa, euro | pojęcie | było | Unia Gospodarcza i Walutowa (UGW); Euro | 0 | podręcznik |
+| 1999/2002 – euro bezgotówkowe i gotówkowe | data | było | 1999 – euro, reforma emerytalna i samorządowa w Polsce; 2002 – gotówka euro | 0 | podręcznik |
+
+### Rozdz. 6. Podmioty systemu ekonomicznego w warunkach pieniężnych
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Gospodarstwo domowe (finanse) | pojęcie | było | Zachowania finansowe gospodarstw domowych | 40 | podręcznik |
+| Przedsiębiorstwo | pojęcie | było | Przedsiębiorstwo państwowe i Skarb Państwa | 22 | podręcznik |
+| Państwo (rola, funkcje) | pojęcie | było | Rola państwa w gospodarce | 1 | podręcznik |
+| Funkcje finansów publicznych (alokacyjna, redystrybucyjna, stabilizacyjna) | pojęcie | było | Efektywność alokacyjna, produkcyjna i X-efektywność; Funkcje finansów publicznych (Musgrave) | 2 | podręcznik |
+| Richard Musgrave | osoba | było | Funkcje finansów publicznych (Musgrave); Musgrave Richard | 1 | podręcznik |
+
+### Rozdz. 7. Krążenie pieniądza i dochodu
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Model okrężnego obiegu | model | było | Model ruchu okrężnego; Model okrężnego obiegu w gospodarce otwartej z państwem | 1 | podręcznik |
+| System rachunków narodowych ESA 2010 | pojęcie | było | System rachunków narodowych (ESA 2010); Sektory instytucjonalne gospodarki (ESA 2010) | 0 | podręcznik |
+| Sektory instytucjonalne (S.11–S.15) | pojęcie | dodane | Sektory instytucjonalne gospodarki (ESA 2010) | 0 | Eurostat – Glossary: Institutional sector (ESA 2010); Statistics Lithuania – sektory ESA 2010 |
+| Sektor realny a finansowy | pojęcie | dodane | Sektory instytucjonalne gospodarki (ESA 2010) | 0 | jw. (S.11/S.14 – sfera realna, S.12 – finansowa) |
+| François Quesnay (Tablica ekonomiczna) | osoba | było | Quesnay François; 1758 – „Tablica ekonomiczna” F. Quesnaya | 0 | podręcznik |
+
+### Rozdz. 8. Pieniądz i czas
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Wartość pieniądza w czasie | pojęcie | było | Wartość pieniądza w czasie; Wartość pieniądza w czasie – wzory | 0 | podręcznik |
+| Inflacja – rodzaje i skutki | pojęcie | było | Inflacja; Koszty inflacji | 0 | podręcznik |
+| Procent prosty i składany, stopa efektywna | pojęcie | było | Procent prosty i składany; Stopa efektywna | 0 | podręcznik |
+| Wartość pieniądza w czasie – wzory | wzór | było | Wartość pieniądza w czasie – wzory | 0 | podręcznik |
+| Wartość zaktualizowana (PV), NPV | pojęcie | było | Wartość bieżąca netto (NPV); NPV i IRR – wzory | 2 | podręcznik |
+| Wewnętrzna stopa zwrotu (IRR) | pojęcie | było | Wewnętrzna stopa zwrotu (IRR) i MIRR; NPV i IRR – wzory | 4 | podręcznik |
+| NPV i IRR – wzory | wzór | było | NPV i IRR – wzory | 0 | podręcznik |
+| Renta wieczysta (perpetuity) | pojęcie | było | Renta (annuity) i perpetuita; Księga wieczysta | 4 | podręcznik |
+
+### Rozdz. 9. Oszczędności pieniężne
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Oszczędności – istota i rodzaje | pojęcie | było | Oszczędności narodowe (prywatne i publiczne); Dochód rozporządzalny i oszczędności | 3 | podręcznik |
+| Stopa oszczędności i motywy oszczędzania | pojęcie | pominięte | – | 0 | omówione w hasłach „Dochód rozporządzalny i oszczędności”, „Popyt na pieniądz (preferencja płynności)” i lekcji fin-podstawy L5 |
+| Hipoteza cyklu życia i dochodu permanentnego | pojęcie | było | Mobilność ekonomiczna i dochód w cyklu życia; Hipoteza dochodu permanentnego | 11 | podręcznik |
+| Paradoks zapobiegliwości | pojęcie | było | Paradoks zapobiegliwości (oszczędności) | 1 | podręcznik |
+| Lokata antybelkowa, polisolokata | pojęcie | było | Lokata antybelkowa; Polisolokata | 2 | podręcznik |
+
+### Rozdz. 10. Transformacja oszczędności w kapitał
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Finansowanie bezpośrednie i pośrednie | pojęcie | było | Instytucje pośrednictwa finansowego | 0 | podręcznik |
+| Pozabankowi pośrednicy finansowi | pojęcie | dodane | Pozabankowi pośrednicy finansowi | 0 | KNF – nadzór nad instytucjami pozabankowymi; OpenStax 17.2 (How households supply financial capital) |
+| Zakład (towarzystwo) ubezpieczeń | pojęcie | było | Towarzystwo ubezpieczeń wzajemnych (TUW) | 7 | podręcznik |
+| Towarzystwo powiernicze (trust) | pojęcie | dodane | Fundusze powiernicze i towarzystwa funduszy inwestycyjnych (TFI) | 0 | Analizy.pl – początki rynku funduszy (Pioneer 1992, ustawa 1991); Bankier – Krótka historia TFI |
+| Otwarte fundusze emerytalne | pojęcie | było | Otwarte fundusze emerytalne (OFE) | 4 | podręcznik |
+| Towarzystwo funduszy inwestycyjnych | pojęcie | dodane | Fundusze powiernicze i towarzystwa funduszy inwestycyjnych (TFI) | 0 | jw. |
+
+### Rozdz. 11. System finansowy
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| System finansowy – struktura i funkcje | pojęcie | było | System finansowy – struktura i funkcje; Globalny system finansowy (architektura finansowa) | 0 | podręcznik |
+| Bank centralny, banki komercyjne, spółdzielcze | pojęcie | było | Bank centralny; Bank komercyjny (uniwersalny) | 7 | podręcznik |
+| Sieć bezpieczeństwa finansowego | pojęcie | dodane | Sieć bezpieczeństwa finansowego | 0 | Ustawa z 5.08.2015 o nadzorze makroostrożnościowym (KSF); rozporządzenie UE 1092/2010 (ESRB) – EUR-Lex |
+| GPW | instytucja | było | Giełda Papierów Wartościowych w Warszawie (GPW) | 0 | podręcznik |
+| KNF | instytucja | było | Komisja Nadzoru Finansowego (KNF); 2006 – Komisja Nadzoru Finansowego | 3 | podręcznik |
+| KSF | instytucja | było | Komitet Stabilności Finansowej (KSF); 2015 – Komitet Stabilności Finansowej i QE w strefie euro | 4 | podręcznik |
+| Europejska Rada ds. Ryzyka Systemowego (ESRB) | instytucja | dodane | Europejska Rada ds. Ryzyka Systemowego (ESRB) | 0 | EUR-Lex – rozporządzenie 1092/2010 (od 16.12.2010); CNB – European Systemic Risk Board |
+| BFG | instytucja | było | Bankowy Fundusz Gwarancyjny (BFG) | 5 | podręcznik |
+| UFG | instytucja | było | Ubezpieczeniowy Fundusz Gwarancyjny (UFG) | 1 | podręcznik |
+| Rzecznik Finansowy | instytucja | było | Rzecznik Finansowy | 0 | podręcznik |
+| Polityka makroostrożnościowa, ryzyko systemowe | pojęcie | dodane | Sieć bezpieczeństwa finansowego | 0 | jw. |
+
+### Rozdz. 12. Polityka finansowa
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Polityka finansowa (monetarna + fiskalna) | pojęcie | dodane | Polityka finansowa | 0 | OpenStax 28.4 i 30.4; S. Owsiak, „Finanse”, rozdz. 12 – spis treści |
+| Polityka pieniężna – cele i narzędzia | pojęcie | było | Strategia bezpośredniego celu inflacyjnego (BCI); Cel operacyjny NBP | 4 | podręcznik |
+| Polityka fiskalna | pojęcie | było | Polityka fiskalna (budżetowa) | 11 | podręcznik |
+| Policy mix, koordynacja | pojęcie | było | Policy mix | 0 | podręcznik |
+| Instrumenty polityki fiskalnej | pojęcie | było | Automatyczne stabilizatory; Polityka dyskrecjonalna | 6 | podręcznik |
+
+### Rozdz. 13. Instrumenty finansowe
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Instrument finansowy – istota i rodzaje | pojęcie | dodane | Instrument finansowy – istota i rodzaje | 0 | S. Owsiak, „Finanse”, rozdz. 13 – spis treści; ustawa o obrocie instrumentami finansowymi (2005) – zob. hasło |
+| Bony skarbowe, bony pieniężne | pojęcie | było | Bony pieniężne NBP; Bony skarbowe | 15 | podręcznik |
+| Czek | pojęcie | było | Czek | 0 | podręcznik |
+| Weksel | pojęcie | było | Weksel | 0 | podręcznik |
+| Akcept bankierski, certyfikat depozytowy | pojęcie | było | Akcept bankierski i certyfikat depozytowy | 1 | podręcznik |
+| Obligacja | pojęcie | było | Obligacja | 0 | podręcznik |
+| List zastawny | pojęcie | było | Bank hipoteczny i list zastawny | 2 | podręcznik |
+| Akcja | pojęcie | było | Akcja | 0 | podręcznik |
+| Opcja | pojęcie | było | Opcja | 0 | podręcznik |
+| Kontrakt terminowy | pojęcie | było | Kontrakt terminowy (futures i forward) | 0 | podręcznik |
+| Swap | pojęcie | było | Swap | 0 | podręcznik |
+| Warrant | pojęcie | dodane | Warrant | 0 | Rzeczpospolita (pro.rp.pl) – warranty subskrypcyjne, art. 453 § 2 k.s.h.; D. Marszałek, „Uwarunkowania emisji warrantów” (DBC) |
+| IRS, CIRS | pojęcie | dodane | IRS i CIRS (swapy procentowe i walutowo-procentowe) | 0 | Wikipedia – Interest rate swap; Wikipedia – Currency swap |
+| CDS | pojęcie | było | CDS (credit default swap) | 7 | podręcznik |
+| Instrumenty rozliczeniowe: inkaso, akredytywa | pojęcie | było | Akredytywa dokumentowa; Inkaso dokumentowe | 4 | podręcznik |
+| Konosament | pojęcie | dodane | Konosament | 0 | Rzeczpospolita (pro.rp.pl) – Co to jest konosament; M. Dragun-Gertner, „Konosament”, Prawo Morskie (PAN) |
+| Karty płatnicze | pojęcie | było | Pieniądz elektroniczny i karta płatnicza | 0 | podręcznik |
+
+### Rozdz. 14. Kryzysy finansowe
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Kryzys finansowy – istota, przesłanki, rodzaje | pojęcie | dodane | Kryzys finansowy – istota i rodzaje | 0 | Federal Reserve History – The Great Depression, Great Recession; OpenStax 28.2 |
+| Kryzys bankowy, run na bank | pojęcie | było | Run na bank (panika bankowa) | 1 | podręcznik |
+| Kryzysy walutowe – generacje | pojęcie | było | Kryzysy walutowe – generacje | 0 | podręcznik |
+| Mania tulipanowa | pojęcie | dodane | Mania tulipanowa | 0 | Wikipedia – Tulip mania (krach II 1637); Britannica (opis w katalogu NLI) / WorldAtlas |
+| Bańki Kompanii Missisipi i Mórz Południowych | pojęcie | dodane | Bańki Kompanii Missisipi i Kompanii Mórz Południowych (1720) | 0 | Britannica – John Law / Mississippi Bubble; Wikipedia – South Sea Company |
+| John Law | osoba | dodane | Law John | 0 | jw. |
+| Kryzys meksykański 1994 | pojęcie | dodane | Kryzys meksykański (1994–1995) | 0 | Wikipedia – Mexican peso crisis; CRS/MFW (pakiet pomocowy) – zob. hasło Ucieczka kapitału |
+| Kryzys azjatycki 1997 | pojęcie | dodane | Kryzys azjatycki (1997–1998) | 0 | Wikipedia – 1997 Asian financial crisis; RBA Annual Report 2009 (FSF utworzone po kryzysie azjatyckim) |
+| Bańka internetowa | pojęcie | było | 2000 – płynny kurs złotego i bańka internetowa | 0 | podręcznik |
+| Wielki Kryzys | pojęcie | było | 1929–1933 – Wielki Kryzys | 0 | podręcznik |
+| Kryzys subprime, upadek Lehman Brothers | pojęcie | było | Kryzys subprime (2007–2009); 2007 – NewConnect i początek kryzysu subprime | 3 | podręcznik |
+| Działania ratunkowe: bailout, QE, pakiet zaufania | pojęcie | było | Luzowanie ilościowe (QE); Bailout i bail-in | 3 | podręcznik |
+| Hipoteza niestabilności finansowej (Minsky) | pojęcie | było | Hipoteza niestabilności finansowej | 1 | podręcznik |
+| Hyman Minsky | osoba | było | Finansowanie zabezpieczone, spekulacyjne i Ponziego (Minsky); Minsky Hyman | 0 | podręcznik |
+| Too big to fail, pokusa nadużycia | pojęcie | było | Zbyt duży, by upaść (too big to fail) | 0 | podręcznik |
+
+### Rozdz. 15. Globalny system finansowy
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Globalny system finansowy (architektura) | pojęcie | dodane | Globalny system finansowy (architektura finansowa) | 0 | BIS – FSF → FSB (2009); ESM – History; S. Owsiak, „Finanse”, rozdz. 15 – spis treści |
+| System z Bretton Woods | pojęcie | było | System z Bretton Woods; 1944 – konferencja w Bretton Woods | 1 | podręcznik |
+| MFW | instytucja | było | Międzynarodowy Fundusz Walutowy (MFW, IMF) | 3 | podręcznik |
+| Bank Światowy | instytucja | było | Bank Światowy | 0 | podręcznik |
+| EBOiR | instytucja | było | Europejski Bank Odbudowy i Rozwoju (EBOiR) | 1 | podręcznik |
+| EBI | instytucja | było | Europejski Bank Inwestycyjny (EBI) | 0 | podręcznik |
+| BIS | instytucja | było | Bank Rozrachunków Międzynarodowych (BIS) | 2 | podręcznik |
+| Umowy bazylejskie | pojęcie | było | Umowy bazylejskie (Bazylea I, II, III) | 0 | podręcznik |
+| Solvency II | pojęcie | dodane | Solvency II | 0 | Wikipedia – Solvency II (SCR 99,5%); Rzeczpospolita – Solvency II od 1.01.2016; dyrektywa 2009/138/WE |
+| Forum Stabilności Finansowej / Rada Stabilności Finansowej (FSB) | instytucja | dodane | Rada Stabilności Finansowej (FSB) | 0 | BIS – komunikat z 3.04.2009; Wikipedia – Financial Stability Board; RBA Annual Report 2009 |
+| ESNF: EBA, ESMA, EIOPA | instytucja | było | Europejskie urzędy nadzoru (EBA, ESMA, EIOPA) | 0 | podręcznik |
+| Unia bankowa | pojęcie | było | Unia bankowa | 0 | podręcznik |
+| EFSF i EFSM | pojęcie | dodane | EFSF i EFSM (tymczasowe mechanizmy strefy euro, 2010) | 0 | Wikipedia – European Financial Stabilisation Mechanism (rozp. 407/2010); ESM – History (EFSF 2010, ESM 8.10.2012) |
+| Europejski Mechanizm Stabilności | instytucja | było | Europejski Mechanizm Stabilności (EMS) | 0 | podręcznik |
+
+### Rozdz. 16. Struktura finansowa gospodarki polskiej
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Monetyzacja gospodarki | pojęcie | dodane | Monetyzacja gospodarki | 0 | S. Owsiak, „Finanse”, rozdz. 16.3 – spis treści; OpenStax 27.2 (agregaty pieniężne) |
+| Finansjalizacja | pojęcie | dodane | Finansjalizacja | 0 | Wikipedia – Financialization; S. Owsiak, „Finanse”, rozdz. 16.4 – spis treści |
+| NBP | instytucja | było | Narodowy Bank Polski (NBP) | 0 | podręcznik |
+| Banki komercyjne w Polsce | pojęcie | było | Bank komercyjny (uniwersalny) | 3 | podręcznik |
+| Rynek ubezpieczeniowy | pojęcie | było | Ubezpieczenia obowiązkowe w Polsce; Towarzystwo ubezpieczeń wzajemnych (TUW) | 1 | podręcznik |
+| Fundusze inwestycyjne w Polsce | pojęcie | było | Fundusz inwestycyjny | 0 | podręcznik |
+| OFE i zmiany 2011–2014 | pojęcie | było | Otwarte fundusze emerytalne (OFE); 2014 – zmiany w OFE i unia bankowa | 4 | podręcznik |
+| IKE, IKZE, PPE, PPK | pojęcie | było | IKE, IKZE i PPE | 1 | podręcznik |
+| Leasing | pojęcie | było | Leasing | 0 | podręcznik |
+| SKOK | pojęcie | było | SKOK | 0 | podręcznik |
+| Faktoring | pojęcie | było | Faktoring | 0 | podręcznik |
+| Firmy pożyczkowe, pośrednictwo kredytowe | pojęcie | dodane | Instytucja pożyczkowa (firma pożyczkowa) | 0 | KNF – objęcie instytucji pożyczkowych nadzorem; PAP – nadzór KNF od 2024 r. |
+| Private equity, venture capital | pojęcie | było | Fundusze private equity i venture capital | 0 | podręcznik |
+| Bilans (wynik) sektora finansów publicznych | pojęcie | było | Deficyt budżetowy i deficyt sektora finansów publicznych | 0 | podręcznik |
+| Dochody i wydatki publiczne | pojęcie | było | Dochody i wydatki budżetu państwa | 0 | podręcznik |
+| Państwowe fundusze celowe | pojęcie | było | Państwowy fundusz celowy | 0 | podręcznik |
+| Dług publiczny | pojęcie | było | Dług publiczny | 1 | podręcznik |
+| Bilans płatniczy | pojęcie | było | Bilans płatniczy | 1 | podręcznik |
+| Zadłużenie zagraniczne, MPIN | pojęcie | było | Zadłużenie zagraniczne; Międzynarodowa pozycja inwestycyjna netto (MPIN) | 1 | podręcznik |
+| Podatek od gier i tonażowy | pojęcie | było | Podatek od gier i podatek tonażowy | 5 | podręcznik |
