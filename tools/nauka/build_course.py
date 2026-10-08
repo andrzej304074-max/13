@@ -88,6 +88,9 @@ def assign_topic(sec, title, d, kind):
 
 
 def assign_unit(topic, title):
+    forced = getattr(C, "UNIT_OVERRIDES", {}).get(title)
+    if forced:
+        return forced
     for uid, rx in unit_patterns(topic, include_rest=True):
         if rx.search(low(title)):
             return uid

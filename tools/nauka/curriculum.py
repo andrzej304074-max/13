@@ -36,6 +36,7 @@ UNITS = {
         ("mikro-struktury", "Struktury rynku i strategie firm", [r"struktura rynku|konkurencja|krzywa podaży firmy|monopol|bariery wejścia|dyskryminacja|oligopol|duopol|bertranda|cournota|sweezy|kartel|lider cenowy|monopson|teoria gier|strategia dominująca|nasha|więźnia|gry powtarzalne|zaporowe|lernera|koncentracji rynku|stackelberga|kontestowalne|nadwyżka mocy|formy monopolizacji|ekonomia przemysłowa|supergwiazd"]),
         ("mikro-czynniki", "Rynki czynników produkcji", [r"popyt pochodny|vmpl|krańcowy koszt pracy|podaż pracy|renta ekonomiczna|dochód transferowy|renta gruntowa|kapitał ludzki|kapitał społeczny|amoralny|płaca nominalna|związki zawodowe|kapitał jako czynnik|krańcowej produktywności|zysk jako dochód"]),
         ("mikro-zawodnosci", "Efektywność, zawodności rynku i państwa", [r"pareto|zawodność|efekty zewnętrzne|koszt społeczny|internalizacja|pigou|coase|dobra publiczne|dobra mieszane|dobra prywatne|gapowicza|wspólnego pastwiska|asymetria informacji|selekcja|pokusa|pryncypała|sygnalizacja|efektywność alokacyjna|równowaga ogólna|regulacja|nacjonalizacja|pogoń za rentą|sprawiedliwego podziału|przełowienie|kumoterstwo|oportunizm|libertarianizm"]),
+        ("mikro-publiczny", "Sektor publiczny, podatki i ekonomia polityczna", [r"stawka podatkow|podatek zryczałtowany|zasada korzyści|zdolności do płacenia|obciążenia administracyjne|negatywny podatek|transfery rzeczowe|pułapka ubóstwa|mobilność ekonomiczna|condorceta|arrowa o niemożności|wyborcy medianowym|analiza kosztów i korzyści"]),
         ("mikro-behawioralna", "Ekonomia behawioralna i nowe zjawiska", [r".*"]),
     ],
     "makro": [
@@ -96,6 +97,43 @@ UNITS = {
         ("demo-migracje", "Migracje", [r"migr|push|remittances|przekazy|mózgów|uchodźcy|cudzoziemców|karta polaka|swobodny przepływ|kraj imigracji"]),
         ("demo-polityka", "Polityka ludnościowa i rodzinna", [r".*"]),
     ],
+}
+
+# Ręczne przypisania hasła do działu (tytuł → id działu), gdy wzorce działów się mylą
+UNIT_OVERRIDES = {
+    "Dziesięć zasad ekonomii (N.G. Mankiw)": "mikro-podstawy",
+    "Bodźce (zachęty) w ekonomii": "mikro-podstawy",
+    "Myślenie krańcowe (decyzje na marginesie)": "mikro-podstawy",
+    "Efektywność a sprawiedliwość (wymienność celów)": "mikro-podstawy",
+    "Ekonomista jako naukowiec i doradca polityki": "mikro-podstawy",
+    "Wykresy w ekonomii: nachylenie i układ współrzędnych": "mikro-podstawy",
+    "Korelacja a przyczynowość (zmienna pominięta, odwrócona przyczynowość)": "mikro-podstawy",
+    "Czynniki kształtujące popyt (determinanty popytu)": "mikro-rynek",
+    "Czynniki kształtujące podaż (determinanty podaży)": "mikro-rynek",
+    "Analiza zmian równowagi – trzy etapy (statyka porównawcza)": "mikro-rynek",
+    "Kontrola czynszów": "mikro-rynek",
+    "Skłonność do płacenia (cena rezerwacji)": "mikro-rynek",
+    "Nadwyżka całkowita i efektywność rynku (planista społeczny)": "mikro-rynek",
+    "Cena światowa a korzyści z handlu (eksporter i importer)": "mikro-rynek",
+    "Paradoks rolnictwa (dobra nowina dla rolnictwa – zła dla rolników)": "mikro-elastycznosc",
+    "Elastyczność a polityka antynarkotykowa": "mikro-elastycznosc",
+    "Wybór międzyokresowy (oszczędności a stopa procentowa)": "mikro-konsument",
+    "Wejście i wyjście z rynku w długim okresie": "mikro-struktury",
+    "Długookresowa krzywa podaży gałęzi": "mikro-struktury",
+    "Monopol prawny: patenty i prawa autorskie": "mikro-struktury",
+    "Polityka państwa wobec monopoli": "mikro-struktury",
+    "Narzucanie cen odsprzedaży": "mikro-struktury",
+    "Sprzedaż wiązana": "mikro-struktury",
+    "Reklama – spory ekonomiczne i sygnał jakości": "mikro-struktury",
+    "Wyrównawcze różnice płac": "mikro-czynniki",
+    "Zdolności, wysiłek i przypadek a płace": "mikro-czynniki",
+    "Ekonomia dyskryminacji na rynku pracy": "mikro-czynniki",
+    "Zbywalne zezwolenia na zanieczyszczenia (handel emisjami)": "mikro-zawodnosci",
+    "Wykluczalność i rywalizacyjność (klasyfikacja dóbr)": "mikro-zawodnosci",
+    "Analiza kosztów i korzyści (wartość statystycznego życia)": "mikro-publiczny",
+    "Obciążenia administracyjne podatków": "mikro-publiczny",
+    "Gra w ultimatum i preferencje sprawiedliwości": "mikro-behawioralna",
+    "Niespójność czasowa preferencji (dyskontowanie hiperboliczne)": "mikro-behawioralna",
 }
 
 # Działy rodzajowe w każdym temacie (wzory, osoby, instytucje, daty, przepisy)
