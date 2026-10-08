@@ -544,7 +544,7 @@ LESSONS = [
              51.6, "10*5.16", ["10 · 5,16 = 51,6 mld zł"], unit="mld zł"),
       ],
       case=[
-          PR("W 2001 r. Argentyna miała sztywny kurs peso do dolara, duży dług zagraniczny i rosnące wątpliwości co do jego spłaty. Inwestorzy i ludność masowo wycofywali pieniądze z banków i kupowali dolary. W styczniu 2002 r. porzucono sztywny kurs, a peso straciło szybko około 70% wartości wobec dolara.",
+          PR("W 2001 r. Argentyna miała sztywny kurs peso do dolara, duży dług zagraniczny i rosnące wątpliwości co do jego spłaty. Inwestorzy i ludność masowo wycofywali pieniądze z banków i kupowali dolary. W styczniu 2002 r. porzucono sztywny kurs, a peso w ciągu kilku miesięcy straciło około 70% wartości wobec dolara.",
              W("Jak nazywa się takie zjawisko?",
                "Ucieczka kapitału", "Efekt Pigou", "Dezinflacja",
                why="Masowa sprzedaż krajowych aktywów z powodu utraty zaufania."),

@@ -91,7 +91,7 @@ LESSONS = [
 
     L(2, "Oszczędności i inwestycje w rachunkach narodowych",
       "Wyprowadzić tożsamość S = I dla gospodarki zamkniętej, odróżnić oszczędności prywatne i publiczne oraz rozumieć, dlaczego deficyt budżetowy zmniejsza oszczędności narodowe.",
-      ["Oszczędności narodowe (prywatne i publiczne)", "Inwestycje", "Deficyt budżetowy i deficyt sektora finansów publicznych", "Dochód rozporządzalny i oszczędności"],
+      ["Oszczędności narodowe (prywatne i publiczne)", "Inwestycje", "Deficyt budżetowy i deficyt sektora finansów publicznych", "Dochód rozporządzalny i oszczędności", "Hipoteza dochodu relatywnego (J. Duesenberry)"],
       [F234, F313],
       explain=[
           K("Tożsamość S = I",
@@ -107,6 +107,8 @@ LESSONS = [
             "W mowie potocznej „inwestycją” jest zakup akcji. Ekonomista nazwie to oszczędnością (lokatą). Inwestycja to zakup nowego kapitału – maszyn, budynków, mieszkań. Zakup akcji przez jedną osobę może sfinansować inwestycję firmy, ale sam nią nie jest."),
           K("Tożsamość dla jednej osoby nie działa",
             "Jedna osoba może oszczędzać, nie inwestując (i odwrotnie). Tylko dla całej gospodarki S = I – system finansowy dopasowuje oszczędności i inwestycje przez stopę procentową."),
+          K("Ile oszczędzają gospodarstwa domowe?",
+            "Oszczędności prywatne zależą od dochodu, stopy procentowej i zwyczajów. J. Duesenberry (hipoteza dochodu relatywnego) zwrócił uwagę, że konsumpcja zależy od dochodów otoczenia (efekt demonstracji – „dorównać sąsiadom”) i od najwyższego wcześniej osiągniętego dochodu (efekt zapadki): gdy dochód spada, ludzie bronią standardu życia i ograniczają oszczędności, a nie konsumpcję."),
           PF("Zakup akcji na giełdzie to w makroekonomii inwestycja.", False,
              why="To oszczędność – inwestycja to zakup nowego kapitału."),
       ],
