@@ -69,7 +69,7 @@ Kurs zbudowany z haseł słownika (`docs/slownik-owe.pdf`) i wszystkich banków 
 
 - **7 tematów:** Mikroekonomia, Makroekonomia, Polityka gospodarcza, Podstawy finansów, Finanse przedsiębiorstw,
   Zarządzanie oraz temat przewodni „Gospodarka wobec wyzwań demograficznych”.
-- **Hierarchia:** 84 działy → 683 lekcje: 296 lekcji haseł (po 1–6 haseł) i 387 lekcji „Zrozumienie” 🧠 → 2732 pod-lekcje.
+- **Hierarchia:** 85 działów → 713 lekcji: 305 lekcji haseł (po 1–6 haseł) i 408 lekcji „Zrozumienie” 🧠 → 2852 pod-lekcje.
 - **Rodzaje treści** (filtr na stronie tematu): pojęcia, wzory, osoby, instytucje, daty, przepisy, zrozumienie.
 - **Pod-lekcje:** 1. Poznaj, 2. Ćwicz, 3. Utrwal, 4. Sprawdzian (pytania olimpijskie i słownikowe dopasowane do haseł lekcji).
 - **Ćwiczenia:** nowe hasło, wybór hasła lub opisu, łączenie par, uzupełnianie luk, prawda/fałsz,
@@ -90,7 +90,7 @@ Kurs zbudowany z haseł słownika (`docs/slownik-owe.pdf`) i wszystkich banków 
 Uczą mechanizmów, obliczeń i zastosowań, a nie tylko definicji. Są wplecione w ścieżkę każdego działu:
 
 - **Liczba lekcji:** 5 w każdym dziale pojęciowym i dziale „Wzory”, 5 w działach osób, instytucji, dat i przepisów
-  z co najmniej 15 hasłami, 2 w mniejszych działach. Razem 387 lekcji, 7774 ćwiczenia oceniane i 1553 karty wyjaśnień.
+  z co najmniej 15 hasłami, 2 w mniejszych działach. Razem 408 lekcji, 8194 ćwiczenia oceniane i 1637 kart wyjaśnień. Mikroekonomia jest dodatkowo sprawdzona ze spisem treści podręcznika N.G. Mankiwa i M.P. Taylora „Mikroekonomia” (PWE 2009): każde zagadnienie ma hasło i lekcję.
 - **4 pod-lekcje:** Wyjaśnienie (karty krok po kroku z pytaniami sprawdzającymi), Mechanizmy (co się stanie, gdy…,
   łańcuchy przyczyn i skutków, sortowanie do kategorii, przesunięcia krzywych), Obliczenia (wynik wpisywany
   z tolerancją i rozwiązaniem krok po kroku), Zastosowanie (studia przypadków). Każda pod-lekcja ćwiczeń ma
