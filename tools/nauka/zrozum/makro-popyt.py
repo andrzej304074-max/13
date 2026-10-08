@@ -40,7 +40,7 @@ LESSONS = [
              why="Każda hipoteza inaczej wyjaśnia związek dochodu i konsumpcji."),
           LN("Ułóż, jak wzrost dochodu przenosi się na konsumpcję (funkcja Keynesa).",
              ["Dochód rozporządzalny rośnie o 1000 zł", "Gospodarstwo wydaje część przyrostu (MPC · 1000)", "Resztę oszczędza (MPS · 1000)", "Konsumpcja rośnie, ale mniej niż dochód"],
-             why="0 < MPC < 1."),
+             why="Ponieważ 0 < MPC < 1, konsumpcja rośnie mniej niż dochód."),
           W("Obniżka podatków zapowiedziana jako tymczasowa (na 1 rok). Jak zareagują konsumenci według hipotezy dochodu permanentnego?",
             "Zwiększą konsumpcję niewiele – dochód trwały prawie się nie zmienia", "Silnie zwiększą konsumpcję", "Zmniejszą konsumpcję",
             why="Tymczasowe zmiany dochodu mają słaby wpływ na konsumpcję."),
