@@ -7,7 +7,7 @@ import json, sys, urllib.parse, urllib.request
 
 # Serwisy, które odpowiadają 403 automatom (ochrona przed botami), a w przeglądarce działają –
 # sprawdzone ręcznie; 403 z tych domen nie jest błędem.
-BOT_403 = ("www.imf.org", "press.princeton.edu", "www.mofa.go.jp", "www.oecd.org", "www.podatki.biz")
+BOT_403 = ("www.imf.org", "press.princeton.edu", "www.mofa.go.jp", "www.oecd.org", "www.podatki.biz", "www.dnv.com", "www.sgs.com")
 # Serwisy zrywające połączenie z automatem (sprawdzone ręcznie, działają w przeglądarce).
 BOT_DROP = ("bank.pl",)
 
