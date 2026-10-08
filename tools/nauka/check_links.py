@@ -7,7 +7,9 @@ import json, sys, urllib.parse, urllib.request
 
 # Serwisy, które odpowiadają 403 automatom (ochrona przed botami), a w przeglądarce działają –
 # sprawdzone ręcznie; 403 z tych domen nie jest błędem.
-BOT_403 = ("www.imf.org", "press.princeton.edu", "www.mofa.go.jp", "www.oecd.org")
+BOT_403 = ("www.imf.org", "press.princeton.edu", "www.mofa.go.jp", "www.oecd.org", "www.podatki.biz")
+# Serwisy zrywające połączenie z automatem (sprawdzone ręcznie, działają w przeglądarce).
+BOT_DROP = ("bank.pl",)
 
 content = json.load(open(sys.argv[1]))
 urls = sorted({s["u"] for c in content.values() for s in c["sources"]})
@@ -20,9 +22,12 @@ for u in urls:
                 code = r.status
         except Exception as ex:  # noqa: BLE001
             code = getattr(ex, "code", type(ex).__name__)
+        if code == 202:  # EUR-Lex: odpowiedź „przyjęto” przed przekierowaniem przeglądarki
+            code = 200
         if code == 200 or isinstance(code, int) and 400 <= code < 500:
             break
-    if code == 403 and urllib.parse.urlsplit(u).hostname in BOT_403:
+    host = urllib.parse.urlsplit(u).hostname
+    if code == 403 and host in BOT_403 or code == "RemoteDisconnected" and host in BOT_DROP:
         continue
     if code != 200:
         bad += 1
