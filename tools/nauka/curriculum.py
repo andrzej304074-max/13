@@ -227,6 +227,18 @@ OVERRIDES = {
     "Stopa poświęcenia": "polityka",
     "Dezinflacja Volckera i Thatcher": "polityka",
     "Federalizm fiskalny": "polityka",
+    "Card David, Krueger Alan": "mikro",
+    "Chamberlin Edward, Robinson Joan": "mikro",
+    "Neumann John von, Morgenstern Oskar": "mikro",
+    "Ostrom Elinor": "mikro",
+    "Spence Michael": "mikro",
+    "Strata martwa (trójkąt Harbergera) – wzór": "mikro",
+    "Indeks Lernera i reguła odwrotnej elastyczności – wzór": "mikro",
+    "Wskaźniki koncentracji CR i HHI – wzory": "mikro",
+    "Równowaga konsumenta – wzory": "mikro",
+    "1933 – teorie konkurencji monopolistycznej i niedoskonałej": "mikro",
+    "1944 – „Teoria gier i zachowań ekonomicznych” J. von Neumanna i O. Morgensterna": "mikro",
+    "1994 – badanie płacy minimalnej D. Carda i A. Kruegera": "mikro",
 }
 
 # Wymuszone przypisanie tematu dla haseł rodzajowych (wzory, osoby, instytucje, daty, przepisy): (wzorzec tytułu, temat)

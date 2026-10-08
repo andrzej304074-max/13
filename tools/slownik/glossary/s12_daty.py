@@ -75,5 +75,8 @@ E = [
  ('1972 – „Granice wzrostu” Klubu Rzymskiego', 'Raport ostrzegający przed skutkami wzrostu ludności i produkcji przy ograniczonych zasobach (neomaltuzjanizm).', {'k': ['granice wzrostu', 'klub rzymski']}),
  ('2011 – pełne otwarcie rynków pracy Niemiec i Austrii', '1 maja 2011 r. koniec okresów przejściowych w swobodnym przepływie pracowników z państw, które przystąpiły do UE w 2004 r.', {'k': ['otwarci rynk pracy', 'okres przejściow']}),
  ('2013 – początek podnoszenia wieku emerytalnego do 67 lat', 'Od 1 stycznia 2013 r. wiek emerytalny podwyższano o 3 miesiące co roku (docelowo 67 lat dla obu płci – mężczyźni w 2020 r., kobiety w 2040 r.); reformę cofnięto od 1 października 2017 r.', {'k': ['67 lat', 'podnoszeni wieku emerytaln']}),
+ ("1933 – teorie konkurencji monopolistycznej i niedoskonałej", "E. Chamberlin („Teoria konkurencji monopolistycznej”) i J. Robinson („Ekonomia konkurencji niedoskonałej”) niezależnie opisują rynki między konkurencją doskonałą a monopolem; Robinson wprowadza pojęcie monopsonu.", {"k": ["chamberlin", "robinson"]}),
+ ("1944 – „Teoria gier i zachowań ekonomicznych” J. von Neumanna i O. Morgensterna", "Początek teorii gier jako dziedziny badań; później J. Nash (1950) definiuje równowagę w grach niekooperacyjnych.", {"k": ["teoria gier", "neumann"]}),
+ ("1994 – badanie płacy minimalnej D. Carda i A. Kruegera", "Porównanie zatrudnienia w barach szybkiej obsługi w New Jersey i Pensylwanii po podwyżce płacy minimalnej w New Jersey (1992) – brak spadku zatrudnienia; przełom w empirycznej ekonomii pracy.", {"k": ["card", "krueger"]}),
 ]
 TABLES = []
