@@ -408,7 +408,7 @@ LESSONS = [
       ]),
     L(6, "Debaty o polityce makroekonomicznej: stabilizacja, reguły, budżet i podatki",
       "Umieć przedstawić argumenty obu stron w głównych sporach opisanych przez Mankiwa: czy państwo powinno stabilizować koniunkturę, czy bank centralny powinien kierować się regułą, czy budżet powinien być zrównoważony i czy system podatkowy powinien sprzyjać oszczędzaniu (podatek konsumpcyjny).",
-      ["Debaty o polityce makroekonomicznej (Mankiw)", "Podatek konsumpcyjny (reforma podatkowa sprzyjająca oszczędzaniu)", "Reguły a uznaniowość (niespójność czasowa)", "Opóźnienia polityki gospodarczej", "Automatyczne stabilizatory"],
+      ["Debaty o polityce makroekonomicznej (Mankiw)", "Podatek konsumpcyjny (reforma podatkowa sprzyjająca oszczędzaniu)", "Reguły a uznaniowość (niespójność czasowa)", "Opóźnienia polityki gospodarczej", "Automatyczne stabilizatory", "Ekwiwalencja ricardiańska"],
       [S306, S307, S314, S285],
       explain=[
           K("Debata 1: stabilizować koniunkturę?",
@@ -422,6 +422,8 @@ LESSONS = [
             "Za: deficyty przerzucają ciężar na przyszłe pokolenia, wypierają inwestycje (niższe oszczędności narodowe) i grożą kryzysem zadłużenia. Przeciw: dług bywa uzasadniony w recesji (stabilizatory), w czasie wojny i przy inwestycjach publicznych, z których skorzystają przyszłe pokolenia; ważniejsza jest relacja długu do PKB niż roczne saldo."),
           K("Debata 4: podatki sprzyjające oszczędzaniu?",
             "Za: opodatkowanie dochodu z oszczędności (odsetek, dywidend, zysków) zniechęca do oszczędzania – podatek konsumpcyjny, IKE/IKZE czy PPK zwiększyłyby oszczędności, inwestycje i wzrost. Przeciw: korzyści trafiłyby głównie do zamożnych, którzy oszczędzają najwięcej, a oszczędności mogą słabo reagować na stopę zwrotu."),
+          K("Ekwiwalencja ricardiańska",
+            "R. Barro (1974), nawiązując do D. Ricarda: jeśli ludzie przewidują, że dzisiejszy dług trzeba będzie spłacić przyszłymi podatkami, to obniżkę podatków finansowaną długiem zaoszczędzą. Wtedy deficyt nie zwiększa konsumpcji ani nie zmniejsza oszczędności narodowych. Krytycy: wiele osób ma ograniczoną płynność, krótki horyzont lub nie myśli o przyszłych podatkach."),
           PF("Podatek konsumpcyjny opodatkowuje dochód w chwili jego wydania, a nie zarobienia.", True,
              why="Oszczędzany dochód nie jest opodatkowany, dopóki nie zostanie wydany."),
       ],

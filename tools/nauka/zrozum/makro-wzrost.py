@@ -411,7 +411,7 @@ LESSONS = [
       ]),
     L(6, "Wydajność pracy: dlaczego jedne kraje są bogatsze od innych",
       "Rozumieć, że poziom życia zależy od wydajności pracy, znać jej cztery czynniki – kapitał fizyczny, ludzki, zasoby naturalne i wiedzę technologiczną – oraz posługiwać się makroekonomiczną funkcją produkcji ze stałymi przychodami skali i malejącymi przychodami z kapitału.",
-      ["Wydajność pracy (produkcyjność) i jej czynniki", "Makroekonomiczna funkcja produkcji (stałe przychody skali)", "Konwergencja (doganianie, catching-up)", "Reguła 70"],
+      ["Wydajność pracy (produkcyjność) i jej czynniki", "Makroekonomiczna funkcja produkcji (stałe przychody skali)", "Konwergencja (doganianie, catching-up)", "Reguła 70", "Rachunek wzrostu i łączna produktywność czynników (reszta Solowa)", "Rachunek wzrostu – wzór"],
       [S202, S203, S204],
       explain=[
           K("Wydajność decyduje o poziomie życia",
@@ -426,6 +426,9 @@ LESSONS = [
             w="Y/L = A · F(1, K/L, H/L, N/L)"),
           K("Malejące przychody i doganianie",
             "Każda kolejna maszyna na pracownika zwiększa produkcję coraz mniej. Kraj biedny, z małym kapitałem, zyskuje dużo z każdej inwestycji – rośnie szybciej (efekt doganiania, konwergencja). Wyższa stopa oszczędności podnosi wzrost tylko przejściowo; trwały wzrost wymaga postępu technicznego."),
+          K("Rachunek wzrostu",
+            "R. Solow (1957) rozłożył wzrost PKB na wkład kapitału, pracy i resztę, której nie tłumaczy przyrost nakładów – łączną produktywność czynników (TFP, reszta Solowa), utożsamianą z postępem technicznym i lepszą organizacją. g_Y = g_A + α·g_K + (1 − α)·g_L, gdzie α to udział kapitału w dochodzie (ok. 0,3).",
+            w="g_A = g_Y − α·g_K − (1 − α)·g_L"),
           PF("Zasoby naturalne są warunkiem koniecznym wysokiej wydajności.", False,
              why="Japonia czy Singapur są bogate mimo ubogich zasobów, bo importują surowce i mają kapitał i technologię."),
       ],
@@ -464,6 +467,8 @@ LESSONS = [
              8, "1000/125", ["1 000 / 125 = 8 (wcześniej 10) – rozrzedzenie kapitału"], unit=""),
           LB("Wydajność rośnie o 2% rocznie. Po ilu latach się podwoi (reguła 70)?",
              35, "70/2", ["70 / 2 = 35 lat"], unit="lat"),
+          LB("PKB rośnie o 3%, kapitał o 4%, praca o 1%, α = 0,3. Ile wynosi wzrost łącznej produktywności czynników (%)?",
+             1.1, "3-0.3*4-0.7*1", ["3 − 1,2 − 0,7 = 1,1%"], unit="%"),
       ],
       case=[
           PR("Korea Południowa w 1960 r. była biedniejsza niż wiele krajów Afryki. Przez kolejne dekady miała bardzo wysoką stopę inwestycji, masowo kształciła inżynierów i importowała technologie. Dziś jej PKB na mieszkańca jest zbliżony do średniej UE.",

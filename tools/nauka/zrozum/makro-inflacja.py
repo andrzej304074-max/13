@@ -181,7 +181,7 @@ LESSONS = [
 
     L(3, "Pieniądz i inflacja",
       "Posługiwać się równaniem wymiany Fishera, rozumieć neutralność pieniądza i dychotomię klasyczną, efekt Fishera oraz mechanizm hiperinflacji.",
-      ["Teoria ilościowa pieniądza (równanie wymiany Fishera)", "Neutralność pieniądza i dychotomia klasyczna", "Efekt Fishera", "Hiperinflacja"],
+      ["Teoria ilościowa pieniądza (równanie wymiany Fishera)", "Neutralność pieniądza i dychotomia klasyczna", "Efekt Fishera", "Hiperinflacja", "Prędkość obiegu pieniądza"],
       [S324, S224, S("OpenStax, Principles of Economics 3e, 28.4 Monetary Policy and Economic Outcomes", OS3 + "28-4-monetary-policy-and-economic-outcomes", D)],
       explain=[
           K("Równanie wymiany",

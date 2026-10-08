@@ -412,7 +412,7 @@ LESSONS = [
       ]),
     L(6, "Gospodarka otwarta: NX = NCO, oszczędności a inwestycje i granice PPP",
       "Rozumieć, dlaczego eksport netto zawsze równa się odpływom kapitału netto, wyprowadzić S = I + NCO, interpretować nadwyżki i deficyty handlowe jako decyzje o oszczędzaniu oraz znać ograniczenia teorii parytetu siły nabywczej.",
-      ["Tożsamości gospodarki otwartej: NX = NCO i S = I + NCO", "Odpływy kapitałowe netto (NCO)", "Ograniczenia parytetu siły nabywczej", "Parytet siły nabywczej (PPP) – teoria kursu", "Bilans handlowy"],
+      ["Tożsamości gospodarki otwartej: NX = NCO i S = I + NCO", "Odpływy kapitałowe netto (NCO)", "Ograniczenia parytetu siły nabywczej", "Parytet siły nabywczej (PPP) – teoria kursu", "Bilans handlowy", "Indeks Big Maca"],
       [S233, S234, S293],
       explain=[
           K("Dlaczego NX = NCO?",

@@ -307,3 +307,235 @@ Kolumna „Pytania OWE” podaje liczbę pytań z XXI–XXXIX OWE, w których po
 | Kryterium Kaldora–Hicksa | pojęcie | pominięte | – | 0 | poza M&T, brak w pytaniach OWE |
 | Logika działania zbiorowego (M. Olson) | pojęcie | pominięte | – | 0 | poza M&T, brak w pytaniach OWE |
 | Model Hotellinga | model | pominięte | – | 0 | poza M&T, brak w pytaniach OWE |
+
+## Makroekonomia – N.G. Mankiw, M.P. Taylor (rozdz. 1–15)
+
+### Rozdz. 1. Pomiar dochodu narodowego
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| PKB | pojęcie | było | Produkt krajowy brutto (PKB) | 2 | podręcznik |
+| Metody liczenia PKB | pojęcie | było | Metody liczenia PKB; PKB metodą produkcyjną i dochodową | 1 | podręcznik |
+| PKB metodą wydatkową | wzór | było | PKB – metoda wydatkowa | 0 | podręcznik |
+| PKB nominalny i realny, deflator | pojęcie | było | PKB nominalny i realny; Deflator PKB | 0 | podręcznik |
+| PNB, PNN, dochód narodowy, dochód rozporządzalny | pojęcie | było | Produkt narodowy brutto (PNB, DNB); Produkt narodowy netto (PNN) | 11 | podręcznik |
+| Wartość dodana | pojęcie | było | Wartość dodana; Wartość dodana – sumowanie | 0 | podręcznik |
+| Zakupy rządowe a transfery | pojęcie | było | Zakupy rządowe a transfery w PKB | 3 | podręcznik |
+| PKB a dobrobyt, HDI | pojęcie | było | Ograniczenia PKB jako miary dobrobytu; Wskaźnik rozwoju społecznego (HDI) | 0 | podręcznik |
+| Szara strefa | pojęcie | było | Szara strefa | 1 | podręcznik |
+| Simon Kuznets (rachunki narodowe) | osoba | było | Kuznets Simon | 0 | podręcznik |
+| ESA 2010 | pojęcie | było | System rachunków narodowych (ESA 2010) | 0 | podręcznik |
+| Wskaźniki alternatywne wobec PKB (GPI, Better Life Index) | pojęcie | pominięte | – | 0 | omówione w haśle „Ograniczenia PKB jako miary dobrobytu”; brak w pytaniach OWE |
+
+### Rozdz. 2. Pomiar kosztów utrzymania
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| CPI i HICP | pojęcie | było | Wskaźnik cen towarów i usług konsumpcyjnych (CPI); HICP | 2 | podręcznik |
+| Obciążenia CPI | pojęcie | było | Obciążenia wskaźnika CPI (problemy pomiaru kosztów utrzymania) | 0 | podręcznik |
+| Indeks Laspeyresa i Paaschego | pojęcie | było | Indeks Laspeyresa i Paaschego | 0 | podręcznik |
+| Inflacja i indeksy cen – wzory | wzór | było | Inflacja i indeksy cen | 0 | podręcznik |
+| Przeliczanie kwot w czasie | pojęcie | było | Przeliczanie kwot pieniężnych z różnych okresów | 0 | podręcznik |
+| Indeksacja | pojęcie | było | Indeksacja | 0 | podręcznik |
+| Stopa procentowa nominalna i realna | pojęcie | było | Stopa procentowa nominalna i realna | 0 | podręcznik |
+| Równanie Fishera | wzór | było | Stopa realna (Fisher) | 0 | podręcznik |
+| Irving Fisher | osoba | było | Fisher Irving | 0 | podręcznik |
+| Inflacja bazowa | pojęcie | było | Inflacja bazowa | 2 | podręcznik |
+
+### Rozdz. 3. Produkcja i wzrost
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Wydajność pracy i jej czynniki | pojęcie | było | Wydajność pracy (produkcyjność) i jej czynniki | 3 | podręcznik |
+| Makroekonomiczna funkcja produkcji | pojęcie | było | Makroekonomiczna funkcja produkcji (stałe przychody skali) | 0 | podręcznik |
+| Konwergencja | pojęcie | było | Konwergencja (doganianie, catching-up) | 0 | podręcznik |
+| Model Solowa | model | było | Model Solowa | 0 | podręcznik |
+| Robert Solow | osoba | było | Solow Robert | 0 | podręcznik |
+| Endogeniczne teorie wzrostu | pojęcie | było | Endogeniczne teorie wzrostu | 0 | podręcznik |
+| Paul Romer | osoba | dodane | Romer Paul | 0 | Nobelprize.org – nagroda 2018; Wikipedia – Paul Romer |
+| Rachunek wzrostu, TFP (reszta Solowa) | pojęcie | dodane | Rachunek wzrostu i łączna produktywność czynników (reszta Solowa) | 0 | Crossref – R. Solow, „Technical Change and the Aggregate Production Function” (REStat 1957); Wikipedia – Growth accounting, Solow residual; OpenStax 20.3 |
+| Rachunek wzrostu – wzór | wzór | dodane | Rachunek wzrostu – wzór | 0 | jw. |
+| Reguła 70 | wzór | było | Reguła 70; Reguła 70 – wzór | 1 | podręcznik |
+| Kapitał ludzki | pojęcie | było | Kapitał ludzki | 0 | podręcznik |
+| BIZ | pojęcie | było | Inwestycje bezpośrednie (BIZ) i portfelowe | 2 | podręcznik |
+| Prawa własności i instytucje | pojęcie | było | Prawa własności i stabilność polityczna a wzrost | 3 | podręcznik |
+| D. Acemoglu, S. Johnson, J. Robinson | osoba | dodane | Acemoglu Daron, Johnson Simon, Robinson James | 0 | Nobelprize.org – nagroda 2024; tabela Nobli w słowniku (Wikipedia – 2024 Nobel) |
+| Wzrost ludności, rozrzedzenie kapitału | pojęcie | było | Wzrost liczby ludności a wzrost gospodarczy | 2 | podręcznik |
+| Thomas Malthus | osoba | było | Malthus Thomas; 1798 – „Prawo ludności” T. Malthusa | 2 | podręcznik |
+| Polityka zorientowana na zewnątrz | pojęcie | było | Polityka zorientowana na zewnątrz i do wewnątrz | 0 | podręcznik |
+| Pułapka średniego dochodu | pojęcie | było | Pułapka średniego dochodu | 0 | podręcznik |
+
+### Rozdz. 4. Oszczędności, inwestycje i system finansowy
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Rynki i pośrednicy finansowi | pojęcie | było | Instytucje pośrednictwa finansowego; Rynek finansowy | 0 | podręcznik |
+| Oszczędności narodowe, prywatne i publiczne | pojęcie | było | Oszczędności narodowe (prywatne i publiczne) | 3 | podręcznik |
+| Tożsamość S = I | wzór | było | Dochód rozporządzalny i oszczędności | 0 | podręcznik |
+| Rynek funduszy pożyczkowych | pojęcie | było | Rynek funduszy pożyczkowych; Model gospodarki otwartej (rynek funduszy pożyczkowych i rynek walutowy) | 0 | podręcznik |
+| Efekt wypychania | pojęcie | było | Efekt wypychania (crowding out) | 5 | podręcznik |
+| Deficyt i dług publiczny | pojęcie | było | Deficyt budżetowy i deficyt sektora finansów publicznych; Dług publiczny | 10 | podręcznik |
+
+### Rozdz. 5. Podstawowe narzędzia finansów
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Wartość pieniądza w czasie | pojęcie | było | Wartość pieniądza w czasie; Wartość pieniądza w czasie – wzory | 0 | podręcznik |
+| Wartość pieniądza w czasie – wzory | wzór | było | Wartość pieniądza w czasie – wzory | 0 | podręcznik |
+| Niechęć do ryzyka | pojęcie | było | Niechęć do ryzyka (awersja do ryzyka) | 0 | podręcznik |
+| Ubezpieczenie, dywersyfikacja | pojęcie | było | Dywersyfikacja portfela; Ubezpieczenie | 0 | podręcznik |
+| Ryzyko systematyczne i specyficzne | pojęcie | było | Ryzyko systematyczne i specyficzne | 0 | podręcznik |
+| CAPM | model | było | Model CAPM | 2 | podręcznik |
+| Harry Markowitz, William Sharpe | osoba | było | Nowoczesna teoria portfela (Markowitz); Markowitz Harry | 4 | podręcznik |
+| Analiza fundamentalna | pojęcie | było | Analiza fundamentalna i techniczna | 2 | podręcznik |
+| Hipoteza rynku efektywnego, błądzenie losowe | pojęcie | było | Hipoteza rynku efektywnego | 2 | podręcznik |
+| Eugene Fama | osoba | było | Fama Eugene | 3 | podręcznik |
+| Bańka spekulacyjna | pojęcie | było | Bańka spekulacyjna | 0 | podręcznik |
+| Robert Shiller | osoba | było | Shiller Robert | 1 | podręcznik |
+
+### Rozdz. 6. Bezrobocie
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Stopa bezrobocia, aktywność zawodowa | pojęcie | było | Stopa bezrobocia; Współczynnik aktywności zawodowej i wskaźnik zatrudnienia | 3 | podręcznik |
+| Stopa bezrobocia – wzory | wzór | było | Stopa bezrobocia i wskaźniki rynku pracy | 0 | podręcznik |
+| BAEL a rejestrowane | pojęcie | było | Bezrobocie rejestrowane i BAEL | 3 | podręcznik |
+| Rodzaje bezrobocia | pojęcie | było | Bezrobocie frykcyjne; Bezrobocie strukturalne | 15 | podręcznik |
+| Naturalna stopa bezrobocia, NAIRU | pojęcie | było | Naturalna stopa bezrobocia; NAIRU | 12 | podręcznik |
+| Zasiłek dla bezrobotnych | pojęcie | było | Zasiłek dla bezrobotnych (ubezpieczenie od bezrobocia) | 1 | podręcznik |
+| Płaca minimalna | pojęcie | było | Płaca minimalna; Płaca minimalna w Polsce | 0 | podręcznik |
+| Związki zawodowe, insiderzy–outsiderzy | pojęcie | było | Związki zawodowe a rynek pracy; Model insiderów–outsiderów | 8 | podręcznik |
+| Płace efektywnościowe | pojęcie | było | Płace efektywnościowe (motywujące) | 0 | podręcznik |
+| Model Shapiro–Stiglitza | model | było | Model bumelowania (Shapiro–Stiglitz) | 1 | podręcznik |
+| Histereza | pojęcie | było | Histereza bezrobocia | 7 | podręcznik |
+| Krzywa Beveridge’a | pojęcie | było | Krzywa Beveridge’a; Beveridge William | 8 | podręcznik |
+| D. Mortensen, C. Pissarides (z P. Diamondem) | osoba | dodane | Mortensen Dale, Pissarides Christopher | 0 | Nobelprize.org – nagroda 2010; Wikipedia – Christopher Pissarides |
+
+### Rozdz. 7. System pieniężny
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Funkcje i rodzaje pieniądza | pojęcie | było | Pieniądz; Pieniądz towarowy, kruszcowy i fiducjarny | 0 | podręcznik |
+| Agregaty pieniężne | pojęcie | było | Agregaty pieniężne (NBP) | 2 | podręcznik |
+| Bank centralny (NBP, EBC, Fed, BoE) | pojęcie | było | Narodowy Bank Polski (NBP); Bank Rezerwy Federalnej (Fed) | 31 | podręcznik |
+| Kreacja pieniądza i mnożnik | pojęcie | było | Kreacja pieniądza (system rezerwy cząstkowej); Mnożnik kreacji pieniądza | 6 | podręcznik |
+| Mnożnik kreacji pieniądza – wzór | wzór | było | Mnożnik kreacji pieniądza – wzór | 0 | podręcznik |
+| Narzędzia polityki pieniężnej | pojęcie | było | Stopy procentowe NBP; Operacje otwartego rynku (OOR) | 13 | podręcznik |
+| Problemy kontroli podaży pieniądza | pojęcie | było | Problemy kontroli podaży pieniądza | 0 | podręcznik |
+| Run na bank | pojęcie | było | Run na bank (panika bankowa) | 1 | podręcznik |
+| Prawo Kopernika–Greshama | pojęcie | było | Prawo Kopernika–Greshama | 1 | podręcznik |
+| Walter Bagehot (pożyczkodawca ostatniej instancji) | osoba | było | Bagehot Walter; 1873 – „Lombard Street” W. Bagehota | 4 | podręcznik |
+
+### Rozdz. 8. Wzrost podaży pieniądza i inflacja
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Teoria ilościowa pieniądza | pojęcie | było | Teoria ilościowa pieniądza (równanie wymiany Fishera) | 0 | podręcznik |
+| Równanie wymiany | wzór | było | Teoria ilościowa pieniądza (równanie wymiany Fishera); Równanie wymiany | 3 | podręcznik |
+| Dychotomia klasyczna, neutralność | pojęcie | było | Neutralność pieniądza i dychotomia klasyczna | 1 | podręcznik |
+| Prędkość obiegu pieniądza | pojęcie | dodane | Prędkość obiegu pieniądza | 1 | Wikipedia – Velocity of money; OpenStax 28.4 (równanie wymiany, prędkość obiegu) |
+| Podatek inflacyjny, seigniorage | pojęcie | było | Seigniorage (renta emisyjna) | 1 | podręcznik |
+| Efekt Fishera | pojęcie | było | Efekt Fishera | 0 | podręcznik |
+| Koszty inflacji | pojęcie | było | Koszty inflacji | 0 | podręcznik |
+| Złudzenie pieniądza | pojęcie | było | Złudzenie pieniądza (iluzja pieniężna) | 0 | podręcznik |
+| Hiperinflacja | pojęcie | było | Hiperinflacja | 0 | podręcznik |
+| David Hume (mechanizm cen i przepływu kruszców) | osoba | było | Hume David | 0 | podręcznik |
+
+### Rozdz. 9. Makroekonomia gospodarki otwartej – pojęcia
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Eksport netto, NCO | pojęcie | było | Odpływy kapitałowe netto (NCO) | 4 | podręcznik |
+| NX = NCO, S = I + NCO | pojęcie | było | Tożsamości gospodarki otwartej: NX = NCO i S = I + NCO | 0 | podręcznik |
+| Kurs nominalny i realny | pojęcie | było | Kurs nominalny i realny | 0 | podręcznik |
+| Kurs realny i PPP – wzory | wzór | było | Kurs realny i parytet siły nabywczej – wzory | 0 | podręcznik |
+| Parytet siły nabywczej i jego ograniczenia | pojęcie | było | PKB per capita i parytet siły nabywczej (PPP); Ograniczenia parytetu siły nabywczej | 1 | podręcznik |
+| Indeks Big Maca | pojęcie | dodane | Indeks Big Maca | 0 | Wikipedia – Big Mac Index (The Economist, od 1986); The Economist – The Big Mac index |
+| Bilans płatniczy | pojęcie | było | Bilans płatniczy | 1 | podręcznik |
+
+### Rozdz. 10. Teoria makroekonomiczna gospodarki otwartej
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Model gospodarki otwartej | pojęcie | było | Model gospodarki otwartej (rynek funduszy pożyczkowych i rynek walutowy) | 0 | podręcznik |
+| Ucieczka kapitału | pojęcie | było | Ucieczka kapitału | 0 | podręcznik |
+| Deficyty bliźniacze | pojęcie | było | Deficyty bliźniacze | 1 | podręcznik |
+| Warunek Marshalla–Lernera, krzywa J | pojęcie | było | Warunek Marshalla–Lernera i krzywa J | 1 | podręcznik |
+| Model Mundella–Fleminga, trylemat | model | było | Trylemat (niemożliwa trójca) Mundella–Fleminga; Model Mundella–Fleminga | 3 | podręcznik |
+| Robert Mundell, Marcus Fleming | osoba | było | Mundell Robert, Fleming Marcus | 0 | podręcznik |
+| Parytet stóp procentowych | pojęcie | było | Parytet stóp procentowych | 2 | podręcznik |
+
+### Rozdz. 11. Zagregowany popyt i zagregowana podaż
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Trzy fakty o wahaniach | pojęcie | było | Trzy fakty o wahaniach koniunktury | 0 | podręcznik |
+| AD – nachylenie (trzy efekty) | pojęcie | było | Nachylenie krzywej zagregowanego popytu (trzy efekty) | 0 | podręcznik |
+| Krótkookresowa AS (trzy teorie) | pojęcie | było | Teorie krótkookresowej podaży zagregowanej (lepkie płace, lepkie ceny, błędne postrzeganie) | 0 | podręcznik |
+| Długookresowa AS, produkt potencjalny | pojęcie | było | Produkt potencjalny i luka PKB (popytowa) | 0 | podręcznik |
+| Szoki podażowe i popytowe, stagflacja | pojęcie | było | Szok podażowy i popytowy; Stagflacja i slumpflacja | 9 | podręcznik |
+| Model AD-AS | model | było | Równowaga makroekonomiczna (model AD-AS) | 0 | podręcznik |
+| Cykl koniunkturalny i jego fazy | pojęcie | było | Cykl koniunkturalny | 3 | podręcznik |
+| Joseph Schumpeter | osoba | było | Schumpeter Joseph A. | 3 | podręcznik |
+| Teoria realnego cyklu koniunkturalnego | pojęcie | było | Teoria realnego cyklu koniunkturalnego | 1 | podręcznik |
+| Finn Kydland, Edward Prescott | osoba | było | Kydland Finn, Prescott Edward | 2 | podręcznik |
+| Arthur Okun | osoba | było | Okun Arthur | 0 | podręcznik |
+| Prawo Okuna – obliczanie | wzór | było | Prawo Okuna – obliczanie | 0 | podręcznik |
+
+### Rozdz. 12. Wpływ polityki pieniężnej i fiskalnej na AD
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Teoria preferencji płynności | pojęcie | było | Popyt na pieniądz (preferencja płynności) | 0 | podręcznik |
+| Model IS-LM | model | było | Model IS-LM | 0 | podręcznik |
+| John Hicks | osoba | było | Hicks John | 0 | podręcznik |
+| John Maynard Keynes | osoba | było | Funkcja konsumpcji (keynesowska); Bezrobocie cykliczne (koniunkturalne, keynesowskie) | 1 | podręcznik |
+| 1936 – „Ogólna teoria” | data | było | 1936 – „Ogólna teoria” J.M. Keynesa | 0 | podręcznik |
+| Mnożnik wydatków i podatkowy | pojęcie | było | Mnożnik (inwestycyjny, wydatkowy); Mnożnik podatkowy | 6 | podręcznik |
+| Mnożniki – zestawienie | wzór | było | Mnożniki – zestawienie | 0 | podręcznik |
+| Efekt wypychania | pojęcie | było | Efekt wypychania (crowding out) | 5 | podręcznik |
+| Automatyczne stabilizatory | pojęcie | było | Automatyczne stabilizatory | 6 | podręcznik |
+| Pułapka płynności | pojęcie | było | Pułapka płynności | 1 | podręcznik |
+| Opóźnienia polityki | pojęcie | było | Opóźnienia polityki gospodarczej | 0 | podręcznik |
+
+### Rozdz. 13. Wybór między inflacją a bezrobociem
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Krzywa Phillipsa | pojęcie | było | Krzywa Phillipsa | 1 | podręcznik |
+| A.W. Phillips | osoba | było | Phillips Alban William | 0 | podręcznik |
+| 1958 – krzywa Phillipsa | data | było | 1958 – krzywa Phillipsa | 0 | podręcznik |
+| Hipoteza stopy naturalnej (Friedman, Phelps) | pojęcie | było | Naturalna stopa bezrobocia; Oczekiwania adaptacyjne i racjonalne | 7 | podręcznik |
+| Milton Friedman, Edmund Phelps | osoba | było | Friedman Milton; Phelps Edmund | 0 | podręcznik |
+| Racjonalne oczekiwania, krytyka Lucasa | pojęcie | było | Nowa ekonomia klasyczna (szkoła racjonalnych oczekiwań); Krytyka Lucasa | 6 | podręcznik |
+| Robert Lucas | osoba | było | Lucas Robert E. | 0 | podręcznik |
+| Stopa poświęcenia | pojęcie | było | Stopa poświęcenia | 0 | podręcznik |
+| Dezinflacja Volckera i Thatcher | pojęcie | było | Dezinflacja Volckera i Thatcher | 0 | podręcznik |
+| Szoki podażowe 1973 i 1979 | pojęcie | było | 1973 – model Blacka–Scholesa i pierwszy szok naftowy; 1979 – Europejski System Walutowy i drugi szok naftowy | 0 | podręcznik |
+| Niezależność banku centralnego, cel inflacyjny | pojęcie | było | Strategia bezpośredniego celu inflacyjnego (BCI); Niezależność banku centralnego | 12 | podręcznik |
+| Reguła Taylora – wzór | wzór | było | Reguła Taylora – wzór | 0 | podręcznik |
+
+### Rozdz. 14. Wspólne waluty
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Teoria optymalnego obszaru walutowego | pojęcie | było | Teoria optymalnego obszaru walutowego | 0 | podręcznik |
+| R. Mundell, R. McKinnon, P. Kenen | osoba | było | McKinnon Ronald, Kenen Peter; Mundell Robert, Fleming Marcus | 1 | podręcznik |
+| Szok asymetryczny | pojęcie | było | Szok asymetryczny | 0 | podręcznik |
+| Koszty i korzyści euro | pojęcie | było | Koszty i korzyści przyjęcia euro | 0 | podręcznik |
+| Kryteria konwergencji z Maastricht | pojęcie | było | Kryteria konwergencji (z Maastricht) | 1 | podręcznik |
+| ERM II | pojęcie | było | ERM II | 0 | podręcznik |
+| Federalizm fiskalny | pojęcie | było | Federalizm fiskalny | 1 | podręcznik |
+| Pakt Stabilności i Wzrostu | pojęcie | było | Klauzula wyjścia (Pakt Stabilności i Wzrostu) | 0 | podręcznik |
+| Kryzys zadłużeniowy strefy euro | pojęcie | było | 2010–2012 – kryzys zadłużeniowy w strefie euro | 0 | podręcznik |
+| 1999 – euro | data | było | 1999 – euro, reforma emerytalna i samorządowa w Polsce | 0 | podręcznik |
+
+### Rozdz. 15. Pięć debat o polityce makroekonomicznej
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Debaty Mankiwa | pojęcie | było | Debaty o polityce makroekonomicznej (Mankiw) | 0 | podręcznik |
+| Reguły a uznaniowość, niespójność czasowa | pojęcie | było | Reguły a uznaniowość (niespójność czasowa) | 0 | podręcznik |
+| Podatek konsumpcyjny | pojęcie | było | Podatek konsumpcyjny (reforma podatkowa sprzyjająca oszczędzaniu) | 0 | podręcznik |
+| Zrównoważony budżet, reguły fiskalne | pojęcie | było | Progi ostrożnościowe i konstytucyjny limit długu; Stabilizująca reguła wydatkowa | 0 | podręcznik |
+| Ekwiwalencja ricardiańska | pojęcie | dodane | Ekwiwalencja ricardiańska | 0 | Crossref – R. Barro, „Are Government Bonds Net Wealth?” (JPE 1974); Wikipedia – Ricardian equivalence |

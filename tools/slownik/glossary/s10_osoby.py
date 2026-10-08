@@ -197,6 +197,9 @@ E = [
  ("Neumann John von, Morgenstern Oskar", "Matematyk i ekonomista, autorzy „Teorii gier i zachowań ekonomicznych” (1944) – dzieła, od którego datuje się teoria gier; wprowadzili m.in. gry o sumie zerowej i teorię oczekiwanej użyteczności.", {"k": ["neumann", "morgenstern"]}),
  ("Ostrom Elinor", "Amerykańska politolożka i ekonomistka, Nobel 2009 (z O. Williamsonem) za analizę zarządzania gospodarczego, zwłaszcza dobrami wspólnymi – pierwsza kobieta z tą nagrodą; pokazała, że społeczności potrafią samodzielnie chronić zasoby wspólne przed „tragedią wspólnego pastwiska” („Governing the Commons”, 1990).", {"k": ["ostrom"]}),
  ("Spence Michael", "Amerykański ekonomista, Nobel 2001 (z G. Akerlofem i J. Stiglitzem) za analizę rynków z asymetrią informacji; model sygnalizacji na rynku pracy („Job Market Signaling”, 1973) – wykształcenie jako sygnał zdolności.", {"k": ["spence"]}),
+ ("Romer Paul", "Amerykański ekonomista, Nobel 2018 (z W. Nordhausem) za włączenie innowacji technologicznych do długookresowej analizy makroekonomicznej; twórca endogenicznej teorii wzrostu (wiedza jako dobro nierywalizacyjne); były główny ekonomista Banku Światowego.", {"k": ["romer"]}),
+ ("Acemoglu Daron, Johnson Simon, Robinson James", "Ekonomiści, Nobel 2024 za badania nad tym, jak powstają instytucje i jak wpływają na dobrobyt; instytucje włączające (inkluzywne) sprzyjają wzrostowi, a wyzyskujące (ekstrakcyjne) go hamują („Dlaczego narody przegrywają”, 2012).", {"k": ["acemoglu"]}),
+ ("Mortensen Dale, Pissarides Christopher", "Ekonomiści pracy, Nobel 2010 (z P. Diamondem) za analizę rynków z frykcjami poszukiwań – model DMP wyjaśnia współistnienie bezrobocia i wolnych miejsc pracy oraz wpływ zasiłków na czas poszukiwania pracy.", {"k": ["mortensen", "pissarides"]}),
 ]
 TABLES = [
  ("Nagrody Nobla z ekonomii przywoływane w pytaniach", ["Rok", "Laureaci", "Za co (skrót)"], [

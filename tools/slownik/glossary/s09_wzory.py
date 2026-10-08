@@ -54,6 +54,7 @@ E = [
  ("Indeks Lernera i reguła odwrotnej elastyczności – wzór", "Miara siły rynkowej (A. Lerner, 1934): narzut ceny nad koszt krańcowy; u monopolisty maksymalizującego zysk równy odwrotności elastyczności popytu.", {"w": "L = (P − MC) / P = −1 / Ed;  MR = P · (1 + 1/Ed);  P = MC / (1 + 1/Ed)", "p": "Ed = −4, MC = 30 zł ⇒ P = 30 / 0,75 = 40 zł, L = (40 − 30)/40 = 0,25. Konkurencja doskonała: L = 0."}),
  ("Wskaźniki koncentracji CR i HHI – wzory", "Miary koncentracji rynku: udział n największych firm (CRn) i wskaźnik Herfindahla–Hirschmana (suma kwadratów udziałów wszystkich firm).", {"w": "CRn = s₁ + s₂ + … + sₙ;  HHI = Σ sᵢ² (udziały w %; maks. 10 000 – monopol)", "p": "Udziały 40, 30, 20, 10% ⇒ CR2 = 70%, HHI = 1600 + 900 + 400 + 100 = 3000."}),
  ("Równowaga konsumenta – wzory", "Warunki optymalnego koszyka: zrównanie użyteczności krańcowej na złotówkę (II prawo Gossena) i styczność krzywej obojętności z linią budżetową.", {"w": "MUx/Px = MUy/Py;  MRS = MUx/MUy = Px/Py;  Px·X + Py·Y = I", "p": "MUx = 20, Px = 4, MUy = 15, Py = 3 ⇒ 20/4 = 15/3 = 5 – koszyk optymalny."}),
+ ("Rachunek wzrostu – wzór", "Rozkład tempa wzrostu PKB na wkład kapitału, pracy i łącznej produktywności czynników (TFP, reszta Solowa).", {"w": "g_Y = g_A + α·g_K + (1 − α)·g_L;  g_A = g_Y − α·g_K − (1 − α)·g_L;  na pracownika: g_(Y/L) = g_A + α·g_(K/L)", "p": "g_Y = 3%, g_K = 4%, g_L = 1%, α = 0,3 ⇒ g_A = 1,1%."}),
 ]
 TABLES = [
  ("Oznaczenia używane we wzorach", ["Symbol", "Znaczenie"], [

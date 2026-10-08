@@ -160,6 +160,10 @@ UNIT_OVERRIDES = {
     "Stopa poświęcenia": "pol-pieniezna",
     "Dezinflacja Volckera i Thatcher": "pol-pieniezna",
     "Federalizm fiskalny": "pol-ue",
+    "Rachunek wzrostu i łączna produktywność czynników (reszta Solowa)": "makro-wzrost",
+    "Prędkość obiegu pieniądza": "makro-inflacja",
+    "Indeks Big Maca": "makro-kursy",
+    "Ekwiwalencja ricardiańska": "pol-fiskalna",
 }
 
 # Działy rodzajowe w każdym temacie (wzory, osoby, instytucje, daty, przepisy)
@@ -227,6 +231,14 @@ OVERRIDES = {
     "Stopa poświęcenia": "polityka",
     "Dezinflacja Volckera i Thatcher": "polityka",
     "Federalizm fiskalny": "polityka",
+    "Rachunek wzrostu i łączna produktywność czynników (reszta Solowa)": "makro",
+    "Prędkość obiegu pieniądza": "makro",
+    "Indeks Big Maca": "makro",
+    "Ekwiwalencja ricardiańska": "polityka",
+    "Romer Paul": "makro",
+    "Acemoglu Daron, Johnson Simon, Robinson James": "makro",
+    "Mortensen Dale, Pissarides Christopher": "makro",
+    "Rachunek wzrostu – wzór": "makro",
     "Card David, Krueger Alan": "mikro",
     "Chamberlin Edward, Robinson Joan": "mikro",
     "Neumann John von, Morgenstern Oskar": "mikro",
