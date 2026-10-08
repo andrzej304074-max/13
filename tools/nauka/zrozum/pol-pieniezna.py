@@ -16,7 +16,7 @@ NBPZ = S("NBP – Sprawozdanie z wykonania założeń polityki pieniężnej na 2
 S274 = S("OpenStax, Principles of Economics 3e, 27.4 How Banks Create Money", OS3 + "27-4-how-banks-create-money", D)
 FHGD = S("Federal Reserve History – The Great Depression (podaż pieniądza spadła o blisko 30% w latach 1930–1933)", "https://www.federalreservehistory.org/essays/great-depression", D)
 FH81 = S("Federal Reserve History – Recession of 1981–82", "https://www.federalreservehistory.org/essays/recession-of-1981-82", D)
-PAWV = S("Princeton Alumni Weekly – Paul Volcker: inflacja z 13,6% (1980) do 3,2% (1983)", "https://paw.princeton.edu/print/10231", D)
+PAWV = S("Wikipedia – Paul Volcker (szczyt inflacji 14,8% w III 1980, stopa funduszy federalnych 20% w VI 1981)", "https://en.wikipedia.org/wiki/Paul_Volcker", D)
 WTH = S("Wikipedia – First Thatcher ministry (inflacja 22% w maju 1980, 4,9% w czerwcu 1983; bezrobocie 3,2 mln)", "https://en.wikipedia.org/wiki/First_Thatcher_ministry", D)
 EHT = S("Economics Help – Economic impact of Margaret Thatcher", "https://www.economicshelp.org/blog/274/uk-economy/economic-impact-of-margaret-thatcher/", D)
 
