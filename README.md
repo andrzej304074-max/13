@@ -69,8 +69,8 @@ Kurs zbudowany z haseł słownika (`docs/slownik-owe.pdf`) i wszystkich banków 
 
 - **7 tematów:** Mikroekonomia, Makroekonomia, Polityka gospodarcza, Podstawy finansów, Finanse przedsiębiorstw,
   Zarządzanie oraz temat przewodni „Gospodarka wobec wyzwań demograficznych”.
-- **Hierarchia:** 84 działy → 296 lekcji (po 1–6 haseł) → 1184 pod-lekcje.
-- **Rodzaje treści** (filtr na stronie tematu): pojęcia, wzory, osoby, instytucje, daty, przepisy.
+- **Hierarchia:** 84 działy → 683 lekcje: 296 lekcji haseł (po 1–6 haseł) i 387 lekcji „Zrozumienie” 🧠 → 2732 pod-lekcje.
+- **Rodzaje treści** (filtr na stronie tematu): pojęcia, wzory, osoby, instytucje, daty, przepisy, zrozumienie.
 - **Pod-lekcje:** 1. Poznaj, 2. Ćwicz, 3. Utrwal, 4. Sprawdzian (pytania olimpijskie i słownikowe dopasowane do haseł lekcji).
 - **Ćwiczenia:** nowe hasło, wybór hasła lub opisu, łączenie par, uzupełnianie luk, prawda/fałsz,
   wpisywanie (tolerancja polskich znaków i literówek), układanie chronologii, wzory, fiszki, pytania testowe.
@@ -84,6 +84,31 @@ Kurs zbudowany z haseł słownika (`docs/slownik-owe.pdf`) i wszystkich banków 
 - **Statystyki nauki** (`/nauka/statystyki`): osobne od testów. Pokazują skuteczność, czas pod-lekcji i lekcji,
   podział na tematy, działy, lekcje, typy ćwiczeń i rodzaje treści, wykres dzienny i najsłabsze hasła.
   Filtry: temat, dział, lekcja, pod-lekcja, rodzaj treści, typ ćwiczenia, okres.
+
+### Lekcje „Zrozumienie” 🧠
+
+Uczą mechanizmów, obliczeń i zastosowań, a nie tylko definicji. Są wplecione w ścieżkę każdego działu:
+
+- **Liczba lekcji:** 5 w każdym dziale pojęciowym i dziale „Wzory”, 5 w działach osób, instytucji, dat i przepisów
+  z co najmniej 15 hasłami, 2 w mniejszych działach. Razem 387 lekcji, 7774 ćwiczenia oceniane i 1553 karty wyjaśnień.
+- **4 pod-lekcje:** Wyjaśnienie (karty krok po kroku z pytaniami sprawdzającymi), Mechanizmy (co się stanie, gdy…,
+  łańcuchy przyczyn i skutków, sortowanie do kategorii, przesunięcia krzywych), Obliczenia (wynik wpisywany
+  z tolerancją i rozwiązaniem krok po kroku), Zastosowanie (studia przypadków). Każda pod-lekcja ćwiczeń ma
+  co najmniej 6 zadań ocenianych.
+- **Źródła:** pod każdą lekcją lista źródeł z linkami i datą dostępu – podręczniki OpenStax (CC BY),
+  akty prawne (ELI/ISAP, EUR-Lex), NBP, GUS, ZUS, MF, Eurostat, KE i inne.
+- **Aktualne dane o Polsce** mają zapis „stan na …”. Każdą liczbę i datę z bieżących danych potwierdzono
+  w dwóch niezależnych źródłach; rejestr jest w `tools/nauka/zrozum/WERYFIKACJA.md`.
+  Dane bez dwóch źródeł są oznaczone jako „dane umowne”.
+
+Treści są w `tools/nauka/zrozum/<id-działu>.py` (jeden plik na dział). `tools/nauka/build_zrozum.py`
+(uruchamiany przez `build_course.py`) waliduje je i scala do `data/nauka/zrozum.json`:
+przelicza każde zadanie liczbowe z wyrażenia `calc`, sprawdza opcje, łańcuchy, kategorie, odwołania do haseł,
+źródła i powtórzenia względem banku pytań. Linki sprawdza:
+
+```bash
+python3 -I tools/nauka/check_links.py data/nauka/zrozum.json
+```
 
 Postęp i statystyki są wspólne dla wszystkich i zapisywane w tabelach `learn_sessions` i `learn_answers`.
 
