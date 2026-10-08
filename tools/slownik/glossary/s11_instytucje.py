@@ -29,6 +29,8 @@ E = [
  ('Agencje ratingowe', 'Standard & Poor’s, Moody’s, Fitch – oceniają wiarygodność kredytową państw i firm.', {'k': ['agencj ratingow', 'agencje ratingowe', 'moody', 'fitch']}),
  ('Klub Paryski', 'Nieformalna grupa państw-wierzycieli; redukcja polskiego długu o 50% (1991).', {'k': ['klub paryski']}),
  ('Sądy gospodarcze', 'Wydziały gospodarcze sądów rejonowych i okręgowych; m.in. prowadzą Krajowy Rejestr Sądowy i postępowania upadłościowe.', {'k': ['sąd gospodarcz', 'sądy gospodarcz', 'sądu gospodarcz']}),
+ ('Europejska Rada ds. Ryzyka Systemowego (ESRB)', 'Organ UE nadzoru makroostrożnościowego, działający od 16.12.2010 r. (rozporządzenie 1092/2010), z siedzibą we Frankfurcie; identyfikuje ryzyka systemowe, wydaje ostrzeżenia i zalecenia; wsparcie analityczne zapewnia EBC. Część Europejskiego Systemu Nadzoru Finansowego obok EBA, ESMA i EIOPA.', {'k': ['esrb', 'ryzyka systemowego']}),
+ ('Rada Stabilności Finansowej (FSB)', 'Międzynarodowe ciało koordynujące regulacje finansowe (siedziba w Bazylei, przy BIS). Powstała w kwietniu 2009 r. (szczyt G20 w Londynie) z przekształcenia Forum Stabilności Finansowej (FSF), utworzonego w 1999 r. przez kraje G7 po kryzysie azjatyckim; członkowie – kraje G20, UE i instytucje międzynarodowe.', {'k': ['fsb', 'forum stabilności finansowej', 'rada stabilności finansowej']}),
 ]
 TABLES = [('Instytucje opisane w działach tematycznych (bez powtarzania haseł)',
   ['Instytucja', 'Gdzie szukać'],

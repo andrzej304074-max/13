@@ -78,5 +78,8 @@ E = [
  ("1933 – teorie konkurencji monopolistycznej i niedoskonałej", "E. Chamberlin („Teoria konkurencji monopolistycznej”) i J. Robinson („Ekonomia konkurencji niedoskonałej”) niezależnie opisują rynki między konkurencją doskonałą a monopolem; Robinson wprowadza pojęcie monopsonu.", {"k": ["chamberlin", "robinson"]}),
  ("1944 – „Teoria gier i zachowań ekonomicznych” J. von Neumanna i O. Morgensterna", "Początek teorii gier jako dziedziny badań; później J. Nash (1950) definiuje równowagę w grach niekooperacyjnych.", {"k": ["teoria gier", "neumann"]}),
  ("1994 – badanie płacy minimalnej D. Carda i A. Kruegera", "Porównanie zatrudnienia w barach szybkiej obsługi w New Jersey i Pensylwanii po podwyżce płacy minimalnej w New Jersey (1992) – brak spadku zatrudnienia; przełom w empirycznej ekonomii pracy.", {"k": ["card", "krueger"]}),
+ ("1637 – krach na rynku tulipanów", "W lutym 1637 r. w Niderlandach załamały się ceny cebulek tulipanów po spekulacyjnym wzroście z lat 1634–1637 – pierwsza opisana bańka spekulacyjna.", {"k": ["tulipan"]}),
+ ("1720 – bańki Missisipi i Mórz Południowych", "Pęknięcie bliźniaczych baniek spekulacyjnych: Kompanii Missisipi J. Lawa we Francji i Kompanii Mórz Południowych w Wielkiej Brytanii.", {"k": ["missisipi", "mórz południowych"]}),
+ ("1844 – ustawa bankowa R. Peela (Bank Charter Act)", "Zwycięstwo szkoły obiegowej: emisja banknotów Banku Anglii ponad ustalony limit wymaga pełnego pokrycia w złocie; podział banku na departament emisyjny i bankowy; w kolejnych kryzysach (1847, 1857, 1866) przepisy zawieszano.", {"k": ["peel", "bank charter"]}),
 ]
 TABLES = []

@@ -55,6 +55,7 @@ E = [
  ("Wskaźniki koncentracji CR i HHI – wzory", "Miary koncentracji rynku: udział n największych firm (CRn) i wskaźnik Herfindahla–Hirschmana (suma kwadratów udziałów wszystkich firm).", {"w": "CRn = s₁ + s₂ + … + sₙ;  HHI = Σ sᵢ² (udziały w %; maks. 10 000 – monopol)", "p": "Udziały 40, 30, 20, 10% ⇒ CR2 = 70%, HHI = 1600 + 900 + 400 + 100 = 3000."}),
  ("Równowaga konsumenta – wzory", "Warunki optymalnego koszyka: zrównanie użyteczności krańcowej na złotówkę (II prawo Gossena) i styczność krzywej obojętności z linią budżetową.", {"w": "MUx/Px = MUy/Py;  MRS = MUx/MUy = Px/Py;  Px·X + Py·Y = I", "p": "MUx = 20, Px = 4, MUy = 15, Py = 3 ⇒ 20/4 = 15/3 = 5 – koszyk optymalny."}),
  ("Rachunek wzrostu – wzór", "Rozkład tempa wzrostu PKB na wkład kapitału, pracy i łącznej produktywności czynników (TFP, reszta Solowa).", {"w": "g_Y = g_A + α·g_K + (1 − α)·g_L;  g_A = g_Y − α·g_K − (1 − α)·g_L;  na pracownika: g_(Y/L) = g_A + α·g_(K/L)", "p": "g_Y = 3%, g_K = 4%, g_L = 1%, α = 0,3 ⇒ g_A = 1,1%."}),
+ ("Model Baumola–Tobina – wzór", "Optymalny przeciętny zasób gotówki przy transakcyjnym popycie na pieniądz.", {"w": "liczba wypłat N* = √(i·Y / (2F));  przeciętna gotówka M* = Y / (2N*) = √(Y·F / (2i))  (Y – roczne wydatki, F – koszt jednej wypłaty, i – stopa procentowa)", "p": "Y = 48 000 zł, F = 6 zł, i = 4% ⇒ N* = √(0,04·48 000/12) = √160 ≈ 12,6; M* ≈ 1 897 zł. Gdy i rośnie 4 razy, M* spada 2 razy."}),
 ]
 TABLES = [
  ("Oznaczenia używane we wzorach", ["Symbol", "Znaczenie"], [
