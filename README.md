@@ -69,7 +69,7 @@ Kurs zbudowany z haseł słownika (`docs/slownik-owe.pdf`) i wszystkich banków 
 
 - **7 tematów:** Mikroekonomia, Makroekonomia, Polityka gospodarcza, Podstawy finansów, Finanse przedsiębiorstw,
   Zarządzanie oraz temat przewodni „Gospodarka wobec wyzwań demograficznych”.
-- **Hierarchia:** 86 działów → 740 lekcji: 310 lekcji haseł (po 1–6 haseł) i 430 lekcji „Zrozumienie” 🧠 → 2960 pod-lekcji.
+- **Hierarchia:** 88 działów → 768 lekcji: 324 lekcje haseł (po 1–6 haseł) i 444 lekcje „Zrozumienie” 🧠 → 3072 pod-lekcje.
 - **Rodzaje treści** (filtr na stronie tematu): pojęcia, wzory, osoby, instytucje, daty, przepisy, zrozumienie.
 - **Pod-lekcje:** 1. Poznaj, 2. Ćwicz, 3. Utrwal, 4. Sprawdzian (pytania olimpijskie i słownikowe dopasowane do haseł lekcji).
 - **Ćwiczenia:** nowe hasło, wybór hasła lub opisu, łączenie par, uzupełnianie luk, prawda/fałsz,
@@ -90,7 +90,7 @@ Kurs zbudowany z haseł słownika (`docs/slownik-owe.pdf`) i wszystkich banków 
 Uczą mechanizmów, obliczeń i zastosowań, a nie tylko definicji. Są wplecione w ścieżkę każdego działu:
 
 - **Liczba lekcji:** 5 w każdym dziale pojęciowym i dziale „Wzory”, 5 w działach osób, instytucji, dat i przepisów
-  z co najmniej 15 hasłami, 2 w mniejszych działach. Razem 430 lekcji, 8634 ćwiczenia oceniane i 1727 kart wyjaśnień. Mikroekonomia i makroekonomia są dodatkowo sprawdzone ze spisami treści podręczników N.G. Mankiwa i M.P. Taylora „Mikroekonomia” i „Makroekonomia” (PWE): każde zagadnienie ma hasło i lekcję (makroekonomia z podręcznika jest rozłożona na tematy Makroekonomia, Polityka gospodarcza i Finanse; nowy dział „Oszczędności, inwestycje i system finansowy”).
+  z co najmniej 15 hasłami, 2 w mniejszych działach. Razem 444 lekcje, 8915 ćwiczeń ocenianych i 1786 kart wyjaśnień. Zakres sprawdzono z podręcznikami literatury podstawowej OWE: N.G. Mankiw, M.P. Taylor „Mikroekonomia” i „Makroekonomia” (PWE) oraz S. Owsiak „Finanse” (PWE 2015). Spisy treści potraktowano jako listę tematów: do każdego rozdziału zebrano pojęcia, modele, osoby, wzory, daty, instytucje i przepisy, sprawdzono je w bazie pytań OWE i zweryfikowano nowe fakty w dwóch źródłach – zob. `tools/nauka/MAPA-POJEC.md`. Każde hasło pojęciowe tematów Mikroekonomia, Makroekonomia, Polityka gospodarcza i Finanse ma lekcję „Zrozumienie”.
 - **4 pod-lekcje:** Wyjaśnienie (karty krok po kroku z pytaniami sprawdzającymi), Mechanizmy (co się stanie, gdy…,
   łańcuchy przyczyn i skutków, sortowanie do kategorii, przesunięcia krzywych), Obliczenia (wynik wpisywany
   z tolerancją i rozwiązaniem krok po kroku), Zastosowanie (studia przypadków). Każda pod-lekcja ćwiczeń ma
