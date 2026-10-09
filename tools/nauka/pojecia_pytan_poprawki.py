@@ -438,3 +438,101 @@ fix("owe25-s-22", add=["Insider trading (wykorzystanie informacji poufnej)"])
 fix("owe25-s-24", add=["Kartel"])
 fix("owe25-s-29", add=["Monopol"])
 fix("owe25-s-30", add=["Typy struktur organizacyjnych"])
+
+
+# ── XXVI OWE, etap centralny ──
+drop("Przedsiębiorca i działalność gospodarcza", "przedsiębiorc")
+rx("Przedsiębiorca i działalność gospodarcza", B + r"(?:definicj|status)\w* przedsiębiorcy", B + r"mikroprzedsiębiorc")
+rx("Optimum Pareto (efektywność w sensie Pareto)", B + r"pareta")
+fix("owe26-c-01", add=["Czynniki kształtujące podaż (determinanty podaży)"])
+fix("owe26-c-02", add=["Elastyczność cenowa popytu"])
+fix("owe26-c-04", add=["Koszt krańcowy (MC)"])
+fix("owe26-c-05", add=["Próg zamknięcia (punkt zamknięcia)"])
+fix("owe26-c-06", add=["Renta gruntowa", "Elastyczność cenowa podaży"], dele=["Umowy w kodeksie cywilnym"])
+fix("owe26-c-08", add=["Efekty zewnętrzne", "Internalizacja efektów zewnętrznych"])
+fix("owe26-c-09", add=["Dochód osobisty i dochód rozporządzalny"])
+fix("owe26-c-11", add=["Automatyczne stabilizatory"])
+fix("owe26-c-14", add=["Inwestycje"])
+fix("owe26-c-17", dele=["Samorząd terytorialny w Polsce"])
+fix("owe26-c-19", add=["Agio (nadwyżka emisyjna)"])
+
+
+# ── XXVI OWE, etap okręgowy ──
+drop("Ekonomista jako naukowiec i doradca polityki", "doradc")
+rx("Ekonomista jako naukowiec i doradca polityki", B + r"ekonomist\w* jako")
+drop("Oczekiwania adaptacyjne i racjonalne", "adaptacyjn")
+rx("Oczekiwania adaptacyjne i racjonalne", B + r"oczekiwa\w* adaptacyjn")
+drop("Wskaźniki płynności", "płynnoś")
+rx("Wskaźniki płynności", B + r"wskaźnik\w* płynności", B + r"płynnoś\w* (?:finansow|bieżąc|szybk|gotówkow|przedsiębiorstw|firmy|spółki)")
+drop("Przedsiębiorca i działalność gospodarcza", "działalnoś gospodarcz", "działalność gospodarcza", "działalności gospodarczej")
+rx("Przedsiębiorca i działalność gospodarcza", B + r"(?:prowadzeni|rozpoczęci|rejestracj|zawieszeni)\w* działalności gospodarczej", B + r"działalnoś\w* nierejestrowan")
+ITEM_ADD["Wskaźniki zadłużenia"] = [B + r"wskaźnik\w* (?:zadłużenia|ogólnego zadłużenia|pokrycia)"]
+fix("owe26-o-02", add=["Elastyczność a utarg"])
+fix("owe26-o-04", add=["Ekonomia normatywna", "Ekonomia pozytywna"], dele=["Formy monopolizacji (porozumienia i koncentracje)"])
+fix("owe26-o-06", add=["Elastyczność cenowa podaży"])
+fix("owe26-o-21", add=["Analiza fundamentalna i techniczna"], dele=["Podejście sytuacyjne"])
+fix("owe26-o-22", add=["Dźwignia finansowa (lewarowanie)"], dele=["Korelacja a przyczynowość"])
+fix("owe26-o-28", add=["Strategie konkurencji Portera"])
+
+
+# ── XXVI OWE, etap szkolny ──
+drop("WIG20", "mwig40", "swig80", "wig30")
+drop("Partnerzy handlowi Polski", "partner handlow", "partnerów handlow", "partnerem handlow")
+rx("Partnerzy handlowi Polski", B + r"partner\w* (?:handlow\w* )?polski", B + r"(?:handl\w* zagraniczn|eksport\w*|import\w*) polski")
+fix("owe26-s-03", add=["Linia ograniczenia budżetowego", "Równowaga konsumenta"], dele=["Równowaga rynkowa"])
+fix("owe26-s-04", add=["Elastyczność a utarg"])
+fix("owe26-s-09", add=["Inflacja popytowa i kosztowa"])
+fix("owe26-s-13", add=["Kreacja pieniądza"])
+fix("owe26-s-16", add=["IKE, IKZE i PPE"])
+fix("owe26-s-21", add=["Stawki VAT w Polsce"])
+fix("owe26-s-23", add=["Reguły finansowe JST"])
+fix("owe26-s-25", add=["Umowa o pracę i umowy cywilnoprawne"])
+fix("owe26-s-29", add=["Narzędzia jakości", "Otoczenie organizacji"])
+
+
+# ── XXVII OWE, etap centralny ──
+drop("Strategie konkurencji Portera", "zróżnicowani")
+rx("Strategie konkurencji Portera", B + r"strategi\w* (?:zróżnicowania|dyferencjacji)")
+ITEM_ADD["Dystrybucja"] = [B + r"kanał\w* dystrybucji", B + r"handl\w* (?:hurtow|detaliczn)", B + r"hurtowni(?:a|e|ach|ami)?" + E,
+                           B + r"detalist"]
+drop("Załamana krzywa popytu (model Sweezy’ego)", "załaman")
+rx("Załamana krzywa popytu (model Sweezy’ego)", B + r"załaman\w* krzyw", B + r"sweezy")
+drop("Reguła 70", "podwojeni")
+rx("Reguła 70", B + r"podwoi\w*")
+fix("owe27-c-01", add=["Czynniki kształtujące popyt (determinanty popytu)", "Dobro Veblena (efekt Veblena)"])
+fix("owe27-c-09", add=["Reguła 70"])
+fix("owe27-c-12", add=["Hipoteza dochodu względnego i efekt rygla", "Efekt posiadania (endowment effect)"])
+fix("owe27-c-14", add=["Bezrobocie strukturalne", "Bezrobocie cykliczne (koniunkturalne, keynesowskie)"])
+fix("owe27-c-18", add=["Aktywa trwałe i obrotowe"])
+fix("owe27-c-20", add=["Podatek progresywny, proporcjonalny (liniowy) i regresywny"])
+fix("owe27-c-25", add=["Teoria twórczej destrukcji"])
+fix("owe27-c-26", add=["Strategie cenowe"])
+
+
+# ── XXVII OWE, etap okręgowy ──
+drop("Cło ad valorem i specyficzne (kwotowe)", "specyficzn")
+rx("Cło ad valorem i specyficzne (kwotowe)", B + r"cł\w* specyficzn", B + r"cł\w* kwotow")
+rx("Krótki okres i długi okres", B + r"okres\w* (?:długi|krótki)" + E, B + r"(?:krótk|dług)\w*okresow")
+rx("Złudzenie pieniądza (iluzja pieniężna)", B + r"iluzj\w* pieniężn")
+rx("Bilans banku centralnego", B + r"(?:pasyw|aktyw)\w* bank\w* centraln")
+fix("owe27-o-03", add=["Cena minimalna", "Nadwyżka (rynkowa)"])
+fix("owe27-o-07", add=["Koszty inflacji"])
+fix("owe27-o-08", add=["Konkurencja doskonała"])
+fix("owe27-o-09", add=["Wartość dodana"])
+fix("owe27-o-11", add=["Oczekiwania adaptacyjne i racjonalne"])
+fix("owe27-o-18", add=["Insider trading (wykorzystanie informacji poufnej)"])
+fix("owe27-o-20", dele=["Uwarunkowania rozpoczęcia działalności gospodarczej"])
+fix("owe27-o-24", add=["Ubezpieczenia społeczne"])
+
+
+# ── XXVII OWE, etap szkolny ──
+drop("Strategie cenowe", "penetracj")
+rx("Strategie cenowe", B + r"cen\w* penetracyjn", B + r"strategi\w* penetracji cenow")
+fix("owe27-s-01", add=["Elastyczność cenowa popytu"])
+fix("owe27-s-08", add=["Efekt substytucyjny i efekt dochodowy"], dele=["Prawa i obowiązki pracownicze"])
+fix("owe27-s-15", add=["Wartość pieniądza w czasie"])
+fix("owe27-s-17", add=["Cel inflacyjny NBP"])
+fix("owe27-s-19", dele=["Kredyty frankowe"])
+fix("owe27-s-30", add=["Macierz Ansoffa (strategie rozwoju)"], dele=["Strategie cenowe"])
+drop("Uwarunkowania rozpoczęcia działalności gospodarczej", "rozpoczęci działalności", "rozpoczęcia działalności", "zezwoleni")
+rx("Uwarunkowania rozpoczęcia działalności gospodarczej", B + r"rozpoczęci\w* działalności gospodarczej", B + r"zakładani\w* (?:firmy|działalności|przedsiębiorstwa)")
