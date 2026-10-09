@@ -1004,3 +1004,59 @@ fix("owe38-s-11", add=["Bilans handlowy"])
 fix("owe38-s-13", add=["Teoria optymalnego obszaru walutowego"])
 fix("owe38-s-17", add=["Deflator PKB"])
 fix("owe38-s-25", add=["Planowanie"])
+
+
+# ── XXXIX OWE, etap centralny ──
+drop("Akcja", "akcj")
+rx("Akcja", B + r"akcj\w*" + E + r"(?!\s+(?:kredytow|ratunkow|promocyjn|marketingow|reklamow|protestacyjn|strajkow|społeczn))")
+rx("Warunek Marshalla–Lernera i krzywa J", B + r"krzyw\w* j" + E, B + r"^j$")
+fix("owe39-c-01", add=["Bezrobocie strukturalne"])
+fix("owe39-c-08", add=["Mnożnik zrównoważonego budżetu (Haavelmo)"])
+fix("owe39-c-09", dele=["Polityka ekspansywna i restrykcyjna"], add=["Związki zawodowe a rynek pracy"])
+fix("owe39-c-10", dele=["Popyt"], add=["Krzywa oferty", "Terms of trade (relacje wymiany)", "Warunek Marshalla–Lernera i krzywa J", "Krzywa możliwości produkcyjnych"],
+    main=["Krzywa oferty", "Terms of trade (relacje wymiany)"])
+fix("owe39-c-15", add=["Efekty zewnętrzne"])
+fix("owe39-c-30", add=["Planowanie"], dele=["Krótki okres i długi okres"])
+rx("Terms of trade (relacje wymiany)", B + r"relacj\w* wymienn")
+
+
+# ── XXXIX OWE, etap okręgowy ──
+drop("Szkoła klasyczna", "klasyczn")
+rx("Szkoła klasyczna", B + r"szkoł\w* klasyczn", B + r"(?<!now\w )(?<!nowej )ekonomi\w* klasyczn",
+   B + r"klasyczn\w* (?:szkoł|ekonomi|ekonomist|podejści\w* do zarządzani|kierun|nurt|teori\w* (?:ekonomi|zarządzani|organizacj)|model\w* (?:rynku|gospodark))",
+   B + r"klasyc\w* ekonomii")
+drop("Rodzaje funduszy wg polityki", "rynku pieniężnego")
+rx("Rodzaje funduszy wg polityki", B + r"fundusz\w* (?:rynku pieniężnego|pieniężn|dłużn|obligacji|zrównoważon|stabilnego wzrostu|mieszan)")
+fix("owe39-o-01", dele=["Wartość godziwa i koszt historyczny"], add=["Analiza fundamentalna i techniczna", "Rynek pieniężny"])
+fix("owe39-o-06", add=["Czynniki kształtujące podaż"])
+fix("owe39-o-08", add=["Deficyt pierwotny", "Obsługa i zarządzanie długiem publicznym"])
+fix("owe39-o-12", add=["Cło"])
+fix("owe39-o-21", add=["Operacje otwartego rynku (OOR)"])
+fix("owe39-o-22", dele=["Koszt kapitału własnego i obcego", "Indeks giełdowy"])
+fix("owe39-o-25", add=["Punkt procentowy a procent"])
+fix("owe39-o-30", dele=["Kompetencje wyróżniające (kluczowe)", "Role kierownicze (H. Mintzberg)"], add=["Taylor Frederick Winslow", "Mintzberg Henry", "McGregor Douglas"],
+    main=["Typologia strategii Milesa i Snowa"])
+drop("Klasyczna i liberalna teoria finansów", "klasycz")
+rx("Klasyczna i liberalna teoria finansów", B + r"klasyczn\w* (?:i liberaln\w* )?teori\w* finansów", B + r"liberaln\w* teori\w* finansów")
+fix("owe39-o-01", dele=["Wartość godziwa i koszt historyczny"], add=["Analiza fundamentalna i techniczna", "Rynek pieniężny"],
+    main=["Hipoteza rynku efektywnego"])
+# klasyczne podejście do zarządzania = naukowe zarządzanie + zarządzanie administracyjne, nie klasyczna ekonomia
+_NZ = r"(?![^.?]{0,25}zarządzani)"
+ITEM_ADD["Szkoła klasyczna"] = [B + r"szkoł\w* klasyczn\w*" + _NZ, B + r"(?<!now\w )(?<!nowej )ekonomi\w* klasyczn",
+                                B + r"klasyczn\w* (?:szkoł|ekonomi|kierun|nurt|model\w* (?:rynku|gospodark))\w*" + _NZ, B + r"klasyc\w* ekonomii"]
+_KZ = B + r"klasyczn\w* (?:podejści|szkoł|kierun|nurt|teori)\w*[^.?]{0,25}zarządzani"
+rx("Naukowe zarządzanie (F.W. Taylor)", _KZ)
+rx("Zarządzanie administracyjne (teoria administracji)", _KZ)
+fix("owe21-s-33", add=["Zarządzanie administracyjne (teoria administracji)"])
+fix("owe35-o-28", add=["McGregor Douglas", "Podejście behawiorystyczne", "Zarządzanie administracyjne (teoria administracji)"])
+
+
+# ── XXXIX OWE, etap szkolny ──
+drop("Paradoks zapobiegliwości (oszczędności)", "paradoksu")
+rx("Paradoks zapobiegliwości (oszczędności)", B + r"paradoks\w* (?:oszczędz|oszczędn|zapobiegliw)")
+fix("owe39-s-04", add=["Dług publiczny"])
+fix("owe39-s-09", add=["Substytuty", "Dobra komplementarne"], dele=["Strategie cenowe"])
+fix("owe39-s-11", add=["Krzywa Kuznetsa"], dele=["Cykle koniunkturalne – typy"])
+fix("owe39-s-14", add=["Emisja banknotów i monet w Polsce"])
+fix("owe39-s-26", dele=["Ministerstwo Finansów", "Podatek"], add=["Grupy i zespoły"], main=["Metody twórczego rozwiązywania problemów"])
+fix("owe39-s-30", dele=["Badania marketingowe"])
