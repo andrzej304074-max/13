@@ -738,7 +738,6 @@ fix("owe31-s-15", add=["Dylemat więźnia", "Kartel"], dele=["Strategie cenowe"]
 fix("owe31-s-20", add=["Tożsamości gospodarki otwartej: NX = NCO i S = I + NCO"])
 fix("owe31-s-22", add=["Model Du Ponta (piramida wskaźników)"])
 fix("owe31-s-29", add=["Planowanie"], dele=["Szczeble zarządzania"])
-fix("owe31-s-30", add=["Lobbing"])
 
 
 # ── XXXII OWE, etap centralny ──
@@ -1065,3 +1064,5 @@ fix("owe39-s-30", dele=["Badania marketingowe"])
 # ── nowe hasła (partia 1) ──
 rx("Krańcowa efektywność kapitału (Keynes)", B + r"krańcow\w* rentownoś\w* kapitał")
 fix("owe23-o-18", add=["Rekomendacja S (KNF)"])
+fix("owe31-s-30", add=["Lobbing", "Dystrybucja"])
+fix("owe27-c-19", add=["Różnice kursowe"], main=["Różnice kursowe"])
