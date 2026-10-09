@@ -202,6 +202,11 @@ E = [
  ("Mortensen Dale, Pissarides Christopher", "Ekonomiści pracy, Nobel 2010 (z P. Diamondem) za analizę rynków z frykcjami poszukiwań – model DMP wyjaśnia współistnienie bezrobocia i wolnych miejsc pracy oraz wpływ zasiłków na czas poszukiwania pracy.", {"k": ["mortensen", "pissarides"]}),
  ("Law John", "Szkocki finansista i ekonomista działający we Francji; założył bank emitujący banknoty (1716) i Kompanię Missisipi, której akcje wymieniano na dług państwa („system Lawa”); po pęknięciu bańki w 1720 r. uciekł z Francji. Wczesny teoretyk pieniądza papierowego.", {"k": ["law"]}),
  ("Tinbergen Jan", "Holenderski ekonomista, pierwszy laureat Nobla z ekonomii (1969, z R. Frischem) za modele dynamiczne procesów gospodarczych; twórca teorii polityki gospodarczej opartej na celach i instrumentach (reguła Tinbergena) i pionier ekonometrii.", {"k": ["tinbergen"]}),
+ ("Locke Edwin", "Amerykański psycholog organizacji; teoria wyznaczania celów (1968) – konkretne, trudne cele zwiększają wyniki (z G. Lathamem).", {"k": ["locke"]}),
+ ("Skinner Burrhus F.", "Amerykański psycholog behawiorysta; warunkowanie instrumentalne (sprawcze) – podstawa teorii wzmocnienia w motywacji.", {"k": ["skinner"]}),
+ ("French John i Raven Bertram", "Psycholodzy społeczni; w 1959 r. opisali pięć źródeł (podstaw) władzy: nagradzania, przymusu, prawomocną (z mocy prawa), ekspercką i odniesienia (charyzmatyczną).", {"k": ["french", "raven"]}),
+ ("Juran Joseph", "Amerykański specjalista zarządzania jakością; jakość jako „przydatność do użytku”, trylogia jakości (planowanie, kontrola, doskonalenie), spopularyzował zasadę Pareto w jakości.", {"k": ["juran"]}),
+ ("Crosby Philip", "Amerykański specjalista zarządzania jakością; koncepcja „zero defektów” i hasło „jakość jest za darmo” (1979) – koszty niskiej jakości przewyższają koszty zapobiegania.", {"k": ["crosby"]}),
 ]
 TABLES = [
  ("Nagrody Nobla z ekonomii przywoływane w pytaniach", ["Rok", "Laureaci", "Za co (skrót)"], [
