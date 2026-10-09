@@ -964,3 +964,43 @@ fix("owe37-s-10", dele=["Struktura instytucjonalna i zasady funkcjonowania UE"],
 fix("owe37-s-15", add=["Bilans"])
 fix("owe37-s-23", add=["Należności i zobowiązania"])
 fix("owe37-s-27", add=["Planowanie"])
+
+
+# ── XXXVIII OWE, etap centralny ──
+drop("Teoria oczekiwań (V. Vroom)", "vroom")
+rx("Teoria oczekiwań (V. Vroom)", B + r"vroom\w*(?![\w’']*\s*[-–]\s*yetton)")
+fix("owe38-c-01", add=["Podatek Tobina", "Minsky Hyman"], dele=["Q Tobina", "Hipoteza niestabilności finansowej"])
+fix("owe38-c-05", add=["Unia Gospodarcza i Walutowa (UGW)"])
+fix("owe38-c-11", add=["Bezrobocie strukturalne", "Bezrobocie frykcyjne"])
+fix("owe38-c-25", dele=["Oszczędności narodowe"], add=["Koszty jawne i ukryte", "Koszt alternatywny (koszt utraconych możliwości)"])
+
+
+# ── XXXVIII OWE, etap okręgowy ──
+rx("Macierz GE (McKinseya)", B + r"selektor\w* jednostek ge" + E)
+rx("Renta (annuity) i perpetuita", B + r"obligacj\w* wieczyst", B + r"konsol[ea]?" + E)
+rx("Nowa ekonomia keynesowska", B + r"now\w* keynesowsk")
+fix("owe38-o-01", dele=["Prawa i obowiązki pracownicze"])
+fix("owe38-o-09", dele=["Pieniądz gotówkowy i bezgotówkowy", "Aprecjacja i deprecjacja"])
+fix("owe38-o-13", dele=["Warunek Marshalla–Lernera i krzywa J"], add=["1951 – Europejska Wspólnota Węgla i Stali"])
+fix("owe38-o-14", add=["Bezrobocie cykliczne (koniunkturalne, keynesowskie)"])
+fix("owe38-o-15", dele=["Emisja banknotów i monet w Polsce"])
+fix("owe38-o-18", add=["Polityka fiskalna (budżetowa)"])
+fix("owe38-o-21", dele=["Keynesizm"])
+fix("owe38-o-22", add=["Wydatki autonomiczne", "Model Keynesa (krzyż keynesowski)"])
+fix("owe38-o-27", add=["Typy struktur organizacyjnych"])
+fix("owe38-o-30", add=["House Robert", "Taylor Frederick Winslow"], dele=["Teoria ścieżki do celu (R. House)"])
+fix("owe38-o-23", main=["Macierz GE (McKinseya)"])
+fix("owe38-o-30", add=["House Robert", "Taylor Frederick Winslow"], dele=["Teoria ścieżki do celu (R. House)"],
+    main=["House Robert", "Przywództwo transformacyjne i charyzmatyczne"])
+
+
+# ── XXXVIII OWE, etap szkolny ──
+rx("Run na bank", B + r"run\w* na bank")
+rx("Wskaźniki płynności", B + r"wskaźnik\w* (?:bieżącej|szybkiej|natychmiastowej) płynnoś")
+fix("owe38-s-01", dele=["Griffin Ricky W."], add=["Dobro Giffena"])
+fix("owe38-s-02", add=["Monopol"])
+fix("owe38-s-09", dele=["Instrumenty polityki rodzinnej w Polsce"], add=["Ludność aktywna zawodowo"])
+fix("owe38-s-11", add=["Bilans handlowy"])
+fix("owe38-s-13", add=["Teoria optymalnego obszaru walutowego"])
+fix("owe38-s-17", add=["Deflator PKB"])
+fix("owe38-s-25", add=["Planowanie"])
