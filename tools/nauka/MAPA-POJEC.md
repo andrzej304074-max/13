@@ -21,14 +21,14 @@ Kolumna „Pytania OWE” podaje liczbę pytań z XXI–XXXIX OWE, w których po
 
 **Podsumowanie (stan na 9.10.2026)**
 
-| Podręcznik | Rozdziały | Pozycji w mapie | Było | Dodane | Pominięte |
-|---|---|---|---|---|---|
-| Mankiw, Taylor – „Mikroekonomia” | 1–22 | 180 | 163 | 12 | 5 |
-| Mankiw, Taylor – „Makroekonomia” | 1–15 | 155 | 146 | 8 | 1 |
-| Owsiak – „Finanse” | 2–16 | 156 | 118 | 36 | 2 |
-| Gabrusewicz – „Metody analizy finansowej przedsiębiorstw” | 1–11 | 38 | 23 | 14 | 1 |
-| Winiarski (red.) – „Polityka gospodarcza” | 1–28 | 60 | 46 | 12 | 2 |
-| Griffin – „Podstawy zarządzania organizacjami” | 1–22, dodatek | 114 | 89 | 23 | 2 |
+| Podręcznik | Rozdziały | Pozycji w mapie | Było | Dodane | Pominięte | Uzupełnione po przeglądzie pytań |
+|---|---|---|---|---|---|---|
+| Mankiw, Taylor – „Mikroekonomia” | 1–22 | 180 | 163 | 12 | 5 | nowe: 4, rozszerzone: 4 |
+| Mankiw, Taylor – „Makroekonomia” | 1–15 | 155 | 146 | 8 | 1 | nowe: 6, rozszerzone: 0 |
+| Owsiak – „Finanse” | 2–16 | 156 | 118 | 36 | 2 | nowe: 22, rozszerzone: 2 |
+| Gabrusewicz – „Metody analizy finansowej przedsiębiorstw” | 1–11 | 38 | 23 | 14 | 1 | nowe: 2, rozszerzone: 2 |
+| Winiarski (red.) – „Polityka gospodarcza” | 1–28 | 60 | 46 | 12 | 2 | nowe: 2, rozszerzone: 1 |
+| Griffin – „Podstawy zarządzania organizacjami” | 1–22, dodatek | 114 | 89 | 23 | 2 | nowe: 9, rozszerzone: 1 |
 
 Wcześniejsze uzupełnienia według samych tytułów podrozdziałów (47 haseł Mikro i 25 Makro) mają w mapie status „było”.
 Każde hasło pojęciowe tematów Mikroekonomia, Makroekonomia, Polityka gospodarcza, Finanse, Firma i Zarządzanie ma lekcję „Zrozumienie”.
@@ -1308,3 +1308,94 @@ W wierszu Griffina „Było” obejmuje 2 rzeczy omówione w definicji innego ha
 | Analiza punktu krytycznego (próg rentowności) | pojęcie | było | Próg rentowności (BEP); Próg rentowności – wzór | 6 | podręcznik |
 | Macierze wypłat i drzewa decyzyjne | pojęcie | dodane | Macierz wypłat i drzewo decyzyjne | 0 | Wikipedia – Decision tree; Wikipedia – Payoff matrix (normal form) |
 | Wartość oczekiwana | pojęcie | było | Ryzyko, niepewność i wartość oczekiwana | 0 | podręcznik |
+
+## Uzupełnione po przeglądzie pytań OWE (XXI–XXXIX)
+
+Wszystkie 1656 pytań OWE z XXI–XXXIX edycji przejrzano pod kątem pojęć z treści i z każdej odpowiedzi (`tools/nauka/pojecia_pytan.py`, poprawki w `pojecia_pytan_poprawki.py`).
+Pojęcia, których brakowało w słowniku, dodano jako hasła albo dopisano do definicji istniejących haseł; przypisano je do obszarów tematycznych podręczników (tytuły rozdziałów służyły tylko do weryfikacji, nie są hasłami).
+Źródła (po dwa na każdą rzecz) – `tools/nauka/zrozum/WERYFIKACJA.md`. Kolumna „Pytania OWE” – liczba pytań, w których hasło wykryto (treść lub odpowiedzi).
+
+### Mankiw, Taylor – „Mikroekonomia”
+
+| Hasło | Obszar w podręczniku | Status | Pytania OWE |
+|---|---|---|---|
+| Popyt na pracę | rynki czynników produkcji | dodane | 7 |
+| Przeciętna i krańcowa stopa podatkowa | projektowanie systemu podatkowego | dodane | 1 |
+| Efekt sieciowy | efekty zewnętrzne | dodane | 1 |
+| Heurystyki i efekt ramowania | granice mikroekonomii (ekonomia behawioralna) | dodane | 4 |
+| Izokoszta | koszty produkcji – optymalna kombinacja czynników | rozszerzone | 8 |
+| Cena maksymalna | popyt, podaż i polityka państwa – reglamentacja | rozszerzone | 7 |
+| Punkt procentowy a procent | myślenie jak ekonomista – punkt bazowy | rozszerzone | 9 |
+| Gospodarka współdzielenia i peer economy | gospodarka dostępności | rozszerzone | 4 |
+
+### Mankiw, Taylor – „Makroekonomia”
+
+| Hasło | Obszar w podręczniku | Status | Pytania OWE |
+|---|---|---|---|
+| Krańcowa efektywność kapitału | popyt zagregowany, inwestycje | dodane | 1 |
+| Chomikowanie pracy | rynek pracy, bezrobocie | dodane | 1 |
+| Efekt bazy i efekty drugiej rundy | inflacja | dodane | 1 |
+| Wskaźnik Hoovera | nierówności dochodowe | dodane | 1 |
+| Twierdzenie Stolpera–Samuelsona | handel międzynarodowy | dodane | 1 |
+| Subsydia eksportowe | handel międzynarodowy, polityka handlowa | dodane | 1 |
+
+### Owsiak – „Finanse”
+
+| Hasło | Obszar w podręczniku | Status | Pytania OWE |
+|---|---|---|---|
+| Podaż pieniądza | pieniądz | dodane | 30 |
+| Polityka pieniężna – cele i instrumenty | polityka pieniężna | dodane | 41 |
+| Kredyt wekslowy NBP | polityka pieniężna NBP | dodane | 1 |
+| Projekcja inflacji i PKB NBP | polityka pieniężna NBP | dodane | 1 |
+| Rada Polityki Pieniężnej | bank centralny – opis dyskusji (minutes) | rozszerzone | 13 |
+| Czynności bankowe | banki | dodane | 1 |
+| Bank inwestycyjny i bank uniwersalny | banki | dodane | 2 |
+| Rekomendacja S | banki, nadzór | dodane | 1 |
+| Kredyt balonowy | produkty bankowe | dodane | 1 |
+| Pożyczki społecznościowe | pozabankowe źródła finansowania | dodane | 2 |
+| Terminy transakcji międzybankowych | rynek pieniężny | dodane | 6 |
+| Pozycja walutowa | rynek walutowy | dodane | 3 |
+| Haircut | rynek pieniężny, kryzysy zadłużeniowe | dodane | 2 |
+| Kwity depozytowe | rynek kapitałowy | dodane | 1 |
+| Fundusz parasolowy | fundusze inwestycyjne | dodane | 2 |
+| Fundusz inwestycyjny | fundusze inwestycyjne – opłaty, no-load | rozszerzone | 19 |
+| Wskaźnik Sharpe’a | inwestycje, ryzyko portfela | dodane | 2 |
+| Efekt stadny | rynki finansowe, kryzysy | dodane | 2 |
+| Rezerwa ogólna i rezerwy celowe budżetu państwa | budżet państwa | dodane | 1 |
+| Konwersja długu | dług publiczny | dodane | 1 |
+| Efekt Tanziego–Olivery | dochody publiczne a inflacja | dodane | 1 |
+| Prawo Wagnera | wydatki publiczne | dodane | 1 |
+| Podatek katastralny | podatki | dodane | 1 |
+| Koszty uzyskania przychodów | podatki dochodowe | dodane | 3 |
+
+### Winiarski (red.) – „Polityka gospodarcza”
+
+| Hasło | Obszar w podręczniku | Status | Pytania OWE |
+|---|---|---|---|
+| Minimum socjalne i minimum egzystencji | polityka społeczna | dodane | 1 |
+| Harmonizacja podatków w UE | integracja europejska, polityka fiskalna | dodane | 1 |
+| 1951 – Europejska Wspólnota Węgla i Stali | integracja europejska – plan Schumana | rozszerzone | 1 |
+
+### Gabrusewicz – „Metody analizy finansowej przedsiębiorstw”
+
+| Hasło | Obszar w podręczniku | Status | Pytania OWE |
+|---|---|---|---|
+| Analiza ex ante i ex post | rodzaje analizy | dodane | 2 |
+| Różnice kursowe | przychody i koszty finansowe | dodane | 2 |
+| Wynik finansowy – poziomy | zysk operacyjny | rozszerzone | 23 |
+| Upadłość i restrukturyzacja | syndyk, sędzia-komisarz, komornik | rozszerzone | 13 |
+
+### Griffin – „Podstawy zarządzania organizacjami”
+
+| Hasło | Obszar w podręczniku | Status | Pytania OWE |
+|---|---|---|---|
+| Prakseologia | podstawy zarządzania | dodane | 1 |
+| Struktura płaska i smukła | struktura organizacji | dodane | 2 |
+| Organizacja wirtualna i fraktalna | nowe formy organizacji | dodane | 1 |
+| Polityka personalna: model sita i model kapitału ludzkiego | zarządzanie zasobami ludzkimi | dodane | 1 |
+| Kafeteryjny system wynagradzania | wynagrodzenia i świadczenia | dodane | 1 |
+| Urlop wypoczynkowy i czas pracy | systemy czasu pracy | rozszerzone | 5 |
+| Dysonans poznawczy | postawy i zachowania | dodane | 1 |
+| Masowa kastomizacja | zarządzanie operacyjne, marketing | dodane | 1 |
+| Handel elektroniczny | technologie informacyjne, marketing | dodane | 7 |
+| Pozycjonowanie stron internetowych | marketing internetowy | dodane | 1 |

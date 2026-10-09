@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 """Generuje automatyczne pytania testowe z haseł słownika (tools/slownik/glossary/s*.py).
 
-Użycie: python3 -I tools/slownik/gen_questions.py tools/slownik/glossary data/slownik
+Użycie: python3 -I tools/slownik/gen_questions.py tools/slownik/glossary data/slownik [data/nauka/course.json]
 Wynik: <out>/auto.json (pytania) i <out>/sections.json (numery i tytuły działów).
+
+Dystraktory pochodzą tylko z haseł tego samego tematu kursu „Nauka”, omawianych w tej samej lub we wcześniejszej
+lekcji (kolejność działów i lekcji z course.json), żeby w Sprawdzianie nie pojawiały się pojęcia jeszcze nieomówione.
 
 Szablony:
   A (single) – definicja → które pojęcie (3 dystraktory z tego samego działu, o podobnych nazwach);
@@ -14,6 +17,7 @@ Szablony:
 import difflib, glob, hashlib, importlib.util, json, os, random, re, sys
 
 G, OUT = (os.path.abspath(a) for a in sys.argv[1:3])
+COURSE = os.path.abspath(sys.argv[3]) if len(sys.argv) > 3 else os.path.join(OUT, "..", "nauka", "course.json")
 rnd = random.Random(2026)
 
 
@@ -37,6 +41,27 @@ for n, s in enumerate(sections, 1):
 by_sec = {}
 for e in entries:
     by_sec.setdefault(e["sec"], []).append(e)
+
+# kolejność nauki: (temat, pozycja hasła w kolejnych działach i lekcjach tematu); hasło z kilku działów – pierwsze wystąpienie
+ORDER = {}
+if os.path.exists(COURSE):
+    _c = json.load(open(COURSE, encoding="utf-8"))
+    _pos = {}
+    for u in _c["units"]:
+        for lid in u["lessons"]:
+            for iid in _c["lessons"][lid].get("items", []):
+                it = _c["items"].get(iid)
+                if it and it["t"] not in ORDER:
+                    _pos[u["topic"]] = _pos.get(u["topic"], 0) + 1
+                    ORDER[it["t"]] = (u["topic"], _pos[u["topic"]])
+
+
+def known(e, pool, upto=None):
+    """Hasła z puli znane uczniowi najpóźniej w lekcji hasła e (ten sam temat, ta sama lub wcześniejsza pozycja)."""
+    if not ORDER:
+        return pool
+    te, ne = ORDER.get(e["title"], (None, 10 ** 9)) if upto is None else upto
+    return [p for p in pool if ORDER.get(p["title"], (None, 10 ** 9))[0] == te and ORDER[p["title"]][1] <= ne]
 
 
 def short_title(t):
@@ -169,7 +194,9 @@ for e in entries:
         yr, event = year_of(e["title"])
         if not yr:
             continue
-        others = [p for p in pool if year_of(p["title"])[0] and year_of(p["title"])[0] != yr]
+        others = [p for p in known(e, pool) if year_of(p["title"])[0] and year_of(p["title"])[0] != yr]
+        if len(others) < 3:
+            continue
         others.sort(key=lambda p: abs(int(year_of(p["title"])[0][:4]) - int(yr[:4])))
         wrong = rnd.sample(others[:8], 3)
         details = re.sub(r"\b1[5-9]\d\d\b|\b20\d\d\b", "…", e["d"])
@@ -183,7 +210,7 @@ for e in entries:
     d = mask(e["d"], e)
     if len(re.sub(r"[…\W]", "", d)) < 35 or d.count("…") > 6:
         continue
-    wrong = similar(e, pool)
+    wrong = similar(e, known(e, pool))
     if not wrong:
         continue
     opts, corr = shuffle_options(e["title"], [p["title"] for p in wrong])
@@ -201,7 +228,7 @@ for e in entries:
         continue
     if not (40 <= len(e["d"]) <= 260):
         continue
-    pool = [p for p in by_sec[e["sec"]] if 40 <= len(p["d"]) <= 320]
+    pool = [p for p in known(e, by_sec[e["sec"]]) if 40 <= len(p["d"]) <= 320]
     wrong = similar(e, pool)
     if not wrong:
         continue
@@ -217,7 +244,7 @@ for e in entries:
 # --- D: pojęcie → wzór ---
 with_w = [e for e in entries if e["x"].get("w") and len(e["x"]["w"]) <= 200]
 for e in with_w:
-    pool = [p for p in with_w if p is not e and p["x"]["w"] != e["x"]["w"]]
+    pool = [p for p in known(e, with_w) if p is not e and p["x"]["w"] != e["x"]["w"]]
     wrong = similar(e, pool)
     if not wrong:
         continue
@@ -226,14 +253,21 @@ for e in with_w:
     add("D", e, "single", f"Który wzór (zależność) dotyczy hasła: {e['title']}?", opts, corr, expl)
 
 # --- C: wielokrotny – prawdziwe pary pojęcie–definicja ---
+by_sec_topic = {}
+for e in entries:
+    by_sec_topic.setdefault((e["sec"], ORDER.get(e["title"], (None,))[0]), []).append(e)
 for rep in range(2):
-    for sec, pool0 in by_sec.items():
+    for (sec, _topic), pool0 in by_sec_topic.items():
         if sec in (SEC_DATES, SEC_FORMULAS):
             continue
         pool = [p for p in pool0 if 30 <= len(p["d"]) <= 300]
         rnd.shuffle(pool)
         for i in range(0, len(pool) - 3, 4):
             group = pool[i:i + 4]
+            # para „pojęcie – cudzy opis”: opis tylko z hasła znanego najpóźniej w lekcji ostatniego hasła grupy
+            last = max(group, key=lambda g: ORDER.get(g["title"], ("", 10 ** 9))[1])
+            if ORDER and len({ORDER.get(g["title"], (None,))[0] for g in group}) > 1:
+                continue
             n_true = rnd.choice([1, 2, 2, 3, 3, 4, 0])
             truth = [True] * n_true + [False] * (4 - n_true)
             rnd.shuffle(truth)
@@ -242,7 +276,9 @@ for rep in range(2):
                 if ok:
                     d_src = e
                 else:
-                    others = [p for p in pool if p not in group and p["title"] != e["title"]]
+                    others = [p for p in known(last, pool) if p not in group and p["title"] != e["title"]]
+                    if not others:
+                        break
                     d_src = similar(e, others, 1)[0]
                 opts.append(f"{e['title']} – {clip(mask(d_src['d'], d_src), 200)}")
                 if ok:
@@ -251,6 +287,8 @@ for rep in range(2):
                 else:
                     parts.append(f"{LETTERS[j]} – fałsz: podany opis dotyczy hasła „{d_src['title']}”; "
                                  f"{e['title']} to: {first_sentence(e['d'], 200)}")
+            if len(opts) < 4:
+                continue
             head = group[0]
             add("C", head, "multi", "Które zestawienia pojęcia z jego opisem są poprawne?", opts, correct,
                 " ".join(parts))
