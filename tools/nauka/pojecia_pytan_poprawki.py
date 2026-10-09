@@ -657,3 +657,35 @@ fix("owe29-s-21", add=["Współczynnik Giniego i krzywa Lorenza"])
 fix("owe29-s-22", add=["Wartość pieniądza w czasie"])
 fix("owe29-s-23", add=["Skala podatkowa PIT"])
 fix("owe29-s-26", add=["CEIDG i KRS"])
+
+
+# ── XXX OWE, etap centralny ──
+drop("Samorząd terytorialny w Polsce", "samorząd")
+rx("Samorząd terytorialny w Polsce", B + r"samorząd\w* (?:terytorialn|gmin|lokaln|regionaln|województw|powiat)", B + r"samorząd" + E)
+rx("Sektor finansów publicznych", B + r"sektor\w* instytucji rządowych i samorządowych")
+rx("Twierdzenie o wyborcy medianowym", B + r"środkow\w* głosując")
+fix("owe30-c-02", add=["Swap walutowy (FX swap)", "Kryzys subprime"])
+fix("owe30-c-04", add=["Hipoteza rynku efektywnego", "Oczekiwania adaptacyjne i racjonalne", "Minsky Hyman"])
+
+
+# ── XXX OWE, etap okręgowy ──
+drop("Notowania ciągłe i jednolite (fixing)", "jednolit")
+rx("Notowania ciągłe i jednolite (fixing)", B + r"(?:notowa|system|kurs)\w* jednolit")
+drop("Efekt Slutsky’ego i Hicksa (dekompozycja zmiany ceny)", "skompensowan")
+rx("Efekt Slutsky’ego i Hicksa (dekompozycja zmiany ceny)", B + r"dochod\w* skompensowan", B + r"hicks")
+drop("Hipoteza cyklu życia", "cyklu życia")
+rx("Hipoteza cyklu życia", B + r"hipotez\w* cyklu życia", B + r"(?:oczekiwan|przeciętn)\w*,? (?:oczekiwan\w* )?w (?:całym )?cyklu życia", B + r"modigliani")
+fix("owe30-o-01", add=["Podatki bezpośrednie i pośrednie"])
+fix("owe30-o-12", add=["Dyskryminacja cenowa"])
+fix("owe30-o-17", add=["Elastyczność cenowa popytu"])
+fix("owe30-o-27", add=["Siatka kierownicza (Blake i Mouton)", "Style kierowania: autokratyczny, demokratyczny, liberalny"])
+fix("owe30-o-28", add=["Cykl życia organizacji"])
+
+
+# ── XXX OWE, etap szkolny ──
+drop("Rewolucja marginalistyczna", "marginal")
+rx("Rewolucja marginalistyczna", B + r"rewolucj\w* marginalist", B + r"marginaliśc", B + r"marginalizm")
+fix("owe30-s-08", add=["Cło"])
+fix("owe30-s-17", add=["Bariery wejścia"])
+fix("owe30-s-20", add=["Renta (annuity) i perpetuita"])
+fix("owe30-s-30", add=["Siatka kierownicza (Blake i Mouton)"], dele=["Grupy i zespoły"])
