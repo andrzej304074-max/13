@@ -58,8 +58,10 @@ Przy starcie testu można wybrać rodzaj pytań (ręczne, automatyczne lub oba) 
 - `tools/slownik/glossary/` – źródła słownika (hasła w `s*.py`); PDF:
   `python3 -I tools/slownik/glossary/build.py tools/slownik/glossary . docs/slownik-owe.pdf`
   (wymaga `playwright-core`, Chromium, `pdftotext`).
-- `data/slownik/auto.json` – pytania automatyczne:
+- `data/slownik/auto.json` – pytania automatyczne (3368):
   `python3 -I tools/slownik/gen_questions.py tools/slownik/glossary data/slownik`.
+  Dystraktory pochodzą tylko z haseł tego samego tematu kursu „Nauka” omawianych w tej samej lub wcześniejszej lekcji
+  (kolejność z `data/nauka/course.json`); każde pytanie ma pole `pojecia` (hasło pytania i hasła dystraktorów).
 - `data/slownik/manual.json` – pytania pisane ręcznie, składane z `tools/slownik/manual/m*.py`:
   `python3 -I tools/slownik/build_manual.py tools/slownik/manual data/slownik`.
 
@@ -69,9 +71,17 @@ Kurs zbudowany z haseł słownika (`docs/slownik-owe.pdf`) i wszystkich banków 
 
 - **7 tematów:** Mikroekonomia, Makroekonomia, Polityka gospodarcza, Podstawy finansów, Finanse przedsiębiorstw,
   Zarządzanie oraz temat przewodni „Gospodarka wobec wyzwań demograficznych”.
-- **Hierarchia:** 88 działów → 789 lekcji: 332 lekcje haseł (po 1–6 haseł) i 457 lekcji „Zrozumienie” 🧠 → 3156 pod-lekcji.
+- **Hierarchia:** 88 działów → 898 lekcji: 441 lekcji haseł (do 6 haseł; 103 z nich to kolejne części lekcji z samymi pojęciami z pytań) i 457 lekcji
+  „Zrozumienie” 🧠 → 3592 pod-lekcje.
 - **Rodzaje treści** (filtr na stronie tematu): pojęcia, wzory, osoby, instytucje, daty, przepisy, zrozumienie.
-- **Pod-lekcje:** 1. Poznaj, 2. Ćwicz, 3. Utrwal, 4. Sprawdzian (pytania olimpijskie i słownikowe dopasowane do haseł lekcji).
+- **Pod-lekcje:** 1. Poznaj, 2. Ćwicz, 3. Utrwal, 4. Sprawdzian (10 losowych pytań olimpijskich i słownikowych lekcji).
+- **Sprawdzian pyta tylko o rzeczy omówione:** każde z 6310 pytań (1656 OWE, 1286 ręcznych, 3368 automatycznych)
+  jest w dokładnie jednej lekcji – najpóźniejszej lekcji macierzystej pojęć, których dotyczy. Pojęcia z treści
+  i ze wszystkich odpowiedzi, których uczeń nie poznał wcześniej w temacie, lekcja omawia w Poznaj, Ćwicz i Utrwal
+  (karta „Nowe hasło · z pytań Sprawdzianu”); poznane wcześniej powtarza w Ćwicz i Utrwal (do 8 losowych na podejście).
+  Gdy hasła lekcji i nowe pojęcia przekraczają 12, lekcja ma kolejne części (cz. 2, 3…). Pojęcia w pytaniach OWE
+  wykrywa `tools/nauka/pojecia_pytan.py` (ręczne korekty po przeglądzie wszystkich pytań XXI–XXXIX OWE:
+  `tools/nauka/pojecia_pytan_poprawki.py`); raport przydziału: `tools/nauka/RAPORT-PYTANIA.md`.
 - **Ćwiczenia:** nowe hasło, wybór hasła lub opisu, łączenie par, uzupełnianie luk, prawda/fałsz,
   wpisywanie (tolerancja polskich znaków i literówek), układanie chronologii, wzory, fiszki, pytania testowe.
   Błędnie rozwiązane ćwiczenie wraca na koniec pod-lekcji.
@@ -118,7 +128,14 @@ Program kursu (`data/nauka/course.json`) generuje skrypt:
 python3 -I tools/nauka/build_course.py tools/slownik/glossary . data/nauka
 ```
 
-Przypisanie haseł do tematów i działów jest w `tools/nauka/curriculum.py`.
+Przypisanie haseł do tematów i działów jest w `tools/nauka/curriculum.py`. Build kończy się błędem, jeśli któreś pojęcie
+pytania lekcji nie jest omówione ani powtórzone w tej lekcji. Kolejność przy zmianie haseł: `build_course.py`,
+`gen_questions.py` (dystraktory według kolejności lekcji), ponownie `build_course.py`. Przegląd pojęć w pytaniach:
+
+```bash
+python3 -I tools/nauka/pojecia_pytan.py dump 'owe-39-*'   # pytania z wykrytymi hasłami
+python3 -I tools/nauka/pojecia_pytan.py stats
+```
 
 ## Uruchomienie lokalne
 

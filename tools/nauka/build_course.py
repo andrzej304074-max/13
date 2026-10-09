@@ -238,7 +238,7 @@ for q, origin in bank:
         continue
     # pytanie dotyczy pojęć (osoby, instytucje, daty i przepisy w treści to zwykle kontekst) – o lekcji decydują pojęcia
     pref = {i for i in main if items[i]["kind"] == "pojecie"} or main
-    tcount = Counter(items[i]["topic"] for i in pref)
+    tcount = Counter(items[i]["topic"] for i in sorted(pref))
     topic = max(tcount, key=lambda t: (tcount[t], max(first_pos[i] for i in pref if items[i]["topic"] == t)))
     # lekcja macierzysta hasła = pierwsze jego wystąpienie w temacie (nie powtórzenie w dziale „Wzory”)
     lid = order[topic][max(first_pos[i] for i in pref if items[i]["topic"] == topic)]
