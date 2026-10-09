@@ -1066,3 +1066,7 @@ rx("Krańcowa efektywność kapitału (Keynes)", B + r"krańcow\w* rentownoś\w*
 fix("owe23-o-18", add=["Rekomendacja S (KNF)"])
 fix("owe31-s-30", add=["Lobbing", "Dystrybucja"])
 fix("owe27-c-19", add=["Różnice kursowe"], main=["Różnice kursowe"])
+drop("Upadłość i restrukturyzacja", "restrukturyzac")
+rx("Upadłość i restrukturyzacja", B + r"restrukturyzac\w*(?! i modernizacji rolnictwa)")
+drop("Formy marketingu współczesnego", "seo", "commerce", "b2b", "b2c", "c2c", "e-commerce", "m-commerce")
+fix("owe27-o-17", add=["Bank inwestycyjny i bank uniwersalny", "Bank komercyjny"], main=["Bank inwestycyjny i bank uniwersalny"])

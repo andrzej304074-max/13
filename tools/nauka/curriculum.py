@@ -104,6 +104,11 @@ UNITS = {
 
 # Ręczne przypisania hasła do działu (tytuł → id działu), gdy wzorce działów się mylą
 UNIT_OVERRIDES = {
+    "Czynności bankowe (sensu stricto i sensu largo)": "fin-banki",
+    "Bank inwestycyjny i bank uniwersalny": "fin-banki",
+    "Analiza ex ante i ex post": "firma-analiza",
+    "Handel elektroniczny (e-commerce, m-commerce, B2B, B2C)": "zarz-marketing",
+    "Pozycjonowanie stron internetowych (SEO)": "zarz-marketing",
     "Rezerwa ogólna i rezerwy celowe budżetu państwa": "fin-publiczne",
     "Podatek katastralny": "fin-podatki",
     "Koszty uzyskania przychodów": "fin-podatki",
@@ -295,6 +300,11 @@ INSTITUTION_TITLES = r"^(narodowy bank polski|prezes nbp|rada polityki pienięż
 
 # Ręczne przypisania tematu (tytuł hasła → temat), gdy reguły się mylą
 OVERRIDES = {
+    "Czynności bankowe (sensu stricto i sensu largo)": "finanse",
+    "Bank inwestycyjny i bank uniwersalny": "finanse",
+    "Analiza ex ante i ex post": "firma",
+    "Handel elektroniczny (e-commerce, m-commerce, B2B, B2C)": "zarzadzanie",
+    "Pozycjonowanie stron internetowych (SEO)": "zarzadzanie",
     "Rezerwa ogólna i rezerwy celowe budżetu państwa": "finanse",
     "Podatek katastralny": "finanse",
     "Koszty uzyskania przychodów": "finanse",
