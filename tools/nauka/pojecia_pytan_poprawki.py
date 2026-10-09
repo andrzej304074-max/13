@@ -99,6 +99,7 @@ ITEM_ADD = {
 }
 
 NO_DETECT = set()
+NO_TITLE = {"Dobro ekonomiczne", "Działy ubezpieczeń"}  # hasła, dla których nie tworzy się wzorca z tytułu
 
 
 def _q(add=(), dele=(), main=()):
@@ -536,3 +537,61 @@ fix("owe27-s-19", dele=["Kredyty frankowe"])
 fix("owe27-s-30", add=["Macierz Ansoffa (strategie rozwoju)"], dele=["Strategie cenowe"])
 drop("Uwarunkowania rozpoczęcia działalności gospodarczej", "rozpoczęci działalności", "rozpoczęcia działalności", "zezwoleni")
 rx("Uwarunkowania rozpoczęcia działalności gospodarczej", B + r"rozpoczęci\w* działalności gospodarczej", B + r"zakładani\w* (?:firmy|działalności|przedsiębiorstwa)")
+
+
+# ── XXVIII OWE, etap centralny ──
+drop("Interpretacja indywidualna i ogólna", "interpretacj")
+rx("Interpretacja indywidualna i ogólna", B + r"interpretacj\w* (?:indywidualn|ogóln|podatkow|przepisów prawa podatkowego)")
+drop("Obligacje zamienne i z prawem pierwszeństwa", "zamienn")
+rx("Obligacje zamienne i z prawem pierwszeństwa", B + r"obligacj\w* zamienn", B + r"zamian\w* (?:obligacji )?na akcje")
+drop("Stopa realna (Fisher)", "stop real")
+drop("Zlecenia giełdowe na GPW", "zleceni")
+rx("Zlecenia giełdowe na GPW", B + r"zleceni\w* (?:giełdow|kupna|sprzedaży|z limitem|peg|cross|po każdej|po cenie|stop|switch|z warunkiem)")
+rx("Popyt pochodny (na czynniki wytwórcze)", B + r"popyt\w* na czynni\w* (?:wytwórcz|produkcji)")
+fix("owe28-c-01", add=["Popyt", "Elastyczność cenowa popytu"])
+fix("owe28-c-03", add=["Elastyczność cenowa popytu"], dele=["Interpretacja indywidualna i ogólna"])
+fix("owe28-c-04", dele=["Obligacje zamienne i z prawem pierwszeństwa"])
+fix("owe28-c-06", add=["Popyt pochodny (na czynniki wytwórcze)"])
+fix("owe28-c-09", add=["Funkcja konsumpcji (keynesowska)"])
+fix("owe28-c-10", add=["Mnożnik (inwestycyjny, wydatkowy)"])
+fix("owe28-c-11", add=["Deficyt budżetowy i deficyt sektora finansów publicznych", "Bilans handlowy"])
+fix("owe28-c-19", add=["Aktywna i pasywna polityka rynku pracy"])
+fix("owe28-c-28", add=["Kartel", "Urząd Ochrony Konkurencji i Konsumentów (UOKiK)"], dele=["Zlecenia giełdowe na GPW"])
+
+
+# ── XXVIII OWE, etap okręgowy ──
+drop("Organizacje otoczenia biznesu", "fundusz pożyczkow", "fundusze pożyczkow")
+rx("Organizacje otoczenia biznesu", B + r"fundusz\w* (?:pożyczkow|poręczeniow)\w* (?:regionaln|lokaln)")
+drop("Integracja gospodarcza – formy (Balassa)", "integracj")
+rx("Integracja gospodarcza – formy (Balassa)", B + r"integracj\w* (?:gospodarcz|regionaln|europejsk|ekonomiczn)", B + r"form\w* integracji")
+fix("owe28-o-01", add=["Koszt alternatywny (koszt utraconych możliwości)"])
+fix("owe28-o-02", add=["Równowaga konsumenta"])
+fix("owe28-o-03", add=["Tragedia wspólnego pastwiska (tragedia wspólnoty)"])
+fix("owe28-o-04", add=["Cena minimalna", "Nadwyżka (rynkowa)"])
+fix("owe28-o-05", add=["Koszty jawne (księgowe) i ukryte (implicite)"])
+fix("owe28-o-07", add=["Rynek funduszy pożyczkowych"])
+fix("owe28-o-11", add=["Mnożnik (inwestycyjny, wydatkowy)"])
+fix("owe28-o-23", add=["Wartość firmy"])
+fix("owe28-o-26", add=["Integracja pionowa i pozioma", "Dywersyfikacja"], dele=["Integracja gospodarcza – formy (Balassa)"])
+fix("owe28-o-27", add=["Prawa konsumenta"])
+
+
+# ── XXVIII OWE, etap szkolny ──
+drop("Kapitalizacja giełdowa", "kapitalizacj")
+rx("Kapitalizacja giełdowa", B + r"kapitalizacj\w* (?:giełdow|rynkow|spółk|indeks)", B + r"(?:największ|najmniejsz|dużej|małej)\w* kapitalizacj")
+drop("Obligacje skarbowe (detaliczne i hurtowe)", "ros", "dos", "coi", "edo")
+drop("Ekonomia behawioralna", "behawioraln")
+rx("Ekonomia behawioralna", B + r"(?:ekonomi|finans)\w* behawioraln", B + r"podejści\w* behawioraln\w* w finans")
+drop("Podejście systemowe", "systemow")
+rx("Podejście systemowe", B + r"podejści\w* systemow", B + r"teori\w* systemów", B + r"system\w* otwart")
+fix("owe28-s-01", add=["Rzadkość"])
+fix("owe28-s-02", add=["Czynniki kształtujące podaż (determinanty podaży)"])
+fix("owe28-s-04", add=["Krzywa obojętności"])
+fix("owe28-s-08", add=["Popyt pochodny (na czynniki wytwórcze)"])
+fix("owe28-s-09", add=["Kurs walutowy"])
+fix("owe28-s-10", add=["Metody liczenia PKB"])
+fix("owe28-s-12", add=["Krańcowa skłonność do konsumpcji (MPC) i oszczędzania (MPS)"])
+fix("owe28-s-16", add=["Stopa procentowa nominalna i realna", "Wartość pieniądza w czasie"], dele=["Kapitalizacja giełdowa"])
+fix("owe28-s-24", add=["Podatki bezpośrednie i pośrednie"])
+fix("owe28-s-25", dele=["Popyt doskonale elastyczny / doskonale nieelastyczny"])
+fix("owe28-s-27", add=["Podejście systemowe", "Podejście behawiorystyczne (szkoła stosunków międzyludzkich)"], dele=["Ekonomia behawioralna"])

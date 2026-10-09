@@ -17,7 +17,7 @@ END = r"(?![\wąćęłńóśźż])"
 # czteroznakowe rdzenie, które mogą mieć końcówkę (pozostałe krótkie klucze – tylko całe słowo)
 PREFIX4 = {"akcj", "bańk", "bess", "bodź", "cesj", "cukr", "etyk", "fuzj", "gmin", "hoss", "misj", "opcj", "utar",
            "wizj", "zmow", "łowc", "żniw", "nisz", "czek", "okun", "nash", "kerr", "mayo", "saya", "łask", "ford",
-           "watt", "hume", "owen", "mill", "snow", "card", "bain", "barr", "fama", "kuhn", "ries", "jago", "awal"}
+           "watt", "hume", "owen", "mill", "snow", "card", "bain", "barr", "fama", "kuhn", "ries", "jago", "awal", "gini"}
 
 
 def _load(p):
@@ -40,6 +40,24 @@ def _key_rx(k):
     parts = [re.escape(w) + (r"[\wąćęłńóśźż]*" if len(w) >= 4 else END) for w in words[:-1]]
     last = re.escape(words[-1]) + ("" if len(words[-1]) >= 3 else END)
     return WB + r"\s+".join(parts + [last])
+
+
+def _title_rx(it):
+    """Wzorzec z tytułu hasła (bez nawiasów): „Rynek funduszy pożyczkowych” trafia też w „rynku funduszy
+    pożyczkowych”. Tylko tytuły 2–5-wyrazowe bez spójników i myślników (te opisują zestawienia, nie nazwy)."""
+    if it["kind"] in ("data", "wzor"):
+        return None
+    words = it["s"].lower().replace(",", " ").split()
+    if not 2 <= len(words) <= 5 or any(w in ("i", "a", "–", "-", "oraz", "czy", "vs") or ":" in w for w in words):
+        return None
+    parts = []
+    for w in words:
+        w = w.strip("„”\"'.")
+        if len(w) >= 5:
+            parts.append(re.escape(w[: len(w) - 1 if len(w) <= 7 else len(w) - 2]) + r"[\wąćęłńóśźż]*")
+        else:
+            parts.append(re.escape(w) + END)
+    return WB + r"\s+".join(parts)
 
 
 def _year(t):
@@ -67,6 +85,9 @@ class Matcher:
             keys = [k.lower() for k in it["k"] if k.lower() not in drop and len(k) >= 2]
             # krótkie klucze (np. „cło”, „m1”) – tylko jako całe słowo
             add = list(FIX.ITEM_ADD.get(it["t"], FIX.ITEM_ADD.get(it["s"], [])))
+            tr = _title_rx(it) if it["t"] not in FIX.NO_TITLE else None
+            if tr:
+                add.append(tr)
             pats = [_key_rx(k) for k in keys] + add
             if not pats:
                 continue
