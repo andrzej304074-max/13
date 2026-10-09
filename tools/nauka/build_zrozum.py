@@ -297,10 +297,18 @@ def build(course, root, out_dir, min_lessons=None):
             zids.append(lid)
         zids.sort(key=lambda x: int(x.rsplit("-z", 1)[1]))
         # lekcje „Zrozumienie” wplecione w ścieżkę działu: po każdej lekcji haseł jedna lekcja zrozumienia
-        terms = [l for l in unit["lessons"] if l not in zids]
+        # kolejne części lekcji haseł („…-cz2”) idą razem ze swoją lekcją
+        terms = []
+        for l in unit["lessons"]:
+            if l in zids:
+                continue
+            if "-cz" in l and terms:
+                terms[-1].append(l)
+            else:
+                terms.append([l])
         merged = []
         for i in range(max(len(terms), len(zids))):
-            merged += terms[i:i + 1] + zids[i:i + 1]
+            merged += (terms[i] if i < len(terms) else []) + zids[i:i + 1]
         unit["lessons"] = merged
         unit["zcount"] = len(zids)
         report.append((uid, len(zids), sum(len([e for e in content[z]["subs"][s] if e["t"] != "karta"]) for z in zids for s in range(4))))

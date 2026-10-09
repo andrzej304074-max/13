@@ -183,39 +183,124 @@ for topic, title, emoji, color in C.TOPICS:
         units.append({"id": uid, "topic": topic, "kind": kind, "title": ut, "lessons": lesson_ids, "count": len(ids)})
 
 # --- pytania do sprawdzianów ---
+# Każde pytanie (OWE, ręczne i automatyczne ze słownika) trafia do dokładnie jednej lekcji: najpóźniejszej lekcji
+# tematu swoich pojęć głównych, która zawiera któreś z nich. Pojęcia pytania (z treści i ze wszystkich odpowiedzi),
+# których uczeń jeszcze nie poznał w tym temacie, lekcja omawia dodatkowo („extra”), a poznane wcześniej powtarza
+# („review”). Gdy nowych pojęć jest za dużo, lekcja dostaje kolejne części (cz. 2, 3…).
+PP = load(os.path.join(HERE, "pojecia_pytan.py"))
+matcher = PP.Matcher(items)
+MAX_NEW = 12  # hasła lekcji + extra w jednej części
+
 bank = []
 for f in sorted(glob.glob(os.path.join(ROOT, "data/questions/*.json"))):
-    bank += [(q, 1) for q in json.load(open(f))]
-bank += [(q, 0) for q in json.load(open(os.path.join(ROOT, "data/slownik/manual.json")))]
-bank += [(q, 2) for q in json.load(open(os.path.join(ROOT, "data/slownik/auto.json")))]
-texts = [(low(q["question"] + " " + " ".join(q["options"])), low(q["explanation"])) for q, _ in bank]
+    bank += [(q, "owe") for q in json.load(open(f))]
+bank += [(q, "manual") for q in json.load(open(os.path.join(ROOT, "data/slownik/manual.json")))]
+bank += [(q, "auto") for q in json.load(open(os.path.join(ROOT, "data/slownik/auto.json")))]
 
-WB = r"(?<![\wąćęłńóśźż])"
-item_rx = {}
-for iid, it in items.items():
-    keys = [k.lower() for k in it["k"] if len(k) >= 3 or k.isupper()]
-    item_rx[iid] = re.compile(WB + "(?:" + "|".join(re.escape(k) for k in keys) + ")") if keys else None
 
-# dla każdego hasła – zbiór pytań, w których występuje (w treści/opcjach i osobno w wyjaśnieniu)
-hit_main, hit_expl = {}, {}
-for iid, rx in item_rx.items():
-    if not rx:
-        hit_main[iid], hit_expl[iid] = set(), set()
+def concepts(q, origin):
+    """(main, all) – id haseł; pytania automatyczne niosą listę swoich pojęć (tytuły haseł)."""
+    if origin == "auto":
+        ids = list(dict.fromkeys(item_id(t) for t in q["pojecia"] if item_id(t) in items))
+        main = ids if q["id"].startswith("sl-C-") else ids[:1]
+        return set(main), set(ids)
+    a = matcher.analyze(q)
+    return a["main"], a["all"]
+
+
+# kolejność nauki w temacie: działy w kolejności UNITS, w dziale lekcje 1, 2, …
+order, lesson_pos, item_lessons = defaultdict(list), {}, defaultdict(list)
+for u in units:
+    for lid in u["lessons"]:
+        lesson_pos[lid] = len(order[u["topic"]])
+        order[u["topic"]].append(lid)
+        for iid in lessons[lid]["items"]:
+            item_lessons[iid].append(lid)
+first_pos = {}  # hasło → najwcześniejsza pozycja w swoim temacie
+for iid, ls in item_lessons.items():
+    first_pos[iid] = min(lesson_pos[l] for l in ls if lessons[l]["topic"] == items[iid]["topic"])
+
+placed = defaultdict(list)  # lekcja → [(id pytania, origin, all)]
+unplaced = []
+for q, origin in bank:
+    main, allc = concepts(q, origin)
+    main = {i for i in main if i in item_lessons} or {i for i in allc if i in item_lessons}
+    if not main:
+        # bez rozpoznanych haseł (np. pytanie o fakt spoza słownika): lekcja tematu działu słownika (pytania
+        # ręczne) o największej zbieżności słów z definicjami haseł; pytanie nie wymaga omówienia nowych pojęć
+        words = set(re.findall(r"[a-ząćęłńóśźż]{5,}", low(q["question"] + " " + " ".join(q["options"]))))
+        topics = [t for t, _ in Counter(items[i]["topic"] for i in items if items[i]["sec"] == q.get("section")).most_common(1)]
+        pool = [l for l in lessons if not topics or lessons[l]["topic"] == topics[0]]
+        score = lambda l: sum(len(words & set(re.findall(r"[a-ząćęłńóśźż]{5,}", low(items[i]["d"])))) for i in lessons[l]["items"])
+        lid = max(pool, key=lambda l: (score(l), -lesson_pos[l]))
+        placed[lid].append((q["id"], origin, set()))
+        unplaced.append(q["id"])
         continue
-    keys = [k.lower() for k in items[iid]["k"] if len(k) >= 3 or k.isupper()]
-    pre = lambda t: any(k in t for k in keys)  # szybkie wstępne sprawdzenie podciągu przed wyrażeniem regularnym
-    hit_main[iid] = {qi for qi, (m, _) in enumerate(texts) if pre(m) and rx.search(m)}
-    hit_expl[iid] = {qi for qi, (_, e) in enumerate(texts) if pre(e) and rx.search(e)}
+    # pytanie dotyczy pojęć (osoby, instytucje, daty i przepisy w treści to zwykle kontekst) – o lekcji decydują pojęcia
+    pref = {i for i in main if items[i]["kind"] == "pojecie"} or main
+    tcount = Counter(items[i]["topic"] for i in pref)
+    topic = max(tcount, key=lambda t: (tcount[t], max(first_pos[i] for i in pref if items[i]["topic"] == t)))
+    # lekcja macierzysta hasła = pierwsze jego wystąpienie w temacie (nie powtórzenie w dziale „Wzory”)
+    lid = order[topic][max(first_pos[i] for i in pref if items[i]["topic"] == topic)]
+    placed[lid].append((q["id"], origin, allc))
 
-for lid, L in lessons.items():
-    score = Counter()
-    for iid in L["items"]:
-        for qi in hit_main[iid]:
-            score[qi] += 2
-        for qi in hit_expl[iid]:
-            score[qi] += 1
-    scored = sorted((-sc, bank[qi][1], qi) for qi, sc in score.items() if sc >= 2)
-    L["questions"] = [bank[qi][0]["id"] for _, _, qi in scored[:24]]
+ORIGIN_RANK = {"owe": 0, "manual": 1, "auto": 2}
+moved = []  # (pytanie, lekcja docelowa) – raport
+new_lessons = {}
+for topic, seq in order.items():
+    known = set()  # hasła poznane we wcześniejszych lekcjach tematu (łącznie z ich extra)
+    for lid in seq:
+        L = lessons[lid]
+        own = set(L["items"])
+        qs = sorted(placed.get(lid, []), key=lambda x: (ORIGIN_RANK[x[1]], x[0]))
+        # pytania wymagające najmniej nowych pojęć najpierw – kolejne części dostają resztę
+        qs.sort(key=lambda x: len(x[2] - own - known))
+        parts = [{"items": L["items"], "extra": [], "qs": [], "taught": set(own)}]
+        for qid_, origin, allc in qs:
+            P = parts[-1]
+            need = allc - P["taught"] - known
+            if len(P["items"]) + len(P["extra"]) + len(need) > MAX_NEW and (P["qs"] or P["extra"]):
+                prev = set().union(*(x["taught"] for x in parts))
+                P = {"items": [], "extra": [], "qs": [], "taught": set(prev)}
+                parts.append(P)
+                need = allc - P["taught"] - known
+            P["extra"] += sorted(need, key=lambda i: items[i]["s"])
+            P["taught"] |= need
+            P["qs"].append((qid_, allc))
+        prev_taught = set(known)
+        for k, P in enumerate(parts):
+            if k == 0:
+                pid, PL = lid, L
+            else:
+                pid = f"{lid}-cz{k + 1}"
+                PL = dict(L, id=pid, items=[], part=k + 1,
+                          title=f"{L['title']} (cz. {k + 1})")
+                new_lessons[pid] = (lid, PL)
+            allq = set().union(*(a for _, a in P["qs"])) if P["qs"] else set()
+            PL["extra"] = P["extra"]
+            PL["review"] = sorted(allq & prev_taught - set(PL["items"]) - set(P["extra"]), key=lambda i: items[i]["s"])
+            PL["questions"] = [x for x, _ in P["qs"]]
+            # kontrola: każde pojęcie pytania lekcja omawia (hasła, extra) albo powtarza (review)
+            cover = set(PL["items"]) | set(PL["extra"]) | set(PL["review"])
+            for x, a in P["qs"]:
+                missing = a - cover
+                assert not missing, (pid, x, [items[i]["t"] for i in missing])
+            prev_taught |= P["taught"]
+        known |= set().union(*(P["taught"] for P in parts))
+
+# kolejne części wstawiane w dziale zaraz po swojej lekcji
+for pid, (lid, PL) in new_lessons.items():
+    lessons[pid] = PL
+for u in units:
+    out = []
+    for lid in u["lessons"]:
+        out.append(lid)
+        k = 2
+        while f"{lid}-cz{k}" in lessons:
+            out.append(f"{lid}-cz{k}")
+            k += 1
+    u["lessons"] = out
+QSTATS = {"placed": sum(len(v) for v in placed.values()), "unplaced": unplaced, "parts": len(new_lessons)}
 
 os.makedirs(OUT, exist_ok=True)
 course = {
@@ -235,5 +320,8 @@ for t in TOPIC_IDS:
     for u in us:
         print(f"     {u['id']:<28} {u['count']:>3} haseł, {len(u['lessons'])} lekcji")
 qn = [len(L["questions"]) for L in lessons.values() if L.get("type") != "zrozum"]
-print("pytania na lekcję: min", min(qn), "mediana", sorted(qn)[len(qn) // 2], "lekcji z <6 pytaniami:", sum(1 for n in qn if n < 6))
+ex = sorted(len(L.get("extra", [])) for L in lessons.values() if L.get("type") != "zrozum")
+print("pytania:", QSTATS["placed"], "przydzielone, w tym bez rozpoznanych haseł:", len(QSTATS["unplaced"]), QSTATS["unplaced"])
+print("pytania na lekcję: min", min(qn), "mediana", sorted(qn)[len(qn) // 2], "max", max(qn), "lekcji z <6 pytaniami:", sum(1 for n in qn if n < 6))
+print("extra na lekcję: mediana", ex[len(ex) // 2], "max", ex[-1], "· kolejnych części lekcji:", QSTATS["parts"])
 print("rodzaje:", Counter(i["kind"] for i in items.values()))

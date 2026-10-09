@@ -164,7 +164,7 @@ questions = []
 _ids = set()
 
 
-def add(kind, e, qtype, question, options, correct, explanation):
+def add(kind, e, qtype, question, options, correct, explanation, others=()):
     i, n = qid(kind, e, question[:40]), 2
     while i in _ids:
         i, n = qid(kind, e, question[:40] + str(n)), n + 1
@@ -179,6 +179,8 @@ def add(kind, e, qtype, question, options, correct, explanation):
         "explanation": explanation,
         "section": e["sec"],
         "origin": "auto",
+        # pojęcia w pytaniu (tytuły haseł): pierwsze – hasło, którego dotyczy pytanie, dalej dystraktory
+        "pojecia": [e["title"]] + [o["title"] for o in others if o["title"] != e["title"]],
     })
 
 
@@ -203,7 +205,7 @@ for e in entries:
         opts, corr = shuffle_options(yr, [year_of(p["title"])[0] for p in wrong])
         add("A", e, "single", f"W którym roku (okresie): {event}? ({clip(details, 200)})", opts, corr,
             f"Poprawnie: {yr}. {full_entry(e)} Pozostałe daty: " +
-            "; ".join(f"{year_of(p['title'])[0]} – {year_of(p['title'])[1]}" for p in wrong) + ".")
+            "; ".join(f"{year_of(p['title'])[0]} – {year_of(p['title'])[1]}" for p in wrong) + ".", wrong)
         continue
     if e["sec"] == SEC_FORMULAS:
         continue  # dział wzorów obsługuje szablon D
@@ -220,7 +222,7 @@ for e in entries:
         q = f"Które pojęcie opisuje definicja: „{clip(d, 300)}”?"
     expl = full_entry(e) + " Pozostałe odpowiedzi: " + "; ".join(
         f"{p['title']} – {first_sentence(p['d'], 140)}" for p in wrong)
-    add("A", e, "single", q, opts, corr, expl)
+    add("A", e, "single", q, opts, corr, expl, wrong)
 
 # --- B: pojęcie → definicja ---
 for e in entries:
@@ -239,7 +241,7 @@ for e in entries:
     opts, corr = shuffle_options(right, wr)
     who = "Który opis dotyczy osoby" if e["sec"] == SEC_PERSONS else "Która definicja opisuje pojęcie"
     expl = full_entry(e) + " Błędne odpowiedzi opisują: " + "; ".join(p["title"] for p in wrong) + "."
-    add("B", e, "single", f"{who}: {e['title']}?", opts, corr, expl)
+    add("B", e, "single", f"{who}: {e['title']}?", opts, corr, expl, wrong)
 
 # --- D: pojęcie → wzór ---
 with_w = [e for e in entries if e["x"].get("w") and len(e["x"]["w"]) <= 200]
@@ -250,7 +252,7 @@ for e in with_w:
         continue
     opts, corr = shuffle_options(e["x"]["w"], [p["x"]["w"] for p in wrong])
     expl = full_entry(e) + " Pozostałe wzory dotyczą: " + "; ".join(p["title"] for p in wrong) + "."
-    add("D", e, "single", f"Który wzór (zależność) dotyczy hasła: {e['title']}?", opts, corr, expl)
+    add("D", e, "single", f"Który wzór (zależność) dotyczy hasła: {e['title']}?", opts, corr, expl, wrong)
 
 # --- C: wielokrotny – prawdziwe pary pojęcie–definicja ---
 by_sec_topic = {}
@@ -271,7 +273,7 @@ for rep in range(2):
             n_true = rnd.choice([1, 2, 2, 3, 3, 4, 0])
             truth = [True] * n_true + [False] * (4 - n_true)
             rnd.shuffle(truth)
-            opts, parts, correct = [], [], []
+            opts, parts, correct, srcs = [], [], [], []
             for j, (e, ok) in enumerate(zip(group, truth)):
                 if ok:
                     d_src = e
@@ -281,6 +283,7 @@ for rep in range(2):
                         break
                     d_src = similar(e, others, 1)[0]
                 opts.append(f"{e['title']} – {clip(mask(d_src['d'], d_src), 200)}")
+                srcs += [e, d_src]
                 if ok:
                     correct.append(j)
                     parts.append(f"{LETTERS[j]} – prawda.")
@@ -291,7 +294,7 @@ for rep in range(2):
                 continue
             head = group[0]
             add("C", head, "multi", "Które zestawienia pojęcia z jego opisem są poprawne?", opts, correct,
-                " ".join(parts))
+                " ".join(parts), [g for g in group + srcs if g is not head])
 
 os.makedirs(OUT, exist_ok=True)
 json.dump(questions, open(os.path.join(OUT, "auto.json"), "w"), ensure_ascii=False, separators=(",", ":"))
