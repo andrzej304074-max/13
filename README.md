@@ -69,7 +69,7 @@ Kurs zbudowany z haseł słownika (`docs/slownik-owe.pdf`) i wszystkich banków 
 
 - **7 tematów:** Mikroekonomia, Makroekonomia, Polityka gospodarcza, Podstawy finansów, Finanse przedsiębiorstw,
   Zarządzanie oraz temat przewodni „Gospodarka wobec wyzwań demograficznych”.
-- **Hierarchia:** 88 działów → 778 lekcji: 328 lekcji haseł (po 1–6 haseł) i 450 lekcji „Zrozumienie” 🧠 → 3112 pod-lekcji.
+- **Hierarchia:** 88 działów → 789 lekcji: 332 lekcje haseł (po 1–6 haseł) i 457 lekcji „Zrozumienie” 🧠 → 3156 pod-lekcji.
 - **Rodzaje treści** (filtr na stronie tematu): pojęcia, wzory, osoby, instytucje, daty, przepisy, zrozumienie.
 - **Pod-lekcje:** 1. Poznaj, 2. Ćwicz, 3. Utrwal, 4. Sprawdzian (pytania olimpijskie i słownikowe dopasowane do haseł lekcji).
 - **Ćwiczenia:** nowe hasło, wybór hasła lub opisu, łączenie par, uzupełnianie luk, prawda/fałsz,
@@ -90,7 +90,7 @@ Kurs zbudowany z haseł słownika (`docs/slownik-owe.pdf`) i wszystkich banków 
 Uczą mechanizmów, obliczeń i zastosowań, a nie tylko definicji. Są wplecione w ścieżkę każdego działu:
 
 - **Liczba lekcji:** 5 w każdym dziale pojęciowym i dziale „Wzory”, 5 w działach osób, instytucji, dat i przepisów
-  z co najmniej 15 hasłami, 2 w mniejszych działach. Razem 450 lekcji, 9035 ćwiczeń ocenianych i 1810 kart wyjaśnień. Zakres sprawdzono z podręcznikami literatury podstawowej OWE: N.G. Mankiw, M.P. Taylor „Mikroekonomia” i „Makroekonomia” (PWE) B. Winiarski (red.) „Polityka gospodarcza” (PWN 2018), S. Owsiak „Finanse” (PWE 2015) oraz W. Gabrusewicz „Metody analizy finansowej przedsiębiorstw” (PWE 2019). Spisy treści potraktowano jako listę tematów: do każdego rozdziału zebrano pojęcia, modele, osoby, wzory, daty, instytucje i przepisy, sprawdzono je w bazie pytań OWE i zweryfikowano nowe fakty w dwóch źródłach – zob. `tools/nauka/MAPA-POJEC.md`. Każde hasło pojęciowe tematów Mikroekonomia, Makroekonomia, Polityka gospodarcza, Finanse i Firma ma lekcję „Zrozumienie”.
+  z co najmniej 15 hasłami, 2 w mniejszych działach. Razem 457 lekcji, 9176 ćwiczeń ocenianych i 1839 kart wyjaśnień. Zakres sprawdzono z podręcznikami literatury podstawowej OWE: N.G. Mankiw, M.P. Taylor „Mikroekonomia” i „Makroekonomia” (PWE), B. Winiarski (red.) „Polityka gospodarcza” (PWN 2018), S. Owsiak „Finanse” (PWE 2015), W. Gabrusewicz „Metody analizy finansowej przedsiębiorstw” (PWE 2019) oraz R.W. Griffin „Podstawy zarządzania organizacjami” (PWN). Spisy treści potraktowano jako listę tematów: do każdego rozdziału zebrano pojęcia, modele, osoby, wzory, daty, instytucje i przepisy, sprawdzono je w bazie pytań OWE i zweryfikowano nowe fakty w dwóch źródłach – zob. `tools/nauka/MAPA-POJEC.md`. Każde hasło pojęciowe tematów Mikroekonomia, Makroekonomia, Polityka gospodarcza, Finanse, Firma i Zarządzanie ma lekcję „Zrozumienie”.
 - **4 pod-lekcje:** Wyjaśnienie (karty krok po kroku z pytaniami sprawdzającymi), Mechanizmy (co się stanie, gdy…,
   łańcuchy przyczyn i skutków, sortowanie do kategorii, przesunięcia krzywych), Obliczenia (wynik wpisywany
   z tolerancją i rozwiązaniem krok po kroku), Zastosowanie (studia przypadków). Każda pod-lekcja ćwiczeń ma
