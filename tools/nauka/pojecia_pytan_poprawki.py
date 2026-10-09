@@ -818,3 +818,38 @@ fix("owe33-s-07", add=["Substytuty"])
 fix("owe33-s-11", add=["Rynek pieniężny"])
 fix("owe33-s-21", add=["Rewolucje przemysłowe"])
 fix("owe33-s-30", add=["Metody twórczego rozwiązywania problemów"], dele=["Grupy i zespoły"])
+
+
+# ── XXXIV OWE, etap centralny ──
+rx("Weksel", B + r"weksel" + E, B + r"weksl\w*")
+drop("Grupy i zespoły", "grup")
+rx("Grupy i zespoły", B + r"grup\w* (?:formaln|nieformaln|robocz|zadaniow|interesu|koleżeńsk|i zespoł)", B + r"(?:rozwoju|rozwój|fazy|faz) grupy", B + r"spójnoś\w* grupy")
+fix("owe34-c-03", add=["Koszt alternatywny (koszt utraconych możliwości)"])
+fix("owe34-c-05", add=["Operacje otwartego rynku (OOR)"])
+fix("owe34-c-14", add=["Inflacja oczekiwana i nieoczekiwana"])
+fix("owe34-c-17", add=["Amortyzacja"])
+fix("owe34-c-21", dele=["Teoria oczekiwań (V. Vroom)"])
+fix("owe34-c-23", add=["Wzrost gospodarczy", "Krzywa doświadczenia (uczenia się)"])
+
+
+# ── XXXIV OWE, etap okręgowy ──
+drop("Przejście epidemiologiczne i przejście migracyjne", "epidemiologiczn")
+rx("Przejście epidemiologiczne i przejście migracyjne", B + r"przejści\w* epidemiologiczn")
+drop("Formy monopolizacji (porozumienia i koncentracje)", "koncern")
+rx("Formy monopolizacji (porozumienia i koncentracje)", B + r"koncern\w*(?=[^.?]*(?:kartel|trust|syndykat|holding))", B + r"(?:kartel|trust|syndykat|holding)\w*[^.?]*koncern")
+rx("Dobra mieszane: klubowe i wspólne", B + r"zasob\w* wspóln", B + r"dob\w* klubow")
+fix("owe34-o-26", add=["Kontrolowanie"])
+fix("owe34-o-28", add=["Typy struktur organizacyjnych"])
+fix("owe34-o-29", dele=["Hierarchia potrzeb Maslowa"], add=["Maslow Abraham"])
+rx("Pułapka maltuzjańska", B + r"malthuzjańsk")
+fix("owe34-o-24", add=["Punkt procentowy a procent"])
+
+
+# ── XXXIV OWE, etap szkolny ──
+fix("owe34-s-02", add=["Substytuty", "Dobra komplementarne"])
+fix("owe34-s-08", add=["Pigou Arthur Cecil", "Marshall Alfred"], dele=["Podatek Pigou", "Warunek Marshalla–Lernera i krzywa J"])
+fix("owe34-s-17", add=["Bilans handlowy"])
+fix("owe34-s-20", dele=["Histereza bezrobocia"])
+fix("owe34-s-21", add=["Szok podażowy i popytowy"], dele=["Popyt", "Podaż"])
+fix("owe34-s-25", add=["Elastyczność cenowa popytu"])
+fix("owe34-s-30", add=["Ford Henry"], dele=["Przemysł 4.0"])
