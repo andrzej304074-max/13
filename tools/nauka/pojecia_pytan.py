@@ -16,7 +16,7 @@ WB = r"(?<![\wąćęłńóśźż])"
 END = r"(?![\wąćęłńóśźż])"
 # czteroznakowe rdzenie, które mogą mieć końcówkę (pozostałe krótkie klucze – tylko całe słowo)
 PREFIX4 = {"akcj", "bańk", "bess", "bodź", "cesj", "cukr", "etyk", "fuzj", "gmin", "hoss", "misj", "opcj", "utar",
-           "wizj", "zmow", "łowc", "żniw", "nisz", "czek", "okun", "nash", "kerr", "mayo", "saya", "łask", "ford",
+           "wizj", "zmow", "łowc", "żniw", "nisz", "okun", "nash", "kerr", "mayo", "saya", "łask", "ford",
            "watt", "hume", "owen", "mill", "snow", "card", "bain", "barr", "fama", "kuhn", "ries", "jago", "awal", "gini"}
 
 
