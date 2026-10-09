@@ -17,6 +17,8 @@ K162 = S("OpenStax, Principles of Marketing, 16.2 Social Media and Mobile Market
 K163 = S("OpenStax, Principles of Marketing, 16.3 Metrics Used to Evaluate the Success of Online Marketing", OSK + "16-3-metrics-used-to-evaluate-the-success-of-online-marketing", D)
 K172 = S("OpenStax, Principles of Marketing, 17.2 Types of Marketing Channels", OSK + "17-2-types-of-marketing-channels", D)
 
+WCON = S("Wikipedia – Concierge", "https://en.wikipedia.org/wiki/Concierge", D)
+
 LESSONS = [
     L(1, "Marketing i marketing mix",
       "Rozumieć, czym jest marketing i jak ewoluowała koncepcja marketingowa, oraz stosować marketing mix 4P, rozszerzenie 7P i perspektywę klienta 4C.",
@@ -335,9 +337,13 @@ LESSONS = [
 
     L(5, "Lojalność, CRM i wartość klienta",
       "Rozumieć budowanie lojalności i zarządzanie relacjami z klientami (CRM), wartość klienta w czasie (CLV), lejek sprzedażowy, koszt pozyskania klienta i wskaźnik NPS.",
-      ["Lojalność klienta i CRM", "Wartość klienta (CLV), lejek sprzedażowy i doświadczenie klienta"],
-      [K16, K163],
+      ["Lojalność klienta i CRM", "Wartość klienta (CLV), lejek sprzedażowy i doświadczenie klienta", "Concierge"],
+      [K16, K163, WCON],
       explain=[
+          K("Concierge – usługa budująca lojalność",
+            "Concierge to osobisty asystent klienta (w hotelu, banku premium, programie kart kredytowych), który załatwia za niego sprawy: rezerwacje, bilety, zakupy. To przykład produktu poszerzonego i marketingu relacji – dodatkowa usługa ma przywiązać klienta o wysokiej wartości (CLV)."),
+          PF("Usługa concierge w banku premium jest narzędziem budowania lojalności zamożnych klientów.", True,
+             why="Dodatkowa wartość zwiększa przywiązanie klienta."),
           K("Lojalność i CRM",
             "Lojalny klient kupuje wielokrotnie, poleca firmę i jest mniej wrażliwy na cenę. Pozyskanie nowego klienta zwykle kosztuje kilka razy więcej niż utrzymanie obecnego. CRM to strategia i system (baza danych, automatyzacja) do zarządzania relacjami: historia kontaktów, personalizacja ofert, programy lojalnościowe, obsługa posprzedażowa. Dane klientów podlegają RODO."),
           K("Wartość klienta w czasie (CLV)",
