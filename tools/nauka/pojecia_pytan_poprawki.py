@@ -786,3 +786,35 @@ fix("owe32-s-12", add=["Tragedia wspólnego pastwiska (tragedia wspólnoty)", "D
 fix("owe32-s-13", add=["Podatek progresywny, proporcjonalny (liniowy) i regresywny"])
 fix("owe32-s-23", add=["Korzyści skali (ekonomia skali)"])
 fix("owe32-s-27", add=["Macierz BCG"], dele=["Inwestycje bezpośrednie (BIZ) i portfelowe"])
+
+
+# ── XXXIII OWE, etap okręgowy ──
+drop("Wartość nominalna, emisyjna, rynkowa i księgowa akcji", "wartość nominaln", "wartości nominaln")
+rx("Wartość nominalna, emisyjna, rynkowa i księgowa akcji", B + r"wartoś\w* (?:nominaln|rynkow|emisyjn)\w* (?:akcji|udziału)", B + r"cen\w* nominaln\w* akcji")
+drop("Narzucanie cen odsprzedaży", "odsprzedaż")
+rx("Narzucanie cen odsprzedaży", B + r"narzucani\w* cen")
+drop("Transfery socjalne", "transfer")
+rx("Transfery socjalne", B + r"transfer\w* (?:socjaln|budżetow|rządow|społeczn|jednostronn|pieniężn)", B + r"płatnoś\w* transferow")
+drop("Demografia", "demograf")
+rx("Demografia", B + r"demografi[aięą]" + E)
+fix("owe33-o-05", add=["Bezrobocie strukturalne"])
+fix("owe33-o-06", add=["Rewolucje przemysłowe"])
+fix("owe33-o-07", dele=["Ścieżka ekspansji przedsiębiorstwa"])
+fix("owe33-o-21", dele=["Formy marketingu współczesnego"])
+fix("owe33-o-23", add=["Gospodarka współdzielenia (sharing economy) i peer economy"])
+fix("owe33-o-26", dele=["Strategie konkurencji Portera"])
+
+
+# ── XXXIII OWE, etap szkolny ──
+drop("Teoria ścieżki do celu (R. House)", "house")
+rx("Teoria ścieżki do celu (R. House)", B + r"r\.\s?house", B + r"house[’']?a" + E)
+rx("Seigniorage (renta emisyjna)", B + r"seniorat")
+rx("Macierz GE (McKinseya)", B + r"(?:selektor|macierz)\w* (?:jednostek )?general electric")
+fix("owe33-s-01", dele=["Hersey Paul, Blanchard Kenneth"])
+fix("owe33-s-02", add=["Cel inflacyjny NBP"])
+fix("owe33-s-03", add=["Krótkookresowe i długookresowe krzywe kosztów"])
+fix("owe33-s-04", add=["Składki na ubezpieczenia społeczne"])
+fix("owe33-s-07", add=["Substytuty"])
+fix("owe33-s-11", add=["Rynek pieniężny"])
+fix("owe33-s-21", add=["Rewolucje przemysłowe"])
+fix("owe33-s-30", add=["Metody twórczego rozwiązywania problemów"], dele=["Grupy i zespoły"])
