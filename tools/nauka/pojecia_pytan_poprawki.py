@@ -739,3 +739,50 @@ fix("owe31-s-20", add=["Tożsamości gospodarki otwartej: NX = NCO i S = I + NCO
 fix("owe31-s-22", add=["Model Du Ponta (piramida wskaźników)"])
 fix("owe31-s-29", add=["Planowanie"], dele=["Szczeble zarządzania"])
 fix("owe31-s-30", add=["Lobbing"])
+
+
+# ── XXXII OWE, etap centralny ──
+drop("Pasywa: kapitał własny i zobowiązania", "pasyw")
+rx("Pasywa: kapitał własny i zobowiązania", B + r"pasyw(?:a|ów|ach|ami|om)" + E)
+fix("owe32-c-01", add=["WIG"])
+fix("owe32-c-03", add=["Rozkład ciężaru podatku (incydencja podatkowa)"])
+fix("owe32-c-12", add=["Fundusz inwestycyjny"], dele=["Style kierowania: autokratyczny, demokratyczny, liberalny"])
+fix("owe32-c-14", add=["Substytuty", "Dobra komplementarne"])
+fix("owe32-c-21", add=["Elastyczność a utarg"])
+fix("owe32-c-24", add=["Elastyczność cenowa popytu"])
+
+
+# ── XXXII OWE, etap okręgowy ──
+drop("Siła rynkowa i wskaźnik Lernera", "lerner")
+rx("Siła rynkowa i wskaźnik Lernera", B + r"(?:indeks|wskaźnik)\w* lernera")
+drop("Sieci komunikacyjne w małych grupach", "łańcuch", "okrąg", "wzorzec")
+rx("Sieci komunikacyjne w małych grupach", B + r"sie[ćc]\w* (?:typu |w kształcie )?(?:łańcuch|okręg|koła|gwiazd|y)" + E)
+drop("Gospodarka niedoboru", "niedoboru")
+rx("Gospodarka niedoboru", B + r"gospodar\w* niedoboru", B + r"miękk\w* ograniczen")
+fix("owe32-o-01", add=["Zarządzanie zapasami"])
+fix("owe32-o-02", add=["Polityka kursowa"])
+fix("owe32-o-04", add=["Korytarz stóp procentowych"])
+fix("owe32-o-06", add=["Kurs nominalny i realny"])
+fix("owe32-o-07", dele=["Ścieżka ekspansji przedsiębiorstwa"])
+fix("owe32-o-11", dele=["Cło ad valorem i specyficzne (kwotowe)"])
+fix("owe32-o-15", add=["Stopa procentowa nominalna i realna"])
+fix("owe32-o-19", add=["Saldo obrotów bieżących"])
+fix("owe32-o-27", add=["Kontrolowanie"])
+fix("owe32-o-29", add=["Cechy osobowości w organizacji"])
+fix("owe32-o-30", add=["Taylor Frederick Winslow"])
+drop("Dyskryminacja (różnicowanie) cenowa", "różnicuj", "różnicowani")
+rx("Dyskryminacja (różnicowanie) cenowa", B + r"różnicow\w* cen", B + r"różnicuj\w* cen", B + r"(?:doskonał|pierwszego|drugiego|trzeciego)\w* (?:stopnia )?(?:różnicowani|dyskryminacj)")
+
+
+# ── XXXII OWE, etap szkolny ──
+drop("Endogeniczne teorie wzrostu", "endogeniczn")
+rx("Endogeniczne teorie wzrostu", B + r"endogeniczn\w* (?:teori|model)\w* wzrostu", B + r"(?:teori|model)\w* wzrostu endogeniczn", B + r"wzrost\w* endogeniczn")
+drop("Inwestycje bezpośrednie (BIZ) i portfelowe", "portfelow")
+rx("Inwestycje bezpośrednie (BIZ) i portfelowe", B + r"inwestycj\w* portfelow")
+rx("Model, teoria i prawo ekonomiczne", B + r"zmienn\w* (?:endogeniczn|egzogeniczn)", B + r"(?:endogeniczn|egzogeniczn)\w*" + E)
+fix("owe32-s-04", add=["Składki na ubezpieczenia społeczne"])
+fix("owe32-s-09", add=["Wejście i wyjście z rynku w długim okresie"])
+fix("owe32-s-12", add=["Tragedia wspólnego pastwiska (tragedia wspólnoty)", "Dobra publiczne"])
+fix("owe32-s-13", add=["Podatek progresywny, proporcjonalny (liniowy) i regresywny"])
+fix("owe32-s-23", add=["Korzyści skali (ekonomia skali)"])
+fix("owe32-s-27", add=["Macierz BCG"], dele=["Inwestycje bezpośrednie (BIZ) i portfelowe"])
