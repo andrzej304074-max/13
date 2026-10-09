@@ -16,9 +16,10 @@ Kolumna „Pytania OWE” podaje liczbę pytań z XXI–XXXIX OWE, w których po
 - N.G. Mankiw, M.P. Taylor, „Mikroekonomia” i „Makroekonomia” (PWE);
 - S. Owsiak, „Finanse” (PWE 2015);
 - B. Winiarski (red.), „Polityka gospodarcza” (PWN 2018);
-- W. Gabrusewicz, „Metody analizy finansowej przedsiębiorstw” (PWE 2019).
+- W. Gabrusewicz, „Metody analizy finansowej przedsiębiorstw” (PWE 2019);
+- R.W. Griffin, „Podstawy zarządzania organizacjami” (PWN).
 
-**Podsumowanie (stan na 8.10.2026)**
+**Podsumowanie (stan na 9.10.2026)**
 
 | Podręcznik | Rozdziały | Pozycji w mapie | Było | Dodane | Pominięte |
 |---|---|---|---|---|---|
@@ -27,9 +28,11 @@ Kolumna „Pytania OWE” podaje liczbę pytań z XXI–XXXIX OWE, w których po
 | Owsiak – „Finanse” | 2–16 | 156 | 118 | 36 | 2 |
 | Gabrusewicz – „Metody analizy finansowej przedsiębiorstw” | 1–11 | 38 | 23 | 14 | 1 |
 | Winiarski (red.) – „Polityka gospodarcza” | 1–28 | 60 | 46 | 12 | 2 |
+| Griffin – „Podstawy zarządzania organizacjami” | 1–22, dodatek | 114 | 89 | 23 | 2 |
 
 Wcześniejsze uzupełnienia według samych tytułów podrozdziałów (47 haseł Mikro i 25 Makro) mają w mapie status „było”.
-Każde hasło pojęciowe tematów Mikroekonomia, Makroekonomia, Polityka gospodarcza, Finanse i Firma ma lekcję „Zrozumienie”.
+Każde hasło pojęciowe tematów Mikroekonomia, Makroekonomia, Polityka gospodarcza, Finanse, Firma i Zarządzanie ma lekcję „Zrozumienie”.
+W wierszu Griffina „Było” obejmuje 2 rzeczy omówione w definicji innego hasła (status „w definicji”).
 
 ## Mikroekonomia – N.G. Mankiw, M.P. Taylor (rozdz. 1–22)
 
@@ -1074,3 +1077,234 @@ Każde hasło pojęciowe tematów Mikroekonomia, Makroekonomia, Polityka gospoda
 | Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
 |---|---|---|---|---|---|
 | Euroregiony | pojęcie | było | Euroregiony i współpraca transgraniczna | 0 | podręcznik |
+
+## Zarządzanie – R.W. Griffin, „Podstawy zarządzania organizacjami” (PWN) (rozdz. 1–22, dodatek)
+
+### Rozdz. 1. Zarządzanie i praca menedżera
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Zarządzanie, proces zarządzania i funkcje | pojęcie | było | Zarządzanie; Funkcje zarządzania | 0 | podręcznik |
+| Sprawność i skuteczność | pojęcie | było | Sprawność, skuteczność i efektywność | 0 | podręcznik |
+| Szczeble zarządzania | pojęcie | było | Szczeble zarządzania | 0 | podręcznik |
+| Role kierownicze (Mintzberg) | pojęcie | było | Role kierownicze (H. Mintzberg) | 0 | podręcznik |
+| Umiejętności kierownicze (Katz, Griffin) | pojęcie | było | Umiejętności kierownicze (R. Katz) | 0 | podręcznik |
+| Szklany sufit | pojęcie | było | Szklany sufit | 0 | podręcznik |
+
+### Rozdz. 2. Tradycyjne i współczesne problemy i wyzwania
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Naukowe zarządzanie (Taylor) | pojęcie | było | Naukowe zarządzanie (F.W. Taylor) | 0 | podręcznik |
+| Zarządzanie administracyjne (Fayol, Weber) | pojęcie | było | Zarządzanie administracyjne (teoria administracji); Biurokracja (M. Weber) | 0 | podręcznik |
+| Kierunek behawiorystyczny, Hawthorne, Follett | pojęcie | było | Podejście behawiorystyczne (szkoła stosunków międzyludzkich) | 0 | podręcznik |
+| Teoria X i Y | pojęcie | było | Teoria X i teoria Y (D. McGregor) | 0 | podręcznik |
+| Ilościowe podejście (badania operacyjne, zarządzanie operacyjne) | pojęcie | było | Zarządzanie operacyjne (produkcją) | 0 | podręcznik |
+| Podejście systemowe i sytuacyjne | pojęcie | było | Podejście systemowe; Podejście sytuacyjne | 1 | podręcznik |
+
+### Rozdz. 3. Otoczenie organizacji i menedżerów
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Otoczenie ogólne, zadaniowe i środowisko wewnętrzne | pojęcie | było | Otoczenie organizacji | 0 | podręcznik |
+| Niepewność otoczenia (Thompson) | pojęcie | było | Niepewność otoczenia (J.D. Thompson) | 0 | podręcznik |
+| Pięć sił Portera | pojęcie | było | Pięć sił Portera | 0 | podręcznik |
+| Modele skuteczności organizacji | pojęcie | dodane | Modele skuteczności organizacji | 0 | OpenStax PoM 4.1; Wikipedia – Organizational effectiveness; Griffin rozdz. 3 |
+
+### Rozdz. 4. Etyczne i społeczne otoczenie organizacji
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Etyka biznesu i kodeksy etyczne | pojęcie | było | Etyka biznesu; Kodeks etyczny, sygnaliści i greenwashing | 0 | podręcznik |
+| Społeczna odpowiedzialność (postawy wobec CSR) | pojęcie | było | Społeczna odpowiedzialność biznesu (CSR) | 0 | podręcznik |
+| Interesariusze | pojęcie | było | Interesariusze (stakeholders) | 0 | podręcznik |
+| Lobbing (jak organizacje wpływają na rząd) | pojęcie | dodane | Lobbing | 0 | Ustawa z 7.07.2005 o działalności lobbingowej (ELI); Wikipedia (pl) – Lobbing; pytanie OWE XXIX (szkolny) |
+
+### Rozdz. 5. Globalny kontekst zarządzania
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Przedsiębiorstwo międzynarodowe, internacjonalizacja | pojęcie | było | Przedsiębiorczość międzynarodowa i modele internacjonalizacji | 0 | podręcznik |
+| Globalizacja | pojęcie | było | Globalizacja | 0 | podręcznik |
+| Wymiary kultury Hofstede | pojęcie | było | Hofstede Geert | 0 | podręcznik |
+
+### Rozdz. 6. Otoczenie kulturowe i wielokulturowe
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Kultura organizacyjna (Schein) | pojęcie | było | Kultura organizacyjna | 0 | podręcznik |
+| Różnorodność i wielokulturowość | pojęcie | było | Różnorodność i wielokulturowość w organizacji | 0 | podręcznik |
+
+### Rozdz. 7. Podstawowe elementy planowania i podejmowania decyzji
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Misja i cele, cele SMART | pojęcie | było | Misja i wizja; Cele SMART | 0 | podręcznik |
+| Rodzaje planów: strategiczne, taktyczne, operacyjne; jednorazowe i ciągłe | pojęcie | było | Planowanie | 0 | podręcznik |
+| Planowanie awaryjne | pojęcie | dodane | Planowanie awaryjne i zarządzanie kryzysowe | 0 | Wikipedia – Contingency plan; Griffin rozdz. 7; pytania OWE o zarządzanie kryzysowe |
+| Zarządzanie przez cele (MBO) | pojęcie | było | Zarządzanie przez cele (MBO) | 2 | podręcznik |
+
+### Rozdz. 8. Zarządzanie strategią i planowanie strategiczne
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Strategia i zarządzanie strategiczne | pojęcie | było | Strategia; Zarządzanie strategiczne i analiza strategiczna | 0 | podręcznik |
+| Analiza SWOT | pojęcie | było | Analiza SWOT | 7 | podręcznik |
+| Kompetencje wyróżniające | pojęcie | było | Kompetencje wyróżniające (kluczowe) | 0 | podręcznik |
+| Strategie Portera | pojęcie | było | Strategie konkurencji Portera | 0 | podręcznik |
+| Typologia Milesa i Snowa | pojęcie | było | Typologia strategii Milesa i Snowa | 7 | podręcznik |
+| Strategia a cykl życia produktu | pojęcie | było | Cykl życia produktu | 1 | podręcznik |
+| Dywersyfikacja zależna i niezależna | pojęcie | było | Dywersyfikacja portfela; Dywersyfikacja | 0 | podręcznik |
+| Macierz BCG i GE | pojęcie | było | Macierz BCG; Macierz GE (McKinseya) | 1 | podręcznik |
+
+### Rozdz. 9. Zarządzanie podejmowaniem decyzji i rozwiązywaniem problemów
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Decyzje zaprogramowane i niezaprogramowane | pojęcie | było | Decyzje zaprogramowane i niezaprogramowane | 2 | podręcznik |
+| Warunki decyzji (pewność, ryzyko, niepewność); model racjonalny | pojęcie | było | Podejmowanie decyzji | 0 | podręcznik |
+| Model administracyjny (Simon) | pojęcie | było | Model administracyjny decyzji (H. Simon) | 0 | podręcznik |
+| Intuicja | pojęcie | było | Intuicja w podejmowaniu decyzji | 0 | podręcznik |
+| Narastanie (eskalacja) zaangażowania | pojęcie | było | Eskalacja zaangażowania (narastanie zaangażowania) | 0 | podręcznik |
+| Myślenie grupowe | pojęcie | było | Myślenie grupowe (groupthink) | 0 | podręcznik |
+| Metody grupowe (burza mózgów, delficka, grupa nominalna) | pojęcie | było | Metody twórczego rozwiązywania problemów | 0 | podręcznik |
+
+### Rozdz. 10. Zarządzanie przedsiębiorczością i tworzeniem nowych przedsiębiorstw
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Przedsiębiorczość | pojęcie | było | Przedsiębiorczość | 0 | podręcznik |
+| Innowacja | pojęcie | było | Innowacja | 0 | podręcznik |
+| Biznesplan | pojęcie | było | Biznesplan | 0 | podręcznik |
+| Franczyza | pojęcie | było | Franczyza (franchising) | 3 | podręcznik |
+| Start-up, inkubator | pojęcie | było | Start-up i inkubator | 0 | podręcznik |
+
+### Rozdz. 11. Podstawowe elementy organizowania
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Projektowanie stanowisk (rotacja, rozszerzanie, wzbogacanie) | pojęcie | było | Projektowanie stanowisk pracy | 0 | podręcznik |
+| Grupowanie stanowisk (departamentalizacja) | pojęcie | było | Grupowanie stanowisk (departamentalizacja) | 0 | podręcznik |
+| Rozpiętość kierowania; organizacje smukłe i płaskie | pojęcie | było | Rozpiętość kierowania | 1 | podręcznik |
+| Delegowanie, centralizacja i decentralizacja | pojęcie | było | Centralizacja i decentralizacja; Delegowanie uprawnień | 0 | podręcznik |
+| Stanowiska liniowe i sztabowe | pojęcie | w definicji | w: Typy struktur organizacyjnych | 1 |  |
+
+### Rozdz. 12. Zarządzanie projektowaniem struktury i schematu organizacji
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Model biurokratyczny i behawioralny (Likert) | pojęcie | było | Biurokracja (M. Weber); Systemy zarządzania R. Likerta | 0 | podręcznik |
+| Technologia a struktura (Woodward) | pojęcie | było | Technologia a struktura (J. Woodward) | 0 | podręcznik |
+| Organizacja mechanistyczna i organiczna | pojęcie | było | Organizacja mechanistyczna i organiczna | 0 | podręcznik |
+| Cykl życia organizacji | pojęcie | dodane | Cykl życia organizacji | 0 | Wikipedia – Organizational life cycle; OpenStax PoM 10.2 |
+| Struktury U, H, M, macierzowa, hybrydowe | pojęcie | było | Typy struktur organizacyjnych | 0 | podręcznik |
+| Organizacja ucząca się, wirtualna, zespołowa | pojęcie | było | Organizacja ucząca się | 2 | podręcznik |
+
+### Rozdz. 13. Kierowanie zmianami organizacyjnymi i innowacjami
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Zmiana i opór wobec zmian (Lewin) | pojęcie | było | Zarządzanie zmianą (K. Lewin) | 0 | podręcznik |
+| Reengineering | pojęcie | było | Reengineering (BPR) | 0 | podręcznik |
+| Doskonalenie organizacji (OD) | pojęcie | dodane | Doskonalenie organizacji (OD) | 0 | Wikipedia – Organization development; OpenStax PoM 10.2–10.3 |
+| Proces i formy innowacji | pojęcie | było | Rodzaje innowacji; Dyfuzja innowacji | 0 | podręcznik |
+
+### Rozdz. 14. Zarządzanie zasobami ludzkimi
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| HRM: planowanie, rekrutacja, dobór, szkolenie, ocena, wynagrodzenia | pojęcie | było | Zarządzanie zasobami ludzkimi (HRM) | 0 | podręcznik |
+| Systemy wynagrodzeń i świadczeń | pojęcie | było | Systemy motywacyjne i wynagrodzeń | 0 | podręcznik |
+| Związki zawodowe i negocjacje zbiorowe | pojęcie | było | Związki zawodowe a rynek pracy | 0 | podręcznik |
+
+### Rozdz. 15. Podstawowe elementy zachowania jednostek w organizacjach
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Kontrakt psychologiczny i dopasowanie do stanowiska | pojęcie | dodane | Kontrakt psychologiczny i dopasowanie osoby do stanowiska | 0 | D. Rousseau 1989 (DOI 10.1007/bf01384942); Wikipedia – Psychological contract |
+| Wielka piątka i inne cechy osobowości | pojęcie | było | Wielka piątka (cechy osobowości); Cechy osobowości w organizacji | 0 | podręcznik |
+| Percepcja i atrybucja | pojęcie | było | Percepcja i błędy percepcji | 0 | podręcznik |
+| Stres (Selye), osobowość typu A i B | pojęcie | było | Stres w pracy | 0 | podręcznik |
+| Kreatywność | pojęcie | w definicji | w: Różnorodność i wielokulturowość w organizacji | 8 |  |
+| Typy zachowań w pracy (produktywne, wycofania, obywatelskie) | pojęcie | dodane | Zachowania w miejscu pracy | 0 | Wikipedia – Organizational citizenship behavior; OpenStax OB; Griffin rozdz. 15 |
+
+### Rozdz. 16. Motywowanie pracowników do wykonywania pracy
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Teorie treści: Maslow, Herzberg, ERG, McClelland | pojęcie | było | Hierarchia potrzeb Maslowa; Teoria ERG (C. Alderfer) | 3 | podręcznik |
+| Teorie procesu: oczekiwań (Vroom), sprawiedliwości (Adams) | pojęcie | było | Teoria oczekiwań (V. Vroom); Teoria sprawiedliwości (J.S. Adams) | 0 | podręcznik |
+| Teoria wyznaczania celów (Locke) | pojęcie | dodane | Teoria wyznaczania celów (E. Locke) | 0 | E. Locke 1968 (DOI 10.1016/0030-5073(68)90004-4); OpenStax PoM 14.3 |
+| Teoria wzmocnienia (Skinner) | pojęcie | dodane | Teoria wzmocnienia (B.F. Skinner) | 0 | OpenStax PoM 14.3; Wikipedia – Operant conditioning |
+| Upełnomocnienie i uczestnictwo | pojęcie | dodane | Upełnomocnienie (empowerment) | 0 | Wikipedia – Empowerment; OpenStax PoM 17.8 |
+| Edwin Locke | osoba | dodane | Locke Edwin | 0 | Crossref (Locke 1968); OpenStax PoM 14.3 |
+| B.F. Skinner | osoba | dodane | Skinner Burrhus F. | 0 | Wikipedia – Operant conditioning; OpenStax PoM 14.3 |
+
+### Rozdz. 17. Przywództwo i procesy oddziaływania na pracowników
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Przywództwo i źródła władzy (French i Raven) | pojęcie | było | Przywództwo | 0 | podręcznik |
+| John French i Bertram Raven | osoba | dodane | French John i Raven Bertram | 0 | Wikipedia – French and Raven's bases of power; Griffin rozdz. 17 |
+| Teorie cech przywódczych | pojęcie | było | Teorie cech przywódczych | 0 | podręcznik |
+| Badania z Michigan i Ohio | pojęcie | dodane | Badania przywództwa z Michigan i Ohio | 0 | OpenStax PoM 13.5; Wikipedia – Leadership (Ohio State, University of Michigan) |
+| Siatka przywództwa (Blake i Mouton) | pojęcie | było | Siatka kierownicza (Blake i Mouton) | 0 | podręcznik |
+| Fiedler (NPW/LPC), ścieżka do celu, Vroom–Yetton–Jago, Hersey–Blanchard | pojęcie | było | Model LPC F. Fiedlera; Teoria ścieżki do celu (R. House) | 6 | podręcznik |
+| Substytuty przywództwa | pojęcie | dodane | Substytuty przywództwa (Kerr i Jermier) | 0 | S. Kerr, J. Jermier 1978 (DOI 10.1016/0030-5073(78)90023-5); OpenStax PoM 13.6 |
+| Przywództwo charyzmatyczne i transformacyjne | pojęcie | było | Przywództwo transformacyjne i charyzmatyczne | 0 | podręcznik |
+| Zachowania polityczne w organizacjach | pojęcie | pominięte | – | 0 | brak w pytaniach OWE; temat opisowy, bez stałych pojęć do zapamiętania |
+
+### Rozdz. 18. Zarządzanie stosunkami interpersonalnymi i komunikowaniem się
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Proces i formy komunikowania się, poczta pantoflowa | pojęcie | było | Komunikacja w organizacji | 0 | podręcznik |
+| Sieci komunikacyjne w zespołach | pojęcie | było | Sieci komunikacyjne w małych grupach | 0 | podręcznik |
+| Komunikacja interpersonalna i pozawerbalna | pojęcie | było | Komunikacja interpersonalna – umiejętności | 0 | podręcznik |
+| Zarządzanie przez krążenie po firmie (MBWA) | pojęcie | pominięte | – | 1 | brak w pytaniach OWE; pojedyncza technika, wzmianka w lekcji o komunikacji |
+
+### Rozdz. 19. Zarządzanie grupami i zespołami roboczymi
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Grupy i zespoły, etapy (Tuckman) | pojęcie | było | Grupy i zespoły | 0 | podręcznik |
+| Role w zespole (Belbin) | pojęcie | było | Role zespołowe Belbina i team building | 0 | podręcznik |
+| Normy i spójność grupy | pojęcie | dodane | Normy i spójność grupy | 0 | Wikipedia – Group cohesiveness; OpenStax PoM 15.3 |
+| Konflikt (przyczyny, pobudzanie, rozwiązywanie) | pojęcie | było | Konflikt w organizacji | 0 | podręcznik |
+
+### Rozdz. 20. Podstawowe elementy kontrolowania
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Typy kontroli i etapy procesu kontrolowania | pojęcie | było | Kontrolowanie | 0 | podręcznik |
+| Kontrola budżetowa | pojęcie | dodane | Kontrola budżetowa | 0 | OpenStax Managerial Accounting 7.1; Griffin rozdz. 20 |
+| Kontrola biurokratyczna i z udziałem pracowników | pojęcie | dodane | Kontrola biurokratyczna i kontrola z udziałem pracowników | 1 | OpenStax PoM 17.8; Griffin rozdz. 20 |
+| Zrównoważona karta wyników | pojęcie | było | Zrównoważona karta wyników (BSC) | 1 | podręcznik |
+
+### Rozdz. 21. Kompleksowe zarządzanie jakością w organizacjach
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| TQM (Deming, Juran, Crosby) | pojęcie | było | Zarządzanie jakością (TQM) | 0 | podręcznik |
+| Joseph Juran | osoba | dodane | Juran Joseph | 0 | Wikipedia – Joseph M. Juran; definicja TQM w słowniku |
+| Philip Crosby | osoba | dodane | Crosby Philip | 0 | Wikipedia – Philip B. Crosby; definicja TQM w słowniku |
+| Narzędzia jakości, Six Sigma, ISO 9000 | pojęcie | było | Normy ISO 9001 i HACCP; Six Sigma | 2 | podręcznik |
+| Wydajność (produktywność) | pojęcie | było | Wydajność pracy (produkcyjność) i jej czynniki | 0 | podręcznik |
+| Zarządzanie operacyjne, zakupy i zapasy | pojęcie | było | Zarządzanie operacyjne (produkcją); Zarządzanie zapasami | 0 | podręcznik |
+| JIT i lean | pojęcie | było | Just in time (JIT) i lean management | 3 | podręcznik |
+
+### Rozdz. 22. Zarządzanie informacjami i techniką informacyjną
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Systemy informacyjne: TPS, SIK (MIS), DSS, EIS, eksperckie, intranet | pojęcie | było | Systemy informatyczne zarządzania; Technologie informacyjne w zarządzaniu | 0 | podręcznik |
+
+### Dodatek. Narzędzia planowania i podejmowania decyzji
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Prognozowanie (sprzedaży, techniki; metody) | pojęcie | dodane | Metody prognozowania | 0 | Wikipedia – Delphi method; Wikipedia – Forecasting |
+| Programowanie liniowe, symulacja, PERT | pojęcie | dodane | Techniki planistyczne: PERT/CPM, programowanie liniowe, symulacja | 0 | Wikipedia – PERT (1958, Polaris); Wikipedia – Linear programming; Wikipedia – Critical path method |
+| Analiza punktu krytycznego (próg rentowności) | pojęcie | było | Próg rentowności (BEP); Próg rentowności – wzór | 6 | podręcznik |
+| Macierze wypłat i drzewa decyzyjne | pojęcie | dodane | Macierz wypłat i drzewo decyzyjne | 0 | Wikipedia – Decision tree; Wikipedia – Payoff matrix (normal form) |
+| Wartość oczekiwana | pojęcie | było | Ryzyko, niepewność i wartość oczekiwana | 0 | podręcznik |
