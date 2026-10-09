@@ -14,7 +14,8 @@ Kolumna „Pytania OWE” podaje liczbę pytań z XXI–XXXIX OWE, w których po
 **Podstawa zakresu:** „Literatura i źródła wiedzy zalecane w przygotowaniach do XXXIX Olimpiady Wiedzy Ekonomicznej”
 (PTE, wrzesień 2025: https://pte.lodz.pl/wp-content/uploads/2025/09/Literatura-XXXIX.pdf). Literatura podstawowa obejmuje:
 - N.G. Mankiw, M.P. Taylor, „Mikroekonomia” i „Makroekonomia” (PWE);
-- S. Owsiak, „Finanse” (PWE 2015).
+- S. Owsiak, „Finanse” (PWE 2015);
+- W. Gabrusewicz, „Metody analizy finansowej przedsiębiorstw” (PWE 2019).
 
 **Podsumowanie (stan na 8.10.2026)**
 
@@ -23,9 +24,10 @@ Kolumna „Pytania OWE” podaje liczbę pytań z XXI–XXXIX OWE, w których po
 | Mankiw, Taylor – „Mikroekonomia” | 1–22 | 180 | 163 | 12 | 5 |
 | Mankiw, Taylor – „Makroekonomia” | 1–15 | 155 | 146 | 8 | 1 |
 | Owsiak – „Finanse” | 2–16 | 156 | 118 | 36 | 2 |
+| Gabrusewicz – „Metody analizy finansowej przedsiębiorstw” | 1–11 | 38 | 23 | 14 | 1 |
 
 Wcześniejsze uzupełnienia według samych tytułów podrozdziałów (47 haseł Mikro i 25 Makro) mają w mapie status „było”.
-Każde hasło pojęciowe tematów Mikroekonomia, Makroekonomia, Polityka gospodarcza i Finanse ma lekcję „Zrozumienie”.
+Każde hasło pojęciowe tematów Mikroekonomia, Makroekonomia, Polityka gospodarcza, Finanse i Firma ma lekcję „Zrozumienie”.
 
 ## Mikroekonomia – N.G. Mankiw, M.P. Taylor (rozdz. 1–22)
 
@@ -783,3 +785,98 @@ Każde hasło pojęciowe tematów Mikroekonomia, Makroekonomia, Polityka gospoda
 | Bilans płatniczy | pojęcie | było | Bilans płatniczy | 1 | podręcznik |
 | Zadłużenie zagraniczne, MPIN | pojęcie | było | Zadłużenie zagraniczne; Międzynarodowa pozycja inwestycyjna netto (MPIN) | 1 | podręcznik |
 | Podatek od gier i tonażowy | pojęcie | było | Podatek od gier i podatek tonażowy | 5 | podręcznik |
+
+## Analiza finansowa – W. Gabrusewicz, „Metody analizy finansowej przedsiębiorstw” (PWE 2019) (rozdz. 1–11)
+
+### Rozdz. 1. Istota i rola analizy finansowej
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Analiza finansowa – istota, rodzaje | pojęcie | dodane | Analiza finansowa – istota, przedmiot i rodzaje | 0 | M. Wypych, analiza czynnikowa (DBC); lista literatury XXXIX OWE (Gabrusewicz, rozdz. 1) |
+| Materiały źródłowe analizy | pojęcie | dodane | Materiały źródłowe analizy finansowej | 0 | ustawa o rachunkowości (warianty RZiS) – zob. hasło Rachunek zysków i strat; OpenStax Principles of Accounting 16.5 |
+| Sprawozdanie finansowe, bilans, RZiS, przepływy | pojęcie | było | Bilans banku centralnego; Bilans płatniczy | 4 | podręcznik |
+
+### Rozdz. 2. Metody analizy finansowej
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Metody porównań | pojęcie | dodane | Metody porównań w analizie finansowej | 0 | Gabrusewicz, rozdz. 2.5 (spis treści); Krajewski, „Ocena efektywności kosztów” (DBC) |
+| Metody deterministyczne (kolejnych podstawień, różnic cząstkowych) | pojęcie | dodane | Metody deterministyczne (kolejnych podstawień, różnic cząstkowych) | 0 | M. Wypych, „Analiza czynnikowa rentowności” (DBC); Zeszyty Naukowe SGGW (EIOGZ) – metody analizy czynnikowej |
+| Metoda kolejnych podstawień – wzór | wzór | dodane | Metoda kolejnych podstawień – wzór | 0 | jw. |
+| Metody stochastyczne | pojęcie | dodane | Metody stochastyczne w analizie finansowej | 0 | Gabrusewicz, rozdz. 2.7 (spis treści); OpenStax Introductory Statistics (korelacja, regresja) |
+| Analiza pozioma i pionowa | pojęcie | było | Analiza pozioma i pionowa (wstępna analiza sprawozdań) | 0 | podręcznik |
+| Model Du Ponta | model | dodane | Model Du Ponta (piramida wskaźników) | 1 | Wikipedia – DuPont analysis; Hagley Museum – Donaldson Brown, „The Father of ROI” |
+
+### Rozdz. 3. Sytuacja majątkowa
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Aktywa trwałe i obrotowe | pojęcie | było | Aktywa trwałe i obrotowe | 0 | podręcznik |
+| Struktura majątku, stan i odnowa, wykorzystanie maszyn | pojęcie | było | Struktura majątku (aktywów) – wskaźniki; Stan i odnowa środków trwałych – wskaźniki | 0 | podręcznik |
+| Zapasy i należności | pojęcie | było | Zapasy i należności – wskaźniki szczegółowe | 0 | podręcznik |
+
+### Rozdz. 4. Sytuacja kapitałowa
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Kapitał własny i obcy, stały i obrotowy netto | pojęcie | było | Pasywa: kapitał własny i zobowiązania; Kapitał stały i obrotowy netto | 19 | podręcznik |
+| Złota reguła bilansowa i finansowa | pojęcie | było | Złota reguła bilansowa; Złota reguła finansowania (bankowa) | 2 | podręcznik |
+| Dźwignia finansowa | pojęcie | było | Dźwignia operacyjna i finansowa (DOL, DFL) | 0 | podręcznik |
+
+### Rozdz. 5. Analiza sprzedaży
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Analiza sprzedaży | pojęcie | dodane | Analiza sprzedaży (wielkość, dynamika, struktura, opłacalność) | 0 | Gabrusewicz, rozdz. 5 (spis treści); GUS – metodologia indeksów dynamiki |
+| Indeksy dynamiki – wzory | wzór | dodane | Indeksy dynamiki – wzory | 0 | GUS – pojęcia (indeksy jednopodstawowe i łańcuchowe); podręczniki statystyki (średnie tempo – średnia geometryczna) |
+| Zarządzanie zapasami (ABC) | pojęcie | było | Zarządzanie zapasami | 1 | podręcznik |
+
+### Rozdz. 6. Analiza kosztów
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Koszty według rodzajów | pojęcie | było | Koszty według rodzajów | 0 | podręcznik |
+| Koszty bezpośrednie i pośrednie, stałe i zmienne | pojęcie | było | Koszty stałe (FC); Koszty bezpośrednie i pośrednie | 21 | podręcznik |
+| Wskaźnik poziomu kosztów | pojęcie | dodane | Wskaźnik poziomu kosztów | 0 | GUS – Wyniki finansowe przedsiębiorstw niefinansowych; Krajewski, „Ocena efektywności kosztów” (DBC) |
+
+### Rozdz. 7. Analiza zysku
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Wynik finansowy – poziomy | pojęcie | było | Wynik finansowy – poziomy | 0 | podręcznik |
+| Marża pokrycia | pojęcie | dodane | Marża pokrycia (marża brutto) | 0 | Kujawski, „Koncepcja rachunku marż” (DBC); KMU (admin.ch) – variable cost margin |
+| Próg rentowności | pojęcie | było | Próg rentowności (BEP); Próg rentowności – wzór | 6 | podręcznik |
+| Rachunek kosztów pełnych i zmiennych | pojęcie | było | Rachunek kosztów pełnych i zmiennych | 0 | podręcznik |
+
+### Rozdz. 8. Analiza rentowności
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| ROS, ROA, ROE | pojęcie | było | Wskaźniki rentowności (ROA, ROE, ROS) | 0 | podręcznik |
+| Rentowność – wzory (Du Pont) | wzór | było | Rentowność – wzory | 0 | podręcznik |
+| Wskaźniki rynku kapitałowego | pojęcie | było | Wskaźniki giełdowe – wzory | 0 | podręcznik |
+
+### Rozdz. 9. Płynność finansowa
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Wskaźniki płynności (statyczne) | pojęcie | było | Wskaźniki płynności | 0 | podręcznik |
+| Wskaźniki wydajności gotówkowej (płynność dynamiczna) | pojęcie | dodane | Wskaźniki wydajności gotówkowej (dynamiczna analiza płynności) | 0 | J. Nowicki, „Rentowność czy wydajność gotówkowa” (UE Poznań); Politechnika Gdańska – kształtowanie płynności |
+
+### Rozdz. 10. Sprawność działania
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Wskaźniki rotacji | pojęcie | było | Wskaźniki rotacji (sprawności) | 0 | podręcznik |
+| Cykl konwersji gotówki | pojęcie | było | Cykl operacyjny i cykl konwersji gotówki | 1 | podręcznik |
+
+### Rozdz. 11. Zadłużenie
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Wskaźniki zadłużenia | pojęcie | było | Wskaźniki zadłużenia | 0 | podręcznik |
+| Wskaźnik pokrycia odsetek (TIE) | pojęcie | dodane | Wskaźnik pokrycia odsetek (TIE) | 0 | Wikipedia – Times interest earned; Biznesradar – wskaźnik pokrycia odsetek |
+| Wskaźniki obsługi zadłużenia (TIE, DSCR) | wzór | dodane | Wskaźniki obsługi zadłużenia – wzory | 0 | jw.; zob. hasło „Wskaźnik pokrycia długu nadwyżką finansową” |
+| Modele wczesnego ostrzegania, Z-score Altmana | pojęcie | było | Modele wczesnego ostrzegania przed upadłością; Z-score Altmana – wzór | 0 | podręcznik |
+| Edward Altman | osoba | było | Altman Edward | 0 | podręcznik |
+| Walter Gabrusewicz | osoba | pominięte | – | 0 | autor podręcznika; brak w pytaniach OWE |
