@@ -123,7 +123,7 @@ class Matcher:
         """{'stem': set, 'opts': [set...], 'main': set, 'all': set} – id haseł."""
         stem = self.find(q["question"])
         # odpowiedź będąca samym nazwiskiem (np. „Henri Fayol”) dotyczy osoby, nie jej koncepcji
-        name = lambda o: len(o.split()) <= 4 and all(w[:1].isupper() for w in o.split())
+        name = lambda o: len(o.split()) <= 4 and all(w[:1].isupper() or w in ("von", "van", "de", "der", "la") for w in o.split())
         opts = [self.find(o, prefer_person=name(o)) for o in q["options"]]
         allc = stem.union(*opts)
         main = stem.union(*(opts[k] for k in q["correct"] if k < len(opts)))
