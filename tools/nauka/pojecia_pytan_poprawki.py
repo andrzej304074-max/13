@@ -919,3 +919,48 @@ fix("owe36-s-21", dele=["Pożyczka a kredyt"], add=["Dług publiczny"])
 fix("owe36-s-22", add=["Punkt procentowy a procent"])
 fix("owe36-s-24", add=["1973 – model Blacka–Scholesa i pierwszy szok naftowy"])
 fix("owe36-s-25", add=["Deficyt pierwotny"])
+
+
+# ── XXXVII OWE, etap centralny ──
+drop("Teoria oczekiwań (V. Vroom)", "oczekiwań")
+rx("Teoria oczekiwań (V. Vroom)", B + r"teori\w* oczekiwań(?=[^.?]*motyw)", B + r"motyw\w*[^.?]*teori\w* oczekiwań", B + r"oczekiwań vrooma")
+rx("Oczekiwania adaptacyjne i racjonalne", B + r"adaptacyjn\w* charakter\w* oczekiwań")
+rx("Funkcja Cobba-Douglasa", B + r"cobb\w*[-–]douglas")
+fix("owe37-c-03", add=["Oczekiwania adaptacyjne i racjonalne"])
+fix("owe37-c-04", add=["Krzywa dochodowości"])
+fix("owe37-c-06", dele=["Wartość pieniądza w czasie"], add=["Bony pieniężne NBP"])
+fix("owe37-c-08", add=["Bony skarbowe"])
+fix("owe37-c-16", dele=["Światowa Organizacja Handlu", "Kapitał jako czynnik produkcji i stopa zwrotu"])
+fix("owe37-c-28", dele=["Ryzyko, niepewność i wartość oczekiwana"])
+fix("owe37-c-30", dele=["Hierarchia potrzeb Maslowa"], add=["Maslow Abraham"])
+NO_TITLE.add("Teoria oczekiwań (V. Vroom)")
+
+
+# ── XXXVII OWE, etap okręgowy ──
+rx("Złota reguła bilansowa", B + r"złot\w* zasad\w* bilansow")
+rx("Percepcja i błędy percepcji", B + r"błęd\w* aureoli", B + r"błąd aureoli")
+rx("Deficyt strukturalny i cykliczny", B + r"sald\w* (?:cykliczn|strukturaln)")
+fix("owe37-o-02", add=["Cykl koniunkturalny"])
+fix("owe37-o-05", dele=["Warunek Marshalla–Lernera i krzywa J"], add=["Lerner Abba", "Dochody i wydatki budżetu państwa"])
+fix("owe37-o-09", dele=["Rachunek kosztów działań"], add=["Model Gordona (wycena akcji)"])
+fix("owe37-o-12", add=["Bitcoin i halving"])
+fix("owe37-o-13", add=["Monetaryzm"])
+fix("owe37-o-16", add=["Konkurencja doskonała"])
+fix("owe37-o-25", add=["Wartość dodana"])
+fix("owe37-o-26", add=["Typy struktur organizacyjnych"])
+fix("owe37-o-30", dele=["Strategie konkurencji Portera"])
+fix("owe37-o-28", add=["Zarządzanie zasobami ludzkimi (HRM)"])
+
+
+# ── XXXVII OWE, etap szkolny ──
+drop("Wskaźniki rotacji (sprawności)", "rotacj")
+rx("Wskaźniki rotacji (sprawności)", B + r"wskaźnik\w* rotacji", B + r"rotacj\w* (?:zapas|należnoś|zobowiąz|aktyw)", B + r"(?:obrot|spłaty|inkasa)\w* (?:zapas|należnoś|zobowiąz)\w* w dniach")
+rx("Reguły podatkowe A. Smitha", B + r"zasad\w* podatkow\w* a\. smitha")
+fix("owe37-s-02", add=["Wskaźniki rotacji (sprawności)"])
+fix("owe37-s-03", add=["Luka inflacyjna i deflacyjna (recesyjna)", "Polityka fiskalna (budżetowa)"])
+fix("owe37-s-07", add=["Polityka fiskalna (budżetowa)"])
+fix("owe37-s-08", add=["Bezrobocie cykliczne (koniunkturalne, keynesowskie)", "Naturalna stopa bezrobocia"], dele=["Keynesizm"])
+fix("owe37-s-10", dele=["Struktura instytucjonalna i zasady funkcjonowania UE"], add=["Reguły podatkowe A. Smitha"])
+fix("owe37-s-15", add=["Bilans"])
+fix("owe37-s-23", add=["Należności i zobowiązania"])
+fix("owe37-s-27", add=["Planowanie"])
