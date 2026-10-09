@@ -853,3 +853,43 @@ fix("owe34-s-20", dele=["Histereza bezrobocia"])
 fix("owe34-s-21", add=["Szok podażowy i popytowy"], dele=["Popyt", "Podaż"])
 fix("owe34-s-25", add=["Elastyczność cenowa popytu"])
 fix("owe34-s-30", add=["Ford Henry"], dele=["Przemysł 4.0"])
+
+
+# ── XXXV OWE, etap centralny ──
+drop("Teoria cyklu życia (Hersey i Blanchard)", "teori cyklu życia", "teoria cyklu życia")
+rx("Teoria cyklu życia (Hersey i Blanchard)", B + r"teori\w* cyklu życia(?! produkt)")
+rx("Naukowe zarządzanie (F.W. Taylor)", B + r"zarządzani\w* naukow")
+fix("owe35-c-17", add=["Prawo poboru"])
+fix("owe35-c-19", dele=["Hipoteza cyklu życia"], add=["Struktura kapitału i teorie jej wyboru"])
+fix("owe35-c-27", dele=["Szkoła klasyczna"])
+fix("owe35-c-28", dele=["Grupy i zespoły"])
+fix("owe35-c-29", add=["Emerson Harrington", "Teoria oczekiwań (V. Vroom)"], dele=["Naukowe zarządzanie (F.W. Taylor)"])
+
+
+# ── XXXV OWE, etap okręgowy ──
+rx("Elastyczność mieszana (krzyżowa) popytu", B + r"mieszan\w* elastycznoś", B + r"krzyżow\w* elastycznoś")
+rx("Hipoteza rynku efektywnego", B + r"rynk\w* efektywn")
+rx("Zarządzanie zapasami", B + r"koszt\w* (?:utrzymania|realizacji|składania|magazynowania) (?:zapas|zamówie|dostaw)")
+fix("owe35-o-01", add=["Stopy procentowe NBP"], dele=["Weksel"])
+fix("owe35-o-04", add=["Zagregowana podaż (AS)", "Inflacja"])
+fix("owe35-o-08", add=["Indeksy GPW – zestaw"])
+fix("owe35-o-09", add=["Bezrobocie cykliczne (koniunkturalne, keynesowskie)"], dele=["Keynesizm"])
+fix("owe35-o-15", add=["Rynek pierwotny i wtórny", "Rynek pieniężny"])
+fix("owe35-o-26", add=["Teoria cyklu życia (Hersey i Blanchard)"], dele=["Teoria oczekiwań (V. Vroom)"])
+fix("owe35-o-28", add=["McGregor Douglas", "Podejście behawiorystyczne"])
+fix("owe35-o-29", add=["Taylor Frederick Winslow", "Naukowe zarządzanie (F.W. Taylor)"])
+fix("owe35-o-30", add=["Gantt Henry"])
+
+
+# ── XXXV OWE, etap szkolny ──
+drop("Metody twórczego rozwiązywania problemów", "kapelusz")
+rx("Metody twórczego rozwiązywania problemów", B + r"sześci\w* (?:myślow\w* )?kapelusz", B + r"kapelusz\w* (?:myślow|de bono)")
+rx("Hierarchia potrzeb Maslowa", B + r"potrzeb\w* (?:fizjologiczn|bezpieczeństwa|szacunku|uznania)")
+rx("Hipoteza rynku efektywnego", B + r"efektywnoś\w* informacyjn")
+fix("owe35-s-05", add=["Długookresowa krzywa podaży gałęzi", "Konkurencja doskonała"])
+fix("owe35-s-07", add=["Bezrobocie strukturalne", "Bezrobocie cykliczne (koniunkturalne, keynesowskie)", "Naturalna stopa bezrobocia"], dele=["Keynesizm"])
+fix("owe35-s-11", add=["Dług publiczny", "Inflacja oczekiwana i nieoczekiwana", "Deflacja i dezinflacja"])
+fix("owe35-s-12", add=["Wykluczalność i rywalizacyjność (klasyfikacja dóbr)"])
+fix("owe35-s-15", add=["Wskaźniki rentowności (ROA, ROE, ROS)"])
+fix("owe35-s-22", add=["Wynik finansowy – poziomy"])
+fix("owe35-s-28", add=["Technologie informacyjne w zarządzaniu"], dele=["Ekonomia"])
