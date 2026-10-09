@@ -893,3 +893,29 @@ fix("owe35-s-12", add=["Wykluczalność i rywalizacyjność (klasyfikacja dóbr)
 fix("owe35-s-15", add=["Wskaźniki rentowności (ROA, ROE, ROS)"])
 fix("owe35-s-22", add=["Wynik finansowy – poziomy"])
 fix("owe35-s-28", add=["Technologie informacyjne w zarządzaniu"], dele=["Ekonomia"])
+
+
+# ── XXXVI OWE, etap okręgowy ──
+rx("Elastyczność mieszana (krzyżowa) popytu", B + r"mieszan\w* cenow\w* elastycznoś")
+rx("Style kierowania: autokratyczny, demokratyczny, liberalny", B + r"ciągł\w* skal\w* zachowań")
+rx("Nowa ekonomia klasyczna (szkoła racjonalnych oczekiwań)", B + r"now\w* makroekonomi\w* klasyczn")
+fix("owe36-o-03", add=["Pułapka płynności"])
+fix("owe36-o-04", add=["Rada Polityki Pieniężnej"])
+fix("owe36-o-05", add=["Substytuty"])
+fix("owe36-o-14", dele=["Szkoła klasyczna", "Makroekonomia"], add=["Nowa ekonomia klasyczna (szkoła racjonalnych oczekiwań)"])
+fix("owe36-o-23", dele=["Rodzaje funduszy wg polityki"], add=["Rynek pieniężny"])
+fix("owe36-o-25", add=["Tannenbaum Robert, Schmidt Warren H.", "Taylor Frederick Winslow", "Gantt Henry"], dele=["Zarządzanie projektami"])
+fix("owe36-o-26", add=["Thompson James D."])
+fix("owe36-o-27", add=["Woodward Joan"])
+fix("owe36-o-28", add=["Weber Max"])
+
+
+# ── XXXVI OWE, etap szkolny ──
+rx("OPEC", B + r"szok\w* \(kryzys\w*\) naftow")
+fix("owe36-s-08", dele=["Ekonomia"])
+fix("owe36-s-12", add=["Bezrobocie strukturalne", "Bezrobocie cykliczne (koniunkturalne, keynesowskie)"], dele=["Popyt"])
+fix("owe36-s-18", add=["Monetaryzm", "Teoria ilościowa pieniądza"])
+fix("owe36-s-21", dele=["Pożyczka a kredyt"], add=["Dług publiczny"])
+fix("owe36-s-22", add=["Punkt procentowy a procent"])
+fix("owe36-s-24", add=["1973 – model Blacka–Scholesa i pierwszy szok naftowy"])
+fix("owe36-s-25", add=["Deficyt pierwotny"])
