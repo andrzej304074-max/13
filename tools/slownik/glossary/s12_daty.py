@@ -26,7 +26,7 @@ E = [
  ("1944 – konferencja w Bretton Woods", "System stałych kursów opartych na dolarze i złocie; powołanie MFW i Banku Światowego.", {"k": ["bretton woods"]}),
  ("1945 – Narodowy Bank Polski", "Utworzenie NBP (dekret z 15 stycznia 1945 r.).", {"k": ["narodowy bank polski"]}),
  ("1947 – GATT", "Układ ogólny w sprawie taryf celnych i handlu (Genewa); Polska w GATT od 1967 r.", {"k": ["gatt"]}),
- ("1951 – Europejska Wspólnota Węgla i Stali", "Traktat paryski – początek integracji europejskiej.", {"k": ["ewwis", "węgla i stali"]}),
+ ("1951 – Europejska Wspólnota Węgla i Stali", "Traktat paryski (podpisany 18 kwietnia 1951 r. przez Francję, RFN, Włochy i kraje Beneluksu) – początek integracji europejskiej; wspólnota zrealizowała plan (deklarację) R. Schumana z 9 maja 1950 r. o wspólnym zarządzaniu produkcją węgla i stali Francji i Niemiec (9 maja – Dzień Europy).", {"k": ["ewwis", "węgla i stali", "schuman", "traktat paryski", "traktatu paryskiego"]}),
  ("1957 – traktaty rzymskie", "Utworzenie Europejskiej Wspólnoty Gospodarczej (EWG) i Euratomu (weszły w życie 1958 r.).", {"k": ["rzymsk", "ewg"]}),
  ("1958 – krzywa Phillipsa", "A.W. Phillips publikuje badanie zależności płac i bezrobocia.", {"k": ["phillips"]}),
  ("1959 – teoria dwuczynnikowa F. Herzberga", "Publikacja „The Motivation to Work”.", {"k": ["herzberg"]}),

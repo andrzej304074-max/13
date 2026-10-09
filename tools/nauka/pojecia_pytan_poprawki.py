@@ -1060,3 +1060,8 @@ fix("owe39-s-11", add=["Krzywa Kuznetsa"], dele=["Cykle koniunkturalne – typy"
 fix("owe39-s-14", add=["Emisja banknotów i monet w Polsce"])
 fix("owe39-s-26", dele=["Ministerstwo Finansów", "Podatek"], add=["Grupy i zespoły"], main=["Metody twórczego rozwiązywania problemów"])
 fix("owe39-s-30", dele=["Badania marketingowe"])
+
+
+# ── nowe hasła (partia 1) ──
+rx("Krańcowa efektywność kapitału (Keynes)", B + r"krańcow\w* rentownoś\w* kapitał")
+fix("owe23-o-18", add=["Rekomendacja S (KNF)"])
