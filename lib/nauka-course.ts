@@ -28,11 +28,12 @@ export function unitsOf(topic: string): CourseUnit[] {
 
 /** Pula haseł do dystraktorów: reszta działu, potem hasła tego samego rodzaju i (dla wzorów) inne wzory w temacie. */
 function poolFor(lesson: CourseLesson): CourseItem[] {
-  const own = new Set(lesson.items);
+  const taught = [...lesson.items, ...(lesson.extra ?? [])];
+  const own = new Set(taught);
   const unit = getUnit(lesson.unit);
   const unitIds = (unit?.lessons ?? []).filter((l) => COURSE.lessons[l].type !== "zrozum").flatMap((l) => COURSE.lessons[l].items);
   const topicItems = Object.values(COURSE.items).filter((i) => i.topic === lesson.topic && i.kind !== "zrozumienie");
-  const lessonItems = lesson.items.map((i) => COURSE.items[i]);
+  const lessonItems = taught.map((i) => COURSE.items[i]);
   const kinds = new Set(lessonItems.map((i) => i.kind));
   const pick = (ids: CourseItem[], n: number) => shuffle(ids.filter((i) => !own.has(i.id))).slice(0, n);
   const out = new Map<string, CourseItem>();
@@ -72,6 +73,8 @@ export function lessonPayload(lessonId: string, sub: number): LessonPayload | nu
     topic,
     sub,
     items: lesson.items.map((i) => COURSE.items[i]),
+    extra: (lesson.extra ?? []).map((i) => COURSE.items[i]),
+    repeat: (lesson.review ?? []).map((i) => COURSE.items[i]),
     pool: poolFor(lesson),
     questions: sub === 4 ? shuffle(questions).slice(0, 10) : [],
   };

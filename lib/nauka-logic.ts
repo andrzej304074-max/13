@@ -107,7 +107,7 @@ export function computeXp(correct: boolean[], finished = true): number {
 /* ---------- generator ćwiczeń ---------- */
 
 export type Exercise =
-  | { type: "intro"; item: CourseItem }
+  | { type: "intro"; item: CourseItem; fromQuestions?: boolean }
   | { type: "wybor"; item: CourseItem; title: string; prompt: string; options: string[]; correct: number; long?: boolean }
   | { type: "wzor"; item: CourseItem; title: string; prompt: string; options: string[]; correct: number; long?: boolean }
   | { type: "prawda-falsz"; item: CourseItem; term?: string; statement: string; truth: boolean; trueDef: string; ctx?: string; stat?: ExerciseType }
@@ -259,10 +259,15 @@ export function buildExercises(p: LessonPayload, opts: BuildOptions = {}): Exerc
   const rnd = opts.rnd ?? Math.random;
   if (p.zrozum) return buildZrozum(p.zrozum.exercises, p.items[0], rnd);
   const level = opts.level ?? 0;
+  // hasła omawiane w lekcji: jej hasła i nowe hasła z jej pytań olimpijskich/słownikowych
+  const fromQ = new Set((p.extra ?? []).map((i) => i.id));
+  const taught = [...p.items, ...(p.extra ?? []).filter((i) => !p.items.some((o) => o.id === i.id))];
   // lekcja z 1–2 haseł: dobierz hasła tego samego rodzaju z puli, żeby ćwiczeń było co najmniej kilka
-  const extra = p.items.length >= 3 ? [] : p.pool.filter((o) => p.items.some((i) => i.kind === o.kind)).slice(0, 3 - p.items.length);
-  const items = [...p.items, ...extra];
-  const all = [...items, ...p.pool.filter((o) => !extra.includes(o))];
+  const pad = taught.length >= 3 ? [] : p.pool.filter((o) => taught.some((i) => i.kind === o.kind) && !fromQ.has(o.id)).slice(0, 3 - taught.length);
+  const items = [...taught, ...pad];
+  // hasła z pytań poznane wcześniej: w „Ćwicz” i „Utrwal” po jednym ćwiczeniu (do 8 losowych na podejście)
+  const repeat = shuffle((p.repeat ?? []).filter((i) => !items.some((o) => o.id === i.id)), rnd).slice(0, 8);
+  const all = [...items, ...repeat, ...p.pool.filter((o) => !items.includes(o) && !repeat.includes(o))];
   const others = (it: CourseItem) => all.filter((o) => o.id !== it.id);
   const sameKind = (it: CourseItem) => others(it).filter((o) => o.kind === it.kind);
   const kindOrAll = (it: CourseItem) => (sameKind(it).length >= 3 ? sameKind(it) : others(it));
@@ -378,7 +383,7 @@ export function buildExercises(p: LessonPayload, opts: BuildOptions = {}): Exerc
 
   if (p.sub === 1) {
     for (const it of items) {
-      out.push({ type: "intro", item: it });
+      out.push({ type: "intro", item: it, fromQuestions: fromQ.has(it.id) });
       add(out, recognize(it) ?? trueFalse(it));
     }
     for (const it of shuffle(items, rnd)) add(out, it.kind === "data" ? trueFalse(it) : termToDef(it) ?? trueFalse(it));
@@ -390,6 +395,7 @@ export function buildExercises(p: LessonPayload, opts: BuildOptions = {}): Exerc
       if (typeMore) add(mixed, typing(it));
       else if (it.w) add(mixed, formula(it, false));
     }
+    for (const it of repeat) add(mixed, recognize(it) ?? trueFalse(it));
     out.push(...shuffle(mixed, rnd));
     add(out, items.some((i) => i.kind === "data") ? ordering() : null, pairs(items));
   } else if (p.sub === 3) {
@@ -400,11 +406,12 @@ export function buildExercises(p: LessonPayload, opts: BuildOptions = {}): Exerc
       else if (typeMore) add(mixed, termToDef(it));
       else add(mixed, { type: "fiszka", item: it });
     }
+    for (const it of repeat) add(mixed, typing(it) ?? termToDef(it) ?? recognize(it));
     out.push(...shuffle(mixed, rnd));
     add(out, items.some((i) => i.kind === "data") ? ordering() : pairs(items));
   } else {
     const qs = shuffle(p.questions, rnd).slice(0, typeMore ? 7 : 8);
-    for (const q of qs) out.push({ type: "pytanie", item: itemForQuestion(q, items), question: q });
+    for (const q of qs) out.push({ type: "pytanie", item: itemForQuestion(q, [...items, ...(p.repeat ?? [])]), question: q });
     const typed = shuffle(items, rnd)
       .map(typing)
       .filter(Boolean)

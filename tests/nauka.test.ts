@@ -46,6 +46,66 @@ describe("generator ćwiczeń", () => {
   }, 120_000);
 });
 
+describe("pojęcia z pytań Sprawdzianu", () => {
+  const lessons = Object.values(COURSE.lessons).filter((l) => l.type !== "zrozum");
+  const withExtra = lessons.filter((l) => (l.extra ?? []).length > 0);
+  const withReview = lessons.filter((l) => (l.review ?? []).length > 0);
+
+  it("każde pytanie jest w dokładnie jednej lekcji", () => {
+    const seen = new Map<string, string>();
+    const dup: string[] = [];
+    for (const l of lessons) for (const q of l.questions) {
+      if (seen.has(q)) dup.push(`${q}: ${seen.get(q)} i ${l.id}`);
+      seen.set(q, l.id);
+    }
+    expect(dup).toEqual([]);
+    expect(seen.size).toBeGreaterThan(5000);
+  });
+
+  it("Poznaj przedstawia każde nowe hasło z pytań lekcji (karta z oznaczeniem)", () => {
+    expect(withExtra.length).toBeGreaterThan(0);
+    for (const l of withExtra) {
+      const intros = buildExercises(lessonPayload(l.id, 1)!).filter((e) => e.type === "intro");
+      for (const id of l.extra!) {
+        const card = intros.find((e) => e.item.id === id);
+        expect(card, `${l.id}: ${id}`).toBeDefined();
+        expect(card!.type === "intro" && card!.fromQuestions).toBe(true);
+      }
+    }
+  }, 120_000);
+
+  it("Ćwicz i Utrwal powtarzają hasła z pytań poznane wcześniej", () => {
+    expect(withReview.length).toBeGreaterThan(0);
+    for (const l of withReview) {
+      const rev = new Set(l.review);
+      for (const sub of [2, 3]) {
+        const ex = buildExercises(lessonPayload(l.id, sub)!);
+        const hit = new Set(ex.flatMap((e) => ("item" in e ? [e.item.id] : [])).filter((id) => rev.has(id)));
+        expect(hit.size, `${l.id}/${sub}`).toBeGreaterThanOrEqual(Math.min(rev.size, 8) > 0 ? 1 : 0);
+      }
+    }
+  }, 120_000);
+
+  it("Sprawdzian losuje pytania tylko z listy lekcji", () => {
+    for (const l of withExtra.slice(0, 50)) {
+      const p = lessonPayload(l.id, 4)!;
+      for (const q of p.questions) expect(l.questions).toContain(q.id);
+    }
+  });
+
+  it("kolejne części lekcji mają nowe hasła z pytań i stoją w ścieżce zaraz po swojej lekcji", () => {
+    const parts = lessons.filter((l) => l.part);
+    expect(parts.length).toBeGreaterThan(0);
+    for (const l of parts) {
+      expect(l.extra!.length + l.items.length, l.id).toBeGreaterThan(0);
+      const unit = COURSE.units.find((u) => u.id === l.unit)!;
+      const i = unit.lessons.indexOf(l.id);
+      const prev = unit.lessons[i - 1];
+      expect(prev === l.id.replace(/-cz\d+$/, "") || /-cz\d+$/.test(prev), l.id).toBe(true);
+    }
+  });
+});
+
 describe("odpowiedzi liczbowe", () => {
   it("przecinek, spacje tysięcy i jednostka", () => {
     expect(checkNumber("1 234,5 zł", 1234.5, 0.01)).toBe(true);

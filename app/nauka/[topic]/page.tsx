@@ -23,7 +23,10 @@ export default async function TopicPage({ params }: { params: Promise<{ topic: s
         const z = ZROZUM[lid];
         return { id: l.id, no: l.no, title: l.title, type: "zrozum" as const, goal: z.goal, items: z.refs.map((i) => COURSE.items[i].s), questions: 0 };
       }
-      return { id: l.id, no: l.no, title: l.title, items: l.items.map((i) => COURSE.items[i].s), questions: l.questions.length };
+      return {
+        id: l.id, no: l.no, part: l.part, title: l.title, items: l.items.map((i) => COURSE.items[i].s),
+        extra: (l.extra ?? []).map((i) => COURSE.items[i].s), questions: l.questions.length,
+      };
     }),
   }));
   return <TopicPath topic={topic} units={units} kinds={COURSE.kinds} />;

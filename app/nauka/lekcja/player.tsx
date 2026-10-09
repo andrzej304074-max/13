@@ -181,7 +181,7 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
 function ExerciseView({ ex, locked, onResult, onNext }: { ex: Exercise; locked: boolean; onResult: OnResult; onNext: () => void }) {
   switch (ex.type) {
     case "intro":
-      return <Intro item={ex.item} onNext={onNext} />;
+      return <Intro item={ex.item} fromQuestions={ex.fromQuestions} onNext={onNext} />;
     case "wybor":
     case "wzor":
       return <Choice ex={ex} locked={locked} onResult={onResult} />;
@@ -223,10 +223,13 @@ function ItemCard({ item }: { item: CourseItem }) {
   );
 }
 
-function Intro({ item, onNext }: { item: CourseItem; onNext: () => void }) {
+function Intro({ item, fromQuestions, onNext }: { item: CourseItem; fromQuestions?: boolean; onNext: () => void }) {
   return (
     <div className="stack">
-      <span className="learn-badge">Nowe hasło · {KIND_LABEL[item.kind]}</span>
+      <span className="learn-badge">
+        Nowe hasło · {KIND_LABEL[item.kind]}
+        {fromQuestions && <> · z pytań Sprawdzianu</>}
+      </span>
       <div className="card learn-intro">
         <h2 style={{ marginTop: 0 }}>{item.t}</h2>
         <ItemCard item={item} />

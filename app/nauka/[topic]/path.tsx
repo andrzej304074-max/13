@@ -12,7 +12,7 @@ export interface UnitView {
   kind: ItemKind;
   count: number;
   zcount: number;
-  lessons: { id: string; no: number; title: string; type?: "zrozum"; goal?: string; items: string[]; questions: number }[];
+  lessons: { id: string; no: number; part?: number; title: string; type?: "zrozum"; goal?: string; items: string[]; extra?: string[]; questions: number }[];
 }
 
 const KIND_ICON: Record<string, string> = {
@@ -115,14 +115,16 @@ export function TopicPath({ topic, units, kinds }: { topic: CourseTopic; units: 
                     {level > 0 && <span className="node-level">👑{level}</span>}
                   </button>
                   <div className="node-label" style={{ transform: `translateX(${OFFSETS[i % OFFSETS.length]}px)` }}>
-                    {l.type === "zrozum" ? `🧠 ${l.title}` : `Lekcja ${l.no}`}
+                    {l.type === "zrozum" ? `🧠 ${l.title}` : `Lekcja ${l.no}${l.part ? ` · cz. ${l.part}` : ""}`}
                   </div>
                   {isOpen && (
                     <div className="lesson-panel card">
-                      <strong>{l.type === "zrozum" ? `🧠 Zrozumienie ${l.no}` : `Lekcja ${l.no}`}: {l.title}</strong>
+                      <strong>{l.type === "zrozum" ? `🧠 Zrozumienie ${l.no}` : `Lekcja ${l.no}${l.part ? ` · cz. ${l.part}` : ""}`}: {l.title}</strong>
                       {l.goal && <p style={{ margin: "4px 0 0", fontSize: "0.92rem" }}>🎯 {l.goal}</p>}
                       <p className="muted" style={{ margin: "4px 0 10px", fontSize: "0.9rem" }}>
-                        {l.type === "zrozum" ? "Powiązane hasła" : "Hasła"}: {l.items.join(" · ")}{l.questions ? ` · ${l.questions} pytań do sprawdzianu` : ""}
+                        {l.type === "zrozum" ? "Powiązane hasła" : "Hasła"}: {l.items.join(" · ") || "—"}
+                        {l.extra?.length ? ` · nowe z pytań: ${l.extra.join(" · ")}` : ""}
+                        {l.questions ? ` · ${l.questions} pytań do sprawdzianu` : ""}
                       </p>
                       <div className="crowns" aria-label={`Poziom ${level} z ${MAX_LEVEL}`}>
                         {Array.from({ length: MAX_LEVEL }, (_, k) => <span key={k} className={k < level ? "on" : ""}>👑</span>)}

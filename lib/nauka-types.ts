@@ -31,6 +31,12 @@ export interface CourseLesson {
   title: string;
   items: string[];
   questions: string[];
+  /** Hasła spoza lekcji, o które pytają jej pytania, a których uczeń nie poznał wcześniej w temacie – omawiane jak hasła lekcji. */
+  extra?: string[];
+  /** Hasła z pytań lekcji poznane we wcześniejszych lekcjach tematu – powtarzane w „Ćwicz” i „Utrwal”. */
+  review?: string[];
+  /** Numer części lekcji (2, 3…), gdy pytania wymagały więcej nowych haseł, niż mieści jedna lekcja. */
+  part?: number;
   /** "zrozum" – lekcja „Zrozumienie” z ręcznymi wyjaśnieniami i ćwiczeniami (treść w zrozum.json). */
   type?: "zrozum";
 }
@@ -130,6 +136,9 @@ export interface LessonPayload {
   topic: CourseTopic;
   sub: number;
   items: CourseItem[];
+  /** Hasła z pytań lekcji: nowe (omawiane razem z hasłami lekcji) i poznane wcześniej (do powtórki). */
+  extra?: CourseItem[];
+  repeat?: CourseItem[];
   /** Hasła pomocnicze do dystraktorów (ten sam dział i rodzaj w temacie). */
   pool: CourseItem[];
   questions: Question[];
