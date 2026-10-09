@@ -15,6 +15,7 @@ Kolumna „Pytania OWE” podaje liczbę pytań z XXI–XXXIX OWE, w których po
 (PTE, wrzesień 2025: https://pte.lodz.pl/wp-content/uploads/2025/09/Literatura-XXXIX.pdf). Literatura podstawowa obejmuje:
 - N.G. Mankiw, M.P. Taylor, „Mikroekonomia” i „Makroekonomia” (PWE);
 - S. Owsiak, „Finanse” (PWE 2015);
+- B. Winiarski (red.), „Polityka gospodarcza” (PWN 2018);
 - W. Gabrusewicz, „Metody analizy finansowej przedsiębiorstw” (PWE 2019).
 
 **Podsumowanie (stan na 8.10.2026)**
@@ -25,6 +26,7 @@ Kolumna „Pytania OWE” podaje liczbę pytań z XXI–XXXIX OWE, w których po
 | Mankiw, Taylor – „Makroekonomia” | 1–15 | 155 | 146 | 8 | 1 |
 | Owsiak – „Finanse” | 2–16 | 156 | 118 | 36 | 2 |
 | Gabrusewicz – „Metody analizy finansowej przedsiębiorstw” | 1–11 | 38 | 23 | 14 | 1 |
+| Winiarski (red.) – „Polityka gospodarcza” | 1–28 | 60 | 46 | 12 | 2 |
 
 Wcześniejsze uzupełnienia według samych tytułów podrozdziałów (47 haseł Mikro i 25 Makro) mają w mapie status „było”.
 Każde hasło pojęciowe tematów Mikroekonomia, Makroekonomia, Polityka gospodarcza, Finanse i Firma ma lekcję „Zrozumienie”.
@@ -880,3 +882,195 @@ Każde hasło pojęciowe tematów Mikroekonomia, Makroekonomia, Polityka gospoda
 | Modele wczesnego ostrzegania, Z-score Altmana | pojęcie | było | Modele wczesnego ostrzegania przed upadłością; Z-score Altmana – wzór | 0 | podręcznik |
 | Edward Altman | osoba | było | Altman Edward | 0 | podręcznik |
 | Walter Gabrusewicz | osoba | pominięte | – | 0 | autor podręcznika; brak w pytaniach OWE |
+
+## Polityka gospodarcza – B. Winiarski (red.), „Polityka gospodarcza” (PWN 2018) (rozdz. 1–28)
+
+### Rozdz. 1. Pojęcia podstawowe
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Polityka gospodarcza, podmioty, cele i instrumenty | pojęcie | było | Polityka gospodarcza (ekonomiczna); Cele, podmioty i instrumenty polityki gospodarczej | 0 | podręcznik |
+| Nauka polityki gospodarczej i doktryny | pojęcie | dodane | Nauka polityki gospodarczej i doktryny polityki gospodarczej | 0 | PTE – literatura XXXIX OWE (Winiarski, rozdz. 1); Wikipedia – Colbertism / historia doktryn |
+
+### Rozdz. 2. Systemy ekonomiczne
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Ustroje i systemy gospodarcze | pojęcie | było | Ustroje społeczno-ekonomiczne i systemy gospodarcze | 0 | podręcznik |
+| Rola państwa w gospodarce | pojęcie | było | Rola państwa w gospodarce | 1 | podręcznik |
+| Gospodarka niedoboru, centralne planowanie | pojęcie | było | Gospodarka niedoboru | 1 | podręcznik |
+| Transformacja systemowa | pojęcie | było | Transformacja systemowa i plan Balcerowicza | 0 | podręcznik |
+
+### Rozdz. 3. Uwarunkowania, cele i dziedziny
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Magiczny czworokąt | pojęcie | było | Magiczny czworokąt polityki gospodarczej | 0 | podręcznik |
+| Reguła Tinbergena | pojęcie | dodane | Reguła Tinbergena | 0 | SRCC – Targets and Instruments… Tinbergen Condition; World Bank Open Knowledge / literatura o celach i instrumentach |
+| Jan Tinbergen | osoba | dodane | Tinbergen Jan | 0 | Nobelprize.org – nagroda 1969; HAL-SHS – „The hidden side of Jan Tinbergen’s approach to economic policy” |
+| Zrównoważony rozwój | pojęcie | było | Zrównoważony rozwój | 0 | podręcznik |
+
+### Rozdz. 4. Gospodarka narodowa
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Bogactwo narodowe | pojęcie | było | Bogactwo narodowe (majątek narodowy) | 0 | podręcznik |
+| Produkt potencjalny | pojęcie | było | Produkt potencjalny i luka PKB (popytowa) | 0 | podręcznik |
+| Struktura gospodarki (sektory) | pojęcie | było | Polityka strukturalna i regionalna | 1 | podręcznik |
+
+### Rozdz. 5. Planowanie
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Planowanie gospodarcze w gospodarce rynkowej (indykatywne) | pojęcie | było | Planowanie gospodarcze w gospodarce rynkowej | 0 | podręcznik |
+
+### Rozdz. 6. Merkantylizm, liberalizm, gospodarka wojenna
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Merkantylizm | pojęcie | było | Merkantylizm | 1 | podręcznik |
+| Kolbertyzm | pojęcie | dodane | Kolbertyzm | 0 | Wikipedia – Colbertism; tabela „Szkoły ekonomii” w słowniku (J.-B. Colbert) |
+| Leseferyzm | pojęcie | było | Laissez-faire | 2 | podręcznik |
+| Gospodarka wojenna | pojęcie | było | Gospodarka wojenna | 0 | podręcznik |
+
+### Rozdz. 7. Międzywojnie
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Interwencjonizm (w tym New Deal) | pojęcie | było | Interwencjonizm państwowy | 3 | podręcznik |
+| Etatyzm II RP, COP | pojęcie | było | Etatyzm i polityka gospodarcza II RP | 1 | podręcznik |
+| Reforma Grabskiego 1924 | data | było | 1924 – reforma W. Grabskiego i Bank Polski | 0 | podręcznik |
+
+### Rozdz. 8. Druga połowa XX wieku
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Keynesizm, monetaryzm, ekonomia podaży | pojęcie | było | Monetaryzm; Ekonomia podaży (supply-side economics) | 0 | podręcznik |
+| Społeczna gospodarka rynkowa | pojęcie | było | Ordoliberalizm i społeczna gospodarka rynkowa | 0 | podręcznik |
+| Plan Marshalla | pojęcie | dodane | Plan Marshalla | 0 | Wikipedia – Marshall Plan (13,3 mld USD, 17 krajów); Wikipedia (pl) – Plan Marshalla |
+| RWPG | pojęcie | dodane | RWPG (Rada Wzajemnej Pomocy Gospodarczej) | 0 | Wikipedia (pl) – RWPG (1949–1991); Wikipedia – Comecon |
+| Reformy gospodarcze w PRL | pojęcie | było | Reformy gospodarcze w PRL w latach 80. i ustawa Wilczka | 0 | podręcznik |
+
+### Rozdz. 9. Transformacja
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Plan Balcerowicza | pojęcie | było | Transformacja systemowa i plan Balcerowicza; Balcerowicz Leszek | 1 | podręcznik |
+| Terapia szokowa a gradualizm | pojęcie | dodane | Terapia szokowa a gradualizm | 0 | Wikipedia – Shock therapy (economics); Wikipedia (pl) – Terapia szokowa (gospodarka) |
+| Prywatyzacja bezpośrednia, leasing i akcjonariat pracowniczy | pojęcie | dodane | Prywatyzacja bezpośrednia (likwidacyjna) i akcjonariat pracowniczy | 0 | Repozytorium UAM – prywatyzacja leasingowa (art. 37 ustawy z 13.07.1990); A. Szczepkowska (DBC); GUS – spółki pracownicze |
+| NFI, prywatyzacja powszechna | pojęcie | było | Okrągły Stół, prywatyzacja i NFI – etapy przemian w Polsce | 3 | podręcznik |
+| Popiwek | pojęcie | dodane | Popiwek | 0 | Wikipedia – Popiwek; ustawa z 27.12.1989 o opodatkowaniu wzrostu wynagrodzeń w 1990 r. (Infor); ustawa z 22.12.1990 (ISAP) |
+| Konsensus waszyngtoński | pojęcie | było | Konsensus waszyngtoński; Konsensus waszyngtoński a kraje rozwijające się | 1 | podręcznik |
+| Komunalizacja | pojęcie | pominięte | – | 0 | brak drugiego źródła; wzmianka w lekcji o prywatyzacji |
+
+### Rozdz. 10. Globalizacja
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Globalizacja, deglobalizacja | pojęcie | było | Deglobalizacja i regionalizacja; Globalizacja | 0 | podręcznik |
+
+### Rozdz. 11. Wzrost
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Wzrost i rozwój gospodarczy | pojęcie | było | Wzrost gospodarczy; Wzrost liczby ludności a wzrost gospodarczy | 4 | podręcznik |
+| Modele wzrostu (Solow) | model | było | Model Solowa | 0 | podręcznik |
+
+### Rozdz. 12. Strategie rozwoju
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Strategie rozwoju kraju (SOR) | pojęcie | było | Strategie rozwoju kraju; Macierz Ansoffa (strategie rozwoju) | 0 | podręcznik |
+
+### Rozdz. 13. Polityka strukturalna
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Polityka strukturalna | pojęcie | było | Polityka strukturalna i regionalna | 1 | podręcznik |
+| Kraje nowo uprzemysłowione (NIC) | pojęcie | dodane | Kraje nowo uprzemysłowione (NIC) | 0 | Wikipedia – Newly industrialized country; OpenStax 20.4 / 32.2 (doganianie krajów Azji Wschodniej) |
+
+### Rozdz. 14–15. Polityka przemysłowa i żywnościowa
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Polityka przemysłowa | pojęcie | było | Polityka przemysłowa – horyzontalna i sektorowa | 0 | podręcznik |
+| Polityka rolna i żywnościowa | pojęcie | było | Polityka rolna i żywnościowa; Wspólna Polityka Rolna (WPR) | 0 | podręcznik |
+
+### Rozdz. 16. Polityka regionalna
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Polityka regionalna | pojęcie | było | Polityka strukturalna i regionalna | 0 | podręcznik |
+| Biegun wzrostu (F. Perroux) | pojęcie | dodane | Biegun wzrostu (teoria F. Perroux) | 0 | Piętak, „Teoria biegunów wzrostu F. Perroux” (DBC 2014); IDEAS/RePEc – ERSA (bieguny wzrostu); Wikipedia – François Perroux |
+| Specjalne strefy ekonomiczne | pojęcie | było | Specjalne strefy ekonomiczne (SSE) i Polska Strefa Inwestycji | 0 | podręcznik |
+
+### Rozdz. 17. Ochrona środowiska
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Polityka ekologiczna (w tym „zanieczyszczający płaci”) | pojęcie | było | Polityka ekologiczna | 0 | podręcznik |
+
+### Rozdz. 18. Polityka naukowa i innowacyjna
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Polityka innowacyjna | pojęcie | było | Polityka innowacyjna i naukowa | 0 | podręcznik |
+| Narodowy system innowacji | pojęcie | dodane | Narodowy system innowacji | 0 | Wikipedia – National innovation system (OECD 1997); M. Hudson – National Systems of Innovation |
+
+### Rozdz. 19. Polityka inwestycyjna
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Polityka inwestycyjna | pojęcie | było | Polityka inwestycyjna i prowzrostowa | 0 | podręcznik |
+
+### Rozdz. 20. Polityka pieniężna
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Strategie i narzędzia polityki pieniężnej | pojęcie | było | Strategia bezpośredniego celu inflacyjnego (BCI); Operacje otwartego rynku (OOR) | 25 | podręcznik |
+| Policy mix | pojęcie | było | Policy mix | 0 | podręcznik |
+
+### Rozdz. 21. Polityka budżetowa
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Funkcje finansów publicznych, stabilizatory, deficyt | pojęcie | było | Automatyczne stabilizatory; Deficyt budżetowy i deficyt sektora finansów publicznych | 16 | podręcznik |
+
+### Rozdz. 22. Rynek pracy
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Polityka rynku pracy (aktywna, pasywna) | pojęcie | było | Aktywna i pasywna polityka rynku pracy | 0 | podręcznik |
+
+### Rozdz. 23. Dochody i ceny
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Polityka dochodowa i cenowa | pojęcie | było | Polityka dochodowa i społeczna; Polityka cenowa państwa i ceny administrowane | 0 | podręcznik |
+
+### Rozdz. 24. Współpraca z zagranicą
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Polityka handlowa, cła, bariery pozataryfowe | pojęcie | było | Cło; Cło ad valorem i specyficzne (kwotowe) | 1 | podręcznik |
+| Bariery parataryfowe | pojęcie | pominięte | – | 0 | brak definicji w dwóch źródłach; zob. „Bariery pozataryfowe” |
+| Polityka kursowa, zadłużenie zagraniczne | pojęcie | było | Zadłużenie zagraniczne; Polityka kursowa | 0 | podręcznik |
+
+### Rozdz. 25. Polityka dostosowawcza
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Programy dostosowawcze MFW | pojęcie | było | Programy dostosowawcze (stabilizacyjne) MFW | 0 | podręcznik |
+
+### Rozdz. 26–27. Unia Europejska
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Instytucje i prawo UE | pojęcie | było | Instytucje UE; Struktura instytucjonalna i zasady funkcjonowania UE | 0 | podręcznik |
+| Wspólna polityka rolna, jednolity rynek, UGW, spójność | pojęcie | było | Cztery swobody rynku wewnętrznego UE; Unia Gospodarcza i Walutowa (UGW) | 0 | podręcznik |
+
+### Rozdz. 28. Euroregiony
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Euroregiony | pojęcie | było | Euroregiony i współpraca transgraniczna | 0 | podręcznik |

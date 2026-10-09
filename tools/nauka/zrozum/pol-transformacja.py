@@ -9,6 +9,14 @@ GOVT = S("gov.pl – opracowanie o transformacji na podstawie danych GUS (inflac
 FORS = S("Forsal – hiperinflacja największym problemem transformacji w 1989 r.", "https://forsal.pl/artykuly/1407592,hiperinflacja-na-poziomie-1183-proc-to-najwiekszy-problem-transformacji-w-1989-roku-30latwolnosci.html", D)
 BEZP = S("Bezprawnik – plan Balcerowicza", "https://bezprawnik.pl/plan-balcerowicza/", D)
 
+WMAR = S("Wikipedia – Marshall Plan (13,3 mld USD, 17 krajów, od 3.04.1948)", "https://en.wikipedia.org/wiki/Marshall_Plan", D)
+WMAP = S("Wikipedia (pl) – Plan Marshalla", "https://pl.wikipedia.org/wiki/Plan_Marshalla", D)
+WRW = S("Wikipedia (pl) – Rada Wzajemnej Pomocy Gospodarczej (1949–1991)", "https://pl.wikipedia.org/wiki/Rada_Wzajemnej_Pomocy_Gospodarczej", D)
+WPOP = S("Wikipedia – Popiwek", "https://en.wikipedia.org/wiki/Popiwek", D)
+EPOP = S("Ustawa z 27.12.1989 o opodatkowaniu wzrostu wynagrodzeń w 1990 r. (Dz.U. 1989 nr 74 poz. 438)", "https://www.infor.pl/akt-prawny/DZU.1989.074.0000438,ustawa-o-opodatkowaniu-wzrostu-wynagrodzen-w-1990-r.html", D)
+SZCZ = S("A. Szczepkowska, Wybrane ekonomiczno-społeczne efekty prywatyzacji (DBC)", "https://dbc.wroc.pl//Content/129788/Szczepkowska_Wybrane_ekonomiczno-spoleczne_efekty_prywatyzacji.pdf", D)
+WSH = S("Wikipedia – Shock therapy (economics)", "https://en.wikipedia.org/wiki/Shock_therapy_(economics)", D)
+
 LESSONS = [
     L(1, "Ustroje i systemy gospodarcze",
       "Rozróżniać ustrój społeczno-ekonomiczny od systemu funkcjonowania gospodarki, porównywać koordynację rynkową, nakazowo-rozdzielczą i mieszaną oraz rozumieć gospodarkę wojenną.",
@@ -394,6 +402,82 @@ LESSONS = [
                why="Szok transformacyjny miał wymiar regionalny i sektorowy."),
              PF("Ocena transformacji zależy od horyzontu czasowego – koszty były skupione na początku, korzyści narastały później.", True,
                 why="Typowy profil reform strukturalnych."),
+          ),
+      ]),
+    L(6, "Od planu Marshalla i RWPG do terapii szokowej: prywatyzacja i popiwek",
+      "Znać tło powojennego podziału Europy (plan Marshalla, RWPG), spór terapii szokowej z gradualizmem oraz polskie narzędzia transformacji: ścieżki prywatyzacji (bezpośrednia z leasingiem pracowniczym, kapitałowa, powszechna) i popiwek.",
+      ["Plan Marshalla", "RWPG (Rada Wzajemnej Pomocy Gospodarczej)", "Terapia szokowa a gradualizm", "Prywatyzacja bezpośrednia (likwidacyjna) i akcjonariat pracowniczy", "Popiwek", "Transformacja systemowa i plan Balcerowicza"],
+      [WMAR, WMAP, WRW, WPOP, EPOP, SZCZ, WSH],
+      explain=[
+          K("Plan Marshalla",
+            "Od kwietnia 1948 r. USA przekazały ok. 13 mld dolarów 17 państwom Europy Zachodniej – surowce, żywność, maszyny, kredyty – pod warunkiem współpracy i liberalizacji handlu (powstała OEEC, poprzedniczka OECD). Polska i Czechosłowacja pod presją ZSRR odmówiły udziału w 1947 r."),
+          K("RWPG",
+            "Odpowiedzią ZSRR była Rada Wzajemnej Pomocy Gospodarczej (1949): koordynacja planów i specjalizacji produkcji krajów bloku, wymiana rozliczana w rublu transferowym. Rozwiązano ją w 1991 r.; jej upadek oznaczał dla Polski utratę rynków wschodnich na początku transformacji."),
+          W("Dlaczego Polska nie skorzystała z planu Marshalla?",
+            "Odmówiła udziału pod presją ZSRR w 1947 r.", "Bo USA odmówiły pomocy wszystkim krajom", "Bo nie poniosła strat wojennych",
+            why="Kraje bloku wschodniego wycofały się z konferencji paryskiej."),
+          K("Terapia szokowa czy gradualizm?",
+            "Terapia szokowa – szybka i równoczesna stabilizacja, liberalizacja cen i handlu oraz prywatyzacja (Polska od 1.01.1990, plan Balcerowicza). Gradualizm – reformy stopniowe (Węgry, Chiny). Zwolennicy szoku podkreślali wiarygodność i szybkie opanowanie hiperinflacji, krytycy – wysokie koszty: spadek produkcji i bezrobocie."),
+          K("Prywatyzacja i popiwek",
+            "Ustawa z 13.07.1990 r. przewidywała prywatyzację kapitałową (komercjalizacja i sprzedaż akcji) oraz bezpośrednią (likwidacyjną): sprzedaż, wniesienie do spółki lub leasing pracowniczy – ta ostatnia forma stała się najpopularniejsza wśród małych i średnich firm. Popiwek, podatek od ponadnormatywnego wzrostu płac (do 1994 r.), hamował spiralę płacowo-cenową w przedsiębiorstwach państwowych."),
+          PF("Popiwek obciążał głównie przedsiębiorstwa państwowe przekraczające limit wzrostu płac.", True,
+             why="Miał hamować inflację płacową."),
+      ],
+      mech=[
+          KT("Plan Marshalla czy RWPG?",
+             {"Plan Marshalla": ["Pomoc USA dla Europy Zachodniej", "Powstanie OEEC"],
+              "RWPG": ["Rozliczenia w rublu transferowym", "Koordynacja planów gospodarczych bloku radzieckiego"]},
+             why="Dwa przeciwstawne projekty powojennej Europy."),
+          KT("Terapia szokowa czy gradualizm?",
+             {"Terapia szokowa": ["Uwolnienie prawie wszystkich cen jednego dnia", "Gwałtowne zacieśnienie polityki pieniężnej"],
+              "Gradualizm": ["Stopniowe uwalnianie cen przez lata", "Reformy wprowadzane etapami, przy dłużej działającym sektorze państwowym"]},
+             why="Różnica tempa i kolejności reform."),
+          LN("Ułóż etapy prywatyzacji bezpośredniej z leasingiem pracowniczym.",
+             ["Przedsiębiorstwo państwowe zostaje zlikwidowane w celu prywatyzacji", "Pracownicy zakładają spółkę", "Spółka otrzymuje mienie do odpłatnego korzystania", "Spłaca raty leasingowe Skarbowi Państwa", "Po spłacie staje się właścicielem majątku"],
+             why="Najpopularniejsza ścieżka prywatyzacji bezpośredniej."),
+          W("Czemu służył popiwek w planie Balcerowicza?",
+            "Hamowaniu wzrostu płac i spirali płacowo-cenowej", "Zachęcaniu do wyższych płac", "Finansowaniu NFI",
+            why="To narzędzie antyinflacyjne."),
+          M("Które ścieżki prywatyzacji występowały w Polsce w latach 90.?",
+            ["Kapitałowa (sprzedaż akcji)", "Bezpośrednia (likwidacyjna)", "Powszechna (NFI)", "Nacjonalizacja"], [0, 1, 2],
+            why="Nacjonalizacja to odwrotność prywatyzacji."),
+          PF("RWPG przetrwała do połowy XXI wieku.", False,
+             why="Rozwiązano ją w 1991 r."),
+      ],
+      calc=[
+          LB("Plan Marshalla: 13 mld USD dla 17 krajów. Ile średnio na kraj (mld USD; zaokrąglij do 0,01)?",
+             0.76, "13/17", ["13 / 17 ≈ 0,76 mld USD"], unit="mld USD"),
+          LB("RWPG działała od 1949 do 1991 r. Ile lat?",
+             42, "1991-1949", ["1991 − 1949 = 42 lata"], unit="lat"),
+          LB("Przykład: limit wzrostu płac wynosi 60% inflacji, inflacja 20%. Ile wynosi dopuszczalny wzrost płac (%)?",
+             12, "0.6*20", ["0,6 · 20 = 12%"], unit="%"),
+          LB("Firma podniosła płace o 18%. O ile pkt proc. przekroczyła limit?",
+             6, "18-12", ["18 − 12 = 6 pkt proc."], unit="pkt proc."),
+          LB("Spółka pracownicza przejęła majątek wart 10 mln zł w leasingu na 10 lat z opłatą 12% rocznie od wartości. Ile wynosi roczna rata (mln zł)?",
+             1.2, "10*0.12", ["10 · 0,12 = 1,2 mln zł"], unit="mln zł"),
+          LB("Inflacja w Polsce: 585,8% (1990) → 70,3% (1991). O ile pkt proc. spadła?",
+             515.5, "585.8-70.3", ["585,8 − 70,3 = 515,5 pkt proc."], unit="pkt proc."),
+      ],
+      case=[
+          PR("1 stycznia 1990 r. Polska uwolniła większość cen, zdewaluowała złotego i ustaliła stały kurs wobec dolara, podniosła stopy procentowe, ograniczyła dotacje i wprowadziła popiwek. Inflacja, sięgająca setek procent rocznie, wyraźnie spadła w ciągu kilku miesięcy, ale produkcja przemysłowa spadła, a bezrobocie szybko rosło.",
+             W("Jaka strategia reform została zastosowana?",
+               "Terapia szokowa", "Gradualizm", "Planowanie centralne",
+               why="Wiele reform wprowadzono jednocześnie i szybko."),
+             W("Jaką rolę pełnił popiwek?",
+               "Ograniczał wzrost płac, by nie napędzały inflacji", "Zwiększał płace w budżetówce", "Finansował zasiłki",
+               why="Hamował spiralę płacowo-cenową."),
+             PF("Kosztem szybkiej stabilizacji był spadek produkcji i wzrost bezrobocia.", True,
+                why="To główny argument zwolenników gradualizmu."),
+          ),
+          PR("Średnia fabryka mebli w 1991 r. została zlikwidowana jako przedsiębiorstwo państwowe. Jej pracownicy i dyrekcja założyli spółkę, która przejęła majątek w leasingu i spłacała go przez kilka lat.",
+             W("Jaka ścieżka prywatyzacji została zastosowana?",
+               "Bezpośrednia (likwidacyjna) – leasing pracowniczy", "Kapitałowa przez giełdę", "Powszechna przez NFI",
+               why="Mienie oddano spółce pracowniczej do odpłatnego korzystania."),
+             W("Dlaczego ta forma była popularna?",
+               "Pozwalała zachować miejsca pracy i kontrolę nad firmą bez inwestora z zewnątrz", "Bo była zakazana dla dużych firm", "Bo nie wymagała żadnych opłat",
+               why="Interesy pracowników i kierownictwa były zbieżne."),
+             PF("Akcjonariat pracowniczy występował też w prywatyzacji kapitałowej, gdy część akcji przeznaczano dla pracowników.", True,
+                why="To druga forma własności pracowniczej."),
           ),
       ]),
 ]
