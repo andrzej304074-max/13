@@ -32,6 +32,10 @@ export interface User {
   isAdmin: boolean;
   isOwner: boolean;
   active: boolean;
+  /** Nieaktywne konto: „code” – trzeba wpisać kod, „approval” – kod przyjęty, czeka na zatwierdzenie. */
+  pending: "code" | "approval" | null;
+  /** Prośba o rolę admina czeka na zatwierdzenie. */
+  adminPending: boolean;
 }
 
 interface UserRow {
@@ -41,12 +45,16 @@ interface UserRow {
   is_admin: boolean;
   is_owner: boolean;
   activated_at: Date | null;
+  code_ok_at: Date | null;
+  admin_requested_at: Date | null;
   failed_codes: number;
   locked_until: Date | null;
 }
 
 const toUser = (r: UserRow): User => ({
   id: r.id, email: r.email, isAdmin: r.is_admin, isOwner: r.is_owner, active: r.activated_at !== null,
+  pending: r.activated_at ? null : r.code_ok_at ? "approval" : "code",
+  adminPending: !r.is_admin && r.admin_requested_at !== null,
 });
 
 const UUID = /^[0-9a-f-]{36}$/i;
@@ -143,12 +151,14 @@ async function checkCode(row: UserRow, ok: (code: string) => Promise<boolean>, c
   throw new HttpError(400, next.lockedUntil ? lockMessage(next.lockedUntil, now)! : "Nieprawidłowy kod.");
 }
 
+/** Poprawny kod nie wpuszcza od razu – konto czeka na zatwierdzenie przez admina. */
 async function activateRow(row: UserRow, rawCode: unknown) {
+  if (row.code_ok_at) return;
   const code = normCode(rawCode);
   const expected = await getActivationCode();
   if (!expected) throw new HttpError(400, "Kod aktywacji nie został jeszcze ustalony – poproś administratora.");
   await checkCode(row, async (c) => codeMatches(c, expected), code);
-  await query("UPDATE users SET activated_at = now() WHERE id = $1 AND activated_at IS NULL", [row.id]);
+  await query("UPDATE users SET code_ok_at = now() WHERE id = $1 AND activated_at IS NULL", [row.id]);
 }
 
 /* ---------- rejestracja, logowanie, aktywacja ---------- */
@@ -202,14 +212,13 @@ export async function login(rawEmail: unknown, pass: unknown): Promise<User> {
 
 export async function activate(me: User, code: unknown): Promise<User> {
   if (me.active) return me;
-  const row = (await loadRow("id = $1", me.id))!;
-  await activateRow(row, code);
-  return { ...me, active: true };
+  await activateRow((await loadRow("id = $1", me.id))!, code);
+  return toUser((await loadRow("id = $1", me.id))!);
 }
 
-/** Kod admina: jednorazowy, ważny ADMIN_CODE_HOURS; nadaje rolę admina na stałe. */
+/** Kod admina: jednorazowy, ważny ADMIN_CODE_HOURS; po zatwierdzeniu w panelu nadaje rolę admina. */
 export async function becomeAdmin(me: User, rawCode: unknown): Promise<User> {
-  if (me.isAdmin) return me;
+  if (me.isAdmin || me.adminPending) return me;
   const code = normCode(rawCode);
   const row = (await loadRow("id = $1", me.id))!;
   await checkCode(row, async (c) => {
@@ -218,8 +227,8 @@ export async function becomeAdmin(me: User, rawCode: unknown): Promise<User> {
        WHERE code = $1 AND used_at IS NULL AND expires_at > now()`, [c, me.id]);
     return rowCount === 1;
   }, code);
-  await query("UPDATE users SET is_admin = true WHERE id = $1", [me.id]);
-  return { ...me, isAdmin: true };
+  await query("UPDATE users SET admin_requested_at = now() WHERE id = $1", [me.id]);
+  return { ...me, adminPending: true };
 }
 
 /* ---------- hasła ---------- */
@@ -278,6 +287,10 @@ export interface AdminUserRow {
   isAdmin: boolean;
   isOwner: boolean;
   active: boolean;
+  /** Wpisał poprawny kod aktywacji – czeka na zatwierdzenie. */
+  codeOk: boolean;
+  /** Prośba o rolę admina czeka na zatwierdzenie. */
+  adminRequested: boolean;
   createdAt: string;
   lastLoginAt: string | null;
   tests: number;
@@ -290,10 +303,11 @@ export interface AdminUserRow {
 export async function listUsers(): Promise<AdminUserRow[]> {
   const { rows } = await query<{
     id: string; email: string; is_admin: boolean; is_owner: boolean; activated_at: Date | null; created_at: Date;
+    code_ok_at: Date | null; admin_requested_at: Date | null;
     last_login_at: Date | null; tests: string; score: number | null; max_score: number | null; ls: string; xp: string | null;
     last_t: Date | null; last_l: Date | null;
   }>(
-    `SELECT u.id, u.email, u.is_admin, u.is_owner, u.activated_at, u.created_at, u.last_login_at,
+    `SELECT u.id, u.email, u.is_admin, u.is_owner, u.activated_at, u.code_ok_at, u.admin_requested_at, u.created_at, u.last_login_at,
        t.tests, t.score, t.max_score, t.last_t, l.ls, l.xp, l.last_l
      FROM users u
      LEFT JOIN LATERAL (SELECT COUNT(*) AS tests, SUM(score) AS score, SUM(max_score) AS max_score, MAX(finished_at) AS last_t
@@ -306,6 +320,7 @@ export async function listUsers(): Promise<AdminUserRow[]> {
     const last = [r.last_t, r.last_l].filter((d): d is Date => d !== null).sort((a, b) => b.getTime() - a.getTime())[0];
     return {
       id: r.id, email: r.email, isAdmin: r.is_admin, isOwner: r.is_owner, active: r.activated_at !== null,
+      codeOk: r.activated_at === null && r.code_ok_at !== null, adminRequested: !r.is_admin && r.admin_requested_at !== null,
       createdAt: r.created_at.toISOString(), lastLoginAt: r.last_login_at?.toISOString() ?? null,
       tests: Number(r.tests), testPercent: r.max_score ? Math.round((Number(r.score) / Number(r.max_score)) * 1000) / 10 : null,
       learnSessions: Number(r.ls), xp: Number(r.xp ?? 0), lastActivity: last?.toISOString() ?? null,
@@ -357,4 +372,43 @@ export async function listAdminCodes() {
 
 export async function revokeAdminCode(code: unknown) {
   await query("DELETE FROM admin_codes WHERE code = $1 AND used_at IS NULL", [normCode(code)]);
+}
+
+/* ---------- zatwierdzanie i role ---------- */
+
+export type AdminAction = "zatwierdz" | "odrzuc" | "zatwierdz-admina" | "odrzuc-admina" | "odbierz-admina";
+export const ADMIN_ACTIONS: AdminAction[] = ["zatwierdz", "odrzuc", "zatwierdz-admina", "odrzuc-admina", "odbierz-admina"];
+
+/** Zmiany kont przez admina. Właściciela i własnego konta nie da się odrzucić ani odebrać im roli. */
+export async function adminAction(me: User, id: string, action: AdminAction) {
+  const row = UUID.test(id) ? await loadRow("id = $1", id) : null;
+  if (!row) throw new HttpError(404, "Nie ma takiego użytkownika.");
+  const guard = () => {
+    if (row.is_owner) throw new HttpError(400, "Tej operacji nie można wykonać na koncie właściciela.");
+    if (row.id === me.id) throw new HttpError(400, "Tej operacji nie można wykonać na własnym koncie.");
+  };
+  switch (action) {
+    case "zatwierdz":
+      if (row.activated_at) return;
+      if (!row.code_ok_at) throw new HttpError(400, "To konto nie wpisało jeszcze kodu aktywacji.");
+      await query("UPDATE users SET activated_at = now() WHERE id = $1", [id]);
+      return;
+    case "odrzuc":
+      guard();
+      if (row.activated_at) throw new HttpError(400, "Konto jest już aktywne – użyj „Usuń”.");
+      await query("DELETE FROM users WHERE id = $1 AND activated_at IS NULL AND NOT is_owner", [id]);
+      return;
+    case "zatwierdz-admina":
+      if (!row.admin_requested_at || row.is_admin) throw new HttpError(400, "Brak prośby o rolę administratora.");
+      if (!row.activated_at) throw new HttpError(400, "Najpierw zatwierdź konto użytkownika.");
+      await query("UPDATE users SET is_admin = true, admin_requested_at = NULL WHERE id = $1", [id]);
+      return;
+    case "odrzuc-admina":
+      await query("UPDATE users SET admin_requested_at = NULL WHERE id = $1 AND NOT is_admin", [id]);
+      return;
+    case "odbierz-admina":
+      guard();
+      await query("UPDATE users SET is_admin = false, admin_requested_at = NULL WHERE id = $1 AND NOT is_owner", [id]);
+      return;
+  }
 }

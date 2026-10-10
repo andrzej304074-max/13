@@ -21,7 +21,13 @@ export default async function SettingsPage() {
       {me.active && !me.isAdmin && (
         <>
           <h2>Kod administratora</h2>
-          <div className="card"><AdminCodeForm /></div>
+          {me.adminPending ? (
+            <div className="card" data-testid="admin-waiting">
+              <p className="ok-msg" style={{ margin: 0 }}>Kod przyjęty – prośba o rolę administratora czeka na zatwierdzenie.</p>
+            </div>
+          ) : (
+            <div className="card"><AdminCodeForm /></div>
+          )}
         </>
       )}
       {me.isAdmin && <p><Link href="/admin">Panel admina →</Link></p>}

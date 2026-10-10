@@ -112,7 +112,7 @@ export function RegisterForm() {
       {error && <p className="error">{error}</p>}
       <button className="btn" disabled={busy}>Załóż konto</button>
       <p className="muted" style={{ margin: 0, fontSize: ".9rem" }}>
-        Bez kodu konto powstanie, ale aplikacja odblokuje się dopiero po jego wpisaniu.
+        Po wpisaniu kodu konto musi jeszcze zatwierdzić administrator. Bez kodu konto powstanie, ale nie będzie można go zatwierdzić.
       </p>
       <div className="auth-links"><Link href="/konto/logowanie">Mam już konto – zaloguj się</Link></div>
     </form>
@@ -127,8 +127,8 @@ export function ActivateForm({ initialError }: { initialError?: string }) {
       onSubmit={(e) => {
         e.preventDefault();
         run(async () => {
-          await post("/api/konto/aktywacja", { code });
-          go("/");
+          const me = await post<Me>("/api/konto/aktywacja", { code });
+          go(me.active ? "/" : "/konto/aktywacja");
         });
       }}
     >
@@ -226,7 +226,7 @@ export function AdminCodeForm() {
         e.preventDefault();
         run(async () => {
           await post("/api/konto/admin-kod", { code });
-          go("/admin");
+          go("/konto/ustawienia");
         });
       }}
     >

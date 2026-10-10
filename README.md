@@ -142,14 +142,16 @@ python3 -I tools/nauka/pojecia_pytan.py stats
 - **Konto:** e-mail i hasło (min. 8 znaków). Bez zalogowania widać tylko ekrany konta (`/konto/...`).
 - **Pierwsze konto** założone w aplikacji jest kontem właściciela: od razu aktywne, z rolą administratora, nie da się go usunąć.
   Przejmuje wszystkie wyniki testów i postęp w Nauce sprzed wprowadzenia kont.
-- **Kod aktywacji (5 cyfr):** każde kolejne konto odblokowuje się dopiero po wpisaniu kodu – przy rejestracji albo na ekranie
-  aktywacji. Kod generuje i zmienia administrator w panelu; zmiana kodu nie wyłącza kont już aktywnych.
+- **Kod aktywacji (5 cyfr) + zatwierdzenie:** każde kolejne konto wpisuje kod (przy rejestracji albo na ekranie aktywacji),
+  a potem czeka, aż administrator zatwierdzi je w panelu. Odrzucenie usuwa konto. Kod generuje i zmienia administrator
+  w panelu; zmiana kodu nie wyłącza kont już aktywnych.
   Po 5 błędnych kodach konto jest blokowane na 15 minut (dodatkowo ogólny limit 50 błędnych prób na 15 minut).
-- **Panel admina** (`/admin`): użytkownicy z liczbą testów, wynikiem, sesjami nauki i XP; podgląd ich statystyk testów,
-  postępu i statystyk nauki (`?user=<id>`); generowanie kodu aktywacji i jednorazowych kodów administratora; usuwanie kont
-  (razem z ich danymi; poza kontem właściciela).
+- **Panel admina** (`/admin`): sekcje „Czekają na zatwierdzenie” (nowe konta i prośby o rolę admina – Zatwierdź/Odrzuć),
+  „Administratorzy” (Odbierz admina, Usuń), „Użytkownicy” (Usuń) i „Bez kodu aktywacji”; przy kontach liczba testów, wynik,
+  sesje nauki i XP oraz podgląd ich statystyk testów, postępu i statystyk nauki (`?user=<id>`); generowanie kodu aktywacji
+  i jednorazowych kodów administratora. Konta właściciela nie da się usunąć ani odebrać mu roli.
 - **Kolejni administratorzy:** zalogowany admin generuje jednorazowy kod (ważny 24 h, widoczny tylko w panelu); użytkownik
-  wpisuje go raz w Ustawieniach konta i zostaje administratorem.
+  wpisuje go raz w Ustawieniach konta, a rolę dostaje po zatwierdzeniu prośby w panelu (odrzucenie – zostaje użytkownikiem).
 - **Zmiana hasła:** w Ustawieniach (obecne + nowe hasło) albo „Nie pamiętam hasła” – link ważny 60 minut wysyłany mailem
   przez Gmail. Po zmianie hasła pozostałe sesje są wylogowane.
 

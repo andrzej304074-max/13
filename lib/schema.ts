@@ -76,6 +76,9 @@ CREATE TABLE IF NOT EXISTS users (
   last_login_at timestamptz
 );
 CREATE UNIQUE INDEX IF NOT EXISTS users_one_owner_idx ON users (is_owner) WHERE is_owner;
+-- Poprawny kod aktywacji / kod admina – konto czeka na zatwierdzenie w panelu admina.
+ALTER TABLE users ADD COLUMN IF NOT EXISTS code_ok_at timestamptz;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS admin_requested_at timestamptz;
 
 CREATE TABLE IF NOT EXISTS user_sessions (
   token_hash text PRIMARY KEY,

@@ -364,3 +364,5 @@ table.users th { color: var(--muted); font-weight: 600; white-space: nowrap; }
 .tag { display: inline-block; font-size: .75rem; padding: 1px 6px; border-radius: 6px; background: var(--bg); border: 1px solid var(--border); margin-left: 4px; }
 .btn.small { padding: 6px 10px; font-size: .85rem; }
 .btn.danger { background: transparent; color: var(--bad); border-color: var(--bad); }
+.users td.actions { white-space: nowrap; }
+.users td.actions .btn + .btn { margin-left: 6px; }
