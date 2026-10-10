@@ -58,7 +58,7 @@ Przy starcie testu można wybrać rodzaj pytań (ręczne, automatyczne lub oba) 
 - `tools/slownik/glossary/` – źródła słownika (hasła w `s*.py`); PDF:
   `python3 -I tools/slownik/glossary/build.py tools/slownik/glossary . docs/slownik-owe.pdf`
   (wymaga `playwright-core`, Chromium, `pdftotext`).
-- `data/slownik/auto.json` – pytania automatyczne (3368):
+- `data/slownik/auto.json` – pytania automatyczne (3394):
   `python3 -I tools/slownik/gen_questions.py tools/slownik/glossary data/slownik`.
   Dystraktory pochodzą tylko z haseł tego samego tematu kursu „Nauka” omawianych w tej samej lub wcześniejszej lekcji
   (kolejność z `data/nauka/course.json`); każde pytanie ma pole `pojecia` (hasło pytania i hasła dystraktorów).
@@ -71,8 +71,8 @@ Kurs zbudowany z haseł słownika (`docs/slownik-owe.pdf`) i wszystkich banków 
 
 - **7 tematów:** Mikroekonomia, Makroekonomia, Polityka gospodarcza, Podstawy finansów, Finanse przedsiębiorstw,
   Zarządzanie oraz temat przewodni „Gospodarka wobec wyzwań demograficznych”.
-- **Hierarchia:** 88 działów → 898 lekcji: 441 lekcji haseł (do 6 haseł; 103 z nich to kolejne części lekcji z samymi pojęciami z pytań) i 457 lekcji
-  „Zrozumienie” 🧠 → 3592 pod-lekcje.
+- **Hierarchia:** 88 działów → 908 lekcji: 444 lekcje haseł (do 6 haseł; 103 z nich to kolejne części lekcji z samymi pojęciami z pytań) i 464 lekcje
+  „Zrozumienie” 🧠 → 3632 pod-lekcje.
 - **Rodzaje treści** (filtr na stronie tematu): pojęcia, wzory, osoby, instytucje, daty, przepisy, zrozumienie.
 - **Pod-lekcje:** 1. Poznaj, 2. Ćwicz, 3. Utrwal, 4. Sprawdzian (10 losowych pytań olimpijskich i słownikowych lekcji).
 - **Sprawdzian pyta tylko o rzeczy omówione:** każde z 6310 pytań (1656 OWE, 1286 ręcznych, 3368 automatycznych)
@@ -99,8 +99,8 @@ Kurs zbudowany z haseł słownika (`docs/slownik-owe.pdf`) i wszystkich banków 
 
 Uczą mechanizmów, obliczeń i zastosowań, a nie tylko definicji. Są wplecione w ścieżkę każdego działu:
 
-- **Liczba lekcji:** 5 w każdym dziale pojęciowym i dziale „Wzory”, 5 w działach osób, instytucji, dat i przepisów
-  z co najmniej 15 hasłami, 2 w mniejszych działach. Razem 457 lekcji, 9176 ćwiczeń ocenianych i 1839 kart wyjaśnień. Zakres sprawdzono z podręcznikami literatury podstawowej OWE: N.G. Mankiw, M.P. Taylor „Mikroekonomia” i „Makroekonomia” (PWE), B. Winiarski (red.) „Polityka gospodarcza” (PWN 2018), S. Owsiak „Finanse” (PWE 2015), W. Gabrusewicz „Metody analizy finansowej przedsiębiorstw” (PWE 2019) oraz R.W. Griffin „Podstawy zarządzania organizacjami” (PWN). Spisy treści potraktowano jako listę tematów: do każdego rozdziału zebrano pojęcia, modele, osoby, wzory, daty, instytucje i przepisy, sprawdzono je w bazie pytań OWE i zweryfikowano nowe fakty w dwóch źródłach – zob. `tools/nauka/MAPA-POJEC.md`. Każde hasło pojęciowe tematów Mikroekonomia, Makroekonomia, Polityka gospodarcza, Finanse, Firma i Zarządzanie ma lekcję „Zrozumienie”.
+- **Liczba lekcji:** 5 w każdym dziale pojęciowym (6–7 w działach tematu Demografia) i dziale „Wzory”, 5 w działach osób, instytucji, dat i przepisów
+  z co najmniej 15 hasłami, 2 w mniejszych działach. Razem 464 lekcje, 9326 ćwiczeń ocenianych i 1873 karty wyjaśnień. Zakres sprawdzono z podręcznikami literatury podstawowej OWE: N.G. Mankiw, M.P. Taylor „Mikroekonomia” i „Makroekonomia” (PWE), B. Winiarski (red.) „Polityka gospodarcza” (PWN 2018), S. Owsiak „Finanse” (PWE 2015), W. Gabrusewicz „Metody analizy finansowej przedsiębiorstw” (PWE 2019) oraz R.W. Griffin „Podstawy zarządzania organizacjami” (PWN). Spisy treści potraktowano jako listę tematów: do każdego rozdziału zebrano pojęcia, modele, osoby, wzory, daty, instytucje i przepisy, sprawdzono je w bazie pytań OWE i zweryfikowano nowe fakty w dwóch źródłach – zob. `tools/nauka/MAPA-POJEC.md`. Każde hasło pojęciowe tematów Mikroekonomia, Makroekonomia, Polityka gospodarcza, Finanse, Firma i Zarządzanie ma lekcję „Zrozumienie”. Temat Demografia sprawdzono tak samo z literaturą hasła przewodniego XL OWE: C. Goodhart, M. Pradhan „Wielki zwrot demograficzny” (WEI 2024), J.A. Majcherek „Demograficzne wyzwania dla systemów społeczno-ekonomicznych” (Impuls 2024; według opisu wydawcy, bo spisu treści nie ma w sieci), M. Schwabe „Migracje zarobkowe. Wprowadzenie” (Wolters Kluwer 2025), N. Barr, P. Diamond „Reformy systemu emerytalnego” (PTE 2014) oraz M. Okólski, A. Fihel „Demografia. Współczesne zjawiska i teorie” (Scholar 2012); 25 nowych haseł z tej mapy ma lekcje „Zrozumienie”.
 - **4 pod-lekcje:** Wyjaśnienie (karty krok po kroku z pytaniami sprawdzającymi), Mechanizmy (co się stanie, gdy…,
   łańcuchy przyczyn i skutków, sortowanie do kategorii, przesunięcia krzywych), Obliczenia (wynik wpisywany
   z tolerancją i rozwiązaniem krok po kroku), Zastosowanie (studia przypadków). Każda pod-lekcja ćwiczeń ma
