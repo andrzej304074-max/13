@@ -35,3 +35,15 @@ export function lastTest(): string | null {
     return null;
   }
 }
+
+/** Podgląd danych innego użytkownika przez admina: `?user=<id>` w adresie strony. */
+export function viewedUser(): string | null {
+  if (typeof window === "undefined") return null;
+  const u = new URLSearchParams(window.location.search).get("user");
+  return u && /^[0-9a-f-]{36}$/i.test(u) ? u : null;
+}
+
+/** Dopisuje `user=` (podgląd admina) do adresu API. */
+export function withUser(url: string, user: string | null = viewedUser()): string {
+  return user ? `${url}${url.includes("?") ? "&" : "?"}user=${user}` : url;
+}

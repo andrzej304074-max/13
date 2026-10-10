@@ -1,4 +1,4 @@
-import { Pool, type QueryResultRow } from "pg";
+import { Pool, type QueryResult, type QueryResultRow } from "pg";
 import { SCHEMA_SQL } from "./schema";
 
 const globalForDb = globalThis as unknown as { pool?: Pool; schemaReady?: Promise<void> };
@@ -33,4 +33,21 @@ function ensureSchema(): Promise<void> {
 export async function query<T extends QueryResultRow>(text: string, params: unknown[] = []) {
   await ensureSchema();
   return getPool().query<T>(text, params);
+}
+
+/** Transakcja: `fn` dostaje klienta z otwartą transakcją (COMMIT po sukcesie, ROLLBACK po błędzie). */
+export async function withTx<R>(fn: (q: <T extends QueryResultRow>(text: string, params?: unknown[]) => Promise<QueryResult<T>>) => Promise<R>): Promise<R> {
+  await ensureSchema();
+  const client = await getPool().connect();
+  try {
+    await client.query("BEGIN");
+    const r = await fn(<T extends QueryResultRow>(text: string, params: unknown[] = []) => client.query<T>(text, params));
+    await client.query("COMMIT");
+    return r;
+  } catch (err) {
+    await client.query("ROLLBACK").catch(() => {});
+    throw err;
+  } finally {
+    client.release();
+  }
 }

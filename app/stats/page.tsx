@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Chart } from "@/app/components/chart";
-import { api, fmtPct, fmtPoints } from "@/lib/client";
+import { PreviewBanner } from "@/app/components/preview-banner";
+import { api, fmtPct, fmtPoints, withUser } from "@/lib/client";
 import { BLOCK_SIZES, DEFAULT_BLOCK_SIZE } from "@/lib/scoring";
 import type { Stats } from "@/lib/tests";
 
@@ -65,7 +66,7 @@ export default function StatsPage() {
   useEffect(() => {
     if (blockSize === null || bank === null) return;
     const typeParam = filter === "all" ? "" : `&type=${filter}`;
-    api<Stats>(`/api/stats?bank=${bank}&block=${blockSize}${typeParam}`).then(setStats).catch((e) => setError(e.message));
+    api<Stats>(withUser(`/api/stats?bank=${bank}&block=${blockSize}${typeParam}`)).then(setStats).catch((e) => setError(e.message));
   }, [blockSize, filter, bank]);
 
   function chooseBank(b: Bank) {
@@ -99,6 +100,7 @@ export default function StatsPage() {
   const unitLabel = filter === "multi" ? "trafnych pól" : filter === "single" ? "poprawnych pytań" : "poprawnych";
   return (
     <div className="stack">
+      <PreviewBanner />
       <h1>Statystyki</h1>
       <p className="muted" style={{ marginTop: -8 }}>Statystyki zakładki Nauka (lekcje, czas, ćwiczenia): <Link href="/nauka/statystyki">Statystyki nauki →</Link></p>
       <div className="seg" role="group" aria-label="Baza pytań">

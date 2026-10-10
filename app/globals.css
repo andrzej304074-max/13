@@ -334,3 +334,33 @@ header.top .brand { white-space: nowrap; }
 .graph-fig { margin: 0; }
 .graph-legend { text-align: center; font-size: .85rem; color: var(--muted); margin-top: 4px; }
 .bucket-row .seg button { font-size: .85rem; padding: 4px 10px; }
+
+/* ---------- konta i panel admina ---------- */
+.auth { max-width: 420px; margin: 24px auto 0; }
+.auth form, .form { display: grid; gap: 12px; }
+.field { display: grid; gap: 4px; }
+.field span { font-size: .9rem; color: var(--muted); }
+.field input {
+  font: inherit; color: var(--text); background: var(--surface);
+  border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px;
+}
+.field input:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+.field input.code { font-size: 1.4rem; letter-spacing: .4em; text-align: center; font-variant-numeric: tabular-nums; }
+.ok-msg { color: var(--good); }
+.auth-links { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: .95rem; }
+.user-nav { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: center; font-size: .9rem; }
+.user-nav a { white-space: nowrap; }
+.user-nav .email { color: var(--muted); max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.linkbtn { background: none; border: none; padding: 0; font: inherit; color: var(--muted); cursor: pointer; text-decoration: underline; }
+.preview-banner {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px;
+  background: var(--warn-bg); border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px; font-size: .95rem;
+}
+.big-code { font-size: 2rem; font-weight: 700; letter-spacing: .3em; font-variant-numeric: tabular-nums; }
+.table-wrap { overflow-x: auto; }
+table.users { width: 100%; border-collapse: collapse; font-size: .9rem; }
+table.users th, table.users td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.users th { color: var(--muted); font-weight: 600; white-space: nowrap; }
+.tag { display: inline-block; font-size: .75rem; padding: 1px 6px; border-radius: 6px; background: var(--bg); border: 1px solid var(--border); margin-left: 4px; }
+.btn.small { padding: 6px 10px; font-size: .85rem; }
+.btn.danger { background: transparent; color: var(--bad); border-color: var(--bad); }

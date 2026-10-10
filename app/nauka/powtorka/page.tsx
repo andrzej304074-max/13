@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { requirePageUser } from "@/lib/auth";
 import { weakItems } from "@/lib/nauka";
 import { reviewPayload } from "@/lib/nauka-course";
 import { LessonPlayer } from "../lekcja/player";
@@ -6,10 +7,11 @@ import { LessonPlayer } from "../lekcja/player";
 export const dynamic = "force-dynamic";
 
 export default async function ReviewPage() {
+  const me = await requirePageUser();
   let payload = null;
   let error: string | null = null;
   try {
-    payload = reviewPayload(await weakItems(8));
+    payload = reviewPayload(await weakItems(me.id, 8));
   } catch (e) {
     console.error(e);
     error = "Nie udało się pobrać historii odpowiedzi.";

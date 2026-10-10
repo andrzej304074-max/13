@@ -14,20 +14,21 @@ const pct = (c: number, t: number) => (t > 0 ? Math.round((c / t) * 1000) / 10 :
 
 /* ---------- sesje ---------- */
 
-export async function startSession(lessonId: string, sub: number) {
+export async function startSession(userId: string, lessonId: string, sub: number) {
   if (lessonId === "powtorka") {
     const { rows } = await query<{ id: string }>(
-      `INSERT INTO learn_sessions (topic, unit, lesson, sub, kind) VALUES ('powtorka', 'powtorka', 'powtorka', 3, 'mix') RETURNING id`,
+      `INSERT INTO learn_sessions (topic, unit, lesson, sub, kind, user_id) VALUES ('powtorka', 'powtorka', 'powtorka', 3, 'mix', $1) RETURNING id`,
+      [userId],
     );
     return { id: rows[0].id, level: 0 };
   }
   const lesson = getLesson(lessonId);
   if (!lesson) throw new HttpError(404, "Nie ma takiej lekcji.");
   if (![1, 2, 3, 4].includes(sub)) throw new HttpError(400, "Pod-lekcja musi mieć numer 1–4.");
-  const level = (await lessonLevels([lessonId]))[lessonId] ?? 0;
+  const level = (await lessonLevels(userId, [lessonId]))[lessonId] ?? 0;
   const { rows } = await query<{ id: string }>(
-    `INSERT INTO learn_sessions (topic, unit, lesson, sub, kind, level) VALUES ($1, $2, $3, $4, $5, $6) RETURNING id`,
-    [lesson.topic, lesson.unit, lesson.id, sub, lesson.kind, level],
+    `INSERT INTO learn_sessions (topic, unit, lesson, sub, kind, level, user_id) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING id`,
+    [lesson.topic, lesson.unit, lesson.id, sub, lesson.kind, level, userId],
   );
   return { id: rows[0].id, level };
 }
@@ -58,7 +59,7 @@ export interface FinishResult {
   levelBefore: number;
 }
 
-export async function finishSession(id: string, rawAnswers: unknown): Promise<FinishResult> {
+export async function finishSession(userId: string, id: string, rawAnswers: unknown): Promise<FinishResult> {
   if (!/^[0-9a-f-]{36}$/i.test(id)) throw new HttpError(404, "Nie ma takiej sesji.");
   const answers = parseAnswers(rawAnswers);
   const correct = answers.filter((a) => a.correct).length;
@@ -66,8 +67,8 @@ export async function finishSession(id: string, rawAnswers: unknown): Promise<Fi
   const { rows } = await query<{ lesson: string; level: number; duration_ms: number }>(
     `UPDATE learn_sessions SET finished_at = now(), correct = $2, total = $3, xp = $4,
        duration_ms = LEAST(EXTRACT(EPOCH FROM now() - started_at) * 1000, ${MAX_DURATION_MS})::int
-     WHERE id = $1 AND finished_at IS NULL RETURNING lesson, level, duration_ms`,
-    [id, correct, answers.length, xp],
+     WHERE id = $1 AND user_id = $5 AND finished_at IS NULL RETURNING lesson, level, duration_ms`,
+    [id, correct, answers.length, xp, userId],
   );
   if (rows.length === 0) throw new HttpError(409, "Sesja nie istnieje albo została już zakończona.");
   await query(
@@ -79,7 +80,7 @@ export async function finishSession(id: string, rawAnswers: unknown): Promise<Fi
       answers.map((a) => a.correct), answers.map((a) => a.ms)],
   );
   const { lesson, level: levelBefore, duration_ms } = rows[0];
-  const level = lesson === "powtorka" ? 0 : (await lessonLevels([lesson]))[lesson] ?? 0;
+  const level = lesson === "powtorka" ? 0 : (await lessonLevels(userId, [lesson]))[lesson] ?? 0;
   return { xp, correct, total: answers.length, percent: pct(correct, answers.length), durationMs: duration_ms, level, levelBefore };
 }
 
@@ -87,14 +88,14 @@ export async function finishSession(id: string, rawAnswers: unknown): Promise<Fi
 
 interface SubRow { lesson: string; sub: number; passes: string; best: number; sessions: string; last: Date }
 
-async function subRows(lessonIds: string[] | null) {
+async function subRows(userId: string, lessonIds: string[] | null) {
   const { rows } = await query<SubRow>(
     `SELECT lesson, sub, COUNT(*) FILTER (WHERE correct >= total * ${PASS_ACCURACY}) AS passes,
        MAX(correct::float / NULLIF(total, 0)) AS best, COUNT(*) AS sessions, MAX(finished_at) AS last
      FROM learn_sessions
-     WHERE finished_at IS NOT NULL AND total > 0 AND lesson <> 'powtorka' AND ($1::text[] IS NULL OR lesson = ANY($1))
+     WHERE user_id = $2 AND finished_at IS NOT NULL AND total > 0 AND lesson <> 'powtorka' AND ($1::text[] IS NULL OR lesson = ANY($1))
      GROUP BY lesson, sub`,
-    [lessonIds],
+    [lessonIds, userId],
   );
   return rows;
 }
@@ -106,8 +107,8 @@ function levelsFrom(rows: SubRow[]) {
   return Object.fromEntries(Object.entries(passes).map(([l, p]) => [l, Math.min(MAX_LEVEL, ...p)]));
 }
 
-async function lessonLevels(lessonIds: string[]): Promise<Record<string, number>> {
-  return levelsFrom(await subRows(lessonIds));
+async function lessonLevels(userId: string, lessonIds: string[]): Promise<Record<string, number>> {
+  return levelsFrom(await subRows(userId, lessonIds));
 }
 
 export interface LessonProgress {
@@ -125,10 +126,11 @@ export interface Summary {
   sessions: number;
 }
 
-export async function getSummary(): Promise<Summary> {
+export async function getSummary(userId: string): Promise<Summary> {
   const { rows } = await query<{ day: string; xp: string; n: string }>(
     `SELECT to_char(${DAY}, 'YYYY-MM-DD') AS day, SUM(xp) AS xp, COUNT(*) AS n
-     FROM learn_sessions WHERE finished_at IS NOT NULL GROUP BY 1 ORDER BY 1 DESC`,
+     FROM learn_sessions WHERE user_id = $1 AND finished_at IS NOT NULL GROUP BY 1 ORDER BY 1 DESC`,
+    [userId],
   );
   const { rows: today } = await query<{ d: string }>(`SELECT to_char((now() AT TIME ZONE '${TZ}')::date, 'YYYY-MM-DD') AS d`);
   const todayStr = today[0].d;
@@ -166,9 +168,9 @@ export interface Progress {
   topics: Record<string, { lessons: number; crowned: number; started: number; crowns: number }>;
 }
 
-export async function getProgress(topic: string | null = null): Promise<Progress> {
+export async function getProgress(userId: string, topic: string | null = null): Promise<Progress> {
   const ids = topic ? Object.values(COURSE.lessons).filter((l) => l.topic === topic).map((l) => l.id) : null;
-  const rows = await subRows(ids);
+  const rows = await subRows(userId, ids);
   const levels = levelsFrom(rows);
   const lessons: Record<string, LessonProgress> = {};
   for (const r of rows) {
@@ -184,17 +186,18 @@ export async function getProgress(topic: string | null = null): Promise<Progress
     if ((levels[l.id] ?? 0) > 0) tp.crowned++;
     tp.crowns += levels[l.id] ?? 0;
   }
-  return { summary: await getSummary(), lessons, topics };
+  return { summary: await getSummary(userId), lessons, topics };
 }
 
 /** Hasła z najniższą skutecznością (min. 2 odpowiedzi, ostatnie 60 dni) – do powtórki. */
-export async function weakItems(limit = 8): Promise<string[]> {
+export async function weakItems(userId: string, limit = 8): Promise<string[]> {
   const { rows } = await query<{ item_id: string }>(
     // lekcje „Zrozumienie” nie mają ćwiczeń generowanych z haseł – powtarza się je w samych lekcjach
-    `SELECT item_id FROM learn_answers WHERE answered_at > now() - interval '60 days' AND item_kind <> 'zrozumienie'
-     GROUP BY item_id HAVING COUNT(*) >= 2 AND AVG(correct::int) < 0.8
-     ORDER BY AVG(correct::int), COUNT(*) DESC LIMIT $1`,
-    [limit],
+    `SELECT a.item_id FROM learn_answers a JOIN learn_sessions s ON s.id = a.session_id
+     WHERE s.user_id = $2 AND a.answered_at > now() - interval '60 days' AND a.item_kind <> 'zrozumienie'
+     GROUP BY a.item_id HAVING COUNT(*) >= 2 AND AVG(a.correct::int) < 0.8
+     ORDER BY AVG(a.correct::int), COUNT(*) DESC LIMIT $1`,
+    [limit, userId],
   );
   return rows.map((r) => r.item_id).filter((id) => getItem(id));
 }
@@ -231,9 +234,9 @@ export interface NaukaStats {
 }
 
 /** Warunki na sesje (temat/dział/lekcja/pod-lekcja/okres) i dodatkowo na odpowiedzi (rodzaj hasła, typ ćwiczenia). */
-function where(f: StatsFilter) {
-  const params: unknown[] = [];
-  const s: string[] = ["s.finished_at IS NOT NULL"];
+function where(userId: string, f: StatsFilter) {
+  const params: unknown[] = [userId];
+  const s: string[] = ["s.finished_at IS NOT NULL", "s.user_id = $1"];
   const add = (sql: string, v: unknown) => {
     params.push(v);
     s.push(sql.replace("?", `$${params.length}`));
@@ -273,8 +276,8 @@ const sessTotals = (r: { n: string; ms: string | null; xp: string | null; c: str
   percent: pct(Number(r.c ?? 0), Number(r.t ?? 0)),
 });
 
-export async function getNaukaStats(f: StatsFilter): Promise<NaukaStats> {
-  const w = where(f);
+export async function getNaukaStats(userId: string, f: StatsFilter): Promise<NaukaStats> {
+  const w = where(userId, f);
   const S = `FROM learn_sessions s WHERE ${w.sessions.sql}`;
   const A = `FROM learn_answers a JOIN learn_sessions s ON s.id = a.session_id WHERE ${w.answers.sql}`;
   const sessAgg = `COUNT(*) AS n, SUM(s.duration_ms) AS ms, SUM(s.xp) AS xp, SUM(s.correct) AS c, SUM(s.total) AS t`;

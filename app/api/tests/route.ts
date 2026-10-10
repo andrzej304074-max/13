@@ -1,4 +1,5 @@
 import { handle, readJson } from "@/lib/api";
+import { requireUser } from "@/lib/auth";
 import { ALLOWED_COUNTS, ENDLESS, type TestSize } from "@/lib/scoring";
 import { createTest, HttpError } from "@/lib/tests";
 import type { Bank, Origin } from "@/lib/types";
@@ -7,6 +8,7 @@ export const dynamic = "force-dynamic";
 
 export async function POST(req: Request) {
   return handle(async () => {
+    const me = await requireUser();
     const { type, count, bank = "owe", origin = null, section = null } = await readJson(req);
     if (type !== "single" && type !== "multi") throw new HttpError(400, "Nieprawidłowy typ pytań.");
     if (count !== ENDLESS && !ALLOWED_COUNTS.includes(count as TestSize)) {
@@ -18,6 +20,6 @@ export async function POST(req: Request) {
       throw new HttpError(400, "Nieprawidłowy dział.");
     }
     const filter = bank === "slownik" ? { origin: origin as Origin | null, section: section as number | null } : {};
-    return createTest(type, count as TestSize | typeof ENDLESS, bank as Bank, filter);
+    return createTest(me.id, type, count as TestSize | typeof ENDLESS, bank as Bank, filter);
   }, 201);
 }

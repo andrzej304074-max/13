@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { Chart } from "@/app/components/chart";
-import { api, fmtPct } from "@/lib/client";
+import { PreviewBanner } from "@/app/components/preview-banner";
+import { api, fmtPct, viewedUser, withUser } from "@/lib/client";
 import { fmtDuration } from "@/lib/nauka-client";
 import type { NaukaStats } from "@/lib/nauka";
 import { EXERCISE_LABELS, SUBLESSONS, SUBLESSONS_Z, subsFor } from "@/lib/nauka-types";
@@ -38,9 +39,10 @@ export function NaukaStatsView({ meta }: { meta: StatsMeta }) {
   useEffect(() => {
     if (!f) return;
     const qs = new URLSearchParams(Object.entries(f).filter(([k, v]) => v && !(k === "range" && v === "all"))).toString();
-    window.history.replaceState(null, "", `/nauka/statystyki${qs ? `?${qs}` : ""}`);
+    const user = viewedUser();
+    window.history.replaceState(null, "", withUser(`/nauka/statystyki${qs ? `?${qs}` : ""}`, user));
     setError(null);
-    api<NaukaStats>(`/api/nauka/stats?${qs}`).then(setStats).catch((e) => setError(e.message));
+    api<NaukaStats>(withUser(`/api/nauka/stats?${qs}`, user)).then(setStats).catch((e) => setError(e.message));
   }, [f]);
 
   const names = useMemo(() => {
@@ -62,6 +64,7 @@ export function NaukaStatsView({ meta }: { meta: StatsMeta }) {
 
   return (
     <div className="stack">
+      <PreviewBanner />
       <p className="muted" style={{ margin: 0 }}><Link href="/nauka">← Nauka</Link> · <Link href="/stats">Statystyki testów</Link></p>
       <h1>Statystyki nauki</h1>
       <p className="muted" style={{ marginTop: -8 }}>

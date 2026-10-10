@@ -137,6 +137,30 @@ python3 -I tools/nauka/pojecia_pytan.py dump 'owe-39-*'   # pytania z wykrytymi 
 python3 -I tools/nauka/pojecia_pytan.py stats
 ```
 
+## Konta i panel admina
+
+- **Konto:** e-mail i hasło (min. 8 znaków). Bez zalogowania widać tylko ekrany konta (`/konto/...`).
+- **Pierwsze konto** założone w aplikacji jest kontem właściciela: od razu aktywne, z rolą administratora, nie da się go usunąć.
+  Przejmuje wszystkie wyniki testów i postęp w Nauce sprzed wprowadzenia kont.
+- **Kod aktywacji (5 cyfr):** każde kolejne konto odblokowuje się dopiero po wpisaniu kodu – przy rejestracji albo na ekranie
+  aktywacji. Kod generuje i zmienia administrator w panelu; zmiana kodu nie wyłącza kont już aktywnych.
+  Po 5 błędnych kodach konto jest blokowane na 15 minut (dodatkowo ogólny limit 50 błędnych prób na 15 minut).
+- **Panel admina** (`/admin`): użytkownicy z liczbą testów, wynikiem, sesjami nauki i XP; podgląd ich statystyk testów,
+  postępu i statystyk nauki (`?user=<id>`); generowanie kodu aktywacji i jednorazowych kodów administratora; usuwanie kont
+  (razem z ich danymi; poza kontem właściciela).
+- **Kolejni administratorzy:** zalogowany admin generuje jednorazowy kod (ważny 24 h, widoczny tylko w panelu); użytkownik
+  wpisuje go raz w Ustawieniach konta i zostaje administratorem.
+- **Zmiana hasła:** w Ustawieniach (obecne + nowe hasło) albo „Nie pamiętam hasła” – link ważny 60 minut wysyłany mailem
+  przez Gmail. Po zmianie hasła pozostałe sesje są wylogowane.
+
+Konfiguracja maili (Vercel → Settings → Environment Variables, potem Redeploy):
+1. Na koncie Google włącz weryfikację dwuetapową, a potem utwórz **hasło aplikacji**
+   (Konto Google → Bezpieczeństwo → Hasła aplikacji).
+2. Ustaw `GMAIL_USER` (adres Gmail) i `GMAIL_APP_PASSWORD` (hasło aplikacji, bez spacji).
+3. Opcjonalnie `APP_URL` – adres strony w linkach z maili (domyślnie adres produkcyjny Vercel).
+
+Po pierwszym wdrożeniu od razu załóż swoje konto – pierwsze konto zostaje właścicielem.
+
 ## Uruchomienie lokalne
 
 ```bash

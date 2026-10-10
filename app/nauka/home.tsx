@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { api } from "@/lib/client";
+import { api, withUser } from "@/lib/client";
+import { PreviewBanner } from "@/app/components/preview-banner";
 import { DAILY_GOALS, lastLesson, loadGoal, saveGoal } from "@/lib/nauka-client";
 import type { Progress } from "@/lib/nauka";
 import { SUBLESSONS, SUBLESSONS_Z, type CourseTopic } from "@/lib/nauka-types";
@@ -28,7 +29,7 @@ export function NaukaHome({ topics, kinds, lessonIds }: { topics: TopicCard[]; k
   useEffect(() => {
     setGoal(loadGoal());
     setLast(lastLesson());
-    api<Progress>("/api/nauka/progress").then(setProgress).catch((e) => setError(e.message));
+    api<Progress>(withUser("/api/nauka/progress")).then(setProgress).catch((e) => setError(e.message));
   }, []);
 
   const s = progress?.summary;
@@ -42,6 +43,7 @@ export function NaukaHome({ topics, kinds, lessonIds }: { topics: TopicCard[]; k
 
   return (
     <div className="stack">
+      <PreviewBanner />
       <h1>Nauka</h1>
       <p className="muted" style={{ marginTop: -8 }}>
         Kurs w stylu Duolingo zbudowany ze słownika pojęć i wszystkich pytań: 6 tematów programu OWE i temat przewodni. Każdy
