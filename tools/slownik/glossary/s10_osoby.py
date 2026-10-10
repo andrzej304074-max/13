@@ -207,6 +207,7 @@ E = [
  ("French John i Raven Bertram", "Psycholodzy społeczni; w 1959 r. opisali pięć źródeł (podstaw) władzy: nagradzania, przymusu, prawomocną (z mocy prawa), ekspercką i odniesienia (charyzmatyczną).", {"k": ["french", "raven"]}),
  ("Juran Joseph", "Amerykański specjalista zarządzania jakością; jakość jako „przydatność do użytku”, trylogia jakości (planowanie, kontrola, doskonalenie), spopularyzował zasadę Pareto w jakości.", {"k": ["juran"]}),
  ("Crosby Philip", "Amerykański specjalista zarządzania jakością; koncepcja „zero defektów” i hasło „jakość jest za darmo” (1979) – koszty niskiej jakości przewyższają koszty zapobiegania.", {"k": ["crosby"]}),
+ ("Lexis Wilhelm", "Niemiecki statystyk, ekonomista i demograf (1837–1914); autor siatki demograficznej (diagram Lexisa, 1875) i miary stabilności szeregów statystycznych (współczynnik Lexisa, 1879); prowadził pierwsze w Niemczech studia aktuarialne (1895).", {"k": ["lexis"]}),
 ]
 TABLES = [
  ("Nagrody Nobla z ekonomii przywoływane w pytaniach", ["Rok", "Laureaci", "Za co (skrót)"], [

@@ -1107,3 +1107,10 @@ fix("owe26-s-22", add=["Sektor finansów publicznych"])
 fix("owe28-s-28", add=["Prawa i obowiązki pracownicze"])
 fix("owe33-o-19", add=["Produkcja (funkcja produkcji)", "Izokwanta", "Izokoszta"])
 fix("owe34-o-21", add=["Produkcja (funkcja produkcji)"])
+
+
+# ── hasła z literatury hasła przewodniego XL OWE (demografia) ──
+drop("Standaryzacja współczynników demograficznych", "standaryzacj")
+rx("Standaryzacja współczynników demograficznych", B + r"standaryzacj\w* (?:współczynnik|bezpośredni|pośredni)", B + r"współczynnik\w* (?:standaryzowan|surow)")
+drop("Automatyzacja a starzenie się ludności", "automatyzacj", "robotyzacj")
+rx("Automatyzacja a starzenie się ludności", B + r"(?:automatyzacj|robotyzacj)\w*[^.?]{0,60}(?:starzen|demograf|niedob\w* prac)", B + r"(?:starzen|demograf)\w*[^.?]{0,60}(?:automatyzacj|robotyzacj)")
