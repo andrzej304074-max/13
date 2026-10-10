@@ -7,9 +7,11 @@ pojęcia, modele, osoby, wzory, daty, instytucje i przepisy. Każdą rzecz spraw
 **Statusy**
 - **było** – hasło już istniało w słowniku;
 - **dodane** – hasło dodane przy tej mapie; fakty potwierdzone w dwóch źródłach podanych w ostatniej kolumnie;
+- **w definicji** – rzecz omówiona w definicji innego hasła (podanego w kolumnie „Hasło w słowniku”);
+- **rozszerzone** – istniejące hasło uzupełnione przy tej mapie (źródła w ostatniej kolumnie);
 - **pominięte** – rzecz poza zakresem OWE (brak w podręcznikach z listy literatury i w pytaniach), z podanym powodem.
 
-Kolumna „Pytania OWE” podaje liczbę pytań z XXI–XXXIX OWE, w których pojawia się dana rzecz (wyszukiwanie po nazwie).
+Kolumna „Pytania OWE” podaje liczbę pytań z XXI–XXXIX OWE, w których pojawia się dana rzecz (wyszukiwanie po nazwie). W sekcjach hasła przewodniego liczbę wyznacza `tools/nauka/pojecia_pytan.py` (pytania, w których rozpoznano hasło z kolumny „Hasło w słowniku”); „–” dla statusów „w definicji” i „pominięte”.
 
 **Podstawa zakresu:** „Literatura i źródła wiedzy zalecane w przygotowaniach do XXXIX Olimpiady Wiedzy Ekonomicznej”
 (PTE, wrzesień 2025: https://pte.lodz.pl/wp-content/uploads/2025/09/Literatura-XXXIX.pdf). Literatura podstawowa obejmuje:
@@ -19,7 +21,17 @@ Kolumna „Pytania OWE” podaje liczbę pytań z XXI–XXXIX OWE, w których po
 - W. Gabrusewicz, „Metody analizy finansowej przedsiębiorstw” (PWE 2019);
 - R.W. Griffin, „Podstawy zarządzania organizacjami” (PWN).
 
-**Podsumowanie (stan na 9.10.2026)**
+Literatura do hasła przewodniego XL OWE („Gospodarka wobec wyzwań demograficznych”, temat „Demografia” w kursie):
+- C. Goodhart, M. Pradhan, „Wielki zwrot demograficzny…” (WEI 2024);
+- J.A. Majcherek, „Demograficzne wyzwania dla systemów społeczno-ekonomicznych” (Impuls 2024);
+- M. Schwabe, „Migracje zarobkowe. Wprowadzenie” (Wolters Kluwer 2025);
+- N. Barr, P. Diamond, „Reformy systemu emerytalnego. Krótki przewodnik” (PTE 2014);
+- M. Okólski, A. Fihel, „Demografia. Współczesne zjawiska i teorie” (Scholar 2012).
+
+Spisy treści tych książek zebrano z sieci (źródła podano na początku każdej sekcji). Spisu treści książki J.A. Majcherka nie udało
+się znaleźć – jej sekcja opiera się na obszarach z opisu wydawcy.
+
+**Podsumowanie (stan na 10.10.2026)**
 
 | Podręcznik | Rozdziały | Pozycji w mapie | Było | Dodane | Pominięte | Uzupełnione po przeglądzie pytań |
 |---|---|---|---|---|---|---|
@@ -29,10 +41,16 @@ Kolumna „Pytania OWE” podaje liczbę pytań z XXI–XXXIX OWE, w których po
 | Gabrusewicz – „Metody analizy finansowej przedsiębiorstw” | 1–11 | 38 | 23 | 14 | 1 | nowe: 2, rozszerzone: 2 |
 | Winiarski (red.) – „Polityka gospodarcza” | 1–28 | 60 | 46 | 12 | 2 | nowe: 2, rozszerzone: 1 |
 | Griffin – „Podstawy zarządzania organizacjami” | 1–22, dodatek | 114 | 89 | 23 | 2 | nowe: 9, rozszerzone: 1 |
+| Goodhart, Pradhan – „Wielki zwrot demograficzny” | 1–14 | 26 | 16 | 9 | 1 | – |
+| Majcherek – „Demograficzne wyzwania…” | obszary z opisu wydawcy | 11 | 8 | 3 | 0 | – |
+| Schwabe – „Migracje zarobkowe. Wprowadzenie” | I–III | 16 | 12 | 4 | 0 | – |
+| Barr, Diamond – „Reformy systemu emerytalnego” | 1–11 | 15 | 10 | 4 | 1 | – |
+| Okólski, Fihel – „Demografia. Współczesne zjawiska i teorie” | 1–8 | 29 | 19 | 8 | 2 | – |
 
 Wcześniejsze uzupełnienia według samych tytułów podrozdziałów (47 haseł Mikro i 25 Makro) mają w mapie status „było”.
 Każde hasło pojęciowe tematów Mikroekonomia, Makroekonomia, Polityka gospodarcza, Finanse, Firma i Zarządzanie ma lekcję „Zrozumienie”.
 W wierszu Griffina „Było” obejmuje 2 rzeczy omówione w definicji innego hasła (status „w definicji”).
+W wierszach literatury hasła przewodniego „Było” obejmuje też rzeczy omówione w definicji innego hasła (6) i hasła rozszerzone przy tej mapie (3: Opieka długoterminowa, Krzywa Phillipsa, Zastępowalność pokoleń). Wszystkie 25 nowych haseł pojęciowych tematu Demografia ma lekcje „Zrozumienie” (L6–L7 w działach demo-*).
 
 ## Mikroekonomia – N.G. Mankiw, M.P. Taylor (rozdz. 1–22)
 
@@ -1308,6 +1326,323 @@ W wierszu Griffina „Było” obejmuje 2 rzeczy omówione w definicji innego ha
 | Analiza punktu krytycznego (próg rentowności) | pojęcie | było | Próg rentowności (BEP); Próg rentowności – wzór | 6 | podręcznik |
 | Macierze wypłat i drzewa decyzyjne | pojęcie | dodane | Macierz wypłat i drzewo decyzyjne | 0 | Wikipedia – Decision tree; Wikipedia – Payoff matrix (normal form) |
 | Wartość oczekiwana | pojęcie | było | Ryzyko, niepewność i wartość oczekiwana | 0 | podręcznik |
+
+## Hasło przewodnie XL OWE – C. Goodhart, M. Pradhan, „Wielki zwrot demograficzny” (WEI 2024; oryg. Palgrave Macmillan 2020) (rozdz. 1–14)
+
+Spis treści: Springer Professional (wydanie oryginalne „The Great Demographic Reversal”).
+
+### Rozdz. 1. Wstęp
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Wielki zwrot demograficzny – koniec ery taniej pracy | pojęcie | było | Wielki zwrot demograficzny (teza Goodharta i Pradhana) | 0 | spis treści |
+| Współczynnik obciążenia demograficznego | pojęcie | było | Współczynnik obciążenia demograficznego | 0 | spis treści |
+
+### Rozdz. 2. Chiny: koniec historycznej mobilizacji
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Punkt zwrotny Lewisa | pojęcie | było | Punkt zwrotny Lewisa | 0 | spis treści |
+| W.A. Lewis | osoba | było | Lewis W. Arthur | 0 | spis treści |
+| Polityka jednego dziecka | pojęcie | w definicji | Polityka ludnościowa (demograficzna) | – | omówiona w definicji hasła |
+
+### Rozdz. 3. Wielki zwrot a przyszły wzrost
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Przejście struktury wieku, dywidenda demograficzna | pojęcie | było | Przejście struktury wieku; Druga dywidenda demograficzna | 0 | spis treści |
+| Skutki starzenia się dla wzrostu i rynku pracy | pojęcie | było | Skutki starzenia się dla rynku pracy i finansów publicznych | 0 | spis treści |
+
+### Rozdz. 4. Zależność, demencja i nadchodzący kryzys opieki
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Opieka długoterminowa, demencja, kryzys opieki | pojęcie | rozszerzone | Opieka długoterminowa | 0 | WHO – dementia; NIHR Dementia Researcher (dodano demencję i chorobę Alzheimera) |
+| Kompresja i ekspansja zachorowalności | pojęcie | dodane | Kompresja zachorowalności i teorie długowieczności | 0 | PMC 3163136 (Fries); SOA – Robine 2014 |
+
+### Rozdz. 5. Powrót inflacji
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Demografia a inflacja | pojęcie | było | Demografia a inflacja i stopy procentowe | 0 | spis treści |
+| Udział płac w dochodzie narodowym | pojęcie | dodane | Udział płac w dochodzie narodowym (labour share) | 0 | OECD/ILO 2015; UNDP |
+
+### Rozdz. 6. Wyznaczanie (realnych) stóp procentowych
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Globalny nadmiar oszczędności (saving glut) | pojęcie | dodane | Globalny nadmiar oszczędności (saving glut) | 0 | Federal Reserve – Bernanke 2005; CRS RL33140 |
+| Sekularna stagnacja | pojęcie | było | Sekularna stagnacja | 1 | spis treści |
+| L. Summers, A. Hansen | osoba | było | Summers Lawrence; Hansen Alvin | 0 | spis treści |
+
+### Rozdz. 7. Nierówności i wzrost populizmu
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Krzywa słonia (Lakner, Milanović) | pojęcie | dodane | Krzywa słonia (Lakner, Milanović) | 0 | Wikipedia – The Elephant Curve; Brookings |
+| Populizm ekonomiczny | pojęcie | dodane | Populizm ekonomiczny (makroekonomiczny) | 0 | NBER WP 2986; Wikipedia – Macroeconomic populism |
+
+### Rozdz. 8. Krzywa Phillipsa
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Krzywa Phillipsa i jej spłaszczenie | pojęcie | rozszerzone | Krzywa Phillipsa | 17 | IMF – WEO 2013; FRBSF WP 2019-27 (dodano spłaszczenie i tezę Goodharta) |
+
+### Rozdz. 9. „Dlaczego nie stało się to w Japonii?”
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Japonia: deflacja mimo starzenia się, przenoszenie produkcji do Chin | pojęcie | w definicji | Demografia a inflacja i stopy procentowe | – | omówione w definicji hasła |
+
+### Rozdz. 10. Co może zrównoważyć starzenie się
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Automatyzacja a starzenie się | pojęcie | dodane | Automatyzacja a starzenie się ludności | 0 | MIT DSpace – Acemoglu, Restrepo; TSE |
+| Wydłużanie aktywności zawodowej, wiek emerytalny | pojęcie | było | Wiek emerytalny a długość życia | 1 | spis treści |
+| Indie i Afryka jako nowe zasoby pracy | pojęcie | pominięte | – | – | ilustracja w książce, bez osobnego pojęcia; ogólnie – Przejście (transformacja) demograficzne |
+
+### Rozdz. 11. Pułapka zadłużenia
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Dynamika długu (r − g), pułapka zadłużenia | pojęcie | dodane | Dynamika długu publicznego (r − g) i pułapka zadłużenia | 0 | EBC Economic Bulletin 2/2019; IMF WP 20/137 |
+
+### Rozdz. 12. Przejście z finansowania długiem na kapitał własny?
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Uprzywilejowanie podatkowe długu (debt bias) | pojęcie | dodane | Uprzywilejowanie podatkowe długu (debt bias) | 0 | IMF WP/17/22; IMF Blog 2016 |
+
+### Rozdz. 13. Przyszłe problemy polityki
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Dominacja fiskalna, konflikt polityki pieniężnej i fiskalnej | pojęcie | dodane | Dominacja fiskalna | 0 | Mercatus; SARB WP 2302 |
+| Starość a podatki, transfery międzypokoleniowe | pojęcie | było | Transfery międzypokoleniowe i rachunkowość pokoleniowa | 0 | spis treści |
+
+### Rozdz. 14. Pod prąd głównego nurtu
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| C. Goodhart, M. Pradhan | osoba | było | Goodhart Charles; Pradhan Manoj | 0 | spis treści |
+
+## Hasło przewodnie XL OWE – J.A. Majcherek, „Demograficzne wyzwania dla systemów społeczno-ekonomicznych” (Impuls 2024)
+
+Spisu treści nie udało się znaleźć w sieci (strona wydawcy niedostępna, księgarnie podają tylko opis: wstęp, 8 rozdziałów, podsumowanie). Poniżej obszary z opisu wydawcy – do zastąpienia rozdziałami po otrzymaniu spisu treści.
+
+### Depopulacja i spadek dzietności w Polsce
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Depopulacja | pojęcie | było | Depopulacja | 0 | opis wydawcy |
+| Współczynnik dzietności, zastępowalność pokoleń | pojęcie | było | Współczynnik dzietności (TFR); Zastępowalność pokoleń | 0 | opis wydawcy |
+| Współczynnik reprodukcji brutto i netto | wzór | w definicji | Zastępowalność pokoleń | – | GRR i NRR omówione w definicji hasła (rozszerzonego przy Okólskim i Fihel) |
+
+### Paradoks ekonomiczno-demograficzny
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Spadek dzietności mimo poprawy warunków życia | pojęcie | dodane | Paradoks ekonomiczno-demograficzny | 0 | Wikipedia – Income and fertility; MPIDR 2018; opis wydawcy |
+| Ekonomiczna teoria płodności (Becker) | pojęcie | było | Ekonomiczna teoria płodności (G. Becker) | 0 | opis wydawcy |
+
+### Emancypacja, antykoncepcja, nowe style życia, antynatalizm
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Drugie przejście demograficzne | pojęcie | było | Drugie przejście demograficzne | 0 | opis wydawcy |
+| Ruchy antynatalistyczne | pojęcie | w definicji | Polityka ludnościowa (demograficzna) | – | antynatalizm omówiony w definicji hasła |
+| Kara za macierzyństwo | pojęcie | dodane | Kara za macierzyństwo (child penalty) | 0 | NBER WP 24219; Wikipedia – Child penalties |
+
+### Nieodwracalność depopulacji i skuteczność polityki
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Pułapka niskiej dzietności | pojęcie | dodane | Pułapka niskiej dzietności | 0 | IIASA IR-06-017; Goldstein i in. 2009 |
+| Instrumenty polityki rodzinnej | pojęcie | było | Instrumenty polityki rodzinnej w Polsce | 0 | opis wydawcy |
+
+### Modele społeczno-gospodarcze oparte na wzroście ludności
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Systemy emerytalne i finanse publiczne w starzejącym się społeczeństwie | pojęcie | było | System repartycyjny (PAYG) a kapitałowy; Skutki starzenia się dla rynku pracy i finansów publicznych | 0 | opis wydawcy |
+
+## Hasło przewodnie XL OWE – M. Schwabe, „Migracje zarobkowe. Wprowadzenie” (Wolters Kluwer 2025) (rozdz. I–III)
+
+Spis treści: fragment książki udostępniony przez wydawcę (profinfo.pl).
+
+### Rozdz. I. Czynniki migracji – poziom mikro
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Migracja zarobkowa | pojęcie | było | Migracja zarobkowa (ekonomiczna) | 0 | spis treści |
+| Model push–pull (E. Lee) | pojęcie | było | Teoria czynników wypychających i przyciągających (push–pull); Lee Everett | 0 | spis treści |
+| Podejście neoklasyczne (Todaro) | pojęcie | było | Neoklasyczna teoria migracji; Todaro Michael | 0 | spis treści |
+| Dochody a umiejętności – selekcja migrantów | pojęcie | dodane | Selekcja migrantów (model Roya–Borjasa) | 0 | NBER WP 2566; Hanson (Harvard) |
+| Nowa ekonomia migracji zarobkowych (Stark) | pojęcie | było | Nowa ekonomia migracji zarobkowych; Stark Oded | 0 | spis treści |
+
+### Rozdz. I. Czynniki migracji – poziom makro i mezo
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Rynek dualny (Piore), sieci migracyjne, systemy migracyjne | pojęcie | było | Teorie rynku dualnego, systemów światowych i sieci migracyjnych; Piore Michael | 0 | spis treści |
+| Skumulowana przyczynowość | pojęcie | w definicji | Teorie rynku dualnego, systemów światowych i sieci migracyjnych | – | omówiona w definicji hasła jako kumulatywna przyczynowość |
+| Prawa migracji Ravensteina | data | było | 1885 – „prawa migracji” E.G. Ravensteina; Ravenstein Ernst Georg | 0 | spis treści |
+
+### Rozdz. II. Bariery migracji
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Bariery administracyjnoprawne, dystans geograficzny, kulturowy i językowy | pojęcie | dodane | Bariery migracyjne i dystans | 0 | IZA World of Labor; NBER WP 33192 |
+| Przepisy o pracy cudzoziemców, Niebieska Karta | przepis | było | Przepisy dotyczące pracy cudzoziemców w Polsce; Karta Polaka i Niebieska Karta UE | 0 | spis treści |
+| Swoboda przepływu pracowników w UE | pojęcie | było | Swobodny przepływ pracowników w UE i emigracja z Polski po 2004 r. | 0 | spis treści |
+
+### Rozdz. III. Korzyści i koszty migracji
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Wpływ na rynek pracy i rynek mieszkaniowy | pojęcie | było | Skutki migracji dla krajów pochodzenia i przyjmujących | 0 | spis treści |
+| Przekazy pieniężne | pojęcie | było | Przekazy pieniężne migrantów (remittances) | 0 | spis treści |
+| Drenaż i cyrkulacja mózgów | pojęcie | było | Cyrkulacja mózgów i migracje powrotne | 0 | spis treści |
+| Bilans fiskalny migracji | pojęcie | dodane | Bilans fiskalny imigracji | 0 | OECD IMO 2013 i 2021 |
+| Programy pracowników gościnnych (Gastarbeiter) | data | dodane | 1961 – umowa RFN–Turcja o rekrutacji pracowników (Gastarbeiter) | 0 | Auswärtiges Amt; Deutschlandmuseum |
+
+## Hasło przewodnie XL OWE – N. Barr, P. Diamond, „Reformy systemu emerytalnego. Krótki przewodnik” (PTE 2014; oryg. OUP 2009) (rozdz. 1–11)
+
+Spis treści: Oxford Academic (wydanie oryginalne „Pension Reform: A Short Guide”).
+
+### Rozdz. 1–2. Tło i podstawy ekonomii emerytur
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Cele systemu emerytalnego (wygładzanie konsumpcji, ubezpieczenie, łagodzenie ubóstwa) | pojęcie | było | Cele systemu emerytalnego (Barr i Diamond) | 0 | spis treści |
+| Uzasadnienie przymusu – krótkowzroczność | pojęcie | dodane | Uzasadnienie przymusu emerytalnego (krótkowzroczność) | 0 | CEPR DP14650; CESifo WP 6577 |
+| N. Barr, P. Diamond | osoba | było | Barr Nicholas; Diamond Peter | 0 | spis treści |
+
+### Rozdz. 3. Emerytury a rynek pracy
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Neutralność aktuarialna, ukryty podatek od dalszej pracy | pojęcie | dodane | Neutralność aktuarialna emerytur | 0 | Cremer i in. (TSE); Agenda Austria WP 01 |
+| Wiek emerytalny a długość życia | pojęcie | było | Wiek emerytalny a długość życia | 1 | spis treści |
+
+### Rozdz. 4. Finansowanie i kapitalizacja
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| System repartycyjny a kapitałowy, warunek Aarona | pojęcie | było | System repartycyjny (PAYG) a kapitałowy; Warunek Aarona (paradoks Aarona–Samuelsona) | 0 | spis treści |
+
+### Rozdz. 5. Redystrybucja i podział ryzyka
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Formuły DB, DC, NDC | pojęcie | było | DB, DC i NDC – formuły emerytalne | 1 | spis treści |
+| Ryzyko długowieczności, renta dożywotnia | pojęcie | było | Ryzyko długowieczności i renta dożywotnia | 0 | spis treści |
+
+### Rozdz. 6. Płeć i rodzina
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Luka emerytalna kobiet | pojęcie | dodane | Luka emerytalna kobiet (gender pension gap) | 0 | Eurostat 2026; European Pensions |
+
+### Rozdz. 7. Wdrażanie
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Koszty administracyjne, zdolności państwa | pojęcie | w definicji | Mity reform emerytalnych | – | koszty zarządzania omówione w definicji hasła |
+
+### Rozdz. 8–9. Zróżnicowanie systemów i systemy w różnych krajach
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Waloryzacja, emerytura minimalna | pojęcie | było | Waloryzacja i emerytura minimalna | 0 | spis treści |
+| Mity reform emerytalnych | pojęcie | było | Mity reform emerytalnych | 0 | spis treści |
+
+### Rozdz. 10. Chile i Chiny
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Kapitałowy system w Chile (AFP) | data | dodane | 1981 – kapitałowy system emerytalny w Chile (AFP) | 0 | Superintendencia de Pensiones; Treasury Today |
+| Reforma emerytalna w Chinach | pojęcie | pominięte | – | – | szczegóły systemu chińskiego poza zakresem pytań OWE |
+
+### Rozdz. 11. Zasady i wnioski
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Obliczanie emerytury w polskim systemie | pojęcie | było | Obliczanie emerytury w polskim systemie | 1 | spis treści |
+
+## Hasło przewodnie XL OWE – M. Okólski, A. Fihel, „Demografia. Współczesne zjawiska i teorie” (Scholar 2012) (części 1–8)
+
+Spis treści: Ebookpoint (opis książki z pełnym spisem).
+
+### Część 1. Kategorie demograficzne
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Demografia, ruch naturalny, saldo migracji | pojęcie | było | Demografia; Współczynniki urodzeń, zgonów i przyrostu naturalnego; Saldo migracji | 1 | spis treści |
+| Gospodarstwo domowe i rodzina, nuklearyzacja | pojęcie | dodane | Gospodarstwo domowe i rodzina – nuklearyzacja | 0 | GUS – NSP 2021 (Białystok, Lublin) |
+| Kohorta, analiza kohortowa i przekrojowa | pojęcie | dodane | Kohorta (generacja) i analiza kohortowa | 0 | MPIDR; Bongaarts (Berkeley) |
+
+### Część 2. Metoda
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Siatka Lexisa | pojęcie | dodane | Siatka Lexisa (siatka demograficzna) | 0 | Wikipedia – Lexis diagram; MPIDR |
+| W. Lexis | osoba | dodane | Lexis Wilhelm | 0 | Wikipedia; MacTutor |
+| Tablice trwania życia | pojęcie | było | Przeciętne dalsze trwanie życia i tablice trwania życia | 0 | spis treści |
+| Standaryzacja współczynników | pojęcie | dodane | Standaryzacja współczynników demograficznych | 0 | Health Knowledge; NJ Department of Health |
+| Prognozowanie ludności | pojęcie | było | Prognoza ludności GUS | 0 | spis treści |
+
+### Część 3. Zjawiska demograficzne
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Małżeńskość i rozwodowość | pojęcie | dodane | Małżeńskość i rozwodowość | 0 | Polska w liczbach (GUS); Bezprawnik |
+| Płodność, reprodukcja (GRR, NRR) | pojęcie | rozszerzone | Współczynnik dzietności (TFR); Zastępowalność pokoleń | 0 | rozszerzone o GRR i NRR |
+| Umieralność i długowieczność | pojęcie | było | Przeciętne dalsze trwanie życia i tablice trwania życia; Ryzyko długowieczności i renta dożywotnia | 0 | spis treści |
+| Migracje | pojęcie | było | Migracja zarobkowa (ekonomiczna); Saldo migracji | 0 | spis treści |
+
+### Część 4. Transformacje
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Przejście demograficzne (Notestein) | pojęcie | było | Przejście (transformacja) demograficzne; Notestein Frank | 0 | spis treści |
+| Przejście epidemiologiczne i migracyjne | pojęcie | było | Przejście epidemiologiczne i przejście migracyjne | 0 | spis treści |
+| Urbanizacja | pojęcie | było | Urbanizacja i suburbanizacja | 0 | spis treści |
+| Starzenie się ludności | pojęcie | było | Starzenie się ludności i jego miary | 0 | spis treści |
+
+### Część 5. Demografia świata
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Uchodźstwo | pojęcie | było | Uchodźcy i ochrona międzynarodowa | 0 | spis treści |
+| Prognozy ludności świata (ONZ) | pojęcie | pominięte | – | – | metoda prognozowania – hasło Prognoza ludności GUS; dane ONZ (World Population Prospects) w lekcji Zrozumienie działu Miary |
+| Demografia Afryki, Chin i Indii | pojęcie | pominięte | – | – | opisy regionalne, bez osobnych pojęć |
+
+### Część 6. Teorie
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Teoria Malthusa, pułapka maltuzjańska | pojęcie | było | Pułapka maltuzjańska; Malthus Thomas | 2 | spis treści |
+| Teoria optimum zaludnienia | pojęcie | dodane | Teoria optimum zaludnienia | 0 | Encyclopedia.com – Cannan; IDEAS – Coleman 2014 |
+| Teorie płodności (Becker, Easterlin) | pojęcie | było | Ekonomiczna teoria płodności (G. Becker); Hipoteza Easterlina (względnego dochodu) | 0 | spis treści |
+| Bliższe determinanty płodności | pojęcie | dodane | Bliższe determinanty płodności (Davis–Blake, Bongaarts) | 0 | Demographic Research 33(19); Population Council |
+| Teorie migracji | pojęcie | było | Neoklasyczna teoria migracji; Teorie rynku dualnego, systemów światowych i sieci migracyjnych | 0 | spis treści |
+| Drugie przejście demograficzne (van de Kaa, Lesthaeghe) | pojęcie | było | Drugie przejście demograficzne; van de Kaa Dirk, Lesthaeghe Ron | 0 | spis treści |
+
+### Część 7. Polityka ludnościowa
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Polityka ludnościowa pro- i antynatalistyczna | pojęcie | było | Polityka ludnościowa (demograficzna) | 0 | spis treści |
+| Polityka migracyjna i integracja | pojęcie | było | Polityka migracyjna i integracja imigrantów | 0 | spis treści |
+
+### Część 8. Techniki analizy
+
+| Rzecz | Rodzaj | Status | Hasło w słowniku | Pytania OWE | Źródła / uwagi |
+|---|---|---|---|---|---|
+| Piramida wieku, struktura wieku | pojęcie | było | Piramida wieku; Struktura wieku: wiek przedprodukcyjny, produkcyjny i poprodukcyjny | 4 | spis treści |
+| A. Fihel, M. Okólski | osoba | było | Fihel Agnieszka; Okólski Marek | 0 | spis treści |
 
 ## Uzupełnione po przeglądzie pytań OWE (XXI–XXXIX)
 
