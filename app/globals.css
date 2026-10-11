@@ -439,3 +439,4 @@ svg, img { max-width: 100%; }
   .node-label { text-align: center; max-width: 90%; }
   .filter-grid { grid-template-columns: 1fr; }
 }
+table.users td.u-main { overflow-wrap: anywhere; }
