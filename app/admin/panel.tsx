@@ -76,7 +76,7 @@ export function AdminPanel({ meId }: { meId: string }) {
         <p className="muted" style={{ margin: 0 }}>
           Podaj ten kod osobom, które mają korzystać z aplikacji. Wpisują go przy zakładaniu konta.
         </p>
-        <div className="row">
+        <div className="row code-row">
           <span className="big-code" data-testid="activation-code">{code?.code ?? "brak"}</span>
           <span className="spacer" />
           <button className="btn" onClick={newCode}>{code?.code ? "Generuj nowy" : "Generuj kod"}</button>
@@ -91,15 +91,15 @@ export function AdminPanel({ meId }: { meId: string }) {
         </p>
         <div className="row"><button className="btn secondary" onClick={newAdminCode}>Generuj kod administratora</button></div>
         {adminCodes && adminCodes.length > 0 && (
-          <table className="users">
+          <table className="users codes">
             <thead><tr><th>Kod</th><th>Utworzył</th><th>Ważny do</th><th /></tr></thead>
             <tbody>
               {adminCodes.map((c) => (
                 <tr key={c.code}>
-                  <td><code data-testid="admin-code">{c.code}</code></td>
-                  <td>{c.createdBy ?? "–"}</td>
-                  <td>{fmtDate(c.expiresAt)}</td>
-                  <td><button className="btn small secondary" onClick={() => revoke(c.code)}>Unieważnij</button></td>
+                  <td className="u-main"><code data-testid="admin-code">{c.code}</code></td>
+                  <td data-label="Utworzył">{c.createdBy ?? "–"}</td>
+                  <td data-label="Ważny do">{fmtDate(c.expiresAt)}</td>
+                  <td className="actions"><button className="btn small secondary" onClick={() => revoke(c.code)}>Unieważnij</button></td>
                 </tr>
               ))}
             </tbody>
@@ -118,8 +118,8 @@ export function AdminPanel({ meId }: { meId: string }) {
                 <tbody>
                   {pending.map((u) => (
                     <tr key={u.id} data-testid="pending-user">
-                      <td>{u.email}</td>
-                      <td>{fmtDate(u.createdAt)}</td>
+                      <td className="u-main">{u.email}</td>
+                      <td data-label="Założone">{fmtDate(u.createdAt)}</td>
                       <td className="actions">
                         <button className="btn small" onClick={() => act(u, "zatwierdz")}>Zatwierdź</button>
                         <button className="btn small danger" onClick={() => act(u, "odrzuc", `Odrzucić i usunąć konto ${u.email}?`)}>Odrzuć</button>
@@ -135,7 +135,7 @@ export function AdminPanel({ meId }: { meId: string }) {
                 <tbody>
                   {adminRequests.map((u) => (
                     <tr key={u.id} data-testid="pending-admin">
-                      <td>{u.email}</td>
+                      <td className="u-main">{u.email}</td>
                       <td className="actions">
                         <button className="btn small" onClick={() => act(u, "zatwierdz-admina", `Nadać rolę administratora ${u.email}?`)}>Zatwierdź</button>
                         <button className="btn small danger" onClick={() => act(u, "odrzuc-admina")}>Odrzuć</button>
@@ -186,21 +186,25 @@ function UserTable({ rows, meId, testid, extra, onDelete }: {
         <tbody>
           {rows.map((u) => (
             <tr key={u.id} data-testid="user-row">
-              <td>
+              <td className="u-main">
                 {u.email}
                 {u.isOwner && <span className="tag">właściciel</span>}
                 {u.adminRequested && <span className="tag">prosi o admina</span>}
                 {u.id === meId && <span className="tag">Ty</span>}
               </td>
-              <td>{fmtDate(u.createdAt)}</td>
-              <td>{fmtDate(u.lastActivity ?? u.lastLoginAt)}</td>
-              <td>
-                {u.tests}{u.testPercent !== null && <> · {fmtPct(u.testPercent)}</>}
-                <br /><Link href={`/stats?user=${u.id}`}>statystyki</Link>
+              <td data-label="Założone">{fmtDate(u.createdAt)}</td>
+              <td data-label="Ostatnio">{fmtDate(u.lastActivity ?? u.lastLoginAt)}</td>
+              <td data-label="Testy">
+                <span>
+                  {u.tests}{u.testPercent !== null && <> · {fmtPct(u.testPercent)}</>}
+                  <br /><Link href={`/stats?user=${u.id}`}>statystyki</Link>
+                </span>
               </td>
-              <td>
-                {u.learnSessions} sesji · {u.xp} XP
-                <br /><Link href={`/nauka?user=${u.id}`}>postęp</Link> · <Link href={`/nauka/statystyki?user=${u.id}`}>statystyki</Link>
+              <td data-label="Nauka">
+                <span>
+                  {u.learnSessions} sesji · {u.xp} XP
+                  <br /><Link href={`/nauka?user=${u.id}`}>postęp</Link> · <Link href={`/nauka/statystyki?user=${u.id}`}>statystyki</Link>
+                </span>
               </td>
               <td className="actions">
                 {extra?.(u)}

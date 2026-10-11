@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { currentUser, type User } from "@/lib/auth";
 import { LogoutButton } from "./konto/forms";
+import { MobileMenu } from "./components/mobile-menu";
 import "./globals.css";
 
 // nagłówek zależy od zalogowanego użytkownika (ciasteczko sesji)
@@ -25,16 +26,17 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <header className="top">
           <Link href="/" className="brand">Testy OWE</Link>
           {me?.active ? (
-            <nav>
+            <nav className="desktop-only">
               <Link href="/">Nowy test</Link>
               <Link href="/slownik">Słownik</Link>
               <Link href="/nauka">Nauka</Link>
               <Link href="/stats">Statystyki</Link>
             </nav>
           ) : null}
+          {me && <MobileMenu email={me.email} active={me.active} isAdmin={me.isAdmin} />}
         </header>
         {me && (
-          <div className="container" style={{ paddingBottom: 0 }}>
+          <div className="container desktop-only" style={{ paddingBottom: 0 }}>
             <div className="user-nav">
               <span className="email" title={me.email}>{me.email}</span>
               {me.isAdmin && <Link href="/admin">Panel admina</Link>}

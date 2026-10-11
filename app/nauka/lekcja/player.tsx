@@ -118,6 +118,20 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
     };
   }, [feedback, current, advance]);
 
+  // dolny odstęp lekcji = wysokość panelu informacji zwrotnej, żeby panel nie zasłaniał treści (telefony)
+  const fbRef = useRef<HTMLDivElement>(null);
+  const [fbHeight, setFbHeight] = useState(0);
+  useEffect(() => {
+    const el = fbRef.current;
+    if (!feedback || !el) {
+      setFbHeight(0);
+      return;
+    }
+    const ro = new ResizeObserver(() => setFbHeight(el.offsetHeight));
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [feedback]);
+
   const subInfo = subsFor(lesson).find((s) => s.no === sub);
   const backHref = payload.review ? "/nauka" : `/nauka/${topic.id}#${lesson.id}`;
 
@@ -140,7 +154,7 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
 
   const total = queue.length;
   return (
-    <div className="learn" style={{ ["--topic" as string]: topic.color }}>
+    <div className="learn" style={{ ["--topic" as string]: topic.color, ...(fbHeight ? { paddingBottom: fbHeight + 24 } : {}) }}>
       <div className="learn-top">
         <Link href={backHref} className="learn-close" aria-label="Zakończ lekcję">✕</Link>
         <div className="learn-progress" role="progressbar" aria-valuemin={0} aria-valuemax={total} aria-valuenow={pos}>
@@ -163,7 +177,7 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
       {startError && <p className="error" style={{ fontSize: "0.85rem" }}>Nie udało się rozpocząć zapisu sesji ({startError}) – możesz ćwiczyć, ale wynik nie trafi do statystyk.</p>}
       <ExerciseView key={pos} ex={current!} locked={!!feedback} onResult={record} onNext={advance} />
       {feedback && (
-        <div className={`learn-feedback ${feedback.correct ? "ok" : "bad"}`} role="status">
+        <div ref={fbRef} className={`learn-feedback ${feedback.correct ? "ok" : "bad"}`} role="status">
           <div className="learn-feedback-inner">
             <div>
               <strong>{feedback.title}</strong>
