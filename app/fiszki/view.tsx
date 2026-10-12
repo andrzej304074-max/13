@@ -105,7 +105,7 @@ export function FlashcardsView({ cards, topics, kinds }: { cards: Card[]; topics
   }, [preview]);
 
   const topicName = useMemo(() => Object.fromEntries(topics.map((t) => [t.id, `${t.emoji} ${t.title.replace(/^Temat przewodni: /, "")}`])), [topics]);
-  if (!ready) return <p className="muted">Ładowanie…</p>;
+  if (!ready) return <PageSkeleton title="Fiszki" wide={false} />;
 
   return (
     <div className="stack">
@@ -276,5 +276,5 @@ function Classic({ list, mastery, rate, preview, topicName }: Props) {
 export function FlashcardsLoader() {
   const { data, error } = useData<{ rows: Card[]; topics: Topic[]; kinds: Kind[] }>("/api/dane/hasla");
   if (error) return <p className="error">{error}</p>;
-  return data ? <FlashcardsView cards={data.rows} topics={data.topics} kinds={data.kinds} /> : <PageSkeleton title="Fiszki" />;
+  return data ? <FlashcardsView cards={data.rows} topics={data.topics} kinds={data.kinds} /> : <PageSkeleton title="Fiszki" wide={false} />;
 }

@@ -136,9 +136,9 @@ export function ConceptTableLoader() {
   return <ConceptTable rows={data.rows} topics={data.topics} kinds={data.kinds} />;
 }
 
-export function PageSkeleton({ title }: { title: string }) {
+export function PageSkeleton({ title, wide = true }: { title: string; wide?: boolean }) {
   return (
-    <div className="stack wide" aria-busy>
+    <div className={wide ? "stack wide" : "stack"} aria-busy>
       <h1>{title}</h1>
       <div className="skeleton" style={{ height: 120 }} />
       <div className="skeleton" style={{ height: 320 }} />

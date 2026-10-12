@@ -17,6 +17,6 @@ export function proxy(req: NextRequest) {
 }
 
 export const config = {
-  // wszystko poza plikami statycznymi Next.js i ikoną
-  matcher: ["/((?!_next/static|_next/image|icon.svg|favicon.ico).*)"],
+  // wszystko poza plikami statycznymi Next.js, czcionkami i ikoną
+  matcher: ["/((?!_next/static|_next/image|fonts/|icon.svg|favicon.ico).*)"],
 };

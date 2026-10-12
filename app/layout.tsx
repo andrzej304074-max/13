@@ -22,6 +22,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   }
   return (
     <html lang="pl">
+      <head>
+        {/* czcionka tekstu potrzebna od pierwszego ekranu – pobierana równolegle z CSS */}
+        <link rel="preload" href="/fonts/lexend-latin-wght-normal.woff2" as="font" type="font/woff2" crossOrigin="" />
+      </head>
       <body>
         <header className="top">
           <Link href="/" className="brand">Testy OWE</Link>

@@ -53,7 +53,7 @@ export function OweStatsView({ data }: { data: Data }) {
     };
   }, [f, data, topicName]);
 
-  if (!f || !res) return <p className="muted">Ładowanie…</p>;
+  if (!f || !res) return <PageSkeleton title="Statystyki pytań OWE" />;
   const set = (o: Partial<OweFilter>) => {
     setF({ ...f, ...o });
     setItemLimit(STEP);

@@ -150,6 +150,17 @@ python3 -I tools/nauka/pojecia_pytan.py stats
   sam postęp tematów (`/api/nauka/progress?lekcje=0`). Tabela pojęć renderuje hasła porcjami po 100; każdy dział ma szkielet
   ładowania (`loading.tsx`).
 
+## Wygląd i czcionki
+
+- **Czcionki** (lokalnie w `public/fonts`, licencja SIL OFL, tylko podzbiory łaciński + polski, ~130 kB razem, pamięć podręczna rok):
+  **Lexend** – cały tekst (zaprojektowana pod płynność czytania), **Atkinson Hyperlegible Next** – wzory, liczby, wyniki, kody
+  (wyraźnie różne I/l/1, O/0). Czcionka tekstu ładowana z wyprzedzeniem (`preload` w `app/layout.tsx`); do czasu jej wczytania
+  systemowa czcionka zastępcza ma dopasowane metryki (`size-adjust`), więc tekst nie przeskakuje.
+- **Typografia**: 17 px bazowo (16 px na telefonie, pola ≥ 16 px), interlinia 1,6; definicje i wyjaśnienia maks. ~68 znaków w wierszu.
+- **Kolory** – tokeny na górze `app/globals.css` (jasny i ciemny motyw); kontrast tekstu ≥ 14:1, tekstu wyciszonego ≥ 6,3:1,
+  przycisków ≥ 5:1. Poprawne/błędne odpowiedzi oznaczone kolorem i znakiem ✓/✗.
+- **Płynność**: przejścia 150–250 ms, delikatne wejście treści; wszystko wyłączone przy systemowym „ogranicz ruch”.
+
 ## Pojęcia – tabela i statystyki pytań OWE
 
 - **Tabela pojęć** (`/pojecia`): wszystkie hasła kursu Nauka (bez lekcji „Zrozumienie”) w kolejności lekcji – nazwa z lewej,
