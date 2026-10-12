@@ -104,6 +104,7 @@ UNITS = {
 
 # Ręczne przypisania hasła do działu (tytuł → id działu), gdy wzorce działów się mylą
 UNIT_OVERRIDES = {
+    "Klasyczne podejście do zarządzania": "zarz-podstawy",
     "Papiery dyskontowe": "fin-obligacje",
     "Deflacja długu (I. Fisher)": "makro-inflacja",
     "Postęp techniczny": "mikro-produkcja",
@@ -328,6 +329,7 @@ INSTITUTION_TITLES = r"^(narodowy bank polski|prezes nbp|rada polityki pienięż
 
 # Ręczne przypisania tematu (tytuł hasła → temat), gdy reguły się mylą
 OVERRIDES = {
+    "Klasyczne podejście do zarządzania": "zarzadzanie",
     "Papiery dyskontowe": "finanse",
     "Deflacja długu (I. Fisher)": "makro",
     "Postęp techniczny": "mikro",
