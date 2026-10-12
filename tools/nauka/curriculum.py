@@ -104,6 +104,7 @@ UNITS = {
 
 # Ręczne przypisania hasła do działu (tytuł → id działu), gdy wzorce działów się mylą
 UNIT_OVERRIDES = {
+    "Deflacja długu (I. Fisher)": "makro-inflacja",
     "Postęp techniczny": "mikro-produkcja",
     "Siatka Lexisa (siatka demograficzna)": "demo-miary",
     "Kohorta (generacja) i analiza kohortowa": "demo-miary",
@@ -326,6 +327,7 @@ INSTITUTION_TITLES = r"^(narodowy bank polski|prezes nbp|rada polityki pienięż
 
 # Ręczne przypisania tematu (tytuł hasła → temat), gdy reguły się mylą
 OVERRIDES = {
+    "Deflacja długu (I. Fisher)": "makro",
     "Postęp techniczny": "mikro",
     "Siatka Lexisa (siatka demograficzna)": "demografia",
     "Kohorta (generacja) i analiza kohortowa": "demografia",
