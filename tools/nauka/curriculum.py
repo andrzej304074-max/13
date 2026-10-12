@@ -104,6 +104,7 @@ UNITS = {
 
 # Ręczne przypisania hasła do działu (tytuł → id działu), gdy wzorce działów się mylą
 UNIT_OVERRIDES = {
+    "Program leniency (łagodzenia kar)": "pol-sektorowa",
     "Klasyczne podejście do zarządzania": "zarz-podstawy",
     "Papiery dyskontowe": "fin-obligacje",
     "Deflacja długu (I. Fisher)": "makro-inflacja",
@@ -329,6 +330,7 @@ INSTITUTION_TITLES = r"^(narodowy bank polski|prezes nbp|rada polityki pienięż
 
 # Ręczne przypisania tematu (tytuł hasła → temat), gdy reguły się mylą
 OVERRIDES = {
+    "Program leniency (łagodzenia kar)": "polityka",
     "Klasyczne podejście do zarządzania": "zarzadzanie",
     "Papiery dyskontowe": "finanse",
     "Deflacja długu (I. Fisher)": "makro",
