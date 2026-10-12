@@ -148,6 +148,27 @@ python3 -I tools/nauka/pojecia_pytan.py stats
   Dane: `data/nauka/owe-stats.json` (generuje `tools/nauka/build_course.py`), opis metody i ręczna weryfikacja wszystkich 1656 pytań (958 poprawionych, 5 nowych haseł) –
   `tools/nauka/RAPORT-STATYSTYK.md` (`python3 -I tools/nauka/raport_statystyk.py`).
 
+- **Pokrycie olimpiad** (`/pojecia/pokrycie`): dla każdej edycji XXI–XXXIX – jaka część pojęć to powtórki pojęć z wcześniejszych
+  edycji (wszystkich od XXI albo ostatnich 3/5), a jaka to pojęcia nowe; wykres słupkowy edycja po edycji (kliknięcie wybiera edycję),
+  koło dla wybranego zakresu, odsetek pytań w całości o powtarzane pojęcia, listy najczęściej powtarzanych i nowych pojęć.
+  Filtry jak w statystykach pytań OWE (wspólny komponent `app/pojecia/filters.tsx`, logika `coverage()` w `lib/owe-stats.ts`).
+
+## Moje statystyki wg działów (strona „Statystyki”)
+
+Pod statystykami testów sekcja „Działy, zagadnienia i pojęcia – jak mi idzie” – osobno dla pytań z olimpiad i ze słownika
+(przełącznik bazy): skuteczność w działach, zagadnieniach i pojęciach, skuteczność z ostatnich 30 dni, trend (ostatnie 10 odpowiedzi
+względem wcześniejszych) i rozwinięcie pojęcia z ostatnimi odpowiedziami. Filtry: typ, etap, zakres edycji (OWE), pochodzenie i dział
+słownika (słownik), dział, rodzaj haseł, okres, kolejność. API `GET /api/stats/dzialy`, agregacja `lib/my-stats-core.ts`.
+Pytania słownikowe mają dział, zagadnienie i pojęcia w `data/nauka/slownik-stats.json` (generuje `build_course.py`).
+
+## Fiszki (`/fiszki`)
+
+Wszystkie hasła kursu (bez lekcji „Zrozumienie”) w dwóch trybach: **przewijanie** (pionowy feed jak w aplikacjach z krótkimi filmami,
+dotknięcie odwraca kartę) i **klasyczne** (odwracanie, „Znam / Nie znam”, strzałki i spacja). Kolor obwódki – jak dobrze znasz hasło:
+zielony ≥ 80%, żółty 50–79%, czerwony < 50%, szary – mniej niż 2 odpowiedzi. Liczone razem: ćwiczenia w Nauce, odpowiedzi testowe
+(OWE i słownik – pytanie liczy się dla każdego swojego pojęcia) i oceny fiszek (tabela `flash_ratings`, nie wpływa na statystyki nauki).
+Filtry: dział, rodzaj, kolor, tylko hasła z OWE, kolejność (lekcje / losowo / najsłabsze najpierw). API `/api/fiszki/opanowanie`, `/api/fiszki/ocena`.
+
 ## Konta i panel admina
 
 - **Konto:** e-mail i hasło (min. 8 znaków). Bez zalogowania widać tylko ekrany konta (`/konto/...`).

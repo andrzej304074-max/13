@@ -139,3 +139,110 @@ export function filterToParams(f: OweFilter, edMin = 21, edMax = 39): string {
   if (f.order === "asc") p.set("kolejnosc", "asc");
   return p.toString();
 }
+
+/** Pytanie słownikowe w statystykach (data/nauka/slownik-stats.json): dział słownika, pochodzenie (a – automatyczne, m – ręczne). */
+export interface SlRec {
+  id: string;
+  t: QType;
+  sec: number | null;
+  o: "a" | "m";
+  topic: string;
+  unit: string;
+  items: string[];
+}
+
+/* ---------- pokrycie olimpiad: powtórki pojęć z poprzednich lat ---------- */
+
+/** Okno powtórek: pojęcie jest powtórką, gdy pytano o nie we wcześniejszej edycji (wszystkie od XXI albo ostatnie N). */
+export type RepeatWindow = "all" | 3 | 5;
+
+export interface CoverageRow {
+  ed: number;
+  /** Różne pojęcia edycji (po filtrach), w tym powtórki i nowe. */
+  items: number;
+  repeat: number;
+  fresh: number;
+  pct: number;
+  /** Pytania edycji z rozpoznanymi pojęciami i te, w których wszystkie pojęcia to powtórki. */
+  questions: number;
+  qRepeat: number;
+}
+
+export interface Coverage {
+  rows: CoverageRow[];
+  /** Suma po wybranych edycjach (pojęcia liczone w każdej edycji osobno). */
+  total: { items: number; repeat: number; fresh: number; pct: number; questions: number; qRepeat: number };
+  /** Pojęcia wybranych edycji z liczbą wcześniejszych edycji, w których o nie pytano (najczęstsze powtórki najpierw). */
+  repeated: { id: string; earlier: number; editions: number[] }[];
+  /** Pojęcia, o które w wybranych edycjach zapytano pierwszy raz (od XXI OWE). */
+  fresh: { id: string; ed: number }[];
+}
+
+/** Pojęcia pytania zawężone do działu i rodzaju z filtra. */
+function recItems(r: OweRec, f: OweFilter, meta: Record<string, ItemMeta>): string[] {
+  return r.items.filter((i) => meta[i] && (!f.topic || meta[i].topic === f.topic) && (!f.kind || meta[i].kind === f.kind));
+}
+
+export function coverage(recs: OweRec[], f: OweFilter, meta: Record<string, ItemMeta>, window: RepeatWindow = "all", edMin = 21): Coverage {
+  // historia liczona z tych samych typów i etapów pytań, ale ze wszystkich edycji
+  const base = recs.filter((r) => (f.type === "all" || r.t === f.type) && f.stages.includes(r.st));
+  const byEd = new Map<number, { items: Set<string>; qs: string[][] }>();
+  for (const r of base) {
+    const its = recItems(r, f, meta);
+    if (!its.length) continue;
+    const e = byEd.get(r.ed) ?? { items: new Set<string>(), qs: [] };
+    its.forEach((i) => e.items.add(i));
+    e.qs.push(its);
+    byEd.set(r.ed, e);
+  }
+  const seenIn = (i: string, from: number, to: number) => {
+    const eds: number[] = [];
+    for (let e = Math.max(from, edMin); e <= to; e++) if (byEd.get(e)?.items.has(i)) eds.push(e);
+    return eds;
+  };
+  const rows: CoverageRow[] = [];
+  const repeated = new Map<string, Set<number>>();
+  const fresh: { id: string; ed: number }[] = [];
+  for (let ed = f.edFrom; ed <= f.edTo; ed++) {
+    const e = byEd.get(ed);
+    if (!e) continue;
+    const from = window === "all" ? edMin : ed - window;
+    const isRep = (i: string) => seenIn(i, from, ed - 1).length > 0;
+    let repeat = 0;
+    for (const i of e.items) {
+      if (isRep(i)) {
+        repeat++;
+        const s = repeated.get(i) ?? new Set<number>();
+        seenIn(i, edMin, ed - 1).forEach((x) => s.add(x));
+        repeated.set(i, s);
+      } else if (!seenIn(i, edMin, ed - 1).length) fresh.push({ id: i, ed });
+    }
+    const qRepeat = e.qs.filter((its) => its.every(isRep)).length;
+    rows.push({ ed, items: e.items.size, repeat, fresh: e.items.size - repeat, pct: pct(repeat, e.items.size), questions: e.qs.length, qRepeat });
+  }
+  const s = (k: "items" | "repeat" | "fresh" | "questions" | "qRepeat") => rows.reduce((a, r) => a + r[k], 0);
+  return {
+    rows,
+    total: { items: s("items"), repeat: s("repeat"), fresh: s("fresh"), pct: pct(s("repeat"), s("items")), questions: s("questions"), qRepeat: s("qRepeat") },
+    repeated: [...repeated].map(([id, eds]) => ({ id, earlier: eds.size, editions: [...eds].sort((a, b) => a - b) }))
+      .sort((a, b) => b.earlier - a.earlier || (meta[a.id]?.title ?? "").localeCompare(meta[b.id]?.title ?? "", "pl")),
+    fresh: fresh.sort((a, b) => a.ed - b.ed || (meta[a.id]?.title ?? "").localeCompare(meta[b.id]?.title ?? "", "pl")),
+  };
+}
+
+/* ---------- opanowanie (fiszki, moje statystyki) ---------- */
+
+export type Level = "good" | "mid" | "weak" | "none";
+export const LEVELS: { id: Level; label: string }[] = [
+  { id: "good", label: "dobrze (≥ 80%)" },
+  { id: "mid", label: "średnio (50–79%)" },
+  { id: "weak", label: "słabo (< 50%)" },
+  { id: "none", label: "jeszcze nie sprawdzone" },
+];
+
+/** Kolor opanowania: zielony ≥ 80%, żółty 50–79%, czerwony < 50%; poniżej 2 odpowiedzi – brak oceny. */
+export function level(correct: number, total: number): Level {
+  if (total < 2) return "none";
+  const p = correct / total;
+  return p >= 0.8 ? "good" : p >= 0.5 ? "mid" : "weak";
+}

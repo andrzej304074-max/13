@@ -7,6 +7,7 @@ import { PreviewBanner } from "@/app/components/preview-banner";
 import { api, fmtPct, fmtPoints, withUser } from "@/lib/client";
 import { BLOCK_SIZES, DEFAULT_BLOCK_SIZE } from "@/lib/scoring";
 import type { Stats } from "@/lib/tests";
+import { MyBreakdown } from "./dzialy";
 
 const BLOCK_KEY = "owe:blockSize";
 const TYPE_KEY = "owe:statsType";
@@ -212,6 +213,8 @@ export default function StatsPage() {
           />
         </div>
       )}
+
+      {bank && <MyBreakdown key={bank} bank={bank} />}
     </div>
   );
 }

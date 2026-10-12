@@ -274,6 +274,17 @@ def owe_record(q, lid, main):
     owe_stats.append({"id": q["id"], "t": q["type"], "ed": int(m.group(1)), "st": m.group(2),
                       "topic": L["topic"] if L else None, "unit": L["unit"] if L else None, "items": sorted(sitems)})
 
+sl_stats = []  # statystyki pytań słownikowych (moje statystyki wg działów, fiszki): dział, zagadnienie, pojęcia
+
+
+def sl_record(q, origin, lid, main):
+    sitems = {i for i in main if i in items} if origin == "auto" else stat_items(q, main)
+    lid = home_lesson(sitems) or lid
+    L = lessons[lid]
+    sl_stats.append({"id": q["id"], "t": q["type"], "sec": q.get("section"), "o": origin[0],
+                     "topic": L["topic"], "unit": L["unit"], "items": sorted(sitems)})
+
+
 for q, origin in bank:
     main, allc = concepts(q, origin)
     main = {i for i in main if i in item_lessons} or {i for i in allc if i in item_lessons}
@@ -289,6 +300,8 @@ for q, origin in bank:
         unplaced.append(q["id"])
         if origin == "owe":
             owe_record(q, None, set())
+        else:
+            sl_record(q, origin, lid, set())
         continue
     # pytanie dotyczy pojęć (osoby, instytucje, daty i przepisy w treści to zwykle kontekst) – o lekcji decydują pojęcia
     pref = {i for i in main if items[i]["kind"] == "pojecie"} or main
@@ -299,6 +312,8 @@ for q, origin in bank:
     placed[lid].append((q["id"], origin, allc))
     if origin == "owe":
         owe_record(q, lid, main)
+    else:
+        sl_record(q, origin, lid, main)
 
 ORIGIN_RANK = {"owe": 0, "manual": 1, "auto": 2}
 moved = []  # (pytanie, lekcja docelowa) – raport
@@ -368,6 +383,7 @@ course = {
 load(os.path.join(HERE, "build_zrozum.py")).build(course, ROOT, OUT)
 json.dump(course, open(os.path.join(OUT, "course.json"), "w"), ensure_ascii=False, separators=(",", ":"))
 json.dump(sorted(owe_stats, key=lambda r: r["id"]), open(os.path.join(OUT, "owe-stats.json"), "w"), ensure_ascii=False, separators=(",", ":"))
+json.dump(sorted(sl_stats, key=lambda r: r["id"]), open(os.path.join(OUT, "slownik-stats.json"), "w"), ensure_ascii=False, separators=(",", ":"))
 
 # --- raport ---
 print(f"hasła: {len(items)}, działy: {len(units)}, lekcje: {len(lessons)}, pod-lekcje: {4 * len(lessons)}")

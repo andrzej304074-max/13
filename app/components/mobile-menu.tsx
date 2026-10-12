@@ -29,7 +29,9 @@ export function MobileMenu({ email, active, isAdmin }: { email: string; active: 
             <Link href="/slownik">Słownik</Link>
             <Link href="/nauka">Nauka</Link>
             <Link href="/pojecia">Pojęcia</Link>
+            <Link href="/fiszki">Fiszki</Link>
             <Link href="/pojecia/statystyki">Statystyki pytań OWE</Link>
+            <Link href="/pojecia/pokrycie">Pokrycie olimpiad</Link>
             <Link href="/stats">Statystyki</Link>
             <hr />
           </>

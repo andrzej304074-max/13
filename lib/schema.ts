@@ -122,4 +122,13 @@ ALTER TABLE tests ADD COLUMN IF NOT EXISTS user_id uuid REFERENCES users(id) ON 
 ALTER TABLE learn_sessions ADD COLUMN IF NOT EXISTS user_id uuid REFERENCES users(id) ON DELETE CASCADE;
 CREATE INDEX IF NOT EXISTS tests_user_idx ON tests (user_id);
 CREATE INDEX IF NOT EXISTS learn_sessions_user_idx ON learn_sessions (user_id);
+
+-- Fiszki: samoocena „znam / nie znam” – wpływa na kolor opanowania hasła (razem z testami i nauką).
+CREATE TABLE IF NOT EXISTS flash_ratings (
+  user_id uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  item_id text NOT NULL,
+  known   boolean NOT NULL,
+  at      timestamptz NOT NULL DEFAULT now()
+);
+CREATE INDEX IF NOT EXISTS flash_ratings_user_idx ON flash_ratings (user_id, item_id);
 `;
