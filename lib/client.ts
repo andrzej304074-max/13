@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 export async function api<T>(url: string, init?: RequestInit): Promise<T> {
   const res = await fetch(url, {
     ...init,
@@ -46,4 +48,23 @@ export function viewedUser(): string | null {
 /** Dopisuje `user=` (podgląd admina) do adresu API. */
 export function withUser(url: string, user: string | null = viewedUser()): string {
   return user ? `${url}${url.includes("?") ? "&" : "?"}user=${user}` : url;
+}
+
+/**
+ * Czy zdarzenie klawiatury pochodzi z pisania (notatka, brudnopis, pole tekstowe wieloliniowe)?
+ * Skróty lekcji, testów i fiszek (1–4, Enter, spacja, strzałki) muszą wtedy milczeć.
+ */
+export function isTyping(e: Event): boolean {
+  const t = e.target as HTMLElement | null;
+  return Boolean(t?.closest?.("textarea, [contenteditable='true'], .notes-editor, .quick-notes"));
+}
+
+/**
+ * Podgląd admina (`?user=`) odczytany po zamontowaniu – w pierwszym renderze null, tak samo jak na serwerze
+ * (odczyt `window` w renderze dawałby różny HTML serwera i klienta – błąd hydratacji).
+ */
+export function useViewedUser(): string | null {
+  const [u, setU] = useState<string | null>(null);
+  useEffect(() => setU(viewedUser()), []);
+  return u;
 }

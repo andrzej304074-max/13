@@ -90,10 +90,11 @@ interface SubRow { lesson: string; sub: number; passes: string; best: number; se
 
 async function subRows(userId: string, lessonIds: string[] | null) {
   const { rows } = await query<SubRow>(
-    `SELECT lesson, sub, COUNT(*) FILTER (WHERE correct >= total * ${PASS_ACCURACY}) AS passes,
-       MAX(correct::float / NULLIF(total, 0)) AS best, COUNT(*) AS sessions, MAX(finished_at) AS last
+    // sesja „artykuł” (przeczytany rozdział Podręcznika zamiast Poznaj) zalicza pod-lekcję jak wynik 100%
+    `SELECT lesson, sub, COUNT(*) FILTER (WHERE mode = 'artykul' OR correct >= total * ${PASS_ACCURACY}) AS passes,
+       MAX(CASE WHEN mode = 'artykul' THEN 1 ELSE correct::float / NULLIF(total, 0) END) AS best, COUNT(*) AS sessions, MAX(finished_at) AS last
      FROM learn_sessions
-     WHERE user_id = $2 AND finished_at IS NOT NULL AND total > 0 AND lesson <> 'powtorka' AND ($1::text[] IS NULL OR lesson = ANY($1))
+     WHERE user_id = $2 AND finished_at IS NOT NULL AND (total > 0 OR mode = 'artykul') AND lesson <> 'powtorka' AND ($1::text[] IS NULL OR lesson = ANY($1))
      GROUP BY lesson, sub`,
     [lessonIds, userId],
   );
@@ -229,7 +230,7 @@ export interface NaukaStats {
   byExercise: ({ id: string; avgMs: number } & Totals)[];
   byKind: ({ id: string } & Totals)[];
   daily: { day: string; sessions: number; percent: number; ms: number; xp: number }[];
-  history: { id: string; lesson: string; sub: number; finishedAt: string; durationMs: number; correct: number; total: number; xp: number }[];
+  history: { id: string; lesson: string; sub: number; finishedAt: string; durationMs: number; correct: number; total: number; xp: number; mode: string }[];
   weakest: ({ id: string; title: string; kind: string; topic: string } & Totals)[];
 }
 
@@ -298,8 +299,8 @@ export async function getNaukaStats(userId: string, f: StatsFilter): Promise<Nau
       `SELECT to_char((s.finished_at AT TIME ZONE '${TZ}')::date, 'YYYY-MM-DD') AS day, COUNT(*) AS n, SUM(s.correct) AS c,
          SUM(s.total) AS t, SUM(s.duration_ms) AS ms, SUM(s.xp) AS xp ${S} GROUP BY 1 ORDER BY 1 DESC LIMIT 60`,
       w.sessions.params),
-    query<{ id: string; lesson: string; sub: number; finished_at: Date; duration_ms: number; correct: number; total: number; xp: number }>(
-      `SELECT s.id, s.lesson, s.sub, s.finished_at, s.duration_ms, s.correct, s.total, s.xp ${S} ORDER BY s.finished_at DESC LIMIT 30`,
+    query<{ id: string; lesson: string; sub: number; finished_at: Date; duration_ms: number; correct: number; total: number; xp: number; mode: string }>(
+      `SELECT s.id, s.lesson, s.sub, s.finished_at, s.duration_ms, s.correct, s.total, s.xp, s.mode ${S} ORDER BY s.finished_at DESC LIMIT 30`,
       w.sessions.params),
     query<{ id: string; c: string; t: string }>(
       `SELECT a.item_id AS id, SUM(a.correct::int) AS c, COUNT(*) AS t ${A} GROUP BY 1
@@ -328,11 +329,43 @@ export async function getNaukaStats(userId: string, f: StatsFilter): Promise<Nau
     })),
     history: hist.rows.map((r) => ({
       id: r.id, lesson: r.lesson, sub: r.sub, finishedAt: r.finished_at.toISOString(), durationMs: r.duration_ms,
-      correct: r.correct, total: r.total, xp: r.xp,
+      correct: r.correct, total: r.total, xp: r.xp, mode: r.mode,
     })),
     weakest: weak.rows.flatMap((r) => {
       const it = getItem(r.id);
       return it ? [{ id: r.id, title: it.t, kind: it.kind, topic: it.topic, ...totals(Number(r.c), Number(r.t)) }] : [];
     }),
   };
+}
+
+/* ---------- Podręcznik ---------- */
+
+const READ_XP = 10;
+
+/**
+ * Przeczytany artykuł: zapis w article_reads; rozdział lekcji dodatkowo zalicza „Poznaj” (sesja w trybie „artykuł”,
+ * najwyżej raz na 10 minut na lekcję, żeby odświeżanie strony nie nabijało koron).
+ */
+export async function markRead(userId: string, ref: unknown, ms: unknown): Promise<{ ok: true; credited: boolean; level?: number }> {
+  if (typeof ref !== "string" || !ref) throw new HttpError(400, "Brak artykułu.");
+  const lesson = getLesson(ref);
+  const unit = COURSE.units.find((u) => u.id === ref);
+  if (!unit && (!lesson || lesson.type === "zrozum")) throw new HttpError(404, "Nie ma takiego artykułu.");
+  await query("INSERT INTO article_reads (user_id, ref) VALUES ($1, $2) ON CONFLICT (user_id, ref) DO UPDATE SET at = now()", [userId, ref]);
+  if (!lesson) return { ok: true, credited: false };
+  const dur = Number.isFinite(ms) ? Math.min(Math.max(Math.round(ms as number), 0), MAX_DURATION_MS) : 0;
+  const { rows } = await query<{ id: string }>(
+    `INSERT INTO learn_sessions (topic, unit, lesson, sub, kind, level, user_id, mode, finished_at, duration_ms, correct, total, xp)
+     SELECT $1, $2, $3, 1, $4, 0, $5, 'artykul', now(), $6, 0, 0, $7
+     WHERE NOT EXISTS (SELECT 1 FROM learn_sessions WHERE user_id = $5 AND lesson = $3 AND mode = 'artykul' AND finished_at > now() - interval '10 minutes')
+     RETURNING id`,
+    [lesson.topic, lesson.unit, lesson.id, lesson.kind, userId, dur, READ_XP],
+  );
+  const level = (await lessonLevels(userId, [lesson.id]))[lesson.id] ?? 0;
+  return { ok: true, credited: rows.length > 0, level };
+}
+
+export async function readArticles(userId: string): Promise<Record<string, string>> {
+  const { rows } = await query<{ ref: string; at: Date }>("SELECT ref, at FROM article_reads WHERE user_id = $1", [userId]);
+  return Object.fromEntries(rows.map((r) => [r.ref, r.at.toISOString()]));
 }

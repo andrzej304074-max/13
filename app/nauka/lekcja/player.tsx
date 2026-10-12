@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { api, fmtPct, LETTERS } from "@/lib/client";
+import { QuestionScratch } from "@/app/components/notes/question-scratch";
+import { api, fmtPct, isTyping, LETTERS } from "@/lib/client";
 import { fmtDuration, rememberLesson } from "@/lib/nauka-client";
 import {
   buildExercises, checkTyped, computeXp, eventOf, acceptedAnswers, questionCorrect, shuffle, yearOf,
@@ -106,7 +107,7 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
   useEffect(() => {
     if (!feedback && current?.type !== "intro" && current?.type !== "karta") return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Enter") {
+      if (e.key === "Enter" && !isTyping(e)) {
         e.preventDefault();
         advance();
       }
@@ -174,8 +175,15 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
           <Sources sources={payload.zrozum.sources} />
         </details>
       )}
+      {sub === 1 && payload.article && pos === 0 && !payload.review && (
+        <Link href={`/nauka/podrecznik/${lesson.unit}/${lesson.id}`} className="article-link" data-testid="article-banner">
+          <span aria-hidden>📖</span>
+          <span><b>Wolisz poczytać? Artykuł tej lekcji zalicza „Poznaj”</b><small>{payload.article}</small></span>
+        </Link>
+      )}
       {startError && <p className="error" style={{ fontSize: "0.85rem" }}>Nie udało się rozpocząć zapisu sesji ({startError}) – możesz ćwiczyć, ale wynik nie trafi do statystyk.</p>}
       <ExerciseView key={pos} ex={current!} locked={!!feedback} onResult={record} onNext={advance} />
+      {current!.type !== "intro" && current!.type !== "karta" && <QuestionScratch refKey={`lekcja:${lesson.id}:${sub}`} />}
       {feedback && (
         <div ref={fbRef} className={`learn-feedback ${feedback.correct ? "ok" : "bad"}`} role="status">
           <div className="learn-feedback-inner">

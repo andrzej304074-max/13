@@ -2,11 +2,13 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { PreviewBanner } from "@/app/components/preview-banner";
+import { StarButton, StarFilterSeg, type StarFilter } from "@/app/components/star";
 import { PageSkeleton } from "@/app/pojecia/table";
 import { useData } from "@/lib/data-client";
-import { api, fmtPct, viewedUser, withUser } from "@/lib/client";
+import { api, fmtPct, isTyping, viewedUser, withUser } from "@/lib/client";
 import type { Mastery } from "@/lib/mastery-core";
 import { LEVELS, level, type Level } from "@/lib/owe-stats";
+import { useStars } from "@/lib/stars-client";
 
 export interface Card { id: string; t: string; d: string; w: string | null; kind: string; topic: string; n: number }
 type Topic = { id: string; title: string; emoji: string };
@@ -46,6 +48,8 @@ export function FlashcardsView({ cards, topics, kinds }: { cards: Card[]; topics
   const [kind, setKind] = useState("");
   const [lv, setLv] = useState<Level | "">("");
   const [oweOnly, setOweOnly] = useState(false);
+  const [gw, setGw] = useState<StarFilter>("");
+  const { stars, toggle: toggleStar, ready: starsReady } = useStars("fiszka");
   const [order, setOrder] = useState<Order>("lessons");
   const [seed, setSeed] = useState(1);
   const [mastery, setMastery] = useState<Record<string, Mastery>>({});
@@ -60,6 +64,8 @@ export function FlashcardsView({ cards, topics, kinds }: { cards: Card[]; topics
     const k = p.get("kolor");
     setLv(k === "good" || k === "mid" || k === "weak" || k === "none" ? k : "");
     setOweOnly(p.get("owe") === "1");
+    const g = p.get("gw");
+    setGw(g === "1" || g === "0" ? g : "");
     const o = p.get("kolejnosc");
     setOrder(o === "random" || o === "weak" ? o : "lessons");
     setSeed(Math.floor(Math.random() * 1e9) + 1);
@@ -75,28 +81,39 @@ export function FlashcardsView({ cards, topics, kinds }: { cards: Card[]; topics
     if (kind) p.set("rodzaj", kind);
     if (lv) p.set("kolor", lv);
     if (oweOnly) p.set("owe", "1");
+    if (gw) p.set("gw", gw);
     if (order !== "lessons") p.set("kolejnosc", order);
     window.history.replaceState(null, "", `/fiszki${p.size ? `?${p}` : ""}`);
-  }, [ready, mode, topic, kind, lv, oweOnly, order]);
+  }, [ready, mode, topic, kind, lv, oweOnly, gw, order]);
 
-  // kolejność i filtr koloru liczone z opanowania z chwili wejścia/zmiany filtrów – ocena karty nie przestawia listy
+  // kolejność, filtr koloru i gwiazdek liczone ze stanu z chwili wejścia/zmiany filtrów – ocena lub gwiazdka nie przestawia listy
   const snapshot = useRef(mastery);
+  const starSnap = useRef<Set<string>>(new Set());
   const [snapKey, setSnapKey] = useState(0);
-  useEffect(() => { snapshot.current = mastery; setSnapKey((k) => k + 1); }, [topic, kind, lv, oweOnly, order, seed, ready]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => { snapshot.current = mastery; starSnap.current = new Set(stars); setSnapKey((k) => k + 1); }, [topic, kind, lv, oweOnly, gw, order, seed, ready]); // eslint-disable-line react-hooks/exhaustive-deps
+  // gwiazdki doczytane po wejściu – odśwież migawkę
+  useEffect(() => { if (starsReady) { starSnap.current = new Set(stars); setSnapKey((k) => k + 1); } }, [starsReady]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const list = useMemo(() => {
     const m = snapshot.current;
-    let r = cards.filter((c) => (!topic || c.topic === topic) && (!kind || c.kind === kind) && (!oweOnly || c.n > 0) && (!lv || lvOf(m[c.id]) === lv));
+    const st = starSnap.current;
+    let r = cards.filter((c) => (!topic || c.topic === topic) && (!kind || c.kind === kind) && (!oweOnly || c.n > 0) && (!lv || lvOf(m[c.id]) === lv)
+      && (!gw || st.has(c.id) === (gw === "1")));
     if (order === "random") r = shuffle(r, seed);
     if (order === "weak") r = [...r].sort((a, b) => LV_RANK[lvOf(m[a.id])] - LV_RANK[lvOf(m[b.id])] || (m[a.id] ? m[a.id].c / m[a.id].t : 1) - (m[b.id] ? m[b.id].c / m[b.id].t : 1));
     return r;
-  }, [cards, topic, kind, lv, oweOnly, order, seed, snapKey]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [cards, topic, kind, lv, oweOnly, gw, order, seed, snapKey]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const counts = useMemo(() => {
     const c: Record<Level, number> = { good: 0, mid: 0, weak: 0, none: 0 };
     for (const x of cards) if ((!topic || x.topic === topic) && (!kind || x.kind === kind) && (!oweOnly || x.n > 0)) c[lvOf(mastery[x.id])]++;
     return c;
   }, [cards, topic, kind, oweOnly, mastery]);
+  const starCounts = useMemo(() => {
+    let on = 0, all = 0;
+    for (const x of cards) if ((!topic || x.topic === topic) && (!kind || x.kind === kind) && (!oweOnly || x.n > 0)) { all++; if (stars.has(x.id)) on++; }
+    return { on, off: all - on };
+  }, [cards, topic, kind, oweOnly, stars, stars.size]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const rate = useCallback(async (id: string, known: boolean) => {
     if (preview) return;
@@ -155,6 +172,10 @@ export function FlashcardsView({ cards, topics, kinds }: { cards: Card[]; topics
               ))}
             </div>
           </div>
+          <div>
+            <div className="filter-label">Gwiazdka</div>
+            <StarFilterSeg value={gw} onChange={setGw} counts={starCounts} />
+          </div>
           <div className="row">
             <label className="check"><input type="checkbox" checked={oweOnly} onChange={(e) => setOweOnly(e.target.checked)} /> tylko hasła, o które pytano na OWE</label>
             <span className="spacer" />
@@ -163,14 +184,21 @@ export function FlashcardsView({ cards, topics, kinds }: { cards: Card[]; topics
         </div>
       </details>
 
-      {list.length === 0 ? <p className="muted">Brak fiszek dla wybranych filtrów.</p>
-        : mode === "feed" ? <Feed list={list} mastery={mastery} rate={rate} preview={preview} topicName={topicName} />
-          : <Classic list={list} mastery={mastery} rate={rate} preview={preview} topicName={topicName} />}
+      {list.length === 0 ? (
+        <div className="empty-state">
+          <span aria-hidden>{gw === "1" ? "⭐" : "🔍"}</span>
+          <p>{gw === "1" ? "Nie masz jeszcze fiszek z gwiazdką – dotknij ☆ na fiszce, żeby ją dodać." : "Brak fiszek dla wybranych filtrów."}</p>
+        </div>
+      ) : mode === "feed" ? <Feed list={list} mastery={mastery} rate={rate} preview={preview} topicName={topicName} stars={stars} onStar={toggleStar} />
+          : <Classic list={list} mastery={mastery} rate={rate} preview={preview} topicName={topicName} stars={stars} onStar={toggleStar} />}
     </div>
   );
 }
 
-type Props = { list: Card[]; mastery: Record<string, Mastery>; rate: (id: string, known: boolean) => void; preview: boolean; topicName: Record<string, string> };
+type Props = {
+  list: Card[]; mastery: Record<string, Mastery>; rate: (id: string, known: boolean) => void; preview: boolean; topicName: Record<string, string>;
+  stars: Set<string>; onStar: (id: string) => void;
+};
 
 function Face({ c, back, topicName, m }: { c: Card; back: boolean; topicName: Record<string, string>; m: Mastery | undefined }) {
   return back ? (
@@ -190,7 +218,7 @@ function Face({ c, back, topicName, m }: { c: Card; back: boolean; topicName: Re
 }
 
 /** Pionowy feed jak w aplikacjach z krótkimi filmami: jedna karta na ekran, przewijanie z przyciąganiem. */
-function Feed({ list, mastery, rate, preview, topicName }: Props) {
+function Feed({ list, mastery, rate, preview, topicName, stars, onStar }: Props) {
   const [shown, setShown] = useState(BATCH);
   const [flipped, setFlipped] = useState<Record<string, boolean>>({});
   const [rated, setRated] = useState<Record<string, boolean>>({});
@@ -215,6 +243,7 @@ function Feed({ list, mastery, rate, preview, topicName }: Props) {
             </button>
             <div className="reel-bar">
               <span className="muted">{i + 1} / {list.length}</span>
+              <StarButton on={stars.has(c.id)} onToggle={() => onStar(c.id)} label="fiszkę do ulubionych" disabled={preview} />
               {!preview && (rated[c.id] ? <span className="muted">Zapisano ✓</span> : <>
                 <button className="btn small secondary" onClick={() => { rate(c.id, false); setRated((r) => ({ ...r, [c.id]: true })); }}>✗ Nie znam</button>
                 <button className="btn small" onClick={() => { rate(c.id, true); setRated((r) => ({ ...r, [c.id]: true })); }}>✓ Znam</button>
@@ -230,7 +259,7 @@ function Feed({ list, mastery, rate, preview, topicName }: Props) {
 }
 
 /** Klasyczne fiszki: jedna karta, odwracanie, ocena „znam / nie znam” i przejście dalej. */
-function Classic({ list, mastery, rate, preview, topicName }: Props) {
+function Classic({ list, mastery, rate, preview, topicName, stars, onStar }: Props) {
   const [i, setI] = useState(0);
   const [back, setBack] = useState(false);
   const [done, setDone] = useState({ known: 0, unknown: 0 });
@@ -244,18 +273,20 @@ function Classic({ list, mastery, rate, preview, topicName }: Props) {
   }, [c, rate, go]);
   useEffect(() => {
     const k = (e: KeyboardEvent) => {
-      if ((e.target as HTMLElement)?.closest("input,select,textarea")) return;
+      if ((e.target as HTMLElement)?.closest("input,select,textarea") || isTyping(e)) return;
       if (e.key === " ") { e.preventDefault(); setBack((b) => !b); }
       if (e.key === "ArrowRight") go(1);
       if (e.key === "ArrowLeft") go(-1);
+      if (e.key.toLowerCase() === "g" && !preview) onStar(c.id);
     };
     window.addEventListener("keydown", k);
     return () => window.removeEventListener("keydown", k);
-  }, [go]);
+  }, [go, c, onStar, preview]);
   const m = mastery[c.id];
   return (
     <div className="stack classic" data-testid="classic">
-      <div className="row"><span className="muted" data-testid="classic-pos">{i + 1} / {list.length}</span><span className="spacer" />
+      <div className="row"><span className="muted" data-testid="classic-pos">{i + 1} / {list.length}</span>
+        <StarButton on={stars.has(c.id)} onToggle={() => onStar(c.id)} label="fiszkę do ulubionych" disabled={preview} /><span className="spacer" />
         {!preview && <span className="muted">w tej sesji: ✓ {done.known} · ✗ {done.unknown}</span>}</div>
       <button className={`fc fc-big fc-${lvOf(m)} ${back ? "back" : ""}`} onClick={() => setBack(!back)} aria-label={`Fiszka: ${c.t}`} data-testid="classic-card">
         <Face c={c} back={back} topicName={topicName} m={m} />
@@ -268,7 +299,7 @@ function Classic({ list, mastery, rate, preview, topicName }: Props) {
         </>}
         <button className="btn secondary" onClick={() => go(1)} disabled={i >= list.length - 1} aria-label="Następna">→</button>
       </div>
-      <p className="muted" style={{ fontSize: ".85rem", textAlign: "center" }}>Spacja – odwróć · strzałki – poprzednia/następna</p>
+      <p className="muted" style={{ fontSize: ".85rem", textAlign: "center" }}>Spacja – odwróć · strzałki – poprzednia/następna · G – gwiazdka</p>
     </div>
   );
 }

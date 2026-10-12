@@ -146,6 +146,8 @@ export interface LessonPayload {
   review?: boolean;
   /** Lekcja „Zrozumienie”: cel, źródła, powiązane hasła i ćwiczenia bieżącej pod-lekcji. */
   zrozum?: { goal: string; sources: ZSource[]; refs: CourseItem[]; exercises: ZEx[] };
+  /** Tytuł artykułu lekcji w Podręczniku (alternatywa dla „Poznaj”), jeśli już napisany. */
+  article?: string;
 }
 
 export type ExerciseType =

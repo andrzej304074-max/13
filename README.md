@@ -139,8 +139,8 @@ python3 -I tools/nauka/pojecia_pytan.py stats
 
 ## Nawigacja i szybkość
 
-- **4 działy** (`lib/nav.ts`): 📝 Testy (Olimpiada, Słownik), 🎓 Nauka (Kurs, Fiszki, Powtórka), 📖 Pojęcia (Tabela, Statystyki OWE,
-  Pokrycie olimpiad), 📊 Statystyki (Wyniki testów, Działy i pojęcia, Nauka). Na komputerze działy w nagłówku, na telefonie dolny pasek
+- **5 działów** (`lib/nav.ts`): 📝 Testy (Olimpiada, Słownik), 🎓 Nauka (Kurs, Podręcznik, Fiszki, Powtórka), 📖 Pojęcia (Tabela,
+  Statystyki OWE, Pokrycie olimpiad), 🗒️ Notatki (Notatki, Brudnopisy), 📊 Statystyki (Wyniki testów, Działy i pojęcia, Nauka). Na komputerze działy w nagłówku, na telefonie dolny pasek
   z ikonami; podzakładki działu nad treścią strony; konto (panel admina, ustawienia, wylogowanie) pod 👤. Podczas testu i lekcji dolny
   pasek i podzakładki są ukryte.
 - **Dane haseł i statystyk OWE** nie są w HTML stron: `GET /api/dane/hasla` i `/api/dane/owe-stats` (ETag, pamięć przeglądarki),
@@ -193,7 +193,36 @@ Wszystkie hasła kursu (bez lekcji „Zrozumienie”) w dwóch trybach: **przewi
 dotknięcie odwraca kartę) i **klasyczne** (odwracanie, „Znam / Nie znam”, strzałki i spacja). Kolor obwódki – jak dobrze znasz hasło:
 zielony ≥ 80%, żółty 50–79%, czerwony < 50%, szary – mniej niż 2 odpowiedzi. Liczone razem: ćwiczenia w Nauce, odpowiedzi testowe
 (OWE i słownik – pytanie liczy się dla każdego swojego pojęcia) i oceny fiszek (tabela `flash_ratings`, nie wpływa na statystyki nauki).
-Filtry: dział, rodzaj, kolor, tylko hasła z OWE, kolejność (lekcje / losowo / najsłabsze najpierw). API `/api/fiszki/opanowanie`, `/api/fiszki/ocena`.
+Gwiazdka ☆/★ na karcie (klawisz G w trybie klasycznym). Filtry: dział, rodzaj, kolor, gwiazdka (z / bez), tylko hasła z OWE, kolejność (lekcje / losowo / najsłabsze najpierw). API `/api/fiszki/opanowanie`, `/api/fiszki/ocena`.
+
+## Notatki i brudnopisy (`/notatki`, `/notatki/brudnopisy`)
+
+- **Edytor** (`app/components/notes/editor.tsx`): tekst z klawiatury + płótno do pisania rysikiem (nacisk), palcem lub myszą; gumka
+  (usuwa całe kreski), cofnij/ponów (Ctrl+Z / Ctrl+Y), 4 kolory, 3 grubości, „więcej miejsca”, tryb „przewijaj” na telefonie.
+  Rysunek zapisany w jednostkach logicznych (szerokość 1000), kreski upraszczane (Douglas–Peucker, `lib/notes-core.ts`). Zapis
+  automatyczny 0,8 s po zmianie, także przy zamknięciu karty.
+- **Brudnopis pod „Sprawdź”** w testach (jeden na pytanie: `owe:<id>`, `slownik:<id>`) i lekcjach (jeden na pod-lekcję); otwarty
+  zostaje otwarty przy kolejnych pytaniach; trafia do Brudnopisów z treścią pytania. Skróty klawiszowe testów, lekcji i fiszek nie
+  reagują podczas pisania (`isTyping` w `lib/client.ts`).
+- **Szybkie notatki** – przycisk 🗒️ w nagłówku na każdej stronie: panel z boku (komputer) lub od dołu nad paskiem działów (telefon),
+  zostaje otwarty przy przechodzeniu między stronami, minimalizacja (▁ / Esc) zachowuje treść.
+- Gwiazdki i filtr (z / bez), wyszukiwanie. Admin widzi notatki użytkownika w podglądzie (`?user=`), bez możliwości zmian.
+- Tabele `notes`, `stars`, `highlights`; API `/api/notatki`, `/api/notatki/[id]`, `/api/notatki/brudnopis`, `/api/gwiazdki`, `/api/podkreslenia`.
+
+## Podręcznik (Nauka → Podręcznik, `/nauka/podrecznik`)
+
+Ręcznie pisane artykuły prostym językiem: dla każdego działu przegląd „W skrócie” i rozdziały – jeden na każdą zwykłą lekcję kursu.
+Rozdział jest też osobnym artykułem lekcji (`/nauka/podrecznik/<dział>/<lekcja>`) i alternatywą dla „Poznaj”: przeczytany do końca
+zalicza pod-lekcję 1 (sesja `learn_sessions.mode = 'artykul'`, bez odpowiedzi – nie zmienia skuteczności; najwyżej raz na 10 min).
+Link „Czytaj artykuł zamiast Poznaj” w panelu lekcji na ścieżce i baner na początku „Poznaj”.
+
+- **Czytnik** (`app/nauka/podrecznik/reader.tsx`): pasek postępu, spis treści, A−/A+, ramki „Przykład / Uwaga, pułapka / Zapamiętaj”,
+  wzory w czcionce wzorów, hasła z dymkiem definicji (odnośnik do Tabeli pojęć `?q=`), znacznik „przeczytane”, gwiazdki działów i rozdziałów.
+- **Podkreślanie**: zaznacz tekst → 3 kolory albo „Do notatki” (notatka z cytatem otwiera się w szybkim panelu); kliknięcie
+  podkreślenia – usunięcie. Zapis: blok i zakres znaków (`highlights`), wspólny dla artykułu działu i lekcji.
+- **Treść**: `tools/nauka/podrecznik/<temat>/<dział>.md` → `python3 -I tools/nauka/build_podrecznik.py [--strict]` →
+  `data/nauka/podrecznik.json`. Format i kontrole (każda lekcja ma rozdział, każde hasło lekcji i hasło z pytań ma odnośnik `[[…]]`)
+  opisane w nagłówku skryptu. Fakty spoza słownika – `tools/nauka/podrecznik/WERYFIKACJA.md`.
 
 ## Konta i panel admina
 

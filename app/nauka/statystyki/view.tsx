@@ -240,7 +240,7 @@ export function NaukaStatsView({ meta }: { meta: StatsMeta }) {
                   <td>{new Date(h.finishedAt).toLocaleString("pl-PL", { dateStyle: "short", timeStyle: "short" })}</td>
                   <td>{h.lesson === "powtorka" ? names.get("powtorka") : <Link href={`/nauka/lekcja/${h.lesson}?sub=${h.sub}`}>{names.get(h.lesson) ?? h.lesson}</Link>}</td>
                   <td>{h.lesson === "powtorka" ? "–" : subsFor(meta.lessons.find((l) => l.id === h.lesson) ?? {})[h.sub - 1]?.title}</td>
-                  <td>{h.correct}/{h.total} · {fmtPct(h.total ? Math.round((h.correct / h.total) * 1000) / 10 : 0)}</td>
+                  <td>{h.mode === "artykul" ? "📖 przeczytany artykuł" : <>{h.correct}/{h.total} · {fmtPct(h.total ? Math.round((h.correct / h.total) * 1000) / 10 : 0)}</>}</td>
                   <td>{fmtDuration(h.durationMs)}</td><td>{h.xp}</td>
                 </tr>
               ))}

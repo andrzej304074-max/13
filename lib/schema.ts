@@ -131,4 +131,52 @@ CREATE TABLE IF NOT EXISTS flash_ratings (
   at      timestamptz NOT NULL DEFAULT now()
 );
 CREATE INDEX IF NOT EXISTS flash_ratings_user_idx ON flash_ratings (user_id, item_id);
+
+-- Notatki i brudnopisy (tekst + rysunek piórem); brudnopis pytania ma ref (np. owe:<id>, lekcja:<id>:<sub>), jeden na pytanie.
+CREATE TABLE IF NOT EXISTS notes (
+  id         uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id    uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  kind       text NOT NULL CHECK (kind IN ('note', 'scratch')),
+  title      text NOT NULL DEFAULT '',
+  body       text NOT NULL DEFAULT '',
+  ink        jsonb NOT NULL DEFAULT '{"h":0,"s":[]}'::jsonb,
+  ref        text,
+  starred    boolean NOT NULL DEFAULT false,
+  created_at timestamptz NOT NULL DEFAULT now(),
+  updated_at timestamptz NOT NULL DEFAULT now()
+);
+CREATE INDEX IF NOT EXISTS notes_user_idx ON notes (user_id, kind, updated_at DESC);
+CREATE UNIQUE INDEX IF NOT EXISTS notes_scratch_ref_idx ON notes (user_id, ref) WHERE kind = 'scratch' AND ref IS NOT NULL;
+
+-- Gwiazdki: fiszki (id hasła) i artykuły Podręcznika (id lekcji / działu).
+CREATE TABLE IF NOT EXISTS stars (
+  user_id uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  kind    text NOT NULL CHECK (kind IN ('fiszka', 'artykul')),
+  ref     text NOT NULL,
+  at      timestamptz NOT NULL DEFAULT now(),
+  PRIMARY KEY (user_id, kind, ref)
+);
+
+-- Podkreślenia w artykułach: blok tekstu i zakres znaków w nim.
+CREATE TABLE IF NOT EXISTS highlights (
+  id         uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id    uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  article    text NOT NULL,
+  block      int NOT NULL,
+  start_at   int NOT NULL,
+  end_at     int NOT NULL,
+  color      text NOT NULL DEFAULT 'y',
+  created_at timestamptz NOT NULL DEFAULT now()
+);
+CREATE INDEX IF NOT EXISTS highlights_user_idx ON highlights (user_id, article);
+
+-- Podręcznik: przeczytane artykuły (rozdział = id lekcji, przegląd działu = id działu).
+CREATE TABLE IF NOT EXISTS article_reads (
+  user_id uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  ref     text NOT NULL,
+  at      timestamptz NOT NULL DEFAULT now(),
+  PRIMARY KEY (user_id, ref)
+);
+-- Sesja „artykuł”: przeczytanie rozdziału zamiast ćwiczeń Poznaj (bez odpowiedzi – nie wpływa na skuteczność).
+ALTER TABLE learn_sessions ADD COLUMN IF NOT EXISTS mode text NOT NULL DEFAULT 'cwiczenia';
 `;

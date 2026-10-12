@@ -33,18 +33,20 @@ export function ConceptTable({ rows, topics, kinds }: { rows: Row[]; topics: Top
   const query = useDeferredValue(q);
   const topicName = useMemo(() => Object.fromEntries(topics.map((t) => [t.id, `${t.emoji} ${t.title}`])), [topics]);
 
-  // filtry zapamiętane w adresie (?dzial=mikro&rodzaj=osoba)
+  // filtry zapamiętane w adresie (?dzial=mikro&rodzaj=osoba&q=elastyczność)
   useEffect(() => {
     const p = new URLSearchParams(window.location.search);
     setTopic(p.get("dzial") ?? "");
     setKind(p.get("rodzaj") ?? "");
+    setQ(p.get("q") ?? "");
   }, []);
   useEffect(() => {
     const p = new URLSearchParams();
     if (topic) p.set("dzial", topic);
     if (kind) p.set("rodzaj", kind);
+    if (query.trim()) p.set("q", query.trim());
     window.history.replaceState(null, "", `/pojecia${p.size ? `?${p}` : ""}`);
-  }, [topic, kind]);
+  }, [topic, kind, query]);
 
   const index = useMemo(() => rows.map((r) => norm(`${r.t} ${r.d} ${r.w ?? ""}`)), [rows]);
   const shown = useMemo(() => {

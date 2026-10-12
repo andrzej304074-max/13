@@ -12,7 +12,7 @@ export interface UnitView {
   kind: ItemKind;
   count: number;
   zcount: number;
-  lessons: { id: string; no: number; part?: number; title: string; type?: "zrozum"; goal?: string; items: string[]; extra?: string[]; questions: number }[];
+  lessons: { id: string; no: number; part?: number; title: string; type?: "zrozum"; goal?: string; items: string[]; extra?: string[]; questions: number; article?: string }[];
 }
 
 const KIND_ICON: Record<string, string> = {
@@ -126,6 +126,12 @@ export function TopicPath({ topic, units, kinds }: { topic: CourseTopic; units: 
                         {l.extra?.length ? ` · nowe z pytań: ${l.extra.join(" · ")}` : ""}
                         {l.questions ? ` · ${l.questions} pytań do sprawdzianu` : ""}
                       </p>
+                      {l.article && (
+                        <Link href={`/nauka/podrecznik/${u.id}/${l.id}`} className="article-link" data-testid="article-link">
+                          <span aria-hidden>📖</span>
+                          <span><b>Czytaj artykuł zamiast „Poznaj”</b><small>{l.article}</small></span>
+                        </Link>
+                      )}
                       <div className="crowns" aria-label={`Poziom ${level} z ${MAX_LEVEL}`}>
                         {Array.from({ length: MAX_LEVEL }, (_, k) => <span key={k} className={k < level ? "on" : ""}>👑</span>)}
                       </div>

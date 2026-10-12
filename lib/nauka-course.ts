@@ -1,4 +1,5 @@
 import { COURSE, ZROZUM } from "@/data/nauka";
+import { lessonArticle } from "./podrecznik";
 import { getQuestion } from "./questions";
 import type { Question } from "./types";
 import type { CourseItem, CourseLesson, CourseTopic, CourseUnit, LessonPayload } from "./nauka-types";
@@ -77,6 +78,7 @@ export function lessonPayload(lessonId: string, sub: number): LessonPayload | nu
     repeat: (lesson.review ?? []).map((i) => COURSE.items[i]),
     pool: poolFor(lesson),
     questions: sub === 4 ? shuffle(questions).slice(0, 10) : [],
+    article: lessonArticle(lesson.id)?.chapter.title,
   };
 }
 

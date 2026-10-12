@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { QuestionScratch } from "@/app/components/notes/question-scratch";
 import { api, fmtPct, fmtPoints, LETTERS, rememberTest } from "@/lib/client";
 import { correctUnits, UNITS_PER_QUESTION } from "@/lib/scoring";
 import type { AnswerFeedback, PublicQuestion, TestState } from "@/lib/types";
@@ -210,6 +211,7 @@ export default function TestPage() {
             Zakończ test
           </button>
         </div>
+        <QuestionScratch refKey={`${test.bank === "slownik" ? "slownik" : "owe"}:${q.id}`} />
       </div>
     </div>
   );

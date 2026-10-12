@@ -1,4 +1,4 @@
-/** Nawigacja: 4 działy aplikacji i ich podzakładki (górny pasek, dolny pasek na telefonie, pasek podzakładek). */
+/** Nawigacja: 5 działów aplikacji i ich podzakładki (górny pasek, dolny pasek na telefonie, pasek podzakładek). */
 export interface NavTab { href: string; label: string; /** Dodatkowe ścieżki, które też podświetlają tę zakładkę. */ also?: string[] }
 export interface NavSection { id: string; icon: string; label: string; tabs: NavTab[] }
 
@@ -9,6 +9,7 @@ export const NAV: NavSection[] = [
   ] },
   { id: "nauka", icon: "🎓", label: "Nauka", tabs: [
     { href: "/nauka", label: "Kurs" },
+    { href: "/nauka/podrecznik", label: "Podręcznik" },
     { href: "/fiszki", label: "Fiszki" },
     { href: "/nauka/powtorka", label: "Powtórka" },
   ] },
@@ -16,6 +17,10 @@ export const NAV: NavSection[] = [
     { href: "/pojecia", label: "Tabela" },
     { href: "/pojecia/statystyki", label: "Statystyki OWE" },
     { href: "/pojecia/pokrycie", label: "Pokrycie olimpiad" },
+  ] },
+  { id: "notatki", icon: "🗒️", label: "Notatki", tabs: [
+    { href: "/notatki", label: "Notatki" },
+    { href: "/notatki/brudnopisy", label: "Brudnopisy" },
   ] },
   { id: "statystyki", icon: "📊", label: "Statystyki", tabs: [
     { href: "/stats", label: "Wyniki testów" },

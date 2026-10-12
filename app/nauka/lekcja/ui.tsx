@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { isTyping } from "@/lib/client";
 import type { Exercise } from "@/lib/nauka-logic";
 import type { CourseItem } from "@/lib/nauka-types";
 
@@ -24,7 +25,7 @@ export function useNumberKeys(n: number, locked: boolean, pick: (i: number) => v
   useEffect(() => {
     if (locked) return;
     const onKey = (e: KeyboardEvent) => {
-      if ((e.target as HTMLElement)?.tagName === "INPUT") return;
+      if ((e.target as HTMLElement)?.tagName === "INPUT" || isTyping(e)) return;
       const i = Number(e.key) - 1;
       if (Number.isInteger(i) && i >= 0 && i < n) pick(i);
     };
@@ -37,7 +38,7 @@ export function useEnter(enabled: boolean, fn: () => void) {
   useEffect(() => {
     if (!enabled) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Enter") {
+      if (e.key === "Enter" && !isTyping(e)) {
         e.preventDefault();
         fn();
       }

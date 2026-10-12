@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { ZROZUM } from "@/data/nauka";
 import { COURSE, getTopic, unitsOf } from "@/lib/nauka-course";
+import { chapterTitles } from "@/lib/podrecznik";
 import { TopicPath, type UnitView } from "./path";
 
 export function generateStaticParams() {
@@ -11,6 +12,7 @@ export default async function TopicPage({ params }: { params: Promise<{ topic: s
   const { topic: id } = await params;
   const topic = getTopic(id);
   if (!topic) notFound();
+  const articles = chapterTitles();
   const units: UnitView[] = unitsOf(id).map((u) => ({
     id: u.id,
     title: u.title,
@@ -26,6 +28,7 @@ export default async function TopicPage({ params }: { params: Promise<{ topic: s
       return {
         id: l.id, no: l.no, part: l.part, title: l.title, items: l.items.map((i) => COURSE.items[i].s),
         extra: (l.extra ?? []).map((i) => COURSE.items[i].s), questions: l.questions.length,
+        ...(articles[l.id] ? { article: articles[l.id] } : {}),
       };
     }),
   }));

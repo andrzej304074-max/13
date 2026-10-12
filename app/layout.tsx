@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { currentUser, type User } from "@/lib/auth";
 import { AccountMenu } from "./components/account-menu";
+import { QuickNotes } from "./components/notes/quick-notes";
 import { SectionNav, SubTabs } from "./components/nav";
 import "./globals.css";
 
@@ -30,6 +31,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <header className="top">
           <Link href="/" className="brand">Testy OWE</Link>
           {me?.active && <SectionNav variant="top" />}
+          {me?.active && <QuickNotes />}
           {me && <AccountMenu email={me.email} isAdmin={me.isAdmin} />}
         </header>
         <main className="container">
