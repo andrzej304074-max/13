@@ -104,6 +104,7 @@ UNITS = {
 
 # Ręczne przypisania hasła do działu (tytuł → id działu), gdy wzorce działów się mylą
 UNIT_OVERRIDES = {
+    "Postęp techniczny": "mikro-produkcja",
     "Siatka Lexisa (siatka demograficzna)": "demo-miary",
     "Kohorta (generacja) i analiza kohortowa": "demo-miary",
     "Standaryzacja współczynników demograficznych": "demo-miary",
@@ -325,6 +326,7 @@ INSTITUTION_TITLES = r"^(narodowy bank polski|prezes nbp|rada polityki pienięż
 
 # Ręczne przypisania tematu (tytuł hasła → temat), gdy reguły się mylą
 OVERRIDES = {
+    "Postęp techniczny": "mikro",
     "Siatka Lexisa (siatka demograficzna)": "demografia",
     "Kohorta (generacja) i analiza kohortowa": "demografia",
     "Standaryzacja współczynników demograficznych": "demografia",

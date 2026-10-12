@@ -233,6 +233,10 @@ def stat_items(q, main):
     """Pojęcia, o które pytanie pyta (do statystyk): z treści i poprawnych odpowiedzi, z ręcznymi korektami „del”/„main”
     (bez „add” – te dokładają pojęcia z błędnych odpowiedzi, potrzebne tylko do omówienia w lekcji); hasła ogólne
     (STAT_GENERIC) tylko wtedy, gdy nie ma żadnego konkretniejszego."""
+    if q["id"] in PP.FIX.STAT_FIX:
+        bad = [t for t in PP.FIX.STAT_FIX[q["id"]] if t not in matcher.by_title]
+        assert not bad, f"STAT_FIX {q['id']}: nieznane hasła {bad}"
+        return {matcher.by_title[t] for t in PP.FIX.STAT_FIX[q["id"]]}
     fix = PP.FIX.Q_FIX.get(q["id"], {})
     if fix.get("main"):
         got = {matcher.by_title[t] for t in fix["main"]}
@@ -245,11 +249,30 @@ def stat_items(q, main):
     return (got - STAT_GENERIC) or got
 
 
+def home_lesson(main):
+    """Lekcja macierzysta zbioru pojęć: pojęcia przed osobami/datami, temat z największą liczbą pojęć,
+    najpóźniejsza lekcja macierzysta w tym temacie (ta sama reguła co przydział pytań do lekcji)."""
+    main = {i for i in main if i in item_lessons}
+    if not main:
+        return None
+    pref = {i for i in main if items[i]["kind"] == "pojecie"} or main
+    tcount = Counter(items[i]["topic"] for i in sorted(pref))
+    topic = max(tcount, key=lambda t: (tcount[t], max(first_pos[i] for i in pref if items[i]["topic"] == t)))
+    return order[topic][max(first_pos[i] for i in pref if items[i]["topic"] == topic)]
+
+
 def owe_record(q, lid, main):
     m = re.match(r"owe(\d+)-([soc])-", q["id"])
+    sitems = stat_items(q, main)
+    # dział i zagadnienie w statystykach – z pojęć statystycznych (zgodne z listą pojęć pytania)
+    # przy ręcznej liście (STAT_FIX) zagadnienie wyznacza pierwsze, główne pojęcie
+    if q["id"] in PP.FIX.STAT_FIX:
+        lid = home_lesson({matcher.by_title[PP.FIX.STAT_FIX[q["id"]][0]]}) or home_lesson(sitems) or lid
+    else:
+        lid = home_lesson(sitems) or lid
     L = lessons[lid] if lid else None
     owe_stats.append({"id": q["id"], "t": q["type"], "ed": int(m.group(1)), "st": m.group(2),
-                      "topic": L["topic"] if L else None, "unit": L["unit"] if L else None, "items": sorted(stat_items(q, main))})
+                      "topic": L["topic"] if L else None, "unit": L["unit"] if L else None, "items": sorted(sitems)})
 
 for q, origin in bank:
     main, allc = concepts(q, origin)

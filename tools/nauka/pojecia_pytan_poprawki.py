@@ -1126,3 +1126,55 @@ STAT_GENERIC = {
 }
 fix("owe25-c-19", dele=["Stopa procentowa nominalna i realna"])  # „stopa procentowa ubezpieczenia” = składka wypadkowa
 fix("owe32-c-19", dele=["Pasywa: kapitał własny i zobowiązania"])  # pasywa w bilansie płatniczym, nie w bilansie firmy
+
+# Ręczna weryfikacja statystyk (wszystkie pytania XXI–XXXIX): ostateczna lista pojęć, o które pytanie pyta –
+# sprawdzana wiedza, bez tła i bez pojęć występujących tylko w błędnych odpowiedziach. Wpis tylko tam, gdzie automat się myli.
+STAT_FIX = {}
+
+
+def stat(qid, *titles):
+    assert titles, qid
+    STAT_FIX[qid] = list(titles)
+
+# ── weryfikacja statystyk: XXXIX OWE ──
+stat("owe39-s-01", "Paradoks zapobiegliwości (oszczędności)", "Wydatki autonomiczne")
+stat("owe39-s-04", "Deficyt budżetowy i deficyt sektora finansów publicznych")
+stat("owe39-s-11", "Krzywa Phillipsa")
+stat("owe39-s-12", "Produkt krajowy brutto (PKB)", "Metody liczenia PKB")
+stat("owe39-s-17", "Kryzys subprime (2007–2009)", "Bańka spekulacyjna")
+stat("owe39-s-23", "Inflacja", "Wskaźnik cen towarów i usług konsumpcyjnych (CPI)", "Deflator PKB", "PPI", "Wskaźnik cena/zysk (P/E)")
+stat("owe39-s-29", "Biurokracja (M. Weber)")
+stat("owe39-o-02", "Konkurencja doskonała", "Konkurencja monopolistyczna", "Koszt całkowity (TC) i przeciętny koszt całkowity (ATC)")
+stat("owe39-o-03", "Płaca minimalna", "Krzywa Phillipsa")
+stat("owe39-o-06", "Czynniki kształtujące podaż (determinanty podaży)")
+stat("owe39-o-08", "Deficyt pierwotny", "Sektor finansów publicznych")
+stat("owe39-o-10", "Twierdzenie Stolpera–Samuelsona")
+stat("owe39-o-12", "Polityka handlowa i wspieranie eksportu", "Kontyngent (kwota importowa)")
+stat("owe39-o-16", "Mechanizm transmisji monetarnej")
+stat("owe39-o-20", "Izokwanta")
+stat("owe39-o-21", "Bony pieniężne NBP", "Polityka pieniężna – cele i instrumenty")
+stat("owe39-o-24", "Typy struktur organizacyjnych", "Grupowanie stanowisk (departamentalizacja)")
+stat("owe39-o-25", "Punkt procentowy a procent")
+stat("owe39-c-01", "Krzywa Phillipsa", "Bezrobocie strukturalne", "Naturalna stopa bezrobocia")
+stat("owe39-c-03", "Hipoteza Lindera")
+stat("owe39-c-04", "Koszt krańcowy (MC)", "Koszt całkowity (TC) i przeciętny koszt całkowity (ATC)", "Koszty zmienne (VC)")
+stat("owe39-c-05", "Elastyczność cenowa popytu", "Efekt substytucyjny i efekt dochodowy", "Substytuty")
+stat("owe39-c-06", "Zysk ekonomiczny (nadzwyczajny)", "Konkurencja doskonała")
+stat("owe39-c-07", "Cło", "Terms of trade (relacje wymiany)")
+stat("owe39-c-08", "Mnożnik zrównoważonego budżetu (Haavelmo)")
+stat("owe39-c-09", "NAIRU", "Zasiłek dla bezrobotnych (ubezpieczenie od bezrobocia)", "Wydajność pracy (produkcyjność) i jej czynniki")
+stat("owe39-c-10", "Krzywa oferty", "Terms of trade (relacje wymiany)")
+stat("owe39-c-11", "Postęp techniczny", "Izokwanta")
+stat("owe39-c-13", "Forward guidance", "Krzywa dochodowości")
+stat("owe39-c-14", "Kryteria konwergencji (z Maastricht)")
+stat("owe39-c-15", "Efekty zewnętrzne (externalities)", "Koszt społeczny")
+stat("owe39-c-16", "Współczynnik Giniego i krzywa Lorenza", "Wskaźnik decylowy (kwintylowy)")
+stat("owe39-c-17", "Histereza bezrobocia", "Polityka ekspansywna i restrykcyjna")
+stat("owe39-c-18", "Równowaga Nasha", "Strategia dominująca")
+stat("owe39-c-19", "Skutki cła", "Cło")
+stat("owe39-c-20", "Krzywa obojętności", "Krańcowa stopa substytucji (MRS)", "Użyteczność")
+stat("owe39-c-21", "Opcja", "Hedging")
+stat("owe39-c-22", "Renta ekonomiczna", "Dochód transferowy")
+stat("owe39-c-23", "Obligacja zerokuponowa", "Obligacja")
+stat("owe39-c-26", "Typologia strategii Milesa i Snowa")
+stat("owe39-c-30", "Planowanie", "Szczeble zarządzania")
