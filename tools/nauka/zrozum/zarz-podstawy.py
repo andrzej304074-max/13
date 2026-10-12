@@ -173,9 +173,14 @@ LESSONS = [
 
     L(3, "Szkoła klasyczna: Taylor, Fayol, Weber",
       "Rozumieć założenia naukowego zarządzania F.W. Taylora, teorii administracji H. Fayola i modelu biurokracji M. Webera, ich osiągnięcia i ograniczenia.",
-      ["Naukowe zarządzanie (F.W. Taylor)", "Zarządzanie administracyjne (teoria administracji)", "Biurokracja (M. Weber)"],
+      ["Naukowe zarządzanie (F.W. Taylor)", "Zarządzanie administracyjne (teoria administracji)", "Biurokracja (M. Weber)", "Klasyczne podejście do zarządzania"],
       [M34, M35],
       explain=[
+          K("Klasyczne podejście do zarządzania",
+            "Pierwszy nurt nauki o zarządzaniu (przełom XIX i XX w.) ma dwa kierunki: naukowe zarządzanie (Taylor, Gilbrethowie, Gantt) – sprawność pracy pojedynczego robotnika, oraz zarządzanie administracyjne (Fayol, Weber, Urwick) – zarządzanie całą organizacją. Wspólne: szukanie uniwersalnych zasad i „jednego najlepszego sposobu”. Ograniczenia: pracownik traktowany jak narzędzie, pomijanie otoczenia – podejście lepiej pasuje do organizacji prostych i stabilnych."),
+          W("Który zarzut najczęściej stawia się klasycznemu podejściu do zarządzania?",
+            "Traktuje pracowników głównie jako narzędzia i szuka uniwersalnych recept", "Pomija pomiar czasu i norm pracy", "Odrzuca hierarchię i podział pracy",
+            why="Klasycy szukali jednego najlepszego sposobu i niedoceniali potrzeb ludzi oraz wpływu otoczenia."),
           K("Taylor – naukowe zarządzanie (1911)",
             "Frederick W. Taylor badał pracę robotników metodą pomiaru czasu i ruchów, by znaleźć „jeden najlepszy sposób” wykonania zadania. Zasady: naukowa analiza pracy zamiast zwyczaju, dobór i szkolenie pracowników, płaca akordowa zależna od wydajności, podział odpowiedzialności – kierownicy planują, robotnicy wykonują. W słynnym eksperymencie z ładowaniem surówki dzienna wydajność robotnika wzrosła z ok. 12,5 do 47,5 tony."),
           K("Fayol – teoria administracji (1916)",

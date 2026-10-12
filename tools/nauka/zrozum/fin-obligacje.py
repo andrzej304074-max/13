@@ -91,9 +91,15 @@ LESSONS = [
 
     L(2, "Renty, perpetuity i papiery dyskontowe",
       "Liczyć wartość bieżącą renty i perpetuity, rozumieć obligacje zerokuponowe i bony skarbowe jako instrumenty dyskontowe.",
-      ["Renta (annuity) i perpetuita", "Obligacja zerokuponowa", "Bony skarbowe", "Wartość pieniądza w czasie"],
-      [S174, OBL],
+      ["Renta (annuity) i perpetuita", "Obligacja zerokuponowa", "Bony skarbowe", "Wartość pieniądza w czasie", "Papiery dyskontowe"],
+      [S174, OBL, S("WallStreetMojo – Treasury Bills", "https://www.wallstreetmojo.com/what-are-treasury-bills/", "2026-10-12")],
       explain=[
+          K("Papiery dyskontowe",
+            "Papier dyskontowy nie płaci odsetek (kuponów): kupuje się go poniżej wartości nominalnej, a emitent wykupuje go po nominale. Dochodem inwestora jest różnica – dyskonto. Przykłady: bony skarbowe, obligacje zerokuponowe, bony pieniężne NBP.",
+            w="cena = nominał / (1 + r)ⁿ;  dochód = nominał − cena"),
+          W("Bon skarbowy o nominale 10 000 zł kupiono za 9 800 zł. Z czego inwestor ma dochód?",
+            "Z różnicy między nominałem a ceną zakupu (dyskonta)", "Z kwartalnych kuponów odsetkowych", "Z dywidendy wypłacanej przez Skarb Państwa",
+            why="Papier dyskontowy nie ma kuponów – dochód to dyskonto 200 zł."),
           K("Renta",
             "Seria równych płatności w równych odstępach (np. rata kredytu, czynsz, emerytura z programu). Wartość bieżąca renty płatnej na koniec okresu: PV = C · [1 − (1 + r)⁻ⁿ] / r.",
             w="PV = C · (1 − (1 + r)⁻ⁿ) / r"),

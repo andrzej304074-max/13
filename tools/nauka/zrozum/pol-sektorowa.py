@@ -177,9 +177,14 @@ LESSONS = [
 
     L(3, "Konkurencja, pomoc publiczna i granice prywatyzacji",
       "Rozumieć cele polityki konkurencji (UOKiK, Komisja Europejska), zasady pomocy publicznej w UE (zakaz z wyjątkami, de minimis) oraz granice prywatyzacji.",
-      ["Polityka konkurencji (antymonopolowa)", "Pomoc publiczna", "Granice prywatyzacji"],
-      [S112, UOK],
+      ["Polityka konkurencji (antymonopolowa)", "Pomoc publiczna", "Granice prywatyzacji", "Program leniency (łagodzenia kar)"],
+      [S112, UOK, S("Prawo.pl – UOKiK: wyjaśnienia programu leniency, czyli łagodzenia kar", "https://www.prawo.pl/biznes/uokik-wyjasnienia-programu-leniency-czyli-lagodzenia-kar,535950.html", "2026-10-12")],
       explain=[
+          K("Program leniency (łagodzenia kar)",
+            "Kartele są tajne, więc trudno je wykryć. Program leniency (w Polsce od 2004 r.) daje uczestnikowi zmowy szansę: kto pierwszy dostarczy Prezesowi UOKiK dowody i będzie współpracował, może całkowicie uniknąć kary, a kolejni – uzyskać jej obniżenie. Od 2015 r. mogą z niego korzystać także menedżerowie. Działa jak instytucja „świadka koronnego” – podważa zaufanie między członkami kartelu."),
+          W("Co daje przedsiębiorcy udział w programie leniency?",
+            "Możliwość uniknięcia lub obniżenia kary za udział w zmowie w zamian za dowody i współpracę", "Zgodę UOKiK na dalsze uczestnictwo w kartelu", "Zwolnienie z podatku CIT",
+            why="Leniency nagradza ujawnienie kartelu łagodniejszą karą."),
           K("Polityka konkurencji",
             "Chroni konkurencję, by konsumenci korzystali z niższych cen, wyższej jakości i innowacji. Trzy filary: zakaz porozumień ograniczających konkurencję (kartele), zakaz nadużywania pozycji dominującej, kontrola koncentracji (fuzji). W Polsce – UOKiK (kary do 10% obrotu), w UE – Komisja Europejska (art. 101–102 TFUE)."),
           K("Pomoc publiczna",

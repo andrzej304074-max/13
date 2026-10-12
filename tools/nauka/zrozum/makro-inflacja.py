@@ -337,9 +337,13 @@ LESSONS = [
 
     L(5, "Deflacja, dezinflacja i stagflacja",
       "Odróżniać deflację od dezinflacji, rozumieć niebezpieczeństwa deflacji, rodzaje inflacji według tempa oraz stagflację i slumpflację.",
-      ["Deflacja i dezinflacja", "Stagflacja i slumpflacja", "Inflacja pełzająca, krocząca, galopująca", "Hiperinflacja"],
-      [S223, S285, BANKIER, BANKPL],
+      ["Deflacja i dezinflacja", "Stagflacja i slumpflacja", "Inflacja pełzająca, krocząca, galopująca", "Hiperinflacja", "Deflacja długu (I. Fisher)"],
+      [S223, S285, BANKIER, BANKPL, S("Econometric Society – I. Fisher, The Debt-Deflation Theory of Great Depressions (Econometrica 1933)", "https://jstor.econometricsociety.org/publications/econometrica/1933/10/01/debt-deflation-theory-great-depressions", "2026-10-12")],
       explain=[
+          K("Deflacja długu (I. Fisher, 1933)",
+            "Irving Fisher wyjaśniał Wielki Kryzys połączeniem nadmiernego zadłużenia i deflacji. Zadłużeni sprzedają majątek, by spłacić długi; ceny spadają, więc realna wartość pozostałego długu ROŚNIE. Rośnie liczba bankructw, spada produkcja i zaufanie – im więcej dłużnicy spłacają, tym więcej realnie są winni."),
+          PF("Według teorii deflacji długu spadek cen zmniejsza realny ciężar zaciągniętych kredytów.", False,
+             why="Odwrotnie: dług ma stałą wartość nominalną, więc przy spadających cenach i dochodach jego realny ciężar rośnie."),
           K("Dezinflacja a deflacja",
             "Dezinflacja to spadek TEMPA inflacji – ceny nadal rosną, tylko wolniej (np. z 18,4% w lutym 2023 r. do 3,6% średnio w 2025 r.). Deflacja to spadek poziomu cen (inflacja ujemna)."),
           K("Dlaczego deflacja bywa groźna",
