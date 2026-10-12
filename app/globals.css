@@ -591,9 +591,9 @@ table.matrix th[scope="row"] { text-align: left; font-weight: 600; }
 @media (max-width: 760px) {
   .filter-cols, .two-col { grid-template-columns: 1fr; }
 }
-.short { display: none; }
+.lbl-short { display: none; }
 @media (max-width: 520px) {
-  .long { display: none; } .short { display: inline; }
+  .lbl-long { display: none; } .lbl-short { display: inline; }
   table.matrix th, table.matrix td { padding: 6px 2px; }
   table.matrix td.cell button { padding: 6px 4px; }
   table.matrix { width: 100%; }

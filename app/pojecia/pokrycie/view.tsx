@@ -159,11 +159,11 @@ export function CoverageView({ data }: { data: Data }) {
         <p className="muted small">% {Q ? "pytań w całości powtórkowych" : "pojęć-powtórek"}: wiersz – etap badanych pytań, kolumna – z jakich etapów wcześniejszych {rep.sameEdition ? "edycji i etapów tej samej edycji" : "edycji"}. Kliknij komórkę, aby ustawić te filtry.</p>
         <div className="table-wrap">
           <table className="stat-table matrix">
-            <thead><tr><th><span className="long">Pytania z etapu</span><span className="short">Etap</span></th>{(["s", "o", "c", "all"] as MatrixCol[]).map((c) => <th key={c} className="num"><span className="long">{COL_NAME[c]}</span><span className="short">{COL_SHORT[c]}</span></th>)}</tr></thead>
+            <thead><tr><th><span className="lbl-long">Pytania z etapu</span><span className="lbl-short">Etap</span></th>{(["s", "o", "c", "all"] as MatrixCol[]).map((c) => <th key={c} className="num"><span className="lbl-long">{COL_NAME[c]}</span><span className="lbl-short">{COL_SHORT[c]}</span></th>)}</tr></thead>
             <tbody>
               {matrix.map((row) => (
                 <tr key={row.st}>
-                  <th scope="row"><span className="long">{STAGE_NAME[row.st]}</span><span className="short">{STAGE_SHORT[row.st]}</span></th>
+                  <th scope="row"><span className="lbl-long">{STAGE_NAME[row.st]}</span><span className="lbl-short">{STAGE_SHORT[row.st]}</span></th>
                   {row.cells.map((c) => {
                     const on = f.stages.length === 1 && f.stages[0] === row.st && (c.col === "all" ? rep.from.length === 3 : rep.from.length === 1 && rep.from[0] === c.col);
                     return (
