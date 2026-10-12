@@ -222,6 +222,35 @@ for iid, ls in item_lessons.items():
 
 placed = defaultdict(list)  # lekcja → [(id pytania, origin, all)]
 unplaced = []
+owe_stats = []  # statystyki pytań OWE (zakładka „Pojęcia” → Statystyki): lekcja i pojęcia główne każdego pytania
+
+
+STAT_GENERIC = {i for i in items if items[i]["t"] in PP.FIX.STAT_GENERIC or items[i]["s"] in PP.FIX.STAT_GENERIC}
+assert len(STAT_GENERIC) >= len(PP.FIX.STAT_GENERIC), "STAT_GENERIC: nieznane hasło"
+
+
+def stat_items(q, main):
+    """Pojęcia, o które pytanie pyta (do statystyk): z treści i poprawnych odpowiedzi, z ręcznymi korektami „del”/„main”
+    (bez „add” – te dokładają pojęcia z błędnych odpowiedzi, potrzebne tylko do omówienia w lekcji); hasła ogólne
+    (STAT_GENERIC) tylko wtedy, gdy nie ma żadnego konkretniejszego."""
+    fix = PP.FIX.Q_FIX.get(q["id"], {})
+    if fix.get("main"):
+        got = {matcher.by_title[t] for t in fix["main"]}
+    else:
+        a = matcher.analyze(q)
+        got = a["stem"].union(*(a["opts"][k] for k in q["correct"] if k < len(a["opts"])))
+        got -= {matcher.by_title[t] for t in fix.get("del", [])}
+        got = got or set(main)
+    got = {i for i in got if i in items}
+    return (got - STAT_GENERIC) or got
+
+
+def owe_record(q, lid, main):
+    m = re.match(r"owe(\d+)-([soc])-", q["id"])
+    L = lessons[lid] if lid else None
+    owe_stats.append({"id": q["id"], "t": q["type"], "ed": int(m.group(1)), "st": m.group(2),
+                      "topic": L["topic"] if L else None, "unit": L["unit"] if L else None, "items": sorted(stat_items(q, main))})
+
 for q, origin in bank:
     main, allc = concepts(q, origin)
     main = {i for i in main if i in item_lessons} or {i for i in allc if i in item_lessons}
@@ -235,6 +264,8 @@ for q, origin in bank:
         lid = max(pool, key=lambda l: (score(l), -lesson_pos[l]))
         placed[lid].append((q["id"], origin, set()))
         unplaced.append(q["id"])
+        if origin == "owe":
+            owe_record(q, None, set())
         continue
     # pytanie dotyczy pojęć (osoby, instytucje, daty i przepisy w treści to zwykle kontekst) – o lekcji decydują pojęcia
     pref = {i for i in main if items[i]["kind"] == "pojecie"} or main
@@ -243,6 +274,8 @@ for q, origin in bank:
     # lekcja macierzysta hasła = pierwsze jego wystąpienie w temacie (nie powtórzenie w dziale „Wzory”)
     lid = order[topic][max(first_pos[i] for i in pref if items[i]["topic"] == topic)]
     placed[lid].append((q["id"], origin, allc))
+    if origin == "owe":
+        owe_record(q, lid, main)
 
 ORIGIN_RANK = {"owe": 0, "manual": 1, "auto": 2}
 moved = []  # (pytanie, lekcja docelowa) – raport
@@ -311,6 +344,7 @@ course = {
 # lekcje „Zrozumienie” (ręczne treści z tools/nauka/zrozum) – dopisywane do działów, zawartość w zrozum.json
 load(os.path.join(HERE, "build_zrozum.py")).build(course, ROOT, OUT)
 json.dump(course, open(os.path.join(OUT, "course.json"), "w"), ensure_ascii=False, separators=(",", ":"))
+json.dump(sorted(owe_stats, key=lambda r: r["id"]), open(os.path.join(OUT, "owe-stats.json"), "w"), ensure_ascii=False, separators=(",", ":"))
 
 # --- raport ---
 print(f"hasła: {len(items)}, działy: {len(units)}, lekcje: {len(lessons)}, pod-lekcje: {4 * len(lessons)}")

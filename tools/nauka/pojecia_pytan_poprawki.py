@@ -1114,3 +1114,15 @@ drop("Standaryzacja współczynników demograficznych", "standaryzacj")
 rx("Standaryzacja współczynników demograficznych", B + r"standaryzacj\w* (?:współczynnik|bezpośredni|pośredni)", B + r"współczynnik\w* (?:standaryzowan|surow)")
 drop("Automatyzacja a starzenie się ludności", "automatyzacj", "robotyzacj")
 rx("Automatyzacja a starzenie się ludności", B + r"(?:automatyzacj|robotyzacj)\w*[^.?]{0,60}(?:starzen|demograf|niedob\w* prac)", B + r"(?:starzen|demograf)\w*[^.?]{0,60}(?:automatyzacj|robotyzacj)")
+
+# ── statystyki pytań OWE (zakładka „Pojęcia” → Statystyki) ──
+# Hasła ogólne, które w treści pytania są zwykle tłem („w gospodarce autarkicznej…”, „krzywa popytu…”, „(ceteris paribus)”).
+# W statystykach liczą się tylko wtedy, gdy pytanie nie dotyczy żadnego bardziej konkretnego hasła.
+STAT_GENERIC = {
+    "Popyt", "Podaż", "Podatek", "Konsumpcja", "Inwestycje", "Pieniądz", "Ceteris paribus", "Krótki okres i długi okres",
+    "Wykresy w ekonomii: nachylenie i układ współrzędnych", "Autarkia", "Ekonomia", "Czynniki wytwórcze (czynniki produkcji)",
+    "Bank centralny", "Papier wartościowy", "Transfery socjalne",
+    "Dochód osobisty i dochód rozporządzalny", "Branża (sektor)",
+}
+fix("owe25-c-19", dele=["Stopa procentowa nominalna i realna"])  # „stopa procentowa ubezpieczenia” = składka wypadkowa
+fix("owe32-c-19", dele=["Pasywa: kapitał własny i zobowiązania"])  # pasywa w bilansie płatniczym, nie w bilansie firmy

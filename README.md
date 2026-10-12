@@ -137,6 +137,17 @@ python3 -I tools/nauka/pojecia_pytan.py dump 'owe-39-*'   # pytania z wykrytymi 
 python3 -I tools/nauka/pojecia_pytan.py stats
 ```
 
+## Pojęcia – tabela i statystyki pytań OWE
+
+- **Tabela pojęć** (`/pojecia`): wszystkie hasła kursu Nauka (bez lekcji „Zrozumienie”) w kolejności lekcji – nazwa z lewej,
+  definicja (i wzór) z prawej; filtry działu i rodzaju (pojęcia, wzory, osoby, instytucje, daty, przepisy), wyszukiwanie,
+  przycisk „↑ Do góry” i przy każdym haśle liczba pytań OWE, w których o nie pytano.
+- **Statystyki pytań OWE** (`/pojecia/statystyki`): dla 1656 pytań XXI–XXXIX OWE – działy (procent pytań), zagadnienia i pojęcia
+  (liczba pytań, osobno jednokrotny i wielokrotny wybór); filtry typu pytań, etapu (szkolny, okręgowy, centralny), zakresu
+  edycji, działu i rodzaju haseł, sortowanie od największej lub najmniejszej liczby; kliknięcie pojęcia pokazuje jego pytania.
+  Dane: `data/nauka/owe-stats.json` (generuje `tools/nauka/build_course.py`), opis metody i kontrola ręczna –
+  `tools/nauka/RAPORT-STATYSTYK.md` (`python3 -I tools/nauka/raport_statystyk.py`).
+
 ## Konta i panel admina
 
 - **Konto:** e-mail i hasło (min. 8 znaków). Bez zalogowania widać tylko ekrany konta (`/konto/...`).

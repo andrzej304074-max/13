@@ -1,0 +1,115 @@
+"use client";
+
+import { useDeferredValue, useEffect, useMemo, useState } from "react";
+import { ToTop } from "@/app/components/to-top";
+import { PojeciaTabs } from "./tabs";
+
+export interface Row {
+  id: string;
+  t: string;
+  d: string;
+  w: string | null;
+  kind: string;
+  topic: string;
+  /** Liczba pytań OWE (XXI–XXXIX), w których pytano o hasło. */
+  n: number;
+}
+
+type Topic = { id: string; title: string; emoji: string };
+type Kind = { id: string; title: string };
+
+const KIND_ONE: Record<string, string> = {
+  pojecie: "pojęcie", wzor: "wzór", osoba: "osoba", instytucja: "instytucja", data: "data", przepis: "przepis",
+};
+
+const norm = (s: string) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/ł/g, "l");
+
+export function ConceptTable({ rows, topics, kinds }: { rows: Row[]; topics: Topic[]; kinds: Kind[] }) {
+  const [topic, setTopic] = useState("");
+  const [kind, setKind] = useState("");
+  const [q, setQ] = useState("");
+  const query = useDeferredValue(q);
+  const topicName = useMemo(() => Object.fromEntries(topics.map((t) => [t.id, `${t.emoji} ${t.title}`])), [topics]);
+
+  // filtry zapamiętane w adresie (?dzial=mikro&rodzaj=osoba)
+  useEffect(() => {
+    const p = new URLSearchParams(window.location.search);
+    setTopic(p.get("dzial") ?? "");
+    setKind(p.get("rodzaj") ?? "");
+  }, []);
+  useEffect(() => {
+    const p = new URLSearchParams();
+    if (topic) p.set("dzial", topic);
+    if (kind) p.set("rodzaj", kind);
+    window.history.replaceState(null, "", `/pojecia${p.size ? `?${p}` : ""}`);
+  }, [topic, kind]);
+
+  const index = useMemo(() => rows.map((r) => norm(`${r.t} ${r.d} ${r.w ?? ""}`)), [rows]);
+  const shown = useMemo(() => {
+    const nq = norm(query.trim());
+    return rows.filter((r, i) => (!topic || r.topic === topic) && (!kind || r.kind === kind) && (!nq || index[i].includes(nq)));
+  }, [rows, index, topic, kind, query]);
+
+  return (
+    <div className="stack">
+      <PojeciaTabs active="tabela" />
+      <h1>Tabela pojęć</h1>
+      <p className="muted" style={{ marginTop: -8 }}>
+        Wszystkie hasła z kursu Nauka w kolejności lekcji. „OWE: N×” – w ilu pytaniach z XXI–XXXIX OWE pytano o dane hasło.
+      </p>
+
+      <div className="card stack filters-card">
+        <div>
+          <div className="filter-label">Dział</div>
+          <div className="chips">
+            <button className={`chip ${!topic ? "selected" : ""}`} onClick={() => setTopic("")}>Wszystkie</button>
+            {topics.map((t) => (
+              <button key={t.id} className={`chip ${topic === t.id ? "selected" : ""}`} onClick={() => setTopic(t.id)}>
+                {t.emoji} {t.title.replace(/^Temat przewodni: /, "")}
+              </button>
+            ))}
+          </div>
+        </div>
+        <div>
+          <div className="filter-label">Rodzaj</div>
+          <div className="chips">
+            <button className={`chip ${!kind ? "selected" : ""}`} onClick={() => setKind("")}>Wszystkie</button>
+            {kinds.map((k) => (
+              <button key={k.id} className={`chip ${kind === k.id ? "selected" : ""}`} onClick={() => setKind(k.id)}>{k.title}</button>
+            ))}
+          </div>
+        </div>
+        <label className="field">
+          <span>Szukaj w nazwie i definicji</span>
+          <input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="np. elastyczność, Keynes, VAT…" />
+        </label>
+        <p className="muted" style={{ margin: 0 }} data-testid="concept-count">Pokazano {shown.length} z {rows.length}</p>
+      </div>
+
+      <div className="concepts" role="table" aria-label="Tabela pojęć">
+        <div className="concept-row head" role="row">
+          <div role="columnheader">Pojęcie</div>
+          <div role="columnheader">Definicja</div>
+        </div>
+        {shown.map((r) => (
+          <div className="concept-row" role="row" key={r.id} id={`h-${r.id}`}>
+            <div className="concept-name" role="cell">
+              <strong>{r.t}</strong>
+              <div className="concept-tags">
+                <span className="tag">{KIND_ONE[r.kind] ?? r.kind}</span>
+                {!topic && <span className="tag">{topicName[r.topic]}</span>}
+                {r.n > 0 && <span className="tag owe" title="Liczba pytań OWE o to hasło">OWE: {r.n}×</span>}
+              </div>
+            </div>
+            <div className="concept-def" role="cell">
+              {r.d}
+              {r.w && <pre className="formula" style={{ marginTop: 8 }}>{r.w}</pre>}
+            </div>
+          </div>
+        ))}
+        {shown.length === 0 && <p className="muted" style={{ padding: 16 }}>Brak haseł dla wybranych filtrów.</p>}
+      </div>
+      <ToTop />
+    </div>
+  );
+}

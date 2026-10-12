@@ -30,6 +30,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               <Link href="/">Nowy test</Link>
               <Link href="/slownik">Słownik</Link>
               <Link href="/nauka">Nauka</Link>
+              <Link href="/pojecia">Pojęcia</Link>
               <Link href="/stats">Statystyki</Link>
             </nav>
           ) : null}
