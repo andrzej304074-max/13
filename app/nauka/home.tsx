@@ -29,7 +29,7 @@ export function NaukaHome({ topics, kinds, lessonIds }: { topics: TopicCard[]; k
   useEffect(() => {
     setGoal(loadGoal());
     setLast(lastLesson());
-    api<Progress>(withUser("/api/nauka/progress")).then(setProgress).catch((e) => setError(e.message));
+    api<Progress>(withUser("/api/nauka/progress?lekcje=0")).then(setProgress).catch((e) => setError(e.message));
   }, []);
 
   const s = progress?.summary;

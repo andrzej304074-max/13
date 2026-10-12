@@ -1,4 +1,5 @@
 import { createHash } from "node:crypto";
+import { brotliCompressSync, gzipSync, constants as zc } from "node:zlib";
 import { COURSE } from "@/data/nauka";
 import { oweCountByItem, oweStatsData } from "./owe-stats-data";
 
@@ -24,22 +25,42 @@ function hasla() {
 }
 
 /** Zserializowane dane (raz na proces) z ETagiem – dane zmieniają się tylko przy nowym buildzie. */
+type Cached = { body: string; etag: string; gz: Buffer; br: Buffer };
 function cached(make: () => unknown) {
-  let v: { body: string; etag: string } | null = null;
-  return () => {
+  let v: Cached | null = null;
+  return (): Cached => {
     if (!v) {
       const body = JSON.stringify(make());
-      v = { body, etag: `"${createHash("sha1").update(body).digest("base64url").slice(0, 16)}"` };
+      // skompresowane raz na proces (odpowiedzi tras API budowane ręcznie Next.js nie kompresuje)
+      v = {
+        body,
+        etag: `"${createHash("sha1").update(body).digest("base64url").slice(0, 16)}"`,
+        gz: gzipSync(body, { level: 9 }),
+        br: brotliCompressSync(body, { params: { [zc.BROTLI_PARAM_QUALITY]: 8 } }),
+      };
     }
     return v;
   };
 }
 export const HASLA = cached(hasla);
 export const OWE_DATA = cached(oweStatsData);
+/** Nazwy tematów, działów i lekcji do filtrów statystyk nauki. */
+export const NAUKA_META = cached(() => ({
+  topics: COURSE.topics.map(({ id, title, emoji }) => ({ id, title, emoji })),
+  units: COURSE.units.map(({ id, title, topic }) => ({ id, title, topic })),
+  lessons: Object.values(COURSE.lessons).map(({ id, title, unit, no, type }) => ({ id, title, unit, no, type })),
+  kinds: COURSE.kinds,
+}));
 
 /** Odpowiedź z ETagiem: 304, gdy przeglądarka ma aktualną wersję. */
-export function jsonCached(req: Request, v: { body: string; etag: string }): Response {
-  const headers = { "Content-Type": "application/json; charset=utf-8", ETag: v.etag, "Cache-Control": "private, max-age=300, stale-while-revalidate=86400" };
+export function jsonCached(req: Request, v: Cached): Response {
+  const headers: Record<string, string> = {
+    "Content-Type": "application/json; charset=utf-8", ETag: v.etag, Vary: "Accept-Encoding",
+    "Cache-Control": "private, max-age=300, stale-while-revalidate=86400",
+  };
   if (req.headers.get("if-none-match") === v.etag) return new Response(null, { status: 304, headers });
+  const enc = req.headers.get("accept-encoding") ?? "";
+  if (/\bbr\b/.test(enc)) return new Response(new Uint8Array(v.br), { headers: { ...headers, "Content-Encoding": "br" } });
+  if (/\bgzip\b/.test(enc)) return new Response(new Uint8Array(v.gz), { headers: { ...headers, "Content-Encoding": "gzip" } });
   return new Response(v.body, { headers });
 }

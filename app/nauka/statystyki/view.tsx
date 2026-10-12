@@ -1,5 +1,8 @@
 "use client";
 
+import { LoadingPage } from "@/app/components/loading-page";
+import { useData } from "@/lib/data-client";
+
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { Chart } from "@/app/components/chart";
@@ -251,4 +254,11 @@ export function NaukaStatsView({ meta }: { meta: StatsMeta }) {
 
 function Bar({ pct }: { pct: number }) {
   return <span className="mini-bar" aria-hidden><span style={{ width: `${pct}%` }} /></span>;
+}
+
+/** Nazwy lekcji (910) z pamięci podręcznej /api/dane/nauka-meta zamiast w HTML strony. */
+export function NaukaStatsLoader() {
+  const { data, error } = useData<StatsMeta>("/api/dane/nauka-meta");
+  if (error) return <p className="error">{error}</p>;
+  return data ? <NaukaStatsView meta={data} /> : <LoadingPage />;
 }

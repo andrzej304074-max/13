@@ -145,7 +145,10 @@ python3 -I tools/nauka/pojecia_pytan.py stats
   pasek i podzakładki są ukryte.
 - **Dane haseł i statystyk OWE** nie są w HTML stron: `GET /api/dane/hasla` i `/api/dane/owe-stats` (ETag, pamięć przeglądarki),
   w karcie trzymane w pamięci (`lib/data-client.ts`) – przejścia między Pojęciami, Statystykami OWE, Pokryciem i Fiszkami nie pobierają ich
-  ponownie. Tabela pojęć renderuje hasła porcjami po 100; każdy dział ma szkielet ładowania (`loading.tsx`).
+  ponownie; odpowiedzi są skompresowane (br/gzip, liczone raz na proces), a dane zakładek bieżącego działu pobierają się w tle,
+  gdy przeglądarka jest bezczynna. To samo dla nazw lekcji w statystykach nauki (`/api/dane/nauka-meta`); strona główna Nauki pobiera
+  sam postęp tematów (`/api/nauka/progress?lekcje=0`). Tabela pojęć renderuje hasła porcjami po 100; każdy dział ma szkielet
+  ładowania (`loading.tsx`).
 
 ## Pojęcia – tabela i statystyki pytań OWE
 
