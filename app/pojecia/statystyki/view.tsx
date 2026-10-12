@@ -2,12 +2,13 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { ToTop } from "@/app/components/to-top";
+import { useData } from "@/lib/data-client";
+import { PageSkeleton } from "../table";
 import { api, fmtPct, LETTERS } from "@/lib/client";
 import {
   DEFAULT_FILTER, ROMAN, STAGES, filterFromParams, filterRecs, filterToParams, itemCounts, topicShares, unitCounts,
   type ItemMeta, type OweFilter, type OweRec, type Stage,
 } from "@/lib/owe-stats";
-import { PojeciaTabs } from "../tabs";
 
 interface Data {
   recs: OweRec[];
@@ -77,8 +78,7 @@ export function OweStatsView({ data }: { data: Data }) {
   }
 
   return (
-    <div className="stack">
-      <PojeciaTabs active="statystyki" />
+    <div className="stack wide">
       <h1>Statystyki pytań OWE</h1>
       <p className="muted" style={{ marginTop: -8 }}>
         O co pytano na XXI–XXXIX OWE: działy (procent pytań), zagadnienia i pojęcia (liczba pytań). Każde pytanie należy do jednego
@@ -235,4 +235,10 @@ export function OweStatsView({ data }: { data: Data }) {
       <ToTop />
     </div>
   );
+}
+
+export function OweStatsLoader() {
+  const { data, error } = useData<Data>("/api/dane/owe-stats");
+  if (error) return <p className="error">{error}</p>;
+  return data ? <OweStatsView data={data} /> : <PageSkeleton title="Statystyki pytań OWE" />;
 }

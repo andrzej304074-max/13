@@ -12,12 +12,13 @@ export interface FilterValue {
   kind: string | null;
 }
 
-export function OweFilterFields<F extends FilterValue>({ f, set, topics, kinds, editions = true, children }: {
+export function OweFilterFields<F extends FilterValue>({ f, set, topics, kinds, editions = true, stageLabel = "Etap", children }: {
   f: F;
   set: (o: Partial<F>) => void;
   topics: { id: string; name: string }[];
   kinds: { id: string; title: string }[];
   editions?: boolean;
+  stageLabel?: string;
   children?: React.ReactNode;
 }) {
   const eds = Array.from({ length: 19 }, (_, i) => 21 + i);
@@ -63,7 +64,7 @@ export function OweFilterFields<F extends FilterValue>({ f, set, topics, kinds, 
       </div>
       {editions && (
         <div>
-          <div className="filter-label">Etap</div>
+          <div className="filter-label">{stageLabel}</div>
           <div className="chips">
             {STAGES.map((s) => (
               <button key={s.id} className={`chip ${f.stages.includes(s.id) ? "selected" : ""}`} onClick={() => toggleStage(s.id)} aria-pressed={f.stages.includes(s.id)}>

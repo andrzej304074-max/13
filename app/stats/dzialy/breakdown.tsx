@@ -48,7 +48,8 @@ export function MyBreakdown({ bank }: { bank: "owe" | "slownik" }) {
     const p = new URLSearchParams(window.location.search);
     for (const k of ["typ", "okres", "sort", "dzial", "rodzaj", "etap", "od", "do", "poch", "sekcja"]) p.delete(k);
     for (const [k, v] of new URLSearchParams(q)) p.set(k, v);
-    window.history.replaceState(null, "", `/stats${p.size ? `?${p}` : ""}`);
+    p.set("bank", bank);
+    window.history.replaceState(null, "", `/stats/dzialy${p.size ? `?${p}` : ""}`);
     setData(null);
     api<MyStatsPayload>(withUser(`/api/stats/dzialy?bank=${bank}${q ? `&${q}` : ""}`)).then(setData).catch((e) => setError(e.message));
   }, [f, bank]);
@@ -60,8 +61,8 @@ export function MyBreakdown({ bank }: { bank: "owe" | "slownik" }) {
 
   return (
     <div className="stack" data-testid="my-breakdown">
-      <h2>Działy, zagadnienia i pojęcia – jak mi idzie</h2>
-      <p className="muted" style={{ marginTop: -8 }}>
+      
+      <p className="muted">
         Twoja skuteczność w pytaniach {bank === "owe" ? "z olimpiad" : "ze słownika"}, według działów, zagadnień i pojęć, o które pytają.
         „Ostatnio” – ostatnie 30 dni; strzałka – zmiana ostatnich 10 odpowiedzi względem wcześniejszych (w punktach procentowych).
         Kolory: <span className="lv good">≥ 80%</span> <span className="lv mid">50–79%</span> <span className="lv weak">&lt; 50%</span>.

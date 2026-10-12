@@ -7,7 +7,6 @@ import { PreviewBanner } from "@/app/components/preview-banner";
 import { api, fmtPct, fmtPoints, withUser } from "@/lib/client";
 import { BLOCK_SIZES, DEFAULT_BLOCK_SIZE } from "@/lib/scoring";
 import type { Stats } from "@/lib/tests";
-import { MyBreakdown } from "./dzialy";
 
 const BLOCK_KEY = "owe:blockSize";
 const TYPE_KEY = "owe:statsType";
@@ -103,7 +102,7 @@ export default function StatsPage() {
     <div className="stack">
       <PreviewBanner />
       <h1>Statystyki</h1>
-      <p className="muted" style={{ marginTop: -8 }}>Statystyki zakładki Nauka (lekcje, czas, ćwiczenia): <Link href="/nauka/statystyki">Statystyki nauki →</Link></p>
+      <p className="muted" style={{ marginTop: -8 }}>Wyniki Twoich testów. Skuteczność według działów i pojęć: <Link href={`/stats/dzialy?bank=${bank}`}>Działy i pojęcia →</Link></p>
       <div className="seg" role="group" aria-label="Baza pytań">
         {BANKS.map((b) => (
           <button
@@ -214,7 +213,6 @@ export default function StatsPage() {
         </div>
       )}
 
-      {bank && <MyBreakdown key={bank} bank={bank} />}
     </div>
   );
 }

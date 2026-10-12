@@ -2,6 +2,8 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { PreviewBanner } from "@/app/components/preview-banner";
+import { PageSkeleton } from "@/app/pojecia/table";
+import { useData } from "@/lib/data-client";
 import { api, fmtPct, viewedUser, withUser } from "@/lib/client";
 import type { Mastery } from "@/lib/mastery-core";
 import { LEVELS, level, type Level } from "@/lib/owe-stats";
@@ -269,4 +271,10 @@ function Classic({ list, mastery, rate, preview, topicName }: Props) {
       <p className="muted" style={{ fontSize: ".85rem", textAlign: "center" }}>Spacja – odwróć · strzałki – poprzednia/następna</p>
     </div>
   );
+}
+
+export function FlashcardsLoader() {
+  const { data, error } = useData<{ rows: Card[]; topics: Topic[]; kinds: Kind[] }>("/api/dane/hasla");
+  if (error) return <p className="error">{error}</p>;
+  return data ? <FlashcardsView cards={data.rows} topics={data.topics} kinds={data.kinds} /> : <PageSkeleton title="Fiszki" />;
 }

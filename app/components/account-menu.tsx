@@ -5,8 +5,8 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 import { LogoutButton } from "@/app/konto/forms";
 
-/** Menu nagłówka na telefonie (☰); zamyka się po przejściu na inną stronę i po kliknięciu poza nim. */
-export function MobileMenu({ email, active, isAdmin }: { email: string; active: boolean; isAdmin: boolean }) {
+/** Menu konta (👤): e-mail, panel admina, ustawienia, wylogowanie; zamyka się po przejściu i kliknięciu obok. */
+export function AccountMenu({ email, isAdmin }: { email: string; isAdmin: boolean }) {
   const ref = useRef<HTMLDetailsElement>(null);
   const path = usePathname();
   useEffect(() => {
@@ -20,22 +20,9 @@ export function MobileMenu({ email, active, isAdmin }: { email: string; active: 
     return () => document.removeEventListener("click", close);
   }, []);
   return (
-    <details className="mobile-menu" ref={ref}>
-      <summary aria-label="Menu">☰ Menu</summary>
-      <div className="mobile-menu-panel">
-        {active && (
-          <>
-            <Link href="/">Nowy test</Link>
-            <Link href="/slownik">Słownik</Link>
-            <Link href="/nauka">Nauka</Link>
-            <Link href="/pojecia">Pojęcia</Link>
-            <Link href="/fiszki">Fiszki</Link>
-            <Link href="/pojecia/statystyki">Statystyki pytań OWE</Link>
-            <Link href="/pojecia/pokrycie">Pokrycie olimpiad</Link>
-            <Link href="/stats">Statystyki</Link>
-            <hr />
-          </>
-        )}
+    <details className="account-menu" ref={ref}>
+      <summary aria-label="Konto"><span aria-hidden>👤</span><span className="email desktop-only">{email}</span></summary>
+      <div className="account-panel">
         <span className="email" title={email}>{email}</span>
         {isAdmin && <Link href="/admin">Panel admina</Link>}
         <Link href="/konto/ustawienia">Ustawienia</Link>

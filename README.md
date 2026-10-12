@@ -137,6 +137,16 @@ python3 -I tools/nauka/pojecia_pytan.py dump 'owe-39-*'   # pytania z wykrytymi 
 python3 -I tools/nauka/pojecia_pytan.py stats
 ```
 
+## Nawigacja i szybkość
+
+- **4 działy** (`lib/nav.ts`): 📝 Testy (Olimpiada, Słownik), 🎓 Nauka (Kurs, Fiszki, Powtórka), 📖 Pojęcia (Tabela, Statystyki OWE,
+  Pokrycie olimpiad), 📊 Statystyki (Wyniki testów, Działy i pojęcia, Nauka). Na komputerze działy w nagłówku, na telefonie dolny pasek
+  z ikonami; podzakładki działu nad treścią strony; konto (panel admina, ustawienia, wylogowanie) pod 👤. Podczas testu i lekcji dolny
+  pasek i podzakładki są ukryte.
+- **Dane haseł i statystyk OWE** nie są w HTML stron: `GET /api/dane/hasla` i `/api/dane/owe-stats` (ETag, pamięć przeglądarki),
+  w karcie trzymane w pamięci (`lib/data-client.ts`) – przejścia między Pojęciami, Statystykami OWE, Pokryciem i Fiszkami nie pobierają ich
+  ponownie. Tabela pojęć renderuje hasła porcjami po 100; każdy dział ma szkielet ładowania (`loading.tsx`).
+
 ## Pojęcia – tabela i statystyki pytań OWE
 
 - **Tabela pojęć** (`/pojecia`): wszystkie hasła kursu Nauka (bez lekcji „Zrozumienie”) w kolejności lekcji – nazwa z lewej,
@@ -148,14 +158,16 @@ python3 -I tools/nauka/pojecia_pytan.py stats
   Dane: `data/nauka/owe-stats.json` (generuje `tools/nauka/build_course.py`), opis metody i ręczna weryfikacja wszystkich 1656 pytań (958 poprawionych, 5 nowych haseł) –
   `tools/nauka/RAPORT-STATYSTYK.md` (`python3 -I tools/nauka/raport_statystyk.py`).
 
-- **Pokrycie olimpiad** (`/pojecia/pokrycie`): dla każdej edycji XXI–XXXIX – jaka część pojęć to powtórki pojęć z wcześniejszych
-  edycji (wszystkich od XXI albo ostatnich 3/5), a jaka to pojęcia nowe; wykres słupkowy edycja po edycji (kliknięcie wybiera edycję),
+- **Pokrycie olimpiad** (`/pojecia/pokrycie`): dla każdej edycji XXI–XXXIX – jaka część pojęć (albo pytań) to powtórki z wcześniejszych
+  edycji (wszystkich od XXI albo ostatnich 3/5), a jaka to nowe. Osobno wybiera się etap badanych pytań i etapy, z których liczą się
+  powtórki (np. pytania szkolne ← szkolne i okręgowe wcześniejszych edycji), opcjonalnie także wcześniejsze etapy tej samej edycji;
+  tabela 3×4 pokazuje naraz wszystkie pary etapów (kliknięcie komórki ustawia filtry); wykres słupkowy edycja po edycji (kliknięcie wybiera edycję),
   koło dla wybranego zakresu, odsetek pytań w całości o powtarzane pojęcia, listy najczęściej powtarzanych i nowych pojęć.
   Filtry jak w statystykach pytań OWE (wspólny komponent `app/pojecia/filters.tsx`, logika `coverage()` w `lib/owe-stats.ts`).
 
-## Moje statystyki wg działów (strona „Statystyki”)
+## Moje statystyki wg działów (Statystyki → Działy i pojęcia, `/stats/dzialy`)
 
-Pod statystykami testów sekcja „Działy, zagadnienia i pojęcia – jak mi idzie” – osobno dla pytań z olimpiad i ze słownika
+Strona „Działy, zagadnienia i pojęcia – jak mi idzie” – osobno dla pytań z olimpiad i ze słownika
 (przełącznik bazy): skuteczność w działach, zagadnieniach i pojęciach, skuteczność z ostatnich 30 dni, trend (ostatnie 10 odpowiedzi
 względem wcześniejszych) i rozwinięcie pojęcia z ostatnimi odpowiedziami. Filtry: typ, etap, zakres edycji (OWE), pochodzenie i dział
 słownika (słownik), dział, rodzaj haseł, okres, kolejność. API `GET /api/stats/dzialy`, agregacja `lib/my-stats-core.ts`.

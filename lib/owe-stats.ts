@@ -183,42 +183,65 @@ function recItems(r: OweRec, f: OweFilter, meta: Record<string, ItemMeta>): stri
   return r.items.filter((i) => meta[i] && (!f.topic || meta[i].topic === f.topic) && (!f.kind || meta[i].kind === f.kind));
 }
 
-export function coverage(recs: OweRec[], f: OweFilter, meta: Record<string, ItemMeta>, window: RepeatWindow = "all", edMin = 21): Coverage {
-  // historia liczona z tych samych typów i etapów pytań, ale ze wszystkich edycji
-  const base = recs.filter((r) => (f.type === "all" || r.t === f.type) && f.stages.includes(r.st));
-  const byEd = new Map<number, { items: Set<string>; qs: string[][] }>();
-  for (const r of base) {
+/** Skąd liczyć powtórki: etapy historii, okno edycji i czy wcześniejsze etapy tej samej edycji też się liczą. */
+export interface RepeatOpts {
+  window: RepeatWindow;
+  from: Stage[];
+  sameEdition: boolean;
+}
+export const DEFAULT_REPEAT: RepeatOpts = { window: "all", from: ["s", "o", "c"], sameEdition: false };
+const STAGE_NO: Record<Stage, number> = { s: 0, o: 1, c: 2 };
+
+/**
+ * Pokrycie: pytania z etapów `f.stages` (badane) i historia z etapów `o.from` (źródło powtórek).
+ * Pojęcie jest powtórką, gdy pytano o nie w etapie źródłowym wcześniejszej edycji (w oknie) albo – przy `sameEdition` –
+ * we wcześniejszym etapie tej samej edycji (szkolny → okręgowy → centralny).
+ */
+export function coverage(recs: OweRec[], f: OweFilter, meta: Record<string, ItemMeta>, o: Partial<RepeatOpts> = {}, edMin = 21): Coverage {
+  const { window, from, sameEdition } = { ...DEFAULT_REPEAT, ...o };
+  const typed = recs.filter((r) => f.type === "all" || r.t === f.type);
+  // historia: pojęcie → wystąpienia (edycja, etap) w etapach źródłowych
+  const hist = new Map<string, { ed: number; st: number }[]>();
+  for (const r of typed) {
+    if (!from.includes(r.st)) continue;
+    for (const i of recItems(r, f, meta)) {
+      const l = hist.get(i);
+      if (l) l.push({ ed: r.ed, st: STAGE_NO[r.st] }); else hist.set(i, [{ ed: r.ed, st: STAGE_NO[r.st] }]);
+    }
+  }
+  const isRep = (i: string, ed: number, st: number) => {
+    const lo = window === "all" ? edMin : ed - window;
+    return (hist.get(i) ?? []).some((h) => (h.ed < ed && h.ed >= lo) || (sameEdition && h.ed === ed && h.st < st));
+  };
+  const earlierEds = (i: string, ed: number) => [...new Set((hist.get(i) ?? []).filter((h) => h.ed < ed).map((h) => h.ed))];
+  // badane pytania: pojęcie edycji liczone raz, w najwcześniejszym etapie, w którym o nie pytano
+  const byEd = new Map<number, { first: Map<string, number>; qs: { its: string[]; st: number }[] }>();
+  for (const r of typed) {
+    if (!f.stages.includes(r.st) || r.ed < f.edFrom || r.ed > f.edTo) continue;
     const its = recItems(r, f, meta);
     if (!its.length) continue;
-    const e = byEd.get(r.ed) ?? { items: new Set<string>(), qs: [] };
-    its.forEach((i) => e.items.add(i));
-    e.qs.push(its);
+    const e = byEd.get(r.ed) ?? { first: new Map<string, number>(), qs: [] };
+    const st = STAGE_NO[r.st];
+    for (const i of its) e.first.set(i, Math.min(e.first.get(i) ?? 9, st));
+    e.qs.push({ its, st });
     byEd.set(r.ed, e);
   }
-  const seenIn = (i: string, from: number, to: number) => {
-    const eds: number[] = [];
-    for (let e = Math.max(from, edMin); e <= to; e++) if (byEd.get(e)?.items.has(i)) eds.push(e);
-    return eds;
-  };
   const rows: CoverageRow[] = [];
   const repeated = new Map<string, Set<number>>();
   const fresh: { id: string; ed: number }[] = [];
-  for (let ed = f.edFrom; ed <= f.edTo; ed++) {
-    const e = byEd.get(ed);
-    if (!e) continue;
-    const from = window === "all" ? edMin : ed - window;
-    const isRep = (i: string) => seenIn(i, from, ed - 1).length > 0;
+  for (const ed of [...byEd.keys()].sort((a, b) => a - b)) {
+    const e = byEd.get(ed)!;
     let repeat = 0;
-    for (const i of e.items) {
-      if (isRep(i)) {
+    for (const [i, st] of e.first) {
+      if (isRep(i, ed, st)) {
         repeat++;
         const s = repeated.get(i) ?? new Set<number>();
-        seenIn(i, edMin, ed - 1).forEach((x) => s.add(x));
+        earlierEds(i, ed).forEach((x) => s.add(x));
         repeated.set(i, s);
-      } else if (!seenIn(i, edMin, ed - 1).length) fresh.push({ id: i, ed });
+      } else fresh.push({ id: i, ed });
     }
-    const qRepeat = e.qs.filter((its) => its.every(isRep)).length;
-    rows.push({ ed, items: e.items.size, repeat, fresh: e.items.size - repeat, pct: pct(repeat, e.items.size), questions: e.qs.length, qRepeat });
+    const qRepeat = e.qs.filter((q) => q.its.every((i) => isRep(i, ed, q.st))).length;
+    rows.push({ ed, items: e.first.size, repeat, fresh: e.first.size - repeat, pct: pct(repeat, e.first.size), questions: e.qs.length, qRepeat });
   }
   const s = (k: "items" | "repeat" | "fresh" | "questions" | "qRepeat") => rows.reduce((a, r) => a + r[k], 0);
   return {
@@ -228,6 +251,20 @@ export function coverage(recs: OweRec[], f: OweFilter, meta: Record<string, Item
       .sort((a, b) => b.earlier - a.earlier || (meta[a.id]?.title ?? "").localeCompare(meta[b.id]?.title ?? "", "pl")),
     fresh: fresh.sort((a, b) => a.ed - b.ed || (meta[a.id]?.title ?? "").localeCompare(meta[b.id]?.title ?? "", "pl")),
   };
+}
+
+/** Wszystkie pary etapów: wiersz – etap badanych pytań, kolumna – etap(y) źródłowe powtórek („all” – wszystkie trzy). */
+export type MatrixCol = Stage | "all";
+export interface MatrixCell { items: number; repeat: number; pct: number; questions: number; qRepeat: number; qPct: number }
+export function stageMatrix(recs: OweRec[], f: OweFilter, meta: Record<string, ItemMeta>, o: Partial<RepeatOpts> = {}) {
+  const cols: MatrixCol[] = ["s", "o", "c", "all"];
+  return (["s", "o", "c"] as Stage[]).map((st) => ({
+    st,
+    cells: cols.map((col) => {
+      const t = coverage(recs, { ...f, stages: [st] }, meta, { ...o, from: col === "all" ? ["s", "o", "c"] : [col] }).total;
+      return { col, items: t.items, repeat: t.repeat, pct: t.pct, questions: t.questions, qRepeat: t.qRepeat, qPct: pct(t.qRepeat, t.questions) } as MatrixCell & { col: MatrixCol };
+    }),
+  }));
 }
 
 /* ---------- opanowanie (fiszki, moje statystyki) ---------- */

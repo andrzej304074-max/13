@@ -1,8 +1,9 @@
 "use client";
 
-import { useDeferredValue, useEffect, useMemo, useState } from "react";
+import { useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
 import { ToTop } from "@/app/components/to-top";
-import { PojeciaTabs } from "./tabs";
+import { useData } from "@/lib/data-client";
+import type { Haslo } from "@/lib/data-server";
 
 export interface Row {
   id: string;
@@ -22,6 +23,7 @@ const KIND_ONE: Record<string, string> = {
   pojecie: "pojęcie", wzor: "wzór", osoba: "osoba", instytucja: "instytucja", data: "data", przepis: "przepis",
 };
 
+const STEP = 100;
 const norm = (s: string) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/ł/g, "l");
 
 export function ConceptTable({ rows, topics, kinds }: { rows: Row[]; topics: Topic[]; kinds: Kind[] }) {
@@ -50,9 +52,20 @@ export function ConceptTable({ rows, topics, kinds }: { rows: Row[]; topics: Top
     return rows.filter((r, i) => (!topic || r.topic === topic) && (!kind || r.kind === kind) && (!nq || index[i].includes(nq)));
   }, [rows, index, topic, kind, query]);
 
+  // renderowanie porcjami (1,7 tys. wierszy naraz blokuje telefon); kolejne porcje przy przewijaniu
+  const [limit, setLimit] = useState(STEP);
+  const end = useRef<HTMLDivElement>(null);
+  useEffect(() => setLimit(STEP), [topic, kind, query]);
+  useEffect(() => {
+    const el = end.current;
+    if (!el) return;
+    const io = new IntersectionObserver((e) => { if (e[0].isIntersecting) setLimit((n) => n + STEP); }, { rootMargin: "1200px" });
+    io.observe(el);
+    return () => io.disconnect();
+  }, [limit, shown.length]);
+
   return (
-    <div className="stack">
-      <PojeciaTabs active="tabela" />
+    <div className="stack wide">
       <h1>Tabela pojęć</h1>
       <p className="muted" style={{ marginTop: -8 }}>
         Wszystkie hasła z kursu Nauka w kolejności lekcji. „OWE: N×” – w ilu pytaniach z XXI–XXXIX OWE pytano o dane hasło.
@@ -91,7 +104,7 @@ export function ConceptTable({ rows, topics, kinds }: { rows: Row[]; topics: Top
           <div role="columnheader">Pojęcie</div>
           <div role="columnheader">Definicja</div>
         </div>
-        {shown.map((r) => (
+        {shown.slice(0, limit).map((r) => (
           <div className="concept-row" role="row" key={r.id} id={`h-${r.id}`}>
             <div className="concept-name" role="cell">
               <strong>{r.t}</strong>
@@ -108,8 +121,27 @@ export function ConceptTable({ rows, topics, kinds }: { rows: Row[]; topics: Top
           </div>
         ))}
         {shown.length === 0 && <p className="muted" style={{ padding: 16 }}>Brak haseł dla wybranych filtrów.</p>}
+        {shown.length > limit && <div ref={end} className="muted" style={{ padding: 16 }}>Ładowanie kolejnych haseł…</div>}
       </div>
       <ToTop />
+    </div>
+  );
+}
+
+/** Dane haseł z pamięci podręcznej (/api/dane/hasla) – HTML strony nie zawiera 1,7 tys. definicji. */
+export function ConceptTableLoader() {
+  const { data, error } = useData<{ rows: Haslo[]; topics: Topic[]; kinds: Kind[] }>("/api/dane/hasla");
+  if (error) return <p className="error">{error}</p>;
+  if (!data) return <PageSkeleton title="Tabela pojęć" />;
+  return <ConceptTable rows={data.rows} topics={data.topics} kinds={data.kinds} />;
+}
+
+export function PageSkeleton({ title }: { title: string }) {
+  return (
+    <div className="stack wide" aria-busy>
+      <h1>{title}</h1>
+      <div className="skeleton" style={{ height: 120 }} />
+      <div className="skeleton" style={{ height: 320 }} />
     </div>
   );
 }

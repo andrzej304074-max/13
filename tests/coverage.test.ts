@@ -3,7 +3,7 @@ import { OWE_STATS, SLOWNIK_STATS } from "@/data/nauka";
 import { combineMastery } from "@/lib/mastery-core";
 import { aggregate, DEFAULT_MY_FILTER, myFilterFromParams, myFilterToParams, type MyAnswer } from "@/lib/my-stats-core";
 import { oweStatsData } from "@/lib/owe-stats-data";
-import { coverage, DEFAULT_FILTER, level, type ItemMeta, type OweFilter, type OweRec } from "@/lib/owe-stats";
+import { coverage, DEFAULT_FILTER, level, stageMatrix, type ItemMeta, type OweFilter, type OweRec } from "@/lib/owe-stats";
 
 const meta: Record<string, ItemMeta> = {
   a: { title: "A", kind: "pojecie", topic: "mikro" },
@@ -24,12 +24,27 @@ describe("pokrycie olimpiad", () => {
     expect(c.fresh.map((x) => x.id + x.ed)).toEqual(["a21", "b22", "c23"]);
   });
   it("okno 3 edycji: pojęcie sprzed 4 lat jest nowe", () => {
-    const c = coverage(recs, F({ edFrom: 26, edTo: 26 }), meta, 3);
+    const c = coverage(recs, F({ edFrom: 26, edTo: 26 }), meta, { window: 3 });
     expect(c.rows[0]).toMatchObject({ ed: 26, repeat: 1, fresh: 2 }); // c (XXIII) tak, a i b (XXI–XXII) nie
   });
   it("filtr działu i rodzaju zawęża pojęcia", () => {
     expect(coverage(recs, F({ kind: "osoba" }), meta).total).toMatchObject({ items: 2, repeat: 1 });
     expect(coverage(recs, F({ topic: "mikro" }), meta).rows.map((r) => r.ed)).toEqual([21, 22, 26]);
+  });
+  it("etap badanych pytań i etapy źródłowe powtórek są niezależne", () => {
+    const S = (id: string, ed: number, st: "s" | "o" | "c", items: string[]): OweRec => ({ ...R(id, ed, items), st });
+    const rs = [S("a1", 30, "s", ["a"]), S("a2", 30, "o", ["b"]), S("a3", 30, "c", ["c"]), S("b1", 31, "s", ["a", "b", "c"]), S("b2", 31, "o", ["b"])];
+    const at31 = (stages: ("s" | "o" | "c")[], from: ("s" | "o" | "c")[], sameEdition = false) =>
+      coverage(rs, F({ stages, edFrom: 31, edTo: 31 }), meta, { from, sameEdition }).total;
+    expect(at31(["s"], ["s"])).toMatchObject({ items: 3, repeat: 1, qRepeat: 0 }); // tylko a z XXX szkolnego
+    expect(at31(["s"], ["s", "o"])).toMatchObject({ repeat: 2 }); // a i b
+    expect(at31(["s"], ["s", "o", "c"])).toMatchObject({ repeat: 3, qRepeat: 1 });
+    expect(at31(["o"], ["s"])).toMatchObject({ items: 1, repeat: 0 }); // b nie było w szkolnym XXX
+    expect(at31(["o"], ["s"], true)).toMatchObject({ repeat: 1 }); // b było w szkolnym XXXI (ta sama edycja)
+    const m = stageMatrix(rs, F({ edFrom: 31, edTo: 31 }), meta, {});
+    expect(m.map((r) => r.cells.map((c) => c.repeat))).toEqual([[1, 1, 1, 3], [0, 1, 0, 1], [0, 0, 0, 0]]);
+    // kolumna „wszystkie” = pokrycie z domyślnymi etapami źródłowymi
+    expect(m[0].cells[3].pct).toBe(coverage(rs, F({ stages: ["s"], edFrom: 31, edTo: 31 }), meta).total.pct);
   });
   it("prawdziwe dane: każda edycja ma pojęcia, XXI w 100% nowe, suma = powtórki + nowe", () => {
     const D = oweStatsData();
