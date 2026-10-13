@@ -28,6 +28,8 @@ ALTER TABLE answers ADD COLUMN IF NOT EXISTS skipped boolean NOT NULL DEFAULT fa
 
 -- Osobna baza pytań ze słownika pojęć – własne testy i statystyki.
 ALTER TABLE tests ADD COLUMN IF NOT EXISTS bank text NOT NULL DEFAULT 'owe';
+-- Test „bez limitu”: filtr losowania (pytania dolosowywane porcjami, żeby nie zapisywać całej puli w wierszu).
+ALTER TABLE tests ADD COLUMN IF NOT EXISTS draw jsonb;
 CREATE INDEX IF NOT EXISTS tests_bank_idx ON tests (bank);
 
 -- Zakładka „Nauka”: sesje pod-lekcji i odpowiedzi w ćwiczeniach.

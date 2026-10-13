@@ -3,7 +3,7 @@ import { query } from "./db";
 import { getQuestion } from "./questions";
 import { HttpError } from "./tests";
 import {
-  isNoteKind, isStarKind, MAX_BODY, MAX_TITLE, NoteError, sanitizeHighlight, sanitizeInk, sanitizeRef, sanitizeText,
+  isNoteKind, isStarKind, MAX_BODY, MAX_HIGHLIGHTS, MAX_NOTES, MAX_NOTES_BYTES, MAX_TITLE, NoteError, sanitizeHighlight, sanitizeInk, sanitizeRef, sanitizeText,
   type Ink, type NoteKind, type StarKind,
 } from "./notes-core";
 
@@ -85,6 +85,19 @@ export async function getScratch(userId: string, ref: unknown): Promise<NoteRow 
   });
 }
 
+/** Limit na konto: liczba notatek (przy nowej) i łączny rozmiar treści z rysunkami (bez notatki `except`). */
+async function checkQuota(userId: string, addBytes: number, isNew: boolean, except: string | null = null) {
+  const { rows } = await query<{ n: string; b: string }>(
+    `SELECT COUNT(*) AS n, COALESCE(SUM(octet_length(body) + octet_length(ink::text)), 0) AS b
+     FROM notes WHERE user_id = $1 AND ($2::uuid IS NULL OR id <> $2)`, [userId, except]);
+  if (isNew && Number(rows[0].n) >= MAX_NOTES) {
+    throw new NoteError(`Masz już ${MAX_NOTES} notatek i brudnopisów – usuń niepotrzebne, żeby dodać nowe.`);
+  }
+  if (Number(rows[0].b) + addBytes > MAX_NOTES_BYTES) {
+    throw new NoteError(`Notatki zajmują już ${Math.round(MAX_NOTES_BYTES / 1024 / 1024)} MB (limit konta) – usuń niepotrzebne albo wyczyść duże rysunki.`);
+  }
+}
+
 export async function createNote(userId: string, v: Record<string, unknown>): Promise<NoteRow> {
   return wrap(async () => {
     const kind = isNoteKind(v.kind) ? v.kind : "note";
@@ -92,6 +105,7 @@ export async function createNote(userId: string, v: Record<string, unknown>): Pr
     const title = sanitizeText(v.title, MAX_TITLE, "tytuł"), body = sanitizeText(v.body, MAX_BODY, "treść");
     const ink = sanitizeInk(v.ink);
     const starred = v.starred === true;
+    await checkQuota(userId, Buffer.byteLength(body) + Buffer.byteLength(JSON.stringify(ink)), true);
     if (kind === "scratch" && ref) {
       // brudnopis pytania: drugi zapis tego samego pytania nadpisuje treść (wyścig dwóch kart)
       const { rows } = await query<NoteRow>(
@@ -116,6 +130,12 @@ export async function updateNote(userId: string, id: string, v: Record<string, u
     if ("title" in v) add("title", sanitizeText(v.title, MAX_TITLE, "tytuł"));
     if ("body" in v) add("body", sanitizeText(v.body, MAX_BODY, "treść"));
     if ("ink" in v) add("ink", JSON.stringify(sanitizeInk(v.ink)));
+    if ("body" in v || "ink" in v) {
+      const cur = await query<{ body: string; ink: string }>("SELECT body, ink::text AS ink FROM notes WHERE id = $1", [id]);
+      const body = "body" in v ? String(params[sets.findIndex((x) => x.startsWith("body")) + 2]) : cur.rows[0].body;
+      const ink = "ink" in v ? String(params[sets.findIndex((x) => x.startsWith("ink")) + 2]) : cur.rows[0].ink;
+      await checkQuota(userId, Buffer.byteLength(body) + Buffer.byteLength(ink), false, id);
+    }
     if ("starred" in v) {
       if (typeof v.starred !== "boolean") throw new NoteError("Nieprawidłowa gwiazdka.");
       add("starred", v.starred);
@@ -167,6 +187,8 @@ export async function listHighlights(userId: string, article: unknown): Promise<
 export async function addHighlight(userId: string, v: Record<string, unknown>): Promise<HighlightRow> {
   return wrap(async () => {
     const h = sanitizeHighlight(v);
+    const { rows: cnt } = await query<{ n: string }>("SELECT COUNT(*) AS n FROM highlights WHERE user_id = $1", [userId]);
+    if (Number(cnt[0].n) >= MAX_HIGHLIGHTS) throw new NoteError(`Masz już ${MAX_HIGHLIGHTS} podkreśleń – usuń część, żeby dodać nowe.`);
     const { rows } = await query<HighlightRow>(
       `INSERT INTO highlights (user_id, article, block, start_at, end_at, color) VALUES ($1, $2, $3, $4, $5, $6)
        RETURNING id, article, block, start_at AS start, end_at AS "end", color`, [userId, h.article, h.block, h.start, h.end, h.color]);

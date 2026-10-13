@@ -140,10 +140,10 @@ python3 -I tools/nauka/pojecia_pytan.py stats
 
 ## Nawigacja i szybkość
 
-- **5 działów** (`lib/nav.ts`): 📝 Testy (Olimpiada, Słownik), 🎓 Nauka (Kurs, Podręcznik, Fiszki, Powtórka), 📖 Pojęcia (Tabela,
-  Statystyki OWE, Pokrycie olimpiad), 🗒️ Notatki (Notatki, Brudnopisy), 📊 Statystyki (Wyniki testów, Działy i pojęcia, Nauka). Na komputerze działy w nagłówku, na telefonie dolny pasek
-  z ikonami; podzakładki działu nad treścią strony; konto (panel admina, ustawienia, wylogowanie) pod 👤. Podczas testu i lekcji dolny
-  pasek i podzakładki są ukryte.
+- **5 działów** (`lib/nav.ts`): 📝 Testy (Olimpiada, Słownik), 🎓 Nauka (Kurs, Podręcznik, Fiszki, Moje talie, Powtórka), 📖 Pojęcia (Tabela,
+  Statystyki OWE, Pokrycie olimpiad, Mapa myśli), 🗒️ Notatki (Notatki, Brudnopisy), 📊 Statystyki (Wyniki testów, Działy i pojęcia, Nauka). Na komputerze działy w nagłówku, na telefonie dolny pasek
+  z ikonami; podzakładki działu nad treścią strony; konto (panel admina, ustawienia, wylogowanie) pod 👤. Dolny pasek jest na telefonie na
+  każdej stronie (także w teście i lekcji – panel odpowiedzi i „Sprawdź” stoją nad nim); podczas testu i lekcji ukryte są tylko podzakładki.
 - **Dane haseł i statystyk OWE** nie są w HTML stron: `GET /api/dane/hasla` i `/api/dane/owe-stats` (ETag, pamięć przeglądarki),
   w karcie trzymane w pamięci (`lib/data-client.ts`) – przejścia między Pojęciami, Statystykami OWE, Pokryciem i Fiszkami nie pobierają ich
   ponownie; odpowiedzi są skompresowane (br/gzip, liczone raz na proces), a dane zakładek bieżącego działu pobierają się w tle,
@@ -196,10 +196,33 @@ zielony ≥ 80%, żółty 50–79%, czerwony < 50%, szary – mniej niż 2 odpow
 (OWE i słownik – pytanie liczy się dla każdego swojego pojęcia) i oceny fiszek (tabela `flash_ratings`, nie wpływa na statystyki nauki).
 Gwiazdka ☆/★ na karcie (klawisz G w trybie klasycznym). Filtry: dział, rodzaj, kolor, gwiazdka (z / bez), tylko hasła z OWE, kolejność (lekcje / losowo / najsłabsze najpierw). API `/api/fiszki/opanowanie`, `/api/fiszki/ocena`.
 
+## Moje talie (Nauka → Moje talie, `/fiszki/talie`)
+
+- Własne talie fiszek: nazwa, wyszukiwarka haseł (podpowiedzi po tytule i definicji, filtry: temat, rodzaj, tylko z pytań OWE),
+  dodanie kliknięciem albo Enterem – karta „wlatuje” do talii. Kolejność ustala się przeciąganiem za uchwyt ⠿ (mysz, palec, rysik;
+  przy krawędzi ekranu strona sama się przewija) albo strzałkami ↑/↓ na uchwycie; usunięcie z „Cofnij”.
+- „▶ Ucz się tej talii” – `/fiszki?talia=<id>`: tylko karty talii w jej kolejności (albo losowo). „＋ Do talii” na każdej fiszce i na mapie myśli.
+- Tabele `decks`, `deck_cards` (limity: 50 talii, 500 kart w talii); API `/api/talie`, `/api/talie/[id]`, `/api/talie/[id]/karty`
+  (POST dodaj, DELETE usuń, PUT kolejność). Podgląd admina tylko do odczytu.
+
+## Mapa myśli (Pojęcia → Mapa myśli, `/pojecia/mapa?q=<id>`)
+
+- Wpisz pojęcie (podpowiedzi) albo wybierz je z listy z filtrami (temat, rodzaj, tylko OWE, tylko fiszki z gwiazdką) – w środku mapy
+  pojęcie, wokół 6–16 powiązanych (grubość linii = siła powiązania, kolor = temat), opcjonalnie 2 poziomy. Kliknięcie (albo Enter)
+  przenosi hasło do środka z płynną animacją; „Wstecz” wraca. Pod mapą: definicja, linki do Tabeli pojęć i Podręcznika, „＋ Do talii”,
+  lista powiązanych z powodami.
+- Dane: `python3 -I tools/nauka/build_mapa.py` → `data/nauka/mapa.json` (do 24 powiązań na hasło). Źródła i wagi: wspólne pytanie OWE (3),
+  ten sam akapit Podręcznika bez części „Na marginesie” (2), opis wymienia tytuł innego hasła (3) albo nazwisko osoby (2, przy
+  tych samych nazwiskach także inicjał), ta sama lekcja działu pojęciowego (1; dla haseł z < 3 powiązaniami także działy osób, dat itp. – 0,5).
+  Pytania słownikowe nie są źródłem (ich zestawienia pojęć są losowe). API `/api/dane/mapa` (ETag, ładowane tylko na stronie mapy).
+
 ## Notatki i brudnopisy (`/notatki`, `/notatki/brudnopisy`)
 
-- **Edytor** (`app/components/notes/editor.tsx`): tekst z klawiatury + płótno do pisania rysikiem (nacisk), palcem lub myszą; gumka
-  (usuwa całe kreski), cofnij/ponów (Ctrl+Z / Ctrl+Y), 4 kolory, 3 grubości, „więcej miejsca”, tryb „przewijaj” na telefonie.
+- **Edytor – jedna kartka** (`app/components/notes/editor.tsx`): tekst z klawiatury i pismo rysikiem (nacisk), palcem lub myszą
+  w tym samym miejscu. Tryby: ⌨️ Tekst (pisze od góry kartki), ✏️ Pióro (rysuje po tekście), 🧽 Gumka (usuwa całe kreski), ✋ Przewijaj;
+  zwykły klawisz w trybie pióra przełącza na tekst; ostatni tryb zapamiętany (domyślnie: mysz – tekst, ekran dotykowy – pióro).
+  Czcionka i linie kartki są w jednostkach szerokości kartki (`cqw`), więc tekst łamie się tak samo na telefonie i komputerze, a dopiski
+  rysikiem zostają przy swoim tekście. Cofnij/ponów (Ctrl+Z / Ctrl+Y), 4 kolory, 3 grubości, „więcej miejsca”.
   Rysunek zapisany w jednostkach logicznych (szerokość 1000), kreski upraszczane (Douglas–Peucker, `lib/notes-core.ts`). Zapis
   automatyczny 0,8 s po zmianie, także przy zamknięciu karty.
 - **Brudnopis pod „Sprawdź”** w testach (jeden na pytanie: `owe:<id>`, `slownik:<id>`) i lekcjach (jeden na pod-lekcję); otwarty
@@ -208,6 +231,7 @@ Gwiazdka ☆/★ na karcie (klawisz G w trybie klasycznym). Filtry: dział, rodz
 - **Szybkie notatki** – przycisk 🗒️ w nagłówku na każdej stronie: panel z boku (komputer) lub od dołu nad paskiem działów (telefon),
   zostaje otwarty przy przechodzeniu między stronami, minimalizacja (▁ / Esc) zachowuje treść.
 - Gwiazdki i filtr (z / bez), wyszukiwanie. Admin widzi notatki użytkownika w podglądzie (`?user=`), bez możliwości zmian.
+- Limity konta: 1000 notatek i brudnopisów, łącznie 25 MB treści z rysunkami, 5000 podkreśleń.
 - Tabele `notes`, `stars`, `highlights`; API `/api/notatki`, `/api/notatki/[id]`, `/api/notatki/brudnopis`, `/api/gwiazdki`, `/api/podkreslenia`.
 
 ## Podręcznik (Nauka → Podręcznik, `/nauka/podrecznik`)
@@ -251,6 +275,21 @@ Konfiguracja maili (Vercel → Settings → Environment Variables, potem Redeplo
 3. Opcjonalnie `APP_URL` – adres strony w linkach z maili (domyślnie adres produkcyjny Vercel).
 
 Po pierwszym wdrożeniu od razu załóż swoje konto – pierwsze konto zostaje właścicielem.
+
+## Limity bazy i hostingu
+
+Plan Free w Neon: **0,5 GB** danych na projekt i **100 CU-godzin** obliczeń na miesiąc (baza usypia po 5 min bez zapytań);
+Vercel Hobby: 4 h aktywnego CPU, 1 mln wywołań funkcji, 100 GB transferu na miesiąc.
+
+- **Ile zajmują dane** (pomiar na lokalnej bazie): odpowiedź w Nauce ok. 160 B, sesja Nauki ok. 0,2–0,8 KB, test 30 pytań ok. 0,6 KB
+  + odpowiedzi po ok. 0,35 KB, test „bez limitu” ok. 1–2 KB (pytania dolosowywane porcjami po 100 – wcześniej cała pula, ok. 17 KB).
+  Bardzo aktywny użytkownik (1000 lekcji, 200 testów) to ok. 5–6 MB, więc 0,5 GB wystarcza na kilkadziesiąt bardzo aktywnych
+  albo kilkaset zwykłych kont.
+- **Panel admina → Baza danych**: rozmiar bazy względem limitu (`DB_LIMIT_MB`, domyślnie 512), największe tabele, liczby kont,
+  testów i odpowiedzi; ostrzeżenie od 70%. Sprzątanie (wygasłe sesje logowania, linki resetu hasła, stare błędne kody) raz na dobę
+  przy logowaniu albo wejściu do panelu, także przyciskiem „Posprzątaj teraz” (`lib/db-usage.ts`).
+- **Obliczenia (CU-godziny)**: aplikacja nie odpytuje serwera cyklicznie, więc baza usypia, gdy nikt nie korzysta. W Neon ustaw
+  **Compute → maks. 0,25 CU** (wtedy 100 CU-h ≈ 400 godzin aktywnej bazy w miesiącu). Zużycie: Neon → Usage, Vercel → Usage.
 
 ## Uruchomienie lokalne
 

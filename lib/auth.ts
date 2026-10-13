@@ -23,6 +23,7 @@ import {
   passwordError,
   verifyPassword,
 } from "./auth-core";
+import { cleanup } from "./db-usage";
 
 export const SESSION_COOKIE = "owe_session";
 
@@ -207,6 +208,8 @@ export async function login(rawEmail: unknown, pass: unknown): Promise<User> {
     throw new HttpError(401, "Nieprawidłowy e-mail lub hasło.");
   }
   await startSession(row.id);
+  // sprzątanie bazy (wygasłe sesje itp.) najwyżej raz na dobę – nie opóźnia logowania przy błędzie
+  await cleanup().catch(() => null);
   return toUser(row);
 }
 

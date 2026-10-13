@@ -8,6 +8,16 @@ import { SkeletonRows } from "@/app/components/loading-page";
 
 type CodeInfo = { code: string | null; updatedAt: string | null };
 type AdminCode = { code: string; createdAt: string; expiresAt: string; createdBy: string | null };
+type DbUsage = {
+  bytes: number; limitBytes: number; percent: number; tables: { name: string; rows: number; bytes: number }[];
+  counts: { users: number; tests: number; answers: number; sessions: number; notes: number }; cleanedAt: string | null;
+};
+const fmtMB = (b: number) => (b >= 1024 * 1024 * 100 ? `${Math.round(b / 1024 / 1024)} MB` : `${(b / 1024 / 1024).toLocaleString("pl-PL", { maximumFractionDigits: 1 })} MB`);
+const TABLE_PL: Record<string, string> = {
+  learn_answers: "odpowiedzi w Nauce", learn_sessions: "sesje Nauki", tests: "testy", answers: "odpowiedzi w testach", notes: "notatki i brudnopisy",
+  users: "konta", user_sessions: "sesje logowania", highlights: "podkreślenia", flash_ratings: "oceny fiszek", deck_cards: "karty talii", decks: "talie",
+  stars: "gwiazdki", article_reads: "przeczytane artykuły", settings: "ustawienia",
+};
 
 const fmtDate = (s: string | null) =>
   s ? new Date(s).toLocaleString("pl-PL", { dateStyle: "short", timeStyle: "short" }) : "–";
@@ -16,6 +26,8 @@ export function AdminPanel({ meId }: { meId: string }) {
   const [users, setUsers] = useState<AdminUserRow[] | null>(null);
   const [code, setCode] = useState<CodeInfo | null>(null);
   const [adminCodes, setAdminCodes] = useState<AdminCode[] | null>(null);
+  const [db, setDb] = useState<DbUsage | null>(null);
+  const [cleaned, setCleaned] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   const fail = (e: unknown) => setError(e instanceof Error ? e.message : "Błąd.");
@@ -25,7 +37,15 @@ export function AdminPanel({ meId }: { meId: string }) {
     loadUsers();
     api<CodeInfo>("/api/admin/kod-aktywacji").then(setCode).catch(fail);
     api<AdminCode[]>("/api/admin/kody-admina").then(setAdminCodes).catch(fail);
+    api<DbUsage>("/api/admin/baza").then(setDb).catch(fail);
   }, []);
+
+  async function cleanNow() {
+    const r = await api<{ removed: { sessions: number; resets: number; failures: number }; usage: DbUsage }>("/api/admin/baza", { method: "POST" }).catch((e) => (fail(e), null));
+    if (!r) return;
+    setDb(r.usage);
+    setCleaned(`Usunięto: ${r.removed.sessions} wygasłych sesji, ${r.removed.resets} linków resetu hasła, ${r.removed.failures} starych błędnych kodów.`);
+  }
 
   async function newCode() {
     if (code?.code && !confirm("Wygenerować nowy kod aktywacji? Stary przestanie działać (aktywne konta pozostają aktywne).")) return;
@@ -71,6 +91,9 @@ export function AdminPanel({ meId }: { meId: string }) {
     <div className="stack">
       <h1>Panel admina</h1>
       {error && <p className="error">{error}</p>}
+      {db && db.percent >= 70 && (
+        <p className="db-warn" role="alert">⚠️ Baza zajmuje {db.percent}% limitu ({fmtMB(db.bytes)} z {fmtMB(db.limitBytes)}). Rozważ usunięcie nieużywanych kont albo wyższy plan bazy.</p>
+      )}
 
       <h2>Kod aktywacji</h2>
       <div className="card stack">
@@ -166,6 +189,35 @@ export function AdminPanel({ meId }: { meId: string }) {
           )}
         </>
       )}
+
+      <h2>Baza danych</h2>
+      <div className="card stack" data-testid="db-usage">
+        {!db ? <SkeletonRows rows={2} height={40} label="Ładowanie rozmiaru bazy" /> : <>
+          <div className="row" style={{ alignItems: "baseline", flexWrap: "wrap", gap: 8 }}>
+            <span className="big">{fmtMB(db.bytes)}</span>
+            <span className="muted">z {fmtMB(db.limitBytes)} limitu · {fmtPct(db.percent)}</span>
+          </div>
+          <div className={`goal-bar db-bar${db.percent >= 70 ? " warn" : ""}`} role="meter" aria-valuemin={0} aria-valuemax={100} aria-valuenow={db.percent} aria-label="Zajęte miejsce w bazie">
+            <div style={{ width: `${Math.min(100, Math.max(0.5, db.percent))}%` }} />
+          </div>
+          <p className="muted" style={{ margin: 0 }}>
+            Konta: {db.counts.users} · testy: {db.counts.tests} · odpowiedzi: {db.counts.answers.toLocaleString("pl-PL")} · sesje Nauki: {db.counts.sessions.toLocaleString("pl-PL")} · notatki: {db.counts.notes}
+          </p>
+          <table className="db-tables">
+            <thead><tr><th>Co zajmuje miejsce</th><th>Wiersze</th><th>Rozmiar</th></tr></thead>
+            <tbody>
+              {db.tables.map((t) => (
+                <tr key={t.name}><td>{TABLE_PL[t.name] ?? t.name}</td><td>{t.rows.toLocaleString("pl-PL")}</td><td>{fmtMB(t.bytes)}</td></tr>
+              ))}
+            </tbody>
+          </table>
+          <div className="row" style={{ flexWrap: "wrap", gap: 8 }}>
+            <button className="btn small secondary" onClick={cleanNow}>🧹 Posprzątaj teraz</button>
+            <span className="muted" style={{ fontSize: ".85rem" }}>Automatycznie raz na dobę{db.cleanedAt ? ` · ostatnio ${fmtDate(db.cleanedAt)}` : ""}</span>
+          </div>
+          {cleaned && <p className="muted" role="status" style={{ margin: 0 }}>{cleaned}</p>}
+        </>}
+      </div>
     </div>
   );
 }

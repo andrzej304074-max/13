@@ -31,6 +31,8 @@ interface TestRow {
   finished_at: Date | null;
   score: number;
   max_score: number;
+  /** Test „bez limitu”: filtr losowania kolejnych porcji pytań. */
+  draw: DrawFilter | null;
 }
 
 interface AnswerRow {
@@ -39,6 +41,9 @@ interface AnswerRow {
   points: number;
   skipped: boolean;
 }
+
+/** Test „bez limitu”: ile pytań losujemy naraz (cała pula to ponad 1000 id – ok. 17 KB na wiersz testu). */
+const ENDLESS_CHUNK = 100;
 
 /** Pozwala na drobne opóźnienie sieci przy odpowiedzi wysłanej tuż przed końcem czasu. */
 const GRACE_MS = 5_000;
@@ -51,13 +56,14 @@ export async function createTest(
   filter: DrawFilter = {},
 ): Promise<TestState> {
   const endless = count === "endless";
-  const drawn = drawQuestions(type, endless ? Infinity : count, bank, filter);
+  // „bez limitu”: zapisujemy porcję wylosowanych pytań (+ filtr), kolejne porcje dolosowuje answerQuestion
+  const drawn = drawQuestions(type, endless ? ENDLESS_CHUNK : count, bank, filter);
   if (drawn.length === 0) throw new HttpError(400, "Brak pytań tego typu w bazie.");
   const { rows } = endless
     ? await query<TestRow>(
-        `INSERT INTO tests (bank, type, mode, question_ids, deadline, max_score, user_id)
-         VALUES ($1, $2, 'endless', $3, NULL, 0, $4) RETURNING *`,
-        [bank, type, drawn.map((q) => q.id), userId],
+        `INSERT INTO tests (bank, type, mode, question_ids, deadline, max_score, user_id, draw)
+         VALUES ($1, $2, 'endless', $3, NULL, 0, $4, $5) RETURNING *`,
+        [bank, type, drawn.map((q) => q.id), userId, JSON.stringify({ origin: filter.origin ?? null, section: filter.section ?? null })],
       )
     : await query<TestRow>(
         `INSERT INTO tests (bank, type, question_ids, deadline, max_score, user_id)
@@ -176,6 +182,16 @@ export async function answerQuestion(userId: string, id: string, questionId: unk
       totalScore,
       answers.length * MAX_POINTS_PER_QUESTION,
     ]);
+  }
+  if (endless && answers.length >= t.question_ids.length) {
+    // porcja się skończyła – dolosuj kolejne pytania z puli (bez już użytych); pusta pula kończy test
+    const used = new Set(t.question_ids);
+    const f = t.draw ?? {};
+    const more = drawQuestions(t.type, Infinity, t.bank, f).filter((x) => !used.has(x.id)).slice(0, ENDLESS_CHUNK).map((x) => x.id);
+    if (more.length) {
+      await query("UPDATE tests SET question_ids = question_ids || $2::text[] WHERE id = $1", [id, more]);
+      t.question_ids = [...t.question_ids, ...more];
+    }
   }
   if (answers.length >= t.question_ids.length) await finishRow(id);
   const next = endless ? getQuestion(t.question_ids[answers.length] ?? "") : undefined;

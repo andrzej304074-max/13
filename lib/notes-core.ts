@@ -12,6 +12,10 @@ const MAX_STROKES = 4000;
 const MAX_POINTS = 80000;
 export const MAX_BODY = 100_000;
 export const MAX_TITLE = 120;
+/** Limity na konto (ochrona limitu bazy): liczba notatek i brudnopisów, ich łączny rozmiar, liczba podkreśleń. */
+export const MAX_NOTES = 1000;
+export const MAX_NOTES_BYTES = 25 * 1024 * 1024;
+export const MAX_HIGHLIGHTS = 5000;
 
 /** Kreska: kolor (indeks palety), grubość (indeks), punkty jako płaska lista [x, y, nacisk 0–100, …]. */
 export interface Stroke { c: number; w: number; p: number[] }
