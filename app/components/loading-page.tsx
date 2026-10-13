@@ -8,3 +8,14 @@ export function LoadingPage() {
     </div>
   );
 }
+
+/** Szkielet fragmentu strony (lista, tabela, wykresy) – zamiast samego napisu „Ładowanie…”. */
+export function SkeletonRows({ rows = 3, height = 56, label = "Ładowanie" }: { rows?: number; height?: number; label?: string }) {
+  return (
+    <div className="stack" aria-busy aria-label={label}>
+      {Array.from({ length: rows }, (_, i) => (
+        <div key={i} className="skeleton" style={{ height, width: i === rows - 1 && rows > 1 ? "70%" : undefined }} />
+      ))}
+    </div>
+  );
+}

@@ -1,6 +1,6 @@
 "use client";
 
-import { LoadingPage } from "@/app/components/loading-page";
+import { LoadingPage, SkeletonRows } from "@/app/components/loading-page";
 import { useData } from "@/lib/data-client";
 
 import Link from "next/link";
@@ -59,7 +59,7 @@ export function NaukaStatsView({ meta }: { meta: StatsMeta }) {
     return m;
   }, [meta]);
 
-  if (!f) return <p className="muted">Ładowanie…</p>;
+  if (!f) return <LoadingPage />;
   const set = (patch: Partial<Filters>) => setF({ ...f, ...patch });
   const units = meta.units.filter((u) => u.topic === f.topic);
   const lessons = meta.lessons.filter((l) => l.unit === f.unit);
@@ -127,9 +127,9 @@ export function NaukaStatsView({ meta }: { meta: StatsMeta }) {
 
       {error && <p className="error">{error}</p>}
       {!stats ? (
-        <p className="muted">Ładowanie…</p>
+        <SkeletonRows rows={4} height={72} />
       ) : stats.sessions.sessions === 0 ? (
-        <p className="muted">Brak ukończonych pod-lekcji dla wybranych filtrów.</p>
+        <div className="empty-state"><span aria-hidden>🎓</span><p>Brak ukończonych pod-lekcji dla wybranych filtrów. Ukończ lekcję w zakładce Nauka, a statystyki pojawią się tutaj.</p></div>
       ) : (
         <>
           <div className="stat-grid">

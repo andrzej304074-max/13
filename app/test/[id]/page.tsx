@@ -7,6 +7,7 @@ import { QuestionScratch } from "@/app/components/notes/question-scratch";
 import { api, fmtPct, fmtPoints, LETTERS, rememberTest } from "@/lib/client";
 import { correctUnits, UNITS_PER_QUESTION } from "@/lib/scoring";
 import type { AnswerFeedback, PublicQuestion, TestState } from "@/lib/types";
+import { LoadingPage } from "@/app/components/loading-page";
 
 type AnswerResponse = AnswerFeedback & { totalScore: number; nextQuestion?: PublicQuestion | null };
 
@@ -66,7 +67,7 @@ export default function TestPage() {
   }, [test, finished, remaining, busy, finish]);
 
   if (error) return <p className="error">{error}</p>;
-  if (!test) return <p className="muted">Ładowanie…</p>;
+  if (!test) return <LoadingPage />;
 
   if (finished) return <Summary test={test} />;
 

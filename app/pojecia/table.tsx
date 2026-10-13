@@ -122,7 +122,7 @@ export function ConceptTable({ rows, topics, kinds }: { rows: Row[]; topics: Top
             </div>
           </div>
         ))}
-        {shown.length === 0 && <p className="muted" style={{ padding: 16 }}>Brak haseł dla wybranych filtrów.</p>}
+        {shown.length === 0 && <div className="empty-state" style={{ margin: 16 }}><span aria-hidden>🔍</span><p>Brak haseł dla wybranych filtrów.</p></div>}
         {shown.length > limit && <div ref={end} className="muted" style={{ padding: 16 }}>Ładowanie kolejnych haseł…</div>}
       </div>
       <ToTop />

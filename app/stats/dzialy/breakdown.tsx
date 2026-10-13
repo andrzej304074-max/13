@@ -6,6 +6,7 @@ import { api, fmtPct, withUser } from "@/lib/client";
 import { DEFAULT_MY_FILTER, myFilterFromParams, myFilterToParams, type MyFilter, type MyRow } from "@/lib/my-stats-core";
 import type { MyStatsPayload } from "@/lib/my-stats";
 import { level } from "@/lib/owe-stats";
+import { SkeletonRows } from "@/app/components/loading-page";
 
 const KIND_ONE: Record<string, string> = { pojecie: "pojęcie", wzor: "wzór", osoba: "osoba", instytucja: "instytucja", data: "data", przepis: "przepis" };
 const STEP = 30;
@@ -110,8 +111,8 @@ export function MyBreakdown({ bank }: { bank: "owe" | "slownik" }) {
         </div>
       </div>
 
-      {!data ? <p className="muted">Ładowanie…</p> : data.total.answers === 0 && data.topics.length === 0 ? (
-        <p className="muted">Brak odpowiedzi w testach {bank === "owe" ? "z pytaniami olimpijskimi" : "słownikowych"} dla tych filtrów.</p>
+      {!data ? <SkeletonRows rows={4} height={64} /> : data.total.answers === 0 && data.topics.length === 0 ? (
+        <div className="empty-state"><span aria-hidden>🔍</span><p>Brak odpowiedzi w testach {bank === "owe" ? "z pytaniami olimpijskimi" : "słownikowych"} dla tych filtrów.</p></div>
       ) : <>
         <h3>Działy</h3>
         <div className="card table-wrap" data-testid="my-topics">

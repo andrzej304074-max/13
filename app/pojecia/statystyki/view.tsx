@@ -9,6 +9,7 @@ import {
   DEFAULT_FILTER, ROMAN, STAGES, filterFromParams, filterRecs, filterToParams, itemCounts, topicShares, unitCounts,
   type ItemMeta, type OweFilter, type OweRec, type Stage,
 } from "@/lib/owe-stats";
+import { SkeletonRows } from "@/app/components/loading-page";
 
 interface Data {
   recs: OweRec[];
@@ -203,7 +204,7 @@ export function OweStatsView({ data }: { data: Data }) {
               return [row, (
                 <tr key={`${r.id}-q`} className="q-list-row">
                   <td colSpan={5}>
-                    {!list ? <p className="muted">Ładowanie pytań…</p> : typeof list === "string" ? <p className="error">{list}</p> : (
+                    {!list ? <SkeletonRows rows={3} height={40} label="Ładowanie pytań" /> : typeof list === "string" ? <p className="error">{list}</p> : (
                       <ol className="q-list">
                         {list.map((q) => (
                           <li key={q.id}>

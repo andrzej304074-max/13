@@ -7,6 +7,7 @@ import { PreviewBanner } from "@/app/components/preview-banner";
 import { api, fmtPct, fmtPoints, withUser } from "@/lib/client";
 import { BLOCK_SIZES, DEFAULT_BLOCK_SIZE } from "@/lib/scoring";
 import type { Stats } from "@/lib/tests";
+import { LoadingPage } from "@/app/components/loading-page";
 
 const BLOCK_KEY = "owe:blockSize";
 const TYPE_KEY = "owe:statsType";
@@ -92,7 +93,7 @@ export default function StatsPage() {
   }
 
   if (error) return <p className="error">{error}</p>;
-  if (!stats) return <p className="muted">Ładowanie…</p>;
+  if (!stats) return <LoadingPage />;
 
   const { overall, byType, history, blocks } = stats;
   const size = stats.blockSize;
@@ -154,7 +155,7 @@ export default function StatsPage() {
 
       <h2>Postęp (% kolejnych testów)</h2>
       {history.length === 0 ? (
-        <p className="muted">Brak zakończonych testów.</p>
+        <div className="empty-state"><span aria-hidden>📈</span><p>Brak zakończonych testów. Rozwiąż pierwszy test, a tu pojawi się wykres postępu.</p><Link href="/" className="btn">Rozpocznij test</Link></div>
       ) : (
         <>
           <div className="card">
@@ -193,7 +194,7 @@ export default function StatsPage() {
         ))}
       </div>
       {blocks.length === 0 ? (
-        <p className="muted">Brak odpowiedzi.</p>
+        <div className="empty-state"><span aria-hidden>📝</span><p>Brak odpowiedzi w tym zakresie.</p></div>
       ) : (
         <div className="card">
           <p className="muted" style={{ margin: "0 0 8px", fontSize: "0.85rem" }}>

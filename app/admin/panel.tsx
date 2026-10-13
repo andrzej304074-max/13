@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { api, fmtPct } from "@/lib/client";
 import type { AdminUserRow } from "@/lib/auth";
+import { SkeletonRows } from "@/app/components/loading-page";
 
 type CodeInfo = { code: string | null; updatedAt: string | null };
 type AdminCode = { code: string; createdAt: string; expiresAt: string; createdBy: string | null };
@@ -107,7 +108,7 @@ export function AdminPanel({ meId }: { meId: string }) {
         )}
       </div>
 
-      {!users ? <p className="muted">Ładowanie użytkowników…</p> : (
+      {!users ? <SkeletonRows rows={5} height={48} label="Ładowanie użytkowników" /> : (
         <>
           <h2>Czekają na zatwierdzenie <span className="muted">({pending.length + adminRequests.length})</span></h2>
           <div className="card stack table-wrap" data-testid="pending">
