@@ -181,10 +181,12 @@ async function store(voice: string, hash: string, bytes: Buffer): Promise<string
   }
   const key = `tts/${voice}/${hash}.mp3`;
   if (useR2()) {
-    const res = await r2().fetch(r2ObjectUrl(key), {
+    // podpis osobno, a wysyłka zwykłym fetch z buforem – R2 wymaga Content-Length (Request z aws4fetch wysyła strumieniem, bez długości)
+    const signed = await r2().sign(r2ObjectUrl(key), {
       method: "PUT", body: new Uint8Array(bytes),
       headers: { "Content-Type": "audio/mpeg", "Cache-Control": "public, max-age=31536000, immutable" },
     });
+    const res = await fetch(signed.url, { method: "PUT", headers: signed.headers, body: new Uint8Array(bytes) });
     if (!res.ok) throw new Error(`R2: HTTP ${res.status} ${(await res.text()).slice(0, 200)}`);
     return `${r2Public()}/${key}`;
   }
