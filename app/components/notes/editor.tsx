@@ -6,11 +6,22 @@ import { EMPTY_INK, INK_MIN_H, INK_W, INK_WIDTHS, simplify, strokeNear, type Ink
 import type { NoteRow } from "@/lib/notes";
 
 /**
- * Edytor notatki / brudnopisu: tekst z klawiatury + płótno do pisania rysikiem, palcem lub myszą.
- * Rysunek w jednostkach logicznych (szerokość 1000), więc skaluje się do ekranu. Zapis automatyczny (800 ms po zmianie).
+ * Edytor notatki / brudnopisu – jedna kartka: tekst z klawiatury i pismo rysikiem, palcem lub myszą w tym samym miejscu.
+ * Tryb ⌨️ Tekst pisze od góry kartki, ✏️ Pióro rysuje po tekście. Rysunek jest w jednostkach logicznych (szerokość 1000),
+ * a czcionka i linie kartki w jednostkach szerokości kartki (cqw) – tekst łamie się tak samo na każdym ekranie,
+ * więc dopiski rysikiem zostają przy swoim tekście. Zapis automatyczny (800 ms po zmianie).
  */
 
-type Tool = "pen" | "eraser" | "scroll";
+type Tool = "text" | "pen" | "eraser" | "scroll";
+const TOOL_KEY = "ne-tool";
+/** Domyślne narzędzie: na urządzeniu z myszą – tekst, na dotykowym – pióro; potem ostatni wybór. */
+function initialTool(): Tool {
+  try {
+    const t = localStorage.getItem(TOOL_KEY);
+    if (t === "text" || t === "pen") return t;
+  } catch {}
+  return typeof window !== "undefined" && window.matchMedia?.("(pointer: coarse)").matches ? "pen" : "text";
+}
 export type SaveState = "idle" | "saving" | "saved" | "error";
 
 const COLOR_VARS = ["--ink-0", "--ink-1", "--ink-2", "--ink-3"];
@@ -66,7 +77,13 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
   const [title, setTitle] = useState(note?.title ?? "");
   const [body, setBody] = useState(note?.body ?? "");
   const [ink, setInk] = useState<Ink>(note?.ink ?? EMPTY_INK);
-  const [tool, setTool] = useState<Tool>("pen");
+  const [tool, setToolState] = useState<Tool>("text");
+  useEffect(() => { setToolState(initialTool()); }, []);
+  const setTool = useCallback((t: Tool) => {
+    setToolState(t);
+    if (t === "text" || t === "pen") { try { localStorage.setItem(TOOL_KEY, t); } catch {} }
+  }, []);
+  const [textH, setTextH] = useState(0);
   const [color, setColor] = useState(0);
   const [width, setWidth] = useState(0);
   const [extra, setExtra] = useState(0);
@@ -80,9 +97,10 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const taRef = useRef<HTMLTextAreaElement>(null);
   const [cssW, setCssW] = useState(0);
-  const minH = compact ? 420 : INK_MIN_H;
-  const logicalH = Math.max(minH, ink.h + 160) + extra;
   const k = cssW / INK_W;
+  // na wąskim ekranie kartka ma co najmniej ~360 px (brudnopis ~260 px) wysokości – puste miejsce, nie zmienia rysunku
+  const minH = Math.max(compact ? 420 : INK_MIN_H, k ? Math.ceil((compact ? 260 : 360) / k) : 0);
+  const logicalH = Math.max(minH, ink.h + 160, textH + 120) + extra;
 
   // --- zapis automatyczny ---
   const dirty = useRef(false);
@@ -139,13 +157,29 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
     return () => { window.removeEventListener("pagehide", out); document.removeEventListener("visibilitychange", vis); out(); };
   }, [flush]);
 
-  // --- tekst: pole rośnie z treścią ---
+  // --- tekst na kartce: wysokość treści (w jednostkach logicznych) wydłuża kartkę ---
   useLayoutEffect(() => {
     const ta = taRef.current;
-    if (!ta) return;
-    ta.style.height = "auto";
-    ta.style.height = `${Math.max(compact ? 72 : 120, ta.scrollHeight + 2)}px`;
-  }, [body, compact]);
+    if (!ta || !cssW) return;
+    const prev = ta.style.height;
+    ta.style.height = "0px";
+    const h = ta.scrollHeight;
+    ta.style.height = prev;
+    setTextH(Math.ceil(h / (cssW / INK_W)));
+  }, [body, cssW]);
+
+  // przełączenie na tekst – kursor od razu w polu (na końcu)
+  const focusText = useCallback((append = "") => {
+    const ta = taRef.current;
+    if (!ta || readOnly) return;
+    ta.focus({ preventScroll: true });
+    if (append) {
+      const v = ta.value + append;
+      setBody(v);
+      touch();
+      requestAnimationFrame(() => { ta.selectionStart = ta.selectionEnd = v.length; });
+    }
+  }, [readOnly, touch]);
 
   // --- płótno ---
   useLayoutEffect(() => {
@@ -199,7 +233,8 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
   const pressure = (e: React.PointerEvent) => (e.pointerType === "pen" && e.pressure > 0 ? Math.round(e.pressure * 100) : 50);
 
   const onDown = (e: React.PointerEvent<HTMLCanvasElement>) => {
-    if (readOnly || tool === "scroll") return;
+    if (readOnly || tool === "scroll" || tool === "text") return;
+    e.currentTarget.focus({ preventScroll: true });
     if (e.pointerType === "pen") penSeen.current = true;
     // rysik w użyciu: dotyk dłoni opartej o ekran nie rysuje
     if (e.pointerType === "touch" && penSeen.current) return;
@@ -290,9 +325,18 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
     commit({ h: 0, s: [] });
   };
 
-  // Ctrl+Z / Ctrl+Y w obrębie edytora
+  // Ctrl+Z / Ctrl+Y w obrębie edytora (w polu tekstu – natywne cofanie tekstu);
+  // zwykły znak z klawiatury w trybie pióra/gumki przełącza na tekst i trafia na koniec tekstu
   const onKeyDown = (e: React.KeyboardEvent) => {
-    if (!(e.ctrlKey || e.metaKey) || (e.target as HTMLElement).tagName === "TEXTAREA" || (e.target as HTMLElement).tagName === "INPUT") return;
+    const tag = (e.target as HTMLElement).tagName;
+    if (tag === "TEXTAREA" || tag === "INPUT" || tag === "BUTTON") return;
+    if (!readOnly && !e.ctrlKey && !e.metaKey && !e.altKey && (e.key.length === 1 || e.key === "Enter")) {
+      e.preventDefault();
+      setTool("text");
+      focusText(e.key === "Enter" ? "\n" : e.key);
+      return;
+    }
+    if (!(e.ctrlKey || e.metaKey)) return;
     if (e.key.toLowerCase() === "z") { e.preventDefault(); if (e.shiftKey) doRedo(); else doUndo(); }
     if (e.key.toLowerCase() === "y") { e.preventDefault(); doRedo(); }
   };
@@ -305,12 +349,10 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
         <input className="ne-title" value={title} placeholder="Tytuł notatki" maxLength={120} readOnly={readOnly}
           onChange={(e) => { setTitle(e.target.value); touch(); }} aria-label="Tytuł" />
       )}
-      <textarea ref={taRef} className="ne-text" value={body} readOnly={readOnly} spellCheck
-        placeholder={placeholder ?? (kind === "scratch" ? "Pisz z klawiatury… (obliczenia, myśli)" : "Pisz z klawiatury…")}
-        onChange={(e) => { setBody(e.target.value); touch(); }} aria-label="Tekst" />
       {!readOnly && (
         <div className="ne-tools" role="toolbar" aria-label="Narzędzia rysowania">
           <div className="ne-group">
+            <button type="button" className={tool === "text" ? "on" : ""} aria-pressed={tool === "text"} onClick={() => { setTool("text"); focusText(); }} title="Tekst z klawiatury – na tej samej kartce">⌨️<span className="ne-lbl"> Tekst</span></button>
             <button type="button" className={tool === "pen" ? "on" : ""} aria-pressed={tool === "pen"} onClick={() => setTool("pen")} title="Pióro">✏️<span className="ne-lbl"> Pióro</span></button>
             <button type="button" className={tool === "eraser" ? "on" : ""} aria-pressed={tool === "eraser"} onClick={() => setTool("eraser")} title="Gumka – ściera całe kreski">🧽<span className="ne-lbl"> Gumka</span></button>
             <button type="button" className={tool === "scroll" ? "on" : ""} aria-pressed={tool === "scroll"} onClick={() => setTool("scroll")} title="Przewijanie palcem – płótno nie rysuje">✋<span className="ne-lbl"> Przewijaj</span></button>
@@ -338,11 +380,15 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
           </div>
         </div>
       )}
-      <div ref={wrapRef} className={`ne-canvas-wrap tool-${tool}`}>
-        <canvas ref={canvasRef} className="ne-canvas" data-testid="ink-canvas" tabIndex={-1}
-          onPointerDown={onDown} onPointerMove={onMove} onPointerUp={onUp} onPointerCancel={onUp}
-          aria-label="Pole do pisania rysikiem lub palcem" />
-        {!ink.s.length && !readOnly && <span className="ne-hint" aria-hidden>Pisz tu rysikiem, palcem lub myszą</span>}
+      <div className="ne-sheet">
+        <div ref={wrapRef} className={`ne-canvas-wrap tool-${readOnly ? "view" : tool}`}>
+          <textarea ref={taRef} className="ne-text" value={body} readOnly={readOnly} spellCheck tabIndex={tool === "text" || readOnly ? 0 : -1}
+            placeholder={readOnly ? "" : placeholder ?? (kind === "scratch" ? "Pisz tu z klawiatury (⌨️) albo rysikiem (✏️) – obliczenia, myśli…" : "Pisz tu z klawiatury (⌨️) albo rysikiem (✏️)…")}
+            onChange={(e) => { setBody(e.target.value); touch(); }} aria-label="Tekst notatki" data-testid="sheet-text" />
+          <canvas ref={canvasRef} className="ne-canvas" data-testid="ink-canvas" tabIndex={-1}
+            onPointerDown={onDown} onPointerMove={onMove} onPointerUp={onUp} onPointerCancel={onUp}
+            aria-label="Kartka do pisania rysikiem lub palcem" />
+        </div>
       </div>
       <div className="ne-foot">
         {!readOnly && <button type="button" className="linkbtn" onClick={() => setExtra((x) => x + 400)}>+ więcej miejsca</button>}

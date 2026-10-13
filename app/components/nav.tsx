@@ -10,7 +10,6 @@ import { activeTab, isFocusPage, NAV } from "@/lib/nav";
 export function SectionNav({ variant }: { variant: "top" | "bottom" }) {
   const path = usePathname();
   const cur = activeTab(path);
-  if (variant === "bottom" && isFocusPage(path)) return null;
   return (
     <nav className={variant === "top" ? "sections desktop-only" : "bottom-bar mobile-only"} aria-label="Działy">
       {NAV.map((s) => {

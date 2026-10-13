@@ -727,12 +727,6 @@ table.matrix th[scope="row"] { text-align: left; font-weight: 600; }
 .notes-editor { display: grid; gap: 10px; }
 .ne-title { font: inherit; font-size: 1.3rem; font-weight: 650; letter-spacing: -0.01em; color: var(--text); background: transparent; border: 0; border-bottom: 1px solid var(--border); padding: 6px 2px; min-height: 44px; }
 .ne-title:focus { outline: none; border-color: var(--accent); }
-.ne-text {
-  font: inherit; line-height: 1.6; color: var(--text); background: var(--surface); resize: none; overflow: hidden;
-  border: 1px solid var(--border-strong); border-radius: var(--radius-sm); padding: 12px 14px; width: 100%;
-  transition: border-color var(--t) var(--ease), box-shadow var(--t) var(--ease);
-}
-.ne-text:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent); }
 .ne-tools { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; position: sticky; top: var(--head-h); z-index: 3; padding: 6px; border-radius: 12px; background: color-mix(in srgb, var(--surface) 96%, transparent); border: 1px solid var(--border); box-shadow: var(--shadow-sm); }
 .ne-group { display: flex; gap: 4px; align-items: center; }
 .ne-group + .ne-group { padding-left: 10px; border-left: 1px solid var(--border); }
@@ -747,16 +741,28 @@ table.matrix th[scope="row"] { text-align: left; font-weight: 600; }
 .ne-color, .ne-width { padding: 0 !important; width: 40px; }
 .ne-color i { width: 20px; height: 20px; border-radius: 50%; box-shadow: 0 0 0 2px var(--surface), 0 0 0 3px var(--border-strong); }
 .ne-width i { display: block; border-radius: 50%; background: var(--text); }
+/* jedna kartka: kontener (cqw = szerokość kartki), tekst pod spodem, płótno na wierzchu; linie co 5,6% szerokości */
+.ne-sheet { container-type: inline-size; width: 100%; max-width: 680px; margin-inline: auto; }
 .ne-canvas-wrap {
+  --ne-lh: 5.6cqw;
   position: relative; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); overflow: hidden;
   background-color: var(--paper);
   background-image: linear-gradient(var(--paper-line) 1px, transparent 1px);
-  background-size: 100% 32px; background-position: 0 31px;
+  background-size: 100% var(--ne-lh); background-position: 0 calc(var(--ne-lh) - 1px);
 }
-.ne-canvas { display: block; width: 100%; touch-action: none; cursor: crosshair; }
+.ne-text {
+  position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; margin: 0; border: 0; resize: none; overflow: hidden;
+  background: transparent; color: var(--text); font: inherit; font-size: 3.6cqw; line-height: var(--ne-lh);
+  padding: 0 3cqw; white-space: pre-wrap; overflow-wrap: anywhere;
+}
+.ne-text:focus { outline: none; }
+.ne-text::placeholder { color: var(--muted); opacity: .8; }
+.ne-canvas-wrap:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent); }
+.ne-canvas { position: relative; z-index: 2; display: block; width: 100%; touch-action: none; cursor: crosshair; }
+.tool-text .ne-canvas, .tool-scroll .ne-canvas, .tool-view .ne-canvas { pointer-events: none; }
+.tool-text .ne-text { cursor: text; }
+.tool-pen .ne-text, .tool-eraser .ne-text, .tool-scroll .ne-text { pointer-events: none; }
 .tool-eraser .ne-canvas { cursor: cell; }
-.tool-scroll .ne-canvas { touch-action: auto; cursor: grab; }
-.ne-hint { position: absolute; left: 50%; top: 40px; transform: translateX(-50%); color: var(--muted); font-size: .9rem; pointer-events: none; opacity: .75; white-space: nowrap; }
 .ne-foot { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: .85rem; }
 .ne-status { color: var(--muted); min-height: 1.4em; }
 .ne-status.saved { color: var(--good); }
@@ -924,4 +930,13 @@ body:has(.bottom-bar) .toast { bottom: calc(80px + env(safe-area-inset-bottom));
 @media (min-width: 641px) and (max-width: 860px) {
   nav.sections a { padding: 8px; font-size: .92rem; }
   nav.sections a .ico { display: none; }
+}
+
+/* dolny pasek działów jest na telefonie na każdej stronie (także w teście i lekcji) – elementy przyklejone do dołu stoją nad nim */
+@media (max-width: 640px) {
+  :root { --bar-h: calc(61px + env(safe-area-inset-bottom)); }
+  body:has(.bottom-bar) .learn-feedback { bottom: var(--bar-h); }
+  body:has(.bottom-bar) .learn-feedback-inner { padding-bottom: 14px; }
+  body:has(.bottom-bar) .learn-actions { bottom: var(--bar-h); padding-bottom: 10px; }
+  body:has(.bottom-bar) .to-top { bottom: calc(var(--bar-h) + 12px); }
 }
