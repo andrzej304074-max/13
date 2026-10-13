@@ -52,7 +52,7 @@ export interface TestState {
   finishedAt: string | null;
   score: number;
   maxScore: number;
-  /** Poprawne jednostki (pytania w jednokrotnym, pola A–D w wielokrotnym) i ich łączna liczba – podstawa procentu. */
+  /** Poprawne jednostki (pytania w jednokrotnym, punkty w wielokrotnym – maks. 2 na pytanie) i ich łączna liczba – podstawa procentu. */
   correct: number;
   total: number;
   /** Poprawne odpowiedzi na wszystkie pytania — dostępne dopiero po zakończeniu testu. */

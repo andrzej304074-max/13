@@ -9,7 +9,7 @@ import type { Bank, Origin, QuestionType, TestState } from "@/lib/types";
 
 const TYPES: { value: QuestionType; label: string; hint: string }[] = [
   { value: "single", label: "Jednokrotny wybór", hint: "1 poprawna odpowiedź · +2 / −1 pkt" },
-  { value: "multi", label: "Wielokrotny wybór", hint: "0,5 pkt za każde trafne pole · max 2 pkt" },
+  { value: "multi", label: "Wielokrotny wybór", hint: "4 trafne pola A–D – 2 pkt · 3 trafne – 1 pkt · mniej – 0" },
 ];
 const SIZES: { value: number | "endless"; label: string; hint: string }[] = [
   { value: 30, label: "30 pytań", hint: "40 minut" },

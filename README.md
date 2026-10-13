@@ -8,7 +8,7 @@ Next.js (App Router) + Postgres (Neon), gotowa do wdrożenia na Vercel.
 | Typ | Punktacja |
 |---|---|
 | Jednokrotny wybór | +2 pkt za poprawną, −1 pkt za błędną, 0 bez odpowiedzi |
-| Wielokrotny wybór | 0,5 pkt za każde z pól A–D o poprawnym stanie (zaznaczone gdy poprawne, puste gdy błędne), max 2 pkt |
+| Wielokrotny wybór | 4 pola A–D o poprawnym stanie (zaznaczone gdy poprawne, puste gdy błędne) – 2 pkt, 3 trafne pola – 1 pkt, mniej – 0 |
 
 Test: 30 pytań → 40 minut, 50 pytań → 60 minut. Trzecia opcja, **Bez limitu**, losuje pytania z całej puli danego typu
 bez limitu czasu; nie można się cofać ani przeskakiwać pytań, a do statystyk liczą się wyłącznie pytania sprawdzone
@@ -16,9 +16,10 @@ bez limitu czasu; nie można się cofać ani przeskakiwać pytań, a do statysty
 ile punktów przyznano i wyjaśnienie. Punktacja i limit czasu są liczone na serwerze.
 
 Procent w podsumowaniu i statystykach to **procent poprawnych odpowiedzi**, a nie punktów: w jednokrotnym wyborze
-poprawne pytania / wszystkie pytania, w wielokrotnym – trafne pola A–D / wszystkie pola (4 na pytanie). W testach
+poprawne pytania / wszystkie pytania, w wielokrotnym – zdobyte punkty / maks. punktów (2 na pytanie). W testach
 30/50 pytań mianownikiem są wszystkie pytania testu (bez odpowiedzi = niepoprawne), w trybie „Bez limitu” – pytania
-sprawdzone i pominięte. Punkty (+2/−1, 0,5 za pole) są pokazywane obok.
+sprawdzone i pominięte. Punkty (+2/−1; 2/1/0) są pokazywane obok.
+Dawne odpowiedzi (punktacja 0,5 pkt za pole) przelicza jednorazowo `lib/rescore.ts` (flaga `scoring_multi = v2` w `settings`).
 
 Statystyki (`/stats`) sumują wyniki **wszystkich** testów wszystkich użytkowników i pokazują dwa wykresy postępu:
 procent kolejnych testów oraz dokładność w blokach po N kolejnych sprawdzonych lub pominiętych pytań

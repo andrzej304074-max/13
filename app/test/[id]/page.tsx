@@ -5,7 +5,7 @@ import { useParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { QuestionScratch } from "@/app/components/notes/question-scratch";
 import { api, fmtPct, fmtPoints, LETTERS, rememberTest } from "@/lib/client";
-import { correctUnits, UNITS_PER_QUESTION } from "@/lib/scoring";
+import { correctUnits, multiHits, UNITS_PER_QUESTION } from "@/lib/scoring";
 import type { AnswerFeedback, PublicQuestion, TestState } from "@/lib/types";
 import { LoadingPage } from "@/app/components/loading-page";
 
@@ -180,6 +180,7 @@ export default function TestPage() {
           <div className="feedback">
             <div className={`points ${fb.points > 0 ? "pos" : fb.points < 0 ? "neg" : ""}`}>
               {fb.points > 0 ? "+" : ""}{fmtPoints(fb.points)} pkt
+              {isMulti && <>{" · "}Trafne pola: {multiHits(fb.selected, fb.correct)}/4</>}
               {" · "}Poprawna odpowiedź: {correctText(fb.correct)}
             </div>
             <p style={{ margin: "8px 0 0" }}>{fb.explanation}</p>
@@ -223,7 +224,7 @@ export default function TestPage() {
 
 function Summary({ test }: { test: TestState }) {
   const percent = test.total > 0 ? Math.round((test.correct / test.total) * 1000) / 10 : 0;
-  const unit = test.type === "multi" ? "trafne pola" : "poprawne odpowiedzi";
+  const unit = test.type === "multi" ? "punkty" : "poprawne odpowiedzi";
   const answers = new Map(test.answers.map((a) => [a.questionId, a]));
   return (
     <div className="stack">

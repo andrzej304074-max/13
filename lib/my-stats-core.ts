@@ -1,7 +1,7 @@
 /**
  * Moje statystyki wg działów, zagadnień i pojęć (strona /stats → „Działy i pojęcia”) – agregacja bez bazy danych,
  * osobno dla pytań OWE i słownikowych. Dokładność pytania jak w statystykach testów: jednokrotny 0/1,
- * wielokrotny – trafne pola / 4, pominięte 0.
+ * wielokrotny – punkty / 2 (4 trafne pola – 2 pkt, 3 – 1 pkt), pominięte 0.
  */
 import type { ItemMeta, OweRec, SlRec, Stage } from "./owe-stats";
 

@@ -12,6 +12,7 @@ import {
   type TestSize,
 } from "./scoring";
 import type { AnswerFeedback, Bank, QuestionType, TestMode, TestState } from "./types";
+import { ensureRescored } from "./rescore";
 
 export class HttpError extends Error {
   constructor(public status: number, message: string) {
@@ -76,6 +77,7 @@ async function loadTest(id: string, userId: string | null): Promise<TestRow> {
 }
 
 async function loadAnswers(id: string): Promise<AnswerRow[]> {
+  await ensureRescored();
   const { rows } = await query<AnswerRow>(
     "SELECT question_id, selected, points, skipped FROM answers WHERE test_id = $1 ORDER BY answered_at",
     [id],
@@ -204,7 +206,7 @@ export async function finishTest(userId: string, id: string): Promise<TestState>
 interface StatsTotals {
   score: number;
   maxScore: number;
-  /** Poprawne jednostki / wszystkie jednostki (pytania w jednokrotnym, pola A–D w wielokrotnym). */
+  /** Poprawne jednostki / wszystkie jednostki (pytania w jednokrotnym, punkty w wielokrotnym – maks. 2 na pytanie). */
   correct: number;
   total: number;
   percent: number;
@@ -246,6 +248,7 @@ export async function getStats(
   typeFilter: QuestionType | null = null,
   bank: Bank = "owe",
 ): Promise<Stats> {
+  await ensureRescored();
   const blockSize = (BLOCK_SIZES as readonly number[]).includes(requestedBlockSize) ? requestedBlockSize : DEFAULT_BLOCK_SIZE;
   // Domknij testy, którym minął czas (np. ktoś zamknął kartę).
   await query(
@@ -257,10 +260,10 @@ export async function getStats(
   // bez limitu – tylko sprawdzone i pominięte).
   const perTest = (u: number) => `
     SELECT t.id, t.type, t.mode, t.score, t.max_score, COALESCE(t.finished_at, t.started_at) AS at,
-      COALESCE(SUM(CASE WHEN a.skipped THEN 0 WHEN t.type = 'single' THEN (a.points = 2)::int ELSE a.points * 2 END), 0)
+      COALESCE(SUM(CASE WHEN a.skipped THEN 0 WHEN t.type = 'single' THEN (a.points = 2)::int ELSE a.points END), 0)
         AS correct,
       (CASE WHEN t.mode = 'endless' THEN COUNT(a.question_id) ELSE cardinality(t.question_ids) END)
-        * (CASE WHEN t.type = 'single' THEN 1 ELSE 4 END) AS total
+        * (CASE WHEN t.type = 'single' THEN 1 ELSE 2 END) AS total
     FROM tests t LEFT JOIN answers a ON a.test_id = t.id
     WHERE ${COUNTED} AND t.bank = $1 AND t.user_id = $${u}
     GROUP BY t.id`;
@@ -277,7 +280,7 @@ export async function getStats(
     [bank, typeFilter, userId],
   );
 
-  // Każde sprawdzone/pominięte pytanie ma dokładność 0–1 (w wielokrotnym: trafne pola / 4), kolejność wg czasu odpowiedzi.
+  // Każde sprawdzone/pominięte pytanie ma dokładność 0–1 (w wielokrotnym: punkty / 2), kolejność wg czasu odpowiedzi.
   const { rows: blockRows } = await query<{ questions: string; accuracy: number }>(
     `WITH q AS (
        SELECT CASE WHEN a.skipped THEN 0

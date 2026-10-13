@@ -98,7 +98,7 @@ export default function StatsPage() {
   const { overall, byType, history, blocks } = stats;
   const size = stats.blockSize;
   const main = filter === "all" ? overall : byType[filter];
-  const unitLabel = filter === "multi" ? "trafnych pól" : filter === "single" ? "poprawnych pytań" : "poprawnych";
+  const unitLabel = filter === "multi" ? "pkt" : filter === "single" ? "poprawnych pytań" : "poprawnych";
   return (
     <div className="stack">
       <PreviewBanner />
@@ -116,8 +116,8 @@ export default function StatsPage() {
           </button>
         ))}
       </div>
-      <p className="muted">{bank === "slownik" ? "Pytania ze słownika pojęć – statystyki liczone osobno od pytań z olimpiad. " : ""}Procent poprawnych odpowiedzi ze wszystkich testów wszystkich użytkowników – w wielokrotnym wyborze liczy się każde
-        trafne pole A–D. W testach 30/50 pytań liczą się wszystkie pytania testu, w trybie „bez limitu” tylko sprawdzone
+      <p className="muted">{bank === "slownik" ? "Pytania ze słownika pojęć – statystyki liczone osobno od pytań z olimpiad. " : ""}Procent poprawnych odpowiedzi ze wszystkich testów wszystkich użytkowników – w wielokrotnym wyborze – zdobyte punkty
+        z maks. 2 na pytanie (4 trafne pola A–D – 2 pkt, 3 trafne – 1 pkt, mniej – 0). W testach 30/50 pytań liczą się wszystkie pytania testu, w trybie „bez limitu” tylko sprawdzone
         lub pominięte.</p>
       <div className="seg" role="group" aria-label="Typ pytań">
         {FILTERS.map((f) => (
@@ -145,7 +145,8 @@ export default function StatsPage() {
             <div className="stat" key={t}>
               <div className="value">{fmtPct(byType[t].percent)}</div>
               <div className="label">
-                {TYPE_LABEL[t]} · {byType[t].correct}/{byType[t].total} {t === "multi" ? "pól" : "pytań"} ·{" "}
+                {TYPE_LABEL[t]} ·{" "}
+                {t === "single" && <>{byType[t].correct}/{byType[t].total} pytań · </>}
                 {fmtPoints(byType[t].score)}/{fmtPoints(byType[t].maxScore)} pkt · {testsLabel(byType[t].tests)}
               </div>
             </div>
@@ -200,7 +201,7 @@ export default function StatsPage() {
           <p className="muted" style={{ margin: "0 0 8px", fontSize: "0.85rem" }}>
             Każda kropka to {size} kolejnych sprawdzonych lub pominiętych pytań
             {filter === "all" ? " (wszystkie testy, oba typy)" : ` (tylko ${filter === "single" ? "jednokrotny" : "wielokrotny"} wybór)`}. W wielokrotnym
-            wyborze dokładność pytania to trafne pola / 4. Pusta kropka – blok jeszcze niepełny.
+            wyborze dokładność pytania to punkty / 2 (4 trafne pola – 100%, 3 trafne – 50%, mniej – 0%). Pusta kropka – blok jeszcze niepełny.
           </p>
           <Chart
             points={blocks.map((b) => b.percent)}

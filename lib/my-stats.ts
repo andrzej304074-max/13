@@ -3,11 +3,13 @@ import { query } from "./db";
 import { aggregate, type MyAnswer, type MyFilter, type MyStats } from "./my-stats-core";
 import type { ItemMeta } from "./owe-stats";
 import { getQuestion } from "./questions";
+import { ensureRescored } from "./rescore";
 import { SLOWNIK_QUESTIONS } from "@/data/slownik";
 import type { Bank } from "./types";
 
 /** Odpowiedzi użytkownika w testach danej bazy (kolejność wg czasu), z dokładnością 0–1. */
 export async function loadAnswers(userId: string, bank: Bank | null): Promise<MyAnswer[]> {
+  await ensureRescored();
   const { rows } = await query<{ q: string; acc: number; at: Date }>(
     `SELECT a.question_id AS q,
        CASE WHEN a.skipped THEN 0 WHEN t.type = 'single' THEN (a.points = 2)::int ELSE a.points / 2 END AS acc,

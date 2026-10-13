@@ -17,26 +17,30 @@ export function scoreSingle(selected: number[], correct: number[]): number {
   return selected[0] === correct[0] ? 2 : -1;
 }
 
-/** Wielokrotny wybór: 0,5 pkt za każde pole A–D o poprawnym stanie zaznaczenia. */
+/** Liczba pól A–D o poprawnym stanie (zaznaczone, gdy odpowiedź jest poprawna; puste, gdy błędna). */
+export function multiHits(selected: number[], correct: number[]): number {
+  let hits = 0;
+  for (let i = 0; i < OPTION_COUNT; i++) if (selected.includes(i) === correct.includes(i)) hits++;
+  return hits;
+}
+
+/** Wielokrotny wybór: 4 trafne pola – 2 pkt, 3 trafne – 1 pkt, mniej – 0. */
 export function scoreMulti(selected: number[], correct: number[]): number {
-  let points = 0;
-  for (let i = 0; i < OPTION_COUNT; i++) {
-    if (selected.includes(i) === correct.includes(i)) points += 0.5;
-  }
-  return points;
+  const hits = multiHits(selected, correct);
+  return hits === OPTION_COUNT ? 2 : hits === OPTION_COUNT - 1 ? 1 : 0;
 }
 
 /** Dozwolone liczby pytań w jednym punkcie wykresu dokładności na stronie statystyk. */
 export const BLOCK_SIZES = [10, 20, 25, 40, 50, 100, 150, 200] as const;
 export const DEFAULT_BLOCK_SIZE = 100;
 
-/** Jednostki do procentu poprawności: pytanie (jednokrotny) albo pole A–D (wielokrotny). */
-export const UNITS_PER_QUESTION: Record<QuestionType, number> = { single: 1, multi: OPTION_COUNT };
+/** Jednostki do procentu poprawności: pytanie (jednokrotny) albo punkt (wielokrotny – maks. 2 na pytanie). */
+export const UNITS_PER_QUESTION: Record<QuestionType, number> = { single: 1, multi: MAX_POINTS_PER_QUESTION };
 
-/** Liczba poprawnych jednostek w odpowiedzi: 1/0 dla jednokrotnego, trafne pola (0–4) dla wielokrotnego. */
+/** Liczba poprawnych jednostek w odpowiedzi: 1/0 dla jednokrotnego, zdobyte punkty (0–2) dla wielokrotnego. */
 export function correctUnits(type: QuestionType, points: number, skipped = false): number {
   if (skipped) return 0;
-  return type === "single" ? (points === 2 ? 1 : 0) : Math.round(points * 2);
+  return type === "single" ? (points === 2 ? 1 : 0) : Math.max(0, Math.round(points));
 }
 
 export function scoreAnswer(type: QuestionType, selected: number[], correct: number[]): number {
