@@ -211,7 +211,8 @@ Gwiazdka ☆/★ na karcie (klawisz G w trybie klasycznym). Filtry: dział, rodz
 
 ## Podręcznik (Nauka → Podręcznik, `/nauka/podrecznik`)
 
-Ręcznie pisane artykuły prostym językiem: dla każdego działu przegląd „W skrócie” i rozdziały – jeden na każdą zwykłą lekcję kursu.
+Ręcznie pisane artykuły prostym językiem: dla każdego działu przegląd „W skrócie” i rozdziały – jeden na każdą zwykłą lekcję kursu
+(komplet: 88 działów, 446 rozdziałów, ok. 112 tys. słów; spójność z kursem pilnuje `tests/podrecznik.test.ts`).
 Rozdział jest też osobnym artykułem lekcji (`/nauka/podrecznik/<dział>/<lekcja>`) i alternatywą dla „Poznaj”: przeczytany do końca
 zalicza pod-lekcję 1 (sesja `learn_sessions.mode = 'artykul'`, bez odpowiedzi – nie zmienia skuteczności; najwyżej raz na 10 min).
 Link „Czytaj artykuł zamiast Poznaj” w panelu lekcji na ścieżce i baner na początku „Poznaj”.

@@ -913,3 +913,15 @@ body:has(.bottom-bar) .toast { bottom: calc(80px + env(safe-area-inset-bottom));
   .reader-body { font-size: calc(1rem * var(--rscale)); line-height: 1.7; }
   .term-pop { left: 50% !important; }
 }
+
+/* średnie ekrany (tablet, małe laptopy): 5 działów + szybkie notatki + konto muszą zmieścić się w jednym wierszu */
+@media (min-width: 641px) and (max-width: 1180px) {
+  header.top { gap: 8px; padding-inline: 16px; }
+  nav.sections { gap: 2px; }
+  nav.sections a { padding: 8px 10px; }
+  .qn-btn .qn-lbl, .account-menu summary .email { display: none; }
+}
+@media (min-width: 641px) and (max-width: 860px) {
+  nav.sections a { padding: 8px; font-size: .92rem; }
+  nav.sections a .ico { display: none; }
+}
