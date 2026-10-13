@@ -21,7 +21,7 @@ export function StackBars({ bars, ariaLabel, onPick, picked }: {
   const h = hover !== null ? bars[hover] : null;
   return (
     <div className="stack-bars">
-      <svg className="chart" viewBox={`0 0 ${W} ${H}`} role="img" aria-label={ariaLabel} onMouseLeave={() => setHover(null)}>
+      <svg className="chart" viewBox={`0 0 ${W} ${H}`} role="img" aria-label={ariaLabel} onPointerLeave={(e) => e.pointerType === "mouse" && setHover(null)}>
         {[0, 25, 50, 75, 100].map((v) => (
           <g key={v}>
             <line className="grid" x1={L} x2={W - R} y1={y(v)} y2={y(v)} />
@@ -34,7 +34,7 @@ export function StackBars({ bars, ariaLabel, onPick, picked }: {
           const x = L + i * bw + bw * 0.15, w = bw * 0.7;
           const dim = picked && !picked(i);
           return (
-            <g key={i} opacity={dim ? 0.35 : 1} onMouseEnter={() => setHover(i)} onClick={() => onPick?.(i)} style={{ cursor: onPick ? "pointer" : undefined }}>
+            <g key={i} opacity={dim ? 0.35 : 1} onPointerEnter={() => setHover(i)} onPointerDown={() => setHover(i)} onClick={() => onPick?.(i)} style={{ cursor: onPick ? "pointer" : undefined }}>
               {/* dolny segment (seria a) i górny (seria b) z 2 px przerwą */}
               <rect className="s-a" x={x} y={y(pa)} width={w} height={Math.max(0, y(0) - y(pa))} rx={2} />
               <rect className="s-b" x={x} y={y(100)} width={w} height={Math.max(0, y(pa) - y(100) - 2)} rx={2} />

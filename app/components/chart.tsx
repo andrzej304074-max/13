@@ -27,7 +27,7 @@ export function Chart({
   const step = points.length > 1 ? (W - L - R) / (points.length - 1) : W;
 
   return (
-    <svg className="chart" viewBox={`0 0 ${W} ${H}`} role="img" aria-label={ariaLabel} onMouseLeave={() => setHover(null)}>
+    <svg className="chart" viewBox={`0 0 ${W} ${H}`} role="img" aria-label={ariaLabel} onPointerLeave={(e) => e.pointerType === "mouse" && setHover(null)}>
       {ticks.map((v) => (
         <g key={v}>
           <line className="grid" x1={L} x2={W - R} y1={y(v)} y2={y(v)} strokeWidth={v === 0 ? 1.5 : 1} />
@@ -43,7 +43,7 @@ export function Chart({
             cy={y(p)}
             r={hover === i ? 5 : 4}
           />
-          <rect x={x(i) - step / 2} y={T} width={step} height={H - T - B} fill="transparent" onMouseEnter={() => setHover(i)} />
+          <rect x={x(i) - step / 2} y={T} width={step} height={H - T - B} fill="transparent" onPointerEnter={() => setHover(i)} onPointerDown={() => setHover(i)} />
         </g>
       ))}
       {hover !== null && (
