@@ -232,6 +232,7 @@ function Face({ c, back, topicName, m }: { c: Card; back: boolean; topicName: Re
       <p className="fc-def">{c.d}</p>
       {c.w && <pre className="formula">{c.w}</pre>}
       <LevelNote m={m} />
+      <Link className="fc-map" href={`/pojecia/mapa?q=${c.id}`} onClick={(e) => e.stopPropagation()}>🧠 Powiązane pojęcia</Link>
     </div>
   ) : (
     <div className="fc-face">

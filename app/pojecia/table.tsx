@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
 import { ToTop } from "@/app/components/to-top";
 import { useData } from "@/lib/data-client";
@@ -114,6 +115,7 @@ export function ConceptTable({ rows, topics, kinds }: { rows: Row[]; topics: Top
                 <span className="tag">{KIND_ONE[r.kind] ?? r.kind}</span>
                 {!topic && <span className="tag">{topicName[r.topic]}</span>}
                 {r.n > 0 && <span className="tag owe" title="Liczba pytań OWE o to hasło">OWE: {r.n}×</span>}
+                <Link className="tag tag-link" href={`/pojecia/mapa?q=${r.id}`} title="Pojęcia powiązane – mapa myśli">🧠 mapa</Link>
               </div>
             </div>
             <div className="concept-def" role="cell">

@@ -1011,3 +1011,57 @@ body:has(.bottom-bar) .toast { bottom: calc(80px + env(safe-area-inset-bottom));
 @media (max-width: 520px) {
   .add-deck-pop, .add-deck-pop.up, .add-deck-pop.left { position: fixed; left: 16px; right: 16px; top: auto; bottom: calc(var(--bar-h, 0px) + 12px); width: auto; z-index: 60; }
 }
+
+/* ---------- mapa myśli pojęć ---------- */
+.mm-search { display: flex; gap: 8px; align-items: stretch; }
+.mm-combo { position: relative; flex: 1; min-width: 0; }
+.mm-sug { position: absolute; z-index: 20; left: 0; right: 0; top: calc(100% + 4px); list-style: none; margin: 0; padding: 6px; display: grid; gap: 2px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); max-height: 60vh; overflow: auto; }
+.mm-sug button { width: 100%; display: grid; gap: 1px; text-align: left; font: inherit; color: var(--text); background: transparent; border: 0; border-radius: 8px; padding: 8px 10px; cursor: pointer; }
+.mm-sug button:hover, .mm-sug button:focus-visible { background: var(--accent-soft); }
+.mm-sug .muted { font-size: .8rem; }
+.mm-list ul { list-style: none; margin: 0 0 10px; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 4px; max-height: 340px; overflow: auto; }
+.mm-list button { width: 100%; display: grid; gap: 1px; text-align: left; font: inherit; color: var(--text); background: transparent; border: 1px solid transparent; border-radius: 8px; padding: 6px 8px; cursor: pointer; }
+.mm-list button:hover { background: var(--surface-2); }
+.mm-list button.on { border-color: var(--accent); background: var(--accent-soft); }
+.mm-list .muted { font-size: .78rem; }
+.mm-toolbar { gap: 10px; }
+.mm-path { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.mind-map { border: 1px solid var(--border); border-radius: var(--radius); background:
+  radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--accent) 7%, var(--surface)) 0, var(--surface) 60%); overflow: hidden; }
+.mind-map svg { display: block; width: 100%; height: auto; font-family: inherit; }
+.mm-edge { animation: mm-fade .5s var(--ease) both; }
+.mm-node { transition: transform .5s cubic-bezier(.2,.8,.2,1); cursor: pointer; animation: mm-fade .35s var(--ease) both; }
+.mm-node rect { fill: var(--surface); stroke: var(--c); stroke-width: 2; transition: fill var(--t) var(--ease); }
+.mm-node text { fill: var(--text); font-weight: 600; pointer-events: none; }
+.mm-node.l0 { cursor: default; }
+.mm-node.l0 rect { fill: var(--c); stroke-width: 0; filter: drop-shadow(0 6px 14px rgb(0 0 0 / .18)); }
+.mm-node.l0 text { fill: #fff; font-weight: 700; }
+.mm-node.l2 rect { stroke-dasharray: 4 3; stroke-width: 1.5; }
+.mm-node.l2 text { font-weight: 500; fill: var(--muted); }
+.mm-node:not(.l0):hover rect, .mm-node:not(.l0):focus-visible rect { fill: color-mix(in srgb, var(--c) 16%, var(--surface)); }
+.mm-node:focus { outline: none; }
+.mm-node:focus-visible rect { stroke-width: 3.5; }
+@keyframes mm-fade { from { opacity: 0; } to { opacity: 1; } }
+.mm-bottom { display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; }
+.mm-card { display: grid; gap: 10px; }
+.mm-card h2 { margin: 0; }
+.mm-card .concept-def { margin: 0; }
+.mm-links h2 { margin: 0 0 8px; font-size: 1.1rem; }
+.mm-links ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; max-height: 480px; overflow: auto; }
+.mm-links button { width: 100%; display: flex; gap: 10px; align-items: center; text-align: left; font: inherit; color: var(--text); background: transparent; border: 0; border-radius: 8px; padding: 8px; cursor: pointer; }
+.mm-links button:hover { background: var(--surface-2); }
+.mm-links i { flex: none; width: 10px; height: 10px; border-radius: 50%; }
+.mm-link-main { flex: 1; min-width: 0; display: grid; gap: 1px; }
+.mm-link-main .muted { font-size: .8rem; }
+.mm-w { flex: none; font-variant-numeric: tabular-nums; color: var(--muted); font-size: .85rem; }
+@media (max-width: 760px) { .mm-bottom { grid-template-columns: 1fr; } }
+@media (max-width: 520px) {
+  .mm-search { flex-direction: column; }
+  .mm-list ul { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { .mm-node, .mm-edge { transition: none; animation: none; } }
+@media (prefers-color-scheme: dark) { .mm-node.l0 text { fill: #0b0b0f; } }
+.tag-link { text-decoration: none; color: var(--accent); }
+.tag-link:hover { border-color: var(--accent); }
+.fc-map { font-size: .85rem; color: var(--accent); }

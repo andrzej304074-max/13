@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import { brotliCompressSync, gzipSync, constants as zc } from "node:zlib";
 import { COURSE } from "@/data/nauka";
 import { oweCountByItem, oweStatsData } from "./owe-stats-data";
+import MAPA_JSON from "@/data/nauka/mapa.json";
 
 /** Hasło kursu w tabeli pojęć i fiszkach. */
 export interface Haslo { id: string; t: string; d: string; w: string | null; kind: string; topic: string; n: number }
@@ -19,9 +20,23 @@ function hasla() {
   }
   return {
     rows,
-    topics: COURSE.topics.map(({ id, title, emoji }) => ({ id, title, emoji })),
+    topics: COURSE.topics.map(({ id, title, emoji, color }) => ({ id, title, emoji, color })),
     kinds: COURSE.kinds.filter((k) => k.id !== "zrozumienie"),
   };
+}
+
+/**
+ * Mapa myśli: powiązania haseł (data/nauka/mapa.json z tools/nauka/build_mapa.py) i rozdział Podręcznika
+ * dla hasła (pierwsza lekcja, w której jest hasłem głównym: [dział, lekcja]).
+ */
+function mapa() {
+  const l: Record<string, [string, string]> = {};
+  for (const u of COURSE.units) for (const lid of u.lessons) {
+    const les = COURSE.lessons[lid];
+    if (les.type === "zrozum") continue;
+    for (const id of les.items) if (!l[id]) l[id] = [u.id, lid];
+  }
+  return { n: (MAPA_JSON as unknown as { n: Record<string, [string, number, number, number][]> }).n, l };
 }
 
 /** Zserializowane dane (raz na proces) z ETagiem – dane zmieniają się tylko przy nowym buildzie. */
@@ -44,6 +59,7 @@ function cached(make: () => unknown) {
 }
 export const HASLA = cached(hasla);
 export const OWE_DATA = cached(oweStatsData);
+export const MAPA = cached(mapa);
 /** Nazwy tematów, działów i lekcji do filtrów statystyk nauki. */
 export const NAUKA_META = cached(() => ({
   topics: COURSE.topics.map(({ id, title, emoji }) => ({ id, title, emoji })),

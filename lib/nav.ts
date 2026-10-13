@@ -18,6 +18,7 @@ export const NAV: NavSection[] = [
     { href: "/pojecia", label: "Tabela" },
     { href: "/pojecia/statystyki", label: "Statystyki OWE" },
     { href: "/pojecia/pokrycie", label: "Pokrycie olimpiad" },
+    { href: "/pojecia/mapa", label: "Mapa myśli" },
   ] },
   { id: "notatki", icon: "🗒️", label: "Notatki", tabs: [
     { href: "/notatki", label: "Notatki" },
