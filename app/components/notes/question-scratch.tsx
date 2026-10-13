@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { api, withUser, useViewedUser } from "@/lib/client";
 import type { NoteRow } from "@/lib/notes";
+import { useAccess } from "@/app/components/access";
 
 /** Edytor ładowany dopiero po otwarciu brudnopisu – testy i lekcje nie pobierają jego kodu na zapas. */
 const NoteEditor = dynamic(() => import("./editor").then((m) => m.NoteEditor), {
@@ -18,7 +19,7 @@ const OPEN_KEY = "owe:scratchOpen";
  * Brudnopis pod przyciskiem „Sprawdź”: jeden na pytanie testu (`owe:<id>`, `slownik:<id>`) albo na pod-lekcję
  * (`lekcja:<id>:<sub>`). Zapisuje się sam i trafia do Notatki → Brudnopisy. Otwarty zostaje otwarty przy kolejnych pytaniach.
  */
-export function QuestionScratch({ refKey }: { refKey: string }) {
+function QuestionScratchInner({ refKey }: { refKey: string }) {
   const [open, setOpen] = useState(false);
   const [loaded, setLoaded] = useState<{ ref: string; note: NoteRow | null } | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -60,3 +61,10 @@ export function QuestionScratch({ refKey }: { refKey: string }) {
     </section>
   );
 }
+
+/** Ukryte, gdy administrator wyłączył sekcję „/notatki/brudnopisy”. */
+export function QuestionScratch(props: { refKey: string }) {
+  const { blocked } = useAccess();
+  return blocked("/notatki/brudnopisy") ? null : <QuestionScratchInner {...props} />;
+}
+

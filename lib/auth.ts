@@ -1,4 +1,4 @@
-import { cookies } from "next/headers";
+import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { query, withTx } from "./db";
 import { HttpError } from "./tests";
@@ -24,6 +24,8 @@ import {
   verifyPassword,
 } from "./auth-core";
 import { cleanup } from "./db-usage";
+import { isBlocked, isBlockMode, keyLabel, pathKey, sanitizeKeys, type BlockMode } from "./access-core";
+import { accessFor } from "./access";
 
 export const SESSION_COOKIE = "owe_session";
 
@@ -37,6 +39,9 @@ export interface User {
   pending: "code" | "approval" | null;
   /** Prośba o rolę admina czeka na zatwierdzenie. */
   adminPending: boolean;
+  /** Blokady sekcji ustawione dla konta (bez blokad globalnych) i wygląd menu (null – jak dla wszystkich). */
+  blocked: string[];
+  blockMode: BlockMode | null;
 }
 
 interface UserRow {
@@ -50,12 +55,15 @@ interface UserRow {
   admin_requested_at: Date | null;
   failed_codes: number;
   locked_until: Date | null;
+  blocked: string[] | null;
+  block_mode: string | null;
 }
 
 const toUser = (r: UserRow): User => ({
   id: r.id, email: r.email, isAdmin: r.is_admin, isOwner: r.is_owner, active: r.activated_at !== null,
   pending: r.activated_at ? null : r.code_ok_at ? "approval" : "code",
   adminPending: !r.is_admin && r.admin_requested_at !== null,
+  blocked: r.blocked ?? [], blockMode: isBlockMode(r.block_mode) ? r.block_mode : null,
 });
 
 const UUID = /^[0-9a-f-]{36}$/i;
@@ -91,13 +99,37 @@ export async function currentUser(): Promise<User | null> {
   return rows[0] ? toUser(rows[0]) : null;
 }
 
-/** Do tras API: 401 bez logowania, 403 bez aktywacji lub roli admina. */
+/** Sekcja bieżącego żądania (nagłówki x-path / x-search ustawia proxy.ts) zablokowana dla konta? Zwraca klucz albo null. */
+async function blockedKey(u: User): Promise<string | null> {
+  let path = "", search = "";
+  try {
+    const h = await headers();
+    path = h.get("x-path") ?? "";
+    search = h.get("x-search") ?? "";
+  } catch {
+    return null;
+  }
+  const key = pathKey(path, search);
+  if (!key) return null;
+  const { blocks } = await accessFor(u);
+  return isBlocked(key, blocks) ? key : null;
+}
+
+/** Do tras API: 401 bez logowania, 403 bez aktywacji, roli admina albo gdy sekcja jest zablokowana. */
 export async function requireUser(opts: { admin?: boolean; active?: boolean } = {}): Promise<User> {
   const u = await currentUser();
   if (!u) throw new HttpError(401, "Zaloguj się.");
   if (opts.active !== false && !u.active) throw new HttpError(403, "Konto nie jest aktywne – wpisz kod aktywacji.");
   if (opts.admin && !u.isAdmin) throw new HttpError(403, "Brak uprawnień administratora.");
+  const key = await blockedKey(u);
+  if (key) throw new HttpError(403, `Sekcja „${keyLabel(key)}” jest wyłączona przez administratora.`);
   return u;
+}
+
+/** Sprawdzenie dostępu do konkretnej sekcji (np. test ze słownika w trasie wspólnej dla obu baz). */
+export async function requireSection(u: User, key: string) {
+  const { blocks } = await accessFor(u);
+  if (isBlocked(key, blocks)) throw new HttpError(403, `Sekcja „${keyLabel(key)}” jest wyłączona przez administratora.`);
 }
 
 /** Do stron (server components): przekierowania zamiast błędów. */
@@ -106,7 +138,19 @@ export async function requirePageUser(opts: { admin?: boolean } = {}): Promise<U
   if (!u) redirect("/konto/logowanie");
   if (!u.active) redirect("/konto/aktywacja");
   if (opts.admin && !u.isAdmin) redirect("/");
+  const key = await blockedKey(u);
+  if (key) redirect(`/zablokowane?sekcja=${encodeURIComponent(key)}`);
   return u;
+}
+
+/** Blokady sekcji konta ustawiane przez admina. */
+export async function setUserAccess(id: string, body: Record<string, unknown>) {
+  if (!UUID.test(id) || !(await loadRow("id = $1", id))) throw new HttpError(404, "Nie ma takiego użytkownika.");
+  const blocked = sanitizeKeys(body.blocked);
+  const mode = body.mode === null || body.mode === "" ? null : isBlockMode(body.mode) ? body.mode : undefined;
+  if (mode === undefined) throw new HttpError(400, "Nieprawidłowy tryb blokady.");
+  await query("UPDATE users SET blocked = $2, block_mode = $3 WHERE id = $1", [id, blocked, mode]);
+  return { blocked, mode };
 }
 
 /** Czyje dane czytać: własne albo – tylko dla admina – użytkownika z parametru `user`. */
@@ -301,16 +345,19 @@ export interface AdminUserRow {
   learnSessions: number;
   xp: number;
   lastActivity: string | null;
+  blocked: string[];
+  blockMode: BlockMode | null;
 }
 
 export async function listUsers(): Promise<AdminUserRow[]> {
   const { rows } = await query<{
     id: string; email: string; is_admin: boolean; is_owner: boolean; activated_at: Date | null; created_at: Date;
-    code_ok_at: Date | null; admin_requested_at: Date | null;
+    code_ok_at: Date | null; admin_requested_at: Date | null; blocked: string[] | null; block_mode: string | null;
     last_login_at: Date | null; tests: string; score: number | null; max_score: number | null; ls: string; xp: string | null;
     last_t: Date | null; last_l: Date | null;
   }>(
     `SELECT u.id, u.email, u.is_admin, u.is_owner, u.activated_at, u.code_ok_at, u.admin_requested_at, u.created_at, u.last_login_at,
+       u.blocked, u.block_mode,
        t.tests, t.score, t.max_score, t.last_t, l.ls, l.xp, l.last_l
      FROM users u
      LEFT JOIN LATERAL (SELECT COUNT(*) AS tests, SUM(score) AS score, SUM(max_score) AS max_score, MAX(finished_at) AS last_t
@@ -327,6 +374,7 @@ export async function listUsers(): Promise<AdminUserRow[]> {
       createdAt: r.created_at.toISOString(), lastLoginAt: r.last_login_at?.toISOString() ?? null,
       tests: Number(r.tests), testPercent: r.max_score ? Math.round((Number(r.score) / Number(r.max_score)) * 1000) / 10 : null,
       learnSessions: Number(r.ls), xp: Number(r.xp ?? 0), lastActivity: last?.toISOString() ?? null,
+      blocked: r.blocked ?? [], blockMode: isBlockMode(r.block_mode) ? r.block_mode : null,
     };
   });
 }

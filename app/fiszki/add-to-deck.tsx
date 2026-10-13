@@ -4,9 +4,10 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { api } from "@/lib/client";
 import type { DeckSummary } from "@/lib/decks";
+import { useAccess } from "@/app/components/access";
 
 /** „＋ Do talii” na fiszce: lista talii z zaznaczeniem (dodaj / usuń kartę) i szybkie utworzenie nowej talii z tą kartą. */
-export function AddToDeck({ item, title }: { item: string; title: string }) {
+function AddToDeckInner({ item, title }: { item: string; title: string }) {
   const [open, setOpen] = useState(false);
   const [decks, setDecks] = useState<DeckSummary[] | null>(null);
   const [name, setName] = useState("");
@@ -81,3 +82,10 @@ export function AddToDeck({ item, title }: { item: string; title: string }) {
     </div>
   );
 }
+
+/** Ukryte, gdy administrator wyłączył sekcję „/fiszki/talie”. */
+export function AddToDeck(props: { item: string; title: string }) {
+  const { blocked } = useAccess();
+  return blocked("/fiszki/talie") ? null : <AddToDeckInner {...props} />;
+}
+

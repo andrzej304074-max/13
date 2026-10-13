@@ -14,6 +14,7 @@ import type { FinishResult } from "@/lib/nauka";
 import { scoreAnswer } from "@/lib/scoring";
 import { CaseContext, CheckButton, useEnter, useNumberKeys, type Feedback, type OnResult } from "./ui";
 import { Buckets, Chain, ExplainCard, GraphChoice, NumberTask, Sources } from "./zrozum-views";
+import { useAccess } from "@/app/components/access";
 
 const KIND_LABEL: Record<string, string> = {
   pojecie: "Pojęcie", wzor: "Wzór", osoba: "Osoba", instytucja: "Instytucja", data: "Data", przepis: "Przepis",
@@ -27,6 +28,7 @@ function answerText(item: CourseItem) {
 }
 
 export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: string | null }) {
+  const bookOff = useAccess().blocked("/nauka/podrecznik");
   const { lesson, sub, topic } = payload;
   const [session, setSession] = useState<{ id: string; level: number } | null>(null);
   const [startError, setStartError] = useState<string | null>(null);
@@ -175,7 +177,7 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
           <Sources sources={payload.zrozum.sources} />
         </details>
       )}
-      {sub === 1 && payload.article && pos === 0 && !payload.review && (
+      {sub === 1 && payload.article && pos === 0 && !payload.review && !bookOff && (
         <Link href={`/nauka/podrecznik/${lesson.unit}/${lesson.id}`} className="article-link" data-testid="article-banner">
           <span aria-hidden>📖</span>
           <span><b>Wolisz poczytać? Artykuł tej lekcji zalicza „Poznaj”</b><small>{payload.article}</small></span>

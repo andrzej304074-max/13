@@ -179,6 +179,9 @@ CREATE TABLE IF NOT EXISTS article_reads (
   at      timestamptz NOT NULL DEFAULT now(),
   PRIMARY KEY (user_id, ref)
 );
+-- Blokady sekcji ustawiane przez admina dla konta (klucze z lib/access-core.ts) i wygląd zablokowanych pozycji.
+ALTER TABLE users ADD COLUMN IF NOT EXISTS blocked text[] NOT NULL DEFAULT '{}';
+ALTER TABLE users ADD COLUMN IF NOT EXISTS block_mode text;
 -- Własne talie fiszek: kolejność kart ustala użytkownik (przeciąganie).
 CREATE TABLE IF NOT EXISTS decks (
   id         uuid PRIMARY KEY DEFAULT gen_random_uuid(),

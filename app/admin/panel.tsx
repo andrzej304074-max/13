@@ -1,10 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { api, fmtPct } from "@/lib/client";
 import type { AdminUserRow } from "@/lib/auth";
 import { SkeletonRows } from "@/app/components/loading-page";
+import { GlobalAccess, UserAccess } from "./access-editor";
+import type { AccessSettings, BlockMode } from "@/lib/access-core";
 
 type CodeInfo = { code: string | null; updatedAt: string | null };
 type AdminCode = { code: string; createdAt: string; expiresAt: string; createdBy: string | null };
@@ -27,6 +29,11 @@ export function AdminPanel({ meId }: { meId: string }) {
   const [code, setCode] = useState<CodeInfo | null>(null);
   const [adminCodes, setAdminCodes] = useState<AdminCode[] | null>(null);
   const [db, setDb] = useState<DbUsage | null>(null);
+  const [access, setAccess] = useState<AccessSettings | null>(null);
+  const [accessOpen, setAccessOpen] = useState<string | null>(null);
+  const accessSaved = (id: string, blocked: string[], blockMode: BlockMode | null) =>
+    setUsers((all) => all && all.map((u) => (u.id === id ? { ...u, blocked, blockMode } : u)));
+  const accessProps = { global: access, openId: accessOpen, setOpenId: setAccessOpen, onAccess: accessSaved };
   const [cleaned, setCleaned] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -172,23 +179,26 @@ export function AdminPanel({ meId }: { meId: string }) {
           </div>
 
           <h2>Administratorzy <span className="muted">({admins.length})</span></h2>
-          <UserTable rows={admins} meId={meId} testid="admins"
+          <UserTable rows={admins} meId={meId} testid="admins" {...accessProps}
             extra={(u) => !u.isOwner && u.id !== meId && (
               <button className="btn small secondary" onClick={() => act(u, "odbierz-admina", `Odebrać rolę administratora ${u.email}?`)}>Odbierz admina</button>
             )}
             onDelete={remove} />
 
           <h2>Użytkownicy <span className="muted">({regular.length})</span></h2>
-          <UserTable rows={regular} meId={meId} testid="users" onDelete={remove} />
+          <UserTable rows={regular} meId={meId} testid="users" onDelete={remove} {...accessProps} />
 
           {noCode.length > 0 && (
             <>
               <h2>Bez kodu aktywacji <span className="muted">({noCode.length})</span></h2>
-              <UserTable rows={noCode} meId={meId} testid="nocode" onDelete={remove} />
+              <UserTable rows={noCode} meId={meId} testid="nocode" onDelete={remove} {...accessProps} />
             </>
           )}
         </>
       )}
+
+      <h2>Dostęp do sekcji</h2>
+      <GlobalAccess onChange={setAccess} />
 
       <h2>Baza danych</h2>
       <div className="card stack" data-testid="db-usage">
@@ -222,12 +232,16 @@ export function AdminPanel({ meId }: { meId: string }) {
   );
 }
 
-function UserTable({ rows, meId, testid, extra, onDelete }: {
+function UserTable({ rows, meId, testid, extra, onDelete, global, openId, setOpenId, onAccess }: {
   rows: AdminUserRow[];
   meId: string;
   testid: string;
   extra?: (u: AdminUserRow) => React.ReactNode;
   onDelete: (u: AdminUserRow) => void;
+  global: AccessSettings | null;
+  openId: string | null;
+  setOpenId: (id: string | null) => void;
+  onAccess: (id: string, blocked: string[], mode: BlockMode | null) => void;
 }) {
   if (rows.length === 0) return <div className="card"><p className="muted" style={{ margin: 0 }}>Brak.</p></div>;
   return (
@@ -238,7 +252,8 @@ function UserTable({ rows, meId, testid, extra, onDelete }: {
         </thead>
         <tbody>
           {rows.map((u) => (
-            <tr key={u.id} data-testid="user-row">
+            <Fragment key={u.id}>
+            <tr data-testid="user-row">
               <td className="u-main">
                 {u.email}
                 {u.isOwner && <span className="tag">właściciel</span>}
@@ -260,12 +275,22 @@ function UserTable({ rows, meId, testid, extra, onDelete }: {
                 </span>
               </td>
               <td className="actions">
+                <button className={`btn small secondary${u.blocked.length ? " has-blocks" : ""}`} aria-expanded={openId === u.id}
+                  onClick={() => setOpenId(openId === u.id ? null : u.id)} data-testid="access-btn">
+                  🔒 Dostęp{u.blocked.length ? ` (${u.blocked.length})` : ""}
+                </button>
                 {extra?.(u)}
                 {!u.isOwner && u.id !== meId && (
                   <button className="btn small danger" onClick={() => onDelete(u)}>Usuń</button>
                 )}
               </td>
             </tr>
+            {openId === u.id && (
+              <tr className="access-row"><td colSpan={6}>
+                <UserAccess user={u} global={global} onSaved={(b, m) => onAccess(u.id, b, m)} />
+              </td></tr>
+            )}
+            </Fragment>
           ))}
         </tbody>
       </table>

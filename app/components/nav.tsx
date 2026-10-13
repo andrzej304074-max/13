@@ -4,19 +4,25 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import { loadData } from "@/lib/data-client";
-import { activeTab, isFocusPage, NAV } from "@/lib/nav";
+import { navView } from "@/lib/access-core";
+import { activeTab, isFocusPage } from "@/lib/nav";
+import { useAccess } from "./access";
 
 /** Działy w nagłówku (komputer) i w dolnym pasku (telefon). Link prowadzi do ostatnio odwiedzonej podzakładki działu. */
 export function SectionNav({ variant }: { variant: "top" | "bottom" }) {
   const path = usePathname();
   const cur = activeTab(path);
+  const { blocks, mode } = useAccess();
+  const view = navView(blocks, mode);
   return (
     <nav className={variant === "top" ? "sections desktop-only" : "bottom-bar mobile-only"} aria-label="Działy">
-      {NAV.map((s) => {
+      {view.map((s) => {
         const on = cur?.section.id === s.id;
+        const lock = s.state === "lock";
         return (
-          <Link key={s.id} href={s.tabs[0].href} className={on ? "active" : ""} aria-current={on ? "page" : undefined}>
-            <span className="ico" aria-hidden>{s.icon}</span>
+          <Link key={s.id} href={s.href} className={`${on ? "active" : ""}${lock ? " locked" : ""}`} aria-current={on ? "page" : undefined}
+            title={lock ? "Sekcja wyłączona przez administratora" : undefined}>
+            <span className="ico" aria-hidden>{lock ? "🔒" : s.icon}</span>
             <span>{s.label}</span>
           </Link>
         );
@@ -45,13 +51,18 @@ export function SubTabs() {
     const t = setTimeout(run, 1500);
     return () => clearTimeout(t);
   }, [section]);
+  const { blocks, mode } = useAccess();
   if (!cur || isFocusPage(path)) return null;
+  const sec = navView(blocks, mode).find((s) => s.id === cur.section.id);
+  if (!sec || sec.tabs.length < 2) return null;
   return (
     <div className="subtabs" role="tablist" aria-label={cur.section.label}>
-      {cur.section.tabs.map((t) => {
+      {sec.tabs.map((t) => {
         const on = t.href === cur.tab.href;
+        const lock = t.state === "lock";
         return (
-          <Link key={t.href} href={t.href} role="tab" aria-selected={on} className={on ? "active" : ""}>{t.label}</Link>
+          <Link key={t.href} href={t.href} role="tab" aria-selected={on} className={`${on ? "active" : ""}${lock ? " locked" : ""}`}
+            title={lock ? "Sekcja wyłączona przez administratora" : undefined}>{lock ? "🔒 " : ""}{t.label}</Link>
         );
       })}
     </div>

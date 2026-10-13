@@ -1,5 +1,5 @@
 import { handle, readJson } from "@/lib/api";
-import { requireUser } from "@/lib/auth";
+import { requireSection, requireUser } from "@/lib/auth";
 import { ALLOWED_COUNTS, ENDLESS, type TestSize } from "@/lib/scoring";
 import { createTest, HttpError } from "@/lib/tests";
 import type { Bank, Origin } from "@/lib/types";
@@ -19,6 +19,7 @@ export async function POST(req: Request) {
     if (section !== null && !(Number.isInteger(section) && (section as number) > 0)) {
       throw new HttpError(400, "Nieprawidłowy dział.");
     }
+    await requireSection(me, bank === "slownik" ? "/slownik" : "/");
     const filter = bank === "slownik" ? { origin: origin as Origin | null, section: section as number | null } : {};
     return createTest(me.id, type, count as TestSize | typeof ENDLESS, bank as Bank, filter);
   }, 201);

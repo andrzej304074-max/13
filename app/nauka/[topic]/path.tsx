@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { api } from "@/lib/client";
+import { useAccess } from "@/app/components/access";
 import type { Progress } from "@/lib/nauka";
 import { MAX_LEVEL, subsFor, type CourseTopic, type ItemKind } from "@/lib/nauka-types";
 
@@ -22,6 +23,7 @@ const KIND_ICON: Record<string, string> = {
 const OFFSETS = [0, 40, 70, 40, 0, -40, -70, -40];
 
 export function TopicPath({ topic, units, kinds }: { topic: CourseTopic; units: UnitView[]; kinds: { id: ItemKind; title: string }[] }) {
+  const bookOff = useAccess().blocked("/nauka/podrecznik");
   const [progress, setProgress] = useState<Progress | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [kind, setKind] = useState<ItemKind | "all">("all");
@@ -126,7 +128,7 @@ export function TopicPath({ topic, units, kinds }: { topic: CourseTopic; units: 
                         {l.extra?.length ? ` · nowe z pytań: ${l.extra.join(" · ")}` : ""}
                         {l.questions ? ` · ${l.questions} pytań do sprawdzianu` : ""}
                       </p>
-                      {l.article && (
+                      {l.article && !bookOff && (
                         <Link href={`/nauka/podrecznik/${u.id}/${l.id}`} className="article-link" data-testid="article-link">
                           <span aria-hidden>📖</span>
                           <span><b>Czytaj artykuł zamiast „Poznaj”</b><small>{l.article}</small></span>
