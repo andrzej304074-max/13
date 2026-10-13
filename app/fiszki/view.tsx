@@ -13,6 +13,9 @@ import Link from "next/link";
 import type { Deck } from "@/lib/decks";
 import { AddToDeck } from "./add-to-deck";
 import { cardsLabel } from "@/lib/decks-core";
+import { SpeakButton } from "@/app/components/speech/speak";
+import { stopGroup, useSpeech } from "@/lib/speech";
+import { speechItem } from "@/lib/speech-text";
 
 export interface Card { id: string; t: string; d: string; w: string | null; kind: string; topic: string; n: number }
 type Topic = { id: string; title: string; emoji: string };
@@ -270,6 +273,7 @@ function Feed({ list, mastery, rate, preview, topicName, stars, onStar }: Props)
             <div className="reel-bar">
               <span className="muted">{i + 1} / {list.length}</span>
               <StarButton on={stars.has(c.id)} onToggle={() => onStar(c.id)} label="fiszkę do ulubionych" disabled={preview} />
+              <SpeakButton compact group={`fiszka:${c.id}`} label="Czytaj hasło i definicję" continuous={false} items={() => [cardItem(c)]} />
               {!preview && <AddToDeck item={c.id} title={c.t} />}
               {!preview && (rated[c.id] ? <span className="muted">Zapisano ✓</span> : <>
                 <button className="btn small secondary" onClick={() => { rate(c.id, false); setRated((r) => ({ ...r, [c.id]: true })); }}>✗ Nie znam</button>
@@ -309,12 +313,24 @@ function Classic({ list, mastery, rate, preview, topicName, stars, onStar }: Pro
     window.addEventListener("keydown", k);
     return () => window.removeEventListener("keydown", k);
   }, [go, c, onStar, preview]);
+  // „Czytaj po kolei”: hasło i definicja każdej karty od bieżącej; karta na ekranie podąża za czytaniem
+  const sp = useSpeech();
+  const reading = sp.group === "fiszki-seq" && sp.status !== "idle";
+  useEffect(() => {
+    if (!reading) return;
+    const id = sp.items[sp.index]?.id;
+    const k = list.findIndex((x) => x.id === id);
+    if (k >= 0) { setI(k); setBack(true); }
+  }, [reading, sp.index, sp.items, list]);
+  useEffect(() => () => stopGroup("fiszki-seq"), []);
   const m = mastery[c.id];
   return (
     <div className="stack classic" data-testid="classic">
       <div className="row"><span className="muted" data-testid="classic-pos">{i + 1} / {list.length}</span>
         <StarButton on={stars.has(c.id)} onToggle={() => onStar(c.id)} label="fiszkę do ulubionych" disabled={preview} />
-        {!preview && <AddToDeck item={c.id} title={c.t} />}<span className="spacer" />
+        {!preview && <AddToDeck item={c.id} title={c.t} />}
+        <SpeakButton group="fiszki-seq" label="Czytaj po kolei" testid="speak-seq" items={() => list.map(cardItem)} start={i} />
+        <span className="spacer" />
         {!preview && <span className="muted">w tej sesji: ✓ {done.known} · ✗ {done.unknown}</span>}</div>
       <button className={`fc fc-big fc-${lvOf(m)} ${back ? "back" : ""}`} onClick={() => setBack(!back)} aria-label={`Fiszka: ${c.t}`} data-testid="classic-card">
         <Face c={c} back={back} topicName={topicName} m={m} />
@@ -337,3 +353,6 @@ export function FlashcardsLoader() {
   if (error) return <p className="error">{error}</p>;
   return data ? <FlashcardsView cards={data.rows} topics={data.topics} kinds={data.kinds} /> : <PageSkeleton title="Fiszki" wide={false} />;
 }
+
+/** Fiszka do czytania: hasło, chwila przerwy (kropka) i definicja ze wzorem. */
+const cardItem = (c: Card) => speechItem(c.id, c.t, c.t, c.d, c.w ? `Wzór: ${c.w}` : null);

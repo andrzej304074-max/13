@@ -12,6 +12,8 @@ import type { Deck } from "@/lib/decks";
 import { cardsLabel } from "@/lib/decks-core";
 import { normalize } from "@/lib/nauka-logic";
 import { DeckBoard } from "../deck-board";
+import { SpeakButton } from "@/app/components/speech/speak";
+import { speechItem } from "@/lib/speech-text";
 
 type Topic = { id: string; title: string; emoji: string };
 type Kind = { id: string; title: string };
@@ -150,6 +152,8 @@ export function DeckEditor({ id }: { id: string }) {
       <div className="row">
         <span className="muted" data-testid="deck-count">{cardsLabel(deck.items.length)}</span>
         <span className="spacer" />
+        {deck.items.length > 0 && <SpeakButton group={`talia:${id}`} label="Czytaj talię" testid="speak-deck"
+          items={() => deck.items.map((x) => byId.get(x)).filter((r): r is Haslo => !!r).map((r) => speechItem(r.id, r.t, r.t, r.d))} />}
         <Link className="btn" href={withUser(`/fiszki?talia=${id}`)} aria-disabled={!deck.items.length}
           style={deck.items.length ? undefined : { pointerEvents: "none", opacity: 0.5 }} data-testid="deck-learn">▶ Ucz się tej talii</Link>
       </div>

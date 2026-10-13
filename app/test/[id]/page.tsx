@@ -8,6 +8,9 @@ import { api, fmtPct, fmtPoints, LETTERS, rememberTest } from "@/lib/client";
 import { correctUnits, multiHits, UNITS_PER_QUESTION } from "@/lib/scoring";
 import type { AnswerFeedback, PublicQuestion, TestState } from "@/lib/types";
 import { LoadingPage } from "@/app/components/loading-page";
+import { SpeakButton } from "@/app/components/speech/speak";
+import { speechItem } from "@/lib/speech-text";
+import { stopGroup } from "@/lib/speech";
 
 type AnswerResponse = AnswerFeedback & { totalScore: number; nextQuestion?: PublicQuestion | null };
 
@@ -24,6 +27,8 @@ export default function TestPage() {
   const [test, setTest] = useState<TestState | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [index, setIndex] = useState(0);
+  // następne pytanie – czytanie poprzedniego milknie
+  useEffect(() => () => stopGroup("pytanie:"), [index]);
   const [selected, setSelected] = useState<number[]>([]);
   const [busy, setBusy] = useState(false);
   const [now, setNow] = useState(() => Date.now());
@@ -161,7 +166,13 @@ export default function TestPage() {
           {isMulti ? "Wielokrotny wybór — zaznacz wszystkie poprawne" : "Jednokrotny wybór — zaznacz jedną odpowiedź"}
           {q.edition && ` · ${q.edition}`}
         </p>
-        <p className="question">{q.question}</p>
+        <div className="q-head">
+          <p className="question">{q.question}</p>
+          <SpeakButton compact label="Czytaj pytanie" group={`pytanie:${q.id}`} continuous={false} testid="speak-question"
+            items={() => [speechItem(`q-${q.id}`, `Pytanie ${index + 1}`, q.question,
+              ...q.options.map((o, i) => `Odpowiedź ${LETTERS[i]}: ${o}`),
+              fb ? `Poprawna odpowiedź: ${correctText(fb.correct)}` : null, fb?.explanation ? `Wyjaśnienie: ${fb.explanation}` : null)]} />
+        </div>
         {q.options.map((opt, i) => (
           <button key={i} className={optionClass(i)} onClick={() => toggle(i)} disabled={!!fb}>
             <span className="letter">{LETTERS[i]}</span>

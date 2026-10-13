@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
 import { ToTop } from "@/app/components/to-top";
+import { SpeakButton } from "@/app/components/speech/speak";
+import { speechItem } from "@/lib/speech-text";
 import { useData } from "@/lib/data-client";
 import type { Haslo } from "@/lib/data-server";
 
@@ -99,7 +101,11 @@ export function ConceptTable({ rows, topics, kinds }: { rows: Row[]; topics: Top
           <span>Szukaj w nazwie i definicji</span>
           <input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="np. elastyczność, Keynes, VAT…" />
         </label>
-        <p className="muted" style={{ margin: 0 }} data-testid="concept-count">Pokazano {shown.length} z {rows.length}</p>
+        <div className="row" style={{ flexWrap: "wrap", gap: 8 }}>
+          <p className="muted" style={{ margin: 0 }} data-testid="concept-count">Pokazano {shown.length} z {rows.length}</p>
+          <span className="spacer" />
+          {shown.length > 0 && <SpeakButton group="tabela" label={`Czytaj wszystkie (${shown.length})`} testid="speak-all" items={() => shown.map(itemOf)} />}
+        </div>
       </div>
 
       <div className="concepts" role="table" aria-label="Tabela pojęć">
@@ -116,6 +122,7 @@ export function ConceptTable({ rows, topics, kinds }: { rows: Row[]; topics: Top
                 {!topic && <span className="tag">{topicName[r.topic]}</span>}
                 {r.n > 0 && <span className="tag owe" title="Liczba pytań OWE o to hasło">OWE: {r.n}×</span>}
                 <Link className="tag tag-link" href={`/pojecia/mapa?q=${r.id}`} title="Pojęcia powiązane – mapa myśli">🧠 mapa</Link>
+                <SpeakButton compact group={`haslo:${r.id}`} label={`Czytaj: ${r.t}`} continuous={false} items={() => [itemOf(r)]} />
               </div>
             </div>
             <div className="concept-def" role="cell">
@@ -149,3 +156,6 @@ export function PageSkeleton({ title, wide = true }: { title: string; wide?: boo
     </div>
   );
 }
+
+/** Hasło do czytania na głos: nazwa, definicja i wzór. */
+const itemOf = (r: Haslo) => speechItem(r.id, r.t, r.t, r.d, r.w ? `Wzór: ${r.w}` : null);

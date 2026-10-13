@@ -9,6 +9,9 @@ import { segments } from "@/lib/notes-core";
 import type { NoteRow } from "@/lib/notes";
 import type { Block, Run } from "@/lib/podrecznik";
 import { useStars } from "@/lib/stars-client";
+import { SpeakButton } from "@/app/components/speech/speak";
+import { play, useSpeech } from "@/lib/speech";
+import { speechItem, type SpeechItem } from "@/lib/speech-text";
 
 /** Jedna sekcja czytnika: przegląd działu albo rozdział lekcji. */
 export interface ReaderSection {
@@ -215,6 +218,44 @@ export function Reader({ sections, unitId, heading, crumbs, footer, lessonMode =
     return m;
   }, [hls]);
 
+  // --- czytanie na głos: każdy blok to element kolejki (id = sekcja-blok, jak data-s / data-b w DOM) ---
+  const speech = useMemo(() => {
+    const items: SpeechItem[] = [];
+    const firstOf: number[] = [];
+    sections.forEach((s, si) => {
+      firstOf[si] = items.length;
+      if (!lessonMode || sections.length > 1) items.push(speechItem(`${si}-h`, s.title, s.title));
+      s.blocks.forEach((b, bi) => {
+        if (b.t === "ul") b.items.forEach((it, k) => items.push(speechItem(`${si}-${bi * 100 + k + 10000}`, s.title, runsText(it))));
+        else if (b.t === "f") items.push(speechItem(`${si}-${bi}`, s.title, `Wzór: ${b.x}`));
+        else items.push(speechItem(`${si}-${bi}`, s.title,
+          b.t === "ex" ? `Przykład. ${runsText(b.r)}` : b.t === "trap" ? `Uwaga, pułapka. ${runsText(b.r)}` : b.t === "key" ? `Zapamiętaj. ${runsText(b.r)}` : runsText(b.r)));
+      });
+    });
+    return { items, firstOf };
+  }, [sections, lessonMode]);
+  const speechGroup = `artykul:${heading.starRef}`;
+  const sp = useSpeech();
+  const speakingId = sp.group === speechGroup && sp.status !== "idle" ? sp.items[sp.index]?.id ?? null : null;
+  useEffect(() => {
+    if (!speakingId) return;
+    const [si, bi] = speakingId.split("-");
+    const el = bi === "h" ? document.querySelector(`#r-${sections[Number(si)]?.ref} h2, .reader-head h1`) : bodyRef.current?.querySelector(`[data-s="${si}"][data-b="${bi}"]`);
+    if (!el) return;
+    el.classList.add("speaking");
+    const r = el.getBoundingClientRect();
+    if (r.top < 90 || r.bottom > window.innerHeight - 140) el.scrollIntoView({ block: "center", behavior: "smooth" });
+    return () => el.classList.remove("speaking");
+  }, [speakingId, sections]);
+  /** „🔊 Czytaj stąd” z dymka zaznaczenia – od bloku, w którym jest zaznaczenie. */
+  const readFrom = (si: number, bi: number) => {
+    const id = `${si}-${bi}`;
+    const i = speech.items.findIndex((x) => x.id === id);
+    play(speech.items, i >= 0 ? i : speech.firstOf[si] ?? 0, { group: speechGroup });
+    setPop(null);
+    window.getSelection()?.removeAllRanges();
+  };
+
   const renderRuns = (r: Run[], si: number, bi: number) => {
     const text = runsText(r);
     const hs = byBlock.get(`${sections[si].hl}|${bi}`) ?? [];
@@ -280,7 +321,8 @@ export function Reader({ sections, unitId, heading, crumbs, footer, lessonMode =
       <div className="reader-tools" role="toolbar" aria-label="Wygląd tekstu">
         <button type="button" className="btn small secondary" onClick={() => setScaleSaved(SCALES[Math.max(0, SCALES.indexOf(scale) - 1)])} disabled={scale === SCALES[0]} aria-label="Mniejszy tekst">A−</button>
         <button type="button" className="btn small secondary" onClick={() => setScaleSaved(SCALES[Math.min(SCALES.length - 1, SCALES.indexOf(scale) + 1)])} disabled={scale === SCALES[SCALES.length - 1]} aria-label="Większy tekst">A+</button>
-        <span className="muted small">Zaznacz tekst, żeby go podkreślić albo przenieść do notatki.</span>
+        <SpeakButton items={speech.items} group={speechGroup} label="Czytaj na głos" testid="read-aloud" />
+        <span className="muted small">Zaznacz tekst, żeby go podkreślić, przenieść do notatki albo czytać od tego miejsca.</span>
       </div>
 
       {!lessonMode && sections.length > 1 && (
@@ -301,6 +343,7 @@ export function Reader({ sections, unitId, heading, crumbs, footer, lessonMode =
               <div className="reader-sec-head">
                 {s.kicker && <span className="learn-badge">{s.kicker}</span>}
                 <h2>{s.title}{reads[s.ref] && <span className="read-ok" title="Przeczytane"> ✓</span>}</h2>
+                <SpeakButton items={speech.items} group={speechGroup} start={speech.firstOf[si]} label={`Czytaj od: ${s.title}`} compact />
                 {s.ref !== unitId && <StarButton on={stars.has(s.ref)} onToggle={() => toggle(s.ref)} label="rozdział do ulubionych" disabled={!!preview} />}
               </div>
             )}
@@ -322,6 +365,7 @@ export function Reader({ sections, unitId, heading, crumbs, footer, lessonMode =
             <button key={c} type="button" className={`sel-color hl-${c}`} onClick={() => addHl(c)} title={`Podkreśl (${HL_LABEL[c]})`} data-testid={`hl-${c}`}><span className="sr-only">Podkreśl na {HL_LABEL[c]}</span></button>
           ))}
           <button type="button" onClick={toNote} data-testid="to-note">📝 Do notatki</button>
+          <button type="button" onClick={() => readFrom(pop.sec, pop.block)} data-testid="read-from">🔊 Czytaj stąd</button>
         </div>
       )}
       {markPop && !preview && (

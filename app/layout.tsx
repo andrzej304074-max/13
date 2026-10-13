@@ -5,6 +5,7 @@ import { AccountMenu } from "./components/account-menu";
 import { QuickNotes } from "./components/notes/quick-notes";
 import { SectionNav, SubTabs } from "./components/nav";
 import { AccessGuard, AccessProvider } from "./components/access";
+import { ReaderBar } from "./components/speech/reader-bar";
 import { accessFor } from "@/lib/access";
 import { firstAllowed, isBlocked, type BlockMode } from "@/lib/access-core";
 import "./globals.css";
@@ -48,6 +49,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             {me?.active ? <AccessGuard>{children}</AccessGuard> : children}
           </main>
           {me?.active && <SectionNav variant="bottom" />}
+          {me?.active && <ReaderBar />}
         </AccessProvider>
       </body>
     </html>

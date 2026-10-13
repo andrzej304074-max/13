@@ -15,6 +15,9 @@ import { scoreAnswer } from "@/lib/scoring";
 import { CaseContext, CheckButton, useEnter, useNumberKeys, type Feedback, type OnResult } from "./ui";
 import { Buckets, Chain, ExplainCard, GraphChoice, NumberTask, Sources } from "./zrozum-views";
 import { useAccess } from "@/app/components/access";
+import { SpeakButton } from "@/app/components/speech/speak";
+import { speechItem } from "@/lib/speech-text";
+import { stopGroup } from "@/lib/speech";
 
 const KIND_LABEL: Record<string, string> = {
   pojecie: "Pojęcie", wzor: "Wzór", osoba: "Osoba", instytucja: "Instytucja", data: "Data", przepis: "Przepis",
@@ -34,6 +37,8 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
   const [startError, setStartError] = useState<string | null>(null);
   const [queue, setQueue] = useState<Exercise[] | null>(null);
   const [pos, setPos] = useState(0);
+  // następne ćwiczenie – czytanie poprzedniego milknie
+  useEffect(() => () => stopGroup("lekcja:"), [pos]);
   const [feedback, setFeedback] = useState<Feedback>(null);
   const [log, setLog] = useState<AnswerLog[]>([]);
   const [combo, setCombo] = useState(0);
@@ -163,6 +168,8 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
         <div className="learn-progress" role="progressbar" aria-valuemin={0} aria-valuemax={total} aria-valuenow={pos}>
           <div style={{ width: `${(pos / total) * 100}%` }} />
         </div>
+        <SpeakButton compact label="Czytaj ćwiczenie" group={`lekcja:${lesson.id}:${sub}:${pos}`} continuous={false} testid="speak-exercise"
+          items={() => [speechItem(`ex-${pos}`, lesson.title, readableText(".learn-ex"), readableText(".learn-feedback"))]} />
         <span className="learn-xp" title="XP w tej pod-lekcji">⚡ {xp}</span>
       </div>
       <p className="muted learn-crumb">
@@ -184,7 +191,7 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
         </Link>
       )}
       {startError && <p className="error" style={{ fontSize: "0.85rem" }}>Nie udało się rozpocząć zapisu sesji ({startError}) – możesz ćwiczyć, ale wynik nie trafi do statystyk.</p>}
-      <ExerciseView key={pos} ex={current!} locked={!!feedback} onResult={record} onNext={advance} />
+      <div className="learn-ex"><ExerciseView key={pos} ex={current!} locked={!!feedback} onResult={record} onNext={advance} /></div>
       {current!.type !== "intro" && current!.type !== "karta" && <QuestionScratch refKey={`lekcja:${lesson.id}:${sub}`} />}
       {feedback && (
         <div ref={fbRef} className={`learn-feedback ${feedback.correct ? "ok" : "bad"}`} role="status">
@@ -201,6 +208,15 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
   );
 }
 
+
+/** Tekst widocznego ćwiczenia do czytania na głos (bez przycisków sterujących, brudnopisu i numerów skrótów). */
+function readableText(sel: string): string {
+  const el = document.querySelector(sel);
+  if (!el) return "";
+  const c = el.cloneNode(true) as HTMLElement;
+  c.querySelectorAll(".learn-actions, .q-scratch, .speak-wrap, .tile-no, kbd").forEach((x) => x.remove());
+  return (c.innerText || c.textContent || "").replace(/\n+/g, ". ").replace(/\s+/g, " ").trim();
+}
 
 function ExerciseView({ ex, locked, onResult, onNext }: { ex: Exercise; locked: boolean; onResult: OnResult; onNext: () => void }) {
   switch (ex.type) {
