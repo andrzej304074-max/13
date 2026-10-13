@@ -7,7 +7,10 @@ import type { RunResult, TtsStatus } from "@/lib/tts";
 const n = (x: number) => x.toLocaleString("pl-PL");
 const mb = (b: number) => `${(b / 1024 / 1024).toLocaleString("pl-PL", { maximumFractionDigits: 1 })} MB`;
 const usd = (chars: number) => `${((chars / 1e6) * 16).toLocaleString("pl-PL", { maximumFractionDigits: 0 })} USD`;
-const STOP: Record<string, string> = { czas: "skończył się czas porcji", budżet: "wyczerpany budżet (dzienny albo miesięczny)", "limit Azure": "limit zapytań Azure", błąd: "błąd" };
+const STOP: Record<string, string> = {
+  czas: "skończył się czas porcji", budżet: "wyczerpany budżet (dzienny albo miesięczny)", "limit Azure": "limit zapytań Azure",
+  "limit Blob": "limit zapisów Vercel Blob w tym miesiącu (skonfiguruj Cloudflare R2)", błąd: "błąd",
+};
 
 /** Karta „Głosy z chmury” – nagrania Podręcznika, haseł i pytań głosem Azure (lib/tts.ts). */
 export function TtsCard() {
@@ -54,7 +57,7 @@ export function TtsCard() {
       recorded += r.recorded; chars += r.chars;
       setMsg(`Nagrywanie… ${describe(recorded, chars, null)}`);
       if (stopAll.current) { setMsg(`Zatrzymano. ${describe(recorded, chars, null)}`); break; }
-      if (r.stopped === "budżet" || r.stopped === "błąd") { setMsg(describe(recorded, chars, r.stopped)); break; }
+      if (r.stopped === "budżet" || r.stopped === "błąd" || r.stopped === "limit Blob") { setMsg(describe(recorded, chars, r.stopped)); break; }
       if (r.recorded === 0 && r.stopped !== "limit Azure") {
         // nic do nagrania (komplet) albo chwilowo nic nie weszło – dwie puste porcje z rzędu kończą
         if (++idle >= 2 || !r.stopped) { setMsg(`Gotowe. ${describe(recorded, chars, null)}`); break; }
@@ -117,6 +120,9 @@ export function TtsCard() {
         {s.lastRun ? ` · ostatnia porcja: ${new Date(s.lastRun).toLocaleString("pl-PL", { dateStyle: "short", timeStyle: "short" })}` : ""}
       </p>
       {s.lastError && <p className="error small" style={{ margin: 0 }}>Ostatni błąd: {s.lastError}</p>}
+      <p className="muted small" style={{ margin: 0 }} data-testid="tts-storage">
+        Pliki: {s.storage === "r2" ? "Cloudflare R2" : s.storage === "blob" ? "Vercel Blob – na planie Hobby najwyżej 1 GB i ok. 2000 nagrań miesięcznie; do nagrania wszystkiego skonfiguruj Cloudflare R2 (README)" : s.storage === "test" ? "atrapa testowa" : "brak magazynu"}
+      </p>
       <div className="row" style={{ flexWrap: "wrap", gap: 12, alignItems: "end" }}>
         <label className="field" style={{ margin: 0 }}>
           <span>Głos</span>
@@ -148,7 +154,8 @@ export function TtsCard() {
             <button className="btn small secondary" onClick={runNow} disabled={!!busy || !s.configured} data-testid="tts-run">
               {busy === "one" ? "Nagrywanie… (do 1 min)" : "🎙️ Nagraj porcję teraz"}
             </button>
-            {s.fast && <button className="btn small" onClick={runAll} disabled={!!busy || !s.configured} data-testid="tts-run-all">⏩ Nagraj wszystko</button>}
+            {s.fast && <button className="btn small" onClick={runAll} disabled={!!busy || !s.configured || s.storage === "blob"}
+              title={s.storage === "blob" ? "Najpierw skonfiguruj Cloudflare R2 – Vercel Blob nie pomieści wszystkich nagrań" : undefined} data-testid="tts-run-all">⏩ Nagraj wszystko</button>}
           </>}
       </div>
       {msg && <p className="muted" role="status" style={{ margin: 0 }} data-testid="tts-msg">{msg}</p>}

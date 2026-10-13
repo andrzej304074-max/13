@@ -2,6 +2,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { del, put } from "@vercel/blob";
+import { AwsClient } from "aws4fetch";
 import { query, withTx } from "./db";
 import { QUESTIONS } from "@/data/questions";
 import { SLOWNIK_QUESTIONS } from "@/data/slownik";
@@ -28,12 +29,25 @@ import { HttpError } from "./tests";
  *
  * Zmienne: AZURE_SPEECH_KEY, AZURE_SPEECH_REGION, BLOB_READ_WRITE_TOKEN, CRON_SECRET, opcjonalnie TTS_MONTHLY_CHARS
  * i TTS_USER_DAILY (dzienny limit nagrań na bieżąco na konto, domyślnie 60 tys. znaków).
- * TTS_FAKE=1 – atrapa do testów: cisza w WAV zapisywana w katalogu tymczasowym, bez Azure i Blob.
+ * TTS_FAKE=1 – atrapa do testów: cisza w WAV zapisywana w katalogu tymczasowym, bez Azure i Blob;
+ * TTS_FAKE=azure – atrapa tylko zamiast Azure (magazyn prawdziwy, np. R2 z R2_ENDPOINT w testach).
  */
 
 const FAKE = process.env.TTS_FAKE === "1";
+const FAKE_AZURE = FAKE || process.env.TTS_FAKE === "azure";
 const FAKE_DIR = path.join(os.tmpdir(), "owe-tts");
-const FORMAT = "audio-24khz-48kbitrate-mono-mp3";
+/** MP3 32 kb/s, 16 kHz – dla mowy praktycznie bez różnicy, a pliki o 1/3 mniejsze (całość ok. 1,8 GB zamiast 2,6 GB). */
+const FORMAT = "audio-16khz-32kbitrate-mono-mp3";
+/** Magazyn plików: Cloudflare R2 (10 GB i 1 mln zapisów miesięcznie za darmo), a bez niego Vercel Blob (Hobby: 1 GB, 2000 zapisów). */
+const R2_VARS = ["R2_ACCOUNT_ID", "R2_ACCESS_KEY_ID", "R2_SECRET_ACCESS_KEY", "R2_BUCKET", "R2_PUBLIC_URL"] as const;
+const useR2 = () => R2_VARS.every((k) => process.env[k]);
+let r2Client: AwsClient | null = null;
+const r2 = () => (r2Client ??= new AwsClient({ accessKeyId: process.env.R2_ACCESS_KEY_ID!, secretAccessKey: process.env.R2_SECRET_ACCESS_KEY!, service: "s3", region: "auto" }));
+// R2_ENDPOINT – tylko do testów (lokalny serwer zgodny z S3)
+const r2ObjectUrl = (key: string) => `${process.env.R2_ENDPOINT ?? `https://${process.env.R2_ACCOUNT_ID}.r2.cloudflarestorage.com`}/${process.env.R2_BUCKET}/${key}`;
+/** Vercel Blob na planie Hobby: 2000 zapisów miesięcznie – zostawiamy zapas. */
+const BLOB_MONTHLY_UPLOADS = 1900;
+const r2Public = () => process.env.R2_PUBLIC_URL!.replace(/\/+$/, "");
 const envNum = (k: string, d: number) => (Number(process.env[k]) > 0 ? Number(process.env[k]) : d);
 /** Limit miesięczny: z panelu admina (settings.tts.monthly), inaczej TTS_MONTHLY_CHARS, inaczej 450 tys. */
 const monthlyOf = (s: TtsState) => s.monthly ?? envNum("TTS_MONTHLY_CHARS", DEFAULT_MONTHLY);
@@ -43,8 +57,15 @@ const userDaily = () => envNum("TTS_USER_DAILY", DEFAULT_USER_DAILY);
 
 export function ttsConfigured(): { ok: boolean; missing: string[] } {
   if (FAKE) return { ok: true, missing: [] };
-  const missing = ["AZURE_SPEECH_KEY", "AZURE_SPEECH_REGION", "BLOB_READ_WRITE_TOKEN"].filter((k) => !process.env[k]);
+  const missing: string[] = FAKE_AZURE ? [] : ["AZURE_SPEECH_KEY", "AZURE_SPEECH_REGION"].filter((k) => !process.env[k]);
+  if (!useR2() && !process.env.BLOB_READ_WRITE_TOKEN) missing.push(...R2_VARS.filter((k) => !process.env[k]));
   return { ok: !missing.length, missing };
+}
+
+/** Gdzie trafiają nowe nagrania (do panelu). */
+export function ttsStorage(): "r2" | "blob" | "test" | null {
+  if (FAKE) return "test";
+  return useR2() ? "r2" : process.env.BLOB_READ_WRITE_TOKEN ? "blob" : null;
 }
 
 /* ---------- katalog nagrań: Podręcznik, hasła, pytania ---------- */
@@ -136,7 +157,7 @@ async function saveClip(p: Paragraph, voice: string, bytes: Buffer, url: string)
 class RateLimited extends Error {}
 
 async function synthesize(text: string, voice: string): Promise<Buffer> {
-  if (FAKE) return silentWav(0.1);
+  if (FAKE_AZURE) return silentWav(0.1);
   const res = await fetch(`https://${process.env.AZURE_SPEECH_REGION}.tts.speech.microsoft.com/cognitiveservices/v1`, {
     method: "POST",
     headers: {
@@ -158,15 +179,28 @@ async function store(voice: string, hash: string, bytes: Buffer): Promise<string
     await writeFile(path.join(FAKE_DIR, voice, `${hash}.wav`), bytes);
     return `/api/podrecznik/nagrania?plik=${encodeURIComponent(`${voice}/${hash}`)}`;
   }
-  const b = await put(`tts/${voice}/${hash}.mp3`, bytes, {
+  const key = `tts/${voice}/${hash}.mp3`;
+  if (useR2()) {
+    const res = await r2().fetch(r2ObjectUrl(key), {
+      method: "PUT", body: new Uint8Array(bytes),
+      headers: { "Content-Type": "audio/mpeg", "Cache-Control": "public, max-age=31536000, immutable" },
+    });
+    if (!res.ok) throw new Error(`R2: HTTP ${res.status} ${(await res.text()).slice(0, 200)}`);
+    return `${r2Public()}/${key}`;
+  }
+  const b = await put(key, bytes, {
     access: "public", contentType: "audio/mpeg", addRandomSuffix: false, allowOverwrite: true, cacheControlMaxAge: 31536000,
   });
   return b.url;
 }
 
+/** Usuwanie plików – z R2 albo z Vercel Blob (starsze nagrania), zależnie od adresu. */
 async function remove(urls: string[]) {
   if (!urls.length || FAKE) return;
-  for (let i = 0; i < urls.length; i += 100) await del(urls.slice(i, i + 100));
+  const fromR2 = useR2() ? urls.filter((u) => u.startsWith(`${r2Public()}/`)) : [];
+  for (const u of fromR2) await r2().fetch(r2ObjectUrl(u.slice(r2Public().length + 1)), { method: "DELETE" }).catch(() => {});
+  const fromBlob = urls.filter((u) => u.includes(".blob.vercel-storage.com/"));
+  if (fromBlob.length && process.env.BLOB_READ_WRITE_TOKEN) for (let i = 0; i < fromBlob.length; i += 100) await del(fromBlob.slice(i, i + 100));
 }
 
 /** Plik atrapy (TTS_FAKE) – tylko do testów. */
@@ -182,6 +216,14 @@ function silentWav(seconds: number): Buffer {
   b.writeUInt32LE(16, 16); b.writeUInt16LE(1, 20); b.writeUInt16LE(1, 22); b.writeUInt32LE(rate, 24); b.writeUInt32LE(rate, 28);
   b.writeUInt16LE(1, 32); b.writeUInt16LE(8, 34); b.write("data", 36); b.writeUInt32LE(n, 40); b.fill(128, 44);
   return b;
+}
+
+/** Ile zapisów do Vercel Blob zostało w tym miesiącu (Infinity – inny magazyn). */
+async function blobUploadsLeft(): Promise<number> {
+  if (ttsStorage() !== "blob") return Infinity;
+  const { rows } = await query<{ n: string }>(
+    "SELECT COUNT(*) AS n FROM tts_clips WHERE created_at >= date_trunc('month', now()) AND url LIKE '%.blob.vercel-storage.com/%'");
+  return Math.max(0, BLOB_MONTHLY_UPLOADS - Number(rows[0].n));
 }
 
 /* ---------- porcja nagrań w tle ---------- */
@@ -225,10 +267,11 @@ async function record(seconds: number): Promise<RunResult> {
   const monthly = monthlyOf(state);
   const budget = state.fast ? Math.max(0, monthly - use.used) : allowance(use, monthly, now);
   const todo = all.filter((p) => !have.has(p.hash));
-  const batch = pickBatch(todo, budget);
+  const uploadsLeft = await blobUploadsLeft();
+  const batch = pickBatch(todo, budget).slice(0, uploadsLeft);
   let recorded = 0, chars = 0;
   // „budżet” – zostały teksty, które nie mieszczą się w dzisiejszej porcji (albo w limicie miesiąca)
-  let stopped: string | null = batch.length < todo.length ? "budżet" : null;
+  let stopped: string | null = batch.length < todo.length ? (batch.length === uploadsLeft ? "limit Blob" : "budżet") : null;
   const deadline = started + seconds * 1000 - (state.fast ? 4000 : MIN_GAP_MS + 2000);
   let next = 0;
   let halt = false;
@@ -260,7 +303,7 @@ async function record(seconds: number): Promise<RunResult> {
       const p = batch[next++];
       const t0 = Date.now();
       await one(p);
-      if (!state.fast && !FAKE && !halt) await new Promise((r) => setTimeout(r, Math.max(0, MIN_GAP_MS - (Date.now() - t0))));
+      if (!state.fast && !FAKE_AZURE && !halt) await new Promise((r) => setTimeout(r, Math.max(0, MIN_GAP_MS - (Date.now() - t0))));
     }
   };
   await Promise.all(Array.from({ length: state.fast ? FAST_PARALLEL : 1 }, worker));
@@ -287,6 +330,7 @@ export async function recordLive(userId: string, hash: unknown): Promise<{ url: 
   const use = await usage(new Date(), userId);
   const blocked = liveBlocked(use, p.chars, monthlyOf(state), use.whoToday, userDaily());
   if (blocked) return { url: null, reason: blocked };
+  if ((await blobUploadsLeft()) <= 0) return { url: null, reason: "Wyczerpany miesięczny limit zapisów Vercel Blob." };
   g.ttsLive ??= new Map();
   let job = g.ttsLive.get(key);
   if (!job) {
@@ -338,6 +382,7 @@ interface Progress { done: number; total: number; chars: number; charsDone: numb
 export interface TtsStatus {
   configured: boolean;
   missing: string[];
+  storage: "r2" | "blob" | "test" | null;
   voice: string;
   voices: typeof VOICES;
   monthly: number;
@@ -371,7 +416,7 @@ export async function ttsStatus(): Promise<TtsStatus> {
   };
   const monthly = monthlyOf(state);
   return {
-    configured: conf.ok, missing: conf.missing, voice: state.voice, voices: VOICES, monthly, monthlySet: state.monthly, fast: state.fast,
+    configured: conf.ok, missing: conf.missing, storage: ttsStorage(), voice: state.voice, voices: VOICES, monthly, monthlySet: state.monthly, fast: state.fast,
     used: use.used, live: use.live, userDaily: userDaily(), month: monthOf(now),
     allowanceNow: state.fast ? Math.max(0, monthly - use.used) : allowance(use, monthly, now),
     paragraphs: prog(all),

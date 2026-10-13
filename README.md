@@ -303,9 +303,24 @@ Po pierwszym wdrożeniu od razu załóż swoje konto – pierwsze konto zostaje 
   - Bez polskiego głosu pojawia się instrukcja: Android – Ustawienia → Zamiana tekstu na mowę (Google), Windows – Ustawienia → Czas i język → Mowa → Dodaj głosy (polski), iPhone – Ustawienia → Dostępność → Mowa → Głosy.
 - **Zapis matematyczny** zamieniany na mowę („%” → „procent”, „Δ” → „delta”, „≈” → „w przybliżeniu”…): `lib/speech-text.ts` (testy: `tests/speech.test.ts`). Kolejka i pasek: `lib/speech.ts`, `app/components/speech/`.
 
-### Głosy z chmury (Azure) – artykuły Podręcznika
+### Głosy z chmury (Azure) – Podręcznik, hasła i pytania
 
-Akapity Podręcznika są nagrywane głosem neuronowym Azure AI Speech porcjami w tle i zapisywane jako MP3 w Vercel Blob.
+Akapity Podręcznika, hasła (fiszki, tabela, mapa, talie) i pytania (OWE i ze słownika – pytanie z odpowiedziami oraz osobno
+wyjaśnienie) są nagrywane głosem neuronowym Azure AI Speech i zapisywane jako MP3 (32 kb/s) w **Cloudflare R2**
+(darmowo 10 GB i 1 mln zapisów miesięcznie), a bez niego w Vercel Blob (Hobby: 1 GB i 2000 zapisów miesięcznie – wystarczy
+najwyżej na część Podręcznika; aplikacja pilnuje limitu). Całość: ok. 22 tys. nagrań, 6,5 mln znaków, ok. 1,8 GB.
+Teksty budują wspólne funkcje (`lib/speech-catalog.ts`, `lib/podrecznik-speech.ts`), więc nagranie pasuje do każdego
+miejsca, w którym tekst jest czytany; teksty spoza katalogu (ćwiczenia w lekcji) czyta głos przeglądarki.
+
+**Nagranie wszystkiego za kredyty Azure (warstwa S0, ok. 16 USD za 1 mln znaków → ok. 105 USD):**
+1. Azure → zasób Speech → **Warstwa cenowa → S0**.
+2. Panel admina → „Głosy z chmury”:
+   - limit znaków na miesiąc np. 7 000 000;
+   - zaznacz **Tryb szybki (S0)** (8 nagrań naraz, bez rozkładania na dni);
+   - kliknij **⏩ Nagraj wszystko** i zostaw kartę otwartą (ok. 30–60 min; „Zatrzymaj” przerywa po bieżącej porcji).
+3. Po zakończeniu:
+   - w Azure z powrotem **Free F0**;
+   - w panelu odznacz tryb szybki i ustaw limit 450 000 – nowe i zmienione teksty dalej nagrywają się powoli za darmo.
 
 **Jak to działa**
 - **Czytnik:** nagrany akapit gra z pliku (☁️ w pasku odtwarzacza).
@@ -335,10 +350,18 @@ Akapity Podręcznika są nagrywane głosem neuronowym Azure AI Speech porcjami w
 
    potem Review + create → Create.
 3. **Klucz:** po utworzeniu zasobu → „Keys and Endpoint” → skopiuj **KEY 1** i **Location/Region** (`westeurope`).
-4. **Magazyn plików:** Vercel → projekt → **Storage** → Create Database → **Blob** → Create → połącz z projektem (Production i Preview). Vercel sam doda `BLOB_READ_WRITE_TOKEN`.
+4. **Magazyn plików – Cloudflare R2:**
+   - załóż konto na [dash.cloudflare.com](https://dash.cloudflare.com) → **R2 Object Storage** → włącz R2 (plan darmowy; Cloudflare prosi o kartę, w limitach 0 zł);
+   - **Create bucket** → nazwa np. `owe-nagrania`, lokalizacja Automatic → Create;
+   - w kubełku: **Settings → Public access → R2.dev subdomain → Allow** → skopiuj adres `https://pub-….r2.dev` (to `R2_PUBLIC_URL`);
+   - R2 → **Manage API tokens** (Account details → API tokens) → **Create API token**: uprawnienia **Object Read & Write**, tylko ten kubełek → Create;
+   - skopiuj **Access Key ID**, **Secret Access Key** i **Account ID** (widoczne na stronie R2 i w adresie `https://<ACCOUNT_ID>.r2.cloudflarestorage.com`).
+
+   Zamiast R2 można użyć Vercel Blob (Vercel → Storage → Blob → `BLOB_READ_WRITE_TOKEN`), ale tylko na część Podręcznika.
 5. **Zmienne:** Vercel → Settings → Environment Variables:
    - `AZURE_SPEECH_KEY` – KEY 1;
    - `AZURE_SPEECH_REGION` – `westeurope`;
+   - `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET` (nazwa kubełka), `R2_PUBLIC_URL` (adres `https://pub-….r2.dev`);
    - `CRON_SECRET` – długi losowy ciąg, np. wynik `openssl rand -hex 32`;
    - opcjonalnie `TTS_MONTHLY_CHARS`.
 6. **Redeploy:** Deployments → ostatnie wdrożenie → ⋯ → Redeploy. Zadanie dzienne pojawi się w Settings → Cron Jobs.
@@ -351,7 +374,7 @@ Akapity Podręcznika są nagrywane głosem neuronowym Azure AI Speech porcjami w
    - `CRON_SECRET` – ten sam co w Vercel.
 
    Workflow „Nagrania Podręcznika (TTS)” uruchamia się co godzinę (tylko z gałęzi domyślnej). Można go też odpalić ręcznie: Actions → Run workflow.
-9. **Kontrola zużycia:** Azure → zasób Speech → Metrics → „Synthesized Characters” oraz Vercel → Storage → Blob (rozmiar plików, ok. 300 MB na cały Podręcznik).
+9. **Kontrola zużycia:** Azure → zasób Speech → Metrics → „Synthesized Characters” oraz Cloudflare → R2 → kubełek → Metrics (rozmiar plików, ok. 1,8 GB po nagraniu wszystkiego); w Azure → Cost Management – zużycie kredytów.
 
 Zmiana głosu w panelu oznacza nagranie wszystkiego od nowa (kolejne ok. 2 miesiące darmowego limitu). Do tego czasu grają nagrania poprzednim głosem.
 
