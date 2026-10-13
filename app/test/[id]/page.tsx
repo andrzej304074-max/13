@@ -16,6 +16,9 @@ function fmtTime(ms: number) {
   return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
 }
 
+/** Litery poprawnych odpowiedzi; w wielokrotnym wyborze bywa, że żadna nie jest poprawna (każde pole ocenia się osobno). */
+const correctText = (c: number[]) => (c.length ? c.map((i) => LETTERS[i]).join(", ") : "żadna – wszystkie odpowiedzi są fałszywe");
+
 export default function TestPage() {
   const { id } = useParams<{ id: string }>();
   const [test, setTest] = useState<TestState | null>(null);
@@ -169,7 +172,7 @@ export default function TestPage() {
 
         {fb?.skipped && (
           <div className="feedback">
-            <div className="points">Pominięte · 0 pkt · Poprawna odpowiedź: {fb.correct.map((c) => LETTERS[c]).join(", ")}</div>
+            <div className="points">Pominięte · 0 pkt · Poprawna odpowiedź: {correctText(fb.correct)}</div>
             <p style={{ margin: "8px 0 0" }}>{fb.explanation}</p>
           </div>
         )}
@@ -177,7 +180,7 @@ export default function TestPage() {
           <div className="feedback">
             <div className={`points ${fb.points > 0 ? "pos" : fb.points < 0 ? "neg" : ""}`}>
               {fb.points > 0 ? "+" : ""}{fmtPoints(fb.points)} pkt
-              {" · "}Poprawna odpowiedź: {fb.correct.map((c) => LETTERS[c]).join(", ")}
+              {" · "}Poprawna odpowiedź: {correctText(fb.correct)}
             </div>
             <p style={{ margin: "8px 0 0" }}>{fb.explanation}</p>
           </div>
