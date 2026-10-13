@@ -222,7 +222,7 @@ function MindMapPage({ rows, topics, kinds, mapa }: { rows: Haslo[]; topics: Top
       {ring.length === 0 ? (
         <div className="empty-state"><span aria-hidden>🕸️</span><p>Brak powiązanych haseł{topic || kind || owe || starred ? " dla wybranych filtrów – zmień filtry" : ""}.</p></div>
       ) : (
-        <MindMap center={{ id: c.id, t: c.t, topic: c.topic, w: 0, reason: "" }} ring={ring} colors={colors} onPick={(id) => pick(id)} />
+        <MindMap center={{ id: c.id, t: c.t, topic: c.topic, w: 0, reason: "" }} ring={ring} colors={colors} onPick={(id) => pick(id)} prevId={history[history.length - 1]} />
       )}
 
       <div className="mm-bottom">

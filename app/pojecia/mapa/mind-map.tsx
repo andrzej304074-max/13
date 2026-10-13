@@ -30,8 +30,10 @@ interface Placed { node: MapNode; x: number; y: number; lines: string[]; w: numb
  * Mapa myśli w SVG: pojęcie w środku, powiązane wokół (grubość linii = siła powiązania, kolor = temat),
  * opcjonalnie drugi poziom. Węzły przesuwają się płynnie przy zmianie środka (klucz = id hasła).
  */
-export function MindMap({ center, ring: ring0, colors, onPick }: {
+export function MindMap({ center, ring: ring0, colors, onPick, prevId }: {
   center: MapNode; ring: MapRing[]; colors: Record<string, string>; onPick: (id: string) => void;
+  /** Pojęcie, z którego przyszliśmy – grubsza obwódka. */
+  prevId?: string;
 }) {
   const box = useRef<HTMLDivElement>(null);
   const [narrow, setNarrow] = useState(false);
@@ -127,8 +129,8 @@ export function MindMap({ center, ring: ring0, colors, onPick }: {
           const col = colors[p.node.topic] ?? "var(--accent)";
           const f = p.level === 0 ? 1.15 : p.level === 2 ? 0.86 : 1;
           return (
-            <g key={p.node.id} className={`mm-node l${p.level}`} style={{ transform: `translate(${p.x}px, ${p.y}px)`, ["--c" as string]: col }}
-              role="button" tabIndex={0} aria-label={p.level === 0 ? `${p.node.t} (środek mapy)` : `${p.node.t} – ustaw w środku mapy`}
+            <g key={p.node.id} className={`mm-node l${p.level}${p.level > 0 && p.node.id === prevId ? " prev" : ""}`} style={{ transform: `translate(${p.x}px, ${p.y}px)`, ["--c" as string]: col }}
+              role="button" tabIndex={0} aria-label={p.level === 0 ? `${p.node.t} (środek mapy)` : `${p.node.t}${p.node.id === prevId ? " (poprzednie pojęcie)" : ""} – ustaw w środku mapy`}
               onClick={() => p.level !== 0 && onPick(p.node.id)} onKeyDown={(e) => p.level !== 0 && key(e, p.node.id)} data-testid={`mm-node-${p.level}`} data-id={p.node.id}>
               <rect x={-p.w / 2} y={-p.h / 2} width={p.w} height={p.h} rx={p.level === 0 ? 18 : 12} />
               <text textAnchor="middle" style={{ fontSize: font * f }}>
@@ -136,7 +138,7 @@ export function MindMap({ center, ring: ring0, colors, onPick }: {
                   <tspan key={i} x={0} y={(i - (p.lines.length - 1) / 2) * lineH * f + font * f * 0.35}>{l}</tspan>
                 ))}
               </text>
-              {p.level > 0 && <title>{`${p.node.t}\n${p.node.reason}`}</title>}
+              {p.level > 0 && <title>{`${p.node.id === prevId ? "↩ poprzednie pojęcie: " : ""}${p.node.t}\n${p.node.reason}`}</title>}
             </g>
           );
         })}

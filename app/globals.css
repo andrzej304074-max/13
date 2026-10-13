@@ -1050,6 +1050,9 @@ body:has(.bottom-bar) .toast { bottom: calc(80px + env(safe-area-inset-bottom));
 .mm-node.l0 text { fill: #fff; font-weight: 700; }
 .mm-node.l2 rect { stroke-dasharray: 4 3; stroke-width: 1.5; }
 .mm-node.l2 text { font-weight: 500; fill: var(--muted); }
+/* pojęcie, z którego przyszliśmy */
+.mm-node.prev rect { stroke-width: 4.5; stroke-dasharray: none; filter: drop-shadow(0 0 4px color-mix(in srgb, var(--c) 45%, transparent)); }
+.mm-node.prev text { font-weight: 700; fill: var(--text); }
 .mm-node:not(.l0):hover rect, .mm-node:not(.l0):focus-visible rect { fill: color-mix(in srgb, var(--c) 16%, var(--surface)); }
 .mm-node:focus { outline: none; }
 .mm-node:focus-visible rect { stroke-width: 3.5; }
