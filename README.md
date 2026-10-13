@@ -263,6 +263,15 @@ Link „Czytaj artykuł zamiast Poznaj” w panelu lekcji na ścieżce i baner n
   „Administratorzy” (Odbierz admina, Usuń), „Użytkownicy” (Usuń) i „Bez kodu aktywacji”; przy kontach liczba testów, wynik,
   sesje nauki i XP oraz podgląd ich statystyk testów, postępu i statystyk nauki (`?user=<id>`); generowanie kodu aktywacji
   i jednorazowych kodów administratora. Konta właściciela nie da się usunąć ani odebrać mu roli.
+- **Dostęp do sekcji** (karta w panelu i przycisk „Dostęp” przy każdym koncie): blokada całego działu (Testy, Nauka, Pojęcia,
+  Notatki, Statystyki) albo pojedynczej podzakładki (np. Nauka → Podręcznik, Fiszki → Moje talie).
+  - **Zakresy:** „Wszyscy” (także admini), „Oprócz adminów” i blokady konkretnego konta – sumują się.
+  - **Wygląd zablokowanych pozycji w menu:** „Ukryj” albo „Pokaż z kłódką 🔒”. Ustawienie globalne można nadpisać dla konta.
+  - **Egzekwowanie:**
+    - po stronie serwera: strony pokazują ekran blokady, API zwraca 403;
+    - szybkie notatki, brudnopis pod pytaniem i „＋ Do talii” znikają razem ze swoją sekcją;
+    - panelu admina i ustawień konta nie da się zablokować.
+  - **Gdzie w kodzie:** logika w `lib/access-core.ts` (testy: `tests/access.test.ts`).
 - **Kolejni administratorzy:** zalogowany admin generuje jednorazowy kod (ważny 24 h, widoczny tylko w panelu); użytkownik
   wpisuje go raz w Ustawieniach konta, a rolę dostaje po zatwierdzeniu prośby w panelu (odrzucenie – zostaje użytkownikiem).
 - **Zmiana hasła:** w Ustawieniach (obecne + nowe hasło) albo „Nie pamiętam hasła” – link ważny 60 minut wysyłany mailem
@@ -275,6 +284,28 @@ Konfiguracja maili (Vercel → Settings → Environment Variables, potem Redeplo
 3. Opcjonalnie `APP_URL` – adres strony w linkach z maili (domyślnie adres produkcyjny Vercel).
 
 Po pierwszym wdrożeniu od razu załóż swoje konto – pierwsze konto zostaje właścicielem.
+
+## Czytanie na głos 🔊
+
+- **Gdzie jest przycisk 🔊:**
+  - Podręcznik: cały artykuł, od rozdziału albo „Czytaj stąd” od akapitu – czytany akapit jest podświetlany;
+  - pytanie testu z odpowiedziami (po sprawdzeniu – z wyjaśnieniem);
+  - ćwiczenie w lekcji;
+  - Tabela pojęć: jedno hasło albo „Czytaj wszystkie” wg filtrów;
+  - fiszki: „Czytaj po kolei” – hasło, pauza, definicja;
+  - mapa myśli i Moje talie.
+- **Pasek odtwarzacza** (nad dolnym menu na telefonie): poprzedni, pauza, następny, stop, tempo 0,8–1,5×, wybór głosu.
+- **Silnik:** wbudowany w przeglądarkę syntezator mowy (Web Speech API) – bez kluczy i kosztów.
+  - Głos wybierany automatycznie (polski, najlepszy dostępny). Głos i tempo zapamiętuje przeglądarka.
+  - Bez polskiego głosu pojawia się instrukcja: Android – Ustawienia → Zamiana tekstu na mowę (Google), Windows – Ustawienia → Czas i język → Mowa → Dodaj głosy (polski), iPhone – Ustawienia → Dostępność → Mowa → Głosy.
+- **Zapis matematyczny** zamieniany na mowę („%” → „procent”, „Δ” → „delta”, „≈” → „w przybliżeniu”…): `lib/speech-text.ts` (testy: `tests/speech.test.ts`). Kolejka i pasek: `lib/speech.ts`, `app/components/speech/`.
+
+## Audyt i wydajność
+
+- `docs/AUDYT.md` – audyt aplikacji: treści, trasy, wygląd, uprawnienia, awarie bazy; poprawki i sprawy do decyzji.
+  Audyt treści można powtórzyć: `python3 -I tools/nauka/audyt_tresci.py` (raport: `tools/nauka/AUDYT-TRESCI.md`).
+- `docs/RAPORT-WYDAJNOSCI.md` – pomiary (LCP, rozmiary danych, zapytania SQL na dużej bazie testowej, zimny start)
+  i rekomendacje przyspieszenia uporządkowane wg zysku i ryzyka.
 
 ## Limity bazy i hostingu
 
