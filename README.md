@@ -296,6 +296,9 @@ Po pierwszym wdrożeniu od razu załóż swoje konto – pierwsze konto zostaje 
   - mapa myśli i Moje talie.
 - **Pasek odtwarzacza** (nad dolnym menu na telefonie): poprzedni, pauza, następny, stop, tempo 0,8–1,5×, wybór głosu.
 - **Silnik:** wbudowany w przeglądarkę syntezator mowy (Web Speech API) – bez kluczy i kosztów.
+  - **iPhone:** sesja audio „playback” – mowa gra mimo przełącznika wyciszenia (Safari 17+; starsze – krótka cisza z `<audio>` przy pierwszym kliknięciu).
+  - **Strażnik ciszy:** gdy wypowiedzi kończą się bez startu, czytanie przechodzi na domyślny głos, a pasek podpowiada, co sprawdzić.
+  - **Wyłączony ekran:** syntezator telefonu w tle milknie. Z wyłączonym ekranem czytają tylko nagrania (głos z chmury, niżej).
   - Głos wybierany automatycznie (polski, najlepszy dostępny). Głos i tempo zapamiętuje przeglądarka.
   - Bez polskiego głosu pojawia się instrukcja: Android – Ustawienia → Zamiana tekstu na mowę (Google), Windows – Ustawienia → Czas i język → Mowa → Dodaj głosy (polski), iPhone – Ustawienia → Dostępność → Mowa → Głosy.
 - **Zapis matematyczny** zamieniany na mowę („%” → „procent”, „Δ” → „delta”, „≈” → „w przybliżeniu”…): `lib/speech-text.ts` (testy: `tests/speech.test.ts`). Kolejka i pasek: `lib/speech.ts`, `app/components/speech/`.
@@ -305,15 +308,20 @@ Po pierwszym wdrożeniu od razu załóż swoje konto – pierwsze konto zostaje 
 Akapity Podręcznika są nagrywane głosem neuronowym Azure AI Speech porcjami w tle i zapisywane jako MP3 w Vercel Blob.
 
 **Jak to działa**
-- **Czytnik:** nagrany akapit gra z pliku (☁️ w pasku odtwarzacza). Akapit jeszcze nienagrany – oraz pytania, definicje i fiszki – czyta głos przeglądarki, jak wcześniej.
+- **Czytnik:** nagrany akapit gra z pliku (☁️ w pasku odtwarzacza).
+  - **Brakujące akapity:** gdy ktoś słucha artykułu, są **nagrywane na bieżąco** (`POST /api/podrecznik/nagrania`, 2 akapity z wyprzedzeniem). Czytanie gra wtedy w całości z plików – także po wyłączeniu ekranu telefonu.
+  - **Ekran blokady i słuchawki:** tytuł oraz przyciski ⏯ ⏭ ⏮ (Media Session).
+  - **Limit konta:** dzienny limit nagrań na bieżąco na konto, `TTS_USER_DAILY`, domyślnie 60 tys. znaków.
+  - **Głos przeglądarki:** czyta, gdy głos z chmury nie jest skonfigurowany albo limit jest wyczerpany. Pytania, definicje i fiszki zawsze czyta głos przeglądarki.
 - **Budżet:**
-  - miesięcznie `TTS_MONTHLY_CHARS` znaków (domyślnie 450 tys., zapas do darmowego progu 0,5 mln), rozłożone równo na pozostałe dni miesiąca;
+  - miesięcznie `TTS_MONTHLY_CHARS` znaków (domyślnie 450 tys., zapas do darmowego progu 0,5 mln), wspólnie dla porcji w tle i nagrań na bieżąco; porcje w tle rozkładają resztę równo na pozostałe dni miesiąca;
+  - zużycie liczone w tabeli `tts_usage` (dzień × źródło);
   - cały Podręcznik to ok. 815 tys. znaków (z nagłówkami), czyli ok. 2 miesiące;
   - w kolejnym miesiącu nagrywanie toczy się dalej, a potem nagrywane są tylko zmienione akapity (klucz nagrania to skrót tekstu); nieaktualne pliki są usuwane.
 - **Tempo:** darmowy plan Azure przyjmuje 20 zapytań na minutę.
   - Vercel Cron (`vercel.json`, raz dziennie ok. 5:17) nagrywa ok. 80 akapitów na uruchomienie (do 5 min), więc całość zajmie ok. 3 miesiące.
   - Opcjonalny workflow `.github/workflows/tts.yml` uruchamia porcję co godzinę – wtedy ograniczeniem jest tylko budżet znaków (ok. 2 miesiące).
-- **Panel admina → „Głosy z chmury”:** postęp (akapity, gotowe artykuły, rozmiar plików), zużycie w miesiącu, ostatni błąd, wybór głosu (Zofia, Marek, Agnieszka) i przycisk „Nagraj porcję teraz” (ok. 50 s).
+- **Panel admina → „Głosy z chmury”:** postęp (akapity, gotowe artykuły, rozmiar plików), zużycie w miesiącu (w tym nagrania na bieżąco), ostatni błąd, wybór głosu (Zofia, Marek, Agnieszka) i przycisk „Nagraj porcję teraz” (ok. 50 s).
 - **Gdzie w kodzie:** `lib/tts.ts`, `lib/tts-core.ts` (testy: `tests/tts.test.ts`), `app/api/cron/tts`, `app/api/admin/tts`, `app/api/podrecznik/nagrania`.
 
 **Wdrożenie krok po kroku**

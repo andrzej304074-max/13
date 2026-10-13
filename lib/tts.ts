@@ -6,7 +6,8 @@ import { query, withTx } from "./db";
 import { allArticleSections } from "./podrecznik";
 import { articleSpeech } from "./podrecznik-speech";
 import {
-  allowance, DEFAULT_MONTHLY, isVoice, MIN_GAP_MS, normalizeState, pickBatch, ssml, textHash, VOICES, type TtsState,
+  allowance, dayOf, DEFAULT_MONTHLY, DEFAULT_USER_DAILY, isVoice, liveBlocked, MIN_GAP_MS, monthOf, normalizeState, pickBatch, ssml,
+  textHash, VOICES, type TtsState, type Usage,
 } from "./tts-core";
 import { HttpError } from "./tests";
 
@@ -17,14 +18,21 @@ import { HttpError } from "./tests";
  * przyjmuje 20 zapytań na minutę, więc jedno uruchomienie nagrywa najwyżej kilkadziesiąt akapitów.
  * Pliki MP3 w Vercel Blob (`tts/<głos>/<skrót>.mp3`); bez nagrania czytnik używa syntezatora przeglądarki.
  *
- * Zmienne: AZURE_SPEECH_KEY, AZURE_SPEECH_REGION, BLOB_READ_WRITE_TOKEN, CRON_SECRET, opcjonalnie TTS_MONTHLY_CHARS.
+ * Nagrania na bieżąco: gdy ktoś słucha artykułu, brakujące akapity są nagrywane od razu (recordLive) – dzięki temu
+ * czytanie gra z plików i trwa po wyłączeniu ekranu telefonu. Ten sam miesięczny limit + dzienny limit na konto.
+ * Zużycie znaków: tabela tts_usage (dzień × źródło: „cron” albo id konta).
+ *
+ * Zmienne: AZURE_SPEECH_KEY, AZURE_SPEECH_REGION, BLOB_READ_WRITE_TOKEN, CRON_SECRET, opcjonalnie TTS_MONTHLY_CHARS
+ * i TTS_USER_DAILY (dzienny limit nagrań na bieżąco na konto, domyślnie 60 tys. znaków).
  * TTS_FAKE=1 – atrapa do testów: cisza w WAV zapisywana w katalogu tymczasowym, bez Azure i Blob.
  */
 
 const FAKE = process.env.TTS_FAKE === "1";
 const FAKE_DIR = path.join(os.tmpdir(), "owe-tts");
 const FORMAT = "audio-24khz-48kbitrate-mono-mp3";
-const monthly = () => Number(process.env.TTS_MONTHLY_CHARS) > 0 ? Number(process.env.TTS_MONTHLY_CHARS) : DEFAULT_MONTHLY;
+const envNum = (k: string, d: number) => (Number(process.env[k]) > 0 ? Number(process.env[k]) : d);
+const monthly = () => envNum("TTS_MONTHLY_CHARS", DEFAULT_MONTHLY);
+const userDaily = () => envNum("TTS_USER_DAILY", DEFAULT_USER_DAILY);
 
 export function ttsConfigured(): { ok: boolean; missing: string[] } {
   if (FAKE) return { ok: true, missing: [] };
@@ -35,7 +43,10 @@ export function ttsConfigured(): { ok: boolean; missing: string[] } {
 /* ---------- akapity Podręcznika ---------- */
 
 interface Paragraph { hash: string; text: string; chars: number; article: string }
-const g = globalThis as unknown as { ttsParas?: { all: Paragraph[]; byArticle: Map<string, string[]> } };
+const g = globalThis as unknown as {
+  ttsParas?: { all: Paragraph[]; byArticle: Map<string, string[]>; byHash: Map<string, Paragraph> };
+  ttsLive?: Map<string, Promise<string>>;
+};
 
 /** Wszystkie akapity (bez powtórzeń) w kolejności kursu i skróty akapitów każdego artykułu – liczone raz na proces. */
 function paragraphs() {
@@ -52,24 +63,50 @@ function paragraphs() {
       }
       byArticle.set(unitId, hashes);
     }
-    g.ttsParas = { all, byArticle };
+    g.ttsParas = { all, byArticle, byHash: new Map(all.map((p) => [p.hash, p])) };
   }
   return g.ttsParas;
 }
 
-/* ---------- stan (settings.tts) ---------- */
+/* ---------- stan (settings.tts) i zużycie (tts_usage) ---------- */
 
-async function loadState(now = new Date()): Promise<TtsState> {
+async function loadState(): Promise<TtsState> {
   const { rows } = await query<{ value: string }>("SELECT value FROM settings WHERE key = 'tts'");
   let v: unknown = null;
   try { v = rows[0] ? JSON.parse(rows[0].value) : null; } catch {}
-  return normalizeState(v, now);
+  return normalizeState(v);
 }
 
 async function saveState(s: TtsState) {
   await query(
     `INSERT INTO settings (key, value) VALUES ('tts', $1) ON CONFLICT (key) DO UPDATE SET value = EXCLUDED.value, updated_at = now()`,
     [JSON.stringify(s)]);
+}
+
+async function usage(now = new Date(), who?: string): Promise<Usage & { whoToday: number; live: number }> {
+  const { rows } = await query<{ used: string; today: string; who_today: string; live: string }>(
+    `SELECT COALESCE(SUM(chars), 0) AS used,
+            COALESCE(SUM(chars) FILTER (WHERE day = $2::date), 0) AS today,
+            COALESCE(SUM(chars) FILTER (WHERE day = $2::date AND who = $3), 0) AS who_today,
+            COALESCE(SUM(chars) FILTER (WHERE who <> 'cron'), 0) AS live
+     FROM tts_usage WHERE day >= $1::date`,
+    [`${monthOf(now)}-01`, dayOf(now), who ?? ""]);
+  const r = rows[0];
+  return { used: Number(r.used), usedToday: Number(r.today), whoToday: Number(r.who_today), live: Number(r.live) };
+}
+
+async function addUsage(who: string, chars: number) {
+  await query(
+    `INSERT INTO tts_usage (day, who, chars) VALUES ($1::date, $2, $3)
+     ON CONFLICT (day, who) DO UPDATE SET chars = tts_usage.chars + EXCLUDED.chars`,
+    [dayOf(new Date()), who, chars]);
+}
+
+async function saveClip(p: Paragraph, voice: string, bytes: Buffer, url: string) {
+  await query(
+    `INSERT INTO tts_clips (hash, voice, article, chars, bytes, url) VALUES ($1, $2, $3, $4, $5, $6)
+     ON CONFLICT (hash, voice) DO UPDATE SET url = EXCLUDED.url, bytes = EXCLUDED.bytes, created_at = now()`,
+    [p.hash, voice, p.article, p.chars, bytes.length, url]);
 }
 
 /* ---------- Azure i magazyn plików ---------- */
@@ -125,7 +162,7 @@ function silentWav(seconds: number): Buffer {
   return b;
 }
 
-/* ---------- porcja nagrań ---------- */
+/* ---------- porcja nagrań w tle ---------- */
 
 export interface RunResult { recorded: number; chars: number; removed: number; stopped: string | null; allowance: number }
 
@@ -149,7 +186,7 @@ export async function runBatch(seconds: number): Promise<RunResult> {
 async function record(seconds: number): Promise<RunResult> {
   const started = Date.now();
   const now = new Date();
-  const state = await loadState(now);
+  const [state, use] = await Promise.all([loadState(), usage(now)]);
   const { all } = paragraphs();
   const current = new Set(all.map((p) => p.hash));
 
@@ -163,7 +200,7 @@ async function record(seconds: number): Promise<RunResult> {
       [stale.map((c) => c.hash), stale.map((c) => c.voice)]);
   }
 
-  const budget = allowance(state, monthly(), now);
+  const budget = allowance(use, monthly(), now);
   const todo = all.filter((p) => !have.has(p.hash));
   const batch = pickBatch(todo, budget);
   let recorded = 0, chars = 0;
@@ -175,27 +212,66 @@ async function record(seconds: number): Promise<RunResult> {
     try {
       const bytes = await synthesize(p.text, state.voice);
       const url = await store(state.voice, p.hash, bytes);
-      await query(
-        `INSERT INTO tts_clips (hash, voice, article, chars, bytes, url) VALUES ($1, $2, $3, $4, $5, $6)
-         ON CONFLICT (hash, voice) DO UPDATE SET url = EXCLUDED.url, bytes = EXCLUDED.bytes, created_at = now()`,
-        [p.hash, state.voice, p.article, p.chars, bytes.length, url]);
+      await saveClip(p, state.voice, bytes, url);
+      // zapis po każdym nagraniu – przerwana funkcja nie zgubi zużytych znaków
+      await addUsage("cron", p.chars);
       recorded++;
       chars += p.chars;
-      state.used += p.chars;
-      state.usedToday += p.chars;
       state.lastError = null;
     } catch (e) {
       state.lastError = (e as Error).message.slice(0, 300);
       stopped = e instanceof RateLimited ? "limit Azure" : "błąd";
       break;
-    } finally {
-      // zapis po każdym nagraniu – przerwana funkcja nie zgubi zużytych znaków
-      if (recorded || state.lastError) await saveState({ ...state, lastRun: new Date().toISOString() });
     }
     if (!FAKE) await new Promise((r) => setTimeout(r, Math.max(0, MIN_GAP_MS - (Date.now() - t0))));
   }
   await saveState({ ...state, lastRun: new Date().toISOString() });
   return { recorded, chars, removed: stale.length, stopped, allowance: budget };
+}
+
+/* ---------- nagranie na bieżąco (ktoś słucha) ---------- */
+
+/**
+ * Nagranie akapitu Podręcznika od razu – dla czytania z plików (także z wyłączonym ekranem).
+ * Tekst pochodzi z mapy akapitów serwera, klient podaje tylko skrót. Jedno nagranie danego akapitu naraz.
+ */
+export async function recordLive(userId: string, hash: unknown): Promise<{ url: string | null; reason?: string }> {
+  const p = typeof hash === "string" ? paragraphs().byHash.get(hash) : undefined;
+  if (!p) throw new HttpError(404, "Nie ma takiego akapitu.");
+  const state = await loadState();
+  const { rows } = await query<{ url: string }>("SELECT url FROM tts_clips WHERE hash = $1 AND voice = $2", [p.hash, state.voice]);
+  if (rows[0]) return { url: rows[0].url };
+  // limity i brak konfiguracji to zwykła odpowiedź „bez nagrania” – czytnik użyje głosu przeglądarki
+  if (!ttsConfigured().ok) return { url: null, reason: "Głos z chmury nie jest skonfigurowany." };
+  const key = `${state.voice}/${p.hash}`;
+  const use = await usage(new Date(), userId);
+  const blocked = liveBlocked(use, p.chars, monthly(), use.whoToday, userDaily());
+  if (blocked) return { url: null, reason: blocked };
+  g.ttsLive ??= new Map();
+  let job = g.ttsLive.get(key);
+  if (!job) {
+    job = (async () => {
+      let bytes: Buffer;
+      try {
+        bytes = await synthesize(p.text, state.voice);
+      } catch (e) {
+        if (e instanceof RateLimited) throw new HttpError(429, "Chwilowy limit zapytań – spróbuj za kilka sekund.");
+        throw new HttpError(502, "Nie udało się nagrać akapitu.");
+      }
+      const url = await store(state.voice, p.hash, bytes);
+      await saveClip(p, state.voice, bytes, url);
+      await addUsage(userId, p.chars);
+      return url;
+    })().finally(() => g.ttsLive!.delete(key));
+    g.ttsLive.set(key, job);
+  }
+  return { url: await job };
+}
+
+/** Czy nagrywanie na bieżąco jest teraz możliwe (konfiguracja i limit miesiąca). */
+export async function liveAvailable(): Promise<boolean> {
+  if (!ttsConfigured().ok) return false;
+  return (await usage()).used < monthly();
 }
 
 /* ---------- odczyt ---------- */
@@ -220,6 +296,9 @@ export interface TtsStatus {
   voices: typeof VOICES;
   monthly: number;
   used: number;
+  /** Z tego nagrania na bieżąco (słuchający). */
+  live: number;
+  userDaily: number;
   month: string;
   allowanceNow: number;
   paragraphs: { done: number; total: number; chars: number; charsDone: number };
@@ -231,14 +310,14 @@ export interface TtsStatus {
 
 export async function ttsStatus(): Promise<TtsStatus> {
   const now = new Date();
-  const state = await loadState(now);
+  const [state, use] = await Promise.all([loadState(), usage(now)]);
   const { all, byArticle } = paragraphs();
   const { rows } = await query<{ hash: string; bytes: number }>("SELECT hash, bytes FROM tts_clips WHERE voice = $1", [state.voice]);
   const done = new Set(rows.map((r) => r.hash));
   const conf = ttsConfigured();
   return {
-    configured: conf.ok, missing: conf.missing, voice: state.voice, voices: VOICES, monthly: monthly(), used: state.used, month: state.month,
-    allowanceNow: allowance(state, monthly(), now),
+    configured: conf.ok, missing: conf.missing, voice: state.voice, voices: VOICES, monthly: monthly(), used: use.used, live: use.live,
+    userDaily: userDaily(), month: monthOf(now), allowanceNow: allowance(use, monthly(), now),
     paragraphs: {
       done: all.filter((p) => done.has(p.hash)).length, total: all.length,
       chars: all.reduce((s, p) => s + p.chars, 0), charsDone: all.filter((p) => done.has(p.hash)).reduce((s, p) => s + p.chars, 0),

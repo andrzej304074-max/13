@@ -156,8 +156,9 @@ export function FlashcardsView({ cards, topics, kinds }: { cards: Card[]; topics
           <Link className="btn small secondary" href={withUser("/fiszki")}>Wszystkie fiszki</Link>
         </div>
       )}
-      <p className="muted" style={{ marginTop: -8 }}>
-        Obwódka pokazuje, jak dobrze znasz hasło – według testów (OWE i słownik), ćwiczeń w Nauce i ocen fiszek:
+      <p className={`muted fc-legend${mode === "feed" ? " hide-sm" : ""}`} style={{ marginTop: -8 }}>
+        {/* na telefonie sam kolorowy klucz – więcej miejsca na kartę */}
+        <span className="hide-sm">Obwódka pokazuje, jak dobrze znasz hasło – według testów (OWE i słownik), ćwiczeń w Nauce i ocen fiszek:</span>
         {" "}<span className="lv good">dobrze ≥ 80%</span> <span className="lv mid">średnio 50–79%</span> <span className="lv weak">słabo &lt; 50%</span> <span className="lv">nie sprawdzone</span>
       </p>
       {error && <p className="error">{error}</p>}
@@ -254,6 +255,21 @@ function Feed({ list, mastery, rate, preview, topicName, stars, onStar }: Props)
   const end = useRef<HTMLDivElement>(null);
   const box = useRef<HTMLDivElement>(null);
   useEffect(() => { setShown(BATCH); box.current?.scrollTo({ top: 0 }); }, [list]);
+  // wysokość feedu = od jego górnej krawędzi do dolnego paska (CSS: --feed-top) – strona się nie przewija,
+  // przewija się tylko feed, więc przyciąganie kart działa (górna krawędź zmienia się np. po rozwinięciu filtrów)
+  useEffect(() => {
+    const el = box.current;
+    if (!el) return;
+    const measure = () => {
+      const top = Math.round(el.getBoundingClientRect().top + window.scrollY);
+      if (el.style.getPropertyValue("--feed-top") !== `${top}px`) el.style.setProperty("--feed-top", `${top}px`);
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
+    if (el.parentElement) ro.observe(el.parentElement);
+    window.addEventListener("resize", measure);
+    return () => { ro.disconnect(); window.removeEventListener("resize", measure); };
+  }, []);
   useEffect(() => {
     const el = end.current;
     if (!el) return;

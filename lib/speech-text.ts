@@ -76,6 +76,8 @@ export interface SpeechItem {
   text: string;
   /** Nagranie głosem z chmury (Podręcznik) – gdy jest, gra plik zamiast syntezatora przeglądarki. */
   audio?: string;
+  /** Skrót akapitu Podręcznika bez nagrania, który serwer może nagrać na bieżąco (POST /api/podrecznik/nagrania). */
+  live?: string;
 }
 
 export function speechItem(id: string, title: string, ...parts: (string | null | undefined | false)[]): SpeechItem {

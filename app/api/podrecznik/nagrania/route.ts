@@ -1,12 +1,15 @@
 import { NextResponse } from "next/server";
-import { handle } from "@/lib/api";
+import { handle, readJson } from "@/lib/api";
 import { requireUser } from "@/lib/auth";
-import { articleClips, fakeFile } from "@/lib/tts";
+import { articleClips, fakeFile, liveAvailable, recordLive } from "@/lib/tts";
 import { HttpError } from "@/lib/tests";
 
 export const dynamic = "force-dynamic";
 
-/** Nagrania akapitów artykułu (skrót tekstu → URL pliku); `?plik=` – plik atrapy w testach (TTS_FAKE=1). */
+/**
+ * Nagrania akapitów artykułu (skrót tekstu → URL pliku) i `live` – czy brakujące akapity można nagrać na bieżąco;
+ * `?plik=` – plik atrapy w testach (TTS_FAKE=1).
+ */
 export async function GET(req: Request) {
   const p = new URL(req.url).searchParams;
   const file = p.get("plik");
@@ -21,6 +24,17 @@ export async function GET(req: Request) {
   }
   return handle(async () => {
     await requireUser();
-    return { clips: await articleClips(p.get("artykul") ?? "") };
+    const [clips, live] = await Promise.all([articleClips(p.get("artykul") ?? ""), liveAvailable()]);
+    return { clips, live };
+  });
+}
+
+export const maxDuration = 30;
+
+/** Nagranie akapitu na bieżąco (słuchanie artykułu, także z wyłączonym ekranem): `{ hash }` → `{ url }`. */
+export async function POST(req: Request) {
+  return handle(async () => {
+    const me = await requireUser();
+    return recordLive(me.id, (await readJson(req)).hash);
   });
 }

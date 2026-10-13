@@ -211,4 +211,11 @@ CREATE TABLE IF NOT EXISTS tts_clips (
   created_at timestamptz NOT NULL DEFAULT now(),
   PRIMARY KEY (hash, voice)
 );
+-- Zużycie znaków Azure: dzień × źródło („cron” – porcje w tle, id konta – nagrania na bieżąco).
+CREATE TABLE IF NOT EXISTS tts_usage (
+  day   date NOT NULL,
+  who   text NOT NULL,
+  chars int NOT NULL,
+  PRIMARY KEY (day, who)
+);
 `;

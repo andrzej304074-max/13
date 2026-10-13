@@ -218,14 +218,21 @@ export function Reader({ sections, unitId, heading, crumbs, footer, lessonMode =
   }, [hls]);
 
   // --- czytanie na głos: każdy blok to element kolejki (id = sekcja-blok, jak data-s / data-b w DOM);
-  // nagrane akapity (głos Azure, lib/tts.ts) grają z pliku, pozostałe czyta syntezator przeglądarki
-  const [clips, setClips] = useState<Record<string, string>>({});
+  // nagrane akapity (głos Azure, lib/tts.ts) grają z pliku, brakujące serwer nagrywa na bieżąco (`live`) –
+  // wtedy czytanie trwa też z wyłączonym ekranem; bez głosu z chmury czyta syntezator przeglądarki
+  const [clips, setClips] = useState<{ clips: Record<string, string>; live: boolean }>({ clips: {}, live: false });
   useEffect(() => {
-    api<{ clips: Record<string, string> }>(`/api/podrecznik/nagrania?artykul=${encodeURIComponent(unitId)}`).then((d) => setClips(d.clips)).catch(() => {});
+    api<{ clips: Record<string, string>; live: boolean }>(`/api/podrecznik/nagrania?artykul=${encodeURIComponent(unitId)}`).then(setClips).catch(() => {});
   }, [unitId]);
   const speech = useMemo(() => {
     const sp = articleSpeech(sections, !lessonMode || sections.length > 1);
-    return { ...sp, items: sp.items.map((it) => (clips[textHash(it.text)] ? { ...it, audio: clips[textHash(it.text)] } : it)) };
+    return {
+      ...sp,
+      items: sp.items.map((it) => {
+        const h = textHash(it.text);
+        return clips.clips[h] ? { ...it, audio: clips.clips[h] } : clips.live ? { ...it, live: h } : it;
+      }),
+    };
   }, [sections, lessonMode, clips]);
   const speechGroup = `artykul:${heading.starRef}`;
   const sp = useSpeech();

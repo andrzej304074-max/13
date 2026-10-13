@@ -1,6 +1,6 @@
 "use client";
 
-import { next, pause, prev, resume, setRate, setVoice, SPEECH_RATES, stop, useSpeech } from "@/lib/speech";
+import { dismissHint, next, pause, prev, resume, setRate, setVoice, SPEECH_RATES, stop, useSpeech } from "@/lib/speech";
 
 /** Pasek odtwarzacza (nad dolnym paskiem na telefonie, w rogu na komputerze) – widoczny, gdy coś jest czytane. */
 export function ReaderBar() {
@@ -11,7 +11,8 @@ export function ReaderBar() {
     <div className="speech-bar" role="region" aria-label="Czytanie na głos" data-testid="speech-bar">
       <div className="speech-info">
         <span className="speech-now" aria-live="polite">{sp.status === "playing" ? "🔊" : "⏸"} {item?.title}</span>
-        {item?.audio && <span className="speech-cloud" title="Nagranie głosem z chmury" data-testid="speech-cloud">☁️</span>}
+        {sp.source === "audio" && <span className="speech-cloud" title="Nagranie głosem z chmury – gra też z wyłączonym ekranem" data-testid="speech-cloud">☁️</span>}
+        {sp.source === "wait" && <span className="speech-cloud" title="Nagrywanie akapitu…" data-testid="speech-wait">⏳</span>}
         {sp.items.length > 1 && <span className="muted speech-pos">{sp.index + 1} / {sp.items.length}</span>}
       </div>
       <div className="speech-ctrl">
@@ -30,6 +31,12 @@ export function ReaderBar() {
           </select>
         )}
       </div>
+      {sp.hint && (
+        <p className="speech-hint" role="status" data-testid="speech-hint">
+          <span>🔇 {sp.hint}</span>
+          <button type="button" onClick={dismissHint} aria-label="Zamknij podpowiedź">✕</button>
+        </p>
+      )}
     </div>
   );
 }

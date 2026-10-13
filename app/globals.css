@@ -598,13 +598,23 @@ tr.selected-row td { background: var(--bg); font-weight: 600; }
 .fc-def { margin: 0; font-size: 1.08rem; line-height: 1.65; overflow-wrap: anywhere; }
 .fc-hint { font-size: .9rem; }
 .feed {
-  height: calc(100dvh - 190px); min-height: 420px; overflow-y: auto; scroll-snap-type: y mandatory;
+  /* --feed-top mierzy app/fiszki/view.tsx; pod spodem dolny pasek (telefon) albo margines strony */
+  --feed-bottom: 24px;
+  height: calc(100dvh - var(--feed-top, 190px) - var(--feed-bottom)); min-height: 240px; overflow-y: auto; scroll-snap-type: y mandatory;
+  /* blok zawierający dla elementów absolutnych w kartach (np. .sr-only przy gwiazdce) – inaczej wystają poza feed
+     i wydłużają całą stronę o tysiące pikseli (strona przewija się razem z feedem) */
+  position: relative;
   overscroll-behavior: contain; border-radius: 18px; scrollbar-width: none;
 }
+@media (max-width: 640px) { body:has(.bottom-bar) .feed { --feed-bottom: calc(var(--bar-h) + 12px); } }
+/* strona z feedem nie przewija się sama – bez dolnego odstępu (także gdy gra czytanie: feed robi miejsce na pasek) */
+main.container:has(.feed) { padding-bottom: 0 !important; }
+body:has(.speech-bar) .feed { --feed-bottom: 150px; }
+@media (max-width: 640px) { body:has(.speech-bar):has(.bottom-bar) .feed { --feed-bottom: calc(var(--bar-h) + 150px); } }
 .feed::-webkit-scrollbar { display: none; }
 .reel { height: 100%; scroll-snap-align: start; scroll-snap-stop: always; display: flex; flex-direction: column; gap: 10px; padding: 4px 0 8px; }
-.reel .fc { flex: 1; min-height: 0; overflow-y: auto; }
-.reel-bar { display: flex; align-items: center; gap: 8px; justify-content: flex-end; }
+.reel .fc { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; }
+.reel-bar { display: flex; align-items: center; gap: 8px; justify-content: flex-end; flex-wrap: wrap; }
 .reel-bar > .muted:first-child { margin-right: auto; }
 .reel-more { padding: 24px; text-align: center; scroll-snap-align: start; }
 .fc-big { min-height: 340px; }
@@ -615,7 +625,6 @@ details.filters-card summary { cursor: pointer; font-weight: 600; }
 @media (max-width: 520px) {
   .fc { padding: 18px; }
   .fc-title { font-size: 1.35rem; }
-  .feed { height: calc(100dvh - 170px); }
 }
 @media (max-width: 520px) { .hide-sm { display: none; } }
 
@@ -656,7 +665,6 @@ nav.sections a.active { color: var(--text); background: var(--surface); border-c
   .bottom-bar a.active { color: var(--accent); font-weight: 600; background: var(--accent-soft); }
   body:has(.bottom-bar) main.container { padding-bottom: calc(96px + env(safe-area-inset-bottom)); }
   .subtabs { margin: 0 -16px 14px; padding: 0 16px 10px; }
-  .feed { height: calc(100dvh - 250px); }
 }
 .skeleton { border-radius: 12px; background: linear-gradient(90deg, var(--surface), var(--border), var(--surface)); background-size: 200% 100%; animation: sk 1.2s ease-in-out infinite; }
 @keyframes sk { from { background-position: 100% 0; } to { background-position: -100% 0; } }
@@ -714,7 +722,7 @@ table.matrix th[scope="row"] { text-align: left; font-weight: 600; }
 .empty-state > span { font-size: 2.2rem; line-height: 1; }
 .empty-state p { margin: 0; max-width: 46ch; }
 
-.star-btn {
+.star-btn { position: relative;
   display: inline-grid; place-items: center; width: 40px; height: 40px; flex: none; border-radius: 999px; border: 1px solid transparent;
   background: transparent; color: var(--muted); font-size: 1.35rem; line-height: 1; cursor: pointer;
   transition: color var(--t) var(--ease), background-color var(--t) var(--ease), transform .15s var(--ease);
@@ -1102,6 +1110,9 @@ nav.sections a.locked, .bottom-bar a.locked, .subtabs a.locked { opacity: .55; }
 .speech-now { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; font-size: .92rem; }
 .speech-pos { font-size: .8rem; font-variant-numeric: tabular-nums; }
 .speech-cloud { font-size: .85rem; line-height: 1; }
+.speech-hint { display: flex; gap: 8px; align-items: flex-start; margin: 0; font-size: .82rem; line-height: 1.4; color: var(--muted); }
+.speech-hint > span { flex: 1; }
+.speech-hint > button { border: 0; background: none; color: var(--muted); font-size: .9rem; padding: 0 2px; cursor: pointer; }
 .speech-ctrl { display: flex; gap: 4px; align-items: center; flex-wrap: wrap; }
 .speech-ctrl button { min-width: 40px; height: 38px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text); font-size: 1rem; cursor: pointer; }
 .speech-ctrl button:hover:not(:disabled) { border-color: var(--accent); }

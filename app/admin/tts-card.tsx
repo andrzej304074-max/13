@@ -44,7 +44,8 @@ export function TtsCard() {
     <div className="card stack" data-testid="tts-card">
       <p className="muted" style={{ margin: 0 }}>
         Akapity Podręcznika są nagrywane głosem neuronowym Azure porcjami w tle (codziennie, w darmowym limicie znaków na miesiąc).
-        Akapity jeszcze nienagrane czyta głos przeglądarki. Po zmianie treści artykułu nagrywane są tylko zmienione akapity.
+        Gdy ktoś słucha artykułu, brakujące akapity są nagrywane od razu (wtedy czytanie trwa też po wyłączeniu ekranu telefonu;
+        limit {n(s.userDaily)} znaków dziennie na konto). Po zmianie treści artykułu nagrywane są tylko zmienione akapity.
       </p>
       {!s.configured && (
         <p className="error" style={{ margin: 0 }} data-testid="tts-missing">
@@ -59,7 +60,8 @@ export function TtsCard() {
         <div style={{ width: `${Math.max(0.5, pct)}%` }} />
       </div>
       <p className="muted" style={{ margin: 0 }}>
-        Zużycie w {s.month}: {n(s.used)} z {n(s.monthly)} znaków ({usedPct.toLocaleString("pl-PL", { maximumFractionDigits: 0 })}%) · dziś można jeszcze ok. {n(s.allowanceNow)} ·
+        Zużycie w {s.month}: {n(s.used)} z {n(s.monthly)} znaków ({usedPct.toLocaleString("pl-PL", { maximumFractionDigits: 0 })}%),
+        w tym nagrane na bieżąco przy słuchaniu: <span data-testid="tts-live">{n(s.live)}</span> · porcja w tle dziś jeszcze ok. {n(s.allowanceNow)} ·
         do nagrania zostało {n(s.paragraphs.chars - s.paragraphs.charsDone)} znaków
         {s.lastRun ? ` · ostatnia porcja: ${new Date(s.lastRun).toLocaleString("pl-PL", { dateStyle: "short", timeStyle: "short" })}` : ""}
       </p>

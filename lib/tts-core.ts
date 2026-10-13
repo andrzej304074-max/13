@@ -35,46 +35,45 @@ export function ssml(text: string, voice: string): string {
   return `<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="pl-PL"><voice name="${esc(voice)}">${esc(text)}</voice></speak>`;
 }
 
+/** Ustawienia nagrań (settings.tts); zużycie znaków jest w tabeli tts_usage (licznik dzienny na źródło). */
 export interface TtsState {
   voice: string;
-  /** Miesiąc rozliczeniowy (UTC, RRRR-MM) i zużyte w nim znaki. */
-  month: string;
-  used: number;
-  /** Dzień (RRRR-MM-DD) i znaki zużyte tego dnia – porcja dzienna rozkłada budżet na cały miesiąc. */
-  day: string;
-  usedToday: number;
   lastRun: string | null;
   lastError: string | null;
 }
 
+/** Zużycie znaków: w bieżącym miesiącu i dziś (wszystkie źródła: porcje w tle i nagrania na bieżąco). */
+export interface Usage { used: number; usedToday: number }
+
+/** Domyślny dzienny limit nagrań na bieżąco dla jednego konta. */
+export const DEFAULT_USER_DAILY = 60_000;
+
 export const monthOf = (d: Date) => d.toISOString().slice(0, 7);
 export const dayOf = (d: Date) => d.toISOString().slice(0, 10);
 
-export function normalizeState(v: unknown, now: Date): TtsState {
+export function normalizeState(v: unknown): TtsState {
   const o = (v && typeof v === "object" ? v : {}) as Record<string, unknown>;
-  const num = (x: unknown) => (typeof x === "number" && Number.isFinite(x) && x >= 0 ? x : 0);
-  const s: TtsState = {
+  return {
     voice: isVoice(o.voice) ? o.voice : DEFAULT_VOICE,
-    month: typeof o.month === "string" ? o.month : monthOf(now),
-    used: num(o.used),
-    day: typeof o.day === "string" ? o.day : dayOf(now),
-    usedToday: num(o.usedToday),
     lastRun: typeof o.lastRun === "string" ? o.lastRun : null,
     lastError: typeof o.lastError === "string" ? o.lastError : null,
   };
-  // nowy miesiąc / dzień – liczniki od zera
-  if (s.month !== monthOf(now)) { s.month = monthOf(now); s.used = 0; }
-  if (s.day !== dayOf(now)) { s.day = dayOf(now); s.usedToday = 0; }
-  return s;
 }
 
-/** Ile znaków wolno nagrać teraz: pozostały budżet miesiąca rozłożony równo na pozostałe dni (z dzisiejszym). */
-export function allowance(s: TtsState, monthly: number, now: Date): number {
-  const left = Math.max(0, monthly - s.used);
+/** Ile znaków wolno nagrać w tle teraz: pozostały budżet miesiąca rozłożony równo na pozostałe dni (z dzisiejszym). */
+export function allowance(u: Usage, monthly: number, now: Date): number {
+  const left = Math.max(0, monthly - u.used);
   const days = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth() + 1, 0)).getUTCDate();
   const daysLeft = days - now.getUTCDate() + 1;
-  const today = Math.ceil((left + s.usedToday) / daysLeft);
-  return Math.max(0, Math.min(left, today - s.usedToday));
+  const today = Math.ceil((left + u.usedToday) / daysLeft);
+  return Math.max(0, Math.min(left, today - u.usedToday));
+}
+
+/** Nagranie na bieżąco (użytkownik słucha): dozwolone, gdy mieści się w limicie miesiąca i w dziennym limicie konta. */
+export function liveBlocked(u: Usage, chars: number, monthly: number, userToday: number, userDaily: number): string | null {
+  if (u.used + chars > monthly) return "Wyczerpany miesięczny limit nagrań głosem z chmury.";
+  if (userToday + chars > userDaily) return "Wyczerpany dzienny limit nagrań na bieżąco dla tego konta.";
+  return null;
 }
 
 /** Porcja do nagrania: kolejne akapity w kolejności kursu, dopóki mieszczą się w budżecie znaków. */
