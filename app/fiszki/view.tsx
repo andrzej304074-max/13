@@ -9,6 +9,10 @@ import { api, fmtPct, isTyping, viewedUser, withUser } from "@/lib/client";
 import type { Mastery } from "@/lib/mastery-core";
 import { LEVELS, level, type Level } from "@/lib/owe-stats";
 import { useStars } from "@/lib/stars-client";
+import Link from "next/link";
+import type { Deck } from "@/lib/decks";
+import { AddToDeck } from "./add-to-deck";
+import { cardsLabel } from "@/lib/decks-core";
 
 export interface Card { id: string; t: string; d: string; w: string | null; kind: string; topic: string; n: number }
 type Topic = { id: string; title: string; emoji: string };
@@ -55,6 +59,8 @@ export function FlashcardsView({ cards, topics, kinds }: { cards: Card[]; topics
   const [mastery, setMastery] = useState<Record<string, Mastery>>({});
   const [error, setError] = useState<string | null>(null);
   const preview = typeof window !== "undefined" && !!viewedUser();
+  // ?talia=<id> – nauka własnej talii: tylko jej karty, w jej kolejności (filtry ukryte)
+  const [deck, setDeck] = useState<Deck | null>(null);
 
   useEffect(() => {
     const p = new URLSearchParams(window.location.search);
@@ -69,7 +75,11 @@ export function FlashcardsView({ cards, topics, kinds }: { cards: Card[]; topics
     const o = p.get("kolejnosc");
     setOrder(o === "random" || o === "weak" ? o : "lessons");
     setSeed(Math.floor(Math.random() * 1e9) + 1);
-    api<Record<string, Mastery>>(withUser("/api/fiszki/opanowanie")).then(setMastery).catch((e) => setError(e.message)).finally(() => setReady(true));
+    const talia = p.get("talia");
+    Promise.all([
+      api<Record<string, Mastery>>(withUser("/api/fiszki/opanowanie")).then(setMastery),
+      talia ? api<Deck>(withUser(`/api/talie/${talia}`)).then(setDeck) : null,
+    ]).catch((e) => setError(e.message)).finally(() => setReady(true));
   }, []);
   useEffect(() => {
     if (!ready) return;
@@ -83,8 +93,9 @@ export function FlashcardsView({ cards, topics, kinds }: { cards: Card[]; topics
     if (oweOnly) p.set("owe", "1");
     if (gw) p.set("gw", gw);
     if (order !== "lessons") p.set("kolejnosc", order);
+    if (deck) p.set("talia", deck.id);
     window.history.replaceState(null, "", `/fiszki${p.size ? `?${p}` : ""}`);
-  }, [ready, mode, topic, kind, lv, oweOnly, gw, order]);
+  }, [ready, mode, topic, kind, lv, oweOnly, gw, order, deck]);
 
   // kolejność, filtr koloru i gwiazdek liczone ze stanu z chwili wejścia/zmiany filtrów – ocena lub gwiazdka nie przestawia listy
   const snapshot = useRef(mastery);
@@ -97,12 +108,17 @@ export function FlashcardsView({ cards, topics, kinds }: { cards: Card[]; topics
   const list = useMemo(() => {
     const m = snapshot.current;
     const st = starSnap.current;
+    if (deck) {
+      const byId = new Map(cards.map((c) => [c.id, c]));
+      const r = deck.items.map((id) => byId.get(id)).filter((c): c is Card => !!c);
+      return order === "random" ? shuffle(r, seed) : r;
+    }
     let r = cards.filter((c) => (!topic || c.topic === topic) && (!kind || c.kind === kind) && (!oweOnly || c.n > 0) && (!lv || lvOf(m[c.id]) === lv)
       && (!gw || st.has(c.id) === (gw === "1")));
     if (order === "random") r = shuffle(r, seed);
     if (order === "weak") r = [...r].sort((a, b) => LV_RANK[lvOf(m[a.id])] - LV_RANK[lvOf(m[b.id])] || (m[a.id] ? m[a.id].c / m[a.id].t : 1) - (m[b.id] ? m[b.id].c / m[b.id].t : 1));
     return r;
-  }, [cards, topic, kind, lv, oweOnly, gw, order, seed, snapKey]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [cards, topic, kind, lv, oweOnly, gw, order, seed, snapKey, deck]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const counts = useMemo(() => {
     const c: Record<Level, number> = { good: 0, mid: 0, weak: 0, none: 0 };
@@ -127,7 +143,16 @@ export function FlashcardsView({ cards, topics, kinds }: { cards: Card[]; topics
   return (
     <div className="stack">
       <PreviewBanner />
-      <h1>Fiszki</h1>
+      <h1>{deck ? `🗂️ ${deck.name}` : "Fiszki"}</h1>
+      {deck && (
+        <div className="row deck-bar" data-testid="deck-mode">
+          <span className="muted">Talia · {cardsLabel(list.length)}{order === "random" ? " · losowo" : " · Twoja kolejność"}</span>
+          <span className="spacer" />
+          <button className="btn small secondary" onClick={() => { setOrder(order === "random" ? "lessons" : "random"); setSeed(seed + 1); }}>{order === "random" ? "↕ Moja kolejność" : "🔀 Losowo"}</button>
+          <Link className="btn small secondary" href={withUser(`/fiszki/talie/${deck.id}`)}>Edytuj talię</Link>
+          <Link className="btn small secondary" href={withUser("/fiszki")}>Wszystkie fiszki</Link>
+        </div>
+      )}
       <p className="muted" style={{ marginTop: -8 }}>
         Obwódka pokazuje, jak dobrze znasz hasło – według testów (OWE i słownik), ćwiczeń w Nauce i ocen fiszek:
         {" "}<span className="lv good">dobrze ≥ 80%</span> <span className="lv mid">średnio 50–79%</span> <span className="lv weak">słabo &lt; 50%</span> <span className="lv">nie sprawdzone</span>
@@ -137,7 +162,7 @@ export function FlashcardsView({ cards, topics, kinds }: { cards: Card[]; topics
         <button className={mode === "feed" ? "active" : ""} aria-pressed={mode === "feed"} onClick={() => setMode("feed")}>📱 Przewijanie</button>
         <button className={mode === "classic" ? "active" : ""} aria-pressed={mode === "classic"} onClick={() => setMode("classic")}>🃏 Klasyczne</button>
       </div>
-      <details className="card filters-card" open={false}>
+      {!deck && <details className="card filters-card" open={false}>
         <summary>Filtry · {list.length} z {cards.length} fiszek</summary>
         <div className="stack" style={{ marginTop: 12 }}>
           <div className="filter-grid">
@@ -182,7 +207,7 @@ export function FlashcardsView({ cards, topics, kinds }: { cards: Card[]; topics
             {order === "random" && <button className="btn small secondary" onClick={() => setSeed(seed + 1)}>🔀 Przetasuj</button>}
           </div>
         </div>
-      </details>
+      </details>}
 
       {list.length === 0 ? (
         <div className="empty-state">
@@ -244,6 +269,7 @@ function Feed({ list, mastery, rate, preview, topicName, stars, onStar }: Props)
             <div className="reel-bar">
               <span className="muted">{i + 1} / {list.length}</span>
               <StarButton on={stars.has(c.id)} onToggle={() => onStar(c.id)} label="fiszkę do ulubionych" disabled={preview} />
+              {!preview && <AddToDeck item={c.id} title={c.t} />}
               {!preview && (rated[c.id] ? <span className="muted">Zapisano ✓</span> : <>
                 <button className="btn small secondary" onClick={() => { rate(c.id, false); setRated((r) => ({ ...r, [c.id]: true })); }}>✗ Nie znam</button>
                 <button className="btn small" onClick={() => { rate(c.id, true); setRated((r) => ({ ...r, [c.id]: true })); }}>✓ Znam</button>
@@ -286,7 +312,8 @@ function Classic({ list, mastery, rate, preview, topicName, stars, onStar }: Pro
   return (
     <div className="stack classic" data-testid="classic">
       <div className="row"><span className="muted" data-testid="classic-pos">{i + 1} / {list.length}</span>
-        <StarButton on={stars.has(c.id)} onToggle={() => onStar(c.id)} label="fiszkę do ulubionych" disabled={preview} /><span className="spacer" />
+        <StarButton on={stars.has(c.id)} onToggle={() => onStar(c.id)} label="fiszkę do ulubionych" disabled={preview} />
+        {!preview && <AddToDeck item={c.id} title={c.t} />}<span className="spacer" />
         {!preview && <span className="muted">w tej sesji: ✓ {done.known} · ✗ {done.unknown}</span>}</div>
       <button className={`fc fc-big fc-${lvOf(m)} ${back ? "back" : ""}`} onClick={() => setBack(!back)} aria-label={`Fiszka: ${c.t}`} data-testid="classic-card">
         <Face c={c} back={back} topicName={topicName} m={m} />

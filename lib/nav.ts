@@ -11,6 +11,7 @@ export const NAV: NavSection[] = [
     { href: "/nauka", label: "Kurs" },
     { href: "/nauka/podrecznik", label: "Podręcznik" },
     { href: "/fiszki", label: "Fiszki" },
+    { href: "/fiszki/talie", label: "Moje talie" },
     { href: "/nauka/powtorka", label: "Powtórka" },
   ] },
   { id: "pojecia", icon: "📖", label: "Pojęcia", tabs: [
@@ -40,7 +41,7 @@ export function activeTab(path: string): { section: NavSection; tab: NavTab } | 
   return best && { section: best.section, tab: best.tab };
 }
 
-/** Strony skupienia (rozwiązywanie testu, lekcja) – bez dolnego paska i podzakładek. */
+/** Strony skupienia (rozwiązywanie testu, lekcja) – bez paska podzakładek (dolny pasek działów zostaje). */
 export function isFocusPage(path: string): boolean {
   return path.startsWith("/test/") || path.startsWith("/nauka/lekcja/");
 }

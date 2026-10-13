@@ -177,6 +177,22 @@ CREATE TABLE IF NOT EXISTS article_reads (
   at      timestamptz NOT NULL DEFAULT now(),
   PRIMARY KEY (user_id, ref)
 );
+-- Własne talie fiszek: kolejność kart ustala użytkownik (przeciąganie).
+CREATE TABLE IF NOT EXISTS decks (
+  id         uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id    uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  name       text NOT NULL,
+  created_at timestamptz NOT NULL DEFAULT now(),
+  updated_at timestamptz NOT NULL DEFAULT now()
+);
+CREATE INDEX IF NOT EXISTS decks_user_idx ON decks (user_id, updated_at DESC);
+CREATE TABLE IF NOT EXISTS deck_cards (
+  deck_id  uuid NOT NULL REFERENCES decks(id) ON DELETE CASCADE,
+  item_id  text NOT NULL,
+  pos      int NOT NULL,
+  added_at timestamptz NOT NULL DEFAULT now(),
+  PRIMARY KEY (deck_id, item_id)
+);
 -- Sesja „artykuł”: przeczytanie rozdziału zamiast ćwiczeń Poznaj (bez odpowiedzi – nie wpływa na skuteczność).
 ALTER TABLE learn_sessions ADD COLUMN IF NOT EXISTS mode text NOT NULL DEFAULT 'cwiczenia';
 `;
