@@ -101,22 +101,41 @@ def first_sentence(text, limit=180):
     parts = re.split(r"(?<=\.)\s+(?=[A-ZĄĆĘŁŃÓŚŹŻ0-9„(])", text)
     s = parts[0]
     for p in parts[1:]:
-        if len(s) >= 60:
+        if len(s) >= 60 and balanced(s):  # „(A. Smith)” to nie koniec zdania
             break
         s += " " + p
-    return s if len(s) <= limit else s[:limit].rsplit(" ", 1)[0] + "…"
+    if len(s) <= limit and balanced(s):
+        return s
+    return cut_open(s[:limit].rsplit(" ", 1)[0]).rstrip(" ,;–") + "…"
+
+
+def balanced(s):
+    return s.count("(") == s.count(")") and s.count("„") == s.count("”")
+
+
+def cut_open(s):
+    """Ucięty tekst bez niedomkniętego nawiasu lub cudzysłowu na końcu („… (np.” → „…”)."""
+    while not balanced(s):
+        i = max(s.rfind("("), s.rfind("„"))
+        if i <= 0:
+            break
+        s = s[:i].rstrip(" ,;–")
+    return s
 
 
 def clip(text, limit=240):
+    """Początek tekstu do granicy zdania lub „;” – bez cięcia w środku nawiasu czy cytatu."""
     if len(text) <= limit:
         return text
     parts = re.split(r"(?<=[.;])\s+", text)
-    out = ""
+    out = good = ""
     for p in parts:
         if len(out) + len(p) + 1 > limit:
             break
         out = (out + " " + p).strip()
-    return out or text[:limit].rsplit(" ", 1)[0] + "…"
+        if balanced(out):
+            good = out
+    return good or cut_open(text[:limit].rsplit(" ", 1)[0]) + "…"
 
 
 def full_entry(e):
