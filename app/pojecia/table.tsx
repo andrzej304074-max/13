@@ -3,6 +3,9 @@
 import Link from "next/link";
 import { useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
 import { ToTop } from "@/app/components/to-top";
+import { StarButton, StarFilterSeg, type StarFilter } from "@/app/components/star";
+import { viewedUser } from "@/lib/client";
+import { useStars } from "@/lib/stars-client";
 import { SpeakButton } from "@/app/components/speech/speak";
 import { hasloSpeech } from "@/lib/speech-catalog";
 import { useData } from "@/lib/data-client";
@@ -34,6 +37,10 @@ export function ConceptTable({ rows, topics, kinds }: { rows: Row[]; topics: Top
   const [kind, setKind] = useState("");
   const [q, setQ] = useState("");
   const query = useDeferredValue(q);
+  const [gw, setGw] = useState<StarFilter>("");
+  const { stars, toggle } = useStars("fiszka");
+  const [preview, setPreview] = useState(false);
+  useEffect(() => setPreview(!!viewedUser()), []);
   const topicName = useMemo(() => Object.fromEntries(topics.map((t) => [t.id, `${t.emoji} ${t.title}`])), [topics]);
 
   // filtry zapamiętane w adresie (?dzial=mikro&rodzaj=osoba&q=elastyczność)
@@ -54,13 +61,14 @@ export function ConceptTable({ rows, topics, kinds }: { rows: Row[]; topics: Top
   const index = useMemo(() => rows.map((r) => norm(`${r.t} ${r.d} ${r.w ?? ""}`)), [rows]);
   const shown = useMemo(() => {
     const nq = norm(query.trim());
-    return rows.filter((r, i) => (!topic || r.topic === topic) && (!kind || r.kind === kind) && (!nq || index[i].includes(nq)));
-  }, [rows, index, topic, kind, query]);
+    return rows.filter((r, i) => (!topic || r.topic === topic) && (!kind || r.kind === kind) && (!nq || index[i].includes(nq))
+      && (!gw || stars.has(r.id) === (gw === "1")));
+  }, [rows, index, topic, kind, query, gw, stars]);
 
   // renderowanie porcjami (1,7 tys. wierszy naraz blokuje telefon); kolejne porcje przy przewijaniu
   const [limit, setLimit] = useState(STEP);
   const end = useRef<HTMLDivElement>(null);
-  useEffect(() => setLimit(STEP), [topic, kind, query]);
+  useEffect(() => setLimit(STEP), [topic, kind, query, gw]);
   useEffect(() => {
     const el = end.current;
     if (!el) return;
@@ -97,6 +105,10 @@ export function ConceptTable({ rows, topics, kinds }: { rows: Row[]; topics: Top
             ))}
           </div>
         </div>
+        <div>
+          <div className="filter-label">Gwiazdka (wspólna z Fiszkami)</div>
+          <StarFilterSeg value={gw} onChange={setGw} />
+        </div>
         <label className="field">
           <span>Szukaj w nazwie i definicji</span>
           <input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="np. elastyczność, Keynes, VAT…" />
@@ -116,13 +128,17 @@ export function ConceptTable({ rows, topics, kinds }: { rows: Row[]; topics: Top
         {shown.slice(0, limit).map((r) => (
           <div className="concept-row" role="row" key={r.id} id={`h-${r.id}`}>
             <div className="concept-name" role="cell">
-              <strong>{r.t}</strong>
+              <div className="concept-head">
+                <strong>{r.t}</strong>
+                <StarButton on={stars.has(r.id)} onToggle={() => toggle(r.id)} label="fiszkę do ulubionych" disabled={preview} />
+              </div>
               <div className="concept-tags">
                 <span className="tag">{KIND_ONE[r.kind] ?? r.kind}</span>
                 {!topic && <span className="tag">{topicName[r.topic]}</span>}
                 {r.n > 0 && <span className="tag owe" title="Liczba pytań OWE o to hasło">OWE: {r.n}×</span>}
-                <Link className="tag tag-link" href={`/pojecia/mapa?q=${r.id}`} title="Pojęcia powiązane – mapa myśli">🧠 mapa</Link>
                 <SpeakButton compact group={`haslo:${r.id}`} label={`Czytaj: ${r.t}`} continuous={false} items={() => [itemOf(r)]} />
+                {/* mapa odsunięta od reszty, żeby nie trafić w nią przypadkiem */}
+                <Link className="tag tag-link concept-map" href={`/pojecia/mapa?q=${r.id}`} title="Pojęcia powiązane – mapa myśli">🧠 mapa</Link>
               </div>
             </div>
             <div className="concept-def" role="cell">

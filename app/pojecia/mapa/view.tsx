@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { AddToDeck } from "@/app/fiszki/add-to-deck";
 import { PageSkeleton } from "@/app/pojecia/table";
+import { StarButton } from "@/app/components/star";
 import { viewedUser } from "@/lib/client";
 import { useData } from "@/lib/data-client";
 import type { Haslo } from "@/lib/data-server";
@@ -46,7 +47,7 @@ function MindMapPage({ rows, topics, kinds, mapa }: { rows: Haslo[]; topics: Top
   const byId = useMemo(() => new Map(rows.map((r) => [r.id, r])), [rows]);
   const colors = useMemo(() => Object.fromEntries(topics.map((t) => [t.id, t.color])), [topics]);
   const topicName = useMemo(() => Object.fromEntries(topics.map((t) => [t.id, `${t.emoji} ${t.title.replace(/^Temat przewodni: /, "")}`])), [topics]);
-  const { stars } = useStars("fiszka");
+  const { stars, toggle: toggleStar } = useStars("fiszka");
   const [center, setCenter] = useState<string | null>(null);
   const [history, setHistory] = useState<string[]>([]);
   const [count, setCount] = useState(10);
@@ -228,7 +229,10 @@ function MindMapPage({ rows, topics, kinds, mapa }: { rows: Haslo[]; topics: Top
       <div className="mm-bottom">
         <section className="card mm-card" aria-label="Wybrane pojęcie" data-testid="mm-card">
           <div className="concept-tags"><span className="tag">{KIND_ONE[c.kind] ?? c.kind}</span><span className="tag">{topicName[c.topic]}</span>{c.n > 0 && <span className="tag owe">OWE: {c.n}×</span>}</div>
-          <h2>{c.t}</h2>
+          <div className="concept-head">
+            <h2>{c.t}</h2>
+            <StarButton on={stars.has(c.id)} onToggle={() => toggleStar(c.id)} label="fiszkę do ulubionych" disabled={preview} />
+          </div>
           <p className="concept-def">{c.d}</p>
           {c.w && <pre className="formula">{c.w}</pre>}
           <div className="row" style={{ flexWrap: "wrap", gap: 8 }}>

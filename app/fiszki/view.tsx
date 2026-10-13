@@ -253,6 +253,45 @@ type Props = {
   stars: Set<string>; onStar: (id: string) => void;
 };
 
+/**
+ * Małe „🧠” do mapy myśli – osobno od karty (stuknięcie w kartę tylko ją odwraca),
+ * a przejście wymaga potwierdzenia w dymku, żeby nie wyjść z fiszek przypadkiem.
+ */
+function MapLink({ id }: { id: string }) {
+  const [open, setOpen] = useState(false);
+  // przesunięcie dymka względem przycisku, żeby zmieścił się na ekranie
+  const [dx, setDx] = useState(0);
+  const ref = useRef<HTMLSpanElement>(null);
+  useEffect(() => {
+    if (!open) return;
+    const off = (e: PointerEvent) => { if (!ref.current?.contains(e.target as Node)) setOpen(false); };
+    const esc = (e: KeyboardEvent) => { if (e.key === "Escape") setOpen(false); };
+    document.addEventListener("pointerdown", off);
+    document.addEventListener("keydown", esc);
+    return () => { document.removeEventListener("pointerdown", off); document.removeEventListener("keydown", esc); };
+  }, [open]);
+  return (
+    <span className="map-link" ref={ref}>
+      <button type="button" className="btn small secondary map-link-btn" aria-expanded={open}
+        onClick={() => {
+          const r = ref.current?.getBoundingClientRect();
+          if (r) { const w = Math.min(260, window.innerWidth * 0.8); setDx(Math.min(window.innerWidth - 8 - w, Math.max(8, r.left)) - r.left); }
+          setOpen((v) => !v);
+        }}
+        title="Powiązane pojęcia – mapa myśli" aria-label="Powiązane pojęcia – mapa myśli" data-testid="map-link">🧠</button>
+      {open && (
+        <span className="map-pop" style={{ left: dx }} role="dialog" aria-label="Przejść do mapy myśli?" data-testid="map-pop">
+          <span>Otworzyć mapę myśli powiązanych pojęć?</span>
+          <span className="row" style={{ gap: 6 }}>
+            <Link className="btn small" href={`/pojecia/mapa?q=${id}`} data-testid="map-open">Otwórz</Link>
+            <button type="button" className="btn small secondary" onClick={() => setOpen(false)}>Anuluj</button>
+          </span>
+        </span>
+      )}
+    </span>
+  );
+}
+
 function Face({ c, back, topicName, m }: { c: Card; back: boolean; topicName: Record<string, string>; m: Mastery | undefined }) {
   return back ? (
     <div className="fc-face">
@@ -260,7 +299,6 @@ function Face({ c, back, topicName, m }: { c: Card; back: boolean; topicName: Re
       <p className="fc-def">{c.d}</p>
       {c.w && <pre className="formula">{c.w}</pre>}
       <LevelNote m={m} />
-      <Link className="fc-map" href={`/pojecia/mapa?q=${c.id}`} onClick={(e) => e.stopPropagation()}>🧠 Powiązane pojęcia</Link>
     </div>
   ) : (
     <div className="fc-face">
@@ -337,12 +375,15 @@ function Feed({ list, mastery, rate, preview, topicName, stars, onStar }: Props)
         const m = mastery[c.id];
         return (
           <section className="reel" key={c.id} data-testid="reel">
-            <button className={`fc fc-${lvOf(m)} ${flipped[c.id] ? "back" : ""}${c.own ? " own" : ""}`} onClick={() => setFlipped((f) => ({ ...f, [c.id]: !f[c.id] }))} aria-label={`Fiszka: ${c.t}`}>
-              <Face c={c} back={!!flipped[c.id]} topicName={topicName} m={m} />
-            </button>
+            <div className="fc-wrap">
+              <button className={`fc fc-${lvOf(m)} ${flipped[c.id] ? "back" : ""}${c.own ? " own" : ""}`} onClick={() => setFlipped((f) => ({ ...f, [c.id]: !f[c.id] }))} aria-label={`Fiszka: ${c.t}`}>
+                <Face c={c} back={!!flipped[c.id]} topicName={topicName} m={m} />
+              </button>
+              <StarButton className="fc-star" on={stars.has(c.id)} onToggle={() => onStar(c.id)} label="fiszkę do ulubionych" disabled={preview} />
+            </div>
             <div className="reel-bar">
               <span className="muted">{i + 1} / {list.length}</span>
-              <StarButton on={stars.has(c.id)} onToggle={() => onStar(c.id)} label="fiszkę do ulubionych" disabled={preview} />
+              {!c.own && <MapLink id={c.id} />}
               <SpeakButton compact group={`fiszka:${c.id}`} label="Czytaj hasło i definicję" continuous={false} items={() => [cardItem(c)]} />
               {!preview && <AddToDeck item={c.id} title={c.t} />}
               {!preview && (rated[c.id] ? <span className="muted">Zapisano ✓</span> : <>
@@ -409,14 +450,17 @@ function Classic({ list, mastery, rate, preview, topicName, stars, onStar }: Pro
   return (
     <div className="stack classic" data-testid="classic">
       <div className="row"><span className="muted" data-testid="classic-pos">{i + 1} / {list.length}</span>
-        <StarButton on={stars.has(c.id)} onToggle={() => onStar(c.id)} label="fiszkę do ulubionych" disabled={preview} />
+        {!c.own && <MapLink id={c.id} />}
         {!preview && <AddToDeck item={c.id} title={c.t} />}
         <SpeakButton group="fiszki-seq" label="Czytaj po kolei" testid="speak-seq" items={() => list.map(cardItem)} start={i} />
         <span className="spacer" />
         {!preview && <span className="muted">w tej sesji: ✓ {done.known} · ✗ {done.unknown}</span>}</div>
-      <button className={`fc fc-big fc-${lvOf(m)} ${back ? "back" : ""}${c.own ? " own" : ""}`} onClick={() => setBack(!back)} aria-label={`Fiszka: ${c.t}`} data-testid="classic-card">
-        <Face c={c} back={back} topicName={topicName} m={m} />
-      </button>
+      <div className="fc-wrap">
+        <button className={`fc fc-big fc-${lvOf(m)} ${back ? "back" : ""}${c.own ? " own" : ""}`} onClick={() => setBack(!back)} aria-label={`Fiszka: ${c.t}`} data-testid="classic-card">
+          <Face c={c} back={back} topicName={topicName} m={m} />
+        </button>
+        <StarButton className="fc-star" on={stars.has(c.id)} onToggle={() => onStar(c.id)} label="fiszkę do ulubionych" disabled={preview} />
+      </div>
       <div className="classic-actions">
         <button className="btn secondary" onClick={() => go(-1)} disabled={i === 0} aria-label="Poprzednia">←</button>
         {preview ? <button className="btn" onClick={() => go(1)}>Dalej →</button> : <>
