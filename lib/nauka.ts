@@ -115,6 +115,8 @@ async function lessonLevels(userId: string, lessonIds: string[]): Promise<Record
 export interface LessonProgress {
   level: number;
   subs: Record<number, { best: number; passes: number; sessions: number; last: string }>;
+  /** Pod-lekcje przerwane w trakcie (ostatnie 7 dni, bez późniejszego ukończenia): ćwiczenie / wszystkie. */
+  partial?: Record<number, { pos: number; total: number; at: string }>;
 }
 
 export interface Summary {
@@ -178,6 +180,18 @@ export async function getProgress(userId: string, topic: string | null = null): 
     const lp = (lessons[r.lesson] ??= { level: levels[r.lesson] ?? 0, subs: {} });
     lp.subs[r.sub] = { best: pct(r.best, 1), passes: Number(r.passes), sessions: Number(r.sessions), last: r.last.toISOString() };
   }
+  // pod-lekcje w trakcie: najnowsza nieukończona sesja z postępem, jeśli później nie było ukończonej
+  const { rows: part } = await query<{ lesson: string; sub: number; progress: { pos: number; total: number }; started_at: Date }>(
+    `SELECT DISTINCT ON (lesson, sub) lesson, sub, progress, started_at FROM learn_sessions
+     WHERE user_id = $2 AND finished_at IS NULL AND progress IS NOT NULL AND started_at > now() - interval '7 days'
+       AND ($1::text[] IS NULL OR lesson = ANY($1))
+     ORDER BY lesson, sub, started_at DESC`, [ids, userId]);
+  for (const r of part) {
+    const done = lessons[r.lesson]?.subs[r.sub];
+    if (done && new Date(done.last) > r.started_at) continue;
+    const lp = (lessons[r.lesson] ??= { level: levels[r.lesson] ?? 0, subs: {} });
+    (lp.partial ??= {})[r.sub] = { pos: r.progress.pos, total: r.progress.total, at: r.started_at.toISOString() };
+  }
   const topics: Progress["topics"] = {};
   for (const t of COURSE.topics) topics[t.id] = { lessons: 0, crowned: 0, started: 0, crowns: 0 };
   for (const l of Object.values(COURSE.lessons)) {
@@ -188,6 +202,17 @@ export async function getProgress(userId: string, topic: string | null = null): 
     tp.crowns += levels[l.id] ?? 0;
   }
   return { summary: await getSummary(userId), lessons, topics };
+}
+
+/** Postęp sesji w trakcie (po każdym ćwiczeniu) – tylko własna, nieukończona sesja. */
+export async function saveSessionProgress(userId: string, id: string, body: Record<string, unknown>): Promise<{ ok: true }> {
+  const pos = Number(body.pos), total = Number(body.total);
+  if (!/^[0-9a-f-]{36}$/i.test(id) || !Number.isInteger(pos) || !Number.isInteger(total) || pos < 0 || total < 1 || pos > total || total > 500) {
+    throw new HttpError(400, "Nieprawidłowy postęp.");
+  }
+  await query("UPDATE learn_sessions SET progress = $3 WHERE id = $1 AND user_id = $2 AND finished_at IS NULL",
+    [id, userId, JSON.stringify({ pos, total })]);
+  return { ok: true };
 }
 
 /** Hasła z najniższą skutecznością (min. 2 odpowiedzi, ostatnie 60 dni) – do powtórki. */

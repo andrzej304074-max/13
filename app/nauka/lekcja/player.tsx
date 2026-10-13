@@ -30,6 +30,24 @@ function answerText(item: CourseItem) {
   return item.kind === "data" ? `${yearOf(item)} – ${eventOf(item)}` : item.s;
 }
 
+const RESUME_PREFIX = "owe:lesson:";
+const RESUME_DAYS = 7;
+interface Saved {
+  v: 1; at: number; session: { id: string; level: number }; queue: Exercise[]; pos: number; log: AnswerLog[];
+  combo: number; startedAt: number; requeued: number[];
+}
+function readSaved(key: string): Saved | null {
+  try {
+    const v = JSON.parse(localStorage.getItem(key) ?? "null") as Saved | null;
+    if (!v || v.v !== 1 || !Array.isArray(v.queue) || !v.session?.id || v.pos <= 0 || v.pos >= v.queue.length) return null;
+    if (Date.now() - v.at > RESUME_DAYS * 864e5) { localStorage.removeItem(key); return null; }
+    return v;
+  } catch {
+    return null;
+  }
+}
+const dropSaved = (key: string) => { try { localStorage.removeItem(key); } catch {} };
+
 export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: string | null }) {
   const bookOff = useAccess().blocked("/nauka/podrecznik");
   const { lesson, sub, topic } = payload;
@@ -45,15 +63,17 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
   const [requeued, setRequeued] = useState<Set<Exercise>>(new Set());
   const [result, setResult] = useState<FinishResult | null>(null);
   const [finishError, setFinishError] = useState<string | null>(null);
-  const [startedAt] = useState(() => Date.now());
+  const [startedAt, setStartedAt] = useState(() => Date.now());
+  // pod-lekcja przerwana wcześniej (stan w localStorage) – propozycja „Kontynuuj / Zacznij od nowa”
+  const saveKey = payload.review ? null : `${RESUME_PREFIX}${lesson.id}:${sub}`;
+  const [offer, setOffer] = useState<Saved | null>(null);
   const shownAt = useRef(Date.now());
   const finishing = useRef(false);
   const started = useRef(false);
 
-  useEffect(() => {
-    if (started.current) return;
-    started.current = true;
-    rememberLesson(lesson.id, sub);
+  const startNew = useCallback(() => {
+    if (saveKey) dropSaved(saveKey);
+    setOffer(null);
     let level = 0;
     api<{ id: string; level: number }>("/api/nauka/sessions", {
       method: "POST",
@@ -65,7 +85,45 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
       })
       .catch((e) => setStartError(e.message))
       .finally(() => setQueue(buildExercises(payload, { level })));
-  }, [lesson.id, sub, payload]);
+  }, [lesson.id, sub, payload, saveKey]);
+
+  useEffect(() => {
+    if (started.current) return;
+    started.current = true;
+    rememberLesson(lesson.id, sub);
+    const saved = saveKey ? readSaved(saveKey) : null;
+    if (saved) setOffer(saved);
+    else startNew();
+  }, [lesson.id, sub, saveKey, startNew]);
+
+  /** „Kontynuuj”: ta sama sesja, kolejka, odpowiedzi i miejsce co przed wyjściem. */
+  const resumeSaved = useCallback((v: Saved) => {
+    setOffer(null);
+    setSession(v.session);
+    setQueue(v.queue);
+    setPos(v.pos);
+    setLog(v.log);
+    setCombo(v.combo);
+    setStartedAt(v.startedAt);
+    setRequeued(new Set(v.requeued.map((i) => v.queue[i]).filter(Boolean)));
+  }, []);
+
+  // zapis stanu po każdym ćwiczeniu (localStorage – pełny stan; serwer – „w trakcie N/M” dla ścieżki)
+  const progressTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  useEffect(() => {
+    if (!saveKey || !queue || !session || offer) return;
+    if (pos >= queue.length) { dropSaved(saveKey); return; }
+    if (pos === 0) return;
+    const v: Saved = {
+      v: 1, at: Date.now(), session, queue, pos, log, combo, startedAt,
+      requeued: queue.flatMap((ex, i) => (requeued.has(ex) ? [i] : [])),
+    };
+    try { localStorage.setItem(saveKey, JSON.stringify(v)); } catch {}
+    if (progressTimer.current) clearTimeout(progressTimer.current);
+    progressTimer.current = setTimeout(() => {
+      api(`/api/nauka/sessions/${session.id}`, { method: "PATCH", body: JSON.stringify({ pos, total: queue.length }) }).catch(() => {});
+    }, 1200);
+  }, [pos]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     shownAt.current = Date.now();
@@ -143,6 +201,23 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
   const subInfo = subsFor(lesson).find((s) => s.no === sub);
   const backHref = payload.review ? "/nauka" : `/nauka/${topic.id}#${lesson.id}`;
 
+  if (offer) {
+    return (
+      <div className="stack resume-offer" style={{ ["--topic" as string]: topic.color }} data-testid="resume-offer">
+        <h1>{lesson.title}</h1>
+        <div className="card stack">
+          <p style={{ margin: 0 }}>Ta pod-lekcja została przerwana – zrobione {offer.pos} z {offer.queue.length} ćwiczeń
+            ({new Date(offer.at).toLocaleString("pl-PL", { dateStyle: "short", timeStyle: "short" })}).</p>
+          <div className="learn-progress" aria-hidden><div style={{ width: `${(offer.pos / offer.queue.length) * 100}%` }} /></div>
+          <div className="row" style={{ gap: 8, flexWrap: "wrap" }}>
+            <button className="btn" onClick={() => resumeSaved(offer)} data-testid="resume-continue">▶ Kontynuuj od ćwiczenia {offer.pos + 1}</button>
+            <button className="btn secondary" onClick={startNew} data-testid="resume-restart">↺ Zacznij od nowa</button>
+          </div>
+        </div>
+        <Link href={backHref}>← Wróć do ścieżki</Link>
+      </div>
+    );
+  }
   if (!queue) return <p className="muted">Przygotowuję ćwiczenia…</p>;
 
   if (done) {

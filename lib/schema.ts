@@ -200,6 +200,8 @@ CREATE TABLE IF NOT EXISTS deck_cards (
 );
 -- Sesja „artykuł”: przeczytanie rozdziału zamiast ćwiczeń Poznaj (bez odpowiedzi – nie wpływa na skuteczność).
 ALTER TABLE learn_sessions ADD COLUMN IF NOT EXISTS mode text NOT NULL DEFAULT 'cwiczenia';
+-- Pod-lekcja w trakcie (wyjście przed końcem): { pos, total } – ścieżka pokazuje „w trakcie 7/15”.
+ALTER TABLE learn_sessions ADD COLUMN IF NOT EXISTS progress jsonb;
 -- Nagrania akapitów Podręcznika głosem Azure (lib/tts.ts): klucz = skrót tekstu + głos, plik w Vercel Blob.
 CREATE TABLE IF NOT EXISTS tts_clips (
   hash       text NOT NULL,

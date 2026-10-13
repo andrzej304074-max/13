@@ -103,6 +103,7 @@ export function TopicPath({ topic, units, kinds }: { topic: CourseTopic; units: 
               const lp = progress?.lessons[l.id];
               const level = lp?.level ?? 0;
               const started = !!lp;
+              const partial = !!lp?.partial && Object.keys(lp.partial).length > 0;
               const isOpen = open === l.id;
               return (
                 <div key={l.id} id={l.id} className="path-step">
@@ -115,6 +116,7 @@ export function TopicPath({ topic, units, kinds }: { topic: CourseTopic; units: 
                   >
                     <span className="node-icon">{level >= MAX_LEVEL ? "🏆" : KIND_ICON[l.type === "zrozum" ? "zrozumienie" : u.kind]}</span>
                     {level > 0 && <span className="node-level">👑{level}</span>}
+                    {partial && <span className="node-partial" title="Pod-lekcja w trakcie" aria-label="w trakcie">⏸</span>}
                   </button>
                   <div className="node-label" style={{ transform: `translateX(${OFFSETS[i % OFFSETS.length]}px)` }}>
                     {l.type === "zrozum" ? `🧠 ${l.title}` : `Lekcja ${l.no}${l.part ? ` · cz. ${l.part}` : ""}`}
@@ -140,11 +142,18 @@ export function TopicPath({ topic, units, kinds }: { topic: CourseTopic; units: 
                       <div className="subs">
                         {subsFor(l).map((s) => {
                           const sp = lp?.subs[s.no];
+                          const part = lp?.partial?.[s.no];
                           return (
-                            <Link key={s.no} href={`/nauka/lekcja/${l.id}?sub=${s.no}`} className={`sub ${sp ? (sp.best >= 80 ? "ok" : "tried") : ""}`}>
+                            <Link key={s.no} href={`/nauka/lekcja/${l.id}?sub=${s.no}`} className={`sub ${sp ? (sp.best >= 80 ? "ok" : "tried") : ""}${part ? " partial" : ""}`}>
                               <b>{s.no}. {s.title}</b>
                               <small>{s.hint}</small>
-                              <small>{sp ? `najlepiej ${sp.best.toLocaleString("pl-PL")}% · ${sp.sessions}× · zaliczone ${sp.passes}×` : "jeszcze nie robione"}</small>
+                              <small>{sp ? `najlepiej ${sp.best.toLocaleString("pl-PL")}% · ${sp.sessions}× · zaliczone ${sp.passes}×` : part ? "" : "jeszcze nie robione"}</small>
+                              {part && (
+                                <small className="sub-partial" data-testid="sub-partial">
+                                  ⏸ w trakcie {part.pos}/{part.total}
+                                  <span className="sub-partial-bar" aria-hidden><span style={{ width: `${(part.pos / part.total) * 100}%` }} /></span>
+                                </small>
+                              )}
                             </Link>
                           );
                         })}
