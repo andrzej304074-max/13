@@ -58,6 +58,9 @@ function MindMapPage({ rows, topics, kinds, mapa }: { rows: Haslo[]; topics: Top
   const [listOpen, setListOpen] = useState(false);
   const [limit, setLimit] = useState(LIST_STEP);
   const [preview, setPreview] = useState(false);
+  // filtry rozwinięte na komputerze, zwinięte na telefonie (mapa od razu widoczna)
+  const [filtersOpen, setFiltersOpen] = useState(true);
+  useEffect(() => { if (window.innerWidth < 640) setFiltersOpen(false); }, []);
   const mapTop = useRef<HTMLDivElement>(null);
 
   // ?q=<id> – udostępnialny adres; domyślnie hasło z największą liczbą pytań OWE
@@ -168,7 +171,7 @@ function MindMapPage({ rows, topics, kinds, mapa }: { rows: Haslo[]; topics: Top
         <button className="btn secondary" onClick={() => setListOpen(!listOpen)} aria-expanded={listOpen} data-testid="mm-list-toggle">📋 {listOpen ? "Ukryj listę" : "Wybierz z listy"}</button>
       </div>
 
-      <details className="card filters-card" open>
+      <details className="card filters-card" open={filtersOpen} onToggle={(e) => setFiltersOpen((e.target as HTMLDetailsElement).open)}>
         <summary>Filtry i układ · {neighbors.length} powiązanych</summary>
         <div className="stack" style={{ marginTop: 12 }}>
           <div className="filter-grid">
