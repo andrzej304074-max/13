@@ -97,6 +97,28 @@ export function sanitizeInk(raw: unknown): Ink {
   return { h, s };
 }
 
+/** Fiszka przypięta do kartki: id hasła kursu albo własnej fiszki (u:…), lewy górny róg w jednostkach rysunku (szerokość kartki = INK_W). */
+export interface NoteCard { id: string; x: number; y: number }
+export const MAX_NOTE_CARDS = 30;
+/** Szerokość przypiętej fiszki w jednostkach rysunku (ok. 38% kartki). */
+export const NOTE_CARD_W = 380;
+
+export function sanitizeCards(raw: unknown): NoteCard[] {
+  if (raw === undefined || raw === null) return [];
+  if (!Array.isArray(raw)) throw new NoteError("Nieprawidłowe fiszki na kartce.");
+  if (raw.length > MAX_NOTE_CARDS) throw new NoteError(`Na jednej kartce najwyżej ${MAX_NOTE_CARDS} fiszek.`);
+  const seen = new Set<string>();
+  const out: NoteCard[] = [];
+  for (const c of raw as { id?: unknown; x?: unknown; y?: unknown }[]) {
+    if (!c || typeof c.id !== "string" || !/^[\w:-]{1,64}$/.test(c.id) || seen.has(c.id)) continue;
+    const x = Number(c.x), y = Number(c.y);
+    if (!Number.isFinite(x) || !Number.isFinite(y)) continue;
+    seen.add(c.id);
+    out.push({ id: c.id, x: Math.round(Math.min(INK_W - NOTE_CARD_W, Math.max(0, x))), y: Math.round(Math.min(INK_MAX_H, Math.max(0, y))) });
+  }
+  return out;
+}
+
 export function sanitizeText(v: unknown, max: number, field: string): string {
   if (v == null) return "";
   if (typeof v !== "string") throw new NoteError(`Nieprawidłowe pole: ${field}.`);

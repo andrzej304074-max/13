@@ -4,7 +4,7 @@ import { ownedIds } from "./own-cards";
 import { query } from "./db";
 import { getQuestion } from "./questions";
 import { HttpError } from "./tests";
-import {
+import { sanitizeCards, type NoteCard,
   isNoteKind, isStarKind, MAX_BODY, MAX_HIGHLIGHTS, MAX_NOTES, MAX_NOTES_BYTES, MAX_TITLE, NoteError, sanitizeHighlight, sanitizeInk, sanitizeRef, sanitizeText,
   type Ink, type NoteKind, type StarKind,
 } from "./notes-core";
@@ -12,12 +12,12 @@ import {
 /** Notatki, brudnopisy, gwiazdki i podkreślenia w bazie (logika walidacji: notes-core.ts). */
 
 export interface NoteRow {
-  id: string; kind: NoteKind; title: string; body: string; ink: Ink; ref: string | null; starred: boolean;
+  id: string; kind: NoteKind; title: string; body: string; ink: Ink; cards: NoteCard[]; ref: string | null; starred: boolean;
   created_at: string; updated_at: string;
   /** Skąd pochodzi brudnopis: treść pytania albo tytuł lekcji/artykułu. */
   context?: string | null;
 }
-export type NoteSummary = Omit<NoteRow, "ink" | "body"> & { excerpt: string; strokes: number };
+export type NoteSummary = Omit<NoteRow, "ink" | "body" | "cards"> & { excerpt: string; strokes: number };
 
 const wrap = async <T>(fn: () => Promise<T>): Promise<T> => {
   try {
@@ -52,7 +52,7 @@ export function refContext(ref: string | null): string | null {
   return null;
 }
 
-const COLS = "id, kind, title, body, ink, ref, starred, created_at, updated_at";
+const COLS = "id, kind, title, body, ink, cards, ref, starred, created_at, updated_at";
 
 export async function listNotes(userId: string, f: { kind?: unknown; starred?: unknown; q?: unknown; limit?: number }): Promise<NoteSummary[]> {
   const kind = isNoteKind(f.kind) ? f.kind : "note";
@@ -65,7 +65,7 @@ export async function listNotes(userId: string, f: { kind?: unknown; starred?: u
   }
   const { rows } = await query<NoteRow>(
     `SELECT ${COLS} FROM notes WHERE ${where} ORDER BY starred DESC, updated_at DESC LIMIT ${Math.min(500, f.limit ?? 500)}`, params);
-  return rows.map(({ body, ink, ...r }) => ({
+  return rows.map(({ body, ink, cards: _cards, ...r }) => ({
     ...r, excerpt: body.slice(0, 220), strokes: ink.s.length, context: refContext(r.ref),
   }));
 }
@@ -106,20 +106,21 @@ export async function createNote(userId: string, v: Record<string, unknown>): Pr
     const ref = sanitizeRef(v.ref);
     const title = sanitizeText(v.title, MAX_TITLE, "tytuł"), body = sanitizeText(v.body, MAX_BODY, "treść");
     const ink = sanitizeInk(v.ink);
+    const cards = sanitizeCards(v.cards);
     const starred = v.starred === true;
     await checkQuota(userId, Buffer.byteLength(body) + Buffer.byteLength(JSON.stringify(ink)), true);
     if (kind === "scratch" && ref) {
       // brudnopis pytania: drugi zapis tego samego pytania nadpisuje treść (wyścig dwóch kart)
       const { rows } = await query<NoteRow>(
-        `INSERT INTO notes (user_id, kind, title, body, ink, ref, starred) VALUES ($1, 'scratch', $2, $3, $4, $5, $6)
+        `INSERT INTO notes (user_id, kind, title, body, ink, ref, starred, cards) VALUES ($1, 'scratch', $2, $3, $4, $5, $6, $7)
          ON CONFLICT (user_id, ref) WHERE kind = 'scratch' AND ref IS NOT NULL
-         DO UPDATE SET body = EXCLUDED.body, ink = EXCLUDED.ink, updated_at = now() RETURNING ${COLS}`,
-        [userId, title, body, JSON.stringify(ink), ref, starred]);
+         DO UPDATE SET body = EXCLUDED.body, ink = EXCLUDED.ink, cards = EXCLUDED.cards, updated_at = now() RETURNING ${COLS}`,
+        [userId, title, body, JSON.stringify(ink), ref, starred, JSON.stringify(cards)]);
       return { ...rows[0], context: refContext(ref) };
     }
     const { rows } = await query<NoteRow>(
-      `INSERT INTO notes (user_id, kind, title, body, ink, ref, starred) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING ${COLS}`,
-      [userId, kind, title, body, JSON.stringify(ink), ref, starred]);
+      `INSERT INTO notes (user_id, kind, title, body, ink, ref, starred, cards) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING ${COLS}`,
+      [userId, kind, title, body, JSON.stringify(ink), ref, starred, JSON.stringify(cards)]);
     return { ...rows[0], context: refContext(ref) };
   });
 }
@@ -132,6 +133,7 @@ export async function updateNote(userId: string, id: string, v: Record<string, u
     if ("title" in v) add("title", sanitizeText(v.title, MAX_TITLE, "tytuł"));
     if ("body" in v) add("body", sanitizeText(v.body, MAX_BODY, "treść"));
     if ("ink" in v) add("ink", JSON.stringify(sanitizeInk(v.ink)));
+    if ("cards" in v) add("cards", JSON.stringify(sanitizeCards(v.cards)));
     if ("body" in v || "ink" in v) {
       const cur = await query<{ body: string; ink: string }>("SELECT body, ink::text AS ink FROM notes WHERE id = $1", [id]);
       const body = "body" in v ? String(params[sets.findIndex((x) => x.startsWith("body")) + 2]) : cur.rows[0].body;

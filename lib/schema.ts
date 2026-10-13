@@ -148,6 +148,8 @@ CREATE TABLE IF NOT EXISTS notes (
   updated_at timestamptz NOT NULL DEFAULT now()
 );
 CREATE INDEX IF NOT EXISTS notes_user_idx ON notes (user_id, kind, updated_at DESC);
+-- Fiszki przypięte do kartki notatki (przesuwane kwadraty): [{ id, x, y }] w jednostkach rysunku.
+ALTER TABLE notes ADD COLUMN IF NOT EXISTS cards jsonb NOT NULL DEFAULT '[]'::jsonb;
 CREATE UNIQUE INDEX IF NOT EXISTS notes_scratch_ref_idx ON notes (user_id, ref) WHERE kind = 'scratch' AND ref IS NOT NULL;
 
 -- Gwiazdki: fiszki (id hasła) i artykuły Podręcznika (id lekcji / działu).

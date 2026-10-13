@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { displayTitle, NoteError, refHref, sanitizeHighlight, sanitizeInk, sanitizeRef, segments, simplify, strokeNear } from "@/lib/notes-core";
+import { displayTitle, NoteError, refHref, MAX_NOTE_CARDS, NOTE_CARD_W, INK_W, sanitizeCards, sanitizeHighlight, sanitizeInk, sanitizeRef, segments, simplify, strokeNear } from "@/lib/notes-core";
 
 describe("rysunek w notatkach", () => {
   it("upraszcza punkty leżące na prostej, zostawia końce i załamania", () => {
@@ -79,5 +79,22 @@ describe("podkreślenia", () => {
       { start: 4, end: 8, h: { color: "g", id: "2" } },
       { start: 8, end: 10 },
     ]);
+  });
+});
+
+describe("fiszki na kartce", () => {
+  it("przycina pozycje do kartki, pomija duplikaty i złe wpisy", () => {
+    expect(sanitizeCards(undefined)).toEqual([]);
+    expect(sanitizeCards([
+      { id: "h-popyt", x: -50, y: 10.6 },
+      { id: "h-popyt", x: 5, y: 5 },
+      { id: "u:1b2c", x: 5000, y: 20 },
+      { id: "zły id!", x: 1, y: 1 },
+      { id: "h-x", x: "a", y: 1 },
+    ])).toEqual([{ id: "h-popyt", x: 0, y: 11 }, { id: "u:1b2c", x: INK_W - NOTE_CARD_W, y: 20 }]);
+  });
+  it("odrzuca nie-listę i zbyt wiele kart", () => {
+    expect(() => sanitizeCards({})).toThrow(NoteError);
+    expect(() => sanitizeCards(Array.from({ length: MAX_NOTE_CARDS + 1 }, (_, i) => ({ id: `h${i}`, x: 0, y: 0 })))).toThrow(NoteError);
   });
 });

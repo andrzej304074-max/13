@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { StarFilterSeg, type StarFilter } from "@/app/components/star";
 import { api, withUser } from "@/lib/client";
-import { useData } from "@/lib/data-client";
+import { loadData } from "@/lib/data-client";
 import type { Haslo } from "@/lib/data-server";
 import { normalize } from "@/lib/nauka-logic";
 import type { OwnCard } from "@/lib/own-cards";
@@ -22,14 +22,22 @@ export const NO_FILTER: CardFilter = { src: "", topic: "", kind: "", owe: false,
 
 export const ownToPool = (c: OwnCard): PoolCard => ({ id: c.id, t: c.t, d: c.d, w: c.w, kind: c.kind, topic: c.topic, n: 0, own: true });
 
-export function useCardPool() {
-  const hasla = useData<{ rows: Haslo[]; topics: Topic[]; kinds: Kind[] }>("/api/dane/hasla");
+/** Pula kart; `enabled = false` – nic nie pobiera (np. notatka bez fiszek, dopóki nie otworzysz wyszukiwarki). */
+export function useCardPool(enabled = true) {
+  const [hasla, setHasla] = useState<{ rows: Haslo[]; topics: Topic[]; kinds: Kind[] } | null>(null);
+  const [error, setError] = useState<string | null>(null);
   const [own, setOwn] = useState<OwnCard[] | null>(null);
-  useEffect(() => { api<OwnCard[]>(withUser("/api/fiszki/moje")).then(setOwn).catch(() => setOwn([])); }, []);
-  const rows = useMemo<PoolCard[] | null>(() => (hasla.data && own ? [...own.map(ownToPool), ...hasla.data.rows] : null), [hasla.data, own]);
+  useEffect(() => {
+    if (!enabled) return;
+    let on = true;
+    loadData<{ rows: Haslo[]; topics: Topic[]; kinds: Kind[] }>("/api/dane/hasla").then((v) => on && setHasla(v)).catch((e) => on && setError(e.message));
+    api<OwnCard[]>(withUser("/api/fiszki/moje")).then((v) => on && setOwn(v)).catch(() => on && setOwn([]));
+    return () => { on = false; };
+  }, [enabled]);
+  const rows = useMemo<PoolCard[] | null>(() => (hasla && own ? [...own.map(ownToPool), ...hasla.rows] : null), [hasla, own]);
   const topicName = useMemo(
-    () => Object.fromEntries((hasla.data?.topics ?? []).map((t) => [t.id, `${t.emoji} ${t.title.replace(/^Temat przewodni: /, "")}`])), [hasla.data]);
-  return { rows, topics: hasla.data?.topics ?? [], kinds: hasla.data?.kinds ?? [], topicName, error: hasla.error };
+    () => Object.fromEntries((hasla?.topics ?? []).map((t) => [t.id, `${t.emoji} ${t.title.replace(/^Temat przewodni: /, "")}`])), [hasla]);
+  return { rows, topics: hasla?.topics ?? [], kinds: hasla?.kinds ?? [], topicName, error };
 }
 
 /** Wyszukiwanie: najpierw tytuły zaczynające się od frazy, potem zawierające ją, potem trafienia w definicji. */

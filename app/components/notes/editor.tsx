@@ -1,8 +1,10 @@
 "use client";
 
-import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { api } from "@/lib/client";
-import { EMPTY_INK, INK_MIN_H, INK_W, INK_WIDTHS, simplify, strokeNear, type Ink, type NoteKind, type Stroke } from "@/lib/notes-core";
+import { EMPTY_INK, INK_MIN_H, INK_W, INK_WIDTHS, MAX_NOTE_CARDS, NOTE_CARD_W, simplify, strokeNear, type Ink, type NoteCard, type NoteKind, type Stroke } from "@/lib/notes-core";
+import { useCardPool } from "@/app/fiszki/card-pool";
+import { CardPicker, NoteCards } from "./note-cards";
 import type { NoteRow } from "@/lib/notes";
 
 /**
@@ -77,6 +79,11 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
   const [title, setTitle] = useState(note?.title ?? "");
   const [body, setBody] = useState(note?.body ?? "");
   const [ink, setInk] = useState<Ink>(note?.ink ?? EMPTY_INK);
+  const [cards, setCards] = useState<NoteCard[]>(note?.cards ?? []);
+  const [picker, setPicker] = useState(false);
+  // dane fiszek pobierane dopiero, gdy na kartce jest fiszka albo otwarto wyszukiwarkę
+  const pool = useCardPool(cards.length > 0 || picker);
+  const poolById = useMemo(() => new Map((pool.rows ?? []).map((r) => [r.id, r])), [pool.rows]);
   const [tool, setToolState] = useState<Tool>("text");
   useEffect(() => { setToolState(initialTool()); }, []);
   const setTool = useCallback((t: Tool) => {
@@ -100,12 +107,13 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
   const k = cssW / INK_W;
   // na wąskim ekranie kartka ma co najmniej ~360 px (brudnopis ~260 px) wysokości – puste miejsce, nie zmienia rysunku
   const minH = Math.max(compact ? 420 : INK_MIN_H, k ? Math.ceil((compact ? 260 : 360) / k) : 0);
-  const logicalH = Math.max(minH, ink.h + 160, textH + 120) + extra;
+  const cardsBottom = cards.reduce((m, c) => Math.max(m, c.y + 320), 0);
+  const logicalH = Math.max(minH, ink.h + 160, textH + 120, cardsBottom) + extra;
 
   // --- zapis automatyczny ---
   const dirty = useRef(false);
-  const latest = useRef({ title, body, ink });
-  latest.current = { title, body, ink };
+  const latest = useRef({ title, body, ink, cards });
+  latest.current = { title, body, ink, cards };
   const idRef = useRef(id);
   idRef.current = id;
   const saving = useRef<Promise<void> | null>(null);
@@ -117,11 +125,11 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
     if (readOnly || !dirty.current) return;
     if (saving.current) { await saving.current; if (!dirty.current) return; }
     dirty.current = false;
-    const { title: t, body: b, ink: i } = latest.current;
+    const { title: t, body: b, ink: i, cards: cs } = latest.current;
     setSave("saving");
     const run = (async () => {
       try {
-        const payload = JSON.stringify(idRef.current ? { title: t, body: b, ink: i } : { kind: cfg.current.kind, ref: cfg.current.refKey, title: t, body: b, ink: i });
+        const payload = JSON.stringify(idRef.current ? { title: t, body: b, ink: i, cards: cs } : { kind: cfg.current.kind, ref: cfg.current.refKey, title: t, body: b, ink: i, cards: cs });
         const n = idRef.current
           ? await api<NoteRow>(`/api/notatki/${idRef.current}`, { method: "PATCH", body: payload, keepalive })
           : await api<NoteRow>("/api/notatki", { method: "POST", body: payload, keepalive });
@@ -378,8 +386,21 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
             <button type="button" onClick={doUndo} disabled={!undo.current.length} title="Cofnij (Ctrl+Z)">↶<span className="sr-only">Cofnij</span></button>
             <button type="button" onClick={doRedo} disabled={!redo.current.length} title="Ponów (Ctrl+Y)">↷<span className="sr-only">Ponów</span></button>
             <button type="button" onClick={clear} disabled={!ink.s.length} title="Wyczyść rysunek">🗑️<span className="sr-only">Wyczyść rysunek</span></button>
+            <button type="button" className={picker ? "on" : ""} aria-pressed={picker} onClick={() => setPicker((v) => !v)} disabled={cards.length >= MAX_NOTE_CARDS}
+              title="Wstaw fiszkę na kartkę – kwadrat do przesuwania" data-testid="note-card-add">🗂️<span className="ne-lbl"> Fiszka</span></button>
           </div>
         </div>
+      )}
+      {picker && !readOnly && (
+        <CardPicker pool={pool} already={new Set(cards.map((c) => c.id))} onClose={() => setPicker(false)} onPick={(cid) => {
+          // nowa fiszka na środku widocznej części kartki
+          const r = wrapRef.current?.getBoundingClientRect();
+          const visMid = r && k ? ((Math.min(window.innerHeight, r.bottom) + Math.max(0, r.top)) / 2 - r.top) / k : 200;
+          const y = Math.max(0, Math.round(visMid - 120)) + cards.length * 24;
+          setCards((cs) => [...cs, { id: cid, x: Math.round((INK_W - NOTE_CARD_W) / 2) + (cs.length % 3) * 20, y }]);
+          setPicker(false);
+          touch();
+        }} />
       )}
       <div className="ne-sheet">
         <div ref={wrapRef} className={`ne-canvas-wrap tool-${readOnly ? "view" : tool}`}>
@@ -389,6 +410,7 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
           <canvas ref={canvasRef} className="ne-canvas" data-testid="ink-canvas" tabIndex={-1}
             onPointerDown={onDown} onPointerMove={onMove} onPointerUp={onUp} onPointerCancel={onUp}
             aria-label="Kartka do pisania rysikiem lub palcem" />
+          <NoteCards cards={cards} byId={poolById} k={k} readOnly={readOnly} onChange={(cs) => { setCards(cs); touch(); }} />
         </div>
       </div>
       <div className="ne-foot">

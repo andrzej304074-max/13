@@ -1154,3 +1154,24 @@ body:has(.speech-bar) main.container { padding-bottom: 160px; }
 .sub-partial-bar > span { display: block; height: 100%; background: var(--accent); }
 .node-partial { position: absolute; top: -4px; left: -4px; font-size: .8rem; background: var(--surface); border: 1px solid var(--accent); border-radius: 999px; width: 22px; height: 22px; display: grid; place-items: center; }
 .resume-offer .learn-progress { height: 10px; }
+
+/* fiszki na kartce notatki – kwadraty przesuwane uchwytem ⠿ */
+.note-card {
+  position: absolute; z-index: 3; display: flex; flex-direction: column;
+  background: var(--surface); border: 2px solid var(--accent); border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .14); font-size: clamp(12px, 1.6cqw, 16px); overflow: hidden;
+}
+.note-card.own { border-style: dashed; }
+.note-card.moving { opacity: .88; box-shadow: 0 12px 28px rgba(0, 0, 0, .25); }
+.note-card-bar { display: flex; align-items: center; gap: 6px; padding: 2px 4px; background: color-mix(in srgb, var(--accent) 12%, transparent); }
+.note-card-handle { cursor: grab; touch-action: none; border: 0; background: none; color: inherit; font-size: 1.3em; line-height: 1; padding: 6px 8px; border-radius: 8px; }
+.note-card.moving .note-card-handle { cursor: grabbing; }
+.note-card-handle:hover, .note-card-handle:focus-visible { background: color-mix(in srgb, var(--accent) 22%, transparent); }
+.note-card-kind { flex: 1; font-size: .8em; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.note-card-x { border: 0; background: none; color: var(--muted); padding: 6px 8px; border-radius: 8px; cursor: pointer; }
+.note-card-x:hover { color: var(--bad); }
+.note-card-body { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; text-align: left; border: 0; background: none; color: inherit; font: inherit; padding: 10px 12px 12px; cursor: pointer; min-height: 5em; max-height: 22em; overflow: auto; }
+.note-card-title { font-size: 1.15em; }
+.note-card-hint { font-size: .8em; }
+.note-card.back .note-card-body span { white-space: pre-wrap; }
+.note-card-picker { position: relative; z-index: 5; }
