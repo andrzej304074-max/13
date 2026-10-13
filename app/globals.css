@@ -1101,6 +1101,7 @@ nav.sections a.locked, .bottom-bar a.locked, .subtabs a.locked { opacity: .55; }
 .speech-info { display: flex; gap: 8px; align-items: baseline; min-width: 0; }
 .speech-now { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; font-size: .92rem; }
 .speech-pos { font-size: .8rem; font-variant-numeric: tabular-nums; }
+.speech-cloud { font-size: .85rem; line-height: 1; }
 .speech-ctrl { display: flex; gap: 4px; align-items: center; flex-wrap: wrap; }
 .speech-ctrl button { min-width: 40px; height: 38px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text); font-size: 1rem; cursor: pointer; }
 .speech-ctrl button:hover:not(:disabled) { border-color: var(--accent); }

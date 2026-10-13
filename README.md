@@ -300,6 +300,53 @@ Po pierwszym wdrożeniu od razu załóż swoje konto – pierwsze konto zostaje 
   - Bez polskiego głosu pojawia się instrukcja: Android – Ustawienia → Zamiana tekstu na mowę (Google), Windows – Ustawienia → Czas i język → Mowa → Dodaj głosy (polski), iPhone – Ustawienia → Dostępność → Mowa → Głosy.
 - **Zapis matematyczny** zamieniany na mowę („%” → „procent”, „Δ” → „delta”, „≈” → „w przybliżeniu”…): `lib/speech-text.ts` (testy: `tests/speech.test.ts`). Kolejka i pasek: `lib/speech.ts`, `app/components/speech/`.
 
+### Głosy z chmury (Azure) – artykuły Podręcznika
+
+Akapity Podręcznika są nagrywane głosem neuronowym Azure AI Speech porcjami w tle i zapisywane jako MP3 w Vercel Blob.
+
+**Jak to działa**
+- **Czytnik:** nagrany akapit gra z pliku (☁️ w pasku odtwarzacza). Akapit jeszcze nienagrany – oraz pytania, definicje i fiszki – czyta głos przeglądarki, jak wcześniej.
+- **Budżet:**
+  - miesięcznie `TTS_MONTHLY_CHARS` znaków (domyślnie 450 tys., zapas do darmowego progu 0,5 mln), rozłożone równo na pozostałe dni miesiąca;
+  - cały Podręcznik to ok. 815 tys. znaków (z nagłówkami), czyli ok. 2 miesiące;
+  - w kolejnym miesiącu nagrywanie toczy się dalej, a potem nagrywane są tylko zmienione akapity (klucz nagrania to skrót tekstu); nieaktualne pliki są usuwane.
+- **Tempo:** darmowy plan Azure przyjmuje 20 zapytań na minutę.
+  - Vercel Cron (`vercel.json`, raz dziennie ok. 5:17) nagrywa ok. 80 akapitów na uruchomienie (do 5 min), więc całość zajmie ok. 3 miesiące.
+  - Opcjonalny workflow `.github/workflows/tts.yml` uruchamia porcję co godzinę – wtedy ograniczeniem jest tylko budżet znaków (ok. 2 miesiące).
+- **Panel admina → „Głosy z chmury”:** postęp (akapity, gotowe artykuły, rozmiar plików), zużycie w miesiącu, ostatni błąd, wybór głosu (Zofia, Marek, Agnieszka) i przycisk „Nagraj porcję teraz” (ok. 50 s).
+- **Gdzie w kodzie:** `lib/tts.ts`, `lib/tts-core.ts` (testy: `tests/tts.test.ts`), `app/api/cron/tts`, `app/api/admin/tts`, `app/api/podrecznik/nagrania`.
+
+**Wdrożenie krok po kroku**
+1. **Konto Azure:** [portal.azure.com](https://portal.azure.com) → załóż konto (Azure prosi o kartę; plan F0 jest darmowy).
+2. **Zasób Speech:** „Create a resource” → wyszukaj **Speech** → Create:
+   - Subscription: Twoja;
+   - Resource group: nowa, np. `owe`;
+   - Region: **West Europe**;
+   - Name: dowolna;
+   - Pricing tier: **Free F0**;
+
+   potem Review + create → Create.
+3. **Klucz:** po utworzeniu zasobu → „Keys and Endpoint” → skopiuj **KEY 1** i **Location/Region** (`westeurope`).
+4. **Magazyn plików:** Vercel → projekt → **Storage** → Create Database → **Blob** → Create → połącz z projektem (Production i Preview). Vercel sam doda `BLOB_READ_WRITE_TOKEN`.
+5. **Zmienne:** Vercel → Settings → Environment Variables:
+   - `AZURE_SPEECH_KEY` – KEY 1;
+   - `AZURE_SPEECH_REGION` – `westeurope`;
+   - `CRON_SECRET` – długi losowy ciąg, np. wynik `openssl rand -hex 32`;
+   - opcjonalnie `TTS_MONTHLY_CHARS`.
+6. **Redeploy:** Deployments → ostatnie wdrożenie → ⋯ → Redeploy. Zadanie dzienne pojawi się w Settings → Cron Jobs.
+7. **Sprawdzenie:** Panel admina → „Głosy z chmury”:
+   - wybierz głos;
+   - kliknij „🎙️ Nagraj porcję teraz”;
+   - otwórz pierwszy artykuł Podręcznika (Mikroekonomia → Podstawy) i „Czytaj na głos” – przy nagranych akapitach widać ☁️.
+8. **(Opcjonalnie) szybciej:** GitHub → repozytorium → Settings → Secrets and variables → Actions → New repository secret:
+   - `APP_URL` – adres aplikacji, np. `https://….vercel.app`;
+   - `CRON_SECRET` – ten sam co w Vercel.
+
+   Workflow „Nagrania Podręcznika (TTS)” uruchamia się co godzinę (tylko z gałęzi domyślnej). Można go też odpalić ręcznie: Actions → Run workflow.
+9. **Kontrola zużycia:** Azure → zasób Speech → Metrics → „Synthesized Characters” oraz Vercel → Storage → Blob (rozmiar plików, ok. 300 MB na cały Podręcznik).
+
+Zmiana głosu w panelu oznacza nagranie wszystkiego od nowa (kolejne ok. 2 miesiące darmowego limitu). Do tego czasu grają nagrania poprzednim głosem.
+
 ## Audyt i wydajność
 
 - `docs/AUDYT.md` – audyt aplikacji: treści, trasy, wygląd, uprawnienia, awarie bazy; poprawki i sprawy do decyzji.

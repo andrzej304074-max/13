@@ -11,6 +11,7 @@ export function ReaderBar() {
     <div className="speech-bar" role="region" aria-label="Czytanie na głos" data-testid="speech-bar">
       <div className="speech-info">
         <span className="speech-now" aria-live="polite">{sp.status === "playing" ? "🔊" : "⏸"} {item?.title}</span>
+        {item?.audio && <span className="speech-cloud" title="Nagranie głosem z chmury" data-testid="speech-cloud">☁️</span>}
         {sp.items.length > 1 && <span className="muted speech-pos">{sp.index + 1} / {sp.items.length}</span>}
       </div>
       <div className="speech-ctrl">

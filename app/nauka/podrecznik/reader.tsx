@@ -11,7 +11,8 @@ import type { Block, Run } from "@/lib/podrecznik";
 import { useStars } from "@/lib/stars-client";
 import { SpeakButton } from "@/app/components/speech/speak";
 import { play, useSpeech } from "@/lib/speech";
-import { speechItem, type SpeechItem } from "@/lib/speech-text";
+import { articleSpeech, runsText } from "@/lib/podrecznik-speech";
+import { textHash } from "@/lib/tts-core";
 
 /** Jedna sekcja czytnika: przegląd działu albo rozdział lekcji. */
 export interface ReaderSection {
@@ -32,8 +33,6 @@ const SCALE_KEY = "owe:readerScale";
 const SCALES = [0.9, 1, 1.1, 1.22, 1.36];
 const HL_LABEL: Record<string, string> = { y: "żółty", g: "zielony", b: "niebieski" };
 
-/** Tekst bloku jako jeden ciąg (przesunięcia podkreśleń liczone w nim). */
-const runsText = (r: Run[]) => r.map((x) => x.s).join("");
 
 /** Wysyła zdarzenie do szybkiego panelu notatek (app/components/notes/quick-notes.tsx). */
 export function openQuickNote(noteId: string) {
@@ -218,22 +217,16 @@ export function Reader({ sections, unitId, heading, crumbs, footer, lessonMode =
     return m;
   }, [hls]);
 
-  // --- czytanie na głos: każdy blok to element kolejki (id = sekcja-blok, jak data-s / data-b w DOM) ---
+  // --- czytanie na głos: każdy blok to element kolejki (id = sekcja-blok, jak data-s / data-b w DOM);
+  // nagrane akapity (głos Azure, lib/tts.ts) grają z pliku, pozostałe czyta syntezator przeglądarki
+  const [clips, setClips] = useState<Record<string, string>>({});
+  useEffect(() => {
+    api<{ clips: Record<string, string> }>(`/api/podrecznik/nagrania?artykul=${encodeURIComponent(unitId)}`).then((d) => setClips(d.clips)).catch(() => {});
+  }, [unitId]);
   const speech = useMemo(() => {
-    const items: SpeechItem[] = [];
-    const firstOf: number[] = [];
-    sections.forEach((s, si) => {
-      firstOf[si] = items.length;
-      if (!lessonMode || sections.length > 1) items.push(speechItem(`${si}-h`, s.title, s.title));
-      s.blocks.forEach((b, bi) => {
-        if (b.t === "ul") b.items.forEach((it, k) => items.push(speechItem(`${si}-${bi * 100 + k + 10000}`, s.title, runsText(it))));
-        else if (b.t === "f") items.push(speechItem(`${si}-${bi}`, s.title, `Wzór: ${b.x}`));
-        else items.push(speechItem(`${si}-${bi}`, s.title,
-          b.t === "ex" ? `Przykład. ${runsText(b.r)}` : b.t === "trap" ? `Uwaga, pułapka. ${runsText(b.r)}` : b.t === "key" ? `Zapamiętaj. ${runsText(b.r)}` : runsText(b.r)));
-      });
-    });
-    return { items, firstOf };
-  }, [sections, lessonMode]);
+    const sp = articleSpeech(sections, !lessonMode || sections.length > 1);
+    return { ...sp, items: sp.items.map((it) => (clips[textHash(it.text)] ? { ...it, audio: clips[textHash(it.text)] } : it)) };
+  }, [sections, lessonMode, clips]);
   const speechGroup = `artykul:${heading.starRef}`;
   const sp = useSpeech();
   const speakingId = sp.group === speechGroup && sp.status !== "idle" ? sp.items[sp.index]?.id ?? null : null;

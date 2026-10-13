@@ -5,6 +5,7 @@ import { Fragment, useEffect, useState } from "react";
 import { api, fmtPct } from "@/lib/client";
 import type { AdminUserRow } from "@/lib/auth";
 import { SkeletonRows } from "@/app/components/loading-page";
+import { TtsCard } from "./tts-card";
 import { GlobalAccess, UserAccess } from "./access-editor";
 import type { AccessSettings, BlockMode } from "@/lib/access-core";
 
@@ -18,7 +19,7 @@ const fmtMB = (b: number) => (b >= 1024 * 1024 * 100 ? `${Math.round(b / 1024 / 
 const TABLE_PL: Record<string, string> = {
   learn_answers: "odpowiedzi w Nauce", learn_sessions: "sesje Nauki", tests: "testy", answers: "odpowiedzi w testach", notes: "notatki i brudnopisy",
   users: "konta", user_sessions: "sesje logowania", highlights: "podkreślenia", flash_ratings: "oceny fiszek", deck_cards: "karty talii", decks: "talie",
-  stars: "gwiazdki", article_reads: "przeczytane artykuły", settings: "ustawienia",
+  stars: "gwiazdki", article_reads: "przeczytane artykuły", settings: "ustawienia", tts_clips: "nagrania głosu (adresy)",
 };
 
 const fmtDate = (s: string | null) =>
@@ -228,6 +229,9 @@ export function AdminPanel({ meId }: { meId: string }) {
           {cleaned && <p className="muted" role="status" style={{ margin: 0 }}>{cleaned}</p>}
         </>}
       </div>
+
+      <h2>Głosy z chmury</h2>
+      <TtsCard />
     </div>
   );
 }

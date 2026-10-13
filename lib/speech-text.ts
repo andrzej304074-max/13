@@ -70,7 +70,13 @@ export function splitChunks(text: string, max = 220): string[] {
 }
 
 /** Element do przeczytania: tytuł do paska odtwarzacza i tekst (już w formie do mowy po `toSpeech`). */
-export interface SpeechItem { id: string; title: string; text: string }
+export interface SpeechItem {
+  id: string;
+  title: string;
+  text: string;
+  /** Nagranie głosem z chmury (Podręcznik) – gdy jest, gra plik zamiast syntezatora przeglądarki. */
+  audio?: string;
+}
 
 export function speechItem(id: string, title: string, ...parts: (string | null | undefined | false)[]): SpeechItem {
   return { id, title, text: toSpeech(parts.filter(Boolean).map((p) => String(p).trim().replace(/([^.!?…:;])$/, "$1.")).join(" ")) };

@@ -1,0 +1,25 @@
+# Opcjonalne przyspieszenie nagrań Podręcznika głosem Azure (lib/tts.ts): porcja co godzinę zamiast raz dziennie (Vercel Cron).
+# Wymaga sekretów repozytorium (Settings → Secrets and variables → Actions): APP_URL (np. https://twoja-aplikacja.vercel.app)
+# i CRON_SECRET (ten sam co w Vercel). Bez nich zadanie kończy się od razu. Budżet znaków pilnuje serwer.
+name: Nagrania Podręcznika (TTS)
+
+on:
+  schedule:
+    - cron: "41 * * * *"
+  workflow_dispatch:
+
+jobs:
+  porcja:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Nagraj porcję
+        env:
+          APP_URL: ${{ secrets.APP_URL }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        run: |
+          if [ -z "$APP_URL" ] || [ -z "$CRON_SECRET" ]; then echo "Brak sekretów APP_URL / CRON_SECRET – pomijam."; exit 0; fi
+          code=$(curl -sS -o out.json -w "%{http_code}" --max-time 330 -H "Authorization: Bearer $CRON_SECRET" "$APP_URL/api/cron/tts")
+          cat out.json; echo
+          # 409 – porcja już trwa (np. równolegle z Vercel Cron)
+          if [ "$code" != "200" ] && [ "$code" != "409" ]; then echo "HTTP $code"; exit 1; fi

@@ -4,7 +4,8 @@ import { useSyncExternalStore } from "react";
 import { splitChunks, type SpeechItem } from "./speech-text";
 
 /**
- * Czytanie na głos przez syntezator mowy przeglądarki (Web Speech API) – bez kluczy i opłat.
+ * Czytanie na głos przez syntezator mowy przeglądarki (Web Speech API) – bez kluczy i opłat;
+ * elementy z nagraniem (`audio` – akapity Podręcznika nagrane głosem Azure, lib/tts.ts) grają z pliku.
  * Jedna kolejka w karcie: lista elementów (artykuł → akapity, tabela → hasła…), każdy dzielony na zdania.
  * Stan subskrybowany przez useSpeech (pasek odtwarzacza, podświetlenie czytanego elementu).
  */
@@ -40,6 +41,14 @@ let inited = false;
 let gapTimer: ReturnType<typeof setTimeout> | null = null;
 /** Pauza złapana w przerwie między elementami – wznowienie zaczyna następny element. */
 let resumeNext = false;
+
+/** Odtwarzacz nagrań (jeden na kartę). */
+let audioEl: HTMLAudioElement | null = null;
+const audio = () => {
+  if (!audioEl && typeof Audio !== "undefined") audioEl = new Audio();
+  return audioEl;
+};
+const playingAudio = () => !!state.items[state.index]?.audio && !!audioEl && !!audioEl.src && !audioEl.ended;
 
 const synth = () => (typeof window !== "undefined" && "speechSynthesis" in window ? window.speechSynthesis : null);
 
@@ -81,14 +90,7 @@ function speakChunk() {
   if (!s) return;
   const item = state.items[state.index];
   if (!item) { stop(); return; }
-  if (chunk >= chunks.length) {
-    // koniec elementu – następny (krótka pauza) albo koniec czytania
-    if (state.continuous && state.index + 1 < state.items.length) {
-      const my = token;
-      gapTimer = setTimeout(() => { gapTimer = null; if (my === token && state.status === "playing") startItem(state.index + 1); }, 450);
-    } else stop();
-    return;
-  }
+  if (chunk >= chunks.length) { itemDone(); return; }
   const u = new SpeechSynthesisUtterance(chunks[chunk]);
   u.lang = "pl-PL";
   u.rate = state.rate;
@@ -100,43 +102,68 @@ function speakChunk() {
   s.speak(u);
 }
 
-function startItem(i: number) {
+/** Koniec elementu – następny (krótka pauza) albo koniec czytania. */
+function itemDone() {
+  if (state.continuous && state.index + 1 < state.items.length) {
+    const my = token;
+    gapTimer = setTimeout(() => { gapTimer = null; if (my === token && state.status === "playing") startItem(state.index + 1); }, 450);
+  } else stop();
+}
+
+function silenceAll() {
   const s = synth();
-  if (!s) return;
+  if (s) { if (s.paused) s.resume(); s.cancel(); }
+  if (audioEl) { audioEl.onended = audioEl.onerror = null; audioEl.pause(); audioEl.removeAttribute("src"); audioEl.load(); }
+}
+
+function startItem(i: number) {
   token++;
   resumeNext = false;
-  if (s.paused) s.resume();
   if (gapTimer) clearTimeout(gapTimer);
-  s.cancel();
+  silenceAll();
   const item = state.items[i];
   if (!item) { stop(); return; }
   chunks = splitChunks(item.text);
   chunk = 0;
   set({ index: i, status: "playing" });
+  const a = item.audio ? audio() : null;
+  if (a && item.audio) {
+    const my = token;
+    a.src = item.audio;
+    a.playbackRate = state.rate;
+    a.onended = () => { if (my === token) itemDone(); };
+    // plik niedostępny (sieć, usunięte nagranie) – ten element czyta syntezator
+    const fallback = () => { if (my !== token) return; a.onended = a.onerror = null; a.removeAttribute("src"); speakChunk(); };
+    a.onerror = fallback;
+    a.play().catch((e: Error) => { if (e.name !== "AbortError") fallback(); });
+    return;
+  }
   speakChunk();
 }
 
 /** Czyta listę od elementu `start`; `continuous: false` – tylko ten jeden element. */
 export function play(items: SpeechItem[], start = 0, opts: { group?: string; continuous?: boolean } = {}) {
   init();
-  if (!synth() || !items.length) return;
+  if ((!synth() && !items.some((x) => x.audio)) || !items.length) return;
   set({ items, group: opts.group ?? null, continuous: opts.continuous ?? true });
   startItem(Math.max(0, Math.min(items.length - 1, start)));
 }
 
 export function pause() {
-  const s = synth();
-  if (!s || state.status !== "playing") return;
+  if (state.status !== "playing") return;
   if (gapTimer) { clearTimeout(gapTimer); gapTimer = null; resumeNext = true; }
-  s.pause();
+  if (playingAudio()) audioEl!.pause();
+  else synth()?.pause();
   set({ status: "paused" });
 }
 
 export function resume() {
-  const s = synth();
-  if (!s || state.status !== "paused") return;
+  if (state.status !== "paused") return;
   set({ status: "playing" });
-  if (resumeNext) { resumeNext = false; s.resume(); startItem(state.index + 1); return; }
+  if (resumeNext) { resumeNext = false; startItem(state.index + 1); return; }
+  if (playingAudio()) { audioEl!.play().catch(() => {}); return; }
+  const s = synth();
+  if (!s) return;
   // część przeglądarek (Android) nie wznawia po pause() – zaczynamy bieżące zdanie od nowa
   if (s.paused) s.resume();
   if (!s.speaking) { token++; speakChunk(); }
@@ -145,7 +172,7 @@ export function resume() {
 export function stop() {
   token++;
   if (gapTimer) clearTimeout(gapTimer);
-  synth()?.cancel();
+  silenceAll();
   chunks = [];
   chunk = 0;
   if (state.status !== "idle" || state.items.length) set({ status: "idle", items: [], index: 0, group: null });
@@ -157,18 +184,19 @@ export function stopGroup(prefix: string) {
 }
 
 export const next = () => { if (state.index + 1 < state.items.length) startItem(state.index + 1); };
-export const prev = () => startItem(chunk > 0 ? state.index : Math.max(0, state.index - 1));
+export const prev = () => startItem((playingAudio() ? audioEl!.currentTime > 2 : chunk > 0) ? state.index : Math.max(0, state.index - 1));
 
 export function setRate(r: number) {
   set({ rate: r });
   saveSettings();
+  if (playingAudio()) { audioEl!.playbackRate = r; return; }
   if (state.status === "playing") { token++; synth()?.cancel(); speakChunk(); }
 }
 
 export function setVoice(uri: string) {
   set({ voiceUri: uri });
   saveSettings();
-  if (state.status === "playing") { token++; synth()?.cancel(); speakChunk(); }
+  if (state.status === "playing" && !playingAudio()) { token++; synth()?.cancel(); speakChunk(); }
 }
 
 export function useSpeech(): SpeechState {

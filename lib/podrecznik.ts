@@ -94,3 +94,12 @@ export function chapterTitles(): Record<string, string> {
   for (const b of Object.values(UNITS)) for (const c of b.chapters) out[c.lesson] = c.title;
   return out;
 }
+
+/** Artykuły działów w kolejności kursu: przegląd „W skrócie” + rozdziały (jak strona artykułu działu). */
+export function allArticleSections(): { unitId: string; sections: { title: string; blocks: Block[] }[] }[] {
+  return COURSE.units.flatMap((u) => {
+    const b = UNITS[u.id];
+    if (!b) return [];
+    return [{ unitId: u.id, sections: [...(b.intro ? [b.intro] : []), ...b.chapters] }];
+  });
+}
