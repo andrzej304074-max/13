@@ -3,7 +3,11 @@ import os from "node:os";
 import path from "node:path";
 import { del, put } from "@vercel/blob";
 import { query, withTx } from "./db";
+import { QUESTIONS } from "@/data/questions";
+import { SLOWNIK_QUESTIONS } from "@/data/slownik";
+import { hasla } from "./data-server";
 import { allArticleSections } from "./podrecznik";
+import { hasloSpeech, questionAnswer, questionAsk } from "./speech-catalog";
 import { articleSpeech } from "./podrecznik-speech";
 import {
   allowance, dayOf, DEFAULT_MONTHLY, DEFAULT_USER_DAILY, isVoice, liveBlocked, MIN_GAP_MS, monthOf, normalizeState, pickBatch, ssml,
@@ -31,7 +35,10 @@ const FAKE = process.env.TTS_FAKE === "1";
 const FAKE_DIR = path.join(os.tmpdir(), "owe-tts");
 const FORMAT = "audio-24khz-48kbitrate-mono-mp3";
 const envNum = (k: string, d: number) => (Number(process.env[k]) > 0 ? Number(process.env[k]) : d);
-const monthly = () => envNum("TTS_MONTHLY_CHARS", DEFAULT_MONTHLY);
+/** Limit miesięczny: z panelu admina (settings.tts.monthly), inaczej TTS_MONTHLY_CHARS, inaczej 450 tys. */
+const monthlyOf = (s: TtsState) => s.monthly ?? envNum("TTS_MONTHLY_CHARS", DEFAULT_MONTHLY);
+/** Tryb szybki (warstwa S0): kilka nagrań naraz, bez przerw i bez rozkładania budżetu na dni. */
+const FAST_PARALLEL = 8;
 const userDaily = () => envNum("TTS_USER_DAILY", DEFAULT_USER_DAILY);
 
 export function ttsConfigured(): { ok: boolean; missing: string[] } {
@@ -40,7 +47,12 @@ export function ttsConfigured(): { ok: boolean; missing: string[] } {
   return { ok: !missing.length, missing };
 }
 
-/* ---------- akapity Podręcznika ---------- */
+/* ---------- katalog nagrań: Podręcznik, hasła, pytania ---------- */
+
+/** Grupa w panelu: artykuły Podręcznika (article = id działu), hasła, pytania OWE, pytania ze słownika. */
+export type ClipGroup = "pod" | "haslo" | "owe" | "slownik";
+export const GROUP_LABEL: Record<ClipGroup, string> = { pod: "Podręcznik", haslo: "Hasła i definicje", owe: "Pytania OWE", slownik: "Pytania ze słownika" };
+const groupOf = (article: string): ClipGroup => (article === "haslo" || article === "owe" || article === "slownik" ? article : "pod");
 
 interface Paragraph { hash: string; text: string; chars: number; article: string }
 const g = globalThis as unknown as {
@@ -48,20 +60,30 @@ const g = globalThis as unknown as {
   ttsLive?: Map<string, Promise<string>>;
 };
 
-/** Wszystkie akapity (bez powtórzeń) w kolejności kursu i skróty akapitów każdego artykułu – liczone raz na proces. */
+/**
+ * Wszystkie teksty do nagrania (bez powtórzeń), kolejno: akapity Podręcznika (kolejność kursu), hasła,
+ * pytania OWE (pytanie z odpowiedziami i osobno wyjaśnienie), pytania ze słownika – liczone raz na proces.
+ * Teksty budują te same funkcje co strony (lib/podrecznik-speech.ts, lib/speech-catalog.ts).
+ */
 function paragraphs() {
   if (!g.ttsParas) {
     const all: Paragraph[] = [];
     const seen = new Set<string>();
     const byArticle = new Map<string, string[]>();
+    const add = (text: string, article: string) => {
+      const hash = textHash(text);
+      if (!seen.has(hash)) { seen.add(hash); all.push({ hash, text, chars: text.length, article }); }
+      return hash;
+    };
     for (const { unitId, sections } of allArticleSections()) {
-      const hashes: string[] = [];
-      for (const it of articleSpeech(sections, true).items) {
-        const hash = textHash(it.text);
-        hashes.push(hash);
-        if (!seen.has(hash)) { seen.add(hash); all.push({ hash, text: it.text, chars: it.text.length, article: unitId }); }
+      byArticle.set(unitId, articleSpeech(sections, true).items.map((it) => add(it.text, unitId)));
+    }
+    for (const h of hasla().rows) add(hasloSpeech(h).text, "haslo");
+    for (const [bank, list] of [["owe", QUESTIONS], ["slownik", SLOWNIK_QUESTIONS]] as const) {
+      for (const q of list) {
+        add(questionAsk(q).text, bank);
+        add(questionAnswer(q, q.correct, q.explanation).text, bank);
       }
-      byArticle.set(unitId, hashes);
     }
     g.ttsParas = { all, byArticle, byHash: new Map(all.map((p) => [p.hash, p])) };
   }
@@ -114,7 +136,7 @@ async function saveClip(p: Paragraph, voice: string, bytes: Buffer, url: string)
 class RateLimited extends Error {}
 
 async function synthesize(text: string, voice: string): Promise<Buffer> {
-  if (FAKE) return silentWav(Math.min(3, 0.2 + text.length / 400));
+  if (FAKE) return silentWav(0.1);
   const res = await fetch(`https://${process.env.AZURE_SPEECH_REGION}.tts.speech.microsoft.com/cognitiveservices/v1`, {
     method: "POST",
     headers: {
@@ -200,31 +222,48 @@ async function record(seconds: number): Promise<RunResult> {
       [stale.map((c) => c.hash), stale.map((c) => c.voice)]);
   }
 
-  const budget = allowance(use, monthly(), now);
+  const monthly = monthlyOf(state);
+  const budget = state.fast ? Math.max(0, monthly - use.used) : allowance(use, monthly, now);
   const todo = all.filter((p) => !have.has(p.hash));
   const batch = pickBatch(todo, budget);
   let recorded = 0, chars = 0;
-  // „budżet” – zostały akapity, które nie mieszczą się w dzisiejszej porcji znaków
+  // „budżet” – zostały teksty, które nie mieszczą się w dzisiejszej porcji (albo w limicie miesiąca)
   let stopped: string | null = batch.length < todo.length ? "budżet" : null;
-  for (const p of batch) {
-    if (Date.now() - started > seconds * 1000 - MIN_GAP_MS - 2000) { stopped = "czas"; break; }
-    const t0 = Date.now();
-    try {
-      const bytes = await synthesize(p.text, state.voice);
-      const url = await store(state.voice, p.hash, bytes);
-      await saveClip(p, state.voice, bytes, url);
-      // zapis po każdym nagraniu – przerwana funkcja nie zgubi zużytych znaków
-      await addUsage("cron", p.chars);
-      recorded++;
-      chars += p.chars;
-      state.lastError = null;
-    } catch (e) {
-      state.lastError = (e as Error).message.slice(0, 300);
-      stopped = e instanceof RateLimited ? "limit Azure" : "błąd";
-      break;
+  const deadline = started + seconds * 1000 - (state.fast ? 4000 : MIN_GAP_MS + 2000);
+  let next = 0;
+  let halt = false;
+  const one = async (p: Paragraph) => {
+    for (let attempt = 0; ; attempt++) {
+      try {
+        const bytes = await synthesize(p.text, state.voice);
+        const url = await store(state.voice, p.hash, bytes);
+        await saveClip(p, state.voice, bytes, url);
+        // zapis po każdym nagraniu – przerwana funkcja nie zgubi zużytych znaków
+        await addUsage("cron", p.chars);
+        recorded++;
+        chars += p.chars;
+        state.lastError = null;
+        return;
+      } catch (e) {
+        // tryb szybki: chwilowy limit Azure – krótka przerwa i ponowienie
+        if (e instanceof RateLimited && state.fast && attempt < 3) { await new Promise((r) => setTimeout(r, 2000 * (attempt + 1))); continue; }
+        state.lastError = (e as Error).message.slice(0, 300);
+        stopped = e instanceof RateLimited ? "limit Azure" : "błąd";
+        halt = true;
+        return;
+      }
     }
-    if (!FAKE) await new Promise((r) => setTimeout(r, Math.max(0, MIN_GAP_MS - (Date.now() - t0))));
-  }
+  };
+  const worker = async () => {
+    while (!halt && next < batch.length) {
+      if (Date.now() > deadline) { stopped = "czas"; return; }
+      const p = batch[next++];
+      const t0 = Date.now();
+      await one(p);
+      if (!state.fast && !FAKE && !halt) await new Promise((r) => setTimeout(r, Math.max(0, MIN_GAP_MS - (Date.now() - t0))));
+    }
+  };
+  await Promise.all(Array.from({ length: state.fast ? FAST_PARALLEL : 1 }, worker));
   await saveState({ ...state, lastRun: new Date().toISOString() });
   return { recorded, chars, removed: stale.length, stopped, allowance: budget };
 }
@@ -237,7 +276,8 @@ async function record(seconds: number): Promise<RunResult> {
  */
 export async function recordLive(userId: string, hash: unknown): Promise<{ url: string | null; reason?: string }> {
   const p = typeof hash === "string" ? paragraphs().byHash.get(hash) : undefined;
-  if (!p) throw new HttpError(404, "Nie ma takiego akapitu.");
+  // tekst spoza katalogu (np. ćwiczenie w lekcji) – bez nagrania, czyta syntezator
+  if (!p) return { url: null };
   const state = await loadState();
   const { rows } = await query<{ url: string }>("SELECT url FROM tts_clips WHERE hash = $1 AND voice = $2", [p.hash, state.voice]);
   if (rows[0]) return { url: rows[0].url };
@@ -245,7 +285,7 @@ export async function recordLive(userId: string, hash: unknown): Promise<{ url: 
   if (!ttsConfigured().ok) return { url: null, reason: "Głos z chmury nie jest skonfigurowany." };
   const key = `${state.voice}/${p.hash}`;
   const use = await usage(new Date(), userId);
-  const blocked = liveBlocked(use, p.chars, monthly(), use.whoToday, userDaily());
+  const blocked = liveBlocked(use, p.chars, monthlyOf(state), use.whoToday, userDaily());
   if (blocked) return { url: null, reason: blocked };
   g.ttsLive ??= new Map();
   let job = g.ttsLive.get(key);
@@ -271,7 +311,8 @@ export async function recordLive(userId: string, hash: unknown): Promise<{ url: 
 /** Czy nagrywanie na bieżąco jest teraz możliwe (konfiguracja i limit miesiąca). */
 export async function liveAvailable(): Promise<boolean> {
   if (!ttsConfigured().ok) return false;
-  return (await usage()).used < monthly();
+  const [state, use] = await Promise.all([loadState(), usage()]);
+  return use.used < monthlyOf(state);
 }
 
 /* ---------- odczyt ---------- */
@@ -289,19 +330,28 @@ export async function articleClips(unitId: string): Promise<Record<string, strin
   return out;
 }
 
+/** Koszt głosów neuronowych Azure na warstwie S0 (USD za 1 mln znaków) – do szacunku w panelu. */
+export const S0_USD_PER_MILLION = 16;
+
+interface Progress { done: number; total: number; chars: number; charsDone: number }
+
 export interface TtsStatus {
   configured: boolean;
   missing: string[];
   voice: string;
   voices: typeof VOICES;
   monthly: number;
+  /** Limit ustawiony w panelu (null – z TTS_MONTHLY_CHARS albo domyślny). */
+  monthlySet: number | null;
+  fast: boolean;
   used: number;
   /** Z tego nagrania na bieżąco (słuchający). */
   live: number;
   userDaily: number;
   month: string;
   allowanceNow: number;
-  paragraphs: { done: number; total: number; chars: number; charsDone: number };
+  paragraphs: Progress;
+  groups: (Progress & { id: ClipGroup; label: string })[];
   articles: { done: number; total: number };
   bytes: number;
   lastRun: string | null;
@@ -315,22 +365,38 @@ export async function ttsStatus(): Promise<TtsStatus> {
   const { rows } = await query<{ hash: string; bytes: number }>("SELECT hash, bytes FROM tts_clips WHERE voice = $1", [state.voice]);
   const done = new Set(rows.map((r) => r.hash));
   const conf = ttsConfigured();
+  const prog = (list: Paragraph[]): Progress => {
+    const d = list.filter((p) => done.has(p.hash));
+    return { done: d.length, total: list.length, chars: list.reduce((s, p) => s + p.chars, 0), charsDone: d.reduce((s, p) => s + p.chars, 0) };
+  };
+  const monthly = monthlyOf(state);
   return {
-    configured: conf.ok, missing: conf.missing, voice: state.voice, voices: VOICES, monthly: monthly(), used: use.used, live: use.live,
-    userDaily: userDaily(), month: monthOf(now), allowanceNow: allowance(use, monthly(), now),
-    paragraphs: {
-      done: all.filter((p) => done.has(p.hash)).length, total: all.length,
-      chars: all.reduce((s, p) => s + p.chars, 0), charsDone: all.filter((p) => done.has(p.hash)).reduce((s, p) => s + p.chars, 0),
-    },
+    configured: conf.ok, missing: conf.missing, voice: state.voice, voices: VOICES, monthly, monthlySet: state.monthly, fast: state.fast,
+    used: use.used, live: use.live, userDaily: userDaily(), month: monthOf(now),
+    allowanceNow: state.fast ? Math.max(0, monthly - use.used) : allowance(use, monthly, now),
+    paragraphs: prog(all),
+    groups: (Object.keys(GROUP_LABEL) as ClipGroup[]).map((id) => ({ id, label: GROUP_LABEL[id], ...prog(all.filter((p) => groupOf(p.article) === id)) })),
     articles: { done: [...byArticle.values()].filter((hs) => hs.every((h) => done.has(h))).length, total: byArticle.size },
     bytes: rows.reduce((s, r) => s + Number(r.bytes), 0),
     lastRun: state.lastRun, lastError: state.lastError,
   };
 }
 
-/** Zmiana głosu: kolejne porcje nagrywają wszystko od nowa; do tego czasu grają nagrania poprzednim głosem. */
-export async function setVoice(voice: unknown) {
-  if (!isVoice(voice)) throw new HttpError(400, "Nieznany głos.");
+/**
+ * Ustawienia z panelu: głos (zmiana = nagrania od nowa; do tego czasu grają nagrania poprzednim głosem),
+ * limit miesięczny znaków (null – z TTS_MONTHLY_CHARS) i tryb szybki (warstwa S0).
+ */
+export async function setTtsSettings(body: Record<string, unknown>) {
   const s = await loadState();
-  await saveState({ ...s, voice });
+  if (body.voice !== undefined) {
+    if (!isVoice(body.voice)) throw new HttpError(400, "Nieznany głos.");
+    s.voice = body.voice;
+  }
+  if (body.monthly !== undefined) {
+    const m = body.monthly === null || body.monthly === "" ? null : Number(body.monthly);
+    if (m !== null && !(Number.isInteger(m) && m >= 0 && m <= 50_000_000)) throw new HttpError(400, "Limit: liczba znaków od 0 do 50 000 000.");
+    s.monthly = m;
+  }
+  if (body.fast !== undefined) s.fast = body.fast === true;
+  await saveState(s);
 }

@@ -2,6 +2,10 @@ import { describe, expect, it } from "vitest";
 import { allowance, liveBlocked, normalizeState, pickBatch, ssml, textHash } from "@/lib/tts-core";
 import { articleSpeech } from "@/lib/podrecznik-speech";
 import { allArticleSections } from "@/lib/podrecznik";
+import { correctText, hasloSpeech, questionAnswer, questionAsk } from "@/lib/speech-catalog";
+import { hasla } from "@/lib/data-server";
+import { QUESTIONS } from "@/data/questions";
+import { SLOWNIK_QUESTIONS } from "@/data/slownik";
 
 describe("textHash", () => {
   it("jest deterministyczny i rozróżnia teksty", () => {
@@ -26,6 +30,11 @@ describe("ssml", () => {
 
 describe("budżet", () => {
   const at = (s: string) => new Date(s);
+  it("ustawienia z panelu: limit i tryb szybki", () => {
+    expect(normalizeState({})).toMatchObject({ monthly: null, fast: false });
+    expect(normalizeState({ monthly: 6000000, fast: true })).toMatchObject({ monthly: 6000000, fast: true });
+    expect(normalizeState({ monthly: -5, fast: "tak" })).toMatchObject({ monthly: null, fast: false });
+  });
   it("nieznany głos → domyślny", () => {
     expect(normalizeState({ voice: "x" }).voice).toBe("pl-PL-ZofiaNeural");
     expect(normalizeState({ voice: "pl-PL-MarekNeural" }).voice).toBe("pl-PL-MarekNeural");
@@ -61,5 +70,23 @@ describe("articleSpeech", () => {
     expect(one.some((x) => x.id.endsWith("-h"))).toBe(false);
     const texts = new Set(full.map((x) => x.text));
     expect(one.every((x) => texts.has(x.text))).toBe(true);
+  });
+});
+
+describe("katalog nagrań", () => {
+  it("hasła i pytania: teksty jak na stronach, bez kolizji skrótów w całym katalogu", () => {
+    const texts = new Set<string>();
+    for (const a of allArticleSections()) for (const it of articleSpeech(a.sections, true).items) texts.add(it.text);
+    for (const h of hasla().rows) texts.add(hasloSpeech(h).text);
+    for (const q of [...QUESTIONS, ...SLOWNIK_QUESTIONS]) { texts.add(questionAsk(q).text); texts.add(questionAnswer(q, q.correct, q.explanation).text); }
+    expect(texts.size).toBeGreaterThan(15000);
+    expect(new Set([...texts].map(textHash)).size).toBe(texts.size);
+  });
+  it("pytanie i wyjaśnienie", () => {
+    const q = { id: "x", question: "Ile to 2+2?", options: ["3", "4", "5", "6"] };
+    expect(questionAsk(q, "Pytanie 7").text).toBe(questionAsk(q).text); // tytuł nie wpływa na tekst (klucz nagrania)
+    expect(questionAsk(q).text).toContain("Odpowiedź B: 4");
+    expect(questionAnswer(q, [1], "Bo tak.").text).toMatch(/^Poprawna odpowiedź: B\. Wyjaśnienie: Bo tak\.$/);
+    expect(correctText([])).toMatch(/żadna/);
   });
 });

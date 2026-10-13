@@ -11,7 +11,7 @@ import { normalize } from "@/lib/nauka-logic";
 import { useStars } from "@/lib/stars-client";
 import { MindMap, type MapNode, type MapRing } from "./mind-map";
 import { SpeakButton } from "@/app/components/speech/speak";
-import { speechItem } from "@/lib/speech-text";
+import { hasloSpeech } from "@/lib/speech-catalog";
 
 type Topic = { id: string; title: string; emoji: string; color: string };
 type Kind = { id: string; title: string };
@@ -235,13 +235,13 @@ function MindMapPage({ rows, topics, kinds, mapa }: { rows: Haslo[]; topics: Top
             <Link className="btn small secondary" href={`/pojecia?q=${encodeURIComponent(c.t)}`}>🔎 W tabeli pojęć</Link>
             {chapter && <Link className="btn small secondary" href={`/nauka/podrecznik/${chapter[0]}/${chapter[1]}`}>📖 W Podręczniku</Link>}
             {!preview && <AddToDeck item={c.id} title={c.t} />}
-            <SpeakButton group={`mapa:${c.id}`} label="Czytaj" continuous={false} items={() => [speechItem(c.id, c.t, c.t, c.d, c.w ? `Wzór: ${c.w}` : null)]} />
+            <SpeakButton group={`mapa:${c.id}`} label="Czytaj" continuous={false} items={() => [hasloSpeech(c)]} />
           </div>
         </section>
         <section className="card mm-links" aria-label="Powiązane pojęcia">
           <div className="row"><h2>Powiązane ({neighbors.length})</h2><span className="spacer" />
             {neighbors.length > 0 && <SpeakButton group={`mapa-lista:${c.id}`} label="Czytaj listę" compact
-              items={() => neighbors.map(([id, , m, o]) => { const r = byId.get(id)!; return speechItem(id, r.t, r.t, reasonText(m, o), r.d); })} />}
+              items={() => neighbors.map(([id]) => hasloSpeech(byId.get(id)!))} />}
           </div>
           <ol>
             {neighbors.map(([id, w, m, o]) => {

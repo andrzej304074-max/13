@@ -9,7 +9,7 @@ import { correctUnits, multiHits, UNITS_PER_QUESTION } from "@/lib/scoring";
 import type { AnswerFeedback, PublicQuestion, TestState } from "@/lib/types";
 import { LoadingPage } from "@/app/components/loading-page";
 import { SpeakButton } from "@/app/components/speech/speak";
-import { speechItem } from "@/lib/speech-text";
+import { correctText, questionAnswer, questionAsk } from "@/lib/speech-catalog";
 import { stopGroup } from "@/lib/speech";
 
 type AnswerResponse = AnswerFeedback & { totalScore: number; nextQuestion?: PublicQuestion | null };
@@ -20,7 +20,6 @@ function fmtTime(ms: number) {
 }
 
 /** Litery poprawnych odpowiedzi; w wielokrotnym wyborze bywa, że żadna nie jest poprawna (każde pole ocenia się osobno). */
-const correctText = (c: number[]) => (c.length ? c.map((i) => LETTERS[i]).join(", ") : "żadna – wszystkie odpowiedzi są fałszywe");
 
 export default function TestPage() {
   const { id } = useParams<{ id: string }>();
@@ -168,10 +167,9 @@ export default function TestPage() {
         </p>
         <div className="q-head">
           <p className="question">{q.question}</p>
-          <SpeakButton compact label="Czytaj pytanie" group={`pytanie:${q.id}`} continuous={false} testid="speak-question"
-            items={() => [speechItem(`q-${q.id}`, `Pytanie ${index + 1}`, q.question,
-              ...q.options.map((o, i) => `Odpowiedź ${LETTERS[i]}: ${o}`),
-              fb ? `Poprawna odpowiedź: ${correctText(fb.correct)}` : null, fb?.explanation ? `Wyjaśnienie: ${fb.explanation}` : null)]} />
+          {/* pytanie z odpowiedziami, po sprawdzeniu dodatkowo poprawna odpowiedź i wyjaśnienie (teksty jak w katalogu nagrań) */}
+          <SpeakButton compact label="Czytaj pytanie" group={`pytanie:${q.id}`} continuous={!!fb} testid="speak-question"
+            items={() => [questionAsk(q, `Pytanie ${index + 1}`), ...(fb ? [questionAnswer(q, fb.correct, fb.explanation, `Pytanie ${index + 1} – wyjaśnienie`)] : [])]} />
         </div>
         {q.options.map((opt, i) => (
           <button key={i} className={optionClass(i)} onClick={() => toggle(i)} disabled={!!fb}>

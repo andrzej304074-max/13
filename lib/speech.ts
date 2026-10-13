@@ -2,6 +2,7 @@
 
 import { useSyncExternalStore } from "react";
 import { splitChunks, type SpeechItem } from "./speech-text";
+import { textHash } from "./tts-core";
 
 /**
  * Czytanie na głos. Jedna kolejka w karcie: lista elementów (artykuł → akapity, tabela → hasła…).
@@ -70,6 +71,8 @@ let silentRun = 0;
 let silentHintClosed = false;
 /** Krótka cisza z gestu kliknięcia odblokowuje dźwięk na iOS – nie przerywać jej. */
 let unlocking = false;
+/** Głos z chmury dostępny (GET /api/glos) – każdy element bez nagrania próbuje nagrania z katalogu (hasła, pytania…). */
+let cloudLive = false;
 /** Nagrania na bieżąco w tej kolejce: id elementu → URL (null – nie udało się). */
 let live = new Map<string, Promise<string | null>>();
 
@@ -186,6 +189,7 @@ function init() {
   load();
   s?.addEventListener?.("voiceschanged", load);
   mediaInit();
+  fetch("/api/glos").then((r) => (r.ok ? r.json() : null)).then((d) => { cloudLive = !!d?.live; }).catch(() => {});
   // zamknięcie karty / przejście na stronę logowania – cisza
   window.addEventListener("pagehide", () => stop());
 }
@@ -267,7 +271,7 @@ function noteSilent(withVoice: boolean) {
 /** Nagranie na bieżąco: POST z ponowieniem przy chwilowym limicie (429). */
 async function fetchLive(hash: string): Promise<string | null> {
   for (let attempt = 0; attempt < 3; attempt++) {
-    const r = await fetch("/api/podrecznik/nagrania", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ hash }) }).catch(() => null);
+    const r = await fetch("/api/glos", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ hash }) }).catch(() => null);
     if (r?.ok) return ((await r.json()) as { url: string | null }).url;
     if (r?.status !== 429) return null;
     await new Promise((res) => setTimeout(res, 3500));
@@ -369,8 +373,10 @@ function startItem(i: number) {
 }
 
 /** Czyta listę od elementu `start`; `continuous: false` – tylko ten jeden element. */
-export function play(items: SpeechItem[], start = 0, opts: { group?: string; continuous?: boolean } = {}) {
+export function play(input: SpeechItem[], start = 0, opts: { group?: string; continuous?: boolean } = {}) {
   init();
+  // głos z chmury: elementy bez nagrania dostają skrót tekstu – serwer odda nagranie z katalogu albo null (syntezator)
+  const items = cloudLive ? input.map((x) => (x.audio || x.live ? x : { ...x, live: textHash(x.text) })) : input;
   if ((!synth() && !items.some((x) => x.audio || x.live)) || !items.length) return;
   const first = items[Math.max(0, Math.min(items.length - 1, start))];
   // w geście kliknięcia: sesja audio (iOS); cisza tylko gdy pierwszy element czyta syntezator

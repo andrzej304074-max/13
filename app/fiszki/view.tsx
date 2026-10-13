@@ -15,7 +15,7 @@ import { AddToDeck } from "./add-to-deck";
 import { cardsLabel } from "@/lib/decks-core";
 import { SpeakButton } from "@/app/components/speech/speak";
 import { stopGroup, useSpeech } from "@/lib/speech";
-import { speechItem } from "@/lib/speech-text";
+import { hasloSpeech } from "@/lib/speech-catalog";
 
 export interface Card { id: string; t: string; d: string; w: string | null; kind: string; topic: string; n: number }
 type Topic = { id: string; title: string; emoji: string };
@@ -371,4 +371,4 @@ export function FlashcardsLoader() {
 }
 
 /** Fiszka do czytania: hasło, chwila przerwy (kropka) i definicja ze wzorem. */
-const cardItem = (c: Card) => speechItem(c.id, c.t, c.t, c.d, c.w ? `Wzór: ${c.w}` : null);
+const cardItem = (c: Card) => hasloSpeech(c);

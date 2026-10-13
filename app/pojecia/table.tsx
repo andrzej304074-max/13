@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
 import { ToTop } from "@/app/components/to-top";
 import { SpeakButton } from "@/app/components/speech/speak";
-import { speechItem } from "@/lib/speech-text";
+import { hasloSpeech } from "@/lib/speech-catalog";
 import { useData } from "@/lib/data-client";
 import type { Haslo } from "@/lib/data-server";
 
@@ -158,4 +158,4 @@ export function PageSkeleton({ title, wide = true }: { title: string; wide?: boo
 }
 
 /** Hasło do czytania na głos: nazwa, definicja i wzór. */
-const itemOf = (r: Haslo) => speechItem(r.id, r.t, r.t, r.d, r.w ? `Wzór: ${r.w}` : null);
+const itemOf = (r: Haslo) => hasloSpeech(r);

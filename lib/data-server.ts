@@ -7,7 +7,7 @@ import MAPA_JSON from "@/data/nauka/mapa.json";
 /** Hasło kursu w tabeli pojęć i fiszkach. */
 export interface Haslo { id: string; t: string; d: string; w: string | null; kind: string; topic: string; n: number }
 
-function hasla() {
+export function hasla() {
   const owe = oweCountByItem();
   // kolejność jak w kursie Nauka: tematy → działy → lekcje → hasła (każde hasło raz), bez lekcji „Zrozumienie”
   const seen = new Set<string>();

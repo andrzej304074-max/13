@@ -38,6 +38,10 @@ export function ssml(text: string, voice: string): string {
 /** Ustawienia nagrań (settings.tts); zużycie znaków jest w tabeli tts_usage (licznik dzienny na źródło). */
 export interface TtsState {
   voice: string;
+  /** Limit znaków na miesiąc z panelu admina (null – z TTS_MONTHLY_CHARS albo domyślny). */
+  monthly: number | null;
+  /** Tryb szybki (warstwa S0 Azure): kilka nagrań naraz, bez przerw i bez rozkładania budżetu na dni. */
+  fast: boolean;
   lastRun: string | null;
   lastError: string | null;
 }
@@ -55,6 +59,8 @@ export function normalizeState(v: unknown): TtsState {
   const o = (v && typeof v === "object" ? v : {}) as Record<string, unknown>;
   return {
     voice: isVoice(o.voice) ? o.voice : DEFAULT_VOICE,
+    monthly: typeof o.monthly === "number" && Number.isFinite(o.monthly) && o.monthly >= 0 ? Math.floor(o.monthly) : null,
+    fast: o.fast === true,
     lastRun: typeof o.lastRun === "string" ? o.lastRun : null,
     lastError: typeof o.lastError === "string" ? o.lastError : null,
   };
