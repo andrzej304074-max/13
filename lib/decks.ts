@@ -2,6 +2,8 @@ import { COURSE } from "@/data/nauka";
 import { query, withTx } from "./db";
 import { DeckError, deckName, MAX_DECK_CARDS, MAX_DECKS, validOrder } from "./decks-core";
 import { HttpError } from "./tests";
+import { isOwnId } from "./own-cards-core";
+import { ownedIds, ownTitles } from "./own-cards";
 
 /** Własne talie fiszek w bazie (logika: decks-core.ts). Odczyt także w podglądzie admina, zapis tylko właściciel. */
 
@@ -28,6 +30,12 @@ async function own(userId: string, id: string): Promise<{ id: string; name: stri
   return rows[0];
 }
 
+/** Karty z listy, które istnieją: hasła kursu i własne fiszki tego konta (`u:…`). */
+async function validCards(userId: string, ids: readonly unknown[]): Promise<string[]> {
+  const own = await ownedIds(userId, ids);
+  return ids.filter((x): x is string => isCard(x) || (typeof x === "string" && own.has(x)));
+}
+
 export async function listDecks(userId: string, item: string | null = null): Promise<DeckSummary[]> {
   const { rows } = await query<{ id: string; name: string; updated_at: Date; count: string; preview: string[] | null; has: boolean }>(
     `SELECT d.id, d.name, d.updated_at, COUNT(c.item_id) AS count,
@@ -36,9 +44,10 @@ export async function listDecks(userId: string, item: string | null = null): Pro
      FROM decks d LEFT JOIN deck_cards c ON c.deck_id = d.id
      WHERE d.user_id = $1 GROUP BY d.id ORDER BY d.updated_at DESC`,
     [userId, item]);
+  const titles = await ownTitles(userId, rows.flatMap((r) => r.preview ?? []));
   return rows.map((r) => ({
     id: r.id, name: r.name, count: Number(r.count), updated_at: r.updated_at.toISOString(),
-    preview: (r.preview ?? []).map((i) => COURSE.items[i]?.t).filter(Boolean) as string[],
+    preview: (r.preview ?? []).map((i) => COURSE.items[i]?.t ?? titles[i]).filter(Boolean) as string[],
     ...(item ? { has: r.has } : {}),
   }));
 }
@@ -46,13 +55,13 @@ export async function listDecks(userId: string, item: string | null = null): Pro
 export async function getDeck(userId: string, id: string): Promise<Deck> {
   const d = await own(userId, id);
   const { rows } = await query<{ item_id: string }>("SELECT item_id FROM deck_cards WHERE deck_id = $1 ORDER BY pos, added_at", [id]);
-  return { id: d.id, name: d.name, updated_at: d.updated_at.toISOString(), items: rows.map((r) => r.item_id).filter(isCard) };
+  return { id: d.id, name: d.name, updated_at: d.updated_at.toISOString(), items: await validCards(userId, rows.map((r) => r.item_id)) };
 }
 
 export async function createDeck(userId: string, body: Record<string, unknown>): Promise<Deck> {
   return wrap(async () => {
     const name = deckName(body.name);
-    const items = Array.isArray(body.items) ? [...new Set(body.items.filter(isCard))].slice(0, MAX_DECK_CARDS) : [];
+    const items = Array.isArray(body.items) ? [...new Set(await validCards(userId, body.items))].slice(0, MAX_DECK_CARDS) : [];
     return withTx(async (q) => {
       const { rows: n } = await q<{ n: string }>("SELECT COUNT(*) AS n FROM decks WHERE user_id = $1", [userId]);
       if (Number(n[0].n) >= MAX_DECKS) throw new HttpError(400, `Możesz mieć najwyżej ${MAX_DECKS} talii.`);
@@ -82,7 +91,7 @@ export async function deleteDeck(userId: string, id: string): Promise<{ ok: true
 
 /** Dodaje kartę na koniec talii (albo na pozycję `at`); karta już w talii – bez zmian. */
 export async function addCard(userId: string, id: string, item: unknown): Promise<Deck> {
-  if (!isCard(item)) throw new HttpError(400, "Nie ma takiego hasła.");
+  if (!(await validCards(userId, [item])).length) throw new HttpError(400, "Nie ma takiego hasła.");
   await own(userId, id);
   await withTx(async (q) => {
     await q("SELECT 1 FROM decks WHERE id = $1 FOR UPDATE", [id]);

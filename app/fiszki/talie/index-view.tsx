@@ -8,6 +8,7 @@ import { PreviewBanner } from "@/app/components/preview-banner";
 import { api, viewedUser, withUser } from "@/lib/client";
 import type { Deck, DeckSummary } from "@/lib/decks";
 import { cardsLabel } from "@/lib/decks-core";
+import { OwnCards } from "./own-cards";
 
 /** Lista własnych talii fiszek: nowa talia, karta talii z podglądem haseł, „Ucz się”. */
 export function DecksIndex() {
@@ -69,6 +70,7 @@ export function DecksIndex() {
           ))}
         </div>
       )}
+      <OwnCards />
     </div>
   );
 }

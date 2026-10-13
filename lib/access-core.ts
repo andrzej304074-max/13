@@ -64,7 +64,7 @@ export function pathKey(path: string, search = ""): string | null {
     if (path.startsWith("/api/notatki/brudnopis")) return "/notatki/brudnopisy";
     if (path.startsWith("/api/notatki")) return q.get("rodzaj") === "scratch" ? "/notatki/brudnopisy" : path === "/api/notatki" ? "/notatki" : "notatki";
     if (path.startsWith("/api/podrecznik") || path.startsWith("/api/podkreslenia")) return "/nauka/podrecznik";
-    if (path.startsWith("/api/talie")) return "/fiszki/talie";
+    if (path.startsWith("/api/talie") || path.startsWith("/api/fiszki/moje")) return "/fiszki/talie";
     if (path.startsWith("/api/fiszki")) return "/fiszki";
     if (path.startsWith("/api/nauka/stats")) return "/nauka/statystyki";
     if (path.startsWith("/api/nauka")) return "nauka";

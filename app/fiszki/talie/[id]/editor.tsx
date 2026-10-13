@@ -6,48 +6,29 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { LoadingPage } from "@/app/components/loading-page";
 import { PreviewBanner } from "@/app/components/preview-banner";
 import { api, viewedUser, withUser } from "@/lib/client";
-import { useData } from "@/lib/data-client";
-import type { Haslo } from "@/lib/data-server";
+import { useStars } from "@/lib/stars-client";
+import { StarButton } from "@/app/components/star";
+import { CardFilters, NO_FILTER, searchCards, useCardPool, type CardFilter, type PoolCard } from "../../card-pool";
 import type { Deck } from "@/lib/decks";
 import { cardsLabel } from "@/lib/decks-core";
-import { normalize } from "@/lib/nauka-logic";
 import { DeckBoard } from "../deck-board";
 import { SpeakButton } from "@/app/components/speech/speak";
 import { hasloSpeech } from "@/lib/speech-catalog";
 
-type Topic = { id: string; title: string; emoji: string };
-type Kind = { id: string; title: string };
 const KIND_ONE: Record<string, string> = { pojecie: "pojęcie", wzor: "wzór", osoba: "osoba", instytucja: "instytucja", data: "data", przepis: "przepis" };
 const RESULTS = 30;
-
-/** Wyszukiwanie: najpierw tytuły zaczynające się od frazy, potem zawierające ją, potem trafienia w definicji. */
-function search(rows: Haslo[], q: string, f: { topic: string; kind: string; owe: boolean }): Haslo[] {
-  const n = normalize(q);
-  const base = rows.filter((r) => (!f.topic || r.topic === f.topic) && (!f.kind || r.kind === f.kind) && (!f.owe || r.n > 0));
-  if (!n) return base.slice(0, RESULTS);
-  const a: Haslo[] = [], b: Haslo[] = [], c: Haslo[] = [];
-  for (const r of base) {
-    const t = normalize(r.t);
-    if (t.startsWith(n)) a.push(r);
-    else if (t.includes(n)) b.push(r);
-    else if (n.length >= 4 && normalize(r.d).includes(n)) c.push(r);
-    if (a.length >= RESULTS) break;
-  }
-  return [...a, ...b, ...c].slice(0, RESULTS);
-}
 
 /** Edytor talii: nazwa, wyszukiwarka haseł z filtrami (dodawanie kart) i karty do przeciągania. */
 export function DeckEditor({ id }: { id: string }) {
   const router = useRouter();
-  const hasla = useData<{ rows: Haslo[]; topics: Topic[]; kinds: Kind[] }>("/api/dane/hasla");
+  const pool = useCardPool();
+  const { stars, toggle: toggleStar } = useStars("fiszka");
   const [deck, setDeck] = useState<Deck | null>(null);
   const [name, setName] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [preview, setPreview] = useState(false);
   const [q, setQ] = useState("");
-  const [topic, setTopic] = useState("");
-  const [kind, setKind] = useState("");
-  const [owe, setOwe] = useState(false);
+  const [filter, setFilter] = useState<CardFilter>(NO_FILTER);
   const [toast, setToast] = useState<{ text: string; undo?: () => void } | null>(null);
   const fly = useRef<{ id: string; from: DOMRect } | null>(null);
 
@@ -61,9 +42,9 @@ export function DeckEditor({ id }: { id: string }) {
     return () => clearTimeout(t);
   }, [toast]);
 
-  const byId = useMemo(() => new Map((hasla.data?.rows ?? []).map((r) => [r.id, r])), [hasla.data]);
+  const byId = useMemo(() => new Map((pool.rows ?? []).map((r) => [r.id, r])), [pool.rows]);
   const inDeck = useMemo(() => new Set(deck?.items ?? []), [deck]);
-  const results = useMemo(() => (hasla.data ? search(hasla.data.rows, q, { topic, kind, owe }) : []), [hasla.data, q, topic, kind, owe]);
+  const results = useMemo(() => (pool.rows ? searchCards(pool.rows, q, filter, stars) : []), [pool.rows, q, filter, stars]);
 
   // zapis kolejności z opóźnieniem (seria przeciągnięć = jedno zapytanie)
   const orderTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -136,8 +117,8 @@ export function DeckEditor({ id }: { id: string }) {
   }
 
   if (error && !deck) return <div className="stack"><p className="error">{error}</p><Link href="/fiszki/talie">← Moje talie</Link></div>;
-  if (!deck || !hasla.data) return <LoadingPage />;
-  const topicName = Object.fromEntries(hasla.data.topics.map((t) => [t.id, `${t.emoji} ${t.title.replace(/^Temat przewodni: /, "")}`]));
+  if (!deck || !pool.rows) return <LoadingPage />;
+  const topicName = pool.topicName;
 
   return (
     <div className="stack deck-editor">
@@ -154,7 +135,7 @@ export function DeckEditor({ id }: { id: string }) {
         <span className="muted" data-testid="deck-count">{cardsLabel(deck.items.length)}</span>
         <span className="spacer" />
         {deck.items.length > 0 && <SpeakButton group={`talia:${id}`} label="Czytaj talię" testid="speak-deck"
-          items={() => deck.items.map((x) => byId.get(x)).filter((r): r is Haslo => !!r).map((r) => hasloSpeech(r))} />}
+          items={() => deck.items.map((x) => byId.get(x)).filter((r): r is PoolCard => !!r).map((r) => hasloSpeech(r))} />}
         <Link className="btn" href={withUser(`/fiszki?talia=${id}`)} aria-disabled={!deck.items.length}
           style={deck.items.length ? undefined : { pointerEvents: "none", opacity: 0.5 }} data-testid="deck-learn">▶ Ucz się tej talii</Link>
       </div>
@@ -172,32 +153,21 @@ export function DeckEditor({ id }: { id: string }) {
                 const first = results.find((r) => !inDeck.has(r.id));
                 if (first) add(first.id, document.querySelector(`[data-result="${first.id}"]`));
               }} />
-            <div className="filter-grid">
-              <label className="filters">Temat
-                <select className="select" value={topic} onChange={(e) => setTopic(e.target.value)}>
-                  <option value="">wszystkie</option>
-                  {hasla.data.topics.map((t) => <option key={t.id} value={t.id}>{topicName[t.id]}</option>)}
-                </select>
-              </label>
-              <label className="filters">Rodzaj
-                <select className="select" value={kind} onChange={(e) => setKind(e.target.value)}>
-                  <option value="">wszystkie</option>
-                  {hasla.data.kinds.map((k) => <option key={k.id} value={k.id}>{k.title}</option>)}
-                </select>
-              </label>
-              <label className="check" style={{ alignSelf: "end" }}><input type="checkbox" checked={owe} onChange={(e) => setOwe(e.target.checked)} /> tylko z pytań OWE</label>
-            </div>
+            <CardFilters value={filter} onChange={setFilter} topics={pool.topics} kinds={pool.kinds} topicName={topicName}
+              ownCount={pool.rows.filter((r) => r.own).length} />
             <ul className="deck-results" data-testid="deck-results">
               {results.length === 0 && <li className="muted">Nic nie pasuje – zmień frazę albo filtry.</li>}
               {results.map((r) => {
                 const has = inDeck.has(r.id);
                 return (
-                  <li key={r.id}>
-                    <button type="button" className={`deck-result${has ? " in" : ""}`} data-result={r.id} disabled={has}
+                  <li key={r.id} className="deck-result-row">
+                    <button type="button" className={`deck-result${has ? " in" : ""}${r.own ? " own" : ""}`} data-result={r.id} disabled={has}
                       onClick={(e) => add(r.id, e.currentTarget)} title={has ? "Już w talii" : "Dodaj do talii"}>
-                      <span className="deck-result-main"><strong>{r.t}</strong><span className="muted">{KIND_ONE[r.kind] ?? r.kind} · {topicName[r.topic]}{r.n > 0 ? ` · OWE ${r.n}×` : ""}</span></span>
+                      <span className="deck-result-main"><strong>{r.own && <span className="own-mark" title="Moja fiszka">✍️ </span>}{r.t}</strong>
+                        <span className="muted">{KIND_ONE[r.kind] ?? r.kind} · {topicName[r.topic]}{r.n > 0 ? ` · OWE ${r.n}×` : ""}</span></span>
                       <span className="deck-result-act" aria-hidden>{has ? "✓ w talii" : "＋"}</span>
                     </button>
+                    <StarButton on={stars.has(r.id)} onToggle={() => toggleStar(r.id)} label="fiszkę do ulubionych" />
                   </li>
                 );
               })}
@@ -209,7 +179,8 @@ export function DeckEditor({ id }: { id: string }) {
           {deck.items.length === 0 ? (
             <div className="empty-state"><span aria-hidden>🃏</span><p>{preview ? "Ta talia jest pusta." : "Talia jest pusta – wyszukaj hasło i dotknij ＋, a karta pojawi się tutaj."}</p></div>
           ) : (
-            <DeckBoard items={deck.items} byId={byId} topicName={topicName} readOnly={preview} onReorder={reorder} onRemove={remove} fly={fly} />
+            <DeckBoard items={deck.items} byId={byId} topicName={topicName} readOnly={preview} onReorder={reorder} onRemove={remove} fly={fly}
+              stars={stars} onStar={toggleStar} />
           )}
         </section>
       </div>

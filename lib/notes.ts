@@ -1,4 +1,6 @@
 import { COURSE } from "@/data/nauka";
+import { isOwnId } from "./own-cards-core";
+import { ownedIds } from "./own-cards";
 import { query } from "./db";
 import { getQuestion } from "./questions";
 import { HttpError } from "./tests";
@@ -165,7 +167,9 @@ export async function listStars(userId: string, kind: unknown): Promise<string[]
 export async function setStar(userId: string, kind: unknown, ref: unknown, on: unknown) {
   if (!isStarKind(kind)) throw new HttpError(400, "Nieznany rodzaj gwiazdki.");
   if (typeof ref !== "string") throw new HttpError(400, "Brak odnośnika.");
-  const ok = kind === "fiszka" ? Boolean(COURSE.items[ref]) : Boolean(COURSE.lessons[ref] || COURSE.units.some((u) => u.id === ref));
+  const ok = kind === "fiszka"
+    ? Boolean(COURSE.items[ref]) || (isOwnId(ref) && (await ownedIds(userId, [ref])).has(ref))
+    : Boolean(COURSE.lessons[ref] || COURSE.units.some((u) => u.id === ref));
   if (!ok) throw new HttpError(400, "Nieznany element.");
   if (typeof on !== "boolean") throw new HttpError(400, "Brak stanu gwiazdki.");
   if (on) await query("INSERT INTO stars (user_id, kind, ref) VALUES ($1, $2, $3) ON CONFLICT DO NOTHING", [userId, kind, ref]);

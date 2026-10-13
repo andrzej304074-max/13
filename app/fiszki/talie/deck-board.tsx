@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import type { Haslo } from "@/lib/data-server";
+import type { PoolCard } from "../card-pool";
+import { StarButton } from "@/app/components/star";
 import { moveItem } from "@/lib/decks-core";
 
 const GAP = 8;
@@ -14,8 +15,9 @@ interface Drag { id: string; from: number; over: number; dy: number; h: number; 
  * pozostałe rozsuwają się animacją, przy krawędzi ekranu strona sama się przewija. Z klawiatury: fokus na uchwycie + ↑/↓.
  * Nowo dodana karta „wlatuje” z miejsca wyniku wyszukiwania (`fly`).
  */
-export function DeckBoard({ items, byId, topicName, readOnly, onReorder, onRemove, fly }: {
-  items: string[]; byId: Map<string, Haslo>; topicName: Record<string, string>; readOnly: boolean;
+export function DeckBoard({ items, byId, topicName, readOnly, onReorder, onRemove, fly, stars, onStar }: {
+  items: string[]; byId: Map<string, PoolCard>; topicName: Record<string, string>; readOnly: boolean;
+  stars: Set<string>; onStar: (id: string) => void;
   onReorder: (items: string[]) => void; onRemove: (id: string) => void;
   fly: React.MutableRefObject<{ id: string; from: DOMRect } | null>;
 }) {
@@ -120,7 +122,7 @@ export function DeckBoard({ items, byId, topicName, readOnly, onReorder, onRemov
         const me = drag?.id === id;
         return (
           <li key={id} ref={(el) => { if (el) els.current.set(id, el); else els.current.delete(id); }}
-            className={`deck-item${me ? " lifted" : ""}`} data-testid="deck-item" data-id={id}
+            className={`deck-item${me ? " lifted" : ""}${c?.own ? " own" : ""}`} data-testid="deck-item" data-id={id}
             style={{ transform: me ? `translateY(${drag!.dy}px)` : shift(i) ? `translateY(${shift(i)}px)` : undefined }}>
             {!readOnly && (
               <button type="button" className="deck-handle" aria-label={`Przenieś: ${c?.t ?? id} (pozycja ${i + 1} z ${items.length}; strzałki ↑/↓)`}
@@ -130,10 +132,11 @@ export function DeckBoard({ items, byId, topicName, readOnly, onReorder, onRemov
             )}
             <span className="deck-no" aria-hidden>{i + 1}</span>
             <div className="deck-body">
-              <strong>{c?.t ?? id}</strong>
+              <strong>{c?.own && <span className="own-mark" title="Moja fiszka">✍️ </span>}{c?.t ?? id}</strong>
               {c && <span className="muted deck-meta">{topicName[c.topic]}{c.n > 0 ? ` · OWE ${c.n}×` : ""}</span>}
               {c && <span className="deck-def">{c.d}</span>}
             </div>
+            <StarButton on={stars.has(id)} onToggle={() => onStar(id)} label="fiszkę do ulubionych" disabled={readOnly} />
             {!readOnly && <button type="button" className="deck-remove" onClick={() => onRemove(id)} aria-label={`Usuń z talii: ${c?.t ?? id}`} title="Usuń z talii">✕</button>}
           </li>
         );

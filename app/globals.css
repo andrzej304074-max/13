@@ -592,6 +592,9 @@ tr.selected-row td { background: var(--bg); font-weight: 600; }
 @keyframes fc-flip { from { transform: rotateY(90deg); } to { transform: rotateY(0); } }
 @media (prefers-reduced-motion: reduce) { .fc.back { animation: none; } }
 .fc-good { border-color: var(--lv-good); } .fc-mid { border-color: var(--lv-mid); } .fc-weak { border-color: var(--lv-weak); }
+/* własna fiszka: przerywana obwódka (kolor = poziom znajomości) i lekko zabarwione tło */
+.fc.own { border-style: dashed; background: color-mix(in srgb, var(--accent) 6%, var(--surface)); }
+.tag.own { border-color: var(--accent); color: var(--accent); font-weight: 600; }
 .fc-face { display: flex; flex-direction: column; justify-content: center; gap: 12px; width: 100%; min-width: 0; }
 .fc-title { font-size: 1.6rem; font-weight: 650; line-height: 1.25; letter-spacing: -0.015em; overflow-wrap: anywhere; text-wrap: balance; }
 .fc-title.small { font-size: 1.1rem; }
@@ -1127,3 +1130,14 @@ nav.sections a.locked, .bottom-bar a.locked, .subtabs a.locked { opacity: .55; }
 .learn-top .speak-btn { flex: none; }
 body:has(.speech-bar) main.container { padding-bottom: 160px; }
 @media (max-width: 640px) { body:has(.speech-bar):has(.bottom-bar) main.container { padding-bottom: calc(230px + env(safe-area-inset-bottom)); } }
+
+/* Moje fiszki (zakładka Moje talie) */
+.own-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.own-item { display: grid; gap: 6px; border-style: dashed; border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); }
+.own-head { display: flex; align-items: center; gap: 8px; justify-content: space-between; }
+.own-def { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.own-form textarea { width: 100%; font: inherit; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--border-strong); background: var(--surface); color: var(--text); resize: vertical; }
+.deck-result-row { display: flex; align-items: center; gap: 4px; }
+.deck-result-row .deck-result { flex: 1; min-width: 0; }
+.deck-item.own, .deck-result.own { border-style: dashed; }
+.own-mark { font-size: .9em; }

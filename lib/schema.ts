@@ -211,6 +211,21 @@ CREATE TABLE IF NOT EXISTS tts_clips (
   created_at timestamptz NOT NULL DEFAULT now(),
   PRIMARY KEY (hash, voice)
 );
+-- Własne fiszki użytkownika (lib/own-cards.ts): id w taliach i gwiazdkach „u:<uuid>”; oceny tylko w karcie.
+CREATE TABLE IF NOT EXISTS own_cards (
+  id         uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id    uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  t          text NOT NULL,
+  d          text NOT NULL,
+  w          text,
+  topic      text NOT NULL,
+  kind       text NOT NULL,
+  c          int NOT NULL DEFAULT 0,
+  n          int NOT NULL DEFAULT 0,
+  created_at timestamptz NOT NULL DEFAULT now(),
+  updated_at timestamptz NOT NULL DEFAULT now()
+);
+CREATE INDEX IF NOT EXISTS own_cards_user_idx ON own_cards (user_id, updated_at DESC);
 -- Zużycie znaków Azure: dzień × źródło („cron” – porcje w tle, id konta – nagrania na bieżąco).
 CREATE TABLE IF NOT EXISTS tts_usage (
   day   date NOT NULL,
