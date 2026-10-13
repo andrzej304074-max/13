@@ -67,7 +67,7 @@ export function FlashcardsView({ cards, topics, kinds, ownMastery = {} }: { card
   const [mastery, setMastery] = useState<Record<string, Mastery>>({});
   const [error, setError] = useState<string | null>(null);
   const preview = typeof window !== "undefined" && !!viewedUser();
-  // ?talia=<id> – nauka własnej talii: tylko jej karty, w jej kolejności (filtry ukryte)
+  // ?talia=<id> – nauka własnej talii: tylko jej karty, w jej kolejności (filtry działają na kartach talii)
   const [deck, setDeck] = useState<Deck | null>(null);
 
   useEffect(() => {
@@ -120,31 +120,33 @@ export function FlashcardsView({ cards, topics, kinds, ownMastery = {} }: { card
   useEffect(() => { if (starsReady) { starSnap.current = new Set(stars); setSnapKey((k) => k + 1); } }, [starsReady]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const inSrc = (c: Card) => !src || (src === "moje" ? !!c.own : !c.own);
+  // nauka talii: te same filtry, ale tylko na kartach talii (w jej kolejności)
+  const pool = useMemo(() => {
+    if (!deck) return cards;
+    const byId = new Map(cards.map((c) => [c.id, c]));
+    return deck.items.map((id) => byId.get(id)).filter((c): c is Card => !!c);
+  }, [cards, deck]);
   const list = useMemo(() => {
     const m = snapshot.current;
     const st = starSnap.current;
-    if (deck) {
-      const byId = new Map(cards.map((c) => [c.id, c]));
-      const r = deck.items.map((id) => byId.get(id)).filter((c): c is Card => !!c);
-      return order === "random" ? shuffle(r, seed) : r;
-    }
-    let r = cards.filter((c) => inSrc(c) && (!topic || c.topic === topic) && (!kind || c.kind === kind) && (!oweOnly || c.n > 0) && (!lv || lvOf(m[c.id]) === lv)
+    let r = pool.filter((c) => inSrc(c) && (!topic || c.topic === topic) && (!kind || c.kind === kind) && (!oweOnly || c.n > 0) && (!lv || lvOf(m[c.id]) === lv)
       && (!gw || st.has(c.id) === (gw === "1")));
     if (order === "random") r = shuffle(r, seed);
+    if (deck) return r;
     if (order === "weak") r = [...r].sort((a, b) => LV_RANK[lvOf(m[a.id])] - LV_RANK[lvOf(m[b.id])] || (m[a.id] ? m[a.id].c / m[a.id].t : 1) - (m[b.id] ? m[b.id].c / m[b.id].t : 1));
     return r;
-  }, [cards, topic, kind, lv, oweOnly, gw, order, seed, snapKey, deck, src]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [pool, topic, kind, lv, oweOnly, gw, order, seed, snapKey, deck, src]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const counts = useMemo(() => {
     const c: Record<Level, number> = { good: 0, mid: 0, weak: 0, none: 0 };
-    for (const x of cards) if (inSrc(x) && (!topic || x.topic === topic) && (!kind || x.kind === kind) && (!oweOnly || x.n > 0)) c[lvOf(mastery[x.id])]++;
+    for (const x of pool) if (inSrc(x) && (!topic || x.topic === topic) && (!kind || x.kind === kind) && (!oweOnly || x.n > 0)) c[lvOf(mastery[x.id])]++;
     return c;
-  }, [cards, topic, kind, oweOnly, mastery, src]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [pool, topic, kind, oweOnly, mastery, src]); // eslint-disable-line react-hooks/exhaustive-deps
   const starCounts = useMemo(() => {
     let on = 0, all = 0;
-    for (const x of cards) if (inSrc(x) && (!topic || x.topic === topic) && (!kind || x.kind === kind) && (!oweOnly || x.n > 0)) { all++; if (stars.has(x.id)) on++; }
+    for (const x of pool) if (inSrc(x) && (!topic || x.topic === topic) && (!kind || x.kind === kind) && (!oweOnly || x.n > 0)) { all++; if (stars.has(x.id)) on++; }
     return { on, off: all - on };
-  }, [cards, topic, kind, oweOnly, stars, stars.size, src]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [pool, topic, kind, oweOnly, stars, stars.size, src]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const rate = useCallback(async (id: string, known: boolean) => {
     if (preview) return;
@@ -178,8 +180,8 @@ export function FlashcardsView({ cards, topics, kinds, ownMastery = {} }: { card
         <button className={mode === "feed" ? "active" : ""} aria-pressed={mode === "feed"} onClick={() => setMode("feed")}>📱 Przewijanie</button>
         <button className={mode === "classic" ? "active" : ""} aria-pressed={mode === "classic"} onClick={() => setMode("classic")}>🃏 Klasyczne</button>
       </div>
-      {!deck && <details className="card filters-card" open={false}>
-        <summary>Filtry · {list.length} z {cards.length} fiszek</summary>
+      <details className="card filters-card" open={false} data-testid="fc-filters">
+        <summary>Filtry · {list.length} z {pool.length} fiszek</summary>
         <div className="stack" style={{ marginTop: 12 }}>
           <div className="filter-grid">
             <label className="filters">Dział
@@ -194,20 +196,20 @@ export function FlashcardsView({ cards, topics, kinds, ownMastery = {} }: { card
                 {kinds.map((k) => <option key={k.id} value={k.id}>{k.title}</option>)}
               </select>
             </label>
-            <label className="filters">Kolejność
+            {!deck && <label className="filters">Kolejność
               <select className="select" value={order} onChange={(e) => setOrder(e.target.value as Order)}>
                 <option value="lessons">jak w lekcjach</option>
                 <option value="random">losowo</option>
                 <option value="weak">najsłabsze najpierw</option>
               </select>
-            </label>
+            </label>}
           </div>
           <div>
             <div className="filter-label">Źródło</div>
             <div className="chips" data-testid="src-filter">
               {([["", "Wszystkie"], ["kurs", "Z kursu"], ["moje", "✍️ Moje fiszki"]] as const).map(([v, label]) => (
                 <button key={v} className={`chip ${src === v ? "selected" : ""}`} onClick={() => setSrc(v)} data-src={v}>
-                  {label}{v === "moje" ? ` · ${cards.filter((c) => c.own).length}` : ""}
+                  {label}{v === "moje" ? ` · ${pool.filter((c) => c.own).length}` : ""}
                 </button>
               ))}
             </div>
@@ -233,7 +235,7 @@ export function FlashcardsView({ cards, topics, kinds, ownMastery = {} }: { card
             {order === "random" && <button className="btn small secondary" onClick={() => setSeed(seed + 1)}>🔀 Przetasuj</button>}
           </div>
         </div>
-      </details>}
+      </details>
 
       {list.length === 0 ? (
         <div className="empty-state">
