@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BackButton } from "./components/back";
 import { currentUser, type User } from "@/lib/auth";
 import { AccountMenu } from "./components/account-menu";
 import { QuickNotes } from "./components/notes/quick-notes";
@@ -39,6 +40,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body>
         <AccessProvider blocks={access.blocks} mode={access.mode}>
           <header className="top">
+            {me?.active && <BackButton />}
             <Link href={home} className="brand">Testy OWE</Link>
             {me?.active && <SectionNav variant="top" />}
             {me?.active && !notesOff && <QuickNotes />}

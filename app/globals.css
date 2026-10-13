@@ -1141,3 +1141,8 @@ body:has(.speech-bar) main.container { padding-bottom: 160px; }
 .deck-result-row .deck-result { flex: 1; min-width: 0; }
 .deck-item.own, .deck-result.own { border-style: dashed; }
 .own-mark { font-size: .9em; }
+
+/* „←” w nagłówku – powrót do poprzedniej strony i miejsca na niej */
+.back-btn { flex: none; width: 36px; height: 36px; display: grid; place-items: center; border-radius: 999px; border: 1px solid var(--border);
+  background: var(--surface); color: var(--text); font-size: 1.1rem; line-height: 1; cursor: pointer; margin-right: -4px; }
+.back-btn:hover { border-color: var(--accent); color: var(--accent); }

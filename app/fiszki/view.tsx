@@ -17,6 +17,7 @@ import { cardsLabel } from "@/lib/decks-core";
 import { SpeakButton } from "@/app/components/speech/speak";
 import { stopGroup, useSpeech } from "@/lib/speech";
 import { hasloSpeech } from "@/lib/speech-catalog";
+import { isBackNav, savedNumber, saveNumber } from "@/app/components/back";
 
 export interface Card { id: string; t: string; d: string; w: string | null; kind: string; topic: string; n: number; /** Własna fiszka konta (`u:…`). */ own?: boolean }
 type Source = "" | "kurs" | "moje";
@@ -62,6 +63,7 @@ export function FlashcardsView({ cards, topics, kinds, ownMastery = {} }: { card
   const { stars, toggle: toggleStar, ready: starsReady } = useStars("fiszka");
   const [order, setOrder] = useState<Order>("lessons");
   const [seed, setSeed] = useState(1);
+  useEffect(() => { if (seed > 1) saveNumber("owe:fseed", seed); }, [seed]);
   const [mastery, setMastery] = useState<Record<string, Mastery>>({});
   const [error, setError] = useState<string | null>(null);
   const preview = typeof window !== "undefined" && !!viewedUser();
@@ -82,7 +84,9 @@ export function FlashcardsView({ cards, topics, kinds, ownMastery = {} }: { card
     setGw(g === "1" || g === "0" ? g : "");
     const o = p.get("kolejnosc");
     setOrder(o === "random" || o === "weak" ? o : "lessons");
-    setSeed(Math.floor(Math.random() * 1e9) + 1);
+    // po powrocie („←”) ta sama kolejność losowa co wcześniej
+    const kept = isBackNav() ? savedNumber("owe:fseed") : null;
+    setSeed(kept || Math.floor(Math.random() * 1e9) + 1);
     const talia = p.get("talia");
     Promise.all([
       // własne fiszki: obwódka z ocen samej karty (nie liczą się do Nauki)
@@ -277,7 +281,34 @@ function Feed({ list, mastery, rate, preview, topicName, stars, onStar }: Props)
   const [rated, setRated] = useState<Record<string, boolean>>({});
   const end = useRef<HTMLDivElement>(null);
   const box = useRef<HTMLDivElement>(null);
-  useEffect(() => { setShown(BATCH); box.current?.scrollTo({ top: 0 }); }, [list]);
+  // po powrocie („←”) feed wraca do tej samej karty; pozycja zapisywana przy przewijaniu
+  const restored = useRef(false);
+  const listKey = useRef("");
+  useEffect(() => {
+    // ta sama lista (np. przeliczona po doczytaniu gwiazdek) – bez powrotu na początek
+    const key = list.map((c) => c.id).join(",");
+    if (key === listKey.current) return;
+    listKey.current = key;
+    const el = box.current;
+    const saved = !restored.current && isBackNav() ? savedNumber("owe:feed") : null;
+    restored.current = true;
+    if (el && saved) {
+      const idx = Math.round(saved / Math.max(1, el.clientHeight));
+      setShown(Math.max(BATCH, idx + 5));
+      requestAnimationFrame(() => requestAnimationFrame(() => el.scrollTo({ top: saved, behavior: "instant" as ScrollBehavior })));
+      return;
+    }
+    setShown(BATCH);
+    el?.scrollTo({ top: 0 });
+  }, [list]);
+  useEffect(() => {
+    const el = box.current;
+    if (!el) return;
+    let t: ReturnType<typeof setTimeout> | null = null;
+    const on = () => { if (!t) t = setTimeout(() => { t = null; saveNumber("owe:feed", el.scrollTop); }, 200); };
+    el.addEventListener("scroll", on, { passive: true });
+    return () => el.removeEventListener("scroll", on);
+  }, []);
   // wysokość feedu = od jego górnej krawędzi do dolnego paska (CSS: --feed-top) – strona się nie przewija,
   // przewija się tylko feed, więc przyciąganie kart działa (górna krawędź zmienia się np. po rozwinięciu filtrów)
   useEffect(() => {
@@ -333,7 +364,19 @@ function Classic({ list, mastery, rate, preview, topicName, stars, onStar }: Pro
   const [i, setI] = useState(0);
   const [back, setBack] = useState(false);
   const [done, setDone] = useState({ known: 0, unknown: 0 });
-  useEffect(() => { setI(0); setBack(false); }, [list]);
+  // po powrocie („←”) ta sama karta, co przed wyjściem
+  const restoredI = useRef(false);
+  const listKeyI = useRef("");
+  useEffect(() => {
+    const key = list.map((x) => x.id).join(",");
+    if (key === listKeyI.current) return;
+    listKeyI.current = key;
+    const kept = !restoredI.current && isBackNav() ? savedNumber("owe:classic") : null;
+    restoredI.current = true;
+    setI(kept && kept < list.length ? kept : 0);
+    setBack(false);
+  }, [list]);
+  useEffect(() => { saveNumber("owe:classic", i); }, [i]);
   const c = list[Math.min(i, list.length - 1)];
   const go = useCallback((d: number) => { setI((x) => Math.max(0, Math.min(list.length - 1, x + d))); setBack(false); }, [list.length]);
   const answer = useCallback((known: boolean) => {
