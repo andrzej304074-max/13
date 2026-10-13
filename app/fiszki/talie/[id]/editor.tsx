@@ -147,6 +147,7 @@ export function DeckEditor({ id }: { id: string }) {
         <span className="spacer" />
         {!preview && <button className="btn small danger" onClick={removeDeck}>Usuń talię</button>}
       </div>
+      <h1 className="sr-only">Talia: {name}</h1>
       <input className="deck-title" value={name} readOnly={preview} maxLength={60} aria-label="Nazwa talii" data-testid="deck-title"
         onChange={(e) => setName(e.target.value)} onBlur={rename} onKeyDown={(e) => e.key === "Enter" && (e.target as HTMLInputElement).blur()} />
       <div className="row">

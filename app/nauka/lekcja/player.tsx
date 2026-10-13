@@ -163,6 +163,7 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
   const total = queue.length;
   return (
     <div className="learn" style={{ ["--topic" as string]: topic.color, ...(fbHeight ? { paddingBottom: fbHeight + 24 } : {}) }}>
+      <h1 className="sr-only">{lesson.title}</h1>
       <div className="learn-top">
         <Link href={backHref} className="learn-close" aria-label="Zakończ lekcję">✕</Link>
         <div className="learn-progress" role="progressbar" aria-valuemin={0} aria-valuemax={total} aria-valuenow={pos}>

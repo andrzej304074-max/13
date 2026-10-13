@@ -115,6 +115,7 @@ export default function HomeClient({
           <h2>Dział słownika</h2>
           <select
             className="select"
+            aria-label="Dział słownika"
             value={section ?? ""}
             onChange={(e) => setSection(e.target.value ? Number(e.target.value) : null)}
           >

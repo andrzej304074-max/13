@@ -345,6 +345,7 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
 
   return (
     <div className={`notes-editor${compact ? " compact" : ""}`} onKeyDown={onKeyDown} data-testid="notes-editor">
+      {showTitle && !compact && <h1 className="sr-only">{title || "Notatka"}</h1>}
       {showTitle && (
         <input className="ne-title" value={title} placeholder="Tytuł notatki" maxLength={120} readOnly={readOnly}
           onChange={(e) => { setTitle(e.target.value); touch(); }} aria-label="Tytuł" />

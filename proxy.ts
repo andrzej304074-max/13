@@ -7,9 +7,9 @@ import { NextResponse, type NextRequest } from "next/server";
  */
 export function proxy(req: NextRequest) {
   const { pathname, search } = req.nextUrl;
-  if (pathname.startsWith("/konto") || pathname.startsWith("/api/konto/")) return NextResponse.next();
-  if (req.cookies.has("owe_session")) {
-    // ścieżka żądania dla sprawdzania blokad sekcji (lib/auth.ts: requireUser / requirePageUser)
+  if (pathname.startsWith("/konto") || pathname.startsWith("/api/konto/") || req.cookies.has("owe_session")) {
+    // ścieżka żądania dla sprawdzania blokad sekcji (lib/auth.ts: requireUser / requirePageUser);
+    // zawsze nadpisywana, żeby klient nie mógł podać własnej
     const h = new Headers(req.headers);
     h.set("x-path", pathname);
     h.set("x-search", search);
