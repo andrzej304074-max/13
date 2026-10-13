@@ -6,6 +6,14 @@ import { useEffect, useState } from "react";
 import { api, fmtPct, lastTest, rememberTest } from "@/lib/client";
 import type { Stats } from "@/lib/tests";
 import type { Bank, Origin, QuestionType, TestState } from "@/lib/types";
+import type { Stage } from "@/lib/questions";
+
+const STAGE_KEY = "owe:testStage";
+const STAGE_OPTS: { value: Stage | null; label: string; hint: string }[] = [
+  { value: null, label: "Oba etapy", hint: "szkolny i okręgowy" },
+  { value: "s", label: "Etap szkolny", hint: "zawody I stopnia" },
+  { value: "o", label: "Etap okręgowy", hint: "zawody II stopnia" },
+];
 
 const TYPES: { value: QuestionType; label: string; hint: string }[] = [
   { value: "single", label: "Jednokrotny wybór", hint: "1 poprawna odpowiedź · +2 / −1 pkt" },
@@ -33,12 +41,18 @@ export default function HomeClient({
   counts: baseCounts,
   bank = "owe",
   slownik,
+  stageCounts,
 }: {
   counts: Record<QuestionType, number>;
   bank?: Bank;
   slownik?: SlownikOptions;
+  /** Pytania OWE jednokrotnego wyboru wg etapu – wybór etapu tylko w zakładce olimpijskiej. */
+  stageCounts?: Record<Stage, number>;
 }) {
   const router = useRouter();
+  const [stage, setStageState] = useState<Stage | null>(null);
+  useEffect(() => { try { const v = localStorage.getItem(STAGE_KEY); if (v === "s" || v === "o") setStageState(v); } catch {} }, []);
+  const setStage = (v: Stage | null) => { setStageState(v); try { localStorage.setItem(STAGE_KEY, v ?? ""); } catch {} };
   const [origin, setOrigin] = useState<Origin | null>(null);
   const [section, setSection] = useState<number | null>(null);
   // W zakładce słownika liczba dostępnych pytań zależy od wybranego pochodzenia i działu.
@@ -47,7 +61,7 @@ export default function HomeClient({
         single: countSlownik(slownik.counts, "single", origin, section),
         multi: countSlownik(slownik.counts, "multi", origin, section),
       }
-    : baseCounts;
+    : stageCounts && stage ? { ...baseCounts, single: stageCounts[stage] } : baseCounts;
   const [type, setType] = useState<QuestionType>(counts.single > 0 || counts.multi === 0 ? "single" : "multi");
   const [count, setCount] = useState<number | "endless">(30);
   const [busy, setBusy] = useState(false);
@@ -71,7 +85,7 @@ export default function HomeClient({
     try {
       const test = await api<TestState>("/api/tests", {
         method: "POST",
-        body: JSON.stringify({ type, count, bank, origin, section }),
+        body: JSON.stringify({ type, count, bank, origin, section, stage: stageCounts && type === "single" ? stage : null }),
       });
       rememberTest(test.id);
       router.push(`/test/${test.id}`);
@@ -143,6 +157,19 @@ export default function HomeClient({
           </button>
         ))}
       </div>
+      {stageCounts && type === "single" && <>
+        <h2>Etap zawodów</h2>
+        <div className="choices three" data-testid="stage-choice">
+          {STAGE_OPTS.map((o) => (
+            <button key={o.value ?? "both"} className={`choice ${stage === o.value ? "active" : ""}`} onClick={() => setStage(o.value)}
+              aria-pressed={stage === o.value} data-stage={o.value ?? ""}>
+              <strong>{o.label}</strong>
+              <small>{o.hint}</small>
+              <small>{o.value ? stageCounts[o.value] : stageCounts.s + stageCounts.o} pytań</small>
+            </button>
+          ))}
+        </div>
+      </>}
       <h2>Liczba pytań</h2>
       <div className="choices three">
         {SIZES.map((s) => (

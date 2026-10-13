@@ -7,11 +7,15 @@ import { PreviewBanner } from "@/app/components/preview-banner";
 import { api, fmtPct, fmtPoints, withUser } from "@/lib/client";
 import { BLOCK_SIZES, DEFAULT_BLOCK_SIZE } from "@/lib/scoring";
 import type { Stats } from "@/lib/tests";
+import type { Stage } from "@/lib/questions";
 import { LoadingPage } from "@/app/components/loading-page";
 
 const BLOCK_KEY = "owe:blockSize";
 const TYPE_KEY = "owe:statsType";
 const BANK_KEY = "owe:statsBank";
+const STAGE_KEY = "owe:statsStage";
+const STAGE_LABEL: Record<Stage, string> = { s: "szkolny", o: "okręgowy" };
+const STAGE_GEN: Record<Stage, string> = { s: "szkolnego", o: "okręgowego" };
 
 type Bank = "owe" | "slownik";
 const BANKS: { value: Bank; label: string }[] = [
@@ -41,6 +45,7 @@ export default function StatsPage() {
   const [blockSize, setBlockSize] = useState<number | null>(null);
   const [filter, setFilter] = useState<Filter>("all");
   const [bank, setBank] = useState<Bank | null>(null);
+  const [stage, setStage] = useState<Stage | null>(null);
 
   // Wybrany rozmiar bloku zapamiętywany lokalnie w przeglądarce.
   useEffect(() => {
@@ -52,6 +57,8 @@ export default function StatsPage() {
     try {
       const f = localStorage.getItem(TYPE_KEY);
       if (f === "single" || f === "multi") setFilter(f);
+      const s = localStorage.getItem(STAGE_KEY);
+      if (s === "s" || s === "o") setStage(s);
     } catch {}
     // Baza z adresu (?bank=slownik) ma pierwszeństwo przed ostatnio oglądaną.
     let b: Bank = "owe";
@@ -67,8 +74,16 @@ export default function StatsPage() {
   useEffect(() => {
     if (blockSize === null || bank === null) return;
     const typeParam = filter === "all" ? "" : `&type=${filter}`;
-    api<Stats>(withUser(`/api/stats?bank=${bank}&block=${blockSize}${typeParam}`)).then(setStats).catch((e) => setError(e.message));
-  }, [blockSize, filter, bank]);
+    const stageParam = bank === "owe" && filter === "single" && stage ? `&stage=${stage}` : "";
+    api<Stats>(withUser(`/api/stats?bank=${bank}&block=${blockSize}${typeParam}${stageParam}`)).then(setStats).catch((e) => setError(e.message));
+  }, [blockSize, filter, bank, stage]);
+
+  function chooseStage(s: Stage | null) {
+    setStage(s);
+    try {
+      localStorage.setItem(STAGE_KEY, s ?? "");
+    } catch {}
+  }
 
   function chooseBank(b: Bank) {
     setBank(b);
@@ -95,9 +110,11 @@ export default function StatsPage() {
   if (error) return <p className="error">{error}</p>;
   if (!stats) return <LoadingPage />;
 
-  const { overall, byType, history, blocks } = stats;
+  const { overall, byType, byStage, history, blocks } = stats;
   const size = stats.blockSize;
-  const main = filter === "all" ? overall : byType[filter];
+  const st = stats.stage;
+  const main = st ? byStage[st] : filter === "all" ? overall : byType[filter];
+  const showStages = bank === "owe" && filter !== "multi";
   const unitLabel = filter === "multi" ? "pkt" : filter === "single" ? "poprawnych pytań" : "poprawnych";
   return (
     <div className="stack">
@@ -131,10 +148,17 @@ export default function StatsPage() {
           </button>
         ))}
       </div>
+      {bank === "owe" && filter === "single" && (
+        <div className="seg" role="group" aria-label="Etap zawodów" data-testid="stats-stage">
+          {([[null, "Oba etapy"], ["s", "Szkolny"], ["o", "Okręgowy"]] as const).map(([v, l]) => (
+            <button key={v ?? "both"} className={stage === v ? "active" : ""} aria-pressed={stage === v} onClick={() => chooseStage(v)} data-stage={v ?? ""}>{l}</button>
+          ))}
+        </div>
+      )}
       <div className="card">
         <div className="big">{fmtPct(main.percent)}</div>
         <p className="muted" style={{ margin: 0 }}>
-          {filter !== "all" && `${TYPE_LABEL[filter]} · `}
+          {filter !== "all" && `${TYPE_LABEL[filter]} · `}{st && `etap ${STAGE_LABEL[st]} · `}
           {main.correct} / {main.total} {unitLabel} · {fmtPoints(main.score)} / {fmtPoints(main.maxScore)} pkt ·{" "}
           {testsLabel(main.tests)}
         </p>
@@ -154,7 +178,22 @@ export default function StatsPage() {
         </div>
       )}
 
-      <h2>Postęp (% kolejnych testów)</h2>
+      {showStages && (byStage.s.total > 0 || byStage.o.total > 0) && <>
+        <h3 style={{ margin: "8px 0 0" }}>Jednokrotny wybór wg etapu</h3>
+        <div className="stat-grid" data-testid="stage-stats">
+          {(["s", "o"] as const).map((s) => (
+            <div className={`stat${st === s ? " active" : ""}`} key={s} data-stage={s}>
+              <div className="value">{byStage[s].total ? fmtPct(byStage[s].percent) : "–"}</div>
+              <div className="label">
+                etap {STAGE_LABEL[s]} · {byStage[s].correct}/{byStage[s].total} pytań · {fmtPoints(byStage[s].score)}/{fmtPoints(byStage[s].maxScore)} pkt · {testsLabel(byStage[s].tests)}
+              </div>
+            </div>
+          ))}
+        </div>
+        <p className="muted small" style={{ margin: 0 }}>Liczone z pytań każdego etapu – także w testach „oba etapy”. Pytania bez odpowiedzi w teście 30/50 liczą się jako błędne.</p>
+      </>}
+
+      <h2>Postęp (% kolejnych testów{st ? ` – tylko pytania etapu ${STAGE_GEN[st]}` : ""})</h2>
       {history.length === 0 ? (
         <div className="empty-state"><span aria-hidden>📈</span><p>Brak zakończonych testów. Rozwiąż pierwszy test, a tu pojawi się wykres postępu.</p><Link href="/" className="btn">Rozpocznij test</Link></div>
       ) : (
@@ -174,7 +213,7 @@ export default function StatsPage() {
                   <tr key={h.id}>
                     <td>{history.length - i}</td>
                     <td>{new Date(h.finishedAt).toLocaleString("pl-PL", { dateStyle: "short", timeStyle: "short" })}</td>
-                    <td>{TYPE_LABEL[h.type]}{h.mode === "endless" ? " · bez limitu" : ""}</td>
+                    <td>{TYPE_LABEL[h.type]}{h.drawStage ? ` · etap ${STAGE_LABEL[h.drawStage]}` : ""}{h.mode === "endless" ? " · bez limitu" : ""}</td>
                     <td>{h.correct} / {h.total}</td>
                     <td>{fmtPoints(h.score)} / {fmtPoints(h.maxScore)}</td>
                     <td>{fmtPct(h.percent)}</td>
@@ -200,7 +239,7 @@ export default function StatsPage() {
         <div className="card">
           <p className="muted" style={{ margin: "0 0 8px", fontSize: "0.85rem" }}>
             Każda kropka to {size} kolejnych sprawdzonych lub pominiętych pytań
-            {filter === "all" ? " (wszystkie testy, oba typy)" : ` (tylko ${filter === "single" ? "jednokrotny" : "wielokrotny"} wybór)`}. W wielokrotnym
+            {filter === "all" ? " (wszystkie testy, oba typy)" : ` (tylko ${filter === "single" ? "jednokrotny" : "wielokrotny"} wybór${st ? `, etap ${STAGE_LABEL[st]}` : ""})`}. W wielokrotnym
             wyborze dokładność pytania to punkty / 2 (4 trafne pola – 100%, 3 trafne – 50%, mniej – 0%). Pusta kropka – blok jeszcze niepełny.
           </p>
           <Chart

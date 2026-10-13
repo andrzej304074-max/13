@@ -1,6 +1,7 @@
 import { handle, readJson } from "@/lib/api";
 import { requireSection, requireUser } from "@/lib/auth";
 import { ALLOWED_COUNTS, ENDLESS, type TestSize } from "@/lib/scoring";
+import { isStage } from "@/lib/questions";
 import { createTest, HttpError } from "@/lib/tests";
 import type { Bank, Origin } from "@/lib/types";
 
@@ -9,7 +10,7 @@ export const dynamic = "force-dynamic";
 export async function POST(req: Request) {
   return handle(async () => {
     const me = await requireUser();
-    const { type, count, bank = "owe", origin = null, section = null } = await readJson(req);
+    const { type, count, bank = "owe", origin = null, section = null, stage = null } = await readJson(req);
     if (type !== "single" && type !== "multi") throw new HttpError(400, "Nieprawidłowy typ pytań.");
     if (count !== ENDLESS && !ALLOWED_COUNTS.includes(count as TestSize)) {
       throw new HttpError(400, "Liczba pytań musi wynosić 30, 50 albo „bez limitu”.");
@@ -19,8 +20,11 @@ export async function POST(req: Request) {
     if (section !== null && !(Number.isInteger(section) && (section as number) > 0)) {
       throw new HttpError(400, "Nieprawidłowy dział.");
     }
+    if (stage !== null && !isStage(stage)) throw new HttpError(400, "Nieznany etap zawodów.");
     await requireSection(me, bank === "slownik" ? "/slownik" : "/");
-    const filter = bank === "slownik" ? { origin: origin as Origin | null, section: section as number | null } : {};
+    // etap (szkolny / okręgowy) tylko w pytaniach OWE jednokrotnego wyboru
+    const filter = bank === "slownik" ? { origin: origin as Origin | null, section: section as number | null }
+      : type === "single" && stage ? { stage } : {};
     return createTest(me.id, type, count as TestSize | typeof ENDLESS, bank as Bank, filter);
   }, 201);
 }

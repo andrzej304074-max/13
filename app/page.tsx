@@ -6,5 +6,6 @@ export const dynamic = "force-dynamic";
 
 export default async function Home() {
   await requirePageUser();
-  return <HomeClient counts={{ single: countByType("single"), multi: countByType("multi") }} />;
+  return <HomeClient counts={{ single: countByType("single"), multi: countByType("multi") }}
+    stageCounts={{ s: countByType("single", "owe", { stage: "s" }), o: countByType("single", "owe", { stage: "o" }) }} />;
 }

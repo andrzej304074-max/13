@@ -9,7 +9,21 @@ const byId = new Map([...QUESTIONS, ...SLOWNIK_QUESTIONS].map((q) => [q.id, q]))
 export interface DrawFilter {
   origin?: Origin | null;
   section?: number | null;
+  /** Pytania OWE jednokrotnego wyboru: tylko etap szkolny (`s`) albo okręgowy (`o`). */
+  stage?: Stage | null;
 }
+
+/** Etap zawodów OWE: szkolny i okręgowy (jednokrotny wybór), centralny (wielokrotny). */
+export type Stage = "s" | "o";
+export const STAGES: Stage[] = ["s", "o"];
+export const isStage = (v: unknown): v is Stage => v === "s" || v === "o";
+/** Etap z id pytania (`owe23-s-01` → `s`); null dla pytań centralnych i słownikowych. */
+export function stageOf(id: string): Stage | null {
+  const m = /^owe\d+-([so])-/.exec(id);
+  return m ? (m[1] as Stage) : null;
+}
+/** Wzorzec SQL (~) dla id pytań danego etapu. */
+export const stageRegex = (s: Stage) => `^owe[0-9]+-${s}-`;
 
 export function getQuestion(id: string): Question | undefined {
   return byId.get(id);
@@ -17,12 +31,12 @@ export function getQuestion(id: string): Question | undefined {
 
 function pool(bank: Bank, type: QuestionType, f: DrawFilter = {}): Question[] {
   return banks[bank].filter(
-    (q) => q.type === type && (!f.origin || q.origin === f.origin) && (!f.section || q.section === f.section),
+    (q) => q.type === type && (!f.origin || q.origin === f.origin) && (!f.section || q.section === f.section) && (!f.stage || stageOf(q.id) === f.stage),
   );
 }
 
-export function countByType(type: QuestionType, bank: Bank = "owe"): number {
-  return pool(bank, type).length;
+export function countByType(type: QuestionType, bank: Bank = "owe", f: DrawFilter = {}): number {
+  return pool(bank, type, f).length;
 }
 
 /** Liczby pytań słownikowych wg klucza `typ|pochodzenie|dział` – do podpowiedzi w formularzu. */
