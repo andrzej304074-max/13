@@ -7,3 +7,6 @@ next-env.d.ts
 .vercel
 tools/slownik/glossary/out.html
 __pycache__/
+
+# tymczasowe skrypty testów e2e
+.*.tmp.mjs
