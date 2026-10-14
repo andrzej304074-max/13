@@ -55,3 +55,64 @@ nazwy, pola bez etykiety, obrazy bez `alt`, zduplikowane `id` i liczbę nagłów
 1. **Content-Security-Policy.** Pełna CSP wymaga nonce dla skryptów Next.js i wyłącza część cache CDN. Przy obecnym ryzyku (brak treści od użytkowników renderowanej jako HTML) zostawiam bez CSP. Do rozważenia, jeśli pojawią się treści współdzielone między kontami.
 2. **Status 200 dla „nie ma takiej strony” w zagnieżdżonych trasach.** Dotyczy np. `/nauka/xyz`. Strona jest strumieniowana, więc status idzie przed treścią; użytkownik widzi poprawny ekran 404. Do zmiany tylko przez rezygnację ze strumieniowania tych tras – nie warto.
 3. **Krótkie wyjaśnienia ręcznych pytań słownikowych** (34) można rozbudować o jedno zdanie kontekstu. To praca redakcyjna, nie błąd.
+
+---
+
+# Przegląd po zgłoszeniu „Load failed” (październik 2026)
+
+Zgłoszenie z iPhone'a: w trakcie testu cały ekran zamienił się w czerwony napis „Load failed”.
+To komunikat Safari, gdy zapytanie w ogóle nie dojdzie do serwera (zmiana sieci, powrót aplikacji z tła).
+
+## Jak sprawdzano
+
+**Testy e2e (Playwright):**
+- `offline.mjs` (20 sprawdzeń):
+  - test 30 pytań: „Sprawdź” i „Zakończ” bez sieci;
+  - odpowiedź HTTP zgubiona po zapisie na serwerze;
+  - wczytanie testu bez sieci;
+  - koniec lekcji bez sieci, zamknięcie i powrót;
+  - lekcja zaczęta bez sieci;
+  - błąd wczytania statystyk.
+- `crawl.mjs` – 26 adresów × jasny/ciemny motyw × 390/1280 px (108 stron): błędy JS, odpowiedzi 4xx/5xx, poziome przewijanie, komunikaty błędów na stronie.
+- `probes.mjs` (41 sprawdzeń API):
+  - walidacja własnych fiszek, notatek z kartami i testów z etapem;
+  - dostęp drugiego konta do cudzych fiszek, talii, notatek, testów i sesji nauki;
+  - usunięcie własnej fiszki – czyszczenie talii i gwiazdek.
+
+**Pozostałe:**
+- Zrzuty nowych ekranów na telefonie.
+- Logi serwera z całej regresji.
+- Testy jednostkowe `api()` (`tests/client-api.test.ts`).
+
+## Poprawione
+
+1. **Błąd sieci zastępował cały test** (`app/test/[id]/page.tsx`). Jeden stan `error` dla wszystkiego: nieudane „Sprawdź” chowało test bez możliwości powrotu.
+   - Teraz błąd wczytania pokazuje ekran z „Spróbuj ponownie”.
+   - Błąd odpowiedzi lub zakończenia pojawia się pod pytaniem i test zostaje.
+   - Po powrocie sieci albo aplikacji z tła stan synchronizuje się z serwerem.
+   - Odpowiedź zapisana mimo zgubionej odpowiedzi HTTP jest pokazywana zamiast błędu (wcześniej ponowienie dawało „już odpowiedziano”).
+   - Zakończenie po czasie bez sieci nie ponawia się co 0,5 s.
+2. **`api()` bez ponawiania i z angielskim komunikatem przeglądarki** (`lib/client.ts`).
+   - GET jest ponawiany 2× przy błędzie sieci i przy 5xx bez JSON.
+   - Zapisy nie są ponawiane automatycznie (mogły dojść do serwera).
+   - Polskie komunikaty; `ApiError` ze statusem i flagą `network`.
+3. **Wynik lekcji przepadał bez sieci** (`app/nauka/lekcja/player.tsx`). Stan był usuwany z przeglądarki przed zapisem wyniku, a nieudany zapis nie miał ponowienia.
+   - Teraz stan zostaje do udanego zapisu, a ponownie otwarta lekcja sama zapisuje wynik.
+   - Doszły „Spróbuj ponownie” i zapis po powrocie sieci.
+   - 409 (wynik już zapisany) jest traktowany jak sukces.
+   - Lekcja zaczęta bez sieci też zachowuje postęp; sesja jest zakładana przy zapisie wyniku.
+4. **Zakończenie sesji nauki nie było atomowe** (`lib/nauka.ts`). Zerwane połączenie mogło zostawić sesję „zakończoną” bez odpowiedzi. Teraz jedna transakcja.
+5. **Autozapis notatki nie ponawiał się po błędzie** (`app/components/notes/editor.tsx`) aż do kolejnej zmiany. Teraz ponowienie po 5 s i po powrocie sieci.
+6. **Błąd gwiazdki lub usuwania notatki zastępował stronę z edytorem** (`app/notatki/[id]/view.tsx`). Teraz komunikat pod nagłówkiem.
+7. **Błędy wczytania bez wyjścia** (statystyki, działy, fiszki, tabela, mapa, pokrycie, statystyki OWE i nauki). Wspólny `LoadError` z „Spróbuj ponownie” i ponowieniem po powrocie sieci.
+8. **Gwiazdka na fiszce stała obok karty, a nie w jej rogu.** Reguła `.star-btn { position: relative }` stała później w CSS i nadpisywała `position: absolute`. Na telefonie zwężało to kartę. Test sprawdza teraz położenie i szerokość.
+9. **Dymek „🧠” ucinany przy prawej krawędzi feedu.** Położenie jest teraz liczone względem kontenera, a nie okna.
+10. **„🧠 mapa” w Tabeli pojęć** po zawinięciu miało przypadkowe wcięcie; teraz stoi przy prawej krawędzi.
+11. **Tymczasowy skrypt testu trafił do repozytorium.** Usunięty; wzorzec `.*.tmp.mjs` dodany do `.gitignore`.
+
+## Sprawdzone – bez zmian
+
+- **„Destination stream closed early” w logu serwera** – zapytania przerwane przez przeglądarkę w testach bez sieci; nie jest to błąd aplikacji.
+- **PATCH cudzej fiszki zwraca 400 zamiast 404.** Walidacja idzie przed sprawdzeniem właściciela, a zapis jest ograniczony do kart konta, więc nic się nie zmienia.
+- **PATCH postępu cudzej sesji odpowiada „ok”.** Zapis jest ograniczony do sesji konta (sprawdzone, że dane się nie zmieniają); to zapis w tle, bez komunikatów.
+- **Panel admina lokalnie pokazuje „Brak konfiguracji Azure/R2”** – oczekiwane bez kluczy; w Vercelu są ustawione.
