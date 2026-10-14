@@ -25,6 +25,9 @@ Statystyki (`/stats`) sumują wyniki **wszystkich** testów wszystkich użytkown
 procent kolejnych testów oraz dokładność w blokach po N kolejnych sprawdzonych lub pominiętych pytań
 (N do wyboru: 10, 20, 25, 40, 50, 100, 150, 200; domyślnie 100). Przełącznik „Oba typy / Jednokrotny / Wielokrotny”
 zawęża wynik, historię i oba wykresy do wybranego typu; oba wybory zapamiętuje przeglądarka.
+**Etap zawodów** (jednokrotny wybór OWE): w formularzu testu „Oba etapy / Etap szkolny / Etap okręgowy” z liczbą pytań (etap z id pytania:
+`-s-` szkolny, `-o-` okręgowy; wybór w `tests.draw`, także przy dolosowaniu „bez limitu”). W statystykach karta „Jednokrotny wybór wg etapu”
+(liczona z pytań każdego etapu, także w testach „oba etapy”) i przełącznik etapu dla wyniku, historii i wykresu bloków (`/api/stats?type=single&stage=s|o`).
 (w wielokrotnym wyborze dokładność pytania to trafne pola / 4). Brak logowania.
 
 ## Pytania
@@ -76,6 +79,9 @@ Kurs zbudowany z haseł słownika (`docs/slownik-owe.pdf`) i wszystkich banków 
   „Zrozumienie” 🧠 → 3640 pod-lekcji.
 - **Rodzaje treści** (filtr na stronie tematu): pojęcia, wzory, osoby, instytucje, daty, przepisy, zrozumienie.
 - **Pod-lekcje:** 1. Poznaj, 2. Ćwicz, 3. Utrwal, 4. Sprawdzian (10 losowych pytań olimpijskich i słownikowych lekcji).
+- **Wznawianie:** stan pod-lekcji w trakcie (kolejka, pozycja, odpowiedzi) zapisuje przeglądarka (`owe:lesson:<lekcja>:<sub>`, 7 dni),
+  a serwer znacznik postępu (`learn_sessions.progress`, `PATCH /api/nauka/sessions/[id]`). Ścieżka pokazuje „⏸ w trakcie N/M”, wejście –
+  „Kontynuuj / Zacznij od nowa”. Odpowiedzi liczą się do statystyk dopiero po ukończeniu pod-lekcji.
 - **Sprawdzian pyta tylko o rzeczy omówione:** każde z 6342 pytań (1656 OWE, 1286 ręcznych, 3400 automatycznych)
   jest w dokładnie jednej lekcji – najpóźniejszej lekcji macierzystej pojęć, których dotyczy. Pojęcia z treści
   i ze wszystkich odpowiedzi, których uczeń nie poznał wcześniej w temacie, lekcja omawia w Poznaj, Ćwicz i Utrwal
@@ -142,7 +148,9 @@ python3 -I tools/nauka/pojecia_pytan.py stats
 
 - **5 działów** (`lib/nav.ts`): 📝 Testy (Olimpiada, Słownik), 🎓 Nauka (Kurs, Podręcznik, Fiszki, Moje talie, Powtórka), 📖 Pojęcia (Tabela,
   Statystyki OWE, Pokrycie olimpiad, Mapa myśli), 🗒️ Notatki (Notatki, Brudnopisy), 📊 Statystyki (Wyniki testów, Działy i pojęcia, Nauka). Na komputerze działy w nagłówku, na telefonie dolny pasek
-  z ikonami; podzakładki działu nad treścią strony; konto (panel admina, ustawienia, wylogowanie) pod 👤. Dolny pasek jest na telefonie na
+  z ikonami; podzakładki działu nad treścią strony; konto (panel admina, ustawienia, wylogowanie) pod 👤. Przycisk „←” w nagłówku
+  wraca do poprzedniej strony aplikacji i do miejsca, w którym się na niej było (pozycja przewinięcia, karta w feedzie fiszek –
+  `app/components/back.tsx`, sessionStorage). Dolny pasek jest na telefonie na
   każdej stronie (także w teście i lekcji – panel odpowiedzi i „Sprawdź” stoją nad nim); podczas testu i lekcji ukryte są tylko podzakładki.
 - **Dane haseł i statystyk OWE** nie są w HTML stron: `GET /api/dane/hasla` i `/api/dane/owe-stats` (ETag, pamięć przeglądarki),
   w karcie trzymane w pamięci (`lib/data-client.ts`) – przejścia między Pojęciami, Statystykami OWE, Pokryciem i Fiszkami nie pobierają ich
@@ -166,7 +174,8 @@ python3 -I tools/nauka/pojecia_pytan.py stats
 
 - **Tabela pojęć** (`/pojecia`): wszystkie hasła kursu Nauka (bez lekcji „Zrozumienie”) w kolejności lekcji – nazwa z lewej,
   definicja (i wzór) z prawej; filtry działu i rodzaju (pojęcia, wzory, osoby, instytucje, daty, przepisy), wyszukiwanie,
-  przycisk „↑ Do góry” i przy każdym haśle liczba pytań OWE, w których o nie pytano.
+  przycisk „↑ Do góry” i przy każdym haśle liczba pytań OWE, w których o nie pytano; gwiazdka przy haśle (wspólna z Fiszkami) i filtr ★;
+  „🧠 mapa” odsunięte od pozostałych przycisków.
 - **Statystyki pytań OWE** (`/pojecia/statystyki`): dla 1656 pytań XXI–XXXIX OWE – działy (procent pytań), zagadnienia i pojęcia
   (liczba pytań, osobno jednokrotny i wielokrotny wybór); filtry typu pytań, etapu (szkolny, okręgowy, centralny), zakresu
   edycji, działu i rodzaju haseł, sortowanie od największej lub najmniejszej liczby; kliknięcie pojęcia pokazuje jego pytania.
@@ -194,7 +203,10 @@ Wszystkie hasła kursu (bez lekcji „Zrozumienie”) w dwóch trybach: **przewi
 dotknięcie odwraca kartę) i **klasyczne** (odwracanie, „Znam / Nie znam”, strzałki i spacja). Kolor obwódki – jak dobrze znasz hasło:
 zielony ≥ 80%, żółty 50–79%, czerwony < 50%, szary – mniej niż 2 odpowiedzi. Liczone razem: ćwiczenia w Nauce, odpowiedzi testowe
 (OWE i słownik – pytanie liczy się dla każdego swojego pojęcia) i oceny fiszek (tabela `flash_ratings`, nie wpływa na statystyki nauki).
-Gwiazdka ☆/★ na karcie (klawisz G w trybie klasycznym). Filtry: dział, rodzaj, kolor, gwiazdka (z / bez), tylko hasła z OWE, kolejność (lekcje / losowo / najsłabsze najpierw). API `/api/fiszki/opanowanie`, `/api/fiszki/ocena`.
+Gwiazdka ☆/★ w prawym górnym rogu karty (nie odwraca jej; klawisz G w trybie klasycznym) – ten sam zbiór w Tabeli pojęć, na mapie
+myśli, w taliach i na własnych fiszkach. Mapa myśli – małe „🧠” w pasku pod kartą z potwierdzeniem w dymku (nie da się wejść przypadkiem).
+Filtry: źródło (wszystkie / z kursu / ✍️ moje), dział, rodzaj, kolor, gwiazdka (z / bez), tylko hasła z OWE, kolejność (lekcje / losowo /
+najsłabsze najpierw) – także w nauce talii. API `/api/fiszki/opanowanie`, `/api/fiszki/ocena`.
 
 ## Moje talie (Nauka → Moje talie, `/fiszki/talie`)
 
@@ -204,12 +216,16 @@ Gwiazdka ☆/★ na karcie (klawisz G w trybie klasycznym). Filtry: dział, rodz
 - „▶ Ucz się tej talii” – `/fiszki?talia=<id>`: tylko karty talii w jej kolejności (albo losowo). „＋ Do talii” na każdej fiszce i na mapie myśli.
 - Tabele `decks`, `deck_cards` (limity: 50 talii, 500 kart w talii); API `/api/talie`, `/api/talie/[id]`, `/api/talie/[id]/karty`
   (POST dodaj, DELETE usuń, PUT kolejność). Podgląd admina tylko do odczytu.
+- **✍️ Moje fiszki** – własne karty konta (hasło, definicja, wzór, dział = jeden z 7 tematów, kategoria = rodzaj hasła). Widzi je tylko
+  właściciel; w Fiszkach mają znacznik „✍️ Moja fiszka” i przerywaną obwódkę, można je dodawać do talii, notatek i gwiazdek (id `u:<uuid>`).
+  Oceny „znam / nie znam” trzymane w samej karcie – nie liczą się do Nauki ani statystyk. Tabela `own_cards` (limit 2000 na konto),
+  API `/api/fiszki/moje`, `/api/fiszki/moje/[id]`.
 
 ## Mapa myśli (Pojęcia → Mapa myśli, `/pojecia/mapa?q=<id>`)
 
 - Wpisz pojęcie (podpowiedzi) albo wybierz je z listy z filtrami (temat, rodzaj, tylko OWE, tylko fiszki z gwiazdką) – w środku mapy
   pojęcie, wokół 6–16 powiązanych (grubość linii = siła powiązania, kolor = temat), opcjonalnie 2 poziomy. Kliknięcie (albo Enter)
-  przenosi hasło do środka z płynną animacją; „Wstecz” wraca. Pod mapą: definicja, linki do Tabeli pojęć i Podręcznika, „＋ Do talii”,
+  przenosi hasło do środka z płynną animacją; „Wstecz” wraca; pojęcie, z którego przyszliśmy, ma pogrubioną obwódkę. Pod mapą: definicja, linki do Tabeli pojęć i Podręcznika, „＋ Do talii”,
   lista powiązanych z powodami.
 - Dane: `python3 -I tools/nauka/build_mapa.py` → `data/nauka/mapa.json` (do 24 powiązań na hasło). Źródła i wagi: wspólne pytanie OWE (3),
   ten sam akapit Podręcznika bez części „Na marginesie” (2), opis wymienia tytuł innego hasła (3) albo nazwisko osoby (2, przy
@@ -225,6 +241,9 @@ Gwiazdka ☆/★ na karcie (klawisz G w trybie klasycznym). Filtry: dział, rodz
   rysikiem zostają przy swoim tekście. Cofnij/ponów (Ctrl+Z / Ctrl+Y), 4 kolory, 3 grubości, „więcej miejsca”.
   Rysunek zapisany w jednostkach logicznych (szerokość 1000), kreski upraszczane (Douglas–Peucker, `lib/notes-core.ts`). Zapis
   automatyczny 0,8 s po zmianie, także przy zamknięciu karty.
+- **Fiszka na kartce** – „🗂️ Fiszka” w pasku: wyszukiwarka haseł i własnych fiszek (filtry jak w talii); karta ląduje na środku widocznej
+  części kartki, dotknięcie odwraca ją na definicję, przesuwa się ją tylko uchwytem ⠿ (albo strzałkami), więc pisanie pod nią działa
+  normalnie; ✕ usuwa. Pozycje w `notes.cards` (jednostki rysunku, maks. 30 kart).
 - **Brudnopis pod „Sprawdź”** w testach (jeden na pytanie: `owe:<id>`, `slownik:<id>`) i lekcjach (jeden na pod-lekcję); otwarty
   zostaje otwarty przy kolejnych pytaniach; trafia do Brudnopisów z treścią pytania. Skróty klawiszowe testów, lekcji i fiszek nie
   reagują podczas pisania (`isTyping` w `lib/client.ts`).
