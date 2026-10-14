@@ -518,7 +518,7 @@ table.users td.u-main { overflow-wrap: anywhere; }
 .concept-head > strong, .concept-head > h2 { min-width: 0; overflow-wrap: anywhere; }
 .concept-head > h2 { margin: 0; }
 .concept-head .star-btn { margin: -8px -8px 0 0; }
-.concept-tags .concept-map { margin-left: 14px; }
+.concept-tags .concept-map { margin-left: auto; }
 .tag.owe { border-color: #f59e0b; color: #b45309; }
 @media (prefers-color-scheme: dark) { .tag.owe { color: #fbbf24; } }
 .concept-def { font-size: .95rem; line-height: 1.6; }
