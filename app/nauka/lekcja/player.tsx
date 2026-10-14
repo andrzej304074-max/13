@@ -33,14 +33,15 @@ function answerText(item: CourseItem) {
 const RESUME_PREFIX = "owe:lesson:";
 const RESUME_DAYS = 7;
 interface Saved {
-  v: 1; at: number; session: { id: string; level: number }; queue: Exercise[]; pos: number; log: AnswerLog[];
+  /** null – sesji nie udało się założyć (brak sieci na starcie); zakłada ją zapis wyniku. */
+  v: 1; at: number; session: { id: string; level: number } | null; queue: Exercise[]; pos: number; log: AnswerLog[];
   combo: number; startedAt: number; requeued: number[];
 }
 function readSaved(key: string): Saved | null {
   try {
     const v = JSON.parse(localStorage.getItem(key) ?? "null") as Saved | null;
     // pos == długość kolejki: pod-lekcja ukończona, ale wynik nie doszedł do serwera (brak sieci) – zapis do ponowienia
-    if (!v || v.v !== 1 || !Array.isArray(v.queue) || !v.session?.id || v.pos <= 0 || v.pos > v.queue.length) return null;
+    if (!v || v.v !== 1 || !Array.isArray(v.queue) || (v.session !== null && !v.session?.id) || v.pos <= 0 || v.pos > v.queue.length) return null;
     if (Date.now() - v.at > RESUME_DAYS * 864e5) { localStorage.removeItem(key); return null; }
     return v;
   } catch {
@@ -114,7 +115,7 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
   // zapis stanu po każdym ćwiczeniu (localStorage – pełny stan; serwer – „w trakcie N/M” dla ścieżki)
   const progressTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   useEffect(() => {
-    if (!saveKey || !queue || !session || offer) return;
+    if (!saveKey || !queue || offer) return;
     // ukończona pod-lekcja zostaje zapisana lokalnie, dopóki wynik nie dojdzie do serwera (saveResult)
     if (pos === 0) return;
     const v: Saved = {
@@ -123,7 +124,7 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
     };
     try { localStorage.setItem(saveKey, JSON.stringify(v)); } catch {}
     if (progressTimer.current) clearTimeout(progressTimer.current);
-    if (pos >= queue.length) return;
+    if (pos >= queue.length || !session) return;
     progressTimer.current = setTimeout(() => {
       api(`/api/nauka/sessions/${session.id}`, { method: "PATCH", body: JSON.stringify({ pos, total: queue.length }) }).catch(() => {});
     }, 1200);

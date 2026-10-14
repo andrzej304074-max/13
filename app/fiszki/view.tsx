@@ -278,7 +278,10 @@ function MapLink({ id }: { id: string }) {
       <button type="button" className="btn small secondary map-link-btn" aria-expanded={open}
         onClick={() => {
           const r = ref.current?.getBoundingClientRect();
-          if (r) { const w = Math.min(260, window.innerWidth * 0.8); setDx(Math.min(window.innerWidth - 8 - w, Math.max(8, r.left)) - r.left); }
+          // w granicach kontenera z marginesem (feed przycina to, co wystaje)
+          const box = ref.current?.closest(".feed, .classic, main")?.getBoundingClientRect();
+          const lo = Math.max(8, box?.left ?? 0) + 4, hi = Math.min(window.innerWidth - 8, box?.right ?? window.innerWidth) - 4;
+          if (r) { const w = Math.min(260, window.innerWidth * 0.8); setDx(Math.min(hi - w, Math.max(lo, r.left)) - r.left); }
           setOpen((v) => !v);
         }}
         title="Powiązane pojęcia – mapa myśli" aria-label="Powiązane pojęcia – mapa myśli" data-testid="map-link">🧠</button>

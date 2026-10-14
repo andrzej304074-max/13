@@ -627,7 +627,7 @@ body:has(.speech-bar) .feed { --feed-bottom: 150px; }
 .fc-wrap { position: relative; display: flex; }
 .fc-wrap > .fc { flex: 1; min-width: 0; }
 .fc-wrap .fc-face > :first-child { padding-right: 40px; }
-.fc-star { position: absolute; top: 8px; right: 8px; z-index: 1; background: color-mix(in srgb, var(--surface) 85%, transparent); }
+.fc-wrap > .star-btn.fc-star { position: absolute; top: 8px; right: 8px; z-index: 1; background: color-mix(in srgb, var(--surface) 85%, transparent); }
 /* „🧠” do mapy myśli: potwierdzenie w dymku */
 .map-link { position: relative; display: inline-flex; margin-right: 6px; }
 .map-link-btn { padding-inline: 10px; }
