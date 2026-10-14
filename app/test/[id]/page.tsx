@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { QuestionScratch } from "@/app/components/notes/question-scratch";
-import { api, fmtPct, fmtPoints, LETTERS, rememberTest } from "@/lib/client";
+import { api, ApiError, fmtPct, fmtPoints, isNetworkError, LETTERS, rememberTest } from "@/lib/client";
 import { correctUnits, multiHits, UNITS_PER_QUESTION } from "@/lib/scoring";
 import type { AnswerFeedback, PublicQuestion, TestState } from "@/lib/types";
 import { LoadingPage } from "@/app/components/loading-page";
@@ -24,7 +24,11 @@ function fmtTime(ms: number) {
 export default function TestPage() {
   const { id } = useParams<{ id: string }>();
   const [test, setTest] = useState<TestState | null>(null);
+  // błąd wczytania testu (cały ekran z „Spróbuj ponownie”) i błąd akcji (pod pytaniem – test zostaje na ekranie)
+  const [loadError, setLoadError] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  // nieudane zakończenie (np. koniec czasu bez sieci) – bez ponawiania co 0,5 s; ponowi powrót sieci/karty albo przycisk
+  const [finishFailed, setFinishFailed] = useState(false);
   const [index, setIndex] = useState(0);
   // następne pytanie – czytanie poprzedniego milknie
   useEffect(() => () => stopGroup("pytanie:"), [index]);
@@ -34,24 +38,47 @@ export default function TestPage() {
 
   const answers = useMemo(() => new Map(test?.answers.map((a) => [a.questionId, a])), [test]);
 
-  useEffect(() => {
-    api<TestState>(`/api/tests/${id}`)
-      .then((t) => {
-        setTest(t);
+  /** Stan testu z serwera. Pierwsze wczytanie ustawia pytanie; kolejne (powrót sieci, karty) tylko synchronizują. */
+  const load = useCallback(async (first: boolean): Promise<TestState | null> => {
+    try {
+      const t = await api<TestState>(`/api/tests/${id}`);
+      setTest(t);
+      setLoadError(null);
+      if (first) {
         const answered = new Set(t.answers.map((a) => a.questionId));
-        const first = t.questions.findIndex((q) => !answered.has(q.id));
-        setIndex(first === -1 ? t.questions.length - 1 : first);
-      })
-      .catch((e) => setError(e.message));
+        const i = t.questions.findIndex((q) => !answered.has(q.id));
+        setIndex(i === -1 ? t.questions.length - 1 : i);
+      }
+      return t;
+    } catch (e) {
+      if (first) setLoadError((e as Error).message);
+      return null;
+    }
   }, [id]);
+  useEffect(() => { load(true); }, [load]);
+
+  // powrót sieci albo aplikacji z tła (iPhone): dociągnij stan i odblokuj zakończenie po czasie
+  useEffect(() => {
+    const sync = () => {
+      if (document.visibilityState !== "visible") return;
+      setFinishFailed(false);
+      load(!test);
+    };
+    window.addEventListener("online", sync);
+    document.addEventListener("visibilitychange", sync);
+    return () => { window.removeEventListener("online", sync); document.removeEventListener("visibilitychange", sync); };
+  }, [load, test]);
 
   const finish = useCallback(async () => {
     setBusy(true);
+    setError(null);
     try {
       setTest(await api<TestState>(`/api/tests/${id}/finish`, { method: "POST" }));
       rememberTest(null);
+      setFinishFailed(false);
     } catch (e) {
       setError((e as Error).message);
+      setFinishFailed(true);
     } finally {
       setBusy(false);
     }
@@ -70,10 +97,21 @@ export default function TestPage() {
   }, [running]);
 
   useEffect(() => {
-    if (test && !finished && remaining <= 0 && !busy) finish();
-  }, [test, finished, remaining, busy, finish]);
+    if (test && !finished && remaining <= 0 && !busy && !finishFailed) finish();
+  }, [test, finished, remaining, busy, finish, finishFailed]);
 
-  if (error) return <p className="error">{error}</p>;
+  if (loadError && !test) {
+    return (
+      <div className="stack" data-testid="test-load-error">
+        <p className="error">{loadError}</p>
+        <p className="muted" style={{ margin: 0 }}>Twoje dotychczasowe odpowiedzi są zapisane – test wczyta się od miejsca, w którym skończyłeś.</p>
+        <div className="row">
+          <button className="btn" onClick={() => { setLoadError(null); load(true); }}>Spróbuj ponownie</button>
+          <Link className="btn secondary" href="/">← Nowy test</Link>
+        </div>
+      </div>
+    );
+  }
   if (!test) return <LoadingPage />;
 
   if (finished) return <Summary test={test} />;
@@ -112,6 +150,15 @@ export default function TestPage() {
       );
       if (skip) go(index + 1);
     } catch (e) {
+      // odpowiedź mogła dojść do serwera mimo błędu sieci (albo poszła już wcześniej) – sprawdź stan testu
+      if (isNetworkError(e) || (e instanceof ApiError && e.status === 409)) {
+        const t = await load(false);
+        if (t?.answers.some((a) => a.questionId === q.id)) {
+          if (skip) go(index + 1);
+          return;
+        }
+        if (t?.finishedAt) return;
+      }
       setError((e as Error).message);
     } finally {
       setBusy(false);
@@ -195,15 +242,15 @@ export default function TestPage() {
             <p style={{ margin: "8px 0 0" }}>{fb.explanation}</p>
           </div>
         )}
-        {error && <p className="error">{error}</p>}
+        {error && <p className="error" role="alert" data-testid="test-error">{error}</p>}
 
         <div className="row" style={{ marginTop: 16 }}>
           {!endless && (
             <button className="btn secondary" onClick={() => go(index - 1)} disabled={index === 0}>←</button>
           )}
           {!fb ? (
-            <button className="btn" onClick={() => check()} disabled={busy || (!isMulti && selected.length === 0)}>
-              Sprawdź
+            <button className="btn" onClick={() => check()} disabled={busy || (!isMulti && selected.length === 0)} data-testid="check">
+              {busy ? "Sprawdzanie…" : error ? "Spróbuj ponownie" : "Sprawdź"}
             </button>
           ) : index < test.questions.length - 1 ? (
             <button className="btn" onClick={() => go(index + 1)}>Dalej →</button>

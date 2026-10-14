@@ -9,6 +9,7 @@ import { BLOCK_SIZES, DEFAULT_BLOCK_SIZE } from "@/lib/scoring";
 import type { Stats } from "@/lib/tests";
 import type { Stage } from "@/lib/questions";
 import { LoadingPage } from "@/app/components/loading-page";
+import { LoadError } from "@/app/components/load-error";
 
 const BLOCK_KEY = "owe:blockSize";
 const TYPE_KEY = "owe:statsType";
@@ -107,7 +108,7 @@ export default function StatsPage() {
     } catch {}
   }
 
-  if (error) return <p className="error">{error}</p>;
+  if (error) return <LoadError message={error} />;
   if (!stats) return <LoadingPage />;
 
   const { overall, byType, byStage, history, blocks } = stats;

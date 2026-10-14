@@ -10,6 +10,7 @@ import {
   type ItemMeta, type OweFilter, type OweRec, type Stage,
 } from "@/lib/owe-stats";
 import { SkeletonRows } from "@/app/components/loading-page";
+import { LoadError } from "@/app/components/load-error";
 
 interface Data {
   recs: OweRec[];
@@ -240,6 +241,6 @@ export function OweStatsView({ data }: { data: Data }) {
 
 export function OweStatsLoader() {
   const { data, error } = useData<Data>("/api/dane/owe-stats");
-  if (error) return <p className="error">{error}</p>;
+  if (error) return <LoadError message={error} />;
   return data ? <OweStatsView data={data} /> : <PageSkeleton title="Statystyki pytań OWE" />;
 }

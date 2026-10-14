@@ -18,6 +18,7 @@ import { SpeakButton } from "@/app/components/speech/speak";
 import { stopGroup, useSpeech } from "@/lib/speech";
 import { hasloSpeech } from "@/lib/speech-catalog";
 import { isBackNav, savedNumber, saveNumber } from "@/app/components/back";
+import { LoadError } from "@/app/components/load-error";
 
 export interface Card { id: string; t: string; d: string; w: string | null; kind: string; topic: string; n: number; /** Własna fiszka konta (`u:…`). */ own?: boolean }
 type Source = "" | "kurs" | "moje";
@@ -483,7 +484,7 @@ export function FlashcardsLoader() {
   useEffect(() => { api<OwnCard[]>(withUser("/api/fiszki/moje")).then(setOwn).catch(() => setOwn([])); }, []);
   const merged = useMemo(() => (data && own ? [...data.rows, ...own.map(ownToCard)] : null), [data, own]);
   const ownMastery = useMemo(() => Object.fromEntries((own ?? []).filter((c) => c.n > 0).map((c) => [c.id, { c: c.c, t: c.n, last: 0 }])), [own]);
-  if (error) return <p className="error">{error}</p>;
+  if (error) return <LoadError message={error} />;
   return data && merged ? <FlashcardsView cards={merged} topics={data.topics} kinds={data.kinds} ownMastery={ownMastery} /> : <PageSkeleton title="Fiszki" wide={false} />;
 }
 

@@ -1,14 +1,44 @@
 import { useEffect, useState } from "react";
 
+/** Błąd zapytania do API; `network` – zapytanie nie doszło do serwera albo nie wróciła odpowiedź (brak zasięgu, uśpiona karta). */
+export class ApiError extends Error {
+  constructor(message: string, readonly status: number, readonly network = false) {
+    super(message);
+  }
+}
+export const NETWORK_MSG = "Brak połączenia z serwerem – sprawdź internet i spróbuj ponownie.";
+export const isNetworkError = (e: unknown) => e instanceof ApiError && e.network;
+
+const RETRY_MS = [600, 1500];
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+/**
+ * Zapytanie JSON do API. Błąd sieci (Safari: „Load failed”, Chrome: „Failed to fetch”) – zapytania GET ponawiane 2×;
+ * zapisy (POST/PATCH/DELETE) nie, bo mogły już dojść do serwera – wywołujący decyduje (np. sprawdza stan i ponawia).
+ */
 export async function api<T>(url: string, init?: RequestInit): Promise<T> {
-  const res = await fetch(url, {
-    ...init,
-    headers: { "Content-Type": "application/json", ...init?.headers },
-    cache: "no-store",
-  });
-  const data = await res.json().catch(() => ({}));
-  if (!res.ok) throw new Error(data.error ?? `Błąd ${res.status}`);
-  return data as T;
+  const get = !init?.method || init.method.toUpperCase() === "GET";
+  for (let attempt = 0; ; attempt++) {
+    let res: Response;
+    try {
+      res = await fetch(url, {
+        ...init,
+        headers: { "Content-Type": "application/json", ...init?.headers },
+        cache: "no-store",
+      });
+    } catch (e) {
+      if ((e as Error)?.name === "AbortError") throw e;
+      if (get && attempt < RETRY_MS.length) { await sleep(RETRY_MS[attempt]); continue; }
+      throw new ApiError(NETWORK_MSG, 0, true);
+    }
+    const data = await res.json().catch(() => null);
+    if (!res.ok) {
+      // 5xx bez JSON (np. strona błędu hostingu) – przejściowe, GET ponawiamy
+      if (res.status >= 500 && !data?.error && get && attempt < RETRY_MS.length) { await sleep(RETRY_MS[attempt]); continue; }
+      throw new ApiError(data?.error ?? (res.status >= 500 ? `Serwer chwilowo nie odpowiada (błąd ${res.status}) – spróbuj ponownie.` : `Błąd ${res.status}`), res.status);
+    }
+    return (data ?? {}) as T;
+  }
 }
 
 export const LETTERS = ["A", "B", "C", "D"];

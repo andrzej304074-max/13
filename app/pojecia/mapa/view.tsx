@@ -13,6 +13,7 @@ import { useStars } from "@/lib/stars-client";
 import { MindMap, type MapNode, type MapRing } from "./mind-map";
 import { SpeakButton } from "@/app/components/speech/speak";
 import { hasloSpeech } from "@/lib/speech-catalog";
+import { LoadError } from "@/app/components/load-error";
 
 type Topic = { id: string; title: string; emoji: string; color: string };
 type Kind = { id: string; title: string };
@@ -38,7 +39,7 @@ export function MindMapLoader() {
   const hasla = useData<{ rows: Haslo[]; topics: Topic[]; kinds: Kind[] }>("/api/dane/hasla");
   const mapa = useData<MapaData>("/api/dane/mapa");
   const err = hasla.error ?? mapa.error;
-  if (err) return <p className="error">{err}</p>;
+  if (err) return <LoadError message={err} />;
   if (!hasla.data || !mapa.data) return <PageSkeleton title="Mapa myśli" />;
   return <MindMapPage rows={hasla.data.rows} topics={hasla.data.topics} kinds={hasla.data.kinds} mapa={mapa.data} />;
 }

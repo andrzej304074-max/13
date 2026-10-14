@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { QuestionScratch } from "@/app/components/notes/question-scratch";
-import { api, fmtPct, isTyping, LETTERS } from "@/lib/client";
+import { api, ApiError, fmtPct, isTyping, LETTERS } from "@/lib/client";
 import { fmtDuration, rememberLesson } from "@/lib/nauka-client";
 import {
   buildExercises, checkTyped, computeXp, eventOf, acceptedAnswers, questionCorrect, shuffle, yearOf,
@@ -39,7 +39,8 @@ interface Saved {
 function readSaved(key: string): Saved | null {
   try {
     const v = JSON.parse(localStorage.getItem(key) ?? "null") as Saved | null;
-    if (!v || v.v !== 1 || !Array.isArray(v.queue) || !v.session?.id || v.pos <= 0 || v.pos >= v.queue.length) return null;
+    // pos == długość kolejki: pod-lekcja ukończona, ale wynik nie doszedł do serwera (brak sieci) – zapis do ponowienia
+    if (!v || v.v !== 1 || !Array.isArray(v.queue) || !v.session?.id || v.pos <= 0 || v.pos > v.queue.length) return null;
     if (Date.now() - v.at > RESUME_DAYS * 864e5) { localStorage.removeItem(key); return null; }
     return v;
   } catch {
@@ -87,15 +88,6 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
       .finally(() => setQueue(buildExercises(payload, { level })));
   }, [lesson.id, sub, payload, saveKey]);
 
-  useEffect(() => {
-    if (started.current) return;
-    started.current = true;
-    rememberLesson(lesson.id, sub);
-    const saved = saveKey ? readSaved(saveKey) : null;
-    if (saved) setOffer(saved);
-    else startNew();
-  }, [lesson.id, sub, saveKey, startNew]);
-
   /** „Kontynuuj”: ta sama sesja, kolejka, odpowiedzi i miejsce co przed wyjściem. */
   const resumeSaved = useCallback((v: Saved) => {
     setOffer(null);
@@ -108,11 +100,22 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
     setRequeued(new Set(v.requeued.map((i) => v.queue[i]).filter(Boolean)));
   }, []);
 
+  useEffect(() => {
+    if (started.current) return;
+    started.current = true;
+    rememberLesson(lesson.id, sub);
+    const saved = saveKey ? readSaved(saveKey) : null;
+    if (saved && saved.pos >= saved.queue.length) resumeSaved(saved); // od razu do ekranu końcowego i ponownego zapisu
+    else if (saved) setOffer(saved);
+    else startNew();
+  }, [lesson.id, sub, saveKey, startNew, resumeSaved]);
+
+
   // zapis stanu po każdym ćwiczeniu (localStorage – pełny stan; serwer – „w trakcie N/M” dla ścieżki)
   const progressTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   useEffect(() => {
     if (!saveKey || !queue || !session || offer) return;
-    if (pos >= queue.length) { dropSaved(saveKey); return; }
+    // ukończona pod-lekcja zostaje zapisana lokalnie, dopóki wynik nie dojdzie do serwera (saveResult)
     if (pos === 0) return;
     const v: Saved = {
       v: 1, at: Date.now(), session, queue, pos, log, combo, startedAt,
@@ -120,6 +123,7 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
     };
     try { localStorage.setItem(saveKey, JSON.stringify(v)); } catch {}
     if (progressTimer.current) clearTimeout(progressTimer.current);
+    if (pos >= queue.length) return;
     progressTimer.current = setTimeout(() => {
       api(`/api/nauka/sessions/${session.id}`, { method: "PATCH", body: JSON.stringify({ pos, total: queue.length }) }).catch(() => {});
     }, 1200);
@@ -159,14 +163,47 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
     setPos((p) => p + 1);
   }, []);
 
+  /**
+   * Zapis wyniku. Bez sieci – komunikat, „Spróbuj ponownie” i ponowienie po powrocie sieci; stan zostaje w localStorage,
+   * więc wynik nie przepada także po zamknięciu karty. Sesja, której nie udało się rozpocząć, jest zakładana teraz.
+   * 409 („już zakończona”) – poprzednia próba doszła, tylko odpowiedź się zgubiła: wynik liczony lokalnie.
+   */
+  const saveResult = useCallback(async () => {
+    if (log.length === 0) return;
+    setFinishError(null);
+    try {
+      let s = session;
+      if (!s) {
+        s = await api<{ id: string; level: number }>("/api/nauka/sessions", { method: "POST", body: JSON.stringify({ lesson: lesson.id, sub }) });
+        setSession(s);
+        setStartError(null);
+      }
+      const r = await api<FinishResult>(`/api/nauka/sessions/${s.id}/finish`, { method: "POST", body: JSON.stringify({ answers: log }) });
+      setResult(r);
+      if (saveKey) dropSaved(saveKey);
+    } catch (e) {
+      if (e instanceof ApiError && e.status === 409 && session) {
+        const correct = log.filter((l) => l.correct).length;
+        setResult({ xp: computeXp(log.map((l) => l.correct)), correct, total: log.length, percent: Math.round((correct / log.length) * 1000) / 10,
+          durationMs: Date.now() - startedAt, level: session.level, levelBefore: session.level });
+        if (saveKey) dropSaved(saveKey);
+        return;
+      }
+      setFinishError((e as Error).message);
+    }
+  }, [log, session, lesson.id, sub, saveKey, startedAt]);
+
   useEffect(() => {
     if (!done || finishing.current || result) return;
     finishing.current = true;
-    if (!session || log.length === 0) return;
-    api<FinishResult>(`/api/nauka/sessions/${session.id}/finish`, { method: "POST", body: JSON.stringify({ answers: log }) })
-      .then(setResult)
-      .catch((e) => setFinishError(e.message));
-  }, [done, session, log, result]);
+    saveResult();
+  }, [done, result, saveResult]);
+  useEffect(() => {
+    if (!finishError || result) return;
+    const on = () => saveResult();
+    window.addEventListener("online", on);
+    return () => window.removeEventListener("online", on);
+  }, [finishError, result, saveResult]);
 
   // Enter – „Dalej” po informacji zwrotnej
   useEffect(() => {
@@ -226,7 +263,8 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
         payload={payload}
         log={log}
         result={result}
-        error={finishError ?? (startError ? `Wynik nie został zapisany: ${startError}` : null)}
+        error={finishError ? `Wynik nie został jeszcze zapisany: ${finishError}` : null}
+        onRetry={finishError ? saveResult : undefined}
         localXp={computeXp(log.map((l) => l.correct))}
         elapsed={Date.now() - startedAt}
         next={next}
@@ -266,7 +304,7 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
           <span><b>Wolisz poczytać? Artykuł tej lekcji zalicza „Poznaj”</b><small>{payload.article}</small></span>
         </Link>
       )}
-      {startError && <p className="error" style={{ fontSize: "0.85rem" }}>Nie udało się rozpocząć zapisu sesji ({startError}) – możesz ćwiczyć, ale wynik nie trafi do statystyk.</p>}
+      {startError && <p className="muted" style={{ fontSize: "0.85rem" }}>Brak połączenia z serwerem – możesz ćwiczyć dalej, wynik zapisze się na końcu, gdy wróci internet.</p>}
       <div className="learn-ex"><ExerciseView key={pos} ex={current!} locked={!!feedback} onResult={record} onNext={advance} /></div>
       {current!.type !== "intro" && current!.type !== "karta" && <QuestionScratch refKey={`lekcja:${lesson.id}:${sub}`} />}
       {feedback && (
@@ -671,9 +709,9 @@ function BankQuestion({ ex, locked, onResult }: { ex: Extract<Exercise, { type: 
 }
 
 function EndScreen({
-  payload, log, result, error, localXp, elapsed, next, backHref,
+  payload, log, result, error, onRetry, localXp, elapsed, next, backHref,
 }: {
-  payload: LessonPayload; log: AnswerLog[]; result: FinishResult | null; error: string | null; localXp: number;
+  payload: LessonPayload; log: AnswerLog[]; result: FinishResult | null; error: string | null; onRetry?: () => void; localXp: number;
   elapsed: number; next: string | null; backHref: string;
 }) {
   const correct = log.filter((l) => l.correct).length;
@@ -712,7 +750,12 @@ function EndScreen({
           </p>
         </div>
       )}
-      {error && <p className="error">{error}</p>}
+      {error && (
+        <div className="row" role="alert" data-testid="lesson-save-error">
+          <p className="error" style={{ margin: 0 }}>{error} Odpowiedzi są zachowane na tym urządzeniu.</p>
+          {onRetry && <button type="button" className="btn small" onClick={onRetry}>Spróbuj ponownie</button>}
+        </div>
+      )}
       {!result && !error && <p className="muted">Zapisywanie wyniku…</p>}
       {payload.zrozum && (
         <div className="card stack">

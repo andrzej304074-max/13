@@ -10,6 +10,7 @@ import { SpeakButton } from "@/app/components/speech/speak";
 import { hasloSpeech } from "@/lib/speech-catalog";
 import { useData } from "@/lib/data-client";
 import type { Haslo } from "@/lib/data-server";
+import { LoadError } from "@/app/components/load-error";
 
 export interface Row {
   id: string;
@@ -158,7 +159,7 @@ export function ConceptTable({ rows, topics, kinds }: { rows: Row[]; topics: Top
 /** Dane haseł z pamięci podręcznej (/api/dane/hasla) – HTML strony nie zawiera 1,7 tys. definicji. */
 export function ConceptTableLoader() {
   const { data, error } = useData<{ rows: Haslo[]; topics: Topic[]; kinds: Kind[] }>("/api/dane/hasla");
-  if (error) return <p className="error">{error}</p>;
+  if (error) return <LoadError message={error} />;
   if (!data) return <PageSkeleton title="Tabela pojęć" />;
   return <ConceptTable rows={data.rows} topics={data.topics} kinds={data.kinds} />;
 }

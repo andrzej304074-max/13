@@ -10,6 +10,7 @@ import { api, withUser, useViewedUser } from "@/lib/client";
 import { refHref } from "@/lib/notes-core";
 import type { NoteRow } from "@/lib/notes";
 import { fmtDate } from "../list";
+import { LoadError } from "@/app/components/load-error";
 
 const NoteEditor = dynamic(() => import("@/app/components/notes/editor").then((m) => m.NoteEditor), {
   ssr: false,
@@ -21,6 +22,8 @@ export function NoteView({ id }: { id: string }) {
   const router = useRouter();
   const [note, setNote] = useState<NoteRow | null>(null);
   const [error, setError] = useState<string | null>(null);
+  // błąd gwiazdki / usuwania – pod nagłówkiem, edytor zostaje
+  const [actionError, setActionError] = useState<string | null>(null);
   const preview = useViewedUser();
   const userQ = preview ? `?user=${preview}` : "";
 
@@ -28,7 +31,7 @@ export function NoteView({ id }: { id: string }) {
     api<NoteRow>(withUser(`/api/notatki/${id}`)).then(setNote).catch((e) => setError(e.message));
   }, [id]);
 
-  if (error) return <div className="stack"><p className="error">{error}</p><Link href={`/notatki${userQ}`}>← Notatki</Link></div>;
+  if (error) return <LoadError message={error}><Link className="btn secondary" href={`/notatki${userQ}`}>← Notatki</Link></LoadError>;
   if (!note) return <div className="stack"><div className="skeleton" style={{ height: 34, width: "40%" }} /><div className="skeleton" style={{ height: 420 }} /></div>;
 
   const back = note.kind === "scratch" ? `/notatki/brudnopisy${userQ}` : `/notatki${userQ}`;
@@ -36,11 +39,11 @@ export function NoteView({ id }: { id: string }) {
   const star = async () => {
     const on = !note.starred;
     setNote({ ...note, starred: on });
-    await api(`/api/notatki/${note.id}`, { method: "PATCH", body: JSON.stringify({ starred: on }) }).catch((e) => { setNote({ ...note }); setError(e.message); });
+    await api(`/api/notatki/${note.id}`, { method: "PATCH", body: JSON.stringify({ starred: on }) }).catch((e) => { setNote({ ...note }); setActionError(e.message); });
   };
   const remove = async () => {
     if (!confirm(note.kind === "scratch" ? "Usunąć ten brudnopis?" : "Usunąć tę notatkę?")) return;
-    await api(`/api/notatki/${note.id}`, { method: "DELETE" }).then(() => router.push(back)).catch((e) => setError(e.message));
+    await api(`/api/notatki/${note.id}`, { method: "DELETE" }).then(() => router.push(back)).catch((e) => setActionError(e.message));
   };
 
   return (
@@ -52,6 +55,7 @@ export function NoteView({ id }: { id: string }) {
         <StarButton on={note.starred} onToggle={star} label="do ulubionych" disabled={!!preview} />
         {!preview && <button className="btn small danger" onClick={remove} data-testid="note-delete">Usuń</button>}
       </div>
+      {actionError && <p className="error" role="alert" style={{ margin: 0 }}>{actionError}</p>}
       {(note.context || src) && (
         <p className="note-src">
           {note.context}{src && <> · <Link href={src.href}>{src.label} →</Link></>}

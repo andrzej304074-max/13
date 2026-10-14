@@ -1,4 +1,4 @@
-import { query } from "./db";
+import { query, withTx } from "./db";
 import { HttpError } from "./tests";
 import { COURSE, getItem, getLesson } from "./nauka-course";
 import { computeXp } from "./nauka-logic";
@@ -64,22 +64,25 @@ export async function finishSession(userId: string, id: string, rawAnswers: unkn
   const answers = parseAnswers(rawAnswers);
   const correct = answers.filter((a) => a.correct).length;
   const xp = computeXp(answers.map((a) => a.correct));
-  const { rows } = await query<{ lesson: string; level: number; duration_ms: number }>(
-    `UPDATE learn_sessions SET finished_at = now(), correct = $2, total = $3, xp = $4,
-       duration_ms = LEAST(EXTRACT(EPOCH FROM now() - started_at) * 1000, ${MAX_DURATION_MS})::int
-     WHERE id = $1 AND user_id = $5 AND finished_at IS NULL RETURNING lesson, level, duration_ms`,
-    [id, correct, answers.length, xp, userId],
-  );
-  if (rows.length === 0) throw new HttpError(409, "Sesja nie istnieje albo została już zakończona.");
-  await query(
-    `INSERT INTO learn_answers (session_id, seq, item_id, item_kind, exercise, correct, ms)
-     SELECT $1, s.seq, s.item, s.kind, s.ex, s.ok, s.ms
-     FROM unnest($2::text[], $3::text[], $4::text[], $5::bool[], $6::int[]) WITH ORDINALITY
-       AS s(item, kind, ex, ok, ms, seq)`,
-    [id, answers.map((a) => a.item), answers.map((a) => a.itemKind), answers.map((a) => a.exercise),
-      answers.map((a) => a.correct), answers.map((a) => a.ms)],
-  );
-  const { lesson, level: levelBefore, duration_ms } = rows[0];
+  // zakończenie sesji i jej odpowiedzi razem – przerwane połączenie nie zostawia sesji „zakończonej” bez odpowiedzi
+  const { lesson, level: levelBefore, duration_ms } = await withTx(async (q) => {
+    const { rows } = await q<{ lesson: string; level: number; duration_ms: number }>(
+      `UPDATE learn_sessions SET finished_at = now(), correct = $2, total = $3, xp = $4,
+         duration_ms = LEAST(EXTRACT(EPOCH FROM now() - started_at) * 1000, ${MAX_DURATION_MS})::int
+       WHERE id = $1 AND user_id = $5 AND finished_at IS NULL RETURNING lesson, level, duration_ms`,
+      [id, correct, answers.length, xp, userId],
+    );
+    if (rows.length === 0) throw new HttpError(409, "Sesja nie istnieje albo została już zakończona.");
+    await q(
+      `INSERT INTO learn_answers (session_id, seq, item_id, item_kind, exercise, correct, ms)
+       SELECT $1, s.seq, s.item, s.kind, s.ex, s.ok, s.ms
+       FROM unnest($2::text[], $3::text[], $4::text[], $5::bool[], $6::int[]) WITH ORDINALITY
+         AS s(item, kind, ex, ok, ms, seq)`,
+      [id, answers.map((a) => a.item), answers.map((a) => a.itemKind), answers.map((a) => a.exercise),
+        answers.map((a) => a.correct), answers.map((a) => a.ms)],
+    );
+    return rows[0];
+  });
   const level = lesson === "powtorka" ? 0 : (await lessonLevels(userId, [lesson]))[lesson] ?? 0;
   return { xp, correct, total: answers.length, percent: pct(correct, answers.length), durationMs: duration_ms, level, levelBefore };
 }

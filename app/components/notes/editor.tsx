@@ -141,12 +141,23 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
         dirty.current = true;
         setSave("error");
         setError((e as Error).message);
+        // bez sieci: ponowienie za 5 s (i od razu po powrocie sieci – efekt niżej), a nie dopiero przy kolejnej zmianie
+        if (timer.current) clearTimeout(timer.current);
+        timer.current = setTimeout(() => void flushRef.current(), 5000);
       }
     })();
     saving.current = run;
     await run;
     saving.current = null;
   }, [readOnly]);
+
+  const flushRef = useRef(flush);
+  flushRef.current = flush;
+  useEffect(() => {
+    const on = () => { if (dirty.current) void flushRef.current(); };
+    window.addEventListener("online", on);
+    return () => window.removeEventListener("online", on);
+  }, []);
 
   const touch = useCallback(() => {
     if (readOnly) return;

@@ -11,6 +11,7 @@ import { api, fmtPct, viewedUser, withUser } from "@/lib/client";
 import { fmtDuration } from "@/lib/nauka-client";
 import type { NaukaStats } from "@/lib/nauka";
 import { EXERCISE_LABELS, SUBLESSONS, SUBLESSONS_Z, subsFor } from "@/lib/nauka-types";
+import { LoadError } from "@/app/components/load-error";
 
 export interface StatsMeta {
   topics: { id: string; title: string; emoji: string }[];
@@ -259,6 +260,6 @@ function Bar({ pct }: { pct: number }) {
 /** Nazwy lekcji (910) z pamięci podręcznej /api/dane/nauka-meta zamiast w HTML strony. */
 export function NaukaStatsLoader() {
   const { data, error } = useData<StatsMeta>("/api/dane/nauka-meta");
-  if (error) return <p className="error">{error}</p>;
+  if (error) return <LoadError message={error} />;
   return data ? <NaukaStatsView meta={data} /> : <LoadingPage />;
 }

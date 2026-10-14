@@ -11,6 +11,7 @@ import {
 } from "@/lib/owe-stats";
 import { OweFilterFields } from "../filters";
 import { PageSkeleton } from "../table";
+import { LoadError } from "@/app/components/load-error";
 
 interface Data {
   recs: OweRec[];
@@ -41,7 +42,7 @@ function repeatFromParams(p: URLSearchParams): RepeatOpts {
 
 export function CoverageLoader() {
   const { data, error } = useData<Data>("/api/dane/owe-stats");
-  if (error) return <p className="error">{error}</p>;
+  if (error) return <LoadError message={error} />;
   return data ? <CoverageView data={data} /> : <PageSkeleton title="Pokrycie olimpiad" />;
 }
 

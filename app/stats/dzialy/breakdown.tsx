@@ -7,6 +7,7 @@ import { DEFAULT_MY_FILTER, myFilterFromParams, myFilterToParams, type MyFilter,
 import type { MyStatsPayload } from "@/lib/my-stats";
 import { level } from "@/lib/owe-stats";
 import { SkeletonRows } from "@/app/components/loading-page";
+import { LoadError } from "@/app/components/load-error";
 
 const KIND_ONE: Record<string, string> = { pojecie: "pojęcie", wzor: "wzór", osoba: "osoba", instytucja: "instytucja", data: "data", przepis: "przepis" };
 const STEP = 30;
@@ -55,7 +56,7 @@ export function MyBreakdown({ bank }: { bank: "owe" | "slownik" }) {
     api<MyStatsPayload>(withUser(`/api/stats/dzialy?bank=${bank}${q ? `&${q}` : ""}`)).then(setData).catch((e) => setError(e.message));
   }, [f, bank]);
 
-  if (error) return <p className="error">{error}</p>;
+  if (error) return <LoadError message={error} />;
   if (!f) return null;
   const set = (o: Partial<MyFilter>) => { setF({ ...f, ...o }); setLimit(STEP); setOpen(null); };
   const N = data?.names;
