@@ -1,0 +1,76 @@
+{
+  "set": "owe-23-okregowe",
+  "ed": 23,
+  "stage": "o",
+  "essays": [
+    {
+      "id": "owe-23-okregowe-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "makro",
+      "topics": [
+        {
+          "title": "Omów mechanizmy oddziaływania negatywnych zewnętrznych impulsów koniunkturalnych na gospodarkę Polski",
+          "schema": [
+            { "title": "Przykładowy schemat odpowiedzi", "pts": 25, "points": [
+              "Najważniejsze cechy współczesnych cykli koniunkturalnych w krajach wysoko rozwiniętych i rozwijających się",
+              "Czynniki endo- i egzogeniczne wahań koniunktury:",
+              "  a) nierównowaga fiskalna i negatywne szoki zewnętrzne",
+              "  b) znaczenie globalizacji i integracji gospodarczej",
+              "  c) rola postępu technicznego, liberalizacji i deregulacji rynków finansowych",
+              "Kanały transmisji zewnętrznych impulsów koniunkturalnych:",
+              "  a) handel zagraniczny",
+              "  b) kryzysy walutowe",
+              "  c) sektor bankowy (finansowy)",
+              "Wahania cykliczne w Polsce w ostatnich latach na tle koniunktury w innych krajach",
+              "Wnioski i własna ocena:",
+              "  a) konsekwencje korelacji koniunktury w Polsce i strefie euro",
+              "  b) propozycje przeciwdziałania negatywnym impulsom zewnętrznym",
+              "  c) ocena polityki antycyklicznej w Polsce i trudności jej koordynacji w warunkach globalizacji"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-23-okregowe-zadanie",
+    "title": "Zadanie z analizy finansowej",
+    "pts": 15,
+    "topic": "firma",
+    "intro": [
+      { "t": "p", "x": "Zadanie dotyczy biura turystycznego (trzy niezależne polecenia)." }
+    ],
+    "parts": [
+      {
+        "label": "1", "pts": 5,
+        "prompt": "Biuro organizuje wycieczkę autokarową. Koszty: wynagrodzenie kierowcy 100 € (koszt utopiony, bezzwrotny), wynajem autokaru 500 €, autostrady i parkingi 75 €. Przy odwołaniu przepada 50 € zaliczki za autokar (gdy wycieczka się odbędzie, zaliczka pomniejsza koszt wynajmu). Ile osób musi kupić bilet po 25 €, aby nie odwołano wycieczki?",
+        "answers": [{ "label": "Minimalna liczba osób", "value": 21, "tol": 0.01 }],
+        "solution": [
+          { "t": "f", "x": "koszty utopione = 100 (kierowca) + 50 (zaliczka) = 150 €\nliczba osób = (koszty całkowite − koszty utopione) / cena = (675 − 150) / 25 = 21" },
+          { "t": "p", "x": "Koszty utopione biuro poniesie tak czy inaczej, więc nie wpływają na decyzję. Przy 21 biletach strata równa się dokładnie kosztom utopionym; przy mniejszej sprzedaży odwołanie wycieczki ogranicza stratę." }
+        ]
+      },
+      {
+        "label": "2", "pts": 5,
+        "prompt": "Roczna sprzedaż biura wyniosła 100 000 €, aktywa 50 000 €, rentowność sprzedaży netto 10%, mnożnik kapitału własnego 1,25. Oblicz ROA i ROE.",
+        "answers": [
+          { "label": "ROA (%)", "value": 20, "tol": 0.01, "unit": "%" },
+          { "label": "ROE (%)", "value": 25, "tol": 0.01, "unit": "%" }
+        ],
+        "solution": [
+          { "t": "f", "x": "zysk netto = 10% × 100 000 = 10 000 €\nkapitał własny = 50 000 / 1,25 = 40 000 €\nROA = 10 000 / 50 000 = 20%\nROE = 10 000 / 40 000 = 25%" }
+        ]
+      },
+      {
+        "label": "3", "pts": 5,
+        "prompt": "Ekspansja wymaga wzrostu aktywów o 50%. Zysk operacyjny (EBIT) wynosi 14 000 € (pozostałe dane jak w punkcie 2), CIT 20%. Czy przy dotychczasowym oprocentowaniu kredytu korzystniej jest zaciągnąć kredyt, czy sfinansować ekspansję kapitałem własnym? Ustal koszt kapitału obcego.",
+        "answers": [{ "label": "Koszt kapitału obcego (%)", "value": 15, "tol": 0.01, "unit": "%" }],
+        "solution": [
+          { "t": "f", "x": "kapitał obcy = 50 000 − 40 000 = 10 000 €\nodsetki + podatek = 14 000 − 10 000 = 4 000 €\n10 000r + 20% × (14 000 − 10 000r) = 4 000\n8 000r + 2 800 = 4 000 → r = 15%" },
+          { "t": "p", "x": "Korzystniejszy jest kredyt: jego koszt (15%, po opodatkowaniu 12%) jest niższy niż koszt kapitału własnego (ROE 25%) i niższy niż rentowność majątku (EBIT / aktywa = 28%), więc dźwignia finansowa zwiększy rentowność kapitału własnego." }
+        ]
+      }
+    ]
+  }
+}

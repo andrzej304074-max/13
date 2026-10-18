@@ -1,0 +1,93 @@
+{
+  "set": "owe-22-centralne",
+  "ed": 22,
+  "stage": "c",
+  "essays": [
+    {
+      "id": "owe-22-centralne-esej",
+      "kind": "ogolne",
+      "pts": 20,
+      "topic": "polityka",
+      "topics": [
+        {
+          "title": "Jakie kwestie w polityce ochrony środowiska budzą najwięcej kontrowersji? Czy Twoim zdaniem państwo dysponuje narzędziami pozwalającymi skutecznie realizować tę politykę?",
+          "schema": [
+            { "title": "I. Wybrane aspekty teoretyczne", "pts": null, "points": [
+              "Problem efektów zewnętrznych w ochronie środowiska",
+              "Rozwiązania prywatne: internalizacja efektów, twierdzenie Coase’a, odszkodowania sądowe",
+              "Rozwiązania publiczne: kary, podatki i opłaty, subwencje, zezwolenia na emisję, regulacja bezpośrednia",
+              "Ochrona środowiska – zawodność państwa czy zawodność rynku?",
+              "Konkurencyjność kryteriów ekologicznych i ekonomicznych w ocenie projektów"
+            ] },
+            { "title": "II. Wybrane aspekty empiryczne", "pts": null, "points": [
+              "Główne cele i kierunki polityki ekologicznej państwa",
+              "Instrumenty realizacji polityki ekologicznej w Polsce",
+              "Zalety i wady wykorzystywanych instrumentów",
+              "Polityka ekologiczna przed i po akcesji Polski do UE"
+            ] },
+            { "title": "III. Własna ocena i wnioski", "pts": null, "points": [
+              "Kwestie sporne: cele, instrumenty, zapobiegać czy ograniczać zanieczyszczenia, efektywność kontroli i monitoringu",
+              "Globalny wymiar ochrony środowiska – sens koordynacji polityki na poziomie narodowym",
+              "Rola badań i edukacji – asymetria informacji i innowacje ekologiczne"
+            ] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "owe-22-centralne-esej-sponsor",
+      "kind": "sponsor",
+      "pts": 10,
+      "topic": "finanse",
+      "topics": [
+        { "title": "Zaproponuj strategię dystrybucji produktów ubezpieczeniowych dla zakładu ubezpieczeń, który zamierza rozpocząć działalność w Polsce", "schema": [] },
+        { "title": "Omów rolę obowiązkowych ubezpieczeń gospodarczych w gospodarce rynkowej", "schema": [] },
+        { "title": "Na podstawie mapy ryzyka wybranego polskiego eksportera przedstaw propozycję pakietu ubezpieczeń dla tej firmy", "schema": [] }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-22-centralne-zadanie",
+    "title": "Zadanie analityczne",
+    "pts": 10,
+    "topic": "mikro",
+    "intro": [
+      { "t": "p", "x": "Duże przedsiębiorstwo w mieście emituje 30 tys. ton zanieczyszczeń. Koszt całkowity (tys. zł) ograniczenia zanieczyszczeń: KC = 14Q + 0,25Q², gdzie Q – ilość zlikwidowanych zanieczyszczeń (tys. ton). Całkowita korzyść społeczna z redukcji: SK = 20Q − 0,05Q²." },
+      { "t": "p", "x": "Klucz nie podaje punktacji poleceń – w aplikacji każde jest warte 2,5 pkt." }
+    ],
+    "parts": [
+      {
+        "label": "1", "pts": 2.5,
+        "prompt": "Władze rozważają opłatę za emisję 24 tys. zł za tys. ton. O ile tys. ton racjonalne przedsiębiorstwo zmniejszy emisję?",
+        "answers": [{ "label": "Redukcja emisji (tys. ton)", "value": 20, "tol": 0.01 }],
+        "solution": [
+          { "t": "f", "x": "przedsiębiorstwo redukuje, dopóki koszt krańcowy redukcji ≤ opłata:\nKC′ = 14 + 0,5Q = 24 → Q = 20 tys. ton" }
+        ]
+      },
+      {
+        "label": "2", "pts": 2.5,
+        "prompt": "Jaka powinna być wielkość emisji, aby całkowita korzyść społeczna netto była maksymalna?",
+        "answers": [{ "label": "Emisja (tys. ton)", "value": 20, "tol": 0.01 }],
+        "solution": [
+          { "t": "f", "x": "krańcowa korzyść = krańcowy koszt: 20 − 0,1Q = 14 + 0,5Q → Q = 10 (redukcja)\nemisja = 30 − 10 = 20 tys. ton" }
+        ]
+      },
+      {
+        "label": "3", "pts": 2.5,
+        "prompt": "Jaki koszt całkowity poniesie przedsiębiorstwo, redukując zanieczyszczenia do poziomu z punktu 2?",
+        "answers": [{ "label": "Koszt całkowity (tys. zł)", "value": 165, "tol": 0.01 }],
+        "solution": [
+          { "t": "f", "x": "KC(10) = 14 × 10 + 0,25 × 10² = 140 + 25 = 165 tys. zł" }
+        ]
+      },
+      {
+        "label": "4", "pts": 2.5,
+        "prompt": "Jaka powinna być opłata za emisję, aby przedsiębiorstwo samo zredukowało zanieczyszczenia do poziomu maksymalizującego korzyść społeczną netto?",
+        "answers": [{ "label": "Opłata (tys. zł / tys. ton)", "value": 19, "tol": 0.01 }],
+        "solution": [
+          { "t": "f", "x": "opłata = krańcowy koszt przy Q = 10: 14 + 0,5 × 10 = 19 (= 20 − 0,1 × 10)" }
+        ]
+      }
+    ]
+  }
+}

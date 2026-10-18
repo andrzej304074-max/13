@@ -1,0 +1,96 @@
+{
+  "set": "owe-21-centralne",
+  "ed": 21,
+  "stage": "c",
+  "essays": [
+    {
+      "id": "owe-21-centralne-esej",
+      "kind": "ogolne",
+      "pts": 20,
+      "topic": "makro",
+      "topics": [
+        {
+          "title": "Scharakteryzuj poziom życia gospodarstw domowych w Polsce na tle krajów Unii Europejskiej",
+          "schema": [
+            { "title": "I. Wybrane aspekty teoretyczne", "pts": null, "points": [
+              "Pojęcie poziomu życia gospodarstw domowych",
+              "Sposoby pomiaru poziomu życia i podstawowe mierniki",
+              "Główne czynniki mikro- i makroekonomiczne determinujące poziom życia"
+            ] },
+            { "title": "II. Wybrane aspekty empiryczne", "pts": null, "points": [
+              "Aspekt ekonomiczny poziomu życia w Polsce i UE (dochody i wydatki, oszczędności i zadłużenie, dobra trwałego użytku)",
+              "Aspekt pozaekonomiczny (zdrowie i długość życia, edukacja, kultura, środowisko)",
+              "Zmiany poziomu życia gospodarstw domowych w ostatnich latach",
+              "Rozmiar ubóstwa i wykluczenia społecznego w Polsce i UE"
+            ] },
+            { "title": "III. Własna ocena i wnioski", "pts": null, "points": [
+              "Zróżnicowanie poziomu życia w grupach społeczno-ekonomicznych",
+              "Dystans poziomu życia między Polską a pozostałymi krajami UE",
+              "Przewidywane tendencje w kontekście globalizacji i integracji europejskiej"
+            ] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "owe-21-centralne-esej-sponsor",
+      "kind": "sponsor",
+      "pts": 10,
+      "topic": "finanse",
+      "topics": [
+        { "title": "Przedstaw, z jakich instrumentów ubezpieczeniowych powinno skorzystać gospodarstwo domowe, które zaciągnęło długoterminowy kredyt mieszkaniowy. Uzasadnij swój wybór", "schema": [] },
+        { "title": "Na podstawie mapy ryzyka osób często podróżujących za granicę przedstaw propozycję kompleksowego pakietu ubezpieczeń dla tego segmentu klientów", "schema": [] },
+        { "title": "Scharakteryzuj znaczenie prewencji w ubezpieczeniach oraz wskaż najlepsze – Twoim zdaniem – programy prewencji", "schema": [] }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-21-centralne-zadanie",
+    "title": "Zadanie analityczne",
+    "pts": 10,
+    "topic": "mikro",
+    "intro": [
+      { "t": "p", "x": "Na rynku telefonii komórkowej działają dwa konkurencyjne przedsiębiorstwa. Koszty krańcowe są stałe i wynoszą 0,40 zł/min; przeciętne koszty całkowite są równe krańcowym. Każde może ustalić cenę wysoką (0,80 zł/min) lub niską (0,60 zł/min). Miesięczna sprzedaż każdej firmy:" },
+      { "t": "ul", "items": [
+        "obie wysokie ceny: po 2,5 mln minut,",
+        "obie niskie ceny: po 3,5 mln minut,",
+        "jedna wysoka, druga niska: firma z wysoką ceną 1,25 mln minut, firma z niską 6 mln minut."
+      ] },
+      { "t": "p", "x": "Firmy ustalają ceny niezależnie i maksymalizują zysk. Klucz nie podaje punktacji poleceń – w aplikacji każde jest warte 2,5 pkt." }
+    ],
+    "parts": [
+      {
+        "label": "1", "pts": 2.5,
+        "prompt": "Jaką politykę cenową (wysokie czy niskie ceny) wybiorą przedsiębiorstwa? Uzasadnij.",
+        "answers": [],
+        "solution": [
+          { "t": "f", "x": "zysk = (cena − 0,40) × sprzedaż (mln zł)\nobie W: 0,4 × 2,5 = 1,0 / 1,0\nobie N: 0,2 × 3,5 = 0,7 / 0,7\nW vs N: 0,4 × 1,25 = 0,5 / 0,2 × 6 = 1,2" },
+          { "t": "p", "x": "Niska cena jest strategią dominującą: gdy konkurent ustali wysoką cenę – niska daje 1,2 > 1,0; gdy niską – niska daje 0,7 > 0,5. Obie firmy wybiorą niskie ceny (dylemat więźnia – razem zarobiłyby więcej przy wysokich)." }
+        ]
+      },
+      {
+        "label": "2", "pts": 2.5,
+        "prompt": "Ile wyniesie miesięczny zysk całkowity każdej firmy przy strategii z punktu 1 (mln zł)?",
+        "answers": [{ "label": "Zysk każdej firmy (mln zł)", "value": 0.7, "tol": 0.001 }],
+        "solution": [{ "t": "f", "x": "(0,60 − 0,40) × 3,5 mln = 0,7 mln zł miesięcznie" }]
+      },
+      {
+        "label": "3", "pts": 2.5,
+        "prompt": "Czy odpowiedź z punktu 1 zmieniłaby się, gdyby przy cenach 0,60 i 0,80 zł/min sprzedaż wynosiła odpowiednio 4 mln i 2 mln minut (zamiast 6 i 1,25 mln)? Uzasadnij.",
+        "answers": [],
+        "solution": [
+          { "t": "f", "x": "W vs N: firma z wysoką ceną 0,4 × 2 = 0,8; z niską 0,2 × 4 = 0,8" },
+          { "t": "p", "x": "Tak – teraz dominuje wysoka cena: gdy konkurent ustali wysoką cenę – wysoka daje 1,0 > 0,8; gdy niską – wysoka daje 0,8 > 0,7. Obie firmy wybiorą wysokie ceny (zysk po 1,0 mln zł)." }
+        ]
+      },
+      {
+        "label": "4", "pts": 2.5,
+        "prompt": "Jakie działania powinny podjąć firmy, aby zmiany cen rynkowych jak najmniej wpływały na ich udział w rynku?",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Usztywnić popyt na swoje usługi (obniżyć jego elastyczność cenową): reklama i budowa marki (przekonanie o niepowtarzalności usług), programy lojalnościowe, sprzedaż wiązana, utrudnienia w wypowiadaniu umów." }
+        ]
+      }
+    ]
+  }
+}

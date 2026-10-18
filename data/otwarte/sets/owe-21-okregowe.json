@@ -1,0 +1,91 @@
+{
+  "set": "owe-21-okregowe",
+  "ed": 21,
+  "stage": "o",
+  "essays": [
+    {
+      "id": "owe-21-okregowe-esej",
+      "kind": "ogolne",
+      "pts": 20,
+      "topic": "finanse",
+      "topics": [
+        {
+          "title": "Scharakteryzuj proces oszczędzania gospodarstw domowych oraz czynniki określające wybór formy oszczędzania",
+          "schema": [
+            { "title": "I. Wybrane aspekty teoretyczne", "pts": null, "points": [
+              "Pojęcie oszczędności gospodarstwa domowego",
+              "Wybór międzyokresowy – oszczędności jako odłożona konsumpcja",
+              "Motywy oszczędzania gospodarstw domowych",
+              "Główne czynniki determinujące poziom oszczędności",
+              "Mechanizm powstawania oszczędności w wybranych teoriach (cykl życia, dochód permanentny, funkcja oszczędności Keynesa)"
+            ] },
+            { "title": "II. Wybrane aspekty empiryczne", "pts": null, "points": [
+              "Formy oszczędzania dostępne dla gospodarstw domowych",
+              "Determinanty wyboru form oszczędzania",
+              "Dywersyfikacja portfela lokat – stopa zwrotu a ryzyko",
+              "Rozmiary i struktura oszczędności gospodarstw domowych w Polsce"
+            ] },
+            { "title": "III. Własna ocena i wnioski", "pts": null, "points": [
+              "Wpływ poziomu oszczędności na kondycję gospodarstw domowych i sytuację gospodarczą kraju",
+              "Przyczyny zróżnicowania stóp oszczędności gospodarstw domowych",
+              "Propozycje pożądanych zmian w strukturze oszczędności w aspekcie mikro- i makroekonomicznym"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-21-okregowe-zadanie",
+    "title": "Zadanie sprawdzające umiejętność korzystania z danych statystycznych",
+    "pts": 10,
+    "topic": "makro",
+    "intro": [
+      { "t": "p", "x": "Przeciętne miesięczne wydatki na towary i usługi konsumpcyjne na 1 osobę w gospodarstwach domowych (GUS, Budżety gospodarstw domowych 1999 i 2006). Ceny w 2006 r. były wyższe o 27% niż w 1999 r. Wskaźniki struktury i dynamiki podawaj z dokładnością do dwóch miejsc po przecinku. (W arkuszu było też pytanie do załączonego artykułu prasowego – pominięte, bo klucz nie zawiera artykułu.)" },
+      { "t": "table", "head": ["Grupy wydatków", "1999", "2006"], "rows": [
+        ["Żywność i napoje bezalkoholowe", "171 zł", "202 zł"],
+        ["Odzież i obuwie", "34 zł", "40 zł"],
+        ["Użytkowanie mieszkania i nośniki energii, wyposażenie mieszkania i prowadzenie gospodarstwa domowego", "136 zł", "185 zł"],
+        ["Zdrowie, rekreacja i kultura, edukacja", "68 zł", "100 zł"],
+        ["Transport i łączność", "66 zł", "104 zł"],
+        ["Pozostałe wydatki konsumpcyjne", "55 zł", "82 zł"],
+        ["Ogółem", "530 zł", "713 zł"]
+      ] }
+    ],
+    "parts": [
+      {
+        "label": "a", "pts": 2,
+        "prompt": "Jaki był udział wydatków na zdrowie, rekreację i kulturę oraz edukację w wydatkach ogółem w 2006 r.?",
+        "answers": [{ "label": "Udział (%)", "value": 14.03, "tol": 0.01, "unit": "%" }],
+        "solution": [{ "t": "f", "x": "100 / 713 × 100% ≈ 14,03%" }]
+      },
+      {
+        "label": "b", "pts": 2,
+        "prompt": "O ile procent wzrosły w 2006 r. (wobec 1999 r.) wydatki na użytkowanie mieszkania, nośniki energii, wyposażenie i prowadzenie gospodarstwa domowego?",
+        "answers": [{ "label": "Wzrost (%)", "value": 36.03, "tol": 0.01, "unit": "%" }],
+        "solution": [{ "t": "f", "x": "dynamika = 185 / 136 × 100 ≈ 136,03 → wzrost o 36,03%" }]
+      },
+      {
+        "label": "c", "pts": 2,
+        "prompt": "W której grupie dynamika wydatków (1999 = 100) była największa i ile wyniosła?",
+        "answers": [{ "label": "Największa dynamika (1999 = 100)", "value": 157.58, "tol": 0.01 }],
+        "solution": [
+          { "t": "f", "x": "żywność 118,13; odzież 117,65; mieszkanie 136,03; zdrowie i kultura 147,06; transport i łączność 157,58; pozostałe 149,09; ogółem 134,53" },
+          { "t": "p", "x": "Największa dynamika – transport i łączność: 104 / 66 × 100 ≈ 157,58." }
+        ]
+      },
+      {
+        "label": "d", "pts": 2,
+        "prompt": "O ile procent realnie wzrosły wydatki na towary i usługi konsumpcyjne ogółem?",
+        "answers": [{ "label": "Realny wzrost (%)", "value": 5.93, "tol": 0.01, "unit": "%" }],
+        "solution": [{ "t": "f", "x": "dynamika nominalna = 713 / 530 × 100 ≈ 134,53\ndynamika realna = 134,53 / 1,27 ≈ 105,93 → wzrost o 5,93%" }]
+      },
+      {
+        "label": "e", "pts": 2,
+        "prompt": "Ile wynosiły wydatki na odzież i obuwie w 2006 r. w cenach z 1999 r.?",
+        "answers": [{ "label": "Wydatki w cenach 1999 (zł)", "value": 31.5, "tol": 0.01 }],
+        "solution": [{ "t": "f", "x": "40 / 1,27 ≈ 31,50 zł" }]
+      }
+    ]
+  }
+}

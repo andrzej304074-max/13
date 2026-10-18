@@ -1,0 +1,91 @@
+{
+  "set": "owe-22-szkolne",
+  "ed": 22,
+  "stage": "s",
+  "essays": [
+    {
+      "id": "owe-22-szkolne-esej",
+      "kind": "ogolne",
+      "pts": 20,
+      "topic": "polityka",
+      "topics": [
+        {
+          "title": "Do jakich konsekwencji społeczno-gospodarczych może doprowadzić kontynuacja obecnych tendencji zmian klimatu Ziemi i co czynić, aby zapobiec ich katastrofalnym następstwom? Przedstaw własną propozycję, w jaki sposób zapewnić przyszłym pokoleniom przyjazne, niezbędne im do życia i pracy środowisko naturalne",
+          "schema": [
+            { "title": "Kryteria oceny z klucza (klucz nie podaje schematu treści)", "pts": 20, "points": [
+              "Zgodność treści odpowiedzi z pytaniem",
+              "Poziom merytoryczny wypowiedzi",
+              "Użyta terminologia ekonomiczna",
+              "Trafne przykłady",
+              "Poprawność językowa",
+              "Przejrzystość struktury odpowiedzi",
+              "Nieszablonowość ujęcia"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-22-szkolne-zadanie",
+    "title": "Zadanie z podstaw ekonomii",
+    "pts": 10,
+    "topic": "mikro",
+    "intro": [
+      { "t": "p", "x": "Rynkowa funkcja podaży baterii: q = 36 + 2p; funkcja popytu: q = 114 − 4p (q – liczba baterii w mln szt., p – cena w zł)." }
+    ],
+    "parts": [
+      {
+        "label": "1", "pts": 1,
+        "prompt": "Narysuj funkcje popytu (D) i podaży (S) (w brudnopisie).",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Krzywa S rośnie (przecina oś ilości w 36), krzywa D opada (przecina oś ceny w 28,5, oś ilości w 114). Przecinają się w punkcie równowagi E = (qe; pe) = (62; 13)." }
+        ]
+      },
+      {
+        "label": "2", "pts": 1,
+        "prompt": "Oblicz cenę i ilość równowagi.",
+        "answers": [
+          { "label": "Cena równowagi (zł)", "value": 13, "tol": 0.01 },
+          { "label": "Ilość równowagi (mln szt.)", "value": 62, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "f", "x": "36 + 2p = 114 − 4p → 6p = 78 → p = 13 zł\nq = 36 + 26 = 62 mln szt." }
+        ]
+      },
+      {
+        "label": "3", "pts": 2,
+        "prompt": "Rząd wprowadza opłatę produktową 2,00 zł/szt. pobieraną od producentów. Oblicz nową cenę i ilość równowagi.",
+        "answers": [
+          { "label": "Nowa cena (zł)", "value": 13.67, "tol": 0.01 },
+          { "label": "Nowa ilość (mln szt.)", "value": 59.33, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "p", "x": "Opłata od ilości przesuwa krzywą podaży w górę o 2 zł – producenci chcą otrzymać taką samą cenę netto jak wcześniej:" },
+          { "t": "f", "x": "q′ = 36 + 2(p′ − 2) = 32 + 2p′\n32 + 2p′ = 114 − 4p′ → 6p′ = 82 → p′ = 13 2/3 ≈ 13,67 zł\nq′ = 114 − 4 × 13 2/3 = 59 1/3 ≈ 59,33 mln szt." }
+        ]
+      },
+      {
+        "label": "4", "pts": 2,
+        "prompt": "Oblicz wpływy państwa z opłaty produktowej (mln zł).",
+        "answers": [{ "label": "Wpływy z opłaty (mln zł)", "value": 118.67, "tol": 0.02 }],
+        "solution": [
+          { "t": "f", "x": "59 1/3 mln szt. × 2 zł ≈ 118,67 mln zł" }
+        ]
+      },
+      {
+        "label": "5", "pts": 4,
+        "prompt": "Jak rozłoży się obciążenie opłatą między nabywców i sprzedawców? Uzasadnij.",
+        "answers": [
+          { "label": "Część opłaty płacona przez nabywców (zł/szt.)", "value": 0.67, "tol": 0.01 },
+          { "label": "Część opłaty ponoszona przez sprzedawców (zł/szt.)", "value": 1.33, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "f", "x": "nabywcy: 13,67 − 13 = 0,67 zł (2/3 zł)\nsprzedawcy otrzymują netto 13,67 − 2 = 11,67 zł → tracą 13 − 11,67 = 1,33 zł (4/3 zł)" },
+          { "t": "p", "x": "Większą część opłaty ponoszą producenci, bo podaż jest relatywnie mniej elastyczna cenowo niż popyt (popyt silniej reaguje na cenę: dq/dp = −4 wobec +2 dla podaży). Produkcja w równowadze spada z 62 do ok. 59,33 mln szt." }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "set": "owe-23-centralne",
+  "ed": 23,
+  "stage": "c",
+  "essays": [
+    {
+      "id": "owe-23-centralne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "polityka",
+      "topics": [
+        {
+          "title": "W świetle wybranych teorii cyklów koniunkturalnych wskaż argumenty za i przeciw stabilizacji gospodarki przez państwo",
+          "schema": [
+            { "title": "I. Wybrane aspekty teoretyczne", "pts": null, "points": [
+              "Podejście klasyczne – czy samoregulujący mechanizm przywraca równowagę po szokach?",
+              "Podejście keynesistów – niedoskonałości rynku i sztywność płac i cen a brak równowagi długookresowej",
+              "Teorie pieniężne – czy polityka pieniężna wpływa na realne procesy gospodarcze?",
+              "Polityczne teorie cyklu – w jakim stopniu wahania są efektem decyzji politycznych?"
+            ] },
+            { "title": "II. Stabilizacja wahań koniunkturalnych – spór na argumenty", "pts": null, "points": [
+              "Przeciwdziałanie bezrobociu i dążenie do pełnego zatrudnienia jako przyczyna ingerencji państwa",
+              "Zmniejszanie fluktuacji dochodów i produkcji jako przeciwdziałanie niedoskonałościom rynku",
+              "Wpływ działań państwa na oczekiwania podmiotów rynkowych",
+              "Skutki deficytu budżetowego i długu publicznego – czy obciążać długiem przyszłe pokolenia?",
+              "Opóźnienia transmisji impulsów polityki antycyklicznej",
+              "Prognozowanie koniunktury a dobór instrumentów stabilizacyjnych",
+              "Szoki zewnętrzne – czy można je neutralizować?"
+            ] },
+            { "title": "III. Działalność państwa a cykle koniunkturalne", "pts": null, "points": [
+              "Wpływ polityki fiskalnej i pieniężnej na dynamikę realnego PKB w długim okresie",
+              "Dobór instrumentów polityki antycyklicznej: system podatkowy, wydatki konsumpcyjne, publiczne inwestycje, polityka innowacyjna",
+              "Kontrowersje wokół efektu wypierania"
+            ] },
+            { "title": "IV. Własna ocena i wnioski", "pts": null, "points": [
+              "Współzależność gospodarek a międzynarodowa koordynacja polityki gospodarczej",
+              "Deficyt finansów publicznych: przyczyna czy wynik fluktuacji?",
+              "Automatyczne a uznaniowe reguły polityki gospodarczej",
+              "Ocena programów polityki antycyklicznej w Polsce na tle doświadczeń międzynarodowych"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-23-centralne-zadanie",
+    "title": "Zadanie analityczne",
+    "pts": 15,
+    "topic": "mikro",
+    "intro": [
+      { "t": "p", "x": "Sprzedaż jachtów podlega silnym wahaniom cyklicznym. Właściciel firmy musi przed sezonem zdecydować o wielkości zamówienia. Prognozy: 60% szans na poprawę koniunktury (sprzedaż o połowę większa niż dotąd) i 40% na stagnację (sprzedaż jak rok temu – 100 szt.)." },
+      { "t": "table", "head": ["Zamówienie", "Zysk przy poprawie", "Zysk przy stagnacji"], "rows": [
+        ["150 szt.", "350 tys. €", "−150 tys. €"],
+        ["100 szt.", "225 tys. €", "100 tys. €"]
+      ] },
+      { "t": "p", "x": "Klucz nie podaje punktacji poleceń – w aplikacji każde polecenie jest warte 5 pkt." }
+    ],
+    "parts": [
+      {
+        "label": "1", "pts": 5,
+        "prompt": "Jaką wielkość zamówienia powinien złożyć właściciel? Podaj oczekiwany zysk obu wariantów (tys. €).",
+        "answers": [
+          { "label": "Oczekiwany zysk – 150 szt. (tys. €)", "value": 150, "tol": 0.01 },
+          { "label": "Oczekiwany zysk – 100 szt. (tys. €)", "value": 175, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "f", "x": "E(150) = 60% × 350 + 40% × (−150) = 210 − 60 = 150 tys. €\nE(100) = 60% × 225 + 40% × 100 = 135 + 40 = 175 tys. €" },
+          { "t": "p", "x": "Należy zamówić 100 szt. – wartość oczekiwana zysku jest wyższa." }
+        ]
+      },
+      {
+        "label": "2", "pts": 5,
+        "prompt": "Firma reklamowa za 15 tys. € (nieuwzględnione w wynikach) gwarantuje wyższe ceny: przy poprawie zysk 450 tys. € (150 szt.) lub 250 tys. € (100 szt.); przy stagnacji −140 tys. € (150 szt.) lub 110 tys. € (100 szt.). Czy skorzystać z reklamy i czy zmieni się zamówienie? Podaj oczekiwany zysk najlepszego wariantu po odjęciu kosztu reklamy.",
+        "answers": [{ "label": "Oczekiwany zysk z reklamą, po jej koszcie (tys. €)", "value": 199, "tol": 0.01 }],
+        "solution": [
+          { "t": "f", "x": "E(150) = 60% × 450 + 40% × (−140) = 270 − 56 = 214 tys. €\nE(100) = 60% × 250 + 40% × 110 = 150 + 44 = 194 tys. €\npo koszcie reklamy: 214 − 15 = 199 tys. € > 175 tys. €" },
+          { "t": "p", "x": "Warto skorzystać z reklamy i zwiększyć zamówienie do 150 szt. – przyrost oczekiwanego zysku przewyższa koszt usług reklamowych." }
+        ]
+      },
+      {
+        "label": "3", "pts": 5,
+        "prompt": "Właściciel zaufał prognozom, a ex post koniunktura okazała się inna (prawdopodobieństwa były inne). Czy podjął złą decyzję? Jak powinien się zachowywać?",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Nie – jeśli prognozy były wypadkową niezależnych analiz, a właściciel nie miał lepszych informacji, podjął optymalną decyzję w danych warunkach (maksymalizacja wartości oczekiwanej zysku). Informacji ex post nie można używać do oceny decyzji podjętej ex ante. Działalność gospodarcza nierozerwalnie wiąże się z ryzykiem; decyzje oparte na rozkładzie prawdopodobieństwa dają w długim okresie lepsze efekty niż intuicyjne przewidywania." }
+        ]
+      }
+    ]
+  }
+}

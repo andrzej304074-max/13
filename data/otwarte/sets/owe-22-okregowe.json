@@ -1,0 +1,68 @@
+{
+  "set": "owe-22-okregowe",
+  "ed": 22,
+  "stage": "o",
+  "essays": [
+    {
+      "id": "owe-22-okregowe-esej",
+      "kind": "ogolne",
+      "pts": 20,
+      "topic": "polityka",
+      "topics": [
+        {
+          "title": "Omów znaczenie środowiska naturalnego dla rozwoju gospodarczego oraz przedstaw jego wpływ na zróżnicowanie regionalne Polski",
+          "schema": [
+            { "title": "I. Wybrane aspekty teoretyczne", "pts": null, "points": [
+              "Znaczenie środowiska naturalnego w procesach produkcji i konsumpcji",
+              "Główne założenia modelu trwałego i zrównoważonego rozwoju",
+              "Polityka regionalna a budowanie spójności ekonomicznej",
+              "Rola państwa w przeciwdziałaniu efektom zewnętrznym i błędom rynku"
+            ] },
+            { "title": "II. Wybrane aspekty empiryczne", "pts": null, "points": [
+              "Wpływ ograniczoności zasobów środowiska na długookresowe tempo rozwoju",
+              "Instytucje i instrumenty polityki ekologicznej i ich wpływ na rozwój regionalny Polski",
+              "Finansowanie nakładów na ochronę środowiska i jego efektywność ekonomiczna",
+              "Społeczne i gospodarcze skutki różnic jakości środowiska w Polsce"
+            ] },
+            { "title": "III. Własna ocena i wnioski", "pts": null, "points": [
+              "Ocena realizacji w Polsce strategii zrównoważonego rozwoju",
+              "Główne wyzwania dla polityki regionalnej w Polsce w XXI wieku",
+              "Szanse i zagrożenia wynikające ze zróżnicowania walorów przyrodniczych Polski na tle UE",
+              "Propozycje zmian polityki ekologicznej w warunkach globalizacji"
+            ] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "owe-22-okregowe-esej-artykul",
+      "kind": "ogolne",
+      "pts": 20,
+      "topic": "firma",
+      "topics": [
+        {
+          "title": "Pytanie do artykułu M. Szczepaniuka „Klimat zachwieje gospodarką” („Gazeta Prawna” nr 177 z 10.09.2008; tekst artykułu nie jest dołączony w aplikacji): omów znaczenie celów ekologicznych w strategiach przedsiębiorstw oraz ich rolę w budowaniu długookresowej przewagi konkurencyjnej",
+          "schema": [
+            { "title": "I. Wybrane aspekty teoretyczne", "pts": null, "points": [
+              "Rola elementów środowiskowych we współczesnych metodach zarządzania przedsiębiorstwem",
+              "Ryzyko i odpowiedzialność jako nieodłączne cechy biznesu",
+              "Benchmarking ekologiczny i społeczna odpowiedzialność biznesu jako sposób na konkurencyjność w dobie globalizacji",
+              "Korzyści i koszty systemu zarządzania środowiskowego w przedsiębiorstwie"
+            ] },
+            { "title": "II. Analiza głównych tez artykułu", "pts": null, "points": [
+              "Główne ryzyka związane ze zmianami klimatycznymi",
+              "Wpływ zmian klimatycznych na przedsiębiorstwa z różnych gałęzi gospodarki",
+              "Konsekwencje przeobrażeń klimatu dla długookresowej przewagi konkurencyjnej"
+            ] },
+            { "title": "III. Własna ocena i wnioski", "pts": null, "points": [
+              "Ekologiczne i ekonomiczne efekty strategii prośrodowiskowych",
+              "Świadomość krótko- i długookresowych skutków zmian klimatu wśród polskich przedsiębiorstw",
+              "Perspektywy innowacyjnych rozwiązań przedsiębiorstw w ochronie środowiska"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": null
+}

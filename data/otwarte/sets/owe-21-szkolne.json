@@ -1,0 +1,100 @@
+{
+  "set": "owe-21-szkolne",
+  "ed": 21,
+  "stage": "s",
+  "essays": [
+    {
+      "id": "owe-21-szkolne-esej",
+      "kind": "ogolne",
+      "pts": 20,
+      "topic": "makro",
+      "topics": [
+        {
+          "title": "Na przykładzie Twojego regionu omów, jak sytuacja na rynku czynników wytwórczych (ziemi, pracy i kapitału) wpływa na sytuację dochodową i majątkową gospodarstw domowych",
+          "schema": [
+            { "title": "I. Wybrane aspekty teoretyczne", "pts": null, "points": [
+              "Decyzje gospodarstw domowych o alokacji posiadanych czynników wytwórczych (ziemi, pracy, kapitału)",
+              "Cechy rynków czynników – cena i ilość równowagi, przyczyny i skutki nierównowagi, przywracanie równowagi",
+              "Ingerencja państwa w rynki czynników (płaca minimalna, związki zawodowe, opodatkowanie dochodów i majątku)"
+            ] },
+            { "title": "II. Wybrane aspekty empiryczne", "pts": null, "points": [
+              "Wpływ lokalnego rynku pracy na dochody gospodarstw domowych – skutki nierównowagi (bezrobocie, brak specjalistów)",
+              "Zmiany sytuacji dochodowej i majątkowej gospodarstw domowych w procesach wzrostu (region na tle kraju)",
+              "Znaczenie dochodów gospodarstw domowych dla zamożności regionów"
+            ] },
+            { "title": "III. Własna ocena i wnioski", "pts": null, "points": [
+              "Ocena sytuacji dochodowej i majątkowej gospodarstw domowych w regionie w świetle zmian na rynkach czynników",
+              "Ocena polityki państwa wobec popytu i podaży pracy i jej wpływu na dochody gospodarstw domowych",
+              "Szanse i zagrożenia integracji z UE i globalizacji dla sytuacji ekonomicznej gospodarstw domowych"
+            ] }
+          ]
+        },
+        {
+          "title": "Scharakteryzuj przyczyny migracji ludności oraz oceń ich wpływ na sytuację ekonomiczną gospodarstw domowych w Twoim regionie",
+          "schema": [
+            { "title": "I. Wybrane aspekty teoretyczne", "pts": null, "points": [
+              "Pojęcie migracji i jej typologia",
+              "Przyczyny migracji",
+              "Konsekwencje międzynarodowej mobilności zasobów pracy"
+            ] },
+            { "title": "II. Wybrane aspekty empiryczne", "pts": null, "points": [
+              "Społeczno-ekonomiczne uwarunkowania migracji Polaków w okresie transformacji",
+              "Skala i charakter migracji w regionie po akcesji do UE a sytuacja gospodarstw domowych",
+              "Wpływ migracji na aktywność ekonomiczną ludności i sytuację demograficzną kraju"
+            ] },
+            { "title": "III. Własna ocena i wnioski", "pts": null, "points": [
+              "Konsekwencje migracji dla gospodarstw domowych",
+              "Korzyści i koszty migracji dla gospodarki Polski (rynek pracy, bilans płatniczy itp.)",
+              "Propozycje działań państwa przeciwdziałających negatywnym skutkom migracji"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-21-szkolne-zadanie",
+    "title": "Zadanie z podstaw ekonomii",
+    "pts": 10,
+    "topic": "mikro",
+    "intro": [
+      { "t": "p", "x": "Użyteczność całkowita (TU, w zł) z konsumpcji różnych ilości batonów orzechowych (Q) przez pewnego konsumenta:" },
+      { "t": "table", "head": ["Q", "0", "1", "2", "3", "4", "5"], "rows": [
+        ["TU", "0", "4", "7", "9", "10", "9"],
+        ["MU", "–", "…", "…", "…", "…", "…"]
+      ] }
+    ],
+    "parts": [
+      {
+        "label": "1", "pts": 3,
+        "prompt": "Wyjaśnij, czym jest użyteczność krańcowa (MU).",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Użyteczność krańcowa to dodatkowa satysfakcja (zadowolenie), jaką konsument uzyskuje ze zwiększenia konsumpcji dobra lub usługi o kolejną jednostkę: MU = ΔTU / ΔQ." }
+        ]
+      },
+      {
+        "label": "2", "pts": 3,
+        "prompt": "Oblicz użyteczność krańcową kolejnych batonów (Q = 1, 2, 3, 4, 5).",
+        "answers": [
+          { "label": "MU 1. batona", "value": 4, "tol": 0.01 },
+          { "label": "MU 2. batona", "value": 3, "tol": 0.01 },
+          { "label": "MU 3. batona", "value": 2, "tol": 0.01 },
+          { "label": "MU 4. batona", "value": 1, "tol": 0.01 },
+          { "label": "MU 5. batona", "value": -1, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "f", "x": "MU = TU(Q) − TU(Q − 1)\n4 − 0 = 4; 7 − 4 = 3; 9 − 7 = 2; 10 − 9 = 1; 9 − 10 = −1" }
+        ]
+      },
+      {
+        "label": "3", "pts": 4,
+        "prompt": "Cena batona wynosi 2 zł. Ile batonów kupi konsument? Wyjaśnij dlaczego.",
+        "answers": [{ "label": "Liczba batonów", "value": 3, "tol": 0.01 }],
+        "solution": [
+          { "t": "p", "x": "Konsument kupi 3 batony – kupuje kolejne jednostki, dopóki użyteczność krańcowa ostatniej jednostki nie spadnie poniżej ceny; maksimum zadowolenia osiąga, gdy MU ostatniej kupionej jednostki zrówna się z ceną (MU 3. batona = 2 zł = cena). Czwarty baton (MU = 1 zł) nie jest wart 2 zł." }
+        ]
+      }
+    ]
+  }
+}

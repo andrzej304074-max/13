@@ -1,0 +1,124 @@
+{
+  "set": "owe-23-szkolne",
+  "ed": 23,
+  "stage": "s",
+  "essays": [
+    {
+      "id": "owe-23-szkolne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "firma",
+      "topics": [
+        {
+          "title": "Na przykładach wybranych przez siebie firm przedstaw, jak obserwowane na świecie spowolnienie gospodarcze wpływa na funkcjonowanie przedsiębiorstw",
+          "schema": [
+            { "title": "I. Otoczenie biznesowe a działalność gospodarcza w warunkach kryzysu", "pts": null, "points": [
+              "Wpływ siły konkurentów i dostawców na rozwój firm",
+              "Zmiany popytu jako reakcja na spowolnienie gospodarcze",
+              "Znaczenie kultury organizacyjnej i jej odporność na zaburzenia",
+              "Znaczenie przewidywań koniunktury dla krótko- i długookresowych decyzji przedsiębiorstw",
+              "Funkcjonowanie przedsiębiorstw w warunkach globalizacji i integracji gospodarczej"
+            ] },
+            { "title": "II. Dobre i złe praktyki w warunkach spowolnienia", "pts": null, "points": [
+              "Identyfikacja rynkowych szans i zagrożeń",
+              "Przeformułowanie celów i działania zapobiegawcze",
+              "Wdrożenie strategii i monitoring jej efektów"
+            ] },
+            { "title": "III. „W tym szaleństwie jest metoda”", "pts": null, "points": [
+              "Przypadki nowych firm, które kryzys gospodarczy przekuły w sukces"
+            ] },
+            { "title": "IV. Własna ocena i wnioski", "pts": null, "points": [
+              "Konsekwencje spowolnienia dla wyników finansowych przedsiębiorstw",
+              "Wpływ kryzysu na wartość i reputację przedsiębiorstwa",
+              "Rola zarządzania strategicznego i scenariuszy sytuacji kryzysowych"
+            ] }
+          ]
+        },
+        {
+          "title": "Przedstaw, jak wahania koniunktury wpływają na zachowania gospodarstw domowych w zakresie konsumpcji i oszczędzania",
+          "schema": [
+            { "title": "I. Wybrane aspekty teoretyczne", "pts": null, "points": [
+              "Sytuacja na rynku pracy a dochody gospodarstw domowych",
+              "Prawidłowości w rozkładach wydatków gospodarstw domowych (prawo Engla)",
+              "Podstawowe uwarunkowania oszczędności gospodarstw domowych w teorii ekonomii",
+              "Znaczenie koniunktury konsumenckiej dla decyzji ekonomicznych gospodarstw domowych"
+            ] },
+            { "title": "II. Wybrane aspekty empiryczne", "pts": null, "points": [
+              "Wpływ koniunktury na zróżnicowanie sytuacji ekonomicznej gospodarstw domowych",
+              "Główne tendencje zmian wzorców konsumpcji wobec pogorszenia klimatu gospodarczego",
+              "Poziom, forma i cele oszczędzania w warunkach spowolnienia gospodarczego",
+              "Problem niewypłacalności gospodarstw domowych"
+            ] },
+            { "title": "III. Własna ocena i wnioski", "pts": null, "points": [
+              "Ocena antycyklicznej polityki państwa i jej wpływu na dochody i wydatki gospodarstw domowych",
+              "Zagrożenie ubóstwem i wykluczeniem społecznym",
+              "Wpływ wahań koniunktury na dochodowość lokat, w tym oszczędności emerytalnych",
+              "Społeczno-ekonomiczne skutki niewypłacalności gospodarstw domowych"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-23-szkolne-zadanie",
+    "title": "Zadanie z podstaw ekonomii",
+    "pts": 15,
+    "topic": "makro",
+    "intro": [
+      { "t": "p", "x": "Podstawowe wielkości makroekonomiczne pewnego europejskiego kraju (mld EUR, ceny bieżące):" },
+      { "t": "table", "head": ["Wyszczególnienie", "2000", "2004", "2008"], "rows": [
+        ["Amortyzacja", "30", "40", "50"],
+        ["Dochody netto obywateli za granicą", "10", "20", "30"],
+        ["Eksport", "150", "140", "200"],
+        ["Import", "160", "180", "160"],
+        ["Dochody podatkowe", "120", "140", "160"],
+        ["Transfery", "30", "40", "50"],
+        ["Wydatki inwestycyjne brutto", "80", "90", "120"],
+        ["Wydatki konsumpcyjne", "250", "280", "320"],
+        ["Wydatki państwa na zakup dóbr i usług", "100", "110", "120"]
+      ] },
+      { "t": "p", "x": "Ceny w 2004 r. były wyższe o 15% niż w 2000 r., a w 2008 r. o 10% wyższe niż w 2004 r." }
+    ],
+    "parts": [
+      {
+        "label": "1", "pts": 2,
+        "prompt": "Ile wyniósł PKB w 2004 r. w cenach bieżących?",
+        "answers": [{ "label": "PKB 2004 (mld EUR)", "value": 440, "tol": 0.01 }],
+        "solution": [{ "t": "f", "x": "PKB = C + G + I + X − M = 280 + 110 + 90 + 140 − 180 = 440 mld EUR" }]
+      },
+      {
+        "label": "2", "pts": 2,
+        "prompt": "Ile wyniósł eksport netto w 2000 r.?",
+        "answers": [{ "label": "Eksport netto 2000 (mld EUR)", "value": -10, "tol": 0.01 }],
+        "solution": [{ "t": "f", "x": "eksport netto = 150 − 160 = −10 mld EUR (import netto 10 mld EUR)" }]
+      },
+      {
+        "label": "3", "pts": 2,
+        "prompt": "Ile wyniosło saldo budżetu państwa w 2008 r.?",
+        "answers": [{ "label": "Saldo budżetu 2008 (mld EUR)", "value": -10, "tol": 0.01 }],
+        "solution": [{ "t": "f", "x": "saldo = dochody podatkowe − transfery − wydatki na dobra i usługi = 160 − 50 − 120 = −10 mld EUR (deficyt)" }]
+      },
+      {
+        "label": "4", "pts": 3,
+        "prompt": "Ile wyniósł produkt narodowy netto w 2004 r.?",
+        "answers": [{ "label": "PNN 2004 (mld EUR)", "value": 420, "tol": 0.01 }],
+        "solution": [{ "t": "f", "x": "PNN = PKB + dochody netto z zagranicy − amortyzacja = 440 + 20 − 40 = 420 mld EUR" }]
+      },
+      {
+        "label": "5", "pts": 3,
+        "prompt": "Ile wyniósł PKB w 2004 r. w cenach z 2000 r.?",
+        "answers": [{ "label": "Realny PKB 2004 (mld EUR)", "value": 382.6, "tol": 0.5 }],
+        "solution": [{ "t": "f", "x": "440 / 1,15 ≈ 382,6 ≈ 383 mld EUR" }]
+      },
+      {
+        "label": "6", "pts": 3,
+        "prompt": "Ile wyniósł realny wzrost PKB w latach 2000–2008 (w %)?",
+        "answers": [{ "label": "Realny wzrost PKB 2000–2008 (%)", "value": 12.9, "tol": 0.15, "unit": "%" }],
+        "solution": [
+          { "t": "f", "x": "PKB 2000 = 250 + 100 + 80 + 150 − 160 = 420\nPKB 2008 = 320 + 120 + 120 + 200 − 160 = 600\nwzrost realny = (600 / 420) / (1,15 × 1,10) − 1 ≈ 1,4286 / 1,265 − 1 ≈ 12,9% (≈ 13%)" }
+        ]
+      }
+    ]
+  }
+}
