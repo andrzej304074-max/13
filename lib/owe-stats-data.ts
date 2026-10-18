@@ -1,5 +1,6 @@
 import { COURSE, OWE_STATS } from "@/data/nauka";
 import type { ItemMeta } from "./owe-stats";
+import { openAll } from "./otwarte";
 
 /** Dane statystyk OWE po stronie serwera: rekordy pytań i opisy haseł, działów, zagadnień. */
 export function oweStatsData() {
@@ -16,6 +17,8 @@ export function oweStatsData() {
     topics: COURSE.topics.filter((t) => usedTopics.has(t.id)).map(({ id, title, emoji }) => ({ id, title, emoji })),
     units: Object.fromEntries(COURSE.units.map((u) => [u.id, { title: u.title, topic: u.topic }])),
     kinds: COURSE.kinds.filter((k) => k.id !== "zrozumienie"),
+    /** Eseje i zadania z kluczy (bez pytań testowych): edycja, etap, dział, hasło przewodnie. */
+    open: openAll().map(({ id, kind, ed, stage, topic, th, title }) => ({ id, kind, ed, st: stage, topic, th, title })),
   };
 }
 

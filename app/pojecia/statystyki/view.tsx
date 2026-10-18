@@ -6,9 +6,12 @@ import { useData } from "@/lib/data-client";
 import { PageSkeleton } from "../table";
 import { api, fmtPct, LETTERS } from "@/lib/client";
 import {
-  DEFAULT_FILTER, ROMAN, STAGES, filterFromParams, filterRecs, filterToParams, itemCounts, topicShares, unitCounts,
-  type ItemMeta, type OweFilter, type OweRec, type Stage,
+  DEFAULT_FILTER, ROMAN, STAGES, filterFromParams, filterRecs, filterToParams, itemCounts, openStats, themeShares, topicShares, unitCounts,
+  type ItemMeta, type OpenRec, type OweFilter, type OweRec, type Stage,
 } from "@/lib/owe-stats";
+import { THEMES } from "@/data/olimpiada/info";
+import { ThemeSelect } from "../filters";
+import { ThemeShareCard } from "../theme-card";
 import { SkeletonRows } from "@/app/components/loading-page";
 import { LoadError } from "@/app/components/load-error";
 
@@ -18,6 +21,7 @@ interface Data {
   topics: { id: string; title: string; emoji: string }[];
   units: Record<string, { title: string; topic: string }>;
   kinds: { id: string; title: string }[];
+  open: OpenRec[];
 }
 
 type Q = { id: string; edition: string; question: string; options: string[]; correct: number[]; type: string };
@@ -26,6 +30,8 @@ const KIND_ONE: Record<string, string> = {
   pojecie: "pojęcie", wzor: "wzór", osoba: "osoba", instytucja: "instytucja", data: "data", przepis: "przepis",
 };
 const STEP = 50;
+/** Działy esejów i zadań bez odpowiednika w pytaniach testowych. */
+const OPEN_TOPIC: Record<string, string> = { mikro: "Mikroekonomia", makro: "Makroekonomia", polityka: "Polityka gospodarcza", finanse: "Finanse", firma: "Przedsiębiorstwo", zarzadzanie: "Zarządzanie", demografia: "Demografia" };
 
 export function OweStatsView({ data }: { data: Data }) {
   const [f, setF] = useState<OweFilter | null>(null);
@@ -52,6 +58,9 @@ export function OweStatsView({ data }: { data: Data }) {
       topics: topicShares(recs, topicName, f.order),
       units: unitCounts(recs, f, data.units),
       items: itemCounts(recs, f, data.meta),
+      // udział pytań z hasła liczony bez filtra hasła (inaczej byłby zawsze 0% albo 100%)
+      theme: themeShares(filterRecs(data.recs, { ...f, theme: "all" }, data.meta)),
+      open: openStats(data.open, f),
     };
   }, [f, data, topicName]);
 
@@ -118,6 +127,7 @@ export function OweStatsView({ data }: { data: Data }) {
               {data.kinds.map((k) => <option key={k.id} value={k.id}>{k.title}</option>)}
             </select>
           </label>
+          <ThemeSelect value={f.theme} set={(theme) => set({ theme })} />
           <label className="filters">Kolejność
             <select className="select" value={f.order} onChange={(e) => set({ order: e.target.value as OweFilter["order"] })}>
               <option value="desc">od największej liczby</option>
@@ -155,6 +165,14 @@ export function OweStatsView({ data }: { data: Data }) {
         ))}
         {res.topics.length === 0 && <p className="muted">Brak pytań.</p>}
       </div>
+
+      <h2>Pytania z hasła przewodniego</h2>
+      <p className="muted" style={{ marginTop: -8 }}>
+        Jaka część pytań testowych danej edycji dotyczyła jej hasła przewodniego (po filtrach typu, etapu, działu i rodzaju haseł).
+        Klasyfikacja: słowa kluczowe hasła w treści pytania i ręczny przegląd wszystkich pytań. Kliknij edycję, aby ją wybrać.
+      </p>
+      <ThemeShareCard shares={res.theme} edFrom={f.edFrom} edTo={f.edTo}
+        pick={(ed) => set(f.edFrom === ed && f.edTo === ed ? { edFrom: 21, edTo: 39 } : { edFrom: ed, edTo: ed })} />
 
       <h2>Zagadnienia {f.topic && <span className="muted">– {topicName[f.topic]}</span>}</h2>
       <div className="card table-wrap" data-testid="owe-units">
@@ -233,6 +251,46 @@ export function OweStatsView({ data }: { data: Data }) {
             <button className="btn small secondary" onClick={() => setItemLimit(res.items.length)}>Pokaż wszystkie ({res.items.length})</button>
           </div>
         )}
+      </div>
+      <h2>Eseje i zadania</h2>
+      <p className="muted" style={{ marginTop: -8 }}>
+        Pytania opisowe (eseje) i zadania z kluczy XXI–XXXIX OWE – osobno, bez pytań jedno- i wielokrotnego wyboru. Działają filtry etapu,
+        edycji, działu i hasła przewodniego.
+      </p>
+      <div className="card stack" data-testid="owe-open">
+        <p style={{ margin: 0 }} data-testid="owe-open-total">
+          <strong>{res.open.total.n}</strong> ({res.open.total.essays} esejów, {res.open.total.tasks} zadań) · z hasła przewodniego swojej edycji:{" "}
+          <strong>{fmtPct(res.open.total.pct)}</strong> <span className="muted">({res.open.total.th})</span>
+        </p>
+        <div className="table-wrap">
+          <table className="stat-table">
+            <thead><tr><th>Edycja</th><th className="num">Eseje</th><th className="num">Zadania</th><th className="num">Z hasła</th></tr></thead>
+            <tbody>
+              {res.open.eds.map((r) => (
+                <tr key={r.ed}>
+                  <td>{ROMAN[r.ed]} OWE<div className="muted q-meta">„{THEMES[r.ed - 1]?.theme}”</div></td>
+                  <td className="num">{r.essays}</td><td className="num">{r.tasks}</td>
+                  <td className="num"><strong>{r.th}</strong>/{r.n}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="table-wrap">
+          <table className="stat-table" data-testid="owe-open-topics">
+            <thead><tr><th>Dział</th><th className="num">Eseje</th><th className="num">Zadania</th><th className="num">Z hasła</th></tr></thead>
+            <tbody>
+              {res.open.topics.map((r) => (
+                <tr key={r.topic}>
+                  <td>{topicName[r.topic] ?? OPEN_TOPIC[r.topic] ?? r.topic}</td>
+                  <td className="num">{r.essays}</td><td className="num">{r.tasks}</td>
+                  <td className="num"><strong>{r.th}</strong>/{r.n}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        {res.open.total.n === 0 && <p className="muted">Brak esejów i zadań dla wybranych filtrów.</p>}
       </div>
       <ToTop />
     </div>

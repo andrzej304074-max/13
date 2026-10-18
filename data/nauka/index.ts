@@ -2,6 +2,7 @@ import course from "./course.json";
 import zrozum from "./zrozum.json";
 import oweStats from "./owe-stats.json";
 import slownikStats from "./slownik-stats.json";
+import theme from "../olimpiada/theme.json";
 import type { Course, ZContent } from "@/lib/nauka-types";
 import type { OweRec, SlRec } from "@/lib/owe-stats";
 
@@ -9,5 +10,7 @@ import type { OweRec, SlRec } from "@/lib/owe-stats";
 // i ręcznych lekcji „Zrozumienie” z tools/nauka/zrozum).
 export const COURSE = course as unknown as Course;
 export const ZROZUM = zrozum as unknown as Record<string, ZContent>;
-export const OWE_STATS = oweStats as unknown as OweRec[];
+// Pytania dotyczące hasła przewodniego swojej edycji (tools/otwarte/theme.py + ręczne poprawki) – pole `th`.
+const THEME_Q = new Set(theme.questions);
+export const OWE_STATS = (oweStats as unknown as OweRec[]).map((r) => (THEME_Q.has(r.id) ? { ...r, th: 1 as const } : r));
 export const SLOWNIK_STATS = slownikStats as unknown as SlRec[];

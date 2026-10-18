@@ -1,6 +1,6 @@
 "use client";
 
-import { ROMAN, STAGES, type Stage } from "@/lib/owe-stats";
+import { ROMAN, STAGES, type Stage, type ThemeFilter } from "@/lib/owe-stats";
 
 /** Wspólny formularz filtrów pytań OWE (typ, edycje, etap, dział, rodzaj) – statystyki, pokrycie, moje statystyki. */
 export interface FilterValue {
@@ -10,6 +10,8 @@ export interface FilterValue {
   edTo: number;
   topic: string | null;
   kind: string | null;
+  /** Hasło przewodnie (tylko pytania OWE) – pole pokazywane, gdy filtr je ma. */
+  theme?: ThemeFilter;
 }
 
 export function OweFilterFields<F extends FilterValue>({ f, set, topics, kinds, editions = true, stageLabel = "Etap", children }: {
@@ -60,6 +62,7 @@ export function OweFilterFields<F extends FilterValue>({ f, set, topics, kinds, 
             {kinds.map((k) => <option key={k.id} value={k.id}>{k.title}</option>)}
           </select>
         </label>
+        {editions && f.theme !== undefined && <ThemeSelect value={f.theme} set={(theme) => set({ theme } as Partial<F>)} />}
         {children}
       </div>
       {editions && (
@@ -75,5 +78,18 @@ export function OweFilterFields<F extends FilterValue>({ f, set, topics, kinds, 
         </div>
       )}
     </>
+  );
+}
+
+/** Filtr hasła przewodniego: pytania o hasło swojej edycji (klasyfikacja tools/otwarte/theme.py + ręczny przegląd). */
+export function ThemeSelect({ value, set }: { value: ThemeFilter; set: (v: ThemeFilter) => void }) {
+  return (
+    <label className="filters">Hasło przewodnie
+      <select className="select" value={value} onChange={(e) => set(e.target.value as ThemeFilter)} data-testid="theme-filter">
+        <option value="all">wszystkie pytania</option>
+        <option value="yes">tylko z hasła swojej edycji</option>
+        <option value="no">bez hasła edycji</option>
+      </select>
+    </label>
   );
 }

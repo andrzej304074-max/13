@@ -3,7 +3,7 @@
  * osobno dla pytań OWE i słownikowych. Dokładność pytania jak w statystykach testów: jednokrotny 0/1,
  * wielokrotny – punkty / 2 (4 trafne pola – 2 pkt, 3 – 1 pkt), pominięte 0.
  */
-import type { ItemMeta, OweRec, SlRec, Stage } from "./owe-stats";
+import { themeOk, type ItemMeta, type OweRec, type SlRec, type Stage, type ThemeFilter } from "./owe-stats";
 
 export type Range = "7d" | "30d" | "all";
 export type Sort = "weak" | "strong" | "count";
@@ -20,13 +20,15 @@ export interface MyFilter {
   stages: Stage[];
   edFrom: number;
   edTo: number;
+  /** Tylko OWE: hasło przewodnie swojej edycji. */
+  theme: ThemeFilter;
   /** Tylko słownik: pochodzenie pytań i dział słownika. */
   origin: "a" | "m" | null;
   sec: number | null;
 }
 
 export const DEFAULT_MY_FILTER: MyFilter = {
-  type: "all", range: "all", sort: "weak", topic: null, kind: null, stages: ["s", "o", "c"], edFrom: 21, edTo: 39, origin: null, sec: null,
+  type: "all", range: "all", sort: "weak", topic: null, kind: null, stages: ["s", "o", "c"], edFrom: 21, edTo: 39, theme: "all", origin: null, sec: null,
 };
 
 export interface MyRow {
@@ -52,7 +54,7 @@ export interface MyStats {
 }
 
 /** Wspólne pola rekordów pytań OWE i słownikowych (pola jednej bazy są w drugiej puste). */
-type Rec = Pick<OweRec, "id" | "t" | "items"> & { topic: string | null; unit: string | null; ed?: number; st?: Stage; o?: SlRec["o"]; sec?: number | null };
+type Rec = Pick<OweRec, "id" | "t" | "items" | "th"> & { topic: string | null; unit: string | null; ed?: number; st?: Stage; o?: SlRec["o"]; sec?: number | null };
 const DAY = 86400000;
 const pct = (c: number, t: number) => (t > 0 ? Math.round((c / t) * 1000) / 10 : 0);
 
@@ -92,7 +94,7 @@ export function aggregate(answers: MyAnswer[], recs: readonly Rec[], meta: Recor
     const r = byId.get(a.q);
     if (!r || a.at < since) continue;
     if (f.type !== "all" && r.t !== f.type) continue;
-    if (r.ed !== undefined && (!f.stages.includes(r.st as Stage) || r.ed < f.edFrom || r.ed > f.edTo)) continue;
+    if (r.ed !== undefined && (!f.stages.includes(r.st as Stage) || r.ed < f.edFrom || r.ed > f.edTo || !themeOk(r, f.theme))) continue;
     if (r.o !== undefined && ((f.origin && r.o !== f.origin) || (f.sec && r.sec !== f.sec))) continue;
     if (f.kind && !r.items.some((i) => meta[i]?.kind === f.kind)) continue;
     // dział i zagadnienie – według przydziału pytania; filtr działu zawęża zagadnienia i pojęcia (jak w statystykach OWE)
@@ -130,6 +132,7 @@ export function myFilterFromParams(p: URLSearchParams): MyFilter {
     stages: st.length ? [...new Set(st)] : ["s", "o", "c"],
     edFrom: Math.min(edFrom, edTo),
     edTo: Math.max(edFrom, edTo),
+    theme: p.get("haslo") === "tak" ? "yes" : p.get("haslo") === "nie" ? "no" : "all",
     origin: poch === "a" || poch === "m" ? poch : null,
     sec: num("sekcja", 0, 1, 99) || null,
   };
@@ -145,6 +148,7 @@ export function myFilterToParams(f: MyFilter): string {
   if (f.stages.length < 3) p.set("etap", f.stages.join(""));
   if (f.edFrom !== 21) p.set("od", String(f.edFrom));
   if (f.edTo !== 39) p.set("do", String(f.edTo));
+  if (f.theme !== "all") p.set("haslo", f.theme === "yes" ? "tak" : "nie");
   if (f.origin) p.set("poch", f.origin);
   if (f.sec) p.set("sekcja", String(f.sec));
   return p.toString();

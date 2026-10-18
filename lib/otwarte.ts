@@ -1,5 +1,6 @@
 import { SETS } from "@/data/otwarte";
 import { THEMES } from "@/data/olimpiada/info";
+import themeMap from "@/data/olimpiada/theme.json";
 import { query } from "./db";
 import {
   publicEssay, publicTask, scoreEssay, scoreTask, STAGE_NAME,
@@ -13,7 +14,11 @@ export type OpenKind = "zadanie" | "esej";
 export interface OpenMeta {
   id: string; kind: OpenKind; set: string; ed: number; edRoman: string; year: string; stage: Stage; stageName: string;
   title: string; pts: number; topic: string; theme: string; choose: number;
+  /** Dotyczy hasła przewodniego swojej edycji (tools/otwarte/theme.py + ręczny przegląd). */
+  th: boolean;
 }
+
+const THEME_OPEN = new Set(themeMap.open);
 
 const roman = (ed: number) => THEMES[ed - 1]?.ed ?? String(ed);
 const yearOf = (ed: number) => THEMES[ed - 1]?.year ?? "";
@@ -27,7 +32,7 @@ for (const s of SETS) {
 
 const meta = (kind: OpenKind, s: OpenSet, id: string, title: string, pts: number, topic: string, choose = 1): OpenMeta => ({
   id, kind, set: s.set, ed: s.ed, edRoman: roman(s.ed), year: yearOf(s.ed), stage: s.stage, stageName: STAGE_NAME[s.stage],
-  title, pts, topic, theme: THEMES[s.ed - 1]?.theme ?? "", choose,
+  title, pts, topic, theme: THEMES[s.ed - 1]?.theme ?? "", choose, th: THEME_OPEN.has(id),
 });
 const ALL: OpenMeta[] = [
   ...[...TASKS.values()].map(({ set, task }) => meta("zadanie", set, task.id, task.title, task.pts, task.topic)),
@@ -36,6 +41,8 @@ const ALL: OpenMeta[] = [
 ].sort((a, b) => b.ed - a.ed || "soc".indexOf(a.stage) - "soc".indexOf(b.stage));
 
 export const openMeta = (id: string) => ALL.find((m) => m.id === id) ?? null;
+/** Wszystkie eseje i zadania (metadane) – do statystyk tematów. */
+export const openAll = (): readonly OpenMeta[] => ALL;
 
 export function openCounts() {
   return { zadanie: TASKS.size, esej: ESSAYS.size };

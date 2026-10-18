@@ -6,10 +6,11 @@ import { ToTop } from "@/app/components/to-top";
 import { fmtPct } from "@/lib/client";
 import { useData } from "@/lib/data-client";
 import {
-  DEFAULT_FILTER, DEFAULT_REPEAT, ROMAN, STAGES, coverage, filterFromParams, filterToParams, stageMatrix,
+  DEFAULT_FILTER, DEFAULT_REPEAT, ROMAN, STAGES, coverage, filterFromParams, filterRecs, filterToParams, stageMatrix, themeShares,
   type ItemMeta, type MatrixCol, type OweFilter, type OweRec, type RepeatOpts, type RepeatWindow, type Stage,
 } from "@/lib/owe-stats";
 import { OweFilterFields } from "../filters";
+import { ThemeShareCard } from "../theme-card";
 import { PageSkeleton } from "../table";
 import { LoadError } from "@/app/components/load-error";
 
@@ -76,7 +77,9 @@ export function CoverageView({ data }: { data: Data }) {
   // wykres i tabela zawsze dla wszystkich edycji – wybrany zakres jest podświetlony
   const covAll = useMemo(() => (f ? coverage(data.recs, { ...f, edFrom: 21, edTo: 39 }, data.meta, rep) : null), [f, rep, data]);
   const matrix = useMemo(() => (f ? stageMatrix(data.recs, f, data.meta, rep) : null), [f, rep, data]);
-  if (!f || !cov || !covAll || !matrix) return <PageSkeleton title="Pokrycie olimpiad" />;
+  // udział pytań z hasła przewodniego (wszystkie edycje, bez filtra hasła)
+  const shares = useMemo(() => (f ? themeShares(filterRecs(data.recs, { ...f, theme: "all", edFrom: 21, edTo: 39 }, data.meta)) : null), [f, data]);
+  if (!f || !cov || !covAll || !matrix || !shares) return <PageSkeleton title="Pokrycie olimpiad" />;
 
   const set = (o: Partial<OweFilter>) => setF({ ...f, ...o });
   const setR = (o: Partial<RepeatOpts>) => setRep({ ...rep, ...o });
@@ -99,6 +102,7 @@ export function CoverageView({ data }: { data: Data }) {
         <p className="muted">
           Jaka część pytań lub pojęć olimpiady powtarza się z wcześniejszych lat. Wybierz osobno, <strong>które pytania badasz</strong> (np. etap szkolny)
           i <strong>z czego liczysz powtórki</strong> (np. etapy szkolne i okręgowe wszystkich wcześniejszych edycji). XXI OWE to początek danych.
+          Filtr hasła przewodniego zawęża badane pytania (np. tylko pytania o hasło swojej edycji); powtórki liczą się ze wszystkich wcześniejszych pytań.
         </p>
       </header>
 
@@ -208,6 +212,12 @@ export function CoverageView({ data }: { data: Data }) {
             </tbody>
           </table>
         </div>
+      </section>
+
+      <section className="stack" style={{ marginTop: 0 }}>
+        <h2 className="card-title">Pytania z hasła przewodniego edycji</h2>
+        <ThemeShareCard shares={shares} edFrom={f.edFrom} edTo={f.edTo}
+          pick={(ed) => set(f.edFrom === ed && f.edTo === ed ? { edFrom: 21, edTo: 39 } : { edFrom: ed, edTo: ed })} />
       </section>
 
       <div className="two-col">

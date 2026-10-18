@@ -17,7 +17,11 @@ export interface OweRec {
   topic: string | null;
   unit: string | null;
   items: string[];
+  /** 1 – pytanie dotyczy hasła przewodniego swojej edycji. */
+  th?: 1;
 }
+
+export type ThemeFilter = "all" | "yes" | "no";
 
 export interface ItemMeta {
   title: string;
@@ -34,6 +38,8 @@ export interface OweFilter {
   topic: string | null;
   /** Rodzaj hasła (pojecie, wzor, osoba…) – liczą się pytania o hasła tego rodzaju. */
   kind: string | null;
+  /** Hasło przewodnie: wszystkie pytania, tylko z hasła swojej edycji albo bez niego. */
+  theme: ThemeFilter;
   order: "desc" | "asc";
 }
 
@@ -60,7 +66,25 @@ export function filterRecs(recs: OweRec[], f: OweFilter, meta: Record<string, It
     (f.type === "all" || r.t === f.type)
     && f.stages.includes(r.st)
     && r.ed >= f.edFrom && r.ed <= f.edTo
-    && (!f.kind || r.items.some((i) => meta[i]?.kind === f.kind)));
+    && (!f.kind || r.items.some((i) => meta[i]?.kind === f.kind))
+    && themeOk(r, f.theme));
+}
+
+/** Filtr hasła przewodniego (brak pola – jak „wszystkie”). */
+export const themeOk = (r: Pick<OweRec, "th">, t: ThemeFilter | undefined) => !t || t === "all" || (t === "yes") === (r.th === 1);
+
+/** Udział pytań z hasła przewodniego w każdej edycji (po pozostałych filtrach, bez filtra hasła). */
+export function themeShares(recs: OweRec[]) {
+  const c = new Map<number, { n: number; th: number }>();
+  for (const r of recs) {
+    const e = c.get(r.ed) ?? { n: 0, th: 0 };
+    e.n++;
+    if (r.th === 1) e.th++;
+    c.set(r.ed, e);
+  }
+  const rows = [...c].sort((a, b) => a[0] - b[0]).map(([ed, e]) => ({ ed, n: e.n, th: e.th, pct: pct(e.th, e.n) }));
+  const n = rows.reduce((s, r) => s + r.n, 0), th = rows.reduce((s, r) => s + r.th, 0);
+  return { rows, total: { n, th, pct: pct(th, n) } };
 }
 
 const pct = (n: number, total: number) => (total > 0 ? Math.round((n / total) * 1000) / 10 : 0);
@@ -106,7 +130,7 @@ export function itemCounts(recs: OweRec[], f: OweFilter, meta: Record<string, It
   return sortRows(rows, f.order);
 }
 
-export const DEFAULT_FILTER: OweFilter = { type: "all", stages: ["s", "o", "c"], edFrom: 21, edTo: 39, topic: null, kind: null, order: "desc" };
+export const DEFAULT_FILTER: OweFilter = { type: "all", stages: ["s", "o", "c"], edFrom: 21, edTo: 39, topic: null, kind: null, theme: "all", order: "desc" };
 
 /** Filtry ↔ parametry adresu (?typ=single&etap=so&od=30&do=39&dzial=mikro&rodzaj=osoba&kolejnosc=asc). */
 export function filterFromParams(p: URLSearchParams, edMin = 21, edMax = 39): OweFilter {
@@ -124,6 +148,7 @@ export function filterFromParams(p: URLSearchParams, edMin = 21, edMax = 39): Ow
     edTo: Math.max(edFrom, edTo),
     topic: p.get("dzial") || null,
     kind: p.get("rodzaj") || null,
+    theme: p.get("haslo") === "tak" ? "yes" : p.get("haslo") === "nie" ? "no" : "all",
     order: p.get("kolejnosc") === "asc" ? "asc" : "desc",
   };
 }
@@ -136,6 +161,7 @@ export function filterToParams(f: OweFilter, edMin = 21, edMax = 39): string {
   if (f.edTo !== edMax) p.set("do", String(f.edTo));
   if (f.topic) p.set("dzial", f.topic);
   if (f.kind) p.set("rodzaj", f.kind);
+  if (f.theme !== "all") p.set("haslo", f.theme === "yes" ? "tak" : "nie");
   if (f.order === "asc") p.set("kolejnosc", "asc");
   return p.toString();
 }
@@ -217,7 +243,7 @@ export function coverage(recs: OweRec[], f: OweFilter, meta: Record<string, Item
   // badane pytania: pojęcie edycji liczone raz, w najwcześniejszym etapie, w którym o nie pytano
   const byEd = new Map<number, { first: Map<string, number>; qs: { its: string[]; st: number }[] }>();
   for (const r of typed) {
-    if (!f.stages.includes(r.st) || r.ed < f.edFrom || r.ed > f.edTo) continue;
+    if (!f.stages.includes(r.st) || r.ed < f.edFrom || r.ed > f.edTo || !themeOk(r, f.theme)) continue;
     const its = recItems(r, f, meta);
     if (!its.length) continue;
     const e = byEd.get(r.ed) ?? { first: new Map<string, number>(), qs: [] };
@@ -282,4 +308,30 @@ export function level(correct: number, total: number): Level {
   if (total < 2) return "none";
   const p = correct / total;
   return p >= 0.8 ? "good" : p >= 0.5 ? "mid" : "weak";
+}
+
+/* ---------- eseje i zadania (bez pytań testowych) ---------- */
+
+export interface OpenRec { id: string; kind: "esej" | "zadanie"; ed: number; st: Stage; topic: string; th: boolean; title: string }
+
+/** Eseje i zadania po filtrach etapu, edycji, działu i hasła: wiersze na edycję i na dział, z liczbą „z hasła”. */
+export function openStats(open: OpenRec[], f: OweFilter) {
+  const list = open.filter((o) => f.stages.includes(o.st) && o.ed >= f.edFrom && o.ed <= f.edTo
+    && (!f.topic || o.topic === f.topic) && themeOk({ th: o.th ? 1 : undefined }, f.theme));
+  const tally = <K extends string | number>(key: (o: OpenRec) => K) => {
+    const m = new Map<K, { essays: number; tasks: number; th: number }>();
+    for (const o of list) {
+      const e = m.get(key(o)) ?? { essays: 0, tasks: 0, th: 0 };
+      if (o.kind === "esej") e.essays++; else e.tasks++;
+      if (o.th) e.th++;
+      m.set(key(o), e);
+    }
+    return m;
+  };
+  const eds = [...tally((o) => o.ed)].sort((a, b) => a[0] - b[0])
+    .map(([ed, e]) => ({ ed, ...e, n: e.essays + e.tasks, pct: pct(e.th, e.essays + e.tasks) }));
+  const topics = [...tally((o) => o.topic)].map(([topic, e]) => ({ topic, ...e, n: e.essays + e.tasks, pct: pct(e.th, e.essays + e.tasks) }))
+    .sort((a, b) => (b.n - a.n) * (f.order === "asc" ? -1 : 1) || a.topic.localeCompare(b.topic));
+  const th = list.filter((o) => o.th).length;
+  return { list, eds, topics, total: { n: list.length, essays: list.filter((o) => o.kind === "esej").length, tasks: list.filter((o) => o.kind === "zadanie").length, th, pct: pct(th, list.length) } };
 }
