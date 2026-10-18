@@ -1209,3 +1209,29 @@ body:has(.speech-bar) main.container { padding-bottom: 160px; }
 .bug-status.w_toku { border-color: var(--lv-mid); }
 .bug-status.naprawione { border-color: var(--lv-good); color: var(--good); }
 .bug-status.odrzucone { opacity: .75; }
+
+/* Nauka → Olimpiada / Literatura */
+.olymp h3 { margin: 0; font-size: 1.1rem; }
+.olymp-toc { flex-wrap: wrap; }
+.olymp-stages { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
+.olymp-stage-head { display: flex; align-items: center; gap: 10px; }
+.olymp-badge { display: inline-grid; place-items: center; min-width: 36px; height: 36px; border-radius: 10px; background: var(--accent); color: #fff; font-weight: 700; }
+.olymp-pts { width: 100%; border-collapse: collapse; font-size: .95rem; }
+.olymp-pts td { padding: 6px 0; border-top: 1px solid var(--border); vertical-align: top; }
+.olymp-pts td.num { text-align: right; white-space: nowrap; padding-left: 10px; font-variant-numeric: tabular-nums; }
+.olymp-pts tr.sum td { font-weight: 700; }
+.olymp-practice { font-size: .85rem; white-space: nowrap; }
+.olymp-next { margin: 0; padding: 8px 10px; border-left: 3px solid var(--accent); background: var(--accent-soft); border-radius: 6px; font-size: .95rem; }
+.olymp-cal { list-style: none; margin: 0; padding: 0; }
+.olymp-cal li { display: grid; grid-template-columns: minmax(120px, 34%) 1fr; gap: 10px; padding: 9px 14px; border-top: 1px solid var(--border); }
+.olymp-cal li:first-child { border-top: 0; }
+.olymp-cal li.main { font-weight: 650; background: var(--accent-soft); }
+.olymp-date { font-variant-numeric: tabular-nums; }
+.olymp-list { margin: 0; padding: 14px 14px 14px 32px; display: flex; flex-direction: column; gap: 8px; }
+.olymp-themes { width: 100%; }
+.olymp-themes tr.current td { font-weight: 700; background: var(--accent-soft); }
+.lit-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.lit-item { display: flex; flex-direction: column; gap: 6px; }
+.lit-links { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: baseline; }
+.lit-links a { overflow-wrap: anywhere; }
+.tag.lit-free { border-color: var(--lv-good); color: var(--good); }

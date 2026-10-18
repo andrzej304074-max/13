@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { loadData } from "@/lib/data-client";
 import { navView } from "@/lib/access-core";
 import { activeTab, isFocusPage } from "@/lib/nav";
@@ -52,11 +52,19 @@ export function SubTabs() {
     return () => clearTimeout(t);
   }, [section]);
   const { blocks, mode } = useAccess();
+  // na telefonie pasek przewija się poziomo – aktywna zakładka zawsze widoczna (np. „Literatura” na końcu listy)
+  const bar = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const el = bar.current, on = el?.querySelector<HTMLElement>('[aria-selected="true"]');
+    if (!el || !on || el.scrollWidth <= el.clientWidth) return;
+    const b = el.getBoundingClientRect(), r = on.getBoundingClientRect();
+    if (r.left < b.left || r.right > b.right) el.scrollLeft += r.left - b.left - (b.width - r.width) / 2;
+  }, [path]);
   if (!cur || isFocusPage(path)) return null;
   const sec = navView(blocks, mode).find((s) => s.id === cur.section.id);
   if (!sec || sec.tabs.length < 2) return null;
   return (
-    <div className="subtabs" role="tablist" aria-label={cur.section.label}>
+    <div className="subtabs" role="tablist" aria-label={cur.section.label} ref={bar}>
       {sec.tabs.map((t) => {
         const on = t.href === cur.tab.href;
         const lock = t.state === "lock";

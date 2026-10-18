@@ -1,0 +1,121 @@
+{
+  "edition": "XL",
+  "asOf": "2026-10-18",
+  "source": "https://owe.pte.pl/upload/files/literatura-i-zrodla-wiedzy/literatura-xl.pdf",
+  "groups": [
+    {
+      "id": "podstawowa",
+      "title": "Literatura podstawowa",
+      "items": [
+        { "a": "N.G. Mankiw, M.P. Taylor", "t": "Mikroekonomia i Makroekonomia", "pub": "PWE, Warszawa 2022",
+          "alt": [
+            { "label": "OpenStax: Principles of Economics 2e (bezpłatny podręcznik, ang.) – ten sam zakres mikro i makro", "u": "https://openstax.org/details/books/principles-economics-2e" },
+            { "label": "CORE Econ: The Economy 2.0 (bezpłatny podręcznik online, ang.)", "u": "https://www.core-econ.org/the-economy/" }
+          ] },
+        { "a": "B. Winiarski (red.)", "t": "Polityka gospodarcza", "pub": "PWN, Warszawa 2018",
+          "alt": [
+            { "label": "Eurostat – dane o gospodarkach UE (polityka gospodarcza w liczbach)", "u": "https://ec.europa.eu/eurostat" },
+            { "label": "GUS – dane i publikacje o gospodarce Polski", "u": "https://stat.gov.pl/" }
+          ] },
+        { "a": "S. Owsiak", "t": "Finanse", "pub": "PWE, Warszawa 2015",
+          "alt": [
+            { "label": "ISAP – ustawy o finansach publicznych, podatkach, NBP (teksty jednolite)", "u": "https://isap.sejm.gov.pl/" },
+            { "label": "NBP – polityka pieniężna, raporty, materiały edukacyjne", "u": "https://www.nbp.pl/" }
+          ] },
+        { "a": "W. Gabrusewicz", "t": "Metody analizy finansowej przedsiębiorstw", "pub": "PWE, Warszawa 2019",
+          "alt": [
+            { "label": "Zadania z analizy finansowej z poprzednich lat – w tej aplikacji (Testy → Zadania)", "u": "/zadania", "internal": true }
+          ] },
+        { "a": "R.W. Griffin", "t": "Podstawy zarządzania organizacjami", "pub": "PWN, Warszawa 2017", "alt": [] },
+        { "a": "G. Konat, T. Smuga (red.)", "t": "Paradoksy ekonomii. Rozmowy z polskimi ekonomistami", "pub": "PWN, Warszawa 2016", "alt": [] }
+      ]
+    },
+    {
+      "id": "haslo",
+      "title": "Literatura związana z hasłem przewodnim XL edycji („Gospodarka wobec wyzwań demograficznych”)",
+      "items": [
+        { "a": "C. Goodhart, M. Pradhan", "t": "Wielki zwrot demograficzny. Starzejące się społeczeństwa, zanikanie nierówności i powrót inflacji", "pub": "WEI, Warszawa 2024", "alt": [] },
+        { "a": "J.A. Majcherek", "t": "Demograficzne wyzwania dla systemów społeczno-ekonomicznych", "pub": "Impuls, Kraków 2024", "alt": [] },
+        { "a": "M. Schwabe", "t": "Migracje zarobkowe. Wprowadzenie", "pub": "Wolters Kluwer Polska, Warszawa 2025", "alt": [] },
+        { "a": "N. Barr, P. Diamond", "t": "Reformy systemu emerytalnego. Krótki przewodnik", "pub": "PTE, Warszawa 2014",
+          "alt": [
+            { "label": "N. Barr: Reforming pensions – lessons from economic theory (bezpłatnie, LSE, ang.)", "u": "https://researchonline.lse.ac.uk/id/eprint/123194" },
+            { "label": "ZUS – statystyki emerytur i ubezpieczeń", "u": "https://www.zus.pl/baza-wiedzy/statystyka" }
+          ] },
+        { "a": "M. Okólski, A. Fihel", "t": "Demografia. Współczesne zjawiska i teorie", "pub": "Scholar, Warszawa 2012",
+          "alt": [
+            { "label": "GUS – Rocznik demograficzny 2025 (bezpłatnie)", "u": "https://stat.gov.pl/obszary-tematyczne/roczniki-statystyczne/roczniki-statystyczne/rocznik-demograficzny-2025,3,19.html" },
+            { "label": "ONZ – World Population Prospects 2024, podsumowanie (PDF)", "u": "https://population.un.org/wpp/assets/Files/WPP2024_Summary-of-Results.pdf" }
+          ] }
+      ]
+    },
+    {
+      "id": "uzupelniajaca",
+      "title": "Literatura uzupełniająca",
+      "items": [
+        { "a": "D. Card, A.B. Krueger", "t": "Mit i pomiar. Nowa ekonomia płacy minimalnej", "pub": "PTE, Warszawa 2023",
+          "alt": [
+            { "label": "D. Card, A.B. Krueger (1993): Minimum Wages and Employment – badanie, od którego wyszła książka (NBER, bezpłatnie, ang.)", "u": "https://www.nber.org/papers/w4509" }
+          ] },
+        { "a": "A. Sławiński (red.)", "t": "Polityka pieniężna", "pub": "C.H. Beck, Warszawa 2011",
+          "alt": [ { "label": "NBP – założenia i raporty polityki pieniężnej", "u": "https://www.nbp.pl/" } ] },
+        { "a": "S. Owsiak", "t": "Finanse publiczne. Współczesne ujęcie", "pub": "PWN, Warszawa 2017",
+          "alt": [ { "label": "ISAP – ustawa o finansach publicznych", "u": "https://isap.sejm.gov.pl/" } ] },
+        { "a": "H. Hazlitt", "t": "Ekonomia w jednej lekcji", "pub": "Instytut Ludwiga von Misesa, Warszawa 2018",
+          "free": [
+            { "label": "Fragment (wersja demonstracyjna PDF, wydawca)", "u": "https://sklep.mises.pl/storage/files/products/0/Ekonomia%20w%20Jednej%20Lekcji/Henry%20Hazlitt%20-%20Ekonomia%20w%20jednej%20lekcji%20DEMO.pdf" },
+            { "label": "Economics in One Lesson – oryginał, bezpłatnie (FEE, ang.)", "u": "https://fee.org/resources/economics-in-one-lesson/" }
+          ] },
+        { "a": "E. Kwiatkowski", "t": "Bezrobocie. Podstawy teoretyczne", "pub": "PWN, Warszawa 2018",
+          "alt": [ { "label": "GUS – rynek pracy (dane)", "u": "https://stat.gov.pl/" } ] },
+        { "a": "M. Szczepański", "t": "Długowieczność w systemach emerytalnych. Narzędzia ekonomii behawioralnej i zarządzanie ryzykiem", "pub": "Wyd. Politechniki Poznańskiej, Poznań 2025", "alt": [] },
+        { "a": "F. Chybalski", "t": "Wiek emerytalny z perspektywy ekonomicznej. Studium teoretyczno-empiryczne", "pub": "C.H. Beck, Warszawa 2018", "alt": [] },
+        { "a": "T. Zalega", "t": "Miejscy srebrni single w Polsce. Sytuacja materialna. Konsumpcja. Zachowania konsumenckie i trendy", "pub": "Wydawnictwa UW, Warszawa 2024",
+          "alt": [ { "label": "Komisja Europejska: The Silver Economy – Final report (bezpłatnie)", "u": "https://data.europa.eu/doi/10.2759/685036" } ] },
+        { "a": "M. Okólski", "t": "Demografia. Podstawowe pojęcia, procesy i teorie w encyklopedycznym zarysie", "pub": "Scholar, Warszawa 2004", "alt": [] },
+        { "a": "E. Frąckiewicz, B. Kryk (red.)", "t": "Srebrna gospodarka. Ujęcie społeczno-ekonomiczne", "pub": "CeDeWu, Warszawa 2020",
+          "alt": [ { "label": "Komisja Europejska: The Silver Economy – Final report (bezpłatnie)", "u": "https://data.europa.eu/doi/10.2759/685036" } ] },
+        { "a": "W.M. Orłowski", "t": "Ekonomia dla ciekawych, czyli co zeznał porwany profesor", "pub": "REBIS, Poznań 2022", "alt": [] }
+      ]
+    }
+  ],
+  "theme": {
+    "title": "Bezpłatne źródła do hasła XL edycji (z „Informatora o XL OWE”)",
+    "items": [
+      { "label": "ONZ (2024), World Population Prospects 2024. Summary of Results", "u": "https://population.un.org/wpp/assets/Files/WPP2024_Summary-of-Results.pdf" },
+      { "label": "Komisja Europejska (2023), Zmiana demograficzna w Europie: zestaw narzędzi do działań, COM(2023) 577", "u": "https://eur-lex.europa.eu/legal-content/PL/TXT/PDF/?uri=CELEX:52023DC0577" },
+      { "label": "Komisja Europejska (2016), The Silver Economy – Final report", "u": "https://data.europa.eu/doi/10.2759/685036" },
+      { "label": "MFW (2019), Macroeconomics of Aging and Policy Implications", "u": "https://www.imf.org/external/np/g20/pdf/2019/060519a.pdf" },
+      { "label": "Aiyar, Ebeke, Shao (2016), The Impact of Workforce Aging on European Productivity, IMF WP/16/238", "u": "https://www.imf.org/-/media/websites/imf/imported-full-text-pdf/external/pubs/ft/wp/2016/_wp16238.pdf" },
+      { "label": "Brys, Colin (2020), Population ageing and sub-central governments, OECD", "u": "https://doi.org/10.1787/2bbfbda8-en" },
+      { "label": "EBC, Financial Stability Review (m.in. Navigating financial stability in an aging world, 2025)", "u": "https://www.ecb.europa.eu/pub/financial-stability/fsr/html/index.en.html" },
+      { "label": "GUS, Rocznik demograficzny 2025", "u": "https://stat.gov.pl/obszary-tematyczne/roczniki-statystyczne/roczniki-statystyczne/rocznik-demograficzny-2025,3,19.html" }
+    ]
+  },
+  "general": [
+    { "label": "ISAP – akty prawne (Sejm RP)", "u": "https://isap.sejm.gov.pl/" },
+    { "label": "GUS – Główny Urząd Statystyczny", "u": "https://stat.gov.pl/" },
+    { "label": "NBP – Narodowy Bank Polski", "u": "https://www.nbp.pl/" },
+    { "label": "Obserwator Finansowy (NBP) – artykuły o gospodarce", "u": "https://www.obserwatorfinansowy.pl/" },
+    { "label": "Eurostat – statystyki UE", "u": "https://ec.europa.eu/eurostat" },
+    { "label": "OpenStax: Principles of Economics 2e (bezpłatny podręcznik, ang.)", "u": "https://openstax.org/details/books/principles-economics-2e" },
+    { "label": "CORE Econ: The Economy 2.0 (bezpłatny podręcznik, ang.)", "u": "https://www.core-econ.org/the-economy/" }
+  ],
+  "previous": [
+    { "ed": "XL", "lit": "https://owe.pte.pl/upload/files/literatura-i-zrodla-wiedzy/literatura-xl.pdf", "inf": "https://owe.pte.pl/upload/files/informatory/informator-o-xl-owe.pdf" },
+    { "ed": "XXXIX", "lit": "https://owe.pte.pl/upload/files/literatura-i-zrodla-wiedzy/literatura-xxxix-owe.pdf", "inf": "https://owe.pte.pl/upload/files/informatory/xxxixolimpiada.pdf" },
+    { "ed": "XXXVIII", "lit": "https://pte.lodz.pl/wp-content/uploads/2024/09/Literatura-XXXVIII-OWE.pdf" },
+    { "ed": "XXXVII", "lit": "https://owe.pte.pl/upload/files/literatura-i-zrodla-wiedzy/literatura-xxxvii-owe.pdf", "inf": "https://owe.pte.pl/upload/files/informatory/xxxviiolimpiadainformator.pdf" },
+    { "ed": "XXXVI", "lit": "https://owe.pte.pl/upload/files/literatura-i-zrodla-wiedzy/literatura-xxxvi-owe.pdf" },
+    { "ed": "XXXV", "inf": "https://owe.pte.pl/upload/files/informatory/xxxvolimpiadainformator.pdf" },
+    { "ed": "XXXIV", "inf": "https://owe.pte.pl/upload/files/informatory/xxxivolimpiada.pdf" },
+    { "ed": "XXXIII", "inf": "https://owe.pte.pl/upload/files/informatory/xxxiiiolimpiada.pdf" },
+    { "ed": "XXXII", "inf": "https://owe.pte.pl/upload/files/informatory/xxxiiolimpiadainformator.pdf" },
+    { "ed": "XXXI", "inf": "https://owe.pte.pl/upload/files/informatory/xxxiolimpiadainformator.pdf" },
+    { "ed": "XXX", "inf": "https://owe.pte.pl/upload/files/informatory/xxxolimpiadainformator.pdf" },
+    { "ed": "XXIX", "inf": "https://owe.pte.pl/upload/files/informatory/informator-o-xxix-owe.pdf" },
+    { "ed": "XXVIII", "inf": "https://owe.pte.pl/upload/files/informatory/informator-o-xxviii-owe.pdf" },
+    { "ed": "XXVII", "inf": "https://owe.pte.pl/upload/files/informatory/informator-o-xxvii-owe.pdf" }
+  ],
+  "archive": "https://owe.pte.pl/informacje/poprzednie-edycje/zestawy-pytan-z-poprzednich-edycji.html"
+}

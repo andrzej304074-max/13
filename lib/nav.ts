@@ -13,6 +13,8 @@ export const NAV: NavSection[] = [
     { href: "/fiszki", label: "Fiszki" },
     { href: "/fiszki/talie", label: "Moje talie" },
     { href: "/nauka/powtorka", label: "Powtórka" },
+    { href: "/nauka/olimpiada", label: "Olimpiada" },
+    { href: "/nauka/literatura", label: "Literatura" },
   ] },
   { id: "pojecia", icon: "📖", label: "Pojęcia", tabs: [
     { href: "/pojecia", label: "Tabela" },
