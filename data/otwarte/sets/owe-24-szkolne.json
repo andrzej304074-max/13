@@ -1,0 +1,87 @@
+{
+  "set": "owe-24-szkolne",
+  "ed": 24,
+  "stage": "s",
+  "essays": [
+    {
+      "id": "owe-24-szkolne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "finanse",
+      "topics": [
+        {
+          "title": "Wyjaśnij, jak powstanie i rozwój pieniądza elektronicznego wpłynęły na funkcje realizowane przez pieniądz oraz zachowania gospodarstw domowych",
+          "schema": [
+            { "title": "Przykładowy schemat odpowiedzi", "pts": 25, "points": [
+              "Charakterystyka ekonomicznych funkcji pieniądza",
+              "Powstanie pieniądza elektronicznego i jego cechy",
+              "Rodzaje elektronicznych instrumentów płatniczych",
+              "Zalety i wady elektronicznych środków płatniczych",
+              "Możliwości realizacji ekonomicznych funkcji pieniądza przez pieniądz elektroniczny",
+              "Wpływ pieniądza elektronicznego na zachowania gospodarstw domowych"
+            ] }
+          ]
+        },
+        {
+          "title": "Pieniądz jest nie tylko dobrem rzadkim, ale jest także narażony na utratę wartości. Omów problem gospodarowania pieniądzem w warunkach inflacji",
+          "schema": [
+            { "title": "Przykładowy schemat odpowiedzi", "pts": 25, "points": [
+              "Istota inflacji i jej przyczyny",
+              "Skutki procesów inflacyjnych dla podmiotów rynkowych",
+              "Złudzenie inflacyjne a zachowania gospodarstw domowych",
+              "Wpływ inflacji na redystrybucję dochodów i alokację zasobów w gospodarce",
+              "Inflacja a budżet państwa",
+              "Strategie inwestowania w warunkach inflacji"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-24-szkolne-zadanie",
+    "title": "Zadanie z podstaw ekonomii",
+    "pts": 15,
+    "topic": "makro",
+    "intro": [
+      { "t": "p", "x": "Tabela przedstawia zmiany poziomu cen oraz wynagrodzenia nominalnego i realnego w górnictwie węgla kamiennego w latach 2007–2009 w pewnym kraju Europy Środkowo-Wschodniej. Komórki „…” uzupełniasz w punkcie 1." },
+      { "t": "table", "head": ["Rok", "Zmiana wynagrodzenia nominalnego (%)", "Zmiana poziomu cen – inflacja (%)", "Zmiana wynagrodzenia realnego (%)"], "rows": [
+        ["2007", "6", "4", "…"],
+        ["2008", "…", "9", "2,75"],
+        ["2009", "8", "…", "−3,52"]
+      ] }
+    ],
+    "parts": [
+      {
+        "label": "1", "pts": 6,
+        "prompt": "Uzupełnij tabelę z dokładnością do dwóch miejsc po przecinku (3 pkt) i zapisz, jak otrzymałeś każdy wynik (3 pkt).",
+        "answers": [
+          { "label": "Zmiana płacy realnej 2007 (%)", "value": 1.92, "tol": 0.01 },
+          { "label": "Zmiana płacy nominalnej 2008 (%)", "value": 12, "tol": 0.01 },
+          { "label": "Inflacja 2009 (%)", "value": 11.94, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "f", "x": "zmiana płacy realnej = [(1 + zmiana nominalna) / (1 + inflacja) − 1] × 100%\n2007: (1,06 / 1,04 − 1) × 100% ≈ 1,92%\n2008: (1 + x) / 1,09 − 1 = 0,0275 → x = 1,0275 × 1,09 − 1 ≈ 0,12 = 12%\n2009: 1,08 / (1 + x) − 1 = −0,0352 → x = 1,08 / 0,9648 − 1 ≈ 0,1194 = 11,94%" }
+        ]
+      },
+      {
+        "label": "2", "pts": 4,
+        "prompt": "O ile procent zmieniło się wynagrodzenie nominalne w całym okresie 2007–2009? Czy na tej podstawie można wnioskować o poprawie sytuacji dochodowej rodzin górników? Uzasadnij.",
+        "answers": [{ "label": "Zmiana płacy nominalnej 2007–2009 (%)", "value": 28.22, "tol": 0.01, "unit": "%" }],
+        "solution": [
+          { "t": "f", "x": "(1,06 × 1,12 × 1,08 − 1) × 100% ≈ 28,22%" },
+          { "t": "p", "x": "Nie można – trzeba uwzględnić zmianę cen; analiza musi opierać się na wartościach realnych (ile dóbr i usług można kupić). Ponadto dochody gospodarstw domowych zależą też od innych źródeł niż wynagrodzenie (np. dochodów z własności)." }
+        ]
+      },
+      {
+        "label": "3", "pts": 5,
+        "prompt": "Związki zawodowe zapowiadają strajk pod hasłem „Dość obniżek realnego wynagrodzenia w górnictwie!”, powołując się na lata 2007–2009. Czy hasło ma uzasadnienie? Oblicz łączną zmianę płacy realnej i zinterpretuj.",
+        "answers": [{ "label": "Zmiana płacy realnej 2007–2009 (%)", "value": 1.04, "tol": 0.01, "unit": "%" }],
+        "solution": [
+          { "t": "f", "x": "(1,0192 × 1,0275 × (1 − 0,0352) − 1) × 100% ≈ 1,04%" },
+          { "t": "p", "x": "Hasło nie ma uzasadnienia: w całym okresie płaca realna wzrosła o ok. 1,04% – płace nominalne rosły szybciej niż ceny, więc siła nabywcza górników się zwiększyła (spadek realny wystąpił tylko w 2009 r.)." }
+        ]
+      }
+    ]
+  }
+}

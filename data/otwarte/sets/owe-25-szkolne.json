@@ -1,0 +1,102 @@
+{
+  "set": "owe-25-szkolne",
+  "ed": 25,
+  "stage": "s",
+  "essays": [
+    {
+      "id": "owe-25-szkolne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "makro",
+      "topics": [
+        {
+          "title": "Wyjaśnij konsekwencje specjalizacji produkcji i zróżnicowania cen czynników wytwórczych w różnych państwach świata dla rozwoju społeczno-ekonomicznego Polski",
+          "schema": [
+            { "title": "Przykładowy schemat odpowiedzi", "pts": 25, "points": [
+              "Przyczyny zróżnicowania cen czynników wytwórczych w wymiarze globalnym",
+              "Międzynarodowy podział pracy a efektywność gospodarowania",
+              "Korzyści ze specjalizacji produkcji i międzynarodowej wymiany handlowej – wykorzystanie przewag komparatywnych",
+              "Wolny rynek a protekcjonizm w wymianie z zagranicą",
+              "Społeczno-ekonomiczne skutki wysokiej mobilności czynników wytwórczych",
+              "Ocena międzynarodowej konkurencyjności gospodarki Polski i jej perspektyw rozwojowych"
+            ] }
+          ]
+        },
+        {
+          "title": "Przedstaw wpływ rewolucji technologicznej na zachowania gospodarstw domowych oraz przedsiębiorstw",
+          "schema": [
+            { "title": "Przykładowy schemat odpowiedzi", "pts": 25, "points": [
+              "Charakterystyka najważniejszych zmian technologicznych przełomu XX i XXI w.",
+              "Wzrost znaczenia sektora usług i powstanie gospodarki elektronicznej",
+              "Zmiany w zachowaniach gospodarstw domowych: konsumpcja, czas wolny, edukacja, komunikacja",
+              "Nowe warunki funkcjonowania przedsiębiorstw – konkurencyjność w dobie e-commerce i globalnego outsourcingu, współpraca i transfer wiedzy w organizacjach",
+              "Wpływ nowych metod produkcji i wymiany handlowej na rynek pracy",
+              "Wyzwania ery wiedzy i cywilizacji informacyjnej"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-25-szkolne-zadanie",
+    "title": "Zadanie z podstaw ekonomii",
+    "pts": 15,
+    "topic": "makro",
+    "intro": [
+      { "t": "p", "x": "Rysunek w arkuszu przedstawia rynek pracy (p – miesięczna stawka wynagrodzenia, q – liczba pracowników) z rosnącą krzywą S i opadającą krzywą D. Odczyty z wykresu (p1 < p2 < p3, q1 < q2 < … < q5):" },
+      { "t": "table", "head": ["Stawka", "Krzywa S", "Krzywa D"], "rows": [
+        ["p3", "q4", "q1"],
+        ["p2", "q3", "q3"],
+        ["p1", "q2", "q5"]
+      ] }
+    ],
+    "parts": [
+      {
+        "label": "1", "pts": 2,
+        "prompt": "Która krzywa reprezentuje pracodawców, a która pracowników?",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "S – pracownicy (podaż pracy): wraz ze wzrostem płacy rośnie liczba osób skłonnych podjąć pracę. D – pracodawcy (popyt na pracę): zapotrzebowanie na pracowników rośnie, gdy płaca spada." }
+        ]
+      },
+      {
+        "label": "2", "pts": 1,
+        "prompt": "Ile wynosi stawka wynagrodzenia zapewniająca równowagę na rynku pracy?",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "p2 – przy tej płacy liczba osób skłonnych podjąć pracę równa się liczbie pracowników, których chcą zatrudnić pracodawcy (q3)." }
+        ]
+      },
+      {
+        "label": "3", "pts": 2,
+        "prompt": "Rząd chce chronić pracowników przed zaniżaniem płac i wprowadza płacę minimalną. Na jakim poziomie (p1 czy p3) powinna ją ustalić?",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Na poziomie p3 – płaca minimalna działa tylko wtedy, gdy jest wyższa od płacy równowagi (p2); płaca p1 < p2 nie wiązałaby rynku." }
+        ]
+      },
+      {
+        "label": "4", "pts": 4,
+        "prompt": "Czy płaca minimalna doprowadzi do nadwyżki, czy do niedoboru (2 pkt)? Ile on wyniesie (2 pkt)?",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Do nadwyżki rynkowej (podaży pracy, czyli bezrobocia): przy stawce p3 pracę chce podjąć q4 osób, a pracodawcy chcą zatrudnić tylko q1. Nadwyżka = q4 − q1." }
+        ]
+      },
+      {
+        "label": "5", "pts": 6,
+        "prompt": "Jakie konsekwencje ma płaca minimalna z punktu 3 dla: a) dobrze wynagradzanych specjalistów i menedżerów (3 pkt); b) pracowników niewykwalifikowanych i młodych rozpoczynających pierwszą pracę (3 pkt)?",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Rynek pracy składa się z segmentów, więc płaca minimalna działa różnie." },
+          { "t": "ul", "items": [
+            "a) Specjaliści i menedżerowie: wpływ niewielki lub żaden – ich płace są wyższe od płacy minimalnej.",
+            "b) Niewykwalifikowani i młodzi: część nie znajdzie zatrudnienia (popyt na pracę przy płacy minimalnej jest mniejszy od podaży); część osób pracujących wcześniej za płacę rynkową (p2) straci pracę. Zatrudnieni zarabiają więcej, bezrobotni tracą dochody.",
+            "W dłuższym okresie wysoka płaca minimalna może skłaniać do przenoszenia prostej produkcji za granicę i do automatyzacji (bardziej kapitałochłonnych metod produkcji)."
+          ] }
+        ]
+      }
+    ]
+  }
+}

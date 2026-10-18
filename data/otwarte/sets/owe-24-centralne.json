@@ -1,0 +1,77 @@
+{
+  "set": "owe-24-centralne",
+  "ed": 24,
+  "stage": "c",
+  "essays": [
+    {
+      "id": "owe-24-centralne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "polityka",
+      "topics": [
+        {
+          "title": "Przedstaw społeczne i ekonomiczne uzasadnienie redystrybucji dochodów ludności",
+          "schema": [
+            { "title": "Przykładowy schemat odpowiedzi", "pts": 25, "points": [
+              "Przyczyny nierówności ekonomicznych gospodarstw domowych",
+              "Miary nierówności",
+              "Wzorce redystrybucji dochodów – liberalizm a egalitaryzm",
+              "Problem ubóstwa i wykluczenia społecznego",
+              "Wpływ redystrybucji na efektywność gospodarowania",
+              "Narzędzia redystrybucji dochodu – podatki i transfery",
+              "Ocena redystrybucji dochodów ludności w Polsce"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-24-centralne-zadanie",
+    "title": "Zadanie analityczne",
+    "pts": 15,
+    "topic": "finanse",
+    "intro": [
+      { "t": "p", "x": "Fundusz venture capital rozważa inwestycje w projekty z sektora nowych technologii. Projekt przedsiębiorcy A wymaga jednorazowo 200 tys. zł, projekt B – 350 tys. zł. Oczekiwane przepływy dla funduszu (tys. zł, na koniec roku):" },
+      { "t": "table", "head": ["Projekt", "Rok 1", "Rok 2", "Rok 3"], "rows": [
+        ["A", "100", "250", "450"],
+        ["B", "360", "350", "340"]
+      ] }
+    ],
+    "parts": [
+      {
+        "label": "1", "pts": 5,
+        "prompt": "Czy fundusz powinien zainwestować w projekty A i B, jeśli wymaga opłacalności w okresie trzyletnim? Stopa dyskontowa 10%, ryzyko projektów identyczne, pomiń podatki. Oblicz NPV (tys. zł).",
+        "answers": [
+          { "label": "NPV projektu A (tys. zł)", "value": 435.61, "tol": 0.5 },
+          { "label": "NPV projektu B (tys. zł)", "value": 521.98, "tol": 0.5 }
+        ],
+        "solution": [
+          { "t": "f", "x": "NPV = Σ CFₜ / (1 + r)ᵗ − I₀\nA: 100/1,1 + 250/1,1² + 450/1,1³ − 200 = 90,91 + 206,61 + 338,09 − 200 ≈ 435,61\nB: 360/1,1 + 350/1,1² + 340/1,1³ − 350 = 327,27 + 289,26 + 255,45 − 350 ≈ 521,98" },
+          { "t": "p", "x": "NPV obu projektów jest dodatnie – oba są opłacalne w okresie trzyletnim, więc fundusz może się w nie zaangażować." }
+        ]
+      },
+      {
+        "label": "2", "pts": 5,
+        "prompt": "Inne zgłoszone projekty (tys. zł) – nakłady / NPV: C 200 / 220, D 300 / 900, E 200 / 450, F 150 / 400, G 350 / 650, H 600 / 750. Finansowanie A wyklucza E (konflikt interesów), a B wyklucza G. Które projekty mogą liczyć na wsparcie?",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "NPV projektu A (≈ 436) jest niższe niż E (450), więc fundusz powinien wybrać E zamiast A. NPV projektu B (≈ 522) jest niższe niż G (650), więc należy wybrać G zamiast B. Wsparcie mogą otrzymać C, D, E, F, G i H; projekty A i B odpadają." }
+        ]
+      },
+      {
+        "label": "3", "pts": 5,
+        "prompt": "Fundusz przeznacza na te projekty 1 mln zł. Które wesprze i dlaczego (uwzględnij punkt 2)? Czy wykorzysta całą pulę?",
+        "answers": [{ "label": "Łączne nakłady wybranych projektów (tys. zł)", "value": 1000, "tol": 0.5 }],
+        "solution": [
+          { "t": "p", "x": "Przy ograniczonym budżecie projekty szereguje się według NPV na jednostkę nakładu:" },
+          { "t": "table", "head": ["Projekt", "C", "D", "E", "F", "G", "H"], "rows": [
+            ["NPV / nakład", "1,10", "3,00", "2,25", "2,67", "1,86", "1,25"]
+          ] },
+          { "t": "f", "x": "kolejność: D (3,00), F (2,67), E (2,25), G (1,86)\nnakłady: 300 + 150 + 200 + 350 = 1 000 tys. zł" },
+          { "t": "p", "x": "Fundusz wesprze projekty D, F, E i G i wykorzysta całą pulę 1 mln zł. Projekty A i B odpadły już w punkcie 2." }
+        ]
+      }
+    ]
+  }
+}

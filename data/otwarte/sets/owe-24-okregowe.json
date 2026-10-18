@@ -1,0 +1,83 @@
+{
+  "set": "owe-24-okregowe",
+  "ed": 24,
+  "stage": "o",
+  "essays": [
+    {
+      "id": "owe-24-okregowe-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "makro",
+      "topics": [
+        {
+          "title": "Scharakteryzuj wpływ kursu walutowego na mikro- i makroekonomiczną sytuację Polski",
+          "schema": [
+            { "title": "Przykładowy schemat odpowiedzi", "pts": 25, "points": [
+              "Kurs walutowy i jego rodzaje",
+              "Determinanty poziomu kursu walutowego – aspekty ekonomiczne, polityczne i psychologiczne",
+              "Wpływ kursu walutowego na przepływy dóbr, usług i kapitału w gospodarce otwartej",
+              "Równowaga bilansu płatniczego a poziom krajowych oszczędności i inwestycji",
+              "Skuteczność polityki fiskalnej i monetarnej w systemie kursu płynnego",
+              "Poziom kursu i terms of trade a konkurencyjność polskich przedsiębiorstw i ich aktywność inwestycyjna",
+              "Wpływ kursu walutowego na poziom cen i sytuację ekonomiczną gospodarstw domowych w Polsce",
+              "Szanse i zagrożenia związane z wejściem Polski do strefy euro"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-24-okregowe-zadanie",
+    "title": "Zadanie z analizy finansowej",
+    "pts": 15,
+    "topic": "firma",
+    "intro": [
+      { "t": "p", "x": "Dwóch przyjaciół prowadzi sklep internetowy. Miesięcznie: przychody 60 tys. zł; dzierżawa łączy i usługi telekomunikacyjne 10 tys. zł; wynagrodzenia sekretarki i konsultantów 30 tys. zł; pozostałe koszty (kurierzy, materiały biurowe, reklama) 6 tys. zł; biuro rachunkowe 2 tys. zł. Przeciętny stan należności: 25 tys. zł." },
+      { "t": "p", "x": "Współwłaściciele zrezygnowali z pracy w dziale IT administracji publicznej, gdzie mogliby zarabiać 6 tys. zł i 5,5 tys. zł miesięcznie. Sklep działa w lokalu jednego z nich (wartość 700 tys. zł, możliwy czynsz 3,5 tys. zł miesięcznie). W kapitał obrotowy zainwestowali 150 tys. zł. Roczna rynkowa stopa procentowa netto: 4%. Pomiń podatki; miesiąc = 30 dni. Wyniki podawaj w tys. zł." }
+    ],
+    "parts": [
+      {
+        "label": "1", "pts": 1,
+        "prompt": "Ile wynoszą miesięczne koszty księgowe?",
+        "answers": [{ "label": "Koszty księgowe (tys. zł)", "value": 48, "tol": 0.01 }],
+        "solution": [{ "t": "f", "x": "10 + 30 + 6 + 2 = 48 tys. zł" }]
+      },
+      {
+        "label": "2", "pts": 1,
+        "prompt": "Ile wynosi miesięczny zysk księgowy?",
+        "answers": [{ "label": "Zysk księgowy (tys. zł)", "value": 12, "tol": 0.01 }],
+        "solution": [{ "t": "f", "x": "60 − 48 = 12 tys. zł" }]
+      },
+      {
+        "label": "3", "pts": 2,
+        "prompt": "Ile dni wynosi przeciętny cykl inkasa należności?",
+        "answers": [{ "label": "Cykl inkasa (dni)", "value": 12.5, "tol": 0.01 }],
+        "solution": [{ "t": "f", "x": "30 dni × 25 / 60 = 12,5 dnia" }]
+      },
+      {
+        "label": "4", "pts": 3,
+        "prompt": "Ile wynoszą miesięczne koszty alternatywne?",
+        "answers": [{ "label": "Koszty alternatywne (tys. zł)", "value": 15.5, "tol": 0.01 }],
+        "solution": [
+          { "t": "f", "x": "utracone płace: 6 + 5,5 = 11,5\nutracony czynsz: 3,5\nutracone odsetki: 150 × 4% / 12 = 0,5\nrazem: 15,5 tys. zł" }
+        ]
+      },
+      {
+        "label": "5", "pts": 3,
+        "prompt": "Ile wynoszą miesięczne koszty ekonomiczne?",
+        "answers": [{ "label": "Koszty ekonomiczne (tys. zł)", "value": 63.5, "tol": 0.01 }],
+        "solution": [{ "t": "f", "x": "koszty księgowe + alternatywne = 48 + 15,5 = 63,5 tys. zł" }]
+      },
+      {
+        "label": "6", "pts": 5,
+        "prompt": "Czy przyjaciele powinni kontynuować działalność? Przedstaw obliczenia i uzasadnij.",
+        "answers": [{ "label": "Miesięczny zysk ekonomiczny (tys. zł)", "value": -3.5, "tol": 0.01 }],
+        "solution": [
+          { "t": "f", "x": "zysk ekonomiczny = 60 − 63,5 = −3,5 tys. zł miesięcznie" },
+          { "t": "p", "x": "Nie – mimo zysku księgowego 12 tys. zł sklep przynosi stratę ekonomiczną 3,5 tys. zł. Praca w administracji, wynajem lokalu i ulokowanie 150 tys. zł dałyby łącznie 15,5 tys. zł miesięcznie zamiast 12 tys. zł. Zysk księgowy nie jest wystarczającą przesłanką do kontynuowania działalności." }
+        ]
+      }
+    ]
+  }
+}

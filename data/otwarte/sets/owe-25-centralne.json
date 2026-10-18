@@ -1,0 +1,84 @@
+{
+  "set": "owe-25-centralne",
+  "ed": 25,
+  "stage": "c",
+  "essays": [
+    {
+      "id": "owe-25-centralne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "finanse",
+      "topics": [
+        {
+          "title": "Przedstaw wyzwania dla nadzoru i regulacji sektora finansowego w warunkach niestabilności rynków finansowych i globalnego kryzysu",
+          "schema": [
+            { "title": "Przykładowy schemat odpowiedzi", "pts": 25, "points": [
+              "Cele nadzoru sektora finansowego",
+              "Główne obszary regulacji – bankowość, rynek kapitałowy, ubezpieczenia, pośrednictwo finansowe",
+              "Argumenty za i przeciw zintegrowanej strukturze nadzoru",
+              "Problem koordynacji nadzoru nad instytucjami finansowymi w skali międzynarodowej",
+              "Ład korporacyjny i samoregulacja sektora finansowego",
+              "Ocena skuteczności regulacji sektora finansowego w Polsce",
+              "Implikacje polityki regulacyjnej dla stabilności systemu gospodarczego"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-25-centralne-zadanie",
+    "title": "Zadanie analityczne",
+    "pts": 15,
+    "topic": "finanse",
+    "intro": [
+      { "t": "p", "x": "Duży koncern międzynarodowy poprosił ubezpieczyciela o ofertę dobrowolnego, dodatkowego ubezpieczenia zdrowotnego pracowników. Wariant I: bez wstępnych badań, ubezpieczyciel pokrywa koszty leczenia wszystkich istniejących chorób." },
+      { "t": "p", "x": "Koszt usług medycznych na pracownika wynosi przeciętnie 450 zł rocznie. Nosiciel wirusa HIV generuje dodatkowo 90 000 zł rocznych kosztów. Odsetek zarażonych wśród pracowników jest taki jak w populacji – ok. 0,5%. Pracownicy mają nieznaczną awersję do ryzyka." }
+    ],
+    "parts": [
+      {
+        "label": "1", "pts": 3,
+        "prompt": "Czy przy rocznej cenie polisy 900 zł (75 zł miesięcznie) większość pracowników będzie zainteresowana ubezpieczeniem? Uzasadnij.",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Nie. Dla 99,5% pracowników polisa pokrywa przeciętnie 450 zł wydatków rocznie, a kosztuje 900 zł – przy nieznacznej awersji do ryzyka oferta jest mało atrakcyjna." }
+        ]
+      },
+      {
+        "label": "2", "pts": 3,
+        "prompt": "Z jakimi konsekwencjami musi się liczyć ubezpieczyciel proponujący takie warunki?",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Z negatywną selekcją (adverse selection): bez wstępnych badań do programu przystąpią przede wszystkim osoby zarażone HIV oraz ci, którzy wiedzą, że koszty ich leczenia przewyższą składkę. Asymetria informacji sprawi, że program przyniesie straty, chyba że przystąpią do niego wszyscy pracownicy." }
+        ]
+      },
+      {
+        "label": "3", "pts": 3,
+        "prompt": "Wariant II wymaga badań i wyklucza osoby już zarażone. Polisa pokrywa koszty jak wyżej (także związane z HIV), a prawdopodobieństwo zarażenia w społeczeństwie wynosi 0,2%. Oblicz aktuarialnie godziwą składkę (bez narzutu zysku).",
+        "answers": [{ "label": "Składka roczna (zł)", "value": 630, "tol": 0.5 }],
+        "solution": [
+          { "t": "f", "x": "składka = 450 + 0,2% × 90 000 = 450 + 180 = 630 zł" }
+        ]
+      },
+      {
+        "label": "4", "pts": 3,
+        "prompt": "Czy ubezpieczyciel powinien oczekiwać, że wśród ubezpieczonych prawdopodobieństwo zarażenia (0,2%) się zmieni? Uzasadnij.",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Tak – może wzrosnąć wskutek pokusy nadużycia (moral hazard). Obawa przed wysokimi kosztami leczenia powstrzymuje część osób przed ryzykownymi zachowaniami; po zakupie polisy ubezpieczony nie ponosi już pełnych kosztów skutków swojego postępowania." }
+        ]
+      },
+      {
+        "label": "5", "pts": 3,
+        "prompt": "Czy ubezpieczyciel może kształtować zachowanie ubezpieczonych? Jeśli tak, to jak?",
+        "answers": [],
+        "solution": [
+          { "t": "ul", "items": [
+            "udział własny ubezpieczonego w kosztach leczenia (np. w razie zarażenia HIV),",
+            "działania prewencyjne: badania i programy profilaktyczne, edukacja w zakresie zdrowego trybu życia."
+          ] }
+        ]
+      }
+    ]
+  }
+}

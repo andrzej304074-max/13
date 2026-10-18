@@ -1,0 +1,104 @@
+{
+  "set": "owe-25-okregowe",
+  "ed": 25,
+  "stage": "o",
+  "essays": [
+    {
+      "id": "owe-25-okregowe-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "polityka",
+      "topics": [
+        {
+          "title": "Scharakteryzuj przyczyny i skutki nierównowagi sektora finansów publicznych w krajach Unii Europejskiej",
+          "schema": [
+            { "title": "Przykładowy schemat odpowiedzi", "pts": 25, "points": [
+              "Nierównowaga finansów publicznych w świetle wybranych teorii ekonomicznych",
+              "Typy deficytów finansów publicznych – rzeczywiste, cykliczne i strukturalne",
+              "Przyczyny nierównowagi sektora finansów publicznych w krajach UE:",
+              "  a) poziom transferów społecznych",
+              "  b) koszty obsługi długu wewnętrznego i zewnętrznego",
+              "  c) zmiana struktury demograficznej i jej wpływ na dochody i wydatki (np. na ochronę zdrowia)",
+              "  d) zrównoważenie systemów emerytalnych",
+              "  e) pozostałe uwarunkowania systemowe",
+              "Wpływ deficytów na konkurencyjność gospodarek i równowagę zewnętrzną",
+              "Społeczne i ekonomiczne skutki wysokiego długu publicznego a metody jego ograniczania",
+              "Reformy sektora finansów publicznych a dynamika wzrostu gospodarczego i zatrudnienie",
+              "Trudności w koordynacji polityki ekonomicznej w ramach Unii Gospodarczej i Walutowej",
+              "Własna ocena skutków nierównowagi finansów publicznych krajów UE dla gospodarki Polski"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-25-okregowe-zadanie",
+    "title": "Zadanie z analizy finansowej",
+    "pts": 15,
+    "topic": "firma",
+    "intro": [
+      { "t": "p", "x": "Hurtownia chemii gospodarczej sprzedaje wyłącznie za gotówkę. Jej sprzedaż netto w ostatnim kwartale (90 dni) wyniosła 1 500 000 zł, koszty całkowite – 1 350 000 zł, w tym koszty zmienne netto (zakup towarów) – 1 125 000 zł (75% sprzedaży netto). Zakupy i sprzedaż obciąża VAT 23%." },
+      { "t": "p", "x": "Analizy pokazują, że sprzedaż z odroczonym terminem płatności (przeciętnie 20 dni) zwiększy sprzedaż netto o 20%, a sprzedaż gotówkowa się nie zmieni. Płatności wpływają w terminie. Zakup towarów na dodatkową sprzedaż hurtownia sfinansuje w całości linią kredytową oprocentowaną 15% rocznie. Kierownictwo wprowadza sprzedaż z odroczonym terminem. Wyniki podawaj dla kwartału (w punkcie 6 przyjmij rok 365 dni; akceptowany jest też wariant 360 dni)." }
+    ],
+    "parts": [
+      {
+        "label": "1", "pts": 1,
+        "prompt": "O ile zwiększy się sprzedaż netto?",
+        "answers": [{ "label": "Wzrost sprzedaży netto (zł)", "value": 300000, "tol": 0.5, "alt": [1200000] }],
+        "solution": [
+          { "t": "f", "x": "20% × 1 500 000 = 300 000 zł na kwartał" }
+        ]
+      },
+      {
+        "label": "2", "pts": 2,
+        "prompt": "O ile zwiększą się koszty zmienne?",
+        "answers": [{ "label": "Wzrost kosztów zmiennych (zł)", "value": 225000, "tol": 0.5, "alt": [276750, 900000, 1107000] }],
+        "solution": [
+          { "t": "f", "x": "netto: 20% × 1 125 000 = 225 000 zł (z VAT: 225 000 × 1,23 = 276 750 zł)" }
+        ]
+      },
+      {
+        "label": "3", "pts": 2,
+        "prompt": "O ile zwiększy się zysk operacyjny?",
+        "answers": [{ "label": "Wzrost zysku operacyjnego (zł)", "value": 75000, "tol": 0.5, "alt": [92250, 300000, 369000] }],
+        "solution": [
+          { "t": "f", "x": "300 000 − 225 000 = 75 000 zł netto (z VAT: 92 250 zł)" }
+        ]
+      },
+      {
+        "label": "4", "pts": 3,
+        "prompt": "Ile wyniosą przeciętne należności brutto?",
+        "answers": [{ "label": "Przeciętne należności brutto (zł)", "value": 82000, "tol": 0.5 }],
+        "solution": [
+          { "t": "f", "x": "300 000 × 20 / 90 × 1,23 = 82 000 zł" }
+        ]
+      },
+      {
+        "label": "5", "pts": 3,
+        "prompt": "Jaka będzie przeciętna wysokość linii kredytowej potrzebnej do sfinansowania zakupów dodatkowego towaru?",
+        "answers": [{ "label": "Linia kredytowa (zł)", "value": 61500, "tol": 0.5 }],
+        "solution": [
+          { "t": "f", "x": "82 000 × 75% = 61 500 zł\n(albo 276 750 × 20 / 90 = 61 500 zł)" }
+        ]
+      },
+      {
+        "label": "6", "pts": 2,
+        "prompt": "Ile wyniosą odsetki od kredytu obrotowego w nadchodzącym kwartale?",
+        "answers": [{ "label": "Odsetki kwartalne (zł)", "value": 2274.66, "tol": 0.6, "alt": [2306.25] }],
+        "solution": [
+          { "t": "f", "x": "61 500 × 0,15 × 90 / 365 ≈ 2 274,66 zł\n(przy roku 360 dni: 2 306,25 zł)" }
+        ]
+      },
+      {
+        "label": "7", "pts": 2,
+        "prompt": "Czy sprzedaż z odroczonym terminem jest opłacalna, jeśli kontrahenci ureguluja tylko 95% wartości wierzytelności netto? Podaj kwartalny wzrost zysku po uwzględnieniu odsetek i odpisów.",
+        "answers": [{ "label": "Wzrost zysku po odsetkach i odpisach (zł)", "value": 57725.34, "tol": 35 }],
+        "solution": [
+          { "t": "f", "x": "odpisy = 5% × 300 000 = 15 000 zł na kwartał\n75 000 − 2 274,66 − 15 000 ≈ 57 725 zł > 0" },
+          { "t": "p", "x": "Decyzja jest opłacalna – wzrost zysku operacyjnego przewyższa odsetki i odpisy na nieściągnięte wierzytelności." }
+        ]
+      }
+    ]
+  }
+}
