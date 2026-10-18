@@ -20,6 +20,10 @@ describe("liczby w odpowiedziach", () => {
     expect(isCorrect(a, "22")).toBe(false);
     expect(isCorrect({ label: "x", value: 165 }, "165")).toBe(true);
     expect(isCorrect({ label: "x", value: 165 }, "166")).toBe(false);
+    const alt = { label: "p", value: 20.4, tol: 0.05, alt: [19.6] };
+    expect(isCorrect(alt, "20,4")).toBe(true);
+    expect(isCorrect(alt, "19,6")).toBe(true);
+    expect(isCorrect(alt, "20")).toBe(false);
   });
 });
 

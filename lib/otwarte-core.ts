@@ -19,6 +19,8 @@ export interface Answer {
   /** Dopuszczalna różnica bezwzględna (domyślnie 0,5% wartości, min. 0,01). */
   tol?: number;
   unit?: string;
+  /** Inne akceptowane wyniki (np. ścisłe rozwiązanie, gdy klucz przyjmuje uproszczenie). */
+  alt?: number[];
 }
 export interface TaskPart {
   label: string;
@@ -62,8 +64,8 @@ export const tolOf = (a: Answer) => a.tol ?? Math.max(0.01, Math.abs(a.value) * 
 export function isCorrect(a: Answer, raw: unknown): boolean {
   const n = parseNum(raw);
   if (n === null) return false;
-  if (Math.abs(n - a.value) <= tolOf(a) + 1e-9) return true;
-  return a.unit === "%" && Math.abs(n * 100 - a.value) <= tolOf(a) + 1e-9;
+  const t = tolOf(a) + 1e-9;
+  return [a.value, ...(a.alt ?? [])].some((v) => Math.abs(n - v) <= t || (a.unit === "%" && Math.abs(n * 100 - v) <= t));
 }
 
 /* ---------- punktacja ---------- */
@@ -143,7 +145,10 @@ export function validateSet(s: OpenSet, topics: string[]): string[] {
     if (t.parts.every((p) => p.pts !== null) && sum !== t.pts) err.push(where(`zadanie: suma podpunktów ${sum} ≠ ${t.pts}`));
     for (const p of t.parts) {
       if (!p.solution.length) err.push(where(`zadanie ${p.label}: brak rozwiązania`));
-      for (const a of p.answers) if (!Number.isFinite(a.value)) err.push(where(`zadanie ${p.label}: wynik nie jest liczbą`));
+      for (const a of p.answers) {
+        if (!Number.isFinite(a.value)) err.push(where(`zadanie ${p.label}: wynik nie jest liczbą`));
+        if (a.alt && !a.alt.every(Number.isFinite)) err.push(where(`zadanie ${p.label}: alternatywny wynik nie jest liczbą`));
+      }
     }
   }
   return err;

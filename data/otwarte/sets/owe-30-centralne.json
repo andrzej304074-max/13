@@ -1,0 +1,98 @@
+{
+  "set": "owe-30-centralne",
+  "ed": 30,
+  "stage": "c",
+  "essays": [
+    {
+      "id": "owe-30-centralne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "polityka",
+      "topics": [
+        {
+          "title": "Na przykładzie jednego z rynków funkcjonujących w gospodarce rozważ rolę mechanizmów rynkowych i rolę państwa we współczesnej polskiej gospodarce. Co mogłoby poprawić skuteczność działalności rynku i działalności państwa?",
+          "schema": [
+            { "title": "Część I: pojęciowo-teoretyczna", "pts": null, "points": [
+              "Istota mechanizmu rynkowego",
+              "Pojęcie i funkcje państwa w gospodarce",
+              "Rola rynku i państwa w gospodarce w teoriach ekonomicznych",
+              "Zalety i słabości mechanizmów rynkowych i państwa w gospodarce"
+            ] },
+            { "title": "Część II: mechanizmy rynkowe i rola państwa na wybranym rynku w Polsce", "pts": null, "points": [
+              "Charakterystyka wybranego rynku i działających na nim podmiotów",
+              "Przejawy działania mechanizmów rynkowych, zakres wolności gospodarczej, korzystne i niekorzystne konsekwencje",
+              "Rola państwa: zakres ingerencji (regulacje instytucjonalne, m.in. fiskalne, instrumenty polityki), korzyści i niekorzyści",
+              "Znaczenie integracji z UE dla funkcjonowania wybranego rynku"
+            ] },
+            { "title": "Część III: postulatywna", "pts": null, "points": [
+              "Co mogłoby poprawić skuteczność mechanizmów rynkowych na wybranym rynku",
+              "Zmiany instytucjonalne i zmiany polityki gospodarczej poprawiające skuteczność działania państwa na wybranym rynku"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-30-centralne-zadanie",
+    "title": "Zadanie analityczne",
+    "pts": 15,
+    "topic": "mikro",
+    "intro": [
+      { "t": "p", "x": "Przedsiębiorstwo produkuje opony samochodowe w jednym zakładzie. Funkcja kosztów: C = 1000 + 10Q², funkcja popytu: P = 1200 − 10Q (C – koszty całkowite, Q – liczba opon, P – cena opony w zł)." }
+    ],
+    "parts": [
+      {
+        "label": "1", "pts": 2,
+        "prompt": "Wyznacz wielkość produkcji maksymalizującą zysk, cenę opony przy tej produkcji oraz zysk przedsiębiorstwa.",
+        "answers": [
+          { "label": "Produkcja (Q)", "value": 30, "tol": 0.01 },
+          { "label": "Cena (zł)", "value": 900, "tol": 0.5 },
+          { "label": "Zysk (zł)", "value": 17000, "tol": 0.5 }
+        ],
+        "solution": [
+          { "t": "f", "x": "MR = 1200 − 20Q; MC = 20Q\n1200 − 20Q = 20Q → Q = 30\nP = 1200 − 300 = 900 zł\nzysk = 900 × 30 − (1000 + 10 × 900) = 27 000 − 10 000 = 17 000 zł" }
+        ]
+      },
+      {
+        "label": "2", "pts": 3,
+        "prompt": "Oszacuj wielkość produkcji, przy której przeciętny koszt całkowity osiąga minimum, i podaj jego wartość.",
+        "answers": [
+          { "label": "Produkcja (Q)", "value": 10, "tol": 0.01 },
+          { "label": "Minimalny koszt przeciętny (zł)", "value": 200, "tol": 0.5 }
+        ],
+        "solution": [
+          { "t": "f", "x": "minimum AC tam, gdzie MC = AC\n20Q = 1000/Q + 10Q → 10Q² = 1000 → Q² = 100 → Q = 10 (Q > 0)\nAC(10) = 1000/10 + 10 × 10 = 200 zł" }
+        ]
+      },
+      {
+        "label": "3", "pts": 5,
+        "prompt": "Przedsiębiorstwo ma drugi, identyczny zakład. Oblicz produkcję całkowitą maksymalizującą zysk, wskaż i uzasadnij podział produkcji między zakładami (4 pkt). Dlaczego produkcja jest teraz większa niż w punkcie 1 (1 pkt)?",
+        "answers": [
+          { "label": "Produkcja całkowita (Q)", "value": 40, "tol": 0.01 },
+          { "label": "Produkcja w każdym zakładzie", "value": 20, "tol": 0.01 },
+          { "label": "Cena (zł)", "value": 800, "tol": 0.5 }
+        ],
+        "solution": [
+          { "t": "p", "x": "Produkcja w zakładach będzie równa – inaczej przeniesienie części produkcji z zakładu o wyższym koszcie krańcowym do drugiego zwiększyłoby zysk. Warunek: MR(Q) = MC₁(Q/2) = MC₂(Q/2)." },
+          { "t": "f", "x": "MCᵢ(Q/2) = 20 × Q/2 = 10Q\n1200 − 20Q = 10Q → Q = 40 (po 20 w każdym zakładzie)\nP = 1200 − 400 = 800 zł" },
+          { "t": "p", "x": "Produkcja jest większa, bo rozłożenie jej na dwa zakłady obniża koszt krańcowy (każdy zakład pracuje bliżej minimum kosztu przeciętnego) – przedsiębiorstwo korzysta z korzyści skali." }
+        ]
+      },
+      {
+        "label": "4", "pts": 5,
+        "prompt": "W długim okresie przedsiębiorstwo może dowolnie kształtować liczbę identycznych zakładów (C = 1000 + 10Q² każdy). Oszacuj optymalną produkcję, cenę opony i liczbę zakładów (4 pkt). Wskaż charakter przychodów ze skali (1 pkt).",
+        "answers": [
+          { "label": "Produkcja całkowita (Q)", "value": 50, "tol": 0.01 },
+          { "label": "Cena (zł)", "value": 700, "tol": 0.5 },
+          { "label": "Liczba zakładów", "value": 5, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "p", "x": "Każdy zakład powinien produkować w minimum kosztu przeciętnego – 10 opon (punkt 2). Długookresowy koszt krańcowy jest wtedy stały i równy 200 zł:" },
+          { "t": "f", "x": "1200 − 20Q = 200 → Q = 50\nliczba zakładów = 50 / 10 = 5\nP = 1200 − 10 × 50 = 700 zł" },
+          { "t": "p", "x": "Przychody ze skali mają charakter stały (długookresowy koszt przeciętny nie zależy od skali)." }
+        ]
+      }
+    ]
+  }
+}

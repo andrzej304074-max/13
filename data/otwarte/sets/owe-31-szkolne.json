@@ -1,0 +1,136 @@
+{
+  "set": "owe-31-szkolne",
+  "ed": 31,
+  "stage": "s",
+  "essays": [
+    {
+      "id": "owe-31-szkolne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "demografia",
+      "topics": [
+        {
+          "title": "Przyczyny i konsekwencje migracji zagranicznych wśród młodzieży",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Definicja zjawiska migracji",
+              "Zarys ewolucji zjawiska migracji",
+              "Neoklasyczna teoria migracji",
+              "Mikroekonomiczne podstawy migracji na gruncie teorii kapitału ludzkiego",
+              "Migracja zewnętrzna w teorii dualnego rynku pracy",
+              "Wyjaśnienie zjawiska migracji w nowej ekonomicznej teorii migracji"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Skala migracji młodzieży na tle pozostałych grup wiekowych",
+              "Przyczyny migracji zagranicznych młodzieży:",
+              "  a) ujęcie mikroekonomiczne",
+              "  b) ujęcie makroekonomiczne",
+              "Różnice między determinantami migracji młodzieży a pozostałych grup wiekowych",
+              "Konsekwencje migracji zagranicznych młodzieży dla kraju goszczącego i wysyłającego:",
+              "  a) wpływ na rynek pracy, w tym na strukturę i wielkość podaży pracy oraz wynagrodzenia",
+              "  b) skutki dla sektora finansów publicznych, w tym długofalowe dla publicznego systemu emerytalnego",
+              "  c) konsekwencje o charakterze społecznym",
+              "  d) znaczenie migracji dla wielkości i struktury międzynarodowej wymiany handlowej",
+              "  e) wpływ na potencjał gospodarczy, zwłaszcza kapitał ludzki i kapitał społeczny",
+              "Próba oceny zjawiska migracji zagranicznych młodzieży"
+            ] }
+          ]
+        },
+        {
+          "title": "Wpływ wahań cyklu koniunkturalnego na sytuację na rynku pracy w Polsce",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Istota wahań cyklu koniunkturalnego w gospodarce",
+              "Definicja oraz cechy bezrobocia koniunkturalnego",
+              "Zależność między cyklem koniunkturalnym a sytuacją na rynku pracy w świetle teorii klasycznej",
+              "Teoria J.M. Keynesa jako próba wyjaśnienia bezrobocia koniunkturalnego",
+              "Istota prawa Okuna",
+              "Rola państwa w ograniczaniu negatywnych zjawisk na rynku pracy wywołanych wahaniami koniunktury w teorii ekonomii"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Wahania poziomu aktywności gospodarczej w Polsce w ostatnich latach",
+              "Wpływ światowego kryzysu finansowego na rynek pracy w Polsce",
+              "Zmiany podstawowych parametrów rynku pracy (zwłaszcza stopy bezrobocia) w Polsce na tle zmieniającej się aktywności gospodarczej",
+              "Rola instytucji rynku pracy w kontekście wahań koniunktury na przykładzie Polski",
+              "Działania państwa ograniczające negatywny wpływ wahań koniunktury na rynek pracy w Polsce"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-31-szkolne-zadanie",
+    "title": "Zadanie z podstaw ekonomii",
+    "pts": 15,
+    "topic": "makro",
+    "intro": [
+      { "t": "p", "x": "Na wykresie (w arkuszu) przedstawiono popyt na pracę (D), gotowość podjęcia pracy według stawek płac (AJ) oraz zasób siły roboczej (LF). Oś Y – płaca realna na godzinę (zł), oś X – liczba pracowników (mln). Odczyty z wykresu:" },
+      { "t": "table", "head": ["Płaca (zł/godz.)", "D (mln)", "AJ (mln)", "LF (mln)"], "rows": [
+        ["17", "16", "20", "26"],
+        ["15", "19", "19", "25"]
+      ] }
+    ],
+    "parts": [
+      {
+        "label": "a", "pts": 2,
+        "prompt": "Określ dla punktu równowagi na rynku pracy wysokość płacy i wielkość zatrudnienia.",
+        "answers": [
+          { "label": "Płaca (zł/godz.)", "value": 15, "tol": 0.01 },
+          { "label": "Zatrudnienie (mln)", "value": 19, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "p", "x": "Równowaga jest w punkcie przecięcia popytu na pracę (D) z krzywą gotowości podjęcia pracy (AJ): E = (19; 15) – płaca 15 zł za godzinę i 19 mln zatrudnionych." }
+        ]
+      },
+      {
+        "label": "b", "pts": 4,
+        "prompt": "Oblicz wielkość bezrobocia naturalnego w stanie równowagi (2 pkt) i wyjaśnij powody jego występowania (2 pkt).",
+        "answers": [{ "label": "Bezrobocie naturalne (mln)", "value": 6, "tol": 0.01 }],
+        "solution": [
+          { "t": "f", "x": "bezrobocie naturalne = LF − zatrudnienie przy płacy równowagi = 25 − 19 = 6 mln osób" },
+          { "t": "p", "x": "Część osób nie chce podjąć pracy za płacę równoważącą rynek (15 zł), ale nadal należy do zasobu siły roboczej. Na wielkość bezrobocia naturalnego wpływają m.in. dopasowanie kwalifikacji pracowników do potrzeb pracodawców oraz działalność związków zawodowych." }
+        ]
+      },
+      {
+        "label": "c", "pts": 2,
+        "prompt": "Państwo wprowadza płacę minimalną 17 zł za godzinę. Ile wyniesie wielkość popytu na pracę?",
+        "answers": [{ "label": "Popyt na pracę (mln)", "value": 16, "tol": 0.01 }],
+        "solution": [
+          { "t": "p", "x": "Przy płacy 17 zł krzywa popytu D wskazuje 16 mln osób." }
+        ]
+      },
+      {
+        "label": "d", "pts": 2,
+        "prompt": "Oszacuj wielkość bezrobocia łącznego przy wprowadzonej płacy minimalnej.",
+        "answers": [{ "label": "Bezrobocie łączne (mln)", "value": 10, "tol": 0.01 }],
+        "solution": [
+          { "t": "f", "x": "bezrobocie łączne = LF przy płacy 17 zł − popyt na pracę = 26 − 16 = 10 mln osób" }
+        ]
+      },
+      {
+        "label": "e", "pts": 2,
+        "prompt": "Wskaż dwie przyczyny przesunięcia krzywej popytu na pracę (D).",
+        "answers": [],
+        "solution": [
+          { "t": "ul", "items": [
+            "zmiana ceny produktu, do którego wytwarzania wykorzystywana jest praca,",
+            "zmiana technologiczna (zmiana produktywności pracy),",
+            "zmiana podaży innych czynników produkcji,",
+            "dotacje rządu do zatrudnienia,",
+            "zmiana kosztu kapitału,",
+            "zmiana popytu na dobra lub usługi wytwarzane z użyciem pracy."
+          ] }
+        ]
+      },
+      {
+        "label": "f", "pts": 3,
+        "prompt": "Przedstaw schematycznie na wykresie (2 pkt) i krótko uzasadnij (1 pkt), jakie konsekwencje dla rynku pracy będzie miało podniesienie zasiłków dla bezrobotnych.",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Krzywa AJ przesuwa się w lewo (AJ′), a krzywa LF w prawo (LF′). Wyższy zasiłek skłania więcej osób do wejścia do zasobu siły roboczej, a jednocześnie mniej osób decyduje się podjąć pracę lub dłużej szuka odpowiedniej pracy. Płaca równowagi rośnie, zatrudnienie spada, a bezrobocie naturalne się zwiększa." }
+        ]
+      }
+    ]
+  }
+}

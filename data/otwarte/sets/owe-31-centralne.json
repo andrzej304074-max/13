@@ -1,0 +1,102 @@
+{
+  "set": "owe-31-centralne",
+  "ed": 31,
+  "stage": "c",
+  "essays": [
+    {
+      "id": "owe-31-centralne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "makro",
+      "topics": [
+        {
+          "title": "Przedstaw argumenty za i przeciw dotyczące różnych typów umów o pracę. Jak wpływają one na elastyczność i stabilność zatrudnienia? Weź pod uwagę punkt widzenia pracodawców i pracowników. Jak typy umów o pracę mogą przyczyniać się do segmentacji rynku pracy?",
+          "schema": [
+            { "title": "1. Typy umów o pracę", "pts": null, "points": [
+              "Umowy oparte na kodeksie pracy",
+              "Umowy oparte na kodeksie cywilnym",
+              "Skala zatrudnienia według typów umów w Polsce i innych krajach"
+            ] },
+            { "title": "2. Elastyczność i bezpieczeństwo na rynku pracy", "pts": null, "points": [
+              "Pojęcie i rodzaje elastyczności rynku pracy (zatrudnienia, płac, czasu pracy, mobilności siły roboczej)",
+              "Znaczenie elastyczności: odporność gospodarki na szoki, kraje wprowadzające wspólną walutę, zagrożenia wysokiej elastyczności",
+              "Bezpieczeństwo zatrudnienia i dochodów; insiderzy i outsiderzy; awersja do ryzyka pracowników i pracodawców",
+              "Rola związków zawodowych",
+              "Koncepcja flexicurity"
+            ] },
+            { "title": "3. Wpływ typów umów na stabilność i elastyczność zatrudnienia", "pts": null, "points": [
+              "Koszty pracy pracodawcy (wynagrodzenia, koszty pozapłacowe, przyjęć i zwolnień)",
+              "Stopień ochrony stosunku pracy – restrykcyjność ochrony zatrudnienia: doświadczenia krajów i wyniki badań",
+              "Bezpieczeństwo i stabilność zatrudnienia i dochodów a elastyczność zatrudnienia",
+              "Inwestycje w kapitał ludzki ze strony pracodawcy i pracownika",
+              "Motywacja i morale pracowników",
+              "Skala asymetrii informacji między pracownikiem a pracodawcą",
+              "Możliwości zmian skali i profilu działalności, metod produkcji i technologii"
+            ] },
+            { "title": "4. Segmentacja rynku pracy", "pts": null, "points": [
+              "Pojęcie segmentacji rynku pracy",
+              "Podstawowe tezy teorii segmentacji",
+              "Segmentacja w modelu dualnego rynku pracy",
+              "Segmentacja według kwalifikacji pracowników",
+              "Negatywne konsekwencje segmentacji"
+            ] },
+            { "title": "5. Typy umów a segmentacja rynku pracy", "pts": null, "points": [
+              "Zatrudnienie tymczasowe i regularne w zależności od typu umowy",
+              "Charakterystyka pracujących na umowach tymczasowych i na czas nieokreślony",
+              "Niskie przepływy z zatrudnienia tymczasowego do regularnego – kontraktowa segmentacja rynku pracy"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-31-centralne-zadanie",
+    "title": "Zadanie analityczne",
+    "pts": 15,
+    "topic": "mikro",
+    "intro": [
+      { "t": "p", "x": "Przedsiębiorstwo X konfiguruje informatyczne systemy bezpieczeństwa w państwie A. Funkcja produkcji w krótkim okresie: Q = 2L (Q – liczba systemów konfigurowanych w miesiącu, L – liczba informatyków na pełny etat). X jest wyłącznym dostawcą systemów zabezpieczeń i jedynym pracodawcą informatyków na rynku. Popyt na jego usługi: Q = 2000 − 0,5P (P – cena konfiguracji jednego systemu w USD). Podaż pracy informatyków: W = 2000 + 2L (W – miesięczna płaca informatyka w USD)." }
+    ],
+    "parts": [
+      {
+        "label": "a", "pts": 5,
+        "prompt": "Ilu informatyków powinno zatrudniać przedsiębiorstwo X, aby maksymalizować miesięczny zysk (3 pkt), i jaką płacę im zaoferuje (2 pkt)?",
+        "answers": [
+          { "label": "Zatrudnienie (L)", "value": 300, "tol": 0.5 },
+          { "label": "Płaca (USD)", "value": 2600, "tol": 0.5 }
+        ],
+        "solution": [
+          { "t": "p", "x": "Warunek maksymalizacji zysku: przychód krańcowy z pracy (MRP_L) = koszt krańcowy pracy (MC_L). X jest monopolistą na rynku produktu i monopsonistą na rynku pracy." },
+          { "t": "f", "x": "P = 4000 − 2Q → MR = 4000 − 4Q\nMP_L = 2 → MRP_L = MR × MP_L = (4000 − 8L) × 2 = 8000 − 16L\nkoszt pracy = W × L = 2000L + 2L² → MC_L = 2000 + 4L\n8000 − 16L = 2000 + 4L → L = 300\nW = 2000 + 2 × 300 = 2600 USD   (Q = 600)" }
+        ]
+      },
+      {
+        "label": "b", "pts": 4,
+        "prompt": "Wskaż dwa czynniki niezależne bezpośrednio od przedsiębiorstwa X, które spowodują wyższą płacę jego pracowników niż w podpunkcie a (założenia zadania się nie zmieniają).",
+        "answers": [],
+        "solution": [
+          { "t": "ul", "items": [
+            "płaca minimalna ustalona przez państwo powyżej płacy maksymalizującej zysk X (albo jej podniesienie),",
+            "uzwiązkowienie (siła negocjacyjna) informatyków – zrzeszeni pracownicy zachowują się jak monopolista na rynku pracy."
+          ] }
+        ]
+      },
+      {
+        "label": "c", "pts": 6,
+        "prompt": "W kraju B rynek tych usług jest doskonale konkurencyjny, cena konfiguracji to 2600 USD. X może zdalnie (bez dodatkowych kosztów) świadczyć usługi także w kraju B. Ilu informatyków zatrudni i ile wyprodukuje (4 pkt)? Ile usług wykona w kraju A, a ile w kraju B (2 pkt)?",
+        "answers": [
+          { "label": "Zatrudnienie (L)", "value": 800, "tol": 0.5 },
+          { "label": "Produkcja łączna (Q)", "value": 1600, "tol": 0.5 },
+          { "label": "Usługi w kraju A", "value": 350, "tol": 0.5 },
+          { "label": "Usługi w kraju B", "value": 1250, "tol": 0.5 }
+        ],
+        "solution": [
+          { "t": "p", "x": "Nowa krzywa utargu krańcowego – X sprzedaje w A, dopóki MR w A przekracza 2600, a resztę w B po 2600:" },
+          { "t": "f", "x": "MR = 4000 − 4Q   dla Q ≤ 350\nMR = 2600        dla Q > 350\n(4000 − 4Q = 2600 → Q = 350)" },
+          { "t": "f", "x": "MRP_L = 2600 × 2 = 5200 = MC_L = 2000 + 4L → L = 800\nQ = 2 × 800 = 1600\nkraj A: 350 konfiguracji, kraj B: 1600 − 350 = 1250" }
+        ]
+      }
+    ]
+  }
+}

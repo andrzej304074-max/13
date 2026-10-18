@@ -1,0 +1,110 @@
+{
+  "set": "owe-30-szkolne",
+  "ed": 30,
+  "stage": "s",
+  "essays": [
+    {
+      "id": "owe-30-szkolne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "polityka",
+      "topics": [
+        {
+          "title": "Opisz, w jaki sposób państwo może zmniejszać wahania cykliczne gospodarki. Na wybranych przez siebie przykładach państw wskaż narzędzia stosowane w tym celu w praktyce",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Przyczyny występowania wahań cyklicznych w gospodarce",
+              "Negatywne konsekwencje społeczno-ekonomiczne wahań cyklicznych",
+              "Istota pasywnej i aktywnej polityki fiskalnej państwa",
+              "Rola polityki pieniężnej w łagodzeniu cykli koniunkturalnych",
+              "Problem opóźnień w polityce finansowej państwa w kontekście działań antycyklicznych"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Funkcjonowanie automatycznych stabilizatorów koniunktury w wybranym kraju",
+              "Działania dyskrecjonalne jako przykład polityki antycyklicznej",
+              "Koordynacja polityki pieniężnej i fiskalnej (policy mix) w przeciwdziałaniu kryzysom w wybranym kraju",
+              "Rezultaty działań ukierunkowanych na zmniejszanie wahań cyklicznych gospodarki"
+            ] }
+          ]
+        },
+        {
+          "title": "Przedstaw przyczyny i skutki ingerencji państwa w dochody gospodarstw domowych. Na przykładzie Polski oceń rolę państwa w zapewnieniu minimum egzystencji",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Społeczno-ekonomiczne przyczyny ingerencji państwa w podział dochodu",
+              "Metody pomiaru zróżnicowania dochodów gospodarstw domowych",
+              "Problem spirali ubóstwa",
+              "Definicja minimum egzystencji"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Zjawisko ubóstwa w polskim społeczeństwie",
+              "Wpływ ingerencji państwa na rozkład dochodów gospodarstw domowych w Polsce",
+              "Polityka społeczna w Polsce wobec skrajnego ubóstwa – instytucje i instrumenty",
+              "Ocena skuteczności działań państwa na rzecz zapewnienia minimum egzystencji"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-30-szkolne-zadanie",
+    "title": "Zadanie z podstaw ekonomii",
+    "pts": 15,
+    "topic": "mikro",
+    "intro": [
+      { "t": "p", "x": "Funkcja podaży stali: q = 2p; funkcja popytu: q = −(2/3)p + 4, gdzie q – liczba kilogramów stali, p – cena kilograma stali (zł)." }
+    ],
+    "parts": [
+      {
+        "label": "a", "pts": 1,
+        "prompt": "W układzie współrzędnych narysuj funkcje popytu (D) i podaży (S) (w brudnopisie).",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "W postaci odwrotnej: D: p = −1,5q + 6 (przecina oś ceny w 6, oś ilości w 4); S: p = 0,5q (zaczyna się w początku układu). Krzywe przecinają się w punkcie E = (3; 1,5)." }
+        ]
+      },
+      {
+        "label": "b", "pts": 2,
+        "prompt": "Oblicz punkt równowagi.",
+        "answers": [
+          { "label": "Ilość równowagi (kg)", "value": 3, "tol": 0.01 },
+          { "label": "Cena równowagi (zł)", "value": 1.5, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "f", "x": "−(3/2)q + 6 = (1/2)q → 2q = 6 → q = 3 kg\np = 3 / 2 = 1,5 zł\nE = (3; 1,5)" }
+        ]
+      },
+      {
+        "label": "c", "pts": 4,
+        "prompt": "Produkcja stali wiąże się z emisją zanieczyszczeń; koszt zanieczyszczenia wynosi 2 zł (na kg) i nie zależy od wielkości produkcji. Przedstaw na rysunku krzywą kosztu społecznego (2 pkt) i podaj jej równanie (2 pkt). Podaj wyraz wolny równania Ks = (1/2)q + b.",
+        "answers": [{ "label": "Wyraz wolny b w równaniu Ks", "value": 2, "tol": 0.01 }],
+        "solution": [
+          { "t": "p", "x": "Koszt społeczny = koszt prywatny (krzywa podaży) + koszt zanieczyszczenia – krzywa S przesuwa się równolegle w górę o 2 zł:" },
+          { "t": "f", "x": "Ks = (1/2)q + 2" }
+        ]
+      },
+      {
+        "label": "d", "pts": 4,
+        "prompt": "Zaznacz na wykresie rezultat efektywny społecznie (2 pkt) i oszacuj jego współrzędne (2 pkt).",
+        "answers": [
+          { "label": "Ilość efektywna (kg)", "value": 2, "tol": 0.01 },
+          { "label": "Cena (zł)", "value": 3, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "p", "x": "Rezultat efektywny społecznie E′ leży na przecięciu krzywej kosztu społecznego z krzywą popytu:" },
+          { "t": "f", "x": "−(3/2)q + 6 = (1/2)q + 2 → 2q = 4 → q = 2\np = 0,5 × 2 + 2 = 3\nE′ = (2; 3)" }
+        ]
+      },
+      {
+        "label": "e", "pts": 4,
+        "prompt": "Oblicz stratę dobrobytu wynikającą z podaży stali na poziomie równowagi rynkowej zamiast ilości optymalnej społecznie.",
+        "answers": [{ "label": "Strata dobrobytu (zł)", "value": 1, "tol": 0.01 }],
+        "solution": [
+          { "t": "p", "x": "Strata dobrobytu to pole trójkąta EE′E″ między krzywą kosztu społecznego a popytem, od q = 2 do q = 3. E″ = punkt na krzywej Ks przy q = 3:" },
+          { "t": "f", "x": "Ks(3) = 0,5 × 3 + 2 = 3,5 → E″ = (3; 3,5)\nwysokość = 3,5 − 1,5 = 2; podstawa = 3 − 2 = 1\nstrata = ½ × 1 × 2 = 1 zł" }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "set": "owe-30-okregowe",
+  "ed": 30,
+  "stage": "o",
+  "essays": [
+    {
+      "id": "owe-30-okregowe-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "polityka",
+      "topics": [
+        {
+          "title": "Na czym polega deregulacja gospodarki? Podaj przykład deregulacji w Polsce. Jakie korzyści może przynieść deregulacja, a jakie zagrożenia są z nią związane?",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Istota deregulacji",
+              "Deregulacja gospodarki – uzasadnienie teoretyczne",
+              "Deregulacja a zawodność rynku:",
+              "  a) problem zawodności konkurencji",
+              "  b) problem asymetrii informacji",
+              "  c) problem negatywnych efektów zewnętrznych",
+              "Deregulacja w różnych doktrynach ekonomicznych",
+              "Deregulacja a elastyczność gospodarki",
+              "Deregulacja a bezpieczeństwo społeczno-ekonomiczne pracowników i pracodawców",
+              "Deregulacja z perspektywy historycznej"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Proces deregulacji w wybranym sektorze gospodarki",
+              "Deregulacja a model społecznej gospodarki rynkowej w Polsce",
+              "Ocena wpływu deregulacji na potencjał gospodarczy Polski",
+              "Ryzyko generowane przez procesy deregulacji na przykładzie gospodarki polskiej",
+              "Przykłady korzyści i zagrożeń związanych z deregulacją"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-30-okregowe-zadanie",
+    "title": "Zadanie z analizy finansowej",
+    "pts": 15,
+    "topic": "finanse",
+    "intro": [
+      { "t": "p", "x": "Przedsiębiorstwo z branży motoryzacyjnej – wybrane dane za 2015 r. Stawka podatku dochodowego wynosi 19%." },
+      { "t": "table", "head": ["Pozycja", "Wartość"], "rows": [
+        ["Przychody (sprzedaż)", "5 000 000 zł"],
+        ["Amortyzacja", "500 000 zł"],
+        ["Środki pieniężne", "100 000 zł"],
+        ["Zobowiązania bieżące", "1 200 000 zł"],
+        ["Mnożnik kapitału własnego", "1,4"],
+        ["Wskaźnik płynności bieżącej", "1,31"],
+        ["Wskaźnik płynności szybkiej", "0,53"],
+        ["ROA", "7,5%"]
+      ] }
+    ],
+    "parts": [
+      {
+        "label": "1", "pts": 2,
+        "prompt": "Oblicz wartość wskaźnika płynności gotówkowej.",
+        "answers": [{ "label": "Wskaźnik płynności gotówkowej", "value": 0.083, "tol": 0.004 }],
+        "solution": [
+          { "t": "f", "x": "płynność gotówkowa = środki pieniężne / zobowiązania bieżące = 100 000 / 1 200 000 ≈ 0,083" }
+        ]
+      },
+      {
+        "label": "2", "pts": 3,
+        "prompt": "Oblicz wartość zapasów przedsiębiorstwa.",
+        "answers": [{ "label": "Zapasy (zł)", "value": 936000, "tol": 1 }],
+        "solution": [
+          { "t": "f", "x": "płynność bieżąca = aktywa obrotowe / zobowiązania bieżące → aktywa obrotowe = 1,31 × 1 200 000 = 1 572 000 zł\npłynność szybka = (aktywa obrotowe − zapasy) / zobowiązania bieżące → aktywa obrotowe − zapasy = 0,53 × 1 200 000 = 636 000 zł\nzapasy = 1 572 000 − 636 000 = 936 000 zł" }
+        ]
+      },
+      {
+        "label": "3", "pts": 4,
+        "prompt": "Oblicz stopę zwrotu z kapitału własnego (ROE) w 2015 r.",
+        "answers": [{ "label": "ROE (%)", "value": 10.5, "tol": 0.01, "unit": "%" }],
+        "solution": [
+          { "t": "f", "x": "ROE = ROA × mnożnik kapitału własnego (aktywa / kapitał własny)\nROE = 7,5% × 1,4 = 10,5%" }
+        ]
+      },
+      {
+        "label": "4", "pts": 3,
+        "prompt": "Cena akcji wynosi 42 zł. W poprzednim okresie wypłacono dywidendę 2 zł na akcję, a stała stopa wzrostu dywidendy (5% rocznie) zostanie utrzymana. Oblicz koszt kapitału własnego.",
+        "answers": [{ "label": "Koszt kapitału własnego (%)", "value": 10, "tol": 0.01, "unit": "%" }],
+        "solution": [
+          { "t": "f", "x": "model rosnącej dywidendy (Gordona): RE = D1 / P0 + g\nD1 = 2 × (1 + 0,05) = 2,10 zł\nRE = 2,10 / 42 + 0,05 = 0,05 + 0,05 = 10%" }
+        ]
+      },
+      {
+        "label": "5", "pts": 3,
+        "prompt": "Koszt długu (bez tarczy podatkowej) wynosi 8%. Wartość rynkowa kapitału własnego to 6 000 000 zł, a długu 8 000 000 zł. Oblicz średni ważony koszt kapitału (WACC).",
+        "answers": [{ "label": "WACC (%)", "value": 8, "tol": 0.02, "unit": "%" }],
+        "solution": [
+          { "t": "f", "x": "WACC = (E / V) × RE + (D / V) × RD × (1 − Tc)\nV = 6 000 000 + 8 000 000 = 14 000 000 zł\nWACC = 6/14 × 10% + 8/14 × 8% × (1 − 0,19) ≈ 4,29% + 3,70% ≈ 8%" }
+        ]
+      }
+    ]
+  }
+}

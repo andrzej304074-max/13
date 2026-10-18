@@ -1,0 +1,132 @@
+{
+  "set": "owe-32-szkolne",
+  "ed": 32,
+  "stage": "s",
+  "essays": [
+    {
+      "id": "owe-32-szkolne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "polityka",
+      "topics": [
+        {
+          "title": "Przedstaw przyczyny i skutki stosowania barier handlowych w wybranym sektorze gospodarki",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Teoretyczne uzasadnienie liberalizacji handlu w świetle dorobku klasycznej teorii handlu",
+              "Analiza teoretyczna skutków wprowadzenia wybranych narzędzi polityki handlowej (taryfowych i pozataryfowych) w modelu równowagi cząstkowej, w tym ich wpływu na:",
+              "  a) wielkość konsumpcji",
+              "  b) wielkość produkcji",
+              "  c) cenę dobra",
+              "  d) terms of trade",
+              "  e) dochody budżetu państwa",
+              "Wybrane teoretyczne argumenty na rzecz protekcjonizmu:",
+              "  a) przyczyny stosowania barier handlowych w dorobku merkantylizmu",
+              "  b) ochrona raczkujących gałęzi przemysłu",
+              "  c) protekcjonizm w ramach polityki przemysłowej",
+              "Protekcjonizm jako rozwiązanie drugie po najlepszym (second best)"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Charakterystyka wybranego sektora",
+              "Społeczno-gospodarcze przyczyny skłaniające państwa do ograniczania swobody wymiany handlowej",
+              "Narzędzia polityki handlowej stosowane przez wybrane państwa w przeszłości i obecnie w celu ochrony wskazanego sektora",
+              "Zarys ewolucji skali protekcjonizmu w wybranym sektorze",
+              "Skutki stosowania narzędzi polityki handlowej w wybranym sektorze dla:",
+              "  a) analizowanego sektora",
+              "  b) gospodarki danego państwa"
+            ] }
+          ]
+        },
+        {
+          "title": "Omów korzyści i koszty wynikające z udziału Polski w jednolitym rynku europejskim",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Wspólny rynek jako jedna z form integracji gospodarczej",
+              "Istota wspólnego rynku:",
+              "  a) swobodny przepływ towarów",
+              "  b) swobodny przepływ usług",
+              "  c) swobodny przepływ kapitału",
+              "  d) swobodny przepływ osób",
+              "Zarys historii funkcjonowania jednolitego rynku europejskiego",
+              "Teoretyczne podstawy efektów kreacji, przesunięcia i ekspansji handlu",
+              "Społeczno-gospodarcze efekty liberalizacji przepływu kapitału w teorii ekonomii"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Wpływ swobody przepływu towarów i usług w jednolitym rynku na wielkość i strukturę wymiany handlowej oraz PKB Polski",
+              "Korzyści i koszty liberalizacji przepływu kapitału dla gospodarki Polski, ze szczególnym uwzględnieniem dostępności kapitału na inwestycje przedsiębiorstw i stabilności sektora finansowego",
+              "Efekty swobodnego przepływu pracowników dla rynku pracy w Polsce oraz długofalowe skutki migracji dla stabilności systemu emerytalnego",
+              "Społeczno-gospodarcze efekty napływu środków z funduszy europejskich",
+              "Prawo Unii Europejskiej – szanse i zagrożenia dla funkcjonowania polskiej gospodarki"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-32-szkolne-zadanie",
+    "title": "Zadanie z podstaw ekonomii",
+    "pts": 15,
+    "topic": "makro",
+    "intro": [
+      { "t": "p", "x": "W kraju X popyt na stal opisany jest równaniem q = −0,5p + 15, a krzywa podaży – równaniem q = 0,25p − 1,5. Krzywa podaży stali reszty świata (bez kraju X): q = 0,5p − 6. Stąd krzywa podaży kraju X i reszty świata (światowa):" },
+      { "t": "f", "x": "q = 0,25p − 1,5   dla p < 12\nq = 0,75p − 7,5   dla p ≥ 12" },
+      { "t": "p", "x": "p – cena tony stali w tys. USD, q – ilość ton stali. Przyjmij pełną wymienialność walut i pomiń koszty transportu." }
+    ],
+    "parts": [
+      {
+        "label": "a", "pts": 2,
+        "prompt": "Oblicz cenę oraz ilość w punkcie równowagi na rynku stali w kraju X w sytuacji autarkii.",
+        "answers": [
+          { "label": "Cena (tys. USD)", "value": 22, "tol": 0.01 },
+          { "label": "Ilość (t)", "value": 4, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "f", "x": "−0,5p + 15 = 0,25p − 1,5 → 0,75p = 16,5 → p = 22\nq = −0,5 × 22 + 15 = 4" }
+        ]
+      },
+      {
+        "label": "b", "pts": 4,
+        "prompt": "Oszacuj cenę tony stali (2 pkt) oraz wielkość konsumpcji stali w kraju X w sytuacji wolnego handlu (2 pkt).",
+        "answers": [
+          { "label": "Cena (tys. USD)", "value": 18, "tol": 0.01 },
+          { "label": "Konsumpcja krajowa (t)", "value": 6, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "p", "x": "Popyt kraju X zestawiamy z podażą światową (kraj X + reszta świata), odcinek p ≥ 12:" },
+          { "t": "f", "x": "−0,5p + 15 = 0,75p − 7,5 → 1,25p = 22,5 → p = 18\nq = −0,5 × 18 + 15 = 6" }
+        ]
+      },
+      {
+        "label": "c", "pts": 4,
+        "prompt": "Kraj X wprowadza cło specyficzne 4000 USD od importu tony stali. Oszacuj nową cenę krajową stali (2 pkt) oraz wielkość produkcji krajowej (2 pkt).",
+        "answers": [
+          { "label": "Nowa cena krajowa (tys. USD)", "value": 20.4, "tol": 0.05, "alt": [19.6] },
+          { "label": "Produkcja krajowa (t)", "value": 3.6, "tol": 0.05, "alt": [3.4] }
+        ],
+        "solution": [
+          { "t": "p", "x": "Rozwiązanie z klucza: krzywą podaży światowej przesuwamy w górę o cło (4 tys. USD):" },
+          { "t": "f", "x": "p = 4q + 6        dla q < 3\np = (4/3)q + 14   dla q ≥ 3\n−0,5p + 15 = 0,75(p − 4) − 7,5 → 1,25p = 25,5 → p = 20,4\nprodukcja krajowa = 0,25 × 20,4 − 1,5 = 3,6" },
+          { "t": "p", "x": "Uwaga (ujęcie ścisłe, też akceptowane): cło płacą tylko importerzy, więc przesuwa się wyłącznie podaż reszty świata: q = 0,5(p − 4) − 6. Wtedy popyt = 0,25p − 1,5 + 0,5p − 8 → 1,25p = 24,5 → p = 19,6, a produkcja krajowa = 0,25 × 19,6 − 1,5 = 3,4." }
+        ]
+      },
+      {
+        "label": "d", "pts": 2,
+        "prompt": "Ile wyniesie przychód rządu z tytułu wprowadzenia cła (w USD)?",
+        "answers": [{ "label": "Przychód z cła (USD)", "value": 4800, "tol": 1, "alt": [7200] }],
+        "solution": [
+          { "t": "f", "x": "konsumpcja krajowa przy p = 20,4: q = −0,5 × 20,4 + 15 = 4,8\nimport = 4,8 − 3,6 = 1,2 t\nprzychód = 4000 USD × 1,2 = 4 800 USD" },
+          { "t": "p", "x": "W ujęciu ścisłym (p = 19,6): konsumpcja 5,2, import 5,2 − 3,4 = 1,8 t, przychód 4000 × 1,8 = 7 200 USD." }
+        ]
+      },
+      {
+        "label": "e", "pts": 3,
+        "prompt": "Czy kraj X jest krajem dużym, czy małym? Uzasadnij.",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Kraj X jest krajem dużym. Wprowadzenie cła obniżyło cenę światową (cenę otrzymywaną przez zagranicznych dostawców) z 18 do 16,4 tys. USD (20,4 − 4); w przypadku kraju małego cena światowa by się nie zmieniła. Widać to też w równaniach: podaż kraju X istotnie zmienia krzywą podaży światowej względem podaży reszty świata." }
+        ]
+      }
+    ]
+  }
+}

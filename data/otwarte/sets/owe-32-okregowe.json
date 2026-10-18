@@ -1,0 +1,98 @@
+{
+  "set": "owe-32-okregowe",
+  "ed": 32,
+  "stage": "o",
+  "essays": [
+    {
+      "id": "owe-32-okregowe-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "polityka",
+      "topics": [
+        {
+          "title": "Rozważ argumenty przemawiające za tym, że wolny handel może wpływać pozytywnie bądź negatywnie na rozwój krajów znajdujących się na niższych etapach rozwoju",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Wpływ wolnego handlu na gospodarkę kraju na niższym etapie rozwoju na bazie koncepcji przewagi komparatywnej D. Ricardo",
+              "Wolny handel w gospodarce na niższym etapie rozwoju w kontekście teorii obfitości zasobów (twierdzenie H-O)",
+              "Niedoskonałości rynku w kraju na niskim etapie rozwoju jako uzasadnienie narzędzi regulacyjnych w handlu międzynarodowym (second best)",
+              "Teoretyczne podstawy argumentów na rzecz protekcjonizmu wychowawczego",
+              "Polityka handlowa kraju rozwijającego się w kontekście pułapki średniego rozwoju (dochodu)"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Uprzemysłowienie antyimportowe na przykładzie wybranego kraju rozwijającego się:",
+              "  a) empiryczna analiza zasadności protekcjonizmu wychowawczego, w tym wolny handel a opadająca krzywa doświadczenia (uczenia się)",
+              "  b) negatywne efekty faworyzowania przemysłu",
+              "Problem dumpingu i jego konsekwencje dla państw o niższym poziomie rozwoju",
+              "Dyfuzja wiedzy wynikająca z wolnego handlu i jej wpływ na poziom rozwoju wybranego kraju rozwijającego się",
+              "Sytuacja na rynku czynników produkcji w wybranym kraju na niższym etapie rozwoju w kontekście polityki handlowej, z uwzględnieniem:",
+              "  a) efektów opisanych w twierdzeniu Stolpera–Samuelsona",
+              "  b) niższej mobilności czynników produkcji (zwłaszcza niskowykwalifikowanej siły roboczej)",
+              "Wpływ wolnego handlu na nierówności społeczne w wybranym kraju",
+              "Próba oceny znaczenia (pozytywnego albo negatywnego) wolnego handlu dla rozwoju państw na niższych etapach rozwoju"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-32-okregowe-zadanie",
+    "title": "Zadanie z analizy finansowej",
+    "pts": 15,
+    "topic": "firma",
+    "intro": [
+      { "t": "p", "x": "Przedsiębiorstwo X produkuje drewniane zabawki dla dzieci. Wybrane informacje o jego sytuacji finansowej w 2014 r.:" },
+      { "t": "table", "head": ["Pozycja", "Wartość"], "rows": [
+        ["Przychody ze sprzedaży", "7 300 000 zł"],
+        ["Zysk brutto", "82 000 zł"],
+        ["Wartości niematerialne i prawne", "200 000 zł"],
+        ["Zapasy", "600 000 zł"],
+        ["Należności ze sprzedaży produktów i towarów", "800 000 zł"],
+        ["Zobowiązania długoterminowe", "20 000 zł"],
+        ["Wskaźnik okresu spłaty zobowiązań", "20 dni"]
+      ] },
+      { "t": "p", "x": "Można przyjąć rok 365- albo 360-dniowy – akceptowane są wyniki dla obu wariantów." }
+    ],
+    "parts": [
+      {
+        "label": "a", "pts": 3,
+        "prompt": "Oblicz wskaźnik obrotu (długości cyklu) zapasów w dniach (2 pkt). Dokonaj jego interpretacji (1 pkt).",
+        "answers": [{ "label": "Cykl zapasów (dni)", "value": 30, "tol": 0.05, "alt": [29.59] }],
+        "solution": [
+          { "t": "f", "x": "cykl zapasów = zapasy / przychody ze sprzedaży × 365 = 600 000 / 7 300 000 × 365 = 30 dni\n(dla 360 dni: 29,59)" },
+          { "t": "p", "x": "Przedsiębiorstwo X co 30 dni odtwarza zapasy w celu uzyskania przychodów ze sprzedaży." }
+        ]
+      },
+      {
+        "label": "b", "pts": 3,
+        "prompt": "Oblicz wskaźnik rotacji należności (w razach) (2 pkt). Dokonaj jego interpretacji (1 pkt).",
+        "answers": [{ "label": "Rotacja należności (razy)", "value": 9.13, "tol": 0.01 }],
+        "solution": [
+          { "t": "f", "x": "rotacja należności = przychody ze sprzedaży / należności = 7 300 000 / 800 000 ≈ 9,13" },
+          { "t": "p", "x": "Przedsiębiorstwo X około 9,13 razy w ciągu roku odtwarza swoje należności z tytułu sprzedaży produktów i towarów." }
+        ]
+      },
+      {
+        "label": "c", "pts": 5,
+        "prompt": "Oblicz wartość cyklu operacyjnego oraz cyklu środków pieniężnych (cyklu konwersji gotówki).",
+        "answers": [
+          { "label": "Cykl operacyjny (dni)", "value": 70, "tol": 0.05, "alt": [69.04] },
+          { "label": "Cykl środków pieniężnych (dni)", "value": 50, "tol": 0.05, "alt": [49.04] }
+        ],
+        "solution": [
+          { "t": "f", "x": "cykl inkasa należności = należności / przychody × 365 = 800 000 / 7 300 000 × 365 = 40 dni   (dla 360: 39,45)\ncykl operacyjny = cykl zapasów + cykl należności = 30 + 40 = 70 dni   (dla 360: 69,04)\ncykl środków pieniężnych = cykl operacyjny − okres spłaty zobowiązań = 70 − 20 = 50 dni   (dla 360: 49,04)" }
+        ]
+      },
+      {
+        "label": "d", "pts": 4,
+        "prompt": "Przedsiębiorstwo chce skrócić cykl środków pieniężnych, m.in. przez faktoring właściwy (pełny). Czym jest faktoring właściwy (2 pkt)? Na zmianę którego ze wskaźników determinujących długość cyklu środków pieniężnych bezpośrednio wpłynie taka decyzja (2 pkt)?",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Faktoring polega na wykupie przez faktora (np. bank) nieprzeterminowanych wierzytelności przedsiębiorstwa (faktoranta), należnych mu z tytułu dostaw towarów i usług. W faktoringu właściwym (pełnym) faktor przejmuje w pełni ryzyko niewypłacalności dłużnika." },
+          { "t": "p", "x": "Faktoring pełny bezpośrednio zmniejszy wskaźnik inkasa (cyklu) należności w dniach." }
+        ]
+      }
+    ]
+  }
+}

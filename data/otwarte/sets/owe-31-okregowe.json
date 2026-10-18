@@ -1,0 +1,137 @@
+{
+  "set": "owe-31-okregowe",
+  "ed": 31,
+  "stage": "o",
+  "essays": [
+    {
+      "id": "owe-31-okregowe-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "makro",
+      "topics": [
+        {
+          "title": "Przedstaw zalety oraz wady stosowania płacy minimalnej jako instrumentu rynku pracy. Jakie problemy są związane z płacą minimalną w warunkach funkcjonowania wspólnego rynku?",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Definicja i istota płacy minimalnej",
+              "Płaca minimalna w neoklasycznej teorii funkcjonowania rynku pracy",
+              "Znaczenie płacy minimalnej w sytuacji monopsonu na rynku pracy",
+              "Aspekt motywacyjny płacy minimalnej – argumenty za i przeciw",
+              "Elastyczne formy zatrudnienia a płaca minimalna",
+              "Płaca minimalna na tle innych instrumentów rynku pracy"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Skutki społeczno-gospodarcze płacy minimalnej z uwzględnieniem różnych grup zawodowych",
+              "Efektywność płacy minimalnej jako narzędzia redukcji ubóstwa",
+              "Istota wspólnego rynku:",
+              "  a) swobodny przepływ towarów",
+              "  b) swobodny przepływ usług",
+              "  c) swobodny przepływ kapitału",
+              "  d) swobodny przepływ osób",
+              "Zróżnicowanie polityki płacy minimalnej w krajach tworzących wspólny rynek",
+              "Ewolucja płacy minimalnej w Polsce po akcesji do Unii Europejskiej",
+              "Problemy społeczno-gospodarcze płacy minimalnej w warunkach wspólnego rynku:",
+              "  a) wpływ zróżnicowania przepisów o płacy minimalnej na działalność gospodarczą na wspólnym rynku",
+              "  b) arbitraż regulacyjny",
+              "  c) problem pracowników delegowanych",
+              "  d) migracja w kontekście płacy minimalnej na wspólnym rynku",
+              "Ocena stosowania płacy minimalnej na wspólnym rynku"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-31-okregowe-zadanie",
+    "title": "Zadanie z analizy finansowej",
+    "pts": 15,
+    "topic": "firma",
+    "intro": [
+      { "t": "p", "x": "W tabeli przedstawiono zestawienie przychodów, kosztów i rodzajów zysku za lata 2015–2016 przygotowane (zgodnie z prawem bilansowym) na walne zgromadzenie przedsiębiorstwa X działającego w Polsce. Przedsiębiorstwo X jest spółką kapitałową. Komórki „…” uzupełniasz w podpunkcie a." },
+      { "t": "table", "head": ["Pozycja (zł)", "2015", "2016"], "rows": [
+        ["Przychody netto ze sprzedaży", "128 000", "151 000"],
+        ["Koszt własny sprzedaży", "…", "124 000"],
+        ["Zysk ze sprzedaży", "…", "27 000"],
+        ["Pozostałe przychody operacyjne", "1 500", "2 000"],
+        ["Pozostałe koszty operacyjne", "600", "400"],
+        ["Zysk z działalności operacyjnej", "14 900", "28 600"],
+        ["Przychody finansowe", "1 000", "1 000"],
+        ["Koszty finansowe", "16 000", "16 000"],
+        ["Zysk z działalności gospodarczej", "−100", "…"],
+        ["Saldo strat nadzwyczajnych", "0", "0"],
+        ["Zysk (strata) brutto", "−100", "13 600"],
+        ["Podatek (19%)", "12", "2 584"],
+        ["Zysk (strata) netto", "−112", "…"]
+      ] }
+    ],
+    "parts": [
+      {
+        "label": "a", "pts": 3,
+        "prompt": "Uzupełnij brakujące wartości w tabeli. Wykorzystaj informację, że w 2015 r. koszty bezpośrednie wyniosły 100 000 zł, koszty zarządu – 10 000 zł, a koszty pośrednie – 14 000 zł. (W arkuszu należało też podać nazwy kategorii zysku.)",
+        "answers": [
+          { "label": "Koszt własny sprzedaży 2015 (zł)", "value": 114000, "tol": 0.5 },
+          { "label": "Zysk ze sprzedaży 2015 (zł)", "value": 14000, "tol": 0.5 },
+          { "label": "Zysk z działalności gospodarczej 2016 (zł)", "value": 13600, "tol": 0.5 },
+          { "label": "Zysk netto 2016 (zł)", "value": 11016, "tol": 0.5 }
+        ],
+        "solution": [
+          { "t": "f", "x": "koszt własny sprzedaży 2015 = 100 000 + 10 000 + 14 000 = 114 000 zł\nzysk ze sprzedaży 2015 = 128 000 − 114 000 = 14 000 zł\n(kontrola: 14 000 + 1 500 − 600 = 14 900 = zysk operacyjny)\nzysk z działalności gospodarczej 2016 = 28 600 + 1 000 − 16 000 = 13 600 zł\nzysk netto 2016 = 13 600 − 2 584 = 11 016 zł" }
+        ]
+      },
+      {
+        "label": "b", "pts": 4,
+        "prompt": "Oszacuj wskaźnik rentowności sprzedaży oraz wskaźnik rentowności operacyjnej sprzedaży dla 2016 r. (w %).",
+        "answers": [
+          { "label": "Rentowność sprzedaży (%)", "value": 17.88, "tol": 0.01, "unit": "%" },
+          { "label": "Rentowność operacyjna sprzedaży (%)", "value": 18.69, "tol": 0.01, "unit": "%" }
+        ],
+        "solution": [
+          { "t": "f", "x": "W_rsp = Zs × 100 / Ps = 27 000 × 100 / 151 000 ≈ 17,88%\nW_ro = Zo × 100 / (Ps + Ppo) = 28 600 × 100 / (151 000 + 2 000) ≈ 18,69%\nZs – zysk ze sprzedaży; Zo – zysk operacyjny; Ps – przychody ze sprzedaży; Ppo – pozostałe przychody operacyjne" }
+        ]
+      },
+      {
+        "label": "c", "pts": 1,
+        "prompt": "Jaką formą spółki handlowej jest przedsiębiorstwo X?",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Spółką akcyjną – sprawozdanie przygotowano na walne zgromadzenie (organ spółki akcyjnej)." }
+        ]
+      },
+      {
+        "label": "d", "pts": 1,
+        "prompt": "W 2015 r. przedsiębiorstwo X poniosło stratę. Przedstaw jeden z możliwych sposobów jej pokrycia.",
+        "answers": [],
+        "solution": [
+          { "t": "ul", "items": [
+            "niepodzielonym zyskiem z lat ubiegłych,",
+            "kapitałem zapasowym lub rezerwowym,",
+            "zyskiem lat następnych,",
+            "przez obniżenie kapitału zakładowego (ogólnie: obniżeniem kapitału własnego)."
+          ] }
+        ]
+      },
+      {
+        "label": "e", "pts": 4,
+        "prompt": "W 2016 r. kapitał własny wynosi 400 000 zł, a kapitał całkowity 600 000 zł. Odsetki od kapitału obcego wynoszą 8% w skali roku. Oszacuj efekt dźwigni finansowej dla 2016 r. (3 pkt, w punktach procentowych). Co oznacza taka wartość (1 pkt)?",
+        "answers": [
+          { "label": "Rentowność kapitału własnego (%)", "value": 2.754, "tol": 0.005 },
+          { "label": "Rentowność kapitału całkowitego (%)", "value": 3.996, "tol": 0.005 },
+          { "label": "Efekt dźwigni finansowej (p.p.)", "value": -1.242, "tol": 0.005 }
+        ],
+        "solution": [
+          { "t": "f", "x": "EDF = W_rkw − W_rkc\nW_rkw = 11 016 / 400 000 × 100 ≈ 2,754%\nkapitał obcy = 600 000 − 400 000 = 200 000 zł; odsetki = 8% × 200 000 = 16 000 zł\nzysk netto + odsetki × (1 − 0,19) = 11 016 + 12 960 = 23 976 zł\nW_rkc = 23 976 / 600 000 × 100 ≈ 3,996%\nEDF = 2,754 − 3,996 = −1,242" },
+          { "t": "p", "x": "To negatywny efekt dźwigni finansowej (tzw. maczuga finansowa): oprocentowanie kapitału obcego jest wyższe niż rentowność kapitału całkowitego, więc zadłużenie obniża rentowność kapitału własnego." }
+        ]
+      },
+      {
+        "label": "f", "pts": 2,
+        "prompt": "W 2015 r. przedsiębiorstwo poniosło stratę brutto, a mimo to zapłaciło podatek dochodowy. Wyjaśnij dlaczego.",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Wynika to z rozbieżności między prawem bilansowym a podatkowym: część kosztów ujętych w wyniku bilansowym nie stanowi kosztów uzyskania przychodu (lub część przychodów podatkowych nie jest przychodem bilansowym), więc dochód do opodatkowania mógł być dodatni mimo straty bilansowej." }
+        ]
+      }
+    ]
+  }
+}

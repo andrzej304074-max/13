@@ -1,0 +1,100 @@
+{
+  "set": "owe-32-centralne",
+  "ed": 32,
+  "stage": "c",
+  "essays": [
+    {
+      "id": "owe-32-centralne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "makro",
+      "topics": [
+        {
+          "title": "Przedstaw teoretyczne argumenty za i przeciw systemom sztywnego i płynnego kursu walutowego. Oceń skuteczność polityki gospodarczej państwa w obu systemach",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Rynek walutowy i istota polityki kursu walutowego",
+              "Charakterystyka systemów kursu walutowego:",
+              "  a) kurs całkowicie płynny",
+              "  b) kurs płynny kierowany",
+              "  c) kurs walutowy w pełzającym przedziale wahań",
+              "  d) kurs stały w przedziale wahań",
+              "  e) kurs stały pełzający",
+              "  f) umowny kurs stały",
+              "  g) system zarządu walutą",
+              "  h) unia walutowa lub formalna dolaryzacja",
+              "„Trylemat” celów polityki w gospodarkach otwartych (teoria trójkąta niemożności):",
+              "  a) system kursu walutowego a mobilność kapitału",
+              "  b) system kursu walutowego a autonomia polityki pieniężnej",
+              "Teoretyczna analiza wpływu zmian polityki makroekonomicznej rządu na produkcję i kurs walutowy",
+              "Wpływ kursu walutowego na produkcję i wymianę międzynarodową:",
+              "  a) realny kurs walutowy i zagregowany popyt",
+              "  b) koncepcja krzywej J",
+              "  c) warunek Marshalla–Lernera"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Doświadczenia wybranych państw z polityką kursu walutowego w kontekście kryzysów gospodarczych",
+              "Konsekwencje systemu walutowego dla wymiany handlowej w praktyce:",
+              "  a) konkurencyjna dewaluacja jako narzędzie protekcji handlowej (wpływ na eksport i import)",
+              "  b) znaczenie ryzyka kursowego w kształtowaniu się wymiany handlowej",
+              "Polityka kursowa jako narzędzie polityki antyinflacyjnej (kurs walutowy jako kotwica nominalna)",
+              "Kształtowanie kursu walutowego a ryzyko zjawisk deflacyjnych w gospodarce",
+              "Polityka rezerw walutowych a system kursowy, w tym koszt alternatywny posiadania rezerw",
+              "Próba oceny skuteczności polityki gospodarczej państwa w zależności od systemu kursowego"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-32-centralne-zadanie",
+    "title": "Zadanie analityczne",
+    "pts": 15,
+    "topic": "makro",
+    "intro": [
+      { "t": "p", "x": "Kraj A i kraj B produkują podkoszulki (P) i tenisówki (T) przy wykorzystaniu rodzimej siły roboczej. W tabeli podano, ile każdy kraj wytwarza w ciągu godziny. Przeanalizuj rozkład wydajności pracy w obu krajach." },
+      { "t": "table", "head": ["", "Podkoszulki (szt./godz.)", "Tenisówki (par/godz.)"], "rows": [
+        ["Kraj A", "25", "10"],
+        ["Kraj B", "50", "50"]
+      ] }
+    ],
+    "parts": [
+      {
+        "label": "a", "pts": 5,
+        "prompt": "Czy przy braku barier handlowych i zerowych kosztach transportu istnieje podstawa do handlu między krajami A i B? Uzasadnij, określając kierunki wymiany i specjalizację. Z jakiej teorii ekonomicznej korzystasz?",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Kraj B ma przewagę absolutną w produkcji obu dóbr – według teorii kosztów absolutnych A. Smitha wymiana nie byłaby możliwa. Jednak względnie przewaga B jest większa w tenisówkach (dwukrotnie więcej podkoszulków, pięciokrotnie więcej tenisówek). Według teorii kosztów komparatywnych D. Ricardo handel jest korzystny: B specjalizuje się w tenisówkach i eksportuje je do A, a A – w podkoszulkach i eksportuje je do B." },
+          { "t": "f", "x": "wewnętrzne stosunki wymienne (relatywne wydajności):\nkraj A: 1P = 0,4T, 1T = 2,5P\nkraj B: 1P = 1T" },
+          { "t": "p", "x": "Każdy kraj specjalizuje się w wyrobie, dla którego jego wewnętrzny stosunek wymienny (koszt alternatywny) jest niższy niż w drugim kraju." }
+        ]
+      },
+      {
+        "label": "b", "pts": 5,
+        "prompt": "Kraj A chce eksportować do B 200 podkoszulków w zamian za 150 par tenisówek. Czy wymiana będzie korzystna dla obu stron? Dla każdego kraju określ wielkość korzyści/strat w podkoszulkach.",
+        "answers": [
+          { "label": "Korzyść kraju A (podkoszulki)", "value": 175, "tol": 0.5 },
+          { "label": "Korzyść kraju B (podkoszulki)", "value": 50, "tol": 0.5 }
+        ],
+        "solution": [
+          { "t": "f", "x": "kraj A: 200P zajmuje tyle czasu co 200 × 0,4T = 80T\nza 200P otrzymuje 150T → 150 − 80 = 70T więcej\n70T × 2,5P = 175P korzyści\nkraj B: 150T = 150P (1T = 1P)\nza 150T otrzymuje 200P → 200 − 150 = 50P korzyści" },
+          { "t": "p", "x": "Wymiana jest korzystna dla obu krajów: A zyskuje równowartość 175 podkoszulków, B – 50 podkoszulków." }
+        ]
+      },
+      {
+        "label": "c", "pts": 5,
+        "prompt": "Kraj A chce za 200 podkoszulków 250 par tenisówek. Negocjujesz w imieniu kraju B: na ile par tenisówek za 200 podkoszulków możesz się zgodzić? W jakim przedziale powinny kształtować się obustronnie korzystne relacje wymienne?",
+        "answers": [
+          { "label": "Górna granica liczby par za 200P (B zgodzi się na mniej niż)", "value": 200, "tol": 0.5 },
+          { "label": "Dolna granica liczby par za 200P (A zgodzi się na więcej niż)", "value": 80, "tol": 0.5 }
+        ],
+        "solution": [
+          { "t": "p", "x": "Na rynku międzynarodowym podkoszulek musi być wymieniany na tenisówki w relacji wyższej niż w kraju A i niższej niż w kraju B:" },
+          { "t": "f", "x": "0,4T < 1P < 1T   | × 200\n80T < 200P < 200T" },
+          { "t": "p", "x": "Jako negocjator kraju B możesz się zgodzić na mniej niż 200 par tenisówek za 200 podkoszulków (żądanie 250 par jest dla B niekorzystne). Obustronnie korzystne relacje: 1P od 0,4T do 1T (czyli od 80 do 200 par za 200 podkoszulków)." }
+        ]
+      }
+    ]
+  }
+}

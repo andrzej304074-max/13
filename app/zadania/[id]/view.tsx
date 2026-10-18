@@ -12,7 +12,8 @@ import type { Answer, Block, PartResult, PublicTask, SelfRating } from "@/lib/ot
 
 type Checked = { parts: PartResult[]; score: number; max: number; attempt: string; given: Record<string, string[]>;
   solution: { label: string; answers: Answer[]; solution: Block[] }[] };
-const fmtVal = (a: Answer) => `${a.value.toLocaleString("pl-PL", { maximumFractionDigits: 4 })}${a.unit ? ` ${a.unit}` : ""}`;
+const fmtNum = (v: number, a: Answer) => `${v.toLocaleString("pl-PL", { maximumFractionDigits: 4 })}${a.unit ? ` ${a.unit}` : ""}`;
+const fmtVal = (a: Answer) => [a.value, ...(a.alt ?? [])].map((v) => fmtNum(v, a)).join(" lub ");
 
 /** Zadanie obliczeniowe: treść → brudnopis → wyniki podpunktów → sprawdzenie, punkty i pełny tok obliczeń; samoocena części opisowych. */
 export function TaskView({ id }: { id: string }) {
