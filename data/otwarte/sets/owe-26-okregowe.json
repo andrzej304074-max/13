@@ -1,0 +1,94 @@
+{
+  "set": "owe-26-okregowe",
+  "ed": 26,
+  "stage": "o",
+  "essays": [
+    {
+      "id": "owe-26-okregowe-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "polityka",
+      "topics": [
+        {
+          "title": "Przedstaw rolę banku centralnego w stabilizowaniu sytuacji gospodarczej w czasie kryzysu",
+          "schema": [
+            { "title": "Przykładowy schemat odpowiedzi", "pts": 25, "points": [
+              "Funkcje i cele banku centralnego",
+              "Instrumenty banku centralnego",
+              "Przegląd wybranych strategii współczesnych banków centralnych",
+              "Działania na rzecz utrzymania stabilności sytuacji gospodarczej",
+              "Problem koordynacji polityki pieniężnej i fiskalnej w gospodarce otwartej",
+              "Znaczenie niezależności banku centralnego dla wiarygodności jego polityki",
+              "Bank centralny a regulacja rynków finansowych",
+              "Własna ocena możliwości stabilizowania gospodarki przez bank centralny"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-26-okregowe-zadanie",
+    "title": "Zadanie z analizy finansowej",
+    "pts": 15,
+    "topic": "firma",
+    "intro": [
+      { "t": "p", "x": "Przedsiębiorstwo budowlane „Cegiełka” otrzymało zlecenie budowy centrum handlowego o wartości 2 mln zł; koszty budowy oszacowano na 1,6 mln zł. Zarząd rozważa dwa warianty finansowania:" },
+      { "t": "ul", "items": [
+        "wariant I: 100% kapitału własnego,",
+        "wariant II: 50% kapitału własnego i 50% kapitału obcego; pozostałe 50% kapitału własnego pozwoli zrealizować dodatkowy projekt o rentowności sprzedaży brutto 20%."
+      ] },
+      { "t": "p", "x": "CIT wynosi 20%, VAT nie występuje. Łączny koszt kapitału obcego to 10% pożyczonej sumy. Kapitał własny przedsiębiorstwa wynosi 1,6 mln zł." }
+    ],
+    "parts": [
+      {
+        "label": "1", "pts": 6,
+        "prompt": "Oblicz wynik finansowy netto dla obu wariantów.",
+        "answers": [
+          { "label": "Zysk netto – wariant I (zł)", "value": 320000, "tol": 0.5 },
+          { "label": "Zysk netto – wariant II łącznie (zł)", "value": 416000, "tol": 0.5 }
+        ],
+        "solution": [
+          { "t": "table", "head": ["Pozycja", "Wariant I", "Wariant II – projekt główny", "Wariant II – projekt dodatkowy"], "rows": [
+            ["Przychody", "2 000 000", "2 000 000", "1 000 000"],
+            ["Koszty", "1 600 000", "1 600 000", "800 000"],
+            ["EBIT", "400 000", "400 000", "200 000"],
+            ["Odsetki", "0", "80 000", "0"],
+            ["CIT 20%", "80 000", "64 000", "40 000"],
+            ["Zysk netto", "320 000", "256 000", "160 000"]
+          ] },
+          { "t": "f", "x": "odsetki = 800 000 × 10% = 80 000 zł\nprojekt dodatkowy: nakład = 50% × 1 600 000 = 800 000 zł\n20% = (P − 800 000) / P → P = 1 000 000 zł\nzysk netto: I = 320 000 zł; II = 256 000 + 160 000 = 416 000 zł" }
+        ]
+      },
+      {
+        "label": "2", "pts": 1,
+        "prompt": "Oblicz efektywny (rzeczywisty) koszt kredytu.",
+        "answers": [{ "label": "Efektywny koszt kredytu (%)", "value": 8, "tol": 0.01, "unit": "%" }],
+        "solution": [
+          { "t": "f", "x": "koszt efektywny = 10% × (1 − 0,2) = 8%" }
+        ]
+      },
+      {
+        "label": "3", "pts": 4,
+        "prompt": "Oblicz efekt tarczy podatkowej (2 pkt) i wyjaśnij zasadę jej działania (2 pkt).",
+        "answers": [{ "label": "Tarcza podatkowa (zł)", "value": 16000, "tol": 0.5 }],
+        "solution": [
+          { "t": "f", "x": "tarcza = CIT w wariancie I − CIT w projekcie głównym wariantu II = 80 000 − 64 000 = 16 000 zł\n(albo: odsetki × stawka CIT = 80 000 × 20% = 16 000 zł)" },
+          { "t": "p", "x": "Odsetki od kapitału obcego są kosztem pomniejszającym podstawę opodatkowania, więc przedsiębiorstwo płaci niższy podatek dochodowy." }
+        ]
+      },
+      {
+        "label": "4", "pts": 4,
+        "prompt": "Na podstawie zysku i rentowności wskaż, który wariant finansowania zarekomendować zarządowi.",
+        "answers": [
+          { "label": "ROE – wariant I (%)", "value": 20, "tol": 0.01, "unit": "%" },
+          { "label": "ROE – wariant II (%)", "value": 26, "tol": 0.01, "unit": "%" }
+        ],
+        "solution": [
+          { "t": "f", "x": "ROE = zysk netto / kapitał własny\nI: 320 000 / 1 600 000 = 20%\nII: 416 000 / 1 600 000 = 26%" },
+          { "t": "p", "x": "Należy zarekomendować wariant II – daje wyższy łączny zysk i wyższą rentowność kapitału własnego (26%)." }
+        ]
+      }
+    ]
+  }
+}

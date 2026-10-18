@@ -1,0 +1,91 @@
+{
+  "set": "owe-27-okregowe",
+  "ed": 27,
+  "stage": "o",
+  "essays": [
+    {
+      "id": "owe-27-okregowe-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "makro",
+      "topics": [
+        {
+          "title": "Omów rolę euro w procesie konwergencji krajów członkowskich Unii Europejskiej",
+          "schema": [
+            { "title": "Przykładowy schemat odpowiedzi", "pts": 25, "points": [
+              "Strefa euro – rys historyczny",
+              "Przesłanki i kryteria przyjmowania nowych członków do strefy euro",
+              "Konwergencja nominalna a konwergencja realna",
+              "Rola kursu walutowego w procesach konwergencji",
+              "Rozszerzenie strefy euro a zjawisko doganiania",
+              "Wpływ procesów konwergencji na główne mierniki ekonomiczne (dynamika PKB, inflacja, bezrobocie, zadłużenie sektora prywatnego)",
+              "Dylematy poszerzenia strefy euro w warunkach narastających zjawisk kryzysowych"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-27-okregowe-zadanie",
+    "title": "Zadanie z analizy finansowej",
+    "pts": 15,
+    "topic": "firma",
+    "intro": [
+      { "t": "p", "x": "Producent oliwy importuje oliwki z Włoch. Produkcja jest równomierna w ciągu roku; roczne zużycie to 120 000 kg oliwek. Umowa przewiduje 8 dostaw rocznie po 15 000 kg. W momencie dostawy zapas wynosi 16 000 kg, a przed dostawą spada do 1000 kg (zapas rezerwowy). Transport jednej dostawy kosztuje 1500 €, cena 1 kg oliwek to 20 €. Roczny koszt utrzymania zapasów wynosi 20% ich wartości. Przyjmij rok = 360 dni, miesiąc = 30 dni." }
+    ],
+    "parts": [
+      {
+        "label": "1", "pts": 1,
+        "prompt": "Na ile dni produkcji wystarcza zapas rezerwowy?",
+        "answers": [{ "label": "Liczba dni", "value": 3, "tol": 0.01 }],
+        "solution": [
+          { "t": "f", "x": "dzienne zużycie = 120 000 / 360 ≈ 333,33 kg\nzapas rezerwowy / dzienne zużycie = 1000 / 333,33 = 3 dni" }
+        ]
+      },
+      {
+        "label": "2", "pts": 2,
+        "prompt": "Określ średni poziom zapasu w przedsiębiorstwie.",
+        "answers": [{ "label": "Średni zapas (kg)", "value": 8500, "tol": 0.5 }],
+        "solution": [
+          { "t": "f", "x": "średni zapas = (16 000 − 1 000) / 2 + 1 000 = 8 500 kg" }
+        ]
+      },
+      {
+        "label": "3", "pts": 3,
+        "prompt": "Ustal łączne roczne koszty transportu i utrzymania zapasów.",
+        "answers": [{ "label": "Łączne koszty (€)", "value": 46000, "tol": 0.5 }],
+        "solution": [
+          { "t": "f", "x": "koszty transportu = 8 × 1500 € = 12 000 €\nkoszty utrzymania = 8 500 kg × 20 €/kg × 20% = 34 000 €\nłącznie = 46 000 €" }
+        ]
+      },
+      {
+        "label": "4", "pts": 2,
+        "prompt": "70% dostaw przychodzi 5. dnia od zamówienia, co piąta po 8 dniach, a 10% po 9 dniach. Przy jakim poziomie zapasu należy złożyć zamówienie, aby nie naruszyć zapasu rezerwowego?",
+        "answers": [{ "label": "Poziom zapasu przy zamówieniu (kg)", "value": 3000, "tol": 1 }],
+        "solution": [
+          { "t": "f", "x": "przeciętny czas dostawy = 5 × 70% + 8 × 20% + 9 × 10% = 3,5 + 1,6 + 0,9 = 6 dni\npoziom zamówienia = 6 × 333,33 + 1 000 ≈ 3 000 kg" }
+        ]
+      },
+      {
+        "label": "5", "pts": 5,
+        "prompt": "Oblicz optymalną wielkość pojedynczej dostawy minimalizującą roczne koszty zaopatrzenia i utrzymania zapasów (4 pkt) oraz nową liczbę dostaw (1 pkt). Wyniki zaokrąglij do liczb całkowitych.",
+        "answers": [
+          { "label": "Optymalna wielkość dostawy (kg)", "value": 9487, "tol": 1.5 },
+          { "label": "Liczba dostaw", "value": 13, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "f", "x": "EOQ = √(2 × roczne zużycie × koszt dostawy / (cena × koszt utrzymania))\nEOQ = √(2 × 120 000 × 1500 / (20 × 20%)) = √(360 000 000 / 4) = √90 000 000 ≈ 9 487 kg (klucz: ≈ 9 486)\nliczba dostaw = 120 000 / 9 487 ≈ 12,65 → 13 dostaw" }
+        ]
+      },
+      {
+        "label": "6", "pts": 2,
+        "prompt": "Jak powinno zareagować przedsiębiorstwo, jeśli obniżka stóp procentowych zmniejszy koszt kapitału obcego finansującego zapasy? Jak zmieni się wielkość i częstotliwość dostaw?",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Niższe stopy obniżają jednostkowy koszt utrzymania zapasów (magazynowanie tanieje) przy niezmienionym koszcie dostawy. Optymalna wielkość pojedynczej dostawy rośnie, a przy stałym rocznym zużyciu liczba dostaw (ich częstotliwość) maleje." }
+        ]
+      }
+    ]
+  }
+}

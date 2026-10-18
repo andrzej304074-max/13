@@ -1,0 +1,110 @@
+{
+  "set": "owe-26-centralne",
+  "ed": 26,
+  "stage": "c",
+  "essays": [
+    {
+      "id": "owe-26-centralne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "finanse",
+      "topics": [
+        {
+          "title": "Przedstaw istotę sieci bezpieczeństwa finansowego w Polsce oraz wyjaśnij jej rolę w przeciwdziałaniu nierównowagom w gospodarce",
+          "schema": [
+            { "title": "Przykładowy schemat odpowiedzi", "pts": 25, "points": [
+              "Wpływ liberalizacji i globalizacji na współczesny rynek finansowy",
+              "Rola zaufania uczestników rynku w zachowaniu stabilności systemu finansowego",
+              "Główne elementy sieci bezpieczeństwa finansowego i ich funkcje – nadzór nad instytucjami finansowymi, pożyczkodawca ostatniej instancji, system gwarantowania depozytów",
+              "Rola rządu i agencji ratingowych w sieci bezpieczeństwa finansowego",
+              "Architektura sieci bezpieczeństwa finansowego w Polsce na tle rozwiązań europejskich",
+              "Kontrowersje wokół instytucji sieci bezpieczeństwa finansowego",
+              "Własna ocena skuteczności sieci w identyfikacji i monitorowaniu zagrożeń oraz przeciwdziałaniu kryzysom"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-26-centralne-zadanie",
+    "title": "Zadanie analityczne",
+    "pts": 15,
+    "topic": "mikro",
+    "intro": [
+      { "t": "p", "x": "Przedsiębiorstwo A jest monopolistą na rynku amerykańskim i brytyjskim. Popyt w USA: Q_US = 100 000 − 5 000P_US; popyt w Wielkiej Brytanii: Q_GB = 15 500 − 500P_GB (obie ceny w USD). Koszt całkowity: TC = 50 000 + 2Q, gdzie Q – łączna produkcja na oba rynki." }
+    ],
+    "parts": [
+      {
+        "label": "1", "pts": 2,
+        "prompt": "A może stosować różne ceny w obu krajach i maksymalizuje zysk. Jakie ceny powinno ustalić na obu rynkach?",
+        "answers": [
+          { "label": "Cena w USA ($)", "value": 11, "tol": 0.01 },
+          { "label": "Cena w Wielkiej Brytanii ($)", "value": 16.5, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "f", "x": "USA: P = (100 000 − Q) / 5 000 → MR = 20 − Q / 2 500\nGB: P = (15 500 − Q) / 500 → MR = 31 − Q / 250\nMC = 2\nUSA: 20 − Q / 2 500 = 2 → Q = 45 000, P = 11\nGB: 31 − Q / 250 = 2 → Q = 7 250, P = 16,50" }
+        ]
+      },
+      {
+        "label": "2", "pts": 2,
+        "prompt": "Ile produktów sprzeda na każdym z rynków?",
+        "answers": [
+          { "label": "Sprzedaż w USA", "value": 45000, "tol": 0.5 },
+          { "label": "Sprzedaż w Wielkiej Brytanii", "value": 7250, "tol": 0.5 }
+        ],
+        "solution": [
+          { "t": "p", "x": "Z warunku MR = MC na każdym rynku (punkt 1): USA – 45 000 szt., Wielka Brytania – 7 250 szt." }
+        ]
+      },
+      {
+        "label": "3", "pts": 1,
+        "prompt": "Ile wyniesie zysk całkowity?",
+        "answers": [{ "label": "Zysk całkowity ($)", "value": 460125, "tol": 0.5 }],
+        "solution": [
+          { "t": "f", "x": "TR_US = 45 000 × 11 = 495 000; TR_GB = 7 250 × 16,50 = 119 625\nπ = 495 000 + 119 625 − [50 000 + 2 × 52 250] = 460 125 $" }
+        ]
+      },
+      {
+        "label": "4", "pts": 2,
+        "prompt": "Urząd antymonopolowy zmusza A do jednej ceny w obu krajach. Jaką cenę powinno ustalić?",
+        "answers": [{ "label": "Cena jednolita ($)", "value": 11.5, "tol": 0.01 }],
+        "solution": [
+          { "t": "f", "x": "Q = Q_US + Q_GB = 115 500 − 5 500P → P = (115 500 − Q) / 5 500\nMR = (115 500 − 2Q) / 5 500 = 2 → Q = 52 250\nP = (115 500 − 52 250) / 5 500 = 11,50 $" }
+        ]
+      },
+      {
+        "label": "5", "pts": 2,
+        "prompt": "Ile produktów A sprzeda na każdym z rynków przy cenie jednolitej?",
+        "answers": [
+          { "label": "Sprzedaż w USA", "value": 42500, "tol": 0.5 },
+          { "label": "Sprzedaż w Wielkiej Brytanii", "value": 9750, "tol": 0.5 }
+        ],
+        "solution": [
+          { "t": "f", "x": "Q_US = 100 000 − 5 000 × 11,5 = 42 500\nQ_GB = 15 500 − 500 × 11,5 = 9 750\nrazem 52 250" }
+        ]
+      },
+      {
+        "label": "6", "pts": 1,
+        "prompt": "Ile wyniesie zysk przy cenie jednolitej?",
+        "answers": [{ "label": "Zysk ($)", "value": 446375, "tol": 0.5 }],
+        "solution": [
+          { "t": "f", "x": "π = 52 250 × 11,50 − (50 000 + 2 × 52 250) = 600 875 − 154 500 = 446 375 $" }
+        ]
+      },
+      {
+        "label": "7", "pts": 5,
+        "prompt": "Brytyjski producent B (dobra pokrewne) zapowiada wejście na rynek brytyjski i wierne naśladowanie cen A. A grozi obniżką ceny w GB do 5 $ (B miałby wtedy 150 tys. $ straty; B potrzebuje ceny co najmniej 7,5 $). Pierwszy ruch należy do B. W duopolu popyt na produkty A: Q_A = 15 500 − 1 000P_A + 100P_B. Czy B powinno poważnie traktować groźbę? Podaj cenę, którą racjonalnie ustali A po wejściu B.",
+        "answers": [
+          { "label": "Sprzedaż A po wejściu B", "value": 6850, "tol": 0.5 },
+          { "label": "Cena A po wejściu B ($)", "value": 9.61, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "p", "x": "Gdy B wejdzie i naśladuje ceny A (P_B = P_A), popyt na produkty A wynosi Q_A = 15 500 − 900P_A:" },
+          { "t": "f", "x": "P_A = (15 500 − Q_A) / 900 → MR_A = (15 500 − 2Q_A) / 900\nMR = MC: (15 500 − 2Q_A) / 900 = 2 → Q_A = 6 850\nP_A = (15 500 − 6 850) / 900 ≈ 9,61 $" },
+          { "t": "p", "x": "Racjonalny A ustali cenę ok. 9,61 $ > 7,5 $ – realizacja groźby (cena 5 $) byłaby dla niego nieopłacalna, bo dopuszczając B zarobi więcej. Groźba jest niewiarygodna, więc B nie powinno jej traktować poważnie i może wejść na rynek." }
+        ]
+      }
+    ]
+  }
+}

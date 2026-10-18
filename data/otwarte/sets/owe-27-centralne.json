@@ -1,0 +1,104 @@
+{
+  "set": "owe-27-centralne",
+  "ed": 27,
+  "stage": "c",
+  "essays": [
+    {
+      "id": "owe-27-centralne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "makro",
+      "topics": [
+        {
+          "title": "Przedstaw konsekwencje ustalenia nieoptymalnego kursu konwersji złotego na euro w przypadku wejścia Polski do strefy euro",
+          "schema": [
+            { "title": "Przykładowy schemat odpowiedzi", "pts": 25, "points": [
+              "Polska droga do euro – warunki formalne przyjęcia wspólnej waluty",
+              "Znaczenie konwergencji nominalnej i realnej",
+              "Uczestnictwo Polski w mechanizmie kursowym ERM II",
+              "Problem właściwego określenia parytetu wymiany (kurs równowagi)",
+              "Konsekwencje nieoptymalnego kursu konwersji złotego na euro:",
+              "  a) wpływ na gospodarstwa domowe (dochody, wydatki, oszczędności)",
+              "  b) wpływ na konkurencyjność przedsiębiorstw",
+              "  c) implikacje makroekonomiczne (presja inflacyjna i popytowa, saldo bilansu handlowego, terms of trade)",
+              "  d) oddziaływanie kursu na inwestycje, bezrobocie i innowacyjność w długim okresie"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-27-centralne-zadanie",
+    "title": "Zadanie analityczne",
+    "pts": 15,
+    "topic": "finanse",
+    "intro": [
+      { "t": "p", "x": "Polski importer kupuje maszyny rolnicze od kontrahenta z Holandii za 1 mln euro. Dostawa 7 kwietnia, płatność 3 miesiące po dostawie. Importer spodziewa się sprzedać maszyny za 4,75 mln zł. Bank kwotuje kurs spot 4,1650–4,4357 zł za 1 euro. Warianty zabezpieczenia proponowane przez bank:" },
+      { "t": "ul", "items": [
+        "Wariant 1: zakup 1 mln euro w dniu dostawy po kursie spot, sfinansowany kredytem obrotowym 6% p.a. z prowizją 1% (doliczaną do kwoty kredytu), spłata jednorazowo za 3 miesiące.",
+        "Wariant 2: kontrakt forward za 3 miesiące po kursie z rynku międzybankowego 4,1428–4,5231 zł za 1 euro; prowizja 20 tys. zł płatna przy dostawie waluty.",
+        "Wariant 3: zakup kontraktów futures na euro (wygasają za 3 miesiące); cena jednego kontraktu na 10 tys. euro – 45 350 zł; depozyt 4% wartości, finansowany kredytem jak w wariancie 1.",
+        "Wariant 4: zakup opcji kupna (long call) na euro z kursem realizacji 4,4725 zł za 3 miesiące; premia 40 zł za każdy 1 tys. euro."
+      ] }
+    ],
+    "parts": [
+      {
+        "label": "1", "pts": 1,
+        "prompt": "Ile wynosi spread walutowy dla kursu spot (w zł)?",
+        "answers": [{ "label": "Spread (zł)", "value": 0.2707, "tol": 0.0001 }],
+        "solution": [
+          { "t": "f", "x": "spread = 4,4357 − 4,1650 = 0,2707 zł (można też wyrazić procentowo)" }
+        ]
+      },
+      {
+        "label": "2", "pts": 2,
+        "prompt": "Powyżej jakiego kursu importer poniósłby stratę bez zabezpieczenia pozycji walutowej?",
+        "answers": [{ "label": "Kurs graniczny (zł/€)", "value": 4.75, "tol": 0.0001 }],
+        "solution": [
+          { "t": "p", "x": "Maszyny warte 1 mln euro importer sprzeda za 4,75 mln zł – nie poniesie straty, dopóki kurs nie przekroczy 4,75 zł za 1 euro." }
+        ]
+      },
+      {
+        "label": "3", "pts": 4,
+        "prompt": "Które z dwóch pierwszych rozwiązań (wariant 1 i 2) jest korzystniejsze dla importera? Podaj łączny koszt zakupu waluty w obu wariantach.",
+        "answers": [
+          { "label": "Koszt – wariant 1 (zł)", "value": 4547258, "tol": 1 },
+          { "label": "Koszt – wariant 2 (zł)", "value": 4543100, "tol": 1 }
+        ],
+        "solution": [
+          { "t": "f", "x": "wariant 1:\nzakup po kursie sprzedaży spot: 1 000 000 × 4,4357 = 4 435 700 zł\nprowizja 1%: 44 357 zł → kredyt 4 480 057 zł\nodsetki: 4 480 057 × 6% × 3/12 ≈ 67 201 zł\nłącznie: 4 435 700 + 44 357 + 67 201 = 4 547 258 zł\n\nwariant 2:\n1 000 000 × 4,5231 + 20 000 = 4 543 100 zł" },
+          { "t": "p", "x": "Korzystniejszy jest kontrakt forward (wariant 2)." }
+        ]
+      },
+      {
+        "label": "4", "pts": 2,
+        "prompt": "Przy jakim kursie rozliczeniowym w dniu wygaśnięcia kontraktów futures (wariant 3) importer osiągnie zysk?",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Kurs rozliczeniowy nie ma znaczenia dla zysku importera – zysk na rynku terminowym oznacza stratę na rynku kasowym (i odwrotnie). Zysk wyznacza różnica między przychodem ze sprzedaży maszyn (4 750 000 zł) a wydatkiem na kontrakty powiększonym o koszt finansowania depozytu." }
+        ]
+      },
+      {
+        "label": "5", "pts": 3,
+        "prompt": "Przy jakim kursie importerowi będzie się opłacało zrealizować opcję?",
+        "answers": [{ "label": "Kurs, powyżej którego opłaca się realizacja (zł/€)", "value": 4.4725, "tol": 0.0001 }],
+        "solution": [
+          { "t": "p", "x": "Opcję kupna opłaca się zrealizować, gdy kurs spot jest wyższy od kursu realizacji 4,4725 zł – importer kupuje wtedy walutę taniej niż na rynku (premia jest już kosztem utopionym)." }
+        ]
+      },
+      {
+        "label": "6", "pts": 3,
+        "prompt": "Dyrektor finansowy zdecydował się zabezpieczyć przed ryzykiem kursowym. Który wariant minimalizuje koszt zakupu euro? Podaj koszty wariantów 3 i 4.",
+        "answers": [
+          { "label": "Koszt – wariant 3 (zł)", "value": 4539562, "tol": 1 },
+          { "label": "Koszt – wariant 4 (zł)", "value": 4512500, "tol": 1 }
+        ],
+        "solution": [
+          { "t": "f", "x": "wariant 3: 100 kontraktów × 45 350 = 4 535 000 zł\ndepozyt 4% = 181 400 zł; prowizja kredytu 1% = 1 814 zł\nodsetki = 181 400 × 1,01 × 6% × 3/12 ≈ 2 748 zł\nłącznie ≈ 4 539 562 zł\nwariant 4: 1 000 000 × 4,4725 + 1000 × 40 = 4 472 500 + 40 000 = 4 512 500 zł" },
+          { "t": "p", "x": "Porównanie: W1 4 547 258 zł, W2 4 543 100 zł, W3 4 539 562 zł, W4 4 512 500 zł. Najkorzystniejszy jest zakup opcji walutowych (wariant 4)." }
+        ]
+      }
+    ]
+  }
+}

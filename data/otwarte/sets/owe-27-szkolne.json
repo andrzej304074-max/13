@@ -1,0 +1,86 @@
+{
+  "set": "owe-27-szkolne",
+  "ed": 27,
+  "stage": "s",
+  "essays": [
+    {
+      "id": "owe-27-szkolne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "makro",
+      "topics": [
+        {
+          "title": "Przedstaw konsekwencje przyjęcia euro w Polsce dla przedsiębiorstw w wybranej przez Ciebie branży",
+          "schema": [
+            { "title": "Przykładowy schemat odpowiedzi", "pts": 25, "points": [
+              "Działalność przedsiębiorstw w okresie poprzedzającym wejście do strefy euro",
+              "Proces wprowadzenia wspólnej waluty w Polsce",
+              "Wybrane krótko- i długoterminowe korzyści i koszty przyjęcia wspólnej waluty",
+              "Szanse i zagrożenia dla przedsiębiorstw związane z przyjęciem przez Polskę euro",
+              "Znaczenie optymalnego kursu konwersji dla konkurencyjności eksporterów i importerów",
+              "Stopień przygotowania polskich przedsiębiorstw do akcesji do unii walutowej"
+            ] }
+          ]
+        },
+        {
+          "title": "Omów wpływ euro na sytuację makroekonomiczną krajów członkowskich Unii Europejskiej",
+          "schema": [
+            { "title": "Przykładowy schemat odpowiedzi", "pts": 25, "points": [
+              "Znaczenie wspólnej waluty dla stabilności makroekonomicznej krajów członkowskich",
+              "Korzyści z intensyfikacji wymiany handlowej w krajach strefy euro",
+              "Wpływ wspólnej waluty na podstawowe kategorie makroekonomiczne (PKB, inflacja, bezrobocie)",
+              "Synchronizacja polityki monetarnej i fiskalnej w unii walutowej a możliwość prowadzenia polityki antycyklicznej",
+              "Problem nadmiernego zadłużenia w strefie euro"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-27-szkolne-zadanie",
+    "title": "Zadanie z podstaw ekonomii",
+    "pts": 15,
+    "topic": "mikro",
+    "intro": [
+      { "t": "p", "x": "Funkcja kosztów całkowitych przedsiębiorstwa: TC = 0,05Q² + 300Q + 1 400 000, gdzie TC – koszty całkowite (zł), Q – wielkość produkcji (szt.)." }
+    ],
+    "parts": [
+      {
+        "label": "a", "pts": 2,
+        "prompt": "Wyznacz funkcję przeciętnych kosztów całkowitych (1 pkt) i oblicz przeciętny koszt całkowity dla produkcji 2500 szt. (1 pkt).",
+        "answers": [{ "label": "ATC dla Q = 2500 (zł)", "value": 985, "tol": 0.01 }],
+        "solution": [
+          { "t": "f", "x": "ATC = TC / Q = 0,05Q + 300 + 1 400 000 / Q\nATC(2500) = 125 + 300 + 560 = 985 zł" }
+        ]
+      },
+      {
+        "label": "b", "pts": 4,
+        "prompt": "Ile w przybliżeniu wynosi koszt krańcowy wyprodukowania dodatkowej jednostki, jeśli przedsiębiorstwo produkuje 1000 szt.?",
+        "answers": [{ "label": "Koszt krańcowy (zł)", "value": 400, "tol": 0.1 }],
+        "solution": [
+          { "t": "f", "x": "TC(1000) = 0,05 × 1 000 000 + 300 000 + 1 400 000 = 1 750 000,00 zł\nTC(1001) = 0,05 × 1 002 001 + 300 300 + 1 400 000 = 1 750 400,05 zł\nMC = ΔTC / ΔQ = 400,05 ≈ 400 zł\n(albo z pochodnej: MC = 0,1Q + 300 = 400)" }
+        ]
+      },
+      {
+        "label": "c", "pts": 4,
+        "prompt": "Czy funkcja kosztów dotyczy krótkiego, czy długiego okresu? Uzasadnij i – jeśli to możliwe – podaj koszty stałe.",
+        "answers": [{ "label": "Koszty stałe (zł)", "value": 1400000, "tol": 0.5 }],
+        "solution": [
+          { "t": "p", "x": "W krótkim okresie przedsiębiorstwo ponosi koszty stałe – niezależne od wielkości produkcji. Koszty stałe to TC przy Q = 0:" },
+          { "t": "f", "x": "FC = TC(0) = 1 400 000 zł > 0" },
+          { "t": "p", "x": "Występują koszty stałe, więc funkcja dotyczy krótkiego okresu." }
+        ]
+      },
+      {
+        "label": "d", "pts": 5,
+        "prompt": "Wyjaśnij, co to jest optimum ekonomiczne, i oblicz produkcję w tym optimum, jeśli popyt wynosi P = 1500 − 0,1Q.",
+        "answers": [{ "label": "Produkcja w optimum (szt.)", "value": 4000, "tol": 0.5 }],
+        "solution": [
+          { "t": "p", "x": "Optimum ekonomiczne to wielkość produkcji, przy której przedsiębiorstwo osiąga maksymalny zysk całkowity (lub minimalną stratę)." },
+          { "t": "f", "x": "TR = (1500 − 0,1Q) × Q = 1500Q − 0,1Q²\nπ = TR − TC = −0,15Q² + 1200Q − 1 400 000\nwierzchołek paraboli: Q = −b / 2a = −1200 / (2 × (−0,15)) = 4000 szt.\n(albo MR = MC: 1500 − 0,2Q = 0,1Q + 300 → Q = 4000)" }
+        ]
+      }
+    ]
+  }
+}
