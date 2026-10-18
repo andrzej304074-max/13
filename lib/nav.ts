@@ -5,6 +5,8 @@ export interface NavSection { id: string; icon: string; label: string; tabs: Nav
 export const NAV: NavSection[] = [
   { id: "testy", icon: "📝", label: "Testy", tabs: [
     { href: "/", label: "Olimpiada", also: ["/test"] },
+    { href: "/zadania", label: "Zadania" },
+    { href: "/eseje", label: "Eseje" },
     { href: "/slownik", label: "Słownik" },
   ] },
   { id: "nauka", icon: "🎓", label: "Nauka", tabs: [

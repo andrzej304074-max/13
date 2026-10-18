@@ -1,0 +1,108 @@
+{
+  "set": "owe-39-okregowe",
+  "ed": 39,
+  "stage": "o",
+  "essays": [
+    {
+      "id": "owe-39-okregowe-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "polityka",
+      "topics": [
+        {
+          "title": "Konsekwencje polityki protekcyjnej w handlu międzynarodowym dla konkurencyjności gospodarki krajowej",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Istota oraz determinanty konkurencyjności gospodarki w teorii ekonomii",
+              "Wpływ konkurencji międzynarodowej na innowacyjność gospodarki w dorobku wybranych szkół ekonomii",
+              "Wpływ otwarcia gospodarki na produktywność. Analiza teoretycznych kanałów oddziaływania",
+              "Znaczenie handlu międzynarodowego w kształtowaniu instytucji, w tym nieformalnych, sprzyjających konkurencyjności gospodarki krajowej",
+              "Teoretyczna argumentacja na rzecz stosowania protekcji w handlu międzynarodowym w kontekście budowania pozycji konkurencyjnej gospodarki na podstawie wybranych szkół ekonomii",
+              "Rozróżnienie krótko- i długookresowych konsekwencji protekcji w handlu międzynarodowym dla konkurencyjności gospodarki"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Ocena skuteczności protekcjonizmu jako narzędzia polityki przemysłowej, w tym ochrony raczkujących gałęzi przemysłu",
+              "Wykorzystanie instrumentów protekcjonistycznych jako narzędzia polityki antydumpingowej",
+              "Ocena wpływu ceł na konkurencyjność gospodarki",
+              "Ocena wpływu ilościowych ograniczeń w handlu na konkurencyjność gospodarki",
+              "Analiza rezultatów polityki protekcyjnej dla konkurencyjności różnych branż gospodarki",
+              "Analiza znaczenia poziomu rozwoju gospodarczego kraju dla skuteczności protekcjonizmu w budowaniu pozycji konkurencyjnej gospodarki"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-39-okregowe-zadanie",
+    "title": "Zadanie z analizy finansowej",
+    "pts": 15,
+    "topic": "firma",
+    "intro": [
+      { "t": "p", "x": "Przedsiębiorstwo Mine zajmuje się produkcją maszyn górniczych. Znaczną część swoich produktów sprzedaje za granicę. W listopadzie 2025 r. z tytułu zapłaty za sprzedane maszyny przedsiębiorstwo Mine otrzymało od swojego kontrahenta weksel o wartości nominalnej 1 mln zł płatny w terminie 10 miesięcy. Informacje na temat sytuacji finansowej przedsiębiorstwa Mine na dzień 31 grudnia 2025 r. zawiera tabela. Ponadto wiemy, że zysk netto przedsiębiorstwa w 2025 r. wyniósł 25,20 mln zł. Przedsiębiorstwo sporządza sprawozdania finansowe według ustawy o rachunkowości." },
+      { "t": "table", "head": ["Wyszczególnienie", "Wartość"], "rows": [
+        ["Długoterminowe aktywa finansowe — inne papiery wartościowe (w mln zł)", "1,20"],
+        ["Należności krótkoterminowe z tytułu dostaw i usług (w mln zł)", "1,00"],
+        ["Krótkoterminowe aktywa finansowe — inne aktywa pieniężne (w mln zł)", "1,10"],
+        ["Zobowiązania długoterminowe (w mln zł)", "15,00"],
+        ["Kapitał stały (w mln zł)", "111,00"],
+        ["Przychody ze sprzedaży (w mln zł)", "80,64"],
+        ["Wskaźnik obrotowości majątku", "0,70"],
+        ["Mnożnik kapitału własnego", "1,20"]
+      ] }
+    ],
+    "parts": [
+      {
+        "label": "a",
+        "pts": 5,
+        "prompt": "O czym informuje wskaźnik rentowności majątku netto? (1 pkt) Ile wyniosła jego wartość w przedsiębiorstwie Mine w 2025 r.? (3 pkt) Zinterpretuj uzyskany wynik. (1 pkt)",
+        "answers": [{ "label": "Wskaźnik rentowności majątku netto (ROA)", "value": 21.875, "tol": 0.06, "unit": "%" }],
+        "solution": [
+          { "t": "p", "x": "Wskaźnik informuje o zdolności aktywów przedsiębiorstwa do generowania zysku netto (jak efektywnie są wykorzystywane aktywa przedsiębiorstwa)." },
+          { "t": "p", "x": "Kapitał stały = kapitał własny + zobowiązania długoterminowe, stąd kapitał własny:" },
+          { "t": "f", "x": "kapitał własny = 111 − 15 = 96 mln zł" },
+          { "t": "f", "x": "majątek całkowity = mnożnik kapitału własnego × kapitał własny = 1,2 × 96 = 115,2 mln zł" },
+          { "t": "p", "x": "Alternatywnie majątek całkowity można wyliczyć ze wskaźnika obrotowości majątku: 80,64 / 0,7 = 115,2 mln zł." },
+          { "t": "f", "x": "ROA = zysk netto / majątek całkowity × 100% = 25,2 / 115,2 × 100% ≈ 21,88%" },
+          { "t": "p", "x": "Interpretacja: każda złotówka aktywów przedsiębiorstwa Mine wygenerowała około 0,22 zł zysku netto." }
+        ]
+      },
+      {
+        "label": "b",
+        "pts": 2,
+        "prompt": "Oblicz wartość wskaźnika rentowności kapitału własnego w przedsiębiorstwie Mine w 2025 r. i przedstaw jego dekompozycję zgodnie z trójczynnikowym modelem Du Ponta.",
+        "answers": [{ "label": "Wskaźnik rentowności kapitału własnego (ROE)", "value": 26.25, "tol": 0.06, "unit": "%" }],
+        "solution": [
+          { "t": "f", "x": "ROE = zysk netto / kapitał własny × 100% = 25,2 / 96 × 100% = 26,25%" },
+          { "t": "p", "x": "Można też skorzystać z wyniku z podpunktu a:" },
+          { "t": "f", "x": "ROE = ROA × mnożnik kapitału własnego = 21,875% × 1,2 = 26,25%" },
+          { "t": "p", "x": "Trójczynnikowa dekompozycja ROE (model Du Ponta):" },
+          { "t": "f", "x": "ROE = wskaźnik rentowności sprzedaży × wskaźnik obrotowości majątku × mnożnik kapitału własnego\n    = (25,2 / 80,64) × 0,7 × 1,2 = 0,3125 × 0,7 × 1,2 = 0,2625" }
+        ]
+      },
+      {
+        "label": "c",
+        "pts": 2,
+        "prompt": "Na co może wskazywać sytuacja, w której wskaźnik rentowności majątku netto przedsiębiorstwa jest zbliżony do średniej z branży, natomiast jego wskaźnik rentowności kapitału własnego jest znacznie niższy?",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Skoro ROE = ROA × mnożnik kapitału własnego, przy podobnym ROA niższe ROE oznacza niższy mnożnik kapitału własnego: przedsiębiorstwo w mniejszym stopniu niż przeciętnie konkurencja wykorzystuje kapitał obcy do finansowania swojej działalności (słabiej korzysta z dźwigni finansowej)." }
+        ]
+      },
+      {
+        "label": "d",
+        "pts": 6,
+        "prompt": "Przedsiębiorstwo rozważa wykorzystanie forfaitingu (bez regresu). Wyjaśnij, na czym polega forfaiting. (2 pkt) Jakie korzyści uzyska przedsiębiorstwo Mine, stosując tę formę finansowania? (2 pkt) Która z pozycji bilansu wykazanych w tabeli zmniejszy się, jeżeli w transakcji forfaitingu przedsiębiorstwo wykorzysta weksel otrzymany w listopadzie 2025 r.? (2 pkt)",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Forfaiting to forma finansowania handlu międzynarodowego polegająca na sprzedaży przez eksportera swoich nieprzeterminowanych, zwykle średnio- lub długoterminowych wierzytelności instytucji finansowej (forfaiterowi)." },
+          { "t": "ul", "items": [
+            "poprawia płynność finansową przedsiębiorstwa (gotówka od razu, zamiast po 10 miesiącach),",
+            "eliminuje ryzyko niewypłacalności (kredytowe) kontrahenta – forfaiter bez prawa regresu przejmuje pełną odpowiedzialność za spłatę weksla."
+          ] },
+          { "t": "p", "x": "Według klucza zmniejszy się pozycja „Krótkoterminowe aktywa finansowe – inne aktywa pieniężne”." }
+        ]
+      }
+    ]
+  }
+}

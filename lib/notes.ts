@@ -4,6 +4,7 @@ import { ownedIds } from "./own-cards";
 import { query } from "./db";
 import { getQuestion } from "./questions";
 import { HttpError } from "./tests";
+import { openMeta } from "./otwarte";
 import { sanitizeCards, type NoteCard,
   isNoteKind, isStarKind, MAX_BODY, MAX_HIGHLIGHTS, MAX_NOTES, MAX_NOTES_BYTES, MAX_TITLE, NoteError, sanitizeHighlight, sanitizeInk, sanitizeRef, sanitizeText,
   type Ink, type NoteKind, type StarKind,
@@ -43,6 +44,10 @@ export function refContext(ref: string | null): string | null {
     if (!l) return null;
     const u = COURSE.units.find((x) => x.id === l.unit);
     return `${u ? u.title + " · " : ""}${l.type === "zrozum" ? "🧠 Zrozumienie" : "Lekcja"} ${l.no}${sub ? ` · część ${sub}` : ""}`;
+  }
+  if (kind === "zadanie" || kind === "esej") {
+    const m = openMeta(id);
+    return m ? `${kind === "zadanie" ? "🧮 Zadanie" : "✍️ Esej"} · OWE ${m.edRoman}, etap ${m.stageName}: ${m.title.length > 120 ? m.title.slice(0, 119) + "…" : m.title}` : null;
   }
   if (kind === "artykul") {
     const u = COURSE.units.find((x) => x.id === id);

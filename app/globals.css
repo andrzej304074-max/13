@@ -1235,3 +1235,38 @@ body:has(.speech-bar) main.container { padding-bottom: 160px; }
 .lit-links { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: baseline; }
 .lit-links a { overflow-wrap: anywhere; }
 .tag.lit-free { border-color: var(--lv-good); color: var(--good); }
+
+/* zadania i eseje z poprzednich lat */
+.open-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.open-item { display: flex; flex-direction: column; gap: 4px; text-decoration: none; color: var(--text); }
+.open-item:hover { border-color: var(--accent); }
+.open-meta { font-size: .85rem; color: var(--muted); }
+.open-title { overflow-wrap: anywhere; }
+.open-state { font-size: .85rem; color: var(--muted); }
+.open-state.done { color: var(--good); }
+.ob-p { margin: 0; line-height: 1.6; }
+.ob-ul { margin: 0; padding-left: 22px; }
+.ob-table table { font-size: .95rem; }
+.ob-table td:last-child { white-space: nowrap; }
+.task-parts { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.task-part-head { line-height: 1.55; }
+.task-answer { display: grid; grid-template-columns: 1fr minmax(110px, 160px); gap: 6px 10px; align-items: center; }
+.task-answer > span:first-child { font-size: .95rem; }
+.task-answer .task-mark { grid-column: 1 / -1; font-weight: 600; }
+.task-answer.ok input { border-color: var(--lv-good); }
+.task-answer.ok .task-mark { color: var(--good); }
+.task-answer.bad input { border-color: var(--lv-weak); }
+.task-answer.bad .task-mark { color: var(--bad); }
+.task-solution { padding: 10px 12px; border-left: 3px solid var(--accent); background: var(--accent-soft); border-radius: 8px; }
+.self-rate { flex-wrap: wrap; gap: 6px; }
+.essay-topics { display: flex; flex-direction: column; gap: 8px; }
+.essay-topic { display: flex; gap: 8px; text-align: left; font: inherit; color: var(--text); cursor: pointer; line-height: 1.5; }
+.essay-topic:disabled { cursor: default; opacity: 1; }
+.essay-topic.on { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-soft); }
+.essay-topic-n { font-weight: 700; }
+.essay-structure { margin: 0; padding: 14px 14px 14px 18px; list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.essay-structure li { display: flex; flex-direction: column; gap: 2px; }
+.essay-section { margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.essay-point { align-items: flex-start; line-height: 1.45; }
+.essay-point.sub { margin-left: 22px; }
+.open-breakdown { display: flex; flex-wrap: wrap; gap: 4px 12px; margin-top: 6px; color: var(--muted); }

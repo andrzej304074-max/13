@@ -10,6 +10,7 @@ import type { Stats } from "@/lib/tests";
 import type { Stage } from "@/lib/questions";
 import { LoadingPage } from "@/app/components/loading-page";
 import { LoadError } from "@/app/components/load-error";
+import { OpenStats } from "./open-stats";
 
 const BLOCK_KEY = "owe:blockSize";
 const TYPE_KEY = "owe:statsType";
@@ -193,6 +194,8 @@ export default function StatsPage() {
         </div>
         <p className="muted small" style={{ margin: 0 }}>Liczone z pytań każdego etapu – także w testach „oba etapy”. Pytania bez odpowiedzi w teście 30/50 liczą się jako błędne.</p>
       </>}
+
+      {bank === "owe" && <OpenStats />}
 
       <h2>Postęp (% kolejnych testów{st ? ` – tylko pytania etapu ${STAGE_GEN[st]}` : ""})</h2>
       {history.length === 0 ? (

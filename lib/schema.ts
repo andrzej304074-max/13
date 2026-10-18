@@ -244,6 +244,20 @@ CREATE TABLE IF NOT EXISTS bug_reports (
 );
 CREATE INDEX IF NOT EXISTS bug_reports_user_idx ON bug_reports (user_id, created_at DESC);
 CREATE INDEX IF NOT EXISTS bug_reports_status_idx ON bug_reports (status, created_at DESC);
+-- Podejścia do zadań obliczeniowych i esejów z kluczy OWE (lib/otwarte.ts); statystyki osobno od testów.
+CREATE TABLE IF NOT EXISTS open_attempts (
+  id         uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id    uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  item_id    text NOT NULL,
+  kind       text NOT NULL CHECK (kind IN ('zadanie', 'esej')),
+  stage      text NOT NULL,
+  topic      text NOT NULL,
+  answers    jsonb NOT NULL DEFAULT '{}'::jsonb,
+  score      real NOT NULL,
+  max        real NOT NULL,
+  created_at timestamptz NOT NULL DEFAULT now()
+);
+CREATE INDEX IF NOT EXISTS open_attempts_user_idx ON open_attempts (user_id, kind, created_at DESC);
 -- Zużycie znaków Azure: dzień × źródło („cron” – porcje w tle, id konta – nagrania na bieżąco).
 CREATE TABLE IF NOT EXISTS tts_usage (
   day   date NOT NULL,
