@@ -1,0 +1,97 @@
+{
+  "set": "owe-38-okregowe",
+  "ed": 38,
+  "stage": "o",
+  "essays": [
+    {
+      "id": "owe-38-okregowe-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "finanse",
+      "topics": [
+        {
+          "title": "Wskaż dylematy związane z granicami suwerenności fiskalnej państw członkowskich Unii Europejskiej",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Cele i podstawowe narzędzia polityki fiskalnej państwa",
+              "Problem prowadzenia polityki fiskalnej w ramach różnych etapów integracji gospodarczej (w szczególności unii walutowej) – ujęcie teoretyczne",
+              "Dylematy związane z suwerennością polityki wydatkowej państw integrujących się gospodarczo",
+              "Przyczyny i konsekwencje funkcjonowania zróżnicowanych systemów podatkowych w ramach obszarów integrujących się gospodarczo, w tym:",
+              "  a) problem nadmiernej konkurencji podatkowej i jego konsekwencje",
+              "  b) wpływ odmiennych rozwiązań fiskalnych na funkcjonowanie wspólnego rynku",
+              "  c) zjawisko agresywnej optymalizacji podatkowej i przesuwanie miejsca opodatkowania do państw członkowskich o niskiej efektywnej stawce podatkowej",
+              "Suwerenność fiskalna państw członkowskich w zakresie polityki zarządzania długiem publicznym – ujęcie teoretyczne"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Problem suwerenności fiskalnej państw członkowskich w kontekście realizacji celów wspólnotowych",
+              "Budżet Unii Europejskiej a suwerenność fiskalna państw członkowskich, w tym tworzenie i wykorzystanie budżetu UE jako narzędzia realizacji zasady solidaryzmu – jednej z wartości UE",
+              "Reguły fiskalne funkcjonujące w Unii Europejskiej i ich wpływ na politykę fiskalną państw członkowskich, w tym ocena skuteczności narzędzi dyscyplinujących finanse publiczne (procedura nadmiernego deficytu)",
+              "Znaczenie harmonizacji polityki podatkowej państw członkowskich dla funkcjonowania wspólnego rynku na przykładzie rozwiązań prawnych dotyczących podatków pośrednich",
+              "Problem harmonizacji podatków bezpośrednich w ramach UE, w tym kwestia CCCTB oraz proces wdrażania w UE zasad GloBE",
+              "Suwerenność państw członkowskich UE w zakresie pomocy publicznej i konsekwencje funkcjonujących rozwiązań legislacyjnych",
+              "Dylematy związane z granicami suwerenności fiskalnej państw członkowskich Unii Europejskiej – synteza"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-38-okregowe-zadanie",
+    "title": "Zadanie z analizy finansowej",
+    "pts": 15,
+    "topic": "firma",
+    "intro": [
+      { "t": "p", "x": "Przedsiębiorstwo Milk działa w branży mleczarskiej. W tabeli przedstawiono wartości wybranych wskaźników finansowych dotyczących jego działalności w ubiegłym roku na tle wszystkich przedsiębiorstw z branży. Dodatkowo wiemy, że poziom kosztów całkowitych w przedsiębiorstwie Milk wyniósł w ubiegłym roku 110 mln euro. W obliczeniach przyjmij, że rok ma 365 dni." },
+      { "t": "table", "head": ["Wyszczególnienie", "Milk", "Branża"], "rows": [
+        ["Wskaźnik przekładni kapitałowej (w %)", "87,1", "87,2"],
+        ["Wskaźnik poziomu kosztów (w %)", "96,2", "95,3"],
+        ["Wskaźnik bieżącej płynności finansowej", "1,8", "1,6"],
+        ["Wskaźnik szybkiej płynności finansowej", "0,8", "1,1"],
+        ["Wskaźnik inkasa należności w dniach", "30,0", "30,2"]
+      ] }
+    ],
+    "parts": [
+      {
+        "label": "a", "pts": 3,
+        "prompt": "Przedsiębiorstwo Milk zdecydowało się zrewidować swoją politykę zarządzania zapasami. Które z wymienionych w tabeli wskaźników informują o konieczności zmiany w zarządzaniu tą częścią aktywów? Uzasadnij (2 pkt). W jaki sposób sytuacja związana z zarządzaniem zapasami przekłada się na wyniki finansowe tego przedsiębiorstwa? (1 pkt)",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Informują o tym wskaźnik bieżącej płynności i wskaźnik szybkiej płynności. Bieżąca płynność (1,8) odpowiada wartości uznawanej w teorii za prawidłową, co potwierdza porównanie z branżą (1,6). Szybka płynność (0,8) jest jednak poniżej 1, czyli poziomu uznawanego za prawidłowy, i poniżej branży (1,1). Różnica między obydwoma wskaźnikami to zapasy – ich poziom w Milk jest zbyt wysoki." },
+          { "t": "p", "x": "Zbyt wysokie zapasy pogarszają wyniki finansowe m.in. przez wzrost kosztów magazynowania i ograniczenie efektywności przychodowej przedsiębiorstwa (zamrożony kapitał)." }
+        ]
+      },
+      {
+        "label": "b", "pts": 4,
+        "prompt": "W przyszłym roku przedsiębiorstwo Milk planuje optymalizację dostaw. Oblicz optymalną wielkość partii dostawy, wiedząc, że: do zapewnienia ciągłości produkcji potrzebuje rocznie 24 mln litrów mleka; zapotrzebowanie jest równomiernie rozłożone w czasie; koszt transportu jednej dostawy wynosi 5000 euro; koszt utrzymania zapasu 1 litra mleka w ciągu roku jest równy 0,5 euro (3 pkt). Ile rocznie dostaw będzie trafiać do przedsiębiorstwa? (1 pkt) Wyniki zaokrąglij do liczb całkowitych.",
+        "answers": [
+          { "label": "Optymalna wielkość partii dostawy (litry)", "value": 692820, "tol": 1 },
+          { "label": "Liczba dostaw w roku", "value": 35, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "p", "x": "Model ekonomicznej wielkości zamówienia (Wilsona):" },
+          { "t": "f", "x": "OPD = √(2 × kr × Za / km)\n    = √(2 × 5000 × 24 000 000 / 0,5) = √480 000 000 000 ≈ 692 820 litrów\nliczba dostaw = Za / OPD = 24 000 000 / 692 820 ≈ 34,6 ≈ 35" },
+          { "t": "p", "x": "gdzie: OPD – optymalna wielkość partii dostawy; kr – koszt realizacji jednej dostawy; Za – zapotrzebowanie na materiały w okresie; km – jednostkowy koszt utrzymania zapasu." }
+        ]
+      },
+      {
+        "label": "c", "pts": 3,
+        "prompt": "Przyjmując zapas bezpieczeństwa na poziomie 3-dniowego zużycia materiału oraz wynik z podpunktu b, oblicz średni poziom zapasów w przedsiębiorstwie Milk w przyszłym roku. Zapas bezpieczeństwa zaokrąglij do setek tysięcy. (Bez wyniku z podpunktu b przyjmij, że optymalna partia to 712 000 litrów.)",
+        "answers": [{ "label": "Średni poziom zapasów (litry)", "value": 546410, "tol": 5 }],
+        "solution": [
+          { "t": "f", "x": "zapas bezpieczeństwa = (24 000 000 / 365) × 3 ≈ 197 260 ≈ 200 000 l\nśredni zapas = OPD / 2 + zapas bezpieczeństwa = 692 820 / 2 + 200 000 = 546 410 l" },
+          { "t": "p", "x": "(Przy OPD = 712 000 l: 356 000 + 200 000 = 556 000 l.)" }
+        ]
+      },
+      {
+        "label": "d", "pts": 5,
+        "prompt": "Przedsiębiorstwo zakłada, że wskaźnik poziomu kosztów zrówna się z branżowym, a wskaźnik długości cyklu zapasów w dniach wyniesie 4,36. Ile wyniesie długość cyklu środków pieniężnych? Przyjmij, że zobowiązania krótkoterminowe wyniosą 9,5 mln euro, a pozostałe wielkości niezbędne do oszacowania cyklu nie zmienią się w porównaniu z ubiegłym rokiem (3 pkt). Zinterpretuj wynik (2 pkt).",
+        "answers": [{ "label": "Cykl środków pieniężnych (dni)", "value": 4.04, "tol": 0.02 }],
+        "solution": [
+          { "t": "f", "x": "przychody ze sprzedaży = koszty całkowite / wskaźnik poziomu kosztów = 110 / 0,962 ≈ 114,35 mln euro\nokres spłaty zobowiązań = 9,5 × 365 / 114,35 ≈ 30,32 dnia\ncykl środków pieniężnych = cykl zapasów + cykl należności − cykl zobowiązań\n                         = 4,36 + 30,0 − 30,32 = 4,04 dnia" },
+          { "t": "p", "x": "Interpretacja: od wydania pieniędzy na zapłatę za zakupione materiały do wpływu pieniędzy ze sprzedaży wytworzonych produktów upływa ok. 4 dni – tyle czasu przedsiębiorstwo musi finansować działalność operacyjną z innych źródeł." }
+        ]
+      }
+    ]
+  }
+}

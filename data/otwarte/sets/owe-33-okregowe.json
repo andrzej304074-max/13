@@ -1,0 +1,103 @@
+{
+  "set": "owe-33-okregowe",
+  "ed": 33,
+  "stage": "o",
+  "essays": [
+    {
+      "id": "owe-33-okregowe-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "makro",
+      "topics": [
+        {
+          "title": "Czy grozi nam nowy luddyzm? Przedstaw wpływ czwartej rewolucji przemysłowej na rynek pracy",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Istota oraz tło historyczne ruchu społecznego, jakim był luddyzm",
+              "Charakterystyka oraz megatrendy czwartej rewolucji przemysłowej w kontekście rynku pracy",
+              "Czwarta rewolucja przemysłowa a funkcja produkcji",
+              "Postęp techniczny a zatrudnienie – analiza teoretyczna:",
+              "  a) skutki postępu technicznego przy neutralnej tendencji postępu i stałej relacji cen czynników produkcji",
+              "  b) skutki postępu technicznego przy postępie zachęcającym do kapitałochłonności i stałej relacji cen czynników produkcji",
+              "  c) skutki postępu technicznego przy postępie zachęcającym do kapitałochłonności i wzroście stosunku płac do cen usług kapitału",
+              "Czwarta rewolucja przemysłowa a wybrane instytucje rynku pracy"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Doświadczenia historyczne – wpływ kolejnych etapów rewolucji przemysłowej na wielkość oraz strukturę popytu na pracę",
+              "Analiza zmian zatrudnienia (poziomu bezrobocia) wywołanych czwartą rewolucją przemysłową, w tym w ujęciu międzynarodowym",
+              "Czwarta rewolucja przemysłowa a elastyczność rynku pracy",
+              "Rola państwa na rynku pracy, w tym w kształtowaniu struktury podaży pracy, w kontekście czwartej rewolucji przemysłowej",
+              "Próba odpowiedzi na pytanie, czy czwarta rewolucja przemysłowa może być dla rynku pracy „twórczą destrukcją”"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-33-okregowe-zadanie",
+    "title": "Zadanie z analizy finansowej",
+    "pts": 15,
+    "topic": "firma",
+    "intro": [
+      { "t": "p", "x": "Przedsiębiorstwo X produkuje kauczukowe piłeczki. Poniżej wybrane pozycje bilansu oraz rachunku zysków i strat (wariant kalkulacyjny) z lat 2017 i 2018. Wyniki podaj z dokładnością do dwóch miejsc po przecinku. W przedsiębiorstwie nie występują: krótkoterminowe rozliczenia międzyokresowe, należne wpłaty na kapitał podstawowy oraz udziały (akcje) własne." },
+      { "t": "table", "head": ["Kategoria (mln zł)", "2017", "2018"], "rows": [
+        ["Przychody ze sprzedaży", "3 938,10", "4 725,80"],
+        ["Koszty sprzedanych produktów, towarów i materiałów", "1 934,30", "2 355,90"],
+        ["Zysk brutto ze sprzedaży", "2 003,90", "2 369,90"],
+        ["Pozostałe koszty operacyjne", "18,70", "18,70"],
+        ["Zysk (strata) z działalności operacyjnej", "462,90", "372,50"],
+        ["Rzeczowe aktywa trwałe", "787,00", "1 144,30"],
+        ["Wartości niematerialne i prawne", "197,50", "261,70"],
+        ["Należności od odbiorców z tytułu dostaw i usług (handlowe)", "95,70", "124,40"],
+        ["Zapasy", "1 417,70", "1 806,10"],
+        ["Zobowiązania wobec dostawców", "235,80", "864,20"],
+        ["Zobowiązania długoterminowe", "1 277,80", "2 650,90"],
+        ["Aktywa trwałe", "1 154,10", "3 574,10"],
+        ["Suma bilansowa", "3 369,90", "6 736,00"]
+      ] }
+    ],
+    "parts": [
+      {
+        "label": "a", "pts": 2,
+        "prompt": "Oblicz wskaźnik udziału należności handlowych w majątku obrotowym przedsiębiorstwa X w 2018 r.",
+        "answers": [{ "label": "Udział należności handlowych w majątku obrotowym (%)", "value": 3.93, "tol": 0.01, "unit": "%" }],
+        "solution": [
+          { "t": "f", "x": "Mo (majątek obrotowy) = suma bilansowa − aktywa trwałe = 6 736,00 − 3 574,10 = 3 161,90 mln zł\nWum = N / Mo × 100% = 124,40 / 3 161,90 × 100% ≈ 3,93%" }
+        ]
+      },
+      {
+        "label": "b", "pts": 5,
+        "prompt": "Oblicz wskaźnik relacji dynamiki należności handlowych i dynamiki przychodów ze sprzedaży przedsiębiorstwa X dla 2018 r. (2 pkt). Zinterpretuj i wyjaśnij, co oznacza uzyskany wynik (3 pkt).",
+        "answers": [{ "label": "Wskaźnik relacji dynamiki należności i przychodów", "value": 1.08, "tol": 0.01 }],
+        "solution": [
+          { "t": "f", "x": "Wdn = 124,40 / 95,70 ≈ 1,2999\nWds = 4 725,80 / 3 938,10 ≈ 1,2000\nWrns = Wdn / Wds ≈ 1,2999 / 1,2000 ≈ 1,08" },
+          { "t": "p", "x": "1% wzrostowi przychodów ze sprzedaży towarzyszy wzrost należności o 1,08%. Przedsiębiorstwo X w 2018 r. zwiększyło zakres kredytu kupieckiego (kredytowania odbiorców), który nie przełożył się na odpowiedni wzrost sprzedaży." }
+        ]
+      },
+      {
+        "label": "c", "pts": 6,
+        "prompt": "Wyjaśnij, o czym informuje wskaźnik pozycji kredytowej przedsiębiorstwa (2 pkt). Oblicz (2 pkt) i zinterpretuj (2 pkt) jego wartość dla przedsiębiorstwa X w 2018 r.",
+        "answers": [{ "label": "Wskaźnik pozycji kredytowej", "value": 0.14, "tol": 0.01 }],
+        "solution": [
+          { "t": "p", "x": "Wskaźnik pozycji kredytowej informuje, czy przedsiębiorstwo jest dawcą, czy biorcą kredytu kupieckiego. Wartość mniejsza od 1 – przedsiębiorstwo jest per saldo biorcą kredytu; większa od 1 – per saldo dawcą." },
+          { "t": "f", "x": "Wpk = N / Zo = 124,40 / 864,20 ≈ 0,14\nN – należności z tytułu dostaw; Zo – zobowiązania z tytułu dostaw" },
+          { "t": "p", "x": "Na 1 zł zobowiązań wobec dostawców przypada 0,14 zł należności od odbiorców – przedsiębiorstwo jest biorcą kredytu kupieckiego (zobowiązania pokrywają należności blisko siedmiokrotnie; udzielone kredyty kupieckie to ok. 14% zobowiązań wobec dostawców)." }
+        ]
+      },
+      {
+        "label": "d", "pts": 2,
+        "prompt": "Należności handlowe są obarczone ryzykiem, więc przedsiębiorstwa często dążą do ich minimalizowania. Mogą one jednak pełnić ważne funkcje – wskaż dwie z nich.",
+        "answers": [],
+        "solution": [
+          { "t": "ul", "items": [
+            "wpływanie na wielkość sprzedaży,",
+            "kształtowanie kontaktów handlowych z odbiorcami,",
+            "oddziaływanie na strukturę majątku obrotowego,",
+            "wpływanie na płynność finansową przedsiębiorstwa."
+          ] }
+        ]
+      }
+    ]
+  }
+}

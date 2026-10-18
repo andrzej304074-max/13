@@ -1,0 +1,146 @@
+{
+  "set": "owe-36-szkolne",
+  "ed": 36,
+  "stage": "s",
+  "essays": [
+    {
+      "id": "owe-36-szkolne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "makro",
+      "topics": [
+        {
+          "title": "Jak wpływają procesy inflacyjne na położenie ekonomiczne różnych podmiotów gospodarczych: przedsiębiorstw, banków i państwa?",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Istota zjawiska inflacji",
+              "Przyczyny inflacji i jej rodzaje",
+              "Umiejscowienie przedsiębiorstw, banków i państwa w krajowych systemach gospodarczych",
+              "Teoretyczna analiza konsekwencji występowania nadmiernej inflacji"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Inflacja a przedsiębiorstwa:",
+              "  a) wpływ inflacji na politykę cenową przedsiębiorstw, ze szczególnym uwzględnieniem kosztów zmieniania jadłospisów",
+              "  b) niepewność generowana przez nadmierną inflację a długoterminowe decyzje inwestycyjne przedsiębiorstw",
+              "  c) polityka płacowa przedsiębiorstw w obliczu zjawisk inflacyjnych",
+              "Działalność sektora bankowego w sytuacji zwiększającej się presji inflacyjnej:",
+              "  a) wpływ inflacji na ryzyko w działalności bankowej",
+              "  b) działalność kredytowa banków w okresach zwiększonej presji inflacyjnej",
+              "  c) wpływ inflacji na rentowność sektora bankowego",
+              "Inflacja a państwo:",
+              "  a) wpływ inflacji na dochody oraz wydatki sektora finansów publicznych, ze szczególnym uwzględnieniem kosztów obsługi zadłużenia",
+              "  b) podatek inflacyjny oraz efekt Tanziego–Olivery",
+              "  c) zaburzenia generowane przez inflację w systemie podatkowym",
+              "Podsumowanie analizy wpływu procesów inflacyjnych na sytuację ekonomiczną wybranej grupy podmiotów"
+            ] }
+          ]
+        },
+        {
+          "title": "Przedstaw konsekwencje inflacji dla gospodarstw domowych",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Istota zjawiska inflacji",
+              "Przyczyny inflacji i jej rodzaje",
+              "Definicja i umiejscowienie gospodarstwa domowego w gospodarce rynkowej",
+              "Podstawowe teoretyczne konsekwencje inflacji w dorobku wybranych szkół ekonomicznych"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Wpływ inflacji na decyzje ekonomiczne członków gospodarstwa domowego:",
+              "  a) wpływ inflacji na decyzje konsumentów",
+              "  b) inflacja a formy alokacji oszczędności gospodarstw domowych",
+              "  c) znaczenie kosztu „zdartych zelówek” dla decyzji ekonomicznych gospodarstw domowych",
+              "Inflacja a nierówności ekonomiczne między gospodarstwami domowymi",
+              "Inflacja a zadłużenie gospodarstw domowych",
+              "Wpływ wywołanych inflacją zaburzeń w systemie podatkowym na funkcjonowanie gospodarstw domowych",
+              "Problem charakteru oczekiwań inflacyjnych gospodarstw domowych",
+              "Konsekwencje antyinflacyjnej polityki państwa dla gospodarstw domowych",
+              "Podsumowanie wpływu inflacji na sytuację ekonomiczną gospodarstw domowych"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-36-szkolne-zadanie",
+    "title": "Zadanie z podstaw ekonomii",
+    "pts": 15,
+    "topic": "makro",
+    "intro": [
+      { "t": "p", "x": "W tabelach podano wybrane wskaźniki makroekonomiczne dotyczące gospodarki Polski (puste komórki „…” uzupełniasz w podpunkcie A)." },
+      { "t": "p", "x": "Tabela 1." },
+      { "t": "table", "head": ["Wyszczególnienie / lata", "2015", "2016", "2017", "2018", "2019", "2020", "2021"], "rows": [
+        ["PKB (ceny bieżące, mld zł)", "1 801,1", "…", "1 989,8", "…", "2 293,2", "2 339,0", "2 622,2"],
+        ["PKB (w cenach stałych z roku poprzedniego, mld zł)", "…", "1 857,7", "1 953,5", "2 096,4", "…", "2 243,9", "2 478,0"],
+        ["Deflator PKB (rok poprzedni = 100)", "101,0", "100,3", "…", "101,2", "103,2", "…", "105,8"],
+        ["Wskaźnik cen towarów i usług konsumpcyjnych (rok poprzedni = 100)", "99,1", "99,4", "102,0", "101,6", "102,3", "103,4", "105,1"]
+      ] },
+      { "t": "p", "x": "Tabela 2. Wskaźniki cen towarów i usług konsumpcyjnych w 2021 r. (A – analogiczny okres roku poprzedniego = 100; B – okres poprzedni = 100; C – grudzień roku poprzedniego = 100)." },
+      { "t": "table", "head": ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"], "rows": [
+        ["A", "102,6", "102,4", "103,2", "104,3", "104,7", "104,4", "105,0", "105,5", "105,9", "106,8", "107,8", "108,6"],
+        ["B", "101,3", "100,5", "101,0", "100,8", "100,3", "100,1", "100,4", "100,3", "100,7", "101,1", "101,0", "100,9"],
+        ["C", "101,3", "101,8", "102,8", "103,6", "103,9", "104,0", "104,5", "104,8", "105,5", "106,6", "107,6", "108,6"]
+      ] }
+    ],
+    "parts": [
+      {
+        "label": "A1", "pts": 2,
+        "prompt": "Uzupełnij dane w tabeli 1 (sześć pustych komórek).",
+        "answers": [
+          { "label": "PKB 2016, ceny bieżące (mld zł)", "value": 1863.1, "tol": 0.5 },
+          { "label": "PKB 2018, ceny bieżące (mld zł)", "value": 2121.6, "tol": 0.5 },
+          { "label": "PKB 2015, ceny stałe (mld zł)", "value": 1783.3, "tol": 0.5 },
+          { "label": "PKB 2019, ceny stałe (mld zł)", "value": 2222.1, "tol": 0.5 },
+          { "label": "Deflator PKB 2017", "value": 101.9, "tol": 0.1 },
+          { "label": "Deflator PKB 2020", "value": 104.2, "tol": 0.1 }
+        ],
+        "solution": [
+          { "t": "f", "x": "deflator PKB = PKB w cenach bieżących / PKB w cenach stałych z roku poprzedniego × 100\nPKB 2016 (bieżące) = 1 857,7 × 1,003 ≈ 1 863,1\nPKB 2018 (bieżące) = 2 096,4 × 1,012 ≈ 2 121,6\nPKB 2015 (stałe) = 1 801,1 / 1,010 ≈ 1 783,3\nPKB 2019 (stałe) = 2 293,2 / 1,032 ≈ 2 222,1\ndeflator 2017 = 1 989,8 / 1 953,5 × 100 ≈ 101,9\ndeflator 2020 = 2 339,0 / 2 243,9 × 100 ≈ 104,2" }
+        ]
+      },
+      {
+        "label": "A2", "pts": 2,
+        "prompt": "Wskaż, kiedy w latach 2015–2021 w Polsce wystąpiła recesja (1 pkt). Uzasadnij odpowiedź, wykorzystując dane z tabeli 1 (1 pkt).",
+        "answers": [{ "label": "Rok recesji", "value": 2020, "tol": 0.01 }],
+        "solution": [
+          { "t": "p", "x": "Recesja wystąpiła w 2020 r.: PKB w cenach stałych z roku poprzedniego (2 243,9 mld zł) był niższy niż PKB w cenach bieżących w 2019 r. (2 293,2 mld zł) – realny PKB spadł." }
+        ]
+      },
+      {
+        "label": "B", "pts": 2,
+        "prompt": "Na podstawie danych z tabeli 1 dotyczących wskaźnika cen towarów i usług konsumpcyjnych wskaż, kiedy w Polsce występowała deflacja.",
+        "answers": [
+          { "label": "Pierwszy rok deflacji", "value": 2015, "tol": 0.01 },
+          { "label": "Drugi rok deflacji", "value": 2016, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "p", "x": "Deflacja – spadek przeciętnego poziomu cen, czyli wskaźnik CPI poniżej 100: w 2015 r. (99,1) i 2016 r. (99,4)." }
+        ]
+      },
+      {
+        "label": "C1", "pts": 2,
+        "prompt": "Przedstaw cel inflacyjny Narodowego Banku Polskiego.",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Celem polityki pieniężnej NBP jest utrzymanie inflacji – rozumianej jako procentowa roczna zmiana indeksu cen towarów i usług konsumpcyjnych – na poziomie 2,5% z symetrycznym przedziałem odchyleń ±1 punkt procentowy w średnim okresie." }
+        ]
+      },
+      {
+        "label": "C2", "pts": 3,
+        "prompt": "Wskaż, w których miesiącach 2021 r. faktyczny poziom inflacji znajdował się w przedziale wyznaczonym przez cel NBP. Wykorzystaj dane z tabeli 2.",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Inflację roczną pokazuje wiersz A (analogiczny okres roku poprzedniego = 100). Przedział celu to 1,5–3,5%, czyli 101,5–103,5: styczeń (102,6), luty (102,4) i marzec (103,2). Od kwietnia (104,3) inflacja była powyżej przedziału." }
+        ]
+      },
+      {
+        "label": "D", "pts": 4,
+        "prompt": "Wartości deflatora PKB i wskaźnika cen towarów i usług konsumpcyjnych różnią się od siebie (tabela 1). Wyjaśnij dlaczego.",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Deflator PKB uwzględnia ceny wszystkich dóbr i usług wytworzonych w Polsce (także inwestycyjnych i eksportowanych, bez importu), a wskaźnik cen konsumpcyjnych – ceny koszyka dóbr i usług kupowanych przez konsumentów (także importowanych). Do tego obu miarom przypisuje się różne wagi poszczególnych cen." }
+        ]
+      }
+    ]
+  }
+}

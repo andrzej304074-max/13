@@ -1,0 +1,97 @@
+{
+  "set": "owe-34-centralne",
+  "ed": 34,
+  "stage": "c",
+  "essays": [
+    {
+      "id": "owe-34-centralne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "polityka",
+      "topics": [
+        {
+          "title": "Pandemia COVID-19 a nierówności ekonomiczne. Jak postrzegasz rolę mechanizmów rynkowych i działalności państwa w powstawaniu tych nierówności?",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Nierówności ekonomiczne – istota zjawiska",
+              "Przyczyny nierówności ekonomicznych w dorobku wybranej szkoły ekonomicznej",
+              "Metody pomiaru nierówności występujących w gospodarce:",
+              "  a) współczynnik Giniego",
+              "  b) współczynnik Schutza",
+              "Analiza wpływu kryzysów gospodarczych na poziom nierówności ekonomicznych",
+              "Państwo a nierówności – redystrybucyjna funkcja finansów publicznych w dorobku R. Musgrave’a",
+              "Nierówności ekonomiczne a stabilność gospodarcza i społeczna"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Charakterystyka kryzysu wywołanego pandemią COVID-19",
+              "Analiza wpływu szoku pandemii COVID-19 na nierówności ekonomiczne, w tym w ramach:",
+              "  a) poszczególnych państw (występowanie zjawiska w zależności od płci, wykształcenia oraz wieku)",
+              "  b) gospodarki światowej (między państwami lub grupami państw)",
+              "Charakter szoku pandemii COVID-19 a uzasadnienie ingerencji państwa w kształtowanie się nierówności ekonomicznych",
+              "Analiza wpływu funkcjonowania mechanizmu rynkowego na poziom nierówności ekonomicznych w kontekście pandemii COVID-19",
+              "Działalność banków centralnych w okresie pandemii COVID-19:",
+              "  a) wpływ polityki niskich stóp procentowych na nierówności ekonomiczne",
+              "  b) polityka bilansu banku centralnego a nierówności ekonomiczne",
+              "Polityka wydatkowa i podatkowa władzy fiskalnej w obliczu pandemii COVID-19:",
+              "  a) gospodarcze konsekwencje pakietów pomocowych dla przedsiębiorstw i gospodarstw domowych",
+              "  b) bezwarunkowy (gwarantowany) dochód podstawowy w okresie pandemii",
+              "  c) wpływ zmian w systemie podatkowym wywołanych pandemią na kształtowanie się nierówności ekonomicznych",
+              "Próba oceny dotychczasowych antykryzysowych działań wybranego państwa w obszarze kształtowania się nierówności ekonomicznych"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-34-centralne-zadanie",
+    "title": "Zadanie analityczne",
+    "pts": 15,
+    "topic": "mikro",
+    "intro": [
+      { "t": "p", "x": "Roczny globalny popyt na pierwiastek Ce (metal ziem rzadkich) opisany jest równaniem Q = −0,5P + 20, gdzie Q – ilość pierwiastka w tys. ton, a P – cena w mln USD. Podaż jest w pełni realizowana przez dwa przedsiębiorstwa A i B. Krzywe kosztów całkowitych (w mln USD) obu przedsiębiorstw: TCᵢ = 16Qᵢ, gdzie i = A, B. Przedsiębiorstwa A i B zawarły porozumienie tworzące kartel; wielkość podaży całego kartelu dzielą równo między sobą." }
+    ],
+    "parts": [
+      {
+        "label": "a", "pts": 5,
+        "prompt": "Zakładając, że sygnatariusze konsekwentnie dążą do maksymalizacji zysku całkowitego kartelu, oszacuj wielkość podaży całego kartelu, cenę pierwiastka Ce na światowym rynku oraz zysk całkowity każdego z członków kartelu.",
+        "answers": [
+          { "label": "Podaż kartelu (tys. ton)", "value": 6, "tol": 0.01 },
+          { "label": "Cena (mln USD)", "value": 28, "tol": 0.01 },
+          { "label": "Zysk każdego członka (mln USD)", "value": 36, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "p", "x": "Kartel maksymalizujący łączny zysk zachowuje się jak monopolista:" },
+          { "t": "f", "x": "P = 40 − 2Q → TR = 40Q − 2Q² → MR = 40 − 4Q\nMC = 16\n40 − 4Q = 16 → Q = 6 tys. ton (A: 3, B: 3)\nP = 40 − 2 × 6 = 28 mln USD\nzysk A = zysk B = 3 × 28 − 16 × 3 = 84 − 48 = 36 mln USD" }
+        ]
+      },
+      {
+        "label": "b", "pts": 3,
+        "prompt": "Przedsiębiorstwo A rozważa złamanie zmowy. Przedsiębiorstwo B może odpowiedzieć dopiero w kolejnym okresie (przez rok produkuje tyle, ile ustalono w kartelu). Do jakiego poziomu A powinno zwiększyć produkcję w pierwszym roku złamania kartelu, aby zmaksymalizować swój zysk, i ile on wyniesie?",
+        "answers": [
+          { "label": "Produkcja A (tys. ton)", "value": 4.5, "tol": 0.01 },
+          { "label": "Zysk A (mln USD)", "value": 40.5, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "f", "x": "P = 40 − 2Q_A − 2Q_B\nTR_A = (40 − 2Q_A − 2Q_B) × Q_A → MR_A = 40 − 2Q_B − 4Q_A\nMR_A = MC_A: 40 − 2Q_B − 4Q_A = 16 → funkcja reakcji R_A: Q_A = (24 − 2Q_B) / 4 = 6 − 0,5Q_B\nQ_B = 3 → Q_A = 4,5 tys. ton\nP = 40 − 2 × (4,5 + 3) = 25 mln USD\nzysk A = 4,5 × 25 − 16 × 4,5 = 112,5 − 72 = 40,5 mln USD" }
+        ]
+      },
+      {
+        "label": "c", "pts": 7,
+        "prompt": "B ostrzega: „jeżeli zwiększycie produkcję powyżej ustalonej w porozumieniu, to my już zawsze będziemy produkować 4 tys. ton rocznie”. B w pełni realizuje groźbę, stopa dyskontowa wynosi 4% (stała), pierwsza wypłata występuje w okresie bieżącym, a popyt i koszty się nie zmieniają. Pamiętaj o opóźnieniu reakcji B z podpunktu b. Czy A powinno złamać porozumienie, aby zmaksymalizować zysk długookresowy (w nieskończoność)? Podaj wartość bieżącą zysków A w obu scenariuszach.",
+        "answers": [
+          { "label": "Wartość bieżąca zysków A – przestrzeganie kartelu (mln USD)", "value": 936, "tol": 0.5 },
+          { "label": "Wartość bieżąca zysków A – złamanie kartelu (mln USD)", "value": 840.5, "tol": 0.5 }
+        ],
+        "solution": [
+          { "t": "p", "x": "Porównujemy dwa strumienie zysków. Wartość bieżącą przyszłych zysków liczymy wzorem na rentę wieczystą: PV = zysk / r (suma nieskończonego ciągu geometrycznego o ilorazie 1/(1 + r))." },
+          { "t": "p", "x": "1. A zawsze przestrzega porozumienia – w każdym roku zysk 36 mln USD:" },
+          { "t": "f", "x": "PV = 36 + 36 / 0,04 = 36 + 900 = 936 mln USD" },
+          { "t": "p", "x": "2. A łamie kartel w okresie bieżącym (zysk 40,5 z podpunktu b), a od kolejnego roku B produkuje 4 tys. ton i A odpowiada zgodnie z funkcją reakcji:" },
+          { "t": "f", "x": "Q_A = 6 − 0,5 × 4 = 4 tys. ton\nP = 40 − 2 × (4 + 4) = 24 mln USD\nzysk A = 4 × 24 − 16 × 4 = 32 mln USD rocznie\nPV = 40,5 + 32 / 0,04 = 40,5 + 800 = 840,5 mln USD" },
+          { "t": "p", "x": "936 > 840,5 – dla maksymalizacji długookresowego zysku przedsiębiorstwo A powinno działać zgodnie z porozumieniem kartelowym." }
+        ]
+      }
+    ]
+  }
+}

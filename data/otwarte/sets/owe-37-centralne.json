@@ -1,0 +1,86 @@
+{
+  "set": "owe-37-centralne",
+  "ed": 37,
+  "stage": "c",
+  "essays": [
+    {
+      "id": "owe-37-centralne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "makro",
+      "topics": [
+        {
+          "title": "Kapitał społeczny na tle innych czynników wytwórczych – podobieństwa i różnice",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Czynniki wytwórcze – przedstawienie definicji",
+              "Czynniki wytwórcze w wybranych koncepcjach teoretycznych, m.in. w analizie:",
+              "  a) A. Smitha",
+              "  b) R. Solowa",
+              "  c) R. Lucasa",
+              "Kapitał społeczny jako czynnik wytwórczy – analiza w oparciu o koncepcje m.in. J. Colemana oraz R. Putnama, z uwzględnieniem jego rodzajów",
+              "Endogeniczne modele wzrostu gospodarczego uwzględniające kapitał społeczny jako czynnik wytwórczy"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Charakterystyka wybranych czynników wytwórczych, w tym: pracy, kapitału, ziemi i kapitału ludzkiego",
+              "Podaż kapitału społecznego na tle wybranych czynników wytwórczych, w szczególności pracy, kapitału i ziemi",
+              "Popyt na kapitał społeczny na tle wybranych czynników wytwórczych, w tym analiza:",
+              "  a) substytucyjności kapitału społecznego z innymi czynnikami wytwórczymi",
+              "  b) komplementarności kapitału społecznego z innymi czynnikami wytwórczymi",
+              "Etapy rozwoju gospodarki a znaczenie kapitału społecznego na tle innych czynników produkcji",
+              "Przykłady dotyczące roli kapitału społecznego w polskiej gospodarce i polskim społeczeństwie",
+              "Podsumowanie podobieństw i różnic między kapitałem społecznym a innymi czynnikami produkcji"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-37-centralne-zadanie",
+    "title": "Zadanie analityczne",
+    "pts": 15,
+    "topic": "mikro",
+    "intro": [
+      { "t": "p", "x": "Popyt na mikroprocesory we Francji opisany jest równaniem p = −25q + 15000 (gdzie: p – cena za sztukę w euro; q – ilość w sztukach). Francuski rynek mikroprocesorów odpowiada warunkom określonym w modelu Bertranda. Przedsiębiorstwa A i B są ich wyłącznymi dostarczycielami. Mikroprocesory obu przedsiębiorstw mają identyczne parametry. Każde z przedsiębiorstw może samodzielnie zaspokoić rynkowy popyt. W celu maksymalizacji zysku oba przedsiębiorstwa niezależnie ustalają cenę, a cenę konkurenta traktują jako daną z góry. Krzywa kosztów całkowitych przedsiębiorstw A i B: TCᵢ = 2500qᵢ (TCᵢ – koszt całkowity w euro; qᵢ – ilość sztuk produkowana w danym przedsiębiorstwie, i = A, B)." }
+    ],
+    "parts": [
+      {
+        "label": "a", "pts": 5,
+        "prompt": "Zakładając, że rynek znajduje się w punkcie równowagi Nasha, oblicz: cenę mikroprocesora, ilość sprzedawaną na rynku, wielkość produkcji poszczególnych przedsiębiorstw oraz koszt całkowity przedsiębiorstwa A.",
+        "answers": [
+          { "label": "Cena (euro)", "value": 2500, "tol": 0.5 },
+          { "label": "Ilość sprzedawana na rynku", "value": 500, "tol": 0.5 },
+          { "label": "Produkcja przedsiębiorstwa A", "value": 250, "tol": 0.5 },
+          { "label": "Produkcja przedsiębiorstwa B", "value": 250, "tol": 0.5 },
+          { "label": "Koszt całkowity przedsiębiorstwa A (euro)", "value": 625000, "tol": 0.5 }
+        ],
+        "solution": [
+          { "t": "p", "x": "W modelu Bertranda (identyczne produkty, rywalizacja cenowa) cena w równowadze Nasha jest równa kosztowi krańcowemu – każda wyższa cena zostałaby podcięta przez konkurenta:" },
+          { "t": "f", "x": "MC = 2500 → p = 2500 euro\n2500 = −25q + 15 000 → q = 500\nprodukcja A = produkcja B = 500 / 2 = 250 (przedsiębiorstwa dzielą rynek po równo)\nTC_A = 2500 × 250 = 625 000 euro" }
+        ]
+      },
+      {
+        "label": "b", "pts": 4,
+        "prompt": "Przedsiębiorstwo A rozważa wejście na rynek brytyjski (2027 r.), na którym monopolistą jest przedsiębiorstwo C. Scenariusze: (1) A nie wchodzi – zysk A = 0, zysk C = 4 mln GBP; (2) A wchodzi, C agresywnie obniża cenę – A traci 0,5 mln GBP, zysk C = 1 mln GBP; (3) A wchodzi, C nie obniża cen – zysk A = 1 mln GBP, zysk C = 1,5 mln GBP. C nie może skutecznie odstraszyć A przed podjęciem decyzji. Jakie działania podejmą przedsiębiorstwa A i C? Uzasadnij.",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Gra sekwencyjna – rozwiązujemy od końca. Jeśli A wejdzie, C porównuje: obniżka cen → 1 mln GBP, utrzymanie cen → 1,5 mln GBP. Racjonalne dla C jest utrzymanie cen (groźba wojny cenowej jest niewiarygodna)." },
+          { "t": "p", "x": "Wiedząc to, A porównuje: brak wejścia → 0, wejście (C utrzyma ceny) → 1 mln GBP. A wejdzie na rynek brytyjski, a C utrzyma dotychczasowy poziom cen (zysk A = 1 mln GBP, zysk C = 1,5 mln GBP)." }
+        ]
+      },
+      {
+        "label": "c", "pts": 6,
+        "prompt": "A wymienia funty z punktu b (scenariusz 3) na euro za pośrednictwem dolara, korzystając z ofert trzech banków (pierwsza waluta w parze jest bazowa; kursy kupna–sprzedaży): Bank X: GBP/USD 1,27–1,30, EUR/USD 1,07–1,11; Bank Y: GBP/USD 1,25–1,32, EUR/USD 1,06–1,08; Bank Z: GBP/USD 1,26–1,29, EUR/USD 1,05–1,12. Opisz, jak A powinno dokonać wymiany najkorzystniej. Oblicz kurs krzyżowy GBP/EUR i zysk A w euro.",
+        "answers": [
+          { "label": "Kurs krzyżowy GBP/EUR", "value": 1.1759, "tol": 0.0005 },
+          { "label": "Zysk A w euro (mln)", "value": 1.1759, "tol": 0.0005 }
+        ],
+        "solution": [
+          { "t": "p", "x": "Sprzedając funty, A dostaje kurs kupna banku (niższy z pary) – najwyższy kurs kupna GBP/USD ma bank X (1,27). Kupując euro za dolary, płaci kurs sprzedaży banku – najniższy kurs sprzedaży EUR/USD ma bank Y (1,08)." },
+          { "t": "f", "x": "GBP/EUR = (GBP/USD kupno w X) / (EUR/USD sprzedaż w Y) = 1,27 / 1,08 ≈ 1,1759\nzysk A = 1 mln GBP × 1,1759 ≈ 1,1759 mln euro" }
+        ]
+      }
+    ]
+  }
+}

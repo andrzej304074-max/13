@@ -1,0 +1,115 @@
+{
+  "set": "owe-35-szkolne",
+  "ed": 35,
+  "stage": "s",
+  "essays": [
+    {
+      "id": "owe-35-szkolne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "finanse",
+      "topics": [
+        {
+          "title": "Rola giełdy papierów wartościowych w finansowaniu działalności gospodarczej",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Istota giełdy papierów wartościowych",
+              "Omówienie wybranych instrumentów finansowych stanowiących przedmiot obrotu na giełdach papierów wartościowych",
+              "Rynek pierwotny a wtórny papierów wartościowych",
+              "Regulacje prawne dotyczące emisji i obrotu papierami wartościowymi przedsiębiorstw"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Przedsiębiorstwo jako emitent papierów wartościowych",
+              "Pierwsza oferta publiczna (Initial Public Offering, IPO) jako forma pozyskania kapitału własnego przez przedsiębiorstwa",
+              "Znaczenie rynku wtórnego akcji w działalności przedsiębiorstwa",
+              "Rola giełdy w pozyskaniu kapitału obcego dla przedsiębiorstwa – obligacje korporacyjne",
+              "Pozafinansowe korzyści i zagrożenia wynikające z finansowania działalności przedsiębiorstwa na rynku kapitałowym",
+              "Giełda papierów wartościowych a alternatywne źródła finansowania działalności gospodarczej",
+              "Podsumowanie szans i zagrożeń wynikających z finansowania działalności przedsiębiorstwa w oparciu o giełdę papierów wartościowych"
+            ] }
+          ]
+        },
+        {
+          "title": "Znaczenie rynku kapitałowego dla gospodarstw domowych",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Charakterystyka rynku kapitałowego",
+              "Omówienie wybranych instrumentów finansowych stanowiących przedmiot obrotu na rynku kapitałowym",
+              "Funkcje rynku kapitałowego w gospodarce",
+              "Istota gospodarstwa domowego",
+              "Anglosaski a kontynentalny model systemu finansowego"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Rynek kapitałowy jako miejsce alokacji oszczędności gospodarstw domowych",
+              "Formy inwestowania oferowane gospodarstwom domowym",
+              "Inwestorzy indywidualni i ich rola na rynku kapitałowym",
+              "Instytucje zbiorowego inwestowania – zalety i wady",
+              "Pojęcie zysku i straty kapitałowej gospodarstwa domowego",
+              "Znaczenie rynku kapitałowego dla funkcjonowania systemów zabezpieczenia emerytalnego",
+              "Prawna ochrona gospodarstw domowych na rynku kapitałowym"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-35-szkolne-zadanie",
+    "title": "Zadanie z podstaw ekonomii",
+    "pts": 15,
+    "topic": "mikro",
+    "intro": [
+      { "t": "p", "x": "W pewnym państwie na rynku produkcji energii elektrycznej funkcjonuje monopol. Krzywa popytu na energię elektryczną jest opisana równaniem p = −q + 42, a krzywa kosztu całkowitego monopolisty to TC = 0,5q² + 6q + 20, gdzie: q – ilość GWh (gigawatogodzin); p – cena 1 GWh w tys. zł; TC – koszty całkowite w tys. zł. Monopolista nie różnicuje ceny." }
+    ],
+    "parts": [
+      {
+        "label": "a", "pts": 1,
+        "prompt": "Czy krzywa kosztu całkowitego monopolisty dotyczy krótkiego czy długiego okresu? Odpowiedź uzasadnij.",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Krótkiego okresu – w równaniu występują koszty stałe (20 tys. zł), a w długim okresie wszystkie koszty są zmienne." }
+        ]
+      },
+      {
+        "label": "b", "pts": 2,
+        "prompt": "Przy jakiej wielkości produkcji monopolista maksymalizuje swój zysk całkowity?",
+        "answers": [{ "label": "Produkcja (GWh)", "value": 12, "tol": 0.01 }],
+        "solution": [
+          { "t": "f", "x": "TR = p × q = −q² + 42q → MR = −2q + 42\nMC = TC′ = q + 6\nMR = MC: −2q + 42 = q + 6 → q = 12" }
+        ]
+      },
+      {
+        "label": "c", "pts": 3,
+        "prompt": "Oblicz wielkość zysku całkowitego monopolisty.",
+        "answers": [{ "label": "Zysk całkowity (tys. zł)", "value": 196, "tol": 0.1 }],
+        "solution": [
+          { "t": "f", "x": "p = −12 + 42 = 30 tys. zł\nATC = 0,5q + 6 + 20/q = 6 + 6 + 1,67 ≈ 13,67\nzysk = (p − ATC) × q = (30 − 13,67) × 12 ≈ 196\nlub: TR − TC = 12 × 30 − (72 + 72 + 20) = 360 − 164 = 196 tys. zł" }
+        ]
+      },
+      {
+        "label": "d", "pts": 5,
+        "prompt": "Wyjaśnij, czym jest i z czego wynika strata społeczna będąca konsekwencją funkcjonowania monopolu (2 pkt). Oblicz, ile wynosi w analizowanym przykładzie (3 pkt).",
+        "answers": [{ "label": "Zbędna strata społeczna (tys. zł)", "value": 36, "tol": 0.01 }],
+        "solution": [
+          { "t": "p", "x": "Strata społeczna monopolu to ubytek nadwyżki całkowitej w porównaniu z branżą wolnokonkurencyjną. Wynika z tego, że monopolista produkuje mniej, niż jest społecznie efektywne: ustalając cenę powyżej kosztu krańcowego, odcina konsumentów, dla których wartość dobra przewyższa koszt krańcowy, ale jest niższa od ceny monopolowej." },
+          { "t": "f", "x": "efektywna produkcja (MC = popyt): q + 6 = −q + 42 → q = 18\nMC przy q = 12: 12 + 6 = 18\nstrata = 0,5 × (p monopolowa − MC przy q = 12) × (18 − 12) = 0,5 × (30 − 18) × 6 = 36 tys. zł" }
+        ]
+      },
+      {
+        "label": "e", "pts": 4,
+        "prompt": "Główną przyczyną powstawania monopoli są bariery wejścia. Wskaż cztery źródła tych barier.",
+        "answers": [],
+        "solution": [
+          { "t": "ul", "items": [
+            "monopolizacja zasobów – dostęp do kluczowego zasobu ma tylko jedno przedsiębiorstwo,",
+            "monopole państwowe (w tym prawa patentowe i autorskie) – państwo przyznaje jednemu podmiotowi wyłączne prawo do sprzedaży dobra lub świadczenia usługi,",
+            "monopol naturalny – koszty są niższe, gdy całe zapotrzebowanie zaspokaja jedno przedsiębiorstwo,",
+            "wzrost zewnętrzny – przejęcie kontroli nad pozostałymi podmiotami na rynku,",
+            "przewaga technologiczna,",
+            "bariera kapitałowa."
+          ] }
+        ]
+      }
+    ]
+  }
+}

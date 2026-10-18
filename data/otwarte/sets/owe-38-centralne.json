@@ -1,0 +1,112 @@
+{
+  "set": "owe-38-centralne",
+  "ed": 38,
+  "stage": "c",
+  "essays": [
+    {
+      "id": "owe-38-centralne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "polityka",
+      "topics": [
+        {
+          "title": "Regulacje Unii Europejskiej – katalizator czy hamulec rozwoju gospodarczego z perspektywy XX-lecia członkostwa Polski w Unii Europejskiej",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Definicja i cele regulacji ekonomicznej",
+              "Problem regulacji ekonomicznej w teorii ekonomii, w szczególności w dorobku teorii interesu publicznego i teorii grup interesu:",
+              "  a) regulacja jako odpowiedź państwa na niedoskonałości rynku",
+              "  b) źródła nieefektywności w regulacjach tworzonych przez państwo, w tym problem nadmiernej biurokracji",
+              "Rodzaje regulacji ekonomicznej",
+              "Regulacje na tle innych form ingerencji państwa w rynek",
+              "Analiza form regulacji gospodarki wykorzystywanych na szczeblu unijnym"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Znaczenie regulacji Unii Europejskiej dla funkcjonowania wspólnego rynku",
+              "Analiza wpływu regulacji Unii Europejskiej na alokację zasobów i konkurencyjność gospodarki europejskiej w świetle tzw. Raportu M. Draghiego",
+              "Doświadczenia polskiej gospodarki w zakresie wpływu regulacji unijnych na innowacyjność gospodarki",
+              "Znaczenie regulacji Unii Europejskiej w ograniczaniu negatywnych konsekwencji niedoskonałości rynku w polskiej gospodarce",
+              "Analiza wybranej regulacji unijnej – jej cele i konsekwencje dla polskiej gospodarki",
+              "Problem niedopasowania unijnych regulacji do realiów gospodarczych poszczególnych państw członkowskich",
+              "Regulacje Unii Europejskiej a rozwój gospodarczy – próba syntezy"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-38-centralne-zadanie",
+    "title": "Zadanie analityczne",
+    "pts": 15,
+    "topic": "mikro",
+    "intro": [
+      { "t": "p", "x": "Na pewnym rynku funkcjonuje monopol. Krzywa popytu na produkowane przez niego dobro jest opisana równaniem p = −4q + 200, a krzywa kosztu całkowitego monopolisty to TC = 8q + 500, gdzie: q – ilość w szt.; p – cena w zł; TC – wielkość kosztów całkowitych w zł." }
+    ],
+    "parts": [
+      {
+        "label": "a", "pts": 2,
+        "prompt": "Oblicz cenę, przy której monopolista będzie maksymalizował swój utarg całkowity. Ile wynosi wtedy cenowa elastyczność popytu?",
+        "answers": [
+          { "label": "Cena maksymalizująca utarg", "value": 100, "tol": 0.01, "unit": "zł" },
+          { "label": "Cenowa elastyczność popytu", "value": -1, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "p", "x": "Utarg całkowity jest największy, gdy MR = 0, czyli gdy elastyczność cenowa popytu ε = −1. Z popytu: q = (200 − p) / 4 = (200 − p) × 0,25, Δq/Δp = −1/4." },
+          { "t": "f", "x": "ε = (Δq / Δp) × (p / q) = −1/4 × p / ((200 − p) × 0,25) = −1\np = 200 − p → p = 100 zł" }
+        ]
+      },
+      {
+        "label": "b", "pts": 1,
+        "prompt": "Czy analizowane przedsiębiorstwo jest monopolem naturalnym? Uzasadnij.",
+        "answers": [],
+        "solution": [
+          { "t": "f", "x": "ATC = TC / q = 8 + 500 / q\nATC′ = −500 / q² < 0" },
+          { "t": "p", "x": "Krzywa przeciętnego kosztu całkowitego jest malejąca w całym zakresie produkcji (koszty stałe rozkładają się na coraz więcej jednostek), więc jest to monopol naturalny – jedna firma zaspokoi popyt taniej niż kilka." }
+        ]
+      },
+      {
+        "label": "c", "pts": 4,
+        "prompt": "Jaką cenę powinna narzucić agencja regulacyjna, jeżeli chciałaby, aby monopolista osiągał zysk normalny? Jaka byłaby wtedy wielkość produkcji? Jak zmieniłyby się wielkość produkcji i zysk względem sytuacji, w której monopol nie podlegał regulacji (bez różnicowania cen)?",
+        "answers": [
+          { "label": "Cena regulowana (p = ATC)", "value": 19.05, "tol": 0.02, "unit": "zł" },
+          { "label": "Produkcja przy cenie regulowanej", "value": 45.24, "tol": 0.02 },
+          { "label": "Produkcja monopolu bez regulacji", "value": 24, "tol": 0.01 },
+          { "label": "Zysk monopolu bez regulacji", "value": 1804, "tol": 0.5, "unit": "zł" }
+        ],
+        "solution": [
+          { "t": "p", "x": "Zysk normalny (ekonomiczny równy zero) – cena równa przeciętnemu kosztowi całkowitemu:" },
+          { "t": "f", "x": "p = ATC: −4q + 200 = 8 + 500 / q\n−4q² + 192q − 500 = 0 → q₁ ≈ 2,76; q₂ ≈ 45,24\nwybieramy większą produkcję: q ≈ 45,24; p = −4 × 45,24 + 200 ≈ 19,05 zł" },
+          { "t": "p", "x": "Bez regulacji monopolista maksymalizuje zysk (MR = MC):" },
+          { "t": "f", "x": "MR = −8q + 200 = 8 = MC → q = 24; p = −4 × 24 + 200 = 104 zł\nπ = TR − TC = 24 × 104 − (8 × 24 + 500) = 2496 − 692 = 1804 zł" },
+          { "t": "p", "x": "Regulacja zwiększa produkcję z 24 do ok. 45,24 szt. (o ok. 21,24 szt.), a zysk ekonomiczny spada z 1804 zł do zera (zysk normalny)." }
+        ]
+      },
+      {
+        "label": "d", "pts": 4,
+        "prompt": "Wskaż dwa problemy występujące przy stosowaniu tego typu regulacji.",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Regulacja oparta na cenie równej przeciętnemu kosztowi całkowitemu (zysk normalny) – problemy (wystarczą dwa):" },
+          { "t": "ul", "items": [
+            "nie usuwa zbędnej straty społecznej wynikającej z monopolu (choć jest ona mniejsza niż bez regulacji),",
+            "nie zachęca monopolisty do zwiększania efektywności kosztowej i ulepszania technologii – brak bodźców do obniżania kosztów,",
+            "jest trudna w zarządzaniu: wymaga od regulatora zasobów (ludzkich i finansowych) do ustalenia uzasadnionego poziomu kosztów przeciętnych, stałego monitorowania monopolisty i licznych negocjacji."
+          ] }
+        ]
+      },
+      {
+        "label": "e", "pts": 4,
+        "prompt": "Gdyby agencja narzuciła monopoliście cenę opartą na koszcie krańcowym, ile wynosiłaby jego produkcja? Czy wynik ekonomiczny przedsiębiorstwa przy takiej cenie uzasadnia żądanie od państwa dotacji w wysokości 20 zł do każdej wyprodukowanej jednostki? Dokonaj obliczeń i zinterpretuj je.",
+        "answers": [
+          { "label": "Produkcja przy p = MC", "value": 48, "tol": 0.01 },
+          { "label": "Wynik ekonomiczny (zysk/strata)", "value": -500, "tol": 0.5, "unit": "zł" }
+        ],
+        "solution": [
+          { "t": "f", "x": "p = MC: −4q + 200 = 8 → q = 48\nπ = 8 × 48 − (8 × 48 + 500) = −500 zł\nATC = 8 + 500 / 48 ≈ 18,41 zł; strata na jednostkę = ATC − p ≈ 18,41 − 8 ≈ 10,41 zł < 20 zł" },
+          { "t": "p", "x": "Przy cenie równej kosztowi krańcowemu monopol naturalny ponosi stratę (500 zł, czyli ok. 10,41 zł na jednostkę), bo cena nie pokrywa kosztów stałych. Dotacja jest więc uzasadniona, ale tylko do wysokości ok. 10,41 zł na jednostkę – żądanie 20 zł jest zawyżone." }
+        ]
+      }
+    ]
+  }
+}

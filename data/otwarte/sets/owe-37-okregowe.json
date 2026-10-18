@@ -1,0 +1,97 @@
+{
+  "set": "owe-37-okregowe",
+  "ed": 37,
+  "stage": "o",
+  "essays": [
+    {
+      "id": "owe-37-okregowe-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "polityka",
+      "topics": [
+        {
+          "title": "Kapitał społeczny a polityka państwa. Czy i jak państwo może kształtować kapitał społeczny? Czy i jak kapitał społeczny może kształtować politykę państwa?",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Istota i rodzaje kapitału społecznego",
+              "Znaczenie polityki państwa w zwiększaniu kapitału społecznego",
+              "Polityka państwa jako czynnik zmniejszający poziom kapitału społecznego",
+              "Wpływ kapitału społecznego na sprawność instytucjonalną państwa",
+              "Znaczenie kapitału społecznego w budowaniu społeczeństwa obywatelskiego"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Kształtowanie kapitału społecznego w ramach polityki oświatowej państwa",
+              "Instrumenty polityki państwa ukierunkowane na ograniczenie wykluczenia społecznego, w tym zmniejszanie nierówności dochodowych oraz bezrobocia",
+              "Sprawny system legislacyjny jako czynnik przyczyniający się do wzrostu kapitału społecznego",
+              "Wpływ polityki migracyjnej państwa na poziom kapitału społecznego",
+              "Związek między kapitałem społecznym a funkcjonowaniem państwa"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-37-okregowe-zadanie",
+    "title": "Zadanie z analizy finansowej",
+    "pts": 15,
+    "topic": "firma",
+    "intro": [
+      { "t": "p", "x": "Podstawowym przedmiotem działania spółki akcyjnej JTA jest sprzedaż detaliczna. W tabeli przedstawiono jej wybrane dane finansowe na koniec 2022 roku." },
+      { "t": "table", "head": ["Wyszczególnienie", "Wartość (w tys. zł)"], "rows": [
+        ["Aktywa obrotowe", "2 706 706"],
+        ["Amortyzacja", "300 129"],
+        ["EBIT", "1 537 819"],
+        ["EPS (w zł)", "11,55"],
+        ["Inwestycje krótkoterminowe", "453 056"],
+        ["Koszty finansowe", "141 293"],
+        ["Koszty ogólnego zarządu", "143 217"],
+        ["Należności krótkoterminowe", "274 872"],
+        ["Podatek dochodowy", "269 531"],
+        ["Pozostałe (niewymienione) składniki majątku finansowego spółki", "226 321"],
+        ["Przychody ze sprzedaży", "19 801 622"],
+        ["Suma bilansowa", "9 003 059"],
+        ["Środki trwałe", "5 000 000"],
+        ["Środki trwałe w budowie", "1 070 032"],
+        ["Zapasy", "1 978 778"]
+      ] }
+    ],
+    "parts": [
+      {
+        "label": "a", "pts": 3,
+        "prompt": "O czym informuje wskaźnik unieruchomienia majątku (1 pkt)? Ile wynosi jego wartość w przypadku przedsiębiorstwa JTA (2 pkt)?",
+        "answers": [{ "label": "Wskaźnik unieruchomienia majątku", "value": 2.33, "tol": 0.01 }],
+        "solution": [
+          { "t": "p", "x": "Wskaźnik unieruchomienia majątku to stosunek majątku trwałego do majątku obrotowego. Informuje o stopniu elastyczności przedsiębiorstwa w dostosowywaniu się do zmian rynkowych." },
+          { "t": "f", "x": "majątek trwały = suma bilansowa − majątek obrotowy = 9 003 059 − 2 706 706 = 6 296 353 tys. zł\nwskaźnik unieruchomienia majątku = majątek trwały / majątek obrotowy = 6 296 353 / 2 706 706 ≈ 2,33" }
+        ]
+      },
+      {
+        "label": "b", "pts": 4,
+        "prompt": "Oblicz wartość wskaźnika produkcyjności majątku.",
+        "answers": [{ "label": "Wskaźnik produkcyjności majątku", "value": 8.43, "tol": 0.01 }],
+        "solution": [
+          { "t": "f", "x": "majątek rzeczowy = środki trwałe + środki trwałe w budowie + zapasy\n                 = 5 000 000 + 1 070 032 + 1 978 778 = 8 048 810 tys. zł\nmajątek finansowy = należności krótkoterminowe + inwestycje krótkoterminowe + pozostałe składniki majątku finansowego\n                  = 274 872 + 453 056 + 226 321 = 954 249 tys. zł\nwskaźnik produkcyjności majątku = majątek rzeczowy / majątek finansowy = 8 048 810 / 954 249 ≈ 8,43" }
+        ]
+      },
+      {
+        "label": "c", "pts": 3,
+        "prompt": "Oblicz wartość wskaźnika obrotowości (produktywności) majątku ogółem (2 pkt). Uzasadnij, czy właściwe jest porównywanie wartości tego wskaźnika między przedsiębiorstwami z różnych branż (1 pkt).",
+        "answers": [{ "label": "Wskaźnik obrotowości majątku ogółem", "value": 2.2, "tol": 0.01 }],
+        "solution": [
+          { "t": "f", "x": "wskaźnik obrotowości majątku ogółem = przychody ze sprzedaży / majątek ogółem = 19 801 622 / 9 003 059 ≈ 2,20" },
+          { "t": "p", "x": "Przykładowa odpowiedź: branże wymagają bardzo różnego zaangażowania majątku – np. przedsiębiorstwa wydobywcze mają znacznie więcej majątku niż handlowe – więc wskaźnik produktywności majątku różni się między branżami. Ocenę wartości wskaźnika dla przedsiębiorstwa należy więc odnosić do uwarunkowań jego branży; porównania między branżami nie są właściwe." }
+        ]
+      },
+      {
+        "label": "d", "pts": 5,
+        "prompt": "Oblicz wartość EBITDA dla spółki JTA (2 pkt). Wskaż argument przeciw wykorzystywaniu EBITDA jako wskaźnika wolnych przepływów pieniężnych (free cash flow) (3 pkt).",
+        "answers": [{ "label": "EBITDA (tys. zł)", "value": 1837948, "tol": 0.5 }],
+        "solution": [
+          { "t": "f", "x": "EBITDA = EBIT + amortyzacja = 1 537 819 + 300 129 = 1 837 948 tys. zł" },
+          { "t": "p", "x": "Przykładowa odpowiedź: EBITDA opiera się na danych memoriałowych – jedyną korektą zbliżającą wynik do ujęcia gotówkowego jest dodanie amortyzacji. Nie uwzględnia natomiast wydatków inwestycyjnych na majątek trwały (materialny i niematerialny) ani zmian kapitału obrotowego netto, które wpływają na wolne przepływy pieniężne." }
+        ]
+      }
+    ]
+  }
+}

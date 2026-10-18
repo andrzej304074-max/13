@@ -1,0 +1,109 @@
+{
+  "set": "owe-39-szkolne",
+  "ed": 39,
+  "stage": "s",
+  "essays": [
+    {
+      "id": "owe-39-szkolne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "polityka",
+      "topics": [
+        {
+          "title": "Dlaczego niektóre kraje wprowadzają protekcjonizm w handlu międzynarodowym?",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Protekcjonizm w tradycyjnych teoriach handlu międzynarodowego",
+              "Podstawowe założenia teoretyczne merkantylizmu",
+              "Istota protekcjonizmu wychowawczego i jego odmiany",
+              "Koncepcja strategicznej polityki handlowej"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Protekcjonizm jako element polityki przemysłowej realizowanej przez dane państwa, ze szczególnym uwzględnieniem doświadczeń państw znajdujących się na niskim poziomie rozwoju",
+              "Wykorzystywanie narzędzi protekcjonistycznych dla realizacji celów pozaekonomicznych, w tym bezpieczeństwa narodowego",
+              "Omówienie problematyki działań antydumpingowych wybranych państw",
+              "Doświadczenia związane z wykorzystywaniem narzędzi taryfowych jako źródła dochodów fiskalnych",
+              "Podstawowe czynniki decydujące o zastosowaniu protekcjonizmu w handlu międzynarodowym – synteza"
+            ] }
+          ]
+        },
+        {
+          "title": "Formy protekcjonizmu w handlu międzynarodowym. Jakie są ich silne i słabe strony?",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Istota protekcjonizmu w handlu międzynarodowym",
+              "Cło jako narzędzie polityki handlowej, w tym koncepcja cła wychowawczego oraz cła wyrównawczego",
+              "Teoria efektywnej ochrony celnej",
+              "Charakterystyka pozataryfowych instrumentów polityki handlowej, w tym:",
+              "  a) subsydiów eksportowych",
+              "  b) subsydiów produkcyjnych",
+              "  c) ograniczeń ilościowych w imporcie"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Zastosowanie analizowanych form protekcjonizmu w ograniczaniu deficytu handlowego wybranych państw i ocena ich skuteczności",
+              "Konsekwencje o charakterze fiskalnym stosowania analizowanych form protekcjonizmu",
+              "Skuteczność stosowania analizowanych form protekcjonizmu w kształtowaniu struktury gospodarki narodowej, w tym ich wpływ na rozwój „raczkujących” gałęzi przemysłu oraz ochronę sektorów strategicznych",
+              "Konsekwencje wykorzystania analizowanych form protekcjonizmu dla gospodarstw domowych",
+              "Skuteczność wybranych form protekcjonizmu w działaniach antydumpingowych, w tym w kontekście dumpingu ekologicznego"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-39-szkolne-zadanie",
+    "title": "Zadanie z podstaw ekonomii",
+    "pts": 15,
+    "topic": "mikro",
+    "intro": [
+      { "t": "p", "x": "W 2024 r. popyt na przelot samolotem z Krakowa do Warszawy opisywało równanie Q = 500 − 0,5P (gdzie: Q – ilość w sztukach, P – cena w złotych za sztukę). Trasę obsługiwała jedna linia lotnicza." }
+    ],
+    "parts": [
+      {
+        "label": "a", "pts": 2,
+        "prompt": "Jaki był utarg całkowity osiągany przez monopolistę, jeśli cena jednego biletu wynosiła 600 zł?",
+        "answers": [{ "label": "Utarg całkowity", "value": 120000, "tol": 0.5, "unit": "zł" }],
+        "solution": [
+          { "t": "f", "x": "Q = 500 − 0,5 × 600 = 200\nTR = P × Q = 600 × 200 = 120 000 zł" }
+        ]
+      },
+      {
+        "label": "b", "pts": 4,
+        "prompt": "Jaka była elastyczność cenowa popytu w punkcie z podpunktu a? (3 pkt) Zinterpretuj uzyskany wynik. (1 pkt)",
+        "answers": [{ "label": "Elastyczność cenowa popytu", "value": -1.5, "tol": 0.01 }],
+        "solution": [
+          { "t": "f", "x": "E = (P / Q) × (ΔQ / ΔP) = (P / Q) × dQ/dP = (600 / 200) × (−0,5) = −1,5" },
+          { "t": "p", "x": "Interpretacja: wzrost (spadek) ceny biletu o 1% skutkuje spadkiem (wzrostem) wielkości popytu o 1,5% – popyt jest elastyczny." }
+        ]
+      },
+      {
+        "label": "c", "pts": 4,
+        "prompt": "Jaka powinna być cena biletu, aby spółka maksymalizowała swój utarg całkowity z tytułu sprzedaży biletów?",
+        "answers": [{ "label": "Cena biletu", "value": 500, "tol": 0.5, "unit": "zł" }],
+        "solution": [
+          { "t": "p", "x": "Utarg całkowity jest największy, gdy elastyczność cenowa popytu wynosi −1:" },
+          { "t": "f", "x": "−1 = P / (500 − 0,5P) × (−0,5)\n500 − 0,5P = 0,5P\nP = 500 zł" },
+          { "t": "p", "x": "Alternatywnie: TR = P × (500 − 0,5P) = 500P − 0,5P²; maksimum, gdy TR′ = 500 − P = 0, czyli P = 500 zł." }
+        ]
+      },
+      {
+        "label": "d", "pts": 3,
+        "prompt": "W 2020 r. cena plecaka kabinowego wynosiła 80 zł i sprzedano ich 150 sztuk. W tym samym roku cena biletu lotniczego na trasie Kraków–Warszawa wynosiła 750 zł i sprzedano ich 250 sztuk. W 2021 r. cena biletu wzrosła do 800 zł (ceteris paribus), sprzedaż biletów spadła do 100 sztuk, a sprzedaż plecaków spadła do 90 sztuk. Jaka była mieszana elastyczność popytu na plecaki w odniesieniu do biletów?",
+        "answers": [{ "label": "Mieszana (krzyżowa) elastyczność popytu", "value": -6, "tol": 0.01 }],
+        "solution": [
+          { "t": "f", "x": "%ΔQ(plecaki) = (90 − 150) / 150 = −40%\n%ΔP(bilety) = (800 − 750) / 750 ≈ 6,67%\nE mieszana = %ΔQ(plecaki) / %ΔP(bilety) = −40% / 6,67% = −6" },
+          { "t": "p", "x": "Ujemna elastyczność mieszana – plecaki kabinowe i bilety są dobrami komplementarnymi." }
+        ]
+      },
+      {
+        "label": "e", "pts": 2,
+        "prompt": "W 2027 r. planowane jest otwarcie nowej drogi szybkiego ruchu łączącej Kraków z Warszawą, dzięki której podróż samochodem będzie o wiele wygodniejsza i szybsza. W jaki sposób wpłynie to na elastyczność cenową popytu na przeloty na tej trasie? Uzasadnij.",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Nowa droga będzie alternatywą wobec połączenia lotniczego. Większa dostępność bliskiego substytutu sprawi, że popyt na bilety lotnicze stanie się bardziej elastyczny cenowo: przy wzroście cen biletów konsumenci będą bardziej skłonni zamienić przelot samolotem na podróż samochodem." }
+        ]
+      }
+    ]
+  }
+}

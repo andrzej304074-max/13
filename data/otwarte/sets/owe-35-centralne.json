@@ -1,0 +1,100 @@
+{
+  "set": "owe-35-centralne",
+  "ed": 35,
+  "stage": "c",
+  "essays": [
+    {
+      "id": "owe-35-centralne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "finanse",
+      "topics": [
+        {
+          "title": "Giełdy a koniunktura gospodarcza. Przedstaw ich wzajemne związki i oddziaływania. Wykorzystaj również przykłady z praktyki gospodarczej",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Giełdy papierów wartościowych i giełdy towarowe – charakterystyka instytucji",
+              "Pojęcie koniunktury gospodarczej",
+              "Wpływ rynku giełdowego na wzrost gospodarczy w kontekście dorobku egzogenicznych modeli wzrostu gospodarczego",
+              "Rozwój giełdy jako stymulanta rozwoju gospodarczego",
+              "Niedoskonałości rynku giełdowego i ich wpływ na koniunkturę gospodarczą:",
+              "  a) hipoteza o niestabilności rynków finansowych",
+              "  b) asymetria informacji na rynku i jej konsekwencje",
+              "Rola giełd w kontekście modelu systemu finansowego danego kraju – model anglosaski a model kontynentalny"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Giełdy jako barometr koniunktury gospodarczej i źródło informacji dla podmiotów gospodarczych",
+              "Wpływ rozwoju rynków giełdowych na zmienność konsumpcji gospodarstw domowych",
+              "Znaczenie finansowania działalności przedsiębiorstw na rynku kapitałowym dla kształtowania koniunktury gospodarczej",
+              "Wpływ kryzysów giełdowych na koniunkturę gospodarczą",
+              "Znaczenie giełd towarowych dla działalności przedsiębiorstw niefinansowych, z uwzględnieniem transakcji zabezpieczających, w kontekście wahań cyklu koniunkturalnego",
+              "Znaczenie giełd towarowych w kształtowaniu koniunktury gospodarczej w kontekście transformacji energetycznej i zielonej ekonomii",
+              "Giełdy a koniunktura gospodarcza – synteza"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-35-centralne-zadanie",
+    "title": "Zadanie analityczne",
+    "pts": 15,
+    "topic": "mikro",
+    "intro": [
+      { "t": "p", "x": "Przedsiębiorstwo „Sokół” S.A. wytwarza paliwo lotnicze z ropy naftowej i działa na rynku będącym oligopolem Sweezy’ego. Obecnie cena 1 galonu paliwa lotniczego wynosi 60 zł. Krzywa popytu na paliwo produkowane przez przedsiębiorstwo:" },
+      { "t": "f", "x": "p = −q + 80   dla q < 20\np = −2q + 100  dla q ≥ 20" },
+      { "t": "p", "x": "gdzie: q – ilość paliwa w galonach; p – cena 1 galonu w złotych. Krzywa kosztu całkowitego: TC = 0,5q² + 16q + 20. Z 1 baryłki ropy można wytworzyć 20 galonów paliwa lotniczego. Obecnie cena 1 baryłki ropy wynosi 200 zł." }
+    ],
+    "parts": [
+      {
+        "label": "a", "pts": 2,
+        "prompt": "Wyjaśnij, dlaczego krzywa popytu jest złamana.",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "W oligopolu przedsiębiorstwo musi uwzględniać reakcje konkurentów. Obniżkę ceny konkurenci naśladują (popyt poniżej obecnej ceny jest mało elastyczny), a podwyżki nie (popyt powyżej obecnej ceny jest bardzo elastyczny). Stąd załamanie krzywej popytu przy obecnej cenie, a przedsiębiorstwo jest świadome tych zależności." }
+        ]
+      },
+      {
+        "label": "b", "pts": 5,
+        "prompt": "Ile galonów paliwa lotniczego produkuje obecnie przedsiębiorstwo „Sokół”? Sprawdź, czy przy tej wielkości produkcji maksymalizuje ono swój zysk całkowity, i ile on wynosi.",
+        "answers": [
+          { "label": "Produkcja (galony)", "value": 20, "tol": 0.01 },
+          { "label": "Zysk całkowity (zł)", "value": 660, "tol": 0.5 }
+        ],
+        "solution": [
+          { "t": "f", "x": "przy p = 60: q = 20 (punkt załamania)\nMR₁ = −2q + 80 dla q < 20  → przy q = 20: 40\nMR₂ = −4q + 100 dla q ≥ 20 → przy q = 20: 20\nMC = q + 16 → przy q = 20: 36" },
+          { "t": "p", "x": "MC = 36 leży w luce utargu krańcowego ⟨20; 40) przy q = 20, więc warunek maksymalizacji zysku jest spełniony." },
+          { "t": "f", "x": "π = TR − TC = 60 × 20 − (0,5 × 400 + 16 × 20 + 20) = 1200 − 540 = 660 zł" }
+        ]
+      },
+      {
+        "label": "c", "pts": 4,
+        "prompt": "Przedstaw koszt całkowity przedsiębiorstwa jako funkcję ilości paliwa i ceny ropy naftowej (1 pkt). O ile procent musi wzrosnąć cena ropy, aby przedsiębiorstwo w celu maksymalizacji zysku musiało zrewidować swoją politykę cenową? (3 pkt)",
+        "answers": [
+          { "label": "Graniczna cena baryłki ropy (zł)", "value": 280, "tol": 0.5 },
+          { "label": "Wymagany wzrost ceny ropy (w %)", "value": 40, "tol": 0.1, "unit": "%" }
+        ],
+        "solution": [
+          { "t": "p", "x": "Ropa na 1 galon kosztuje x / 20 = 0,05x, a przy x = 200 to 10 zł – stąd 16 = 6 + 0,05 × 200:" },
+          { "t": "f", "x": "TC = 0,5q² + (6 + 0,05x)q + 20   (x – cena baryłki ropy)\nMC = q + 6 + 0,05x" },
+          { "t": "p", "x": "Polityka cenowa zmieni się, gdy MC przy q = 20 przekroczy górną granicę luki MR (40):" },
+          { "t": "f", "x": "40 = 20 + 6 + 0,05x → x = 280 zł\nwzrost = (280 − 200) / 200 = 40%" },
+          { "t": "p", "x": "Cena ropy musi wzrosnąć o więcej niż 40% (powyżej 280 zł za baryłkę)." }
+        ]
+      },
+      {
+        "label": "d", "pts": 4,
+        "prompt": "Zarządzający chcą zabezpieczyć się przed skutkami wzrostu ceny ropy. Wskaż dwa instrumenty pochodne, które mogą w tym celu wykorzystać, i określ pozycję, którą powinno zająć przedsiębiorstwo w każdym z nich.",
+        "answers": [],
+        "solution": [
+          { "t": "ul", "items": [
+            "kontrakt terminowy forward na dostawę ropy – pozycja długa (kupujący),",
+            "kontrakt terminowy futures na ropę – pozycja długa,",
+            "opcja call (kupna) na ropę naftową – zakup opcji (pozycja długa)."
+          ] }
+        ]
+      }
+    ]
+  }
+}

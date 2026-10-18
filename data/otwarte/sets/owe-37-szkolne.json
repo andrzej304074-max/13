@@ -1,0 +1,121 @@
+{
+  "set": "owe-37-szkolne",
+  "ed": 37,
+  "stage": "s",
+  "essays": [
+    {
+      "id": "owe-37-szkolne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "makro",
+      "topics": [
+        {
+          "title": "Kapitał społeczny jako czynnik rozwoju gospodarczego",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Omówienie koncepcji kapitału społecznego",
+              "Przedstawienie rodzajów kapitału społecznego",
+              "Istota rozwoju gospodarczego",
+              "Ujęcie kapitału społecznego w teoriach wzrostu gospodarczego",
+              "Kapitał społeczny i jego relacje z innymi czynnikami produkcji"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Kapitał społeczny a koszty transakcyjne w gospodarce",
+              "Znaczenie kapitału społecznego w realizacji procesów inwestycyjnych, w tym długoterminowych",
+              "Kapitał społeczny i jego wpływ na konsumpcję dóbr wspólnych w gospodarce",
+              "Znaczenie kapitału społecznego w gospodarce opartej na wiedzy",
+              "Kapitał społeczny a społeczna kontrola władzy, w tym jej wpływ na politykę gospodarczą realizowaną przez władze publiczne",
+              "Dysfunkcje kapitału społecznego i ich wpływ na procesy gospodarcze"
+            ] }
+          ]
+        },
+        {
+          "title": "Czynniki kształtujące poziom kapitału społecznego w gospodarce",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Przedstawienie istoty kapitału społecznego",
+              "Typy kapitału społecznego",
+              "Omówienie procesu ekspansji kapitału społecznego",
+              "Analiza procesu rozpadu kapitału społecznego",
+              "Czynniki kształtujące poziom kapitału społecznego na tle determinant innych czynników produkcji"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Czynniki instytucjonalne kształtujące poziom kapitału społecznego:",
+              "  a) potencjał kulturowy i kreatywny (w tym odwołanie do koncepcji F. Fukuyamy)",
+              "  b) znaczenie polityki realizowanej przez państwo, w tym kształtowanie systemu edukacji",
+              "Czynniki społeczno-ekonomiczne kształtujące poziom kapitału społecznego, w tym:",
+              "  a) struktura dochodowa",
+              "  b) struktura społeczno-gospodarcza organizacji (przedsiębiorstw)",
+              "Bariery ekspansji kapitału społecznego, w tym:",
+              "  a) bariery o charakterze instytucjonalnym",
+              "  b) bariery o charakterze ekonomiczno-społecznym, ze szczególnym uwzględnieniem nierówności dochodowych oraz wysokiego bezrobocia",
+              "  c) narastające zagrożenia o charakterze globalnym, w tym kryzysy migracyjne oraz konflikty międzynarodowe",
+              "Omówienie wybranych typów instrumentów służących kształtowaniu kapitału społecznego przez państwo"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-37-szkolne-zadanie",
+    "title": "Zadanie z podstaw ekonomii",
+    "pts": 15,
+    "topic": "makro",
+    "intro": [
+      { "t": "p", "x": "Pewną autarkię opisują następujące równania:" },
+      { "t": "f", "x": "C = 200 + 0,5YD;  I = 350;  G = 600;  T = 400" },
+      { "t": "p", "x": "gdzie: C – konsumpcja; YD – dochód rozporządzalny; I – inwestycje; G – wydatki publiczne; T – podatki minus transfery budżetowe otrzymywane przez konsumenta." }
+    ],
+    "parts": [
+      {
+        "label": "a", "pts": 3,
+        "prompt": "Ile wynosi wartość dochodu rozporządzalnego, konsumpcji i PKB w stanie równowagi?",
+        "answers": [
+          { "label": "Dochód rozporządzalny YD", "value": 1500, "tol": 0.5 },
+          { "label": "Konsumpcja C", "value": 950, "tol": 0.5 },
+          { "label": "PKB Y", "value": 1900, "tol": 0.5 }
+        ],
+        "solution": [
+          { "t": "f", "x": "Y = C + I + G = 200 + 0,5 × (Y − 400) + 350 + 600\nY = 950 + 0,5Y → 0,5Y = 950 → Y = 1900\nYD = Y − T = 1900 − 400 = 1500\nC = 200 + 0,5 × 1500 = 950" }
+        ]
+      },
+      {
+        "label": "b", "pts": 2,
+        "prompt": "Oszacuj wartość wydatków autonomicznych w danej gospodarce.",
+        "answers": [{ "label": "Wydatki autonomiczne", "value": 950, "tol": 0.5 }],
+        "solution": [
+          { "t": "f", "x": "wydatki autonomiczne = c₀ + I + G − c₁T = 200 + 350 + 600 − 0,5 × 400 = 950" }
+        ]
+      },
+      {
+        "label": "c", "pts": 5,
+        "prompt": "Ile wynoszą oszczędności publiczne (2 pkt), prywatne (2 pkt) i narodowe (1 pkt)?",
+        "answers": [
+          { "label": "Oszczędności publiczne", "value": -200, "tol": 0.5 },
+          { "label": "Oszczędności prywatne", "value": 550, "tol": 0.5 },
+          { "label": "Oszczędności narodowe", "value": 350, "tol": 0.5 }
+        ],
+        "solution": [
+          { "t": "f", "x": "oszczędności publiczne = T − G = 400 − 600 = −200\noszczędności prywatne = Y − T − C = 1500 − 950 = 550\noszczędności narodowe = −200 + 550 = 350 (= I, bo gospodarka zamknięta)" }
+        ]
+      },
+      {
+        "label": "d", "pts": 2,
+        "prompt": "Przedstaw równanie określające wartość oszczędności prywatnych w zależności od dochodu rozporządzalnego (funkcja oszczędności).",
+        "answers": [],
+        "solution": [
+          { "t": "f", "x": "C = c₀ + c₁YD\nS = YD − C = −c₀ + (1 − c₁)YD = −200 + 0,5YD" }
+        ]
+      },
+      {
+        "label": "e", "pts": 3,
+        "prompt": "Przedstaw istotę paradoksu oszczędzania (zapobiegliwości).",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Paradoks oszczędzania (zapobiegliwości) to sytuacja, w której ograniczenie wydatków autonomicznych na konsumpcję gospodarstw domowych (chęć oszczędzania więcej) zmniejsza poziom dochodu zapewniającego równowagę. W efekcie poziom oszczędności w punkcie równowagi nie zmienia się – większa skłonność do oszczędzania nie przekłada się na większe oszczędności, a obniża dochód." }
+        ]
+      }
+    ]
+  }
+}

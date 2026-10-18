@@ -1,0 +1,106 @@
+{
+  "set": "owe-38-szkolne",
+  "ed": 38,
+  "stage": "s",
+  "essays": [
+    {
+      "id": "owe-38-szkolne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "polityka",
+      "topics": [
+        {
+          "title": "Jak członkostwo w Unii Europejskiej wpłynęło na polski rynek pracy?",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Swoboda przepływu osób jako jeden z fundamentów Unii Europejskiej",
+              "Wpływ integracji europejskiej na popyt na pracę w Polsce",
+              "Krótko- i długookresowe konsekwencje akcesji dla podaży pracy w Polsce, w tym analiza zjawisk migracyjnych oraz problemu drenażu mózgów",
+              "Wpływ członkostwa w Unii Europejskiej na kształt instytucji polskiego rynku pracy"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Analiza wielkości oraz struktury bezrobocia w Polsce przed i po akcesji",
+              "Wpływ członkostwa w Unii Europejskiej na aktywność gospodarczą polskiego społeczeństwa",
+              "Otwarcie rynku pracy i jego wpływ na wysokość płac na rynku krajowym",
+              "Znaczenie funduszy unijnych w kształtowaniu podaży pracy w Polsce, w tym ich wpływ na poziom kapitału ludzkiego",
+              "Próba oceny wpływu członkostwa w Unii Europejskiej na polski rynek pracy"
+            ] }
+          ]
+        },
+        {
+          "title": "Omów znaczenie funduszy unijnych dla rozwoju społeczno-ekonomicznego Polski",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Ogólna charakterystyka budżetu Unii Europejskiej i wieloletnich ram finansowych",
+              "Zasoby własne Unii Europejskiej",
+              "Rozliczenia Polski z Unią Europejską (Polska jako beneficjent netto)",
+              "Charakterystyka głównych funduszy unijnych, których beneficjentem była Polska",
+              "Wieloletnie ramy finansowe i nadzwyczajny plan odbudowy Next Generation EU po pandemii COVID-19"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Analiza wpływu funduszy unijnych na tempo wzrostu gospodarczego",
+              "Fundusze unijne a aktywność inwestycyjna w Polsce",
+              "Znaczenie funduszy unijnych dla funkcjonowania rynku pracy w Polsce, w tym ich wpływ na poziom kapitału ludzkiego (np. w obszarze edukacji i ochrony zdrowia)",
+              "Oddziaływanie funduszy unijnych na poziom innowacyjności polskiej gospodarki",
+              "Znaczenie akcesji dla lepszego zarządzania projektami publicznymi finansowanymi z funduszy UE (większa przejrzystość i efektywność wykorzystania środków publicznych)",
+              "Problem rozrostu biurokracji i skomplikowanych procedur związanych z realizacją projektów unijnych",
+              "Próba oceny wpływu funduszy europejskich na rozwój społeczno-gospodarczy Polski"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-38-szkolne-zadanie",
+    "title": "Zadanie z podstaw ekonomii",
+    "pts": 15,
+    "topic": "polityka",
+    "intro": [
+      { "t": "p", "x": "W państwie Rowerlandia popyt na rowery opisany jest równaniem q = −0,5p + 19, natomiast krzywa podaży równaniem q = p − 11 (gdzie: p – cena roweru w USD, q – liczba rowerów). Rowerlandia jest krajem małym (może sprzedać po cenie światowej tyle rowerów, ile jest w stanie wyprodukować), a cena jednego roweru na rynku światowym wynosi 26 USD. W zadaniu pomiń koszty transportu." }
+    ],
+    "parts": [
+      {
+        "label": "a", "pts": 2,
+        "prompt": "Oblicz cenę oraz ilość w punkcie równowagi na rynku rowerów w Rowerlandii w sytuacji autarkii.",
+        "answers": [
+          { "label": "Cena równowagi", "value": 20, "tol": 0.01, "unit": "USD" },
+          { "label": "Ilość równowagi", "value": 9, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "f", "x": "−0,5p + 19 = p − 11 → 1,5p = 30 → p = 20 USD\nq = 20 − 11 = 9" }
+        ]
+      },
+      {
+        "label": "b", "pts": 5,
+        "prompt": "Oblicz krajową wielkość zapotrzebowania (2 pkt), wielkość produkcji krajowej (2 pkt), a także wielkość eksportu (1 pkt) rowerów w Rowerlandii w sytuacji wolnego handlu.",
+        "answers": [
+          { "label": "Zapotrzebowanie krajowe", "value": 6, "tol": 0.01 },
+          { "label": "Produkcja krajowa", "value": 15, "tol": 0.01 },
+          { "label": "Eksport", "value": 9, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "p", "x": "Przy wolnym handlu cena krajowa jest równa cenie światowej 26 USD:" },
+          { "t": "f", "x": "zapotrzebowanie: q = −0,5 × 26 + 19 = 6\nprodukcja: q = 26 − 11 = 15\neksport = 15 − 6 = 9" }
+        ]
+      },
+      {
+        "label": "c", "pts": 8,
+        "prompt": "Rowerlandia wprowadza subsydia eksportowe w wysokości 4 USD za każdy wyeksportowany rower oraz zakaz importu. Oblicz cenę roweru w Rowerlandii (1 pkt) i koszty finansowania subsydiów ponoszone przez rząd (1 pkt). Ile wynosi zmiana nadwyżki konsumenta (2 pkt), nadwyżki producenta (2 pkt) i nadwyżki całkowitej (2 pkt) w porównaniu z sytuacją przed wprowadzeniem subsydiów?",
+        "answers": [
+          { "label": "Cena roweru w Rowerlandii", "value": 30, "tol": 0.01, "unit": "USD" },
+          { "label": "Koszt subsydiów", "value": 60, "tol": 0.01, "unit": "USD" },
+          { "label": "Zmiana nadwyżki konsumenta", "value": -20, "tol": 0.01 },
+          { "label": "Zmiana nadwyżki producenta", "value": 68, "tol": 0.01 },
+          { "label": "Zmiana nadwyżki całkowitej", "value": -12, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "p", "x": "Producenci mogą eksportować po 26 + 4 = 30 USD, więc sprzedaż w kraju po niższej cenie przestaje się opłacać; zakaz importu nie pozwala sprowadzić tańszych rowerów:" },
+          { "t": "f", "x": "cena krajowa = 26 + 4 = 30 USD\nprodukcja: 30 − 11 = 19; zapotrzebowanie: −0,5 × 30 + 19 = 4; eksport = 19 − 4 = 15\nkoszt subsydiów = 4 × 15 = 60" },
+          { "t": "p", "x": "Krzywa popytu przecina oś cen przy p = 38, krzywa podaży – przy p = 11:" },
+          { "t": "f", "x": "ΔNK = 0,5 × (38 − 30) × 4 − 0,5 × (38 − 26) × 6 = 16 − 36 = −20\nΔNP = 0,5 × (30 − 11) × 19 − 0,5 × (26 − 11) × 15 = 180,5 − 112,5 = 68\nΔNC = 68 + (−20) + (−60) = −12" }
+        ]
+      }
+    ]
+  }
+}

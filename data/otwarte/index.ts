@@ -1,5 +1,21 @@
 // Wygenerowane przez tools/otwarte/build_index.py – nie edytować ręcznie.
 import type { OpenSet } from "@/lib/otwarte-core";
+import s_owe_33_okregowe from "./sets/owe-33-okregowe.json";
+import s_owe_33_szkolne from "./sets/owe-33-szkolne.json";
+import s_owe_34_centralne from "./sets/owe-34-centralne.json";
+import s_owe_34_okregowe from "./sets/owe-34-okregowe.json";
+import s_owe_34_szkolne from "./sets/owe-34-szkolne.json";
+import s_owe_35_centralne from "./sets/owe-35-centralne.json";
+import s_owe_35_szkolne from "./sets/owe-35-szkolne.json";
+import s_owe_36_szkolne from "./sets/owe-36-szkolne.json";
+import s_owe_37_centralne from "./sets/owe-37-centralne.json";
+import s_owe_37_okregowe from "./sets/owe-37-okregowe.json";
+import s_owe_37_szkolne from "./sets/owe-37-szkolne.json";
+import s_owe_38_centralne from "./sets/owe-38-centralne.json";
+import s_owe_38_okregowe from "./sets/owe-38-okregowe.json";
+import s_owe_38_szkolne from "./sets/owe-38-szkolne.json";
+import s_owe_39_centralne from "./sets/owe-39-centralne.json";
 import s_owe_39_okregowe from "./sets/owe-39-okregowe.json";
+import s_owe_39_szkolne from "./sets/owe-39-szkolne.json";
 
-export const SETS = [s_owe_39_okregowe] as unknown as OpenSet[];
+export const SETS = [s_owe_33_okregowe, s_owe_33_szkolne, s_owe_34_centralne, s_owe_34_okregowe, s_owe_34_szkolne, s_owe_35_centralne, s_owe_35_szkolne, s_owe_36_szkolne, s_owe_37_centralne, s_owe_37_okregowe, s_owe_37_szkolne, s_owe_38_centralne, s_owe_38_okregowe, s_owe_38_szkolne, s_owe_39_centralne, s_owe_39_okregowe, s_owe_39_szkolne] as unknown as OpenSet[];

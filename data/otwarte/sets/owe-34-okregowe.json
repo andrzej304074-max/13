@@ -1,0 +1,108 @@
+{
+  "set": "owe-34-okregowe",
+  "ed": 34,
+  "stage": "o",
+  "essays": [
+    {
+      "id": "owe-34-okregowe-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "firma",
+      "topics": [
+        {
+          "title": "Krótko- i długookresowe konsekwencje pandemii COVID-19 dla działalności przedsiębiorstw",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Przedsiębiorstwo w gospodarce wolnorynkowej",
+              "Wpływ kryzysów gospodarczych na działalność przedsiębiorstw, w tym:",
+              "  a) kryzysy gospodarcze a rynki zbytu",
+              "  b) problemy z finansowaniem działalności przedsiębiorstw w okresach kryzysów gospodarczych",
+              "Znaczenie pandemii COVID-19 dla funkcjonowania światowej gospodarki"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Pandemia COVID-19 – charakterystyka szoku z perspektywy przedsiębiorstwa",
+              "Krótkookresowe konsekwencje pandemii COVID-19 dla działalności przedsiębiorstw:",
+              "  a) ograniczenia, w tym o charakterze administracyjnym, wynikające z pandemii a zmiany w strukturze i wielkości popytu na produkty przedsiębiorstw",
+              "  b) zarządzanie produkcją, w tym problem opóźnień w dostawach w okresie pandemii",
+              "  c) znaczenie pomocy publicznej dla działalności przedsiębiorstw",
+              "  d) polityka zatrudnienia w przedsiębiorstwach w okresie pandemii",
+              "  e) polityka inwestycyjna w okresie niepewności wynikającej z kolejnych fal pandemii",
+              "  f) polityka dywidendy w okresie pandemii na przykładzie wybranej branży",
+              "Długookresowe konsekwencje pandemii COVID-19 dla działalności przedsiębiorstw:",
+              "  a) długookresowe zmiany w strukturze popytu będące efektem pandemii",
+              "  b) przyspieszenie procesu cyfryzacji gospodarki dla działalności przedsiębiorstw na przykładzie wybranej branży",
+              "  c) skrócenie globalnych łańcuchów dostaw a zarządzanie produkcją",
+              "  d) polityka zatrudnienia w przedsiębiorstwach po pandemii COVID-19",
+              "Pandemia COVID-19 a funkcjonowanie przedsiębiorstw – próba syntezy"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-34-okregowe-zadanie",
+    "title": "Zadanie z analizy finansowej",
+    "pts": 15,
+    "topic": "firma",
+    "intro": [
+      { "t": "p", "x": "Przedsiębiorstwo X jest spółką akcyjną i działa w branży IT. W tabeli przedstawiono jego wybrane dane finansowe w 2019 r." },
+      { "t": "table", "head": ["Wyszczególnienie", "w mln zł"], "rows": [
+        ["Aktywa obrotowe", "461,7"],
+        ["Suma bilansowa", "5235,7"],
+        ["Kapitał własny ogółem", "4892,4"],
+        ["Kapitał podstawowy", "83,0"],
+        ["Kapitał zapasowy", "4180,1"],
+        ["Zobowiązania długoterminowe", "137,2"],
+        ["Kredyty bankowe, pożyczki, dłużne papiery wartościowe", "0"],
+        ["Zobowiązania krótkoterminowe", "206,1"],
+        ["Zysk netto przypadający na 1 akcję (w zł)", "2,49"],
+        ["Wartość nominalna 1 akcji (w zł)", "1"]
+      ] }
+    ],
+    "parts": [
+      {
+        "label": "a", "pts": 5,
+        "prompt": "Oblicz wartość wskaźnika ROE (3 pkt). Zinterpretuj uzyskany wynik (2 pkt).",
+        "answers": [{ "label": "ROE (w %)", "value": 4.22, "tol": 0.01, "unit": "%" }],
+        "solution": [
+          { "t": "f", "x": "liczba akcji = kapitał podstawowy / wartość nominalna akcji = 83,0 mln zł / 1 zł = 83 mln szt.\nzysk netto = EPS × liczba akcji = 2,49 × 83 = 206,67 mln zł\nROE = zysk netto / kapitał własny × 100% = 206,67 / 4892,4 × 100% ≈ 4,22%" },
+          { "t": "p", "x": "Interpretacja: na 1 zł kapitału własnego przedsiębiorstwa X przypada około 0,042 zł zysku netto." }
+        ]
+      },
+      {
+        "label": "b", "pts": 4,
+        "prompt": "O czym mówi złota zasada bilansowa? (2 pkt) Czy w przypadku przedsiębiorstwa X jest ona spełniona? Przedstaw stosowne obliczenia (2 pkt).",
+        "answers": [
+          { "label": "Majątek trwały (mln zł)", "value": 4774, "tol": 0.5 },
+          { "label": "Kapitał własny / majątek trwały", "value": 1.025, "tol": 0.002 }
+        ],
+        "solution": [
+          { "t": "p", "x": "Zgodnie ze złotą zasadą bilansową majątek trwały powinien być w całości finansowany kapitałem własnym, natomiast majątek obrotowy może być finansowany kapitałem obcym." },
+          { "t": "f", "x": "majątek trwały = 5235,7 − 461,7 = 4774 mln zł\nkapitał własny / majątek trwały = 4892,4 / 4774 ≈ 1,025 > 1" },
+          { "t": "p", "x": "W przedsiębiorstwie X złota zasada bilansowa jest spełniona." }
+        ]
+      },
+      {
+        "label": "c", "pts": 3,
+        "prompt": "Przedsiębiorstwo X wyemitowało 100 tys. akcji zwykłych po cenie emisyjnej 20 zł; akcje zostały w całości objęte i opłacone. Wskaż wszystkie pozycje pasywów z tabeli, które ulegną zmianie, i oblicz, o ile się zmienią (bez kosztów emisji z podpunktu d). Podaj zmiany w mln zł.",
+        "answers": [
+          { "label": "Zmiana kapitału własnego ogółem (mln zł)", "value": 2, "tol": 0.001 },
+          { "label": "Zmiana kapitału podstawowego (mln zł)", "value": 0.1, "tol": 0.001 },
+          { "label": "Zmiana kapitału zapasowego (mln zł)", "value": 1.9, "tol": 0.001 }
+        ],
+        "solution": [
+          { "t": "f", "x": "wpływy z emisji = 100 000 × 20 zł = 2 mln zł → kapitał własny ogółem +2 mln zł\nkapitał podstawowy = 100 000 × 1 zł (wartość nominalna) = +100 tys. zł\nkapitał zapasowy (nadwyżka ceny emisyjnej nad nominalną) = 100 000 × (20 − 1) = +1,9 mln zł" }
+        ]
+      },
+      {
+        "label": "d", "pts": 3,
+        "prompt": "Oszacuj koszt kapitału własnego z emisji akcji z podpunktu c, wiedząc, że najbliższa dywidenda na 1 akcję wynosi 1,02 zł, a koszty emisji stanowiły 12% ceny emisyjnej. Bieżąca cena akcji jest równa cenie emisyjnej. Prognozowana stała roczna stopa wzrostu dywidendy wynosi 2%.",
+        "answers": [{ "label": "Koszt kapitału własnego (w %)", "value": 7.8, "tol": 0.05, "unit": "%" }],
+        "solution": [
+          { "t": "f", "x": "K_kw = D / (Ca − Ke) + g\nD – oczekiwana dywidenda na akcję; Ca – cena akcji; Ke – koszty emisji na akcję; g – stała stopa wzrostu dywidendy\nK_kw = 1,02 / (20 − 20 × 0,12) + 0,02 = 1,02 / 17,6 + 0,02 ≈ 0,058 + 0,02 ≈ 0,078 = 7,8%" }
+        ]
+      }
+    ]
+  }
+}

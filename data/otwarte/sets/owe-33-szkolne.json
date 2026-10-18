@@ -1,0 +1,120 @@
+{
+  "set": "owe-33-szkolne",
+  "ed": 33,
+  "stage": "s",
+  "essays": [
+    {
+      "id": "owe-33-szkolne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "firma",
+      "topics": [
+        {
+          "title": "Konsekwencje ekonomiczne czwartej rewolucji przemysłowej dla gospodarstw domowych",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Przedstawienie charakterystyki czwartej rewolucji przemysłowej",
+              "Omówienie megatrendów występujących w ramach czwartej rewolucji przemysłowej",
+              "Istota gospodarstwa domowego",
+              "Gospodarstwo domowe w teorii ekonomii",
+              "Ekonomia współdzielenia – przedstawienie koncepcji"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Wpływ czwartej rewolucji przemysłowej na konsumpcję gospodarstw domowych:",
+              "  a) wpływ zmian technologicznych na zachowania konsumpcyjne gospodarstw domowych, ze szczególnym uwzględnieniem ekonomii współdzielenia",
+              "  b) analiza konsekwencji powstania nowych kategorii dóbr",
+              "  c) wpływ niepewności związanej ze zmianami technologicznymi na bieżącą konsumpcję gospodarstw domowych – teoria i praktyka",
+              "Konsekwencje czwartej rewolucji przemysłowej dla struktury dochodów gospodarstwa domowego:",
+              "  a) wpływ zmian technologicznych na dochody z tytułu pracy",
+              "  b) wpływ zmian technologicznych na dochody z tytułu kapitału",
+              "  c) bezwarunkowy dochód gwarantowany jako odpowiedź na konsekwencje czwartej rewolucji przemysłowej – argumenty za i przeciw",
+              "Wpływ czwartej rewolucji przemysłowej na decyzje finansowe gospodarstw domowych, z uwzględnieniem problematyki kryptowalut",
+              "Analiza porównawcza konsekwencji czwartej rewolucji przemysłowej dla gospodarstwa domowego na tle poprzednich jej etapów",
+              "Próba systematyki szans oraz zagrożeń wynikających z czwartej rewolucji przemysłowej dla gospodarstw domowych"
+            ] }
+          ]
+        },
+        {
+          "title": "Omów funkcjonowanie przedsiębiorstw w warunkach czwartej rewolucji przemysłowej na wybranych przez siebie przykładach",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Przedstawienie charakterystyki czwartej rewolucji przemysłowej",
+              "Omówienie megatrendów występujących w ramach czwartej rewolucji przemysłowej",
+              "Wpływ zmian technologicznych czwartej rewolucji przemysłowej na krzywą transformacji (możliwości produkcyjnych)",
+              "Czwarta rewolucja przemysłowa a funkcja produkcji – aspekt teoretyczny",
+              "Nowe modele prowadzenia działalności gospodarczej będące konsekwencją czwartej rewolucji przemysłowej"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Analiza zmian dotychczasowych procesów produkcyjnych związanych z czwartą rewolucją przemysłową na wybranych przykładach, z uwzględnieniem:",
+              "  a) niezbędnych nakładów inwestycyjnych związanych z dostosowaniem przedsiębiorstwa do nowego otoczenia",
+              "  b) problemu doboru czynników produkcji i jego konsekwencji dla przedsiębiorstwa",
+              "  c) decyzji lokalizacyjnych",
+              "  d) znaczenia systemu regulacyjnego",
+              "Wpływ czwartej rewolucji przemysłowej na charakterystykę dóbr oferowanych przez przedsiębiorstwa",
+              "Nowe segmenty rynku będące konsekwencją czwartej rewolucji przemysłowej",
+              "„Destrukcyjny” charakter czwartej rewolucji przemysłowej na wybranych przykładach",
+              "Próba systematyki szans oraz zagrożeń wynikających z czwartej rewolucji przemysłowej dla przedsiębiorstw"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-33-szkolne-zadanie",
+    "title": "Zadanie z podstaw ekonomii",
+    "pts": 15,
+    "topic": "mikro",
+    "intro": [
+      { "t": "p", "x": "W kraju Y na rynku kredytów hipotecznych krzywa popytu opisana jest równaniem Q = 12 − P, a krzywa podaży Q = 1,25P − 3,75 (P – stopa procentowa w %; Q – wolumen kredytów w mln zł)." }
+    ],
+    "parts": [
+      {
+        "label": "a", "pts": 2,
+        "prompt": "Oblicz wartość stopy procentowej oraz wolumen kredytów w punkcie równowagi.",
+        "answers": [
+          { "label": "Stopa procentowa (%)", "value": 7, "tol": 0.01 },
+          { "label": "Wolumen kredytów (mln zł)", "value": 5, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "f", "x": "12 − P = 1,25P − 3,75 → 2,25P = 15,75 → P = 7%\nQ = 12 − 7 = 5 mln zł" }
+        ]
+      },
+      {
+        "label": "b", "pts": 8,
+        "prompt": "Opisana krzywa popytu dotyczy klientów o niskim ryzyku kredytowym (grupa A). Na rynku są też klienci o wyższym ryzyku (grupa B) z popytem Q_B = −0,25P + 6. Z powodu asymetrii informacji banki nie rozróżniają tych grup. Podaj równanie rynkowej krzywej popytu (4 pkt), oblicz stopę procentową i wolumen kredytów w równowadze (2 pkt) oraz udział kredytów grupy B w portfelu (2 pkt).",
+        "answers": [
+          { "label": "Stopa procentowa w równowadze (%)", "value": 8.7, "tol": 0.01 },
+          { "label": "Wolumen kredytów (mln zł)", "value": 7.125, "tol": 0.005 },
+          { "label": "Udział kredytów grupy B (%)", "value": 54, "tol": 0.5, "unit": "%" }
+        ],
+        "solution": [
+          { "t": "p", "x": "Popyt rynkowy to suma horyzontalna popytu obu grup. Grupa A zgłasza popyt tylko przy P < 12, grupa B – przy P < 24:" },
+          { "t": "f", "x": "dla P ≥ 12: Q = 6 − 0,25P → P = −4Q + 24   (Q < 3)\ndla P < 12: Q = (12 − P) + (6 − 0,25P) = 18 − 1,25P → P = −0,8Q + 14,4   (Q ≥ 3)" },
+          { "t": "f", "x": "18 − 1,25P = 1,25P − 3,75 → 2,5P = 21,75 → P = 8,7%\nQ = 1,25 × 8,7 − 3,75 = 7,125 mln zł\nQ_B = −0,25 × 8,7 + 6 = 3,825 mln zł\nudział B = 3,825 / 7,125 ≈ 0,537 ≈ 54%" }
+        ]
+      },
+      {
+        "label": "c", "pts": 2,
+        "prompt": "Krzywa podaży zmieniła się na Q = 0,25P − 1,75. Jaką część portfela stanowią teraz kredyty grupy B i jaki może to mieć wpływ na stabilność sektora finansowego?",
+        "answers": [
+          { "label": "Stopa procentowa w nowej równowadze (%)", "value": 15.5, "tol": 0.01 },
+          { "label": "Udział kredytów grupy B (%)", "value": 100, "tol": 0.01, "unit": "%" }
+        ],
+        "solution": [
+          { "t": "p", "x": "Sprawdzamy odcinek popytu, na którym działa tylko grupa B (P ≥ 12):" },
+          { "t": "f", "x": "6 − 0,25P = 0,25P − 1,75 → 0,5P = 7,75 → P = 15,5%\nQ = 0,25 × 15,5 − 1,75 = 2,125 mln zł" },
+          { "t": "p", "x": "Przy stopie 15,5% grupa A nie zgłasza popytu na kredyt, więc kredyty grupy B stanowią 100% portfela. Osłabia to stabilność sektora finansowego – portfel kredytowy jest mocno obciążony ryzykiem kredytowym." }
+        ]
+      },
+      {
+        "label": "d", "pts": 3,
+        "prompt": "Jak w teorii ekonomii określa się zjawisko będące konsekwencją asymetrii informacji na rynku kredytów hipotecznych, uwidocznione w zadaniu?",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Negatywna selekcja (selekcja negatywna, adverse selection) – z powodu asymetrii informacji wzrost stopy procentowej wypycha z rynku klientów o niskim ryzyku, a w portfelu zostają klienci o wysokim ryzyku." }
+        ]
+      }
+    ]
+  }
+}

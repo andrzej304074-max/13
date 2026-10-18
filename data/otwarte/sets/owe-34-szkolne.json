@@ -1,0 +1,146 @@
+{
+  "set": "owe-34-szkolne",
+  "ed": 34,
+  "stage": "s",
+  "essays": [
+    {
+      "id": "owe-34-szkolne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "polityka",
+      "topics": [
+        {
+          "title": "Możliwości i ograniczenia polityki rządu w okresie kryzysu wywołanego pandemią",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Przyczyny kryzysów gospodarczych w teorii ekonomii",
+              "Rola przypisywana polityce rządu w łagodzeniu wahań cyklu koniunkturalnego na przykładzie wybranej szkoły ekonomii",
+              "Znaczenie automatycznych stabilizatorów koniunktury w ograniczaniu skutków kryzysów gospodarczych",
+              "Aktywna polityka fiskalna państwa w świetle dorobku teorii ekonomii",
+              "Deficyt budżetowy jako antycykliczne narzędzie polityki fiskalnej państwa i jego konsekwencje",
+              "Występowanie efektu opóźnień czasowych w polityce fiskalnej państwa"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Charakterystyka kryzysu wywołanego pandemią, w tym gospodarcze konsekwencje lockdownów:",
+              "  a) szok pierwotny",
+              "  b) szoki wtórne",
+              "Rola polityki rządu w okresie znaczącego wzrostu niepewności oraz awersji do ryzyka",
+              "Pakiety stymulacyjne oparte na zwiększaniu wydatków publicznych lub ograniczaniu danin – zalety i wady",
+              "Problem finansowania deficytów budżetowych powstałych w rezultacie pandemii COVID-19:",
+              "  a) prawne oraz finansowe granice wzrostu poziomu zadłużenia państwa",
+              "  b) monetyzacja długu publicznego i jej konsekwencje",
+              "Polityka fiskalna w sytuacji skrajnie niskich stóp procentowych banków centralnych",
+              "Społeczno-gospodarcze konsekwencje polityki rządu w okresie kryzysu wywołanego pandemią"
+            ] }
+          ]
+        },
+        {
+          "title": "Możliwości i ograniczenia polityki banku centralnego w okresie kryzysu wywołanego pandemią",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Przyczyny kryzysów gospodarczych w teorii ekonomii",
+              "Rola przypisywana bankowi centralnemu w łagodzeniu wahań cyklu koniunkturalnego na przykładzie wybranej szkoły ekonomii",
+              "Polityka stopy procentowej i jej ograniczenia",
+              "Polityka bilansu banku centralnego i jej ograniczenia",
+              "Bank centralny jako pożyczkodawca ostatniej instancji",
+              "Występowanie efektu opóźnień czasowych w polityce pieniężnej państwa"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Charakterystyka kryzysu wywołanego pandemią, w tym gospodarcze konsekwencje lockdownów:",
+              "  a) szok pierwotny",
+              "  b) szoki wtórne",
+              "Działania i instrumenty banku centralnego w okresie znaczącego wzrostu niepewności oraz awersji do ryzyka, w tym:",
+              "  a) problem zjawiska credit crunch w okresie pandemii i jego konsekwencje dla polityki pieniężnej",
+              "  b) problem akceleratora finansowego w okresie pandemii",
+              "  c) polityka pieniężna w sytuacji skrajnie niskich stóp procentowych (problem pułapki płynności)",
+              "Programy skupu aktywów realizowane przez banki centralne:",
+              "  a) analiza konsekwencji skupu papierów wartościowych emitowanych przez władze fiskalne, z uwzględnieniem problemu dominacji fiskalnej",
+              "  b) bank centralny nabywający aktywa sektora prywatnego – argumenty za i przeciw",
+              "Formy komunikacji banku centralnego z otoczeniem w sytuacji pandemii COVID-19",
+              "Społeczno-gospodarcze konsekwencje polityki banku centralnego w okresie kryzysu wywołanego pandemią"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-34-szkolne-zadanie",
+    "title": "Zadanie z podstaw ekonomii",
+    "pts": 15,
+    "topic": "mikro",
+    "intro": [
+      { "t": "p", "x": "Na wykresie (w arkuszu) przedstawiono mapę obojętności pewnego konsumenta dla pary dóbr X (w szt.) oraz Y (w szt.). Odczyt z wykresu:" },
+      { "t": "ul", "items": [
+        "U1, U2, U3, U4 – krzywe obojętności (U1 położona najniżej, U4 najwyżej);",
+        "LB1 – linia ograniczenia budżetowego przecinająca oś Y w punkcie 20, a oś X w punkcie 16;",
+        "LB2 – linia ograniczenia budżetowego przecinająca oś Y w punkcie 20, a oś X w punkcie 20;",
+        "koszyk C (X = 1, Y ≈ 20) leży na krzywej U1, koszyk A (X = 7, Y = 8) – na krzywej U2;",
+        "koszyk B (X = 8, Y = 10) – punkt styczności LB1 z krzywą U3;",
+        "koszyk D (X = 9, Y = 11) – punkt styczności LB2 z krzywą U4."
+      ] }
+    ],
+    "parts": [
+      {
+        "label": "a", "pts": 1,
+        "prompt": "Mając do wyboru koszyk dóbr A lub C, który z nich wybierze konsument (przy braku ograniczenia budżetowego)? Odpowiedź uzasadnij.",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Konsument wybierze koszyk A, ponieważ znajduje się on na wyżej położonej krzywej obojętności (daje wyższą użyteczność)." }
+        ]
+      },
+      {
+        "label": "b", "pts": 1,
+        "prompt": "Przyjmij, że LB1 jest linią ograniczenia budżetowego. Ile dobra X i Y będzie konsumował konsument, maksymalizując swoją użyteczność całkowitą?",
+        "answers": [
+          { "label": "Dobro X (szt.)", "value": 8, "tol": 0.01 },
+          { "label": "Dobro Y (szt.)", "value": 10, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "p", "x": "Optimum konsumenta leży w punkcie styczności linii budżetowej LB1 z najwyżej położoną osiągalną krzywą obojętności – koszyk B: 8 jednostek dobra X i 10 jednostek dobra Y." }
+        ]
+      },
+      {
+        "label": "c", "pts": 3,
+        "prompt": "Wiedząc, że cena jednostki dobra X jest równa 12,5 zł, oblicz dochód konsumenta oraz cenę dobra Y.",
+        "answers": [
+          { "label": "Dochód konsumenta (zł)", "value": 200, "tol": 0.01 },
+          { "label": "Cena dobra Y (zł)", "value": 10, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "p", "x": "Punkt przecięcia LB1 z osią X to cały dochód wydany na dobro X (16 szt.), a z osią Y – na dobro Y (20 szt.):" },
+          { "t": "f", "x": "I = 12,5 zł × 16 = 200 zł\np_Y = 200 / 20 = 10 zł" }
+        ]
+      },
+      {
+        "label": "d", "pts": 2,
+        "prompt": "Wiedząc, że linia ograniczenia budżetowego LB2 powstała w wyniku zmiany ceny dobra X (ceteris paribus), oblicz, o ile zmieniła się cena tego dobra.",
+        "answers": [
+          { "label": "Nowa cena dobra X (zł)", "value": 10, "tol": 0.01 },
+          { "label": "Zmiana ceny dobra X (zł)", "value": -2.5, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "f", "x": "nowa cena X = 200 / 20 = 10 zł\nzmiana = 10 − 12,5 = −2,5 zł" },
+          { "t": "p", "x": "Cena dobra X zmniejszyła się o 2,5 zł." }
+        ]
+      },
+      {
+        "label": "e", "pts": 6,
+        "prompt": "Zmiana ceny z punktu d spowodowała zmianę punktu równowagi konsumenta. Oblicz elastyczność cenową popytu na dobro X (3 pkt). Zinterpretuj uzyskany wynik (2 pkt). Jaki charakter ma popyt na dobro X? (1 pkt)",
+        "answers": [{ "label": "Elastyczność cenowa popytu (wartość bezwzględna)", "value": 0.625, "tol": 0.005 }],
+        "solution": [
+          { "t": "f", "x": "% zmiana wielkości popytu = (9 − 8) / 8 = 12,5%\n% zmiana ceny = (10 − 12,5) / 12,5 = −20%\nE = |12,5% / (−20%)| = 0,625" },
+          { "t": "p", "x": "Spadek ceny o 1% powoduje wzrost wielkości popytu o 0,625%. Ponieważ |E| < 1, popyt na dobro X jest nieelastyczny cenowo." }
+        ]
+      },
+      {
+        "label": "f", "pts": 2,
+        "prompt": "Czy dobro X jest dobrem Giffena? Odpowiedź uzasadnij.",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Dobra Giffena mają rosnącą funkcję popytu (wzrost ceny zwiększa wielkość popytu). W przypadku dobra X spadek ceny spowodował wzrost wielkości popytu, więc nie jest ono dobrem Giffena." }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "set": "owe-39-centralne",
+  "ed": 39,
+  "stage": "c",
+  "essays": [
+    {
+      "id": "owe-39-centralne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "polityka",
+      "topics": [
+        {
+          "title": "Wolny handel a nierówności ekonomiczne – perspektywa krajowa i międzynarodowa",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Zjawisko nierówności ekonomicznych i problem ich pomiaru",
+              "Determinanty nierówności ekonomicznych w świetle dorobku wybranych szkół ekonomicznych",
+              "Wpływ handlu międzynarodowego na wzrost gospodarczy i jego charakter, a pośrednio na poziom nierówności ekonomicznych",
+              "Wpływ wolnego handlu na rozprzestrzenianie się postępu technologicznego na świecie, w tym hipoteza cyklu życia produktu",
+              "Znaczenie efektu Stolpera–Samuelsona w kształtowaniu struktury dochodów w gospodarce otwartej na wymianę handlową",
+              "Istota i znaczenie problemu pułapki zależności we współczesnej gospodarce światowej"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Wolny handel a problem nierówności ekonomicznych wewnątrz krajów – zarys problemu",
+              "Wpływ wolnego handlu na proces dezindustrializacji niektórych gałęzi i regionów w państwach rozwiniętych",
+              "Analiza wpływu globalizacji na dochody klasy średniej w krajach rozwiniętych",
+              "Konsekwencje globalizacji dla nierówności dochodowych występujących w państwach rozwijających się",
+              "Znaczenie instytucji (formalnych i nieformalnych) w dystrybucji korzyści wynikających z wymiany handlowej w wybranych krajach",
+              "Wolny handel a zdolność państwa do realizacji funkcji redystrybucyjnej, w tym konsekwencje globalizacji dla efektywności systemu podatkowego",
+              "Wpływ wybranych instrumentów polityki handlowej na redystrybucję dochodu w gospodarce",
+              "Wolny handel a problem nierówności ekonomicznych między państwami – zarys problemu",
+              "Wolny handel a konwergencja typu beta, w tym transfer technologii i wiedzy oraz napływ bezpośrednich inwestycji zagranicznych do państw rozwijających się"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-39-centralne-zadanie",
+    "title": "Zadanie analityczne",
+    "pts": 15,
+    "topic": "polityka",
+    "intro": [
+      { "t": "p", "x": "Kraj X jest małym krajem, będącym autarkią. Popyt na samochody elektryczne w kraju X opisany jest równaniem p = −10q + 3800, a krzywa podaży krajowej to p = 10q + 1000 (gdzie: p – cena za sztukę; q – ilość w sztukach). Cena samochodu elektrycznego na rynku światowym to 1600." },
+      { "t": "p", "x": "Władze kraju X zdecydowały się otworzyć gospodarkę na wymianę międzynarodową." }
+    ],
+    "parts": [
+      {
+        "label": "a", "pts": 2,
+        "prompt": "Jaka będzie wielkość importu samochodów elektrycznych do kraju X?",
+        "answers": [{ "label": "Import (sztuk)", "value": 160, "tol": 0.5 }],
+        "solution": [
+          { "t": "p", "x": "Po otwarciu gospodarki cena w kraju X będzie równa cenie światowej 1600 (mały kraj nie wpływa na cenę światową)." },
+          { "t": "f", "x": "popyt krajowy przy p = 1600: 1600 = −10q + 3800 → q = 220\npodaż krajowa przy p = 1600: 1600 = 10q + 1000 → q = 60\nimport = 220 − 60 = 160" }
+        ]
+      },
+      {
+        "label": "b", "pts": 2,
+        "prompt": "Oblicz zmianę nadwyżki konsumenta.",
+        "answers": [{ "label": "Wzrost nadwyżki konsumenta", "value": 144000, "tol": 0.5 }],
+        "solution": [
+          { "t": "p", "x": "W autarkii: −10q + 3800 = 10q + 1000 → q = 140, p = 2400. Po otwarciu cena spada do 1600, a konsumpcja rośnie do 220." },
+          { "t": "f", "x": "ΔNK = 0,5 × (220 + 140) × (2400 − 1600) = 144 000" }
+        ]
+      },
+      {
+        "label": "c", "pts": 1,
+        "prompt": "Po okresie swobodnej wymiany handlowej władze kraju X wprowadziły kontyngent ilościowy na przywóz samochodów elektrycznych na poziomie 80 samochodów. Oblicz cenę samochodu w kraju X po wprowadzeniu kontyngentu.",
+        "answers": [{ "label": "Cena w kraju X", "value": 2000, "tol": 0.5 }],
+        "solution": [
+          { "t": "p", "x": "Produkcja krajowa + kontyngent = popyt krajowy (podaż i popyt zapisane jako q od p):" },
+          { "t": "f", "x": "(0,1p − 100) + 80 = −0,1p + 380\n0,2p = 400 → p = 2000" }
+        ]
+      },
+      {
+        "label": "d", "pts": 1,
+        "prompt": "Oblicz wielkość korzyści (zmianę nadwyżki producenta), jakie z tytułu wprowadzenia kontyngentu osiągnęły przedsiębiorstwa krajowe.",
+        "answers": [{ "label": "Wzrost nadwyżki producenta", "value": 32000, "tol": 0.5 }],
+        "solution": [
+          { "t": "f", "x": "produkcja krajowa przy p = 2000: 0,1 × 2000 − 100 = 100\nΔNP = 0,5 × (60 + 100) × (2000 − 1600) = 32 000" }
+        ]
+      },
+      {
+        "label": "e", "pts": 3,
+        "prompt": "Jaki jest poziom straty netto (zbędnej straty społecznej) z tytułu wprowadzenia kontyngentu?",
+        "answers": [{ "label": "Strata netto", "value": 16000, "tol": 0.5 }],
+        "solution": [
+          { "t": "p", "x": "Popyt przy p = 2000: q = −0,1 × 2000 + 380 = 180. Strata netto to dwa trójkąty – produkcyjny (nieefektywna produkcja krajowa) i konsumpcyjny (utracona konsumpcja):" },
+          { "t": "f", "x": "strata netto = 0,5 × (100 − 60) × (2000 − 1600) + 0,5 × (220 − 180) × (2000 − 1600)\n            = 8000 + 8000 = 16 000" }
+        ]
+      },
+      {
+        "label": "f", "pts": 4,
+        "prompt": "Rząd planuje sprzedać licencję na import wszystkich samochodów w ramach kontyngentu, wykorzystując aukcję Vickreya. Czym charakteryzuje się ta forma aukcji? Jaka jest optymalna strategia dla uczestniczącego w niej importera?",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Aukcja Vickreya to wariant przetargu zamkniętego (oferty składane w zamkniętych kopertach): licytowane dobro (licencję importową) otrzymuje uczestnik z najwyższą ofertą, ale płaci cenę równą drugiej co do wysokości ofercie." },
+          { "t": "p", "x": "Optymalną strategią jest zaoferowanie kwoty równej swojej prawdziwej wycenie licencji – dzięki temu uczestnik nie przepłaca i maksymalizuje szansę na wygraną." }
+        ]
+      },
+      {
+        "label": "g", "pts": 2,
+        "prompt": "Ile uczestniczący w licytacji importer będzie skłonny zapłacić za licencję?",
+        "answers": [{ "label": "Maksymalna cena licencji", "value": 32000, "tol": 0.5 }],
+        "solution": [
+          { "t": "p", "x": "Licencja obejmuje import całego kontyngentu, więc jej wartość to renta kontyngentowa – liczba samochodów × różnica między ceną w kraju X a ceną światową:" },
+          { "t": "f", "x": "80 × (2000 − 1600) = 32 000" }
+        ]
+      }
+    ]
+  }
+}
