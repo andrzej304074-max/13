@@ -1,0 +1,102 @@
+{
+  "set": "owe-29-centralne",
+  "ed": 29,
+  "stage": "c",
+  "essays": [
+    {
+      "id": "owe-29-centralne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "polityka",
+      "topics": [
+        {
+          "title": "Wyjaśnij, czym jest zapisana w Konstytucji RP społeczna gospodarka rynkowa. Oceń sposób realizacji tej idei w naszym kraju po 1989 r. w kontekście przeciwdziałania nierównościom społecznym",
+          "schema": [
+            { "title": "Przykładowy schemat odpowiedzi", "pts": 25, "points": [
+              "Geneza i założenia społecznej gospodarki rynkowej",
+              "Wolność gospodarcza i sprawiedliwość społeczna jako podstawowe cechy społecznej gospodarki rynkowej",
+              "Wpływ kapitału społecznego, zaufania i partycypacji pracowniczej na stosunki ekonomiczne",
+              "Ograniczenia i trudności realizacji idei społecznej gospodarki rynkowej w warunkach transformacji",
+              "Przemiany na rynku pracy w Polsce po 1989 r. a nierówności dochodowe:",
+              "  a) walka z bezrobociem",
+              "  b) działalność związków zawodowych",
+              "  c) funkcjonowanie płacy minimalnej",
+              "Rola państwa w kształtowaniu polityki społecznej",
+              "Ewolucja systemu emerytalnego, rentowego i opieki zdrowotnej w Polsce a nierówności dochodowe",
+              "Edukacja jako instrument zmniejszania zróżnicowania społecznego i ekonomicznego",
+              "Ile społecznej gospodarki rynkowej jest w polskiej gospodarce? – ocena"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-29-centralne-zadanie",
+    "title": "Zadanie analityczne",
+    "pts": 15,
+    "topic": "mikro",
+    "intro": [
+      { "t": "p", "x": "Menedżerowie kina ustalają ceny biletów. Dzienny popyt: P = 54 − 0,1Q (P – cena biletu w zł, Q – liczba biletów). Kino może sprzedać maksymalnie 320 biletów dziennie. Przy pełnym zapełnieniu sal przeciętny dzienny koszt całkowity wynosi 20 zł na bilet. Wpływ frekwencji na koszty całkowite jest nieistotny (koszty są stałe)." }
+    ],
+    "parts": [
+      {
+        "label": "1", "pts": 3,
+        "prompt": "Dotąd cenę ustalano jako przeciętny koszt całkowity (dla Q = 320) plus narzut 20%. Oblicz dzienny zysk w tym przypadku.",
+        "answers": [{ "label": "Zysk dzienny (zł)", "value": 800, "tol": 0.5 }],
+        "solution": [
+          { "t": "f", "x": "P = 20 × (1 + 20%) = 24 zł\nQ = 540 − 10P = 540 − 240 = 300\nTR = 24 × 300 = 7 200 zł\nTC = 20 × 320 = 6 400 zł\nπ = 7 200 − 6 400 = 800 zł" }
+        ]
+      },
+      {
+        "label": "2", "pts": 2,
+        "prompt": "Wyjaśnij słabości obecnej polityki ustalania cen.",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Ustalanie ceny przez narzut na koszt przeciętny: (1) pomija elastyczność cenową popytu, (2) uwzględnia w kalkulacji koszty stałe, które są nieistotne przy wyznaczaniu optymalnej ceny." }
+        ]
+      },
+      {
+        "label": "3", "pts": 1,
+        "prompt": "Oblicz cenę, przy której zostaną sprzedane bilety na wszystkie seanse.",
+        "answers": [{ "label": "Cena (zł)", "value": 22, "tol": 0.01 }],
+        "solution": [
+          { "t": "f", "x": "P = 54 − 0,1 × 320 = 22 zł" }
+        ]
+      },
+      {
+        "label": "4", "pts": 3,
+        "prompt": "Czy cena z punktu 3 maksymalizuje zysk? Jeśli nie, ustal optymalną cenę i liczbę biletów. Uzasadnij obliczeniami.",
+        "answers": [
+          { "label": "Optymalna liczba biletów", "value": 270, "tol": 0.5 },
+          { "label": "Optymalna cena (zł)", "value": 27, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "p", "x": "Koszty nie zależą od frekwencji, więc zysk jest maksymalny tam, gdzie maksymalny jest utarg całkowity:" },
+          { "t": "f", "x": "TR = 54Q − 0,1Q² → MR = 54 − 0,2Q = 0 → Q = 270 (≤ 320)\nP = 54 − 27 = 27 zł\nTR = 7 290 zł > 22 × 320 = 7 040 zł" },
+          { "t": "p", "x": "Cena 22 zł nie maksymalizuje zysku – lepsza jest cena 27 zł (sprzedaż 270 biletów)." }
+        ]
+      },
+      {
+        "label": "5", "pts": 2,
+        "prompt": "Program „Zniżki dla dużej rodziny”: bilety po 5 zł dla osób, które dotąd nie chodziły do kina. Jaką maksymalną liczbę biletów ulgowych można sprzedać, aby zysk nie był niższy niż w punkcie 4?",
+        "answers": [{ "label": "Maksymalna liczba biletów ulgowych", "value": 129.1, "tol": 1 }],
+        "solution": [
+          { "t": "p", "x": "Koszty są stałe, więc wystarczy utrzymać utarg 7 290 zł. BU – bilety ulgowe, BN – normalne:" },
+          { "t": "f", "x": "5BU + BN × (54 − 0,1BN) = 7 290\nBU + BN = 320\n→ 5(320 − BN) + 54BN − 0,1BN² = 7 290\n→ BN² − 490BN + 56 900 = 0 → BN ≈ 190,9\nBU = 320 − 190,9 ≈ 129 (klucz: nie więcej niż ok. 130)" }
+        ]
+      },
+      {
+        "label": "6", "pts": 4,
+        "prompt": "Jak powinien wyglądać optymalnie skonstruowany program, który w pełni zabezpieczy interesy ekonomiczne (zyski) kina?",
+        "answers": [],
+        "solution": [
+          { "t": "ul", "items": [
+            "dzienny limit biletów ulgowych, który – przy dużym zainteresowaniu programem – gwarantuje sprzedaż maksymalizującej zysk liczby biletów normalnych (270 po 27 zł; ulgowe tylko na pozostałe 50 miejsc),",
+            "zablokowanie odsprzedaży tańszych biletów klientom pełnopłatnym (np. bilety imienne, weryfikacja uprawnień)."
+          ] }
+        ]
+      }
+    ]
+  }
+}

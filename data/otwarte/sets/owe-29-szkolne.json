@@ -1,0 +1,115 @@
+{
+  "set": "owe-29-szkolne",
+  "ed": 29,
+  "stage": "s",
+  "essays": [
+    {
+      "id": "owe-29-szkolne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "polityka",
+      "topics": [
+        {
+          "title": "Omów przyczyny ubóstwa i sposoby jego pomiaru (0–15 pkt). W jaki sposób przeciwdziała się temu zjawisku w Polsce? (0–10 pkt)",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Definicja ubóstwa",
+              "Przyczyny zróżnicowania dochodowego gospodarstw domowych",
+              "Cechy ubogich gospodarstw domowych",
+              "Pomiar ubóstwa – wskaźniki i linie ubóstwa"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Zróżnicowanie dochodowe gospodarstw domowych w Polsce",
+              "Zakres i głębokość ubóstwa w polskim społeczeństwie",
+              "Rola polityki państwa w ograniczaniu ubóstwa",
+              "Polityka społeczna w Polsce wobec wykluczenia społecznego i ubóstwa – podmioty, instrumenty"
+            ] }
+          ]
+        },
+        {
+          "title": "Omów teoretyczne determinanty rozwoju ekonomicznego i jego główne bariery w krajach rozwijających się (0–15 pkt). Przedstaw, jakie społeczno-gospodarcze konsekwencje ma zróżnicowanie poziomu rozwoju krajów dla aktualnej sytuacji w Europie (0–10 pkt)",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Rozwój ekonomiczny a wzrost gospodarczy",
+              "Uwarunkowania rozwoju gospodarczego w ujęciu wybranych modeli",
+              "Specyfika krajów rozwijających się",
+              "Bariery ekspansji gospodarczej krajów rozwijających się"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Międzynarodowa analiza porównawcza zróżnicowania poziomu rozwoju gospodarczego",
+              "Wyzwania związane z zapewnieniem stabilności euro",
+              "Polityka spójności ekonomicznej państw Unii Europejskiej",
+              "Dylematy polityki społecznej w dobie wielkich migracji",
+              "Globalizacja a rynek pracy w Europie"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-29-szkolne-zadanie",
+    "title": "Zadanie z podstaw ekonomii",
+    "pts": 15,
+    "topic": "mikro",
+    "intro": [
+      { "t": "p", "x": "Rysunek w arkuszu przedstawia krzywe obojętności U1, U2, U3 konsumenta dla produktów X i Y oraz linie ograniczenia budżetowego LB1 i LB2; punkty A–F to koszyki dóbr (X; Y). Odczyt z rysunku:" },
+      { "t": "ul", "items": [
+        "LB1 przechodzi przez koszyki A (2; 18), D (6; 10) i B (9; 4);",
+        "LB2 przechodzi przez koszyki C (3; 26), F (8; 16) i E (15; 2);",
+        "na krzywej U1 leżą A i B; na krzywej U2 – C, D i E; na krzywej U3 – F;",
+        "D jest punktem styczności LB1 z U2, a F – punktem styczności LB2 z U3."
+      ] }
+    ],
+    "parts": [
+      {
+        "label": "1", "pts": 2,
+        "prompt": "Wskaż punkt równowagi konsumenta, jeśli jego dochód wyznacza linię ograniczenia budżetowego LB1. Podaj współrzędne koszyka.",
+        "answers": [
+          { "label": "Ilość X", "value": 6, "tol": 0.01 },
+          { "label": "Ilość Y", "value": 10, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "p", "x": "Równowagę dla LB1 wyznacza punkt D (6; 10) – leży na najwyżej położonej spośród dostępnych dla konsumenta krzywej obojętności (U2)." }
+        ]
+      },
+      {
+        "label": "2", "pts": 3,
+        "prompt": "Tygodniowy dochód konsumenta wynosi 88 zł, a cena dobra Y – 4 zł. Ile wynosi cena dobra X?",
+        "answers": [{ "label": "Cena X (zł)", "value": 8, "tol": 0.01 }],
+        "solution": [
+          { "t": "f", "x": "np. koszyk A (2X; 18Y) leży na LB1:\nwydatek na Y = 18 × 4 = 72 zł\nna X zostaje 88 − 72 = 16 zł → p_X = 16 / 2 = 8 zł" }
+        ]
+      },
+      {
+        "label": "3", "pts": 3,
+        "prompt": "Pod wpływem jakiego czynnika linia budżetowa przesunęła się z LB1 do LB2? Jeśli to możliwe, określ zmianę liczbowo.",
+        "answers": [
+          { "label": "Wzrost dochodu nominalnego (zł) przy stałych cenach", "value": 40, "tol": 0.01 },
+          { "label": "Wzrost dochodu (%)", "value": 45.5, "tol": 0.1, "unit": "%" }
+        ],
+        "solution": [
+          { "t": "p", "x": "Linia przesunęła się równolegle – wzrósł dochód realny konsumenta. Np. koszyk F (8; 16) kosztuje:" },
+          { "t": "f", "x": "8 × 8 + 16 × 4 = 128 zł\nwzrost dochodu nominalnego = 128 − 88 = 40 zł ≈ 45,5% (przy stałych cenach)\nalbo spadek cen X i Y o 1 − 88/128 ≈ 31,3% (przy stałym dochodzie nominalnym)" }
+        ]
+      },
+      {
+        "label": "4", "pts": 3,
+        "prompt": "Analizując zmianę położenia punktów równowagi na LB1 i LB2, określ charakter dóbr X i Y dla konsumenta. Uzasadnij.",
+        "answers": [],
+        "solution": [
+          { "t": "f", "x": "równowaga: D (6; 10) → F (8; 16)\nX: (8 − 6) / 6 ≈ +33,3%; Y: (16 − 10) / 10 = +60%; dochód: +45,5%" },
+          { "t": "p", "x": "Oba produkty są dobrami normalnymi – wzrost dochodu realnego zwiększył konsumpcję obu. X jest dobrem podstawowym (konsumpcja rośnie wolniej niż dochód), a Y – dobrem luksusowym (konsumpcja rośnie szybciej niż dochód)." }
+        ]
+      },
+      {
+        "label": "5", "pts": 4,
+        "prompt": "Rząd rozważa nieodpłatne, niewymienialne na gotówkę bony na zakup 6 szt. dobra X. Przedstaw schematycznie (w brudnopisie), jak zmieni się linia budżetowa względem LB2.",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Nowa linia LB3: od osi Y biegnie poziomo na wysokości maksymalnej ilości Y (128 / 4 = 32 szt.) aż do X = 6 (bony pozwalają kupić 6 szt. X bez rezygnacji z Y), a dalej jest równoległa do LB2, przesunięta w prawo o 6 jednostek X (przecina oś X w 16 + 6 = 22). Bony nie wymienialne na gotówkę dają „załamaną” linię budżetową." }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "set": "owe-28-okregowe",
+  "ed": 28,
+  "stage": "o",
+  "essays": [
+    {
+      "id": "owe-28-okregowe-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "polityka",
+      "topics": [
+        {
+          "title": "Przedstaw główne koszty społeczne transformacji systemowej w Polsce",
+          "schema": [
+            { "title": "Przykładowy schemat odpowiedzi", "pts": 25, "points": [
+              "Przejście od gospodarki centralnie planowanej do rynkowej – główne cechy przekształceń systemowych i programu stabilizacyjnego",
+              "Wybrane koszty społeczne transformacji:",
+              "  a) zmiany w strukturze rynku pracy",
+              "  b) bezrobocie i emigracja zarobkowa",
+              "  c) obszary biedy i wykluczenia społecznego",
+              "  d) rozwarstwienie społeczne – polaryzacja majątkowa i dochodowa gospodarstw domowych",
+              "Kontrowersje wokół procesu prywatyzacji",
+              "Wpływ transformacji na możliwość budowania kapitału społecznego",
+              "Ocena kosztów społecznych transformacji systemowej w Polsce"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-28-okregowe-zadanie",
+    "title": "Zadanie z analizy finansowej",
+    "pts": 15,
+    "topic": "firma",
+    "intro": [
+      { "t": "p", "x": "Przychody firmy z branży stalowej w ostatnim roku wyniosły 4 380 000 zł. Kapitał obrotowy netto na koniec okresu: 20 000 zł, krótkoterminowy kredyt bankowy: 300 000 zł. Środki pieniężne: 20 000 zł (ze względów ostrożnościowych nie mniej). Cykl zapasów: 35 dni; cykl zobowiązań krótkoterminowych (bez kredytów): 60 dni. Zobowiązania przeterminowane stanowią 15% zobowiązań krótkoterminowych (bez kredytów)." },
+      { "t": "p", "x": "Inkaso należności: 10% odbiorców płaci po 90 dniach, 20% po 60 dniach, kolejne 20% po 45 dniach (tych terminów nie można skrócić). Rok ma 365 dni; pomiń VAT. Przyjmij, że aktywa obrotowe to gotówka, zapasy i należności, a kapitał obrotowy netto, kredyt krótkoterminowy i zobowiązania krótkoterminowe je finansują." }
+    ],
+    "parts": [
+      {
+        "label": "1", "pts": 6,
+        "prompt": "Oblicz średnią wartość zapasów (3 pkt) i zobowiązań krótkoterminowych bez kredytów (3 pkt).",
+        "answers": [
+          { "label": "Średnie zapasy (zł)", "value": 420000, "tol": 1 },
+          { "label": "Średnie zobowiązania krótkoterminowe (zł)", "value": 720000, "tol": 1 }
+        ],
+        "solution": [
+          { "t": "f", "x": "cykl zapasów = zapasy × 365 / przychody → 35 = Z × 365 / 4 380 000 → Z = 420 000 zł\ncykl zobowiązań = zobowiązania × 365 / przychody → 60 = Zob × 365 / 4 380 000 → Zob = 720 000 zł" }
+        ]
+      },
+      {
+        "label": "2", "pts": 2,
+        "prompt": "Oblicz wartość należności ogółem.",
+        "answers": [{ "label": "Należności (zł)", "value": 600000, "tol": 1 }],
+        "solution": [
+          { "t": "f", "x": "pasywa = 20 000 (KON) + 300 000 (kredyt) + 720 000 (zobowiązania) = 1 040 000 zł\naktywa = gotówka + zapasy + należności\nnależności = 1 040 000 − 20 000 − 420 000 = 600 000 zł" }
+        ]
+      },
+      {
+        "label": "3", "pts": 3,
+        "prompt": "Po ilu dniach swoje należności regulują pozostali odbiorcy firmy?",
+        "answers": [{ "label": "Termin płatności pozostałych odbiorców (dni)", "value": 40, "tol": 0.05 }],
+        "solution": [
+          { "t": "f", "x": "cykl należności = 600 000 × 365 / 4 380 000 = 50 dni\n10% × 90 + 20% × 60 + 20% × 45 + 50% × D = 50\n9 + 12 + 9 + 0,5D = 50 → D = 40 dni" }
+        ]
+      },
+      {
+        "label": "4", "pts": 4,
+        "prompt": "O ile dni firma musiałaby skrócić termin płatności dla pozostałych odbiorców, aby płacić wszystkie zobowiązania w terminie?",
+        "answers": [{ "label": "Skrócenie terminu (dni)", "value": 18, "tol": 0.05 }],
+        "solution": [
+          { "t": "f", "x": "zobowiązania przeterminowane = 720 000 × 15% = 108 000 zł\nskrócenie cyklu należności = 108 000 × 365 / 4 380 000 = 9 dni → nowy cykl 41 dni\n9 + 12 + 9 + 0,5D′ = 41 → D′ = 22 dni\nD − D′ = 40 − 22 = 18 dni" }
+        ]
+      }
+    ]
+  }
+}

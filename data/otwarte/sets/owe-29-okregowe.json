@@ -1,0 +1,98 @@
+{
+  "set": "owe-29-okregowe",
+  "ed": 29,
+  "stage": "o",
+  "essays": [
+    {
+      "id": "owe-29-okregowe-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "polityka",
+      "topics": [
+        {
+          "title": "Scharakteryzuj główne modele polityki społecznej na świecie. Na przykładzie wybranych krajów przedstaw, jaki wpływ na wzrost gospodarczy i rozwarstwienie dochodowe ma realizowany model polityki społecznej",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Państwo i rynek wobec problemów społecznych",
+              "Polityka społeczna – definicja i uzasadnienie",
+              "Zakres przedmiotowy polityki społecznej",
+              "Kryteria wyodrębniania modeli polityki społecznej:",
+              "  a) sposoby i zakres ochrony najuboższych",
+              "  b) poziom i jakość dóbr i usług dostarczanych przez państwo",
+              "  c) kryteria dostępu do świadczeń",
+              "  d) ochrona pracowników i bezrobotnych",
+              "  e) sposoby finansowania polityki społecznej",
+              "Wybrane modele polityki społecznej na świecie"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Modele polityki społecznej a poziom rozwarstwienia dochodowego",
+              "Zróżnicowanie dochodowe i polityka społeczna jako bodźce wzrostu gospodarczego – studium wybranych krajów",
+              "Możliwości i bariery wykorzystania polityki społecznej przez kraje słabo rozwinięte"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-29-okregowe-zadanie",
+    "title": "Zadanie z analizy finansowej",
+    "pts": 15,
+    "topic": "finanse",
+    "intro": [
+      { "t": "p", "x": "Menedżerowie dynamicznie rozwijającej się spółki rozważają sposoby sfinansowania działalności operacyjnej w II i III kwartale 2016 r. Przyjmij, że miesiąc ma 30 dni, a rok 360 dni." }
+    ],
+    "parts": [
+      {
+        "label": "1", "pts": 5,
+        "prompt": "Kredyt bankowy 4 mln zł na 6 miesięcy, oprocentowanie 9% rocznie, prowizja 2% pomniejsza wypłaconą kwotę, odsetki płatne na koniec wraz ze spłatą. Oblicz koszty kredytu (2 pkt) i efektywną roczną stopę oprocentowania z uwzględnieniem prowizji (3 pkt).",
+        "answers": [
+          { "label": "Łączne koszty kredytu (zł)", "value": 260000, "tol": 0.5 },
+          { "label": "Efektywna roczna stopa (%)", "value": 13.71, "tol": 0.02, "unit": "%" }
+        ],
+        "solution": [
+          { "t": "f", "x": "prowizja = 4 000 000 × 0,02 = 80 000 zł\nodsetki = 4 000 000 × 0,09 × 180 / 360 = 180 000 zł\nkoszty łącznie = 260 000 zł\nwypłacono 3 920 000 zł, spłata 4 180 000 zł po pół roku:\n3 920 000 = 4 180 000 / (1 + r_ef)^0,5 → r_ef = (4 180 000 / 3 920 000)² − 1 ≈ 13,71%" }
+        ]
+      },
+      {
+        "label": "2", "pts": 2,
+        "prompt": "SKOK: kredyt o tych samych parametrach, oprocentowanie 10% rocznie, odsetki za cały okres pobierane z góry (pomniejszają wypłatę), bez prowizji, ale z opłatą przygotowawczą 50 tys. zł (też pomniejsza wypłatę). O jaką kwotę musi zawnioskować spółka, aby otrzymać 4 mln zł?",
+        "answers": [{ "label": "Kwota wnioskowana (zł)", "value": 4263157.89, "tol": 1 }],
+        "solution": [
+          { "t": "f", "x": "4 000 000 = K − K × 0,1 × 180 / 360 − 50 000\n4 050 000 = 0,95K → K ≈ 4 263 157,89 zł" }
+        ]
+      },
+      {
+        "label": "3", "pts": 3,
+        "prompt": "Dyskonto weksli obcych na 3,75 mln zł (termin wykupu 150 dni) przy stopie dyskonta 6% rocznie, 90 dni przed wykupem. Jaką kwotę uzyska firma?",
+        "answers": [{ "label": "Kwota z dyskonta (zł)", "value": 3693750, "tol": 0.5 }],
+        "solution": [
+          { "t": "f", "x": "kwota = 3 750 000 × (1 − 0,06 × 90 / 360) = 3 750 000 × 0,985 = 3 693 750 zł" }
+        ]
+      },
+      {
+        "label": "4", "pts": 2,
+        "prompt": "Faktoring: faktury 4,5 mln zł z terminem 90 dni; faktor wypłaca 80% wierzytelności i pobiera 1% wypłaconej kwoty prowizji; resztę wypłaca po zapłacie dłużnika; odsetki 8% rocznie za okres kredytowania. Oblicz koszt faktoringu kwotowo i procentowo (dla 90 dni).",
+        "answers": [
+          { "label": "Koszt faktoringu (zł)", "value": 108000, "tol": 0.5 },
+          { "label": "Koszt faktoringu za 90 dni (%)", "value": 3, "tol": 0.01, "unit": "%" }
+        ],
+        "solution": [
+          { "t": "f", "x": "wypłata = 4 500 000 × 80% = 3 600 000 zł\nprowizja = 3 600 000 × 0,01 = 36 000 zł\nodsetki = 3 600 000 × 0,08 × 90 / 360 = 72 000 zł\nkoszt = 108 000 zł = 108 000 / 3 600 000 = 3% za 90 dni" }
+        ]
+      },
+      {
+        "label": "5", "pts": 3,
+        "prompt": "Skonto 2% za płatność gotówką przy odbiorze (zamiast 60-dniowego kredytu kupieckiego). Czy to korzystniejsze niż faktoring z podpunktu 4? Porównaj efektywne roczne stopy procentowe.",
+        "answers": [
+          { "label": "Efektywny roczny koszt skonta (%)", "value": 12.89, "tol": 0.02, "unit": "%" },
+          { "label": "Efektywny roczny koszt faktoringu (%)", "value": 12.55, "tol": 0.02, "unit": "%" }
+        ],
+        "solution": [
+          { "t": "f", "x": "koszt skonta za 60 dni = 0,02 / (1 − 0,02) ≈ 2,04%\nefektywny roczny koszt skonta = (1 + 0,02/0,98)^(360/60) − 1 ≈ 12,89%\nfaktoring: 3 600 000 = 3 708 000 / (1 + r_ef)^0,25 → r_ef = (3 708 000 / 3 600 000)⁴ − 1 ≈ 12,55%" },
+          { "t": "p", "x": "Korzystniejszy jest faktoring – jego efektywny koszt (12,55%) jest niższy niż koszt skonta (12,89%)." }
+        ]
+      }
+    ]
+  }
+}

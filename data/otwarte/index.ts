@@ -1,5 +1,11 @@
 // Wygenerowane przez tools/otwarte/build_index.py – nie edytować ręcznie.
 import type { OpenSet } from "@/lib/otwarte-core";
+import s_owe_28_centralne from "./sets/owe-28-centralne.json";
+import s_owe_28_okregowe from "./sets/owe-28-okregowe.json";
+import s_owe_28_szkolne from "./sets/owe-28-szkolne.json";
+import s_owe_29_centralne from "./sets/owe-29-centralne.json";
+import s_owe_29_okregowe from "./sets/owe-29-okregowe.json";
+import s_owe_29_szkolne from "./sets/owe-29-szkolne.json";
 import s_owe_30_centralne from "./sets/owe-30-centralne.json";
 import s_owe_30_okregowe from "./sets/owe-30-okregowe.json";
 import s_owe_30_szkolne from "./sets/owe-30-szkolne.json";
@@ -27,4 +33,4 @@ import s_owe_39_centralne from "./sets/owe-39-centralne.json";
 import s_owe_39_okregowe from "./sets/owe-39-okregowe.json";
 import s_owe_39_szkolne from "./sets/owe-39-szkolne.json";
 
-export const SETS = [s_owe_30_centralne, s_owe_30_okregowe, s_owe_30_szkolne, s_owe_31_centralne, s_owe_31_okregowe, s_owe_31_szkolne, s_owe_32_centralne, s_owe_32_okregowe, s_owe_32_szkolne, s_owe_33_okregowe, s_owe_33_szkolne, s_owe_34_centralne, s_owe_34_okregowe, s_owe_34_szkolne, s_owe_35_centralne, s_owe_35_szkolne, s_owe_36_szkolne, s_owe_37_centralne, s_owe_37_okregowe, s_owe_37_szkolne, s_owe_38_centralne, s_owe_38_okregowe, s_owe_38_szkolne, s_owe_39_centralne, s_owe_39_okregowe, s_owe_39_szkolne] as unknown as OpenSet[];
+export const SETS = [s_owe_28_centralne, s_owe_28_okregowe, s_owe_28_szkolne, s_owe_29_centralne, s_owe_29_okregowe, s_owe_29_szkolne, s_owe_30_centralne, s_owe_30_okregowe, s_owe_30_szkolne, s_owe_31_centralne, s_owe_31_okregowe, s_owe_31_szkolne, s_owe_32_centralne, s_owe_32_okregowe, s_owe_32_szkolne, s_owe_33_okregowe, s_owe_33_szkolne, s_owe_34_centralne, s_owe_34_okregowe, s_owe_34_szkolne, s_owe_35_centralne, s_owe_35_szkolne, s_owe_36_szkolne, s_owe_37_centralne, s_owe_37_okregowe, s_owe_37_szkolne, s_owe_38_centralne, s_owe_38_okregowe, s_owe_38_szkolne, s_owe_39_centralne, s_owe_39_okregowe, s_owe_39_szkolne] as unknown as OpenSet[];

@@ -1,0 +1,113 @@
+{
+  "set": "owe-28-szkolne",
+  "ed": 28,
+  "stage": "s",
+  "essays": [
+    {
+      "id": "owe-28-szkolne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "makro",
+      "topics": [
+        {
+          "title": "Scharakteryzuj uwarunkowania wzrostu gospodarczego w Polsce po 1989 r.",
+          "schema": [
+            { "title": "Przykładowy schemat odpowiedzi", "pts": 25, "points": [
+              "Definicja wzrostu gospodarczego i struktury tworzenia PKB",
+              "Czynniki wzrostu gospodarczego w teorii ekonomii",
+              "Charakterystyka dynamiki PKB w Polsce po 1989 r.",
+              "Wpływ wybranych uwarunkowań na wzrost gospodarczy w okresie transformacji:",
+              "  a) prywatyzacji",
+              "  b) wzrostu wydajności, postępu technologicznego i modernizacji gospodarki",
+              "  c) liberalizacji wymiany handlowej",
+              "  d) reform strukturalnych i funduszy unijnych",
+              "  e) inwestycji zagranicznych i globalizacji",
+              "Własna ocena przebiegu wzrostu gospodarczego w Polsce po 1989 r."
+            ] }
+          ]
+        },
+        {
+          "title": "Omów najważniejsze cechy procesu transformacji gospodarczej w Polsce",
+          "schema": [
+            { "title": "Przykładowy schemat odpowiedzi", "pts": 25, "points": [
+              "Transformacja gospodarcza jako proces tworzenia gospodarki rynkowej",
+              "Powiązanie transformacji ze zmianami politycznymi i społecznymi w kraju",
+              "Najważniejsze cechy procesu transformacji:",
+              "  a) odejście od gospodarki nakazowo-rozdzielczej, likwidacja niedoborów i uwolnienie cen",
+              "  b) swoboda działalności gospodarczej",
+              "  c) przekształcenia własnościowe – prywatyzacja oddolna i odgórna",
+              "  d) powstanie nowoczesnego systemu bankowego i rynku kapitałowego",
+              "  e) umożliwienie napływu kapitału zagranicznego",
+              "Negatywne konsekwencje transformacji – koszty społeczne (bezrobocie, spadek dochodów realnych części grup), zaburzenia wywołane nieoczekiwaną inflacją, dominacja firm zagranicznych w niektórych sektorach"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-28-szkolne-zadanie",
+    "title": "Zadanie z podstaw ekonomii",
+    "pts": 15,
+    "topic": "makro",
+    "intro": [
+      { "t": "p", "x": "W tabelach podano wybrane wskaźniki gospodarki Polski w latach 1990–2010. Odpowiedzi krótko uzasadnij." },
+      { "t": "table", "head": ["Rok", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999"], "rows": [
+        ["Dynamika realnego PKB (rok poprzedni = 100)", "88,4", "93,0", "102,6", "103,8", "105,2", "107,0", "106,1", "106,8", "104,8", "104,1"],
+        ["Wskaźnik cen towarów i usług konsumpcyjnych (rok poprzedni = 100)", "685,8", "170,3", "143,0", "135,3", "132,2", "127,8", "119,9", "114,9", "111,8", "107,3"]
+      ] },
+      { "t": "table", "head": ["Rok", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010"], "rows": [
+        ["PKB per capita w cenach bieżących (zł)", "20 379", "21 144", "22 061", "24 209", "25 759", "27 781", "30 865", "33 464", "35 256", "37 115"],
+        ["Deflator PKB (2005 = 100)", "91,2", "93,2", "93,6", "97,4", "100,0", "101,5", "105,5", "108,8", "112,8", "114,4"]
+      ] }
+    ],
+    "parts": [
+      {
+        "label": "a", "pts": 3,
+        "prompt": "Kiedy w Polsce wystąpiła recesja i w którym roku PKB przekroczył poziom z 1989 r.?",
+        "answers": [
+          { "label": "Pierwszy rok recesji", "value": 1990, "tol": 0.01 },
+          { "label": "Ostatni rok recesji", "value": 1991, "tol": 0.01 },
+          { "label": "Rok przekroczenia poziomu PKB z 1989 r.", "value": 1996, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "p", "x": "Recesja: lata 1990–1991 (dynamika realnego PKB poniżej 100). PKB z 1989 r. trzeba porównać ze skumulowanym indeksem:" },
+          { "t": "f", "x": "1995: 0,884 × 0,93 × 1,026 × 1,038 × 1,052 × 1,07 ≈ 0,986 < 1\n1996: 0,986 × 1,061 ≈ 1,046 > 1 → PKB przekroczył poziom z 1989 r. w 1996 r." }
+        ]
+      },
+      {
+        "label": "b", "pts": 2,
+        "prompt": "W jakich latach wystąpiła w Polsce hiperinflacja?",
+        "answers": [{ "label": "Rok hiperinflacji", "value": 1990, "tol": 0.01 }],
+        "solution": [
+          { "t": "p", "x": "Hiperinflacja to bardzo wysoka inflacja – w Polsce w początkowym okresie transformacji, w 1990 r. (ceny wzrosły o 585,8%)." }
+        ]
+      },
+      {
+        "label": "c", "pts": 4,
+        "prompt": "W 1995 r. przeciętne wynagrodzenie wynosiło 700 zł, a w 1998 r. 1240 zł. Jak zmieniła się siła nabywcza osoby z przeciętnym wynagrodzeniem? Podaj zmianę w %.",
+        "answers": [{ "label": "Zmiana siły nabywczej (%)", "value": 15, "tol": 0.1, "unit": "%" }],
+        "solution": [
+          { "t": "f", "x": "wzrost nominalny = 1240 / 700 − 1 ≈ 77,14%\nwzrost cen 1995→1998 = 1,199 × 1,149 × 1,118 − 1 ≈ 54,02%\nzmiana realna = 1,7714 / 1,5402 − 1 ≈ 15%" },
+          { "t": "p", "x": "Siła nabywcza (płaca realna) wzrosła o około 15%." }
+        ]
+      },
+      {
+        "label": "d", "pts": 3,
+        "prompt": "Ile wynosił PKB per capita w 2008 r. w cenach stałych z 2005 r.?",
+        "answers": [{ "label": "PKB per capita 2008 w cenach z 2005 (zł)", "value": 30757, "tol": 2 }],
+        "solution": [
+          { "t": "f", "x": "33 464 / 1,088 ≈ 30 757 zł" }
+        ]
+      },
+      {
+        "label": "e", "pts": 3,
+        "prompt": "O ile procent realnie wzrósł PKB per capita w latach 2001–2010 (rok odniesienia 2001)?",
+        "answers": [{ "label": "Realny wzrost PKB per capita (%)", "value": 45.19, "tol": 0.05, "unit": "%" }],
+        "solution": [
+          { "t": "f", "x": "2001 w cenach z 2005: 20 379 / 0,912 ≈ 22 345 zł\n2010 w cenach z 2005: 37 115 / 1,144 ≈ 32 443 zł\nwzrost = 32 443 / 22 345 − 1 ≈ 45,19%" }
+        ]
+      }
+    ]
+  }
+}

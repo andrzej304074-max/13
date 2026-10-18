@@ -1,0 +1,109 @@
+{
+  "set": "owe-28-centralne",
+  "ed": 28,
+  "stage": "c",
+  "essays": [
+    {
+      "id": "owe-28-centralne-esej",
+      "kind": "ogolne",
+      "pts": 25,
+      "topic": "makro",
+      "topics": [
+        {
+          "title": "Czy polskiej gospodarce grozi pułapka średniego dochodu? Przedstaw studium problemu z perspektywy zmian systemowych w naszym kraju po 25 latach transformacji",
+          "schema": [
+            { "title": "Przykładowy schemat odpowiedzi", "pts": 25, "points": [
+              "Pułapka średniego dochodu – istota zjawiska",
+              "Konkurencyjność a rozwój gospodarki – od imitacji do innowacji",
+              "Uwarunkowania konwergencji gospodarki Polski z krajami wysoko rozwiniętymi:",
+              "  a) poziom innowacyjności polskich przedsiębiorstw",
+              "  b) poziom i struktura eksportu",
+              "  c) struktura inwestycji zagranicznych",
+              "  d) zmiany sektorowe w gospodarce",
+              "  e) sytuacja demograficzna i poziom kapitału społecznego",
+              "  f) jakość otoczenia regulacyjnego",
+              "Sposoby uniknięcia pułapki średniego dochodu",
+              "Ocena przemian gospodarczych w Polsce po 1989 r. i ich wpływu na ograniczenie luk rozwojowych",
+              "Jak uchronić gospodarkę Polski przed pułapką średniego dochodu – wnioski na przyszłość"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-28-centralne-zadanie",
+    "title": "Zadanie analityczne",
+    "pts": 15,
+    "topic": "mikro",
+    "intro": [
+      { "t": "p", "x": "Przedsiębiorstwa A i B startują w przetargu publicznym na budowę fragmentu drogi ekspresowej (częściowo w tunelu). Warunki są trudne i nie w pełni rozpoznane. Firma A oczekuje kosztu realizacji 500 mln zł i wymaga narzutu zysku 12% ponad koszty. Firma B oczekuje kosztu 450 mln zł i wymaga narzutu 20%. Narzuty wynikają z zysków możliwych w innych podobnych kontraktach. Zamawiający nie zna kosztów całkowitych wykonawców (koszt realizacji + zysk)." }
+    ],
+    "parts": [
+      {
+        "label": "1", "pts": 1,
+        "prompt": "Która firma zdobędzie kontrakt w przetargu pisemnym, w którym kryterium wyboru jest koszt całkowity budowy drogi? Podaj koszty całkowite obu ofert.",
+        "answers": [
+          { "label": "Koszt całkowity oferty A (mln zł)", "value": 560, "tol": 0.05 },
+          { "label": "Koszt całkowity oferty B (mln zł)", "value": 540, "tol": 0.05 }
+        ],
+        "solution": [
+          { "t": "f", "x": "A: 500 + 12% × 500 = 500 + 60 = 560 mln zł\nB: 450 + 20% × 450 = 450 + 90 = 540 mln zł" },
+          { "t": "p", "x": "Kontrakt zdobędzie firma B – jej oferta jest tańsza." }
+        ]
+      },
+      {
+        "label": "2", "pts": 4,
+        "prompt": "Przedstaw syntetycznie zalety i wady przetargu opartego na kryterium najniższej ceny z punktu widzenia zamawiającego.",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Zalety:" },
+          { "t": "ul", "items": [
+            "z góry określony koszt realizacji zadania,",
+            "bodźce do działań proefektywnościowych po stronie wykonawcy,",
+            "łatwość skonstruowania warunków przetargu,",
+            "przerzucenie odpowiedzialności za nieprzewidziane zdarzenia (np. wzrost kosztów) na wykonawcę,",
+            "prostota uzasadnienia wyboru i brak zarzutów subiektywności."
+          ] },
+          { "t": "p", "x": "Wady:" },
+          { "t": "ul", "items": [
+            "ryzyko wycofania się wykonawcy po rozstrzygnięciu przy błędnym oszacowaniu kosztów (nawet bez rażąco niskiej ceny),",
+            "wyższe koszty kontraktu – wykonawcy wliczają premię za ryzyko rosnącą z niepewnością warunków,",
+            "nieefektywność wyboru przy niektórych zamówieniach (brak analizy cena/jakość, funkcjonalności, późniejszych kosztów serwisu)."
+          ] }
+        ]
+      },
+      {
+        "label": "3", "pts": 4,
+        "prompt": "Zmodyfikowany przetarg: firmy ujawniają koszt realizacji i narzut zysku; kryterium – 30% koszt realizacji, 70% narzut zysku (ocena = najniższa wartość / wartość oferty × waga). Która firma wygra? Przedstaw obliczenia.",
+        "answers": [
+          { "label": "Ocena oferty A (pkt)", "value": 97, "tol": 0.05 },
+          { "label": "Ocena oferty B (pkt)", "value": 72, "tol": 0.05 }
+        ],
+        "solution": [
+          { "t": "f", "x": "A: (450 / 500) × 30 + (12% / 12%) × 70 = 27 + 70 = 97 pkt\nB: (450 / 450) × 30 + (12% / 20%) × 70 = 30 + 42 = 72 pkt" },
+          { "t": "p", "x": "Wygra firma A (97 pkt, o 25 pkt więcej niż B)." }
+        ]
+      },
+      {
+        "label": "4a", "pts": 2,
+        "prompt": "Nowa formuła: zamawiający określa wstępny koszt 460 mln zł; wykonawcy podają narzut zysku ponad koszty rzeczywiste (A: 10%, B: 15%); różnicę między kosztami rzeczywistymi a planowanymi pokrywa w 40% zamawiający, w 60% wykonawca. Którego oferenta wybrać i jaki będzie całkowity koszt budowy drogi, jeśli zamawiający dobrze oszacował koszt?",
+        "answers": [{ "label": "Całkowity koszt budowy przez wybranego oferenta (mln zł)", "value": 506, "tol": 0.05 }],
+        "solution": [
+          { "t": "f", "x": "koszt dla zamawiającego = 460 + (K_rzecz − 460) × 40% + K_rzecz × narzut\nA: 460 + 0 + 460 × 10% = 506 mln zł\nB: 460 + 0 + 460 × 15% = 529 mln zł" },
+          { "t": "p", "x": "Zamawiający powinien wybrać firmę A – zaproponowała niższy narzut zysku; koszt budowy wyniesie 506 mln zł." }
+        ]
+      },
+      {
+        "label": "4b", "pts": 4,
+        "prompt": "Przy jakim maksymalnym błędzie (w mln zł) w oszacowaniu wstępnego kosztu nowa formuła będzie dla zamawiającego mniej korzystna niż formuła z punktu 1?",
+        "answers": [{ "label": "Graniczny błąd oszacowania (mln zł)", "value": 68, "tol": 0.05 }],
+        "solution": [
+          { "t": "p", "x": "W formule z punktu 1 minimalny koszt wynosi 540 mln zł (oferta B). Szukamy kosztów rzeczywistych, przy których nowa formuła (oferta A) kosztuje tyle samo:" },
+          { "t": "f", "x": "540 = 460 + (K − 460) × 40% + K × 10%\n540 = 276 + 0,5K → K = 528 mln zł\nbłąd = 528 − 460 = 68 mln zł" },
+          { "t": "p", "x": "Nowa formuła jest mniej korzystna, jeśli zamawiający niedoszacuje kosztu o więcej niż 68 mln zł." }
+        ]
+      }
+    ]
+  }
+}
