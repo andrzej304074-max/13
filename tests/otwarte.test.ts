@@ -45,6 +45,8 @@ describe("punktacja zadania", () => {
     const p = publicTask(task);
     expect(JSON.stringify(p)).not.toContain('"value"');
     expect(JSON.stringify(p)).not.toContain("solution");
+    expect(publicTask({ ...task, own: true }).own).toBe(true);
+    expect(JSON.stringify(publicTask({ ...task, parts: [{ ...task.parts[0], answers: [{ label: "x", value: 1, alt: [2] }] }] }))).not.toContain('"alt"');
   });
 });
 

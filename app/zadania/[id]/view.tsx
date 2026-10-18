@@ -55,6 +55,7 @@ export function TaskView({ id }: { id: string }) {
       <nav className="muted small"><Link href="/zadania">← Zadania</Link></nav>
       <h1>{task.title}</h1>
       <p className="muted" style={{ marginTop: -8 }}>OWE {meta.edRoman} ({meta.year}) · etap {meta.stageName} · {task.pts} pkt · hasło edycji: „{meta.theme}”</p>
+      {task.own && <p className="card open-own" role="note" data-testid="own-note">Oficjalny klucz zawiera tylko treść tego zestawu – wyniki i tok rozwiązania opracowano w aplikacji. Traktuj je jako przykładowe, nie jako wzorzec jury.</p>}
       <div className="card stack task-body"><Blocks blocks={task.intro} /></div>
 
       <ol className="task-parts">

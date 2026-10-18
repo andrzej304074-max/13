@@ -1,0 +1,98 @@
+{
+  "set": "owe-35-okregowe",
+  "ed": 35,
+  "stage": "o",
+  "essays": [
+    {
+      "id": "owe-35-okregowe-esej",
+      "kind": "ogolne",
+      "own": true,
+      "pts": 25,
+      "topic": "finanse",
+      "topics": [
+        {
+          "title": "Efektywność rynku kapitałowego i jej znaczenie dla funkcjonowania gospodarki realnej",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Rynek kapitałowy – istota, segmenty (pierwotny i wtórny), instrumenty i uczestnicy",
+              "Rodzaje efektywności rynku: alokacyjna, operacyjna (transakcyjna) i informacyjna",
+              "Hipoteza rynku efektywnego E. Famy – forma słaba, półsilna i silna",
+              "Krytyka hipotezy: anomalie rynkowe, finanse behawioralne, bańki spekulacyjne, asymetria informacji",
+              "Kanały wpływu rynku kapitałowego na gospodarkę realną: alokacja oszczędności, koszt kapitału, wycena firm, efekt majątkowy"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Rola giełdy (np. GPW) w finansowaniu przedsiębiorstw – IPO, emisje akcji i obligacji",
+              "Przykłady (nie)efektywności informacyjnej – reakcje kursów na informacje, insider trading",
+              "Regulacje i nadzór (KNF, MAR, obowiązki informacyjne) jako warunek efektywności",
+              "Skutki nieefektywności dla gospodarki realnej – błędna alokacja kapitału, kryzysy (np. 2000, 2008)",
+              "Ocena efektywności polskiego rynku kapitałowego i jej znaczenia dla wzrostu gospodarczego"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-35-okregowe-zadanie",
+    "title": "Zadanie z analizy finansowej",
+    "pts": 15,
+    "topic": "firma",
+    "own": true,
+    "intro": [
+      { "t": "p", "x": "Przedsiębiorstwo ABC – spółka akcyjna notowana na giełdzie, branża odzieżowa. Wybrane dane finansowe na koniec ostatniego roku (ROA wyniósł 6%):" },
+      { "t": "table", "head": ["Wyszczególnienie", "Wartość (zł)"], "rows": [
+        ["Kapitał własny", "3 393 887,00"],
+        ["Zobowiązania długoterminowe", "1 340 554,00"],
+        ["Zobowiązania krótkoterminowe", "2 521 401,00"],
+        ["Aktywa trwałe", "4 432 309,00"],
+        ["Zysk netto", "435 350,52"],
+        ["Zapasy", "1 365 814,00"],
+        ["Wartość firmy", "179 618,00"]
+      ] }
+    ],
+    "parts": [
+      {
+        "label": "a", "pts": 3,
+        "prompt": "O czym informuje wskaźnik bieżącej płynności finansowej (1 pkt)? Ile wynosi w tym przedsiębiorstwie (2 pkt)?",
+        "answers": [{ "label": "Wskaźnik bieżącej płynności", "value": 1.12, "tol": 0.01 }],
+        "solution": [
+          { "t": "p", "x": "Wskaźnik bieżącej płynności (aktywa obrotowe / zobowiązania krótkoterminowe) informuje, ile razy aktywa obrotowe pokrywają zobowiązania bieżące – czyli o zdolności do terminowego regulowania krótkoterminowych zobowiązań." },
+          { "t": "f", "x": "suma bilansowa = 3 393 887 + 1 340 554 + 2 521 401 = 7 255 842 zł\n(kontrola: ROA = 435 350,52 / 7 255 842 = 6%)\naktywa obrotowe = 7 255 842 − 4 432 309 = 2 823 533 zł\nwskaźnik = 2 823 533 / 2 521 401 ≈ 1,12" }
+        ]
+      },
+      {
+        "label": "b", "pts": 4,
+        "prompt": "Przedstaw dwa sposoby obliczania kapitału obrotowego netto (2 pkt). Oblicz jego wartość (1 pkt) i zinterpretuj wynik (1 pkt).",
+        "answers": [{ "label": "Kapitał obrotowy netto (zł)", "value": 302132, "tol": 0.5 }],
+        "solution": [
+          { "t": "f", "x": "sposób „od dołu bilansu”: KON = aktywa obrotowe − zobowiązania krótkoterminowe = 2 823 533 − 2 521 401 = 302 132 zł\nsposób „od góry bilansu”: KON = (kapitał własny + zobowiązania długoterminowe) − aktywa trwałe = 4 734 441 − 4 432 309 = 302 132 zł" },
+          { "t": "p", "x": "Dodatni KON oznacza, że kapitał stały finansuje cały majątek trwały i dodatkowo 302 132 zł majątku obrotowego – część aktywów obrotowych jest finansowana kapitałem długoterminowym (bufor płynności)." }
+        ]
+      },
+      {
+        "label": "c", "pts": 6,
+        "prompt": "W kolejnym okresie: zysk zatrzymany 3 000 zł, inwestycje 874 400 zł, amortyzacja 664 846 zł, dynamika przychodów 105%; pozostałe wielkości jak w tabeli. Oszacuj dysponowany kapitał obrotowy netto, zapotrzebowanie na niego (metoda uproszczona) i niedobór.",
+        "answers": [
+          { "label": "Dysponowany KON (zł)", "value": 95578, "tol": 0.5 },
+          { "label": "Zapotrzebowanie na KON (zł)", "value": 317238.6, "tol": 1 },
+          { "label": "Niedobór KON (zł)", "value": 221660.6, "tol": 1 }
+        ],
+        "solution": [
+          { "t": "f", "x": "dysponowany KON = KON obecny + zysk zatrzymany + amortyzacja − inwestycje\n= 302 132 + 3 000 + 664 846 − 874 400 = 95 578 zł\nzapotrzebowanie (metoda uproszczona – proporcjonalnie do przychodów) = 302 132 × 1,05 = 317 238,60 zł\nniedobór = 317 238,60 − 95 578 = 221 660,60 zł" }
+        ]
+      },
+      {
+        "label": "d", "pts": 2,
+        "prompt": "Wskaż dwa możliwe sposoby pokrycia niedoboru kapitału obrotowego netto.",
+        "answers": [],
+        "solution": [
+          { "t": "ul", "items": [
+            "zwiększenie kapitału stałego: emisja akcji, wyższy zysk zatrzymany (niższa dywidenda), kredyt długoterminowy lub emisja obligacji,",
+            "ograniczenie lub przesunięcie inwestycji w majątek trwały, sprzedaż zbędnych aktywów trwałych (np. leasing zwrotny),",
+            "zmniejszenie zapotrzebowania – szybsze inkaso należności (np. faktoring), ograniczenie zapasów, dłuższe terminy płatności u dostawców."
+          ] }
+        ]
+      }
+    ]
+  }
+}

@@ -76,6 +76,7 @@ export function EssayView({ id }: { id: string }) {
       <h1>{essay.kind === "sponsor" ? "Pytanie do wyboru (sponsor)" : "Pytanie opisowe o charakterze ogólnym"}</h1>
       <p className="muted" style={{ marginTop: -8 }}>OWE {meta.edRoman} ({meta.year}) · etap {meta.stageName} · {essay.pts} pkt · hasło edycji: „{meta.theme}”</p>
 
+      {essay.own && <p className="card open-own" role="note" data-testid="own-note">Oficjalny klucz zawiera tylko treść tego zestawu – schemat odpowiedzi opracowano w aplikacji. Traktuj je jako przykładowe, nie jako wzorzec jury.</p>}
       {essay.topics.length > 1 && <p style={{ margin: 0 }}><strong>Wybierz jeden temat:</strong></p>}
       <div className="essay-topics" role={essay.topics.length > 1 ? "radiogroup" : undefined}>
         {essay.topics.map((t, i) => (

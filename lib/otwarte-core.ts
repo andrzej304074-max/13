@@ -32,6 +32,8 @@ export interface TaskPart {
 }
 export interface Task {
   id: string; title: string; pts: number; topic: string;
+  /** Rozwiązanie opracowane w aplikacji – oficjalny klucz go nie zawiera. */
+  own?: boolean;
   intro: Block[];
   parts: TaskPart[];
 }
@@ -41,6 +43,8 @@ export interface Essay {
   id: string;
   /** „ogolne” – pytanie opisowe o charakterze ogólnym; „sponsor” – pytanie do wyboru od sponsora (bez schematu w kluczu). */
   kind: "ogolne" | "sponsor";
+  /** Schemat opracowany w aplikacji – oficjalny klucz go nie zawiera. */
+  own?: boolean;
   pts: number; topic: string;
   topics: EssayTopic[];
 }

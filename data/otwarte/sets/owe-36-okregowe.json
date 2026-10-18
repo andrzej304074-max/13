@@ -1,0 +1,113 @@
+{
+  "set": "owe-36-okregowe",
+  "ed": 36,
+  "stage": "o",
+  "essays": [
+    {
+      "id": "owe-36-okregowe-esej",
+      "kind": "ogolne",
+      "own": true,
+      "pts": 25,
+      "topic": "polityka",
+      "topics": [
+        {
+          "title": "W jaki sposób banki centralne realizują ochronę wartości pieniądza?",
+          "schema": [
+            { "title": "Część teoretyczna", "pts": 15, "points": [
+              "Wartość pieniądza – siła nabywcza, inflacja i jej koszty",
+              "Bank centralny: funkcje (bank emisyjny, bank banków, bank państwa) i cel stabilności cen",
+              "Niezależność banku centralnego i problem niespójności czasowej (wiarygodność polityki)",
+              "Strategie polityki pieniężnej – cel inflacyjny, kotwica kursowa, cel pieniężny",
+              "Instrumenty polityki pieniężnej: stopy procentowe, operacje otwartego rynku, rezerwa obowiązkowa, operacje kredytowo-depozytowe",
+              "Mechanizm transmisji monetarnej (kanał stopy procentowej, kredytowy, kursowy, oczekiwań) i jego opóźnienia"
+            ] },
+            { "title": "Część praktyczna", "pts": 10, "points": [
+              "Strategia bezpośredniego celu inflacyjnego NBP (2,5% ± 1 p.p.) i jej realizacja",
+              "Działania wybranych banków centralnych (NBP, EBC, Fed) wobec inflacji po pandemii i szokach energetycznych 2021–2022",
+              "Komunikacja banku centralnego i kotwiczenie oczekiwań inflacyjnych (forward guidance)",
+              "Ograniczenia skuteczności: szoki podażowe, polityka fiskalna, kurs walutowy, dolna granica stóp",
+              "Ocena skuteczności ochrony wartości pieniądza przez wybrany bank centralny"
+            ] }
+          ]
+        }
+      ]
+    }
+  ],
+  "task": {
+    "id": "owe-36-okregowe-zadanie",
+    "title": "Zadanie z analizy finansowej",
+    "pts": 15,
+    "topic": "firma",
+    "own": true,
+    "intro": [
+      { "t": "p", "x": "Wybrane pozycje rachunku zysków i strat przedsiębiorstwa Fox za 2021 r. (wariant porównawczy). Suma bilansowa: 9 845 000 zł na 31.12.2020 i 11 667 000 zł na 31.12.2021. Puste nazwy i wartość „…” uzupełniasz w podpunktach a i b." },
+      { "t": "table", "head": ["Wyszczególnienie", "Wartość (zł)"], "rows": [
+        ["Przychody netto ze sprzedaży i zrównane z nimi", "2 573 341,00"],
+        ["Amortyzacja", "…"],
+        ["(nazwa do uzupełnienia)", "1 782 815,00"],
+        ["(nazwa do uzupełnienia)", "253 790,00"],
+        ["(nazwa do uzupełnienia)", "68 656,00"],
+        ["(nazwa do uzupełnienia)", "201 938,00"],
+        ["Ubezpieczenia społeczne i inne świadczenia", "59 129,00"],
+        ["Pozostałe koszty rodzajowe", "27 083,00"],
+        ["Wartość sprzedanych towarów i materiałów", "44 899,00"],
+        ["Pozostałe koszty operacyjne", "15 396,00"],
+        ["Zysk z działalności operacyjnej", "426 038,00"],
+        ["Przychody finansowe (wyłącznie odsetki)", "45 048,00"],
+        ["Koszty finansowe (wyłącznie odsetki)", "76 710,00"],
+        ["Zysk (strata) brutto", "394 376,00"],
+        ["Zysk (strata) netto", "319 445,00"]
+      ] }
+    ],
+    "parts": [
+      {
+        "label": "a", "pts": 2,
+        "prompt": "Wymień brakujące w tabeli nazwy kosztów rodzajowych (w dowolnej kolejności).",
+        "answers": [],
+        "solution": [
+          { "t": "p", "x": "Koszty rodzajowe w wariancie porównawczym to: amortyzacja, zużycie materiałów i energii, usługi obce, podatki i opłaty, wynagrodzenia, ubezpieczenia społeczne i inne świadczenia, pozostałe koszty rodzajowe, wartość sprzedanych towarów i materiałów. Brakuje więc:" },
+          { "t": "ul", "items": ["zużycie materiałów i energii,", "usługi obce,", "podatki i opłaty,", "wynagrodzenia."] }
+        ]
+      },
+      {
+        "label": "b", "pts": 2,
+        "prompt": "Łączna wartość kosztów rodzajowych wynosi 2 531 620 zł. Oblicz wartość amortyzacji.",
+        "answers": [{ "label": "Amortyzacja (zł)", "value": 93310, "tol": 0.5 }],
+        "solution": [
+          { "t": "f", "x": "pozostałe koszty rodzajowe razem = 1 782 815 + 253 790 + 68 656 + 201 938 + 59 129 + 27 083 + 44 899 = 2 438 310 zł\namortyzacja = 2 531 620 − 2 438 310 = 93 310 zł" }
+        ]
+      },
+      {
+        "label": "c", "pts": 5,
+        "prompt": "O czym informuje wskaźnik pokrycia odsetek zyskiem (2 pkt)? Oszacuj jego wartość dla przedsiębiorstwa Fox (3 pkt).",
+        "answers": [{ "label": "Wskaźnik pokrycia odsetek", "value": 6.14, "tol": 0.01, "alt": [5.55] }],
+        "solution": [
+          { "t": "p", "x": "Wskaźnik pokrycia odsetek (TIE) informuje, ile razy zysk przed odsetkami i opodatkowaniem pokrywa odsetki od kapitału obcego – czyli o zdolności obsługi zadłużenia i bezpieczeństwie wierzycieli. Im wyższy, tym mniejsze ryzyko; wartość poniżej 1 oznacza, że zysk nie wystarcza na odsetki." },
+          { "t": "f", "x": "EBIT = zysk brutto + koszty odsetek = 394 376 + 76 710 = 471 086 zł\nwskaźnik = 471 086 / 76 710 ≈ 6,14\n(w wersji z zyskiem operacyjnym: 426 038 / 76 710 ≈ 5,55 – też akceptowane)" }
+        ]
+      },
+      {
+        "label": "d", "pts": 4,
+        "prompt": "Oszacuj odchylenie bezwzględne majątku całkowitego (2 pkt) oraz ogólny wskaźnik dynamiki majątku (2 pkt, rok poprzedni = 100).",
+        "answers": [
+          { "label": "Odchylenie bezwzględne (zł)", "value": 1822000, "tol": 0.5 },
+          { "label": "Wskaźnik dynamiki majątku (%)", "value": 118.51, "tol": 0.01 }
+        ],
+        "solution": [
+          { "t": "f", "x": "odchylenie = 11 667 000 − 9 845 000 = 1 822 000 zł\ndynamika = 11 667 000 / 9 845 000 × 100 ≈ 118,51%" }
+        ]
+      },
+      {
+        "label": "e", "pts": 2,
+        "prompt": "Przedstaw argumenty za i przeciw uwzględnianiu rocznego wskaźnika cen towarów i usług konsumpcyjnych (CPI) w szacowaniu ogólnego wskaźnika dynamiki majątku.",
+        "answers": [],
+        "solution": [
+          { "t": "ul", "items": [
+            "Za: wartości bilansowe są nominalne – deflowanie pozwala ocenić realny wzrost majątku i oddzielić go od wzrostu cen (przy wysokiej inflacji nominalna dynamika zawyża rozwój firmy).",
+            "Przeciw: CPI mierzy ceny koszyka konsumpcyjnego, a nie ceny składników majątku przedsiębiorstwa (maszyn, budynków, zapasów, należności); część aktywów (np. środki trwałe) wyceniana jest w cenach historycznych pomniejszonych o amortyzację, a aktywa pieniężne nie zmieniają wartości nominalnej – CPI może więc zniekształcić wynik."
+          ] }
+        ]
+      }
+    ]
+  }
+}

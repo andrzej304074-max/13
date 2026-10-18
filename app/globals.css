@@ -1242,6 +1242,7 @@ body:has(.speech-bar) main.container { padding-bottom: 160px; }
 .open-item:hover { border-color: var(--accent); }
 .open-meta { font-size: .85rem; color: var(--muted); }
 .open-title { overflow-wrap: anywhere; }
+.open-own { margin: 0; border-left: 4px solid var(--lv-mid); font-size: .92rem; }
 .open-state { font-size: .85rem; color: var(--muted); }
 .open-state.done { color: var(--good); }
 .ob-p { margin: 0; line-height: 1.6; }
