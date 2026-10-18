@@ -26,6 +26,7 @@ export function AccountMenu({ email, isAdmin }: { email: string; isAdmin: boolea
         <span className="email" title={email}>{email}</span>
         {isAdmin && <Link href="/admin">Panel admina</Link>}
         <Link href="/konto/ustawienia">Ustawienia</Link>
+        <Link href={`/zgloszenia?z=${encodeURIComponent(path)}`} data-testid="bug-link">🐞 Zgłoś błąd</Link>
         <LogoutButton />
       </div>
     </details>

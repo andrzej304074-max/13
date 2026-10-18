@@ -1196,3 +1196,16 @@ body:has(.speech-bar) main.container { padding-bottom: 160px; }
 .note-card-hint { font-size: .8em; }
 .note-card.back .note-card-body span { white-space: pre-wrap; }
 .note-card-picker { position: relative; z-index: 5; }
+
+/* zgłoszenia błędów */
+.bug-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.bug-item { display: flex; flex-direction: column; gap: 6px; }
+.bug-item.admin { padding: 12px 0; border-top: 1px solid var(--border); }
+.bug-item.admin:first-child { border-top: 0; padding-top: 0; }
+.bug-text { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.bug-note { margin: 0; padding: 8px 10px; border-left: 3px solid var(--accent); background: var(--accent-soft); border-radius: 6px; }
+.bug-user { overflow-wrap: anywhere; }
+.bug-status.nowe { border-color: var(--accent); color: var(--accent); }
+.bug-status.w_toku { border-color: var(--lv-mid); }
+.bug-status.naprawione { border-color: var(--lv-good); color: var(--good); }
+.bug-status.odrzucone { opacity: .75; }

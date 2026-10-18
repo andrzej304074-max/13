@@ -30,6 +30,7 @@ export default async function SettingsPage() {
           )}
         </>
       )}
+      <p><Link href="/zgloszenia" data-testid="bug-settings-link">🐞 Zgłoś błąd albo zobacz swoje zgłoszenia →</Link></p>
       {me.isAdmin && <p><Link href="/admin">Panel admina →</Link></p>}
       <p><LogoutButton className="btn secondary" /></p>
     </div>

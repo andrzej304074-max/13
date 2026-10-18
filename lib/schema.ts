@@ -230,6 +230,20 @@ CREATE TABLE IF NOT EXISTS own_cards (
   updated_at timestamptz NOT NULL DEFAULT now()
 );
 CREATE INDEX IF NOT EXISTS own_cards_user_idx ON own_cards (user_id, updated_at DESC);
+-- Zgłoszenia błędów od użytkowników (lib/bugs.ts) – lista w panelu admina.
+CREATE TABLE IF NOT EXISTS bug_reports (
+  id         uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id    uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  text       text NOT NULL,
+  page       text,
+  device     text,
+  status     text NOT NULL DEFAULT 'nowe' CHECK (status IN ('nowe', 'w_toku', 'naprawione', 'odrzucone')),
+  admin_note text,
+  created_at timestamptz NOT NULL DEFAULT now(),
+  updated_at timestamptz NOT NULL DEFAULT now()
+);
+CREATE INDEX IF NOT EXISTS bug_reports_user_idx ON bug_reports (user_id, created_at DESC);
+CREATE INDEX IF NOT EXISTS bug_reports_status_idx ON bug_reports (status, created_at DESC);
 -- Zużycie znaków Azure: dzień × źródło („cron” – porcje w tle, id konta – nagrania na bieżąco).
 CREATE TABLE IF NOT EXISTS tts_usage (
   day   date NOT NULL,
