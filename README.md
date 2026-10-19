@@ -338,8 +338,7 @@ Po pierwszym wdrożeniu od razu załóż swoje konto – pierwsze konto zostaje 
 - **Utrudnienie kopiowania** (`app/components/copy-guard.tsx`):
   - poza polami edycji (notatki, brudnopisy, formularze) nie da się zaznaczać ani kopiować tekstu; menu kontekstowe, przeciąganie i skróty Ctrl/Cmd+C/X/A/S/P/U są wyłączone;
   - w Podręczniku zaznaczanie działa – podkreślenia i „Do notatki” mają własne menu – ale zaznaczenia nie da się skopiować;
-  - drukowanie pokazuje tylko informację, że jest wyłączone;
-  - na stronach z treścią jest dyskretny znak wodny z adresem konta.
+  - drukowanie pokazuje tylko informację, że jest wyłączone.
 
   **Uczciwie:** blokady w przeglądarce utrudniają kopiowanie, ale go nie uniemożliwiają (narzędzia deweloperskie, zrzut ekranu, wyłączenie skryptów).
   Realną ochroną są serwer i limity: pytania z kluczem tylko w ramach testu lub zadania, rozwiązania dopiero po odpowiedzi,

@@ -49,7 +49,6 @@ for (const p of ["/", "/nauka", "/nauka/lekcja/mikro-rynek-2?sub=1", "/nauka/pod
 await admin.goto(`${B}/nauka/lekcja/mikro-rynek-2?sub=1`); await admin.waitForLoadState("networkidle");
 check(await admin.locator("button").count() > 3, "lekcja interaktywna przy CSP (React działa)");
 await admin.goto(`${B}/admin`); await admin.waitForSelector('[data-testid="security-admin"]');
-check(await admin.locator('[data-testid="watermark"]').count() === 0, "znak wodny: brak w panelu admina");
 
 // 3. CSRF
 const user = await login("drugi@example.com", "nowe-haslo-123");
@@ -109,7 +108,7 @@ await admin.locator('[data-testid="security-admin"]').screenshot({ path: `${OUT}
 
 // 7. blokada kopiowania (telefon) – treść tak, pola edycji nie
 await user.goto(`${B}/pojecia`); await user.waitForLoadState("networkidle");
-check(await user.locator('[data-testid="watermark"]').count() === 1, "znak wodny na stronie z treścią");
+check(!(await user.locator("body").innerText()).includes("drugi@example.com"), "bez znaku wodnego z adresem konta");
 check(await user.evaluate(() => getComputedStyle(document.body).userSelect) === "none", "user-select: none na treści");
 const blocked = await user.evaluate(() => {
   const ev = (t, e) => { t.dispatchEvent(e); return e.defaultPrevented; };

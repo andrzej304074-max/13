@@ -1,7 +1,6 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-import { useEffect, useMemo } from "react";
+import { useEffect } from "react";
 
 /** Pola, w których wolno zaznaczać, kopiować i wklejać (notatki, brudnopisy, formularze). */
 const EDITABLE = "input, textarea, select, [contenteditable=''], [contenteditable='true'], [data-allow-copy]";
@@ -50,16 +49,4 @@ export function CopyGuard() {
     };
   }, []);
   return null;
-}
-
-/** Dyskretny znak wodny z nazwą konta – na stronach z treścią (bez ekranów konta i panelu admina). */
-export function Watermark({ name }: { name: string }) {
-  const path = usePathname();
-  const bg = useMemo(() => {
-    const esc = name.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
-    const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='320' height='200'><text x='20' y='120' transform='rotate(-24 160 100)' font-family='sans-serif' font-size='15' fill='rgb(128,128,128)' fill-opacity='0.09'>${esc}</text></svg>`;
-    return `url("data:image/svg+xml,${encodeURIComponent(svg)}")`;
-  }, [name]);
-  if (/^\/(konto|admin|zablokowane)(\/|$)/.test(path)) return null;
-  return <div className="watermark" aria-hidden style={{ backgroundImage: bg }} data-testid="watermark" />;
 }

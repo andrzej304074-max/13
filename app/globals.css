@@ -1305,7 +1305,6 @@ body:has(.speech-bar) main.container { padding-bottom: 160px; }
 .no-copy :is(input, textarea, select, [contenteditable="true"], [contenteditable=""], .reader-body, [data-allow-copy]) {
   -webkit-user-select: text; user-select: text;
 }
-.watermark { position: fixed; inset: 0; z-index: 40; pointer-events: none; background-repeat: repeat; }
 /* drukowanie wyłączone – zamiast treści krótka informacja */
 @media print {
   body > * { display: none !important; }
