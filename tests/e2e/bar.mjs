@@ -13,7 +13,9 @@ for (const path of ["/", "/slownik", "/nauka", "/nauka/podrecznik", "/fiszki", "
 // test
 await p.goto(B + "/"); await p.click('button.btn:has-text("Rozpocznij test")'); await p.waitForSelector("button.option");
 check(await p.locator("nav.bottom-bar").isVisible(), "pasek w teście");
-await p.locator('button.btn:has-text("Zakończ test")').scrollIntoViewIfNeeded();
+// do końca strony: przycisk musi dać się wysunąć nad pasek (odstęp na dole strony); samo scrollIntoViewIfNeeded
+// nie przewija, gdy przycisk jest już w oknie, choć pod paskiem – wynik zależał od długości wylosowanego pytania
+await p.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight)); await p.waitForTimeout(300);
 const zb = await p.locator('button.btn:has-text("Zakończ test")').boundingBox(); const t1 = await barTop();
 check(zb.y + zb.height <= t1, `przycisk „Zakończ test” nad paskiem (${zb.y + zb.height} ≤ ${t1})`);
 await p.screenshot({ path: `${OUT}/bar-test.png` });

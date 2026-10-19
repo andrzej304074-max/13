@@ -136,7 +136,14 @@ Przegląd po rozbudowie o:
   - `security.mjs` – nagłówki, CSP, CSRF, limity, blokada logowania, kopiowanie, druk;
   - `authsweep.mjs` – wszystkie 67 tras API: bez logowania, z fałszywą sesją, zwykłe konto do tras admina.
 - **Crawl:** 35 adresów × 2 motywy × 2 szerokości, w tym nowe ekrany: Zadania, Eseje, Olimpiada, Literatura, Ogłoszenia, Zgłoszenia.
-- **Pozostałe:** testy jednostkowe (vitest), zrzuty nowych ekranów na telefonie, `npm audit` (0 podatności).
+- **Pozostałe:**
+  - testy jednostkowe (vitest, 166);
+  - zrzuty nowych ekranów na telefonie (390 px, jasny i ciemny motyw: zadania, eseje, Olimpiada, Literatura, ogłoszenia, zgłoszenia, statystyki OWE) – bez poziomego przewijania i błędów;
+  - `npm audit` (0 podatności).
+- **Wynik końcowy:**
+  - wszystkie 32 skrypty regresji bez błędów;
+  - crawl: 140 stron, jedyne komunikaty to brak kluczy Azure/R2 w panelu admina w środowisku testowym (oczekiwane);
+  - `bar.mjs` zależał od długości wylosowanego pytania – poprawiony test (przewinięcie do końca strony).
 
 ## Poprawione
 1. **Blokady sekcji po dodaniu podzakładek** (`lib/access-core.ts`).

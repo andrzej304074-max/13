@@ -486,6 +486,10 @@ Każdy kolejny push na gałąź produkcyjną (Settings → Git → Production Br
 
 ## Skrypty
 
-- `npm test` — testy jednostkowe punktacji
+- `npm test` — testy jednostkowe (vitest: punktacja, kurs, powtórki, statystyki, ogłoszenia, bezpieczeństwo i inne)
 - `npm run typecheck` — sprawdzenie typów
 - `npm run validate-questions` — walidacja bazy pytań
+- `bash tests/e2e/run.sh [katalog-na-zrzuty] [log-serwera]` — pełna regresja e2e (Playwright, 32 skrypty: konta, testy,
+  nauka, notatki, fiszki, mapa, podręcznik, zadania i eseje, ogłoszenia, zgłoszenia, wydajność danych, bezpieczeństwo,
+  sondy wszystkich tras API, przejście po wszystkich stronach w obu motywach i szerokościach). **Tylko na lokalnej bazie
+  testowej** – na początku czyści konta. Wymaga serwera produkcyjnego na porcie 3100 (instrukcja w nagłówku skryptu).
