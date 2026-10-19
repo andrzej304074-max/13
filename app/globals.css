@@ -1298,3 +1298,16 @@ body:has(.speech-bar) main.container { padding-bottom: 160px; }
 .ann-admin-form textarea { min-height: 110px; }
 .ann-admin-item { display: grid; gap: 8px; }
 .ann-voters { font-size: .85rem; color: var(--muted); overflow-wrap: anywhere; }
+
+/* Ochrona treści (app/components/copy-guard.tsx): bez zaznaczania poza polami edycji; w Podręczniku zaznaczanie
+   działa (podkreślenia, „Do notatki”), ale kopiowanie blokuje skrypt. */
+.no-copy body { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+.no-copy :is(input, textarea, select, [contenteditable="true"], [contenteditable=""], .reader-body, [data-allow-copy]) {
+  -webkit-user-select: text; user-select: text;
+}
+.watermark { position: fixed; inset: 0; z-index: 40; pointer-events: none; background-repeat: repeat; }
+/* drukowanie wyłączone – zamiast treści krótka informacja */
+@media print {
+  body > * { display: none !important; }
+  body::before { content: "Drukowanie treści aplikacji jest wyłączone."; display: block; padding: 40px; font-size: 18px; }
+}

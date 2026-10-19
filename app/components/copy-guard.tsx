@@ -33,6 +33,8 @@ export function CopyGuard() {
       e.preventDefault();
     };
     const drag = (e: DragEvent) => { if (!editable(e.target)) e.preventDefault(); };
+    // zaznaczanie wyłączone w CSS (poza polami edycji i tekstem Podręcznika – patrz .no-copy w globals.css)
+    document.documentElement.classList.add("no-copy");
     document.addEventListener("copy", block, true);
     document.addEventListener("cut", block, true);
     document.addEventListener("contextmenu", block, true);
@@ -44,6 +46,7 @@ export function CopyGuard() {
       document.removeEventListener("contextmenu", block, true);
       document.removeEventListener("dragstart", drag, true);
       document.removeEventListener("keydown", keys, true);
+      document.documentElement.classList.remove("no-copy");
     };
   }, []);
   return null;

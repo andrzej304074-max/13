@@ -23,8 +23,11 @@ import {
   normEmail,
   passwordError,
   verifyPassword,
+  needsRehash,
+  DUMMY_HASH,
 } from "./auth-core";
 import { cleanup } from "./db-usage";
+import { accountLimit, loginAllowed, loginFailed, loginOk } from "./security";
 import { isBlocked, isBlockMode, keyLabel, pathKey, sanitizeKeys, type BlockMode } from "./access-core";
 import { accessFor } from "./access";
 
@@ -214,6 +217,7 @@ export async function register(rawEmail: unknown, pass: unknown, code: unknown):
   const email = normEmail(rawEmail);
   const err = emailError(email) ?? passwordError(pass);
   if (err) throw new HttpError(400, err);
+  await accountLimit("rejestracja");
   const hash = await hashPassword(pass as string);
   const row = await withTx(async (q) => {
     // blokada tabeli: dwie rejestracje naraz nie mogą obie zostać „pierwszym kontem”
@@ -248,11 +252,18 @@ export async function register(rawEmail: unknown, pass: unknown, code: unknown):
 }
 
 export async function login(rawEmail: unknown, pass: unknown): Promise<User> {
-  const row = await loadRow("email = $1", normEmail(rawEmail));
+  const email = normEmail(rawEmail).slice(0, 320);
+  // blokada po zbyt wielu nieudanych próbach (na konto i na IP) – sprawdzana przed hasłem
+  await loginAllowed(email);
+  const row = await loadRow("email = $1", email);
   // ten sam komunikat dla nieznanego e-maila i złego hasła
-  if (!row || typeof pass !== "string" || !(await verifyPassword(pass, row.pass_hash))) {
+  const ok = typeof pass === "string" && (await verifyPassword(pass, row?.pass_hash ?? DUMMY_HASH));
+  if (!row || !ok) {
+    await loginFailed(email, row?.id ?? null);
     throw new HttpError(401, "Nieprawidłowy e-mail lub hasło.");
   }
+  await loginOk(email);
+  if (needsRehash(row.pass_hash)) await query("UPDATE users SET pass_hash = $2 WHERE id = $1", [row.id, await hashPassword(pass as string)]);
   await startSession(row.id);
   // sprzątanie bazy (wygasłe sesje itp.) najwyżej raz na dobę – nie opóźnia logowania przy błędzie
   await cleanup().catch(() => null);
@@ -300,6 +311,7 @@ export async function requestReset(rawEmail: unknown) {
   const err = emailError(email);
   if (err) throw new HttpError(400, err);
   if (!mailConfigured()) throw new HttpError(503, "Wysyłka maili nie jest skonfigurowana – poproś administratora o pomoc.");
+  await accountLimit("reset");
   const row = await loadRow("email = $1", email);
   if (!row) return; // ta sama odpowiedź dla nieznanego adresu
   const token = newToken();
@@ -325,6 +337,9 @@ export async function confirmReset(token: unknown, newPass: unknown) {
     await q("DELETE FROM user_sessions WHERE user_id = $1", [rows[0].user_id]);
     return rows[0].user_id;
   });
+  // nowe hasło zdejmuje blokadę logowania konta
+  const row = await loadRow("id = $1", userId);
+  if (row) await loginOk(row.email);
   await startSession(userId);
 }
 

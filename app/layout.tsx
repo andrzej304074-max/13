@@ -8,6 +8,7 @@ import { QuickNotes } from "./components/notes/quick-notes";
 import { SectionNav, SubTabs } from "./components/nav";
 import { AccessGuard, AccessProvider } from "./components/access";
 import { ReaderBar } from "./components/speech/reader-bar";
+import { CopyGuard, Watermark } from "./components/copy-guard";
 import { accessFor } from "@/lib/access";
 import { firstAllowed, isBlocked, type BlockMode } from "@/lib/access-core";
 import "./globals.css";
@@ -18,6 +19,7 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "Testy OWE",
   description: "Testy z pytań z poprzednich edycji Olimpiady Wiedzy Ekonomicznej",
+  robots: { index: false, follow: false },
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
@@ -55,6 +57,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           </main>
           {me?.active && <SectionNav variant="bottom" />}
           {me?.active && <ReaderBar />}
+          {me?.active && <><CopyGuard /><Watermark name={me.email} /></>}
         </AccessProvider>
       </body>
     </html>

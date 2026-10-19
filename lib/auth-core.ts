@@ -30,22 +30,42 @@ export function passwordError(pass: unknown): string | null {
   return null;
 }
 
-const scryptAsync = (pass: string, salt: Buffer) =>
-  new Promise<Buffer>((res, rej) => scrypt(pass, salt, 64, (err, key) => (err ? rej(err) : res(key))));
+/** Koszt scrypt: N = 2^16, r = 8 (64 MB, ~0,1–0,2 s) – wg zaleceń OWASP; stare hasze (N = 2^14) przechodzą na nowy przy logowaniu. */
+export const SCRYPT_LOG_N = 16;
+const scryptAsync = (pass: string, salt: Buffer, logN: number) =>
+  new Promise<Buffer>((res, rej) =>
+    scrypt(pass, salt, 64, { N: 2 ** logN, r: 8, p: 1, maxmem: 256 * 2 ** logN * 8 }, (err, key) => (err ? rej(err) : res(key))));
 
-/** Hasło → „scrypt$<sól hex>$<hash hex>”. */
+/** Hasło → „scrypt$<log2 N>$<sól hex>$<hash hex>” (starszy zapis „scrypt$<sól>$<hash>” = N 2^14). */
 export async function hashPassword(pass: string): Promise<string> {
   const salt = randomBytes(16);
-  return `scrypt$${salt.toString("hex")}$${(await scryptAsync(pass, salt)).toString("hex")}`;
+  return `scrypt$${SCRYPT_LOG_N}$${salt.toString("hex")}$${(await scryptAsync(pass, salt, SCRYPT_LOG_N)).toString("hex")}`;
+}
+
+function parseHash(stored: string): { logN: number; salt: string; hash: string } | null {
+  const p = stored.split("$");
+  if (p[0] !== "scrypt") return null;
+  if (p.length === 3 && p[1] && p[2]) return { logN: 14, salt: p[1], hash: p[2] };
+  const logN = Number(p[1]);
+  if (p.length === 4 && Number.isInteger(logN) && logN >= 14 && logN <= 20 && p[2] && p[3]) return { logN, salt: p[2], hash: p[3] };
+  return null;
 }
 
 export async function verifyPassword(pass: string, stored: string): Promise<boolean> {
-  const [alg, saltHex, hashHex] = stored.split("$");
-  if (alg !== "scrypt" || !saltHex || !hashHex) return false;
-  const key = await scryptAsync(pass, Buffer.from(saltHex, "hex"));
-  const expected = Buffer.from(hashHex, "hex");
+  const h = parseHash(stored);
+  if (!h) return false;
+  const key = await scryptAsync(pass, Buffer.from(h.salt, "hex"), h.logN);
+  const expected = Buffer.from(h.hash, "hex");
   return key.length === expected.length && timingSafeEqual(key, expected);
 }
+
+/** Hash ze starszym (słabszym) kosztem – do przeliczenia po udanym logowaniu. */
+export function needsRehash(stored: string): boolean {
+  return (parseHash(stored)?.logN ?? 0) < SCRYPT_LOG_N;
+}
+
+/** Hash „na pusto” dla nieznanego e-maila – logowanie trwa tyle samo, czy konto istnieje, czy nie. */
+export const DUMMY_HASH = `scrypt$${SCRYPT_LOG_N}$${"0".repeat(32)}$${"0".repeat(128)}`;
 
 /** Kod aktywacji: 5 cyfr (może zaczynać się od 0). */
 export function genActivationCode(): string {

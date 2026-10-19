@@ -2,6 +2,7 @@ import { handle, readJson } from "@/lib/api";
 import { requireSection, requireUser } from "@/lib/auth";
 import { ALLOWED_COUNTS, ENDLESS, type TestSize } from "@/lib/scoring";
 import { isStage } from "@/lib/questions";
+import { contentQuota } from "@/lib/security";
 import { createTest, HttpError } from "@/lib/tests";
 import type { Bank, Origin } from "@/lib/types";
 
@@ -22,6 +23,7 @@ export async function POST(req: Request) {
     }
     if (stage !== null && !isStage(stage)) throw new HttpError(400, "Nieznany etap zawodów.");
     await requireSection(me, bank === "slownik" ? "/slownik" : "/");
+    await contentQuota(me, "test");
     // etap (szkolny / okręgowy) tylko w pytaniach OWE jednokrotnego wyboru
     const filter = bank === "slownik" ? { origin: origin as Origin | null, section: section as number | null }
       : type === "single" && stage ? { stage } : {};

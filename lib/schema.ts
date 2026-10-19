@@ -306,4 +306,20 @@ CREATE TABLE IF NOT EXISTS announcement_reads (
   read_at   timestamptz NOT NULL DEFAULT now(),
   PRIMARY KEY (user_id, item_id)
 );
+-- Limity zapytań (okno przesuwne: wpisy z kluczem w ostatnich N sekundach) i dziennik zdarzeń bezpieczeństwa (lib/security.ts).
+CREATE TABLE IF NOT EXISTS rate_hits (
+  key text NOT NULL,
+  at  timestamptz NOT NULL DEFAULT now()
+);
+CREATE INDEX IF NOT EXISTS rate_hits_key_at_idx ON rate_hits (key, at);
+CREATE INDEX IF NOT EXISTS rate_hits_at_idx ON rate_hits (at);
+CREATE TABLE IF NOT EXISTS security_events (
+  id      bigserial PRIMARY KEY,
+  at      timestamptz NOT NULL DEFAULT now(),
+  kind    text NOT NULL,
+  user_id uuid REFERENCES users(id) ON DELETE SET NULL,
+  ip      text NOT NULL DEFAULT '',
+  detail  text NOT NULL DEFAULT ''
+);
+CREATE INDEX IF NOT EXISTS security_events_at_idx ON security_events (at DESC);
 `;

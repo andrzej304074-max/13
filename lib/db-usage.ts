@@ -1,3 +1,4 @@
+import { cleanupSecurity } from "./security";
 import { query } from "./db";
 
 /**
@@ -45,6 +46,7 @@ export async function cleanup(force = false): Promise<{ sessions: number; resets
   const s = await query("DELETE FROM user_sessions WHERE expires_at < now()");
   const r = await query("DELETE FROM password_resets WHERE expires_at < now() - interval '1 day'");
   const f = await query("DELETE FROM code_failures WHERE at < now() - interval '1 day'");
+  await cleanupSecurity();
   await query(
     `INSERT INTO settings (key, value) VALUES ('cleanup_at', $1)
      ON CONFLICT (key) DO UPDATE SET value = EXCLUDED.value, updated_at = now()`, [new Date().toISOString()]);

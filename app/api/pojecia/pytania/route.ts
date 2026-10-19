@@ -4,13 +4,14 @@ import { requireUser } from "@/lib/auth";
 import { filterFromParams, filterRecs } from "@/lib/owe-stats";
 import { oweStatsData } from "@/lib/owe-stats-data";
 import { getQuestion } from "@/lib/questions";
+import { contentQuota } from "@/lib/security";
 
 export const dynamic = "force-dynamic";
 
 /** Pytania OWE dotyczące hasła (`item`), z filtrami jak w statystykach – do rozwinięcia wiersza pojęcia. */
 export async function GET(req: Request) {
   return handle(async () => {
-    await requireUser();
+    await contentQuota(await requireUser(), "pytania");
     const p = new URL(req.url).searchParams;
     const item = p.get("item") ?? "";
     const f = { ...filterFromParams(p), kind: null };

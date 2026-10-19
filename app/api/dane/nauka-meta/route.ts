@@ -1,14 +1,8 @@
-import { requireUser } from "@/lib/auth";
-import { handle } from "@/lib/api";
-import { NAUKA_META, jsonCached } from "@/lib/data-server";
+import { daneResponse } from "@/lib/data-route";
+import { NAUKA_META } from "@/lib/data-server";
 
 export const dynamic = "force-dynamic";
 
 export async function GET(req: Request) {
-  try {
-    await requireUser();
-  } catch (e) {
-    return handle(async () => { throw e; });
-  }
-  return jsonCached(req, NAUKA_META());
+  return daneResponse(req, NAUKA_META);
 }

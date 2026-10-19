@@ -7,7 +7,7 @@ import { HttpError } from "./tests";
  * i dziennik zdarzeń bezpieczeństwa dla panelu admina. Działa tak samo na wielu instancjach serwera.
  */
 
-export type SecKind = "login_fail" | "login_lock" | "rate_limit" | "scrape" | "csrf";
+export type SecKind = "login_fail" | "login_lock" | "rate_limit" | "scrape";
 
 /** Adres IP klienta (pierwszy z X-Forwarded-For – ustawia go platforma hostingu). */
 export async function clientIp(): Promise<string> {
@@ -58,7 +58,8 @@ export async function limit(key: string, max: number, windowSec: number, userId:
 
 /* ---------- logowanie ---------- */
 
-export const LOGIN = { perAccount: 8, perIp: 30, windowSec: 15 * 60 };
+/** Na IP luźniej: cała klasa w szkole często wychodzi do internetu z jednego adresu. */
+export const LOGIN = { perAccount: 8, perIp: 60, windowSec: 15 * 60 };
 
 /** Przed sprawdzeniem hasła: blokada po zbyt wielu nieudanych próbach na konto (e-mail) albo z jednego IP. */
 export async function loginAllowed(email: string): Promise<void> {
@@ -85,7 +86,7 @@ export async function loginOk(email: string): Promise<void> {
 /** Rejestracja, reset hasła, kody: limit na IP. */
 export async function accountLimit(kind: "rejestracja" | "reset" | "kod"): Promise<void> {
   const ip = await clientIp();
-  await limit(`acct:${kind}:${ip}`, kind === "reset" ? 5 : 10, 3600, null, "prób");
+  await limit(`acct:${kind}:${ip}`, kind === "reset" ? 20 : 30, 3600, null, "prób");
 }
 
 /* ---------- treść (ochrona przed zczytywaniem bazy pytań) ---------- */
@@ -96,22 +97,28 @@ export const CONTENT = {
   test: { burst: 40, burstSec: 10 * 60, day: 300 },
   /** zestaw zadania / eseju */
   otwarte: { burst: 30, burstSec: 10 * 60, day: 200 },
-  /** pliki danych /api/dane/* (pobierane raz i trzymane w pamięci przeglądarki) */
-  dane: { burst: 60, burstSec: 10 * 60, day: 400 },
+  /** pytania OWE z kluczem przy haśle (rozwinięcie wiersza w Pojęciach) */
+  pytania: { burst: 60, burstSec: 10 * 60, day: 400 },
+  /** pliki danych /api/dane/* – liczone tylko pełne pobrania (304 nie) */
+  dane: { burst: 120, burstSec: 10 * 60, day: 1000 },
 } as const;
 
-/** Pobranie treści: przekroczenie krótkiego okna to „masowe pobieranie” – 429 i wpis „scrape” do dziennika. */
-export async function contentQuota(userId: string, kind: keyof typeof CONTENT): Promise<void> {
+/**
+ * Pobranie treści: przekroczenie krótkiego okna to „masowe pobieranie” – 429 i wpis „scrape” do dziennika.
+ * Admini są zwolnieni (przeglądają i testują całą bazę).
+ */
+export async function contentQuota(me: { id: string; isAdmin: boolean }, kind: keyof typeof CONTENT): Promise<void> {
+  if (me.isAdmin) return;
   const c = CONTENT[kind];
-  const key = `c:${kind}:${userId}`;
+  const key = `c:${kind}:${me.id}`;
   const n = await hitCount(key, 24 * 3600);
   if (n > c.day) {
-    if (n === c.day + 1) await logEvent("scrape", `${kind}: > ${c.day} pobrań w ciągu doby`, userId);
+    if (n === c.day + 1) await logEvent("scrape", `${kind}: > ${c.day} pobrań w ciągu doby`, me.id);
     throw new HttpError(429, "Dzienny limit pobrań został wyczerpany. Spróbuj jutro.");
   }
   const burst = await countHits(key, c.burstSec);
   if (burst > c.burst) {
-    if (burst === c.burst + 1) await logEvent("scrape", `${kind}: > ${c.burst} pobrań w ${minutes(c.burstSec)} min`, userId);
+    if (burst === c.burst + 1) await logEvent("scrape", `${kind}: > ${c.burst} pobrań w ${minutes(c.burstSec)} min`, me.id);
     throw new HttpError(429, `Za dużo pobrań w krótkim czasie. Spróbuj ponownie za ${minutes(c.burstSec)} min.`);
   }
 }
@@ -124,7 +131,7 @@ export async function cleanupSecurity(): Promise<void> {
 
 /** Dziennik dla panelu admina: ostatnie zdarzenia i podsumowanie z 24 h. */
 export async function securityLog(kind: string | null) {
-  const k = kind && ["login_fail", "login_lock", "rate_limit", "scrape", "csrf"].includes(kind) ? kind : null;
+  const k = kind && ["login_fail", "login_lock", "rate_limit", "scrape"].includes(kind) ? kind : null;
   const [ev, sum] = await Promise.all([
     query<{ id: string; at: Date; kind: SecKind; ip: string; detail: string; email: string | null }>(
       `SELECT e.id, e.at, e.kind, e.ip, e.detail, u.email FROM security_events e LEFT JOIN users u ON u.id = e.user_id

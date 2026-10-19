@@ -14,7 +14,11 @@ import {
   normEmail,
   passwordError,
   verifyPassword,
+  needsRehash,
+  DUMMY_HASH,
+  SCRYPT_LOG_N,
 } from "../lib/auth-core";
+import { randomBytes, scryptSync } from "node:crypto";
 
 describe("hasła", () => {
   it("hash i weryfikacja", async () => {
@@ -23,6 +27,18 @@ describe("hasła", () => {
     expect(await verifyPassword("tajne-haslo-1", h)).toBe(true);
     expect(await verifyPassword("tajne-haslo-2", h)).toBe(false);
     expect(await verifyPassword("x", "zly-format")).toBe(false);
+  });
+  it("starszy zapis (N = 2^14) nadal działa i jest do przeliczenia; nowy ma koszt 2^16", async () => {
+    const salt = randomBytes(16);
+    const old = `scrypt$${salt.toString("hex")}$${scryptSync("stare-haslo-1", salt, 64).toString("hex")}`;
+    expect(await verifyPassword("stare-haslo-1", old)).toBe(true);
+    expect(await verifyPassword("stare-haslo-2", old)).toBe(false);
+    expect(needsRehash(old)).toBe(true);
+    const h = await hashPassword("stare-haslo-1");
+    expect(h.split("$")[1]).toBe(String(SCRYPT_LOG_N));
+    expect(needsRehash(h)).toBe(false);
+    expect(await verifyPassword("cokolwiek", DUMMY_HASH)).toBe(false);
+    expect(await verifyPassword("x", "scrypt$99$aa$bb")).toBe(false);
   });
   it("ta sama fraza daje różne hashe (sól)", async () => {
     expect(await hashPassword("abcdefgh")).not.toBe(await hashPassword("abcdefgh"));

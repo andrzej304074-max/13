@@ -40,7 +40,7 @@ function mapa() {
 }
 
 /** Zserializowane dane (raz na proces) z ETagiem – dane zmieniają się tylko przy nowym buildzie. */
-type Cached = { body: string; etag: string; gz: Buffer; br: Buffer };
+export type Cached = { body: string; etag: string; gz: Buffer; br: Buffer };
 function cached(make: () => unknown) {
   let v: Cached | null = null;
   return (): Cached => {

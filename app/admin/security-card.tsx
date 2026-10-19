@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 import { SkeletonRows } from "@/app/components/loading-page";
 import { api } from "@/lib/client";
 
-type Kind = "login_fail" | "login_lock" | "rate_limit" | "scrape" | "csrf";
+type Kind = "login_fail" | "login_lock" | "rate_limit" | "scrape";
 type Ev = { id: string; at: string; kind: Kind; ip: string; detail: string; email: string | null };
 const LABEL: Record<Kind, string> = {
   login_fail: "nieudane logowanie", login_lock: "blokada logowania", rate_limit: "limit zapytań",
-  scrape: "masowe pobieranie", csrf: "obce źródło (CSRF)",
+  scrape: "masowe pobieranie",
 };
 const fmt = (s: string) => new Date(s).toLocaleString("pl-PL", { dateStyle: "short", timeStyle: "medium" });
 
@@ -35,7 +35,7 @@ export function SecurityCard() {
       {!data ? <SkeletonRows rows={2} height={40} label="Ładowanie dziennika" /> : data.events.length === 0 ? (
         <p className="muted" style={{ margin: 0 }}>Brak zdarzeń.</p>
       ) : (
-        <div className="table-scroll">
+        <div className="table-wrap">
           <table className="db-tables sec-log">
             <thead><tr><th>Kiedy</th><th>Zdarzenie</th><th>Konto</th><th>IP</th><th>Szczegóły</th></tr></thead>
             <tbody>
