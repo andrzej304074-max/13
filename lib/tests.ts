@@ -305,46 +305,50 @@ export async function getStats(
     GROUP BY t.id`;
   };
   type PerTest = { id: string; type: QuestionType; mode: TestMode; draw_stage: string | null; score: number; max_score: number; at: Date; correct: number; total: string };
-  const { rows: agg } = await query<{ type: QuestionType; score: number; max_score: number; correct: number; total: string; tests: string }>(
-    `SELECT type, SUM(score) AS score, SUM(max_score) AS max_score, SUM(correct) AS correct, SUM(total) AS total,
-       COUNT(*) AS tests
-     FROM (${perTest(2)}) p GROUP BY type`,
+  type StageRow = { score: number | null; max_score: number | null; correct: string | null; total: string | null; tests: string };
+  const stageQuery = (st: Stage) => query<StageRow>(
+    `SELECT SUM(score) AS score, SUM(max_score) AS max_score, SUM(correct) AS correct, SUM(total) AS total, COUNT(*) AS tests
+     FROM (${perTest(2, st)}) p WHERE total > 0`,
     [bank, userId],
   );
-  const { rows: hist } = await query<PerTest>(
-    `SELECT * FROM (SELECT * FROM (${perTest(3, stage)}) p WHERE ($2::text IS NULL OR type = $2)${stage ? " AND total > 0" : ""}
-     ORDER BY at DESC LIMIT 100) h ORDER BY at ASC`,
-    [bank, typeFilter, userId],
-  );
+  // niezależne zapytania równolegle – jedna tura do bazy zamiast pięciu
+  const [{ rows: agg }, { rows: hist }, stageRows, { rows: blockRows }] = await Promise.all([
+    query<{ type: QuestionType; score: number; max_score: number; correct: number; total: string; tests: string }>(
+      `SELECT type, SUM(score) AS score, SUM(max_score) AS max_score, SUM(correct) AS correct, SUM(total) AS total,
+         COUNT(*) AS tests
+       FROM (${perTest(2)}) p GROUP BY type`,
+      [bank, userId],
+    ),
+    query<PerTest>(
+      `SELECT * FROM (SELECT * FROM (${perTest(3, stage)}) p WHERE ($2::text IS NULL OR type = $2)${stage ? " AND total > 0" : ""}
+       ORDER BY at DESC LIMIT 100) h ORDER BY at ASC`,
+      [bank, typeFilter, userId],
+    ),
+    bank === "owe" ? Promise.all((["s", "o"] as const).map(stageQuery)) : Promise.resolve(null),
+    // Każde sprawdzone/pominięte pytanie ma dokładność 0–1 (w wielokrotnym: punkty / 2), kolejność wg czasu odpowiedzi.
+    query<{ questions: string; accuracy: number }>(
+      `WITH q AS (
+         SELECT CASE WHEN a.skipped THEN 0
+                     WHEN t.type = 'single' THEN (a.points = 2)::int
+                     ELSE a.points / 2 END AS accuracy,
+                row_number() OVER (ORDER BY a.answered_at, a.test_id, a.question_id) - 1 AS rn
+         FROM answers a JOIN tests t ON t.id = a.test_id
+         WHERE t.bank = $2 AND ($1::text IS NULL OR t.type = $1) AND t.user_id = $3${stage ? ` AND a.question_id ~ '${stageRegex(stage)}'` : ""}
+       )
+       SELECT * FROM (
+         SELECT rn / ${blockSize} AS block, COUNT(*) AS questions, AVG(accuracy) AS accuracy
+         FROM q GROUP BY 1 ORDER BY 1 DESC LIMIT 100
+       ) b ORDER BY block ASC`,
+      [typeFilter, bank, userId],
+    ),
+  ]);
   const byStage = { s: emptyTotals(), o: emptyTotals() };
-  if (bank === "owe") {
-    for (const st of ["s", "o"] as const) {
-      const { rows } = await query<{ score: number | null; max_score: number | null; correct: string | null; total: string | null; tests: string }>(
-        `SELECT SUM(score) AS score, SUM(max_score) AS max_score, SUM(correct) AS correct, SUM(total) AS total, COUNT(*) AS tests
-         FROM (${perTest(2, st)}) p WHERE total > 0`,
-        [bank, userId],
-      );
-      const r = rows[0], correct = Number(r?.correct ?? 0), total = Number(r?.total ?? 0);
-      byStage[st] = { score: Number(r?.score ?? 0), maxScore: Number(r?.max_score ?? 0), correct, total, percent: pct(correct, total), tests: Number(r?.tests ?? 0) };
-    }
-  }
-
-  // Każde sprawdzone/pominięte pytanie ma dokładność 0–1 (w wielokrotnym: punkty / 2), kolejność wg czasu odpowiedzi.
-  const { rows: blockRows } = await query<{ questions: string; accuracy: number }>(
-    `WITH q AS (
-       SELECT CASE WHEN a.skipped THEN 0
-                   WHEN t.type = 'single' THEN (a.points = 2)::int
-                   ELSE a.points / 2 END AS accuracy,
-              row_number() OVER (ORDER BY a.answered_at, a.test_id, a.question_id) - 1 AS rn
-       FROM answers a JOIN tests t ON t.id = a.test_id
-       WHERE t.bank = $2 AND ($1::text IS NULL OR t.type = $1) AND t.user_id = $3${stage ? ` AND a.question_id ~ '${stageRegex(stage)}'` : ""}
-     )
-     SELECT * FROM (
-       SELECT rn / ${blockSize} AS block, COUNT(*) AS questions, AVG(accuracy) AS accuracy
-       FROM q GROUP BY 1 ORDER BY 1 DESC LIMIT 100
-     ) b ORDER BY block ASC`,
-    [typeFilter, bank, userId],
-  );
+  (["s", "o"] as const).forEach((st, i) => {
+    const r = stageRows?.[i].rows[0];
+    if (!r) return;
+    const correct = Number(r.correct ?? 0), total = Number(r.total ?? 0);
+    byStage[st] = { score: Number(r.score ?? 0), maxScore: Number(r.max_score ?? 0), correct, total, percent: pct(correct, total), tests: Number(r.tests ?? 0) };
+  });
 
   const byType = { single: emptyTotals(), multi: emptyTotals() };
   for (const r of agg) {

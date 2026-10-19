@@ -138,8 +138,8 @@ export async function getSummary(userId: string): Promise<Summary> {
      FROM learn_sessions WHERE user_id = $1 AND finished_at IS NOT NULL GROUP BY 1 ORDER BY 1 DESC`,
     [userId],
   );
-  const { rows: today } = await query<{ d: string }>(`SELECT to_char((now() AT TIME ZONE '${TZ}')::date, 'YYYY-MM-DD') AS d`);
-  const todayStr = today[0].d;
+  // dzisiejsza data w strefie kursu – bez dodatkowego zapytania (en-CA daje format RRRR-MM-DD)
+  const todayStr = new Intl.DateTimeFormat("en-CA", { timeZone: TZ, year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
   const byDay = new Map(rows.map((r) => [r.day, Number(r.xp)]));
   const shift = (d: string, n: number) => {
     const t = new Date(`${d}T12:00:00Z`);
@@ -176,7 +176,16 @@ export interface Progress {
 
 export async function getProgress(userId: string, topic: string | null = null): Promise<Progress> {
   const ids = topic ? Object.values(COURSE.lessons).filter((l) => l.topic === topic).map((l) => l.id) : null;
-  const rows = await subRows(userId, ids);
+  // trzy niezależne zapytania równolegle
+  const [rows, { rows: part }, summary] = await Promise.all([
+    subRows(userId, ids),
+    query<{ lesson: string; sub: number; progress: { pos: number; total: number }; started_at: Date }>(
+      `SELECT DISTINCT ON (lesson, sub) lesson, sub, progress, started_at FROM learn_sessions
+       WHERE user_id = $2 AND finished_at IS NULL AND progress IS NOT NULL AND started_at > now() - interval '7 days'
+         AND ($1::text[] IS NULL OR lesson = ANY($1))
+       ORDER BY lesson, sub, started_at DESC`, [ids, userId]),
+    getSummary(userId),
+  ]);
   const levels = levelsFrom(rows);
   const lessons: Record<string, LessonProgress> = {};
   for (const r of rows) {
@@ -184,11 +193,6 @@ export async function getProgress(userId: string, topic: string | null = null): 
     lp.subs[r.sub] = { best: pct(r.best, 1), passes: Number(r.passes), sessions: Number(r.sessions), last: r.last.toISOString() };
   }
   // pod-lekcje w trakcie: najnowsza nieukończona sesja z postępem, jeśli później nie było ukończonej
-  const { rows: part } = await query<{ lesson: string; sub: number; progress: { pos: number; total: number }; started_at: Date }>(
-    `SELECT DISTINCT ON (lesson, sub) lesson, sub, progress, started_at FROM learn_sessions
-     WHERE user_id = $2 AND finished_at IS NULL AND progress IS NOT NULL AND started_at > now() - interval '7 days'
-       AND ($1::text[] IS NULL OR lesson = ANY($1))
-     ORDER BY lesson, sub, started_at DESC`, [ids, userId]);
   for (const r of part) {
     const done = lessons[r.lesson]?.subs[r.sub];
     if (done && new Date(done.last) > r.started_at) continue;
@@ -204,7 +208,7 @@ export async function getProgress(userId: string, topic: string | null = null): 
     if ((levels[l.id] ?? 0) > 0) tp.crowned++;
     tp.crowns += levels[l.id] ?? 0;
   }
-  return { summary: await getSummary(userId), lessons, topics };
+  return { summary, lessons, topics };
 }
 
 /** Postęp sesji w trakcie (po każdym ćwiczeniu) – tylko własna, nieukończona sesja. */
@@ -316,17 +320,17 @@ export async function getNaukaStats(userId: string, f: StatsFilter): Promise<Nau
   type SR = { n: string; ms: string | null; xp: string | null; c: string | null; t: string | null };
   type GS = { g: string; k: string | null };
   // Sumy, podział wg pod-lekcji i wg poziomu w jednym zapytaniu (GROUPING SETS) – mniej połączeń z bazą.
-  const [sessG, ansG, byEx, daily, hist, weak] = await Promise.all([
+  // 5 zapytań = jedna tura przy puli 5 połączeń
+  const [sessG, ansG, daily, hist, weak] = await Promise.all([
     query<SR & GS>(
       `SELECT CASE WHEN GROUPING(s.sub) = 0 THEN 'sub' WHEN GROUPING(${col}) = 0 THEN 'br' ELSE 'all' END AS g,
               COALESCE(s.sub::text, ${col}) AS k, ${sessAgg} ${S}
        GROUP BY GROUPING SETS ((), (s.sub), (${col}))`, w.sessions.params),
-    query<{ c: string | null; t: string } & GS>(
-      `SELECT CASE WHEN GROUPING(a.item_kind) = 0 THEN 'kind' WHEN GROUPING(${col}) = 0 THEN 'br' ELSE 'all' END AS g,
-              COALESCE(a.item_kind, ${col}) AS k, SUM(a.correct::int) AS c, COUNT(*) AS t ${A}
-       GROUP BY GROUPING SETS ((), (${col}), (a.item_kind))`, w.answers.params),
-    query<{ id: string; c: string; t: string; ms: string }>(
-      `SELECT a.exercise AS id, SUM(a.correct::int) AS c, COUNT(*) AS t, AVG(a.ms) AS ms ${A} GROUP BY 1 ORDER BY 1`, w.answers.params),
+    query<{ c: string | null; t: string; ms: string | null } & GS>(
+      `SELECT CASE WHEN GROUPING(a.exercise) = 0 THEN 'ex' WHEN GROUPING(a.item_kind) = 0 THEN 'kind'
+                   WHEN GROUPING(${col}) = 0 THEN 'br' ELSE 'all' END AS g,
+              COALESCE(a.exercise, a.item_kind, ${col}) AS k, SUM(a.correct::int) AS c, COUNT(*) AS t, AVG(a.ms) AS ms ${A}
+       GROUP BY GROUPING SETS ((), (${col}), (a.item_kind), (a.exercise))`, w.answers.params),
     query<{ day: string; n: string; c: string; t: string; ms: string; xp: string }>(
       `SELECT to_char((s.finished_at AT TIME ZONE '${TZ}')::date, 'YYYY-MM-DD') AS day, COUNT(*) AS n, SUM(s.correct) AS c,
          SUM(s.total) AS t, SUM(s.duration_ms) AS ms, SUM(s.xp) AS xp ${S} GROUP BY 1 ORDER BY 1 DESC LIMIT 60`,
@@ -346,6 +350,7 @@ export async function getNaukaStats(userId: string, f: StatsFilter): Promise<Nau
   const ans = { rows: pick(ansG.rows, "all") };
   const brA = { rows: pick(ansG.rows, "br").map((r) => ({ ...r, id: r.k as string })) };
   const byKind = { rows: pick(ansG.rows, "kind").map((r) => ({ ...r, id: r.k as string })) };
+  const byEx = { rows: pick(ansG.rows, "ex").map((r) => ({ ...r, id: r.k as string })).sort((x, y) => (x.id < y.id ? -1 : x.id > y.id ? 1 : 0)) };
 
   const ansBy = new Map(brA.rows.map((r) => [r.id, r]));
   return {
