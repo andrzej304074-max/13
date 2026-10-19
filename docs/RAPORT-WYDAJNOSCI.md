@@ -1,6 +1,6 @@
 # Raport wydajności (październik 2026)
 
-Jak jeszcze przyspieszyć aplikację bez obniżania jakości. Raport do decyzji – opisane zmiany **nie są wdrożone**.
+Jak jeszcze przyspieszyć aplikację bez obniżania jakości. Rekomendacje 2, 4 i 5 są **wdrożone w etapie 7** (pomiary przed i po – sekcja „Etap 7” na końcu); pozostałe czekają na decyzję.
 
 ## Pomiary
 
@@ -74,7 +74,7 @@ Same tytuły haseł, bez definicji i wzorów, to 164 KB rozpakowane i **34 KB** 
 - **Zimny start:**
   - serwer gotowy po 1,8 s;
   - pierwsze żądanie każdej trasy jest wolniejsze o 100–170 ms (wczytanie modułów i danych kursu), kolejne trwają ~20 ms;
-  - przy starcie wykonuje się cały `SCHEMA_SQL` (42 polecenia `CREATE … IF NOT EXISTS` / `ALTER TABLE … ADD COLUMN IF NOT EXISTS`): lokalnie 2–5 ms i jedna podróż do bazy.
+  - przy starcie wykonywał się cały `SCHEMA_SQL` (42 polecenia `CREATE … IF NOT EXISTS` / `ALTER TABLE … ADD COLUMN IF NOT EXISTS`): lokalnie 2–5 ms i jedna podróż do bazy. Od etapu 7 – tylko po zmianie schematu.
 - **Pamięć bazy:** ~0,5 MB na bardzo aktywne konto (150 lekcji, 30 testów). Darmowy Neon (0,5 GB) wystarczy na kilkaset takich kont – patrz karta „Baza danych” w panelu admina.
 
 ## Rekomendacje (od największego zysku przy najmniejszym ryzyku)
@@ -127,3 +127,39 @@ Same tytuły haseł, bez definicji i wzorów, to 164 KB rozpakowane i **34 KB** 
 3. Lekki indeks haseł (34 KB zamiast 150 KB) – Fiszki i Pojęcia szybsze na telefonie.
 4. Statystyki nauki: 10 zapytań → 2.
 5. Migracja schematu tylko przy zmianie wersji – bez blokad przy zimnym starcie.
+
+## Etap 7: wdrożone optymalizacje – pomiary przed i po (19.10.2026)
+
+### Co zmieniono
+- **Sesja raz na żądanie** – `currentUser()` w `cache()` z Reacta (`lib/auth.ts`): layout i strona nie pytają bazy osobno.
+- **Schemat tylko po zmianie** – skrót `SCHEMA_SQL` zapisany w `settings` (`lib/db.ts`). Zimny start to jedno `SELECT`, pełna migracja tylko po zmianie schematu – bez blokad `ALTER TABLE` przy każdym starcie.
+- **Statystyki testów** (`getStats`, `/api/stats` – strona startowa): 5 niezależnych zapytań wysyłanych równolegle zamiast jedno po drugim.
+- **Statystyki nauki** (`getNaukaStats`): 10 zapytań → 5, sumy, podziały i ćwiczenia w jednym zapytaniu z `GROUPING SETS`. Mieści się w puli 5 połączeń, więc to jedna tura do bazy zamiast dwóch.
+- **Postęp nauki** (`getProgress`): 3 zapytania równolegle; dzisiejsza data liczona w kodzie (strefa Europe/Warsaw) zamiast osobnego zapytania.
+- **Licznik ogłoszeń 🔔** (wywoływany na każdej stronie): 1 zapytanie zamiast 2.
+
+Wyniki nowych funkcji porównano ze starymi na danych testowych (54 pola statystyk nauki, statystyki testów dla wszystkich filtrów, postęp) – identyczne. Jedyna różnica to kolejność wierszy „wg rodzaju”, która wcześniej była przypadkowa (brak `ORDER BY`).
+
+### Pomiar
+- **Metoda:**
+  - ten sam serwer produkcyjny i baza co wyżej;
+  - liczba poleceń SQL z logu Postgresa (`log_statement = all`);
+  - czasy z bazą „zdalną” zmierzono przez lokalny pośrednik TCP dodający 10 ms w każdą stronę (RTT 20 ms – typowe dla bazy w innej strefie dostępności, a nawet mało przy innym regionie);
+  - mediana z 7 wywołań.
+- **Lokalnie** (baza w tym samym kontenerze, podróż < 0,1 ms) TTFB i LCP stron zmieniły się w granicach szumu pomiaru (±20%): zysk z mniejszej liczby podróży do bazy widać dopiero przy prawdziwej sieci.
+
+| Dane | Zapytania SQL przed → po | Tury do bazy przed → po | Czas przy RTT 20 ms przed → po |
+|---|---:|---:|---:|
+| strona (layout + strona, sesja) | 2 → 1 | 2 → 1 | ~40 → ~20 ms |
+| `/api/stats` (strona startowa, statystyki) | 7 → 7 | 7 → 3 | **219 → 70 ms** |
+| `/api/nauka/stats` | 11 → 6 | 3 → 2 | 163 → 96 ms |
+| `/api/nauka/progress` (Nauka, tematy) | 5 → 4 | 5 → 2 | **149 → 52 ms** |
+| `/api/ogloszenia/licznik` (każda strona) | 3 → 2 | 3 → 2 | 44 → 23 ms |
+| zimny start (migracja schematu) | ~60 poleceń → 1 | 1 → 1 | 64 → 22 ms, bez blokad tabel |
+
+Liczba zapytań przy pełnym wejściu na stronę (strona + dane pobierane po załadowaniu), komputer: `/` 18 → 16, `/nauka` 16 → 13, `/nauka/mikro` 16 → 13, lekcja „Utrwal” 17 → 14, `/fiszki` 19 → 17, `/stats` 19 → 17, `/admin` 36 → 33.
+
+### Czego nie wdrożono i dlaczego
+- **Lekki indeks haseł (rek. 3):** wszyscy odbiorcy `/api/dane/hasla` (fiszki, tabela, mapa, czytnik) pokazują definicje od pierwszego ekranu, więc podział wymagałby przebudowy 6 komponentów. Dane są pobierane raz i trzymane w pamięci przeglądarki (ETag, 304 przy kolejnych wejściach) – zysk dotyczy tylko pierwszej wizyty. Zostaje jako rekomendacja.
+- **Region i adres `-pooler` (rek. 1):** ustawienie hostingu, nie kodu – nadal największy możliwy zysk.
+- **Pliki z wersją w nazwie (rek. 6):** decyzja o dostępie bez logowania – sprzeczna z ochroną treści w etapie 8.
