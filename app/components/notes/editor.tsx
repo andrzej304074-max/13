@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
-import { api } from "@/lib/client";
+import { api, ApiError, isNetworkError } from "@/lib/client";
 import { EMPTY_INK, INK_MIN_H, INK_W, INK_WIDTHS, MAX_NOTE_CARDS, NOTE_CARD_W, simplify, strokeNear, type Ink, type NoteCard, type NoteKind, type Stroke } from "@/lib/notes-core";
 import { useCardPool } from "@/app/fiszki/card-pool";
 import { CardPicker, NoteCards } from "./note-cards";
@@ -120,6 +120,10 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
   const cfg = useRef({ kind, refKey, onSaved });
   cfg.current = { kind, refKey, onSaved };
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // identyfikator nowej notatki nadany tutaj – ponowiony POST po zgubionej odpowiedzi nie tworzy kopii
+  const cid = useRef<string | null>(null);
+  const mounted = useRef(true);
+  useEffect(() => { mounted.current = true; return () => { mounted.current = false; }; }, []);
 
   const flush = useCallback(async (keepalive = false) => {
     if (readOnly || !dirty.current) return;
@@ -129,7 +133,8 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
     setSave("saving");
     const run = (async () => {
       try {
-        const payload = JSON.stringify(idRef.current ? { title: t, body: b, ink: i, cards: cs } : { kind: cfg.current.kind, ref: cfg.current.refKey, title: t, body: b, ink: i, cards: cs });
+        if (!idRef.current) cid.current ??= crypto.randomUUID();
+        const payload = JSON.stringify(idRef.current ? { title: t, body: b, ink: i, cards: cs } : { kind: cfg.current.kind, ref: cfg.current.refKey, cid: cid.current, title: t, body: b, ink: i, cards: cs });
         const n = idRef.current
           ? await api<NoteRow>(`/api/notatki/${idRef.current}`, { method: "PATCH", body: payload, keepalive })
           : await api<NoteRow>("/api/notatki", { method: "POST", body: payload, keepalive });
@@ -141,9 +146,13 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
         dirty.current = true;
         setSave("error");
         setError((e as Error).message);
-        // bez sieci: ponowienie za 5 s (i od razu po powrocie sieci – efekt niżej), a nie dopiero przy kolejnej zmianie
+        // bez sieci albo chwilowy błąd serwera: ponowienie za 5 s (i od razu po powrocie sieci – efekt niżej).
+        // Błąd trwały (np. 400, 403 – sekcja zablokowana, 413) – bez ponawiania; zapis spróbuje przy kolejnej zmianie.
+        // Po zamknięciu edytora – też bez ponawiania (zapis przy wyjściu był ostatnią próbą).
+        const st = e instanceof ApiError ? e.status : 0;
+        const transient = isNetworkError(e) || st >= 500 || st === 429;
         if (timer.current) clearTimeout(timer.current);
-        timer.current = setTimeout(() => void flushRef.current(), 5000);
+        if (transient && mounted.current) timer.current = setTimeout(() => void flushRef.current(), 5000);
       }
     })();
     saving.current = run;

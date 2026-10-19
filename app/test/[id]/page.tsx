@@ -42,7 +42,20 @@ export default function TestPage() {
   const load = useCallback(async (first: boolean): Promise<TestState | null> => {
     try {
       const t = await api<TestState>(`/api/tests/${id}`);
-      setTest(t);
+      if (first) setTest(t);
+      else {
+        // synchronizacja (powrót sieci, karty): migawka z serwera mogła wyjść przed zapisem odpowiedzi, która właśnie
+        // wróciła (check) – odpowiedzi i dolosowane pytania sumujemy, a nie nadpisujemy
+        setTest((prev) => {
+          if (!prev) return t;
+          const have = new Set(t.answers.map((a) => a.questionId));
+          return {
+            ...t,
+            answers: [...t.answers, ...prev.answers.filter((a) => !have.has(a.questionId))],
+            questions: t.questions.length >= prev.questions.length ? t.questions : prev.questions,
+          };
+        });
+      }
       setLoadError(null);
       if (first) {
         const answered = new Set(t.answers.map((a) => a.questionId));

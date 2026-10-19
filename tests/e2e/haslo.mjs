@@ -1,0 +1,51 @@
+import { chromium } from "playwright-core";
+const B = "http://localhost:3100", OUT = process.argv[2] ?? ".";
+const browser = await chromium.launch({ executablePath: process.env.CHROMIUM ?? "/opt/pw-browsers/chromium-1194/chrome-linux/chrome" });
+let ok = 0; const fails = [];
+const check = (c, m) => (c ? ok++ : fails.push(m));
+const errs = [];
+const page = await (await browser.newContext({ viewport: { width: 390, height: 844 }, hasTouch: true })).newPage();
+page.on("pageerror", (e) => errs.push(e.message));
+page.on("console", (m) => m.type() === "error" && errs.push(m.text()));
+await page.goto(`${B}/konto/logowanie`);
+await page.fill('input[name="email"]', "drugi@example.com"); await page.fill('input[name="password"]', "nowe-haslo-123");
+await page.click("form button.btn"); await page.waitForURL((u) => !u.pathname.startsWith("/konto"));
+const total = async () => Number((await page.locator('[data-testid="owe-total"] strong').innerText()).replace(/\D/g, ""));
+// 1. statystyki OWE: filtr, karta, sekcja esejów i zadań
+await page.goto(`${B}/pojecia/statystyki`); await page.waitForSelector('[data-testid="owe-theme"]');
+const all = await total();
+check(await page.locator('[data-testid="owe-theme-row"]').count() === 19, "19 edycji na karcie hasła");
+check(/188 z 1656/.test(await page.locator('[data-testid="owe-theme-total"]').innerText()), `razem 188 z 1656 (${await page.locator('[data-testid="owe-theme-total"]').innerText()})`);
+await page.selectOption('[data-testid="theme-filter"]', "yes");
+await page.waitForTimeout(300);
+const yes = await total();
+check(yes === 188, `filtr „z hasła” → 188 (${yes})`);
+check(new URL(page.url()).searchParams.get("haslo") === "tak", "parametr haslo=tak w adresie");
+await page.selectOption('[data-testid="theme-filter"]', "no"); await page.waitForTimeout(300);
+check(await total() === all - 188, "filtr „bez hasła” → reszta");
+const ot = await page.locator('[data-testid="owe-open-total"]').innerText();
+check(/z hasła/.test(ot), `sekcja esejów i zadań (${ot})`);
+await page.selectOption('[data-testid="theme-filter"]', "yes"); await page.waitForTimeout(300);
+check(/^75 /.test(await page.locator('[data-testid="owe-open-total"]').innerText()), "eseje/zadania z hasła: 75");
+await page.locator('[data-testid="owe-theme-row"]').nth(15).click(); await page.waitForTimeout(300);
+check(new URL(page.url()).searchParams.get("od") === "36" && new URL(page.url()).searchParams.get("do") === "36", "klik edycji XXXVI ustawia zakres");
+check(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1), "statystyki: brak poziomego przewijania (390 px)");
+await page.screenshot({ path: `${OUT}/haslo-stat-390.png`, fullPage: true });
+// 2. wejście z adresu
+await page.goto(`${B}/pojecia/statystyki?haslo=nie`); await page.waitForSelector('[data-testid="owe-theme"]');
+check(await page.locator('[data-testid="theme-filter"]').inputValue() === "no", "filtr odczytany z adresu");
+// 3. pokrycie
+await page.goto(`${B}/pojecia/pokrycie`); await page.waitForSelector('[data-testid="cov-summary"]');
+await page.locator("details.filters-card summary").click().catch(() => {});
+const q0 = await page.locator('[data-testid="cov-qrepeat"]').locator("..").innerText();
+check(await page.locator('[data-testid="owe-theme-row"]').count() === 19, "pokrycie: karta hasła");
+await page.selectOption('[data-testid="theme-filter"]', "yes"); await page.waitForTimeout(400);
+const q1 = await page.locator('[data-testid="cov-qrepeat"]').locator("..").innerText();
+check(q0 !== q1 && /z 188/.test(q1), `pokrycie: filtr hasła zmienia liczbę badanych pytań (${q1.slice(-60)})`);
+check(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1), "pokrycie: brak poziomego przewijania");
+await page.screenshot({ path: `${OUT}/haslo-pokrycie-390.png`, fullPage: true });
+// 4. moje statystyki – filtr dostępny dla OWE
+await page.goto(`${B}/stats/dzialy`); await page.waitForTimeout(1500);
+await page.waitForSelector('[data-testid="my-breakdown"]'); check(await page.locator('[data-testid="theme-filter"]').count() === 1, "moje statystyki: filtr hasła");
+await browser.close();
+console.log(`OK: ${ok} błędów: ${fails.length}`, JSON.stringify(fails, null, 1), JSON.stringify(errs.slice(0, 5)));

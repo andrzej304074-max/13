@@ -123,9 +123,14 @@ export async function createNote(userId: string, v: Record<string, unknown>): Pr
         [userId, title, body, JSON.stringify(ink), ref, starred, JSON.stringify(cards)]);
       return { ...rows[0], context: refContext(ref) };
     }
+    // `cid` z przeglądarki: ponowienie zapisu po zgubionej odpowiedzi aktualizuje tę samą notatkę zamiast tworzyć kopię
+    const cid = typeof v.cid === "string" && /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(v.cid) ? v.cid : null;
     const { rows } = await query<NoteRow>(
-      `INSERT INTO notes (user_id, kind, title, body, ink, ref, starred, cards) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING ${COLS}`,
-      [userId, kind, title, body, JSON.stringify(ink), ref, starred, JSON.stringify(cards)]);
+      `INSERT INTO notes (user_id, kind, title, body, ink, ref, starred, cards, client_id) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
+       ON CONFLICT (user_id, client_id) WHERE client_id IS NOT NULL
+       DO UPDATE SET title = EXCLUDED.title, body = EXCLUDED.body, ink = EXCLUDED.ink, cards = EXCLUDED.cards, updated_at = now()
+       RETURNING ${COLS}`,
+      [userId, kind, title, body, JSON.stringify(ink), ref, starred, JSON.stringify(cards), cid]);
     return { ...rows[0], context: refContext(ref) };
   });
 }

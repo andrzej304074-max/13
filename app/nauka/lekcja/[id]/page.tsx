@@ -24,8 +24,10 @@ export default async function LessonPage({ params, searchParams }: {
   const sub = Number((await searchParams).sub ?? 1);
   const base = [1, 2, 3, 4].includes(sub) ? lessonPayload(id, sub) : null;
   if (!base) notFound();
+  // konto (raz na żądanie – wspólne z layoutem): właściciel zapisanego stanu lekcji w przeglądarce
+  const me = await currentUser();
   // powtórki („Ćwicz”, „Utrwal”) dobierane od haseł, które użytkownikowi szły najgorzej
-  const me = base.sub === 2 || base.sub === 3 ? await currentUser() : null;
-  const payload = me?.active ? personalizeRepeats(base, await getMastery(me.id).catch(() => ({}))) : base;
-  return <LessonPlayer key={`${id}-${sub}`} payload={payload} next={nextHref(id, sub)} />;
+  const personal = (base.sub === 2 || base.sub === 3) && me?.active;
+  const payload = personal ? personalizeRepeats(base, await getMastery(me.id).catch(() => ({}))) : base;
+  return <LessonPlayer key={`${id}-${sub}`} payload={payload} next={nextHref(id, sub)} uid={me?.id ?? null} />;
 }

@@ -151,6 +151,12 @@ CREATE INDEX IF NOT EXISTS notes_user_idx ON notes (user_id, kind, updated_at DE
 -- Fiszki przypięte do kartki notatki (przesuwane kwadraty): [{ id, x, y }] w jednostkach rysunku.
 ALTER TABLE notes ADD COLUMN IF NOT EXISTS cards jsonb NOT NULL DEFAULT '[]'::jsonb;
 CREATE UNIQUE INDEX IF NOT EXISTS notes_scratch_ref_idx ON notes (user_id, ref) WHERE kind = 'scratch' AND ref IS NOT NULL;
+-- Sesja nauki z identyfikatorem z przeglądarki: ponowione założenie sesji (zgubiona odpowiedź) nie tworzy kolejnej.
+ALTER TABLE learn_sessions ADD COLUMN IF NOT EXISTS client_id uuid;
+CREATE UNIQUE INDEX IF NOT EXISTS learn_sessions_client_idx ON learn_sessions (user_id, client_id) WHERE client_id IS NOT NULL;
+-- Identyfikator nadany przez przeglądarkę przy pierwszym zapisie notatki: ponowiony POST (zgubiona odpowiedź) nie tworzy kopii.
+ALTER TABLE notes ADD COLUMN IF NOT EXISTS client_id uuid;
+CREATE UNIQUE INDEX IF NOT EXISTS notes_client_idx ON notes (user_id, client_id) WHERE client_id IS NOT NULL;
 
 -- Gwiazdki: fiszki (id hasła) i artykuły Podręcznika (id lekcji / działu).
 CREATE TABLE IF NOT EXISTS stars (

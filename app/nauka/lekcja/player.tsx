@@ -36,10 +36,16 @@ interface Saved {
   /** null – sesji nie udało się założyć (brak sieci na starcie); zakłada ją zapis wyniku. */
   v: 1; at: number; session: { id: string; level: number } | null; queue: Exercise[]; pos: number; log: AnswerLog[];
   combo: number; startedAt: number; requeued: number[];
+  /** konto, którego to odpowiedzi (urządzenie bywa wspólne) */
+  u?: string;
+  /** identyfikator sesji nadany w przeglądarce – ponowione założenie sesji zwraca tę samą */
+  cid?: string;
 }
-function readSaved(key: string): Saved | null {
+function readSaved(key: string, uid: string | null): Saved | null {
   try {
     const v = JSON.parse(localStorage.getItem(key) ?? "null") as Saved | null;
+    // stan innego konta na tym samym urządzeniu – nie proponujemy go i nie zapisujemy na cudze konto
+    if (v?.u && uid && v.u !== uid) return null;
     // pos == długość kolejki: pod-lekcja ukończona, ale wynik nie doszedł do serwera (brak sieci) – zapis do ponowienia
     if (!v || v.v !== 1 || !Array.isArray(v.queue) || (v.session !== null && !v.session?.id) || v.pos <= 0 || v.pos > v.queue.length) return null;
     if (Date.now() - v.at > RESUME_DAYS * 864e5) { localStorage.removeItem(key); return null; }
@@ -50,7 +56,9 @@ function readSaved(key: string): Saved | null {
 }
 const dropSaved = (key: string) => { try { localStorage.removeItem(key); } catch {} };
 
-export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: string | null }) {
+const newCid = () => (typeof crypto !== "undefined" && "randomUUID" in crypto ? crypto.randomUUID() : undefined);
+
+export function LessonPlayer({ payload, next, uid = null }: { payload: LessonPayload; next: string | null; uid?: string | null }) {
   const bookOff = useAccess().blocked("/nauka/podrecznik");
   const { lesson, sub, topic } = payload;
   const [session, setSession] = useState<{ id: string; level: number } | null>(null);
@@ -72,14 +80,16 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
   const shownAt = useRef(Date.now());
   const finishing = useRef(false);
   const started = useRef(false);
+  const cid = useRef<string | undefined>(undefined);
 
   const startNew = useCallback(() => {
     if (saveKey) dropSaved(saveKey);
     setOffer(null);
     let level = 0;
+    cid.current = newCid();
     api<{ id: string; level: number }>("/api/nauka/sessions", {
       method: "POST",
-      body: JSON.stringify({ lesson: lesson.id, sub }),
+      body: JSON.stringify({ lesson: lesson.id, sub, cid: cid.current }),
     })
       .then((s) => {
         setSession(s);
@@ -92,6 +102,7 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
   /** „Kontynuuj”: ta sama sesja, kolejka, odpowiedzi i miejsce co przed wyjściem. */
   const resumeSaved = useCallback((v: Saved) => {
     setOffer(null);
+    cid.current = v.cid;
     setSession(v.session);
     setQueue(v.queue);
     setPos(v.pos);
@@ -105,11 +116,11 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
     if (started.current) return;
     started.current = true;
     rememberLesson(lesson.id, sub);
-    const saved = saveKey ? readSaved(saveKey) : null;
+    const saved = saveKey ? readSaved(saveKey, uid) : null;
     if (saved && saved.pos >= saved.queue.length) resumeSaved(saved); // od razu do ekranu końcowego i ponownego zapisu
     else if (saved) setOffer(saved);
     else startNew();
-  }, [lesson.id, sub, saveKey, startNew, resumeSaved]);
+  }, [lesson.id, sub, saveKey, startNew, resumeSaved, uid]);
 
 
   // zapis stanu po każdym ćwiczeniu (localStorage – pełny stan; serwer – „w trakcie N/M” dla ścieżki)
@@ -121,6 +132,7 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
     const v: Saved = {
       v: 1, at: Date.now(), session, queue, pos, log, combo, startedAt,
       requeued: queue.flatMap((ex, i) => (requeued.has(ex) ? [i] : [])),
+      u: uid ?? undefined, cid: cid.current,
     };
     try { localStorage.setItem(saveKey, JSON.stringify(v)); } catch {}
     if (progressTimer.current) clearTimeout(progressTimer.current);
@@ -172,27 +184,47 @@ export function LessonPlayer({ payload, next }: { payload: LessonPayload; next: 
   const saveResult = useCallback(async () => {
     if (log.length === 0) return;
     setFinishError(null);
-    try {
-      let s = session;
-      if (!s) {
-        s = await api<{ id: string; level: number }>("/api/nauka/sessions", { method: "POST", body: JSON.stringify({ lesson: lesson.id, sub }) });
-        setSession(s);
-        setStartError(null);
+    /** Sesja założona teraz – od razu do stanu w przeglądarce (po zamknięciu karty ponowienie użyje tej samej). */
+    const create = async () => {
+      cid.current ??= newCid();
+      const s = await api<{ id: string; level: number }>("/api/nauka/sessions", { method: "POST", body: JSON.stringify({ lesson: lesson.id, sub, cid: cid.current }) });
+      setSession(s);
+      setStartError(null);
+      if (saveKey) {
+        const v = readSaved(saveKey, uid);
+        if (v) try { localStorage.setItem(saveKey, JSON.stringify({ ...v, session: s, cid: cid.current })); } catch {}
       }
-      const r = await api<FinishResult>(`/api/nauka/sessions/${s.id}/finish`, { method: "POST", body: JSON.stringify({ answers: log }) });
+      return s;
+    };
+    const finish = (s: { id: string }) =>
+      api<FinishResult>(`/api/nauka/sessions/${s.id}/finish`, { method: "POST", body: JSON.stringify({ answers: log }) });
+    let s = session;
+    try {
+      if (!s) s = await create();
+      let r: FinishResult;
+      try {
+        r = await finish(s);
+      } catch (e) {
+        // 404 – sesja z zapisanego stanu nie istnieje albo należy do innego konta: odpowiedzi zapisujemy w nowej sesji
+        if (!(e instanceof ApiError && e.status === 404)) throw e;
+        cid.current = newCid();
+        s = await create();
+        r = await finish(s);
+      }
       setResult(r);
       if (saveKey) dropSaved(saveKey);
     } catch (e) {
-      if (e instanceof ApiError && e.status === 409 && session) {
+      // 409 – własna sesja już zakończona: poprzednia próba doszła, tylko odpowiedź się zgubiła – wynik liczony lokalnie
+      if (e instanceof ApiError && e.status === 409 && s) {
         const correct = log.filter((l) => l.correct).length;
         setResult({ xp: computeXp(log.map((l) => l.correct)), correct, total: log.length, percent: Math.round((correct / log.length) * 1000) / 10,
-          durationMs: Date.now() - startedAt, level: session.level, levelBefore: session.level });
+          durationMs: Math.min(Date.now() - startedAt, 3 * 3600_000), level: s.level, levelBefore: s.level });
         if (saveKey) dropSaved(saveKey);
         return;
       }
       setFinishError((e as Error).message);
     }
-  }, [log, session, lesson.id, sub, saveKey, startedAt]);
+  }, [log, session, lesson.id, sub, saveKey, startedAt, uid]);
 
   useEffect(() => {
     if (!done || finishing.current || result) return;

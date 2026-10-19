@@ -14,23 +14,29 @@ const pct = (c: number, t: number) => (t > 0 ? Math.round((c / t) * 1000) / 10 :
 
 /* ---------- sesje ---------- */
 
-export async function startSession(userId: string, lessonId: string, sub: number) {
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
+/**
+ * Nowa sesja. `cid` – identyfikator nadany przez przeglądarkę: ponowione zapytanie (zgubiona odpowiedź, brak sieci)
+ * zwraca tę samą sesję zamiast zakładać kolejną.
+ */
+export async function startSession(userId: string, lessonId: string, sub: number, cid: unknown = null) {
+  const clientId = typeof cid === "string" && UUID_RE.test(cid) ? cid : null;
+  const insert = (cols: string, vals: string, params: unknown[]) => query<{ id: string; level: number }>(
+    `INSERT INTO learn_sessions (${cols}, user_id, client_id) VALUES (${vals}, $${params.length + 1}, $${params.length + 2})
+     ON CONFLICT (user_id, client_id) WHERE client_id IS NOT NULL DO UPDATE SET client_id = EXCLUDED.client_id
+     RETURNING id, level`, [...params, userId, clientId]);
   if (lessonId === "powtorka") {
-    const { rows } = await query<{ id: string }>(
-      `INSERT INTO learn_sessions (topic, unit, lesson, sub, kind, user_id) VALUES ('powtorka', 'powtorka', 'powtorka', 3, 'mix', $1) RETURNING id`,
-      [userId],
-    );
+    const { rows } = await insert("topic, unit, lesson, sub, kind", "'powtorka', 'powtorka', 'powtorka', 3, 'mix'", []);
     return { id: rows[0].id, level: 0 };
   }
   const lesson = getLesson(lessonId);
   if (!lesson) throw new HttpError(404, "Nie ma takiej lekcji.");
   if (![1, 2, 3, 4].includes(sub)) throw new HttpError(400, "Pod-lekcja musi mieć numer 1–4.");
   const level = (await lessonLevels(userId, [lessonId]))[lessonId] ?? 0;
-  const { rows } = await query<{ id: string }>(
-    `INSERT INTO learn_sessions (topic, unit, lesson, sub, kind, level, user_id) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING id`,
-    [lesson.topic, lesson.unit, lesson.id, sub, lesson.kind, level, userId],
-  );
-  return { id: rows[0].id, level };
+  const { rows } = await insert("topic, unit, lesson, sub, kind, level", "$1, $2, $3, $4, $5, $6",
+    [lesson.topic, lesson.unit, lesson.id, sub, lesson.kind, level]);
+  return { id: rows[0].id, level: rows[0].level };
 }
 
 function parseAnswers(raw: unknown): AnswerLog[] {
@@ -72,7 +78,11 @@ export async function finishSession(userId: string, id: string, rawAnswers: unkn
        WHERE id = $1 AND user_id = $5 AND finished_at IS NULL RETURNING lesson, level, duration_ms`,
       [id, correct, answers.length, xp, userId],
     );
-    if (rows.length === 0) throw new HttpError(409, "Sesja nie istnieje albo została już zakończona.");
+    if (rows.length === 0) {
+      // 409 tylko dla własnej, już zakończonej sesji (poprzedni zapis doszedł); nieznana albo cudza – 404
+      const { rowCount } = await q("SELECT 1 FROM learn_sessions WHERE id = $1 AND user_id = $2", [id, userId]);
+      throw rowCount ? new HttpError(409, "Sesja została już zakończona.") : new HttpError(404, "Nie ma takiej sesji.");
+    }
     await q(
       `INSERT INTO learn_answers (session_id, seq, item_id, item_kind, exercise, correct, ms)
        SELECT $1, s.seq, s.item, s.kind, s.ex, s.ok, s.ms
