@@ -18,9 +18,9 @@ function editable(n: EventTarget | Node | null | undefined): boolean {
  */
 export function CopyGuard() {
   useEffect(() => {
-    const sel = () => window.getSelection()?.anchorNode;
     const block = (e: Event) => {
-      if (editable(e.target) && editable(sel() ?? e.target)) return;
+      // zdarzenie z pola edycji (notatka, brudnopis, formularz) – kopiowanie i wklejanie działa normalnie
+      if (editable(e.target)) return;
       e.preventDefault();
       if (e instanceof ClipboardEvent) e.clipboardData?.setData("text/plain", "");
     };

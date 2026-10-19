@@ -9,11 +9,14 @@ import { HttpError } from "./tests";
 
 export type SecKind = "login_fail" | "login_lock" | "rate_limit" | "scrape";
 
-/** Adres IP klienta (pierwszy z X-Forwarded-For – ustawia go platforma hostingu). */
+/**
+ * Adres IP klienta: `x-real-ip` ustawia platforma hostingu (Vercel) i klient nie może go podmienić;
+ * `X-Forwarded-For` tylko awaryjnie (pierwszą pozycję klient może dopisać sam).
+ */
 export async function clientIp(): Promise<string> {
   try {
     const h = await headers();
-    return (h.get("x-forwarded-for")?.split(",")[0] ?? h.get("x-real-ip") ?? "").trim().slice(0, 64) || "?";
+    return (h.get("x-real-ip") ?? h.get("x-forwarded-for")?.split(",")[0] ?? "").trim().slice(0, 64) || "?";
   } catch {
     return "?";
   }
