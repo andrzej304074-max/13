@@ -310,6 +310,7 @@ Po pierwszym wdrożeniu od razu załóż swoje konto – pierwsze konto zostaje 
   - po 8 nieudanych próbach na konto w ciągu 15 minut logowanie na to konto jest wstrzymane (także z poprawnym hasłem); reset hasła zdejmuje blokadę;
   - limit 60 nieudanych prób na adres IP w 15 minut – luźniejszy, bo cała klasa w szkole często ma jeden adres;
   - nieznany e-mail jest obsługiwany tak samo i trwa tyle samo – po odpowiedzi nie da się poznać, czy konto istnieje.
+  - kompromis: ktoś, kto zna cudzy e-mail, może celowo wstrzymać logowanie na to konto na 15 minut – reset hasła mailem działa nadal.
 - **Limity na adres IP:** rejestracja 30 na godzinę, reset hasła 20 na godzinę.
 - **Hasła:** scrypt (N = 2^16, r = 8, sól 16 B). Starsze hasze (N = 2^14) są przeliczane przy najbliższym logowaniu.
   Sesja: losowy token w ciasteczku `HttpOnly`, `SameSite=Lax`, `Secure` na produkcji; w bazie tylko skrót. Nowa sesja przy każdym logowaniu.
