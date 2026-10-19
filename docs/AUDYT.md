@@ -132,7 +132,7 @@ Przegląd po rozbudowie o:
 
 ## Jak sprawdzano
 - **Przegląd kodu** (`/code-review`, poziom wysoki) zmian w `app/`, `lib/`, `proxy.ts`, `next.config.ts` od etapu 1 oraz ponowny przegląd poprzedniego audytu.
-- **Pełna regresja e2e:** 33 skrypty, ~1100 sprawdzeń; od tego etapu w repozytorium (`tests/e2e/`, `bash tests/e2e/run.sh`). Nowe skrypty:
+- **Pełna regresja e2e:** 32 skrypty; od tego etapu w repozytorium (`tests/e2e/`, `bash tests/e2e/run.sh`). Nowe skrypty:
   - `security.mjs` – nagłówki, CSP, CSRF, limity, blokada logowania, kopiowanie, druk;
   - `authsweep.mjs` – wszystkie 67 tras API: bez logowania, z fałszywą sesją, zwykłe konto do tras admina.
 - **Crawl:** 35 adresów × 2 motywy × 2 szerokości, w tym nowe ekrany: Zadania, Eseje, Olimpiada, Literatura, Ogłoszenia, Zgłoszenia.
