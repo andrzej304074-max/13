@@ -1,3 +1,4 @@
+import { isUuid } from "./api";
 import { query, withTx } from "./db";
 import { HttpError } from "./tests";
 import { COURSE, getItem, getLesson } from "./nauka-course";
@@ -14,14 +15,12 @@ const pct = (c: number, t: number) => (t > 0 ? Math.round((c / t) * 1000) / 10 :
 
 /* ---------- sesje ---------- */
 
-const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
-
 /**
  * Nowa sesja. `cid` – identyfikator nadany przez przeglądarkę: ponowione zapytanie (zgubiona odpowiedź, brak sieci)
  * zwraca tę samą sesję zamiast zakładać kolejną.
  */
 export async function startSession(userId: string, lessonId: string, sub: number, cid: unknown = null) {
-  const clientId = typeof cid === "string" && UUID_RE.test(cid) ? cid : null;
+  const clientId = isUuid(cid) ? cid : null;
   const insert = (cols: string, vals: string, params: unknown[]) => query<{ id: string; level: number }>(
     `INSERT INTO learn_sessions (${cols}, user_id, client_id) VALUES (${vals}, $${params.length + 1}, $${params.length + 2})
      ON CONFLICT (user_id, client_id) WHERE client_id IS NOT NULL DO UPDATE SET client_id = EXCLUDED.client_id

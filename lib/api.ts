@@ -33,3 +33,7 @@ export async function readJson(req: Request): Promise<Record<string, unknown>> {
     throw new HttpError(400, "Nieprawidłowy JSON.");
   }
 }
+
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+/** Identyfikator nadany w przeglądarce (`crypto.randomUUID`) – ponowiony zapis po zgubionej odpowiedzi nie tworzy kopii. */
+export const isUuid = (v: unknown): v is string => typeof v === "string" && UUID_RE.test(v);

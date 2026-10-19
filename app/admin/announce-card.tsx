@@ -14,6 +14,8 @@ type AnnForm = { id?: string; title: string; body: string; pinned: boolean; publ
 type PollForm = { id?: string; question: string; options: string; multi: boolean; anonymous: boolean; results_after: "vote" | "close"; published: boolean; closes_at: string };
 
 const fmt = (s: string | null) => (s ? new Date(s).toLocaleString("pl-PL", { dateStyle: "short", timeStyle: "short" }) : "");
+/** Wartość pola datetime-local (czas lokalny admina, bez strefy) → ISO z UTC – serwer liczy w UTC, nie w strefie admina. */
+const iso = (v: string) => (v ? new Date(v).toISOString() : null);
 /** ISO → wartość pola datetime-local (czas lokalny). */
 const local = (s: string | null) => {
   if (!s) return "";
@@ -49,12 +51,12 @@ export function AnnounceCard() {
     }
   }
   const saveAnn = () => run(async () => {
-    const body = JSON.stringify({ ...ann, expires_at: ann.expires_at || null });
+    const body = JSON.stringify({ ...ann, expires_at: iso(ann.expires_at) });
     await api(ann.id ? `/api/admin/ogloszenia/${ann.id}` : "/api/admin/ogloszenia", { method: ann.id ? "PATCH" : "POST", body });
     setAnn(EMPTY_ANN);
   }, ann.id ? "Zapisano zmiany ogłoszenia." : ann.published ? "Opublikowano ogłoszenie." : "Zapisano szkic ogłoszenia.");
   const savePoll = () => run(async () => {
-    const body = JSON.stringify({ ...poll, closes_at: poll.closes_at || null });
+    const body = JSON.stringify({ ...poll, closes_at: iso(poll.closes_at) });
     await api(poll.id ? `/api/admin/ankiety/${poll.id}` : "/api/admin/ankiety", { method: poll.id ? "PATCH" : "POST", body });
     setPoll(EMPTY_POLL);
   }, poll.id ? "Zapisano zmiany ankiety." : poll.published ? "Opublikowano ankietę." : "Zapisano szkic ankiety.");

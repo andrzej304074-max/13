@@ -41,7 +41,18 @@ export function effectiveBlocks(user: { isAdmin: boolean; blocked: string[] }, s
   return ACCESS_KEYS.filter((k) => set.has(k));
 }
 
-/** Czy klucz jest zablokowany: wprost, przez swój dział albo (dla działu) przez blokadę wszystkich podzakładek. */
+/**
+ * Wspólne zasoby działu (klucz działu z `pathKey`) i podzakładki, które z nich korzystają: test (`/test/…`, `/api/tests`)
+ * – Olimpiada i Słownik; lekcje i postęp (`/api/nauka`) – Kurs, Powtórka, Fiszki, Moje talie, Podręcznik.
+ * Zasób jest zablokowany, gdy zablokowane są wszystkie korzystające z niego podzakładki – nowe podzakładki działu
+ * (np. Zadania, Eseje, Olimpiada, Literatura) nie odblokowują go same z siebie.
+ */
+const SHARED_TABS: Record<string, string[]> = {
+  testy: ["/", "/slownik"],
+  nauka: ["/nauka", "/nauka/podrecznik", "/fiszki", "/fiszki/talie", "/nauka/powtorka"],
+};
+
+/** Czy klucz jest zablokowany: wprost, przez swój dział albo (dla działu) przez blokadę podzakładek korzystających z jego zasobów. */
 export function isBlocked(key: string | null, blocks: readonly string[]): boolean {
   if (!key) return false;
   const b = new Set(blocks);
@@ -49,7 +60,8 @@ export function isBlocked(key: string | null, blocks: readonly string[]): boolea
   const sec = sectionOfTab.get(key);
   if (sec && b.has(sec)) return true;
   const section = NAV.find((s) => s.id === key);
-  return !!section && section.tabs.every((t) => b.has(t.href));
+  if (!section) return false;
+  return (SHARED_TABS[key] ?? section.tabs.map((t) => t.href)).every((t) => b.has(t));
 }
 
 /**

@@ -1,3 +1,4 @@
+import type { Mastery } from "./mastery-core";
 import type { Question } from "./types";
 import type { AnswerLog, CourseItem, ExerciseType, GraphSpec, LessonPayload, ZEx } from "./nauka-types";
 
@@ -462,8 +463,8 @@ export function accuracy(answers: Pick<AnswerLog, "correct">[]): number {
   return answers.length ? answers.filter((a) => a.correct).length / answers.length : 0;
 }
 
-/** Opanowanie hasła (poprawne / wszystkie, ostatnia odpowiedź) – z lib/mastery-core. */
-export interface RepeatStat { c: number; t: number; last: number }
+/** Opanowanie hasła (poprawne / wszystkie, ostatnia odpowiedź) – ten sam kształt co `Mastery` z lib/mastery-core. */
+export type RepeatStat = Mastery;
 const DAY_MS = 86_400_000;
 
 /**

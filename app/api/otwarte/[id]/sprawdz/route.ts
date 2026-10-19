@@ -1,6 +1,7 @@
 import { handle, readJson } from "@/lib/api";
 import { requireUser } from "@/lib/auth";
 import { checkEssay, checkTask } from "@/lib/otwarte";
+import { contentQuota } from "@/lib/security";
 
 export const dynamic = "force-dynamic";
 
@@ -14,6 +15,8 @@ export async function POST(req: Request, { params }: { params: Promise<{ id: str
   const { id } = await params;
   return handle(async () => {
     const me = await requireUser();
+    // sprawdzenie zwraca rozwiązanie albo schemat odpowiedzi – liczy się do limitu pobrań jak sama treść
+    await contentQuota(me, "otwarte");
     const body = await readJson(req);
     const save = body.zapisz === true;
     return id.endsWith("-zadanie") ? checkTask(me.id, id, body) : checkEssay(me.id, id, body, save);

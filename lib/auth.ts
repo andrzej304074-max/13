@@ -27,7 +27,7 @@ import {
   DUMMY_HASH,
 } from "./auth-core";
 import { cleanup } from "./db-usage";
-import { accountLimit, loginAllowed, loginFailed, loginOk } from "./security";
+import { accountLimit, loginAllowed, loginFailed, loginOk, loginUnlock } from "./security";
 import { isBlocked, isBlockMode, keyLabel, pathKey, sanitizeKeys, type BlockMode } from "./access-core";
 import { accessFor } from "./access";
 
@@ -339,7 +339,7 @@ export async function confirmReset(token: unknown, newPass: unknown) {
   });
   // nowe hasło zdejmuje blokadę logowania konta
   const row = await loadRow("id = $1", userId);
-  if (row) await loginOk(row.email);
+  if (row) await loginUnlock(row.email);
   await startSession(userId);
 }
 

@@ -1,3 +1,4 @@
+import { isUuid } from "./api";
 import { COURSE } from "@/data/nauka";
 import { isOwnId } from "./own-cards-core";
 import { ownedIds } from "./own-cards";
@@ -113,7 +114,11 @@ export async function createNote(userId: string, v: Record<string, unknown>): Pr
     const ink = sanitizeInk(v.ink);
     const cards = sanitizeCards(v.cards);
     const starred = v.starred === true;
-    await checkQuota(userId, Buffer.byteLength(body) + Buffer.byteLength(JSON.stringify(ink)), true);
+    // `cid` z przeglądarki: ponowienie zapisu po zgubionej odpowiedzi aktualizuje tę samą notatkę zamiast tworzyć kopię
+    // (i nie liczy się do limitu jako nowa notatka)
+    const cid = isUuid(v.cid) ? v.cid : null;
+    const existing = cid ? (await query<{ id: string }>("SELECT id FROM notes WHERE user_id = $1 AND client_id = $2", [userId, cid])).rows[0]?.id ?? null : null;
+    await checkQuota(userId, Buffer.byteLength(body) + Buffer.byteLength(JSON.stringify(ink)), !existing, existing);
     if (kind === "scratch" && ref) {
       // brudnopis pytania: drugi zapis tego samego pytania nadpisuje treść (wyścig dwóch kart)
       const { rows } = await query<NoteRow>(
@@ -123,8 +128,6 @@ export async function createNote(userId: string, v: Record<string, unknown>): Pr
         [userId, title, body, JSON.stringify(ink), ref, starred, JSON.stringify(cards)]);
       return { ...rows[0], context: refContext(ref) };
     }
-    // `cid` z przeglądarki: ponowienie zapisu po zgubionej odpowiedzi aktualizuje tę samą notatkę zamiast tworzyć kopię
-    const cid = typeof v.cid === "string" && /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(v.cid) ? v.cid : null;
     const { rows } = await query<NoteRow>(
       `INSERT INTO notes (user_id, kind, title, body, ink, ref, starred, cards, client_id) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
        ON CONFLICT (user_id, client_id) WHERE client_id IS NOT NULL

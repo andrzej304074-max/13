@@ -65,7 +65,7 @@ To komunikat Safari, gdy zapytanie w ogóle nie dojdzie do serwera (zmiana sieci
 
 ## Jak sprawdzano
 
-**Testy e2e (Playwright):**
+**Testy e2e (Playwright)** – od etapu 9 w repozytorium: `tests/e2e/` (uruchomienie: `bash tests/e2e/run.sh`):
 - `offline.mjs` (20 sprawdzeń):
   - test 30 pytań: „Sprawdź” i „Zakończ” bez sieci;
   - odpowiedź HTTP zgubiona po zapisie na serwerze;
@@ -73,7 +73,7 @@ To komunikat Safari, gdy zapytanie w ogóle nie dojdzie do serwera (zmiana sieci
   - koniec lekcji bez sieci, zamknięcie i powrót;
   - lekcja zaczęta bez sieci;
   - błąd wczytania statystyk.
-- `crawl.mjs` – 26 adresów × jasny/ciemny motyw × 390/1280 px (108 stron): błędy JS, odpowiedzi 4xx/5xx, poziome przewijanie, komunikaty błędów na stronie.
+- `crawl.mjs` – 27 adresów × jasny/ciemny motyw × 390/1280 px (108 stron; od etapu 9 – 35 adresów, 140 stron): błędy JS, odpowiedzi 4xx/5xx, poziome przewijanie, komunikaty błędów na stronie.
 - `probes.mjs` (41 sprawdzeń API):
   - walidacja własnych fiszek, notatek z kartami i testów z etapem;
   - dostęp drugiego konta do cudzych fiszek, talii, notatek, testów i sesji nauki;
@@ -105,7 +105,7 @@ To komunikat Safari, gdy zapytanie w ogóle nie dojdzie do serwera (zmiana sieci
 5. **Autozapis notatki nie ponawiał się po błędzie** (`app/components/notes/editor.tsx`) aż do kolejnej zmiany. Teraz ponowienie po 5 s i po powrocie sieci.
 6. **Błąd gwiazdki lub usuwania notatki zastępował stronę z edytorem** (`app/notatki/[id]/view.tsx`). Teraz komunikat pod nagłówkiem.
 7. **Błędy wczytania bez wyjścia** (statystyki, działy, fiszki, tabela, mapa, pokrycie, statystyki OWE i nauki). Wspólny `LoadError` z „Spróbuj ponownie” i ponowieniem po powrocie sieci.
-8. **Gwiazdka na fiszce stała obok karty, a nie w jej rogu.** Reguła `.star-btn { position: relative }` stała później w CSS i nadpisywała `position: absolute`. Na telefonie zwężało to kartę. Test sprawdza teraz położenie i szerokość.
+8. **Gwiazdka na fiszce stała obok karty, a nie w jej rogu.** Reguła `.star-btn { position: relative }` stała później w CSS i nadpisywała `position: absolute`. Na telefonie zwężało to kartę. Położenie i szerokość sprawdza `tests/e2e/stars.mjs`.
 9. **Dymek „🧠” ucinany przy prawej krawędzi feedu.** Położenie jest teraz liczone względem kontenera, a nie okna.
 10. **„🧠 mapa” w Tabeli pojęć** po zawinięciu miało przypadkowe wcięcie; teraz stoi przy prawej krawędzi.
 11. **Tymczasowy skrypt testu trafił do repozytorium.** Usunięty; wzorzec `.*.tmp.mjs` dodany do `.gitignore`.
@@ -116,3 +116,70 @@ To komunikat Safari, gdy zapytanie w ogóle nie dojdzie do serwera (zmiana sieci
 - **PATCH cudzej fiszki zwraca 400 zamiast 404.** Walidacja idzie przed sprawdzeniem właściciela, a zapis jest ograniczony do kart konta, więc nic się nie zmienia.
 - **PATCH postępu cudzej sesji odpowiada „ok”.** Zapis jest ograniczony do sesji konta (sprawdzone, że dane się nie zmieniają); to zapis w tle, bez komunikatów.
 - **Panel admina lokalnie pokazuje „Brak konfiguracji Azure/R2”** – oczekiwane bez kluczy; w Vercelu są ustawione.
+
+
+# Debug końcowy – etapy 1–8 (październik 2026)
+
+Przegląd po rozbudowie o:
+- zgłoszenia błędów;
+- Olimpiadę i Literaturę;
+- zadania i eseje;
+- hasło przewodnie;
+- ogłoszenia i ankiety;
+- powtórki;
+- wydajność;
+- bezpieczeństwo.
+
+## Jak sprawdzano
+- **Przegląd kodu** (`/code-review`, poziom wysoki) zmian w `app/`, `lib/`, `proxy.ts`, `next.config.ts` od etapu 1 oraz ponowny przegląd poprzedniego audytu.
+- **Pełna regresja e2e:** 33 skrypty, ~1100 sprawdzeń; od tego etapu w repozytorium (`tests/e2e/`, `bash tests/e2e/run.sh`). Nowe skrypty:
+  - `security.mjs` – nagłówki, CSP, CSRF, limity, blokada logowania, kopiowanie, druk;
+  - `authsweep.mjs` – wszystkie 67 tras API: bez logowania, z fałszywą sesją, zwykłe konto do tras admina.
+- **Crawl:** 35 adresów × 2 motywy × 2 szerokości, w tym nowe ekrany: Zadania, Eseje, Olimpiada, Literatura, Ogłoszenia, Zgłoszenia.
+- **Pozostałe:** testy jednostkowe (vitest), zrzuty nowych ekranów na telefonie, `npm audit` (0 podatności).
+
+## Poprawione
+1. **Blokady sekcji po dodaniu podzakładek** (`lib/access-core.ts`).
+   - Wspólne zasoby działu – test (`/test/…`, `/api/tests`) oraz lekcje i postęp (`/api/nauka`) – były blokowane, gdy zablokowano wszystkie podzakładki działu.
+   - Nowe podzakładki (Zadania, Eseje, Olimpiada, Literatura) nie były na niczyich listach blokad. Konto z zablokowaną Olimpiadą i Słownikiem znów mogło więc rozwiązywać testy.
+   - Teraz zasób wiąże się z podzakładkami, które z niego korzystają.
+2. **Sprawdzanie zadania lub eseju poza limitem pobrań** (`/api/otwarte/[id]/sprawdz`). Zwraca rozwiązanie albo schemat odpowiedzi, a nie liczyło się do limitu. Teraz się liczy.
+3. **Test „bez limitu” jako furtka do całej bazy pytań.** Każda odpowiedź zwraca klucz i następne pytanie, a limit liczył tylko start testu. Doszedł limit odpowiedzi: 200 w 10 min, 2000 na dobę.
+4. **Blokada logowania nie była atomowa** (`lib/security.ts`).
+   - Liczenie prób przed hasłem i zapis porażki po nim przepuszczały równoległe próby; 200 naraz – 200 haseł zamiast 8.
+   - Teraz próba jest zapisywana razem ze sprawdzeniem limitu, jednym zapytaniem, przed kosztownym scrypt.
+   - Udane logowanie zdejmuje swoją próbę.
+5. **Daty ogłoszeń i ankiet w strefie serwera.** Wartość z pola daty (bez strefy) serwer czytał w UTC, czyli przesuniętą o 1–2 h względem czasu admina. Teraz przeglądarka wysyła czas z UTC.
+6. **Autozapis notatki** (`app/components/notes/editor.tsx`, `lib/notes.ts`).
+   - Ponawiał co 5 s bez końca, także błędy trwałe (400, 403, 413) i po zamknięciu edytora. Teraz ponawia tylko błędy sieci i 5xx/429, póki edytor jest otwarty.
+   - Ponowiony pierwszy zapis po zgubionej odpowiedzi tworzył kopię notatki. Teraz przeglądarka nadaje identyfikator (`cid`), więc ponowienie aktualizuje tę samą notatkę i nie liczy się do limitu jako nowa.
+7. **Wynik lekcji – podwójny zapis albo cicha utrata** (`app/nauka/lekcja/player.tsx`, `lib/nauka.ts`).
+   - Sesja zakładana przy zapisie wyniku nie trafiała do stanu w przeglądarce. Po zamknięciu karty ponowienie zakładało drugą sesję i liczyło wynik i XP dwa razy.
+   - Zgubiona odpowiedź na założenie sesji zostawiała sesje-sieroty.
+   - Każda odpowiedź 409 była traktowana jak „już zapisane”, także dla sesji cudzej albo nieistniejącej. Odpowiedzi znikały, a pokazywany był wynik policzony w przeglądarce.
+   - Teraz:
+     - sesja ma identyfikator z przeglądarki, a ponowienie zwraca tę samą;
+     - serwer odróżnia 409 (własna, zakończona) od 404 (nie ma albo cudza);
+     - przy 404 odpowiedzi trafiają do nowej sesji;
+     - stan lekcji jest przypisany do konta, więc na wspólnym urządzeniu cudzy stan nie jest proponowany.
+8. **Synchronizacja testu gubiła odpowiedź** (`app/test/[id]/page.tsx`). Migawka z serwera pobrana przed zapisem odpowiedzi mogła ją nadpisać po powrocie do karty. Teraz odpowiedzi są sumowane; stan zakończonego testu z serwera jest ostateczny.
+9. **Ekran błędu przeładowywał stronę przy każdej zmianie sieci** (`app/components/load-error.tsx`), nawet przy błędzie trwałym (blokada, 404). Teraz ponawia sam tylko błędy sieci i chwilowe błędy serwera.
+10. **Limity w bazie:**
+    - limit treści sprawdzany jednym zapytaniem zamiast dwóch po kolei;
+    - adres IP z `X-Forwarded-For` – ostatni, a nie pierwszy, który klient może podać sam.
+11. **Drobne:**
+    - typ powtórek to `Mastery`, a nie jego kopia;
+    - jedna funkcja `isUuid`;
+    - zależność `playwright-core` zapisana w `package.json`.
+12. **Wyścigi w testach e2e:**
+    - `decks.mjs` sprawdzał pustą listę talii przed jej wczytaniem;
+    - `offline.mjs` otwierał lekcję ponownie, zanim zapis po powrocie sieci się wykonał;
+    - `security.mjs` – podstawianie „$” przez powłokę w zapytaniu SQL.
+
+## Sprawdzone – świadomie bez zmian
+- **Blokada logowania na cudzy e-mail.** Kto zna e-mail, może na 15 minut wstrzymać logowanie na to konto. Reset hasła mailem działa nadal i zdejmuje blokadę (opisane w README).
+- **Serwer bez pośrednika** (poza Vercelem, bez `x-real-ip`): wszyscy dzielą jeden licznik IP. Wdrożenie poza Vercelem powinno ustawiać `x-real-ip`.
+- **Blokada kopiowania w przeglądarce** jest tylko utrudnieniem; realną ochroną są limity i serwer (README).
+
+## Do decyzji
+- **Pytania z kluczem przy haśle** (`/api/pojecia/pytania`, rozwinięcie wiersza w Tabeli pojęć) pokazują poprawne odpowiedzi bez rozwiązywania testu. Mają limit 60 w 10 min i 400 na dobę. Można ukryć klucz całkiem, ale wtedy rozwinięcie traci wartość do nauki.

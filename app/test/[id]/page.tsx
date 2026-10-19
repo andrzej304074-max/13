@@ -47,7 +47,8 @@ export default function TestPage() {
         // synchronizacja (powrót sieci, karty): migawka z serwera mogła wyjść przed zapisem odpowiedzi, która właśnie
         // wróciła (check) – odpowiedzi i dolosowane pytania sumujemy, a nie nadpisujemy
         setTest((prev) => {
-          if (!prev) return t;
+          // test zakończony (gdzie indziej albo po czasie) – stan z serwera jest ostateczny
+          if (!prev || t.finishedAt) return t;
           const have = new Set(t.answers.map((a) => a.questionId));
           return {
             ...t,

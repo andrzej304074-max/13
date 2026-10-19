@@ -83,12 +83,15 @@ check((log.day.login_fail ?? 0) >= 7, `dziennik: nieudane logowania w 24 h (${lo
 check((await user.request.get(`${B}/api/admin/bezpieczenstwo`)).status() === 403, "dziennik tylko dla admina");
 sql("DELETE FROM rate_hits WHERE key LIKE 'login:%'");
 
-// 6. limit pobrań treści: zadania – 30 w 10 min, potem 429 i wpis „masowe pobieranie”; admin bez limitu
+// 6. limit pobrań treści: zadania (treść i sprawdzenie) – 60 w 10 min, potem 429 i wpis „masowe pobieranie”; admin bez limitu
 const list = await (await user.request.get(`${B}/api/otwarte?rodzaj=zadanie`)).json();
 const ids = (list.items ?? list).map((x) => x.id);
 const st = [];
-for (let i = 0; i < 31; i++) st.push((await user.request.get(`${B}/api/otwarte/${ids[i % ids.length]}`)).status());
-check(st.slice(0, 30).every((c) => c === 200) && st[30] === 429, `zadania: 30 × 200, potem 429 (${st.slice(28).join(",")})`);
+for (let i = 0; i < 59; i++) st.push((await user.request.get(`${B}/api/otwarte/${ids[i % ids.length]}`)).status());
+// sprawdzenie (zwraca rozwiązanie) też się liczy: 60. pobranie przechodzi, 61. – już nie
+st.push((await user.request.post(`${B}/api/otwarte/${ids[0]}/sprawdz`, { data: { answers: {} } })).status());
+st.push((await user.request.post(`${B}/api/otwarte/${ids[0]}/sprawdz`, { data: { answers: {} } })).status());
+check(st.slice(0, 59).every((c) => c === 200) && st[59] !== 429 && st[60] === 429, `zadania: 59 × treść + sprawdzenie, potem 429 (${st.slice(57).join(",")})`);
 const st2 = [];
 for (let i = 0; i < 31; i++) st2.push((await admin.request.get(`${B}/api/otwarte/${ids[i % ids.length]}`)).status());
 check(st2.every((c) => c === 200), "admin bez limitu pobrań");

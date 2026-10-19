@@ -39,6 +39,12 @@ describe("blokady sekcji – łączenie i menu", () => {
     expect(isBlocked("/notatki/brudnopisy", ["notatki"])).toBe(true);
     expect(isBlocked("notatki", ["/notatki", "/notatki/brudnopisy"])).toBe(true);
     expect(isBlocked("notatki", ["/notatki"])).toBe(false);
+    // wspólne zasoby: test blokują Olimpiada + Słownik (nowe Zadania i Eseje go nie odblokowują)
+    expect(isBlocked("testy", ["/", "/slownik"])).toBe(true);
+    expect(isBlocked("testy", ["/"])).toBe(false);
+    expect(isBlocked("testy", ["/zadania", "/eseje"])).toBe(false);
+    expect(isBlocked("nauka", ["/nauka", "/nauka/podrecznik", "/fiszki", "/fiszki/talie", "/nauka/powtorka"])).toBe(true);
+    expect(isBlocked("nauka", ["/nauka/olimpiada", "/nauka/literatura"])).toBe(false);
   });
   it("menu: ukryj i kłódka", () => {
     const hide = navView(["/nauka/podrecznik", "notatki"], "hide");
