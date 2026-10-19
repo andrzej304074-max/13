@@ -1,6 +1,7 @@
 "use client";
 
 import { BugsCard } from "./bugs-card";
+import { AnnounceCard } from "./announce-card";
 import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
 import { api, fmtPct } from "@/lib/client";
@@ -201,6 +202,9 @@ export function AdminPanel({ meId }: { meId: string }) {
 
       <h2>Zgłoszenia błędów</h2>
       <BugsCard />
+
+      <h2>Ogłoszenia i ankiety</h2>
+      <AnnounceCard />
 
       <h2>Dostęp do sekcji</h2>
       <GlobalAccess onChange={setAccess} />

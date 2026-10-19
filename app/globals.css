@@ -1272,3 +1272,28 @@ body:has(.speech-bar) main.container { padding-bottom: 160px; }
 .essay-point { align-items: flex-start; line-height: 1.45; }
 .essay-point.sub { margin-left: 22px; }
 .open-breakdown { display: flex; flex-wrap: wrap; gap: 4px 12px; margin-top: 6px; color: var(--muted); }
+
+/* ---------- ogłoszenia i ankiety ---------- */
+.ann-bell { text-decoration: none; }
+.ann-count { position: absolute; top: -4px; right: -4px; min-width: 18px; height: 18px; padding: 0 4px; border-radius: 999px; background: var(--bad); color: #fff; font-size: .72rem; font-weight: 700; line-height: 18px; text-align: center; box-shadow: 0 0 0 2px var(--surface); }
+.ann-pinned { display: flex; gap: 10px; align-items: center; padding: 10px 12px; margin-bottom: 12px; border: 1px solid var(--accent); border-radius: var(--radius); background: var(--accent-soft); }
+.ann-pinned-text { flex: 1; min-width: 0; color: var(--text); text-decoration: none; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ann-pinned-x { flex: none; width: 32px; height: 32px; border: 0; border-radius: 50%; background: transparent; color: var(--text); font-size: 1.3rem; line-height: 1; cursor: pointer; }
+.ann-pinned-x:hover { background: var(--surface); }
+.ann-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.ann-item { position: relative; }
+.ann-item.unread { border-left: 4px solid var(--accent); }
+.ann-meta { font-size: .85rem; color: var(--muted); display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.ann-new { display: inline-block; padding: 1px 8px; border-radius: 999px; background: var(--accent); color: var(--accent-text); font-size: .75rem; font-weight: 700; }
+.ann-body p { margin: 0 0 8px; overflow-wrap: anywhere; }
+.ann-body p:last-child { margin-bottom: 0; }
+.poll-opts { display: grid; gap: 8px; }
+.poll-opt { display: grid; gap: 4px; }
+.poll-opt .check { align-items: flex-start; }
+.poll-res { display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; align-items: center; }
+.poll-res .share-bar { grid-column: 1 / -1; }
+.poll-res.mine strong { color: var(--accent); }
+.ann-admin-form { display: grid; gap: 10px; }
+.ann-admin-form textarea { min-height: 110px; }
+.ann-admin-item { display: grid; gap: 8px; }
+.ann-voters { font-size: .85rem; color: var(--muted); overflow-wrap: anywhere; }

@@ -265,4 +265,45 @@ CREATE TABLE IF NOT EXISTS tts_usage (
   chars int NOT NULL,
   PRIMARY KEY (day, who)
 );
+-- Ogłoszenia i ankiety prowadzone przez adminów (lib/announce.ts); przeczytane / ukryte – announcement_reads.
+CREATE TABLE IF NOT EXISTS announcements (
+  id           uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  title        text NOT NULL,
+  body         text NOT NULL,
+  pinned       boolean NOT NULL DEFAULT false,
+  published_at timestamptz,
+  expires_at   timestamptz,
+  author       uuid REFERENCES users(id) ON DELETE SET NULL,
+  created_at   timestamptz NOT NULL DEFAULT now(),
+  updated_at   timestamptz NOT NULL DEFAULT now()
+);
+CREATE INDEX IF NOT EXISTS announcements_pub_idx ON announcements (published_at DESC);
+CREATE TABLE IF NOT EXISTS polls (
+  id            uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  question      text NOT NULL,
+  options       jsonb NOT NULL,
+  multi         boolean NOT NULL DEFAULT false,
+  anonymous     boolean NOT NULL DEFAULT true,
+  results_after text NOT NULL DEFAULT 'vote' CHECK (results_after IN ('vote', 'close')),
+  published_at  timestamptz,
+  closes_at     timestamptz,
+  author        uuid REFERENCES users(id) ON DELETE SET NULL,
+  created_at    timestamptz NOT NULL DEFAULT now(),
+  updated_at    timestamptz NOT NULL DEFAULT now()
+);
+CREATE INDEX IF NOT EXISTS polls_pub_idx ON polls (published_at DESC);
+CREATE TABLE IF NOT EXISTS poll_votes (
+  poll_id    uuid NOT NULL REFERENCES polls(id) ON DELETE CASCADE,
+  user_id    uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  choices    int[] NOT NULL,
+  created_at timestamptz NOT NULL DEFAULT now(),
+  PRIMARY KEY (poll_id, user_id)
+);
+CREATE TABLE IF NOT EXISTS announcement_reads (
+  user_id   uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  item_id   uuid NOT NULL,
+  dismissed boolean NOT NULL DEFAULT false,
+  read_at   timestamptz NOT NULL DEFAULT now(),
+  PRIMARY KEY (user_id, item_id)
+);
 `;

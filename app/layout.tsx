@@ -3,6 +3,7 @@ import Link from "next/link";
 import { BackButton } from "./components/back";
 import { currentUser, type User } from "@/lib/auth";
 import { AccountMenu } from "./components/account-menu";
+import { AnnounceBell, PinnedBar } from "./components/announce-bell";
 import { QuickNotes } from "./components/notes/quick-notes";
 import { SectionNav, SubTabs } from "./components/nav";
 import { AccessGuard, AccessProvider } from "./components/access";
@@ -44,9 +45,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             <Link href={home} className="brand">Testy OWE</Link>
             {me?.active && <SectionNav variant="top" />}
             {me?.active && !notesOff && <QuickNotes />}
+            {me?.active && <AnnounceBell />}
             {me && <AccountMenu email={me.email} isAdmin={me.isAdmin} />}
           </header>
           <main className="container">
+            {me?.active && <PinnedBar />}
             {me?.active && <SubTabs />}
             {me?.active ? <AccessGuard>{children}</AccessGuard> : children}
           </main>
