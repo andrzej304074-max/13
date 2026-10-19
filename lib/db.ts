@@ -1,4 +1,5 @@
 import { Pool, type QueryResult, type QueryResultRow } from "pg";
+import { createHash } from "node:crypto";
 import { SCHEMA_SQL } from "./schema";
 
 const globalForDb = globalThis as unknown as { pool?: Pool; schemaReady?: Promise<void> };
@@ -17,11 +18,25 @@ function getPool(): Pool {
   return globalForDb.pool;
 }
 
+/** Wersja schematu (skrót SCHEMA_SQL): pełna migracja tylko po zmianie – zwykły zimny start to jedno szybkie SELECT, bez blokad ALTER TABLE. */
+const SCHEMA_VERSION = createHash("sha256").update(SCHEMA_SQL).digest("hex").slice(0, 16);
+
+async function migrate(pool: Pool): Promise<void> {
+  try {
+    const { rows } = await pool.query<{ value: string }>("SELECT value FROM settings WHERE key = 'schema_version'");
+    if (rows[0]?.value === SCHEMA_VERSION) return;
+  } catch {
+    // brak tabeli settings – świeża baza
+  }
+  await pool.query(SCHEMA_SQL);
+  await pool.query(
+    `INSERT INTO settings (key, value) VALUES ('schema_version', $1)
+     ON CONFLICT (key) DO UPDATE SET value = EXCLUDED.value, updated_at = now()`, [SCHEMA_VERSION]);
+}
+
 function ensureSchema(): Promise<void> {
   if (!globalForDb.schemaReady) {
-    globalForDb.schemaReady = getPool()
-      .query(SCHEMA_SQL)
-      .then(() => undefined)
+    globalForDb.schemaReady = migrate(getPool())
       .catch((err) => {
         globalForDb.schemaReady = undefined;
         throw err;

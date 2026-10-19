@@ -314,15 +314,19 @@ export async function getNaukaStats(userId: string, f: StatsFilter): Promise<Nau
   const col = { topic: "s.topic", unit: "s.unit", lesson: "s.lesson" }[level];
 
   type SR = { n: string; ms: string | null; xp: string | null; c: string | null; t: string | null };
-  const [ans, sess, bySub, brS, brA, byEx, byKind, daily, hist, weak] = await Promise.all([
-    query<{ c: string; t: string }>(`SELECT SUM(a.correct::int) AS c, COUNT(*) AS t ${A}`, w.answers.params),
-    query<SR>(`SELECT ${sessAgg} ${S}`, w.sessions.params),
-    query<SR & { sub: number }>(`SELECT s.sub, ${sessAgg} ${S} GROUP BY s.sub ORDER BY s.sub`, w.sessions.params),
-    query<SR & { id: string }>(`SELECT ${col} AS id, ${sessAgg} ${S} GROUP BY 1`, w.sessions.params),
-    query<{ id: string; c: string; t: string }>(`SELECT ${col} AS id, SUM(a.correct::int) AS c, COUNT(*) AS t ${A} GROUP BY 1`, w.answers.params),
+  type GS = { g: string; k: string | null };
+  // Sumy, podział wg pod-lekcji i wg poziomu w jednym zapytaniu (GROUPING SETS) – mniej połączeń z bazą.
+  const [sessG, ansG, byEx, daily, hist, weak] = await Promise.all([
+    query<SR & GS>(
+      `SELECT CASE WHEN GROUPING(s.sub) = 0 THEN 'sub' WHEN GROUPING(${col}) = 0 THEN 'br' ELSE 'all' END AS g,
+              COALESCE(s.sub::text, ${col}) AS k, ${sessAgg} ${S}
+       GROUP BY GROUPING SETS ((), (s.sub), (${col}))`, w.sessions.params),
+    query<{ c: string | null; t: string } & GS>(
+      `SELECT CASE WHEN GROUPING(a.item_kind) = 0 THEN 'kind' WHEN GROUPING(${col}) = 0 THEN 'br' ELSE 'all' END AS g,
+              COALESCE(a.item_kind, ${col}) AS k, SUM(a.correct::int) AS c, COUNT(*) AS t ${A}
+       GROUP BY GROUPING SETS ((), (${col}), (a.item_kind))`, w.answers.params),
     query<{ id: string; c: string; t: string; ms: string }>(
       `SELECT a.exercise AS id, SUM(a.correct::int) AS c, COUNT(*) AS t, AVG(a.ms) AS ms ${A} GROUP BY 1 ORDER BY 1`, w.answers.params),
-    query<{ id: string; c: string; t: string }>(`SELECT a.item_kind AS id, SUM(a.correct::int) AS c, COUNT(*) AS t ${A} GROUP BY 1`, w.answers.params),
     query<{ day: string; n: string; c: string; t: string; ms: string; xp: string }>(
       `SELECT to_char((s.finished_at AT TIME ZONE '${TZ}')::date, 'YYYY-MM-DD') AS day, COUNT(*) AS n, SUM(s.correct) AS c,
          SUM(s.total) AS t, SUM(s.duration_ms) AS ms, SUM(s.xp) AS xp ${S} GROUP BY 1 ORDER BY 1 DESC LIMIT 60`,
@@ -335,6 +339,13 @@ export async function getNaukaStats(userId: string, f: StatsFilter): Promise<Nau
        HAVING COUNT(*) >= 2 AND AVG(a.correct::int) < 1 ORDER BY AVG(a.correct::int), COUNT(*) DESC LIMIT 15`,
       w.answers.params),
   ]);
+  const pick = <T extends GS>(rows: T[], g: string) => rows.filter((r) => r.g === g);
+  const sess = { rows: pick(sessG.rows, "all") };
+  const bySub = { rows: pick(sessG.rows, "sub").map((r) => ({ ...r, sub: Number(r.k) })).sort((a, b) => a.sub - b.sub) };
+  const brS = { rows: pick(sessG.rows, "br").map((r) => ({ ...r, id: r.k as string })) };
+  const ans = { rows: pick(ansG.rows, "all") };
+  const brA = { rows: pick(ansG.rows, "br").map((r) => ({ ...r, id: r.k as string })) };
+  const byKind = { rows: pick(ansG.rows, "kind").map((r) => ({ ...r, id: r.k as string })) };
 
   const ansBy = new Map(brA.rows.map((r) => [r.id, r]));
   return {

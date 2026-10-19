@@ -1,5 +1,6 @@
 import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
+import { cache } from "react";
 import { query, withTx } from "./db";
 import { HttpError } from "./tests";
 import { appUrl, mailConfigured, sendMail } from "./mail";
@@ -89,7 +90,8 @@ async function loadRow(where: string, param: string): Promise<UserRow | null> {
   return rows[0] ?? null;
 }
 
-export async function currentUser(): Promise<User | null> {
+/** Zalogowane konto – raz na żądanie (React `cache`): layout i strona nie pytają bazy osobno. */
+export const currentUser = cache(async (): Promise<User | null> => {
   const token = (await cookies()).get(SESSION_COOKIE)?.value;
   if (!token) return null;
   const { rows } = await query<UserRow>(
@@ -97,7 +99,7 @@ export async function currentUser(): Promise<User | null> {
     [hashToken(token)],
   );
   return rows[0] ? toUser(rows[0]) : null;
-}
+});
 
 /** Sekcja bieżącego żądania (nagłówki x-path / x-search ustawia proxy.ts) zablokowana dla konta? Zwraca klucz albo null. */
 async function blockedKey(u: User): Promise<string | null> {

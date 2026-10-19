@@ -78,15 +78,19 @@ async function votesFor(ids: string[]): Promise<Map<string, number[][]>> {
 
 /** Licznik nieprzeczytanych (🔔) i przypięte ogłoszenie do paska (najnowsze nieukryte). */
 export async function badge(userId: string): Promise<{ unread: number; pinned: { id: string; title: string; body: string } | null }> {
-  const { rows } = await query<{ n: string }>(
+  // Jedno zapytanie (licznik + przypięte) – wywoływane na każdej stronie.
+  const { rows } = await query<{ n: string; id: string | null; title: string | null; body: string | null }>(
     `SELECT (SELECT COUNT(*) FROM announcements a WHERE ${VISIBLE_ANN}
               AND NOT EXISTS (SELECT 1 FROM announcement_reads r WHERE r.item_id = a.id AND r.user_id = $1))
           + (SELECT COUNT(*) FROM polls p WHERE ${VISIBLE_POLL}
-              AND NOT EXISTS (SELECT 1 FROM announcement_reads r WHERE r.item_id = p.id AND r.user_id = $1)) AS n`, [userId]);
-  const { rows: pin } = await query<{ id: string; title: string; body: string }>(
-    `SELECT a.id, a.title, a.body FROM announcements a WHERE ${VISIBLE_ANN} AND a.pinned
-       AND NOT EXISTS (SELECT 1 FROM announcement_reads r WHERE r.item_id = a.id AND r.user_id = $1 AND r.dismissed)
-     ORDER BY a.published_at DESC LIMIT 1`, [userId]);
+              AND NOT EXISTS (SELECT 1 FROM announcement_reads r WHERE r.item_id = p.id AND r.user_id = $1)) AS n,
+            pin.id, pin.title, pin.body
+       FROM (SELECT 1) one LEFT JOIN LATERAL (
+         SELECT a.id, a.title, a.body FROM announcements a WHERE ${VISIBLE_ANN} AND a.pinned
+            AND NOT EXISTS (SELECT 1 FROM announcement_reads r WHERE r.item_id = a.id AND r.user_id = $1 AND r.dismissed)
+          ORDER BY a.published_at DESC LIMIT 1) pin ON true`, [userId]);
+  const r = rows[0];
+  const pin = r.id ? [{ id: r.id, title: r.title ?? "", body: r.body ?? "" }] : [];
   return { unread: Number(rows[0].n), pinned: pin[0] ? { ...pin[0], body: pin[0].body.slice(0, 280) } : null };
 }
 
