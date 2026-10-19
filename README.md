@@ -304,6 +304,46 @@ Konfiguracja maili (Vercel → Settings → Environment Variables, potem Redeplo
 
 Po pierwszym wdrożeniu od razu załóż swoje konto – pierwsze konto zostaje właścicielem.
 
+## Bezpieczeństwo i ochrona treści
+
+- **Logowanie:**
+  - po 8 nieudanych próbach na konto w ciągu 15 minut logowanie na to konto jest wstrzymane (także z poprawnym hasłem); reset hasła zdejmuje blokadę;
+  - limit 60 nieudanych prób na adres IP w 15 minut – luźniejszy, bo cała klasa w szkole często ma jeden adres;
+  - nieznany e-mail jest obsługiwany tak samo i trwa tyle samo – po odpowiedzi nie da się poznać, czy konto istnieje.
+- **Limity na adres IP:** rejestracja 30 na godzinę, reset hasła 20 na godzinę.
+- **Hasła:** scrypt (N = 2^16, r = 8, sól 16 B). Starsze hasze (N = 2^14) są przeliczane przy najbliższym logowaniu.
+  Sesja: losowy token w ciasteczku `HttpOnly`, `SameSite=Lax`, `Secure` na produkcji; w bazie tylko skrót. Nowa sesja przy każdym logowaniu.
+- **Limity pobrań treści** (na konto; admini zwolnieni):
+
+  | Co | Limit w 10 minut | Limit na dobę |
+  |---|---:|---:|
+  | start testu | 40 | 300 |
+  | zadania i eseje | 30 | 200 |
+  | pytania z kluczem przy haśle | 60 | 400 |
+  | pliki danych `/api/dane/*` | 120 | 1000 |
+
+  Do limitu plików danych liczą się tylko pełne pobrania – odpowiedzi 304 (przeglądarka ma aktualną wersję) nie.
+  Przekroczenie limitu daje błąd 429 i wpis „masowe pobieranie” w dzienniku.
+- **Dziennik bezpieczeństwa** (panel admina → Bezpieczeństwo): nieudane logowania, blokady, przekroczenia limitów; ostatnie 90 dni.
+- **Nagłówki:**
+  - CSP z jednorazowym nonce – skrypty tylko z aplikacji, bez ramek i wtyczek;
+  - HSTS, `X-Frame-Options: DENY`, `nosniff`, COOP i CORP `same-origin`;
+  - bez indeksowania: `X-Robots-Tag`, `robots.txt`, meta `noindex`.
+- **Inne zabezpieczenia:**
+  - **CSRF:** zapytania zmieniające dane z obcego `Origin` (albo `Sec-Fetch-Site: cross-site`) są odrzucane (403) – obok `SameSite` ciasteczka;
+  - **rozmiar danych:** ciało zapytania JSON do 4 MB (413);
+  - **zadanie cykliczne:** sekret porównywany w stałym czasie.
+- **Gdzie w kodzie:** `proxy.ts` i `lib/security-core.ts` (CSRF, CSP), `lib/security.ts` (limity, dziennik), `next.config.ts` (nagłówki).
+- **Utrudnienie kopiowania** (`app/components/copy-guard.tsx`):
+  - poza polami edycji (notatki, brudnopisy, formularze) nie da się zaznaczać ani kopiować tekstu; menu kontekstowe, przeciąganie i skróty Ctrl/Cmd+C/X/A/S/P/U są wyłączone;
+  - w Podręczniku zaznaczanie działa – podkreślenia i „Do notatki” mają własne menu – ale zaznaczenia nie da się skopiować;
+  - drukowanie pokazuje tylko informację, że jest wyłączone;
+  - na stronach z treścią jest dyskretny znak wodny z adresem konta.
+
+  **Uczciwie:** blokady w przeglądarce utrudniają kopiowanie, ale go nie uniemożliwiają (narzędzia deweloperskie, zrzut ekranu, wyłączenie skryptów).
+  Realną ochroną są serwer i limity: pytania z kluczem tylko w ramach testu lub zadania, rozwiązania dopiero po odpowiedzi,
+  wszystko tylko dla zalogowanych i z limitem pobrań.
+
 ## Czytanie na głos 🔊
 
 - **Gdzie jest przycisk 🔊:**
@@ -414,7 +454,7 @@ Vercel Hobby: 4 h aktywnego CPU, 1 mln wywołań funkcji, 100 GB transferu na mi
   Bardzo aktywny użytkownik (1000 lekcji, 200 testów) to ok. 5–6 MB, więc 0,5 GB wystarcza na kilkadziesiąt bardzo aktywnych
   albo kilkaset zwykłych kont.
 - **Panel admina → Baza danych**: rozmiar bazy względem limitu (`DB_LIMIT_MB`, domyślnie 512), największe tabele, liczby kont,
-  testów i odpowiedzi; ostrzeżenie od 70%. Sprzątanie (wygasłe sesje logowania, linki resetu hasła, stare błędne kody) raz na dobę
+  testów i odpowiedzi; ostrzeżenie od 70%. Sprzątanie (wygasłe sesje logowania, linki resetu hasła, stare błędne kody, wpisy limitów starsze niż 2 dni, dziennik bezpieczeństwa starszy niż 90 dni) raz na dobę
   przy logowaniu albo wejściu do panelu, także przyciskiem „Posprzątaj teraz” (`lib/db-usage.ts`).
 - **Obliczenia (CU-godziny)**: aplikacja nie odpytuje serwera cyklicznie, więc baza usypia, gdy nikt nie korzysta. W Neon ustaw
   **Compute → maks. 0,25 CU** (wtedy 100 CU-h ≈ 400 godzin aktywnej bazy w miesiącu). Zużycie: Neon → Usage, Vercel → Usage.
