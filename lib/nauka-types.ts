@@ -144,6 +144,8 @@ export interface LessonPayload {
   questions: Question[];
   /** true dla powtórki najsłabszych haseł (bez zapisu do konkretnej lekcji). */
   review?: boolean;
+  /** true – `repeat` uszeregowane od najsłabszych haseł użytkownika (bez losowania kolejności). */
+  repeatRanked?: boolean;
   /** Lekcja „Zrozumienie”: cel, źródła, powiązane hasła i ćwiczenia bieżącej pod-lekcji. */
   zrozum?: { goal: string; sources: ZSource[]; refs: CourseItem[]; exercises: ZEx[] };
   /** Tytuł artykułu lekcji w Podręczniku (alternatywa dla „Poznaj”), jeśli już napisany. */

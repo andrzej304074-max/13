@@ -668,7 +668,8 @@ nav.sections a.active { color: var(--text); background: var(--surface); border-c
 .account-menu { position: relative; flex: none; }
 .account-menu summary { list-style: none; cursor: pointer; display: inline-flex; gap: 8px; align-items: center; border: 1px solid var(--border); border-radius: 999px; padding: 6px 12px; background: var(--surface); min-height: 40px; }
 .account-menu summary::-webkit-details-marker { display: none; }
-.account-menu summary .email { max-width: 160px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--muted); font-size: .9rem; }
+/* e-mail tylko w rozwiniętym menu – w nagłówku miejsce na działy, notatki i 🔔 */
+.account-menu summary .email { display: none; }
 .account-menu[open] summary { border-color: var(--accent); }
 .account-panel { position: absolute; right: 0; top: calc(100% + 6px); z-index: 40; min-width: 220px; max-width: calc(100vw - 32px); display: grid; gap: 2px; padding: 8px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); animation: page-in .16s var(--ease); }
 .account-panel a, .account-panel .linkbtn { display: block; padding: 10px 12px; border-radius: 8px; text-decoration: none; color: var(--text); text-align: left; font-size: 1rem; }
@@ -956,7 +957,7 @@ body:has(.bottom-bar) .toast { bottom: calc(80px + env(safe-area-inset-bottom));
   header.top { gap: 8px; padding-inline: 16px; }
   nav.sections { gap: 2px; }
   nav.sections a { padding: 8px 10px; }
-  .qn-btn .qn-lbl, .account-menu summary .email { display: none; }
+  .qn-btn .qn-lbl { display: none; }
 }
 @media (min-width: 641px) and (max-width: 860px) {
   nav.sections a { padding: 8px; font-size: .92rem; }

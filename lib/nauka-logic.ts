@@ -263,10 +263,14 @@ export function buildExercises(p: LessonPayload, opts: BuildOptions = {}): Exerc
   const fromQ = new Set((p.extra ?? []).map((i) => i.id));
   const taught = [...p.items, ...(p.extra ?? []).filter((i) => !p.items.some((o) => o.id === i.id))];
   // lekcja z 1–2 haseł: dobierz hasła tego samego rodzaju z puli, żeby ćwiczeń było co najmniej kilka
-  const pad = taught.length >= 3 ? [] : p.pool.filter((o) => taught.some((i) => i.kind === o.kind) && !fromQ.has(o.id)).slice(0, 3 - taught.length);
+  // (bez haseł do powtórki – te są poznane wcześniej i liczą się do limitu powtórek)
+  const repIds = new Set((p.repeat ?? []).map((i) => i.id));
+  const pad = taught.length >= 3 ? [] : p.pool.filter((o) => taught.some((i) => i.kind === o.kind) && !fromQ.has(o.id) && !repIds.has(o.id)).slice(0, 3 - taught.length);
   const items = [...taught, ...pad];
-  // hasła z pytań poznane wcześniej: w „Ćwicz” i „Utrwal” po jednym ćwiczeniu (do 8 losowych na podejście)
-  const repeat = shuffle((p.repeat ?? []).filter((i) => !items.some((o) => o.id === i.id)), rnd).slice(0, 8);
+  // hasła poznane wcześniej (do 8): uszeregowane od najsłabszych użytkownika albo losowo; w „Ćwicz” i „Utrwal”
+  // po jednym ćwiczeniu, ale najwyżej tyle, ile ćwiczeń z nowych haseł (powtórki ≤ 50% pod-lekcji)
+  const repeatAll = (p.repeat ?? []).filter((i) => !items.some((o) => o.id === i.id));
+  const repeat = (p.repeatRanked ? repeatAll : shuffle(repeatAll, rnd)).slice(0, 8);
   const all = [...items, ...repeat, ...p.pool.filter((o) => !items.includes(o) && !repeat.includes(o))];
   const others = (it: CourseItem) => all.filter((o) => o.id !== it.id);
   const sameKind = (it: CourseItem) => others(it).filter((o) => o.kind === it.kind);
@@ -380,6 +384,15 @@ export function buildExercises(p: LessonPayload, opts: BuildOptions = {}): Exerc
   };
   const out: Exercise[] = [];
   const typeMore = level >= 2;
+  /** Powtórki w kolejności `repeat` (najsłabsze pierwsze), najwyżej `max` (= liczba ćwiczeń z nowych haseł). */
+  const addRepeats = (into: Exercise[], max: number, make: (it: CourseItem) => Exercise | null) => {
+    let n = 0;
+    for (const it of repeat) {
+      if (n >= max) break;
+      const e = make(it);
+      if (e) { into.push(e); n++; }
+    }
+  };
 
   if (p.sub === 1) {
     for (const it of items) {
@@ -395,9 +408,10 @@ export function buildExercises(p: LessonPayload, opts: BuildOptions = {}): Exerc
       if (typeMore) add(mixed, typing(it));
       else if (it.w) add(mixed, formula(it, false));
     }
-    for (const it of repeat) add(mixed, recognize(it) ?? trueFalse(it));
-    out.push(...shuffle(mixed, rnd));
-    add(out, items.some((i) => i.kind === "data") ? ordering() : null, pairs(items));
+    const tail: Exercise[] = [];
+    add(tail, items.some((i) => i.kind === "data") ? ordering() : null, pairs(items));
+    addRepeats(mixed, mixed.length + tail.length, (it) => recognize(it) ?? trueFalse(it));
+    out.push(...shuffle(mixed, rnd), ...tail);
   } else if (p.sub === 3) {
     const mixed: Exercise[] = [];
     for (const it of items) {
@@ -406,9 +420,10 @@ export function buildExercises(p: LessonPayload, opts: BuildOptions = {}): Exerc
       else if (typeMore) add(mixed, termToDef(it));
       else add(mixed, { type: "fiszka", item: it });
     }
-    for (const it of repeat) add(mixed, typing(it) ?? termToDef(it) ?? recognize(it));
-    out.push(...shuffle(mixed, rnd));
-    add(out, items.some((i) => i.kind === "data") ? ordering() : pairs(items));
+    const tail: Exercise[] = [];
+    add(tail, items.some((i) => i.kind === "data") ? ordering() : pairs(items));
+    addRepeats(mixed, mixed.length + tail.length, (it) => typing(it) ?? termToDef(it) ?? recognize(it));
+    out.push(...shuffle(mixed, rnd), ...tail);
   } else {
     const qs = shuffle(p.questions, rnd).slice(0, typeMore ? 7 : 8);
     for (const q of qs) out.push({ type: "pytanie", item: itemForQuestion(q, [...items, ...(p.repeat ?? [])]), question: q });
@@ -445,4 +460,24 @@ export function questionCorrect(q: Question, selected: number[]): boolean {
 
 export function accuracy(answers: Pick<AnswerLog, "correct">[]): number {
   return answers.length ? answers.filter((a) => a.correct).length / answers.length : 0;
+}
+
+/** Opanowanie hasła (poprawne / wszystkie, ostatnia odpowiedź) – z lib/mastery-core. */
+export interface RepeatStat { c: number; t: number; last: number }
+const DAY_MS = 86_400_000;
+
+/**
+ * Kolejność powtórek: najpierw hasła, które użytkownikowi szły najgorzej.
+ * Priorytet = (1 − skuteczność) × waga świeżości (1 – odpowiedź w ostatnich 60 dniach, 0,5 – starsza);
+ * hasła z mniej niż 2 odpowiedziami na końcu (losowo).
+ */
+export function rankRepeats(cands: CourseItem[], stats: Record<string, RepeatStat>, now = Date.now(), rnd: () => number = Math.random): CourseItem[] {
+  const prio = (it: CourseItem) => {
+    const m = stats[it.id];
+    if (!m || m.t < 2) return -1;
+    return (1 - m.c / m.t) * (now - m.last <= 60 * DAY_MS ? 1 : 0.5);
+  };
+  const seen = new Set<string>();
+  const uniq = cands.filter((i) => !seen.has(i.id) && seen.add(i.id));
+  return shuffle(uniq, rnd).map((it) => ({ it, p: prio(it) })).sort((a, b) => b.p - a.p).map((x) => x.it);
 }

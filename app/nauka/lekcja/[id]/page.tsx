@@ -1,5 +1,7 @@
 import { notFound } from "next/navigation";
-import { COURSE, getUnit, lessonPayload } from "@/lib/nauka-course";
+import { COURSE, getUnit, lessonPayload, personalizeRepeats } from "@/lib/nauka-course";
+import { currentUser } from "@/lib/auth";
+import { getMastery } from "@/lib/mastery";
 import { LessonPlayer } from "../player";
 
 export const dynamic = "force-dynamic";
@@ -20,7 +22,10 @@ export default async function LessonPage({ params, searchParams }: {
 }) {
   const { id } = await params;
   const sub = Number((await searchParams).sub ?? 1);
-  const payload = [1, 2, 3, 4].includes(sub) ? lessonPayload(id, sub) : null;
-  if (!payload) notFound();
+  const base = [1, 2, 3, 4].includes(sub) ? lessonPayload(id, sub) : null;
+  if (!base) notFound();
+  // powtórki („Ćwicz”, „Utrwal”) dobierane od haseł, które użytkownikowi szły najgorzej
+  const me = base.sub === 2 || base.sub === 3 ? await currentUser() : null;
+  const payload = me?.active ? personalizeRepeats(base, await getMastery(me.id).catch(() => ({}))) : base;
   return <LessonPlayer key={`${id}-${sub}`} payload={payload} next={nextHref(id, sub)} />;
 }

@@ -3,7 +3,7 @@ import { lessonArticle } from "./podrecznik";
 import { getQuestion } from "./questions";
 import type { Question } from "./types";
 import type { CourseItem, CourseLesson, CourseTopic, CourseUnit, LessonPayload } from "./nauka-types";
-import { shuffle } from "./nauka-logic";
+import { rankRepeats, shuffle, type RepeatStat } from "./nauka-logic";
 
 export { COURSE };
 
@@ -80,6 +80,36 @@ export function lessonPayload(lessonId: string, sub: number): LessonPayload | nu
     questions: sub === 4 ? shuffle(questions).slice(0, 10) : [],
     article: lessonArticle(lesson.id)?.chapter.title,
   };
+}
+
+/** Hasła lekcji tego samego tematu, które w kursie są przed daną lekcją (kolejność działów i lekcji). */
+export function earlierTopicItems(lessonId: string): string[] {
+  const lesson = getLesson(lessonId);
+  if (!lesson) return [];
+  const out: string[] = [];
+  for (const u of unitsOf(lesson.topic)) {
+    for (const lid of u.lessons) {
+      if (lid === lessonId) return out;
+      const l = COURSE.lessons[lid];
+      if (l && l.type !== "zrozum") out.push(...l.items);
+    }
+  }
+  return out;
+}
+
+/**
+ * Powtórki w lekcji dla użytkownika: hasła z pytań lekcji poznane wcześniej („review”) oraz słabe hasła
+ * (skuteczność < 80%, co najmniej 2 odpowiedzi) z wcześniejszych lekcji tematu – od najsłabszych.
+ */
+export function personalizeRepeats(p: LessonPayload, stats: Record<string, RepeatStat>, now = Date.now()): LessonPayload {
+  if (p.zrozum || p.review || p.sub === 1 || p.sub === 4) return p;
+  const taught = new Set([...p.items, ...(p.extra ?? [])].map((i) => i.id));
+  const weak = earlierTopicItems(p.lesson.id).filter((id) => {
+    const m = stats[id];
+    return !taught.has(id) && m && m.t >= 2 && m.c / m.t < 0.8;
+  });
+  const cands = [...(p.repeat ?? []), ...weak.map((id) => COURSE.items[id]).filter((i): i is CourseItem => !!i && i.kind !== "zrozumienie")];
+  return { ...p, repeat: rankRepeats(cands.filter((i) => !taught.has(i.id)), stats, now).slice(0, 8), repeatRanked: true };
 }
 
 /** Lekcja powtórkowa z podanych (najsłabszych) haseł – ćwiczenia jak w „Utrwal”. */
