@@ -234,7 +234,8 @@ export async function register(rawEmail: unknown, pass: unknown, code: unknown):
     if (first) {
       // pierwsze konto przejmuje wyniki testów i postęp nauki sprzed wprowadzenia kont
       await q("UPDATE tests SET user_id = $1 WHERE user_id IS NULL", [rows[0].id]);
-      await q("UPDATE learn_sessions SET user_id = $1 WHERE user_id IS NULL", [rows[0].id]);
+      // identyfikator klienta służy tylko do ponowień zapisu – przy przejęciu czyszczony (sesje różnych kont mogły mieć ten sam)
+      await q("UPDATE learn_sessions SET user_id = $1, client_id = NULL WHERE user_id IS NULL", [rows[0].id]);
     }
     return rows[0];
   });

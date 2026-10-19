@@ -167,11 +167,12 @@ Przegląd po rozbudowie o:
 10. **Limity w bazie:**
     - limit treści sprawdzany jednym zapytaniem zamiast dwóch po kolei;
     - adres IP z `X-Forwarded-For` – ostatni, a nie pierwszy, który klient może podać sam.
-11. **Drobne:**
+11. **Przejęcie danych sprzed kont a identyfikatory sesji** (`lib/auth.ts`). Pierwsze konto przejmuje sesje bez właściciela. Gdy dwie takie sesje miały ten sam identyfikator klienta (z różnych kont), naruszały unikalność i rejestracja się nie udawała. Wyszło w regresji; przy przejęciu identyfikator jest teraz czyszczony.
+12. **Drobne:**
     - typ powtórek to `Mastery`, a nie jego kopia;
     - jedna funkcja `isUuid`;
     - zależność `playwright-core` zapisana w `package.json`.
-12. **Wyścigi w testach e2e:**
+13. **Wyścigi w testach e2e:**
     - `decks.mjs` sprawdzał pustą listę talii przed jej wczytaniem;
     - `offline.mjs` otwierał lekcję ponownie, zanim zapis po powrocie sieci się wykonał;
     - `security.mjs` – podstawianie „$” przez powłokę w zapytaniu SQL.
