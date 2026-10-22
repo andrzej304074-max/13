@@ -1313,3 +1313,6 @@ body:has(.speech-bar) main.container { padding-bottom: 160px; }
 /* dziennik bezpieczeństwa (panel admina): tekst do lewej, data w jednej linii */
 .sec-log th, .sec-log td { text-align: left; vertical-align: top; }
 .sec-log td:first-child { white-space: nowrap; }
+
+/* ← i → w nagłówku */
+.nav-arrows { flex: none; display: flex; gap: 4px; }

@@ -41,7 +41,7 @@ describe("durationMinutes", () => {
 
 describe("validateSelection", () => {
   it("odrzuca dwie odpowiedzi w jednokrotnym", () => expect(validateSelection("single", [0, 1])).not.toBeNull());
-  it("odrzuca brak odpowiedzi w jednokrotnym", () => expect(validateSelection("single", [])).not.toBeNull());
+  it("przyjmuje brak odpowiedzi w jednokrotnym (sprawdzenie za 0 pkt)", () => expect(validateSelection("single", [])).toBeNull());
   it("akceptuje wiele w wielokrotnym", () => expect(validateSelection("multi", [0, 1, 3])).toBeNull());
   it("odrzuca indeks spoza zakresu", () => expect(validateSelection("multi", [4])).not.toBeNull());
   it("odrzuca duplikaty", () => expect(validateSelection("multi", [1, 1])).not.toBeNull());

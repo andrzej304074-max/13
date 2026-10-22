@@ -54,6 +54,7 @@ export function validateSelection(type: QuestionType, selected: unknown): string
     return "Nieprawidłowy indeks odpowiedzi.";
   }
   if (new Set(selected).size !== selected.length) return "Powtórzona odpowiedź.";
-  if (type === "single" && selected.length !== 1) return "Zaznacz dokładnie jedną odpowiedź.";
+  // puste zaznaczenie jest dozwolone – sprawdzenie bez odpowiedzi daje 0 pkt i pokazuje poprawną
+  if (type === "single" && selected.length > 1) return "Zaznacz dokładnie jedną odpowiedź.";
   return null;
 }

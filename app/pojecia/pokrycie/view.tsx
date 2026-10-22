@@ -2,7 +2,6 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { Donut, StackBars } from "@/app/components/stack-bars";
-import { ToTop } from "@/app/components/to-top";
 import { fmtPct } from "@/lib/client";
 import { useData } from "@/lib/data-client";
 import {
@@ -254,7 +253,6 @@ export function CoverageView({ data }: { data: Data }) {
           {!more.fresh && cov.fresh.length > LIMIT && <button className="btn small secondary" style={{ marginTop: 10 }} onClick={() => setMore({ ...more, fresh: true })}>Pokaż wszystkie ({cov.fresh.length})</button>}
         </section>
       </div>
-      <ToTop />
     </div>
   );
 }

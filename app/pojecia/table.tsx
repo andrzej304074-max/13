@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
-import { ToTop } from "@/app/components/to-top";
 import { StarButton, StarFilterSeg, type StarFilter } from "@/app/components/star";
 import { viewedUser } from "@/lib/client";
 import { useStars } from "@/lib/stars-client";
@@ -151,7 +150,6 @@ export function ConceptTable({ rows, topics, kinds }: { rows: Row[]; topics: Top
         {shown.length === 0 && <div className="empty-state" style={{ margin: 16 }}><span aria-hidden>🔍</span><p>Brak haseł dla wybranych filtrów.</p></div>}
         {shown.length > limit && <div ref={end} className="muted" style={{ padding: 16 }}>Ładowanie kolejnych haseł…</div>}
       </div>
-      <ToTop />
     </div>
   );
 }

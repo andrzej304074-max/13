@@ -9,6 +9,7 @@ import { SectionNav, SubTabs } from "./components/nav";
 import { AccessGuard, AccessProvider } from "./components/access";
 import { ReaderBar } from "./components/speech/reader-bar";
 import { CopyGuard } from "./components/copy-guard";
+import { ToTop } from "./components/to-top";
 import { accessFor } from "@/lib/access";
 import { firstAllowed, isBlocked, type BlockMode } from "@/lib/access-core";
 import "./globals.css";
@@ -58,6 +59,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           {me?.active && <SectionNav variant="bottom" />}
           {me?.active && <ReaderBar />}
           {me?.active && <CopyGuard />}
+          <ToTop />
         </AccessProvider>
       </body>
     </html>

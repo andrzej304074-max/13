@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { ToTop } from "@/app/components/to-top";
 import { useData } from "@/lib/data-client";
 import { PageSkeleton } from "../table";
 import { api, fmtPct, LETTERS } from "@/lib/client";
@@ -292,7 +291,6 @@ export function OweStatsView({ data }: { data: Data }) {
         </div>
         {res.open.total.n === 0 && <p className="muted">Brak esejów i zadań dla wybranych filtrów.</p>}
       </div>
-      <ToTop />
     </div>
   );
 }

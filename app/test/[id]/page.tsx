@@ -263,8 +263,9 @@ export default function TestPage() {
             <button className="btn secondary" onClick={() => go(index - 1)} disabled={index === 0}>←</button>
           )}
           {!fb ? (
-            <button className="btn" onClick={() => check()} disabled={busy || (!isMulti && selected.length === 0)} data-testid="check">
-              {busy ? "Sprawdzanie…" : error ? "Spróbuj ponownie" : "Sprawdź"}
+            <button className="btn" onClick={() => check()} disabled={busy} data-testid="check"
+              title={selected.length === 0 ? "Bez zaznaczenia – 0 pkt, zobaczysz poprawną odpowiedź" : undefined}>
+              {busy ? "Sprawdzanie…" : error ? "Spróbuj ponownie" : selected.length === 0 ? "Sprawdź (0 pkt)" : "Sprawdź"}
             </button>
           ) : index < test.questions.length - 1 ? (
             <button className="btn" onClick={() => go(index + 1)}>Dalej →</button>

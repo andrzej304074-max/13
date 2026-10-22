@@ -140,8 +140,13 @@ export async function getTest(id: string, viewer: { id: string; isAdmin: boolean
   return toState(t, await loadAnswers(id));
 }
 
-export async function answerQuestion(userId: string, id: string, questionId: unknown, selected: unknown, skip: unknown = false) {
-  const t = await loadTest(id, userId);
+/**
+ * Odpowiedź na pytanie. Szybka ścieżka: test i (opcjonalnie) `guard` – np. limit pobrań – równolegle, potem zapis odpowiedzi,
+ * kontrola kolejności (bez limitu), suma punktów i wynik testu w jednym zapytaniu (dawniej 5–6 podróży do bazy po kolei).
+ * Puste zaznaczenie = odpowiedź za 0 pkt (pokazujemy poprawną); „Pomiń” z zapisem – tylko bez limitu.
+ */
+export async function answerQuestion(userId: string, id: string, questionId: unknown, selected: unknown, skip: unknown = false, guard?: Promise<unknown>) {
+  const [t] = await Promise.all([loadTest(id, userId), ensureRescored(), guard]);
   const endless = t.mode === "endless";
   if (t.finished_at) throw new HttpError(409, "Test został już zakończony.");
   if (t.deadline && t.deadline.getTime() + GRACE_MS < Date.now()) {
@@ -155,37 +160,34 @@ export async function answerQuestion(userId: string, id: string, questionId: unk
   if (!q) throw new HttpError(400, "Nieznane pytanie.");
   const skipped = skip === true;
   if (skipped && !endless) throw new HttpError(400, "Pomijanie z zapisem działa tylko w trybie bez limitu.");
-  if (endless) {
-    const { rows } = await query<{ n: string }>("SELECT COUNT(*) AS n FROM answers WHERE test_id = $1", [id]);
-    if (t.question_ids[Number(rows[0].n)] !== questionId) {
-      throw new HttpError(409, "W trybie bez limitu nie można wracać ani przeskakiwać pytań.");
-    }
-  }
   if (!skipped) {
     const err = validateSelection(q.type, selected);
     if (err) throw new HttpError(400, err);
   }
 
   const sel = skipped ? [] : [...(selected as number[])].sort((a, b) => a - b);
-  const points = skipped ? 0 : scoreAnswer(q.type, sel, q.correct);
-  const inserted = await query(
-    `INSERT INTO answers (test_id, question_id, selected, points, skipped)
-     VALUES ($1, $2, $3, $4, $5) ON CONFLICT DO NOTHING`,
-    [id, questionId, sel, points, skipped],
+  // bez zaznaczenia – 0 pkt (w wielokrotnym puste pola mogłyby inaczej dać punkt za „trafnie niezaznaczone”)
+  const points = skipped || sel.length === 0 ? 0 : scoreAnswer(q.type, sel, q.correct);
+  // bez limitu: pytanie musi być kolejne w teście (nie można wracać ani przeskakiwać)
+  const pos = endless ? t.question_ids.indexOf(questionId) : -1;
+  const { rows } = await query<{ ins: string; n: string; s: number }>(
+    `WITH prev AS (SELECT COUNT(*) AS n, COALESCE(SUM(points), 0) AS s FROM answers WHERE test_id = $1),
+          ins AS (INSERT INTO answers (test_id, question_id, selected, points, skipped)
+                  SELECT $1, $2, $3, $4, $5 FROM prev WHERE $6::int < 0 OR prev.n = $6
+                  ON CONFLICT DO NOTHING RETURNING points),
+          upd AS (UPDATE tests SET score = (SELECT s FROM prev) + $4, max_score = ((SELECT n FROM prev) + 1) * $8
+                  WHERE id = $1 AND $7 AND EXISTS (SELECT 1 FROM ins) RETURNING 1)
+     SELECT (SELECT COUNT(*) FROM ins) AS ins, prev.n, prev.s FROM prev`,
+    [id, questionId, sel, points, skipped, pos, endless, MAX_POINTS_PER_QUESTION],
   );
-  if (inserted.rowCount === 0) throw new HttpError(409, "Na to pytanie już odpowiedziano.");
-
-  const answers = await loadAnswers(id);
-  const totalScore = answers.reduce((s, a) => s + a.points, 0);
-  if (endless) {
-    // Wynik testu bez limitu liczy się do statystyk na bieżąco – tylko z odpowiedzianych/pominiętych pytań.
-    await query("UPDATE tests SET score = $2, max_score = $3 WHERE id = $1", [
-      id,
-      totalScore,
-      answers.length * MAX_POINTS_PER_QUESTION,
-    ]);
+  const r = rows[0];
+  if (Number(r.ins) === 0) {
+    if (endless && Number(r.n) !== pos) throw new HttpError(409, "W trybie bez limitu nie można wracać ani przeskakiwać pytań.");
+    throw new HttpError(409, "Na to pytanie już odpowiedziano.");
   }
-  if (endless && answers.length >= t.question_ids.length) {
+  const answered = Number(r.n) + 1;
+  const totalScore = Number(r.s) + points;
+  if (endless && answered >= t.question_ids.length) {
     // porcja się skończyła – dolosuj kolejne pytania z puli (bez już użytych); pusta pula kończy test
     const used = new Set(t.question_ids);
     const f = t.draw ?? {};
@@ -195,8 +197,8 @@ export async function answerQuestion(userId: string, id: string, questionId: unk
       t.question_ids = [...t.question_ids, ...more];
     }
   }
-  if (answers.length >= t.question_ids.length) await finishRow(id);
-  const next = endless ? getQuestion(t.question_ids[answers.length] ?? "") : undefined;
+  if (answered >= t.question_ids.length) await finishRow(id);
+  const next = endless ? getQuestion(t.question_ids[answered] ?? "") : undefined;
   return {
     ...feedback({ question_id: questionId, selected: sel, points, skipped }),
     totalScore,

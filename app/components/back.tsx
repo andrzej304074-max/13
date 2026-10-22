@@ -13,12 +13,16 @@ import { useEffect, useState } from "react";
  */
 
 const STACK = "owe:nav-stack";
+/** Adresy, z których wrócono – do „→” (dalej); nowa strona otwarta inaczej niż „dalej” czyści listę. */
+const FWD = "owe:nav-forward";
 const POS = "owe:scroll:";
 const MAX = 50;
 
 const here = () => window.location.pathname + window.location.search;
 const read = (): string[] => { try { return JSON.parse(sessionStorage.getItem(STACK) ?? "[]"); } catch { return []; } };
 const write = (s: string[]) => { try { sessionStorage.setItem(STACK, JSON.stringify(s.slice(-MAX))); } catch {} };
+const readF = (): string[] => { try { return JSON.parse(sessionStorage.getItem(FWD) ?? "[]"); } catch { return []; } };
+const writeF = (s: string[]) => { try { sessionStorage.setItem(FWD, JSON.stringify(s.slice(-MAX))); } catch {} };
 
 let backNav = false;
 /** Czy bieżąca strona została otwarta powrotem (do przywracania stanu, np. karty w feedzie fiszek). */
@@ -56,6 +60,7 @@ export function BackButton() {
   const router = useRouter();
   const pathname = usePathname();
   const [canBack, setCanBack] = useState(false);
+  const [canFwd, setCanFwd] = useState(false);
 
   // pozycja przewinięcia bieżącego adresu
   useEffect(() => {
@@ -71,24 +76,40 @@ export function BackButton() {
   useEffect(() => {
     const url = here();
     const s = read();
+    const f = readF();
     if (s.length >= 2 && s[s.length - 2] === url) {
-      s.pop();
+      f.push(s.pop()!);
       backNav = true;
       restoreScroll(url);
     } else if (s[s.length - 1] !== url) {
       // ta sama ścieżka z innymi parametrami (filtry) – podmiana, nie nowy krok
       if (s.length && s[s.length - 1].split("?")[0] === pathname) s[s.length - 1] = url;
-      else s.push(url);
+      else {
+        s.push(url);
+        // „dalej” – zdejmij z listy; każda inna nowa strona zaczyna nową gałąź historii
+        if (f[f.length - 1] === url) { f.pop(); restoreScroll(url); } else f.length = 0;
+      }
       backNav = false;
     }
     write(s);
+    writeF(f);
     setCanBack(s.length >= 2);
+    setCanFwd(f.length > 0);
   }, [pathname]);
 
-  if (!canBack) return null;
+  if (!canBack && !canFwd) return null;
   return (
-    <button type="button" className="back-btn" onClick={() => router.back()} aria-label="Wróć do poprzedniej strony" title="Wróć (do tego samego miejsca)" data-testid="back">
-      ←
-    </button>
+    <span className="nav-arrows">
+      {canBack && (
+        <button type="button" className="back-btn" onClick={() => router.back()} aria-label="Wróć do poprzedniej strony" title="Wróć (do tego samego miejsca)" data-testid="back">
+          ←
+        </button>
+      )}
+      {canFwd && (
+        <button type="button" className="back-btn" onClick={() => router.forward()} aria-label="Przejdź dalej (do strony, z której wrócono)" title="Dalej" data-testid="forward">
+          →
+        </button>
+      )}
+    </span>
   );
 }
