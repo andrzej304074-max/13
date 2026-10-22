@@ -224,7 +224,8 @@ export default function TestPage() {
       <div className="card">
         <p className="muted" style={{ margin: "0 0 8px", fontSize: "0.85rem" }}>
           {isMulti ? "Wielokrotny wybór — zaznacz wszystkie poprawne" : "Jednokrotny wybór — zaznacz jedną odpowiedź"}
-          {q.edition && ` · ${q.edition}`}
+          {test.bank === "mix" && ` · ${sourceLabel(q.id)}`}
+          {q.edition && !(test.bank === "mix" && !q.id.startsWith("owe")) && ` · ${q.edition}`}
         </p>
         <div className="q-head">
           <p className="question">{q.question}</p>
@@ -287,7 +288,7 @@ export default function TestPage() {
             Zakończ test
           </button>
         </div>
-        <QuestionScratch refKey={`${test.bank === "slownik" ? "slownik" : "owe"}:${q.id}`} />
+        <QuestionScratch refKey={`${q.id.startsWith("sl-") ? "slownik" : q.id.startsWith("ai-") ? "ai" : "owe"}:${q.id}`} />
       </div>
     </div>
   );
@@ -330,9 +331,14 @@ function Summary({ test }: { test: TestState }) {
         </table></div>
       </div>
       <div className="row">
-        <Link className="btn" href={test.bank === "slownik" ? "/slownik" : "/"}>Nowy test</Link>
+        <Link className="btn" href={test.bank === "slownik" ? "/slownik" : test.bank === "mix" ? "/testy/wszystkie" : "/"}>Nowy test</Link>
         <Link className="btn secondary" href={`/stats?bank=${test.bank}`}>Statystyki</Link>
       </div>
     </div>
   );
+}
+
+/** Źródło pytania w teście „Wszystkie pytania” (z prefiksu id). */
+function sourceLabel(id: string): string {
+  return id.startsWith("ai-") ? "🤖 Pytania AI" : id.startsWith("sl-") ? "📘 Słownik" : "📜 Archiwum OWE";
 }

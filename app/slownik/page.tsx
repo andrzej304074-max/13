@@ -1,5 +1,6 @@
 import { SLOWNIK_SECTIONS } from "@/data/slownik";
-import { countByType, slownikCounts } from "@/lib/questions";
+import { countByType } from "@/lib/questions";
+import { KINDS, TOPICS } from "@/lib/question-meta";
 import HomeClient from "../home-client";
 
 export default function SlownikHome() {
@@ -7,7 +8,7 @@ export default function SlownikHome() {
     <HomeClient
       bank="slownik"
       counts={{ single: countByType("single", "slownik"), multi: countByType("multi", "slownik") }}
-      slownik={{ counts: slownikCounts(), sections: SLOWNIK_SECTIONS }}
+      options={{ topics: TOPICS(), kinds: KINDS(), sections: SLOWNIK_SECTIONS }}
     />
   );
 }

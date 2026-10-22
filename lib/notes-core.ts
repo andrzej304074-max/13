@@ -127,7 +127,7 @@ export function sanitizeText(v: unknown, max: number, field: string): string {
 }
 
 /** Odnośnik notatki do miejsca w aplikacji: pytanie OWE/słownika, lekcja z pod-lekcją, artykuł. */
-const REF = /^(owe|slownik|lekcja|artykul|zadanie|esej):[A-Za-z0-9_.:-]{1,160}$/;
+const REF = /^(owe|slownik|ai|lekcja|artykul|zadanie|esej):[A-Za-z0-9_.:-]{1,160}$/;
 export function sanitizeRef(v: unknown): string | null {
   if (v == null || v === "") return null;
   if (typeof v !== "string" || !REF.test(v)) throw new NoteError("Nieprawidłowy odnośnik notatki.");

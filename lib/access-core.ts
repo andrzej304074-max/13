@@ -43,12 +43,12 @@ export function effectiveBlocks(user: { isAdmin: boolean; blocked: string[] }, s
 
 /**
  * Wspólne zasoby działu (klucz działu z `pathKey`) i podzakładki, które z nich korzystają: test (`/test/…`, `/api/tests`)
- * – Olimpiada i Słownik; lekcje i postęp (`/api/nauka`) – Kurs, Powtórka, Fiszki, Moje talie, Podręcznik.
+ * – Olimpiada, Wszystkie pytania i Słownik; lekcje i postęp (`/api/nauka`) – Kurs, Powtórka, Fiszki, Moje talie, Podręcznik.
  * Zasób jest zablokowany, gdy zablokowane są wszystkie korzystające z niego podzakładki – nowe podzakładki działu
  * (np. Zadania, Eseje, Olimpiada, Literatura) nie odblokowują go same z siebie.
  */
 const SHARED_TABS: Record<string, string[]> = {
-  testy: ["/", "/slownik"],
+  testy: ["/", "/testy/wszystkie", "/slownik"],
   nauka: ["/nauka", "/nauka/podrecznik", "/fiszki", "/fiszki/talie", "/nauka/powtorka"],
 };
 

@@ -34,11 +34,11 @@ const wrap = async <T>(fn: () => Promise<T>): Promise<T> => {
 export function refContext(ref: string | null): string | null {
   if (!ref) return null;
   const [kind, id, sub] = ref.split(":");
-  if (kind === "owe" || kind === "slownik") {
+  if (kind === "owe" || kind === "slownik" || kind === "ai") {
     const q = getQuestion(id);
     if (!q) return null;
     const t = q.question.replace(/\s+/g, " ");
-    return `${kind === "owe" ? `OWE ${q.edition}` : "Słownik"}: ${t.length > 140 ? t.slice(0, 139) + "…" : t}`;
+    return `${kind === "owe" ? `OWE ${q.edition}` : kind === "ai" ? "Pytania AI" : "Słownik"}: ${t.length > 140 ? t.slice(0, 139) + "…" : t}`;
   }
   if (kind === "lekcja") {
     const l = COURSE.lessons[id];

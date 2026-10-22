@@ -69,6 +69,24 @@ Przy starcie testu można wybrać rodzaj pytań (ręczne, automatyczne lub oba) 
 - `data/slownik/manual.json` – pytania pisane ręcznie, składane z `tools/slownik/manual/m*.py`:
   `python3 -I tools/slownik/build_manual.py tools/slownik/manual data/slownik`.
 
+## Pytania AI i zakładka „Wszystkie pytania”
+
+Trzy źródła pytań testowych: **📜 Archiwum OWE** (prawdziwe pytania z olimpiad, `data/questions`), **🤖 Pytania AI
+(sprawdzone)** (`data/ai/questions.json`) i **📘 Słownik** (`data/slownik`). Zakładka Testy → **Wszystkie pytania**
+(`/testy/wszystkie`, `tests.bank = 'mix'`) losuje jeden test z wybranych źródeł; przy pytaniu widać jego źródło.
+
+- **Pytania AI**: pytania z oznaczeniem „🤖 AI” wklejone przez użytkownika (eksport innej aplikacji, bez zaznaczonych
+  odpowiedzi). `tools/pytania_ai/extract.py` wyciąga je do `surowe.json` (pomija „📜 OWE”, scala identyczne),
+  `tools/pytania_ai/klucz.txt` to ręczny klucz: poprawna odpowiedź i wyjaśnienie każdego pytania, poprawki bełkotliwych
+  sformułowań i odrzucenia (powtórzenia tego samego pytania innymi słowami), `tools/pytania_ai/build.py` buduje bank
+  i raport `tools/pytania_ai/RAPORT.md` (550 unikalnych → 464 w banku).
+- **Filtry** (wspólne dla Olimpiady, Wszystkich pytań i Słownika – `lib/question-meta.ts`): zakres edycji i etapy
+  (szkolny/okręgowy/centralny – tylko Archiwum), dział (temat kursu), rodzaj haseł (pojęcia, wzory, osoby…; pytania
+  obliczeniowe liczą się jako „wzory”), hasło przewodnie (Archiwum – hasło swojej edycji; AI i Słownik – demografia,
+  hasło XL edycji). Liczby pytań dla filtrów: `POST /api/tests/pula`. Filtr zapisuje się przy teście (`tests.draw`),
+  więc test „bez limitu” dolosowuje z tymi samymi filtrami.
+- Dział i pojęcia każdego pytania: `data/nauka/{owe,slownik,ai}-stats.json` (`tools/nauka/build_course.py`).
+
 ## Nauka (zakładka „Nauka” – kurs w stylu Duolingo)
 
 Kurs zbudowany z haseł słownika (`docs/slownik-owe.pdf`) i wszystkich banków pytań:
@@ -146,7 +164,7 @@ python3 -I tools/nauka/pojecia_pytan.py stats
 
 ## Nawigacja i szybkość
 
-- **5 działów** (`lib/nav.ts`): 📝 Testy (Olimpiada, Słownik), 🎓 Nauka (Kurs, Podręcznik, Fiszki, Moje talie, Powtórka), 📖 Pojęcia (Tabela,
+- **5 działów** (`lib/nav.ts`): 📝 Testy (Olimpiada, Wszystkie pytania, Zadania, Eseje, Słownik), 🎓 Nauka (Kurs, Podręcznik, Fiszki, Moje talie, Powtórka), 📖 Pojęcia (Tabela,
   Statystyki OWE, Pokrycie olimpiad, Mapa myśli), 🗒️ Notatki (Notatki, Brudnopisy), 📊 Statystyki (Wyniki testów, Działy i pojęcia, Nauka). Na komputerze działy w nagłówku, na telefonie dolny pasek
   z ikonami; podzakładki działu nad treścią strony; konto (panel admina, ustawienia, wylogowanie) pod 👤. Przycisk „←” w nagłówku
   wraca do poprzedniej strony aplikacji i do miejsca, w którym się na niej było (pozycja przewinięcia, karta w feedzie fiszek –

@@ -392,6 +392,24 @@ for u in units:
 QSTATS = {"placed": sum(len(v) for v in placed.values()), "unplaced": unplaced, "parts": len(new_lessons)}
 
 os.makedirs(OUT, exist_ok=True)
+# Pytania AI (sprawdzone) – data/ai/questions.json: tylko statystyki (dział, zagadnienie, pojęcia), bez przydziału do lekcji
+AI_TOPIC = {"Ekonomia": "mikro", "Demografia": "demografia", "Zarządzanie": "zarzadzanie", "Finanse": "finanse",
+            "Finanse Przedsiębiorstw": "firma"}
+ai_stats = []
+for q in json.load(open(os.path.join(ROOT, "data/ai/questions.json"))):
+    main, allc = concepts(q, "manual")
+    main = {i for i in main if i in item_lessons} or {i for i in allc if i in item_lessons}
+    sitems, calc = calc_items(q, stat_items(q, main) if main else set())
+    lid = home_lesson(sitems)
+    rec = {"id": q["id"], "t": q["type"], "dz": q["dzial"], "topic": lessons[lid]["topic"] if lid else AI_TOPIC[q["dzial"]],
+           "unit": lessons[lid]["unit"] if lid else None, "items": sorted(sitems)}
+    if calc:
+        rec["calc"] = 1
+    # dział „Demografia” to hasło przewodnie XL edycji („Gospodarka wobec wyzwań demograficznych”)
+    if q["dzial"] == "Demografia":
+        rec["th"] = 1
+    ai_stats.append(rec)
+
 course = {
     "topics": [{"id": t, "title": ti, "emoji": e, "color": c} for t, ti, e, c in C.TOPICS],
     "kinds": [{"id": k, "title": kt} for k, kt in C.KINDS],
@@ -402,8 +420,10 @@ load(os.path.join(HERE, "build_zrozum.py")).build(course, ROOT, OUT)
 json.dump(course, open(os.path.join(OUT, "course.json"), "w"), ensure_ascii=False, separators=(",", ":"))
 json.dump(sorted(owe_stats, key=lambda r: r["id"]), open(os.path.join(OUT, "owe-stats.json"), "w"), ensure_ascii=False, separators=(",", ":"))
 json.dump(sorted(sl_stats, key=lambda r: r["id"]), open(os.path.join(OUT, "slownik-stats.json"), "w"), ensure_ascii=False, separators=(",", ":"))
+json.dump(sorted(ai_stats, key=lambda r: r["id"]), open(os.path.join(OUT, "ai-stats.json"), "w"), ensure_ascii=False, separators=(",", ":"))
 
 # --- raport ---
+print(f"pytania AI: {len(ai_stats)}, bez pojęć: {sum(not r['items'] for r in ai_stats)}, obliczeniowe: {sum('calc' in r for r in ai_stats)}")
 print(f"hasła: {len(items)}, działy: {len(units)}, lekcje: {len(lessons)}, pod-lekcje: {4 * len(lessons)}")
 for t in TOPIC_IDS:
     us = [u for u in units if u["topic"] == t]

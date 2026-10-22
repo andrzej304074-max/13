@@ -14,15 +14,16 @@ const stats = async (q = "") => (await page.request.get(`${B}/api/stats?bank=owe
 const s0 = await stats();
 check(s0.byStage && "s" in s0.byStage && "o" in s0.byStage, "statystyki mają podział na etapy");
 
-// 1. formularz: wybór etapu tylko przy jednokrotnym
-await page.goto(`${B}/`); await page.waitForSelector('[data-testid="stage-choice"]');
-const lbl = await page.locator('[data-testid="stage-choice"] button').allInnerTexts();
-check(lbl.length === 3 && /\d+ pytań/.test(lbl[1]), `trzy opcje z liczbą pytań: ${lbl.map((x) => x.replace(/\n/g, " ")).join(" | ")}`);
-await page.locator(".choice", { hasText: "Wielokrotny wybór" }).click();
-check(await page.locator('[data-testid="stage-choice"]').count() === 0, "przy wielokrotnym brak wyboru etapu");
+// 1. formularz: etapy w filtrach (szkolny / okręgowy / centralny)
+await page.goto(`${B}/`); await page.waitForSelector('[data-testid="test-filters"]');
+await page.evaluate(() => localStorage.removeItem("owe:testStart:owe")); await page.reload(); await page.waitForSelector('[data-testid="test-filters"]');
+await page.locator('details[data-testid="test-filters"] summary').click();
+check(await page.locator('[data-testid="stages"] button').count() === 3, "trzy etapy w filtrach");
 await page.locator(".choice", { hasText: "Jednokrotny wybór" }).click();
-await page.click('[data-testid="stage-choice"] [data-stage="s"]');
-check(await page.locator('[data-testid="stage-choice"] [data-stage="s"]').getAttribute("aria-pressed") === "true", "zaznaczony etap szkolny");
+await page.click('[data-testid="stages"] [data-stage="o"]'); await page.click('[data-testid="stages"] [data-stage="c"]');
+check(await page.locator('[data-testid="stages"] [data-stage="s"]').getAttribute("aria-pressed") === "true"
+  && await page.locator('[data-testid="stages"] [aria-pressed="true"]').count() === 1, "zaznaczony tylko etap szkolny");
+await page.waitForTimeout(600);
 await page.locator(".choice", { hasText: "30 pytań" }).click();
 await page.click("text=Rozpocznij test"); await page.waitForURL(/\/test\//);
 const tid = page.url().split("/").pop();
@@ -31,8 +32,11 @@ check(t.questions.length === 30 && t.questions.every((q) => /-s-/.test(q.id)), `
 for (const q of t.questions.slice(0, 3)) await page.request.post(`${B}/api/tests/${tid}/answer`, { data: { questionId: q.id, selected: [0] } });
 await page.request.post(`${B}/api/tests/${tid}/finish`);
 // wybór zapamiętany
-await page.goto(`${B}/`); await page.waitForSelector('[data-testid="stage-choice"]');
-check(await page.locator('[data-testid="stage-choice"] [data-stage="s"]').getAttribute("aria-pressed") === "true", "wybór etapu zapamiętany");
+await page.goto(`${B}/`); await page.waitForSelector('[data-testid="test-filters"]');
+await page.waitForTimeout(300);
+check(await page.locator('[data-testid="stages"] [data-stage="s"]').getAttribute("aria-pressed") === "true"
+  && await page.locator('[data-testid="stages"] [aria-pressed="true"]').count() === 1, "wybór etapu zapamiętany");
+await page.evaluate(() => localStorage.removeItem("owe:testStart:owe"));
 
 // 2. bez limitu – okręgowy, przez API (dolosowanie też z etapu)
 const e = await (await page.request.post(`${B}/api/tests`, { data: { type: "single", count: "endless", stage: "o" } })).json();

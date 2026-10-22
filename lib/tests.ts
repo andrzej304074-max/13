@@ -60,7 +60,9 @@ export async function createTest(
   const drawn = drawQuestions(type, endless ? ENDLESS_CHUNK : count, bank, filter);
   if (drawn.length === 0) throw new HttpError(400, "Brak pytań tego typu w bazie.");
   // filtr losowania zapamiętany przy teście (bez limitu – do dolosowania; etap – do historii)
-  const draw = JSON.stringify({ origin: filter.origin ?? null, section: filter.section ?? null, stage: filter.stage ?? null });
+  const draw = JSON.stringify({ origin: filter.origin ?? null, section: filter.section ?? null, stage: filter.stage ?? null,
+    sources: filter.sources ?? null, edFrom: filter.edFrom ?? null, edTo: filter.edTo ?? null, stages: filter.stages ?? null,
+    topic: filter.topic ?? null, kind: filter.kind ?? null, theme: filter.theme ?? null });
   const { rows } = endless
     ? await query<TestRow>(
         `INSERT INTO tests (bank, type, mode, question_ids, deadline, max_score, user_id, draw)

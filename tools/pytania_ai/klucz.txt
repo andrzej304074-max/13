@@ -1,0 +1,658 @@
+# Klucz i poprawki pytań AI (indeks = pozycja w surowe.json).
+# Format: N|poprawne(np. 2 albo 0,3)|wyjaśnienie
+#         N|q=nowa treść   N|o<k>=nowa odpowiedź k   N|x=powód odrzucenia
+0|0|Mnożnik prosty = 1 / stopa rezerw = 1 / 0,1 = 10.
+1|0|Realny PKB ≈ wzrost nominalnego PKB − wzrost deflatora = 5% − 2% = 3%.
+2|2|W krótkim okresie firma produkuje, dopóki cena pokrywa przeciętny koszt zmienny; poniżej minimum AVC zamknięcie zmniejsza stratę do kosztów stałych.
+3|2|Użyteczność krańcowa maleje, więc użyteczność całkowita rośnie coraz wolniej (do punktu nasycenia).
+4|0|QE to skup aktywów (głównie obligacji) przez bank centralny, który zwiększa rezerwy banków i obniża rentowności długoterminowe.
+5|2|Ricardo: handel opłaca się obu stronom, gdy różnią się względne (komparatywne) koszty produkcji, nawet przy przewadze absolutnej jednego kraju.
+6|2|Kurs realny = kurs nominalny × P zagraniczne / P krajowe – uwzględnia relację poziomów cen.
+7|3|Wspólne zasoby (rywalizacyjne, niewykluczalne) są nadmiernie eksploatowane – tragedia wspólnego pastwiska.
+8|1|Ciężar podatku ponosi w większym stopniu strona mniej elastyczna – trudniej jej uniknąć zakupu lub sprzedaży.
+8|q=Zgodnie z mechanizmem rynkowym, która strona wymiany poniesie faktycznie większy ciężar nowo nałożonego podatku pośredniego (np. akcyzy od jednostki towaru)?
+9|1|Przy doskonale nieelastycznym popycie kupujący nie zmniejsza zakupów, więc cena rośnie o cały podatek – ciężar w całości na konsumencie.
+10|1|Przy |Ed| < 1 procentowy spadek ilości jest mniejszy niż wzrost ceny, więc utarg (P × Q) rośnie.
+11|1|Bezrobocie rośnie w recesji i spada w ożywieniu – jest antycykliczne; inwestycje, VAT i zatrudnienie są procykliczne.
+12|2|Kontyngent (kwota) importowy to ilościowy limit przywozu; cło działa przez cenę.
+13|1|Bezrobocie frykcyjne wynika z czasu potrzebnego na znalezienie pracy przy naturalnym ruchu kadr.
+14|2|Cykl PDCA: Plan – Do – Check – Act; zaczyna się od planowania.
+15|1|M = Measurable – cel mierzalny.
+16|1|U Herzberga wynagrodzenie, bezpieczeństwo i warunki pracy to czynniki higieny – ich brak demotywuje, ale nie motywują same z siebie.
+17|3|Przeniesienie trendu historycznego w przyszłość to ekstrapolacja trendu.
+18|2|Efekt aureoli (halo): jedna wyraźna cecha „rozlewa się” na ocenę pozostałych.
+19|1|Macierz GE (McKinsey) ma 9 pól i wielokryterialne osie: atrakcyjność sektora i pozycja konkurencyjna; BCG – 4 pola i dwie zmienne.
+20|3|Woodward: struktury mechanistyczne przeważały w produkcji masowej (wielkich serii), organiczne – w jednostkowej i procesowej.
+21|3|Rotacja pracy to okresowe przenoszenie między stanowiskami o podobnym poziomie.
+22|2|Styl 9,1 to zarządzanie autorytarne (zadaniowe): maksimum troski o zadania, minimum o ludzi.
+23|1|Przywództwo transformacyjne inspiruje i zmienia wartości podwładnych; transakcyjne opiera się na wymianie nagroda–wykonanie.
+24|2|Wysokie koszty zmiany dostawcy wiążą nabywców z obecnym dostawcą, więc ich siła przetargowa słabnie.
+25|0|Burns i Stalker: struktura organiczna – w otoczeniu zmiennym, mechanistyczna – w stabilnym.
+26|1|Sieć „każdy z każdym” daje najwyższą satysfakcję członków (choć bywa wolniejsza w prostych zadaniach).
+27|1|Szum to wszystko, co zakłóca przekaz między nadawcą a odbiorcą.
+28|3|EOQ minimalizuje sumę kosztów utrzymania zapasu i kosztów zamawiania.
+29|1|Przy negatywnej niesprawiedliwości pracownik przywraca równowagę: zmniejsza nakłady albo domaga się większych wyników (podwyżki).
+30|2|Joint venture to nowy, wspólny podmiot partnerów z różnych krajów, ze współdzieloną własnością i ryzykiem.
+31|1|Outsourcing to przekazanie funkcji pomocniczych firmom zewnętrznym.
+32|0|Sztab doradza i opiniuje, ale nie wydaje poleceń liniowych.
+33|1|Opis stanowiska pracy określa cel, zadania, odpowiedzialność i miejsce stanowiska w strukturze.
+34|0|Teoria interesariuszy (Freeman) każe uwzględniać interesy wszystkich grup, na które firma wpływa.
+35|0|Efekt potwierdzenia: szukamy informacji zgodnych z tym, w co już wierzymy.
+36|0|Usunięcie przykrego bodźca w nagrodę za pożądane zachowanie to wzmocnienie negatywne.
+37|1|Łańcuch skalarny (Fayol): nieprzerwana linia podległości od szczytu do najniższego szczebla.
+38|2|Nowy produkt na dotychczasowym rynku to w macierzy Ansoffa rozwój produktu.
+39|3|Pięć sił Portera: rywalizacja w sektorze, nowi wchodzący, substytuty, siła dostawców, siła nabywców – polityka rządu do nich nie należy.
+40|0|Uleganie (dostosowanie): rezygnacja z własnych interesów dla relacji.
+41|2|Rywalizacja (wymuszanie) – asertywna, niekooperatywna postawa „wygrana–przegrana”.
+42|3|Reengineering (BPR, Hammer i Champy) to radykalne przeprojektowanie procesów.
+43|3|Stopy procentowe to czynnik ekonomiczny makrootoczenia (PEST).
+44|0|Problemy nietypowe i niepewne wymagają decyzji nieprogramowanych.
+45|0|Walencja to wartość (atrakcyjność) nagrody dla pracownika; prawdopodobieństwo wykonania to oczekiwanie, a nagrodzenia – instrumentalność.
+46|1|Unikalność produktu w skali całej branży to strategia zróżnicowania.
+47|0|Synergia: całość daje więcej niż suma części („2 + 2 = 5”).
+48|1|Eskalacja zaangażowania – trwanie przy złej decyzji z powodu kosztów utopionych.
+49|2|Kontrola zaczyna się od ustalenia standardów, potem pomiar, porównanie i korekta.
+50|3|Entropia – skłonność systemów zamkniętych do rozpadu; organizacja jako system otwarty jej przeciwdziała.
+51|3|Zewnętrzna regulacja uderzająca w podstawowy produkt to zagrożenie (czynnik zewnętrzny, negatywny).
+52|0|Podejście sytuacyjne: nie ma jednego najlepszego sposobu – skuteczne metody zależą od sytuacji.
+53|3|Metoda delficka: anonimowe, wielokrotne ankiety ekspertów aż do zbieżności opinii.
+54|2|Eksperymenty Hawthorne (Mayo) dały początek szkole stosunków międzyludzkich (human relations).
+55|3|Rola przedsiębiorcy u Mintzberga to inicjowanie zmian i innowacji; rozstrzyganie kryzysów to rola przeciwdziałającego zakłóceniom.
+56|0|Instrumentalność – przekonanie, że wykonanie zadania przyniesie nagrodę; oczekiwanie dotyczy związku wysiłek–wykonanie.
+57|0|Ograniczona racjonalność i decyzje „satysfakcjonujące” – Herbert Simon.
+58|3|Struktura dywizjonalna sprawdza się przy wielu zróżnicowanych produktach, rynkach lub regionach.
+59|0|Podział według grup klientów (detal, korporacje, VIP) to departamentalizacja według klienta.
+60|2|Rozszerzanie pracy (job enlargement) – więcej zadań tego samego poziomu, bez większej autonomii.
+61|0|Kaizen – ciągłe, drobne usprawnienia z udziałem wszystkich pracowników.
+62|2|Badanie po zakończeniu okresu, na gotowych wynikach, to kontrola wynikowa (końcowa).
+63|1|Struktura macierzowa łamie jedność rozkazodawstwa – podwójne podporządkowanie rodzi konflikty.
+64|2|Identyfikowalność zadania – wykonanie całości pracy z widocznym efektem.
+64|o2=identyfikowalność zadania
+65|2|Delegowanie: przydzielenie zadań, przekazanie uprawnień i ustanowienie odpowiedzialności.
+66|2|Rzecznik należy do ról informacyjnych (obok monitorującego i upowszechniającego).
+67|3|„Znaki zapytania” wymagają selektywnych inwestycji – najlepsze mogą stać się „gwiazdami”.
+68|3|Taylor nie postulował partycypacji pracowników w celach strategicznych – planowanie należało do kierownictwa.
+69|0|Wymiary ekonomiczny, socjokulturowy i polityczno-prawny tworzą otoczenie ogólne.
+70|2|Storming (docieranie się) – konflikty i walka o role w grupie.
+71|0|Niski udział i niski wzrost – „psy”.
+72|3|Duży udział w szybko rosnącym rynku to „gwiazdy”; wymagają nakładów, by utrzymać pozycję.
+73|2|Struktura holdingowa (H) łączy niepowiązane biznesy (konglomerat) zarządzane głównie finansowo.
+74|2|U Carrolla podstawą piramidy jest odpowiedzialność ekonomiczna (firma musi być rentowna).
+75|3|Zarządzanie zasobami ludzkimi to działanie pomocnicze; logistyka, marketing i serwis – podstawowe.
+76|2|Pozyskiwanie i gospodarowanie kapitałem to funkcja finansowa (Fayol).
+77|2|Władza odniesienia (referencyjna) wynika z charyzmy i identyfikacji z liderem.
+78|2|Rozpiętość kierowania to liczba bezpośrednich podwładnych jednego kierownika.
+79|3|Struktura smukła: wiele szczebli, mała rozpiętość kierowania.
+80|1|„Dojne krowy” – wysoki udział w dojrzałym rynku, generują gotówkę.
+81|3|Małe centrum i sieć podwykonawców to struktura wirtualna (sieciowa).
+82|3|Bezosobowość u Webera – reguły stosowane jednakowo wobec wszystkich, bez faworyzowania.
+83|2|U Webera zatrudnienie i awans wynikają z kwalifikacji i osiągnięć.
+84|1|Macierz – podwójne podporządkowanie (kierownik funkcjonalny i projektu).
+85|2|Przekazywanie uprawnień decyzyjnych na niższe szczeble to decentralizacja.
+86|1|Potrzeba osiągnięć: odpowiedzialność za wynik, umiarkowane ryzyko, informacja zwrotna.
+87|2|Kontrola sterująca (bieżąca) koryguje proces w trakcie jego trwania.
+88|1|Integrator koordynuje działy bez władzy liniowej.
+89|0|Kontrola wstępna (wyprzedzająca) dotyczy zasobów przed rozpoczęciem procesu.
+89|o0=kontrola wstępna (wyprzedzająca)
+90|2|Organizowanie – ustalanie struktury zadań, ról i podległości.
+91|1|Teoria Y: ludzie mogą lubić pracę i szukać odpowiedzialności.
+92|0|MBO – cele ustalane wspólnie przez przełożonego i podwładnego, ocena według ich realizacji.
+93|1|Dobór według sympatii przeczy biurokracji Webera, która opiera się na kwalifikacjach.
+94|3|Faza dojrzałości – sformalizowana, rozbudowana struktura i procedury.
+95|1|Standaryzacja i rutyna zadań pozwalają na szeroką rozpiętość kierowania.
+96|0|Podstawowe założenia (najgłębszy poziom u Scheina) są niewidoczne i najtrudniejsze do zmiany.
+97|0|Podejście obronne (Griffin): robi się tylko to, czego wymaga prawo.
+98|1|Uczenie się od firmy z innej branży w tej samej funkcji to benchmarking funkcjonalny.
+99|3|Nowe produkty na nowych rynkach – dywersyfikacja.
+100|0|Rozmrażanie – przygotowanie do zmiany i przełamanie oporu.
+101|0|Assessment Center – ćwiczenia symulacyjne oceniane przez kilku obserwatorów.
+102|0|Nurt ilościowy wyrósł z badań operacyjnych z czasów II wojny światowej.
+103|2|Fiedler: lider zadaniowy jest skuteczny w sytuacjach bardzo korzystnych albo bardzo niekorzystnych.
+104|0|Trzecia faza przejścia: urodzenia wyraźnie spadają, zgony są już niskie – przyrost naturalny maleje.
+105|2|Polityka pronatalistyczna zachęca do posiadania dzieci.
+106|0|Drugie przejście demograficzne – Ron Lesthaeghe i Dirk van de Kaa (1986).
+107|1|Zastępowalność pokoleń zapewnia współczynnik dzietności ok. 2,1 (przy niskiej umieralności).
+107|o1=2,10–2,15
+108|1|Becker: wraz ze wzrostem dochodów i kosztu czasu rodzice wybierają mniej dzieci, inwestując więcej w każde z nich.
+109|3|Nuklearyzacja – przejście od rodziny wielopokoleniowej do rodziny małej (rodzice i dzieci).
+110|2|Umieralność niemowląt silnie zależy od opieki zdrowotnej, warunków sanitarnych i zamożności – to czuły miernik rozwoju.
+111|0|Piore: gospodarki rozwinięte stale potrzebują imigrantów do gorzej płatnych prac w drugorzędnym segmencie rynku pracy.
+112|0|Zasoby nie są jednakowo przydatne do każdej produkcji, więc koszt alternatywny rośnie – KMP jest wklęsła.
+113|0|Powojenny wyż wynikał z realizacji odłożonych decyzji o rodzinie i powojennej koniunktury.
+114|2|Wysoka inflacja skłania do trzymania mniej gotówki i częstszych wizyt w banku – to koszty „zdartych zelówek”.
+115|0|NAIRU – stopa bezrobocia, przy której inflacja nie przyspiesza.
+116|0|Współczynnik netto uwzględnia umieralność – ile córek dożyje wieku matki; brutto ją pomija.
+117|1|Migracja łańcuchowa: kolejni migranci podążają za krewnymi i znajomymi, korzystając z ich sieci wsparcia.
+118|1|Sztywny limit długu działa procyklicznie: w recesji spadają dochody, a reguła wymusza cięcia, które pogłębiają spowolnienie.
+118|q=Za główną wadę sztywnej, niskiej reguły limitu zadłużenia publicznego uważa się zwykle to, że:
+118|o0=obniża wiarygodność kredytową państwa w ocenie agencji ratingowych
+118|o1=działa procyklicznie – w recesji wymusza cięcia wydatków i inwestycji, co pogłębia spowolnienie
+118|o2=przyciąga kapitał spekulacyjny, który wywołuje deflację
+118|o3=powoduje gwałtowny spadek rentowności obligacji skarbowych
+119|0|Czynniki wypychające działają w kraju pochodzenia: bieda, bezrobocie, konflikty.
+120|2|Mnożnik = 1 / (1 − MPC) = 5, więc ΔY = 5 × 50 = 250 mln zł.
+121|3|Za dzietność „ultraniską” (lowest-low) uznaje się TFR poniżej 1,3 dziecka na kobietę (Kohler, Billari, Ortega).
+121|q=Terminem „ultraniska dzietność” (lowest-low fertility) określa się w demografii sytuację, w której współczynnik dzietności spada poniżej:
+121|o3=1,3 dziecka na kobietę
+122|2|Baza monetarna = gotówka w obiegu (także w kasach banków) + rezerwy banków w banku centralnym.
+123|1|Becker: rośnie koszt alternatywny czasu rodziców, więc rodziny substytuują „ilość” dzieci „jakością”.
+124|0|Starzenie „od góry” wynika z wydłużania się życia osób starszych.
+125|2|Optimum zaludnienia to liczba ludności maksymalizująca dochód na mieszkańca.
+126|1|Drugie przejście: zmiany wartości (samorealizacja), odkładanie małżeństwa i rodzicielstwa, nowe formy związków.
+127|x=duplikat pytania 121
+128|2|Ravenstein: większość migrantów pokonuje krótkie odległości, najczęściej ze wsi do najbliższych miast.
+129|1|Faza pierwsza: wysokie urodzenia i wysokie zgony, niski przyrost.
+130|0|Obciążenie osobami starszymi = ludność poprodukcyjna / ludność w wieku produkcyjnym.
+131|1|Echo demograficzne – wyż (niż) urodzeń, gdy liczne (nieliczne) roczniki osiągają wiek rodzicielski.
+132|1|Optimum konsumenta: linia budżetu styczna do najwyższej osiągalnej krzywej obojętności.
+133|1|Uchodźca (konwencja genewska 1951) – osoba prześladowana, szukająca ochrony za granicą.
+134|1|Okno demograficzne – okres niskiego obciążenia osobami nieprodukcyjnymi, sprzyjający wzrostowi.
+135|1|Starsze gospodarstwa domowe mają krótszy horyzont i większą awersję do ryzyka – wybierają bezpieczniejsze aktywa.
+136|3|Hipoteza przejścia mobilności – Wilbur Zelinsky (1971).
+137|0|Faza druga: urodzenia wciąż wysokie, zgony szybko spadają – eksplozja demograficzna.
+138|0|Dobro publiczne: nierywalizacyjne i niewykluczalne.
+139|0|Becker stosuje rachunek korzyści do małżeństwa: partnerzy maksymalizują użyteczność, „rynek małżeński”.
+139|q=Jak mikroekonomiczna teoria Gary'ego Beckera tłumaczy tworzenie związków małżeńskich?
+140|3|Srebrna gospodarka – produkty i usługi dla rosnącej grupy osób starszych.
+141|1|BIZ (FDI) księguje się na rachunku finansowym bilansu płatniczego.
+142|3|Drenaż mózgów obciąża kraj pochodzenia – traci wykształconych pracowników.
+143|1|Przeciętne dalsze trwanie życia noworodka = oczekiwana długość życia w chwili narodzin.
+144|0|Starzenie zmniejsza udział pracujących, a więc wpływy z podatków i składek od pracy.
+145|3|Neoklasyczna (mikroekonomiczna) teoria płodności – koszt alternatywny czasu rodziców.
+146|x=duplikat pytania 140
+147|1|Żłobki i przedszkola obniżają koszt alternatywny dzieci – łatwiej łączyć pracę i rodzicielstwo.
+148|3|Współczynnik maskulinizacji – liczba mężczyzn na 100 kobiet.
+149|3|TFR – liczba dzieci urodzonych przez kobietę w ciągu życia przy płodności z danego roku.
+150|0|TU jest maksymalna, gdy MU = 0; gdy MU < 0, TU spada.
+151|x=duplikat pytania 117
+152|0|Klasyczna teoria przejścia demograficznego – Warren Thompson (1929) i Frank Notestein (1945).
+153|2|Piramida w kształcie urny (wąska podstawa) – społeczeństwo regresywne, starzejące się.
+154|3|Starzenie „od dołu” – mniej urodzeń zwęża podstawę piramidy.
+155|2|Mężczyźni / kobiety × 100 to współczynnik maskulinizacji.
+156|2|„Granice wzrostu” to neomaltuzjańska przestroga przed przeludnieniem i wyczerpaniem zasobów.
+157|2|Eksport netto < 0, gdy import przewyższa eksport.
+158|1|W gospodarce zamkniętej bez państwa równowaga: planowane inwestycje = planowane oszczędności.
+159|3|Czynniki przyciągające działają w kraju docelowym: popyt na pracę, płace, bezpieczeństwo.
+160|0|Kohorta – osoby, które w tym samym okresie przeżyły to samo zdarzenie (np. urodzenie).
+161|1|Drenaż mózgów – emigracja wysoko wykwalifikowanych specjalistów.
+162|0|Renta mennicza (senioraż) – dochód emitenta z emisji pieniądza.
+163|0|Rosnące korzyści skali – LRAC maleje wraz ze wzrostem skali produkcji.
+164|0|Malthus: ludność rośnie geometrycznie, żywność arytmetycznie.
+165|2|Implozja demograficzna – trwały ubytek naturalny i kurczenie się populacji.
+166|x=duplikat pytania 109
+167|x=duplikat pytania 119
+168|2|Starzenie: mniejsza podaż pracy, presja na emerytury i ochronę zdrowia, erozja bazy podatkowej.
+169|3|Pułapka maltuzjańska – przyrost ludności „zjada” wzrost produkcji, dochód na osobę stoi w miejscu.
+170|2|Zastępowalność: para pozostawia dwoje dzieci, które dożywają wieku rozrodczego.
+171|2|Pierwsza dywidenda demograficzna – korzyść z rosnącego udziału ludności w wieku produkcyjnym.
+172|1|Pułapka maltuzjańska – wzrost ludności sprowadza dochód na osobę do poziomu wyjściowego.
+173|3|Hipoteza cyklu życia: emeryci „konsumują oszczędności”, więc starzenie obniża stopę oszczędności.
+174|0|Piramida stacjonarna – urodzenia i zgony w równowadze, młodsze roczniki podobnej wielkości.
+175|0|Pułapka maltuzjańska: wzrost produkcji zwiększa populację, aż produkcja na osobę wraca do poziomu przetrwania.
+176|2|Urbanizacja – wzrost odsetka ludności miejskiej (jeden z megatrendów ONZ).
+177|0|Elastyczność podaży zależy przede wszystkim od czasu na dostosowanie produkcji (w długim okresie jest większa).
+178|x=duplikat pytania 106
+179|0|Remitencje (przekazy pieniężne) – pieniądze przesyłane przez emigrantów rodzinom w kraju pochodzenia.
+179|q=W odniesieniu do migracji zarobkowych pojęcie „remitencje” (przekazy pieniężne) dotyczy:
+180|1|Neomaltuzjanizm postuluje świadomą kontrolę urodzeń (antykoncepcję), a nie tylko „hamulce moralne” Malthusa.
+181|2|Imigranci minus emigranci = saldo migracji (migracja netto).
+182|2|Współczynnik reprodukcji brutto liczy tylko urodzone córki (TFR – wszystkie dzieci); umieralność uwzględnia dopiero współczynnik netto.
+183|0|Push–pull: czynniki wypychające w kraju pochodzenia i przyciągające w kraju docelowym.
+184|2|Według raportów KE o starzeniu się (Ageing Report) największą pozycją są wydatki emerytalne.
+185|0|Współczynnik zgonów niemowląt liczy się na 1000 urodzeń żywych.
+186|0|Leibenstein analizował dzieci jako „dobra” o kosztach i korzyściach (konsumpcyjnych, dochodowych, zabezpieczenia).
+187|2|Gdy produkcja rośnie szybciej niż ludność, PKB per capita rośnie.
+188|2|Koszt alternatywny dziecka to głównie utracone dochody i czas rodziców (zwłaszcza matki).
+189|2|Ultraniska dzietność i szybkie starzenie to cechy zaawansowanego drugiego przejścia demograficznego.
+190|0|Alfred Sauvy rozwinął teorię optimum zaludnienia, uwzględniając korzyści skali.
+191|2|Powrót emigrantów do ojczyzny to reemigracja.
+192|0|Gdy PKB rzeczywisty jest niższy od potencjalnego, powstaje luka recesyjna (deflacyjna).
+193|1|Codzienne dojazdy bez zmiany miejsca zamieszkania to migracje wahadłowe.
+194|3|Era cofających się pandemii: lepsze warunki sanitarne, odżywianie i medycyna ograniczają choroby zakaźne.
+195|1|Dłuższe życie każe więcej oszczędzać na emeryturę; podaż oszczędności rośnie, a naturalna stopa procentowa spada.
+196|1|Substytucja „ilości” dzieci „jakością” to koncepcja Gary'ego Beckera.
+197|x=duplikat pytania 176
+198|0|Ludność w wieku poprodukcyjnym – osoby po ustawowym wieku emerytalnym (w Polsce 60 lat kobiety, 65 lat mężczyźni).
+199|x=duplikat pytania 107
+200|3|Inercja demograficzna: duże roczniki w wieku rozrodczym podtrzymują wzrost ludności mimo spadku dzietności.
+201|1|Demografia – z greckiego „demos” (lud) i „grapho” (piszę, opisuję).
+201|o1=Z greckiego („demos” i „grapho”)
+202|3|Monetaryści (Friedman) widzą źródło wahań głównie w niestabilnej, uznaniowej polityce pieniężnej.
+202|q=Według monetarystów (np. M. Friedmana) główną przyczyną krótkookresowych wahań aktywności gospodarczej są:
+202|o0=chroniczne niedobory popytu konsumpcyjnego
+202|o1=nieprzewidywalne szoki technologiczne
+202|o2=zmiany nastrojów inwestorów („zwierzęce instynkty”)
+202|o3=błędy i nadmierna uznaniowość polityki pieniężnej banku centralnego
+203|3|Gini = 0 – idealnie równy rozkład dochodów; 1 – skrajna nierówność.
+204|x=duplikat pytania 128
+205|3|Przenoszenie się z centrów miast na obrzeża to suburbanizacja.
+206|0|Starsi inwestorzy wolą obligacje długoterminowe; większy popyt obniża ich rentowność i spłaszcza krzywą dochodowości.
+206|q=Według badań (np. X. Li) starzenie się społeczeństwa wpływa na krzywą dochodowości obligacji w ten sposób, że:
+206|o0=starsi inwestorzy wolą obligacje długoterminowe, co spłaszcza krzywą dochodowości
+207|0|Urodzenia żywe minus zgony = przyrost naturalny.
+208|x=duplikat pytania 206
+209|0|Podatek inflacyjny: inflacja zmniejsza realną wartość pieniądza, a emitent finansuje wydatki kosztem jego posiadaczy.
+210|1|Społeczeństwo młode – piramida o szerokiej podstawie (progresywna).
+211|3|AFC = FC / Q maleje wraz z produkcją i zbliża się do zera.
+212|2|Koszty zdartych zelówek to wysiłek i czas związany z trzymaniem mniej gotówki i częstszym jej pobieraniem.
+212|o2=koszty czasu i wysiłku związane z częstszym pobieraniem gotówki, by nie trzymać tracącego wartość pieniądza
+213|2|Konsumpcja autonomiczna (a) występuje nawet przy zerowym dochodzie.
+214|0|Według ONZ (WPP 2024) ludność świata osiągnie maksimum ok. 10,3 mld w połowie lat 80. XXI w.
+215|0|W zaawansowanym stadium przejścia epidemiologicznego dominują choroby przewlekłe i zwyrodnieniowe.
+216|2|Tablica trwania życia pozwala wyznaczyć prawdopodobieństwa zgonu i przeciętne dalsze trwanie życia.
+217|2|Pierwsza dywidenda: spada odsetek dzieci, rośnie udział ludności w wieku produkcyjnym – obciążenie maleje, PKB rośnie szybciej.
+218|0|Reguła Taylora: stopa procentowa reaguje na lukę inflacyjną i lukę PKB.
+219|1|W systemie repartycyjnym emerytury opłacają pracujący – starzenie zmniejsza ich liczbę względem emerytów.
+220|3|Twierdzenie Coase'a: przy jasnych prawach własności i zerowych kosztach transakcyjnych strony same wynegocjują efektywny wynik.
+221|2|(przedprodukcyjni + poprodukcyjni) / produkcyjni = współczynnik obciążenia demograficznego ogółem.
+222|1|Przyrost rzeczywisty = przyrost naturalny + saldo migracji.
+223|x=duplikat pytania 144
+224|x=duplikat pytania 165
+225|1|Obniżka stóp procentowych to polityka pieniężna banku centralnego, nie fiskalna.
+225|q=Który z poniższych instrumentów NIE należy do ekspansywnej polityki fiskalnej?
+225|o0=podwyższenie transferów socjalnych dla rodzin
+225|o1=obniżenie stóp procentowych przez bank centralny
+225|o2=obniżenie stawek podatków dochodowych
+225|o3=zwiększenie zamówień publicznych, np. na infrastrukturę
+226|0|Ravenstein: kobiety częściej migrują na krótkie dystanse (wewnątrz kraju), mężczyźni – na dalekie.
+227|x=duplikat pytania 149
+228|x=duplikat pytania 215
+229|3|Dezinflacja – spadek tempa inflacji, która pozostaje dodatnia (deflacja to spadek cen).
+230|x=duplikat pytania 125
+231|x=duplikat pytania 130
+232|x=duplikat pytania 152
+233|3|Druga dywidenda: dłuższe życie skłania do większych oszczędności, które finansują inwestycje i wzrost.
+234|1|Podatek proporcjonalny zmniejsza mnożnik: 1 / (1 − c(1 − t)) < 1 / (1 − c).
+235|3|Pierwsza dywidenda wygasa, gdy liczne roczniki przechodzą na emeryturę, a obciążenie osobami starszymi rośnie.
+236|x=duplikat pytania 126
+237|1|Wiek dzielący populację na dwie równe części to mediana wieku.
+238|0|Siatka Lexisa łączy rok kalendarzowy, wiek i rok urodzenia (kohortę).
+239|2|Krótkookresowa krzywa Phillipsa – kompromis między inflacją a bezrobociem.
+240|0|Chińska polityka jednego dziecka (1979–2015) to najsłynniejsza przymusowa polityka antynatalistyczna.
+241|3|Sieci migracyjne: kontakty z krewnymi i znajomymi w kraju docelowym obniżają koszty i ryzyko migracji.
+242|x=duplikat pytania 173
+243|x=duplikat pytania 161
+244|1|W długim okresie wejście i wyjście firm sprowadza zysk ekonomiczny do zera (zostaje zysk normalny).
+245|1|Siatka Lexisa łączy wiek, czas kalendarzowy i kohortę urodzeń.
+246|2|W długim okresie wszystkie czynniki produkcji są zmienne – nie ma kosztów stałych.
+247|x=duplikat pytania 137
+248|x=duplikat pytania 5
+249|x=duplikat pytania 104
+250|0|Drugie przejście: odkładanie małżeństwa i pierwszego dziecka na późniejszy wiek, kohabitacja, rozwody.
+251|1|Zelinsky powiązał zmiany wzorców migracji z fazami przejścia demograficznego i modernizacją.
+252|3|Terms of trade = ceny eksportu / ceny importu; poprawa – ceny eksportu rosną szybciej.
+253|x=duplikat pytania 180
+254|0|„Prawa migracji” (1885–1889) sformułował Ernst Georg Ravenstein.
+255|1|Teoria przejścia epidemiologicznego (Omran, 1971) – od chorób zakaźnych do przewlekłych.
+255|o3=Pierwsze przejście demograficzne
+256|2|Listy zastawne emitują wyłącznie banki hipoteczne, a zabezpieczeniem są wierzytelności hipoteczne lub z kredytów publicznych.
+257|0|Ilość wzrosła o 20% (10/50), cena spadła o 20% – |Ed| = 20% / 20% = 1.
+257|q=Po spadku ceny produktu o 20% ilość kupowana wzrosła z 50 do 60 sztuk. Popyt (wartość bezwzględna współczynnika elastyczności) jest w tym przedziale:
+257|o0=jednostkowo elastyczny (|Ed| = 1)
+257|o1=elastyczny (|Ed| > 1)
+257|o2=nieelastyczny (|Ed| < 1)
+257|o3=doskonale nieelastyczny (|Ed| = 0)
+258|0|Gdy ceny i dochód rosną o tyle samo, linia budżetu się nie zmienia (ani położenie, ani nachylenie).
+259|3|Deficyt budżetowy – wydatki państwa przewyższają dochody.
+260|3|Bancassurance – współpraca banków i ubezpieczycieli, np. sprzedaż polis w oddziałach banku.
+261|2|V w MV = PY to szybkość (prędkość) obiegu pieniądza.
+262|3|Nadwyżka w handlu towarami poprawia saldo rachunku obrotów bieżących.
+263|x=duplikat pytania 150
+264|2||mnożnik wydatków| = 1 / (1 − c) > |mnożnik podatkowy| = c / (1 − c), bo część obniżki podatku jest oszczędzana.
+264|q=W standardowym modelu keynesowskim (w wartościach bezwzględnych) mnożnik wydatków rządowych i mnożnik podatkowy są takie, że:
+265|1|Minimalizacja kosztu danej produkcji – izokwanta styczna do izokoszty.
+266|0|Krótka sprzedaż: sprzedaż pożyczonych papierów, by odkupić je taniej i oddać.
+267|0|W prostym modelu keynesowskim ceny są sztywne, a produkcję wyznacza popyt zagregowany.
+268|3|II prawo Gossena: MUx / Px = MUy / Py.
+269|3|Inwestycje netto = inwestycje brutto − amortyzacja.
+270|3|Bessa – długotrwały trend spadkowy kursów.
+271|0|Nadwyżka ceny emisyjnej nad nominalną (agio) zasila kapitał zapasowy.
+272|3|Stawki podatków ustala parlament i rząd (polityka fiskalna), nie bank centralny.
+273|x=duplikat pytania 2
+274|0|Sekurytyzacja – zamiana niepłynnych aktywów (np. kredytów) na zbywalne papiery wartościowe.
+275|x=duplikat pytania 122
+276|x=duplikat pytania 261
+277|0|Bony skarbowe emituje Minister Finansów – krótkoterminowe, sprzedawane z dyskontem na przetargach.
+278|x=duplikat pytania 132
+279|0|Efekt Veblena – popyt na dobro prestiżowe rośnie wraz z ceną.
+279|o0=efekt Veblena
+280|1|Utarg się nie zmienił, więc procentowa zmiana ilości równa się procentowej zmianie ceny – |Ed| = 1.
+281|2|Spread – różnica między kursem sprzedaży i kupna.
+282|3|Stolper–Samuelson: cło podnosi cenę chronionego dobra i realną cenę czynnika używanego w nim intensywnie – tu realne płace.
+282|q=Zgodnie z twierdzeniem Stolpera–Samuelsona wprowadzenie cła na importowane dobro pracochłonne (w kraju obficie wyposażonym w kapitał) prowadzi do:
+282|o0=wzrostu realnych dochodów właścicieli kapitału
+282|o1=jednakowego spadku dochodów obu czynników produkcji
+282|o2=spadku płac nominalnych we wszystkich branżach
+282|o3=wzrostu realnych płac pracowników
+283|0|NewConnect (ASO) ma łagodniejsze wymogi i niższe koszty dla debiutantów niż Rynek Główny.
+284|3|Dolny punkt zwrotny cyklu to dno.
+285|1|PNB = PKB + saldo dochodów pierwotnych (czynnikowych) z zagranicą.
+286|2|Pozioma krzywa popytu – popyt doskonale elastyczny.
+287|x=duplikat pytania 177
+288|3|Stopa lombardowa – oprocentowanie kredytu lombardowego NBP pod zastaw papierów; wyznacza górną granicę stóp rynku międzybankowego.
+288|q=Stopa lombardowa NBP wyznacza:
+288|o0=oprocentowanie rezerwy obowiązkowej
+288|o1=maksymalne oprocentowanie pożyczek w firmach lombardowych
+288|o2=minimalne oprocentowanie lokat dla klientów detalicznych
+288|o3=koszt kredytu, który banki mogą zaciągnąć w NBP pod zastaw papierów wartościowych (górna granica stóp overnight)
+289|0|Zniechęceni przestają szukać pracy i wypadają z grona bezrobotnych – oficjalna stopa bezrobocia jest niższa.
+290|1|Wysokie płace „insiderów” zmniejszają zatrudnienie – rośnie bezrobocie „outsiderów”.
+291|3|Pokusa nadużycia – ubezpieczony mniej dba o unikanie ryzyka.
+292|0|WIBOR – stopa referencyjna oprocentowania pożyczek na polskim rynku międzybankowym.
+293|0|Rynek OTC – transakcje bezpośrednio między stronami, często na negocjowanych warunkach.
+294|3|Klasycy: elastyczne płace i ceny same przywracają pełne zatrudnienie.
+295|1|Nabywca opcji call ma prawo (nie obowiązek) kupić instrument bazowy po cenie wykonania.
+296|3|Płaca efektywnościowa – wyższa od równowagi zwiększa wysiłek i lojalność, zmniejsza rotację.
+297|0|I prawo Gossena: użyteczność krańcowa kolejnych porcji maleje.
+298|0|Krańcowa stopa substytucji – ile jednego dobra konsument odda za jednostkę drugiego przy stałej użyteczności.
+299|1|RBC: wahania wywołują realne szoki podażowe, głównie technologiczne.
+300|2|W monopsonie płaca jest poniżej krańcowego produktu pracy; płaca minimalna może podnieść jednocześnie płacę i zatrudnienie.
+301|2|Paradoks oszczędzania: wyższa skłonność do oszczędzania obniża popyt i dochód, a łączne oszczędności mogą nie wzrosnąć.
+302|3|Zlecenie z limitem aktywacji trafia do arkusza dopiero, gdy kurs osiągnie wskazany poziom aktywacji.
+302|o3=trafia do arkusza jako zlecenie z limitem ceny dopiero wtedy, gdy kurs rynkowy osiągnie wskazany przez inwestora limit aktywacji
+303|3|Rynek kapitałowy – instrumenty powyżej roku, np. 10-letnie obligacje; bony 52-tygodniowe to rynek pieniężny.
+304|1|O dopuszczeniu akcji do obrotu giełdowego decyduje Zarząd GPW (prospekt zatwierdza KNF).
+305|2|BFG gwarantuje depozyty do równowartości 100 000 euro na deponenta w jednym banku.
+306|0|Wyższa stopa rezerwy obowiązkowej zmniejsza mnożnik i zdolność banków do kreacji kredytu.
+307|3|Pozycja długa (kupno) zarabia na wzroście ceny.
+307|q=Inwestor zajmujący pozycję długą (long) w akcjach zarabia, gdy kurs tych akcji:
+307|o0=spada poniżej kursu odniesienia
+307|o1=gwałtownie spada
+307|o2=nie zmienia się przez kilka sesji
+307|o3=rośnie powyżej ceny nabycia
+308|x=duplikat pytania 280
+309|3|Forward jest niestandaryzowany i zawierany bezpośrednio między stronami (OTC); futures – standaryzowany i giełdowy.
+310|3|Podatek Belki – 19% zryczałtowany podatek od zysków kapitałowych (m.in. odsetek).
+311|2|FIZ emituje certyfikaty inwestycyjne (mogą być notowane), FIO zbywa i odkupuje jednostki uczestnictwa.
+312|1|Efekt wypychania: wydatki państwa (finansowane długiem) podnoszą stopy i ograniczają inwestycje prywatne.
+313|1|Iluzja pieniądza – myślenie w wartościach nominalnych zamiast realnych.
+314|2|Dematerializacja – papiery istnieją tylko jako zapisy na kontach (KDPW, rachunki maklerskie).
+315|0|Bezrobocie strukturalne zwalcza się szkoleniami, przekwalifikowaniem i mobilnością (aktywna polityka rynku pracy).
+316|0|Podstawowy cel NBP (art. 227 Konstytucji, ustawa o NBP) – utrzymanie stabilnego poziomu cen.
+317|2|Akcje dają udział w kapitale, prawo do dywidendy i głosu na walnym zgromadzeniu.
+318|1|Przy wysokiej płacy efekt dochodowy (chęć więcej czasu wolnego) przeważa – krzywa podaży pracy zakrzywia się do tyłu.
+319|2|Izokwanta – kombinacje K i L dające tę samą produkcję.
+320|x=duplikat pytania 303
+321|1|PCR nie ma limitu – realizuje się po cenie najlepszego zlecenia po drugiej stronie, a reszta staje się zleceniem z limitem tej ceny.
+322|2|Mnożnik ≈ 1 / stopa rezerw – maleje, gdy stopa rezerw rośnie.
+323|2|Nowa ekonomia keynesowska wyjaśnia wahania sztywnościami nominalnymi: kosztami menu, lepkimi płacami i umowami.
+323|q=Nowa ekonomia keynesowska tłumaczy, dlaczego rynki nie dostosowują się natychmiast po szoku, przede wszystkim:
+323|o0=doskonałą elastycznością cen i płac
+323|o1=racjonalnymi oczekiwaniami i natychmiastowym dostosowaniem cen
+323|o2=sztywnościami nominalnymi (np. kosztami menu) i lepkością płac wynikającą z umów
+323|o3=natychmiastową elastycznością wszystkich płac i cen transakcyjnych
+324|2|Ujemna elastyczność dochodowa – dobro podrzędne (niższego rzędu).
+325|x=duplikat pytania 309
+326|0|Handel towarami i usługami księguje się na rachunku obrotów bieżących.
+327|2|Bezrobocie klasyczne – płaca realna utrzymywana powyżej równowagi (związki, płaca minimalna).
+328|1|P/BV < 1: rynek wycenia spółkę poniżej wartości księgowej – nisko ocenia jej zdolność do generowania zysków.
+329|0|Progresywne podatki i zasiłki działają automatycznie antycyklicznie – to automatyczne stabilizatory.
+330|x=duplikat pytania 292
+331|x=duplikat pytania 274
+332|1|Dochód rozporządzalny = dochody osobiste − podatki bezpośrednie (i składki) + transfery.
+332|o1=podatki bezpośrednie (i składki), a powiększone o transfery od państwa
+333|3|Bazę monetarną (gotówkę i rezerwy) kreuje bank centralny.
+334|x=duplikat pytania 295
+335|0|Kapitalizacja = kurs akcji × liczba akcji.
+336|1|PKC (po każdej cenie) ma pierwszeństwo realizacji niezależnie od kursu.
+337|3|Split 1:10 – dziesięć razy więcej akcji o nominale i kursie 10 razy niższym; wartość pakietów bez zmian.
+338|2|Wiele bliskich substytutów oznacza wysoką elastyczność cenową popytu.
+339|1|Największe wpływy podatkowe budżetu państwa daje VAT.
+340|1|Długookresowa krzywa Phillipsa jest pionowa na poziomie naturalnej stopy bezrobocia.
+341|x=duplikat pytania 324
+342|0|Koszty utopione – poniesione i nieodzyskiwalne; nie powinny wpływać na decyzje.
+343|2|FIO zbywa jednostki uczestnictwa (FIZ – certyfikaty).
+344|2|Trasat – osoba, do której wystawca kieruje polecenie zapłaty (weksel trasowany).
+345|0|Krzywa obojętności – koszyki dające tę samą użyteczność.
+346|x=duplikat pytania 266
+347|0|Stagflacja – inflacja przy stagnacji i rosnącym bezrobociu.
+348|0|Animator rynku (market maker) utrzymuje płynność, składając zlecenia kupna i sprzedaży.
+349|0|Proporcjonalny spadek obu cen przy stałym dochodzie przesuwa linię budżetu równolegle na zewnątrz (jak wzrost dochodu).
+349|q=Równoległe przesunięcie linii ograniczenia budżetowego na zewnątrz (w prawo) może wywołać:
+350|3|Wartość dodana = wartość produkcji − zużycie pośrednie.
+351|3|W dniu koncertu liczba biletów jest stała – podaż doskonale nieelastyczna.
+352|0|Koszt alternatywny – wartość najlepszej utraconej możliwości.
+353|0|Monopol naturalny wynika z ogromnych korzyści skali – jedna firma obsługuje rynek najtaniej.
+353|o1=zmowy cenowej kilku największych dostawców (kartelu)
+353|o2=ochrony rynku przez embargo i zaporowe cła
+353|o3=ochrony patentowej wykluczającej naśladowców
+354|0|Prawo poboru – pierwszeństwo dotychczasowych akcjonariuszy do nowych akcji, chroni przed rozwodnieniem.
+355|0|Karta debetowa obciąża środki na rachunku, kredytowa – przyznany limit kredytowy.
+356|0|ETF-y zwykle pasywnie odwzorowują indeks.
+357|1|Dla dobra normalnego przy spadku ceny oba efekty zwiększają ilość kupowaną.
+358|0|Trzeba mieć akcje na rachunku w dniu ustalenia prawa, więc kupić je odpowiednio wcześniej (cykl rozliczeniowy T+2).
+359|x=duplikat pytania 286
+360|2|Deficyt strukturalny – deficyt, jaki byłby przy produkcji na poziomie potencjalnym (oczyszczony z wpływu cyklu).
+360|o0=wynika z wydatków na modernizację infrastruktury finansowanych z funduszy UE
+360|o1=wynika z obsługi długu zagranicznego w walutach obcych
+360|o3=wynika wyłącznie z wahań cyklu koniunkturalnego
+361|1|PKN = PKB − amortyzacja.
+362|0|Bezrobocie z niedoboru popytu w recesji – keynesowskie (cykliczne).
+363|x=duplikat pytania 266
+364|1|Elastyczność mieszana równa zeru – dobra niezależne.
+365|x=duplikat pytania 260
+366|x=duplikat pytania 312
+367|x=duplikat pytania 339
+368|2|Podatek Belki wynosi 19%.
+369|3|Cło ad valorem – procent wartości celnej towaru.
+370|0|Warrant subskrypcyjny daje prawo zapisu na akcje nowej emisji (zwykle z wyłączeniem prawa poboru).
+371|1|Reasekuracja – ubezpieczyciel (cedent) przekazuje część ryzyka reasekuratorowi.
+372|1|Restrykcyjna polityka fiskalna – wyższe podatki lub niższe wydatki; QE i stopy to polityka pieniężna.
+373|1|Cykl Juglara (inwestycyjny) trwa ok. 7–11 lat.
+374|0|Normalna krzywa dochodowości jest rosnąca – za dłuższy termin inwestorzy żądają premii.
+375|0|MC przecina ATC (i AVC) w ich minimum.
+376|x=duplikat pytania 277
+377|x=duplikat pytania 386
+378|x=duplikat pytania 382
+379|2|Akcja to instrument udziałowy – część własności spółki.
+380|1|KDPW rozlicza transakcje i prowadzi centralny rejestr zdematerializowanych papierów.
+381|3|Private equity i venture capital inwestują w spółki spoza giełdy, by podnieść ich wartość i sprzedać z zyskiem.
+381|o0=obligacji Skarbu Państwa, by chronić kapitał
+381|o1=publicznym – skupując płynne akcje od drobnych akcjonariuszy na giełdzie
+381|o3=niepublicznym – w spółki spoza giełdy (często we wczesnej fazie rozwoju), aby podnieść ich wartość i sprzedać z zyskiem
+382|0|Ekspansywna polityka fiskalna – niższe podatki lub wyższe wydatki rządowe.
+383|1|Mnożnik zrównoważonego budżetu (Haavelmo) = 1 – dochód rośnie o kwotę wzrostu wydatków.
+384|3|Naturalną stopę bezrobocia kształtują czynniki strukturalne, instytucje rynku pracy i demografia.
+385|2|M1 = gotówka w obiegu (poza kasami banków) + depozyty bieżące.
+386|3|LTV = kwota kredytu / wartość zabezpieczenia (nieruchomości).
+387|x=duplikat pytania 349
+388|2|Hossa – długotrwały wzrost kursów.
+389|0|IPO – pierwsza oferta publiczna akcji spółki, zakończona debiutem.
+390|2|WIG jest dochodowy (uwzględnia dywidendy i prawa poboru), WIG20 – cenowy.
+391|3|Niższa stopa rezerw zwiększa mnożnik i potencjał kredytowy banków.
+392|1|P/E = 8: przy stałym zysku cena akcji „zwraca się” z zysków po ok. 8 latach.
+393|1|Dodatnia elastyczność mieszana – substytuty.
+394|0|Prawo Okuna łączy lukę PKB ze stopą bezrobocia.
+395|2|NewConnect to alternatywny system obrotu (ASO) dla mniejszych spółek.
+396|3|Realna stopa ≈ nominalna − inflacja; przy inflacji wyższej od oprocentowania jest ujemna.
+397|x=duplikat pytania 394
+398|2|Naturalna stopa bezrobocia = bezrobocie frykcyjne + strukturalne.
+399|3|Dobra doskonale komplementarne – krzywe obojętności w kształcie litery L.
+400|3|Wyższe stopy obniżają ceny wcześniej wyemitowanych obligacji stałokuponowych (rentowność rośnie).
+401|x=duplikat pytania 122
+402|x=duplikat pytania 357
+403|x=duplikat pytania 305
+404|x=duplikat pytania 115
+405|2|Elastyczność dochodowa > 1 – dobro luksusowe (wyższego rzędu).
+406|x=duplikat pytania 138
+407|3|Problem gapowicza dotyczy dóbr publicznych (niewykluczalnych).
+408|2|Przechowywanie wartości to funkcja tezauryzacyjna (środka gromadzenia).
+409|2|PKB faktyczny powyżej potencjalnego – luka inflacyjna (dodatnia).
+410|3|W długim okresie podaż jest bardziej elastyczna – firmy mogą zmienić moce i wejść na rynek.
+411|0|Arbitraż – jednoczesne kupno i sprzedaż tego samego aktywa na rynkach o różnych cenach, zysk bez ryzyka rynkowego.
+412|0|Cykl Kuznetsa (budowlany, infrastrukturalny) – ok. 15–25 lat.
+413|x=duplikat pytania 309
+414|x=duplikat pytania 295
+415|x=duplikat pytania 281
+416|x=duplikat pytania 400
+417|1|Rynek pieniężny – instrumenty o zapadalności do roku.
+418|3|Linia budżetu: M = Px·X + Py·Y.
+419|x=duplikat pytania 369
+420|0|Renta mennicza (senioraż) – dochód z monopolu emisji pieniądza.
+421|x=duplikat pytania 429
+422|1|Absolwent aktywnie szukający pracy jest bezrobotny (aktywny zawodowo), a nie bierny.
+423|3|Równowaga w modelu keynesowskim: planowane wydatki = produkcja (dochód).
+424|3|Jednorazowa, uznaniowa dotacja to polityka dyskrecjonalna, nie automatyczny stabilizator.
+425|3|VAT jest podatkiem pośrednim (obciąża konsumpcję przez cenę).
+426|1|Koszty ekonomiczne = księgowe (jawne) + ukryte (alternatywne, np. praca i kapitał właściciela).
+427|0|Przy popycie nieelastycznym obniżka ceny zmniejsza wydatki (utarg), bo ilość rośnie słabiej niż spada cena.
+428|x=duplikat pytania 400
+429|0|WIG20 w podstawowej wersji jest indeksem cenowym (WIG – dochodowym).
+430|x=duplikat pytania 319
+431|1|Rynek pozagiełdowy – OTC (over-the-counter).
+432|1|Pieniądz fiducjarny nie ma pokrycia w kruszcu – opiera się na zaufaniu do emitenta.
+433|1|Efekt krzywej J: po deprecjacji saldo handlowe najpierw się pogarsza (stare kontrakty, sztywne ilości), a potem poprawia.
+433|q=Efekt krzywej J opisuje opóźnione skutki:
+433|o0=obniżenia stopy rezerw obowiązkowych dla popytu inwestycyjnego
+433|o1=deprecjacji waluty krajowej dla salda bilansu handlowego
+433|o2=wprowadzenia ceł importowych dla nadwyżki konsumenta
+433|o3=obniżki krańcowych stawek podatku dochodowego dla podaży pracy
+434|x=duplikat pytania 345
+435|1|Dodatnie przepływy operacyjne i finansowe przy ujemnych inwestycyjnych – firma inwestuje (rozwój finansowany z działalności i kapitału zewnętrznego).
+436|0|Kto nie pracuje i nie szuka pracy, jest bierny zawodowo (nie bezrobotny).
+437|3|Model Gordona: k = D1 / P0 + g – koszt kapitału z dywidendy, ceny akcji i stopy wzrostu dywidendy.
+438|3|Przy popycie elastycznym obniżka ceny zwiększa utarg.
+439|1|Urzędy statystyczne (w UE obowiązkowo) szacują szarą strefę i doliczają ją do PKB.
+440|2|Synergia: połączone firmy są warte więcej niż suma ich wartości osobno.
+441|x=duplikat pytania 394
+442|1|Przy leasingu finansowym przedmiot ujmuje w bilansie i amortyzuje korzystający.
+443|0|LIFO przy rosnących cenach wycenia rozchód po nowszych, droższych cenach – wyższy koszt sprzedaży, niższy zysk.
+444|3|Trylemat: nie da się naraz utrzymać sztywnego kursu, niezależnej polityki pieniężnej i swobodnego przepływu kapitału.
+445|3|Heckscher–Ohlin: kraj eksportuje dobra intensywnie wykorzystujące czynnik, w który jest względnie bogato wyposażony.
+446|x=duplikat pytania 115
+447|3|Mechanizm transmisji – kanały, którymi zmiany stóp banku centralnego wpływają (z opóźnieniem) na gospodarkę i inflację.
+447|q=Mechanizm transmisji monetarnej to:
+447|o0=system rozliczeń transakcji walutowych między bankami
+447|o1=bezpośrednie zasilanie przez rząd zagrożonych upadłością przedsiębiorstw
+447|o2=przekazywanie zysku banku centralnego do budżetu państwa
+447|o3=łańcuch zależności, przez które zmiany stóp procentowych banku centralnego wpływają z opóźnieniem na rynki finansowe, produkcję i inflację
+448|0|Obligacje 5-letnie to zobowiązania długoterminowe (kapitał obcy).
+449|1|Koszty utopione nie zależą od decyzji, więc nie wchodzą do rachunku projektu.
+450|1|Zakupy akcji i obligacji przez nierezydentów (inwestycje portfelowe) księguje się na rachunku finansowym, nie bieżącym.
+450|q=Które przepływy NIE są księgowane na rachunku obrotów bieżących bilansu płatniczego?
+450|o0=handel towarami i usługami
+450|o1=zakupy akcji i obligacji przez inwestorów zagranicznych (inwestycje portfelowe)
+450|o2=dochody pierwotne i wtórne (np. odsetki, dywidendy, darowizny)
+450|o3=przekazy pieniężne emigrantów i transfery bieżące z UE
+451|0|Negatywna selekcja wynika z asymetrii informacji („rynek cytryn”).
+452|3|Wysoka dźwignia operacyjna – duży udział kosztów stałych, więc EBIT silnie reaguje na zmiany sprzedaży.
+453|2|Ujemna elastyczność mieszana – dobra komplementarne.
+454|3|Tańsza kawa (substytut) zmniejsza popyt na herbatę – krzywa przesuwa się w lewo.
+455|0|Akcyza nie zmniejsza asymetrii informacji; marka, certyfikaty i gwarancje są sygnałami jakości.
+455|q=Które działanie NIE ogranicza skutków asymetrii informacji na rynku (np. problemu „cytryn”)?
+455|o0=nałożenie akcyzy na dany rodzaj towarów
+455|o1=budowanie renomy i marki sprzedawcy
+455|o2=certyfikaty, atesty i niezależne recenzje ekspertów
+455|o3=gwarancje udzielane przez producenta
+456|0|Dobro Giffena – dobro podrzędne, w którym efekt dochodowy przeważa nad substytucyjnym (popyt rośnie z ceną).
+457|1|Niższy koszt zmienny zwiększa marżę jednostkową, więc BEP = FC / (p − v) spada.
+458|2|DuPont: ROE = ROS × rotacja aktywów × mnożnik kapitału własnego.
+459|3|Złota reguła bilansowa: majątek trwały finansowany kapitałem stałym.
+460|0|Krótkookresowa krzywa Phillipsa – ujemna zależność inflacji i bezrobocia.
+461|1|Zysk jest maksymalny, gdy MR = MC.
+462|1|Wydanie całego budżetu na jedno dobro to rozwiązanie brzegowe (narożne).
+463|2|Wypłata dywidendy zmniejsza środki pieniężne (aktywa) i kapitał własny (zysk zatrzymany).
+463|o0=zmniejszenie aktywów i jednoczesny wzrost zobowiązań krótkoterminowych
+464|1|KON > 0: kapitał stały finansuje cały majątek trwały i część obrotowego.
+465|0|Krzywa Engla – zależność między dochodem a ilością kupowanego dobra.
+466|x=duplikat pytania 457
+467|0|Zasób siły roboczej (aktywni zawodowo) = pracujący + bezrobotni.
+467|o0=osoby pracujące oraz bezrobotne (aktywnie poszukujące pracy)
+468|x=duplikat pytania 354
+469|3|CCC = DIO + DSO − DPO; dłuższe DPO skraca cykl.
+470|x=duplikat pytania 399
+471|3|WACC – średni wymagany zwrot z kapitału własnego i obcego, ważony ich udziałem.
+472|1|Monetaryści: inflacja w długim okresie wynika ze zbyt szybkiego wzrostu podaży pieniądza.
+473|2|Dochód narodowy – produkt narodowy netto w cenach czynników produkcji.
+474|1|Beta mierzy ryzyko systematyczne – wrażliwość akcji na zmiany rynku.
+475|3|Krzywa LM – równowaga na rynku pieniądza.
+476|1|Przy kosztach zewnętrznych rynek produkuje za dużo po zbyt niskiej cenie (nie liczy kosztów społecznych).
+477|2|Dług to zasób (skumulowane deficyty), deficyt – strumień w danym roku.
+478|3|Stopa bezrobocia = bezrobotni / aktywni zawodowo (siła robocza).
+479|x=duplikat pytania 271
+480|3|NPV = 0 – projekt daje zwrot równy stopie dyskontowej (IRR = koszt kapitału).
+481|2|Transfery nie są zakupem dóbr – nie wchodzą do PKB metodą wydatkową.
+482|1|Długookresowy wzrost zależy od kapitału rzeczowego, ludzkiego i postępu technicznego.
+483|1|Kredyt kupiecki – odroczenie przez dostawcę terminu zapłaty.
+484|x=duplikat pytania 480
+485|2|Wzrost ceny obniżył utarg – ilość spadła procentowo bardziej niż wzrosła cena, więc popyt jest elastyczny.
+486|x=duplikat pytania 9
+487|x=duplikat pytania 452
+488|0|W metodzie pośredniej amortyzację dodaje się do zysku netto (koszt niepieniężny).
+489|2|Dla dobra Giffena krzywa popytu jest rosnąca.
+490|3|MC przecina AVC w jej minimum.
+491|2|Elastyczność dochodowa 0–1 – dobra podstawowe (pierwszej potrzeby).
+492|1|Deflator obejmuje wszystkie dobra finalne wytworzone w kraju, CPI – koszyk konsumpcyjny gospodarstw domowych (także importy).
+493|0|„2/10 net 30”: zapłata w 30 dni, a przy zapłacie w 10 dni 2% skonta.
+494|0|KON = aktywa obrotowe − zobowiązania krótkoterminowe = kapitał stały − aktywa trwałe.
+495|x=duplikat pytania 312
+496|x=duplikat pytania 351
+497|1|Faktoring – sprzedaż krótkoterminowych należności handlowych instytucji finansowej.
+498|1|Ekspansywna operacja otwartego rynku – bank centralny skupuje papiery i dostarcza bankom płynność.
+499|2|Klasycy: LRAS jest pionowa na poziomie produkcji potencjalnej.
+500|x=duplikat pytania 280
+501|0|Przy CR > 1 równe zmniejszenie licznika i mianownika podnosi wskaźnik płynności bieżącej.
+502|x=duplikat pytania 483
+503|3|Odsetki są kosztem uzyskania przychodu, więc zmniejszają podstawę podatku dochodowego – to tarcza podatkowa.
+504|2||mnożnik G| = 1/(1−c), |mnożnik T| = c/(1−c); różnica wynosi 1, bo pierwsza runda wydatków rządowych w całości jest popytem.
+504|q=W prostym modelu keynesowskim (bez podatku proporcjonalnego) wartość bezwzględna mnożnika wydatków rządowych w porównaniu z mnożnikiem podatkowym jest:
+504|o2=o 1 wyższa, bo wydatki rządowe w pierwszej rundzie w całości zwiększają popyt, a zmiana podatków – tylko o część konsumowaną
+505|2|Mapa obojętności – zbiór krzywych obojętności; wyższa krzywa oznacza wyższą użyteczność.
+506|1|Mnożnik = 1 / (1 − 0,8) = 5.
+507|x=duplikat pytania 459
+508|x=duplikat pytania 463
+509|1|CCC = DIO + DSO − DPO; dłuższy cykl inkasa należności wydłuża cykl konwersji gotówki.
+510|1|FIFO przy rosnących cenach: koszt sprzedaży po starszych, tańszych cenach – wyższy zysk i wyższa wycena zapasów końcowych.
+511|0|Agresywna polityka kapitału obrotowego: wyższe ryzyko płynności, ale potencjalnie wyższa rentowność.
+512|x=duplikat pytania 150
+513|x=duplikat pytania 501
+514|x=duplikat pytania 298
+515|2|Projekty o typowym ryzyku dyskontuje się średnim ważonym kosztem kapitału (WACC).
+516|0|Surowce i materiały bezpośrednie to koszty zmienne.
+517|x=duplikat pytania 503
+518|3|Pułapka płynności – przy stopach bliskich zera polityka pieniężna przestaje działać.
+519|1|Złamana krzywa popytu (Sweezy) – model oligopolu.
+520|3|Cykl operacyjny – od zakupu zapasów, przez produkcję i sprzedaż, do inkasa należności.
+521|1|M–M z podatkami: wartość firmy rośnie z zadłużeniem dzięki tarczy podatkowej.
+522|3|Przy korzyściach zewnętrznych rynek dostarcza za mało dobra w porównaniu z optimum społecznym.
+522|q=Dobra, których konsumpcja daje znaczne korzyści zewnętrzne (np. edukacja, szczepienia), na wolnym rynku są zwykle:
+522|o0=produkowane w nadmiarze
+522|o1=odporne na negatywną selekcję i pokusę nadużycia
+522|o2=obciążane przez rynek podatkiem Pigou
+522|o3=dostarczane w ilości mniejszej niż optymalna społecznie
+523|0|Skłonność do importu to dodatkowy „wyciek” – mnożnik w gospodarce otwartej jest mniejszy.
+524|0|Dyplom jako dowód zdolności przy asymetrii informacji to sygnalizowanie (Spence).
+525|2|W faktoringu pełnym (bez regresu) faktor przejmuje ryzyko niewypłacalności dłużnika.
+525|o3=usługa obejmuje jedynie wierzytelności potwierdzone prawomocnym wyrokiem sądu
+526|3|Histereza bezrobocia – długie bezrobocie cykliczne trwale podnosi bezrobocie naturalne.
+527|2|Prawo malejących przychodów: produkt krańcowy czynnika zmiennego od pewnego momentu spada.
+528|2|Przy leasingu operacyjnym przedmiot amortyzuje finansujący (leasingodawca).
+529|0|Mnożnik = 1 / MPS = 5, więc ΔY = 5 × 100 = 500 mld zł.
+530|2|Niedopasowanie kwalifikacji do potrzeb gospodarki – bezrobocie strukturalne.
+531|x=duplikat pytania 279
+532|3|Nadrzędny cel finansów firmy – maksymalizacja wartości rynkowej (bogactwa właścicieli).
+533|x=duplikat pytania 329
+534|0|Krzywa Beveridge'a – ujemna zależność stopy bezrobocia i stopy wolnych miejsc pracy.
+535|2|Dumping – eksport po cenie niższej od wartości normalnej (zwykle ceny na rynku krajowym eksportera), szkodzący przemysłowi importera.
+535|q=Eksport towaru po cenie niższej od jego wartości normalnej (zwykle ceny na rynku krajowym eksportera), wyrządzający szkodę przemysłowi kraju importującego, to według WTO:
+535|o0=arbitraż cenowy
+535|o1=embargo
+535|o2=dumping
+535|o3=kontyngent eksportowy
+536|1|ROA = zysk netto / aktywa ogółem (suma bilansowa).
+536|o0=wartości zobowiązań krótkoterminowych i rezerw
+537|0|Przesunięcie handlu: tańszy import spoza unii zastępuje droższy import od partnera chronionego wspólną taryfą.
+538|3|Mundell: przy wspólnej walucie szoki asymetryczne łagodzi mobilność pracy i elastyczność płac.
+539|2|Ścieżka ekspansji dochodowej zawraca ku osi Y, gdy X staje się dobrem podrzędnym (popyt na nie spada z dochodem).
+540|x=duplikat pytania 488
+541|0|Wzrost ceny X zmniejsza maksymalną ilość X – linia budżetu obraca się wokół punktu na osi Y do wewnątrz.
+542|1|Nowe zamówienia w przemyśle wyprzedzają produkcję – to zmienna wyprzedzająca.
+543|x=duplikat pytania 458
+544|1|Projekt jest opłacalny, gdy IRR przewyższa koszt kapitału (stopę graniczną).
+545|1|Spółka komandytowa: komplementariusz odpowiada bez ograniczeń, komandytariusz – do sumy komandytowej.
+545|q=W której spółce co najmniej jeden wspólnik odpowiada za zobowiązania bez ograniczeń (całym majątkiem), a odpowiedzialność co najmniej jednego jest ograniczona do określonej kwoty?
+546|3|Lepkie płace sprawiają, że SRAS jest rosnąca – produkcja reaguje na zmiany popytu.
+547|0|Każdą dodatkową złotówkę dochodu konsumuje się albo oszczędza: MPC + MPS = 1.
+548|x=duplikat pytania 271
+549|3|Ciężar podatku spada bardziej na stronę mniej elastyczną – tu na sztywną podaż (producentów).
+549|o3=popyt jest silnie elastyczny, a podaż sztywna (nieelastyczna)

@@ -192,6 +192,18 @@ export interface SlRec {
   calc?: 1;
 }
 
+/** Pytanie AI w statystykach (data/nauka/ai-stats.json): dział z eksportu, temat i pojęcia z dopasowania haseł. */
+export interface AiRec {
+  id: string;
+  t: QType;
+  dz: string;
+  topic: string;
+  unit: string | null;
+  items: string[];
+  calc?: 1;
+  th?: 1;
+}
+
 /* ---------- pokrycie olimpiad: powtórki pojęć z poprzednich lat ---------- */
 
 /** Okno powtórek: pojęcie jest powtórką, gdy pytano o nie we wcześniejszej edycji (wszystkie od XXI albo ostatnie N). */

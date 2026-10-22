@@ -13,6 +13,11 @@ for (const file of files) {
   const items = JSON.parse(readFileSync(path.join(dir, file), "utf8")) as Record<string, unknown>[];
   items.forEach((q) => data.push({ ...q, _file: file }));
 }
+// pozostałe źródła: Słownik (ręczne i automatyczne) i Pytania AI – te same reguły, id unikalne we wszystkich bankach
+for (const file of ["slownik/manual.json", "slownik/auto.json", "ai/questions.json"]) {
+  const items = JSON.parse(readFileSync(path.join(dir, "..", file), "utf8")) as Record<string, unknown>[];
+  items.forEach((q) => data.push({ ...q, _file: file }));
+}
 
 data.forEach((q) => {
   const where = `${String(q._file)} (${String(q.id)})`;
@@ -36,7 +41,7 @@ data.forEach((q) => {
 
 const single = data.filter((q) => q.type === "single").length;
 const multi = data.filter((q) => q.type === "multi").length;
-console.log(`Plików: ${files.length}, pytań: ${data.length} (jednokrotnego wyboru: ${single}, wielokrotnego: ${multi})`);
+console.log(`Plików: ${files.length + 3}, pytań: ${data.length} (jednokrotnego wyboru: ${single}, wielokrotnego: ${multi})`);
 if (errors.length) {
   console.error(errors.join("\n"));
   process.exit(1);

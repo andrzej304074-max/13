@@ -1,12 +1,18 @@
 import { QUESTIONS } from "@/data/questions";
 import { SLOWNIK_QUESTIONS } from "@/data/slownik";
+import { AI_QUESTIONS } from "@/data/ai";
+import { metaOk, type MetaFilter } from "./question-meta";
 import type { Bank, Origin, PublicQuestion, Question, QuestionType } from "./types";
 
-const banks: Record<Bank, Question[]> = { owe: QUESTIONS, slownik: SLOWNIK_QUESTIONS };
-const byId = new Map([...QUESTIONS, ...SLOWNIK_QUESTIONS].map((q) => [q.id, q]));
+// „mix” – zakładka „Wszystkie pytania”: źródła wybiera filtr `sources`
+const banks: Record<Bank, Question[]> = {
+  owe: QUESTIONS, slownik: SLOWNIK_QUESTIONS, ai: AI_QUESTIONS, mix: [...QUESTIONS, ...AI_QUESTIONS, ...SLOWNIK_QUESTIONS],
+};
+const byId = new Map([...QUESTIONS, ...SLOWNIK_QUESTIONS, ...AI_QUESTIONS].map((q) => [q.id, q]));
 
 /** Zawężenie puli pytań słownikowych: pochodzenie (null – oba) i dział słownika (null – wszystkie). */
-export interface DrawFilter {
+/** Filtr losowania: pola słownika (pochodzenie, dział słownika), etap (stare testy) i filtry wspólne (MetaFilter). */
+export interface DrawFilter extends MetaFilter {
   origin?: Origin | null;
   section?: number | null;
   /** Pytania OWE jednokrotnego wyboru: tylko etap szkolny (`s`) albo okręgowy (`o`). */
@@ -29,9 +35,13 @@ export function getQuestion(id: string): Question | undefined {
   return byId.get(id);
 }
 
+const hasMeta = (f: MetaFilter) => !!(f.sources?.length || f.edFrom || f.edTo || f.stages?.length || f.topic || f.kind || (f.theme && f.theme !== "all"));
+
 function pool(bank: Bank, type: QuestionType, f: DrawFilter = {}): Question[] {
+  const meta = hasMeta(f);
   return banks[bank].filter(
-    (q) => q.type === type && (!f.origin || q.origin === f.origin) && (!f.section || q.section === f.section) && (!f.stage || stageOf(q.id) === f.stage),
+    (q) => q.type === type && (!f.origin || q.origin === f.origin) && (!f.section || q.section === f.section) && (!f.stage || stageOf(q.id) === f.stage)
+      && (!meta || metaOk(q.id, f)),
   );
 }
 

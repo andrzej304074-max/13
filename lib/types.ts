@@ -3,11 +3,14 @@ export type QuestionType = "single" | "multi";
 /** "timed" – 30/50 pytań z limitem czasu; "endless" – bez limitu pytań i czasu, bez cofania. */
 export type TestMode = "timed" | "endless";
 
-/** Baza pytań: "owe" – pytania z olimpiad, "slownik" – pytania ułożone na podstawie słownika pojęć (docs/slownik-owe.pdf). */
-export type Bank = "owe" | "slownik";
+/**
+ * Baza pytań: "owe" – Archiwum OWE (pytania z olimpiad), "slownik" – pytania ułożone na podstawie słownika pojęć
+ * (docs/slownik-owe.pdf), "ai" – Pytania AI (sprawdzone), "mix" – „Wszystkie pytania” (źródła z filtra).
+ */
+export type Bank = "owe" | "slownik" | "ai" | "mix";
 
-/** Pochodzenie pytań słownikowych: generowane automatycznie z haseł albo pisane ręcznie. */
-export type Origin = "auto" | "manual";
+/** Pochodzenie pytań słownikowych (generowane automatycznie z haseł albo pisane ręcznie); "ai" – pytania AI. */
+export type Origin = "auto" | "manual" | "ai";
 
 export interface Question {
   id: string;
@@ -24,6 +27,8 @@ export interface Question {
   /** Tylko pytania słownikowe: numer działu słownika i pochodzenie pytania. */
   section?: number;
   origin?: Origin;
+  /** Tylko pytania AI: dział z eksportu (Ekonomia, Demografia, Zarządzanie, Finanse, Finanse Przedsiębiorstw). */
+  dzial?: string;
 }
 
 /** Pytanie wysyłane do klienta przed sprawdzeniem — bez odpowiedzi. */
