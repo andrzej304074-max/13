@@ -56,7 +56,7 @@ export function OweFilterFields<F extends FilterValue>({ f, set, topics, kinds, 
             {topics.map((t) => <option key={t.id} value={t.id}>{t.name}</option>)}
           </select>
         </label>
-        <label className="filters">Rodzaj haseł
+        <label className="filters" title="Pytania, w których trzeba coś policzyć, należą do „wzorów”, nie do „pojęć”.">Rodzaj haseł
           <select className="select" value={f.kind ?? ""} onChange={(e) => set({ kind: e.target.value || null } as Partial<F>)}>
             <option value="">wszystkie</option>
             {kinds.map((k) => <option key={k.id} value={k.id}>{k.title}</option>)}

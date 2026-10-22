@@ -19,6 +19,8 @@ export interface OweRec {
   items: string[];
   /** 1 – pytanie dotyczy hasła przewodniego swojej edycji. */
   th?: 1;
+  /** 1 – pytanie obliczeniowe (trzeba policzyć ze wzoru): w filtrze rodzaju liczy się jako „wzór”, nie „pojęcie”. */
+  calc?: 1;
 }
 
 export type ThemeFilter = "all" | "yes" | "no";
@@ -66,8 +68,19 @@ export function filterRecs(recs: OweRec[], f: OweFilter, meta: Record<string, It
     (f.type === "all" || r.t === f.type)
     && f.stages.includes(r.st)
     && r.ed >= f.edFrom && r.ed <= f.edTo
-    && (!f.kind || r.items.some((i) => meta[i]?.kind === f.kind))
+    && kindOk(r, f.kind, meta)
     && themeOk(r, f.theme));
+}
+
+/**
+ * Filtr rodzaju hasła: pytanie pyta o hasło tego rodzaju. Pytania obliczeniowe (`calc`) należą do „wzorów”
+ * (także gdy reguła nie wskazała konkretnego hasła-wzoru) i nie liczą się jako pytania o „pojęcia”.
+ */
+export function kindOk(r: Pick<OweRec, "items" | "calc">, kind: string | null | undefined, meta: Record<string, ItemMeta>): boolean {
+  if (!kind) return true;
+  if (kind === "wzor" && r.calc === 1) return true;
+  if (kind === "pojecie" && r.calc === 1) return false;
+  return r.items.some((i) => meta[i]?.kind === kind);
 }
 
 /** Filtr hasła przewodniego (brak pola – jak „wszystkie”). */
@@ -175,6 +188,8 @@ export interface SlRec {
   topic: string;
   unit: string;
   items: string[];
+  /** 1 – pytanie obliczeniowe (jak w OweRec). */
+  calc?: 1;
 }
 
 /* ---------- pokrycie olimpiad: powtórki pojęć z poprzednich lat ---------- */

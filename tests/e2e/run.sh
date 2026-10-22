@@ -46,6 +46,7 @@ run ogloszenia.mjs
 run powtorki.mjs
 run probes.mjs
 run g1.mjs
+run g2.mjs
 run authsweep.mjs
 run security.mjs
 run crawl.mjs

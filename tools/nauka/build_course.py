@@ -188,6 +188,7 @@ for topic, title, emoji, color in C.TOPICS:
 # których uczeń jeszcze nie poznał w tym temacie, lekcja omawia dodatkowo („extra”), a poznane wcześniej powtarza
 # („review”). Gdy nowych pojęć jest za dużo, lekcja dostaje kolejne części (cz. 2, 3…).
 PP = load(os.path.join(HERE, "pojecia_pytan.py"))
+CALC = load(os.path.join(HERE, "calc.py"))
 matcher = PP.Matcher(items)
 MAX_NEW = 12  # hasła lekcji + extra w jednej części
 
@@ -261,28 +262,45 @@ def home_lesson(main):
     return order[topic][max(first_pos[i] for i in pref if items[i]["topic"] == topic)]
 
 
+def calc_items(q, sitems):
+    """Pytanie obliczeniowe: w statystykach liczy się jako pytanie o hasło-wzór (gdy reguła je wskazuje)."""
+    if not CALC.is_calc(q):
+        return sitems, False
+    return set(CALC.formula_items(q, FORMULA_BY_TITLE)) or sitems, True
+
+
+FORMULA_BY_TITLE = {v["t"]: k for k, v in items.items() if v["kind"] == "wzor"}
+
+
 def owe_record(q, lid, main):
     m = re.match(r"owe(\d+)-([soc])-", q["id"])
-    sitems = stat_items(q, main)
+    sitems, calc = calc_items(q, stat_items(q, main))
     # dział i zagadnienie w statystykach – z pojęć statystycznych (zgodne z listą pojęć pytania)
     # przy ręcznej liście (STAT_FIX) zagadnienie wyznacza pierwsze, główne pojęcie
-    if q["id"] in PP.FIX.STAT_FIX:
+    if q["id"] in PP.FIX.STAT_FIX and not calc:
         lid = home_lesson({matcher.by_title[PP.FIX.STAT_FIX[q["id"]][0]]}) or home_lesson(sitems) or lid
     else:
         lid = home_lesson(sitems) or lid
     L = lessons[lid] if lid else None
-    owe_stats.append({"id": q["id"], "t": q["type"], "ed": int(m.group(1)), "st": m.group(2),
-                      "topic": L["topic"] if L else None, "unit": L["unit"] if L else None, "items": sorted(sitems)})
+    rec = {"id": q["id"], "t": q["type"], "ed": int(m.group(1)), "st": m.group(2),
+           "topic": L["topic"] if L else None, "unit": L["unit"] if L else None, "items": sorted(sitems)}
+    if calc:
+        rec["calc"] = 1
+    owe_stats.append(rec)
 
 sl_stats = []  # statystyki pytań słownikowych (moje statystyki wg działów, fiszki): dział, zagadnienie, pojęcia
 
 
 def sl_record(q, origin, lid, main):
     sitems = {i for i in main if i in items} if origin == "auto" else stat_items(q, main)
+    sitems, calc = calc_items(q, sitems) if origin != "auto" else (sitems, False)
     lid = home_lesson(sitems) or lid
     L = lessons[lid]
-    sl_stats.append({"id": q["id"], "t": q["type"], "sec": q.get("section"), "o": origin[0],
-                     "topic": L["topic"], "unit": L["unit"], "items": sorted(sitems)})
+    rec = {"id": q["id"], "t": q["type"], "sec": q.get("section"), "o": origin[0],
+           "topic": L["topic"], "unit": L["unit"], "items": sorted(sitems)}
+    if calc:
+        rec["calc"] = 1
+    sl_stats.append(rec)
 
 
 for q, origin in bank:

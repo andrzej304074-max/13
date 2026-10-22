@@ -3,7 +3,7 @@
  * osobno dla pytań OWE i słownikowych. Dokładność pytania jak w statystykach testów: jednokrotny 0/1,
  * wielokrotny – punkty / 2 (4 trafne pola – 2 pkt, 3 – 1 pkt), pominięte 0.
  */
-import { themeOk, type ItemMeta, type OweRec, type SlRec, type Stage, type ThemeFilter } from "./owe-stats";
+import { kindOk, themeOk, type ItemMeta, type OweRec, type SlRec, type Stage, type ThemeFilter } from "./owe-stats";
 
 export type Range = "7d" | "30d" | "all";
 export type Sort = "weak" | "strong" | "count";
@@ -54,7 +54,7 @@ export interface MyStats {
 }
 
 /** Wspólne pola rekordów pytań OWE i słownikowych (pola jednej bazy są w drugiej puste). */
-type Rec = Pick<OweRec, "id" | "t" | "items" | "th"> & { topic: string | null; unit: string | null; ed?: number; st?: Stage; o?: SlRec["o"]; sec?: number | null };
+type Rec = Pick<OweRec, "id" | "t" | "items" | "th" | "calc"> & { topic: string | null; unit: string | null; ed?: number; st?: Stage; o?: SlRec["o"]; sec?: number | null };
 const DAY = 86400000;
 const pct = (c: number, t: number) => (t > 0 ? Math.round((c / t) * 1000) / 10 : 0);
 
@@ -96,7 +96,7 @@ export function aggregate(answers: MyAnswer[], recs: readonly Rec[], meta: Recor
     if (f.type !== "all" && r.t !== f.type) continue;
     if (r.ed !== undefined && (!f.stages.includes(r.st as Stage) || r.ed < f.edFrom || r.ed > f.edTo || !themeOk(r, f.theme))) continue;
     if (r.o !== undefined && ((f.origin && r.o !== f.origin) || (f.sec && r.sec !== f.sec))) continue;
-    if (f.kind && !r.items.some((i) => meta[i]?.kind === f.kind)) continue;
+    if (!kindOk(r, f.kind, meta)) continue;
     // dział i zagadnienie – według przydziału pytania; filtr działu zawęża zagadnienia i pojęcia (jak w statystykach OWE)
     if (r.topic) push(by.topics, r.topic, a);
     if (f.topic && r.topic !== f.topic && !r.items.some(okItem)) continue;
