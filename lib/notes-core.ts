@@ -17,8 +17,14 @@ export const MAX_NOTES = 1000;
 export const MAX_NOTES_BYTES = 25 * 1024 * 1024;
 export const MAX_HIGHLIGHTS = 5000;
 
-/** Kreska: kolor (indeks palety), grubość (indeks), punkty jako płaska lista [x, y, nacisk 0–100, …]. */
-export interface Stroke { c: number; w: number; p: number[] }
+/**
+ * Kreska: kolor (indeks palety), grubość (indeks), punkty jako płaska lista [x, y, nacisk 0–100, …].
+ * Kształt `t`: brak – pismo odręczne; "l" – odcinek (2 punkty: początek, koniec); "b" – krzywa Béziera
+ * (4 punkty: początek, dwa punkty kontrolne „wychylenia”, koniec).
+ */
+export interface Stroke { c: number; w: number; p: number[]; t?: StrokeShape }
+export type StrokeShape = "l" | "b";
+const SHAPE_POINTS: Record<StrokeShape, number> = { l: 2, b: 4 };
 export interface Ink { h: number; s: Stroke[] }
 export type NoteKind = "note" | "scratch";
 export type StarKind = "fiszka" | "artykul";
@@ -82,8 +88,12 @@ export function sanitizeInk(raw: unknown): Ink {
     const st = k as Partial<Stroke>;
     const c = int(st?.c, 0, INK_COLORS - 1), w = int(st?.w, 0, INK_WIDTHS.length - 1);
     if (c === null || w === null || !Array.isArray(st.p) || st.p.length < 3 || st.p.length % 3) throw new NoteError("Nieprawidłowa kreska.");
+    const t = st.t;
+    if (t !== undefined && !(t === "l" || t === "b")) throw new NoteError("Nieprawidłowy kształt kreski.");
+    if (t && st.p.length !== SHAPE_POINTS[t] * 3) throw new NoteError("Nieprawidłowa liczba punktów kształtu.");
     const p: number[] = [];
     for (let i = 0; i < st.p.length; i += 3) {
+      // punkty kontrolne krzywej mogą leżeć poza kartką – i tak są przycinane do jej granic
       const x = int(st.p[i], 0, INK_W), y = int(st.p[i + 1], 0, INK_MAX_H), pr = int(st.p[i + 2], 0, 100);
       if (x === null || y === null || pr === null) throw new NoteError("Nieprawidłowy punkt kreski.");
       p.push(x, y, pr);
@@ -91,7 +101,7 @@ export function sanitizeInk(raw: unknown): Ink {
     }
     total += p.length / 3;
     if (total > MAX_POINTS) throw new NoteError("Rysunek jest za duży – zacznij nowy brudnopis.");
-    s.push({ c, w, p });
+    s.push(t ? { c, w, p, t } : { c, w, p });
   }
   const h = Math.max(int(src.h, 0, INK_MAX_H) ?? 0, s.length ? Math.min(INK_MAX_H, maxY + 40) : 0);
   return { h, s };
@@ -199,4 +209,25 @@ export function strokeNear(p: number[], x: number, y: number, r: number): boolea
   if (p.length === 3) return Math.hypot(p[0] - x, p[1] - y) <= r;
   for (let i = 3; i < p.length; i += 3) if (segDist(x, y, p[i - 3], p[i - 2], p[i], p[i + 1]) <= r) return true;
   return false;
+}
+
+/** Punkt krzywej Béziera trzeciego stopnia (p – płaska lista 4 punktów [x, y, nacisk, …]) dla parametru u ∈ [0, 1]. */
+export function bezierAt(p: number[], u: number): [number, number] {
+  const v = 1 - u, a = v * v * v, b = 3 * v * v * u, c = 3 * v * u * u, d = u * u * u;
+  return [a * p[0] + b * p[3] + c * p[6] + d * p[9], a * p[1] + b * p[4] + c * p[7] + d * p[10]];
+}
+
+/** Łamana przybliżająca kreskę (krzywą Béziera – 24 odcinki), w formacie [x, y, nacisk, …] – do gumki i zasięgu rysunku. */
+export function strokePolyline(s: Stroke): number[] {
+  if (s.t !== "b") return s.p;
+  const out: number[] = [];
+  for (let i = 0; i <= 24; i++) { const [x, y] = bezierAt(s.p, i / 24); out.push(x, y, 50); }
+  return out;
+}
+
+/** Odcinek z Shiftem: kąt przyciągany co 15°, długość zachowana. */
+export function snapAngle(ax: number, ay: number, bx: number, by: number, step = 15): [number, number] {
+  const len = Math.hypot(bx - ax, by - ay);
+  const r = (Math.round((Math.atan2(by - ay, bx - ax) * 180) / Math.PI / step) * step * Math.PI) / 180;
+  return [Math.round(ax + len * Math.cos(r)), Math.round(ay + len * Math.sin(r))];
 }

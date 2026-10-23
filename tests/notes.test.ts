@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { displayTitle, NoteError, refHref, MAX_NOTE_CARDS, NOTE_CARD_W, INK_W, sanitizeCards, sanitizeHighlight, sanitizeInk, sanitizeRef, segments, simplify, strokeNear } from "@/lib/notes-core";
+import { bezierAt, displayTitle, snapAngle, strokePolyline, NoteError, refHref, MAX_NOTE_CARDS, NOTE_CARD_W, INK_W, sanitizeCards, sanitizeHighlight, sanitizeInk, sanitizeRef, segments, simplify, strokeNear } from "@/lib/notes-core";
 
 describe("rysunek w notatkach", () => {
   it("upraszcza punkty leżące na prostej, zostawia końce i załamania", () => {
@@ -96,5 +96,33 @@ describe("fiszki na kartce", () => {
   it("odrzuca nie-listę i zbyt wiele kart", () => {
     expect(() => sanitizeCards({})).toThrow(NoteError);
     expect(() => sanitizeCards(Array.from({ length: MAX_NOTE_CARDS + 1 }, (_, i) => ({ id: `h${i}`, x: 0, y: 0 })))).toThrow(NoteError);
+  });
+});
+
+describe("kształty: linia i krzywa Béziera", () => {
+  it("walidacja: linia ma 2 punkty, krzywa 4, nieznany kształt odrzucony", () => {
+    const ink = sanitizeInk({ h: 0, s: [
+      { c: 1, w: 1, p: [10, 10, 50, 300, 10, 50], t: "l" },
+      { c: 2, w: 0, p: [0, 100, 50, 100, 0, 50, 200, 200, 50, 300, 100, 50], t: "b" },
+    ] });
+    expect(ink.s.map((s) => s.t)).toEqual(["l", "b"]);
+    expect(() => sanitizeInk({ s: [{ c: 0, w: 0, p: [1, 1, 50, 2, 2, 50, 3, 3, 50], t: "l" }] })).toThrow(NoteError);
+    expect(() => sanitizeInk({ s: [{ c: 0, w: 0, p: [1, 1, 50, 2, 2, 50], t: "x" }] })).toThrow(NoteError);
+    expect(sanitizeInk({ s: [{ c: 0, w: 0, p: [1, 1, 50, 2, 2, 50] }] }).s[0]).not.toHaveProperty("t");
+  });
+  it("krzywa: końce w punktach skrajnych, gumka trafia w łuk, nie w cięciwę", () => {
+    const p = [0, 100, 50, 0, 0, 50, 200, 0, 50, 200, 100, 50];
+    expect(bezierAt(p, 0)).toEqual([0, 100]);
+    expect(bezierAt(p, 1)).toEqual([200, 100]);
+    const poly = strokePolyline({ c: 0, w: 0, p, t: "b" });
+    expect(poly.length).toBe(25 * 3);
+    expect(strokeNear(poly, 100, 25, 6)).toBe(true); // szczyt łuku (y = 25)
+    expect(strokeNear(poly, 100, 100, 6)).toBe(false); // środek cięciwy
+  });
+  it("Shift: kąt co 15°, długość zachowana", () => {
+    expect(snapAngle(0, 0, 100, 4)).toEqual([100, 0]);
+    const [x, y] = snapAngle(0, 0, 70, 72);
+    expect(x).toBe(y);
+    expect(Math.round(Math.hypot(x, y))).toBe(Math.round(Math.hypot(70, 72)));
   });
 });

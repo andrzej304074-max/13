@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { api, ApiError, isNetworkError } from "@/lib/client";
-import { EMPTY_INK, INK_MIN_H, INK_W, INK_WIDTHS, MAX_NOTE_CARDS, NOTE_CARD_W, simplify, strokeNear, type Ink, type NoteCard, type NoteKind, type Stroke } from "@/lib/notes-core";
+import { EMPTY_INK, INK_MAX_H, INK_MIN_H, INK_W, INK_WIDTHS, MAX_NOTE_CARDS, NOTE_CARD_W, simplify, snapAngle, strokeNear, strokePolyline, type Ink, type NoteCard, type NoteKind, type Stroke } from "@/lib/notes-core";
 import { useCardPool } from "@/app/fiszki/card-pool";
 import { CardPicker, NoteCards } from "./note-cards";
 import type { NoteRow } from "@/lib/notes";
@@ -12,9 +12,11 @@ import type { NoteRow } from "@/lib/notes";
  * Tryb ⌨️ Tekst pisze od góry kartki, ✏️ Pióro rysuje po tekście. Rysunek jest w jednostkach logicznych (szerokość 1000),
  * a czcionka i linie kartki w jednostkach szerokości kartki (cqw) – tekst łamie się tak samo na każdym ekranie,
  * więc dopiski rysikiem zostają przy swoim tekście. Zapis automatyczny (800 ms po zmianie).
+ * Kształty: 📏 Linia (przeciągnij od–do, Shift – kąt co 15°) i 〰️ Krzywa (przeciągnij, potem wygnij punktami kontrolnymi,
+ * ✓ zatwierdza). ⛶ – pełny ekran (Fullscreen API, a na iPhonie nakładka na cały ekran).
  */
 
-type Tool = "text" | "pen" | "eraser" | "scroll";
+type Tool = "text" | "pen" | "eraser" | "scroll" | "line" | "curve";
 const TOOL_KEY = "ne-tool";
 /** Domyślne narzędzie: na urządzeniu z myszą – tekst, na dotykowym – pióro; potem ostatni wybór. */
 function initialTool(): Tool {
@@ -31,6 +33,8 @@ const COLOR_NAMES = ["Czarny", "Niebieski", "Czerwony", "Zielony"];
 const WIDTH_NAMES = ["Cienka", "Średnia", "Gruba"];
 const ERASE_R = 14;
 const HISTORY = 60;
+/** Promień uchwytu krzywej w pikselach ekranu (palec). */
+const HANDLE_PX = 16;
 
 export interface EditorProps {
   note: NoteRow | null;
@@ -51,6 +55,15 @@ function drawStroke(ctx: CanvasRenderingContext2D, s: Stroke, k: number, colors:
   ctx.fillStyle = ctx.strokeStyle;
   ctx.lineCap = "round";
   ctx.lineJoin = "round";
+  if (s.t) {
+    ctx.lineWidth = Math.max(0.6, base * k);
+    ctx.beginPath();
+    ctx.moveTo(p[0] * k, p[1] * k);
+    if (s.t === "l") ctx.lineTo(p[3] * k, p[4] * k);
+    else ctx.bezierCurveTo(p[3] * k, p[4] * k, p[6] * k, p[7] * k, p[9] * k, p[10] * k);
+    ctx.stroke();
+    return;
+  }
   if (p.length === 3) {
     ctx.beginPath();
     ctx.arc(p[0] * k, p[1] * k, (base * (0.5 + p[2] / 100) * k) / 2 + 0.5, 0, Math.PI * 2);
@@ -71,7 +84,27 @@ function drawStroke(ctx: CanvasRenderingContext2D, s: Stroke, k: number, colors:
 
 function hitStroke(s: Stroke, x: number, y: number): boolean {
   const r = ERASE_R + (INK_WIDTHS[s.w] ?? 2);
-  return strokeNear(s.p, x, y, r);
+  return strokeNear(strokePolyline(s), x, y, r);
+}
+
+/** Uchwyty edytowanej krzywej: przerywane ramiona do punktów kontrolnych, kółka (końce puste, punkty kontrolne pełne). */
+function drawHandles(ctx: CanvasRenderingContext2D, p: number[], k: number, color: string) {
+  ctx.save();
+  ctx.strokeStyle = color;
+  ctx.fillStyle = color;
+  ctx.lineWidth = 1.5;
+  ctx.setLineDash([5, 4]);
+  ctx.beginPath();
+  ctx.moveTo(p[0] * k, p[1] * k); ctx.lineTo(p[3] * k, p[4] * k);
+  ctx.moveTo(p[9] * k, p[10] * k); ctx.lineTo(p[6] * k, p[7] * k);
+  ctx.stroke();
+  ctx.setLineDash([]);
+  for (let i = 0; i < 4; i++) {
+    ctx.beginPath();
+    ctx.arc(p[i * 3] * k, p[i * 3 + 1] * k, i === 1 || i === 2 ? 8 : 6, 0, Math.PI * 2);
+    if (i === 1 || i === 2) ctx.fill(); else ctx.stroke();
+  }
+  ctx.restore();
 }
 
 export function NoteEditor({ note, kind, refKey = null, compact = false, showTitle = !compact, readOnly = false, onSaved, placeholder }: EditorProps) {
@@ -99,6 +132,12 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
   const undo = useRef<Ink[]>([]);
   const redo = useRef<Ink[]>([]);
   const [, setHist] = useState(0);
+  // krzywa w edycji (przed zatwierdzeniem): 4 punkty [x, y, 50, …] – ref do rysowania, stan do paska narzędzi
+  const [curve, setCurveState] = useState<number[] | null>(null);
+  const curveRef = useRef<number[] | null>(null);
+  const setCurve = useCallback((c: number[] | null) => { curveRef.current = c; setCurveState(c); }, []);
+  const [full, setFull] = useState(false);
+  const rootRef = useRef<HTMLDivElement>(null);
 
   const wrapRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -220,6 +259,7 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
   }, []);
 
   const colors = useRef<string[]>([]);
+  const styleRef = useRef({ color: 0, width: 0 });
   const redraw = useCallback(() => {
     const c = canvasRef.current;
     if (!c || !cssW) return;
@@ -236,8 +276,14 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
     const cs = getComputedStyle(c);
     colors.current = COLOR_VARS.map((v) => cs.getPropertyValue(v).trim() || "#222");
     for (const s of latest.current.ink.s) drawStroke(ctx, s, k, colors.current);
+    const cv = curveRef.current;
+    if (cv) {
+      drawStroke(ctx, { c: styleRef.current.color, w: styleRef.current.width, p: cv, t: "b" }, k, colors.current);
+      drawHandles(ctx, cv, k, cs.getPropertyValue("--accent").trim() || "#2563eb");
+    }
   }, [cssW, k, logicalH]);
-  useEffect(() => { redraw(); }, [redraw, ink]);
+  styleRef.current = { color, width };
+  useEffect(() => { redraw(); }, [redraw, ink, curve, color, width]);
   useEffect(() => {
     const mq = window.matchMedia("(prefers-color-scheme: dark)");
     mq.addEventListener("change", redraw);
@@ -251,6 +297,22 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
     setInk(next);
     touch();
   }, [touch]);
+
+  /** Zatwierdza edytowaną krzywą jako kreskę rysunku. */
+  const commitCurve = useCallback(() => {
+    const cv = curveRef.current;
+    if (!cv) return;
+    setCurve(null);
+    const maxY = Math.max(cv[1], cv[4], cv[7], cv[10]);
+    commit({ h: Math.max(latest.current.ink.h, Math.min(INK_MAX_H, maxY + 40)), s: [...latest.current.ink.s, { c: styleRef.current.color, w: styleRef.current.width, p: cv, t: "b" }] });
+  }, [commit, setCurve]);
+  // zmiana narzędzia zatwierdza krzywą
+  useEffect(() => { if (tool !== "curve") commitCurve(); }, [tool, commitCurve]);
+
+  // kształt w trakcie przeciągania (linia albo nowa krzywa) i przeciągany uchwyt krzywej
+  const shape = useRef<{ pid: number; ax: number; ay: number; bx: number; by: number } | null>(null);
+  const handle = useRef<{ pid: number; i: number } | null>(null);
+  const clampPt = (x: number, y: number): [number, number] => [Math.min(INK_W, Math.max(0, x)), Math.min(INK_MAX_H, Math.max(0, y))];
 
   const cur = useRef<{ pid: number; pts: number[]; erased: boolean; base: Ink } | null>(null);
   const penSeen = useRef(false);
@@ -266,10 +328,23 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
     if (e.pointerType === "pen") penSeen.current = true;
     // rysik w użyciu: dotyk dłoni opartej o ekran nie rysuje
     if (e.pointerType === "touch" && penSeen.current) return;
-    if (cur.current) return;
+    if (cur.current || shape.current || handle.current) return;
     e.preventDefault();
     e.currentTarget.setPointerCapture(e.pointerId);
     const [x, y] = pos(e);
+    if (tool === "line" || tool === "curve") {
+      const cv = curveRef.current;
+      if (tool === "curve" && cv) {
+        // najbliższy uchwyt w zasięgu palca – przeciąganie; dotknięcie obok zatwierdza krzywą i zaczyna nową
+        const r = HANDLE_PX / (k || 1);
+        let best = -1, bd = Infinity;
+        for (let i = 0; i < 4; i++) { const d = Math.hypot(cv[i * 3] - x, cv[i * 3 + 1] - y); if (d <= r && d < bd) { best = i; bd = d; } }
+        if (best >= 0) { handle.current = { pid: e.pointerId, i: best }; return; }
+        commitCurve();
+      }
+      shape.current = { pid: e.pointerId, ax: x, ay: y, bx: x, by: y };
+      return;
+    }
     // gumka końcówki rysika (przycisk „eraser”) też ściera
     const erasing = tool === "eraser" || e.button === 5 || (e.buttons & 32) !== 0;
     cur.current = { pid: e.pointerId, pts: [x, y, pressure(e)], erased: erasing, base: latest.current.ink };
@@ -290,6 +365,25 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
   };
 
   const onMove = (e: React.PointerEvent<HTMLCanvasElement>) => {
+    const h = handle.current, sh = shape.current;
+    if (h && h.pid === e.pointerId && curveRef.current) {
+      e.preventDefault();
+      const [x, y] = clampPt(...(pos(e) as [number, number]));
+      const cv = [...curveRef.current];
+      cv[h.i * 3] = x; cv[h.i * 3 + 1] = y;
+      setCurve(cv);
+      return;
+    }
+    if (sh && sh.pid === e.pointerId) {
+      e.preventDefault();
+      let [x, y] = clampPt(...(pos(e) as [number, number]));
+      if (e.shiftKey) [x, y] = clampPt(...snapAngle(sh.ax, sh.ay, x, y));
+      sh.bx = x; sh.by = y;
+      redraw();
+      const ctx = canvasRef.current!.getContext("2d")!;
+      drawStroke(ctx, { c: color, w: width, p: [sh.ax, sh.ay, 50, x, y, 50], t: "l" }, k, colors.current);
+      return;
+    }
     const s = cur.current;
     if (!s || s.pid !== e.pointerId) return;
     e.preventDefault();
@@ -316,6 +410,20 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
   };
 
   const onUp = (e: React.PointerEvent<HTMLCanvasElement>) => {
+    if (handle.current?.pid === e.pointerId) { handle.current = null; return; }
+    const sh = shape.current;
+    if (sh && sh.pid === e.pointerId) {
+      shape.current = null;
+      if (Math.hypot(sh.bx - sh.ax, sh.by - sh.ay) < 6) { redraw(); return; }
+      if (tool === "curve") {
+        // nowa krzywa: prosta z punktami kontrolnymi w 1/3 i 2/3 – do wygięcia uchwytami
+        const t = (u: number) => [Math.round(sh.ax + (sh.bx - sh.ax) * u), Math.round(sh.ay + (sh.by - sh.ay) * u), 50];
+        setCurve([sh.ax, sh.ay, 50, ...t(1 / 3), ...t(2 / 3), sh.bx, sh.by, 50]);
+        return;
+      }
+      commit({ h: Math.max(latest.current.ink.h, Math.max(sh.ay, sh.by) + 40), s: [...latest.current.ink.s, { c: color, w: width, p: [sh.ax, sh.ay, 50, sh.bx, sh.by, 50], t: "l" }] });
+      return;
+    }
     const s = cur.current;
     if (!s || s.pid !== e.pointerId) return;
     cur.current = null;
@@ -333,6 +441,7 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
   };
 
   const doUndo = () => {
+    if (curveRef.current) { setCurve(null); return; }
     const prev = undo.current.pop();
     if (!prev) return;
     redo.current.push(latest.current.ink);
@@ -356,6 +465,8 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
   // Ctrl+Z / Ctrl+Y w obrębie edytora (w polu tekstu – natywne cofanie tekstu);
   // zwykły znak z klawiatury w trybie pióra/gumki przełącza na tekst i trafia na koniec tekstu
   const onKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Escape" && full) { e.stopPropagation(); void toggleFull(false); return; }
+    if (e.key === "Enter" && curveRef.current && (e.target as HTMLElement).tagName !== "TEXTAREA") { e.preventDefault(); commitCurve(); return; }
     const tag = (e.target as HTMLElement).tagName;
     if (tag === "TEXTAREA" || tag === "INPUT" || tag === "BUTTON") return;
     if (!readOnly && !e.ctrlKey && !e.metaKey && !e.altKey && (e.key.length === 1 || e.key === "Enter")) {
@@ -369,10 +480,30 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
     if (e.key.toLowerCase() === "y") { e.preventDefault(); doRedo(); }
   };
 
+  // --- pełny ekran: Fullscreen API na edytorze, a gdy go brak (iPhone) – nakładka na cały ekran (klasa ne-full) ---
+  const toggleFull = useCallback(async (on: boolean) => {
+    setFull(on);
+    const el = rootRef.current;
+    try {
+      if (on && el?.requestFullscreen && !document.fullscreenElement) await el.requestFullscreen();
+      else if (!on && document.fullscreenElement) await document.exitFullscreen();
+    } catch {}
+  }, []);
+  useEffect(() => {
+    const h = () => { if (!document.fullscreenElement) setFull(false); };
+    document.addEventListener("fullscreenchange", h);
+    return () => document.removeEventListener("fullscreenchange", h);
+  }, []);
+  useEffect(() => {
+    if (!full) return;
+    document.documentElement.classList.add("ne-full-open");
+    return () => document.documentElement.classList.remove("ne-full-open");
+  }, [full]);
+
   const status = readOnly ? "tylko podgląd" : save === "saving" ? "Zapisywanie…" : save === "saved" ? "Zapisano ✓" : save === "error" ? "Nie zapisano" : "";
 
   return (
-    <div className={`notes-editor${compact ? " compact" : ""}`} onKeyDown={onKeyDown} data-testid="notes-editor">
+    <div ref={rootRef} className={`notes-editor${compact ? " compact" : ""}${full ? " ne-full" : ""}`} onKeyDown={onKeyDown} data-testid="notes-editor">
       {showTitle && !compact && <h1 className="sr-only">{title || "Notatka"}</h1>}
       {showTitle && (
         <input className="ne-title" value={title} placeholder="Tytuł notatki" maxLength={120} readOnly={readOnly}
@@ -383,6 +514,8 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
           <div className="ne-group">
             <button type="button" className={tool === "text" ? "on" : ""} aria-pressed={tool === "text"} onClick={() => { setTool("text"); focusText(); }} title="Tekst z klawiatury – na tej samej kartce">⌨️<span className="ne-lbl"> Tekst</span></button>
             <button type="button" className={tool === "pen" ? "on" : ""} aria-pressed={tool === "pen"} onClick={() => setTool("pen")} title="Pióro">✏️<span className="ne-lbl"> Pióro</span></button>
+            <button type="button" className={tool === "line" ? "on" : ""} aria-pressed={tool === "line"} onClick={() => setTool("line")} title="Linia prosta – przeciągnij od początku do końca (Shift: kąt co 15°)" data-testid="tool-line">📏<span className="ne-lbl"> Linia</span></button>
+            <button type="button" className={tool === "curve" ? "on" : ""} aria-pressed={tool === "curve"} onClick={() => setTool("curve")} title="Krzywa – przeciągnij, potem wygnij punktami kontrolnymi i zatwierdź ✓" data-testid="tool-curve">〰️<span className="ne-lbl"> Krzywa</span></button>
             <button type="button" className={tool === "eraser" ? "on" : ""} aria-pressed={tool === "eraser"} onClick={() => setTool("eraser")} title="Gumka – ściera całe kreski">🧽<span className="ne-lbl"> Gumka</span></button>
             <button type="button" className={tool === "scroll" ? "on" : ""} aria-pressed={tool === "scroll"} onClick={() => setTool("scroll")} title="Przewijanie palcem – płótno nie rysuje">✋<span className="ne-lbl"> Przewijaj</span></button>
           </div>
@@ -403,12 +536,15 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
             ))}
           </div>
           <div className="ne-group">
-            <button type="button" onClick={doUndo} disabled={!undo.current.length} title="Cofnij (Ctrl+Z)">↶<span className="sr-only">Cofnij</span></button>
-            <button type="button" onClick={doRedo} disabled={!redo.current.length} title="Ponów (Ctrl+Y)">↷<span className="sr-only">Ponów</span></button>
+            <button type="button" onClick={doUndo} disabled={!undo.current.length && !curve} title="Cofnij (Ctrl+Z)" data-testid="ink-undo">↶<span className="sr-only">Cofnij</span></button>
+            <button type="button" onClick={doRedo} disabled={!redo.current.length} title="Ponów (Ctrl+Y)" data-testid="ink-redo">↷<span className="sr-only">Ponów</span></button>
             <button type="button" onClick={clear} disabled={!ink.s.length} title="Wyczyść rysunek">🗑️<span className="sr-only">Wyczyść rysunek</span></button>
             <button type="button" className={picker ? "on" : ""} aria-pressed={picker} onClick={() => setPicker((v) => !v)} disabled={cards.length >= MAX_NOTE_CARDS}
               title="Wstaw fiszkę na kartkę – kwadrat do przesuwania" data-testid="note-card-add">🗂️<span className="ne-lbl"> Fiszka</span></button>
+            <button type="button" className={full ? "on" : ""} aria-pressed={full} onClick={() => void toggleFull(!full)}
+              title={full ? "Zamknij pełny ekran (Esc)" : "Pełny ekran"} data-testid="ink-full">{full ? "🗗" : "⛶"}<span className="sr-only">{full ? "Zamknij pełny ekran" : "Pełny ekran"}</span></button>
           </div>
+
         </div>
       )}
       {picker && !readOnly && (
@@ -430,6 +566,15 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
           <canvas ref={canvasRef} className="ne-canvas" data-testid="ink-canvas" tabIndex={-1}
             onPointerDown={onDown} onPointerMove={onMove} onPointerUp={onUp} onPointerCancel={onUp}
             aria-label="Kartka do pisania rysikiem lub palcem" />
+          {curve && (
+            // dymek przy krzywej (nie w pasku narzędzi – kartka nie przesuwa się pod palcem)
+            <div className="ne-curve" role="group" aria-label="Edycja krzywej"
+              style={{ left: Math.min(Math.max(curve[0], curve[9]) * k, Math.max(0, cssW - 230)), top: (Math.max(curve[1], curve[4], curve[7], curve[10]) + 24) * k }}>
+              <span className="small">Przeciągnij ● punkty kontrolne</span>
+              <button type="button" className="btn small" onClick={commitCurve} title="Zatwierdź krzywą (Enter)" data-testid="curve-ok">✓ Gotowe</button>
+              <button type="button" className="btn small secondary" onClick={() => setCurve(null)} title="Odrzuć krzywą" data-testid="curve-cancel">✕</button>
+            </div>
+          )}
           <NoteCards cards={cards} byId={poolById} k={k} readOnly={readOnly} onChange={(cs) => { setCards(cs); touch(); }} />
         </div>
       </div>
