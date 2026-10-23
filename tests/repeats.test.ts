@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { COURSE } from "@/data/nauka";
 import { earlierTopicItems, lessonPayload, personalizeRepeats } from "@/lib/nauka-course";
-import { buildExercises, rankRepeats, type Exercise, type RepeatStat } from "@/lib/nauka-logic";
+import { buildExercises, MAX_REPEATS, rankRepeats, repeatLimit, type Exercise, type RepeatStat } from "@/lib/nauka-logic";
 import type { LessonPayload } from "@/lib/nauka-types";
 
 /** Prosty generator z ziarnem – powtarzalne losowanie w testach. */
@@ -21,7 +21,7 @@ function share(p: LessonPayload, ex: Exercise[]) {
   return { r, n: ex.length - r };
 }
 
-describe("powtórki w lekcjach – najwyżej 50%", () => {
+describe("powtórki w lekcjach – najwyżej 30%, do 5 haseł", () => {
   it("każda lekcja, „Ćwicz” i „Utrwal”, bez danych użytkownika", () => {
     let checked = 0;
     for (const l of lessons) {
@@ -30,7 +30,8 @@ describe("powtórki w lekcjach – najwyżej 50%", () => {
         for (const level of [0, 2]) {
           const ex = buildExercises(p, { level, rnd: seeded(l.id.length * 31 + sub + level) });
           const { r, n } = share(p, ex);
-          expect(r, `${l.id}/${sub}/poz.${level}: ${r} powtórek na ${n} nowych`).toBeLessThanOrEqual(n);
+          expect(r * 10, `${l.id}/${sub}/poz.${level}: ${r} powtórek na ${n} nowych`).toBeLessThanOrEqual(3 * (r + n));
+          expect(r).toBeLessThanOrEqual(MAX_REPEATS);
           checked++;
         }
       }
@@ -38,7 +39,7 @@ describe("powtórki w lekcjach – najwyżej 50%", () => {
     expect(checked).toBeGreaterThan(1000);
   }, 180_000);
 
-  it("najgorszy przypadek: wszystkie wcześniejsze hasła tematu słabe – nadal ≤ 50%", () => {
+  it("najgorszy przypadek: wszystkie wcześniejsze hasła tematu słabe – nadal ≤ 30%", () => {
     for (const l of lessons) {
       const stats: Record<string, RepeatStat> = {};
       for (const id of earlierTopicItems(l.id)) stats[id] = { c: 0, t: 5, last: NOW };
@@ -46,11 +47,16 @@ describe("powtórki w lekcjach – najwyżej 50%", () => {
         const p = personalizeRepeats(lessonPayload(l.id, sub)!, stats, NOW);
         const ex = buildExercises(p, { rnd: seeded(sub) });
         const { r, n } = share(p, ex);
-        expect(r, `${l.id}/${sub}`).toBeLessThanOrEqual(n);
-        expect(p.repeat!.length).toBeLessThanOrEqual(8);
+        expect(r * 10, `${l.id}/${sub}`).toBeLessThanOrEqual(3 * (r + n));
+        expect(p.repeat!.length).toBeLessThanOrEqual(MAX_REPEATS);
       }
     }
   }, 180_000);
+
+  it("limit: 30% pod-lekcji, najwyżej 5", () => {
+    expect([0, 2, 3, 7, 10, 14, 30].map(repeatLimit)).toEqual([0, 0, 1, 3, 4, 5, 5]);
+    for (let fresh = 0; fresh < 40; fresh++) expect(repeatLimit(fresh) * 10).toBeLessThanOrEqual(3 * (fresh + repeatLimit(fresh)));
+  });
 
   it("„Poznaj” i sprawdzian bez dodatkowych powtórek; powtórka słabych haseł bez zmian", () => {
     const l = lessons.find((x) => (x.review ?? []).length > 0)!;

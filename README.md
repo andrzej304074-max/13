@@ -125,7 +125,7 @@ Kurs zbudowany z haseł słownika (`docs/slownik-owe.pdf`) i wszystkich banków 
 - **Sprawdzian pyta tylko o rzeczy omówione:** każde z 6342 pytań (1656 OWE, 1286 ręcznych, 3400 automatycznych)
   jest w dokładnie jednej lekcji – najpóźniejszej lekcji macierzystej pojęć, których dotyczy. Pojęcia z treści
   i ze wszystkich odpowiedzi, których uczeń nie poznał wcześniej w temacie, lekcja omawia w Poznaj, Ćwicz i Utrwal
-  (karta „Nowe hasło · z pytań Sprawdzianu”); poznane wcześniej powtarza w Ćwicz i Utrwal (do 8 losowych na podejście).
+  (karta „Nowe hasło · z pytań Sprawdzianu”); poznane wcześniej powtarza w Ćwicz i Utrwal (do 5 na podejście, najwyżej 30% ćwiczeń pod-lekcji, najsłabsze hasła użytkownika najpierw).
   Gdy hasła lekcji i nowe pojęcia przekraczają 12, lekcja ma kolejne części (cz. 2, 3…). Pojęcia w pytaniach OWE
   wykrywa `tools/nauka/pojecia_pytan.py` (ręczne korekty po przeglądzie wszystkich pytań XXI–XXXIX OWE:
   `tools/nauka/pojecia_pytan_poprawki.py`); raport przydziału: `tools/nauka/RAPORT-PYTANIA.md`.

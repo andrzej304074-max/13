@@ -3,7 +3,7 @@ import { lessonArticle } from "./podrecznik";
 import { getQuestion } from "./questions";
 import type { Question } from "./types";
 import type { CourseItem, CourseLesson, CourseTopic, CourseUnit, LessonPayload } from "./nauka-types";
-import { rankRepeats, shuffle, type RepeatStat } from "./nauka-logic";
+import { MAX_REPEATS, rankRepeats, shuffle, type RepeatStat } from "./nauka-logic";
 
 export { COURSE };
 
@@ -109,7 +109,7 @@ export function personalizeRepeats(p: LessonPayload, stats: Record<string, Repea
     return !taught.has(id) && m && m.t >= 2 && m.c / m.t < 0.8;
   });
   const cands = [...(p.repeat ?? []), ...weak.map((id) => COURSE.items[id]).filter((i): i is CourseItem => !!i && i.kind !== "zrozumienie")];
-  return { ...p, repeat: rankRepeats(cands.filter((i) => !taught.has(i.id)), stats, now).slice(0, 8), repeatRanked: true };
+  return { ...p, repeat: rankRepeats(cands.filter((i) => !taught.has(i.id)), stats, now).slice(0, MAX_REPEATS), repeatRanked: true };
 }
 
 /** Lekcja powtórkowa z podanych (najsłabszych) haseł – ćwiczenia jak w „Utrwal”. */

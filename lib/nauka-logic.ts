@@ -268,10 +268,10 @@ export function buildExercises(p: LessonPayload, opts: BuildOptions = {}): Exerc
   const repIds = new Set((p.repeat ?? []).map((i) => i.id));
   const pad = taught.length >= 3 ? [] : p.pool.filter((o) => taught.some((i) => i.kind === o.kind) && !fromQ.has(o.id) && !repIds.has(o.id)).slice(0, 3 - taught.length);
   const items = [...taught, ...pad];
-  // hasła poznane wcześniej (do 8): uszeregowane od najsłabszych użytkownika albo losowo; w „Ćwicz” i „Utrwal”
-  // po jednym ćwiczeniu, ale najwyżej tyle, ile ćwiczeń z nowych haseł (powtórki ≤ 50% pod-lekcji)
+  // hasła poznane wcześniej (do MAX_REPEATS): uszeregowane od najsłabszych użytkownika albo losowo; w „Ćwicz” i „Utrwal”
+  // po jednym ćwiczeniu, ale najwyżej 30% pod-lekcji (repeatLimit)
   const repeatAll = (p.repeat ?? []).filter((i) => !items.some((o) => o.id === i.id));
-  const repeat = (p.repeatRanked ? repeatAll : shuffle(repeatAll, rnd)).slice(0, 8);
+  const repeat = (p.repeatRanked ? repeatAll : shuffle(repeatAll, rnd)).slice(0, MAX_REPEATS);
   const all = [...items, ...repeat, ...p.pool.filter((o) => !items.includes(o) && !repeat.includes(o))];
   const others = (it: CourseItem) => all.filter((o) => o.id !== it.id);
   const sameKind = (it: CourseItem) => others(it).filter((o) => o.kind === it.kind);
@@ -385,8 +385,9 @@ export function buildExercises(p: LessonPayload, opts: BuildOptions = {}): Exerc
   };
   const out: Exercise[] = [];
   const typeMore = level >= 2;
-  /** Powtórki w kolejności `repeat` (najsłabsze pierwsze), najwyżej `max` (= liczba ćwiczeń z nowych haseł). */
-  const addRepeats = (into: Exercise[], max: number, make: (it: CourseItem) => Exercise | null) => {
+  /** Powtórki w kolejności `repeat` (najsłabsze pierwsze), najwyżej repeatLimit(`fresh` = liczba ćwiczeń z nowych haseł). */
+  const addRepeats = (into: Exercise[], fresh: number, make: (it: CourseItem) => Exercise | null) => {
+    const max = repeatLimit(fresh);
     let n = 0;
     for (const it of repeat) {
       if (n >= max) break;
@@ -466,6 +467,10 @@ export function accuracy(answers: Pick<AnswerLog, "correct">[]): number {
 /** Opanowanie hasła (poprawne / wszystkie, ostatnia odpowiedź) – ten sam kształt co `Mastery` z lib/mastery-core. */
 export type RepeatStat = Mastery;
 const DAY_MS = 86_400_000;
+/** Najwięcej haseł do powtórki w pod-lekcji. */
+export const MAX_REPEATS = 5;
+/** Ile ćwiczeń-powtórek można dołożyć do `fresh` ćwiczeń z nowych haseł: ≤ 30% całej pod-lekcji, najwyżej MAX_REPEATS. */
+export const repeatLimit = (fresh: number) => Math.min(MAX_REPEATS, Math.floor((fresh * 3) / 7));
 
 /**
  * Kolejność powtórek: najpierw hasła, które użytkownikowi szły najgorzej.
