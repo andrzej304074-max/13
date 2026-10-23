@@ -338,4 +338,43 @@ CREATE TABLE IF NOT EXISTS user_prefs (
   updated_at timestamptz NOT NULL DEFAULT now(),
   PRIMARY KEY (user_id, key)
 );
+-- Wspólny cel dzienny i seria (lib/xp.ts): XP dnia (strefa Europe/Warsaw) ze wszystkich aktywności, rozbite na źródła,
+-- z celem obowiązującym tego dnia (dzień liczy się do serii, gdy xp >= goal).
+ALTER TABLE users ADD COLUMN IF NOT EXISTS daily_goal int NOT NULL DEFAULT 100;
+CREATE TABLE IF NOT EXISTS xp_days (
+  user_id uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  day     date NOT NULL,
+  xp      int NOT NULL DEFAULT 0,
+  by      jsonb NOT NULL DEFAULT '{}',
+  goal    int NOT NULL DEFAULT 100,
+  PRIMARY KEY (user_id, day)
+);
+CREATE INDEX IF NOT EXISTS xp_days_day_idx ON xp_days (day);
+-- jednorazowe uzupełnienie XP z historii (testy, kurs i czytanie, fiszki – maks. 100 XP/dzień, zadania i eseje – raz na pozycję dziennie)
+DO $$ BEGIN
+  IF NOT EXISTS (SELECT 1 FROM settings WHERE key = 'xp_backfill') THEN
+    INSERT INTO xp_days (user_id, day, xp, by, goal)
+    SELECT e.u, e.d, SUM(e.x), jsonb_object_agg(e.s, e.x), MAX(us.daily_goal)
+    FROM (
+      SELECT u, d, s, SUM(x)::int AS x FROM (
+        SELECT t.user_id AS u, (a.answered_at AT TIME ZONE 'Europe/Warsaw')::date AS d, 'testy' AS s,
+          CASE WHEN a.skipped OR cardinality(a.selected) = 0 THEN 0 WHEN a.points >= 2 THEN 10 WHEN a.points > 0 THEN 5 ELSE 2 END AS x
+        FROM answers a JOIN tests t ON t.id = a.test_id WHERE t.user_id IS NOT NULL
+        UNION ALL
+        SELECT user_id, (finished_at AT TIME ZONE 'Europe/Warsaw')::date, CASE WHEN mode = 'artykul' THEN 'czytanie' ELSE 'kurs' END, xp
+        FROM learn_sessions WHERE finished_at IS NOT NULL AND user_id IS NOT NULL
+        UNION ALL
+        SELECT user_id, d, 'fiszki', LEAST(2 * COUNT(*), 100) FROM (
+          SELECT user_id, (at AT TIME ZONE 'Europe/Warsaw')::date AS d FROM flash_ratings) f GROUP BY 1, 2
+        UNION ALL
+        SELECT user_id, d, CASE WHEN kind = 'esej' THEN 'eseje' ELSE 'zadania' END, CASE WHEN kind = 'esej' THEN 50 ELSE 30 END
+        FROM (SELECT DISTINCT user_id, item_id, kind, (created_at AT TIME ZONE 'Europe/Warsaw')::date AS d FROM open_attempts) o
+      ) ev GROUP BY 1, 2, 3
+    ) e JOIN users us ON us.id = e.u
+    WHERE e.x > 0
+    GROUP BY e.u, e.d
+    ON CONFLICT (user_id, day) DO NOTHING;
+    INSERT INTO settings (key, value) VALUES ('xp_backfill', 'v1');
+  END IF;
+END $$;
 `;

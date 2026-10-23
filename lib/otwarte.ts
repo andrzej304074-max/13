@@ -7,6 +7,8 @@ import {
   type Essay, type OpenSet, type PublicEssay, type PublicTask, type SelfRating, type Stage, type Task,
 } from "./otwarte-core";
 import { HttpError } from "./tests";
+import { addXp } from "./xp";
+import { OPEN_XP } from "./xp-core";
 
 /** Zadania i eseje z kluczy OWE: lista, treść bez klucza, sprawdzenie (wynik + rozwiązanie), zapis podejścia, statystyki. */
 
@@ -104,10 +106,13 @@ export async function checkTask(userId: string, id: string, body: Record<string,
   if (attemptId) {
     await query("UPDATE open_attempts SET answers = $3, score = $4 WHERE id = $1 AND user_id = $2", [attemptId, userId, saved, res.score]);
   } else {
-    const { rows } = await query<{ id: string }>(
-      "INSERT INTO open_attempts (user_id, item_id, kind, stage, topic, answers, score, max) VALUES ($1, $2, 'zadanie', $3, $4, $5, $6, $7) RETURNING id",
+    // XP za pierwsze podejście do danego zadania tego dnia (RETURNING widzi stan sprzed wstawienia)
+    const { rows } = await query<{ id: string; prev: string }>(
+      `INSERT INTO open_attempts (user_id, item_id, kind, stage, topic, answers, score, max) VALUES ($1, $2, 'zadanie', $3, $4, $5, $6, $7)
+       RETURNING id, (SELECT COUNT(*) FROM open_attempts o WHERE o.user_id = $1 AND o.item_id = $2 AND (o.created_at AT TIME ZONE 'Europe/Warsaw')::date = (now() AT TIME ZONE 'Europe/Warsaw')::date) AS prev`,
       [userId, id, t.set.stage, t.task.topic, saved, res.score, res.max]);
     attemptId = rows[0].id;
+    if (Number(rows[0].prev) === 0) await addXp(userId, "zadania", OPEN_XP.zadanie);
   }
   return { ...res, attempt: attemptId, given: answers, solution: t.task.parts.map((p) => ({ label: p.label, answers: p.answers, solution: p.solution })) };
 }
@@ -124,9 +129,11 @@ export async function checkEssay(userId: string, id: string, body: Record<string
   if (save) {
     if (!t.schema.length) throw new HttpError(400, "Ten temat nie ma schematu w kluczu – samoocena niedostępna.");
     const chars = typeof body.chars === "number" && body.chars >= 0 ? Math.min(100000, Math.round(body.chars)) : null;
-    await query(
-      "INSERT INTO open_attempts (user_id, item_id, kind, stage, topic, answers, score, max) VALUES ($1, $2, 'esej', $3, $4, $5, $6, $7)",
+    const { rows } = await query<{ prev: string }>(
+      `INSERT INTO open_attempts (user_id, item_id, kind, stage, topic, answers, score, max) VALUES ($1, $2, 'esej', $3, $4, $5, $6, $7)
+       RETURNING (SELECT COUNT(*) FROM open_attempts o WHERE o.user_id = $1 AND o.item_id = $2 AND (o.created_at AT TIME ZONE 'Europe/Warsaw')::date = (now() AT TIME ZONE 'Europe/Warsaw')::date) AS prev`,
       [userId, id, e.set.stage, e.essay.topic, JSON.stringify({ topic, checks, chars }), res.score, res.max]);
+    if (Number(rows[0].prev) === 0) await addXp(userId, "eseje", OPEN_XP.esej);
   }
   return { ...res, topic: t.title, schema: t.schema };
 }

@@ -1,29 +1,6 @@
-/** Ustawienia nauki zapamiętywane w przeglądarce (cel dzienny, ostatnia lekcja). */
+/** Ustawienia nauki zapamiętywane w przeglądarce (ostatnia lekcja). Cel dzienny – na koncie (`/api/cel`, lib/xp.ts). */
 
-export const DAILY_GOALS = [
-  { xp: 50, label: "Luźno" },
-  { xp: 100, label: "Normalnie" },
-  { xp: 200, label: "Poważnie" },
-  { xp: 300, label: "Intensywnie" },
-] as const;
-export const DEFAULT_GOAL = 100;
-
-const GOAL_KEY = "owe:naukaGoal";
 const LAST_KEY = "owe:naukaLast";
-
-export function loadGoal(): number {
-  try {
-    const v = Number(localStorage.getItem(GOAL_KEY));
-    if (DAILY_GOALS.some((g) => g.xp === v)) return v;
-  } catch {}
-  return DEFAULT_GOAL;
-}
-
-export function saveGoal(xp: number) {
-  try {
-    localStorage.setItem(GOAL_KEY, String(xp));
-  } catch {}
-}
 
 export function rememberLesson(lesson: string, sub: number) {
   try {

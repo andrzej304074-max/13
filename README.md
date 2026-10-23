@@ -120,8 +120,24 @@ Trzy źródła pytań testowych: **📜 Archiwum OWE** (prawdziwe pytania z olim
   z przeglądarki, potem z konta (`GET /api/ustawienia/filtry`); zmiana zapisuje się po 0,8 s albo przy wyjściu ze strony
   (`PUT /api/ustawienia/filtry/<klucz>`, tabela `user_prefs`, dozwolone klucze w `lib/prefs-core.ts`). Adres z jawnymi
   filtrami (np. link od kogoś) ma pierwszeństwo i nie nadpisuje zapisanych, dopóki nic nie zmienisz; podgląd admina nie zapisuje.
-- **🎲 Losuj zadanie / esej** – na listach Zadań i Esejów (spośród pokazanych po filtrach) i na stronie Testy → Olimpiada
-  (zakres edycji i etapy z filtrów testu); najpierw pozycje jeszcze nierozwiązane.
+- **🎲 Losuj zadanie** (zakładka Zadania) i **🎲 Losuj esej** (zakładka Eseje) – w karcie filtrów listy, spośród pokazanych po filtrach
+  (edycja, etap, dział, stan); najpierw pozycje jeszcze nierozwiązane. Strona Testy → Olimpiada nie losuje zadań ani esejów.
+
+## Cel dzienny i seria 🔥 (wspólne dla całej aplikacji)
+
+- **XP dnia** (strefa Europe/Warsaw, tabela `xp_days`, rozbicie na źródła) zbierają wszystkie aktywności:
+  - kurs – XP lekcji;
+  - test – 10 za poprawną odpowiedź, 5 za częściową, 2 za błędną (pominięte i bez zaznaczenia – 0);
+  - fiszki – 2 za ocenę, do 100 dziennie;
+  - zadanie – 30, esej – 50 (pierwsze podejście do danej pozycji tego dnia);
+  - przeczytany rozdział Podręcznika – 10.
+- **Cel dzienny** 50/100/200/300 XP na koncie (`users.daily_goal`, `PUT /api/cel`) – obowiązuje od dziś; przeszłe dni zachowują swój cel.
+- **Seria** – kolejne dni z osiągniętym celem. Dziś bez celu jeszcze jej nie przerywa. Raz w tygodniu (pn.–niedz.) jeden dzień
+  bez celu nie przerywa serii (🧊 zamrożenie zużywa się samo). Rekord – najdłuższa seria w historii. Logika: `lib/xp-core.ts`
+  (testy `tests/xp.test.ts`), zapis jednym zapytaniem w istniejących ścieżkach (`addXp`, `lib/xp.ts`).
+- **W nagłówku** na każdej stronie 🔥 z liczbą dni i pierścieniem celu; kliknięcie otwiera panel (cel, XP dziś wg źródeł,
+  tydzień, zamrożenie, rekord); ten sam panel na stronie Nauki. Licznik odświeża się sam po akcjach dających XP.
+- Przy pierwszym starcie tej wersji XP uzupełnia się jednorazowo z historii (testy, kurs, fiszki, zadania, eseje).
 
 ## Nauka (zakładka „Nauka” – kurs w stylu Duolingo)
 
@@ -149,7 +165,7 @@ Kurs zbudowany z haseł słownika (`docs/slownik-owe.pdf`) i wszystkich banków 
 - **Bez blokad:** każdy temat, lekcja i pod-lekcja jest dostępna od razu.
 - **Grywalizacja:**
   - XP: 10 za poprawną odpowiedź, +5 co 5 z rzędu, +10 za ukończenie, +10 bez błędu;
-  - seria dni i dzienny cel XP (zapamiętany w przeglądarce);
+  - wspólny cel dzienny i seria 🔥 dla całej aplikacji (niżej, „Cel dzienny i seria”);
   - korony 0–5 dla lekcji: koronę daje zaliczenie (≥ 80%) każdej z 4 pod-lekcji, wyższy poziom oznacza więcej wpisywania.
 - **Powtórka słabych haseł:** hasła ze skutecznością poniżej 80%.
 - **Statystyki nauki** (`/nauka/statystyki`): osobne od testów. Pokazują skuteczność, czas pod-lekcji i lekcji,

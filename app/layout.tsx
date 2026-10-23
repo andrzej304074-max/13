@@ -4,6 +4,7 @@ import { BackButton } from "./components/back";
 import { currentUser, type User } from "@/lib/auth";
 import { AccountMenu } from "./components/account-menu";
 import { AnnounceBell, PinnedBar } from "./components/announce-bell";
+import { StreakBadge } from "./components/streak";
 import { QuickNotes } from "./components/notes/quick-notes";
 import { BugPopup } from "./components/bug-popup";
 import { SectionNav, SubTabs } from "./components/nav";
@@ -49,6 +50,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             <Link href={home} className="brand">Testy OWE</Link>
             {me?.active && <SectionNav variant="top" />}
             {me?.active && !notesOff && <QuickNotes />}
+            {me?.active && <StreakBadge />}
             {me?.active && <AnnounceBell />}
             {me && <AccountMenu email={me.email} isAdmin={me.isAdmin} />}
           </header>

@@ -14,6 +14,8 @@ import {
 import type { AnswerFeedback, Bank, QuestionType, TestMode, TestState } from "./types";
 import { ensureRescored } from "./rescore";
 import { sourceCaseSql, sourceWhereSql, type QSource } from "./question-source";
+import { addXp } from "./xp";
+import { testXp } from "./xp-core";
 
 export class HttpError extends Error {
   constructor(public status: number, message: string) {
@@ -188,6 +190,7 @@ export async function answerQuestion(userId: string, id: string, questionId: unk
     if (endless && Number(r.n) !== pos) throw new HttpError(409, "W trybie bez limitu nie można wracać ani przeskakiwać pytań.");
     throw new HttpError(409, "Na to pytanie już odpowiedziano.");
   }
+  await addXp(userId, "testy", testXp(points, skipped, sel.length === 0));
   let answered = Number(r.n) + 1;
   // test 30/50: `prev` to stan sprzed zapisu – przy równoczesnym zapisie ostatnich odpowiedzi (dwie karty, ponowienie po błędzie
   // sieci) oba żądania widziałyby „jeszcze nie wszystkie”. Pod koniec testu liczymy więc odpowiedzi po zapisie

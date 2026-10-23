@@ -1,4 +1,4 @@
-// G6: „🎲 Losuj zadanie/esej” – na liście (z filtrami, najpierw nierozwiązane) i na stronie Olimpiady
+// G6/H0: „🎲 Losuj zadanie” w Zadaniach, „🎲 Losuj esej” w Esejach (z filtrami, najpierw nierozwiązane); nie na Olimpiadzie
 import { chromium } from "playwright-core";
 const B = "http://localhost:3100";
 const browser = await chromium.launch({ executablePath: process.env.CHROMIUM ?? "/opt/pw-browsers/chromium-1194/chrome-linux/chrome" });
@@ -17,15 +17,13 @@ check(/-centralne-/.test(p.url()), `losowe zadanie z etapu centralnego (${p.url(
 await p.goto(`${B}/eseje`); await p.waitForSelector('[data-testid="open-item"]');
 await p.click('[data-testid="open-random"]'); await p.waitForURL(/\/eseje\/.+/);
 check(true, "losowy esej");
-// 3. strona Olimpiady: zakres edycji z filtrów
-await p.goto(`${B}/`); await p.waitForSelector('[data-testid="random-open"]');
-await p.locator('details[data-testid="test-filters"] summary').click();
-await p.selectOption('[data-testid="ed-from"]', "38"); await p.waitForTimeout(400);
-await p.click('[data-testid="random-zadanie"]'); await p.waitForURL(/\/zadania\/.+/);
-check(/owe-3[89]-/.test(p.url()), `zadanie z XXXVIII–XXXIX (${p.url()})`);
-await p.goto(`${B}/`); await p.waitForSelector('[data-testid="random-open"]');
-await p.click('[data-testid="random-esej"]'); await p.waitForURL(/\/eseje\/.+/);
-check(true, "esej z Olimpiady");
+// 3. każda zakładka losuje tylko swoje: w Zadaniach – zadanie, w Esejach – esej; na Olimpiadzie nie ma losowania
+await p.goto(`${B}/eseje`); await p.waitForSelector('[data-testid="open-item"]');
+check(await p.locator('[data-testid="open-random"]').count() === 1 && /Losuj esej/.test(await p.locator('[data-testid="open-random"]').innerText()), "Eseje: tylko „Losuj esej”");
+await p.goto(`${B}/zadania`); await p.waitForSelector('[data-testid="open-item"]');
+check(await p.locator('[data-testid="open-random"]').count() === 1 && /Losuj zadanie/.test(await p.locator('[data-testid="open-random"]').innerText()), "Zadania: tylko „Losuj zadanie”");
+await p.goto(`${B}/`); await p.waitForSelector('[data-testid="test-filters"]');
+check(await p.locator('[data-testid="random-open"], [data-testid="random-zadanie"], [data-testid="random-esej"]').count() === 0, "Olimpiada bez losowania zadań i esejów");
 check(errs.length === 0, `błędy JS: ${errs.join(" | ")}`);
 await browser.close();
 console.log("OK:", ok, "błędów:", fails.length, JSON.stringify(fails, null, 1));

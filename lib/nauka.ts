@@ -3,6 +3,7 @@ import { query, withTx } from "./db";
 import { HttpError } from "./tests";
 import { COURSE, getItem, getLesson } from "./nauka-course";
 import { computeXp } from "./nauka-logic";
+import { addXp } from "./xp";
 import { EXERCISE_LABELS, MAX_LEVEL, PASS_ACCURACY, type AnswerLog, type ExerciseType, type ItemKind } from "./nauka-types";
 
 /** Dni (serie, XP dzienne) liczone w polskiej strefie czasowej. */
@@ -92,7 +93,8 @@ export async function finishSession(userId: string, id: string, rawAnswers: unkn
     );
     return rows[0];
   });
-  const level = lesson === "powtorka" ? 0 : (await lessonLevels(userId, [lesson]))[lesson] ?? 0;
+  const [lv] = await Promise.all([lesson === "powtorka" ? Promise.resolve({}) : lessonLevels(userId, [lesson]), addXp(userId, "kurs", xp)]);
+  const level = (lv as Record<string, number>)[lesson] ?? 0;
   return { xp, correct, total: answers.length, percent: pct(correct, answers.length), durationMs: duration_ms, level, levelBefore };
 }
 
@@ -414,8 +416,8 @@ export async function markRead(userId: string, ref: unknown, ms: unknown): Promi
      RETURNING id`,
     [lesson.topic, lesson.unit, lesson.id, lesson.kind, userId, dur, READ_XP],
   );
-  const level = (await lessonLevels(userId, [lesson.id]))[lesson.id] ?? 0;
-  return { ok: true, credited: rows.length > 0, level };
+  const [lv] = await Promise.all([lessonLevels(userId, [lesson.id]), rows.length ? addXp(userId, "czytanie", READ_XP) : null]);
+  return { ok: true, credited: rows.length > 0, level: lv[lesson.id] ?? 0 };
 }
 
 export async function readArticles(userId: string): Promise<Record<string, string>> {

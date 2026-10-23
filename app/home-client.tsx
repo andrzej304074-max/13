@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { api, ApiError, fmtPct, lastTest, rememberTest } from "@/lib/client";
 import { usePrefSync } from "@/lib/prefs-client";
-import { RandomOpenButton } from "./zadania/random-open";
 import { ROMAN } from "@/lib/owe-stats";
 import type { OweStage } from "@/lib/question-meta";
 import { SOURCES, type QSource } from "@/lib/question-source";
@@ -154,14 +153,6 @@ export default function HomeClient({ bank = "owe", counts: initial, options }: {
           <span>Masz niedokończony test.</span>
           <span className="spacer" />
           <Link className="btn secondary" href={`/test/${resumeId}`}>Kontynuuj</Link>
-        </div>
-      )}
-      {bank === "owe" && (
-        <div className="card row" style={{ flexWrap: "wrap", gap: 8 }} data-testid="random-open">
-          <span>Zadania i eseje z kluczy OWE (zakres edycji i etapy z filtrów):</span>
-          <span className="spacer" />
-          <RandomOpenButton kind="zadanie" edFrom={p.edFrom} edTo={p.edTo} stages={p.stages} />
-          <RandomOpenButton kind="esej" edFrom={p.edFrom} edTo={p.edTo} stages={p.stages} />
         </div>
       )}
       {bank === "mix" && <>

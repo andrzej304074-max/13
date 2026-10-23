@@ -5,7 +5,8 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { api, withUser } from "@/lib/client";
 import { PreviewBanner } from "@/app/components/preview-banner";
-import { DAILY_GOALS, lastLesson, loadGoal, saveGoal } from "@/lib/nauka-client";
+import { lastLesson } from "@/lib/nauka-client";
+import { useXp, XpPanel } from "@/app/components/streak";
 import type { Progress } from "@/lib/nauka";
 import { SUBLESSONS, SUBLESSONS_Z, type CourseTopic } from "@/lib/nauka-types";
 
@@ -17,24 +18,20 @@ export interface TopicCard extends CourseTopic {
   kinds: Record<string, number>;
 }
 
-const DAY_NAMES = ["nd", "pn", "wt", "śr", "cz", "pt", "sb"];
-
 export function NaukaHome({ topics, kinds, lessonIds }: { topics: TopicCard[]; kinds: { id: string; title: string }[]; lessonIds: string[] }) {
   const router = useRouter();
   const [progress, setProgress] = useState<Progress | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [goal, setGoal] = useState<number | null>(null);
   const [last, setLast] = useState<{ lesson: string; sub: number } | null>(null);
 
   useEffect(() => {
-    setGoal(loadGoal());
     setLast(lastLesson());
     api<Progress>(withUser("/api/nauka/progress?lekcje=0")).then(setProgress).catch((e) => setError(e.message));
   }, []);
 
   const s = progress?.summary;
-  const goalPct = s && goal ? Math.min(100, (s.xpToday / goal) * 100) : 0;
-  const maxWeek = Math.max(goal ?? 0, ...(s?.week.map((d) => d.xp) ?? [0]), 1);
+  // cel dzienny i seria – wspólne dla całej aplikacji (kurs, testy, fiszki, zadania, eseje, Podręcznik)
+  const [xp, setXp] = useXp();
 
   function randomLesson() {
     const id = lessonIds[Math.floor(Math.random() * lessonIds.length)];
@@ -54,35 +51,11 @@ export function NaukaHome({ topics, kinds, lessonIds }: { topics: TopicCard[]; k
 
       <div className="card learn-summary">
         <div className="learn-summary-stats">
-          <div title="Seria dni z ukończoną pod-lekcją"><span className="big-emoji">{s?.todayDone ? "🔥" : "🕯️"}</span><b>{s?.streak ?? "–"}</b><small>dni serii</small></div>
-          <div title="XP zdobyte dzisiaj"><span className="big-emoji">⚡</span><b>{s?.xpToday ?? "–"}</b><small>XP dziś</small></div>
-          <div title="Wszystkie XP"><span className="big-emoji">💎</span><b>{s?.xpTotal ?? "–"}</b><small>XP łącznie</small></div>
+          <div title="Seria dni z osiągniętym celem dziennym (wspólna dla całej aplikacji)"><span className="big-emoji">{xp?.todayMet ? "🔥" : "🕯️"}</span><b>{xp?.streak ?? "–"}</b><small>dni serii</small></div>
+          <div title="XP zdobyte dzisiaj – wszystkie aktywności"><span className="big-emoji">⚡</span><b>{xp?.today.xp ?? "–"}</b><small>XP dziś</small></div>
+          <div title="XP z lekcji kursu – łącznie"><span className="big-emoji">💎</span><b>{s?.xpTotal ?? "–"}</b><small>XP z kursu</small></div>
         </div>
-        <div>
-          <div className="row" style={{ justifyContent: "space-between" }}>
-            <strong>Cel dzienny: {goal ?? "…"} XP</strong>
-            <span className="muted">{s ? (s.xpToday >= (goal ?? 0) ? "✅ cel osiągnięty" : `brakuje ${(goal ?? 0) - s.xpToday} XP`) : ""}</span>
-          </div>
-          <div className="goal-bar"><div style={{ width: `${goalPct}%` }} /></div>
-          <div className="seg" role="group" aria-label="Cel dzienny" style={{ marginTop: 8 }}>
-            {DAILY_GOALS.map((g) => (
-              <button key={g.xp} className={g.xp === goal ? "active" : ""} aria-pressed={g.xp === goal}
-                onClick={() => { setGoal(g.xp); saveGoal(g.xp); }}>
-                {g.label} · {g.xp}
-              </button>
-            ))}
-          </div>
-        </div>
-        {s && (
-          <div className="week" aria-label="XP w ostatnich 7 dniach">
-            {s.week.map((d) => (
-              <div key={d.day} title={`${d.day}: ${d.xp} XP`}>
-                <div className="week-bar"><div style={{ height: `${(d.xp / maxWeek) * 100}%` }} className={goal && d.xp >= goal ? "hit" : ""} /></div>
-                <small>{DAY_NAMES[new Date(`${d.day}T12:00:00`).getDay()]}</small>
-              </div>
-            ))}
-          </div>
-        )}
+        {xp && <XpPanel s={xp} onChange={setXp} />}
         {error && <p className="error" style={{ margin: 0 }}>Postęp niedostępny: {error}</p>}
       </div>
 

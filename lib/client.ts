@@ -37,9 +37,15 @@ export async function api<T>(url: string, init?: RequestInit): Promise<T> {
       if (res.status >= 500 && !data?.error && get && attempt < RETRY_MS.length) { await sleep(RETRY_MS[attempt]); continue; }
       throw new ApiError(data?.error ?? (res.status >= 500 ? `Serwer chwilowo nie odpowiada (błąd ${res.status}) – spróbuj ponownie.` : `Błąd ${res.status}`), res.status);
     }
+    // akcje, które dają XP (odpowiedź w teście, ocena fiszki, koniec lekcji, sprawdzenie zadania/eseju, przeczytany rozdział)
+    // – licznik celu i serii w nagłówku odświeża się sam
+    if (!get && XP_URL.test(url) && typeof window !== "undefined") window.dispatchEvent(new Event(XP_EVENT));
     return (data ?? {}) as T;
   }
 }
+
+export const XP_EVENT = "xp:changed";
+const XP_URL = /\/api\/(tests\/[^/]+\/answer|fiszki\/ocena|nauka\/sessions\/[^/]+\/finish|otwarte\/[^/]+\/sprawdz|podrecznik\/przeczytane|cel)\b/;
 
 export const LETTERS = ["A", "B", "C", "D"];
 

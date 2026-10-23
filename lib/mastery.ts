@@ -1,6 +1,8 @@
 import { COURSE, OWE_STATS, SLOWNIK_STATS } from "@/data/nauka";
 import { query } from "./db";
 import { HttpError } from "./tests";
+import { addXp } from "./xp";
+import { FLASH_DAILY_CAP, FLASH_XP } from "./xp-core";
 import { combineMastery, type Mastery } from "./mastery-core";
 import { loadAnswers } from "./my-stats";
 
@@ -24,5 +26,6 @@ export async function rateFlashcard(userId: string, itemId: unknown, known: unkn
   if (typeof itemId !== "string" || !COURSE.items[itemId] || COURSE.items[itemId].kind === "zrozumienie") throw new HttpError(400, "Nieznane hasło.");
   if (typeof known !== "boolean") throw new HttpError(400, "Brak oceny.");
   await query("INSERT INTO flash_ratings (user_id, item_id, known) VALUES ($1, $2, $3)", [userId, itemId, known]);
+  await addXp(userId, "fiszki", FLASH_XP, FLASH_DAILY_CAP);
   return { ok: true };
 }
