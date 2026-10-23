@@ -65,6 +65,10 @@ Nie wszystkie dobra nas cieszą. **[[Dobro neutralne i dobro niechciane (antydob
 
 > Zapamiętaj: I prawo Gossena – malejąca użyteczność krańcowa; II prawo Gossena – MU na złotówkę równa dla wszystkich dóbr.
 
+> Przykład: pierwszy kawałek pizzy daje 10 jednostek zadowolenia, drugi 7, trzeci 3, czwarty 0. Użyteczność krańcowa maleje – to pierwsze prawo Gossena.
+
+> Uwaga: drugie prawo Gossena mówi o **zrównaniu użyteczności krańcowej na złotówkę** (MU/P), a nie samej użyteczności krańcowej.
+
 # mikro-konsument-2 | Portfel, ścieżki i paradoks diamentów
 
 ## Na co cię stać
@@ -93,11 +97,18 @@ Adam Smith zastanawiał się, dlaczego woda, bez której nie przeżyjemy, jest t
 
 Dawniej ekonomiści, jak Gossen i Marshall, zakładali, że użyteczność można liczyć w jednostkach. To podejście **kardynalne**. Później Pareto i Hicks uznali, że wystarczy wiedzieć, który koszyk wolisz. To podejście **porządkowe** (ordynalne) – na nim opierają się krzywe obojętności. Obie wersje opisuje hasło **[[Użyteczność kardynalna i porządkowa (ordynalna)|użyteczność kardynalna i porządkowa]]**.
 
+> Uwaga: zmiana dochodu przesuwa linię budżetu **równolegle**, a zmiana ceny jednego dobra ją **obraca**.
+
+> Zapamiętaj: paradoks wody i diamentu: woda ma dużą użyteczność całkowitą, ale małą krańcową (bo jest jej dużo).
+
 ## Na marginesie pytań
 
 Olimpiada pytała tu też o [[Preferencje konsumenta – założenia|założenia o preferencjach]] (o nich w kolejnej lekcji), [[Inwestycje|inwestycje]] (wydatki na maszyny, budynki i zapasy), [[Paradoks Leontiefa|paradoks Leontiefa]] w handlu zagranicznym oraz o [[Solow Robert|Robercie Solowie]], twórcy neoklasycznego modelu wzrostu.
-
 # mikro-konsument-3 | Wybory pod lupą: ryzyko, czas i ujawnione gusta
+
+## Co mówią twoje wybory o tobie?
+
+Ankieter pyta: „wolisz książki czy gry?”. Mówisz „książki”, a wieczorem grasz. Ekonomiści wolą patrzeć na to, co wybierasz, a nie na to, co deklarujesz – i z tych wyborów wyprowadzają twoje preferencje.
 
 ## Cztery założenia rozsądnego wyboru
 
@@ -128,6 +139,12 @@ Czy wolisz zagrać, czy dostać pewne 50 zł? Osoba z awersją do ryzyka wybierz
 ## Dziś czy jutro?
 
 Oszczędzanie to też wybór konsumenta – między konsumpcją dziś a w przyszłości. W **[[Wybór międzyokresowy (oszczędności a stopa procentowa)|wyborze międzyokresowym]]** cenę „jutra” wyznacza stopa procentowa. Gdy rośnie, przyszła konsumpcja tanieje i opłaca się oszczędzać (efekt substytucyjny). Ale oszczędzający staje się bogatszy, więc może wydać więcej już dziś (efekt dochodowy). Dlatego wpływ stopy procentowej na oszczędności jest niejednoznaczny.
+
+> Przykład: ubezpieczenie roweru za 2000 zł kosztuje 150 zł rocznie, a szansa kradzieży to 5% (oczekiwana strata 100 zł). Osoba niechętna ryzyku zapłaci 150 zł, żeby nie martwić się stratą 2000 zł.
+
+> Uwaga: efekt **substytucyjny** zawsze działa przeciwnie do zmiany ceny; **dochodowy** – zależy od tego, czy dobro jest normalne, czy niższego rzędu.
+
+> Zapamiętaj: preferencje ujawnione (Samuelson) – wybory mówią więcej niż deklaracje.
 
 ## Na marginesie
 

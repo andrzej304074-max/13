@@ -68,10 +68,13 @@ Najstarszy przykład renty to **[[Renta gruntowa|renta gruntowa]]**. Ziemi w dan
 
 Dlaczego warto się uczyć? Bo edukacja buduje **[[Kapitał ludzki|kapitał ludzki]]** – wiedzę, umiejętności, zdrowie i doświadczenie, które zwiększają twoją produktywność. A wyższa produktywność to wyższa płaca. Teorię kapitału ludzkiego rozwinął **[[Becker Gary|Gary Becker]]**, noblista z 1992 roku, który ekonomicznym okiem patrzył też na rodzinę, przestępczość i dyskryminację.
 
+> Przykład: piekarz wypieka dodatkowo 100 bochenków dziennie (produkt krańcowy), a bochenek kosztuje 5 zł. Jego wartość produktu krańcowego to 500 zł dziennie – piekarnia opłaca się zatrudnić go za płacę niższą niż 500 zł.
+
+> Zapamiętaj: popyt na pracę jest pochodny; firma zatrudnia, dopóki wartość produktu krańcowego ≥ płaca.
+
 ## Na marginesie
 
 Przy tej lekcji pytano też o [[Popyt na pracę|popyt na pracę]], [[Dochód osobisty i dochód rozporządzalny|dochód rozporządzalny]] (to, co zostaje po podatkach) oraz o [[Phelps Edmund|Edmunda Phelpsa]], współtwórcę pojęcia naturalnej stopy bezrobocia.
-
 # mikro-czynniki-1-cz2 | Wiedza jako silnik wzrostu
 
 Kapitał ludzki to nie tylko sprawa jednego pracownika. Gdy rośnie wiedza całego społeczeństwa, rośnie cała gospodarka. Ten krótki rozdział pokazuje, jak ekonomiści połączyli te dwie skale.
@@ -126,10 +129,15 @@ Jak dzieli się dochód między pracę, ziemię i kapitał? J.B. Clark odpowiedz
 
 $ w = MRPL = P · MPL
 
+> Przykład: płaca wzrosła o 10%, a ceny o 6%. Płaca realna wzrosła o ok. 4% (1,10 / 1,06 ≈ 1,038) – tyle więcej chleba kupisz.
+
+> Uwaga: renta ekonomiczna to nadwyżka ponad **minimum**, za które czynnik byłby oferowany – nie tylko czynsz za ziemię.
+
+> Zapamiętaj: płaca realna = płaca nominalna / poziom cen; kapitał społeczny – zaufanie i sieci.
+
 ## Na marginesie
 
 Olimpiada pytała tu też o [[Zagregowany popyt (AD)|zagregowany popyt]], [[Podatek od towarów i usług (VAT)|VAT]] (23% stawka podstawowa, największe źródło dochodów budżetu), [[Inwestycje bezpośrednie (BIZ) i portfelowe|inwestycje bezpośrednie i portfelowe]], [[Federalizm fiskalny|federalizm fiskalny]] i [[Teoria optymalnego obszaru walutowego|teorię optymalnego obszaru walutowego]] Mundella.
-
 # mikro-czynniki-2-cz2 | Ludzie, zaufanie i pieniądz
 
 Ten rozdział zbiera pojęcia i postacie, które olimpiada łączyła z kapitałem społecznym i rynkiem pracy.
@@ -183,3 +191,5 @@ Gdy pracodawca płaci mniej komuś tylko z powodu płci, pochodzenia czy wieku, 
 ## Kto liczy się do rynku pracy
 
 Na koniec dwa pojęcia z makroekonomii. **[[Ludność aktywna zawodowo (zasób siły roboczej)|Ludność aktywna zawodowo]]** to pracujący i bezrobotni (szukający pracy). Uczniowie, emeryci i osoby zniechęcone są bierni zawodowo. **[[Naturalna stopa bezrobocia|Naturalna stopa bezrobocia]]** to bezrobocie, które zostaje nawet przy dobrej koniunkturze – gdy ludzie zmieniają pracę albo ich umiejętności nie pasują do ofert.
+
+> Zapamiętaj: wyrównawcze różnice płac – za trudne warunki; kapitał ludzki – za wykształcenie; dyskryminacja – różnice niewynikające z wydajności.

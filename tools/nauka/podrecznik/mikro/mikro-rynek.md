@@ -58,6 +58,10 @@ Oto rozróżnienie, które pojawia się na olimpiadzie najczęściej: **[[Wielko
 Gdy połączymy obie krzywe, otrzymamy **[[Równowaga rynkowa|równowagę rynkową]]** – cenę, przy której wielkość popytu równa się wielkości podaży. Nikt nie zostaje z niesprzedanym towarem i nikt nie odchodzi z pustymi rękami, jeśli był gotów zapłacić tę cenę.
 ::wykres sd | Równowaga rynkowa: cena i ilość w punkcie E, gdzie krzywa popytu (D) przecina krzywą podaży (S).
 
+> Przykład: przy cenie 2 zł sklepik sprzedaje 15 pączków, a piekarnia chce dostarczyć 15. Przy 3 zł chętnych jest 10, a piekarnia chciałaby dostarczyć 20. Równowaga to 2 zł i 15 pączków.
+
+> Zapamiętaj: zmiana ceny – ruch po krzywej (wielkość popytu); zmiana innych czynników – przesunięcie krzywej (popyt).
+
 ## Na marginesie
 
 Przy tej lekcji olimpiada pytała też o rzeczy, które mieszają się z rynkiem:
@@ -65,7 +69,6 @@ Przy tej lekcji olimpiada pytała też o rzeczy, które mieszają się z rynkiem
 - [[Cło|cło]] i [[Dumping|dumping]] – czyli handel ponad granicami;
 - [[Popyt doskonale elastyczny / doskonale nieelastyczny|popyt doskonale elastyczny i doskonale nieelastyczny]] – pozioma i pionowa krzywa popytu;
 - [[Zarządzanie zasobami ludzkimi (HRM)|zarządzanie zasobami ludzkimi]] – bo firma kupuje też pracę.
-
 # mikro-rynek-1-cz2 | Dochód, pieniądz i praca – rynek w szerszym planie
 
 Popyt i podaż nie żyją w próżni. Ten rozdział zbiera pojęcia, o które olimpiada pytała razem z prawem popytu. Każde z nich rozwiniesz później w swoim dziale.
@@ -95,6 +98,10 @@ Rynek pracy ma swoje osobliwości. Firmy czasem płacą więcej, niż muszą –
 Cło może być **[[Cło ad valorem i specyficzne (kwotowe)|procentowe (ad valorem) albo kwotowe]]**. A Thomas Malthus obawiał się, że ludzkość zawsze będzie żyła na granicy głodu, bo więcej żywności oznacza więcej ludzi – to **[[Pułapka maltuzjańska|pułapka maltuzjańska]]**, którą przełamała dopiero rewolucja przemysłowa.
 
 > Zapamiętaj: dochód rośnie → popyt na dobra normalne rośnie, na dobra niższego rzędu spada. Realna stopa ≈ nominalna minus inflacja.
+
+> Przykład: kieszonkowe rośnie ze 100 do 150 zł. Popyt na kino (dobro normalne) rośnie, a na najtańsze zupki (dobro niższego rzędu) spada.
+
+> Uwaga: dochód przesuwa krzywą popytu w **różne strony** zależnie od dobra: w prawo dla normalnych, w lewo dla niższego rzędu.
 
 # mikro-rynek-1-cz3 | Za kulisami popytu i podaży
 
@@ -132,6 +139,8 @@ $ u = bezrobotni / (pracujący + bezrobotni) × 100%
 
 > Uwaga: do stopy bezrobocia dzielisz przez **aktywnych zawodowo** (pracujący + bezrobotni), a nie przez całą ludność.
 
+> Zapamiętaj: popyt przesuwają: dochód, ceny innych dóbr, gusta, oczekiwania, liczba kupujących; podaż: koszty, technika, liczba firm, podatki i dotacje.
+
 # mikro-rynek-1-cz4 | Ludzie, którzy narysowali rynek
 
 Krzywe popytu i podaży, które dziś rysujesz w zeszycie, mają swoich autorów. Ten rozdział to galeria ekonomistów, o których olimpiada pytała przy prawie popytu.
@@ -158,6 +167,8 @@ Na koniec zależność, która rozpaliła spory ekonomistów: **[[Krzywa Phillip
 
 > Zapamiętaj: Jevons – marginalizm; Marshall – nożyce popytu i podaży, elastyczność; Pigou – efekty zewnętrzne; Samuelson – synteza neoklasyczna; Nash – teoria gier.
 
+> Uwaga: rewolucję marginalistyczną zapoczątkowali niezależnie **Jevons, Menger i Walras** (1871–1874) – nie Marshall, który ją potem zsyntetyzował.
+
 # mikro-rynek-2 | Gdy cena jest za wysoka albo za niska
 
 ## Nadwyżka i niedobór
@@ -180,12 +191,13 @@ Załóżmy, że byłbyś gotów zapłacić za bilet na mecz 120 zł, a kosztuje 
 
 > Przykład: gdy państwo ustala cenę maksymalną, część nadwyżki przechodzi od producentów do szczęśliwców, którzy kupili tanio. Ale ci, którzy nie dostali towaru, tracą zupełnie.
 
+> Zapamiętaj: cena maksymalna poniżej równowagi → niedobór; cena minimalna powyżej równowagi → nadwyżka.
+
 ## Na marginesie pytań
 
 W tej lekcji pojawiały się też: [[Wartość pieniądza w czasie|wartość pieniądza w czasie]] (złotówka dziś jest warta więcej niż jutro), [[Motywacja|motywacja]] pracowników, [[Struktura wieku: wiek przedprodukcyjny, produkcyjny i poprodukcyjny|struktura wieku ludności]] oraz [[Marketing mix (4P / 7P / 4C)|marketing mix]] – produkt, cena, dystrybucja i promocja. Cena jest przecież jednym z „4P”.
 
 $ FV = PV · (1 + r)ⁿ
-
 # mikro-rynek-3 | Strata, której nikt nie zgarnia
 
 ## Gdy znika część tortu
@@ -212,10 +224,13 @@ Dlaczego ekonomiści tak cenią swobodne ceny? Bo **[[Ceny jako sygnały (mechan
 
 **[[Podaż pracy (krzywa zakrzywiona do tyłu)|Podaż pracy]]** zachowuje się inaczej niż podaż bułek. Wyższa płaca zachęca do pracy (czas wolny drożeje), ale przy bardzo wysokich zarobkach człowiek może woleć więcej odpoczynku. Wtedy krzywa zakręca do tyłu.
 
+> Przykład: podatek 2 zł od litra soku podnosi cenę dla kupujących z 6 do 7,50 zł, a sprzedawcy dostają 5,50 zł zamiast 6. Sprzedaje się 80 litrów zamiast 100 – 20 litrów transakcji, które opłacałyby się obu stronom, znika. To strata martwa.
+
+> Uwaga: ciężar podatku **nie zależy** od tego, kto go formalnie płaci – zależy od elastyczności popytu i podaży.
+
 ## Na marginesie
 
 Pytania sięgały też do [[Płaca minimalna|płacy minimalnej]], [[Konsumpcja|konsumpcji]] (największego składnika PKB), [[Izokoszta|izokoszty]] w teorii produkcji, a także do demografii: [[Skutki starzenia się dla rynku pracy i finansów publicznych|skutków starzenia się społeczeństwa]] i tezy Goodharta i Pradhana o [[Wielki zwrot demograficzny (teza Goodharta i Pradhana)|wielkim zwrocie demograficznym]] – gdy rąk do pracy ubywa, płace mogą rosnąć.
-
 # mikro-rynek-4 | Co przesuwa krzywe i dlaczego ceny się kołyszą
 
 ## Cena w złotówkach a cena w pizzach
@@ -247,6 +262,10 @@ Gdy państwo dopłaca producentowi do każdej sztuki, mamy **[[Subsydium do prod
 Rolnik decyduje, ile ziemniaków posadzić, patrząc na zeszłoroczną cenę. Gdy ta była wysoka, wszyscy sadzą dużo – i w tym roku cena spada. Za rok sadzą mało – i cena znów rośnie. Tak działa **[[Model pajęczyny|model pajęczyny]]**: ceny oscylują wokół równowagi. Jeśli wahania słabną, rynek dochodzi do równowagi. Jeśli rosną – oddala się od niej.
 
 > Przykład: „cykl świński” – hodowcy reagują na ceny wieprzowiny z opóźnieniem, a ceny przez lata huśtają się w górę i w dół.
+
+> Uwaga: cena **względna** liczy się do decyzji; jeśli wszystkie ceny i płace wzrosną dwa razy, wybory się nie zmienią.
+
+> Zapamiętaj: model pajęczyny – ceny wahają się, bo producenci reagują z opóźnieniem (np. cykl świński).
 
 # mikro-rynek-5 | Rynek w trzech krokach
 
@@ -281,3 +300,7 @@ Nawet życzliwy „planista społeczny” nie zrobiłby tego lepiej – pod waru
 ## Handel ze światem
 
 Gdy kraj otwiera się na handel, liczy się **[[Cena światowa a korzyści z handlu (eksporter i importer)|cena światowa]]**. Jeśli jest wyższa od krajowej, kraj eksportuje – producenci zyskują więcej, niż tracą konsumenci. Jeśli niższa – importuje, a konsumenci zyskują więcej, niż tracą producenci. W obu przypadkach nadwyżka całkowita rośnie. Gdy państwo nakłada [[Skutki cła|cło]], cena krajowa rośnie, import maleje i powstaje zbędna strata w postaci dwóch trójkątów.
+
+> Przykład: drożeje mleko (podaż masła w lewo) i lekarze chwalą masło (popyt w prawo). Cena masła na pewno wzrośnie; ilość może wzrosnąć albo spaść – zależy, która zmiana była silniejsza.
+
+> Zapamiętaj: trzy kroki: która krzywa? w którą stronę? co się dzieje z ceną i ilością?

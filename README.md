@@ -75,6 +75,10 @@ Przy starcie testu można wybrać rodzaj pytań (ręczne, automatyczne lub oba) 
   „które hasło nie należy do tematu”, „które należą”) dla wszystkich haseł tematu kursu z dystraktorami z tego samego
   tematu; przy nowym haśle przewodnim zmienia się stałą `THEME` w skrypcie. Nowe pytania (pole `th`) i pytania algorytmiczne liczą się
   w testach Słownika, „Wszystkich pytaniach” i statystykach, ale nie przestawiają lekcji kursu (`build_course.py`).
+- **Styl Podręcznika**: wzorzec w `tools/nauka/podrecznik/STYL.md` (sposób pisania Mankiwa i Taylora): pytanie z życia →
+  intuicja → pojęcie → przykład liczbowy → wnioski → ramka „Uwaga” (pułapka OWE) → „Zapamiętaj”. Demografia, zarządzanie
+  i finanse przedsiębiorstw są przepisane w całości; w finansach, polityce, makro- i mikroekonomii każdy rozdział dostał
+  wstęp z pytaniem (gdzie zaczynał się od definicji), przykład liczbowy i ramki pułapek – fakty i odnośniki bez zmian.
 - **Rysunki w Podręczniku**: w pliku działu linia `::wykres <rodzaj> [opcje] | Podpis` pod akapitem dodaje rysunek SVG
   (`app/components/book-figure.tsx`): przesunięcia krzywych (`sd`, `adas`, `islm`, `praca`, `pieniadz`, `waluta`, `fundusze`,
   np. `sd D=+1`), krzywe kosztów, Phillipsa (`dlugi=1`), Laffera, Lorenza, KMP (`punkty=1`), monopol, piramida wieku

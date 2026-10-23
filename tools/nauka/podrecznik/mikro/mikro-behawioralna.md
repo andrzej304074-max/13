@@ -59,10 +59,13 @@ Dostałeś 200 zł w prezencie i 200 zł za pracę. Czy wydasz je tak samo? Czę
 
 Thaler i Cass Sunstein napisali w 2008 roku książkę „Impuls”. Opisali w niej **[[Teoria szturchania (nudge)|teorię szturchania]]**: można tak zaprojektować wybór, żeby ludzie częściej decydowali dobrze, nie zakazując niczego. W szkolnej stołówce wystarczy postawić owoce na wysokości oczu, a frytki trochę dalej.
 
+> Uwaga: awersja do straty mówi, że strata 100 zł boli **mocniej**, niż cieszy zysk 100 zł – to nie to samo co niechęć do ryzyka.
+
+> Zapamiętaj: Simon – ograniczona racjonalność; Kahneman i Tversky – teoria perspektywy; Thaler – księgowanie mentalne i nudge.
+
 ## Na marginesie
 
 Pytano też o [[Zachowania finansowe gospodarstw domowych|zachowania finansowe gospodarstw domowych]] (np. zbyt szybka sprzedaż zyskownych akcji i trzymanie stratnych), [[Aprecjacja i deprecjacja|aprecjację i deprecjację]] waluty oraz [[Bilans handlowy|bilans handlowy]].
-
 # mikro-behawioralna-1-cz2 | Projektanci mechanizmów i szkoła austriacka
 
 Ten rozdział przedstawia ekonomistów i nurty, o które olimpiada pytała razem z ekonomią behawioralną.
@@ -113,6 +116,12 @@ W **[[Gra w ultimatum i preferencje sprawiedliwości|grze w ultimatum]]** gracz 
 ## Dzielenie się zamiast posiadania
 
 **[[Gospodarka współdzielenia (sharing economy) i peer economy|Gospodarka współdzielenia]]** opiera się na zasadzie „dostęp zamiast własności”: wynajem mieszkań na krótko, samochody na minuty, wymiana rzeczy między ludźmi bez pośrednika.
+
+> Przykład: sklep pokazuje „było 300 zł, teraz 199 zł”. Pierwsza liczba działa jak kotwica – 199 zł wydaje się okazją, nawet jeśli kurtka nigdy nie była warta 300 zł.
+
+> Uwaga: efekt **kotwiczenia** to wpływ pierwszej liczby na ocenę, a efekt **posiadania** – wyższa wycena rzeczy, które już mamy.
+
+> Zapamiętaj: efekt posiadania, kotwiczenie, heurystyki, efekt ramowania, hiperboliczne dyskontowanie (odkładanie na jutro).
 
 ## Na marginesie
 

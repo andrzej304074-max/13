@@ -34,6 +34,10 @@ W każdym rozdziale znajdziesz przykład liczbowy. Rozwiąż go najpierw sam, a 
 
 # mikro-wzor-1 | Elastyczności i zadowolenie na złotówkę
 
+## Wzory, które mierzą reakcje
+
+Ile mniej kupisz, gdy cena wzrośnie? Ile więcej, gdy dostaniesz podwyżkę? Elastyczności odpowiadają na te pytania liczbą – bez względu na to, w jakich jednostkach mierzymy towar.
+
 ## Elastyczność cenowa
 
 **[[Elastyczność cenowa popytu|Elastyczność cenowa popytu]]** mówi, o ile procent zmieni się ilość, gdy cena zmieni się o 1%:
@@ -82,7 +86,13 @@ $ MUx / Px = MUy / Py
 
 > Uwaga: w zadaniach elastyczność cenowa wychodzi ujemna. Klasyfikując popyt, patrz na wartość bezwzględną.
 
+> Zapamiętaj: Ed = %ΔQ / %ΔP; |Ed| > 1 – elastyczny, < 1 – nieelastyczny; optimum konsumenta: MU_A / P_A = MU_B / P_B.
+
 # mikro-wzor-2 | Linie, krzywe i najtańsza kombinacja
+
+## Linia budżetu i najtańszy przepis
+
+Konsument ma ograniczony dochód, a firma – ograniczony budżet na czynniki. Oba problemy rozwiązuje się podobnie: porównując, ile daje ostatnia złotówka wydana na każdą rzecz.
 
 ## Linia budżetowa
 
@@ -128,7 +138,13 @@ $ MPL / w = MPK / r
 
 > Zapamiętaj: konsument – MUx/Px = MUy/Py; producent – MPL/w = MPK/r. To ta sama idea: równe korzyści z ostatniej złotówki.
 
+> Uwaga: nachylenie linii budżetu to **−P_X / P_Y** (stosunek cen), a nie stosunek ilości.
+
 # mikro-wzor-3 | Koszty, utarg i próg rentowności
+
+## Koszty, utarg i zysk w liczbach
+
+Każda decyzja firmy sprowadza się do porównania: ile przyniesie kolejna sztuka, a ile będzie kosztować. Ten rozdział zbiera wzory, które pozwalają to policzyć.
 
 ## Koszty w jednym miejscu
 
@@ -176,7 +192,13 @@ Różnica P − AVC to marża, która z każdej sztuki pokrywa koszty stałe.
 
 > Uwaga: koszt krańcowy liczysz ze **zmiany** kosztu całkowitego, a nie dzieląc koszt całkowity przez ilość – to byłby koszt przeciętny.
 
+> Zapamiętaj: MR = MC – maksymalny zysk; próg rentowności Q* = FC / (P − AVC); zysk ekonomiczny = TR − TC (z kosztami alternatywnymi).
+
 # mikro-wzor-4 | Monopol, praca i siła rynkowa w liczbach
+
+## Monopol i rynek pracy w liczbach
+
+Ile zarobi monopolista? Ile warto zapłacić pracownikowi? Jak duża jest siła rynkowa firmy? Wzory z tego rozdziału zamieniają te pytania w rachunki.
 
 ## Zysk monopolisty
 
@@ -228,7 +250,15 @@ $ W realna = W nominalna / P
 
 > Przykład: płaca wzrosła z 5000 do 5500 zł (o 10%), a ceny o 6%. Płaca realna wzrosła o około 4% (dokładnie 1,10/1,06 − 1 ≈ 3,8%).
 
+> Uwaga: monopolista ustala ilość z MR = MC, ale **cenę** odczytuje z krzywej popytu – cena jest wyższa niż MC.
+
+> Zapamiętaj: VMP_L = P · MP_L; Lerner = (P − MC) / P; HHI = Σ udziałów² (w %).
+
 # mikro-wzor-5 | Nachylenia, nadwyżki i podatki
+
+## Podział, nachylenia i podatki
+
+Kto ile dostaje z tortu, jak czytać nachylenie krzywej, jak policzyć wartość rynku i skutki podatku – to praktyczne rachunki, które często pojawiają się w zadaniach.
 
 ## Podział dochodu
 
@@ -270,7 +300,13 @@ $ NC = NK + NP
 
 > Przykład: t = 50%, dopłata 2000 zł. Przy dochodzie 1000 zł podatek = 500 − 2000 = −1500 zł (dopłata). Przy dochodzie 4000 zł podatek = 0. Przy 10 000 zł podatek = 3000 zł.
 
+> Zapamiętaj: w konkurencji płaca = VMP_L; metoda punktu środkowego dla elastyczności; nadwyżka konsumenta – trójkąt nad ceną pod popytem.
+
 # mikro-wzor-6 | Równowaga i podatek krok po kroku
+
+## Równowaga krok po kroku
+
+Zadanie: popyt Q = 100 − 2P, podaż Q = 20 + 2P. Ile wynosi cena równowagi? Ten rozdział pokazuje, jak takie zadania rozwiązywać bez błędów.
 
 ## Liczenie równowagi
 
@@ -309,7 +345,15 @@ $ C₁ + C₂/(1 + r) = Y₁ + Y₂/(1 + r)
 
 > Zapamiętaj: podatek dla producentów → w funkcji podaży wstaw (P − t). Cena dla kupujących rośnie, cena na rękę dla sprzedających spada; różnica = t.
 
+> Przykład: Q = 100 − 2P i Q = 20 + 2P. Przyrównujemy: 100 − 2P = 20 + 2P, więc P = 20, a Q = 60.
+
+> Uwaga: podatek nałożony na **producentów** przesuwa krzywą podaży w górę o kwotę podatku – w równaniu zamieniasz P na (P − t) w funkcji podaży.
+
 # mikro-wzor-7 | Pola trójkątów i maksimum utargu
+
+## Trójkąty, które mają znaczenie
+
+Przy liniowych krzywych nadwyżki i strata martwa to pola trójkątów. Wystarczy wzór na pole i dobre odczytanie wierzchołków z wykresu.
 
 ## Nadwyżki jako trójkąty
 
@@ -352,6 +396,10 @@ Gdy koszt krańcowy jest stały, VC = MC · Q.
 Gdy znasz krzywą podaży czynnika (np. pracy) i płacę równowagi W*, liczysz **[[Renta ekonomiczna i dochód transferowy – obliczanie|rentę ekonomiczną i dochód transferowy]]**. Renta to pole nad krzywą podaży, a pod płacą. Dochód transferowy to pole pod krzywą podaży.
 
 > Przykład: podaż pracy W = 10 + 0,1L, płaca równowagi W* = 30 zł, więc L* = 200. Renta = ½ · 200 · (30 − 10) = 2000 zł. Cały dochód = 30 · 200 = 6000 zł, dochód transferowy = 6000 − 2000 = 4000 zł.
+
+> Uwaga: utarg całkowity jest **maksymalny** tam, gdzie elastyczność popytu wynosi 1 (MR = 0) – nie tam, gdzie zysk.
+
+> Zapamiętaj: pole trójkąta = ½ · podstawa · wysokość; renta ekonomiczna – nadwyżka ponad dochód transferowy.
 
 # mikro-wzor-8 | Strata martwa, Lerner i HHI w praktyce
 

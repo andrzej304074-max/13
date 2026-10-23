@@ -59,6 +59,8 @@ Ekonomiści wypowiadają się na dwa sposoby. Zdanie „podwyżka płacy minimal
 
 Ekonomia potrafi też zaskakiwać. [[Ostrom Elinor|Elinor Ostrom]], pierwsza kobieta z Nagrodą Nobla z ekonomii, pokazała, że lokalne społeczności często same umieją dbać o wspólne łowiska czy pastwiska. Ekonomiści interesują się również biedą – GUS rozróżnia [[Ubóstwo skrajne, relatywne i ustawowe (GUS)|ubóstwo skrajne, relatywne i ustawowe]], bo każde mierzy co innego.
 
+> Zapamiętaj: rzadkość → wybór → koszt alternatywny; ekonomia pozytywna opisuje, normatywna ocenia.
+
 # mikro-podstawy-1-cz2 | Ludzie i liczby, które spotkasz na olimpiadzie
 
 Ten rozdział to mapa nazwisk i pojęć, które często pojawiają się w pytaniach obok podstaw ekonomii. Nie musisz ich dziś znać w szczegółach – ważne, żebyś wiedział, z czym kojarzyć każde z nich.
@@ -108,12 +110,17 @@ Powietrze jest **[[Dobro wolne|dobrem wolnym]]**: jest go tyle, że nie ma ceny,
 
 Ekonomiści, żeby cokolwiek zbadać, zakładają **[[Ceteris paribus|ceteris paribus]]** – „przy innych warunkach niezmienionych”. Badając wpływ ceny na zakupy, udają na chwilę, że dochody, moda i pogoda się nie zmieniają.
 
+> Przykład: kraj produkuje 1 mln bochenków i 0 rowerów albo 600 tys. bochenków i 50 tys. rowerów. Pierwsze 50 tys. rowerów kosztuje 400 tys. bochenków – czyli 8 bochenków za rower. To koszt alternatywny odczytany z krzywej.
+
+> Uwaga: punkt **wewnątrz** KMP oznacza niewykorzystane zasoby (np. bezrobocie), a nie „lepszą oszczędność”; punkt **na zewnątrz** – dziś nieosiągalny.
+
+> Zapamiętaj: KMP wygięta na zewnątrz – rosnący koszt alternatywny; przesuwa się na zewnątrz przy wzroście zasobów lub postępie.
+
 ## Na marginesie pytań
 
 Przy tym rozdziale olimpiada pytała też o [[Ryzyko, niepewność i wartość oczekiwana|ryzyko i wartość oczekiwaną]] (ryzyko – znamy prawdopodobieństwa, niepewność – nie znamy), [[Akcja|akcje]], [[Obligacje komunalne i przychodowe|obligacje komunalne i przychodowe]] oraz [[Monopol prawny: patenty i prawa autorskie|patenty i prawa autorskie]] – czyli sposoby, w jakie kapitał i pomysły zamieniają się w produkcję.
 
 $ E(X) = Σ pᵢ · xᵢ
-
 # mikro-podstawy-2-cz2 | Narzędzia, które przydadzą się dalej
 
 Ten rozdział zbiera pojęcia, które pojawiały się w pytaniach razem z krzywą możliwości produkcyjnych. Każde z nich ma swój dział w kursie – tu dostajesz pierwszą, krótką wizytówkę.
@@ -145,6 +152,8 @@ $ nachylenie = Δy / Δx
 Ujemne nachylenie oznacza zależność odwrotną (cena w górę – zakupy w dół), dodatnie – zależność wprost.
 
 > Zapamiętaj: krótki okres – coś jest stałe; długi okres – wszystko zmienne. Elastyczność = procentowa zmiana ilości / procentowa zmiana ceny.
+
+> Przykład: zmiana ceny z 10 na 12 zł zmniejsza popyt ze 100 do 80 sztuk. Na wykresie to ruch **wzdłuż** krzywej popytu, a nie jej przesunięcie.
 
 # mikro-podstawy-3 | Kto decyduje, co powstanie?
 
@@ -178,6 +187,10 @@ Najprostszy obraz gospodarki to **[[Model ruchu okrężnego|model ruchu okrężn
 
 W tym miejscu pytania dotyczyły też [[Dobro luksusowe (wyższego rzędu)|dóbr luksusowych]] (gdy rośnie dochód, wydajemy na nie coraz większą część), różnicy między [[Pożyczka a kredyt|pożyczką a kredytem]] oraz niemieckiej idei [[Ordoliberalizm i społeczna gospodarka rynkowa|społecznej gospodarki rynkowej]], zapisanej w art. 20 Konstytucji RP.
 
+> Przykład: lekarz godzinę może leczyć pacjentów za 200 zł albo sprzątać mieszkanie. Sprzątaczka bierze 40 zł za godzinę. Choć lekarz sprząta może szybciej, opłaca się mu zatrudnić sprzątaczkę – jego koszt alternatywny to 200 zł.
+
+> Zapamiętaj: trzy systemy: tradycyjny, nakazowo-rozdzielczy, rynkowy (i mieszany); niewidzialna ręka – Smith.
+
 # mikro-podstawy-3-cz2 | Wielki spór: ile państwa w gospodarce?
 
 Pytanie, jak dużo powinno robić państwo, dzieli ekonomistów od kilkuset lat. Ten rozdział to przewodnik po najważniejszych stronach tego sporu.
@@ -206,6 +219,8 @@ W II Rzeczypospolitej państwo mocno angażowało się w gospodarkę. Ten nurt n
 
 Dziś niemal nikt nie broni czystego rynku ani czystego planu. Spór o **[[Rola państwa w gospodarce|rolę państwa w gospodarce]]** dotyczy zakresu: czy państwo ma być tylko „nocnym stróżem”, czy rozbudowanym państwem opiekuńczym. Na olimpiadzie łatwo poznać, kto jest kim, gdy pamiętasz, czego każdy się bał. Keynes bał się bezrobocia, a Hayek i Friedman nadmiaru władzy państwa i inflacji.
 
+> Uwaga: Keynes widział w państwie **uzupełnienie** rynku w kryzysie, a nie zastępstwo dla rynku – planowanie centralne to inna idea.
+
 # mikro-podstawy-4 | Jak ekonomiści dochodzą do wniosków
 
 ## Punkt procentowy – pułapka dla dorosłych
@@ -232,10 +247,13 @@ Każda gospodarka musi rozwiązać **[[Problem ekonomiczny: co, jak i dla kogo p
 
 Jedną z najstarszych prawd ekonomii jest siła **[[Podział pracy i specjalizacja|podziału pracy]]**. Adam Smith opisał manufakturę szpilek. Jeden robotnik sam zrobiłby kilka szpilek dziennie, a dziesięciu, z których każdy wykonuje jedną czynność, robi ich tysiące. Wprawa, oszczędność czasu i maszyny robią swoje. Ale specjalista musi wymieniać się z innymi, bo sam nie wyprodukuje wszystkiego.
 
+> Przykład: inflacja spadła z 5% do 4%. To spadek o **1 punkt procentowy**, ale o **20%** w ujęciu względnym (1 / 5).
+
+> Zapamiętaj: punkt procentowy – różnica między procentami; procent – zmiana względna.
+
 ## Na marginesie
 
 Pytania z tej lekcji sięgały też do teorii organizacji. W [[Podejście systemowe|podejściu systemowym]] firma to system, który przetwarza nakłady w wyniki, a całość jest czymś więcej niż suma części (synergia). Max Weber opisał [[Biurokracja (M. Weber)|biurokrację]] jako najbardziej racjonalną formę organizacji.
-
 # mikro-podstawy-4-cz2 | Ojcowie zarządzania
 
 Ekonomia i zarządzanie to bliscy krewni. Pierwsza pyta, jak gospodaruje społeczeństwo, drugie – jak dobrze poprowadzić jedną organizację. Na olimpiadzie te światy się spotykają, dlatego warto poznać czterech pionierów.
@@ -297,6 +315,8 @@ Społeczeństwo stale wybiera między **[[Efektywność a sprawiedliwość (wymi
 
 > Przykład: przy tych zasadach olimpiada pytała też o [[Pieniądz|pieniądz]] i jego funkcje, [[Prawo popytu|prawo popytu]] oraz [[Ceny zaporowe (limit pricing) i ceny drapieżne|ceny zaporowe i drapieżne]] – czyli bodźce w praktyce rynkowej.
 
+> Uwaga: agregacja **upraszcza** – „poziom cen” to średnia tysięcy cen; pojedyncze ceny mogą iść w przeciwnym kierunku.
+
 # mikro-podstawy-6 | Jak nie dać się nabrać na wykres
 
 ## Wykres – mowa ekonomisty
@@ -329,3 +349,5 @@ Polski filozof Leszek Nowak z Poznania opisał **[[Metoda idealizacji|metodę id
 Ekonomista Marian Gorynia ostrzega przed **[[Ekonomia pozytywna a postulatywna (normatywna) – spór|ekonomią „postulatywną”]]**. Tak nazywa formułowanie zaleceń bez rzetelnego zbadania faktów. Ekonomia całkiem wolna od ocen jest niemożliwa, ale recepta musi wynikać z porządnej diagnozy.
 
 > Przykład: zanim ekonomista stwierdzi, że kraj wchodzi w [[Recesja i depresja|recesję]] (spadek realnego PKB, umownie przez dwa kwartały z rzędu), musi to sprawdzić w danych, a nie „na wyczucie”.
+
+> Zapamiętaj: korelacja to nie przyczynowość; nachylenie mówi, o ile zmienia się Y, gdy X rośnie o 1.

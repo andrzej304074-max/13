@@ -79,6 +79,8 @@ Na koniec **[[Elastyczność cenowa podaży|elastyczność cenowa podaży]]** �
 
 > Zapamiętaj: elastyczność mieszana dodatnia → substytuty, ujemna → dobra komplementarne. Dochodowa ujemna → dobro niższego rzędu.
 
+> Przykład: popyt na bilety ma elastyczność 2. Kino podnosi cenę o 10% – sprzedaje 20% mniej biletów, więc utarg spada. Gdyby elastyczność wynosiła 0,5, utarg by wzrósł.
+
 # mikro-elastycznosc-2 | Rodzina dóbr: zamienniki, pary i luksusy
 
 ## Dwie skrajności
@@ -113,6 +115,10 @@ $ MUx / Px = MUy / Py
 
 Pojawiały się też [[Dobro Giffena|dobra Giffena]] (o nich w kolejnej lekcji) i [[Podatek akcyzowy (akcyza)|akcyza]] – podatek nakładany chętnie na dobra o nieelastycznym popycie, jak paliwo, alkohol i papierosy, bo przynosi pewne wpływy.
 
+> Uwaga: dobra **komplementarne** mają ujemną elastyczność mieszaną (droższe drukarki → mniej tuszu), **substytuty** – dodatnią.
+
+> Zapamiętaj: elastyczność dochodowa > 1 – dobro luksusowe; 0–1 – podstawowe; < 0 – niższego rzędu.
+
 # mikro-elastycznosc-2-cz2 | Elastyczność w banku i w umowie
 
 Ten krótki rozdział wychodzi poza wykresy. Olimpiada pytała przy elastyczności o codzienne narzędzia finansowe i prawne. Warto je znać, bo to właśnie w nich spotykasz ceny i wybory w dorosłym życiu.
@@ -141,6 +147,8 @@ Każda transakcja to umowa. **[[Umowy w kodeksie cywilnym|Kodeks cywilny]]** opi
 > Uwaga: najem a dzierżawa – różnica tkwi w „pożytkach”. Wynajęte mieszkanie tylko używasz. Z dzierżawionego sadu możesz zbierać i sprzedawać jabłka.
 
 > Zapamiętaj: umowa o dzieło – rezultat; zlecenie – staranne działanie.
+
+> Przykład: bank oferuje lokatę 6% w skali roku na 3 miesiące. Za 10 000 zł dostaniesz po kwartale 150 zł odsetek brutto (10 000 · 6% / 4), a po podatku Belki 19% – 121,50 zł.
 
 # mikro-elastycznosc-3 | Dobra, które łamią prawo popytu
 
@@ -172,6 +180,8 @@ Niektóre dobra cenimy głównie za to, że stawiają nas wyżej od innych: pres
 
 Za każdym wyborem stoi **[[Użyteczność|użyteczność]]** – zadowolenie z konsumpcji. Olimpiada pytała tu też o [[Cykle koniunkturalne – typy|typy cykli koniunkturalnych]]: krótkie cykle Kitchina (zapasy), Juglara (inwestycje), Kuznetsa (budownictwo) i długie fale Kondratiewa (przełomowe innowacje).
 
+> Zapamiętaj: dobra Giffena – drożej, kupujemy więcej (efekt dochodowy silniejszy); Veblena – drożej, bo prestiż; efekt owczego pędu – kupujemy, bo inni kupują.
+
 # mikro-elastycznosc-4 | Elastyczność w praktyce: rolnicy i narkotyki
 
 ## Licz uczciwie: metoda punktu środkowego
@@ -197,3 +207,7 @@ Naukowcy wyhodowali nową, bardziej wydajną odmianę pszenicy. Plony rosną o p
 Państwo może walczyć z narkotykami dwojako. Może ograniczać podaż: łapać przemytników i niszczyć uprawy. Ale popyt osoby uzależnionej jest nieelastyczny – cena rośnie bardziej, niż spada ilość. Uzależnieni wydają więc więcej, a część z nich zdobywa pieniądze przestępstwem. Może też ograniczać popyt: edukacją i leczeniem. Wtedy spada i cena, i ilość. Tak **[[Elastyczność a polityka antynarkotykowa|elastyczność podpowiada politykę antynarkotykową]]**.
 
 > Zapamiętaj: przy nieelastycznym popycie spadek podaży podnosi wydatki kupujących, a wzrost podaży je obniża. To klucz do obu paradoksów.
+
+> Przykład: rekordowe zbiory zboża podnoszą podaż o 20%. Popyt na zboże jest mało elastyczny, więc cena spada o 40% – i rolnicy zarabiają łącznie mniej, choć zebrali więcej.
+
+> Uwaga: płaska krzywa nie zawsze oznacza wysoką elastyczność – elastyczność zmienia się **wzdłuż** prostej krzywej popytu.

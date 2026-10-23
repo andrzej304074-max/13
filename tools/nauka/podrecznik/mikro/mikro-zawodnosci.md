@@ -60,10 +60,13 @@ Rozwiązaniem jest **[[Internalizacja efektów zewnętrznych|internalizacja]]** 
 
 Nie każdy sposób zarabiania tworzy wartość. Firma może wydać miliony na lobbing, żeby dostać wyłączną licencję albo cło chroniące ją przed konkurencją. To **[[Pogoń za rentą (rent seeking)|pogoń za rentą]]**: zasoby idą na zdobycie przywilejów, a nie na lepsze produkty. Społeczeństwo na tym traci.
 
+> Uwaga: efekt zewnętrzny **negatywny** (zanieczyszczenie) prowadzi do nadprodukcji, **pozytywny** (szczepienia) – do niedoprodukcji w porównaniu z optimum społecznym.
+
+> Zapamiętaj: optimum Pareto – nie da się poprawić sytuacji jednego bez pogorszenia innego; podatek Pigou – „internalizuje” koszty zewnętrzne.
+
 ## Na marginesie
 
 Pytania dotyczyły też [[Przewaga komparatywna (względna)|przewagi komparatywnej]] Ricarda, [[Polityka konkurencji (antymonopolowa)|polityki konkurencji]], [[Asymetria informacji|asymetrii informacji]] (o niej w lekcji 3), [[Dochody i wydatki budżetu państwa|dochodów i wydatków budżetu]] oraz [[Podatek dochodowy od osób fizycznych (PIT)|PIT]] – od 2022 roku ze stawkami 12% i 32% i kwotą wolną 30 000 zł.
-
 # mikro-zawodnosci-1-cz2 | Podatki od oszczędności i wartość firmy
 
 Krótki rozdział o dwóch pojęciach, które olimpiada łączyła z efektywnością: o tym, jak państwo opodatkowuje zyski z kapitału, i o tym, kiedy firmom opłaca się inwestować.
@@ -112,10 +115,13 @@ Na wspólnym pastwisku każdy pasterz dokłada kolejną krowę – zysk jest jeg
 
 Ronald Coase zaproponował zaskakujące rozwiązanie efektów zewnętrznych. **[[Twierdzenie Coase’a|Twierdzenie Coase’a]]** mówi: jeśli prawa własności są jasne, a negocjacje nic nie kosztują, strony same znajdą efektywne rozwiązanie. Nie ma przy tym znaczenia, komu prawo przyznano. Hałaśliwy sąsiad może zapłacić za ciszę albo ty możesz zapłacić jemu – wynik będzie efektywny. Problem w tym, że w praktyce negocjacje kosztują, zwłaszcza gdy stron jest wiele.
 
+> Przykład: latarnia morska świeci dla wszystkich statków – nie da się wykluczyć tych, którzy nie płacą, a jeden statek nie odbiera światła drugiemu. To dobro publiczne. Ryby w morzu – nie da się wykluczyć, ale złowiona ryba nie złowi się drugi raz. To dobro wspólne.
+
+> Zapamiętaj: cztery rodzaje dóbr: prywatne, publiczne, wspólne, klubowe; twierdzenie Coase’a – przy niskich kosztach transakcyjnych strony same się dogadają.
+
 ## Na marginesie
 
 Pytano też o [[Ubezpieczenie|ubezpieczenia]], [[Negatywna (niekorzystna) selekcja|negatywną selekcję]] i [[Pokusa nadużycia (moral hazard)|pokusę nadużycia]] (o nich w lekcji 3), [[Twierdzenie o wyborcy medianowym|twierdzenie o wyborcy medianowym]] – dlaczego partie zbliżają programy do środka – oraz [[Samorząd terytorialny w Polsce|samorząd terytorialny]] z trzema szczeblami: gminą, powiatem i województwem.
-
 # mikro-zawodnosci-2-cz2 | Własność, stabilność i pomoc państwa
 
 Ten rozdział łączy dobra publiczne z dwoma szerszymi tematami: dlaczego niektóre kraje się bogacą, a inne nie, i jak państwo pomaga obywatelom.
@@ -166,10 +172,13 @@ Są dwa sposoby, opisane przez noblistów z 2001 roku (**[[Sygnalizacja i odsiew
 
 Wróćmy do zasobów wspólnych. **[[Przełowienie i dekapitalizacja zasobów|Przełowienie]]** to łowienie ryb szybciej, niż populacja się odradza – tragedia wspólnego pastwiska w praktyce. Dekapitalizacja to zużywanie majątku szybciej, niż się go odtwarza.
 
+> Przykład: dobre auta są warte 40 000 zł, „cytryny” 20 000 zł, po połowie każdych. Kupujący nie odróżnia, więc oferuje 30 000 zł. Właściciele dobrych aut nie chcą sprzedać za tyle – wycofują się, i na rynku zostają głównie cytryny.
+
+> Zapamiętaj: negatywna selekcja – przed umową; pokusa nadużycia – po umowie; problem pryncypał–agent.
+
 ## Na marginesie
 
 Przy tej lekcji pojawiały się też: [[Dobra społecznie pożądane (merit goods)|dobra społecznie pożądane]] (edukacja, kultura), [[Rzeczywista roczna stopa oprocentowania (RRSO)|RRSO]] – całkowity koszt kredytu, który pozwala porównać oferty, [[Faktura VAT i KSeF|faktura VAT i KSeF]], [[Rynek pracy|rynek pracy]] oraz [[Pułapka średniego dochodu|pułapka średniego dochodu]].
-
 # mikro-zawodnosci-3-cz2 | Sygnały na rynku i w firmie
 
 Asymetria informacji występuje wszędzie – na rynku pracy, w spółkach i na giełdzie. Ten rozdział zbiera pojęcia, o które olimpiada pytała w tym kontekście.
@@ -224,10 +233,15 @@ Alfred Marshall badał jeden rynek, zakładając, że reszta się nie zmienia �
 
 **[[Libertarianizm i libertariański paternalizm|Libertarianie]]**, jak Robert Nozick, stawiają wolność jednostki ponad interwencję – chcą państwa minimalnego. Richard Thaler i Cass Sunstein proponują drogę pośrednią: libertariański paternalizm. Państwo nie zakazuje, tylko tak projektuje wybory, żeby łatwiej było wybrać dobrze. Na przykład domyślnie zapisuje pracowników do programu oszczędzania, ale pozwala się wypisać.
 
+> Przykład: branża taksówkowa przekonuje urząd, by ograniczył liczbę licencji „dla bezpieczeństwa pasażerów”. Ceny przejazdów rosną, a zyski licencjonowanych kierowców też. Regulator, który miał chronić klientów, chroni branżę – to przejęcie regulacyjne.
+
+> Uwaga: **pogoń za rentą** (rent seeking) to wydawanie zasobów na zdobycie przywileju, a nie na tworzenie nowej wartości.
+
+> Zapamiętaj: zawodność państwa: brak informacji, opóźnienia, biurokracja, interesy polityków, przejęcie regulacyjne.
+
 ## Na marginesie
 
 Pytania dotyczyły też [[Obligacja|obligacji]], [[Menger Carl|Carla Mengera]] (twórcy szkoły austriackiej), [[Pareto Vilfredo|Vilfreda Pareto]] (zasada 80/20), [[Instrumenty polityki rodzinnej w Polsce|instrumentów polityki rodzinnej]] i [[Przepisy dotyczące pracy cudzoziemców w Polsce|przepisów o pracy cudzoziemców]].
-
 # mikro-zawodnosci-4-cz2 | Narzędzia państwa w praktyce
 
 Ten rozdział zbiera różne narzędzia i instytucje, przez które państwo i organizacje wpływają na gospodarkę.
@@ -282,6 +296,12 @@ Jak najtaniej zmniejszyć emisję CO₂? Państwo może nakazać każdej fabryce
 ## Ludzie, którzy oszukują
 
 Oliver Williamson przyjął, że ludzie w biznesie są nie tylko ograniczenie racjonalni, ale też skłonni do **[[Oportunizm (w nowej ekonomii instytucjonalnej)|oportunizmu]]** – dbania o swój interes z użyciem podstępu. Dlatego umowy muszą być starannie pisane, a niektóre rzeczy lepiej robić we własnej firmie niż kupować na rynku.
+
+> Przykład: państwo przydziela fabrykom pozwolenia na emisję 1000 ton CO₂. Fabryka A, która tanio ogranicza emisje, sprzedaje część pozwoleń fabryce B, dla której ograniczenie jest drogie. Łączna emisja jest ta sama, ale osiągnięta najtaniej.
+
+> Uwaga: handel uprawnieniami do emisji ustala **ilość** zanieczyszczeń (cena się ustala), a podatek Pigou – **cenę** (ilość się dostosowuje).
+
+> Zapamiętaj: nacjonalizacja – przejęcie przez państwo; prywatyzacja – sprzedaż prywatnym właścicielom.
 
 ## Na marginesie
 

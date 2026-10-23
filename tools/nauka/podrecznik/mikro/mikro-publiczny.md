@@ -63,6 +63,8 @@ Są dwie główne zasady.
 
 > Uwaga: ulgi podatkowe często łamią sprawiedliwość poziomą – dwie osoby o tych samych dochodach płacą różnie, bo jedna skorzystała z ulgi.
 
+> Zapamiętaj: analiza kosztów i korzyści – porównanie w złotych, także wartości życia; podatek pogłówny – najbardziej efektywny, ale uznawany za niesprawiedliwy.
+
 # mikro-publiczny-2 | Jak pomagać, żeby praca się opłacała
 
 ## Ukryte koszty podatków
@@ -88,6 +90,10 @@ Milton Friedman zaproponował **[[Negatywny podatek dochodowy|negatywny podatek 
 Pomoc można dawać w gotówce albo w naturze. **[[Transfery rzeczowe (świadczenia w naturze)|Transfery rzeczowe]]** to posiłki w szkole, mieszkania socjalne, bony żywnościowe. Zaleta: pomoc trafia tam, gdzie ma trafić. Wada: odbiorca ma mniejszy wybór, a państwo ponosi koszty organizacji.
 
 > Zapamiętaj: efektywna krańcowa stawka podatkowa = podatek + utracone świadczenia od dodatkowej złotówki. Gdy jest wysoka, praca przestaje się opłacać.
+
+> Przykład: osoba bez pracy dostaje 1000 zł zasiłku. Gdy podejmie pracę za 1500 zł, traci zasiłek i płaci podatek – na rękę ma niewiele więcej niż wcześniej. Efektywna stawka „podatku” od pracy wynosi prawie 100% – to pułapka biedy.
+
+> Uwaga: negatywny podatek dochodowy (Friedman) **wypłaca** pieniądze osobom poniżej progu dochodu, ale stopniowo – tak, by każda zarobiona złotówka zwiększała dochód na rękę.
 
 # mikro-publiczny-3 | Dlaczego głosowanie nie jest idealne
 

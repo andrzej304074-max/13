@@ -57,10 +57,13 @@ Na drugim końcu jest **[[Monopol|monopol]]** – jedna firma, produkt bez blisk
 
 > Uwaga: monopol naturalny nie wynika z zakazu wejścia, tylko z kosztów. Dlatego zwykle się go reguluje, zamiast dzielić.
 
+> Przykład: na targu jabłek sprzedaje 200 rolników identyczne owoce – żaden nie wpłynie na cenę (konkurencja doskonała). W mieście jedna sieć wodociągowa dostarcza wodę – ma pełną kontrolę nad ceną, choć ograniczaną przez regulatora (monopol naturalny).
+
+> Zapamiętaj: cztery struktury: konkurencja doskonała, monopolistyczna, oligopol, monopol.
+
 ## Na marginesie
 
 Przy tej lekcji olimpiada pytała też o [[Oligopol|oligopol]] i [[Nadwyżka mocy produkcyjnych|nadwyżkę mocy produkcyjnych]] (o obu w kolejnych lekcjach), [[Dyskryminacja (różnicowanie) cenowa|dyskryminację cenową]], [[Reklama – spory ekonomiczne i sygnał jakości|reklamę]], [[Efekty zewnętrzne (externalities)|efekty zewnętrzne]] oraz [[Polityka cenowa państwa i ceny administrowane|ceny administrowane]] – na przykład taryfy na prąd i gaz zatwierdzane przez Prezesa URE.
-
 # mikro-struktury-1-cz2 | Kawiarnie, sieci i dwóch rywali
 
 Ten rozdział to przedsmak struktur pośrednich – między konkurencją doskonałą a monopolem. W nich toczy się większość prawdziwego biznesu.
@@ -113,10 +116,11 @@ Oligopol z dwiema firmami to **[[Duopol|duopol]]**. Ekonomiści opisują go trze
 
 Wszystkie te modele opierają się na **[[Równowaga Nasha|równowadze Nasha]]**: sytuacji, w której żadna firma nie poprawi wyniku, zmieniając tylko własną decyzję.
 
+> Zapamiętaj: dyskryminacja cenowa I stopnia – każdy płaci swoją maksymalną cenę; II – zależnie od ilości; III – według grup klientów.
+
 ## Na marginesie
 
 Pytano też o [[Kartel|kartele]], [[Monopson|monopson]] (jeden nabywca, np. jedyny pracodawca w mieście) oraz [[Dystrybucja|kanały dystrybucji]] – bezpośredni i przez hurtownie czy sklepy.
-
 # mikro-struktury-3 | Zmowy, liderzy i jeden kupujący
 
 ## Dlaczego ceny w oligopolu stoją w miejscu
@@ -137,12 +141,15 @@ Rynek może być zdominowany także po stronie kupującej. **[[Monopson|Monopson
 
 To wszystko opisuje **[[Teoria gier|teoria gier]]** – analiza decyzji, w których twój wynik zależy od decyzji innych. Jej podstawowe pojęcia (strategia dominująca, równowaga Nasha, dylemat więźnia) poznasz w kolejnej lekcji.
 
+> Przykład: dwie stacje benzynowe naprzeciw siebie. Gdy jedna obniża cenę, druga od razu robi to samo; gdy jedna podnosi – druga zostaje przy starej cenie i przejmuje klientów. Dlatego ceny długo stoją w miejscu.
+
+> Uwaga: monopson to **jeden kupujący** (np. jedyny pracodawca w mieście), monopol – jeden sprzedawca.
+
 ## Na marginesie
 
 Olimpiada łączyła tę lekcję z [[Strategie konkurencyjne według pozycji rynkowej (Ph. Kotler)|strategiami Kotlera]] (lider, pretendent, naśladowca, niszowiec), [[Urząd Ochrony Konkurencji i Konsumentów (UOKiK)|UOKiK]], który może nałożyć karę do 10% obrotu, gospodarczymi przepisami [[Konstytucja RP – przepisy gospodarcze|Konstytucji RP]] oraz [[Teorie krótkookresowej podaży zagregowanej (lepkie płace, lepkie ceny, błędne postrzeganie)|teoriami lepkich płac i cen]] – sztywność cen w oligopolu to jeden z powodów, dla których cała gospodarka reaguje na szoki z opóźnieniem.
 
 > Zapamiętaj: model Sweezy’ego – sztywne ceny w oligopolu; kartel – zmowa jawna; lider cenowy – zmowa milcząca.
-
 # mikro-struktury-3-cz2 | Kartele i organizacje świata
 
 Ten rozdział przenosi zmowy i konkurencję na skalę całego świata. Olimpiada lubi pytać o międzynarodowe organizacje, które ustalają zasady handlu.
@@ -166,6 +173,8 @@ Kraje tworzą też mniejsze **[[Porozumienia regionalne|porozumienia regionalne]
 **[[Międzynarodowy Fundusz Walutowy (MFW, IMF)|Międzynarodowy Fundusz Walutowy]]** powstał w 1944 roku w Bretton Woods. Pilnuje stabilności systemu walutowego i pożycza pieniądze krajom w kłopotach – zwykle pod warunkiem reform. Ma siedzibę w Waszyngtonie. Polska wystąpiła z MFW w 1950 roku i wróciła w 1986 roku. W latach 2009–2017 miała dostęp do Elastycznej Linii Kredytowej – rodzaju finansowego „koła ratunkowego” na wypadek kryzysu.
 
 > Zapamiętaj: OPEC – 1960, Wiedeń, kartel ropy; WTO – 1995, Genewa, następca GATT; MFW – 1944, Bretton Woods, Waszyngton.
+
+> Przykład: kraje OPEC umawiają się, by obniżyć wydobycie o 2 mln baryłek dziennie. Cena ropy rośnie, ale każdy członek ma pokusę, by potajemnie wydobywać więcej – i dlatego kartele są niestabilne.
 
 # mikro-struktury-4 | Gra w zdradę i współpracę
 
@@ -194,6 +203,10 @@ Firma dominująca może bronić rynku. **[[Ceny zaporowe (limit pricing) i ceny 
 ## Zwycięzca bierze wszystko
 
 Dlaczego najlepszy piłkarz zarabia wielokrotnie więcej niż dziesiąty najlepszy, choć różnica umiejętności jest niewielka? Sherwin Rosen wyjaśnił to **[[Ekonomia supergwiazd (fenomen megagwiazdy)|ekonomią supergwiazd]]**. Gdy jeden wykonawca może obsłużyć miliony odbiorców – w muzyce, sporcie, mediach – wszyscy chcą najlepszego. Małe różnice talentu dają ogromne różnice dochodów.
+
+> Uwaga: w dylemacie więźnia równowaga Nasha **nie jest** najlepsza dla obu graczy – obaj zdradzają, choć współpraca dałaby im więcej.
+
+> Zapamiętaj: strategia dominująca – najlepsza bez względu na rywala; równowaga Nasha – nikt nie chce zmienić strategii sam.
 
 # mikro-struktury-5 | Jak zmierzyć siłę firmy
 
@@ -231,10 +244,13 @@ William Baumol pokazał, że liczy się nie tylko, ile firm jest na rynku, ale t
 
 W konkurencji monopolistycznej firmy działają przy **[[Nadwyżka mocy produkcyjnych|nadwyżce mocy produkcyjnych]]** – produkują mniej, niż wynosiłaby skala najtańsza. To koszt tego, że mamy wybór między wieloma różnymi kawiarniami.
 
+> Uwaga: wskaźnik Lernera = (P − MC) / P: 0 – brak siły rynkowej (konkurencja doskonała); im bliżej 1, tym większa siła.
+
+> Zapamiętaj: HHI – suma kwadratów udziałów rynkowych; Lerner – narzut ceny nad kosztem krańcowym.
+
 ## Na marginesie
 
 Pytano też o [[Polityka państwa wobec monopoli|politykę państwa wobec monopoli]], [[Nieuczciwa konkurencja|nieuczciwą konkurencję]] oraz instytucje nadzoru: [[Komisja Nadzoru Finansowego (KNF)|KNF]] (rynek finansowy), [[Najwyższa Izba Kontroli (NIK)|NIK]] (kontrola państwa) i [[Rzecznik Finansowy|Rzecznika Finansowego]] (ochrona klientów banków i ubezpieczycieli).
-
 # mikro-struktury-5-cz2 | Jak firmy się łączą i liczą pieniądze
 
 Ten rozdział łączy struktury rynku z praktyką prowadzenia firmy.
@@ -268,6 +284,8 @@ Firma żyje nie tylko z zysku, ale i z płynności. **[[Należności i zobowiąz
 
 > Zapamiętaj: trust – utrata samodzielności; koncern – wspólne kierownictwo w branży; konglomerat – różne branże; holding – spółka matka i córki.
 
+> Uwaga: leniency (program łagodzenia kar) nagradza **pierwszego**, kto ujawni kartel – to celowo podkopuje zaufanie między uczestnikami zmowy.
+
 # mikro-struktury-6 | Wejście, wyjście i ochrona pomysłów
 
 ## Rynek, który sam się wyrównuje
@@ -294,10 +312,13 @@ Wynalazca, który wydał lata i miliony na nowy lek, nie chciałby, by konkurent
 
 Producent może żądać od sklepów, żeby nie sprzedawały taniej niż określona cena. To **[[Narzucanie cen odsprzedaży|narzucanie cen odsprzedaży]]**. Krytycy widzą w tym ograniczenie konkurencji, obrońcy – sposób, by sklepy dbały o obsługę klienta. W UE i Polsce jest to co do zasady zakazane.
 
+> Przykład: pizzerie w mieście zarabiają po 20 000 zł zysku ekonomicznego rocznie. Otwierają się nowe, ceny spadają, aż zysk ekonomiczny spada do zera. Firmy dalej działają – zarabiają tyle, ile mogłyby gdzie indziej.
+
+> Zapamiętaj: w długim okresie w konkurencji doskonałej zysk ekonomiczny = 0, a P = min ATC.
+
 ## Na marginesie
 
 Pytania dotyczyły też [[Uwarunkowania rozpoczęcia działalności gospodarczej|zakładania firmy]] (CEIDG lub KRS, NIP, REGON, ZUS), [[Prawo własności przemysłowej (2000)|prawa własności przemysłowej]], [[Własność intelektualna|własności intelektualnej]] oraz [[Licencja i know-how|licencji i know-how]] – czyli sposobów, w jakie pomysły stają się towarem.
-
 # mikro-struktury-7 | Pakiety, reklama i ekonomia przemysłowa
 
 ## Dwa w jednym
@@ -321,3 +342,5 @@ Wszystko, czego dowiedziałeś się w tym dziale, należy do **[[Ekonomia przemy
 W PRL istniał szczególny monopol: prawo do handlu z zagranicą miały tylko państwowe centrale handlu zagranicznego. Zwykła firma nie mogła sama sprzedać towaru za granicę. To **[[Monopol handlu zagranicznego|monopol handlu zagranicznego]]**, zniesiony w reformach końca lat 80.
 
 > Zapamiętaj: paradygmat SCP – struktura → zachowanie → wyniki. Reklama może być sygnałem jakości, bo opłaca się tylko dobrym produktom.
+
+> Uwaga: sprzedaż wiązana bywa **legalna** (pakiety TV+internet), ale staje się nadużyciem, gdy dominująca firma zmusza do kupna drugiego produktu.

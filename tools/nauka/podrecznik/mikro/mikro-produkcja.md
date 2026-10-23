@@ -67,10 +67,13 @@ $ TC = w·L + r·K
 
 Najtaniej produkujesz tam, gdzie izokwanta dotyka najniższej izokoszty. Wtedy ostatnia złotówka wydana na kucharza daje tyle samo pizz, co ostatnia złotówka wydana na piec.
 
+> Przykład: jeden kucharz robi 10 pizz na godzinę, dwóch – 25, trzech – 35, czterech – 40. Produkt krańcowy kolejnych kucharzy: 10, 15, 10, 5 – od trzeciego zaczyna maleć, bo piec jest jeden. To prawo malejących przychodów.
+
+> Zapamiętaj: produkt całkowity, przeciętny (TP/L) i krańcowy (ΔTP/ΔL); prawo malejących przychodów działa, gdy jeden czynnik jest stały.
+
 ## Na marginesie
 
 Olimpiada pytała tu też o [[Koszt całkowity (TC) i przeciętny koszt całkowity (ATC)|koszt całkowity i przeciętny]], [[Funkcja Cobba-Douglasa|funkcję Cobba-Douglasa]], rynek pracy – [[Histereza bezrobocia|histerezę bezrobocia]] i [[Krzywa Beveridge’a|krzywą Beveridge’a]] – oraz o kodeksowe zasady dotyczące [[Urlop wypoczynkowy i czas pracy|urlopu i czasu pracy]] (20 lub 26 dni urlopu, 8 godzin na dobę i przeciętnie 40 w tygodniu).
-
 # mikro-produkcja-1-cz2 | Gdy produkcja spotyka całą gospodarkę
 
 Ten rozdział łączy pojedynczą firmę z gospodarką jako całością. Olimpiada lubi takie mosty, bo pokazują, czy rozumiesz, że koszty jednej pizzerii i inflacja w kraju to części jednej układanki.
@@ -94,6 +97,8 @@ Gospodarką wstrząsają **[[Szok podażowy i popytowy|szoki]]**. Szok popytowy 
 Produkcja potrzebuje rąk do pracy, a te zależą od demografii. **[[Współczynnik dzietności (TFR)|Współczynnik dzietności]]** mówi, ile dzieci rodzi przeciętnie kobieta. Richard Easterlin zauważył, że liczne roczniki mają trudniej na rynku pracy i rodzą mniej dzieci – to **[[Hipoteza Easterlina (względnego dochodu)|hipoteza Easterlina]]**. A to, jak długo pracujemy, wyznacza między innymi **[[Wiek emerytalny w Polsce|wiek emerytalny]]**: w Polsce 60 lat dla kobiet i 65 dla mężczyzn.
 
 > Zapamiętaj: negatywny szok podażowy = wyższe ceny i niższa produkcja naraz (stagflacja).
+
+> Uwaga: krótki okres to czas, w którym **przynajmniej jeden** czynnik jest stały – nie konkretna liczba miesięcy.
 
 # mikro-produkcja-2 | Najtańszy przepis i magia skali
 
@@ -132,10 +137,13 @@ Gdy produkcja rośnie, koszt jednej sztuki często spada. To **[[Korzyści skali
 
 Najmniejsza produkcja, przy której koszt przeciętny jest już najniższy, to **[[Minimalna skala efektywna (MES)|minimalna skala efektywna]]**. Gdy jest ogromna w stosunku do rynku – jak w produkcji samolotów – mieści się na nim tylko kilka firm.
 
+> Uwaga: korzyści skali to spadek **przeciętnego kosztu długookresowego** przy większej skali; rosnące przychody skali – produkcja rośnie szybciej niż wszystkie nakłady.
+
+> Zapamiętaj: MRTS = MP_L / MP_K; najtańsza kombinacja: MP_L / w = MP_K / r; Cobb–Douglas: Y = A·K^α·L^β.
+
 ## Na marginesie
 
 Pytania dotyczyły też [[Koszty zmienne (VC)|kosztów zmiennych]], [[Zysk ekonomiczny (nadzwyczajny)|zysku ekonomicznego]] i [[Krzywa doświadczenia (uczenia się)|krzywej doświadczenia]]: im więcej razy coś robisz, tym robisz to taniej. Według BCG podwojenie łącznej produkcji obniża koszt jednostkowy o 20–30%.
-
 # mikro-produkcja-3 | Rodzina kosztów
 
 ## Stałe i zmienne
@@ -171,10 +179,13 @@ Właściciel pizzerii płaci za mąkę i prąd – to **[[Koszty jawne (księgow
 
 > Uwaga: koszt krańcowy dotyczy zmiany kosztu przy **jednej dodatkowej** sztuce, a nie kosztu przeciętnego. To częsta pomyłka w zadaniach z tabelką.
 
+> Przykład: pizzeria: FC = 6000 zł, przy 300 pizzach VC = 3000 zł. TC = 9000 zł, ATC = 30 zł, AVC = 10 zł, AFC = 20 zł. Przy 600 pizzach AFC spada do 10 zł.
+
+> Zapamiętaj: TC = FC + VC; MC przecina AVC i ATC w ich minimach; optimum techniczne – min ATC (MC = ATC), ekonomiczne – MR = MC.
+
 ## Na marginesie
 
 Pytano też o [[Krótkookresowe i długookresowe krzywe kosztów|krzywe kosztów w długim okresie]], [[Produkt przeciętny i krańcowy, optimum czynników – wzory|wzory teorii produkcji]], [[Innowacja|innowacje]] według Schumpetera, [[Kontyngent (kwota importowa)|kontyngent importowy]], [[Dźwignia operacyjna i finansowa (DOL, DFL)|dźwignię operacyjną i finansową]] (koszty stałe zwiększają wahania zysku) oraz [[Rachunek kosztów pełnych i zmiennych|rachunek kosztów pełnych i zmiennych]].
-
 # mikro-produkcja-3-cz2 | Koszty w księgach firmy
 
 Ekonomista i księgowy patrzą na te same koszty inaczej. Ten rozdział pokazuje trzy pojęcia z rachunkowości, które olimpiada łączyła z teorią kosztów.
@@ -201,6 +212,8 @@ Na koniec roku pizzeria liczy wynik. **[[Wynik finansowy – poziomy|Wynik finan
 
 Do rachunkowości wrócisz szczegółowo w temacie „Finanse przedsiębiorstw”. Tu wystarczy, że wiesz, skąd na wykresie kosztów biorą się amortyzacja i raty.
 
+> Uwaga: amortyzacja to **koszt bez wydatku** w danym roku – pieniądze wydano wcześniej, przy zakupie maszyny.
+
 # mikro-produkcja-4 | Prawdziwy zysk i niewidzialne koszty
 
 ## Pieniądze, których już nie odzyskasz
@@ -226,10 +239,11 @@ $ zysk ekonomiczny = zysk księgowy − koszty alternatywne
 
 > Przykład: pizzeria ma 60 000 zł zysku księgowego rocznie. Właściciel na etacie zarobiłby 70 000 zł. Jego zysk ekonomiczny wynosi −10 000 zł – mimo „zysku” w księgach, ekonomicznie traci.
 
+> Zapamiętaj: koszty utopione ignoruj; zysk ekonomiczny = przychód − koszty jawne − koszty alternatywne.
+
 ## Na marginesie
 
 Pytano też o [[Logistyka i łańcuch dostaw (SCM)|logistykę i łańcuch dostaw]], [[Negocjacje|negocjacje]] (np. metodę harwardzką: skup się na interesach, nie na stanowiskach) oraz laureatów Nobla z 2024 roku – [[Acemoglu Daron, Johnson Simon, Robinson James|Acemoglu, Johnsona i Robinsona]], którzy pokazali, że bogactwo narodów zależy od jakości instytucji.
-
 # mikro-produkcja-5 | Ile produkować i kiedy się zamknąć
 
 ## Złota reguła zysku
@@ -266,6 +280,10 @@ Pizzeria dymi na całe osiedle. Sąsiedzi cierpią, ale firma za to nie płaci. 
 
 Neoklasycy mówią: tak. Ale istnieją inne **[[Cele przedsiębiorstwa i teorie firmy|teorie firmy]]**. Menedżerowie mogą dążyć do jak największej sprzedaży (Baumol), wzrostu (Marris) albo własnej wygody (Williamson). Teoria behawioralna widzi w firmie koalicję grup, którym wystarczy „wynik zadowalający”. W bilansie widać, skąd firma ma pieniądze – opisują to [[Pasywa: kapitał własny i zobowiązania|pasywa]]: kapitał własny i zobowiązania.
 
+> Przykład: cena pizzy 30 zł, AVC przy obecnej produkcji 25 zł, ATC 35 zł. Pizzeria ma stratę, ale cena pokrywa koszty zmienne i część stałych – w krótkim okresie opłaca się nie zamykać. Gdyby cena spadła poniżej 25 zł – lepiej zgasić piec.
+
+> Zapamiętaj: MR = MC – wielkość produkcji; P < min AVC – zamknięcie w krótkim okresie; P < min ATC – wyjście w długim.
+
 # mikro-produkcja-6 | Firma w długim okresie
 
 ## Krzywe kosztów w dwóch horyzontach
@@ -297,10 +315,13 @@ Skąd bierze się zysk nadzwyczajny? Frank Knight odpowiadał: to nagroda za pod
 
 Wszystko, czego uczyliśmy się w tym dziale, to **[[Neoklasyczna teoria przedsiębiorstwa (firmy)|neoklasyczna teoria firmy]]**: firma maksymalizuje zysk przy danej technologii i pełnej racjonalności. To świadome uproszczenie. Inne teorie – behawioralne, menedżerskie, instytucjonalne – powstały jako jej krytyka i rozwinięcie.
 
+> Przykład: mała pizzeria ma ATC 30 zł, średnia przy dwa razy większej produkcji – 25 zł, duża przy czterokrotnie większej – 27 zł. Najniższy koszt przeciętny ma skala średnia: to minimalna efektywna skala dla tego rynku.
+
+> Zapamiętaj: LRAC – „obwiednia” krzywych krótkookresowych; korzyści, stałe i niekorzyści skali.
+
 ## Na marginesie
 
 Pytania sięgały tu do makroekonomii: [[Bank centralny|banku centralnego]], [[Zagregowana podaż (AS)|zagregowanej podaży]], [[Inflacja oczekiwana i nieoczekiwana|inflacji oczekiwanej i nieoczekiwanej]], [[Podaż pieniądza (nominalna i realna)|podaży pieniądza]], [[Oszczędności narodowe (prywatne i publiczne)|oszczędności narodowych]] i [[Model Solowa|modelu Solowa]], w którym długookresowy wzrost zależy od postępu technicznego.
-
 # mikro-produkcja-6-cz2 | Ekonomiści wzrostu i rozwoju
 
 Postęp techniczny i długi okres prowadzą prosto do pytania: dlaczego jedne kraje są bogate, a inne biedne? Ten rozdział przedstawia trzech noblistów, którzy szukali na nie odpowiedzi.
@@ -320,3 +341,5 @@ Gdy dziś słyszysz w wiadomościach, że „PKB wzrósł o 3%”, zawdzięczasz
 **[[Romer Paul|Paul Romer]]** pokazał, że wzrost gospodarczy nie spada z nieba jako „postęp techniczny”, tylko wynika z decyzji ludzi: inwestowania w badania i wiedzę. To endogeniczna teoria wzrostu. Kluczowa myśl: wiedza jest dobrem nierywalizacyjnym. Ten sam wzór czy przepis może wykorzystać tysiąc firm naraz i nikomu go nie ubędzie. Romer dostał Nobla w 2018 roku i był głównym ekonomistą Banku Światowego.
 
 > Zapamiętaj: Kuznets – rachunki narodowe (PKB); Lewis – gospodarka dualna; Romer – endogeniczny wzrost i wiedza; Solow – neoklasyczny model wzrostu.
+
+> Uwaga: Lewis opisał przepływ pracowników **ze wsi do przemysłu** (gospodarka dualna), Romer – wiedzę jako źródło wzrostu endogenicznego; Kuznets – rachunki narodowe i hipotezę odwróconego U.

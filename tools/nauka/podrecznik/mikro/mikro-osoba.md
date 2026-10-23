@@ -28,6 +28,10 @@ Nagroda Banku Szwecji im. Alfreda Nobla w dziedzinie ekonomii przyznawana jest o
 
 # mikro-osoba-1 | Od Gossena do Kahnemana
 
+## Kto wymyślił to, czego uczysz się w mikroekonomii?
+
+Malejąca użyteczność, koszty transakcyjne, rynek cytryn, tragedia wspólnego pastwiska – za każdym z tych pojęć stoi konkretny człowiek i jedno dobre pytanie.
+
 ## Hermann Heinrich Gossen
 
 **[[Gossen Hermann Heinrich|Gossen]]** był niemieckim urzędnikiem, który w 1854 roku wydał książkę o prawach rządzących przyjemnością. Sformułował dwa prawa: malejącej użyteczności krańcowej i równowagi konsumenta. Książka przeszła bez echa i wycofano ją ze sprzedaży. Odnaleziono ją dopiero po rewolucji marginalistycznej – w 1878 roku – a Jevons uczciwie przyznał, że Gossen go wyprzedził.
@@ -54,7 +58,13 @@ Nagroda Banku Szwecji im. Alfreda Nobla w dziedzinie ekonomii przyznawana jest o
 
 > Zapamiętaj: Gossen – prawa użyteczności (1854); Coase – koszty transakcyjne (Nobel 1991); Akerlof – rynek cytryn (Nobel 2001); Duesenberry – dochód względny; Hardin – tragedia pastwiska; Kahneman – teoria perspektywy (Nobel 2002).
 
+> Uwaga: Gossen sformułował prawa użyteczności w **1854 r.**, ale doceniono go dopiero po rewolucji marginalistycznej (1871–1874).
+
 # mikro-osoba-2 | Wielcy neoklasycy
+
+## Wielcy neoklasycy
+
+Pod koniec XIX i na początku XX wieku kilku ekonomistów zbudowało język, którym mówimy o rynkach: popyt i podaż na jednym wykresie, efektywność, efekty zewnętrzne.
 
 ## Alfred Marshall
 
@@ -82,7 +92,13 @@ Nagroda Banku Szwecji im. Alfreda Nobla w dziedzinie ekonomii przyznawana jest o
 
 > Zapamiętaj: Marshall – popyt i podaż, elastyczność; Menger – szkoła austriacka; Mill – utylitaryzm; Nash – równowaga (Nobel 1994); Pareto – optimum i 80/20; Pigou – efekty zewnętrzne.
 
+> Uwaga: Pareto opisał **efektywność**, a nie sprawiedliwość – stan Pareto-optymalny może być bardzo nierówny.
+
 # mikro-osoba-3 | Ojciec ekonomii i nowe pokolenie
+
+## Od Smitha do współczesnych noblistów
+
+Ekonomia zaczęła się od szkockiego filozofa i jego manufaktury szpilek. Dziś noblistami zostają ekonomiści, którzy projektują aukcje i badają psychologię wyborów.
 
 ## Adam Smith
 
@@ -110,7 +126,13 @@ Nagroda Banku Szwecji im. Alfreda Nobla w dziedzinie ekonomii przyznawana jest o
 
 > Zapamiętaj: Smith – „Bogactwo narodów” 1776; Walras – równowaga ogólna 1874; Thaler – nudge (Nobel 2017); Tversky – partner Kahnemana; Maskin – mechanizmy (2007); Milgrom – aukcje (2020).
 
+> Uwaga: Walras stworzył teorię **równowagi ogólnej** (wszystkie rynki naraz), Marshall – **cząstkowej** (jeden rynek).
+
 # mikro-osoba-4 | Gracze, branże i supergwiazdy
+
+## Gry, branże i supergwiazdy
+
+Dlaczego współpraca opłaca się w długich relacjach? Dlaczego najlepsi zarabiają nieproporcjonalnie dużo? Jak zbudowane są branże? Na te pytania odpowiadali ekonomiści tego rozdziału.
 
 ## Robert Axelrod
 
@@ -138,7 +160,13 @@ Nagroda Banku Szwecji im. Alfreda Nobla w dziedzinie ekonomii przyznawana jest o
 
 > Zapamiętaj: Axelrod – „wet za wet”; Bain – SCP i bariery wejścia; Frank – dobra pozycyjne; Gorynia – mezoekonomia; Rosen – supergwiazdy; Williamson – koszty transakcyjne (Nobel 2009).
 
+> Uwaga: „wet za wet” wygrał turnieje Axelroda **w powtarzanym** dylemacie więźnia – w jednorazowej grze opłaca się zdradzić.
+
 # mikro-osoba-5 | Twórcy narzędzi analizy
+
+## Twórcy narzędzi
+
+Równanie Slutsky’ego, model Stackelberga, wskaźnik HHI, indeks Lernera – to narzędzia, którymi ekonomiści do dziś analizują rynki. Każde ma swojego autora.
 
 ## Eugen Slutsky
 
@@ -170,7 +198,13 @@ Nagroda Banku Szwecji im. Alfreda Nobla w dziedzinie ekonomii przyznawana jest o
 
 > Zapamiętaj: Slutsky – efekt dochodowy i substytucyjny; Stackelberg – lider i naśladowca; Lerner – siła monopolu; Baumol – rynki kontestowalne i choroba kosztów; Stigler – przejęcie regulacyjne.
 
+> Uwaga: w modelu **Stackelberga** jedna firma decyduje pierwsza (lider), w modelu **Cournota** – obie jednocześnie.
+
 # mikro-osoba-6 | O firmach, ryzyku i sprawiedliwości
+
+## Firmy, ryzyko i sprawiedliwość
+
+Czy firma naprawdę maksymalizuje zysk? Czym ryzyko różni się od niepewności? Co jest sprawiedliwym podziałem? Te pytania łączą ekonomię z filozofią.
 
 ## Cyert i March
 
@@ -198,7 +232,13 @@ Nagroda Banku Szwecji im. Alfreda Nobla w dziedzinie ekonomii przyznawana jest o
 
 > Zapamiętaj: Cyert i March – behawioralna teoria firmy; Leibenstein – X-nieefektywność; Knight – ryzyko a niepewność; Clark – krańcowa produktywność; Rawls – zasłona niewiedzy; Nozick – państwo minimalne.
 
+> Uwaga: **Knight** odróżnił ryzyko (znane prawdopodobieństwa) od niepewności (nieznane) – to rozróżnienie wraca w zarządzaniu i finansach.
+
 # mikro-osoba-7 | Filozofowie, matematycy i empirycy
+
+## Filozofowie, matematycy i empirycy
+
+Ekonomia korzysta z filozofii (co to jest dobrobyt?), matematyki (teoria gier) i statystyki (eksperymenty naturalne). Ten rozdział zbiera ludzi z tych trzech światów.
 
 ## Jeremy Bentham
 
@@ -226,6 +266,8 @@ Nagroda Banku Szwecji im. Alfreda Nobla w dziedzinie ekonomii przyznawana jest o
 
 > Zapamiętaj: Bentham – utylitaryzm; Jevons – marginalizm 1871; Arrow – niemożność i Arrow–Debreu; Card i Krueger – płaca minimalna 1994; Chamberlin i Robinson – 1933; von Neumann i Morgenstern – teoria gier 1944.
 
+> Uwaga: Card i Krueger pokazali na danych z barów szybkiej obsługi, że podwyżka płacy minimalnej **nie musiała** zmniejszyć zatrudnienia – wbrew prostemu modelowi.
+
 # mikro-osoba-8 | Dwie wielkie postaci ekonomii informacji i dóbr wspólnych
 
 ## Elinor Ostrom
@@ -245,3 +287,5 @@ W 2009 roku, razem z Oliverem Williamsonem, otrzymała Nobla z ekonomii – jako
 Ostrom i Spence badali sytuacje, w których klasyczny rynek „nie działa sam”. Ostrom pokazała, że ludzie potrafią tworzyć własne instytucje do zarządzania wspólnym dobrem. Spence – że ludzie potrafią przekazywać informacje, których nie da się bezpośrednio sprawdzić. Oboje rozszerzyli ekonomię poza świat idealnych rynków.
 
 > Zapamiętaj: Ostrom – dobra wspólne, pierwsza kobieta z Noblem z ekonomii (2009); Spence – sygnalizacja na rynku pracy (Nobel 2001).
+
+> Uwaga: Ostrom (Nobel 2009) pokazała, że wspólnymi zasobami mogą skutecznie zarządzać **społeczności lokalne** – bez państwa i bez prywatyzacji, wbrew pesymizmowi Hardina.
