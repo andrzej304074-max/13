@@ -54,11 +54,20 @@ Rząd obniża podatki i finansuje to długiem. Czy ludzie wydadzą więcej? **[[
 
 **[[Niekeynesowskie efekty polityki fiskalnej|Niekeynesowskie efekty]]** to sytuacja, gdy cięcia wydatków pobudzają wzrost. Jak to możliwe? Gdy dług jest bardzo wysoki, ludzie i inwestorzy boją się kryzysu. Wiarygodna konsolidacja przywraca zaufanie, obniża stopy procentowe i zachęca do wydatków. Mnożnik staje się ujemny.
 
+> Przykład: rząd obniża podatek o 1000 zł na osobę i pożycza na to pieniądze. Jeśli ludzie wierzą, że za kilka lat podatki wzrosną o tyle samo plus odsetki, odłożą te 1000 zł – i konsumpcja się nie zmieni. Tak działa ekwiwalencja ricardiańska w czystej postaci.
+
+> Uwaga: krzywa Laffera **nie mówi**, że obniżka podatków zawsze zwiększa wpływy – tylko wtedy, gdy stawka jest powyżej szczytu t*.
+
+> Zapamiętaj: ekonomia podaży – bodźce i niskie podatki; ekwiwalencja ricardiańska – dług dziś to podatki jutro (Barro, 1974).
+
 ## Na marginesie
 
 Warto odróżniać [[Deficyt budżetowy i deficyt sektora finansów publicznych|deficyt budżetowy od deficytu sektora]] oraz [[Podatki bezpośrednie i pośrednie|podatki bezpośrednie]] (PIT, CIT) od pośrednich (VAT, akcyza).
-
 # pol-fiskalna-2 | Reguły, które trzymają budżet w ryzach
+
+## Dlaczego politykom trzeba związać ręce?
+
+Wydawanie pieniędzy przynosi głosy, a podnoszenie podatków – wrogów. Bez zasad budżet prawie zawsze rósłby szybciej niż dochody. Dlatego finanse publiczne mają hamulce zapisane w konstytucji i ustawach.
 
 ## Polityka fiskalna
 
@@ -85,6 +94,10 @@ Od 2014 roku obowiązuje **[[Stabilizująca reguła wydatkowa|stabilizująca reg
 **[[Konsolidacja fiskalna|Konsolidacja fiskalna]]** to zmniejszanie deficytu i długu: cięcie wydatków lub podnoszenie podatków.
 
 > Przykład: deficyt 5% PKB, rząd chce zejść do 3%. Może obciąć wydatki o 1,5% PKB i podnieść podatki o 0,5% PKB. Ekonomiści spierają się, która droga mniej szkodzi wzrostowi.
+
+> Uwaga: konstytucyjny limit 3/5 PKB dotyczy **państwowego długu publicznego** w definicji krajowej, a próg 55% to próg **ostrożnościowy** z ustawy, nie z konstytucji.
+
+> Zapamiętaj: art. 216 ust. 5 Konstytucji – dług ≤ 3/5 PKB; złota zasada – pożyczaj tylko na inwestycje.
 
 # pol-fiskalna-3 | Unijne reguły i prawa wydatków
 
@@ -115,3 +128,5 @@ Budżet UE zatwierdza m.in. **[[Parlament Europejski|Parlament Europejski]]** �
 **[[Sektor finansów publicznych|Sektor finansów publicznych]]** to wszystkie instytucje publiczne: ministerstwa, samorządy, jednostki budżetowe, agencje, fundusze celowe, ZUS, NFZ, uczelnie publiczne. To ich łączny deficyt i dług podlegają regułom UE.
 
 > Zapamiętaj: pakt fiskalny – deficyt strukturalny ≤ 0,5% PKB; nadwyżka długu ponad 60% – redukcja o 1/20 rocznie.
+
+> Uwaga: deficyt **strukturalny** jest oczyszczony z wpływu koniunktury, a deficyt **cykliczny** wynika z samej koniunktury (np. niższe wpływy w recesji).

@@ -25,6 +25,10 @@ G7 skupia siedem najbogatszych gospodarek, G20 – największe gospodarki świat
 
 # polityka-instytucja-1 | Rząd, Komisja i kluby państw
 
+## Kto pisze budżet?
+
+Budżet państwa nie powstaje w Sejmie, tylko w rządzie. Sejm go zmienia i uchwala, prezydent podpisuje, a w Brukseli inne instytucje patrzą, czy deficyt mieści się w regułach.
+
 ## Polski rząd
 
 **[[Rada Ministrów|Rada Ministrów]]** opracowuje projekt ustawy budżetowej i przedkłada go Sejmowi do 30 września. Po uchwaleniu wykonuje budżet. Prezydent może skierować ustawę budżetową do Trybunału Konstytucyjnego, który ma 2 miesiące na orzeczenie.
@@ -52,7 +56,15 @@ G7 skupia siedem najbogatszych gospodarek, G20 – największe gospodarki świat
 
 **[[Grupa G7 i G20|G7]]** to siedem najbardziej rozwiniętych gospodarek: USA, Japonia, Niemcy, Wielka Brytania, Francja, Włochy i Kanada. **G20** – 19 państw, UE i Unia Afrykańska. Polska nie należy do żadnej z tych grup.
 
+> Uwaga: Komisja Europejska **proponuje** prawo UE, a uchwalają je Rada UE i Parlament Europejski – Komisja nie jest „rządem”, który sam stanowi prawo.
+
+> Zapamiętaj: projekt budżetu – Rada Ministrów do 30 września; G7 – siedem największych gospodarek rozwiniętych, G20 – także wschodzące.
+
 # polityka-instytucja-2 | Parlament, statystyka i fundusz ratunkowy
+
+## Trzy rady, które łatwo pomylić
+
+W Brukseli i Strasburgu działa kilka instytucji o podobnych nazwach. Pomylić je to najprostszy sposób na stracenie punktu w teście.
 
 ## Rada UE i Rada Europejska
 

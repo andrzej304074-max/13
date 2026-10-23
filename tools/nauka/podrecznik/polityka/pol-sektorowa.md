@@ -30,6 +30,10 @@ Polityka energetyczna musi pogodzić trzy cele: bezpieczeństwo dostaw, przystę
 
 # pol-sektorowa-1 | Regiony, środowisko i innowacje
 
+## Dlaczego Śląsk przestał żyć z węgla?
+
+Przez dziesięciolecia kopalnie dawały Śląskowi pracę. Gdy węgiel przestał się opłacać, trzeba było zmienić całą strukturę regionalnej gospodarki – i to nie zrobiło się samo.
+
 ## Zmieniać strukturę gospodarki
 
 **[[Polityka strukturalna i regionalna|Polityka strukturalna]]** zmienia strukturę gospodarki – sektorową, regionalną, technologiczną. Przykładem jest restrukturyzacja górnictwa na Śląsku. **Polityka regionalna** wyrównuje poziom rozwoju regionów i wspiera słabsze.
@@ -58,11 +62,20 @@ Polityka energetyczna musi pogodzić trzy cele: bezpieczeństwo dostaw, przystę
 
 **[[Transfery socjalne|Transfery socjalne]]** – zasiłki, emerytury, renty – to wydatki publiczne, ale nie wchodzą do PKB jako zakupy rządowe (G), bo państwo nie kupuje za nie dóbr ani usług.
 
+> Przykład: region ma PKB na mieszkańca równe 70% średniej UE – kwalifikuje się do największego wsparcia (regiony słabiej rozwinięte poniżej 75%).
+
+> Uwaga: polityka **regionalna** wyrównuje różnice między regionami, **strukturalna** – zmienia strukturę gospodarki (np. odejście od górnictwa); często się nakładają.
+
+> Zapamiętaj: polityka strukturalna – zmiana struktury; regionalna – wyrównywanie regionów; innowacyjna – nauka i B+R.
+
 ## Na marginesie
 
 Pojawiała się też [[Grupa G7 i G20|grupa G7 i G20]].
-
 # pol-sektorowa-2 | Konkurencja, pomoc publiczna i energia
+
+## Kto pilnuje, żeby firmy się nie zmawiały?
+
+Trzy stacje benzynowe w mieście mają identyczne ceny co do grosza. Przypadek? Może. Ale jeśli się umówiły, łamią prawo – a w Polsce i w UE są urzędy, które to ścigają.
 
 ## Strażnik konkurencji
 
@@ -92,7 +105,17 @@ Jak wykryć tajny kartel? **[[Program leniency (łagodzenia kar)|Program lenienc
 
 Państwo organizuje też system **[[Ubezpieczenie|ubezpieczeń]]**: **[[Ubezpieczenia społeczne (ZUS)|społecznych]]** (emerytalne, rentowe, chorobowe, wypadkowe – ZUS), zdrowotnych (**[[Narodowy Fundusz Zdrowia (NFZ)|NFZ]]**) i gwarancyjnych – **[[Ubezpieczeniowy Fundusz Gwarancyjny (UFG)|UFG]]** wypłaca odszkodowania za szkody wyrządzone przez nieubezpieczonych kierowców.
 
+> Przykład: kartel trzech firm płaci karę do 10% obrotu. Pierwsza firma, która sama zgłosi zmowę (leniency), może uniknąć kary całkowicie – dlatego kartele są niestabilne.
+
+> Uwaga: pomoc publiczna jest **co do zasady zakazana** w UE, ale są wyjątki (np. pomoc regionalna, de minimis, na badania).
+
+> Zapamiętaj: UOKiK w Polsce, Komisja Europejska w UE; leniency – nagroda dla pierwszego, kto ujawni kartel.
+
 # pol-sektorowa-3 | Strefy, tygrysy i bieguny wzrostu
+
+## Jak przyciągnąć fabrykę do swojego miasta?
+
+Miasta i kraje rywalizują o inwestorów: zwolnieniami z podatków, gotowymi terenami, szkoleniem pracowników. Niektóre kraje w ten sposób przeskoczyły z biedy do bogactwa w jedno pokolenie.
 
 ## Strefy ekonomiczne
 
@@ -121,3 +144,5 @@ Innowacje nie biorą się z pojedynczych genialnych wynalazców. **[[Narodowy sy
 - **horyzontalna** – tworzy ogólne warunki dla wszystkich firm: prywatyzacja, zachęty do oszczędzania i inwestowania, wspieranie innowacji, informacja o trendach.
 
 > Zapamiętaj: tygrysy – Korea Płd., Tajwan, Hongkong, Singapur; Perroux – bieguny wzrostu (1955).
+
+> Uwaga: od 2018 r. ulgi daje **Polska Strefa Inwestycji** na terenie całego kraju – stare specjalne strefy ekonomiczne straciły monopol na zwolnienia.

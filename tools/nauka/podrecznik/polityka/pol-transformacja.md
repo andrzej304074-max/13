@@ -31,6 +31,10 @@ Do dziś trwa spór, czy lepsza była terapia szokowa (Polska), czy gradualizm (
 
 # pol-transformacja-1 | Plan, niedobór i rynek
 
+## Dlaczego w PRL stało się w kolejkach?
+
+W sklepie był ocet, a po papier toaletowy ustawiała się kolejka. Nie dlatego, że ludzie byli biedni – mieli pieniądze, ale nie było czego kupić. Tak działa gospodarka, w której ceny ustala urzędnik, a nie rynek.
+
 ## Ustroje i systemy
 
 **[[Ustroje społeczno-ekonomiczne i systemy gospodarcze|Ustrój]]** określa stosunki własności i władzy – kapitalizm albo socjalizm. **System gospodarczy** to sposób koordynacji decyzji: rynkowy (przez ceny), nakazowo-rozdzielczy (przez centralne planowanie) albo mieszany.
@@ -57,7 +61,15 @@ W finansach publicznych istnieją **[[Państwowy fundusz celowy|państwowe fundu
 
 > Zapamiętaj: Kornai – gospodarka niedoboru, miękkie ograniczenie budżetowe; Williamson (1989) – konsensus waszyngtoński.
 
+> Przykład: urzędnik ustala cenę mięsa na 50 zł/kg, a ludzie przy tej cenie chcą kupić 2 razy więcej, niż jest. Bez podwyżki ceny pojawia się kolejka i kartki – niedobór.
+
+> Uwaga: **ustrój** (kapitalizm, socjalizm) to stosunki własności i władzy, **system gospodarczy** (rynkowy, nakazowo-rozdzielczy) – sposób koordynacji decyzji.
+
 # pol-transformacja-2 | Od reform PRL do Okrągłego Stołu
+
+## Czy PRL próbowała się reformować?
+
+Tak, wiele razy. Każda reforma kończyła się jednak tak samo – częściowe zmiany nie usuwały niedoborów, a długi rosły. Dopiero Okrągły Stół w 1989 roku otworzył drogę do prawdziwej zmiany systemu.
 
 ## Pomoc i blok wschodni
 
@@ -81,6 +93,10 @@ Kraje w kryzysie, które prosiły MFW o pożyczkę, musiały przyjąć **[[Progr
 
 Zwieńczeniem pierwszego etapu transformacji było wejście Polski do **[[OECD|OECD]]** 22 listopada 1996 roku.
 
+> Uwaga: Polska **odmówiła** udziału w planie Marshalla w 1947 r. pod presją ZSRR – nie dostała tych pieniędzy.
+
+> Zapamiętaj: plan Marshalla od 1948 r.; RWPG 1949 r.; Okrągły Stół 1989 r.
+
 # pol-transformacja-3 | Szok czy stopniowo?
 
 ## Dwie drogi
@@ -102,3 +118,5 @@ Jak powstrzymać spiralę płacowo-cenową po uwolnieniu cen? Plan Balcerowicza 
 **[[Prywatyzacja bezpośrednia (likwidacyjna) i akcjonariat pracowniczy|Prywatyzacja bezpośrednia]]** (z ustawy z 1990 roku) dotyczyła głównie małych i średnich firm. Przedsiębiorstwo można było sprzedać, wnieść do spółki albo oddać w odpłatne korzystanie – tzw. leasing pracowniczy – spółce utworzonej przez pracowników. Ta ostatnia forma stała się najpopularniejsza. Obok istniała prywatyzacja kapitałowa (komercjalizacja i sprzedaż akcji, część dla pracowników) i powszechna (NFI).
 
 > Zapamiętaj: popiwek – 1984–1994; leasing pracowniczy – najpopularniejsza ścieżka prywatyzacji bezpośredniej.
+
+> Uwaga: terapia szokowa to **równoczesne** reformy (stabilizacja, liberalizacja, prywatyzacja), a gradualizm – rozłożone w czasie; popiwek był narzędziem stabilizacji, nie prywatyzacji.

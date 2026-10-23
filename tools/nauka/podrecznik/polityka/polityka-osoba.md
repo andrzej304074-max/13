@@ -24,6 +24,10 @@ Joseph Stiglitz i Dani Rodrik krytykowali MFW i konsensus waszyngtoński, który
 
 # polityka-osoba-1 | Balcerowicz, Kalecki, Lange i inni
 
+## Polacy, którzy zmienili ekonomię
+
+Polska dała światu kilku ekonomistów, których nazwiska znają studenci na całym świecie – i architekta jednej z najszybszych transformacji w historii.
+
 ## Architekt transformacji
 
 **[[Balcerowicz Leszek|Leszek Balcerowicz]]** był wicepremierem i ministrem finansów w latach 1989–1991 i 1997–2000. Przygotował program transformacji, który wszedł w życie 1 stycznia 1990 roku. W latach 2001–2007 był prezesem NBP.
@@ -48,7 +52,15 @@ Joseph Stiglitz i Dani Rodrik krytykowali MFW i konsensus waszyngtoński, który
 
 **[[McKinnon Ronald, Kenen Peter|Ronald McKinnon i Peter Kenen]]** razem z Mundellem stworzyli teorię optymalnych obszarów walutowych. McKinnon (1963) wskazał na otwartość gospodarki, Kenen (1969) – na zróżnicowanie produkcji.
 
+> Uwaga: Kalecki opisał efektywny popyt **niezależnie** i nieco wcześniej niż Keynes – dlatego nazywa się go „polskim Keynesem”.
+
+> Zapamiętaj: Balcerowicz – plan transformacji 1990; Kalecki – teoria efektywnego popytu; Lange – socjalizm rynkowy.
+
 # polityka-osoba-2 | Minsky, Mundell, Stiglitz i Taylor
+
+## Ekonomiści, którzy przewidzieli kryzysy
+
+Niektórzy ekonomiści byli przez lata ignorowani, dopóki kryzys nie potwierdził ich ostrzeżeń. Inni zaprojektowali narzędzia, których banki centralne używają codziennie.
 
 ## Niestabilność finansowa
 
@@ -74,7 +86,13 @@ Joseph Stiglitz i Dani Rodrik krytykowali MFW i konsensus waszyngtoński, który
 
 > Zapamiętaj: Rodrik – trylemat globalizacji; Mundell–Fleming – trylemat walutowy. Nie myl ich!
 
+> Uwaga: Minsky opisał, jak **stabilność rodzi niestabilność** – w spokojnych czasach rośnie skłonność do ryzykownego długu.
+
 # polityka-osoba-3 | Od Hume’a do Kwiatkowskiego
+
+## Od XVIII-wiecznych filozofów do budowniczych Gdyni
+
+Pytania o handel, pieniądz i rolę państwa zadawano na długo przed powstaniem ekonomii jako nauki – a odpowiedzi kształtowały politykę także w Polsce.
 
 ## Konsensus waszyngtoński
 
@@ -98,7 +116,13 @@ Joseph Stiglitz i Dani Rodrik krytykowali MFW i konsensus waszyngtoński, który
 
 > Zapamiętaj: Kwiatkowski – Gdynia i COP; Hume – mechanizm przepływu kruszców.
 
+> Uwaga: konsensus waszyngtoński to zestaw **zaleceń** (dyscyplina budżetowa, liberalizacja, prywatyzacja), a nie instytucja.
+
 # polityka-osoba-4 | Ludzie przełomu i pierwszy noblista
+
+## Ludzie przełomu 1989 roku
+
+Zmiana systemu to nie tylko ustawy – to konkretni ludzie, którzy zamykali urzędy planowania, kierowali pierwszymi rządami i budowali nowe instytucje.
 
 ## Plan, który się kończył
 
@@ -117,3 +141,5 @@ Joseph Stiglitz i Dani Rodrik krytykowali MFW i konsensus waszyngtoński, który
 **[[Tinbergen Jan|Jan Tinbergen]]**, holenderski ekonomista, w 1969 roku razem z Ragnarem Frischem otrzymał pierwszą w historii Nagrodę Nobla z ekonomii – za dynamiczne modele procesów gospodarczych. Stworzył teorię polityki gospodarczej opartą na celach i instrumentach. Reguła Tinbergena mówi: ile celów, tyle potrzeba niezależnych narzędzi. Był też pionierem ekonometrii.
 
 > Przykład: rząd chce jednocześnie obniżyć inflację i bezrobocie. Według Tinbergena potrzebuje dwóch narzędzi – np. polityki pieniężnej dla inflacji i aktywnej polityki rynku pracy dla bezrobocia.
+
+> Uwaga: Tadeusz Mazowiecki był pierwszym niekomunistycznym premierem (1989), a Leszek Balcerowicz – jego wicepremierem i ministrem finansów.

@@ -57,13 +57,20 @@ Czy Polska i Portugalia powinny mieć wspólną walutę? A Teksas i Kalifornia? 
 
 Teorie konsumpcji pomagają zrozumieć skutki szoków. **[[Hipoteza dochodu permanentnego|Hipoteza dochodu permanentnego]]** Miltona Friedmana (1957): ludzie wydają w zależności od dochodu, którego spodziewają się na stałe, a nie od bieżącego. **[[Hipoteza cyklu życia|Hipoteza cyklu życia]]** Franco Modiglianiego: oszczędzamy w wieku produkcyjnym, a wydajemy oszczędności na emeryturze. **[[Duesenberry James|James Duesenberry]]** dodał, że liczy się dochód względny – porównujemy się z innymi. Punktem wyjścia jest **[[Dochód osobisty i dochód rozporządzalny|dochód rozporządzalny]]**.
 
+> Przykład: Hiszpanię dotyka kryzys turystyki, a Niemcy mają boom eksportowy. Z własną walutą Hiszpania mogłaby obniżyć stopy i pozwolić pesecie osłabnąć. W strefie euro stopy są wspólne – zostają elastyczne płace, migracja pracowników i transfery z budżetu.
+
+> Uwaga: szok **asymetryczny** dotyka kraje różnie – dopiero wtedy brak własnej waluty boli; szok symetryczny wspólna polityka pieniężna łagodzi dla wszystkich naraz.
+
+> Zapamiętaj: Mundell: wspólna waluta opłaca się, gdy szoki są podobne, a praca i kapitał mobilne.
+
 ## Na marginesie
 
 Pojawiał się też duet [[Modigliani Franco, Miller Merton|Modigliani–Miller]].
-
 # pol-ue-1-cz2 | Ekonomiści, którzy zaprojektowali myślenie o euro
 
-Ten rozdział przedstawia ekonomistów, których idee pojawiają się w debatach o integracji i pieniądzu.
+## Skąd się wzięło euro?
+
+Zanim politycy postanowili o wspólnej walucie, ekonomiści przez dekady spierali się, kiedy taka waluta ma sens i co robić, gdy wybucha kryzys. Ich nazwiska wracają w każdej debacie o euro.
 
 ## Ojcowie obszarów walutowych
 
@@ -92,7 +99,13 @@ Ten rozdział przedstawia ekonomistów, których idee pojawiają się w debatach
 
 > Zapamiętaj: Mundell (1961), McKinnon (1963), Kenen (1969) – optymalne obszary walutowe.
 
+> Uwaga: pożyczkodawca ostatniej instancji (Bagehot) pożycza **wypłacalnym** bankom w panice, na dobre zabezpieczenie i drogo – a nie ratuje każdego.
+
 # pol-ue-2 | Od strefy wolnego handlu do jednolitego rynku
+
+## Od wspólnych ceł do wspólnej waluty
+
+Dzisiaj możesz pojechać do Hiszpanii bez paszportu, kupić tam buty bez cła i zapłacić euro. Kilkadziesiąt lat temu każda z tych rzeczy wymagała osobnego porozumienia. Integracja szła krok po kroku.
 
 ## Drabina integracji
 
@@ -135,13 +148,20 @@ Unia celna ma **[[Efekty kreacji i przesunięcia handlu|dwa efekty]]** (Jacob Vi
 
 **[[Instytucje UE|Instytucje UE]]**: Parlament Europejski, Rada Europejska, Rada UE, Komisja Europejska, Trybunał Sprawiedliwości, EBC i Trybunał Obrachunkowy. Dane dla nich liczy **[[Europejski Urząd Statystyczny (Eurostat)|Eurostat]]**.
 
+> Przykład: przed unią celną Polska kupowała pralki z Niemiec z 10% cłem, a z Korei – też z 10%. Po wejściu do unii celnej niemieckie są bez cła, koreańskie dalej z cłem. Część zakupów przesuwa się do Niemiec, choć koreańskie mogły być tańsze – to przesunięcie handlu.
+
+> Uwaga: unia **celna** ma wspólną zewnętrzną taryfę; strefa **wolnego handlu** – nie (każdy kraj ustala własne cła wobec reszty świata).
+
+> Zapamiętaj: Balassa: strefa wolnego handlu → unia celna → wspólny rynek → unia gospodarcza → pełna integracja.
+
 ## Na marginesie
 
 Pojawiały się też: [[Inwestycje bezpośrednie (BIZ) i portfelowe|inwestycje bezpośrednie i portfelowe]], [[2002 – gotówka euro|gotówka euro w 2002 roku]], [[Współczynnik obciążenia demograficznego|współczynnik obciążenia demograficznego]] i [[Współczynnik dzietności (TFR)|współczynnik dzietności]].
-
 # pol-ue-2-cz2 | Handel, migracje i granice w Unii
 
-Ten rozdział zbiera pojęcia, które pokazują, jak integracja zmienia życie ludzi i firm.
+## Co zmieniła Unia w życiu zwykłych ludzi?
+
+Wyjazd do pracy w Irlandii, zakupy przez internet z Niemiec, ceny w euro na Słowacji – to wszystko skutki integracji, które widać na co dzień.
 
 ## Bez granic
 
@@ -171,9 +191,15 @@ Wspólna Polityka Rolna próbuje łagodzić **[[Paradoks rolnictwa (dobra nowina
 
 Unijne przepisy coraz częściej wymagają od firm raportowania w zakresie **[[Społeczna odpowiedzialność biznesu (CSR)|społecznej odpowiedzialności]]**. A umowy między firmami z różnych krajów wymagają umiejętnych **[[Negocjacje|negocjacji]]**.
 
+> Uwaga: strefa Schengen i Unia Europejska to **różne** obszary – np. Szwajcaria jest w Schengen, a nie jest w UE.
+
 # pol-ue-2-cz3 | Prawo, waluty i ludzie
 
 Kolejny rozdział zbiorczy – o zasadach prawa UE, historii walutowej i migracjach.
+
+## Kto ma rację: prawo polskie czy unijne?
+
+Gdy przepis krajowy kłóci się z unijnym, sąd musi zdecydować, który zastosować. Prawo UE ma swoje zasady pierwszeństwa – a obok nich historia walut i ludzi, którzy kształtowali Europę.
 
 ## Zasady prawa UE
 
@@ -197,9 +223,15 @@ Akty prawne to rozporządzenia (stosowane bezpośrednio), dyrektywy (państwa mu
 
 **[[Mnożnik zrównoważonego budżetu (Haavelmo)|Mnożnik zrównoważonego budżetu]]** Haavelmo: wzrost wydatków i podatków o tę samą kwotę zwiększa dochód o tę samą kwotę. **[[Europejski Bank Odbudowy i Rozwoju (EBOiR)|EBOiR]]** (od 1991 roku) wspierał transformację w Europie Środkowo-Wschodniej. Prawo rozróżnia **[[Osoba fizyczna, prawna i jednostka organizacyjna|osobę fizyczną i prawną]]**.
 
+> Uwaga: zasada **pierwszeństwa** mówi, że prawo UE wygrywa z krajowym; zasada **bezpośredniego skutku** – że obywatel może się na nie powołać przed sądem.
+
 # pol-ue-2-cz4 | Podatki, konkurencja i rynek
 
 Ostatni rozdział zbiorczy przy jednolitym rynku – o podatkach, konkurencji i firmach.
+
+## Jednolity rynek – czy podatki też są jednolite?
+
+Towar przejeżdża przez granicę bez kontroli, ale podatki wciąż ustala każdy kraj. UE pilnuje uczciwej konkurencji, ale VAT czy CIT w Polsce i w Irlandii mogą być zupełnie różne.
 
 ## Podatki w Polsce
 
@@ -226,7 +258,13 @@ UE definiuje **[[Mała, średnia i mikrofirma (MŚP)|małe i średnie firmy]]**:
 
 > Zapamiętaj: jednolity rynek od 1 stycznia 1993 r.
 
+> Uwaga: UE ujednoliciła **zasady** VAT (dyrektywa), ale **stawki** różnią się między krajami w ustalonych granicach.
+
 # pol-ue-3 | Unia walutowa i jej kryzys
+
+## Jedna waluta, wiele budżetów
+
+W strefie euro jest jeden bank centralny, ale dwadzieścia jeden rządów, każdy z własnym długiem. Gdy jeden z nich ma kłopoty, płacą wszyscy – tak pokazał kryzys grecki.
 
 ## Trzy etapy UGW
 
@@ -256,13 +294,20 @@ UE definiuje **[[Mała, średnia i mikrofirma (MŚP)|małe i średnie firmy]]**:
 
 Po kryzysie powstała **[[Unia bankowa|unia bankowa]]** (od 2014 roku): EBC nadzoruje istotne banki strefy euro, działa wspólny mechanizm restrukturyzacji. Wspólny system gwarantowania depozytów jest wciąż w przygotowaniu.
 
+> Przykład: Grecja przed kryzysem pożyczała prawie tak tanio jak Niemcy, bo rynki zakładały, że strefa euro jej nie zostawi. Gdy okazało się, że dług i deficyt były wyższe, niż podawano, rentowność greckich obligacji wystrzeliła, a kraj stracił dostęp do rynku.
+
+> Uwaga: do strefy euro wchodzi się po spełnieniu **kryteriów z Maastricht** (inflacja, deficyt, dług, stopy, kurs w ERM II), a nie po samym wejściu do UE.
+
+> Zapamiętaj: UGW – trzy etapy 1990–1999; euro bezgotówkowo 1999, gotówka 2002.
+
 ## Na marginesie
 
 Pojawiały się też: [[Oszczędności narodowe (prywatne i publiczne)|oszczędności narodowe]], [[Pieniądz elektroniczny i karta płatnicza|pieniądz elektroniczny]], [[Bank Rozrachunków Międzynarodowych (BIS)|BIS]] i [[Finanse publiczne|finanse publiczne]].
-
 # pol-ue-3-cz2 | Ratunek, gwarancje i fundusze
 
-Ten rozdział zbiera pojęcia związane z bezpieczeństwem finansowym i wsparciem w UE.
+## Kto ratuje, gdy państwo albo bank upada?
+
+Kryzys strefy euro pokazał, że wspólna waluta potrzebuje wspólnych zabezpieczeń: funduszu ratunkowego, gwarancji depozytów i zasad pomocy publicznej.
 
 ## Fundusz ratunkowy
 
@@ -286,7 +331,13 @@ Do porównań zamożności krajów UE używa się **[[PKB per capita i parytet s
 
 > Zapamiętaj: EMS – od 2012 r.; gwarancja depozytów – 100 000 euro.
 
+> Uwaga: gwarancja depozytów w UE obejmuje do **100 000 euro** na deponenta w jednym banku – nie na każde konto osobno.
+
 # pol-ue-4 | Fundusze, handel i brexit
+
+## Skąd wzięły się nowe drogi i boiska?
+
+Na wielu tablicach przy inwestycjach w Polsce widać flagę UE. To fundusze europejskie – największy program przekazywania pieniędzy od bogatszych regionów do biedniejszych w historii Europy.
 
 ## Pieniądze z Unii
 
@@ -323,11 +374,20 @@ W 2022 roku UE po raz pierwszy uruchomiła **[[Ochrona czasowa (dyrektywa 2001/5
 
 **[[Struktura instytucjonalna i zasady funkcjonowania UE|Zasady funkcjonowania UE]]**: subsydiarność, proporcjonalność, pierwszeństwo prawa unijnego.
 
+> Przykład: gmina buduje drogę za 10 mln zł. 85% kosztów może pokryć dotacja unijna, a 15% – wkład własny gminy. Bez wkładu własnego nie dostanie dotacji.
+
+> Uwaga: polityka handlowa UE jest **wyłączną** kompetencją Unii – Polska nie zawiera sama umów handlowych z państwami spoza UE.
+
+> Zapamiętaj: brexit – referendum 2016, wyjście 31 stycznia 2020 r.
+
 ## Na marginesie
 
 Pojawiały się też: [[Karta Polaka i Niebieska Karta UE|Karta Polaka i Niebieska Karta UE]], [[Bank Światowy|Bank Światowy]], [[Fuzja i przejęcie (M&A)|fuzje i przejęcia]], [[OPEC|OPEC]] i [[Organizacja|organizacja]].
-
 # pol-ue-5 | Droga Polski do Unii
+
+## Dziesięć lat drogi
+
+1 maja 2004 roku Polska weszła do Unii. Ale droga zaczęła się dużo wcześniej – od układu stowarzyszeniowego, przez wniosek o członkostwo, negocjacje, aż po referendum.
 
 ## Długi marsz
 
@@ -359,3 +419,5 @@ Etapy potwierdził traktat z Maastricht.
 Polska zobowiązała się w traktacie akcesyjnym do przyjęcia euro, ale bez terminu. Żeby to zrobić, musiałaby spełnić kryteria z Maastricht, przez dwa lata uczestniczyć w ERM II i zmienić Konstytucję (art. 227 o NBP). Spór o euro – korzyści z integracji kontra utrata własnej polityki pieniężnej – trwa.
 
 > Zapamiętaj: traktat akcesyjny – Ateny, 16 kwietnia 2003 r.; członkostwo – 1 maja 2004 r.
+
+> Uwaga: Polska jest w UE od 2004 r., w strefie Schengen od 2007 r., ale **nie** w strefie euro – zobowiązała się przyjąć euro, nie podając daty.

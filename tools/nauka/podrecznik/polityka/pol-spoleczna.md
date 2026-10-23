@@ -31,6 +31,10 @@ Polityka społeczna to też wsparcie rodzin (800+, urlopy rodzicielskie, żłobk
 
 # pol-spoleczna-1 | Praca, płace i podatki od pracy
 
+## Zasiłek czy szkolenie?
+
+Ktoś stracił pracę. Państwo może dać mu zasiłek, żeby przetrwał, albo zapłacić za kurs, po którym znajdzie nową. Pierwsze to polityka pasywna, drugie – aktywna.
+
 ## Aktywnie czy pasywnie
 
 **[[Aktywna i pasywna polityka rynku pracy|Polityka rynku pracy]]** ma dwie twarze:
@@ -59,11 +63,18 @@ Wysoki klin zniechęca do legalnego zatrudnienia i sprzyja **[[Szara strefa|szar
 
 **[[Polityka dochodowa i społeczna|Polityka dochodowa]]** wpływa na poziom i podział dochodów: płaca minimalna, podatki, transfery, negocjacje trójstronne. **Polityka społeczna** jest szersza – obejmuje zabezpieczenie społeczne, rynek pracy, zdrowie, edukację, mieszkalnictwo.
 
+> Uwaga: klin podatkowy to różnica między **kosztem pracy dla pracodawcy** a **pensją netto** pracownika – obejmuje podatki i składki obu stron.
+
+> Zapamiętaj: aktywna polityka rynku pracy – szkolenia, staże, pośrednictwo; pasywna – zasiłki; model duński – flexicurity.
+
 ## Na marginesie
 
 Pojawiały się też: [[Ekonomia|definicja ekonomii]], [[Branża (sektor)|branża]], [[Stopa efektywna|stopa efektywna]] i [[Wynik finansowy – poziomy|poziomy wyniku finansowego]].
-
 # pol-spoleczna-2 | Ceny, rodzina i dialog
+
+## Kto ustala cenę prądu w twoim domu?
+
+Cenę chleba ustala rynek, ale cenę prądu dla gospodarstw domowych zatwierdza urząd. Niektóre ceny są administrowane, bo dotyczą dóbr, bez których nie da się żyć.
 
 ## Ceny ustalane przez państwo
 
@@ -90,3 +101,7 @@ Instytut Pracy i Spraw Socjalnych wylicza **[[Minimum socjalne i minimum egzyste
 **[[Układy zbiorowe pracy i regulacje rynku pracy|Układ zbiorowy pracy]]** to porozumienie związków zawodowych z pracodawcą określające warunki pracy i płacy – zakładowe albo ponadzakładowe (dla całej branży). W Polsce obejmują znacznie mniejszą część pracowników niż w Europie Zachodniej.
 
 > Zapamiętaj: Rada Dialogu Społecznego – od 2015 r. (wcześniej Trójstronna Komisja, 1994–2015).
+
+> Przykład: minimum egzystencji dla jednoosobowego gospodarstwa wynosi np. 1000 zł miesięcznie, a ktoś ma 900 zł. Żyje w skrajnym ubóstwie – jego dochód nie pokrywa podstawowych potrzeb biologicznych.
+
+> Uwaga: **minimum socjalne** to poziom pozwalający żyć skromnie, ale godnie; **minimum egzystencji** – tylko przetrwanie. Minimum egzystencji jest niższe.

@@ -24,6 +24,10 @@ Kryzys zadłużeniowy w strefie euro, 500+ i brexit, reformy emerytalne, PPK, Po
 
 # polityka-data-1 | Od GATT do unii celnej
 
+## Jak Europa nauczyła się handlować bez barier?
+
+Po II wojnie światowej cła i kontyngenty dzieliły kraje murami. W ciągu dwudziestu lat kilka porozumień zamieniło je w kolejne kroki integracji – od obniżek ceł do wspólnej taryfy.
+
 ## 1947 – GATT
 
 **[[1947 – GATT|GATT]]** – Układ ogólny w sprawie taryf celnych i handlu – podpisano w Genewie w 1947 roku. Przez prawie pół wieku obniżał cła w kolejnych rundach negocjacji. Polska przystąpiła w 1967 roku. W 1995 roku GATT zastąpiła WTO.
@@ -44,7 +48,15 @@ Kryzys zadłużeniowy w strefie euro, 500+ i brexit, reformy emerytalne, PPK, Po
 
 **[[1968 – unia celna EWG|W 1968 roku]]** EWG zniosła cła wewnętrzne i wprowadziła wspólną taryfę zewnętrzną. Tego samego roku Garrett Hardin opublikował „Tragedię wspólnego pastwiska”.
 
+> Uwaga: Polska przystąpiła do **GATT w 1967 r.**, a do **WTO w 1995 r.** – to dwie różne daty, bo WTO zastąpiło GATT dopiero w 1995 r.
+
+> Zapamiętaj: 1947 GATT, 1951 EWWiS, 1957 traktaty rzymskie, 1961 OECD, 1968 unia celna EWG.
+
 # polityka-data-2 | Od ESW do jednolitego rynku
+
+## Dekady przełomów
+
+Od lat 70. do 90. Europa przeszła drogę od kryzysów naftowych do jednolitego rynku, a Polska – od gospodarki planowej do rynku. Kilka dat spina te dwie historie.
 
 ## 1979 – ESW i ropa
 
@@ -66,7 +78,15 @@ Kryzys zadłużeniowy w strefie euro, 500+ i brexit, reformy emerytalne, PPK, Po
 
 **[[1993 – reguła Taylora i jednolity rynek UE|Od 1 stycznia 1993 roku]]** działa jednolity rynek UE. Tego roku John Taylor opublikował swoją regułę.
 
+> Uwaga: traktat z Maastricht podpisano w **1992 r.**, a wszedł w życie w **1993 r.** – pytania często pytają o jedną z tych dat.
+
+> Zapamiętaj: 1979 ESW i ECU; 1986 Polska wraca do MFW; 1989 Okrągły Stół; 1992 Maastricht; 1993 jednolity rynek.
+
 # polityka-data-3 | Nowy złoty, nowe instytucje, nowa Europa
+
+## Nowy złoty i nowe instytucje
+
+W połowie lat 90. Polska porządkowała państwo po transformacji: skreśliła cztery zera ze złotego, weszła do klubu bogatych krajów i uchwaliła konstytucję, która zapisała niezależność banku centralnego.
 
 ## 1995 – denominacja
 
@@ -90,7 +110,15 @@ Kryzys zadłużeniowy w strefie euro, 500+ i brexit, reformy emerytalne, PPK, Po
 
 **[[2004 – Polska w Unii Europejskiej|1 maja 2004 roku]]** Polska i 9 innych państw przystąpiło do UE. Od 2004 roku obowiązuje ciągły cel inflacyjny NBP 2,5% ± 1 p.p.
 
+> Uwaga: denominacja (1995) to **skreślenie zer** – nie zmienia siły nabywczej; dewaluacja zmienia kurs waluty.
+
+> Zapamiętaj: 1995 denominacja i WTO; 1996 OECD; 1997 Konstytucja; 1998 RPP i EBC; 2004 UE.
+
 # polityka-data-4 | Kryzysy, świadczenia i Polski Ład
+
+## Kryzysy i reformy ostatnich lat
+
+Ostatnie piętnaście lat to kryzys strefy euro, brexit, wielkie programy socjalne, pandemia i najwyższa od ćwierć wieku inflacja. Daty pomagają ułożyć te wydarzenia w kolejności.
 
 ## 2010–2012 – kryzys strefy euro
 
@@ -111,6 +139,10 @@ Kryzys zadłużeniowy w strefie euro, 500+ i brexit, reformy emerytalne, PPK, Po
 ## 2022 – Polski Ład i inflacja
 
 **[[2022 – Polski Ład i cykl podwyżek stóp|Rok 2022]]**: reforma podatkowa Polski Ład (od lipca skala 12%/32%, kwota wolna 30 000 zł). Po agresji Rosji na Ukrainę 24 lutego – napływ uchodźców. RPP podniosła stopę referencyjną do 6,75% (wrzesień 2022). Inflacja osiągnęła szczyt 18,4% r/r w lutym 2023 roku.
+
+> Uwaga: „whatever it takes” Mario Draghi powiedział w **2012 r.** jako prezes EBC – to słowa, które uspokoiły rynki bez wydania pieniędzy.
+
+> Zapamiętaj: 2016 500+ i referendum brexitowe; 2019 PPK i split payment; 2022 Polski Ład.
 
 # polityka-data-5 | Najnowsza historia
 
@@ -135,3 +167,5 @@ Kryzys zadłużeniowy w strefie euro, 500+ i brexit, reformy emerytalne, PPK, Po
 **[[2026 – Bułgaria w strefie euro i KSeF|1 stycznia 2026 roku]]** Bułgaria przyjęła euro jako 21. państwo. Od lutego i kwietnia 2026 roku obowiązkowy jest Krajowy System e-Faktur. 4 marca wygaszono specustawę ukraińską. 1 marca emerytury zwaloryzowano o 5,3%.
 
 > Zapamiętaj: euro w Chorwacji – 2023, w Bułgarii – 2026; procedura nadmiernego deficytu wobec Polski – lipiec 2024.
+
+> Uwaga: Niemcy i Austria otworzyły rynki pracy dla Polaków w **2011 r.**, a Wielka Brytania, Irlandia i Szwecja – już w **2004 r.**

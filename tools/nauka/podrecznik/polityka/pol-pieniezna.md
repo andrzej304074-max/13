@@ -63,9 +63,15 @@ $ stopa poświęcenia = utracony PKB (p.p.) / spadek inflacji (p.p.)
 
 **[[Dezinflacja Volckera i Thatcher|Dwa słynne przykłady]]**. W USA Paul Volcker, szef Fed od 1979 roku, podniósł stopy do około 20%. Inflacja spadła z około 13,5% (1980) do około 3,2% (1983), ale bezrobocie w listopadzie 1982 roku sięgnęło 10,8%. W Wielkiej Brytanii rząd Margaret Thatcher prowadził politykę monetarystyczną: inflacja spadła z około 22% (1980) do około 5% (1983), a bezrobocie przekroczyło 3 miliony.
 
+> Uwaga: dezinflacja to **spadek tempa** wzrostu cen (inflacja z 10% do 4%), a nie spadek cen – to byłaby deflacja.
+
+> Zapamiętaj: kotwica nominalna: cel inflacyjny, kurs albo podaż pieniądza; stopa poświęcenia – ile PKB kosztuje 1 p.p. mniej inflacji.
+
 # pol-pieniezna-1-cz2 | Kto decyduje i czym mierzy
 
-Ten rozdział przypomina trzy pojęcia potrzebne, żeby rozumieć polską politykę pieniężną.
+## Kto w Polsce decyduje o stopach procentowych?
+
+Gdy w wiadomościach słyszysz „stopy bez zmian”, za tą decyzją stoi dziesięć osób. Żeby rozumieć ich decyzje, trzeba wiedzieć, kim są, jak mierzą inflację i dlaczego Polska wciąż ma złotego.
 
 ## Rada Polityki Pieniężnej
 
@@ -85,7 +91,13 @@ Kraje strefy euro nie mają własnej RPP. Politykę prowadzi wspólnie Europejsk
 
 > Zapamiętaj: euro – bezgotówkowo od 1999 r., gotówka od 2002 r.
 
+> Uwaga: inflację w Polsce mierzy GUS (CPI), a cel NBP odnosi się właśnie do CPI – nie do inflacji bazowej, choć RPP uważnie ją śledzi.
+
 # pol-pieniezna-2 | Stopy NBP i rynek międzybankowy
+
+## Jedna liczba, która zmienia raty kredytów
+
+Gdy RPP podnosi stopę referencyjną, po kilku tygodniach rośnie rata kredytu mieszkaniowego twoich rodziców. Jak to możliwe, skoro NBP nie pożycza pieniędzy ludziom? Przez rynek, na którym banki pożyczają sobie nawzajem.
 
 ## Trzy stopy
 
@@ -114,13 +126,18 @@ Jest też stopa redyskontowa i dyskontowa weksli.
 
 **[[Punkt procentowy a procent|Punkt procentowy a procent]]**: gdy stopa rośnie z 4% do 5%, rośnie o 1 punkt procentowy, ale o 25%. W finansach często używa się punktów bazowych: 1 pb = 0,01 p.p.
 
+> Uwaga: stopa **lombardowa** to górna granica korytarza (NBP pożycza bankom), **depozytowa** – dolna (NBP przyjmuje depozyty). Nie odwrotnie.
+
+> Zapamiętaj: korytarz stóp: depozytowa ≤ stopa overnight ≤ lombardowa; cel operacyjny – stopa POLONIA blisko referencyjnej.
+
 ## Na marginesie
 
 Pojawiały się też [[Ministerstwo Finansów (MF)|Ministerstwo Finansów]] i [[Podatek|definicja podatku]].
-
 # pol-pieniezna-2-cz2 | Rezerwy, WIBOR i wartość pieniądza w czasie
 
-Ten rozdział opisuje trzy pojęcia, które łączą politykę pieniężną z codziennymi finansami.
+## Polityka pieniężna w twoim portfelu
+
+Rezerwa obowiązkowa, WIBOR i wartość pieniądza w czasie brzmią technicznie, ale to one decydują, ile zapłacisz za kredyt i ile zarobisz na lokacie.
 
 ## Rezerwa obowiązkowa
 
@@ -143,7 +160,15 @@ $ PV = FV / (1 + r)ⁿ
 
 Stopy procentowe banku centralnego zmieniają tę wycenę: im wyższe stopy, tym mniej warte są dziś przyszłe pieniądze – dlatego przy podwyżkach stóp spadają ceny obligacji i często akcji.
 
+> Uwaga: WIBOR to oprocentowanie, po jakim banki **deklarują** pożyczać sobie pieniądze – stopa referencyjna NBP to coś innego, choć oba zwykle idą w tę samą stronę.
+
+> Zapamiętaj: FV = PV · (1 + r)ⁿ; PV = FV / (1 + r)ⁿ.
+
 # pol-pieniezna-3 | Narzędzia NBP i transmisja
+
+## Jak decyzja w Warszawie dociera do sklepu w Rzeszowie?
+
+RPP podnosi stopy w środę, a ceny w sklepach zaczynają rosnąć wolniej dopiero po roku. Po drodze decyzja przechodzi przez banki, kredyty, kurs złotego i oczekiwania ludzi. To mechanizm transmisji.
 
 ## Bony i repo
 
@@ -178,13 +203,18 @@ $ i = r* + π + 0,5 · (π − π*) + 0,5 · luka PKB
 
 W kryzysie reguła może dać stopę ujemną – stąd pomysły na niestandardowe narzędzia.
 
+> Uwaga: operacje otwartego rynku to **kupno i sprzedaż papierów** przez bank centralny; zmiana rezerwy obowiązkowej to osobne narzędzie.
+
+> Zapamiętaj: reguła Taylora: i = r* + π + 0,5(π − π*) + 0,5 · luka PKB.
+
 ## Na marginesie
 
 Pojawiały się też [[Przedsiębiorstwo państwowe i Skarb Państwa|Skarb Państwa]].
-
 # pol-pieniezna-3-cz2 | Inflacja, luka i płace
 
-Ten rozdział zbiera pojęcia, na które patrzy bank centralny, podejmując decyzje.
+## Na co patrzy bank centralny?
+
+Zanim RPP zmieni stopy, ogląda dziesiątki wskaźników: inflację, lukę PKB, płace, bezrobocie. Każdy mówi coś o tym, czy gospodarka się przegrzewa, czy stygnie.
 
 ## Inflacja i luka PKB
 
@@ -210,7 +240,13 @@ Inflację podbijają też decyzje rządu. Gdy rośnie **[[Podatek akcyzowy (akcy
 
 > Zapamiętaj: dodatnia luka PKB → przegrzanie → presja na podwyżki stóp.
 
+> Uwaga: podwyżka VAT jednorazowo podnosi poziom cen, ale nie musi trwale przyspieszać inflacji – bank centralny zwykle nie reaguje na takie szoki, jeśli nie zmieniają oczekiwań.
+
 # pol-pieniezna-4 | Gdy stopy dotykają zera
+
+## Co robić, gdy stóp nie da się już obniżyć?
+
+W 2009 i 2020 roku banki centralne obniżyły stopy prawie do zera, a gospodarka wciąż słabła. Klasyczne narzędzie się wyczerpało. Trzeba było sięgnąć po niestandardowe.
 
 ## Słowa jako narzędzie
 
@@ -232,13 +268,20 @@ Inflację podbijają też decyzje rządu. Gdy rośnie **[[Podatek akcyzowy (akcy
 
 **[[Asymetria polityki pieniężnej|Asymetria polityki pieniężnej]]**: łatwiej zahamować gospodarkę, niż ją pobudzić. „Bank centralny może pociągnąć za sznurek, ale nie może go pchać.” Wysokie stopy zatrzymają kredyty, ale niskie nie zmuszą nikogo do pożyczania, gdy ludzie się boją.
 
+> Przykład: bank centralny kupuje od banków obligacje za 100 mld zł. Banki mają więcej pieniędzy, a ceny obligacji rosną, więc ich rentowność spada – tanieją kredyty długoterminowe, choć stopa referencyjna stoi przy zerze.
+
+> Uwaga: QE to skup **aktywów** (głównie obligacji) za nowo wykreowane rezerwy, a nie „drukowanie pieniędzy dla rządu” – bank centralny kupuje na rynku wtórnym.
+
+> Zapamiętaj: forward guidance – słowa; QE – skup obligacji; QT – wycofanie; ujemne stopy – opłata za depozyt.
+
 ## Na marginesie
 
 Pojawiała się też [[Sekurytyzacja|sekurytyzacja]] – zamiana kredytów na papiery wartościowe, którą skupowano w ramach QE.
-
 # pol-pieniezna-4-cz2 | Rynki finansowe w czasach kryzysu
 
-Ten rozdział zbiera pojęcia z rynków finansowych, które pojawiają się przy niestandardowej polityce pieniężnej.
+## Kryzys, który nauczył banki centralne nowych sztuczek
+
+Upadek banku Lehman Brothers w 2008 roku zamroził rynki finansowe na całym świecie. Banki przestały sobie ufać i pożyczać. Banki centralne musiały zrozumieć te rynki lepiej niż kiedykolwiek.
 
 ## Kryzys, który zmienił banki centralne
 
@@ -258,7 +301,13 @@ Reakcje rynków na decyzje banków centralnych widać w **[[Indeksy światowe|in
 
 > Zapamiętaj: FOMC ustala stopę federal funds; Lehman Brothers – 15.09.2008.
 
+> Uwaga: rynek **pieniężny** to instrumenty do roku (bony, lokaty międzybankowe), rynek **kapitałowy** – powyżej roku (obligacje, akcje).
+
 # pol-pieniezna-5 | Niezależność i spory w Radzie
+
+## Dlaczego politycy nie mogą decydować o stopach?
+
+Przed wyborami każdy rząd chciałby tanich kredytów i szybkiego wzrostu. Kosztem byłaby inflacja – ale już po wyborach. Dlatego w większości krajów o stopach decyduje niezależny bank centralny.
 
 ## Jastrzębie i gołębie
 
@@ -280,13 +329,20 @@ W każdej radzie polityki pieniężnej są **[[Jastrzębie i gołębie|jastrzęb
 
 W marcu 2020 roku NBP zapowiedział **[[Kredyt wekslowy NBP|kredyt wekslowy]]**, udostępniony bankom od 10 kwietnia 2020 roku: banki mogły dyskontować w NBP weksle firm, żeby łatwiej udzielać kredytów. EBC stosował **[[LTRO|LTRO]]** – długoterminowe pożyczki dla banków.
 
+> Przykład: w RPP pięciu członków chce podwyżki o 0,25 p.p., pięciu – utrzymania stóp. Przy równym podziale głosów rozstrzyga głos prezesa NBP.
+
+> Uwaga: zakaz z art. 220 Konstytucji dotyczy **finansowania deficytu przez NBP** – NBP nie może kupować obligacji bezpośrednio od rządu na rynku pierwotnym.
+
+> Zapamiętaj: jastrzębie – walka z inflacją; gołębie – wsparcie wzrostu; niezależność – ochrona przed politycznym cyklem.
+
 ## Na marginesie
 
 Pojawiały się też [[Haircut (redukcja wartości)|haircut]] i [[Swap walutowy (FX swap)|swap walutowy]].
-
 # pol-pieniezna-5-cz2 | Państwo, banki i rynek w jednym obrazie
 
-Ten rozdział zbiera pojęcia z różnych dziedzin, które pojawiają się wokół polityki pieniężnej.
+## Pieniądz, banki i państwo – jeden system
+
+Bank centralny nie działa sam. Wokół niego są banki komercyjne, państwowe instytucje finansowe, samorządy i podatki – wszystkie połączone przepływami pieniędzy.
 
 ## Banki i rynek
 
@@ -308,9 +364,13 @@ Polityka pieniężna działa inaczej w **[[Krótki okres i długi okres|krótkim
 
 > Zapamiętaj: w krótkim okresie pieniądz może wpływać na produkcję (lepkość), w długim – tylko na ceny.
 
+> Uwaga: neutralność pieniądza dotyczy **długiego okresu**; w krótkim pieniądz wpływa na produkcję, bo ceny i płace są lepkie.
+
 # pol-pieniezna-5-cz3 | Kurs, euro i Konstytucja
 
-Krótki rozdział o tym, jak polityka pieniężna wiąże się z kursem i prawem.
+## Słabszy złoty – dobrze czy źle?
+
+Gdy złoty słabnie, wakacje za granicą drożeją, ale polskie firmy łatwiej sprzedają za granicą. Kurs to narzędzie i cel polityki zarazem, a jego ramy wyznacza nawet Konstytucja.
 
 ## Dewaluacja i rewaluacja
 
@@ -332,7 +392,13 @@ Ten ostatni przepis jest jednym z argumentów w sporze o euro: przyjęcie wspól
 
 > Zapamiętaj: art. 227 – NBP i wartość pieniądza; art. 220 ust. 2 – zakaz finansowania deficytu przez NBP; art. 216 ust. 5 – limit długu 3/5 PKB.
 
+> Uwaga: **dewaluacja** to decyzja o obniżeniu kursu w systemie kursu stałego; w kursie płynnym mówimy o **deprecjacji** (spadku pod wpływem rynku).
+
 # pol-pieniezna-6 | Projekcje i walka z inflacją
+
+## Prowadzić samochód, patrząc w lusterko?
+
+Bank centralny podejmuje decyzję dziś, a jej skutek zobaczy za rok lub dwa. Musi więc patrzeć przez przednią szybę – na prognozy – a nie tylko w lusterko wsteczne danych z ostatnich miesięcy.
 
 ## Patrzeć w przyszłość
 
@@ -355,3 +421,5 @@ Dezinflacja ma swój koszt – przejściowy spadek produkcji i wzrost bezrobocia
 Decyzje polityki gospodarczej ocenia się dwa razy. **[[Analiza ex ante i ex post|Analiza ex ante]]** – przed decyzją, na podstawie prognoz: co się stanie, jeśli podniesiemy stopy? **Analiza ex post** – po fakcie: co się naprawdę stało i czy decyzja była trafna? Projekcja NBP to narzędzie analizy ex ante, a porównanie jej z rzeczywistą inflacją – analizy ex post.
 
 > Zapamiętaj: Raport o inflacji – marzec, lipiec, listopad; model NECMOD.
+
+> Uwaga: projekcja NBP to **warunkowa prognoza** przy założeniu niezmienionych stóp – nie obietnica RPP.

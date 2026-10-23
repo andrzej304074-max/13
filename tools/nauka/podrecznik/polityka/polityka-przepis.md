@@ -24,6 +24,10 @@ Płacę minimalną co roku ustala rząd rozporządzeniem.
 
 # polityka-przepis-1 | Konstytucja, konkurencja, konsument, płaca
 
+## Gospodarka w Konstytucji
+
+Konstytucja to nie tylko prawa obywatela. Zapisano w niej też zasady gospodarki: społeczną gospodarkę rynkową, limit długu i niezależność banku centralnego.
+
 ## Konstytucja
 
 **[[Konstytucja RP – przepisy gospodarcze|Gospodarcze przepisy Konstytucji]]**:

@@ -24,6 +24,10 @@ Gdy ceny eksportu rosną szybciej niż ceny importu, kraj zyskuje – za ten sam
 
 # polityka-wzor-1 | Reguła Taylora, stopa poświęcenia i terms of trade
 
+## Trzy wzory polityki gospodarczej
+
+Bank centralny ustala stopy, ale skąd wie, jakie? Ile kosztuje obniżenie inflacji? Czy eksport się opłaca? Na każde z tych pytań jest prosty wzór.
+
 ## Reguła Taylora
 
 **[[Reguła Taylora|Reguła Taylora]]** (1993) określa stopę procentową banku centralnego:

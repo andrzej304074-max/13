@@ -36,6 +36,10 @@ Ekonomiści od dekad spierają się, czy państwo w ogóle powinno aktywnie ster
 
 # pol-podstawy-1 | Gaz, hamulec i autopilot
 
+## Dlaczego gospodarka nie jeździ prosto?
+
+Gospodarka raz przyspiesza tak, że ceny rosną z miesiąca na miesiąc, raz zwalnia i ludzie tracą pracę. Państwo próbuje te wahania łagodzić – czasem świadomie, a czasem samo z siebie, dzięki temu, jak zbudowane są podatki i zasiłki.
+
 ## Stabilizowanie gospodarki
 
 **[[Polityka stabilizacyjna|Polityka stabilizacyjna]]** ma łagodzić wahania koniunktury – działać antycyklicznie. W dobrych czasach hamować, w złych – pobudzać. Wahania mogą kończyć się **[[Recesja i depresja|recesją]]**, a nawet depresją.
@@ -60,7 +64,13 @@ Część stabilizacji dzieje się sama. **[[Automatyczne stabilizatory|Automatyc
 
 > Zapamiętaj: automatyczne stabilizatory – bez decyzji (podatki progresywne, zasiłki); dyskrecjonalna – świadoma decyzja.
 
+> Uwaga: automatyczne stabilizatory działają **bez nowej ustawy** – obniżka podatków uchwalona w recesji to już polityka dyskrecjonalna.
+
 # pol-podstawy-2 | Cele, czworokąt i historia interwencji
+
+## Czego chce państwo?
+
+Rząd obiecuje szybki wzrost, niskie bezrobocie, niskie ceny i zdrowy handel z zagranicą. Każdy z tych celów brzmi dobrze. Kłopot w tym, że często sobie przeszkadzają.
 
 ## Czym jest polityka gospodarcza
 
@@ -88,13 +98,18 @@ Czy w gospodarce rynkowej państwo coś planuje? Tak, ale inaczej niż w PRL. **
 
 **[[Transformacja systemowa i plan Balcerowicza|Plan Balcerowicza]]** od 1 stycznia 1990 roku zastąpił planowanie centralne rynkiem: uwolnił ceny, wprowadził wymienialność złotego, ograniczył deficyt.
 
+> Uwaga: magiczny czworokąt to cele **makroekonomiczne**; sprawiedliwy podział dochodu czy ochrona środowiska to cele dodatkowe, spoza czworokąta.
+
+> Zapamiętaj: plan Balcerowicza – 1 stycznia 1990 r.; reforma Grabskiego – 1924 r.; COP i Gdynia – Kwiatkowski.
+
 ## Na marginesie
 
 Pojawiały się też [[Stawki VAT w Polsce|stawki VAT]] (23%, 8%, 5%, 0%) i [[Stopa procentowa nominalna i realna|stopa procentowa nominalna i realna]] (r ≈ i − π).
-
 # pol-podstawy-2-cz2 | Wielcy uczestnicy debaty
 
-Ten rozdział przedstawia ekonomistów, którzy najmocniej wpłynęli na spory o rolę państwa.
+## Czy państwo powinno sterować gospodarką?
+
+Na to pytanie wielcy ekonomiści XX wieku odpowiadali zupełnie różnie – i ich spór trwa do dziś w każdej debacie budżetowej.
 
 ## Za interwencją
 
@@ -116,7 +131,13 @@ Ten rozdział przedstawia ekonomistów, którzy najmocniej wpłynęli na spory o
 
 > Zapamiętaj: Keynes i Galbraith – za aktywnym państwem; Hayek, Mises, Friedman – sceptycy. Phelps i Friedman – naturalna stopa bezrobocia.
 
+> Uwaga: Hayek i Mises to szkoła **austriacka**, Friedman – **monetaryzm**. Wszyscy byli sceptyczni wobec interwencji, ale z różnych powodów.
+
 # pol-podstawy-3 | Strategie, narzędzia i reguła Tinbergena
+
+## Jednym kluczem nie otworzysz dwóch zamków
+
+Bank centralny chce jednocześnie niskiej inflacji i stałego kursu waluty. Ma jedną stopę procentową. Czy da radę? Holenderski ekonomista Jan Tinbergen odpowiedział: nie – potrzeba tylu narzędzi, ilu celów.
 
 ## Kto, po co i czym
 
@@ -145,6 +166,12 @@ Jan Tinbergen sformułował **[[Reguła Tinbergena|regułę]]**: żeby osiągną
 
 **[[Płaca minimalna|Płaca minimalna]]** chroni najsłabiej zarabiających, ale ustalona za wysoko może zwiększać bezrobocie, bo narusza **[[Równowaga rynkowa|równowagę rynkową]]**. **[[Plan Marshalla|Plan Marshalla]]** (od 1948 roku) był przykładem pomocy zewnętrznej, która miała przyspieszyć **[[Wzrost gospodarczy|wzrost]]** w Europie. Integracja europejska – zob. **[[Unia Europejska – historia|historię UE]]** – to też strategia rozwoju. Teorię rynku, na której opierają się te narzędzia, zbudował m.in. **[[Marshall Alfred|Alfred Marshall]]**.
 
+> Przykład: rząd chce obniżyć inflację i jednocześnie zmniejszyć bezrobocie. Stopą procentową (jedno narzędzie) może walczyć z inflacją, ale bezrobocie wymaga drugiego narzędzia – np. szkoleń i ulg za zatrudnienie.
+
+> Uwaga: w policy mix ekspansja fiskalna z restrykcją pieniężną **podnosi stopy procentowe** i umacnia walutę – efekty obu polityk się nie znoszą, tylko przesuwają.
+
+> Zapamiętaj: reguła Tinbergena – tyle niezależnych narzędzi, ile celów.
+
 # pol-podstawy-4 | Państwo, wyborcy i politycy
 
 ## Dobra, które państwo wspiera
@@ -168,3 +195,7 @@ Ekonomiści analizują też samych polityków. **[[Ekonomiczna teoria demokracji
 **[[Teoria wyboru publicznego (public choice)|Teoria wyboru publicznego]]** (James Buchanan – Nobel 1986, Gordon Tullock) idzie dalej: politycy, urzędnicy i grupy interesu kierują się własnym interesem jak wszyscy. Stąd zawodność państwa, pogoń za rentą (lobbing o przywileje) i polityczny cykl koniunkturalny.
 
 > Zapamiętaj: merit goods – Musgrave; public choice – Buchanan (Nobel 1986), Tullock; ekonomiczna teoria demokracji – Downs (1957).
+
+> Przykład: państwo dopłaca 20 zł do każdego biletu do teatru i nakłada 30 zł akcyzy na karton papierosów. Pierwsze to wspieranie dobra pożądanego, drugie – zniechęcanie do niepożądanego.
+
+> Uwaga: merit goods to nie dobra publiczne – edukację można sprzedawać i wykluczać z niej, a mimo to państwo uznaje, że ludzie konsumują jej za mało.
