@@ -41,22 +41,35 @@ const SECTIONS = (() => {
   return [...m].sort((a, b) => a[0] - b[0]).map(([id, name]) => ({ id, name }));
 })();
 
-export interface MyStatsPayload extends MyStats {
+/** Bez ostatnich odpowiedzi przy pojęciach – te (z treścią pytań) pobiera dopiero rozwinięcie pojęcia (`getMyItemAnswers`). */
+export interface MyStatsPayload extends Omit<MyStats, "itemAnswers"> {
   names: { topics: Record<string, string>; units: Record<string, string>; items: Record<string, ItemMeta>; kinds: { id: string; title: string }[]; sections: { id: number; name: string }[] };
+}
+
+export interface MyItemAnswers {
+  answers: MyStats["itemAnswers"][string];
   questions: Record<string, { edition: string; question: string }>;
+}
+
+const recsFor = (bank: QSource) => (bank === "owe" ? OWE_STATS : bank === "ai" ? AI_STATS : SLOWNIK_STATS);
+
+/** Ostatnie odpowiedzi na pytania o jedno pojęcie (te same filtry co tabela) z treścią pytań. */
+export async function getMyItemAnswers(userId: string, bank: QSource, f: MyFilter, item: string): Promise<MyItemAnswers> {
+  const s = aggregate(await loadAnswers(userId, bank), recsFor(bank), itemMeta(), f);
+  const answers = s.itemAnswers[item] ?? [];
+  const questions: MyItemAnswers["questions"] = {};
+  for (const a of answers) {
+    const q = getQuestion(a.q);
+    if (q) questions[a.q] = { edition: q.edition, question: q.question };
+  }
+  return { answers, questions };
 }
 
 export async function getMyStats(userId: string, bank: QSource, f: MyFilter): Promise<MyStatsPayload> {
   const meta = itemMeta();
-  const recs = bank === "owe" ? OWE_STATS : bank === "ai" ? AI_STATS : SLOWNIK_STATS;
-  const s = aggregate(await loadAnswers(userId, bank), recs, meta, f);
+  const { itemAnswers: _skip, ...s } = aggregate(await loadAnswers(userId, bank), recsFor(bank), meta, f);
   const items: Record<string, ItemMeta> = {};
   for (const r of s.items) items[r.id] = meta[r.id];
-  const questions: MyStatsPayload["questions"] = {};
-  for (const l of Object.values(s.itemAnswers)) for (const a of l) {
-    const q = getQuestion(a.q);
-    if (q) questions[a.q] = { edition: q.edition, question: q.question };
-  }
   return {
     ...s,
     names: {
@@ -66,6 +79,5 @@ export async function getMyStats(userId: string, bank: QSource, f: MyFilter): Pr
       kinds: COURSE.kinds.filter((k) => k.id !== "zrozumienie"),
       sections: SECTIONS,
     },
-    questions,
   };
 }

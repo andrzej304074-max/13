@@ -191,3 +191,43 @@ Przegląd po rozbudowie o:
 
 ## Do decyzji
 - **Pytania z kluczem przy haśle** (`/api/pojecia/pytania`, rozwinięcie wiersza w Tabeli pojęć) pokazują poprawne odpowiedzi bez rozwiązywania testu. Mają limit 60 w 10 min i 400 na dobę. Można ukryć klucz całkiem, ale wtedy rozwinięcie traci wartość do nauki.
+
+# Debug końcowy – Plan II, etapy G1–G14 (październik 2026)
+
+Przegląd po rozbudowie o: szybkie sprawdzanie i sprawdzenie bez zaznaczenia, pytania obliczeniowe jako „wzór”, Pytania AI
+i zakładkę „Wszystkie pytania” z filtrami, filtry zapisywane na koncie, losowanie zadań i esejów, 400 pytań o haśle XL,
+przeróbkę definicji, mniej powtórek w kursie, Podręcznik w stylu Mankiwa z wykresami, notatki (linia, krzywa, pełny ekran),
+zgłoszenia w wyskakującym panelu, Literaturę i statystyki wg źródeł.
+
+## Jak sprawdzano
+- **Przegląd kodu** (`/code-review`, poziom wysoki) zmian w `app/`, `lib/` i testach od G1 (bez danych i treści Podręcznika).
+- **Pełna regresja e2e** (`bash tests/e2e/run.sh`, w częściach ≤ 25 min): __REGRESJA__.
+- **Testy jednostkowe** (vitest): __VITEST__; `npm run validate-questions`, `build_podrecznik.py --strict`.
+- **Pomiar szybkości** (`perf3.mjs`, telefon z dławieniem CPU ×4 i siecią 9 Mb/s oraz komputer) – sekcja „Plan II” w `docs/RAPORT-WYDAJNOSCI.md`.
+
+## Poprawione
+1. **Statystyki – zakładka „Pytania AI” była zawsze pusta.** Testy z samych pytań AI zapisują się jako `mix`, a statystyki
+   szukały `bank = 'ai'`. Teraz „Pytania AI” to testy „Wszystkie pytania” złożone wyłącznie z pytań AI, a „Wszystkie pytania” – pozostałe.
+2. **Statystyki – link z podsumowania testu (`/stats?bank=…`) gubił zapisane filtry** (typ, etap, blok). Teraz źródło bierzemy
+   z adresu, a resztę z konta; wolniejsza odpowiedź dla starych filtrów nie nadpisuje nowszej.
+3. **„→” (dalej) po zwykłym linku do poprzedniej strony.** Link wyglądał jak cofnięcie i pokazywał „→”, które nic nie robiło.
+   Teraz cofnięcie rozpoznajemy po `popstate` (i typie nawigacji `back_forward` po pełnym wczytaniu strony).
+4. **Link z filtrami nadpisywał zapisane filtry konta** (Zadania, Eseje, Tabela pojęć): pierwsza wartość filtra była pusta,
+   a filtry z adresu wyglądały jak zmiana użytkownika. Teraz synchronizacja zaczyna się dopiero po wczytaniu adresu.
+5. **Działy i pojęcia:** przełączenie źródła przenosiło filtry poprzedniego źródła (i pomijało zapisane dla nowego), a `haslo`
+   zostawało w adresie po wyczyszczeniu filtra.
+6. **Test 30/50 nie kończył się sam** przy równoczesnym zapisie dwóch ostatnich odpowiedzi (dwie karty, ponowienie po błędzie
+   sieci) – oba żądania widziały stan sprzed zapisu. Pod koniec testu liczymy odpowiedzi po zapisie.
+7. **Formularz testu:** liczniki puli pytań bez kontroli kolejności odpowiedzi; zapisany dział lub rodzaj, którego już nie ma,
+   dawał 400 po cichu, a „Rozpocznij test” był aktywny dla starych liczb. Teraz stara odpowiedź jest pomijana, a odrzucony
+   filtr wraca do domyślnego.
+8. **Notatki – płynność:** przeciąganie linii i uchwytów krzywej rysowało od nowa cały rysunek przy każdym ruchu.
+   Zatwierdzone kreski są teraz w warstwie poza ekranem; ruch kopiuje warstwę i dorysowuje tylko podgląd.
+9. **Źródło pytania liczone w czterech miejscach** (SQL statystyk, Działy, znacznik w teście, brudnopis) – teraz jeden moduł
+   `lib/question-source.ts`.
+
+## Sprawdzone – świadomie bez zmian
+- **Statystyki OWE i Pokrycie** opisują archiwum olimpiad (jakie pojęcia padały w których edycjach) – pytań AI tam nie dokładamy,
+  bo nie pochodzą z olimpiad. Wyniki na pytaniach AI są w Statystykach (karta „Według źródła pytań”) i w „Działach i pojęciach”.
+- **Źródło „Wszystkie pytania” zapisane przez link** z podsumowania testu staje się domyślnym na koncie – to ostatnio oglądane
+  źródło, a nie link od kogoś (statystyki są prywatne).

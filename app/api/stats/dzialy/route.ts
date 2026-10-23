@@ -1,7 +1,7 @@
 import { handle } from "@/lib/api";
 import { requireUser, viewedUserId } from "@/lib/auth";
 import { myFilterFromParams } from "@/lib/my-stats-core";
-import { getMyStats } from "@/lib/my-stats";
+import { getMyItemAnswers, getMyStats } from "@/lib/my-stats";
 
 export const dynamic = "force-dynamic";
 
@@ -10,5 +10,10 @@ export async function GET(req: Request) {
   const p = new URL(req.url).searchParams;
   const b = p.get("bank");
   const bank = b === "slownik" || b === "ai" ? b : "owe";
-  return handle(async () => getMyStats(await viewedUserId(req, await requireUser()), bank, myFilterFromParams(p)));
+  // ?pojecie=<id> – ostatnie odpowiedzi przy jednym pojęciu (rozwinięcie wiersza), bez całej tabeli
+  const item = p.get("pojecie");
+  return handle(async () => {
+    const uid = await viewedUserId(req, await requireUser());
+    return item ? getMyItemAnswers(uid, bank, myFilterFromParams(p), item) : getMyStats(uid, bank, myFilterFromParams(p));
+  });
 }

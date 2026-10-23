@@ -163,3 +163,40 @@ Liczba zapytań przy pełnym wejściu na stronę (strona + dane pobierane po za�
 - **Lekki indeks haseł (rek. 3):** wszyscy odbiorcy `/api/dane/hasla` (fiszki, tabela, mapa, czytnik) pokazują definicje od pierwszego ekranu, więc podział wymagałby przebudowy 6 komponentów. Dane są pobierane raz i trzymane w pamięci przeglądarki (ETag, 304 przy kolejnych wejściach) – zysk dotyczy tylko pierwszej wizyty. Zostaje jako rekomendacja.
 - **Region i adres `-pooler` (rek. 1):** ustawienie hostingu, nie kodu – nadal największy możliwy zysk.
 - **Pliki z wersją w nazwie (rek. 6):** decyzja o dostępie bez logowania – sprzeczna z ochroną treści w etapie 8.
+
+## Plan II (G1–G14): pomiar przed i po (23.10.2026)
+
+**Metoda.** `perf3.mjs` – serwer produkcyjny (`next start`), lokalna baza, konto właściciela; telefon (CPU ×4, sieć 9 Mb/s,
+opóźnienie 60 ms) i komputer; mediana z 3 wejść. Stan „przed” to commit sprzed G1 zbudowany na **tej samej maszynie** tuż
+przed pomiarem „po” – wyniki z etapu 7 pochodzą z innego (szybszego) kontenera i nie nadają się do bezpośredniego porównania
+(wszystkie strony, także niezmienione, wychodziły tam ok. 2× szybciej).
+
+**Wynik.** Plan II nie spowolnił aplikacji – różnice LCP mieszczą się w szumie pomiaru (±30% na telefonie):
+
+| Strona (telefon) | LCP przed → po | Dane przed → po |
+|---|---:|---:|
+| `/` (Testy → Olimpiada) | 484 → 424 ms | 54 → 55 kB |
+| `/nauka/lekcja/…?sub=3` | 1184 → 1316 ms | 209 → 212 kB |
+| `/fiszki` | 1980 → 1872 ms | 267 → 272 kB |
+| `/pojecia` | 1832 → 1516 ms | 241 → 245 kB |
+| `/stats` | 1660 → 1536 ms | 80 → 81 kB |
+| `/eseje` | 1392 → 1096 ms | 65 → 69 kB |
+| `/nauka/podrecznik` | 1012 → 980 ms | 234 → 238 kB |
+
+API bez zmian (mediana): `/api/stats` 53 → 58 ms, `/api/stats/dzialy` 48 → 47 ms, `/api/dane/hasla` 562 → 574 kB (nowe hasła G8).
+
+**Co zrobiono w Planie II dla szybkości:**
+- **Zapis odpowiedzi w teście** (G1): 1 zapytanie zamiast 4–5 po kolei (zapis, kontrola kolejności, suma i wynik w jednym CTE),
+  limit pobrań sprawdzany równolegle z wczytaniem testu.
+- **Liczby pytań w formularzu testu** z serwera (`/api/tests/pula`) zamiast pobierania treści pytań; stare odpowiedzi pomijane.
+- **Formularz zgłoszenia, panel szybkich notatek, edytor notatek** ładowane dopiero przy otwarciu (wspólna paczka layoutu bez
+  zmian: ~17,7 kB po kompresji mimo nowych przycisków ←/→, „Do góry” i zgłoszeń).
+- **Wykresy Podręcznika** to lekkie SVG rysowane z opisu (`book-figure.tsx`), bez biblioteki wykresów.
+- **Notatki:** podgląd linii i krzywej rysowany na warstwie z gotowym rysunkiem – koszt ruchu nie rośnie z liczbą kresek.
+- **Filtry na koncie:** jedno pobranie `/api/ustawienia/filtry` na kartę (pamięć modułu) – stąd +2 zapytania SQL na stronach z
+  filtrami; zapis z opóźnieniem 0,8 s.
+- **Statystyki wg źródła:** jedno zapytanie więcej w `/api/stats`, wysyłane równolegle z pozostałymi (ta sama tura do bazy).
+- **Działy i pojęcia** (`/api/stats/dzialy`): ostatnie odpowiedzi przy pojęciach i treść pytań pobierane dopiero po rozwinięciu
+  pojęcia (`?pojecie=<id>`) – dla aktywnego konta odpowiedź **459 → 146 kB** (−68%).
+
+**Nadal warte zrobienia** (bez zmian względem etapu 7): region bazy i adres `-pooler`.

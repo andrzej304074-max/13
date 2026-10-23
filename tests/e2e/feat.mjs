@@ -14,7 +14,7 @@ const shot = (n, full = false) => page.screenshot({ path: `${OUT}/${n}.png`, ful
 const S = JSON.parse(fs.readFileSync("./data/nauka/owe-stats.json", "utf8"));
 const Q = {};
 for (const f of fs.readdirSync("./data/questions").filter((f) => f.endsWith(".json"))) for (const q of JSON.parse(fs.readFileSync("./data/questions/" + f))) Q[q.id] = q;
-for (const f of ["auto", "manual"]) for (const q of JSON.parse(fs.readFileSync(`./data/slownik/${f}.json`))) Q[q.id] = q;
+for (const f of ["auto", "manual", "theme_auto"]) for (const q of JSON.parse(fs.readFileSync(`./data/slownik/${f}.json`))) Q[q.id] = q;
 
 await page.goto(`${B}/konto/logowanie`);
 await page.fill('input[name="email"]', "owner@example.com");

@@ -5,7 +5,7 @@ import { usePrefSync } from "@/lib/prefs-client";
 import { OweFilterFields } from "@/app/pojecia/filters";
 import { api, fmtPct, viewedUser, withUser } from "@/lib/client";
 import { DEFAULT_MY_FILTER, myFilterFromParams, myFilterToParams, type MyFilter, type MyRow } from "@/lib/my-stats-core";
-import type { MyStatsPayload } from "@/lib/my-stats";
+import type { MyItemAnswers, MyStatsPayload } from "@/lib/my-stats";
 import { level } from "@/lib/owe-stats";
 import { SkeletonRows } from "@/app/components/loading-page";
 import { LoadError } from "@/app/components/load-error";
@@ -48,6 +48,8 @@ export function MyBreakdown({ bank }: { bank: "owe" | "ai" | "slownik" }) {
   const [data, setData] = useState<MyStatsPayload | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [open, setOpen] = useState<string | null>(null);
+  // ostatnie odpowiedzi przy pojęciu – pobierane dopiero po rozwinięciu (bez nich tabela waży ok. 1/3)
+  const [itemAns, setItemAns] = useState<Record<string, MyItemAnswers | "err">>({});
   const [limit, setLimit] = useState(STEP);
 
   const [explicit] = useState(() => typeof window !== "undefined"
@@ -65,8 +67,22 @@ export function MyBreakdown({ bank }: { bank: "owe" | "ai" | "slownik" }) {
     p.set("bank", bank);
     window.history.replaceState(null, "", `/stats/dzialy${p.size ? `?${p}` : ""}`);
     setData(null);
-    api<MyStatsPayload>(withUser(`/api/stats/dzialy?bank=${bank}${q ? `&${q}` : ""}`)).then(setData).catch((e) => setError(e.message));
+    setItemAns({});
+    let live = true;
+    api<MyStatsPayload>(withUser(`/api/stats/dzialy?bank=${bank}${q ? `&${q}` : ""}`))
+      .then((d) => { if (live) setData(d); })
+      .catch((e) => { if (live) setError(e.message); });
+    return () => { live = false; };
   }, [f, bank]);
+  useEffect(() => {
+    if (!f || !open || itemAns[open]) return;
+    const q = myFilterToParams(f), id = open;
+    let live = true;
+    api<MyItemAnswers>(withUser(`/api/stats/dzialy?bank=${bank}${q ? `&${q}` : ""}&pojecie=${encodeURIComponent(id)}`))
+      .then((a) => { if (live) setItemAns((m) => ({ ...m, [id]: a })); })
+      .catch(() => { if (live) setItemAns((m) => ({ ...m, [id]: "err" })); });
+    return () => { live = false; };
+  }, [f, bank, open, itemAns]);
 
   if (error) return <LoadError message={error} />;
   if (!f) return null;
@@ -177,17 +193,20 @@ export function MyBreakdown({ bank }: { bank: "owe" | "ai" | "slownik" }) {
                   </tr>
                 );
                 if (open !== r.id) return [main];
+                const ia = itemAns[r.id];
                 return [main, (
                   <tr key={`${r.id}-a`} className="q-list-row"><td colSpan={5}>
-                    <ol className="q-list">
-                      {(data.itemAnswers[r.id] ?? []).map((a, k) => (
-                        <li key={k}>
-                          <div className="muted q-meta">{data.questions[a.q]?.edition} · {new Date(a.at).toLocaleString("pl-PL", { dateStyle: "short", timeStyle: "short" })}</div>
-                          <div>{data.questions[a.q]?.question}</div>
-                          <div className={a.acc >= 1 ? "ok-msg" : a.acc > 0 ? "" : "error"}>{a.acc >= 1 ? "✓ poprawnie" : a.acc > 0 ? `częściowo (${Math.round(a.acc * 100)}%)` : "✗ błędnie"}</div>
-                        </li>
-                      ))}
-                    </ol>
+                    {!ia ? <SkeletonRows rows={2} height={48} /> : ia === "err" ? <p className="error">Nie udało się wczytać odpowiedzi.</p> : (
+                      <ol className="q-list" data-testid="my-item-answers">
+                        {ia.answers.map((a, k) => (
+                          <li key={k}>
+                            <div className="muted q-meta">{ia.questions[a.q]?.edition} · {new Date(a.at).toLocaleString("pl-PL", { dateStyle: "short", timeStyle: "short" })}</div>
+                            <div>{ia.questions[a.q]?.question}</div>
+                            <div className={a.acc >= 1 ? "ok-msg" : a.acc > 0 ? "" : "error"}>{a.acc >= 1 ? "✓ poprawnie" : a.acc > 0 ? `częściowo (${Math.round(a.acc * 100)}%)` : "✗ błędnie"}</div>
+                          </li>
+                        ))}
+                      </ol>
+                    )}
                   </td></tr>
                 )];
               })}
