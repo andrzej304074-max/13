@@ -1,6 +1,7 @@
 "use client";
 
 import { LoadingPage, SkeletonRows } from "@/app/components/loading-page";
+import { usePrefSync } from "@/lib/prefs-client";
 import { useData } from "@/lib/data-client";
 
 import Link from "next/link";
@@ -39,6 +40,13 @@ export function NaukaStatsView({ meta }: { meta: StatsMeta }) {
     const p = new URLSearchParams(window.location.search);
     setF(Object.fromEntries(KEYS.map((k) => [k, p.get(k) ?? EMPTY[k]])) as Filters);
   }, []);
+
+  const [explicit] = useState(() => typeof window !== "undefined" && window.location.search.length > 1);
+  const fQs = f ? new URLSearchParams(Object.entries(f).filter(([k, v]) => v && !(k === "range" && v === "all"))).toString() : null;
+  usePrefSync("nauka-statystyki", fQs, (v) => {
+    const p = new URLSearchParams(v);
+    setF(Object.fromEntries(KEYS.map((k) => [k, p.get(k) ?? EMPTY[k]])) as Filters);
+  }, { load: explicit, save: !!viewedUser() });
 
   useEffect(() => {
     if (!f) return;

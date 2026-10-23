@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { api, fmtPct, lastTest, rememberTest } from "@/lib/client";
+import { usePrefSync } from "@/lib/prefs-client";
+import { RandomOpenButton } from "./zadania/random-open";
 import { ROMAN } from "@/lib/owe-stats";
 import type { OweStage, QSource } from "@/lib/question-meta";
 import type { Stats } from "@/lib/tests";
@@ -37,7 +39,7 @@ const EDS = Array.from({ length: 19 }, (_, i) => 21 + i);
 
 export type StartBank = "owe" | "slownik" | "mix";
 
-/** Ustawienia formularza (zapamiętywane w przeglądarce – osobno dla każdej zakładki). */
+/** Ustawienia formularza (zapamiętywane na koncie – osobno dla każdej zakładki). */
 export interface StartPrefs {
   type: QuestionType;
   count: number | "endless";
@@ -73,16 +75,10 @@ export default function HomeClient({ bank = "owe", counts: initial, options }: {
   options: StartOptions;
 }) {
   const router = useRouter();
-  const key = `owe:testStart:${bank}`;
   const [p, setP] = useState<StartPrefs>(DEFAULT_PREFS);
-  useEffect(() => {
-    try { const v = localStorage.getItem(key); if (v) setP({ ...DEFAULT_PREFS, ...JSON.parse(v) }); } catch {}
-  }, [key]);
-  const set = (o: Partial<StartPrefs>) => setP((x) => {
-    const n = { ...x, ...o };
-    try { localStorage.setItem(key, JSON.stringify(n)); } catch {}
-    return n;
-  });
+  const set = (o: Partial<StartPrefs>) => setP((x) => ({ ...x, ...o }));
+  // ustawienia formularza zapamiętane na koncie (osobno dla każdej zakładki)
+  usePrefSync(`testy-${bank}`, JSON.stringify(p), (v) => { try { setP({ ...DEFAULT_PREFS, ...JSON.parse(v) }); } catch {} });
   const [counts, setCounts] = useState<Counts>({ ...initial, bySource: null });
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -153,6 +149,14 @@ export default function HomeClient({ bank = "owe", counts: initial, options }: {
           <span>Masz niedokończony test.</span>
           <span className="spacer" />
           <Link className="btn secondary" href={`/test/${resumeId}`}>Kontynuuj</Link>
+        </div>
+      )}
+      {bank === "owe" && (
+        <div className="card row" style={{ flexWrap: "wrap", gap: 8 }} data-testid="random-open">
+          <span>Zadania i eseje z kluczy OWE (zakres edycji i etapy z filtrów):</span>
+          <span className="spacer" />
+          <RandomOpenButton kind="zadanie" edFrom={p.edFrom} edTo={p.edTo} stages={p.stages} />
+          <RandomOpenButton kind="esej" edFrom={p.edFrom} edTo={p.edTo} stages={p.stages} />
         </div>
       )}
       {bank === "mix" && <>

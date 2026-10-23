@@ -1,10 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { usePrefSync } from "@/lib/prefs-client";
 import { useEffect, useMemo, useState } from "react";
 import { SkeletonRows } from "@/app/components/loading-page";
 import { LoadError } from "@/app/components/load-error";
-import { api, fmtPoints, withUser } from "@/lib/client";
+import { api, fmtPoints, viewedUser, withUser } from "@/lib/client";
 import type { OpenKind, OpenMeta } from "@/lib/otwarte";
 
 type Row = OpenMeta & { best: number | null; attempts: number };
@@ -16,6 +18,7 @@ const STAGES = [["", "wszystkie"], ["s", "szkolny"], ["o", "okręgowy"], ["c", "
 
 /** Lista zadań obliczeniowych albo esejów z poprzednich edycji: filtry edycji, etapu, działu i stanu. */
 export function OpenList({ kind }: { kind: OpenKind }) {
+  const router = useRouter();
   const [rows, setRows] = useState<Row[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [stage, setStage] = useState("");
@@ -27,11 +30,16 @@ export function OpenList({ kind }: { kind: OpenKind }) {
     setStage(p.get("etap") ?? ""); setTopic(p.get("dzial") ?? ""); setEd(p.get("edycja") ?? ""); setState((p.get("stan") ?? "") as "" | "todo" | "done");
     api<Row[]>(withUser(`/api/otwarte?rodzaj=${kind}`)).then(setRows).catch((e) => setError(e.message));
   }, [kind]);
+  const [explicit] = useState(() => typeof window !== "undefined" && window.location.search.length > 1);
+  const qs = new URLSearchParams([...(stage ? [["etap", stage]] : []), ...(topic ? [["dzial", topic]] : []), ...(ed ? [["edycja", ed]] : []), ...(state ? [["stan", state]] : [])]).toString();
   useEffect(() => {
-    const p = new URLSearchParams();
-    if (stage) p.set("etap", stage); if (topic) p.set("dzial", topic); if (ed) p.set("edycja", ed); if (state) p.set("stan", state);
-    window.history.replaceState(null, "", `${window.location.pathname}${p.size ? `?${p}` : ""}`);
-  }, [stage, topic, ed, state]);
+    window.history.replaceState(null, "", `${window.location.pathname}${qs ? `?${qs}` : ""}`);
+  }, [qs]);
+  // filtry zapamiętane na koncie (osobno zadania i eseje)
+  usePrefSync(kind === "esej" ? "eseje" : "zadania", qs, (v) => {
+    const p = new URLSearchParams(v);
+    setStage(p.get("etap") ?? ""); setTopic(p.get("dzial") ?? ""); setEd(p.get("edycja") ?? ""); setState((p.get("stan") ?? "") as "" | "todo" | "done");
+  }, { load: explicit, save: !!viewedUser() });
   const shown = useMemo(() => (rows ?? []).filter((r) => (!stage || r.stage === stage) && (!topic || r.topic === topic) && (!ed || String(r.ed) === ed)
     && (!state || (state === "done") === r.attempts > 0)), [rows, stage, topic, ed, state]);
   if (error) return <LoadError message={error} />;
@@ -73,7 +81,15 @@ export function OpenList({ kind }: { kind: OpenKind }) {
             </select>
           </label>
         </div>
-        <p className="muted small" style={{ margin: 0 }} data-testid="open-count">Pokazano {shown.length} z {rows?.length ?? 0}</p>
+        <div className="row" style={{ gap: 8, flexWrap: "wrap" }}>
+          <p className="muted small" style={{ margin: 0 }} data-testid="open-count">Pokazano {shown.length} z {rows?.length ?? 0}</p>
+          <span className="spacer" />
+          <button className="btn secondary" disabled={!shown.length} data-testid="open-random"
+            title="Losowo spośród pokazanych – najpierw te, których jeszcze nie rozwiązano"
+            onClick={() => router.push(withUser(`${base}/${pickRandom(shown).id}`))}>
+            🎲 Losuj {kind === "zadanie" ? "zadanie" : "esej"}
+          </button>
+        </div>
       </div>
       {!rows ? <SkeletonRows rows={4} height={72} label="Ładowanie" /> : shown.length === 0 ? (
         <div className="empty-state"><span aria-hidden>🔍</span><p>Brak pozycji dla wybranych filtrów.</p></div>
@@ -94,4 +110,11 @@ export function OpenList({ kind }: { kind: OpenKind }) {
       )}
     </div>
   );
+}
+
+/** Losowa pozycja: spośród nierozwiązanych, a gdy wszystkie rozwiązane – spośród wszystkich. */
+export function pickRandom<T extends { attempts: number }>(rows: T[]): T {
+  const todo = rows.filter((r) => r.attempts === 0);
+  const pool = todo.length ? todo : rows;
+  return pool[Math.floor(Math.random() * pool.length)];
 }

@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePrefSync } from "@/lib/prefs-client";
 import { OweFilterFields } from "@/app/pojecia/filters";
-import { api, fmtPct, withUser } from "@/lib/client";
+import { api, fmtPct, viewedUser, withUser } from "@/lib/client";
 import { DEFAULT_MY_FILTER, myFilterFromParams, myFilterToParams, type MyFilter, type MyRow } from "@/lib/my-stats-core";
 import type { MyStatsPayload } from "@/lib/my-stats";
 import { level } from "@/lib/owe-stats";
@@ -43,7 +44,12 @@ export function MyBreakdown({ bank }: { bank: "owe" | "slownik" }) {
   const [open, setOpen] = useState<string | null>(null);
   const [limit, setLimit] = useState(STEP);
 
+  const [explicit] = useState(() => typeof window !== "undefined"
+    && ["typ", "okres", "sort", "dzial", "rodzaj", "etap", "od", "do", "poch", "sekcja", "haslo"].some((k) => new URLSearchParams(window.location.search).has(k)));
   useEffect(() => setF(myFilterFromParams(new URLSearchParams(window.location.search))), []);
+  // filtry zapamiętane na koncie (osobno dla pytań z olimpiad i ze słownika)
+  usePrefSync(bank === "owe" ? "stats-dzialy" : "stats-dzialy-slownik", f ? myFilterToParams(f) : null,
+    (v) => setF(myFilterFromParams(new URLSearchParams(v))), { load: explicit, save: !!viewedUser() });
   useEffect(() => {
     if (!f) return;
     const q = myFilterToParams(f);

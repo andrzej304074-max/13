@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { usePrefSync } from "@/lib/prefs-client";
 import { Donut, StackBars } from "@/app/components/stack-bars";
 import { fmtPct } from "@/lib/client";
 import { useData } from "@/lib/data-client";
@@ -55,21 +56,27 @@ export function CoverageView({ data }: { data: Data }) {
   const [filtersOpen, setFiltersOpen] = useState(true);
   useEffect(() => setFiltersOpen(window.matchMedia("(min-width: 641px)").matches), []);
 
-  useEffect(() => {
-    const p = new URLSearchParams(window.location.search);
+  const [explicit] = useState(() => typeof window !== "undefined" && window.location.search.length > 1);
+  const fromQs = (qs: string) => {
+    const p = new URLSearchParams(qs);
     setRep(repeatFromParams(p));
     setMeasure(p.get("miara") === "pytania" ? "questions" : "items");
     setF(filterFromParams(p));
-  }, []);
-  useEffect(() => {
-    if (!f) return;
+  };
+  useEffect(() => fromQs(window.location.search), []);
+  const qs = useMemo(() => {
+    if (!f) return null;
     const p = new URLSearchParams(filterToParams(f));
     if (rep.window !== "all") p.set("okno", String(rep.window));
     if (rep.from.length < 3) p.set("zetap", rep.from.join(""));
     if (rep.sameEdition) p.set("ta", "1");
     if (measure === "questions") p.set("miara", "pytania");
-    window.history.replaceState(null, "", `/pojecia/pokrycie${p.size ? `?${p}` : ""}`);
+    return p.toString();
   }, [f, rep, measure]);
+  useEffect(() => {
+    if (qs !== null) window.history.replaceState(null, "", `/pojecia/pokrycie${qs ? `?${qs}` : ""}`);
+  }, [qs]);
+  usePrefSync("pojecia-pokrycie", qs, fromQs, { load: explicit });
 
   const topicName = useMemo(() => Object.fromEntries(data.topics.map((t) => [t.id, `${t.emoji} ${t.title.replace(/^Temat przewodni: /, "")}`])), [data.topics]);
   const cov = useMemo(() => (f ? coverage(data.recs, f, data.meta, rep) : null), [f, rep, data]);

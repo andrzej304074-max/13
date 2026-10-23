@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePrefSync } from "@/lib/prefs-client";
 import { useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
 import { StarButton, StarFilterSeg, type StarFilter } from "@/app/components/star";
 import { viewedUser } from "@/lib/client";
@@ -43,13 +44,17 @@ export function ConceptTable({ rows, topics, kinds }: { rows: Row[]; topics: Top
   useEffect(() => setPreview(!!viewedUser()), []);
   const topicName = useMemo(() => Object.fromEntries(topics.map((t) => [t.id, `${t.emoji} ${t.title}`])), [topics]);
 
-  // filtry zapamiętane w adresie (?dzial=mikro&rodzaj=osoba&q=elastyczność)
+  // filtry zapamiętane w adresie (?dzial=mikro&rodzaj=osoba&q=elastyczność); dział i rodzaj także na koncie
+  const [explicit] = useState(() => typeof window !== "undefined" && window.location.search.length > 1);
   useEffect(() => {
     const p = new URLSearchParams(window.location.search);
     setTopic(p.get("dzial") ?? "");
     setKind(p.get("rodzaj") ?? "");
     setQ(p.get("q") ?? "");
   }, []);
+  const prefQs = new URLSearchParams([...(topic ? [["dzial", topic]] : []), ...(kind ? [["rodzaj", kind]] : [])]).toString();
+  usePrefSync("pojecia-tabela", prefQs, (v) => { const p = new URLSearchParams(v); setTopic(p.get("dzial") ?? ""); setKind(p.get("rodzaj") ?? ""); },
+    { load: explicit, save: preview });
   useEffect(() => {
     const p = new URLSearchParams();
     if (topic) p.set("dzial", topic);

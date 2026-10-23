@@ -90,7 +90,8 @@ await page.waitForTimeout(1500);
 check(!page.url().includes("/konto/"), "logowanie " + page.url());
 
 // 1. Tabela pojęć: nowe hasła z liczbą pytań OWE
-const NEW = { "Postęp techniczny": 3, "Deflacja długu (I. Fisher)": 1, "Papiery dyskontowe": 2, "Klasyczne podejście do zarządzania": 5, "Program leniency (łagodzenia kar)": 1 };
+// „Postęp techniczny”: 2 (owe39-c-11 jest obliczeniowe – od G2 liczy się do hasła „Produkt przeciętny i krańcowy, optimum czynników – wzory”)
+const NEW = { "Postęp techniczny": 2, "Deflacja długu (I. Fisher)": 1, "Papiery dyskontowe": 2, "Klasyczne podejście do zarządzania": 5, "Program leniency (łagodzenia kar)": 1 };
 await page.goto(`${B}/pojecia`); await page.waitForSelector(".concept-row:not(.head)");
 for (const [t, n] of Object.entries(NEW)) {
   await page.fill('input[type="search"]', t.split(" (")[0]); await page.waitForTimeout(400);

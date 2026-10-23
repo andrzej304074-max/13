@@ -87,6 +87,16 @@ Trzy źródła pytań testowych: **📜 Archiwum OWE** (prawdziwe pytania z olim
   więc test „bez limitu” dolosowuje z tymi samymi filtrami.
 - Dział i pojęcia każdego pytania: `data/nauka/{owe,slownik,ai}-stats.json` (`tools/nauka/build_course.py`).
 
+## Zapisane filtry i losowanie zadań
+
+- **Filtry zapamiętywane na koncie** (wspólne dla urządzeń): formularze testów, Zadania, Eseje, Tabela pojęć, Statystyki OWE,
+  Pokrycie, Działy i pojęcia, Statystyki Nauki, Fiszki. Hook `usePrefSync` (`lib/prefs-client.ts`): od razu wartość
+  z przeglądarki, potem z konta (`GET /api/ustawienia/filtry`); zmiana zapisuje się po 0,8 s albo przy wyjściu ze strony
+  (`PUT /api/ustawienia/filtry/<klucz>`, tabela `user_prefs`, dozwolone klucze w `lib/prefs-core.ts`). Adres z jawnymi
+  filtrami (np. link od kogoś) ma pierwszeństwo i nie nadpisuje zapisanych, dopóki nic nie zmienisz; podgląd admina nie zapisuje.
+- **🎲 Losuj zadanie / esej** – na listach Zadań i Esejów (spośród pokazanych po filtrach) i na stronie Testy → Olimpiada
+  (zakres edycji i etapy z filtrów testu); najpierw pozycje jeszcze nierozwiązane.
+
 ## Nauka (zakładka „Nauka” – kurs w stylu Duolingo)
 
 Kurs zbudowany z haseł słownika (`docs/slownik-owe.pdf`) i wszystkich banków pytań:

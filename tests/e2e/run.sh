@@ -15,7 +15,8 @@ PSQL="psql -h localhost -U postgres -d owe -q -c"
 $PSQL "UPDATE tests SET user_id=NULL; UPDATE learn_sessions SET user_id=NULL; DELETE FROM flash_ratings; DELETE FROM users; DELETE FROM settings; DELETE FROM admin_codes; DELETE FROM code_failures; DELETE FROM password_resets;"
 # limity i dziennik bezpieczeństwa (tabele mogą jeszcze nie istnieć przed pierwszym startem nowej wersji)
 $PSQL "DO \$\$ BEGIN IF to_regclass('rate_hits') IS NOT NULL THEN DELETE FROM rate_hits; DELETE FROM security_events; END IF; END \$\$;"
-run() { echo "== $1"; timeout 1500 node "tests/e2e/$1" "$OUT" "${@:2}" 2>&1 | grep -E "^FAIL|^OK|OK:|stron:|problem|błędów|fails|errors|BAD|Error" | tail -6; }
+# zapisane filtry (user_prefs) czyszczone przed każdym skryptem – skrypty zaczynają od domyślnych filtrów
+run() { echo "== $1"; $PSQL "DO \$\$ BEGIN IF to_regclass('user_prefs') IS NOT NULL THEN DELETE FROM user_prefs; END IF; END \$\$;" >/dev/null; timeout 1500 node "tests/e2e/$1" "$OUT" "${@:2}" 2>&1 | grep -E "^FAIL|^OK|OK:|stron:|problem|błędów|fails|errors|BAD|Error" | tail -6; }
 # kolejność ma znaczenie: auth_e2e2 zakłada konta (właściciel, drugi), na których pracują pozostałe skrypty
 run auth_e2e2.mjs "$LOG"
 run tests_ui.mjs
@@ -48,6 +49,8 @@ run probes.mjs
 run g1.mjs
 run g2.mjs
 run g4.mjs
+run g5.mjs
+run g6.mjs
 run authsweep.mjs
 run security.mjs
 run crawl.mjs

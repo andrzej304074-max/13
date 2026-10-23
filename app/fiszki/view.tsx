@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { usePrefSync } from "@/lib/prefs-client";
 import { PreviewBanner } from "@/app/components/preview-banner";
 import { StarButton, StarFilterSeg, type StarFilter } from "@/app/components/star";
 import { PageSkeleton } from "@/app/pojecia/table";
@@ -71,8 +72,7 @@ export function FlashcardsView({ cards, topics, kinds, ownMastery = {} }: { card
   // ?talia=<id> – nauka własnej talii: tylko jej karty, w jej kolejności (filtry działają na kartach talii)
   const [deck, setDeck] = useState<Deck | null>(null);
 
-  useEffect(() => {
-    const p = new URLSearchParams(window.location.search);
+  const applyFilters = (p: URLSearchParams) => {
     setMode(p.get("tryb") === "klasyczne" ? "classic" : "feed");
     setTopic(p.get("dzial") ?? "");
     setKind(p.get("rodzaj") ?? "");
@@ -85,6 +85,10 @@ export function FlashcardsView({ cards, topics, kinds, ownMastery = {} }: { card
     setGw(g === "1" || g === "0" ? g : "");
     const o = p.get("kolejnosc");
     setOrder(o === "random" || o === "weak" ? o : "lessons");
+  };
+  useEffect(() => {
+    const p = new URLSearchParams(window.location.search);
+    applyFilters(p);
     // po powrocie („←”) ta sama kolejność losowa co wcześniej
     const kept = isBackNav() ? savedNumber("owe:fseed") : null;
     setSeed(kept || Math.floor(Math.random() * 1e9) + 1);
@@ -111,6 +115,13 @@ export function FlashcardsView({ cards, topics, kinds, ownMastery = {} }: { card
     if (deck) p.set("talia", deck.id);
     window.history.replaceState(null, "", `/fiszki${p.size ? `?${p}` : ""}`);
   }, [ready, mode, topic, kind, lv, oweOnly, gw, order, deck, src]);
+  // filtry fiszek zapamiętane na koncie (bez talii – ta zawsze z adresu)
+  const [explicit] = useState(() => typeof window !== "undefined" && window.location.search.length > 1);
+  const prefQs = ready ? new URLSearchParams(Object.entries({
+    tryb: mode === "classic" ? "klasyczne" : "", dzial: topic, rodzaj: kind, kolor: lv, owe: oweOnly ? "1" : "", zrodlo: src, gw,
+    kolejnosc: order !== "lessons" ? order : "",
+  }).filter(([, v]) => v)).toString() : null;
+  usePrefSync("fiszki", prefQs, (v) => applyFilters(new URLSearchParams(v)), { load: explicit, save: preview || !!deck });
 
   // kolejność, filtr koloru i gwiazdek liczone ze stanu z chwili wejścia/zmiany filtrów – ocena lub gwiazdka nie przestawia listy
   const snapshot = useRef(mastery);

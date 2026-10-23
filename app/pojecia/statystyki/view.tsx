@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { usePrefSync } from "@/lib/prefs-client";
 import { useData } from "@/lib/data-client";
 import { PageSkeleton } from "../table";
 import { api, fmtPct, LETTERS } from "@/lib/client";
@@ -39,7 +40,10 @@ export function OweStatsView({ data }: { data: Data }) {
   const [open, setOpen] = useState<string | null>(null);
   const [qs, setQs] = useState<Record<string, Q[] | string>>({});
 
+  const [explicit] = useState(() => typeof window !== "undefined" && window.location.search.length > 1);
   useEffect(() => setF(filterFromParams(new URLSearchParams(window.location.search))), []);
+  // filtry zapamiętane na koncie (adres z filtrami – np. link od kogoś – ma pierwszeństwo)
+  usePrefSync("pojecia-statystyki", f ? filterToParams(f) : null, (v) => setF(filterFromParams(new URLSearchParams(v))), { load: explicit });
   useEffect(() => {
     if (!f) return;
     const p = filterToParams(f);

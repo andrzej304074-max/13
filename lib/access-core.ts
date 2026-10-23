@@ -69,7 +69,7 @@ export function isBlocked(key: string | null, blocks: readonly string[]): boolea
  * wspólne dane kursu bez danych użytkownika).
  */
 export function pathKey(path: string, search = ""): string | null {
-  if (/^\/(admin|konto|zablokowane)(\/|$)/.test(path) || /^\/api\/(admin|konto|dane|gwiazdki)(\/|$)/.test(path)) return null;
+  if (/^\/(admin|konto|zablokowane)(\/|$)/.test(path) || /^\/api\/(admin|konto|dane|gwiazdki|ustawienia)(\/|$)/.test(path)) return null;
   const q = new URLSearchParams(search);
   if (path.startsWith("/api/")) {
     if (path.startsWith("/api/tests")) return "testy";

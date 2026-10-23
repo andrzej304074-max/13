@@ -328,4 +328,12 @@ CREATE TABLE IF NOT EXISTS security_events (
   detail  text NOT NULL DEFAULT ''
 );
 CREATE INDEX IF NOT EXISTS security_events_at_idx ON security_events (at DESC);
+-- Zapisane ustawienia filtrów (lib/prefs.ts): klucz strony → wartość (parametry adresu albo JSON formularza).
+CREATE TABLE IF NOT EXISTS user_prefs (
+  user_id    uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  key        text NOT NULL,
+  value      text NOT NULL,
+  updated_at timestamptz NOT NULL DEFAULT now(),
+  PRIMARY KEY (user_id, key)
+);
 `;
