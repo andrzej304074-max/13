@@ -350,6 +350,12 @@ CREATE TABLE IF NOT EXISTS xp_days (
   PRIMARY KEY (user_id, day)
 );
 CREATE INDEX IF NOT EXISTS xp_days_day_idx ON xp_days (day);
+-- Ranking tygodniowy XP – tylko po zapisaniu się, pod pseudonimem (lib/world.ts).
+ALTER TABLE users ADD COLUMN IF NOT EXISTS rank_opt boolean NOT NULL DEFAULT false;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS rank_name text;
+CREATE UNIQUE INDEX IF NOT EXISTS users_rank_name_idx ON users (lower(rank_name)) WHERE rank_name IS NOT NULL;
+CREATE INDEX IF NOT EXISTS learn_answers_at_idx ON learn_answers (answered_at);
+CREATE INDEX IF NOT EXISTS answers_at_idx ON answers (answered_at);
 -- jednorazowe uzupełnienie XP z historii (testy, kurs i czytanie, fiszki – maks. 100 XP/dzień, zadania i eseje – raz na pozycję dziennie)
 DO $$ BEGIN
   IF NOT EXISTS (SELECT 1 FROM settings WHERE key = 'xp_backfill') THEN

@@ -259,6 +259,17 @@ python3 -I tools/nauka/pojecia_pytan.py stats
   koło dla wybranego zakresu, odsetek pytań w całości o powtarzane pojęcia, listy najczęściej powtarzanych i nowych pojęć.
   Filtry jak w statystykach pytań OWE (wspólny komponent `app/pojecia/filters.tsx`, logika `coverage()` w `lib/owe-stats.ts`).
 
+## Na tle innych (Statystyki → Na tle innych, `/stats/swiat`)
+
+- **Ty na tle wszystkich** (anonimowo): Twój wynik, „lepiej niż X% pozostałych osób”, histogram wszystkich z wyróżnionym Twoim
+  przedziałem, średnia i mediana. Miary: XP, skuteczność (od 10 odpowiedzi w okresie), aktywność, seria. Źródło: łącznie, kurs,
+  testy (wszystkie / Archiwum OWE / Pytania AI / Słownik), fiszki, zadania, eseje; okres 7 dni / 30 dni / cały czas. Filtry na koncie.
+- **Prywatność:** do przeglądarki trafia tylko rozkład i Twój wynik; rozkład dopiero od 5 osób (k-anonimowość); liczone są aktywne
+  konta z aktywnością w danej mierze. Wyniki liczone jednym zapytaniem i trzymane w pamięci serwera 5 min (`lib/world.ts`,
+  logika rozkładu `lib/world-core.ts`, testy `tests/world.test.ts`).
+- **Ranking tygodnia (XP)** – tylko osoby, które same się zapiszą pod pseudonimem (3–20 znaków, unikalny, bez e-maili i wulgaryzmów);
+  wypisanie w każdej chwili (`GET/PUT /api/ranking`, kolumny `users.rank_opt`, `users.rank_name`).
+
 ## Moje statystyki wg działów (Statystyki → Działy i pojęcia, `/stats/dzialy`)
 
 Strona „Działy, zagadnienia i pojęcia – jak mi idzie” – osobno dla Archiwum OWE, Pytań AI i Słownika

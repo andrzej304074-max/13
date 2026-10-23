@@ -32,6 +32,7 @@ export const NAV: NavSection[] = [
   { id: "statystyki", icon: "📊", label: "Statystyki", tabs: [
     { href: "/stats", label: "Wyniki testów" },
     { href: "/stats/dzialy", label: "Działy i pojęcia" },
+    { href: "/stats/swiat", label: "Na tle innych" },
     { href: "/nauka/statystyki", label: "Nauka" },
   ] },
 ];

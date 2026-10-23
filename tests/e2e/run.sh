@@ -59,6 +59,7 @@ $PSQL "DELETE FROM bug_reports WHERE text LIKE 'limit % test zgłoszenia'" >/dev
 run g12.mjs
 run g14.mjs
 run h1.mjs
+run h2.mjs
 run authsweep.mjs
 run security.mjs
 run crawl.mjs

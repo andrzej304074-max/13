@@ -84,6 +84,7 @@ export function pathKey(path: string, search = ""): string | null {
     if (path.startsWith("/api/nauka/stats")) return "/nauka/statystyki";
     if (path.startsWith("/api/nauka")) return "nauka";
     if (path.startsWith("/api/stats/dzialy")) return "/stats/dzialy";
+    if (path.startsWith("/api/swiat") || path.startsWith("/api/ranking")) return "/stats/swiat";
     if (path.startsWith("/api/stats")) return "/stats";
     if (path.startsWith("/api/pojecia")) return "/pojecia/statystyki";
     return null;
