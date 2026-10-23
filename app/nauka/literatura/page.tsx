@@ -21,6 +21,17 @@ export default function LiteraturaPage() {
         Przy każdej pozycji: bezpłatne wersje lub fragmenty, jeśli istnieją legalnie, i bezpłatne materiały o tym samym zakresie.
         Podręczniki z wykazu nie mają legalnych darmowych wersji – można je wypożyczyć (link do katalogu Biblioteki Narodowej przy pozycji).
       </p>
+      <div className="card lit-note" data-testid="lit-disclaimer">
+        <strong>⚠️ Ważne:</strong> bezpłatne materiały przy pozycjach (oznaczone „bezpłatnie” i „bezpłatne materiały”) to nasz własny dobór.
+        <strong> Organizator OWE ich nie wskazuje</strong> – na olimpiadzie obowiązuje zakres z oficjalnego wykazu literatury,
+        a darmowe źródła pomagają go opanować, ale nie zastępują podręczników z wykazu.
+      </div>
+      <div className="card lit-note" data-testid="lit-scribd">
+        <strong>📄 Scribd:</strong> część pozycji z wykazu (lub ich fragmenty, streszczenia, wcześniejsze wydania) bywa dostępna
+        w serwisie{" "}<a href="https://www.scribd.com" target="_blank" rel="noopener noreferrer">Scribd ↗</a> – to serwis z płatną
+        subskrypcją (zwykle z okresem próbnym). Pliki wgrywają tam użytkownicy, więc sprawdzaj wydanie i korzystaj zgodnie
+        z prawem autorskim; pewniejsza jest biblioteka (szkolna, miejska, uczelniana) albo Academica (cyfrowe wypożyczenia BN).
+      </div>
 
       {lit.groups.map((g) => (
         <section key={g.id} id={g.id} className="stack">
@@ -42,6 +53,23 @@ export default function LiteraturaPage() {
           </ol>
         </section>
       ))}
+
+      <section id="jak-sie-uczyc" className="stack" data-testid="lit-howto">
+        <h2>Jak się uczyć z tej literatury</h2>
+        <ul className="card olymp-list">
+          <li><strong>Nie rozumiesz fragmentu? Zapytaj AI.</strong> Przepisz zdanie lub nazwę pojęcia do czatu AI i poproś: „wyjaśnij jak licealiście”,
+            „podaj przykład z życia”, „pokaż na liczbach”. Odpowiedź AI sprawdzaj w podręczniku – AI potrafi się mylić, zwłaszcza w liczbach i datach.</li>
+          <li><strong>Tłumacz sobie własnymi słowami</strong> (technika Feynmana): po przeczytaniu podrozdziału zamknij książkę i wyjaśnij
+            go na głos albo na kartce, jakbyś uczył kolegę. Miejsca, w których się zacinasz, to luki – wróć do nich.</li>
+          <li><strong>Pytaj „dlaczego?” i „co z tego wynika?”.</strong> Przy każdej definicji szukaj przyczyny, skutku i przykładu – tak są
+            budowane pytania olimpijskie.</li>
+          <li><strong>Rysuj wykresy i licz.</strong> Krzywe (popyt–podaż, koszty, AD–AS) i wzory przerabiaj sam w <Link href="/notatki">notatkach</Link> –
+            samo czytanie nie wystarcza.</li>
+          <li><strong>Sprawdzaj się od razu.</strong> Po rozdziale zrób lekcję w <Link href="/nauka">kursie</Link>, test ze <Link href="/slownik">Słownika</Link> lub
+            z <Link href="/">archiwum OWE</Link>; błędne odpowiedzi wracają w <Link href="/fiszki">fiszkach</Link> i powtórkach.</li>
+          <li><strong>Wracaj do trudnych miejsc</strong> po kilku dniach – rozłożone powtórki utrwalają lepiej niż jedno długie czytanie.</li>
+        </ul>
+      </section>
 
       <section id="zrodla-haslo" className="stack">
         <h2>{lit.theme.title}</h2>
