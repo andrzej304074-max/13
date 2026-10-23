@@ -80,6 +80,10 @@ $ WO = (L₀₋₁₄ + L₆₅₊) / L₁₅₋₆₄ · 100
 ## Piramida
 
 **[[Piramida wieku|Piramida wieku]]**: mężczyźni po lewej, kobiety po prawej. Trójkąt – wysoka dzietność; dzwon – stabilizacja; urna (wąska podstawa) – starzenie się, jak w Polsce i Japonii.
+::wykres piramida typ=progresywna | Piramida progresywna (trójkąt): dużo dzieci, mało seniorów – wysoka dzietność.
+
+Porównaj z piramidą kraju o niskiej dzietności:
+::wykres piramida typ=regresywna | Piramida regresywna (urna): wąska podstawa i szeroki środek – starzenie się ludności, jak w Polsce.
 
 ## Na marginesie
 

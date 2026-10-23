@@ -36,7 +36,7 @@ export default async function LessonArticlePage({ params }: { params: Promise<{ 
   return (
     <div className="stack" style={{ ["--topic" as string]: a.unit.topic.color }}>
       <Reader lessonMode unitId={unit} footer={footer}
-        sections={[{ ref: lesson, hl: `${unit}:${lesson}`, title: a.chapter.title, blocks: a.chapter.blocks, words: a.chapter.words }]}
+        sections={[{ ref: lesson, hl: `${unit}:${lesson}`, title: a.chapter.title, blocks: a.chapter.blocks, words: a.chapter.words, ch: a.chapter.ch }]}
         heading={{ title: a.chapter.title, sub: `Lekcja ${l.no}${l.part ? ` · cz. ${l.part}` : ""} · rozdział ${a.no} z ${a.of}`, starRef: lesson }}
         crumbs={[{ href: "/nauka/podrecznik", label: "Podręcznik" }, { href: `/nauka/podrecznik/${unit}`, label: a.unit.title }]} />
     </div>

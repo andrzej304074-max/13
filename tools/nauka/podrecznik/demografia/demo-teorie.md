@@ -33,6 +33,7 @@ Dlaczego bogatsi mają mniej dzieci? Gary Becker odpowiadał: dziecko kosztuje t
 2. spadają zgony, urodzeń wciąż dużo – [[Eksplozja i implozja demograficzna|eksplozja demograficzna]];
 3. spadają urodzenia;
 4. mało urodzeń i mało zgonów – stabilizacja albo spadek.
+::wykres przejscie | Przejście demograficzne: najpierw spadają zgony (faza II), potem urodzenia (faza III); pole między krzywymi to przyrost naturalny.
 
 ## Drugie przejście
 

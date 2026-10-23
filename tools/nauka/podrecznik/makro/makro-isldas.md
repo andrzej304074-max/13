@@ -47,6 +47,7 @@ Co przesuwa IS w prawo? Wszystko, co zwiększa wydatki przy danej stopie: wyższ
 ## Krzywa LM – rynek pieniądza
 
 **[[Krzywa LM|Krzywa LM]]** pokazuje pary (stopa, dochód), przy których rynek pieniądza jest w równowadze. Rośnie, bo wyższy dochód zwiększa **[[Popyt na pieniądz (preferencja płynności)|popyt na pieniądz]]** – potrzebujemy więcej gotówki na zakupy. Przy stałej ilości pieniądza stopa procentowa musi wtedy wzrosnąć. Ekspansja monetarna (więcej pieniądza) przesuwa LM w prawo.
+::wykres islm | Model IS-LM: równowaga E na przecięciu IS (rynek dóbr) i LM (rynek pieniądza) wyznacza dochód Y i stopę procentową r.
 
 ## Dwie pułapki
 
@@ -91,6 +92,7 @@ Krzywa AD opada. Jednym z powodów jest **[[Efekt majątkowy (efekt Pigou, efekt
 **[[Szok podażowy i popytowy|Szoki]]** wstrząsają gospodarką na dwa sposoby:
 - **szok popytowy** przesuwa AD; gdy AD spada, maleją i ceny, i produkcja;
 - **szok podażowy** przesuwa AS; gdy drożeje ropa, AS przesuwa się w lewo – ceny rosną, a produkcja spada.
+::wykres adas AD=-1 | Negatywny szok popytowy: AD przesuwa się w lewo – spadają i ceny, i produkcja.
 
 > Przykład: w 2022 roku skok cen energii po rosyjskiej agresji na Ukrainę był negatywnym szokiem podażowym dla Europy – rosła inflacja, a wzrost gospodarczy zwalniał.
 

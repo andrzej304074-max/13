@@ -240,6 +240,7 @@ Inflacja i polityka pieniężna zmieniają podział dochodów. Żeby zobaczyć, 
 ## Krzywa Lorenza
 
 Ustaw wszystkich ludzi w kraju od najbiedniejszego do najbogatszego. Na osi poziomej zaznacz odsetek ludności (od 0 do 100%), a na pionowej – jaki odsetek wszystkich dochodów ma ta część ludzi. Gdyby wszyscy zarabiali tyle samo, 20% ludzi miałoby 20% dochodów, 50% – 50%, i wykres byłby prostą linią – linią równości. W rzeczywistości najbiedniejsze 20% ma zwykle dużo mniej niż 20% dochodów, więc **krzywa Lorenza** wygina się poniżej linii równości.
+::wykres lorenz | Krzywa Lorenza: im bardziej odchyla się od linii równości, tym większa nierówność; współczynnik Giniego = A / (A + B).
 
 ## Współczynnik Giniego
 

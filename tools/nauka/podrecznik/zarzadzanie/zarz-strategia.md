@@ -79,6 +79,7 @@ Naczelne kierownictwo ustala strategię, ale realizują ją ludzie na niższych 
 ## SWOT
 
 **[[Analiza SWOT|Analiza SWOT]]**: mocne strony (Strengths), słabe strony (Weaknesses) – wewnątrz firmy; szanse (Opportunities), zagrożenia (Threats) – w otoczeniu.
+::wykres macierz preset=swot | Analiza SWOT: czynniki wewnętrzne (mocne i słabe strony) i zewnętrzne (szanse i zagrożenia).
 
 > Przykład: lokalna piekarnia. S – tradycyjny przepis, lojalni klienci. W – mała skala, wysokie koszty. O – moda na zdrową żywność. T – supermarket z tanim pieczywem obok.
 
@@ -101,8 +102,10 @@ Naczelne kierownictwo ustala strategię, ale realizują ją ludzie na niższych 
 - **dojne krowy** – duży udział, wolny wzrost – dają gotówkę;
 - **znaki zapytania** – mały udział, szybki wzrost;
 - **psy** – mały udział, wolny wzrost.
+::wykres macierz preset=bcg | Macierz BCG: produkty według tempa wzrostu rynku i względnego udziału w rynku.
 
 **[[Macierz GE (McKinseya)|Macierz GE]]** – siatka 3 × 3: atrakcyjność sektora i siła jednostki; uwzględnia więcej czynników niż BCG.
+::wykres macierz preset=ge | Macierz GE (McKinseya): 9 pól – zielone inwestuj i rozwijaj, żółte selektywnie, czerwone zbieraj lub wycofaj się.
 
 ## Na marginesie
 
@@ -135,6 +138,7 @@ Strategia musi uwzględniać państwo. **[[Regulacja, deregulacja i przejęcie r
 - **rozwój rynku** – obecny produkt, nowy rynek (eksport);
 - **rozwój produktu** – nowy produkt, obecny rynek;
 - **dywersyfikacja** – nowy produkt, nowy rynek (najbardziej ryzykowna).
+::wykres macierz preset=ansoff | Macierz Ansoffa: cztery strategie rozwoju – od najbezpieczniejszej penetracji rynku po najbardziej ryzykowną dywersyfikację.
 
 ## Dywersyfikacja
 

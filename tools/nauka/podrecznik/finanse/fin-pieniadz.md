@@ -164,6 +164,7 @@ r to stopa rezerw, g – stosunek gotówki do depozytów.
 ## Ile pieniądza chcemy trzymać
 
 **[[Popyt na pieniądz (preferencja płynności)|Popyt na pieniądz]]** według Keynesa ma trzy motywy: transakcyjny, przezornościowy i spekulacyjny. Rośnie z dochodem, maleje, gdy rosną stopy – bo trzymanie gotówki ma **[[Koszt alternatywny (koszt utraconych możliwości)|koszt alternatywny]]**: utracone odsetki. Uwaga na **[[Wielkość popytu a popyt|różnicę między popytem a wielkością popytu]]**.
+::wykres pieniadz MS=+1 | Rynek pieniądza: bank centralny zwiększa podaż pieniądza (MS w prawo) – stopa procentowa spada.
 
 ## Stopy
 

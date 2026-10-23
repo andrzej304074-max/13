@@ -48,6 +48,7 @@ Pierwszy nawias to oszczędności prywatne (dochód po podatkach minus konsumpcj
 - **zachęty do oszczędzania** (np. ulgi podatkowe) – podaż w prawo, stopa spada, inwestycje rosną;
 - **ulgi inwestycyjne** – popyt w prawo, stopa rośnie, inwestycje rosną;
 - **deficyt budżetowy** – oszczędności publiczne spadają, podaż w lewo, stopa rośnie, inwestycje maleją. To efekt wypierania.
+::wykres fundusze S=+1 | Więcej oszczędności (podaż funduszy w prawo): realna stopa procentowa spada, a inwestycje rosną.
 
 ## Pośrednicy
 

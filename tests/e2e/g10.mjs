@@ -1,4 +1,5 @@
 // G10: Podręcznik – „Czytaj następną lekcję →” (także przez granicę działu), „Czytaj dalej” na końcu działu, wykresy w artykułach.
+import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import { chromium } from "playwright-core";
 const B = "http://localhost:3100";
@@ -37,7 +38,7 @@ check(await page.evaluate(() => document.documentElement.scrollWidth <= window.i
 
 // wykresy: każdy blok „g” w danych renderuje się jako SVG
 const withGraph = [];
-for (const [uid, u] of Object.entries(book)) for (const c of u.chapters) if (c.blocks.some((b) => b.t === "g")) withGraph.push([uid, c.lesson, c.blocks.filter((b) => b.t === "g").length]);
+for (const [uid, u] of Object.entries(book)) for (const c of u.chapters) if (c.blocks.some((b) => b.fig)) withGraph.push([uid, c.lesson, c.blocks.filter((b) => b.fig).length]);
 if (withGraph.length) {
   for (const [uid, l, n] of withGraph.slice(0, 12)) {
     await page.goto(`${B}/nauka/podrecznik/${uid}/${l}`);
@@ -46,6 +47,21 @@ if (withGraph.length) {
     check(got === n, `${uid}/${l}: wykresy ${got}/${n}`);
   }
   check(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1), "wykres: bez poziomego przewijania");
+}
+
+// podkreślenie sprzed zmiany tekstu rozdziału jest ukryte (z informacją), nowsze zostaje
+const changedCh = Object.entries(book).flatMap(([uid, u]) => u.chapters.filter((c) => c.ch > "2001").map((c) => [uid, c.lesson, c.ch]))[0];
+if (changedCh) {
+  const [uid, l, ch] = changedCh;
+  const sql = (q) => execFileSync("psql", ["-h", "localhost", "-U", "postgres", "-d", "owe", "-qtAc", q], { env: { ...process.env, PGPASSWORD: "dev" } }).toString().trim();
+  const uidUser = sql("SELECT id FROM users WHERE email = 'drugi@example.com'");
+  sql(`DELETE FROM highlights WHERE user_id = '${uidUser}' AND article = '${uid}:${l}'`);
+  sql(`INSERT INTO highlights (user_id, article, block, start_at, end_at, color, created_at) VALUES ('${uidUser}', '${uid}:${l}', 0, 0, 5, 'y', '${ch}'::timestamptz - interval '1 day'), ('${uidUser}', '${uid}:${l}', 0, 0, 5, 'g', '${ch}'::timestamptz + interval '1 second')`);
+  await page.goto(`${B}/nauka/podrecznik/${uid}/${l}`);
+  await page.waitForSelector('[data-testid="reader-body"]');
+  check(/1 podkreślenie z poprzedniej wersji/.test(await page.locator('[data-testid="hl-stale"]').innerText().catch(() => "")), `${l}: informacja o ukrytym podkreśleniu`);
+  check(await page.locator('[data-testid="reader-body"] mark').count() === 1, `${l}: widoczne tylko nowsze podkreślenie (${await page.locator('[data-testid="reader-body"] mark').count()})`);
+  sql(`DELETE FROM highlights WHERE user_id = '${uidUser}' AND article = '${uid}:${l}'`);
 }
 
 await browser.close();

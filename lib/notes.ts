@@ -192,13 +192,13 @@ export async function setStar(userId: string, kind: unknown, ref: unknown, on: u
   return { ok: true, on };
 }
 
-export interface HighlightRow { id: string; article: string; block: number; start: number; end: number; color: string }
+export interface HighlightRow { id: string; article: string; block: number; start: number; end: number; color: string; created_at?: string }
 
 export async function listHighlights(userId: string, article: unknown): Promise<HighlightRow[]> {
   if (typeof article !== "string" || !article) throw new HttpError(400, "Brak artykułu.");
   // artykuł działu pokazuje też podkreślenia z jego rozdziałów (ten sam tekst), więc prefiks
   const { rows } = await query<HighlightRow>(
-    `SELECT id, article, block, start_at AS start, end_at AS "end", color FROM highlights
+    `SELECT id, article, block, start_at AS start, end_at AS "end", color, created_at FROM highlights
      WHERE user_id = $1 AND (article = $2 OR article LIKE $3) ORDER BY created_at`, [userId, article, `${article}:%`]);
   return rows;
 }
@@ -210,7 +210,7 @@ export async function addHighlight(userId: string, v: Record<string, unknown>): 
     if (Number(cnt[0].n) >= MAX_HIGHLIGHTS) throw new NoteError(`Masz już ${MAX_HIGHLIGHTS} podkreśleń – usuń część, żeby dodać nowe.`);
     const { rows } = await query<HighlightRow>(
       `INSERT INTO highlights (user_id, article, block, start_at, end_at, color) VALUES ($1, $2, $3, $4, $5, $6)
-       RETURNING id, article, block, start_at AS start, end_at AS "end", color`, [userId, h.article, h.block, h.start, h.end, h.color]);
+       RETURNING id, article, block, start_at AS start, end_at AS "end", color, created_at`, [userId, h.article, h.block, h.start, h.end, h.color]);
     return rows[0];
   });
 }

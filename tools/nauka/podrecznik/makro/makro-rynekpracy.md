@@ -38,6 +38,7 @@ Na zwykłym rynku nadwyżka towaru obniża cenę. Dlaczego bezrobocie nie obniż
 ## Rynek, na którym towarem jest praca
 
 **[[Rynek pracy|Rynek pracy]]** działa jak każdy rynek: firmy zgłaszają popyt na pracę, a ludzie jej podaż. Ceną jest płaca realna – to, ile za pensję można kupić.
+::wykres praca | Rynek pracy: płaca realna i zatrudnienie w punkcie, gdzie popyt na pracę (firmy) spotyka podaż pracy (ludzie).
 
 ## Trzy grupy ludności
 
@@ -197,6 +198,7 @@ Trzech brytyjskich ekonomistów – **[[Layard Richard, Nickell Stephen, Jackman
 ## Krzywa Phillipsa
 
 W 1958 roku Alban William Phillips zauważył, że w Wielkiej Brytanii, gdy bezrobocie było niskie, płace rosły szybko. Tak powstała **[[Krzywa Phillipsa|krzywa Phillipsa]]**: w krótkim okresie niższe bezrobocie idzie w parze z wyższą inflacją. Politycy uwierzyli, że mogą wybrać punkt na krzywej. Friedman i Phelps ostrzegli: w długim okresie ludzie dostosują oczekiwania i krzywa stanie się pionowa na poziomie naturalnej stopy bezrobocia. Lata 70. – wysoka inflacja _i_ wysokie bezrobocie – przyznały im rację.
+::wykres phillips dlugi=1 | Krzywa Phillipsa: w krótkim okresie (SRPC) niższe bezrobocie idzie w parze z wyższą inflacją; w długim (LRPC) krzywa jest pionowa przy naturalnej stopie bezrobocia u*.
 
 ## Prawo Okuna
 

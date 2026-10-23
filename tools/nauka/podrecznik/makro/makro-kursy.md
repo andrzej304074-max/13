@@ -141,6 +141,7 @@ Sprawozdania sprawdza **[[Audyt wewnętrzny i biegły rewident|biegły rewident]
 ## Umocnienie i osłabienie
 
 **[[Aprecjacja i deprecjacja|Aprecjacja]]** to umocnienie waluty – za euro płacimy mniej złotych. Import tanieje, eksport staje się mniej konkurencyjny. **Deprecjacja** to osłabienie.
+::wykres waluta D=+1 | Rośnie popyt na euro (np. więcej importu z UE): kurs PLN/EUR rośnie – złoty się osłabia.
 
 > Uwaga: gdy kurs EUR/PLN spada z 4,40 do 4,20, złoty się **umacnia**. Liczba maleje, a waluta zyskuje – łatwo się pomylić.
 

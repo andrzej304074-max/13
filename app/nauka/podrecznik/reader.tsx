@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { StarButton } from "@/app/components/star";
 import { api, withUser, useViewedUser } from "@/lib/client";
 import { loadData } from "@/lib/data-client";
@@ -13,6 +13,7 @@ import { SpeakButton } from "@/app/components/speech/speak";
 import { play, useSpeech } from "@/lib/speech";
 import { articleSpeech, runsText } from "@/lib/podrecznik-speech";
 import { textHash } from "@/lib/tts-core";
+import { BookFigure } from "@/app/components/book-figure";
 
 /** Jedna sekcja czytnika: przegląd działu albo rozdział lekcji. */
 export interface ReaderSection {
@@ -24,9 +25,11 @@ export interface ReaderSection {
   blocks: Block[];
   words: number;
   kicker?: string;
+  /** Data ostatniej zmiany tekstu – starsze podkreślenia tej sekcji są ukrywane (przesunięcia z poprzedniej wersji). */
+  ch?: string;
 }
 
-interface Highlight { id: string; article: string; block: number; start: number; end: number; color: string }
+interface Highlight { id: string; article: string; block: number; start: number; end: number; color: string; created_at?: string }
 type Haslo = { id: string; t: string; d: string; w: string | null };
 
 const SCALE_KEY = "owe:readerScale";
@@ -208,14 +211,22 @@ export function Reader({ sections, unitId, heading, crumbs, footer, lessonMode =
     if (!hasla) loadData<{ rows: Haslo[] }>("/api/dane/hasla").then((d) => setHasla(Object.fromEntries(d.rows.map((x) => [x.id, x])))).catch(() => {});
   };
 
+  // podkreślenia sprzed ostatniej zmiany tekstu sekcji – nieaktualne przesunięcia, nie pokazujemy
+  const changedAt = useMemo(() => new Map(sections.filter((s) => s.ch).map((s) => [s.hl, s.ch!])), [sections]);
+  const isStale = useCallback((h: Highlight) => {
+    const ch = changedAt.get(h.article);
+    return !!(ch && h.created_at && h.created_at < ch);
+  }, [changedAt]);
+  const stale = useMemo(() => hls.filter(isStale), [hls, isStale]);
   const byBlock = useMemo(() => {
     const m = new Map<string, Highlight[]>();
     for (const h of hls) {
+      if (isStale(h)) continue;
       const k = `${h.article}|${h.block}`;
       m.set(k, [...(m.get(k) ?? []), h]);
     }
     return m;
-  }, [hls]);
+  }, [hls, isStale]);
 
   // --- czytanie na głos: każdy blok to element kolejki (id = sekcja-blok, jak data-s / data-b w DOM);
   // nagrane akapity (głos Azure, lib/tts.ts) grają z pliku, brakujące serwer nagrywa na bieżąco (`live`) –
@@ -285,6 +296,10 @@ export function Reader({ sections, unitId, heading, crumbs, footer, lessonMode =
   };
 
   const renderBlock = (b: Block, si: number, bi: number) => {
+    const el = renderText(b, si, bi);
+    return b.fig ? <Fragment key={bi}>{el}<BookFigure fig={b.fig} /></Fragment> : el;
+  };
+  const renderText = (b: Block, si: number, bi: number) => {
     const attrs = { "data-s": si, "data-b": bi };
     switch (b.t) {
       case "p": return <p key={bi} {...attrs} data-len={runsText(b.r).length}>{renderRuns(b.r, si, bi)}</p>;
@@ -336,6 +351,12 @@ export function Reader({ sections, unitId, heading, crumbs, footer, lessonMode =
         </details>
       )}
 
+      {stale.length > 0 && (
+        <p className="muted small reader-stale" data-testid="hl-stale">
+          Tekst tego artykułu został poprawiony – {stale.length === 1 ? "1 podkreślenie z poprzedniej wersji jest ukryte" : `${stale.length} podkreśleń z poprzedniej wersji jest ukrytych`}.{" "}
+          <button type="button" className="linkbtn" onClick={() => stale.forEach((h) => void delHl(h.id))} disabled={!!preview}>Usuń je</button>
+        </p>
+      )}
       <div className="reader-body" ref={bodyRef} data-testid="reader-body">
         {sections.map((s, si) => (
           <section key={s.ref} id={`r-${s.ref}`} className="reader-section">

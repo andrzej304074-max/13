@@ -49,6 +49,7 @@ W długim okresie wysoka cena przyciąga nowych sprzedawców, aż zysk ekonomicz
 ## Monopol: jeden sprzedawca
 
 Na drugim końcu jest **[[Monopol|monopol]]** – jedna firma, produkt bez bliskich zamienników, wejście zablokowane. Monopolista sam wybiera cenę, ale musi pamiętać, że im drożej, tym mniej sprzeda. Jego utarg krańcowy jest niższy od ceny, bo żeby sprzedać jeszcze jedną sztukę, musi obniżyć cenę wszystkich. Efekt: produkuje mniej i drożej niż rynek konkurencyjny, a społeczeństwo traci.
+::wykres monopol | Monopolista wybiera ilość Qₘ, przy której MR = MC, a cenę Pₘ odczytuje z krzywej popytu. Czerwony trójkąt to strata dobrobytu względem konkurencji (Q_k).
 
 ## Skąd się biorą monopole
 

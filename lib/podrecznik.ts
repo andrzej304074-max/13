@@ -9,12 +9,16 @@ import type { CourseTopic } from "./nauka-types";
 
 /** Odcinek tekstu: s – tekst, b/i – pogrubienie/kursywa, k – id hasła (odnośnik do Tabeli pojęć). */
 export interface Run { s: string; b?: 1; i?: 1; k?: string }
-export type Block =
+/** Rysunek pod blokiem (app/components/book-figure.tsx): rodzaj, opcje, podpis. */
+export interface Fig { k: string; o?: Record<string, string | number>; cap?: string }
+export type Block = (
   | { t: "p" | "h" | "ex" | "trap" | "key"; r: Run[] }
   | { t: "ul"; items: Run[][] }
-  | { t: "f"; x: string };
-export interface Chapter { lesson: string; title: string; blocks: Block[]; words: number }
-interface UnitBook { intro: { title: string; blocks: Block[]; words: number } | null; chapters: Chapter[]; words: number }
+  | { t: "f"; x: string }
+) & { fig?: Fig };
+/** `ch` – data ostatniej zmiany tekstu sekcji (starsze podkreślenia dotyczą poprzedniej wersji). */
+export interface Chapter { lesson: string; title: string; blocks: Block[]; words: number; ch?: string }
+interface UnitBook { intro: { title: string; blocks: Block[]; words: number; ch?: string } | null; chapters: Chapter[]; words: number }
 
 const UNITS = (book as unknown as { units: Record<string, UnitBook> }).units;
 

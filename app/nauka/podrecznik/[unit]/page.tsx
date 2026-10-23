@@ -16,10 +16,10 @@ export default async function UnitArticlePage({ params }: { params: Promise<{ un
   const a = unitArticle(unit);
   if (!a) notFound();
   const sections: ReaderSection[] = [
-    ...(a.intro ? [{ ref: unit, hl: `${unit}:intro`, title: a.intro.title, blocks: a.intro.blocks, words: a.intro.words, kicker: "W skrócie" }] : []),
+    ...(a.intro ? [{ ref: unit, hl: `${unit}:intro`, title: a.intro.title, blocks: a.intro.blocks, words: a.intro.words, kicker: "W skrócie", ch: a.intro.ch }] : []),
     ...a.chapters.map((c) => {
       const l = COURSE.lessons[c.lesson];
-      return { ref: c.lesson, hl: `${unit}:${c.lesson}`, title: c.title, blocks: c.blocks, words: c.words, kicker: `Lekcja ${l.no}${l.part ? ` · cz. ${l.part}` : ""}` };
+      return { ref: c.lesson, hl: `${unit}:${c.lesson}`, title: c.title, blocks: c.blocks, words: c.words, ch: c.ch, kicker: `Lekcja ${l.no}${l.part ? ` · cz. ${l.part}` : ""}` };
     }),
   ];
   const nu = nextUnit(unit);

@@ -155,6 +155,7 @@ Przeciętny koszt stały ciągle maleje – czynsz rozkłada się na coraz więc
 ## Koszt jeszcze jednej pizzy
 
 **[[Koszt krańcowy (MC)|Koszt krańcowy]]** to przyrost kosztu przy produkcji jednej dodatkowej sztuki:
+::wykres koszty | Krzywe kosztów: koszt krańcowy MC przecina AVC i ATC w ich najniższych punktach; koszt stały na sztukę (AFC) maleje bez końca.
 
 $ MC = ΔTC / ΔQ
 

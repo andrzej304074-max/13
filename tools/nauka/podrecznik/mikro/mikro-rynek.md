@@ -56,6 +56,7 @@ Oto rozróżnienie, które pojawia się na olimpiadzie najczęściej: **[[Wielko
 ## Spotkanie w punkcie równowagi
 
 Gdy połączymy obie krzywe, otrzymamy **[[Równowaga rynkowa|równowagę rynkową]]** – cenę, przy której wielkość popytu równa się wielkości podaży. Nikt nie zostaje z niesprzedanym towarem i nikt nie odchodzi z pustymi rękami, jeśli był gotów zapłacić tę cenę.
+::wykres sd | Równowaga rynkowa: cena i ilość w punkcie E, gdzie krzywa popytu (D) przecina krzywą podaży (S).
 
 ## Na marginesie
 
@@ -229,6 +230,7 @@ Krzywa popytu przesuwa się, gdy zmieniają się **[[Czynniki kształtujące pop
 - gusty i moda;
 - oczekiwania co do cen i dochodów;
 - liczba nabywców.
+::wykres sd D=+1 | Wzrost popytu (np. wyższe dochody przy dobru normalnym): D przesuwa się w prawo – rosną cena i ilość równowagi (E₀ → E₁).
 
 Krzywa podaży przesuwa się, gdy zmieniają się **[[Czynniki kształtujące podaż (determinanty podaży)|determinanty podaży]]**: koszty, technika, oczekiwania producentów, liczba sprzedawców, podatki i dotacje, warunki naturalne.
 

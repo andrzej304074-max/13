@@ -17,11 +17,16 @@ Format pliku działu (jeden plik = jeden dział kursu, nazwa = id działu):
     > Zapamiętaj: ramka z najważniejszą myślą
     $ wzór w osobnej linii
     - punkt listy
+    ::wykres sd D=+1 | Podpis             ← rysunek SVG pod blokiem powyżej (pole `fig` bloku – numeracja bloków,
+                                            a więc i podkreślenia użytkowników, się nie zmienia); rodzaje: FIGS niżej
+
+Każda sekcja dostaje `ch` – datę ostatniej zmiany treści (porównanie skrótu tekstu z poprzednim podrecznik.json);
+podkreślenia starsze niż `ch` czytnik ukrywa, bo ich przesunięcia dotyczą poprzedniej wersji tekstu.
 
 Sprawdza: każda zwykła lekcja działu ma rozdział, każde hasło lekcji (i hasła z pytań – „extra”) ma w nim odnośnik,
 odnośniki prowadzą do istniejących haseł. Braki to ostrzeżenia; z --strict błąd.
 """
-import glob, json, os, re, sys
+import datetime, glob, hashlib, json, os, re, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
@@ -78,6 +83,47 @@ def runs(text, ctx, links):
 
 BOX = {"przykład:": "ex", "uwaga:": "trap", "zapamiętaj:": "key"}
 
+# Rysunki (app/components/book-figure.tsx): rodzaj → dozwolone opcje (None – dowolna krzywa z przesunięciem −2…2)
+SHIFT_GRAPHS = {"sd": "D S", "adas": "AD SRAS LRAS", "islm": "IS LM", "praca": "DL SL", "pieniadz": "MD MS", "waluta": "D S", "fundusze": "D S"}
+FIGS = {
+    "koszty": {}, "laffer": {}, "lorenz": {}, "przejscie": {}, "blake": {}, "monopol": {},
+    "phillips": {"dlugi": {"1"}}, "kmp": {"punkty": {"1"}},
+    "piramida": {"typ": {"progresywna", "ustabilizowana", "regresywna"}},
+    "macierz": {"preset": {"bcg", "ansoff", "ge", "swot"}},
+}
+
+
+def figure(spec, ctx):
+    """„sd D=+1 S=-1 | Podpis” → {k, o, cap}."""
+    body, _, cap = spec.partition("|")
+    parts = body.split()
+    if not parts:
+        errors.append(f"{ctx}: pusty ::wykres")
+        return None
+    k, opts = parts[0], {}
+    for kv in parts[1:]:
+        key, _, val = kv.partition("=")
+        opts[key] = val
+    if k in SHIFT_GRAPHS:
+        for key, val in opts.items():
+            if key not in SHIFT_GRAPHS[k].split() or not re.fullmatch(r"[+-]?[12]", val):
+                errors.append(f"{ctx}: ::wykres {k} – zła opcja {key}={val}")
+        o = {key: int(val) for key, val in opts.items()}
+    elif k in FIGS:
+        for key, val in opts.items():
+            if key not in FIGS[k] or val not in FIGS[k][key]:
+                errors.append(f"{ctx}: ::wykres {k} – zła opcja {key}={val}")
+        o = opts
+    else:
+        errors.append(f"{ctx}: nieznany rodzaj wykresu „{k}”")
+        return None
+    out = {"k": k}
+    if o:
+        out["o"] = o
+    if cap.strip():
+        out["cap"] = cap.strip()
+    return out
+
 
 def blocks(lines, ctx, links):
     out, para, lst = [], [], []
@@ -115,6 +161,13 @@ def blocks(lines, ctx, links):
             else:
                 body = body.split(":", 1)[1].strip()
             out.append({"t": kind, "r": runs(body, ctx, links), "_open": True})
+        elif s.startswith("::wykres"):
+            flush()
+            fig = figure(s[len("::wykres"):].strip(), ctx)
+            if not out:
+                errors.append(f"{ctx}: ::wykres musi stać pod akapitem, ramką albo listą")
+            elif fig:
+                out[-1]["fig"] = fig
         elif s.startswith("$ "):
             flush()
             out.append({"t": "f", "x": s[2:].strip()})
@@ -141,7 +194,32 @@ def text_of(bs):
             parts += ["".join(r["s"] for r in it) for it in b["items"]]
         if "x" in b:
             parts.append(b["x"])
+        if "fig" in b and b["fig"].get("cap"):
+            parts.append(b["fig"]["cap"])
     return " ".join(parts)
+
+
+def digest(bs):
+    """Skrót treści sekcji bez rysunków – zmiana tekstu (nie dodanie wykresu) unieważnia podkreślenia."""
+    return hashlib.sha1(json.dumps([{k: v for k, v in b.items() if k != "fig"} for b in bs], ensure_ascii=False, sort_keys=True).encode()).hexdigest()[:12]
+
+
+try:
+    OLD = json.load(open(OUT, encoding="utf-8"))["units"]
+except (OSError, ValueError, KeyError):
+    OLD = {}
+NOW = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+BASE = "2000-01-01T00:00:00Z"
+
+
+def changed(uid, sid, bs):
+    """(skrót, data ostatniej zmiany treści) – data z poprzedniej wersji, gdy treść ta sama (albo bez skrótu – pierwsze uruchomienie)."""
+    h = digest(bs)
+    old = OLD.get(uid) or {}
+    prev = old.get("intro") if sid == "intro" else next((c for c in old.get("chapters", []) if c["lesson"] == sid), None)
+    if prev and (prev.get("hx") in (None, h)):
+        return h, prev.get("ch", BASE)
+    return h, NOW if prev else BASE
 
 
 def words(bs):
@@ -176,7 +254,8 @@ for path in sorted(glob.glob(os.path.join(SRC, "*", "*.md"))):
         if not bs:
             errors.append(f"{ctx}: pusty rozdział")
         if sec["id"] == "intro":
-            intro = {"title": sec["title"] or "W skrócie", "blocks": bs, "words": words(bs)}
+            hx, ch = changed(uid, "intro", bs)
+            intro = {"title": sec["title"] or "W skrócie", "blocks": bs, "words": words(bs), "hx": hx, "ch": ch}
             continue
         lesson = LESSONS.get(sec["id"])
         if not lesson or lesson["unit"] != uid or lesson.get("type") == "zrozum":
@@ -188,7 +267,8 @@ for path in sorted(glob.glob(os.path.join(SRC, "*", "*.md"))):
         missing = [ITEMS[i]["t"] for i in need if i not in links]
         if missing:
             warnings.append(f"{ctx}: bez odnośnika do: " + "; ".join(missing))
-        chapters.append({"lesson": sec["id"], "title": sec["title"], "blocks": bs, "words": words(bs)})
+        hx, ch = changed(uid, sec["id"], bs)
+        chapters.append({"lesson": sec["id"], "title": sec["title"], "blocks": bs, "words": words(bs), "hx": hx, "ch": ch})
     order = {l: i for i, l in enumerate(std)}
     chapters.sort(key=lambda c: order.get(c["lesson"], 1e9))
     got = {c["lesson"] for c in chapters}

@@ -117,6 +117,7 @@ McClelland zauważył, że najlepszymi menedżerami w dużych firmach nie są lu
 - **(9,1)** zadaniowy – wyniki kosztem ludzi;
 - **(5,5)** zrównoważony – po trochu;
 - **(9,9)** zespołowy – ideał.
+::wykres blake | Siatka kierownicza Blake'a i Mouton: styl kierowania jako połączenie troski o ludzi i troski o zadania (od 1.1 do 9.9).
 
 ## Fiedler
 

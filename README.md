@@ -75,6 +75,12 @@ Przy starcie testu można wybrać rodzaj pytań (ręczne, automatyczne lub oba) 
   „które hasło nie należy do tematu”, „które należą”) dla wszystkich haseł tematu kursu z dystraktorami z tego samego
   tematu; przy nowym haśle przewodnim zmienia się stałą `THEME` w skrypcie. Nowe pytania (pole `th`) i pytania algorytmiczne liczą się
   w testach Słownika, „Wszystkich pytaniach” i statystykach, ale nie przestawiają lekcji kursu (`build_course.py`).
+- **Rysunki w Podręczniku**: w pliku działu linia `::wykres <rodzaj> [opcje] | Podpis` pod akapitem dodaje rysunek SVG
+  (`app/components/book-figure.tsx`): przesunięcia krzywych (`sd`, `adas`, `islm`, `praca`, `pieniadz`, `waluta`, `fundusze`,
+  np. `sd D=+1`), krzywe kosztów, Phillipsa (`dlugi=1`), Laffera, Lorenza, KMP (`punkty=1`), monopol, piramida wieku
+  (`typ=progresywna|ustabilizowana|regresywna`), przejście demograficzne, macierze (`preset=bcg|ansoff|ge|swot`), siatka Blake'a–Mouton.
+  Rysunek należy do bloku powyżej, więc numeracja bloków (podkreślenia, nagrania) się nie zmienia. Każda sekcja ma `ch` – datę
+  ostatniej zmiany tekstu; podkreślenia starsze od niej czytnik ukrywa (z informacją i przyciskiem „Usuń je”).
 - **Jakość definicji**: `python3 -I tools/slownik/quality.py` → `tools/slownik/JAKOSC.md` (za krótkie, ogólnikowe,
   powtarzające nazwę, bez przykładu). Przykłady i uzupełnienia definicji są w `tools/slownik/glossary/przyklady_s15.py`
   (hasło XL) i `przyklady_ogolne.py`; nanosi je `python3 -I tools/slownik/glossary/apply_examples.py` (bezpieczne do

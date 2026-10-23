@@ -40,6 +40,7 @@ W latach 70. i 80. część ekonomistów uznała, że keynesizm za bardzo skupia
 ## Krzywa Laffera
 
 Arthur Laffer narysował podobno swoją krzywą na serwetce. **[[Krzywa Laffera|Krzywa Laffera]]** pokazuje, że przy stawce 0% wpływy z podatku są zerowe – ale przy 100% też, bo nikomu nie opłaca się pracować. Gdzieś pomiędzy wpływy są największe. Powyżej tej stawki podnoszenie podatków zmniejsza wpływy. Spór dotyczy tego, gdzie leży szczyt – i czy dany kraj jest powyżej, czy poniżej niego.
+::wykres laffer | Krzywa Laffera: do stawki t* wyższa stawka daje wyższe wpływy, powyżej – niższe. Te same wpływy można uzyskać przy niskiej (A) i wysokiej (B) stawce.
 
 ## Polityka podażowa
 

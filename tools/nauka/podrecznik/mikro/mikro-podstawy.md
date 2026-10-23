@@ -88,6 +88,7 @@ Do rachunkowości wrócisz w temacie „Finanse przedsiębiorstw”. Na razie za
 Wyobraź sobie małe państwo, które produkuje tylko dwie rzeczy: chleb i rowery. Jeśli wszyscy pracownicy i maszyny zajmą się chlebem, kraj wypiecze, powiedzmy, milion bochenków i zero rowerów. Jeśli tylko rowerami – sto tysięcy rowerów i zero chleba. Pomiędzy są wszystkie kombinacje. Gdy narysujemy je na wykresie, powstanie **[[Krzywa możliwości produkcyjnych (granica możliwości produkcyjnych)|krzywa możliwości produkcyjnych]]**.
 
 Pokazuje ona maksymalne kombinacje dwóch dóbr przy pełnym i efektywnym wykorzystaniu zasobów. Każdy punkt na krzywej oznacza, że więcej chleba można mieć tylko kosztem rowerów – to koszt alternatywny w czystej postaci.
+::wykres kmp punkty=1 | Krzywa możliwości produkcyjnych: A – produkcja efektywna, B – zasoby niewykorzystane, C – dziś nieosiągalne.
 
 - punkt **na** krzywej – gospodarka działa efektywnie;
 - punkt **wewnątrz** – zasoby się marnują, np. ludzie są bezrobotni;
