@@ -196,7 +196,11 @@ export default function StatsPage() {
         <p className="muted small" style={{ margin: 0 }}>Liczone z pytań każdego etapu – także w testach „oba etapy”. Pytania bez odpowiedzi w teście 30/50 liczą się jako błędne.</p>
       </>}
 
-      <h2>Według źródła pytań</h2>
+      <div className="row" style={{ gap: 8 }}>
+        <h2 style={{ margin: 0 }}>Według źródła pytań</h2>
+        <span className="spacer" />
+        <Link className="btn small secondary" href="/testy/wszystkie?bledy=1" data-testid="retry-mistakes">🔁 Powtórz moje błędy</Link>
+      </div>
       <div className="stat-grid" data-testid="source-stats">
         {(["owe", "ai", "slownik"] as const).map((k) => {
           const src = stats.bySource[k];

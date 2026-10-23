@@ -334,6 +334,7 @@ function Summary({ test }: { test: TestState }) {
       <div className="row">
         <Link className="btn" href={test.bank === "slownik" ? "/slownik" : test.bank === "mix" ? "/testy/wszystkie" : "/"}>Nowy test</Link>
         <Link className="btn secondary" href={`/stats?bank=${test.bank}`}>Statystyki</Link>
+        <Link className="btn secondary" href="/testy/wszystkie?bledy=1" data-testid="retry-mistakes">🔁 Powtórz błędy</Link>
       </div>
     </div>
   );

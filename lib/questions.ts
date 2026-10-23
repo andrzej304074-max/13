@@ -17,6 +17,10 @@ export interface DrawFilter extends MetaFilter {
   section?: number | null;
   /** Pytania OWE jednokrotnego wyboru: tylko etap szkolny (`s`) albo okręgowy (`o`). */
   stage?: Stage | null;
+  /** „Tylko moje błędy”: dozwolone pytania w tej kolejności (od najdawniejszego błędu) – bez losowania. */
+  only?: string[] | null;
+  /** Zapisany w teście znacznik „tylko moje błędy” (lista `only` liczona na nowo przy dolosowaniu). */
+  mistakes?: boolean | null;
 }
 
 /** Etap zawodów OWE: szkolny i okręgowy (jednokrotny wybór), centralny (wielokrotny). */
@@ -39,6 +43,11 @@ const hasMeta = (f: MetaFilter) => !!(f.sources?.length || f.edFrom || f.edTo ||
 
 function pool(bank: Bank, type: QuestionType, f: DrawFilter = {}): Question[] {
   const meta = hasMeta(f);
+  if (f.only) {
+    const rank = new Map(f.only.map((id, i) => [id, i]));
+    return banks[bank].filter((q) => rank.has(q.id) && q.type === type && (!meta || metaOk(q.id, f)))
+      .sort((a, b) => rank.get(a.id)! - rank.get(b.id)!);
+  }
   return banks[bank].filter(
     (q) => q.type === type && (!f.origin || q.origin === f.origin) && (!f.section || q.section === f.section) && (!f.stage || stageOf(q.id) === f.stage)
       && (!meta || metaOk(q.id, f)),
@@ -62,6 +71,7 @@ export function slownikCounts(): Record<string, number> {
 /** Losuje do `count` różnych pytań danego typu (Fisher–Yates). */
 export function drawQuestions(type: QuestionType, count: number, bank: Bank = "owe", f: DrawFilter = {}): Question[] {
   const p = pool(bank, type, f);
+  if (f.only) return p.slice(0, count);
   for (let i = p.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [p[i], p[j]] = [p[j], p[i]];

@@ -1385,3 +1385,8 @@ body:has(.speech-bar) main.container { padding-bottom: 160px; }
 .rank-place { width: 2.2em; color: var(--muted); }
 .rank-name { flex: 1; overflow: hidden; text-overflow: ellipsis; }
 .rank-xp { font-variant-numeric: tabular-nums; }
+.mistakes-choice { width: 100%; text-align: left; margin-top: 8px; }
+.qa-flag-klucz { background: color-mix(in srgb, var(--bad) 18%, transparent); }
+.qa-flag-trudne { background: color-mix(in srgb, #f59e0b 22%, transparent); }
+.qa-opt { padding: 4px 8px; border-radius: 8px; }
+.qa-opt.ok { background: color-mix(in srgb, var(--good, #16a34a) 15%, transparent); }

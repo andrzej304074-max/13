@@ -38,6 +38,8 @@ export async function POST(req: Request) {
     const oneStage = stage ?? (single?.length === 1 ? single[0] : null);
     const filter: DrawFilter = bank === "slownik" ? { ...meta, origin: origin as Origin | null, section: section as number | null }
       : bank === "owe" && type === "single" && oneStage ? { ...meta, stage: oneStage } : meta;
+    // „Tylko moje błędy” – w zakładce „Wszystkie pytania”
+    if (bank === "mix" && body.mistakes === true) filter.mistakes = true;
     return createTest(me.id, type, count as TestSize | typeof ENDLESS, bank as Bank, filter);
   }, 201);
 }

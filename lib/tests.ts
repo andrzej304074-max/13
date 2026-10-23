@@ -15,6 +15,7 @@ import type { AnswerFeedback, Bank, QuestionType, TestMode, TestState } from "./
 import { ensureRescored } from "./rescore";
 import { sourceCaseSql, sourceWhereSql, type QSource } from "./question-source";
 import { addXp } from "./xp";
+import { mistakeIds } from "./mistakes";
 import { testXp } from "./xp-core";
 
 export class HttpError extends Error {
@@ -59,13 +60,14 @@ export async function createTest(
   filter: DrawFilter = {},
 ): Promise<TestState> {
   const endless = count === "endless";
+  if (filter.mistakes) filter = { ...filter, only: await mistakeIds(userId) };
   // „bez limitu”: zapisujemy porcję wylosowanych pytań (+ filtr), kolejne porcje dolosowuje answerQuestion
   const drawn = drawQuestions(type, endless ? ENDLESS_CHUNK : count, bank, filter);
-  if (drawn.length === 0) throw new HttpError(400, "Brak pytań tego typu w bazie.");
+  if (drawn.length === 0) throw new HttpError(400, filter.mistakes ? "Brak błędów do powtórki dla tych filtrów – świetnie!" : "Brak pytań tego typu w bazie.");
   // filtr losowania zapamiętany przy teście (bez limitu – do dolosowania; etap – do historii)
   const draw = JSON.stringify({ origin: filter.origin ?? null, section: filter.section ?? null, stage: filter.stage ?? null,
     sources: filter.sources ?? null, edFrom: filter.edFrom ?? null, edTo: filter.edTo ?? null, stages: filter.stages ?? null,
-    topic: filter.topic ?? null, kind: filter.kind ?? null, theme: filter.theme ?? null });
+    topic: filter.topic ?? null, kind: filter.kind ?? null, theme: filter.theme ?? null, mistakes: filter.mistakes ?? null });
   const { rows } = endless
     ? await query<TestRow>(
         `INSERT INTO tests (bank, type, mode, question_ids, deadline, max_score, user_id, draw)
@@ -203,7 +205,8 @@ export async function answerQuestion(userId: string, id: string, questionId: unk
   if (endless && answered >= t.question_ids.length) {
     // porcja się skończyła – dolosuj kolejne pytania z puli (bez już użytych); pusta pula kończy test
     const used = new Set(t.question_ids);
-    const f = t.draw ?? {};
+    const f: DrawFilter = t.draw ?? {};
+    if (f.mistakes) f.only = await mistakeIds(userId);
     const more = drawQuestions(t.type, Infinity, t.bank, f).filter((x) => !used.has(x.id)).slice(0, ENDLESS_CHUNK).map((x) => x.id);
     if (more.length) {
       await query("UPDATE tests SET question_ids = question_ids || $2::text[] WHERE id = $1", [id, more]);

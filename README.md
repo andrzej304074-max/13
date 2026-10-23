@@ -113,6 +113,22 @@ Trzy źródła pytań testowych: **📜 Archiwum OWE** (prawdziwe pytania z olim
   więc test „bez limitu” dolosowuje z tymi samymi filtrami.
 - Dział i pojęcia każdego pytania: `data/nauka/{owe,slownik,ai}-stats.json` (`tools/nauka/build_course.py`).
 
+## Powtórki z błędów
+
+- Testy → „Wszystkie pytania” → **🔁 Tylko moje błędy**: pytania z wybranych źródeł, na które Twoja ostatnia odpowiedź (z ostatnich
+  90 dni, ze wszystkich testów) była błędna, częściowa albo pominięta – od najdawniejszego błędu, bez losowania. Poprawna
+  odpowiedź usuwa pytanie z puli. Działa z filtrami formularza i w trybie „bez limitu” (`lib/mistakes.ts`, `DrawFilter.only`).
+- Przyciski **„🔁 Powtórz błędy”** w Statystykach i w podsumowaniu testu (`/testy/wszystkie?bledy=1`).
+
+## Panel admina: statystyki pytań
+
+- Karta „Pytania – skuteczność i flagi do przeglądu” (`GET /api/admin/pytania`, tylko admin): dla każdego pytania z odpowiedziami –
+  liczba odpowiedzi wszystkich użytkowników, % poprawnych, ile razy wybrano każdą opcję, najczęstsza błędna odpowiedź,
+  zgłoszenia błędów z id pytania.
+- **Flagi** (od 10 odpowiedzi): „podejrzany klucz” – błędna opcja wybierana częściej niż (najrzadziej wybierana) poprawna; „za trudne”
+  (< 20%); „za łatwe” (> 95%). Filtry źródła, flagi, minimalnej liczby odpowiedzi, sortowanie; podgląd pytania z kluczem i wyjaśnieniem.
+- Zakładka „Ćwiczenia kursu” – 100 najtrudniejszych par hasło × typ ćwiczenia (logika `lib/question-stats-core.ts`).
+
 ## Zapisane filtry i losowanie zadań
 
 - **Filtry zapamiętywane na koncie** (wspólne dla urządzeń): formularze testów, Zadania, Eseje, Tabela pojęć, Statystyki OWE,

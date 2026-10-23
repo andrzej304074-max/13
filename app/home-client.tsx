@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { api, ApiError, fmtPct, lastTest, rememberTest } from "@/lib/client";
 import { usePrefSync } from "@/lib/prefs-client";
@@ -47,10 +47,12 @@ export interface StartPrefs {
   theme: "all" | "yes" | "no";
   origin: Origin | null;
   section: number | null;
+  /** „Wszystkie pytania”: tylko pytania, na które ostatnio odpowiedziano źle (ostatnie 90 dni). */
+  mistakes: boolean;
 }
 export const DEFAULT_PREFS: StartPrefs = {
   type: "single", count: 30, sources: ["owe", "ai", "slownik"], edFrom: 21, edTo: 39, stages: ["s", "o", "c"],
-  topic: null, kind: null, theme: "all", origin: null, section: null,
+  topic: null, kind: null, theme: "all", origin: null, section: null, mistakes: false,
 };
 
 interface Counts { single: number; multi: number; bySource: Record<QSource, { single: number; multi: number }> | null }
@@ -72,8 +74,13 @@ export default function HomeClient({ bank = "owe", counts: initial, options }: {
   const router = useRouter();
   const [p, setP] = useState<StartPrefs>(DEFAULT_PREFS);
   const set = (o: Partial<StartPrefs>) => setP((x) => ({ ...x, ...o }));
+  // link „Powtórz błędy” (?bledy=1) – włącza „Tylko moje błędy”, reszta ustawień z konta
+  // (useSearchParams – przy przejściu linkiem adres w window.location zmienia się dopiero po pierwszym renderze)
+  const search = useSearchParams();
+  const mistakesLink = bank === "mix" && search.get("bledy") === "1";
+  useEffect(() => { if (mistakesLink) set({ mistakes: true }); }, [mistakesLink]);
   // ustawienia formularza zapamiętane na koncie (osobno dla każdej zakładki)
-  usePrefSync(`testy-${bank}`, JSON.stringify(p), (v) => { try { setP({ ...DEFAULT_PREFS, ...JSON.parse(v) }); } catch {} });
+  usePrefSync(`testy-${bank}`, JSON.stringify(p), (v) => { try { setP({ ...DEFAULT_PREFS, ...JSON.parse(v), ...(mistakesLink ? { mistakes: true } : {}) }); } catch {} });
   const [counts, setCounts] = useState<Counts>({ ...initial, bySource: null });
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -97,6 +104,7 @@ export default function HomeClient({ bank = "owe", counts: initial, options }: {
     ...(oweOn ? { edFrom: p.edFrom, edTo: p.edTo, stages: p.stages } : {}),
     topic: p.topic, kind: p.kind, theme: p.theme,
     ...(bank === "slownik" ? { origin: p.origin, section: p.section } : {}),
+    ...(bank === "mix" && p.mistakes ? { mistakes: true } : {}),
   });
   const filterKey = JSON.stringify(body());
   // liczby pytań dla bieżących filtrów (z serwera – bez pobierania treści pytań)
@@ -171,6 +179,12 @@ export default function HomeClient({ bank = "owe", counts: initial, options }: {
             );
           })}
         </div>
+        <button className={`choice mistakes-choice ${p.mistakes ? "active" : ""}`} aria-pressed={p.mistakes} data-testid="mistakes"
+          onClick={() => set({ mistakes: !p.mistakes })}>
+          <strong>{p.mistakes ? "✓ " : ""}🔁 Tylko moje błędy</strong>
+          <small>pytania z wybranych źródeł, na które ostatnio odpowiedziałeś źle lub częściowo (90 dni) – od najdawniejszego;
+            poprawna odpowiedź usuwa pytanie z puli{p.mistakes ? ` · ${counts[p.type]} do powtórki` : ""}</small>
+        </button>
       </>}
       {bank === "slownik" && options.sections && <>
         <h2>Rodzaj pytań</h2>

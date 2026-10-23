@@ -9,6 +9,7 @@ import type { AdminUserRow } from "@/lib/auth";
 import { SkeletonRows } from "@/app/components/loading-page";
 import { TtsCard } from "./tts-card";
 import { SecurityCard } from "./security-card";
+import { QuestionsCard } from "./questions-card";
 import { GlobalAccess, UserAccess } from "./access-editor";
 import type { AccessSettings, BlockMode } from "@/lib/access-core";
 
@@ -203,6 +204,9 @@ export function AdminPanel({ meId }: { meId: string }) {
 
       <h2>Zgłoszenia błędów</h2>
       <BugsCard />
+
+      <h2>Pytania – skuteczność i flagi do przeglądu</h2>
+      <QuestionsCard />
 
       <h2>Ogłoszenia i ankiety</h2>
       <AnnounceCard />
