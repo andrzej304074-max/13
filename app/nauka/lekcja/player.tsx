@@ -1,5 +1,6 @@
 "use client";
 
+import { MoreButton } from "@/app/components/more";
 import { ItemFigure } from "@/app/components/item-figure";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -422,6 +423,7 @@ function Intro({ item, fromQuestions, onNext }: { item: CourseItem; fromQuestion
         <h2 style={{ marginTop: 0 }}>{item.t}</h2>
         <ItemCard item={item} />
         <ItemFigure f={item.f} />
+        <MoreButton id={item.id} />
       </div>
       <div className="learn-actions">
         <button className="btn" onClick={onNext} autoFocus>Dalej</button>

@@ -1,5 +1,6 @@
 "use client";
 
+import { MoreButton } from "@/app/components/more";
 import { ItemFigure } from "@/app/components/item-figure";
 import type { FigSpec } from "@/lib/nauka-types";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -311,6 +312,17 @@ function MapLink({ id }: { id: string }) {
   );
 }
 
+/**
+ * Karta to `div role="button"` (nie `<button>`), bo w środku jest przycisk „Więcej”. Enter (i Spacja w feedzie – w trybie klasycznym
+ * Spację obsługuje skrót całej strony) odwraca kartę, gdy fokus jest na niej samej.
+ */
+function onKeys(toggle: () => void, space: boolean) {
+  return (e: React.KeyboardEvent) => {
+    if (e.target !== e.currentTarget) return;
+    if (e.key === "Enter" || (space && e.key === " ")) { e.preventDefault(); toggle(); }
+  };
+}
+
 function Face({ c, back, topicName, m }: { c: Card; back: boolean; topicName: Record<string, string>; m: Mastery | undefined }) {
   return back ? (
     <div className="fc-face">
@@ -318,6 +330,7 @@ function Face({ c, back, topicName, m }: { c: Card; back: boolean; topicName: Re
       <p className="fc-def">{c.d}</p>
       {c.w && <pre className="formula">{c.w}</pre>}
       <ItemFigure f={c.f} compact />
+      <MoreButton id={c.id} />
       <LevelNote m={m} />
     </div>
   ) : (
@@ -396,9 +409,10 @@ function Feed({ list, mastery, rate, preview, topicName, stars, onStar }: Props)
         return (
           <section className="reel" key={c.id} data-testid="reel">
             <div className="fc-wrap">
-              <button className={`fc fc-${lvOf(m)} ${flipped[c.id] ? "back" : ""}${c.own ? " own" : ""}`} onClick={() => setFlipped((f) => ({ ...f, [c.id]: !f[c.id] }))} aria-label={`Fiszka: ${c.t}`}>
+              <div role="button" tabIndex={0} className={`fc fc-${lvOf(m)} ${flipped[c.id] ? "back" : ""}${c.own ? " own" : ""}`} onClick={() => setFlipped((f) => ({ ...f, [c.id]: !f[c.id] }))}
+                onKeyDown={onKeys(() => setFlipped((f) => ({ ...f, [c.id]: !f[c.id] })), true)} aria-label={`Fiszka: ${c.t}`}>
                 <Face c={c} back={!!flipped[c.id]} topicName={topicName} m={m} />
-              </button>
+              </div>
               <StarButton className="fc-star" on={stars.has(c.id)} onToggle={() => onStar(c.id)} label="fiszkę do ulubionych" disabled={preview} />
             </div>
             <div className="reel-bar">
@@ -447,7 +461,7 @@ function Classic({ list, mastery, rate, preview, topicName, stars, onStar }: Pro
   }, [c, rate, go]);
   useEffect(() => {
     const k = (e: KeyboardEvent) => {
-      if ((e.target as HTMLElement)?.closest("input,select,textarea") || isTyping(e)) return;
+      if ((e.target as HTMLElement)?.closest("input,select,textarea,button,a") || isTyping(e)) return;
       if (e.key === " ") { e.preventDefault(); setBack((b) => !b); }
       if (e.key === "ArrowRight") go(1);
       if (e.key === "ArrowLeft") go(-1);
@@ -476,9 +490,10 @@ function Classic({ list, mastery, rate, preview, topicName, stars, onStar }: Pro
         <span className="spacer" />
         {!preview && <span className="muted">w tej sesji: ✓ {done.known} · ✗ {done.unknown}</span>}</div>
       <div className="fc-wrap">
-        <button className={`fc fc-big fc-${lvOf(m)} ${back ? "back" : ""}${c.own ? " own" : ""}`} onClick={() => setBack(!back)} aria-label={`Fiszka: ${c.t}`} data-testid="classic-card">
+        <div role="button" tabIndex={0} className={`fc fc-big fc-${lvOf(m)} ${back ? "back" : ""}${c.own ? " own" : ""}`} onClick={() => setBack(!back)}
+          onKeyDown={onKeys(() => setBack((b) => !b), false)} aria-label={`Fiszka: ${c.t}`} data-testid="classic-card">
           <Face c={c} back={back} topicName={topicName} m={m} />
-        </button>
+        </div>
         <StarButton className="fc-star" on={stars.has(c.id)} onToggle={() => onStar(c.id)} label="fiszkę do ulubionych" disabled={preview} />
       </div>
       <div className="classic-actions">

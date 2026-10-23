@@ -3,6 +3,7 @@ import { brotliCompressSync, gzipSync, constants as zc } from "node:zlib";
 import { COURSE } from "@/data/nauka";
 import { oweCountByItem, oweStatsData } from "./owe-stats-data";
 import MAPA_JSON from "@/data/nauka/mapa.json";
+import WIECEJ_JSON from "@/data/nauka/wiecej.json";
 import type { FigSpec } from "./nauka-types";
 
 /** Hasło kursu w tabeli pojęć i fiszkach. */
@@ -61,6 +62,8 @@ function cached(make: () => unknown) {
 export const HASLA = cached(hasla);
 export const OWE_DATA = cached(oweStatsData);
 export const MAPA = cached(mapa);
+/** „Więcej” przy hasłach (tools/nauka/build_wiecej.py): wyjaśnienie, przykład, rozdział Podręcznika – osobny plik, pobierany przy pierwszym „Więcej”. */
+export const WIECEJ = cached(() => WIECEJ_JSON);
 /** Nazwy tematów, działów i lekcji do filtrów statystyk nauki. */
 export const NAUKA_META = cached(() => ({
   topics: COURSE.topics.map(({ id, title, emoji }) => ({ id, title, emoji })),

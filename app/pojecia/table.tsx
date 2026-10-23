@@ -1,5 +1,6 @@
 "use client";
 
+import { MoreButton } from "@/app/components/more";
 import { ItemFigure } from "@/app/components/item-figure";
 import type { FigSpec } from "@/lib/nauka-types";
 import Link from "next/link";
@@ -157,6 +158,7 @@ export function ConceptTable({ rows, topics, kinds }: { rows: Row[]; topics: Top
               {r.d}
               {r.w && <pre className="formula" style={{ marginTop: 8 }}>{r.w}</pre>}
               <ItemFigure f={r.f} compact />
+              <MoreButton id={r.id} />
             </div>
           </div>
         ))}

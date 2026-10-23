@@ -1405,3 +1405,11 @@ body:has(.speech-bar) main.container { padding-bottom: 160px; }
 .item-fig.compact .book-fig svg { max-height: 210px; }
 .item-fig.compact figcaption { font-size: .8rem; }
 .fc-face .item-fig.compact .book-fig svg { max-height: 170px; }
+/* „Więcej” przy haśle (app/components/more.tsx) */
+.more { margin-top: 6px; text-align: left; }
+.more-btn { border: 1px solid var(--border); background: var(--surface); color: var(--accent); border-radius: 999px; padding: 4px 12px; font: inherit; font-size: .88rem; cursor: pointer; }
+.more-btn:hover { border-color: var(--accent); }
+.more-body { margin-top: 8px; padding: 10px 12px; border-radius: var(--radius-sm); background: var(--surface-2, var(--bg)); font-size: .95rem; line-height: 1.55; }
+.more-body p { margin: 0 0 8px; }
+.more-ex { color: var(--text); }
+.more-link { font-size: .9rem; }

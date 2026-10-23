@@ -368,6 +368,19 @@ najsłabsze najpierw) – także w nauce talii. API `/api/fiszki/opanowanie`, `/
   o powiązanym haśle, odwrót fiszki, tabela pojęć i mapa myśli (ładowany dopiero, gdy jest co pokazać). Rysunków nie ma w treści
   zadań testowych ani zadań i esejów.
 
+## „Więcej ▾” przy hasłach
+
+- Na odwrocie każdej fiszki (feed, tryb klasyczny, własne talie), na karcie „Nowe hasło” w kursie, w tabeli pojęć i na mapie myśli:
+  rozszerzone wyjaśnienie (intuicja, po co to, typowa pułapka), **przykład** (liczbowy lub z polskich realiów; przy osobach – za co ją
+  pamiętać, przy datach – dlaczego ważna), rysunek hasła i link „📖 Czytaj w Podręczniku” do pierwszego rozdziału z odnośnikiem do hasła.
+  Własne fiszki konta nie mają rozwinięcia.
+- Treści: `tools/nauka/wiecej/*.md` (tematami; `# Tytuł hasła`, akapit wyjaśnienia, linia `Przykład: …`), budowane skryptem
+  `python3 -I tools/nauka/build_wiecej.py [--strict]` → `data/nauka/wiecej.json` (komplet: wszystkie hasła kursu poza lekcjami
+  „Zrozumienie”). Kontrola: każde hasło ma wpis, długości, wyjaśnienie nie powtarza definicji, przykład do wzoru zawiera liczby
+  (`tests/wiecej.test.ts`).
+- Plik pobierany osobno (`/api/dane/wiecej`, ETag) dopiero przy pierwszym rozwinięciu – nie powiększa `/api/dane/hasla`.
+- Karta fiszki to `div role="button"` (z przyciskiem w środku nie może być `<button>`); Enter odwraca kartę, w feedzie także Spacja.
+
 ## Podręcznik (Nauka → Podręcznik, `/nauka/podrecznik`)
 
 Ręcznie pisane artykuły prostym językiem: dla każdego działu przegląd „W skrócie” i rozdziały – jeden na każdą zwykłą lekcję kursu
