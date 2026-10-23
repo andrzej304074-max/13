@@ -6,17 +6,11 @@ import { kindOk, themeOk, type ItemMeta, type ThemeFilter } from "./owe-stats";
  * pojęcia, pytanie obliczeniowe, hasło przewodnie. Dane: data/nauka/{owe,slownik,ai}-stats.json (build_course.py).
  */
 
-/** Źródło pytania: Archiwum OWE, Pytania AI (sprawdzone), Słownik. */
-export type QSource = "owe" | "ai" | "slownik";
+import { SOURCES, isSource, type QSource } from "./question-source";
+export { SOURCES, isSource, type QSource };
 
 /** Dział Słownika z pytaniami o hasło przewodnie bieżącej edycji (XL – „Gospodarka wobec wyzwań demograficznych”). */
 export const THEME_SECTION = 15;
-export const SOURCES: { id: QSource; label: string; hint: string }[] = [
-  { id: "owe", label: "Archiwum OWE", hint: "prawdziwe pytania z olimpiad XXI–XXXIX" },
-  { id: "ai", label: "Pytania AI", hint: "sprawdzone i poprawione, z wyjaśnieniami" },
-  { id: "slownik", label: "Słownik", hint: "pytania z haseł słownika pojęć" },
-];
-export const isSource = (v: unknown): v is QSource => v === "owe" || v === "ai" || v === "slownik";
 
 /** Etap zawodów w Archiwum: szkolny, okręgowy, centralny. */
 export type OweStage = "s" | "o" | "c";

@@ -13,6 +13,7 @@ import { LoadError } from "@/app/components/load-error";
 import { OpenStats } from "./open-stats";
 import { usePrefSync } from "@/lib/prefs-client";
 import { viewedUser } from "@/lib/client";
+import { Why } from "@/app/components/why";
 
 const STAGE_LABEL: Record<Stage, string> = { s: "szkolny", o: "okręgowy" };
 const STAGE_GEN: Record<Stage, string> = { s: "szkolnego", o: "okręgowego" };
@@ -29,19 +30,9 @@ const BANK_NOTE: Record<Bank, string> = {
   owe: "Testy z zakładki Olimpiada – prawdziwe pytania z archiwum OWE.",
   ai: "Testy z samych pytań AI (sprawdzonych) – rozwiązywanych w zakładce „Wszystkie pytania” ze źródłem „Pytania AI”.",
   slownik: "Testy z zakładki Słownik – pytania o pojęcia, osoby, daty i wzory, w tym o haśle XL.",
-  mix: "Testy z zakładki „Wszystkie pytania” łączące kilka źródeł. Wynik każdego źródła osobno – w karcie „Według źródła pytań”.",
+  mix: "Testy z zakładki „Wszystkie pytania” z Archiwum OWE lub Słownika (także mieszane z Pytaniami AI; testy z samych pytań AI – w „Pytaniach AI”). Wynik każdego źródła osobno – w karcie „Według źródła pytań”.",
 };
 const SOURCE_LABEL = { owe: "Archiwum OWE", ai: "Pytania AI", slownik: "Słownik" } as const;
-
-/** „Skąd te liczby?” – krótkie wyjaśnienie pod kartą statystyk. */
-function Why({ children }: { children: React.ReactNode }) {
-  return (
-    <details className="why">
-      <summary>Skąd te liczby?</summary>
-      <div className="muted small">{children}</div>
-    </details>
-  );
-}
 
 type Filter = "all" | "single" | "multi";
 const FILTERS: { value: Filter; label: string }[] = [
@@ -67,37 +58,47 @@ export default function StatsPage() {
   const [bank, setBank] = useState<Bank | null>(null);
   const [stage, setStage] = useState<Stage | null>(null);
 
-  // filtry: z adresu (?bank=…) albo zapamiętane na koncie (klucz „stats”), inaczej domyślne
-  const [explicit] = useState(() => typeof window !== "undefined" && new URLSearchParams(window.location.search).has("bank"));
+  // filtry zapamiętane na koncie (klucz „stats”); źródło z adresu (?bank=… – link z podsumowania testu) ma pierwszeństwo,
+  // pozostałe filtry (typ, etap, blok) i tak wczytujemy z konta
+  const [urlBank] = useState(() => {
+    if (typeof window === "undefined") return null;
+    const b = new URLSearchParams(window.location.search).get("bank");
+    return isBank(b) ? b : null;
+  });
   useEffect(() => {
-    const fromUrl = new URLSearchParams(window.location.search).get("bank");
-    setBank(isBank(fromUrl) ? fromUrl : "owe");
+    setBank(urlBank ?? "owe");
     setBlockSize(DEFAULT_BLOCK_SIZE);
-  }, []);
+  }, [urlBank]);
   const prefValue = bank && blockSize ? new URLSearchParams({ bank, typ: filter, ...(stage ? { etap: stage } : {}), blok: String(blockSize) }).toString() : null;
   usePrefSync("stats", prefValue, (v) => {
     const p = new URLSearchParams(v);
     const b = p.get("bank"), t = p.get("typ"), e = p.get("etap"), n = Number(p.get("blok"));
-    if (isBank(b)) setBank(b);
+    if (isBank(b) && !urlBank) setBank(b);
     if (t === "single" || t === "multi" || t === "all") setFilter(t);
     setStage(e === "s" || e === "o" ? e : null);
     if ((BLOCK_SIZES as readonly number[]).includes(n)) setBlockSize(n);
-  }, { load: explicit, save: !!viewedUser() });
+  }, { save: !!viewedUser() });
 
   useEffect(() => {
     if (blockSize === null || bank === null) return;
     const typeParam = filter === "all" ? "" : `&type=${filter}`;
     const stageParam = bank === "owe" && filter === "single" && stage ? `&stage=${stage}` : "";
-    api<Stats>(withUser(`/api/stats?bank=${bank}&block=${blockSize}${typeParam}${stageParam}`)).then(setStats).catch((e) => setError(e.message));
+    // filtry z konta mogą zmienić się zaraz po pierwszym pobraniu – starsza, wolniejsza odpowiedź nie nadpisuje nowszej
+    let live = true;
+    api<Stats>(withUser(`/api/stats?bank=${bank}&block=${blockSize}${typeParam}${stageParam}`))
+      .then((s) => { if (live) setStats(s); })
+      .catch((e) => { if (live) setError(e.message); });
+    return () => { live = false; };
   }, [blockSize, filter, bank, stage]);
 
   const chooseStage = (s: Stage | null) => setStage(s);
   function chooseBank(b: Bank) {
     setBank(b);
     try {
+      // źródło zapamiętuje konto – bez ?bank= w adresie (przy odświeżeniu nie przesłania zapisanego wyboru)
       const q = new URLSearchParams(window.location.search);
-      q.set("bank", b);
-      window.history.replaceState(null, "", `/stats?${q}`);
+      q.delete("bank");
+      window.history.replaceState(null, "", `/stats${q.size ? `?${q}` : ""}`);
     } catch {}
   }
   const chooseFilter = (f: Filter) => setFilter(f);
@@ -138,6 +139,7 @@ export default function StatsPage() {
             key={f.value}
             className={f.value === filter ? "active" : ""}
             aria-pressed={f.value === filter}
+            data-type={f.value}
             onClick={() => chooseFilter(f.value)}
           >
             {f.label}

@@ -3,11 +3,12 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { api, fmtPct, lastTest, rememberTest } from "@/lib/client";
+import { api, ApiError, fmtPct, lastTest, rememberTest } from "@/lib/client";
 import { usePrefSync } from "@/lib/prefs-client";
 import { RandomOpenButton } from "./zadania/random-open";
 import { ROMAN } from "@/lib/owe-stats";
-import type { OweStage, QSource } from "@/lib/question-meta";
+import type { OweStage } from "@/lib/question-meta";
+import { SOURCES, type QSource } from "@/lib/question-source";
 import type { Stats } from "@/lib/tests";
 import type { Origin, QuestionType, TestState } from "@/lib/types";
 
@@ -24,11 +25,6 @@ const ORIGINS: { value: Origin | null; label: string; hint: string }[] = [
   { value: null, label: "Oba rodzaje", hint: "ręczne i automatyczne" },
   { value: "manual", label: "Ręcznie pisane", hint: "zadania w stylu OWE: obliczenia, skutki, osoby" },
   { value: "auto", label: "Automatyczne", hint: "definicja ↔ pojęcie, wzory, daty" },
-];
-const SOURCES: { id: QSource; label: string; hint: string }[] = [
-  { id: "owe", label: "📜 Archiwum OWE", hint: "prawdziwe pytania z olimpiad" },
-  { id: "ai", label: "🤖 Pytania AI", hint: "sprawdzone, z wyjaśnieniami" },
-  { id: "slownik", label: "📘 Słownik", hint: "z haseł słownika pojęć" },
 ];
 const STAGES: { id: OweStage; label: string }[] = [
   { id: "s", label: "szkolny" },
@@ -105,11 +101,20 @@ export default function HomeClient({ bank = "owe", counts: initial, options }: {
   });
   const filterKey = JSON.stringify(body());
   // liczby pytań dla bieżących filtrów (z serwera – bez pobierania treści pytań)
+  // Odpowiedź dla starszych filtrów (wolniejsza) nie nadpisuje nowszej. Odrzucone filtry (np. zapisany dział, którego już nie ma)
+  // wracają do domyślnych – inaczej „Rozpocznij test” byłby aktywny dla nieaktualnych liczb.
   useEffect(() => {
+    let live = true;
     const t = setTimeout(() => {
-      api<Counts>("/api/tests/pula", { method: "POST", body: filterKey }).then(setCounts).catch(() => {});
+      api<Counts>("/api/tests/pula", { method: "POST", body: filterKey })
+        .then((c) => { if (live) setCounts(c); })
+        .catch((e) => {
+          if (!live || !(e instanceof ApiError) || e.status !== 400) return;
+          setCounts({ single: 0, multi: 0, bySource: null });
+          setP((x) => (x.topic || x.kind || x.section ? { ...x, topic: null, kind: null, section: null } : x));
+        });
     }, 200);
-    return () => clearTimeout(t);
+    return () => { live = false; clearTimeout(t); };
   }, [filterKey]);
 
   const available = counts[p.type];
@@ -168,7 +173,7 @@ export default function HomeClient({ bank = "owe", counts: initial, options }: {
             return (
               <button key={s.id} className={`choice ${on ? "active" : ""}`} aria-pressed={on} data-source={s.id}
                 onClick={() => set({ sources: toggle(p.sources, s.id, SOURCES.map((x) => x.id)) })}>
-                <strong>{on ? "✓ " : ""}{s.label}</strong>
+                <strong>{on ? "✓ " : ""}{s.icon} {s.label}</strong>
                 <small>{s.hint}</small>
                 {n && <small>{n[p.type]} pytań</small>}
               </button>

@@ -25,6 +25,16 @@ const readF = (): string[] => { try { return JSON.parse(sessionStorage.getItem(F
 const writeF = (s: string[]) => { try { sessionStorage.setItem(FWD, JSON.stringify(s.slice(-MAX))); } catch {} };
 
 let backNav = false;
+/**
+ * Czy bieżąca zmiana trasy to ruch po historii przeglądarki (wstecz/dalej – zdarzenie popstate), a nie kliknięty link.
+ * Bez tego zwykły link do poprzedniej strony wyglądałby jak powrót i pokazywał „→”, które nie ma dokąd prowadzić.
+ */
+let popped = false;
+if (typeof window !== "undefined") {
+  window.addEventListener("popstate", () => { popped = true; });
+  // wstecz/dalej do strony spoza pamięci aplikacji = pełne wczytanie dokumentu (bez popstate) – typ nawigacji „back_forward”
+  try { popped = (performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming | undefined)?.type === "back_forward"; } catch {}
+}
 /** Czy bieżąca strona została otwarta powrotem (do przywracania stanu, np. karty w feedzie fiszek). */
 export const isBackNav = () => backNav;
 
@@ -77,7 +87,9 @@ export function BackButton() {
     const url = here();
     const s = read();
     const f = readF();
-    if (s.length >= 2 && s[s.length - 2] === url) {
+    const pop = popped;
+    popped = false;
+    if (pop && s.length >= 2 && s[s.length - 2] === url) {
       f.push(s.pop()!);
       backNav = true;
       restoreScroll(url);
@@ -87,7 +99,7 @@ export function BackButton() {
       else {
         s.push(url);
         // „dalej” – zdejmij z listy; każda inna nowa strona zaczyna nową gałąź historii
-        if (f[f.length - 1] === url) { f.pop(); restoreScroll(url); } else f.length = 0;
+        if (pop && f[f.length - 1] === url) { f.pop(); restoreScroll(url); } else f.length = 0;
       }
       backNav = false;
     }

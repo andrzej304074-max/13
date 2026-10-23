@@ -14,12 +14,14 @@ export interface FilterValue {
   theme?: ThemeFilter;
 }
 
-export function OweFilterFields<F extends FilterValue>({ f, set, topics, kinds, editions = true, stageLabel = "Etap", children }: {
+export function OweFilterFields<F extends FilterValue>({ f, set, topics, kinds, editions = true, theme = editions, stageLabel = "Etap", children }: {
   f: F;
   set: (o: Partial<F>) => void;
   topics: { id: string; name: string }[];
   kinds: { id: string; title: string }[];
   editions?: boolean;
+  /** filtr hasła przewodniego (domyślnie razem z edycjami; Pytania AI – bez edycji, z hasłem) */
+  theme?: boolean;
   stageLabel?: string;
   children?: React.ReactNode;
 }) {
@@ -62,7 +64,7 @@ export function OweFilterFields<F extends FilterValue>({ f, set, topics, kinds, 
             {kinds.map((k) => <option key={k.id} value={k.id}>{k.title}</option>)}
           </select>
         </label>
-        {editions && f.theme !== undefined && <ThemeSelect value={f.theme} set={(theme) => set({ theme } as Partial<F>)} />}
+        {theme && f.theme !== undefined && <ThemeSelect value={f.theme} set={(theme) => set({ theme } as Partial<F>)} />}
         {children}
       </div>
       {editions && (

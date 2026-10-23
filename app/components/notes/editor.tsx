@@ -260,22 +260,40 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
 
   const colors = useRef<string[]>([]);
   const styleRef = useRef({ color: 0, width: 0 });
+  // Zatwierdzony rysunek w osobnej warstwie (canvas poza ekranem) – przy przeciąganiu linii albo uchwytu krzywej
+  // tylko kopiujemy tę warstwę i dorysowujemy podgląd, zamiast rysować od nowa wszystkie kreski przy każdym ruchu.
+  const base = useRef<{ c: HTMLCanvasElement; ink: Ink | null; key: string } | null>(null);
   const redraw = useCallback(() => {
     const c = canvasRef.current;
     if (!c || !cssW) return;
     const dpr = Math.min(window.devicePixelRatio || 1, 2.5);
     const h = Math.round(logicalH * k);
-    if (c.width !== Math.round(cssW * dpr) || c.height !== Math.round(h * dpr)) {
-      c.width = Math.round(cssW * dpr);
-      c.height = Math.round(h * dpr);
+    const W = Math.round(cssW * dpr), H = Math.round(h * dpr);
+    if (c.width !== W || c.height !== H) {
+      c.width = W;
+      c.height = H;
       c.style.height = `${h}px`;
     }
-    const ctx = c.getContext("2d")!;
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    ctx.clearRect(0, 0, cssW, h);
     const cs = getComputedStyle(c);
     colors.current = COLOR_VARS.map((v) => cs.getPropertyValue(v).trim() || "#222");
-    for (const s of latest.current.ink.s) drawStroke(ctx, s, k, colors.current);
+    const key = `${W}x${H}:${k}:${colors.current.join(",")}`;
+    base.current ??= { c: document.createElement("canvas"), ink: null, key: "" };
+    const b = base.current;
+    if (b.ink !== latest.current.ink || b.key !== key) {
+      b.c.width = W;
+      b.c.height = H;
+      const bx = b.c.getContext("2d")!;
+      bx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      bx.clearRect(0, 0, cssW, h);
+      for (const s of latest.current.ink.s) drawStroke(bx, s, k, colors.current);
+      b.ink = latest.current.ink;
+      b.key = key;
+    }
+    const ctx = c.getContext("2d")!;
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.clearRect(0, 0, W, H);
+    ctx.drawImage(b.c, 0, 0);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     const cv = curveRef.current;
     if (cv) {
       drawStroke(ctx, { c: styleRef.current.color, w: styleRef.current.width, p: cv, t: "b" }, k, colors.current);
@@ -371,7 +389,9 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
       const [x, y] = clampPt(...(pos(e) as [number, number]));
       const cv = [...curveRef.current];
       cv[h.i * 3] = x; cv[h.i * 3 + 1] = y;
-      setCurve(cv);
+      // podczas przeciągania tylko ref + szybkie przerysowanie; stan (przyciski ✓/✕) – po puszczeniu uchwytu
+      curveRef.current = cv;
+      redraw();
       return;
     }
     if (sh && sh.pid === e.pointerId) {
@@ -410,7 +430,7 @@ export function NoteEditor({ note, kind, refKey = null, compact = false, showTit
   };
 
   const onUp = (e: React.PointerEvent<HTMLCanvasElement>) => {
-    if (handle.current?.pid === e.pointerId) { handle.current = null; return; }
+    if (handle.current?.pid === e.pointerId) { handle.current = null; if (curveRef.current) setCurve(curveRef.current); return; }
     const sh = shape.current;
     if (sh && sh.pid === e.pointerId) {
       shape.current = null;

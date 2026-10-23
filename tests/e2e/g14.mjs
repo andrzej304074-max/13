@@ -30,6 +30,12 @@ check(after.bySource.slownik.answers - before.bySource.slownik.answers === nSl, 
 check(after.bySource.owe.answers === before.bySource.owe.answers, "Archiwum bez zmian");
 check(after.bySource.ai.percent >= 0 && after.bySource.ai.percent <= 100, `procent w [0,100]: ${after.bySource.ai.percent}`);
 
+const ta = await (await a.request.post(`${B}/api/tests`, { data: { bank: "mix", type: "single", count: 30, sources: ["ai"] } })).json();
+const qa = (await (await a.request.get(`${B}/api/tests/${ta.id}`)).json()).questions[0];
+await a.request.post(`${B}/api/tests/${ta.id}/answer`, { data: { questionId: qa.id, selected: [0] } });
+await a.request.post(`${B}/api/tests/${ta.id}/finish`);
+const nAi2 = 1;
+
 // 2. strona: 4 źródła, karta wg źródła, opisy „Skąd te liczby?”
 await a.goto(`${B}/stats`); await a.waitForSelector('[data-testid="source-stats"]');
 check(await a.locator('[data-testid="stats-bank"] [data-bank]').count() === 4, "4 źródła w przełączniku");
@@ -40,17 +46,30 @@ check(/Sprawdzenie bez zaznaczenia/.test(await a.locator("details.why").first().
 check(await a.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), "telefon: bez poziomego przewijania");
 await a.screenshot({ path: `${OUT}/g14_stats_390.png`, fullPage: true });
 
-// 3. wybór źródła zapisany na koncie – drugie urządzenie widzi „Wszystkie pytania”
-await a.click('[data-bank="mix"]'); await a.waitForTimeout(1500);
-check(new URL(a.url()).searchParams.get("bank") === "mix", "źródło w adresie");
+// 3. wybór źródła i typu zapisany na koncie – drugie urządzenie widzi „Wszystkie pytania” i „Wielokrotny”
+await a.click('[data-bank="mix"]'); await a.click('[data-type="multi"]'); await a.waitForTimeout(1500);
+check(!new URL(a.url()).searchParams.has("bank"), "źródło nie w adresie (pamięta konto)");
 await b.goto(`${B}/stats`); await b.waitForSelector('[data-testid="source-stats"]'); await b.waitForTimeout(1200);
 check(await b.locator('[data-bank="mix"]').getAttribute("aria-pressed") === "true", "komputer: źródło z konta");
-// jawny adres wygrywa i nie nadpisuje zapisu
+check(await b.locator('[data-type="multi"]').getAttribute("aria-pressed") === "true", "komputer: typ z konta");
+// link z podsumowania testu (?bank=slownik): źródło z adresu, pozostałe filtry nadal z konta
 await b.goto(`${B}/stats?bank=slownik`); await b.waitForSelector('[data-testid="source-stats"]'); await b.waitForTimeout(1500);
-check(await b.locator('[data-bank="slownik"]').getAttribute("aria-pressed") === "true", "jawny adres wygrywa");
-const prefs = await (await b.request.get(`${B}/api/ustawienia/filtry`)).json();
-check(/bank=mix/.test(prefs.prefs.stats ?? ""), `zapis nienadpisany: ${prefs.prefs.stats}`);
+check(await b.locator('[data-bank="slownik"]').getAttribute("aria-pressed") === "true", "źródło z adresu wygrywa");
+check(await b.locator('[data-type="multi"]').getAttribute("aria-pressed") === "true", "typ z konta mimo ?bank=");
+// zakładka „Pytania AI” – testy z samych pytań AI (zapisane jako mix)
+const sa = await (await a.request.get(`${B}/api/stats?bank=ai&block=30`)).json();
+check(sa.history.length >= 1 && sa.overall.tests >= 1, `Pytania AI: testy z samych pytań AI (${sa.history.length})`);
 await b.screenshot({ path: `${OUT}/g14_stats_1280.png`, fullPage: true });
+
+// 4. Działy i pojęcia: źródło „Pytania AI” z filtrem hasła; odpowiedzi z testu mieszanego się liczą
+const dz = await (await a.request.get(`${B}/api/stats/dzialy?bank=ai`)).json();
+check(dz.total.answers >= nAi + nAi2, `działy AI: ${dz.total.answers} ≥ ${nAi + nAi2}`);
+await a.goto(`${B}/stats/dzialy?bank=ai`); await a.waitForSelector('[data-testid="my-total"]');
+check(await a.locator('[data-testid="dzialy-bank"] [data-bank]').count() === 3, "działy: 3 źródła");
+check(await a.locator('[data-testid="theme-filter"]').count() === 1, "działy AI: filtr hasła");
+check(await a.locator("details.why").count() === 1, "działy: „Skąd te liczby?”");
+await a.goto(`${B}/stats/dzialy?bank=slownik`); await a.waitForSelector('[data-testid="my-total"]');
+check(await a.locator('[data-testid="theme-filter"]').count() === 0, "działy Słownik: bez filtra hasła (osobny dział słownika)");
 
 check(errs.length === 0, `błędy strony: ${errs.join(" | ")}`);
 console.log(`g14: ${ok}/${ok + fails.length}`); for (const f of fails) console.log("  ✗", f);

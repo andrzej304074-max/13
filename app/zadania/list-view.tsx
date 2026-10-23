@@ -28,15 +28,18 @@ export function OpenList({ kind }: { kind: OpenKind }) {
   useEffect(() => {
     const p = new URLSearchParams(window.location.search);
     setStage(p.get("etap") ?? ""); setTopic(p.get("dzial") ?? ""); setEd(p.get("edycja") ?? ""); setState((p.get("stan") ?? "") as "" | "todo" | "done");
+    setParsed(true);
     api<Row[]>(withUser(`/api/otwarte?rodzaj=${kind}`)).then(setRows).catch((e) => setError(e.message));
   }, [kind]);
   const [explicit] = useState(() => typeof window !== "undefined" && window.location.search.length > 1);
+  // dopóki adres nie jest wczytany – null: inaczej filtry z linku wyglądałyby jak zmiana użytkownika i nadpisały zapisane
+  const [parsed, setParsed] = useState(false);
   const qs = new URLSearchParams([...(stage ? [["etap", stage]] : []), ...(topic ? [["dzial", topic]] : []), ...(ed ? [["edycja", ed]] : []), ...(state ? [["stan", state]] : [])]).toString();
   useEffect(() => {
     window.history.replaceState(null, "", `${window.location.pathname}${qs ? `?${qs}` : ""}`);
   }, [qs]);
   // filtry zapamiętane na koncie (osobno zadania i eseje)
-  usePrefSync(kind === "esej" ? "eseje" : "zadania", qs, (v) => {
+  usePrefSync(kind === "esej" ? "eseje" : "zadania", parsed ? qs : null, (v) => {
     const p = new URLSearchParams(v);
     setStage(p.get("etap") ?? ""); setTopic(p.get("dzial") ?? ""); setEd(p.get("edycja") ?? ""); setState((p.get("stan") ?? "") as "" | "todo" | "done");
   }, { load: explicit, save: !!viewedUser() });

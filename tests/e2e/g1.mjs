@@ -48,6 +48,11 @@ await p.click('[data-testid="forward"]'); await p.waitForURL(/\/pojecia$/);
 check(true, "← potem → wraca na /pojecia");
 await p.waitForTimeout(300);
 check(await p.locator('[data-testid="forward"]').count() === 0, "→ znika po przejściu dalej");
+// zwykły link do poprzedniej strony (nie „wstecz”) – nowy krok, bez „→” prowadzącego donikąd
+await p.goto(`${B}/nauka`); await p.waitForLoadState("networkidle");
+await p.locator('a[href="/pojecia"]:visible').first().click(); await p.waitForURL(/\/pojecia$/);
+await p.locator('a[href="/nauka"]:visible').first().click(); await p.waitForURL(/\/nauka$/); await p.waitForTimeout(300);
+check(await p.locator('[data-testid="forward"]').count() === 0, "link do poprzedniej strony – bez →");
 const ov = await p.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
 check(ov <= 0, `nagłówek z ← bez poziomego przewijania (${ov})`);
 

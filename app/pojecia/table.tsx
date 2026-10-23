@@ -51,9 +51,12 @@ export function ConceptTable({ rows, topics, kinds }: { rows: Row[]; topics: Top
     setTopic(p.get("dzial") ?? "");
     setKind(p.get("rodzaj") ?? "");
     setQ(p.get("q") ?? "");
+    setParsed(true);
   }, []);
+  // dopóki adres nie jest wczytany – null: inaczej filtry z linku wyglądałyby jak zmiana użytkownika i nadpisały zapisane
+  const [parsed, setParsed] = useState(false);
   const prefQs = new URLSearchParams([...(topic ? [["dzial", topic]] : []), ...(kind ? [["rodzaj", kind]] : [])]).toString();
-  usePrefSync("pojecia-tabela", prefQs, (v) => { const p = new URLSearchParams(v); setTopic(p.get("dzial") ?? ""); setKind(p.get("rodzaj") ?? ""); },
+  usePrefSync("pojecia-tabela", parsed ? prefQs : null, (v) => { const p = new URLSearchParams(v); setTopic(p.get("dzial") ?? ""); setKind(p.get("rodzaj") ?? ""); },
     { load: explicit, save: preview });
   useEffect(() => {
     const p = new URLSearchParams();

@@ -7,7 +7,7 @@ export const PREF_KEYS = [
   "testy-owe", "testy-mix", "testy-slownik",
   "zadania", "eseje",
   "pojecia-tabela", "pojecia-statystyki", "pojecia-pokrycie",
-  "stats", "stats-dzialy", "stats-dzialy-slownik", "nauka-statystyki",
+  "stats", "stats-dzialy", "stats-dzialy-slownik", "stats-dzialy-ai", "nauka-statystyki",
   "fiszki",
 ] as const;
 export type PrefKey = (typeof PREF_KEYS)[number];

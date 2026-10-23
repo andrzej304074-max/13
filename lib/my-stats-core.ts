@@ -85,6 +85,8 @@ function sortRows(rows: MyRow[], sort: Sort) {
 /** @param answers – odpowiedzi użytkownika w kolejności czasu. */
 export function aggregate(answers: MyAnswer[], recs: readonly Rec[], meta: Record<string, ItemMeta>, f: MyFilter, now = Date.now()): MyStats {
   const byId = new Map(recs.map((r) => [r.id, r]));
+  // filtr hasła przewodniego: Archiwum (wg edycji) i Pytania AI (dział „Demografia”); Słownik ma osobny dział „Hasło XL”
+  const themed = recs.some((r) => r.th);
   const since = f.range === "7d" ? now - 7 * DAY : f.range === "30d" ? now - 30 * DAY : -Infinity;
   const okItem = (i: string) => meta[i] && (!f.topic || meta[i].topic === f.topic) && (!f.kind || meta[i].kind === f.kind);
   const all: MyAnswer[] = [];
@@ -94,7 +96,8 @@ export function aggregate(answers: MyAnswer[], recs: readonly Rec[], meta: Recor
     const r = byId.get(a.q);
     if (!r || a.at < since) continue;
     if (f.type !== "all" && r.t !== f.type) continue;
-    if (r.ed !== undefined && (!f.stages.includes(r.st as Stage) || r.ed < f.edFrom || r.ed > f.edTo || !themeOk(r, f.theme))) continue;
+    if (r.ed !== undefined && (!f.stages.includes(r.st as Stage) || r.ed < f.edFrom || r.ed > f.edTo)) continue;
+    if (themed && !themeOk(r, f.theme)) continue;
     if (r.o !== undefined && ((f.origin && r.o !== f.origin) || (f.sec && r.sec !== f.sec))) continue;
     if (!kindOk(r, f.kind, meta)) continue;
     // dział i zagadnienie – według przydziału pytania; filtr działu zawęża zagadnienia i pojęcia (jak w statystykach OWE)

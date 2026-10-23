@@ -11,6 +11,7 @@ import { LoadingPage } from "@/app/components/loading-page";
 import { SpeakButton } from "@/app/components/speech/speak";
 import { correctText, questionAnswer, questionAsk } from "@/lib/speech-catalog";
 import { stopGroup } from "@/lib/speech";
+import { SOURCES, sourceOf } from "@/lib/question-source";
 
 type AnswerResponse = AnswerFeedback & { totalScore: number; nextQuestion?: PublicQuestion | null };
 
@@ -288,7 +289,7 @@ export default function TestPage() {
             Zakończ test
           </button>
         </div>
-        <QuestionScratch refKey={`${q.id.startsWith("sl-") ? "slownik" : q.id.startsWith("ai-") ? "ai" : "owe"}:${q.id}`} />
+        <QuestionScratch refKey={`${sourceOf(q.id)}:${q.id}`} />
       </div>
     </div>
   );
@@ -340,5 +341,6 @@ function Summary({ test }: { test: TestState }) {
 
 /** Źródło pytania w teście „Wszystkie pytania” (z prefiksu id). */
 function sourceLabel(id: string): string {
-  return id.startsWith("ai-") ? "🤖 Pytania AI" : id.startsWith("sl-") ? "📘 Słownik" : "📜 Archiwum OWE";
+  const s = SOURCES.find((x) => x.id === sourceOf(id))!;
+  return `${s.icon} ${s.label}`;
 }

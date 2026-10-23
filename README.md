@@ -21,10 +21,14 @@ poprawne pytania / wszystkie pytania, w wielokrotnym – zdobyte punkty / maks. 
 sprawdzone i pominięte. Punkty (+2/−1; 2/1/0) są pokazywane obok.
 Dawne odpowiedzi (punktacja 0,5 pkt za pole) przelicza jednorazowo `lib/rescore.ts` (flaga `scoring_multi = v2` w `settings`).
 
-Statystyki (`/stats`) sumują wyniki **wszystkich** testów wszystkich użytkowników i pokazują dwa wykresy postępu:
+Statystyki (`/stats`) sumują wyniki **Twoich** testów z wybranego źródła (Archiwum OWE / Pytania AI / Słownik / Wszystkie pytania)
+i pokazują dwa wykresy postępu:
 procent kolejnych testów oraz dokładność w blokach po N kolejnych sprawdzonych lub pominiętych pytań
 (N do wyboru: 10, 20, 25, 40, 50, 100, 150, 200; domyślnie 100). Przełącznik „Oba typy / Jednokrotny / Wielokrotny”
-zawęża wynik, historię i oba wykresy do wybranego typu; oba wybory zapamiętuje przeglądarka.
+zawęża wynik, historię i oba wykresy do wybranego typu; źródło, typ, etap i rozmiar bloku zapamiętuje konto (klucz `stats`).
+Karta **„Według źródła pytań”** liczy wszystkie Twoje sprawdzone i pominięte pytania osobno dla Archiwum OWE, Pytań AI i Słownika
+– po pochodzeniu pytania (prefiks id `ai-`, `sl-`), także w mieszanych testach „Wszystkie pytania” (`Stats.bySource`).
+Pod kartami rozwijane „Skąd te liczby?” wyjaśniają, co jest liczone.
 **Etap zawodów** (jednokrotny wybór OWE): w formularzu testu „Oba etapy / Etap szkolny / Etap okręgowy” z liczbą pytań (etap z id pytania:
 `-s-` szkolny, `-o-` okręgowy; wybór w `tests.draw`, także przy dolosowaniu „bez limitu”). W statystykach karta „Jednokrotny wybór wg etapu”
 (liczona z pytań każdego etapu, także w testach „oba etapy”) i przełącznik etapu dla wyniku, historii i wykresu bloków (`/api/stats?type=single&stage=s|o`).
@@ -56,7 +60,7 @@ Jeśli pytań danego typu jest mniej niż 30/50, test zawiera wszystkie dostępn
 ## Pytania ze słownika (zakładka „Słownik”)
 
 Osobna baza pytań ułożonych na podstawie słownika pojęć `docs/slownik-owe.pdf`, z własnymi statystykami
-(przełącznik „Pytania z olimpiad / Pytania ze słownika” na stronie statystyk; kolumna `tests.bank`).
+(przełącznik źródła „Słownik” na stronie statystyk; kolumna `tests.bank`).
 Przy starcie testu można wybrać rodzaj pytań (ręczne, automatyczne lub oba) i dział słownika (albo wszystkie).
 
 - `tools/slownik/glossary/` – źródła słownika (hasła w `s*.py`); PDF:
@@ -241,8 +245,9 @@ python3 -I tools/nauka/pojecia_pytan.py stats
 
 ## Moje statystyki wg działów (Statystyki → Działy i pojęcia, `/stats/dzialy`)
 
-Strona „Działy, zagadnienia i pojęcia – jak mi idzie” – osobno dla pytań z olimpiad i ze słownika
-(przełącznik bazy): skuteczność w działach, zagadnieniach i pojęciach, skuteczność z ostatnich 30 dni, trend (ostatnie 10 odpowiedzi
+Strona „Działy, zagadnienia i pojęcia – jak mi idzie” – osobno dla Archiwum OWE, Pytań AI i Słownika
+(przełącznik źródła; źródło po pochodzeniu pytania – liczą się też testy mieszane „Wszystkie pytania”; każde źródło ma własne
+zapisane filtry, filtr hasła przewodniego także dla Pytań AI – dział „Demografia”): skuteczność w działach, zagadnieniach i pojęciach, skuteczność z ostatnich 30 dni, trend (ostatnie 10 odpowiedzi
 względem wcześniejszych) i rozwinięcie pojęcia z ostatnimi odpowiedziami. Filtry: typ, etap, zakres edycji (OWE), pochodzenie i dział
 słownika (słownik), dział, rodzaj haseł, okres, kolejność. API `GET /api/stats/dzialy`, agregacja `lib/my-stats-core.ts`.
 Pytania słownikowe mają dział, zagadnienie i pojęcia w `data/nauka/slownik-stats.json` (generuje `build_course.py`).

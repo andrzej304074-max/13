@@ -77,6 +77,17 @@ describe("moje statystyki i opanowanie", () => {
     expect(aggregate(ans, recs, meta, { ...DEFAULT_MY_FILTER, range: "30d" }, now).total.answers).toBe(1);
     expect(aggregate(ans, recs, meta, { ...DEFAULT_MY_FILTER, type: "multi" }, now).total.answers).toBe(0);
   });
+  it("hasło przewodnie także dla Pytań AI (bez edycji); Słownik bez pola th – filtr pomijany", () => {
+    const ai = [
+      { id: "ai-1", t: "single" as const, topic: "x", unit: null, items: ["a"], th: 1 as const },
+      { id: "ai-2", t: "single" as const, topic: "x", unit: null, items: ["a"] },
+    ];
+    const aa: MyAnswer[] = [{ q: "ai-1", acc: 1, at: now }, { q: "ai-2", acc: 0, at: now }];
+    expect(aggregate(aa, ai, meta, { ...DEFAULT_MY_FILTER, theme: "yes" }, now).total).toMatchObject({ answers: 1, percent: 100 });
+    expect(aggregate(aa, ai, meta, { ...DEFAULT_MY_FILTER, theme: "no" }, now).total).toMatchObject({ answers: 1, percent: 0 });
+    const sl = ai.map(({ th: _th, ...r }) => ({ ...r, o: "m" as const, sec: 1 }));
+    expect(aggregate(aa, sl, meta, { ...DEFAULT_MY_FILTER, theme: "yes" }, now).total.answers).toBe(2);
+  });
   it("filtry ↔ adres", () => {
     const f = { ...DEFAULT_MY_FILTER, type: "single" as const, range: "7d" as const, topic: "mikro", stages: ["c" as const], edFrom: 30, origin: "m" as const, sec: 3 };
     expect(myFilterFromParams(new URLSearchParams(myFilterToParams(f)))).toEqual(f);
