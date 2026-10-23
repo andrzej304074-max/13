@@ -1,6 +1,6 @@
 # intro | W skrócie: daty, które zmieniły myślenie o ludności
 
-Historia demografii to historia lęków i nadziei: że ludzi będzie za dużo, że zabraknie zasobów, że zabraknie pracowników, że emerytury się nie zbilansują. Kilka dat porządkuje tę opowieść.
+Historia demografii to historia lęków i nadziei. Najpierw bano się, że ludzi będzie za dużo i zabraknie jedzenia. Potem – że zabraknie zasobów. Dziś bogate kraje martwią się, że zabraknie pracowników, a emerytury się nie zbilansują. Kilka dat porządkuje tę opowieść.
 
 ## Oś czasu
 
@@ -22,23 +22,25 @@ Historia demografii to historia lęków i nadziei: że ludzi będzie za dużo, �
 
 ## 1798 – strach przed głodem
 
-**[[1798 – „Prawo ludności” T. Malthusa|„Prawo ludności”]]** Malthusa: wzrost ludności wyprzedza wzrost żywności. Ta myśl wróci jeszcze nie raz.
+**[[1798 – „Prawo ludności” T. Malthusa|„Prawo ludności”]]** Malthusa głosiło, że wzrost ludności wyprzedza wzrost żywności. Ta myśl wracała jeszcze wiele razy – za każdym razem, gdy ludzi szybko przybywało.
 
-## 1885 – prawa migracji
+## 1885 – pierwsze prawidłowości
 
 **[[1885 – „prawa migracji” E.G. Ravensteina|Ravenstein]]** jako pierwszy systematycznie opisał prawidłowości migracji: większość na krótkie odległości, etapami, z przewagą motywów ekonomicznych.
 
-## 1961 – pracownicy gościnni
+## 1961 – goście, którzy zostali
 
-**[[1961 – umowa RFN–Turcja o rekrutacji pracowników (Gastarbeiter)|30 października 1961 roku]]** RFN i Turcja podpisały umowę o rekrutacji pracowników gościnnych (Gastarbeiter). Mieli pracować dwa lata i wracać, ale rotację szybko porzucono. Rekrutację zakończył kryzys naftowy 1973 roku, a większość migrantów została – tak powstała największa diaspora turecka w Europie. Lekcja: „tymczasowi” migranci często zostają na stałe.
+Wyobraź sobie umowę, w której robotnicy mają przyjechać na dwa lata i wrócić. Tak miało być. **[[1961 – umowa RFN–Turcja o rekrutacji pracowników (Gastarbeiter)|30 października 1961 roku]]** RFN i Turcja podpisały umowę o rekrutacji pracowników gościnnych (Gastarbeiter). Rotację szybko porzucono. Rekrutację zakończył kryzys naftowy 1973 roku, a większość migrantów została – tak powstała największa diaspora turecka w Europie.
 
-## 1966 – dwie teorie
+> Uwaga: lekcja z 1961 roku pojawia się w pytaniach o politykę migracyjną – „tymczasowi” migranci często zostają na stałe.
+
+## 1966 – dwie teorie jednego roku
 
 **[[1966 – teoria push–pull E. Lee i warunek Aarona|W 1966 roku]]** Everett Lee publikuje „A Theory of Migration”, a Henry Aaron – warunek opłacalności systemu repartycyjnego (n + g > r).
 
 ## 1972 – granice
 
-**[[1972 – „Granice wzrostu” Klubu Rzymskiego|„Granice wzrostu”]]** Klubu Rzymskiego ostrzegały przed skutkami wzrostu ludności i produkcji przy ograniczonych zasobach – to neomaltuzjanizm. Dziś bogate kraje martwią się raczej, że ludzi będzie za mało.
+**[[1972 – „Granice wzrostu” Klubu Rzymskiego|„Granice wzrostu”]]** Klubu Rzymskiego ostrzegały przed skutkami wzrostu ludności i produkcji przy ograniczonych zasobach – to neomaltuzjanizm. Pół wieku później bogate kraje martwią się raczej, że ludzi będzie za mało.
 
 ## 1981 – Chile
 

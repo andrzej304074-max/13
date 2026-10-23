@@ -1,13 +1,13 @@
 # intro | W skrócie: ludzie, którzy policzyli ludzkość
 
-Demografia ma swoich bohaterów: angielskiego pastora, który przestraszył świat wizją głodu, amerykańskiego demografa, który opisał przejście od dużych do małych rodzin, ekonomistów, którzy zastanawiali się, dlaczego ludzie migrują i jak finansować emerytury. Poznając ich, łatwiej zapamiętać teorie.
+Demografia ma swoich bohaterów: angielskiego pastora, który przestraszył świat wizją głodu, amerykańskiego demografa, który opisał przejście od dużych do małych rodzin, ekonomistów, którzy pytali, dlaczego ludzie migrują i jak finansować emerytury. Najłatwiej ich zapamiętać, gdy wiesz, na jakie pytanie każdy z nich odpowiadał.
 
-## Grupy
+## Kto o co pytał
 
-- **teorie ludności i płodności** – Malthus, Notestein, van de Kaa i Lesthaeghe, Becker, Easterlin;
-- **migracje** – Ravenstein, Lee, Stark, Piore, Todaro, Okólski;
-- **gospodarka i emerytury** – Goodhart i Pradhan, Lewis, Hansen, Summers, Barr, Diamond, Aaron, Kotlikoff;
-- **narzędzia demografii** – Lexis, Fihel.
+- **teorie ludności i płodności** – Malthus, Notestein, van de Kaa i Lesthaeghe, Becker, Easterlin: dlaczego rodzi się tyle dzieci, ile się rodzi?
+- **migracje** – Ravenstein, Lee, Stark, Piore, Todaro, Okólski: kto, dokąd i dlaczego wyjeżdża?
+- **gospodarka i emerytury** – Goodhart i Pradhan, Lewis, Hansen, Summers, Barr, Diamond, Aaron, Kotlikoff: co starzenie się zrobi z płacami, stopami i budżetem?
+- **narzędzia demografii** – Lexis, Fihel: jak to wszystko policzyć?
 
 ## Czego nauczysz się w tym dziale
 
@@ -19,52 +19,80 @@ Demografia ma swoich bohaterów: angielskiego pastora, który przestraszył świ
 
 # demografia-osoba-1 | Od Malthusa do Beckera
 
-**[[Malthus Thomas|Thomas Malthus]]** w „Prawie ludności” (1798) ostrzegał: ludność rośnie w postępie geometrycznym (2, 4, 8, 16…), żywność – arytmetycznym (1, 2, 3, 4…). Prędzej czy później głód i choroby ograniczą liczbę ludzi. Malthus nie przewidział rewolucji przemysłowej ani antykoncepcji.
+## Pastor, który przestraszył świat
 
-**[[Goodhart Charles|Charles Goodhart]]** – członek Komitetu Polityki Pieniężnej Banku Anglii, autor prawa Goodharta: wskaźnik, który staje się celem, przestaje być dobrą miarą. Z **[[Pradhan Manoj|Manojem Pradhanem]]**, byłym analitykiem Morgan Stanley, napisał „Wielki zwrot demograficzny” (2020).
+Pod koniec XVIII wieku Anglia rosła szybko, a ceny zboża szły w górę. **[[Malthus Thomas|Thomas Malthus]]** w „Prawie ludności” (1798) dał na to ponurą odpowiedź: ludność rośnie w postępie geometrycznym (2, 4, 8, 16…), a żywność – arytmetycznym (1, 2, 3, 4…). Prędzej czy później głód i choroby ograniczą liczbę ludzi. Malthus nie przewidział jednak rewolucji przemysłowej ani antykoncepcji.
 
-**[[Barr Nicholas|Nicholas Barr]]** (LSE) i **[[Diamond Peter|Peter Diamond]]** (MIT, Nobel 2010) – autorytety w sprawie emerytur; razem napisali „Reforming Pensions” (2008).
+## Bankier, który zapowiada drożejącą pracę
 
-**[[Becker Gary|Gary Becker]]** (Nobel 1992) – ekonomia rodziny: dzieci jako wybór między „ilością” a „jakością”, kapitał ludzki, ekonomia dyskryminacji i przestępczości.
+**[[Goodhart Charles|Charles Goodhart]]** był członkiem Komitetu Polityki Pieniężnej Banku Anglii. Znamy go z prawa Goodharta: wskaźnik, który staje się celem, przestaje być dobrą miarą. Z **[[Pradhan Manoj|Manojem Pradhanem]]**, byłym analitykiem Morgan Stanley, napisał „Wielki zwrot demograficzny” (2020) – książkę o końcu ery taniej pracy.
+
+## Dwaj lekarze emerytur
+
+**[[Barr Nicholas|Nicholas Barr]]** (LSE) i **[[Diamond Peter|Peter Diamond]]** (MIT, Nobel 2010) to autorytety w sprawie emerytur. Razem napisali „Reforming Pensions” (2008), w której rozprawiają się z mitami reform.
 
 > Uwaga: nie myl Petera Diamonda (emerytury, rynek pracy) z Douglasem Diamondem (banki).
 
+## Ekonomista, który policzył rodzinę
+
+**[[Becker Gary|Gary Becker]]** (Nobel 1992) wprowadził rachunek ekonomiczny tam, gdzie nikt go nie szukał: do rodziny. Dzieci to dla niego wybór między „ilością” a „jakością”. Badał też kapitał ludzki, ekonomię dyskryminacji i przestępczości.
+
+> Zapamiętaj: Malthus – bieda z nadmiaru ludzi; Becker – mało dzieci, bo czas rodziców jest drogi.
+
 # demografia-osoba-2 | Przejścia i migracje
 
-**[[Easterlin Richard|Richard Easterlin]]** – hipoteza względnego dochodu (fale wyżów i niżów) i paradoks Easterlina (1974): w bogatych krajach wzrost dochodu nie zwiększa trwale szczęścia.
+## Dlaczego pieniądze nie dają szczęścia
 
-**[[Notestein Frank|Frank Notestein]]** (Princeton) sformułował teorię przejścia demograficznego (1945).
+**[[Easterlin Richard|Richard Easterlin]]** zostawił dwa pomysły. Hipoteza względnego dochodu tłumaczy fale wyżów i niżów: liczne roczniki mają trudniej, więc mają mniej dzieci. Paradoks Easterlina (1974) mówi, że w bogatych krajach wzrost dochodu nie zwiększa trwale szczęścia.
 
-**[[van de Kaa Dirk, Lesthaeghe Ron|Dirk van de Kaa i Ron Lesthaeghe]]** – Holender i Belg; drugie przejście demograficzne (1986).
+## Autorzy wielkich przejść
 
-**[[Lee Everett|Everett Lee]]** – teoria push–pull (1966).
+**[[Notestein Frank|Frank Notestein]]** (Princeton) sformułował teorię przejścia demograficznego (1945). **[[van de Kaa Dirk, Lesthaeghe Ron|Dirk van de Kaa i Ron Lesthaeghe]]** – Holender i Belg – opisali drugie przejście demograficzne (1986), w którym o niskiej dzietności decyduje zmiana wartości.
 
-**[[Ravenstein Ernst Georg|Ernst Georg Ravenstein]]** – „prawa migracji” (1885–1889): większość migracji odbywa się na krótkie odległości, etapami, głównie z powodów ekonomicznych.
+## Od praw migracji do rodzinnej polisy
 
-**[[Stark Oded|Oded Stark]]** – nowa ekonomia migracji (z Davidem Bloomem, 1985), deprywacja względna i „korzystny drenaż mózgów”: perspektywa wyjazdu zachęca więcej osób do nauki, a nie wszyscy wyjeżdżają.
+**[[Ravenstein Ernst Georg|Ernst Georg Ravenstein]]** jako pierwszy szukał prawidłowości w migracjach. Jego „prawa migracji” (1885–1889) mówią, że większość migracji odbywa się na krótkie odległości, etapami i głównie z powodów ekonomicznych. **[[Lee Everett|Everett Lee]]** rozwinął je w teorię push–pull (1966).
+
+**[[Stark Oded|Oded Stark]]** stworzył z Davidem Bloomem nową ekonomię migracji (1985): decyduje rodzina, nie jednostka. Opisał też deprywację względną i „korzystny drenaż mózgów” – perspektywa wyjazdu zachęca więcej osób do nauki, a nie wszyscy wyjeżdżają.
+
+> Uwaga: Ravenstein – prawa migracji (XIX w.); Lee – push–pull (1966); Stark – rodzina rozkłada ryzyko (1985). Kolejność dat często pada na olimpiadzie.
 
 # demografia-osoba-3 | Rynki pracy, emerytury i stagnacja
 
-**[[Piore Michael|Michael Piore]]** (MIT) – teoria dualnego rynku pracy i książka „Birds of Passage” (1979) o migrantach zarobkowych.
+## Dlaczego bogaci potrzebują przybyszów
 
-**[[Todaro Michael|Michael Todaro]]** – model Harrisa–Todaro (1970): ludzie przenoszą się ze wsi do miast, kierując się oczekiwanym dochodem, nawet jeśli w miastach jest bezrobocie.
+**[[Piore Michael|Michael Piore]]** (MIT) stworzył teorię dualnego rynku pracy. W książce „Birds of Passage” (1979) pokazał, że bogate kraje stale potrzebują migrantów do prac, których unikają miejscowi.
 
-**[[Lewis W. Arthur|W. Arthur Lewis]]** z Saint Lucii, Nobel 1979 – model gospodarki dualnej z nieograniczoną podażą pracy (1954) i punkt zwrotny Lewisa.
+**[[Todaro Michael|Michael Todaro]]** wyjaśnił, dlaczego ludzie jadą do miast, w których jest bezrobocie. Model Harrisa–Todaro (1970) mówi: decyduje oczekiwany dochód, a nie sama płaca.
 
-**[[Aaron Henry|Henry Aaron]]** (Brookings) – warunek Aarona (1966).
+## Ekonomista z Saint Lucii
 
-**[[Kotlikoff Laurence|Laurence Kotlikoff]]** – współtwórca rachunkowości pokoleniowej (1991).
+**[[Lewis W. Arthur|W. Arthur Lewis]]** z Saint Lucii (Nobel 1979) opisał gospodarkę dualną z nieograniczoną podażą pracy (1954). Gdy nadmiar rąk na wsi się wyczerpie, płace w przemyśle zaczynają rosnąć – to punkt zwrotny Lewisa.
 
-**[[Hansen Alvin|Alvin Hansen]]** – „amerykański Keynes”; hipoteza sekularnej stagnacji (1938), współtwórca modelu IS-LM.
+## Rachunkowość pokoleń i stagnacja
+
+**[[Aaron Henry|Henry Aaron]]** (Brookings) sformułował warunek Aarona (1966): kiedy system repartycyjny daje więcej niż kapitałowy. **[[Kotlikoff Laurence|Laurence Kotlikoff]]** współtworzył rachunkowość pokoleniową (1991), która liczy, ile zapłacą przyszłe pokolenia.
+
+**[[Hansen Alvin|Alvin Hansen]]**, nazywany „amerykańskim Keynesem”, postawił hipotezę sekularnej stagnacji (1938) i współtworzył model IS-LM.
+
+> Zapamiętaj: Lewis – punkt zwrotny płac; Aaron – n + g > r; Hansen – sekularna stagnacja.
 
 # demografia-osoba-4 | Stagnacja i polska demografia
 
-**[[Summers Lawrence|Lawrence Summers]]** (Harvard), sekretarz skarbu USA w latach 1999–2001, w 2013 roku przywrócił pojęcie sekularnej stagnacji.
+## Powrót starego pojęcia
 
-**[[Okólski Marek|Marek Okólski]]** – twórca Ośrodka Badań nad Migracjami UW, autor koncepcji „niedokończonego przejścia migracyjnego” Polski.
+**[[Summers Lawrence|Lawrence Summers]]** (Harvard), sekretarz skarbu USA w latach 1999–2001, w 2013 roku przywrócił pojęcie sekularnej stagnacji – 75 lat po Hansenie.
 
-**[[Fihel Agnieszka|Agnieszka Fihel]]** – demografka z UW, badaczka umieralności, migracji i starzenia się. Razem z Okólskim napisała podręcznik „Demografia”.
+## Polscy badacze migracji
 
-**[[Lexis Wilhelm|Wilhelm Lexis]]** (1837–1914) – niemiecki statystyk; siatka demograficzna (1875) i współczynnik Lexisa (1879). Prowadził pierwsze w Niemczech studia aktuarialne.
+**[[Okólski Marek|Marek Okólski]]** założył Ośrodek Badań nad Migracjami UW. Jest autorem koncepcji „niedokończonego przejścia migracyjnego” Polski: wciąż jednocześnie wyjeżdżamy i przyjmujemy imigrantów.
+
+**[[Fihel Agnieszka|Agnieszka Fihel]]** to demografka z UW, badaczka umieralności, migracji i starzenia się. Razem z Okólskim napisała podręcznik „Demografia”.
+
+## Twórca siatki
+
+**[[Lexis Wilhelm|Wilhelm Lexis]]** (1837–1914) był niemieckim statystykiem. Stworzył siatkę demograficzną (1875) i współczynnik Lexisa (1879), a także prowadził pierwsze w Niemczech studia aktuarialne.
+
+> Uwaga: Hansen (1938) wymyślił sekularną stagnację, Summers (2013) ją przywrócił – na olimpiadzie łatwo przypisać pojęcie temu drugiemu.
 
 > Zapamiętaj: Okólski i Fihel – autorzy podręcznika „Demografia”.
