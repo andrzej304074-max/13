@@ -25,6 +25,10 @@ Najważniejsze dane o polskiej gospodarce liczy Główny Urząd Statystyczny. Fi
 
 # makro-instytucja-1 | Strażnicy handlu i pieniądza
 
+## Kto pilnuje światowej gospodarki?
+
+Gdy kraje kłócą się o cła, gdy jakiś kraj nie ma czym zapłacić długów, gdy biedny kraj potrzebuje pieniędzy na drogi – zajmują się tym międzynarodowe instytucje, każda ze swoim zadaniem.
+
 ## Sędzia światowego handlu
 
 **[[Światowa Organizacja Handlu (WTO)|Światowa Organizacja Handlu]]** działa od 1 stycznia 1995 roku, ma siedzibę w Genewie. Zastąpiła GATT z 1947 roku. Pilnuje, żeby handel był swobodny, i rozstrzyga spory między państwami. Jej zasady:
@@ -50,7 +54,15 @@ Kolejne rundy negocjacji: Kennedy’ego, tokijska, urugwajska (1986–1994), Doh
 
 **[[OECD|OECD]]** (od 1961 roku, Paryż) to forum krajów rozwiniętych. Polska jest członkiem od 22 listopada 1996 roku. Do tego **[[Grupa G7 i G20|G7]]** – siedem najbogatszych gospodarek (USA, Japonia, Niemcy, Wielka Brytania, Francja, Włochy, Kanada) – i szersza G20: 19 państw, UE i Unia Afrykańska. Polska nie należy do żadnej z tych grup.
 
+> Uwaga: MFW pomaga przy problemach z **bilansem płatniczym** (krótkoterminowo), Bank Światowy finansuje **rozwój** (długoterminowo).
+
+> Zapamiętaj: WTO – Genewa, od 1995 r.; MFW i Bank Światowy – Bretton Woods 1944, Waszyngton; BIS – Bazylea 1930; OECD – Paryż 1961.
+
 # makro-instytucja-2 | Ropa, statystyka i praca
+
+## Ropa, liczby i praca
+
+Cena benzyny zależy od decyzji kartelu w Wiedniu, dane o Polsce zbiera GUS, a prawa pracownicze na świecie chroni organizacja działająca od ponad stu lat.
 
 ## Kartel naftowy
 
@@ -73,3 +85,5 @@ Kolejne rundy negocjacji: Kennedy’ego, tokijska, urugwajska (1986–1994), Doh
 W Polsce firmę trzeba zarejestrować. **[[CEIDG i KRS|CEIDG]]** (Centralna Ewidencja i Informacja o Działalności Gospodarczej) to rejestr jednoosobowych działalności i wspólników spółek cywilnych. **KRS** (Krajowy Rejestr Sądowy) prowadzą sądy rejonowe; trafiają do niego spółki handlowe, fundacje i stowarzyszenia. Każdy podmiot ma też numery: NIP (podatkowy), REGON (statystyczny), a w KRS – numer KRS.
 
 > Zapamiętaj: spółka cywilna – CEIDG (wspólnicy), spółki handlowe – KRS.
+
+> Uwaga: OPEC to **kartel państw** – w krajach członkowskich nie działa polskie ani unijne prawo konkurencji, więc nie można go ukarać jak zmowy firm.

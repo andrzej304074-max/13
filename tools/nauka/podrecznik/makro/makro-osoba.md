@@ -28,6 +28,10 @@ Wśród postaci są też Polacy: Stanisław Gomułka – ekonomista wzrostu i do
 
 # makro-osoba-1 | Od państwa dobrobytu do wolnego rynku
 
+## Państwo czy rynek?
+
+W XX wieku ekonomiści podzielili się na tych, którzy chcieli silnego państwa opiekuńczego, i tych, którzy bronili wolnego rynku. Ich nazwiska do dziś pojawiają się w każdej debacie o podatkach i świadczeniach.
+
 ## Ojciec państwa dobrobytu
 
 **[[Beveridge William|William Beveridge]]** w 1942 roku napisał raport, który stał się podstawą brytyjskiego państwa dobrobytu i publicznej służby zdrowia (NHS). Jego nazwiskiem nazwano też krzywą Beveridge’a – zależność między wakatami a bezrobociem.
@@ -52,7 +56,15 @@ Wśród postaci są też Polacy: Stanisław Gomułka – ekonomista wzrostu i do
 
 **[[Hayek Friedrich von|Friedrich von Hayek]]** (Nobel 1974) ze szkoły austriackiej w „Drodze do zniewolenia” (1944) ostrzegał, że centralne planowanie prowadzi do utraty wolności. Pokazał, że ceny przekazują wiedzę rozproszoną wśród milionów ludzi – wiedzę, której żaden urzędnik nie zbierze. Proponował nawet denacjonalizację pieniądza.
 
+> Uwaga: krzywa **Beveridge’a** łączy wakaty z bezrobociem; krzywa **Phillipsa** – bezrobocie z inflacją.
+
+> Zapamiętaj: Beveridge 1942 – raport o państwie dobrobytu; Friedman – monetaryzm; Hayek – obrona wolnego rynku.
+
 # makro-osoba-2 | Keynes i jego krąg
+
+## Keynes i ludzie wokół niego
+
+Keynes zmienił ekonomię, ale jego idee rozwijali, porządkowali i krytykowali inni. Niektórzy z nich dostali Nobla za uproszczenie jego myśli do jednego wykresu.
 
 ## Twórca IS-LM
 
@@ -77,6 +89,10 @@ Wśród postaci są też Polacy: Stanisław Gomułka – ekonomista wzrostu i do
 ## Ojciec PKB
 
 **[[Kuznets Simon|Simon Kuznets]]** (Nobel 1971) stworzył rachunki narodowe – to dzięki niemu liczymy PKB. Jego nazwiskiem nazwano krzywą Kuznetsa (nierówności a rozwój) i cykle Kuznetsa (15–25 lat).
+
+> Uwaga: model IS-LM stworzył **Hicks** (1937), a nie Keynes – choć opiera się na „Ogólnej teorii”.
+
+> Zapamiętaj: Hicks – IS-LM; Kondratiew – długie fale; Kornai – gospodarka niedoboru; Krugman – nowa teoria handlu; Kuznets – rachunki narodowe.
 
 # makro-osoba-3 | Rynek pracy, handel i szkoła austriacka
 
@@ -106,7 +122,13 @@ Wśród postaci są też Polacy: Stanisław Gomułka – ekonomista wzrostu i do
 
 > Zapamiętaj: Leontief – input–output i paradoks; List – młody przemysł; Mises – kalkulacja w socjalizmie.
 
+> Uwaga: Friedrich List bronił ochrony **młodego przemysłu** – to argument za przejściowymi cłami, a nie za trwałym protekcjonizmem.
+
 # makro-osoba-4 | Od Okuna do Samuelsona
+
+## Od prawa Okuna do pierwszego Nobla
+
+Kilku amerykańskich ekonomistów lat 50. i 60. dało makroekonomii jej podstawowe narzędzia. Inni – od fizjokratów po klasyków – zbudowali fundamenty dwa wieki wcześniej.
 
 ## Prawo Okuna
 
@@ -131,6 +153,12 @@ Wśród postaci są też Polacy: Stanisław Gomułka – ekonomista wzrostu i do
 ## Pierwszy amerykański noblista
 
 **[[Samuelson Paul|Paul Samuelson]]** (Nobel 1970) stworzył syntezę neoklasyczną – połączenie Keynesa z ekonomią neoklasyczną. Jego podręcznik „Ekonomia” uczył pokolenia studentów. Sformułował też teorię dóbr publicznych.
+
+> Przykład: inflacja 8% i bezrobocie 6% dają wskaźnik niedoli Okuna równy 14 – dla porównania w spokojnych latach bywa to np. 2% + 5% = 7.
+
+> Uwaga: Samuelson był **pierwszym amerykańskim** noblistą z ekonomii (1970); pierwszymi laureatami w ogóle byli Frisch i Tinbergen (1969).
+
+> Zapamiętaj: Okun 1962 – bezrobocie a luka PKB; Phillips 1958; Putnam – „Samotna gra w kręgle” (kapitał społeczny).
 
 # makro-osoba-5 | Od Saya do Wicksella
 
@@ -160,7 +188,13 @@ Wśród postaci są też Polacy: Stanisław Gomułka – ekonomista wzrostu i do
 
 > Zapamiętaj: Wicksell – naturalna stopa; Hildebrand – gospodarka naturalna, pieniężna, kredytowa.
 
+> Uwaga: Wicksell odróżnił stopę **naturalną** od **rynkowej** – gdy rynkowa jest niższa, rosną inwestycje i ceny (proces kumulatywny).
+
 # makro-osoba-6 | Wynalazcy, filozofowie i Polacy
+
+## Wynalazcy, utopiści i polscy ekonomiści
+
+Historia ekonomii to nie tylko teorie – to też wynalazki, które zmieniły produkcję, i ludzie, którzy próbowali budować lepsze fabryki i lepsze społeczeństwa.
 
 ## Socjalista utopijny
 
@@ -186,7 +220,15 @@ Wśród postaci są też Polacy: Stanisław Gomułka – ekonomista wzrostu i do
 
 **[[Nowak Leszek|Leszek Nowak]]** (1943–2009), polski filozof, współtworzył poznańską szkołę metodologiczną. Jego idealizacyjna teoria nauki mówi, że naukowcy celowo upraszczają rzeczywistość (idealizują), a potem stopniowo dodają pominięte czynniki – tak jak ekonomiści, zaczynając od modelu konkurencji doskonałej.
 
+> Uwaga: Robert Owen to socjalista **utopijny** (reformy w fabryce, spółdzielczość), a nie twórca socjalizmu naukowego – to Marks i Engels.
+
+> Zapamiętaj: Owen – New Lanark; Watt – maszyna parowa; Kuhn – paradygmaty i rewolucje naukowe.
+
 # makro-osoba-7 | Falsyfikacja, luka technologiczna i Nobliści 2018
+
+## Jak sprawdzić, czy teoria jest naukowa?
+
+Filozof Karl Popper zaproponował prosty test: teoria jest naukowa, jeśli da się wskazać, co by ją obaliło. Obok niego w tym rozdziale – noblistów, którzy badali klimat i pomysły jako źródło wzrostu.
 
 ## Falsyfikacja
 
@@ -212,6 +254,10 @@ Wśród postaci są też Polacy: Stanisław Gomułka – ekonomista wzrostu i do
 
 **[[Barro Robert|Robert Barro]]** z Harvardu, przedstawiciel nowej ekonomii klasycznej, w 1974 roku sformułował nowoczesną wersję ekwiwalencji ricardiańskiej: gdy rząd obniża podatki na kredyt, ludzie oszczędzają, bo wiedzą, że w przyszłości podatki wzrosną. Badał też konwergencję.
 
+> Uwaga: Nobel 2018: **Nordhaus** – klimat w modelach wzrostu, **Romer** – pomysły (wiedza) jako źródło wzrostu endogenicznego.
+
+> Zapamiętaj: Popper – falsyfikowalność; Barro – ekwiwalencja ricardiańska (1974).
+
 # makro-osoba-8 | Instytucje i poszukiwanie pracy
 
 ## Dlaczego narody bogacą się lub upadają
@@ -227,3 +273,5 @@ Ich kluczowe rozróżnienie: instytucje **włączające** (inkluzywne) dają sze
 **[[Mortensen Dale, Pissarides Christopher|Dale Mortensen i Christopher Pissarides]]** (Nobel 2010, razem z Peterem Diamondem) zajęli się pytaniem: dlaczego jednocześnie są bezrobotni i wolne miejsca pracy? Odpowiedź: szukanie pracy i pracownika wymaga czasu i kosztów. To rynki z frykcjami poszukiwań. Model DMP pokazuje też, jak zasiłki wpływają na długość szukania: wyższy zasiłek pozwala dłużej szukać lepszej oferty, ale wydłuża bezrobocie.
 
 > Zapamiętaj: Nobel 2024 – Acemoglu, Johnson, Robinson (instytucje). Nobel 2010 – Diamond, Mortensen, Pissarides (frykcje poszukiwań).
+
+> Uwaga: Nobel 2024 (Acemoglu, Johnson, Robinson) dotyczył **instytucji** – włączających i wyzyskujących – a nie nierówności dochodowych jako takich.

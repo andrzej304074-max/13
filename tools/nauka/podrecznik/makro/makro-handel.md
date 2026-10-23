@@ -34,6 +34,10 @@ Największym partnerem handlowym Polski są Niemcy – trafia tam ponad jedna cz
 
 # makro-handel-1 | Przewagi, które opłacają handel
 
+## Czy prawnik powinien sam przepisywać swoje pisma?
+
+Prawnik pisze na komputerze szybciej niż jego sekretarka. Czy powinien więc sam przepisywać dokumenty? Nie – jego godzina jest warta dużo więcej przy sprawach klientów. Tak samo jest z krajami.
+
 ## Z kim handluje Polska
 
 **[[Partnerzy handlowi Polski|Największym partnerem handlowym Polski]]** są Niemcy – około 27–28% eksportu i 20–22% importu towarów. W imporcie według kraju pochodzenia na drugim miejscu są Chiny. Ważnymi odbiorcami eksportu są też Czechy, Francja i Wielka Brytania.
@@ -60,9 +64,17 @@ A co, jeśli jeden kraj robi wszystko lepiej? David Ricardo w 1817 roku pokazał
 
 Pojawiali się też: [[Malthus Thomas|Thomas Malthus]], [[Mill John Stuart|John Stuart Mill]], [[Hayek Friedrich von|Friedrich von Hayek]] i [[Greenspan Alan|Alan Greenspan]].
 
+> Uwaga: przewaga **komparatywna** zależy od kosztu **alternatywnego**, a nie od tego, kto produkuje taniej w ogóle (to przewaga absolutna).
+
+> Zapamiętaj: Smith – przewaga absolutna; Ricardo – przewaga komparatywna; Heckscher–Ohlin – zasoby czynników produkcji.
+
 # makro-handel-1-cz2 | Skala i cykl życia produktu
 
 Ten krótki rozdział wyjaśnia, dlaczego wielkość produkcji i wiek produktu wpływają na handel.
+
+## Dlaczego Niemcy sprzedają samochody Francji, a Francja Niemcom?
+
+Klasyczne teorie mówią, że kraje wymieniają się różnymi towarami. A jednak dużo handlu to wymiana podobnych rzeczy. Wyjaśnia to skala produkcji i wiek produktu.
 
 ## Im więcej, tym taniej
 
@@ -81,6 +93,8 @@ Korzyści skali to ważny powód handlu. Mały kraj nie wyprodukuje taniej wszys
 Koncepcję spopularyzował Theodore Levitt w 1965 roku. W handlu międzynarodowym rozwinął ją Raymond Vernon: produkt najpierw powstaje i jest eksportowany przez kraj innowacyjny, a gdy dojrzewa, produkcja przenosi się tam, gdzie jest taniej.
 
 > Przykład: odtwarzacze DVD – na początku drogie i robione w Japonii, potem tanie i masowo produkowane w Chinach, a wreszcie wypierane przez streaming.
+
+> Uwaga: korzyści **skali** to spadek kosztu przy większej produkcji w okresie; krzywa **doświadczenia** – przy większej produkcji skumulowanej.
 
 # makro-handel-2 | Paradoksy i nowe teorie handlu
 
@@ -116,13 +130,18 @@ Wzrost ToT oznacza, że za jednostkę eksportu kupujemy więcej importu.
 
 **[[Wolny handel|Wolny handel]]** – bez ceł i barier – zwiększa efektywność dzięki specjalizacji. Kraje tworzą **[[Porozumienia regionalne|porozumienia regionalne]]**: USMCA (dawniej NAFTA), Mercosur, ASEAN, EFTA, CEFTA. Gdy waluta słabnie, bilans handlowy poprawia się nie od razu – **[[Warunek Marshalla–Lernera i krzywa J|krzywa J]]**: najpierw gorzej, potem lepiej, jeśli suma elastyczności popytu na eksport i import przekracza 1.
 
+> Uwaga: paradoks Leontiefa **nie obala** handlu – pokazuje, że prosta teoria Heckschera–Ohlina nie wyjaśnia wszystkiego (np. jakości pracy i kapitału ludzkiego).
+
+> Zapamiętaj: Leontief 1953 – paradoks; Porter – diament przewagi; handel wewnątrzgałęziowy – wymiana podobnych towarów.
+
 ## Na marginesie
 
 Pojawiały się też: [[Teoria wyboru publicznego (public choice)|teoria wyboru publicznego]], [[Model Bertranda|model Bertranda]], [[Paradoks wody i diamentu|paradoks wody i diamentu]] i [[Prawo malejącej użyteczności krańcowej (I prawo Gossena)|I prawo Gossena]].
-
 # makro-handel-2-cz2 | Od merkantylizmu do Krugmana
 
-Ten rozdział pokazuje, jak zmieniało się myślenie o handlu.
+## Od złota w skarbcu do skali produkcji
+
+Przez wieki myślenie o handlu przeszło długą drogę: od przekonania, że bogactwo to złoto, przez korzyści z wymiany, aż po teorie, które dały Nobla w XXI wieku.
 
 ## Bogactwo w skarbcu
 
@@ -137,6 +156,8 @@ Adam Smith i David Ricardo pokazali, że to błąd. Bogactwo to nie złoto, tylk
 Klasyczne teorie dobrze wyjaśniały handel między krajami różnymi – np. bogatą Anglią i rolniczą Portugalią. Ale w XX wieku najwięcej handlu odbywa się między krajami podobnymi: Niemcami, Francją, Włochami. **[[Krugman Paul|Paul Krugman]]** wyjaśnił to korzyściami skali i różnorodnością produktów. Konsumenci lubią wybór, a firmy, produkując dużo, obniżają koszty. Krugman zajmował się też geografią ekonomiczną – dlaczego przemysł skupia się w niektórych regionach – i kryzysami walutowymi.
 
 > Zapamiętaj: merkantylizm – bogactwo = kruszce, nadwyżka handlowa, protekcjonizm. Krugman – Nobel 2008, nowa teoria handlu.
+
+> Uwaga: merkantyliści uważali, że handel to **gra o sumie zerowej** (zysk jednego to strata drugiego); Smith i Ricardo pokazali, że zyskać mogą obie strony.
 
 # makro-handel-3 | Cła, kontyngenty i inne bariery
 
@@ -168,11 +189,18 @@ Powstaje zbędna strata – dwa trójkąty na wykresie.
 
 **[[Bariery pozataryfowe|Bariery pozataryfowe]]** to wszystko poza cłem: licencje, normy techniczne i sanitarne, procedury, „dobrowolne” ograniczenia eksportu. **[[Subsydia eksportowe|Subsydia eksportowe]]** to dopłaty do eksportu – podnoszą cenę krajową, a dobrobyt kraju maleje. Bank centralny może wpływać na kurs przez **[[Interwencja walutowa|interwencje walutowe]]**.
 
+> Uwaga: cło **podnosi** cenę krajową, zwiększa produkcję krajową, ale zmniejsza konsumpcję i tworzy stratę dobrobytu – zyskują producenci i budżet, tracą konsumenci.
+
+> Zapamiętaj: cło – podatek od importu; kontyngent – limit ilości; bariery pozataryfowe – normy, procedury, subsydia.
+
 ## Na marginesie
 
 Pojawiały się też: [[Rodrik Dani|Dani Rodrik]] (trylemat globalizacji), [[Licencja i know-how|licencja i know-how]], [[Krzywa doświadczenia (uczenia się)|krzywa doświadczenia]] i [[Regulacja, deregulacja i przejęcie regulacyjne|przejęcie regulacyjne]].
-
 # makro-handel-4 | Dumping, autarkia i globalne korporacje
+
+## Tani import – zawsze dobrze?
+
+Gdy do sklepów trafiają bardzo tanie towary z zagranicy, klienci się cieszą. Ale jeśli są tanie, bo eksporter sprzedaje poniżej kosztów, by zniszczyć konkurencję, kraje mogą się bronić.
 
 ## Sprzedaż poniżej kosztów
 
@@ -194,11 +222,20 @@ Pojawiały się też: [[Rodrik Dani|Dani Rodrik]] (trylemat globalizacji), [[Lic
 
 Rynek wielu małych sprzedawców i jednorodnego produktu to **[[Konkurencja doskonała|konkurencja doskonała]]**. Jej przeciwieństwem są **[[Formy monopolizacji (porozumienia i koncentracje)|formy monopolizacji]]**: kartele, syndykaty, trusty, koncerny. Firmy łączą się przez **[[Fuzja i przejęcie (M&A)|fuzje i przejęcia]]**, a nowym utrudniają wejście **[[Bariery wejścia|bariery wejścia]]**.
 
+> Przykład: producent sprzedaje rower w swoim kraju za 1000 zł, a za granicą za 600 zł, choć koszt wynosi 700 zł. Kraj importujący może nałożyć cło antydumpingowe w wysokości różnicy.
+
+> Uwaga: **autarkia** to samowystarczalność bez handlu – w ekonomii prowadzi zwykle do niższego dobrobytu niż handel.
+
+> Zapamiętaj: dumping – sprzedaż za granicą poniżej kosztów lub ceny krajowej; klauzula najwyższego uprzywilejowania – równe traktowanie partnerów w WTO.
+
 ## Na marginesie
 
 Pojawiały się też: [[Dystrybucja|dystrybucja]], [[Style kierowania: autokratyczny, demokratyczny, liberalny|style kierowania]] i [[Zamówienia publiczne|zamówienia publiczne]].
-
 # makro-handel-5 | Jak firmy wychodzą w świat
+
+## Gdzie produkować iPhone’a?
+
+Projekt w USA, części z Korei i Tajwanu, montaż w Chinach. Firmy rozkładają produkcję po świecie, szukając niższych kosztów i bliskości klientów – a z każdą decyzją wiążą się inne pojęcia.
 
 ## Gdzie przenieść produkcję
 
@@ -224,13 +261,22 @@ Firmy przenoszą działalność, żeby obniżyć koszty albo być bliżej klient
 
 Jacob Viner pokazał, że unia celna ma **[[Efekty kreacji i przesunięcia handlu|dwa efekty]]**: kreację handlu (droższa produkcja krajowa zastąpiona tańszym importem od partnera – dobrze) i przesunięcie handlu (tańszy import z kraju trzeciego zastąpiony droższym od partnera – źle).
 
+> Przykład: polska firma odzieżowa przenosi szwalnię do Bangladeszu (offshoring), zleca księgowość zewnętrznej firmie w Krakowie (outsourcing), a po kilku latach – przez rosnące koszty transportu – wraca z częścią produkcji do Polski (reshoring).
+
+> Uwaga: **offshoring** – przeniesienie za granicę (może być we własnej firmie); **outsourcing** – zlecenie innej firmie (może być w kraju).
+
+> Zapamiętaj: formy wejścia na rynek: eksport, licencja, franczyza, joint venture, inwestycja bezpośrednia.
+
 ## Na marginesie
 
 Pojawiały się też: [[Subsydia eksportowe|subsydia eksportowe]], [[Zarządzanie zasobami ludzkimi (HRM)|zarządzanie zasobami ludzkimi]], [[Strategia|strategia]] i [[Organizowanie i struktura organizacyjna|struktura organizacyjna]].
-
 # makro-handel-5-cz2 | Zarządzanie firmą bez granic
 
 Firma działająca w wielu krajach musi inaczej się organizować. Ten rozdział zbiera pojęcia z zarządzania i finansów, które pojawiają się przy handlu międzynarodowym.
+
+## Jedna firma, wiele krajów
+
+Firma z filiami w dziesięciu krajach musi zdecydować, kto za co odpowiada, jak dzielić się wiedzą i jak finansować działalność za granicą.
 
 ## Kto za co odpowiada
 
@@ -245,3 +291,5 @@ Wejście na nowe rynki wymaga zmian w całej organizacji. **[[Doskonalenie organ
 Handel i inwestycje tworzą też długi. **[[Zadłużenie zagraniczne|Zadłużenie zagraniczne]]** to zobowiązania rezydentów wobec nierezydentów – państwa, firm i banków. Polska boleśnie się o tym przekonała: w latach 70. Gierek finansował rozwój kredytami z Zachodu, a w latach 80. zadłużenie sięgnęło około 40 mld dolarów i kraj nie był w stanie go obsługiwać. Problem rozwiązały dopiero porozumienia z Klubem Paryskim (wierzyciele rządowi, 1991) i Klubem Londyńskim (banki komercyjne, 1994), które umorzyły znaczną część długu.
 
 > Zapamiętaj: Klub Paryski (1991) – wierzyciele publiczni; Klub Londyński (1994) – banki komercyjne.
+
+> Uwaga: zadłużenie zagraniczne kraju obejmuje także długi **firm prywatnych** wobec zagranicy, nie tylko długi państwa.

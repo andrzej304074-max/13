@@ -59,10 +59,11 @@ Franco Modigliani zauważył, że ludzie planują na dekady. W młodości zarabi
 
 > Uwaga: w modelu Keynesa konsumpcja zależy od dochodu **bieżącego**, w modelu Modiglianiego – od dochodu z **całego życia**. Na olimpiadzie łatwo pomylić te podejścia.
 
+> Zapamiętaj: MPC + MPS = 1; funkcja konsumpcji Keynesa: C = C₀ + c · Y.
+
 ## Na marginesie
 
 Pytania dotyczyły też [[Stopa procentowa nominalna i realna|stopy procentowej nominalnej i realnej]] (wyższa realna stopa zachęca do oszczędzania), [[Bezrobocie cykliczne (koniunkturalne, keynesowskie)|bezrobocia cyklicznego]] (gdy konsumpcja spada, firmy zwalniają), [[Stopa bezrobocia|stopy bezrobocia]], [[Równowaga rynkowa|równowagi rynkowej]] i [[Ryzyko, niepewność i wartość oczekiwana|ryzyka]] – niepewność skłania ludzi do większych oszczędności „na czarną godzinę”.
-
 # makro-popyt-1-cz2 | Czterech ekonomistów konsumpcji
 
 Kto ma rację w sprawie konsumpcji? Ten rozdział przedstawia ekonomistów, którzy zaproponowali różne odpowiedzi.
@@ -91,6 +92,8 @@ Te teorie prowadzą do różnych wniosków. Jeśli Keynes ma rację, jednorazowy
 
 > Zapamiętaj: Keynes – dochód bieżący; Duesenberry – dochód względny; Friedman – dochód permanentny (1957); Modigliani – cykl życia.
 
+> Uwaga: Friedman – dochód **permanentny**; Modigliani – **cykl życia**; Duesenberry – dochód **względny**. Trzy różne hipotezy, często mylone.
+
 # makro-popyt-2 | Naśladowanie, oszczędzanie i inwestowanie
 
 ## Dochód względny i zapadka
@@ -117,13 +120,18 @@ Keynes zauważył coś zaskakującego. Gdy jedna rodzina oszczędza więcej, bog
 
 Państwo może zachęcać do inwestycji: **[[Polityka inwestycyjna i prowzrostowa|polityka prowzrostowa]]** to ulgi podatkowe, specjalne strefy ekonomiczne i budowa infrastruktury. Bank centralny wpływa na koszt kredytu swoją **[[Polityka pieniężna – cele i instrumenty|polityką pieniężną]]**. Gdy państwo wydaje więcej, niż zbiera, powstaje **[[Deficyt budżetowy i deficyt sektora finansów publicznych|deficyt]]**.
 
+> Przykład: wszyscy w gospodarce postanawiają oszczędzać o 10% więcej. Sklepy sprzedają mniej, firmy zwalniają, dochody spadają – i na koniec łączne oszczędności mogą wcale nie wzrosnąć. To paradoks oszczędności.
+
+> Zapamiętaj: paradoks oszczędności (Keynes): to, co rozsądne dla jednej rodziny, może zaszkodzić całej gospodarce.
+
 ## Na marginesie
 
 Pytano też o pojęcia ekonomii behawioralnej: [[Efekt posiadania (endowment effect)|efekt posiadania]] i [[Heurystyki i efekt ramowania|heurystyki]] – bo decyzje o oszczędzaniu i inwestowaniu często nie są w pełni racjonalne.
-
 # makro-popyt-2-cz2 | Narzędzia i pojęcia z tła
 
-Ten rozdział zbiera pojęcia, o które olimpiada pytała przy okazji konsumpcji i inwestycji. Większość z nich znasz z mikroekonomii albo poznasz w kolejnych działach.
+## Pojęcia z drugiego planu
+
+Przy konsumpcji i inwestycjach olimpiada pyta też o pieniądz, akcje, wybór nakładów przez firmę i zasiłek dla bezrobotnych. To tło, które pomaga zrozumieć główny temat.
 
 ## Pieniądz i akcje
 
@@ -142,6 +150,8 @@ Makroekonomia, tak jak mikroekonomia, opiera się na **[[Model, teoria i prawo e
 **[[Zasiłek dla bezrobotnych (ubezpieczenie od bezrobocia)|Zasiłek dla bezrobotnych]]** chroni dochód osób, które straciły pracę. Ma też znaczenie dla popytu: dzięki zasiłkom konsumpcja w czasie recesji spada mniej. Ekonomiści zwracają jednak uwagę, że wysoki zasiłek może wydłużać szukanie pracy. W Polsce od czerwca 2026 roku zasiłek wynosi brutto 1 783,90 zł przez pierwsze 90 dni i 1 400,90 zł później.
 
 > Zapamiętaj: zasiłki działają jak automatyczny stabilizator – podtrzymują konsumpcję, gdy gospodarka słabnie.
+
+> Uwaga: zasiłek dla bezrobotnych to **transfer** – nie wchodzi do PKB, choć zwiększa dochód do dyspozycji.
 
 # makro-popyt-3 | Mnożnik: jak złotówka staje się kilkoma
 
@@ -187,13 +197,18 @@ $ kT = −MPC / [1 − MPC · (1 − t)]
 
 Co się stanie, gdy rząd zwiększy wydatki o 100 mln zł i jednocześnie podatki o 100 mln zł? Intuicja mówi: nic. Ale wydatki działają silniej niż podatki. W prostym modelu dochód rośnie dokładnie o 100 mln zł. To **[[Mnożnik zrównoważonego budżetu (Haavelmo)|mnożnik zrównoważonego budżetu]]** Haavelma – równy 1.
 
+> Uwaga: mnożnik podatkowy jest **mniejszy** (co do wartości) od wydatkowego, bo część obniżki podatku ludzie oszczędzają.
+
+> Zapamiętaj: mnożnik wydatkowy = 1 / (1 − MPC); mnożnik zrównoważonego budżetu = 1.
+
 ## Na marginesie
 
 Pytano też o [[Hipoteza dochodu permanentnego|hipotezę dochodu permanentnego]], [[Wartość pieniądza w czasie|wartość pieniądza w czasie]], [[Pasywa: kapitał własny i zobowiązania|pasywa]], [[Phelps Edmund|Edmunda Phelpsa]] i [[Reguła złotej zasady (finansów publicznych)|złotą regułę finansów publicznych]]: pożyczać tylko na inwestycje.
-
 # makro-popyt-3-cz2 | Długie fale oszczędzania i demografii
 
-Ten rozdział łączy oszczędności i popyt z długim okresem: demografią, stopami procentowymi i ryzykiem stagnacji.
+## Oszczędności w długim okresie
+
+Starzejące się społeczeństwa oszczędzają inaczej niż młode. Gdy oszczędności jest za dużo, a inwestycji za mało, stopy spadają i gospodarka może utknąć w stagnacji.
 
 ## Gdy wszyscy oszczędzają, a nikt nie inwestuje
 
@@ -215,10 +230,15 @@ Demografia wpływa na oszczędności. **[[Starzenie się ludności i jego miary|
 
 Na drugim biegunie leży **[[Hiperinflacja|hiperinflacja]]** – według Phillipa Cagana inflacja powyżej 50% miesięcznie. Zwykle wynika z finansowania deficytu drukowaniem pieniędzy. W takich warunkach nikt nie oszczędza w gotówce – wszyscy pozbywają się pieniędzy jak najszybciej.
 
+> Przykład: w kraju 100 osób oszczędza po 1000 zł rocznie, ale firmy chcą pożyczyć tylko 60 000 zł. Żeby zrównać oszczędności z inwestycjami, stopa procentowa musi spaść – jeśli nie może spaść poniżej zera, gospodarka zwalnia.
+
+> Uwaga: naturalna stopa procentowa (r*) jest **niewidoczna** – szacuje się ją z modeli, a nie odczytuje z rynku.
+
+> Zapamiętaj: sekularna stagnacja – trwale niski wzrost i bardzo niskie r*.
+
 ## Na marginesie
 
 Pojawiały się też [[Jevons William Stanley|William Stanley Jevons]] i [[Krótki okres i długi okres|podział na krótki i długi okres]] – mnożnik Keynesa to zjawisko krótkiego okresu, a sekularna stagnacja – długiego.
-
 # makro-popyt-4 | Krzyż Keynesa i luki w wydatkach
 
 ## Wycieki i zastrzyki
@@ -245,15 +265,20 @@ Hyman Minsky zauważył niepokojącą prawidłowość. Długie okresy stabilnoś
 
 **[[Akcelerator finansowy|Akcelerator finansowy]]** (Bernanke, Gertler, Gilchrist) dopowiada resztę: w recesji spada wartość zabezpieczeń, banki niechętnie pożyczają, a to pogłębia recesję. **[[Bernanke Ben|Ben Bernanke]]**, jako szef Fed w latach 2006–2014, zmierzył się z tym w praktyce w czasie kryzysu 2008 roku.
 
+> Uwaga: luka **inflacyjna** – wydatki większe niż potrzeba do pełnego zatrudnienia; **deflacyjna** – mniejsze.
+
 ## Na marginesie
 
 Pytano też o [[Keynes John Maynard|Keynesa]] i jego „Ogólną teorię” (1936) oraz o [[Milgrom Paul|Paula Milgroma]].
 
 > Zapamiętaj: luka deflacyjna – wydatki za niskie (bezrobocie); luka inflacyjna – wydatki za wysokie (rosną ceny).
-
 # makro-popyt-4-cz2 | Ryzyko, bezrobocie i bezradny bank
 
 Trzy pojęcia, które olimpiada łączyła z modelem Keynesa i lukami w wydatkach.
+
+## Gdy obniżka stóp nie pomaga
+
+Bank centralny obniża stopy, a gospodarka dalej stoi. Keynes opisał taką sytuację – i pokazał, że wtedy pałeczkę musi przejąć polityka fiskalna.
 
 ## Jak budować portfel
 
@@ -277,6 +302,8 @@ Zwykle bank centralny pobudza gospodarkę, obniżając stopy procentowe. Ale gdy
 
 Te trzy pojęcia łączy jedno: pokazują, jak łatwo gospodarka może odejść od pełnego wykorzystania zasobów – i jakie narzędzia mogą ją tam przywrócić.
 
+> Uwaga: pułapka płynności to sytuacja, gdy ludzie trzymają dodatkowe pieniądze zamiast je wydawać lub inwestować – dalsze zwiększanie podaży pieniądza nie obniża stóp.
+
 # makro-popyt-5 | Inwestycje, handel i porównywanie się z innymi
 
 ## Znów o sąsiadach
@@ -296,6 +323,8 @@ Firmy inwestują też za granicą. **[[Inwestycje bezpośrednie (BIZ) i portfelo
 ## Dlaczego kraje handlują tym, czym handlują
 
 Dwie teorie z lat 60. wyjaśniają wymianę handlową inaczej niż klasycy. **[[Hipoteza Lindera|Hipoteza Lindera]]** (1961): kraj eksportuje dobra, które najpierw sprawdziły się na rynku krajowym, a najwięcej handlują ze sobą kraje o podobnych dochodach. **[[Hipoteza luki technologicznej (imitacyjnej)|Hipoteza luki technologicznej]]** Posnera (1961): kraj, który wymyśla nowy produkt, eksportuje go, dopóki inne kraje go nie skopiują.
+
+> Uwaga: efekt **zapadki** dotyczy spadku dochodu (konsumpcja maleje wolniej), efekt **demonstracji** – naśladowania otoczenia.
 
 ## Na marginesie
 

@@ -35,6 +35,10 @@ Od standardu złota przez Bretton Woods po dzisiejsze kursy płynne – systemy 
 
 # makro-kursy-1 | Pieniądze, które płyną przez granice
 
+## Dlaczego kraj pożycza od świata?
+
+Gdy Polska kupuje za granicą więcej, niż sprzedaje, różnicę musi czymś opłacić – pożyczką albo sprzedażą aktywów cudzoziemcom. Rachunki z zagranicą zawsze się bilansują.
+
 ## Długi wobec świata
 
 **[[Zadłużenie zagraniczne|Zadłużenie zagraniczne]]** to zobowiązania rezydentów wobec nierezydentów. W latach 80. Polska miała około 40 mld dolarów długu, którego nie była w stanie spłacać. Pomogły porozumienia z Klubem Paryskim (1991) i Londyńskim (1994).
@@ -66,10 +70,13 @@ Eksport netto zawsze równa się odpływom kapitału netto. Kraj z nadwyżką ku
 
 Parytet siły nabywczej nie działa idealnie. **[[Ograniczenia parytetu siły nabywczej|Dlaczego]]**? Bo wiele usług nie podlega handlowi (fryzjer, czynsz), towary nie są identyczne (marki, gusty), a transport i cła kosztują.
 
+> Uwaga: deficyt na rachunku **bieżącym** musi być sfinansowany nadwyżką na rachunku **kapitałowym i finansowym** (napływem kapitału) albo spadkiem rezerw.
+
+> Zapamiętaj: S − I = NX (tożsamość gospodarki otwartej); Klub Paryski 1991, Londyński 1994.
+
 ## Na marginesie
 
 Pojawiały się też: [[Cele, podmioty i instrumenty polityki gospodarczej|cele, podmioty i instrumenty polityki gospodarczej]].
-
 # makro-kursy-2 | Bilans płatniczy krok po kroku
 
 ## Hamburgerowy test
@@ -105,13 +112,18 @@ $ kurs PPP = cena w kraju / cena w USA
 
 Po wejściu do UE Polacy zyskali **[[Swobodny przepływ pracowników w UE i emigracja z Polski po 2004 r.|swobodę pracy]]** – od 1 maja 2004 roku w Wielkiej Brytanii, Irlandii i Szwecji, a od 2011 roku w całej Unii. **[[Migracja zarobkowa (ekonomiczna)|Migracja zarobkowa]]** zmieniła polski bilans płatniczy.
 
+> Uwaga: parytet siły nabywczej (indeks Big Maca) mówi o kursie **w długim okresie** – w krótkim kursy mogą od niego daleko odbiegać.
+
+> Zapamiętaj: bilans płatniczy: rachunek bieżący, kapitałowy, finansowy; dochody pierwotne – z pracy i kapitału, wtórne – transfery.
+
 ## Na marginesie
 
 Pojawiały się też: [[Instrument pochodny (derywat)|instrumenty pochodne]], [[Finansowanie deficytu|finansowanie deficytu]] i [[Produkty bankowe dla klientów|produkty bankowe]].
-
 # makro-kursy-2-cz2 | Instytucje i sprawozdania
 
-Ten rozdział zbiera pojęcia instytucjonalne i rachunkowe, które pojawiają się przy bilansie płatniczym.
+## Kto pilnuje bezpieczeństwa finansów kraju?
+
+Bilans płatniczy to nie tylko liczby. Za nim stoją instytucje, które dbają o stabilność systemu finansowego, i sprawozdania, z których te liczby pochodzą.
 
 ## Bezpieczeństwo systemu finansowego
 
@@ -131,6 +143,8 @@ Tak jak kraj ma bilans płatniczy, firma ma **[[Sprawozdanie finansowe|sprawozda
 Sprawozdania sprawdza **[[Audyt wewnętrzny i biegły rewident|biegły rewident]]** – zawód zaufania publicznego.
 
 > Uwaga: bilans płatniczy kraju i bilans firmy to zupełnie różne rzeczy. Pierwszy zapisuje przepływy w okresie, drugi pokazuje stan majątku na dzień.
+
+> Zapamiętaj: Komitet Stabilności Finansowej – NBP, MF, KNF, BFG; rezerwy walutowe zarządza NBP.
 
 # makro-kursy-3 | Kurs: nominalny, realny i teorie
 
@@ -165,13 +179,18 @@ $ e realny = e nominalny × P* / P
 
 Wymienialność złotego była jednym z filarów **[[Transformacja systemowa i plan Balcerowicza|planu Balcerowicza]]** z 1 stycznia 1990 roku. Kursy walut silnie zareagowały na **[[Brexit|brexit]]** – po referendum w 2016 roku funt mocno stracił.
 
+> Zapamiętaj: notowanie bezpośrednie: PLN za 1 jednostkę waluty obcej; wzrost kursu PLN/EUR = **osłabienie** złotego.
+
 ## Na marginesie
 
 Pojawiały się też: [[Ministerstwo Finansów (MF)|Ministerstwo Finansów]], [[Mechanizm transmisji monetarnej|mechanizm transmisji monetarnej]] (z kanałem kursowym) i [[Paradoks rolnictwa (dobra nowina dla rolnictwa – zła dla rolników)|paradoks rolnictwa]].
-
 # makro-kursy-3-cz2 | Narzędzia i instytucje rynku walutowego
 
 Ten krótki rozdział zbiera pojęcia, które pojawiają się wokół kursu walutowego.
+
+## Narzędzia i ludzie rynku walutowego
+
+Na rynek walutowy wpływa NBP swoimi operacjami, inwestorzy swoimi zakładami, a Polska – wyborem, kiedy przyjąć euro. Ten rozdział porządkuje te pojęcia.
 
 ## Jak NBP ściąga nadmiar pieniędzy
 
@@ -191,7 +210,13 @@ Kraj, który chce przyjąć euro, musi najpierw przez co najmniej dwa lata uczes
 
 > Zapamiętaj: ERM II – pasmo ±15%, minimum 2 lata przed przyjęciem euro.
 
+> Uwaga: ERM II to „poczekalnia” do euro: co najmniej **2 lata** bez poważnych napięć kursowych (wahania ±15% wokół parytetu).
+
 # makro-kursy-4 | Systemy walutowe i kryzysy
+
+## Stały kurs, wolny przepływ kapitału i własna polityka – wybierz dwa
+
+Każdy kraj chciałby mieć stały kurs, swobodny przepływ pieniędzy i niezależną politykę pieniężną. Ekonomiści pokazali, że wszystkich trzech naraz mieć się nie da.
 
 ## Waluta z pełnym pokryciem
 
@@ -220,11 +245,20 @@ Po deprecjacji bilans handlowy najpierw się pogarsza (stare kontrakty, droższy
 - **II** (Obstfeld) – samospełniające się oczekiwania: rynek atakuje walutę, bo wierzy, że rząd z niej zrezygnuje;
 - **III** – słabe banki i pokusa nadużycia, jak w Azji w 1997 roku.
 
+> Przykład: kraj ma stały kurs i swobodny przepływ kapitału. Chce obniżyć stopy, żeby pobudzić gospodarkę. Kapitał ucieka za granicę, gdzie stopy są wyższe, kurs zaczyna słabnąć – i bank centralny musi wrócić do wyższych stóp, żeby obronić kurs.
+
+> Uwaga: krzywa J: po osłabieniu waluty bilans handlowy **najpierw się pogarsza**, a dopiero potem poprawia – bo ilości dostosowują się wolniej niż ceny.
+
+> Zapamiętaj: niemożliwa trójca (Mundell–Fleming): stały kurs + swobodny kapitał + niezależna polityka pieniężna – tylko dwa z trzech.
+
 ## Na marginesie
 
 Pojawiały się też: [[Polityka gospodarcza (ekonomiczna)|polityka gospodarcza]] i [[Plan Marshalla|plan Marshalla]] (pomoc USA dla Europy od 1948 roku).
-
 # makro-kursy-5 | Od złota do SDR
+
+## Od złota do pieniądza bez pokrycia
+
+Kiedyś banknot można było wymienić w banku na złoto. Dziś nie da się go wymienić na nic oprócz innych banknotów. Jak doszliśmy do tego systemu?
 
 ## Standard złota
 
@@ -246,13 +280,20 @@ Kraje rozwijające się często nie mogą pożyczać za granicą we własnej wal
 
 Polski eksporter wysyła towar do Brazylii. Skąd ma pewność, że dostanie zapłatę? **[[Akredytywa dokumentowa|Akredytywa dokumentowa]]** to zobowiązanie banku importera, że zapłaci po przedstawieniu określonych dokumentów (np. listu przewozowego). To najbezpieczniejsza forma. **[[Inkaso dokumentowe|Inkaso dokumentowe]]** jest tańsze: bank tylko pośredniczy – wydaje dokumenty importerowi w zamian za zapłatę – ale nie gwarantuje płatności.
 
+> Przykład: w systemie z Bretton Woods dolar był wymienialny na złoto po 35 USD za uncję, a inne waluty miały stały kurs do dolara. Gdy USA miały za mało złota na pokrycie dolarów, w 1971 r. Nixon zawiesił wymienialność – system się rozpadł.
+
+> Uwaga: SDR (specjalne prawa ciągnienia) to **jednostka rozrachunkowa MFW**, a nie waluta do płacenia w sklepie.
+
+> Zapamiętaj: standard złota do 1914 r.; Bretton Woods 1944–1971/73; od lat 70. – kursy płynne.
+
 ## Na marginesie
 
 Pojawiały się też: [[Niezależność banku centralnego|niezależność banku centralnego]], [[Europejski Bank Odbudowy i Rozwoju (EBOiR)|EBOiR]] i [[Światowa Organizacja Handlu (WTO)|WTO]].
-
 # makro-kursy-5-cz2 | Pieniądz i dokumenty w obrocie
 
-Ten rozdział zbiera pojęcia z finansów praktycznych, które pojawiają się przy rozliczeniach.
+## Rozliczenia w praktyce
+
+Firma eksportująca towar za granicę musi wiedzieć, jak dostanie zapłatę, jak zabezpieczyć kredyt i jak udokumentować dług. To praktyczna strona finansów międzynarodowych.
 
 ## Gotówka i zapisy
 
@@ -271,6 +312,8 @@ Zanim bank pożyczy, sprawdza **[[Zdolność kredytowa|zdolność kredytową]]**
 **[[Należności i zobowiązania|Należności]]** to kwoty, które firma ma dostać, **zobowiązania** – które musi zapłacić. Gdy jedna firma nie płaci w terminie, druga też nie ma z czego zapłacić swoim dostawcom – powstają zatory płatnicze.
 
 > Zapamiętaj: indos – przeniesienie praw z weksla; awal – poręczenie wekslowe.
+
+> Uwaga: akredytywa to zobowiązanie **banku** do zapłaty po spełnieniu warunków (np. przedstawieniu dokumentów dostawy) – chroni i eksportera, i importera.
 
 # makro-kursy-6 | Kto jest rezydentem
 
@@ -294,3 +337,5 @@ Ale gdy polska firma sprzedaje towar polskiemu klientowi, transakcja do bilansu 
 Rezydencja decyduje też o podatkach. Rezydent podatkowy płaci w Polsce podatek od wszystkich dochodów, także zagranicznych (nieograniczony obowiązek podatkowy). Nierezydent – tylko od dochodów uzyskanych w Polsce. Osoba fizyczna jest rezydentem podatkowym, gdy ma w Polsce ośrodek interesów życiowych albo przebywa tu ponad 183 dni w roku. Umowy o unikaniu podwójnego opodatkowania pilnują, by ktoś, kto zarabia w dwóch krajach, nie płacił dwa razy.
 
 > Zapamiętaj: rezydencja ≠ obywatelstwo. Decyduje ośrodek interesów; w podatkach – też 183 dni w roku.
+
+> Uwaga: rezydentem może być też **cudzoziemiec**, jeśli ma w Polsce ośrodek interesów gospodarczych – liczy się miejsce, a nie obywatelstwo.

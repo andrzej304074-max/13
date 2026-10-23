@@ -35,6 +35,10 @@ Wzrost nie zawsze rozkłada się równo. Ekonomiści mierzą nierówności wspó
 
 # makro-wzrost-1 | Wzrost, rozwój i doganianie bogatych
 
+## Dlaczego jedne kraje są bogate, a inne biedne?
+
+Sto lat temu Korea Południowa była biedniejsza od wielu krajów Afryki. Dziś jest jednym z najbogatszych krajów Azji. Co sprawia, że jedne gospodarki rosną latami, a inne stoją?
+
 ## Wzrost a rozwój
 
 **[[Wzrost gospodarczy|Wzrost gospodarczy]]** to długookresowy wzrost realnego PKB (najlepiej per capita) i potencjału produkcyjnego. **[[Rozwój gospodarczy|Rozwój gospodarczy]]** to pojęcie szersze: obejmuje zmiany jakościowe – strukturę gospodarki, instytucje, edukację, zdrowie, poziom życia.
@@ -63,9 +67,15 @@ Skoro kapitał przynosi więcej tam, gdzie jest go mało, kraje biedne powinny r
 
 Pojawiały się też: **[[Koszty i korzyści przyjęcia euro|koszty i korzyści przyjęcia euro]]** oraz **[[Kryteria konwergencji (z Maastricht)|kryteria konwergencji z Maastricht]]** – warunki, które musi spełnić kraj przed przyjęciem wspólnej waluty: niska inflacja, deficyt do 3% PKB, dług do 60% PKB, dwa lata stabilnego kursu w ERM II i niskie długoterminowe stopy procentowe.
 
+> Uwaga: **wzrost** to ilościowy przyrost PKB; **rozwój** – zmiany jakościowe (struktura, instytucje, zdrowie, edukacja). Można mieć wzrost bez rozwoju.
+
+> Zapamiętaj: reguła 70: czas podwojenia ≈ 70 / tempo wzrostu (%); Solow – w długim okresie wzrost dzięki postępowi technicznemu.
+
 # makro-wzrost-1-cz2 | Banki i reguły, które wspierają wzrost
 
-Ten rozdział zbiera pojęcia instytucjonalne, które pojawiają się przy wzroście gospodarczym i integracji europejskiej.
+## Kto finansuje wzrost?
+
+Fabryki, drogi i laboratoria trzeba za coś zbudować. Pieniądze pochodzą z banków, z rynku – i z budżetów, które muszą trzymać się reguł, żeby nie zadłużyć przyszłych pokoleń.
 
 ## Banki finansują wzrost
 
@@ -84,6 +94,8 @@ W czasie kryzysu zadłużeniowego EBC uruchomił **[[LTRO|LTRO]]** – długoter
 Po kryzysie w strefie euro państwa UE podpisały **[[Pakt fiskalny (2012)|pakt fiskalny]]**. Zobowiązały się, że deficyt strukturalny nie przekroczy 0,5% PKB (1%, gdy dług jest znacznie poniżej 60%), a nadwyżkę długu ponad 60% PKB będą redukować o 1/20 rocznie. Chodziło o to, żeby wzrost nie był kupowany na kredyt.
 
 > Zapamiętaj: EBC – Frankfurt, od 1998 r., cel 2%. Pakt fiskalny – deficyt strukturalny do 0,5% PKB.
+
+> Uwaga: EBC odpowiada za politykę pieniężną **strefy euro**, a nie całej UE – Polska ma własny bank centralny.
 
 # makro-wzrost-2 | Surowcowa klątwa i mierzenie nierówności
 
@@ -114,13 +126,20 @@ Simon Kuznets postawił hipotezę, że nierówności najpierw rosną w miarę ro
 
 **[[Dywidenda demograficzna|Dywidenda demograficzna]]** to okres, gdy w populacji jest wyjątkowo dużo osób w wieku produkcyjnym, a mało dzieci i seniorów. Gospodarka może wtedy rosnąć szybciej – tak było w Azji Wschodniej.
 
+> Przykład: kraj odkrywa ropę i zarabia na niej miliardy dolarów. Waluta się umacnia, a fabryki mebli i odzieży tracą klientów za granicą, bo są za drogie. Po kilku latach gospodarka zależy prawie tylko od ropy – to choroba holenderska.
+
+> Uwaga: krzywa Kuznetsa (odwrócone U) to **hipoteza**: nierówności najpierw rosną, potem maleją wraz z rozwojem – dane jej nie potwierdzają jednoznacznie.
+
+> Zapamiętaj: choroba holenderska – surowcowy boom szkodzi przemysłowi; Gini – miara nierówności 0–1.
+
 ## Na marginesie
 
 Pojawiały się też: [[Dobro luksusowe (wyższego rzędu)|dobro luksusowe]], [[Giełda Papierów Wartościowych w Warszawie (GPW)|GPW]], [[Markowitz Harry|Harry Markowitz]] i [[Model administracyjny decyzji (H. Simon)|model administracyjny Simona]].
-
 # makro-wzrost-2-cz2 | Przedsiębiorstwa, państwo i demografia
 
-Ten rozdział zbiera pojęcia z pogranicza wzrostu, rynku kapitałowego i demografii.
+## Firmy, państwo i ludność
+
+Wzrost zależy od tego, jak działają firmy, ile majątku ma państwo i jak zmienia się liczba ludzi. Ten rozdział łączy te trzy perspektywy.
 
 ## Firmy i branże
 
@@ -139,6 +158,8 @@ Po pierwszej dywidendzie demograficznej może przyjść **[[Druga dywidenda demo
 ## Teorie i modele
 
 **[[Nowa ekonomia klasyczna (szkoła racjonalnych oczekiwań)|Nowa ekonomia klasyczna]]** (Lucas, Sargent, Barro) twierdzi, że ludzie mają racjonalne oczekiwania, więc przewidywalna polityka pieniężna nie zmienia produkcji. **[[Teoria gier|Teoria gier]]** bada decyzje zależne od decyzji innych. A **[[Wycena opcji: model Blacka–Scholesa i dwumianowy|model Blacka–Scholesa]]** z 1973 roku pozwolił wyceniać opcje – Nobel 1997 dla Scholesa i Mertona (Black zmarł wcześniej).
+
+> Uwaga: starzenie się społeczeństwa **zmniejsza** podaż pracy, więc bez wzrostu wydajności PKB per capita rośnie wolniej.
 
 # makro-wzrost-3 | Twórcza destrukcja i rewolucje przemysłowe
 
@@ -166,9 +187,17 @@ Wzrost zależy od kapitału ludzkiego, a ten potrafi wyjechać. **[[Drenaż móz
 
 Pojawiali się też [[Hume David|David Hume]] (mechanizm przepływu kruszców) i [[Ricardo David|David Ricardo]] (przewaga komparatywna).
 
+> Przykład: w latach 2000 dominowali producenci telefonów z klawiaturami. Smartfony w kilka lat wyparły ich z rynku, ale stworzyły tysiące nowych firm i zawodów – twórców aplikacji, kurierów, influencerów. To twórcza destrukcja w praktyce.
+
+> Uwaga: twórcza destrukcja (Schumpeter) to **źródło wzrostu**, a nie kryzys – choć dla upadających branż bywa bolesna.
+
+> Zapamiętaj: rewolucje przemysłowe: 1 – para; 2 – elektryczność i taśma; 3 – komputery; 4 – sieć, dane, automatyzacja.
+
 # makro-wzrost-3-cz2 | Kryzysy, własność i strategie
 
-Ten rozdział zbiera kolejne pojęcia, które pojawiały się przy temacie wzrostu.
+## Gdy wzrost się załamuje
+
+Kryzysy przerywają wzrost, a o jego tempie decyduje też to, kto jest właścicielem firm i jak firmy walczą o rynek.
 
 ## Gdy wzrost się załamuje
 
@@ -191,6 +220,8 @@ Philip Kotler opisał **[[Strategie konkurencyjne według pozycji rynkowej (Ph. 
 [[Say Jean-Baptiste|Jean-Baptiste Say]] sformułował prawo rynków („podaż tworzy własny popyt”) i podkreślał rolę przedsiębiorcy. [[Veblen Thorstein|Thorstein Veblen]] stworzył instytucjonalizm i opisał konsumpcję na pokaz.
 
 > Zapamiętaj: Kotler – lider, pretendent, naśladowca, niszowiec.
+
+> Uwaga: pułapka średniego dochodu dotyczy krajów, które **wyczerpały** wzrost oparty na taniej pracy i nie przestawiły się na innowacje.
 
 # makro-wzrost-4 | Świat po globalizacji i źródła wydajności
 
@@ -224,6 +255,12 @@ Ludzie oszczędzają i inwestują, gdy wierzą, że nikt im tego nie odbierze. *
 
 **[[Wzrost liczby ludności a wzrost gospodarczy|Szybki przyrost ludności]]** działa w obie strony. Może obciążać zasoby (obawy Malthusa, które się nie sprawdziły) i rozrzedzać kapitał – te same szkoły i maszyny dzielą się na więcej ludzi. Ale może też przyspieszać postęp, bo więcej ludzi to więcej wynalazców.
 
+> Przykład: firma, która 10 lat temu kupowała części w Chinach, dziś przenosi część dostaw do Meksyku albo Polski – bliżej klientów i z mniejszym ryzykiem. To nearshoring, jeden z objawów „slowbalizacji”.
+
+> Uwaga: deglobalizacja nie oznacza **końca** handlu – raczej wolniejszy wzrost i przesunięcie łańcuchów dostaw na bliższych partnerów.
+
+> Zapamiętaj: źródła wzrostu: kapitał, praca, wydajność (TFP), instytucje.
+
 # makro-wzrost-5 | Otwartość, rachunek wzrostu i wskaźnik Robin Hooda
 
 ## Do wewnątrz czy na zewnątrz?
@@ -243,3 +280,5 @@ Kraje rozwijające się w XX wieku wybierały między dwiema strategiami. **[[Po
 > Przykład: dwie osoby, jedna zarabia 80, druga 20. Średnia to 50. Trzeba przenieść 30 ze 100, czyli wskaźnik Hoovera wynosi 30%.
 
 > Zapamiętaj: reszta Solowa = wzrost PKB − wkład kapitału − wkład pracy. Wskaźnik Hoovera – „ile trzeba przenieść”.
+
+> Uwaga: rachunek wzrostu dzieli wzrost PKB na wkład kapitału, pracy i **reszty Solowa** (TFP) – a reszta to miara naszej niewiedzy, nie tylko postęp techniczny.

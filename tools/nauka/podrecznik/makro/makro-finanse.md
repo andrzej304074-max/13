@@ -63,3 +63,5 @@ Pierwszy nawias to oszczędności prywatne (dochód po podatkach minus konsumpcj
 **[[Podatek konsumpcyjny (reforma podatkowa sprzyjająca oszczędzaniu)|Podatek konsumpcyjny]]** obciąża to, co wydajesz, a nie to, co zarabiasz. Pieniądze odłożone nie są opodatkowane, dopóki ich nie wydasz. Zwolennicy mówią: zachęca to do oszczędzania, więc do inwestycji i wzrostu. Przeciwnicy: przerzuca ciężar na biedniejszych, którzy wydają większą część dochodu. W Polsce elementy tego podejścia to ulgi w IKE, IKZE i PPK.
 
 > Zapamiętaj: deficyt budżetowy → niższe oszczędności narodowe → wyższa stopa procentowa → mniej inwestycji (wypieranie).
+
+> Uwaga: w modelu funduszy pożyczkowych **popytem** są inwestycje, a **podażą** – oszczędności; deficyt budżetowy zmniejsza podaż (oszczędności publiczne).

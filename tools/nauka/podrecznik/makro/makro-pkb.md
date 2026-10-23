@@ -74,13 +74,18 @@ C to konsumpcja gospodarstw domowych, I – [[Inwestycje|inwestycje]] firm (masz
 
 **[[Produkt narodowy brutto (PNB, DNB)|Produkt narodowy brutto]]** (dziś częściej: dochód narodowy brutto) liczy, ile zarobili _mieszkańcy_ kraju, gdziekolwiek pracowali. Dodajemy dochody Polaków z zagranicy, a odejmujemy dochody cudzoziemców w Polsce.
 
+> Uwaga: PKB liczy produkcję **na terenie kraju** (także firm zagranicznych), PNB – produkcję **obywateli i firm danego kraju** (także za granicą).
+
+> Zapamiętaj: PKB = wartość dóbr i usług **finalnych**; trzy metody: produkcyjna, dochodowa, wydatkowa.
+
 ## Na marginesie
 
 Przy tej lekcji olimpiada pytała też o [[Punkt procentowy a procent|punkt procentowy a procent]] („PKB wzrósł z 2% do 3%” to wzrost tempa o 1 punkt procentowy), [[Podatki bezpośrednie i pośrednie|podatki bezpośrednie i pośrednie]] oraz [[Świadczenia społeczne w Polsce|świadczenia społeczne]] – te ostatnie nie wchodzą do G.
-
 # makro-pkb-1-cz2 | Wokół PKB: pojęcia, które warto znać
 
-Ten rozdział zbiera pojęcia, o które olimpiada pytała razem z definicją PKB. Każde z nich pomaga zrozumieć, co PKB liczy, a czego nie.
+## Co jeszcze kryje się za PKB?
+
+PKB to jedna liczba, ale za nią stoją maszyny, które się zużywają, dochody, które ludzie dostają, i oszczędności całego kraju. Żeby czytać PKB ze zrozumieniem, trzeba znać jego najbliższe otoczenie.
 
 ## Od czego zależy produkcja
 
@@ -118,6 +123,10 @@ Wzór wygląda jak PKB metodą wydatkową – i nie bez powodu. AD mówi, ile ws
 
 Na marginesie: [[Naturalna stopa bezrobocia|naturalna stopa bezrobocia]] to bezrobocie przy normalnej produkcji, a [[Wykresy w ekonomii: nachylenie i układ współrzędnych|wykresy]] pomogą ci czytać dane o PKB.
 
+> Uwaga: PKB nie obejmuje pracy w domu, wolontariatu ani kosztów zanieczyszczeń – dlatego nie jest miarą dobrobytu.
+
+> Zapamiętaj: amortyzacja = zużycie kapitału; PKN = PKB − amortyzacja.
+
 # makro-pkb-2 | Od brutto do kieszeni: rodzina miar
 
 ## Od PNB do dochodu narodowego
@@ -152,6 +161,8 @@ $ PKB realny = PKB nominalny / deflator × 100
 
 Emerytury i zasiłki to **[[Transfery socjalne|transfery socjalne]]**. Państwo nie kupuje za nie żadnej produkcji, więc nie wliczamy ich do G. Gdy państwo wydaje mniej, niż zbiera, ma **[[Nadwyżka budżetowa|nadwyżkę budżetową]]**. Gdy więcej – deficyt, który powiększa **[[Dług publiczny|dług publiczny]]**. W Polsce dług liczy się na dwa sposoby: według definicji krajowej i według metodologii UE, która obejmuje więcej instytucji.
 
+> Zapamiętaj: PNB → PNN (− amortyzacja) → dochód narodowy (− podatki pośrednie netto) → dochód do dyspozycji.
+
 # makro-pkb-3 | Czy bogatszy znaczy szczęśliwszy?
 
 ## Na głowę mieszkańca
@@ -183,12 +194,13 @@ Część legalnej pracy jest ukrywana przed urzędami – remont „na czarno”
 
 **[[Produkt potencjalny i luka PKB (popytowa)|Produkt potencjalny]]** to produkcja przy normalnym wykorzystaniu zasobów. Gdy rzeczywisty PKB jest od niego niższy, mamy ujemną lukę PKB – fabryki i ludzie stoją bezczynnie. Gdy wyższy – gospodarka się przegrzewa.
 
+> Uwaga: PKB per capita według **PSN** (parytetu siły nabywczej) lepiej porównuje poziom życia niż PKB per capita po kursie rynkowym.
+
 ## Na marginesie
 
 Pytano też o [[Wzrost gospodarczy|wzrost gospodarczy]], [[Wzrost liczby ludności a wzrost gospodarczy|związek liczby ludności ze wzrostem]], demografię – [[Przeciętne dalsze trwanie życia i tablice trwania życia|tablice trwania życia]] i [[Współczynniki urodzeń, zgonów i przyrostu naturalnego|przyrost naturalny]] – oraz [[Inflacja|inflację]], [[Euro|euro]] i założenie [[Ceteris paribus|ceteris paribus]].
 
 > Zapamiętaj: do porównań poziomu życia – PKB per capita według PPP. HDI = długość życia + wykształcenie + dochód.
-
 # makro-pkb-4 | Majątek, konta i obieg pieniądza
 
 ## Zasób a strumień
@@ -216,6 +228,8 @@ $ S + T + M = I + G + X
 ## Zakup czy transfer?
 
 **[[Zakupy rządowe a transfery w PKB|Zakupy rządowe i transfery]]** różnią się zasadniczo. Gdy państwo płaci nauczycielowi albo buduje drogę, kupuje produkcję – to G. Gdy wypłaca emeryturę, nic nie kupuje. Emerytura zwiększy PKB dopiero wtedy, gdy emeryt wyda ją w sklepie – jako konsumpcja C.
+
+> Zapamiętaj: zasób – stan w chwili (majątek, dług); strumień – w okresie (PKB, dochód); transfery (zasiłki) nie wchodzą do PKB.
 
 ## Na marginesie
 

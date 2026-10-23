@@ -65,10 +65,11 @@ Czasem jedna z krzywych przybiera skrajny kształt.
 
 Część polityki fiskalnej działa bez decyzji polityków. **[[Automatyczne stabilizatory|Automatyczne stabilizatory]]** to podatki progresywne i zasiłki dla bezrobotnych. W recesji ludzie płacą mniej podatków i dostają więcej zasiłków, więc ich wydatki spadają mniej. Krzywa IS staje się przez to mniej rozchwiana.
 
+> Zapamiętaj: IS – rynek dóbr (opada); LM – rynek pieniądza (rośnie); polityka fiskalna przesuwa IS, pieniężna – LM.
+
 ## Na marginesie
 
 Pytano też o [[Popyt doskonale elastyczny / doskonale nieelastyczny|popyt doskonale elastyczny]] – pozioma LM w pułapce płynności to właśnie doskonale elastyczny popyt na pieniądz.
-
 # makro-isldas-2 | Popyt i podaż całej gospodarki
 
 ## Czy państwo wypycha prywatnych?
@@ -100,10 +101,13 @@ Krzywa AD opada. Jednym z powodów jest **[[Efekt majątkowy (efekt Pigou, efekt
 
 Krótkookresowa AS łączy się z **[[Krzywa Phillipsa|krzywą Phillipsa]]**: gdy popyt rośnie, produkcja rośnie, bezrobocie spada, a inflacja przyspiesza. W długim okresie ta zależność znika.
 
+> Uwaga: efekt wypychania dotyczy **inwestycji prywatnych** wypieranych przez wyższe stopy – nie konsumpcji.
+
+> Zapamiętaj: AD = C + I + G + NX; szok popytowy przesuwa AD, podażowy – AS.
+
 ## Na marginesie
 
 Pytano też o [[Model ruchu okrężnego|model ruchu okrężnego]], [[Krzywa możliwości produkcyjnych (granica możliwości produkcyjnych)|krzywą możliwości produkcyjnych]] (pionowa długookresowa AS to jej makroekonomiczny odpowiednik), [[Podatek dochodowy od osób fizycznych (PIT)|PIT]], [[Prawo Kopernika–Greshama|prawo Kopernika–Greshama]], [[Podaż pieniądza (nominalna i realna)|podaż pieniądza]] i [[Wartość krańcowego produktu pracy (VMPL) i przychód z krańcowego produktu (MRPL)|wartość krańcowego produktu pracy]].
-
 # makro-isldas-3 | Równowaga, przegrzanie i ślepe zaułki wzrostu
 
 ## Czy podaż sama tworzy popyt?
@@ -132,6 +136,10 @@ Produkcja przekracza potencjalną tylko wtedy, gdy ceny są wyższe od oczekiwan
 
 Wiele krajów szybko bogaci się dzięki taniej pracy – aż do pewnego poziomu. Potem płace rosną, przewaga kosztowa znika, a na konkurowanie innowacjami jeszcze ich nie stać. Wzrost zwalnia. To **[[Pułapka średniego dochodu|pułapka średniego dochodu]]**. Ekonomiści dyskutują, czy grozi ona Polsce – i jak jej uniknąć dzięki innowacjom i edukacji.
 
+> Przykład: gospodarka produkuje 5% powyżej potencjału. Firmy nie nadążają z zamówieniami, płace rosną szybko, ceny za nimi – to przegrzanie. Bank centralny podnosi stopy, żeby schłodzić popyt.
+
+> Uwaga: prawo Saya to „podaż tworzy własny popyt”; Keynes odwrócił akcent – to **popyt** decyduje o produkcji w krótkim okresie.
+
 # makro-isldas-4 | Dlaczego krzywe mają takie kształty
 
 ## Trzy powody, dla których AD opada
@@ -158,6 +166,10 @@ Gregory Mankiw podsumowuje **[[Trzy fakty o wahaniach koniunktury|trzy fakty o w
 - wahania są nieregularne i nieprzewidywalne;
 - większość wielkości zmienia się razem, a inwestycje najsilniej;
 - gdy produkcja spada, bezrobocie rośnie.
+
+> Przykład: ceny spadają o 10%. Oszczędności w złotych mają większą siłę nabywczą (efekt majątkowy), stopy procentowe spadają (efekt stopy procentowej), a eksport tanieje (efekt kursowy). Z trzech powodów ludzie kupują więcej – dlatego AD opada.
+
+> Uwaga: krzywa AD opada **nie** z powodu efektu substytucji (jak popyt na jeden towar), tylko z trzech efektów makro: majątkowego, stopy procentowej i kursowego.
 
 ## Na marginesie
 

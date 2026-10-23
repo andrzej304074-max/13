@@ -33,6 +33,10 @@ Ekonomiści spierają się też o metodę: czy założenia muszą być realistyc
 
 # makro-szkoly-1 | Od skarbca do Keynesa
 
+## Skąd się bierze bogactwo?
+
+Na to pytanie każda epoka odpowiadała inaczej: złoto w skarbcu, ziemia, praca, wybory konsumentów, popyt. Historia myśli ekonomicznej to historia tych odpowiedzi.
+
 ## Merkantylizm
 
 **[[Merkantylizm|Merkantyliści]]** (XVI–XVIII wiek) wierzyli, że bogactwo kraju to kruszce. Żeby ich przybywało, trzeba eksportować więcej, niż importować. Państwo powinno chronić krajową produkcję i wspierać eksport.
@@ -61,13 +65,18 @@ W latach 60.–70. Milton Friedman zaproponował **[[Monetaryzm|monetaryzm]]**: 
 
 **[[Ekonomia podaży (supply-side economics)|Ekonomia podaży]]** (Laffer) postawiła na niższe podatki i deregulację – tak działali Reagan i Thatcher. **[[Szkoła austriacka|Szkoła austriacka]]** krytykowała interwencjonizm. Wszystkie te nurty spierają się o **[[Rola państwa w gospodarce|rolę państwa]]**.
 
+> Uwaga: fizjokraci uważali, że **tylko rolnictwo** tworzy nadwyżkę; klasycy – że praca w ogóle; merkantyliści – że kruszce.
+
+> Zapamiętaj: merkantylizm → fizjokratyzm → klasycy → marginaliści → Keynes → monetaryzm.
+
 ## Na marginesie
 
 Pojawiały się też: [[Budżet państwa|budżet państwa]] i [[Rynek finansowy|rynek finansowy]].
-
 # makro-szkoly-1-cz2 | Ludzie, którzy zmienili ekonomię
 
-Ten rozdział przedstawia postaci, które pojawiają się w pytaniach o historię myśli ekonomicznej.
+## Ludzie, którzy zmienili ekonomię
+
+Kilkanaście nazwisk wraca w każdym teście z historii myśli. Najłatwiej je zapamiętać, łącząc każde z jednym pytaniem, na które odpowiadało.
 
 ## Krytycy i reformatorzy kapitalizmu
 
@@ -96,6 +105,10 @@ Po Wielkim Kryzysie rozkwitł **[[Interwencjonizm państwowy|interwencjonizm]]**
 # makro-szkoly-1-cz3 | Ojcowie zarządzania
 
 Na OWE w pytaniach o historię myśli pojawiają się też twórcy nauki o zarządzaniu. Ten rozdział ich przedstawia.
+
+## Zarządzanie w historii myśli
+
+Nauka o zarządzaniu narodziła się obok ekonomii. Na OWE pytania o jej twórców pojawiają się również w części historycznej.
 
 ## Zegarek i stoper
 
@@ -143,13 +156,18 @@ Na OWE w pytaniach o historię myśli pojawiają się też twórcy nauki o zarz�
 
 **[[Kydland Finn, Prescott Edward|Kydland i Prescott]]** (Nobel 2004) – realny cykl koniunkturalny i niespójność czasowa polityki. **[[Minsky Hyman|Hyman Minsky]]** – niestabilność finansowa. **[[Hipoteza rynku efektywnego|Hipoteza rynku efektywnego]]** Eugene’a Famy – ceny odzwierciedlają dostępne informacje.
 
+> Uwaga: krytyka Lucasa mówi, że modele oparte na przeszłych zależnościach **zawodzą**, gdy zmienia się polityka – bo ludzie zmieniają zachowanie.
+
+> Zapamiętaj: oczekiwania adaptacyjne – z przeszłości; racjonalne – ze wszystkich informacji (Muth, Lucas).
+
 ## Na marginesie
 
 Pojawiała się też [[Kreacja pieniądza (system rezerwy cząstkowej)|kreacja pieniądza]] przez banki.
-
 # makro-szkoly-2-cz2 | Konkurencja niedoskonała i społeczeństwo dobrobytu
 
-Ten rozdział przedstawia ekonomistów, którzy krytykowali uproszczony obraz doskonałej konkurencji.
+## Gdy rynek nie jest doskonały
+
+Podręcznikowa konkurencja doskonała to wygodny model, ale w rzeczywistości firmy mają markę, siłę rynkową i reklamę. Ekonomiści, którzy to opisali, zmienili ekonomię.
 
 ## Rynek nie jest doskonały
 
@@ -166,6 +184,10 @@ Przez długi czas ekonomia znała dwa modele: konkurencję doskonałą i monopol
 > Zapamiętaj: 1933 – Chamberlin (konkurencja monopolistyczna) i Robinson (konkurencja niedoskonała). Galbraith – „Społeczeństwo dobrobytu” (1958), siła równoważąca.
 
 # makro-szkoly-3 | Trzecia droga i krytycy głównego nurtu
+
+## Między kapitalizmem a socjalizmem
+
+Po wojnie Niemcy, Szwecja i inne kraje szukały drogi pomiędzy wolnym rynkiem a gospodarką planową. Jednocześnie ekonomiści krytykowali główny nurt za zbyt proste założenia.
 
 ## Społeczna gospodarka rynkowa
 
@@ -194,10 +216,13 @@ Wielu współczesnych ekonomistów nie przypisuje się do jednej szkoły. **[[Ek
 
 Milton Friedman w 1953 roku zaproponował **[[Instrumentalizm (M. Friedman)|instrumentalizm]]**: nie liczy się realizm założeń teorii, tylko trafność jej przewidywań. Krytycy odpowiadają, że teoria oparta na fałszywych założeniach może przypadkiem dobrze przewidywać, a zawieść, gdy warunki się zmienią.
 
+> Uwaga: **ordoliberalizm** (Eucken) to państwo jako strażnik reguł konkurencji – nie mylić z państwem sterującym gospodarką ani z neoliberalnym minimum państwa.
+
+> Zapamiętaj: społeczna gospodarka rynkowa – Niemcy, Erhard; w Polsce zapisana w art. 20 Konstytucji.
+
 ## Na marginesie
 
 Pojawiały się też: [[Przedsiębiorca i działalność gospodarcza|przedsiębiorca i działalność gospodarcza]] oraz [[Ustroje społeczno-ekonomiczne i systemy gospodarcze|ustroje i systemy gospodarcze]].
-
 # makro-szkoly-4 | Jak zmienia się ekonomia
 
 ## Paradygmat
@@ -219,3 +244,5 @@ Polscy ekonomiści akademiccy również należą do różnych nurtów. **[[Szko�
 Ekonomia teoretyczna przekłada się na konkretne dziedziny. **[[Biznes międzynarodowy i paradygmat eklektyczny (OLI)|Paradygmat eklektyczny Dunninga]]** wyjaśnia, kiedy firma inwestuje za granicą: gdy ma przewagę własnościową (np. technologię), lokalizacyjną (np. tanią pracę) i internalizacyjną (bardziej opłaca się działać samodzielnie, niż sprzedać licencję). A **[[Internalizacja efektów zewnętrznych|internalizacja efektów zewnętrznych]]** – podatek Pigou, handel pozwoleniami, negocjacje Coase’a – to teoria, która stoi za europejskim systemem handlu emisjami.
 
 > Zapamiętaj: paradygmat – Kuhn. OLI – Ownership, Location, Internalization (Dunning).
+
+> Uwaga: paradygmat (Kuhn) to wspólny zestaw założeń nauki; zmiana paradygmatu to **rewolucja naukowa**, a nie stopniowy postęp.

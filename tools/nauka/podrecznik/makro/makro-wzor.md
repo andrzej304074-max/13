@@ -68,6 +68,8 @@ $ PKB realny = PKB nominalny / deflator × 100
 
 > Uwaga: deflator różni się od CPI – obejmuje wszystkie dobra w PKB (także inwestycyjne i rządowe), ale nie obejmuje importu.
 
+> Zapamiętaj: PKB = C + I + G + (X − M); PNB = PKB + saldo dochodów pierwotnych z zagranicą; realny = nominalny / deflator.
+
 # makro-wzor-2 | Konsumpcja, inwestycje, oszczędności
 
 ## Funkcja konsumpcji
@@ -111,6 +113,10 @@ $ NCO = NX = S − I
 
 > Przykład: S = 250, I = 200. NCO = NX = 50 – kraj ma nadwyżkę handlową i kupuje aktywa za granicą.
 
+> Uwaga: MPC to zmiana konsumpcji przy **zmianie** dochodu (ΔC/ΔY), a przeciętna skłonność – C/Y. Nie są równe.
+
+> Zapamiętaj: C = C₀ + c·Y; MPC + MPS = 1; S = Y − C.
+
 # makro-wzor-3 | Mnożnik, popyt i bezrobocie
 
 ## Mnożnik
@@ -148,6 +154,10 @@ $ u = bezrobotni / (pracujący + bezrobotni) × 100%
 ## Pieniądz
 
 **[[Teoria ilościowa pieniądza (równanie wymiany Fishera)|Równanie wymiany]]**: M · V = P · Y. Przy stałych V i Y wzrost M podnosi proporcjonalnie P.
+
+> Uwaga: mnożnik podatkowy ma znak **ujemny** i wartość −MPC/(1 − MPC) – obniżka podatków działa słabiej niż równy wzrost wydatków.
+
+> Zapamiętaj: mnożnik = 1 / (1 − MPC); Okun: wzrost bezrobocia o 1 p.p. ponad naturalne ≈ 2–3% luki PKB.
 
 # makro-wzor-4 | Stopy, podwojenie i gospodarka otwarta
 
@@ -190,6 +200,10 @@ $ S + T + M = I + G + X
 
 > Przykład: 2 000 zł z roku, gdy indeks wynosił 80; dziś indeks wynosi 120. 2 000 · 120 / 80 = 3 000 zł w dzisiejszych cenach.
 
+> Uwaga: w gospodarce otwartej mnożnik = 1 / (1 − MPC + MPI) – import „wycieka” i **zmniejsza** mnożnik.
+
+> Zapamiętaj: Fisher: i ≈ r + π; reguła 70: lata podwojenia ≈ 70 / g(%).
+
 # makro-wzor-5 | Wydajność, fundusze i podaż zagregowana
 
 ## Wydajność pracy
@@ -218,6 +232,10 @@ $ Y/L = A · F(1, K/L, H/L, N/L)
 $ g_A = g_Y − α · g_K − (1 − α) · g_L
 
 > Przykład: g_Y = 4%, g_K = 5%, g_L = 1%, α = 0,3. g_A = 4 − 1,5 − 0,7 = 1,8%.
+
+> Uwaga: w rachunku wzrostu wkład kapitału to α · (ΔK/K), a nie samo ΔK/K – udział kapitału α jest zwykle około 1/3.
+
+> Zapamiętaj: wydajność = Y/L; S = I na rynku funduszy pożyczkowych; Solow: g_Y = g_A + α·g_K + (1 − α)·g_L.
 
 # makro-wzor-6 | Pieniądz, kurs i równowaga
 
@@ -250,6 +268,10 @@ $ g_A = g_Y − α · g_K − (1 − α) · g_L
 $ Y = (Ca − c · T + I + G) / (1 − c)
 
 > Przykład: Ca = 100, c = 0,8, T = 200, I = 150, G = 210. Y = (100 − 160 + 150 + 210) / 0,2 = 300 / 0,2 = 1 500.
+
+> Uwaga: kurs realny = kurs nominalny × ceny zagraniczne / ceny krajowe – przy notowaniu bezpośrednim jego wzrost oznacza **realne osłabienie** waluty krajowej.
+
+> Zapamiętaj: V = PY / M; równowaga w modelu mnożnikowym: Y = C + I + G (+ NX).
 
 # makro-wzor-7 | Ściąga ze wzorów
 
@@ -291,6 +313,8 @@ $ wskaźnik zatrudnienia = P / ludność 15+
 **[[Reguła 70 – wzór|Reguła 70]]**: t ≈ 70 / g; dokładnie t = ln 2 / ln(1 + g).
 
 > Przykład: g = 7%. Przybliżenie: 10 lat. Dokładnie: 0,693 / 0,0677 ≈ 10,2 roku.
+
+> Uwaga: zanim podstawisz do wzoru, sprawdź, czy dane są **nominalne czy realne** i w jakim okresie (rok, kwartał).
 
 # makro-wzor-8 | Handel, nierówności i wartość dodana
 

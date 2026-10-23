@@ -64,13 +64,16 @@ Progi podatkowe zapisane w złotówkach się nie zmieniają, a płace rosną raz
 
 **[[Inflacja popytowa i kosztowa|Inflacja popytowa]]** pojawia się, gdy wydatki rosną szybciej niż możliwości produkcji – na przykład po dodruku pieniądza albo dużym wzroście wydatków rządu. Inflacja kosztowa – gdy drożeją surowce, energia albo praca. Rozróżnienie jest ważne: z popytową bank centralny walczy skutecznie stopami, z kosztową – trudniej, bo podwyżki stóp nie obniżą ceny ropy.
 
+> Zapamiętaj: inflacja – wzrost cen; dezinflacja – spadek tempa wzrostu; deflacja – spadek cen; stagflacja – inflacja + stagnacja.
+
 ## Na marginesie
 
 Pytano też o [[Bilans płatniczy|bilans płatniczy]], [[Baza monetarna (M0, pieniądz wielkiej mocy)|bazę monetarną]], [[HICP|HICP]], [[Ceny względne i nominalne|ceny względne i nominalne]] oraz o tezę Goodharta i Pradhana o [[Wielki zwrot demograficzny (teza Goodharta i Pradhana)|wielkim zwrocie demograficznym]], według której kurczące się zasoby pracy mogą podnieść inflację w przyszłości.
-
 # makro-inflacja-1-cz2 | Kto walczy z inflacją i jak
 
-Ten rozdział zbiera pojęcia związane z polityką antyinflacyjną i jej otoczeniem.
+## Jak walczyć z drożyzną?
+
+Gdy ceny rosną szybko, wszyscy patrzą na bank centralny. Ale inflacja może przyjść też z zewnątrz – z drożejącej ropy czy słabego kursu – i wtedy walka jest trudniejsza.
 
 ## Cel banku centralnego
 
@@ -96,9 +99,15 @@ Inflacja zakłóca też **[[Ceny jako sygnały (mechanizm cenowy)|sygnalną rol�
 
 > Zapamiętaj: cel NBP – 2,5% ± 1 p.p. (od 2004 r.). Inflacja ukryta – puste półki zamiast rosnących cen.
 
+> Uwaga: inflacja **kosztowa** (np. droga ropa) podnosi ceny i jednocześnie obniża produkcję – podwyżka stóp pomaga na ceny, ale pogłębia spadek produkcji.
+
 # makro-inflacja-1-cz3 | Budżet, decyzje i reguła Taylora
 
 Ostatni rozdział z pierwszej grupy pojęć łączy inflację z finansami państwa i decyzjami banku centralnego.
+
+## Inflacja w budżecie i w decyzjach
+
+Inflacja zmienia budżet państwa, decyzje banku centralnego i zakupy zwykłych ludzi. Ten rozdział łączy te trzy perspektywy.
 
 ## Deficyt dobry i zły
 
@@ -125,6 +134,10 @@ Inflacja zmienia wybory konsumentów. Gdy dochody realne spadają, rośnie popyt
 ## Decyzje w niepewności
 
 Wysoka inflacja utrudnia **[[Podejmowanie decyzji|podejmowanie decyzji]]**: firma nie wie, ile za rok będą kosztować surowce, a rodzina – ile będzie warta pensja. Decyzje zapadają w warunkach ryzyka i niepewności zamiast pewności.
+
+> Uwaga: reguła Taylora **podpowiada** stopę procentową, ale bank centralny nie jest zobowiązany jej stosować.
+
+> Zapamiętaj: strategia celu inflacyjnego – publiczny cel, niezależny bank, przejrzystość i prognozy.
 
 # makro-inflacja-2 | Jak mierzyć inflację i ile ona kosztuje
 
@@ -155,10 +168,13 @@ Raz rozpędzona inflacja trudno hamuje. Pracownicy żądają podwyżek, bo ceny 
 - **niepewność** – trudniej planować inwestycje;
 - **redystrybucja** – przypadkowe przesunięcia bogactwa.
 
+> Uwaga: inflacja **bazowa** nie obejmuje cen żywności i energii – jest stabilniejsza, ale nie mówi o kosztach życia tak dobrze jak CPI.
+
+> Zapamiętaj: CPI – koszyk konsumenta (GUS); HICP – zharmonizowany wskaźnik UE.
+
 ## Na marginesie
 
 Pytano też o [[Polityka cenowa państwa i ceny administrowane|ceny administrowane]], [[Krzywa dochodowości|krzywą dochodowości]], [[Płaca nominalna i realna|płacę nominalną i realną]], [[Run na bank (panika bankowa)|panikę bankową]], [[Unia Europejska – historia|historię UE]] i [[Planowanie|planowanie]].
-
 # makro-inflacja-2-cz2 | Inflacja w świecie finansów
 
 Inflacja łączy się z rynkami finansowymi, kursami walut i integracją europejską. Ten rozdział zbiera te powiązania.
@@ -188,6 +204,8 @@ Irving Fisher opisał w 1933 roku **[[Deflacja długu (I. Fisher)|deflację dłu
 Pojawiały się też [[Niedobór (rynkowy)|niedobór]] (przy zamrożonych cenach), [[Negatywna (niekorzystna) selekcja|negatywna selekcja]] i [[Globalizacja|globalizacja]], która przez lata obniżała ceny towarów.
 
 > Zapamiętaj: RPP – prezes NBP + 9 członków (po 3 od Prezydenta, Sejmu i Senatu, 6 lat). Strefa euro – 21 państw od 2026 r.
+
+> Uwaga: deflacja długu (Fisher) to spirala: spadające ceny zwiększają realny ciężar długów, dłużnicy tną wydatki, ceny spadają dalej.
 
 # makro-inflacja-3 | Indeksy cen i teoria ilościowa pieniądza
 
@@ -229,10 +247,13 @@ $ i ≈ r + πᵉ
 
 NBP mierzy ilość pieniądza **[[Agregaty pieniężne (NBP)|agregatami]]**: M0 (baza monetarna), M1 (gotówka + depozyty bieżące), M2 (+ depozyty terminowe do 2 lat), M3 (+ m.in. papiery dłużne do 2 lat). Pieniądz chowany „w skarpecie” to **[[Tezauryzacja|tezauryzacja]]** – zmniejsza szybkość obiegu.
 
+> Uwaga: teoria ilościowa MV = PY mówi, że przy stałych V i Y wzrost M przekłada się na wzrost P – to **długi okres**; w krótkim pieniądz może zmienić Y.
+
+> Zapamiętaj: Laspeyres – koszyk z okresu bazowego (CPI); Paasche – z okresu bieżącego (bliski deflatorowi PKB).
+
 ## Na marginesie
 
 Pytano też o [[Utarg (przychód) całkowity, przeciętny i krańcowy|utarg]] i [[Wielkość popytu a popyt|różnicę między popytem a wielkością popytu]].
-
 # makro-inflacja-3-cz2 | Kto zyskuje, a kto traci – mierzenie nierówności
 
 Inflacja i polityka pieniężna zmieniają podział dochodów. Żeby zobaczyć, jak bardzo dochody są nierówne, ekonomiści używają dwóch narzędzi.
@@ -255,6 +276,8 @@ Im bardziej krzywa się wygina, tym większa nierówność. **[[Współczynnik G
 Inflacja uderza nierówno. Osoby o stałych dochodach – emeryci bez indeksacji, oszczędzający w gotówce – tracą najwięcej. Ludzie z majątkiem w nieruchomościach czy akcjach są lepiej chronieni. Ubodzy wydają też większą część dochodu na żywność i energię, które w ostatnich latach drożały najszybciej. Dlatego wysoka inflacja może zwiększać nierówności – a krzywa Lorenza i współczynnik Giniego pozwalają to zmierzyć.
 
 > Zapamiętaj: Gini 0 – równość, 1 – całkowita nierówność. Krzywa Lorenza im dalej od linii równości, tym większa nierówność.
+
+> Uwaga: Gini = 0 oznacza **pełną równość**, Gini = 1 – całkowitą nierówność.
 
 # makro-inflacja-4 | Inflacja, której nie widać na pierwszy rzut oka
 
@@ -289,10 +312,13 @@ $ kwota w cenach roku T = kwota w roku t · (indeks cen T / indeks cen t)
 
 Podwyżka o 3% cieszy – nawet gdy inflacja wynosi 5%, a płaca realnie spadła. To **[[Złudzenie pieniądza (iluzja pieniężna)|złudzenie pieniądza]]**: myślimy w złotówkach, a nie w tym, co za nie kupimy. Dlatego obniżka płacy nominalnej budzi bunt, a realna obniżka przez inflację – często nie.
 
+> Uwaga: złudzenie pieniądza to mylenie wartości **nominalnych** z **realnymi** – np. radość z podwyżki o 5% przy inflacji 8%.
+
+> Zapamiętaj: inflacja pełzająca – kilka %; krocząca – kilkanaście; galopująca – dziesiątki i więcej; hiperinflacja – powyżej 50% miesięcznie (Cagan).
+
 ## Na marginesie
 
 Pytano też o [[Negocjacje|negocjacje]] – w czasie inflacji rozmowy o płacach są szczególnie trudne.
-
 # makro-inflacja-5 | Szybkość pieniądza, efekt bazy i spirala długu
 
 ## Jak szybko krąży pieniądz
@@ -314,3 +340,5 @@ Gdy drożeje energia, to dopiero początek. Firmy podnoszą ceny swoich produkt�
 Na koniec przestroga z Wielkiego Kryzysu. Irving Fisher w 1933 roku opisał **[[Deflacja długu (I. Fisher)|deflację długu]]**. Gdy gospodarka jest nadmiernie zadłużona, a coś wywoła spadek cen, dłużnicy wyprzedają majątek, żeby spłacić długi. Wyprzedaż obniża ceny jeszcze bardziej. A skoro ceny spadają, realna wartość długu… rośnie. Im więcej ludzie spłacają, tym więcej są winni w przeliczeniu na towary. Spirala może zamienić recesję w depresję.
 
 > Zapamiętaj: efekt bazy – inflacja r/r zależy od zmian sprzed roku; efekty drugiej rundy – szok cenowy przenosi się na płace i oczekiwania; deflacja długu – spadające ceny zwiększają realny ciężar długów.
+
+> Uwaga: efekt **bazy** to wpływ zeszłorocznych cen na dzisiejszy odczyt inflacji r/r – inflacja może spaść, choć ceny w tym miesiącu wzrosły.

@@ -40,6 +40,10 @@ Firmy i rządy chcą wiedzieć wcześniej, że nadchodzi spowolnienie. Pomagają
 
 # makro-cykl-1 | Wzloty i upadki gospodarki
 
+## Dlaczego raz łatwo o pracę, a raz trudno?
+
+Twój starszy brat może trafić na rynek pracy w dobrym roku, gdy firmy szukają ludzi, albo w złym, gdy zwalniają. Gospodarka nie rośnie równo – faluje. Te fale mają nazwę i swoje prawidłowości.
+
 ## Cykl w czterech krokach
 
 **[[Cykl koniunkturalny|Cykl koniunkturalny]]** to powtarzające się wahania aktywności gospodarczej wokół długookresowego trendu. Wyobraź sobie linię, która generalnie idzie w górę (gospodarka z czasem rośnie), ale faluje: raz nad trendem, raz pod nim.
@@ -70,10 +74,13 @@ Długie fale Kondratiewa wiąże się z **[[Innowacja|innowacjami]]** – Joseph
 
 **[[Wskaźniki wyprzedzające (barometry koniunktury)|Wskaźniki wyprzedzające]]** zmieniają się przed zmianą koniunktury: nowe zamówienia, indeks PMI, ceny akcji, nastroje konsumentów, krzywa dochodowości. Gdy firmy przestają zamawiać, za kilka miesięcy spadnie produkcja.
 
+> Przykład: PKB rośnie przez 4 lata o 4–5% rocznie (ekspansja), potem tempo spada do 1% (spowolnienie), a przez dwa kwartały z rzędu PKB maleje (recesja techniczna). Po kilku kwartałach wzrost wraca (ożywienie).
+
+> Zapamiętaj: fazy cyklu: ekspansja → szczyt → recesja → dno → ożywienie; recesja techniczna – dwa kwartały spadku PKB z rzędu.
+
 ## Na marginesie
 
 Pojawiały się też: [[Krzywa Laffera|krzywa Laffera]], [[Inflacja i indeksy cen|wzór na inflację]], [[Upadłość i restrukturyzacja|upadłość i restrukturyzacja]] (których przybywa w recesji) oraz [[Dobro neutralne i dobro niechciane (antydobro)|dobro neutralne i antydobro]].
-
 # makro-cykl-1-cz2 | Co cykl robi z firmami i ludźmi
 
 Ten rozdział pokazuje, jak cykl koniunkturalny przekłada się na decyzje firm i ludzi – i zbiera pojęcia pojawiające się przy okazji.
@@ -94,7 +101,15 @@ Na dłuższą metę na cykl wpływa też **[[Demografia|demografia]]**: wyże i 
 
 > Przykład: w czasie pandemii w 2020 roku wiele polskich firm korzystało z dopłat do wynagrodzeń z tarcz antykryzysowych, żeby nie zwalniać pracowników mimo spadku zamówień.
 
+> Uwaga: inwestycje wahają się w cyklu **mocniej** niż konsumpcja – firmy łatwo odkładają zakup maszyn, ludzie trudniej rezygnują z jedzenia.
+
+> Zapamiętaj: w recesji najmocniej spadają inwestycje i zakup dóbr trwałych.
+
 # makro-cykl-2 | Długi, nastroje i teorie cyklu
+
+## Skąd się biorą wahania?
+
+Ekonomiści od stu lat spierają się, co wywołuje cykle: nastroje inwestorów, zmiany technologii, politykę pieniężną czy nadmierne zadłużenie. Każda szkoła ma swoją odpowiedź.
 
 ## Trzy rodzaje długów
 
@@ -124,3 +139,7 @@ Im dłużej trwa dobra koniunktura, tym więcej jest finansowania typu Ponziego.
 Raymond Vernon opisał **[[Teoria cyklu życia produktu w handlu (Vernon)|cykl życia produktu w handlu]]**. Nowy produkt powstaje w kraju innowacyjnym i jest stamtąd eksportowany. Gdy dojrzewa i staje się standardowy, produkcja przenosi się do krajów o niższych kosztach – a kraj wynalazca w końcu go importuje. Tak było z telewizorami czy elektroniką.
 
 > Zapamiętaj: PMI > 50 – ekspansja, PMI < 50 – kurczenie się. Minsky: hedge → spekulacyjne → Ponzi.
+
+> Przykład: firma pożycza na budowę biurowca, licząc, że czynsze pokryją raty i spłatę (finansowanie bezpieczne). Gdy czynsze pokrywają tylko odsetki, a kapitał trzeba rolować – to finansowanie spekulacyjne. Gdy nie starcza nawet na odsetki – finansowanie typu Ponziego.
+
+> Uwaga: wskaźniki **wyprzedzające** (np. nastroje przedsiębiorców, zamówienia) zmieniają się przed PKB; **opóźnione** (np. bezrobocie) – po nim.

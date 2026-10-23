@@ -69,10 +69,11 @@ W Polsce bezrobocie mierzy się na dwa sposoby (**[[Bezrobocie rejestrowane i BA
 
 Gdy kończysz szkołę albo rzucasz pracę, żeby znaleźć lepszą, przez chwilę jesteś bez pracy. To **[[Bezrobocie frykcyjne|bezrobocie frykcyjne]]**. Jest naturalne – lepiej szukać kilka tygodni i trafić dobrze, niż brać pierwszą lepszą ofertę. Skraca je sprawna informacja o ofertach.
 
+> Zapamiętaj: aktywni zawodowo = pracujący + bezrobotni; stopa bezrobocia = bezrobotni / aktywni zawodowo.
+
 ## Na marginesie
 
 Pytano też o [[Struktura wieku: wiek przedprodukcyjny, produkcyjny i poprodukcyjny|strukturę wieku]], [[Międzynarodowa Organizacja Pracy (MOP)|Międzynarodową Organizację Pracy]] (działa od 1919 roku), [[Bezrobocie strukturalne|bezrobocie strukturalne]], [[Cykl koniunkturalny|cykl koniunkturalny]] i [[Saldo obrotów bieżących|saldo obrotów bieżących]].
-
 # makro-rynekpracy-1-cz2 | Instytucje rynku pracy
 
 Rynek pracy otaczają instytucje, które go mierzą, regulują i chronią pracowników. Olimpiada pytała o nie przy definicjach bezrobocia.
@@ -94,6 +95,8 @@ Częścią zabezpieczenia są obowiązkowe **[[Ubezpieczenia społeczne (ZUS)|ub
 > Przykład: pracownik na umowie o pracę ma potrącane z pensji składki na ubezpieczenia emerytalne, rentowe i chorobowe. Część składek płaci też pracodawca. Dzięki nim, gdy zachoruje, dostanie zasiłek chorobowy, a na starość – emeryturę.
 
 > Zapamiętaj: GUS – statystyka (BAEL, CPI, PKB); NBP – pieniądz i stopy; ZUS – ubezpieczenia społeczne; KRUS – rolnicy.
+
+> Uwaga: stopa bezrobocia **rejestrowanego** (GUS z danych urzędów pracy) różni się od stopy według **BAEL** (badanie ankietowe) – BAEL jest zwykle niższa w Polsce.
 
 # makro-rynekpracy-2 | Pięć twarzy bezrobocia
 
@@ -123,13 +126,18 @@ Bezrobocie frykcyjne i strukturalne nie znikają nawet przy dobrej koniunkturze.
 
 > Zapamiętaj: naturalne = frykcyjne + strukturalne. Cykliczne to odchylenie od naturalnego w czasie wahań koniunktury.
 
+> Przykład: w kraju jest 1 mln bezrobotnych: 200 tys. zmienia pracę (frykcyjne), 300 tys. ma niepasujące kwalifikacje (strukturalne), 500 tys. straciło pracę w recesji (koniunkturalne). Po ożywieniu zniknie głównie trzecia grupa.
+
+> Uwaga: bezrobocie **naturalne** = frykcyjne + strukturalne; koniunkturalne do niego nie należy.
+
 ## Na marginesie
 
 Pytano też o [[Podaż pracy (krzywa zakrzywiona do tyłu)|podaż pracy]], [[Ubezpieczenie|ubezpieczenia]] i [[Postęp techniczny|postęp techniczny]] – źródło bezrobocia technologicznego, ale w długim okresie też nowych zawodów.
-
 # makro-rynekpracy-2-cz2 | Ekonomiści, którzy myśleli o pracy i rozwoju
 
-Ten rozdział przedstawia ekonomistów, o których olimpiada pytała przy rodzajach bezrobocia. Każdy z nich widział gospodarkę trochę inaczej.
+## Ekonomiści, którzy myśleli o pracy
+
+O bezrobocie i rozwój pytali ekonomiści z różnych krajów i szkół – od Polaków przez Niemców po Brytyjczyków. Każdy widział rynek pracy inaczej.
 
 ## Dwaj wielcy Polacy
 
@@ -146,6 +154,8 @@ Ten rozdział przedstawia ekonomistów, o których olimpiada pytała przy rodzaj
 **[[Marshall Alfred|Alfred Marshall]]** wprowadził do ekonomii podział na krótki i długi okres – bez niego trudno zrozumieć różnicę między bezrobociem cyklicznym a naturalnym. **[[Pigou Arthur Cecil|Arthur Cecil Pigou]]** napisał „Teorię bezrobocia” (1933) i uważał, że elastyczne płace i ceny same przywrócą pełne zatrudnienie. Keynes ostro z nim polemizował.
 
 > Zapamiętaj: Kalecki – efektywny popyt i polityczny cykl; Lange – socjalizm rynkowy; List – ochrona młodego przemysłu; Hildebrand – gospodarka naturalna, pieniężna, kredytowa.
+
+> Uwaga: niemiecka szkoła historyczna **odrzucała** uniwersalne prawa ekonomii – badała historię konkretnych gospodarek.
 
 # makro-rynekpracy-3 | Dlaczego płace nie spadają
 
@@ -171,13 +181,18 @@ Niektóre firmy płacą więcej, niż muszą. **[[Płace efektywnościowe (motyw
 
 **[[Krzywa Beveridge’a|Krzywa Beveridge’a]]** łączy stopę wolnych miejsc pracy ze stopą bezrobocia. W dobrych czasach ofert jest dużo, a bezrobotnych mało – i odwrotnie. Gdy krzywa przesuwa się na zewnątrz, mamy dużo ofert _i_ dużo bezrobotnych naraz – znak, że ludzie i oferty do siebie nie pasują.
 
+> Uwaga: NAIRU to nie „zero bezrobocia” – to poziom, przy którym inflacja **nie przyspiesza**; obniżanie bezrobocia poniżej niego podkręca inflację.
+
+> Zapamiętaj: NAIRU – bezrobocie bez przyspieszania inflacji; histereza – wysokie bezrobocie podnosi bezrobocie naturalne; płace efektywnościowe – wyższe płace dla wyższej wydajności.
+
 ## Na marginesie
 
 Pytano też o [[Wydajność pracy (produkcyjność) i jej czynniki|wydajność pracy]], [[Kapitał ludzki|kapitał ludzki]], [[Popyt na pracę|popyt na pracę]], [[Podaż|podaż]] oraz [[Efekt bazy i efekty drugiej rundy|efekty drugiej rundy]] – gdy wzrost cen energii przenosi się na płace i oczekiwania inflacyjne.
-
 # makro-rynekpracy-3-cz2 | Teoretycy bezrobocia i stopy procentowej
 
-Krótki rozdział o trzech postaciach, które olimpiada łączyła z NAIRU i histerezą.
+## Kto wymyślił NAIRU?
+
+Za pojęciami, które zna dziś każdy bankowiec centralny, stoją konkretni ekonomiści – od XVIII-wiecznego Szkota po brytyjskich badaczy bezrobocia lat 90.
 
 ## Layard, Nickell i Jackman
 
@@ -192,6 +207,8 @@ Trzech brytyjskich ekonomistów – **[[Layard Richard, Nickell Stephen, Jackman
 **[[Smith Adam|Adam Smith]]** już w 1776 roku pisał o tym, dlaczego płace różnią się między zawodami – praca nieprzyjemna, niebezpieczna albo wymagająca długiej nauki musi być lepiej płatna. To wczesna wersja teorii wyrównawczych różnic płac.
 
 > Zapamiętaj: Layard, Nickell, Jackman – NAIRU („Unemployment”, 1991); Wicksell – naturalna stopa procentowa i proces kumulatywny.
+
+> Uwaga: Wicksell odróżnił **naturalną** stopę procentową od rynkowej; to nie to samo co naturalna stopa bezrobocia.
 
 # makro-rynekpracy-4 | Bezrobocie, inflacja i koszty
 
@@ -222,6 +239,8 @@ W recesji zatrudnienie często spada słabiej niż produkcja. Firmy zatrzymują 
 - ubóstwo, wykluczenie i problemy zdrowotne.
 
 **[[Zasiłek dla bezrobotnych (ubezpieczenie od bezrobocia)|Zasiłek dla bezrobotnych]]** łagodzi te skutki, ale zbyt wysoki może wydłużać szukanie pracy.
+
+> Uwaga: prawo Okuna mówi o zależności bezrobocia od **luki PKB**, a krzywa Phillipsa – bezrobocia od **inflacji**. Nie myl ich.
 
 ## Na marginesie
 

@@ -54,7 +54,15 @@ Trzech ekonomistów niezależnie od siebie odkryło to samo: wartość wynika z 
 
 > Przykład: wodę pijemy codziennie, a diamenty widzimy rzadko – mimo to diament kosztuje więcej. Marginaliści wyjaśnili ten paradoks: liczy się użyteczność ostatniej szklanki wody, a ta jest niewielka.
 
+> Uwaga: „Bogactwo narodów” Smitha to **1776 r.**, a „Zasady” Ricarda z przewagą komparatywną – **1817 r.** Te dwie daty często się mieszają.
+
+> Zapamiętaj: 1758 Quesnay; 1776 Smith; 1803 Say; 1817 Ricardo; 1867 Marks („Kapitał”, t. I); 1871–1874 rewolucja marginalistyczna.
+
 # makro-data-2 | Od Marshalla do krzywej Phillipsa
+
+## Wiek XX: od nożyc do krzywej Phillipsa
+
+W ciągu siedemdziesięciu lat ekonomia zmieniła się bardziej niż przez poprzednie stulecie. Kryzys lat 30. obalił wiarę w samonaprawiający się rynek, a wojna stworzyła nowy ład gospodarczy świata.
 
 ## 1890 – nożyce popytu i podaży
 
@@ -80,6 +88,10 @@ Na **[[1944 – konferencja w Bretton Woods|konferencji w Bretton Woods]]** usta
 
 Alban William Phillips opublikował badanie danych brytyjskich: gdy bezrobocie było niskie, płace rosły szybko. **[[1958 – krzywa Phillipsa|Krzywa Phillipsa]]** sugerowała wybór: trochę więcej inflacji za mniej bezrobocia. Lata 70. pokazały, że ten wybór jest tylko krótkookresowy.
 
+> Uwaga: Wielki Kryzys zaczął się krachem na Wall Street w **październiku 1929 r.** – „Ogólna teoria” Keynesa ukazała się dopiero w **1936 r.**, już po najgorszych latach.
+
+> Zapamiętaj: 1890 Marshall; 1899 Veblen; 1929–1933 Wielki Kryzys; 1936 Keynes; 1944 Bretton Woods; 1958 Phillips.
+
 # makro-data-3 | Od upadku Bretton Woods do pandemii
 
 ## 1971 – dolar bez złota
@@ -103,3 +115,5 @@ Od **[[2000 – płynny kurs złotego i bańka internetowa|12 kwietnia 2000 roku
 **[[2020 – pandemia COVID-19|Pandemia COVID-19]]** zamroziła gospodarki. Polska uruchomiła tarcze antykryzysowe i Tarczę Finansową PFR. NBP obniżył stopę referencyjną do 0,1% i skupował obligacje. UE aktywowała ogólną klauzulę wyjścia z reguł fiskalnych i stworzyła fundusz NextGenerationEU. 31 stycznia tego roku Wielka Brytania opuściła Unię.
 
 > Zapamiętaj: 15.08.1971 – Nixon; 12.04.2000 – płynny złoty; 15.09.2008 – Lehman Brothers.
+
+> Uwaga: złoty stał się w pełni **płynny** w kwietniu **2000 r.** – wcześniej NBP stosował pełzający kurs i pasmo wahań.
