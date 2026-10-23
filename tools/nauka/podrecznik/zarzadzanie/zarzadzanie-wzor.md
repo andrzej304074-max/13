@@ -19,9 +19,11 @@ Klient to nie jednorazowa transakcja, ale strumień zysków przez lata. Wartoś�
 
 # zarzadzanie-wzor-1 | EOQ i wartość klienta
 
-## Ile zamawiać
+## Raz w roku czy co tydzień?
 
-**[[Zarządzanie zapasami|Zarządzanie zapasami]]** szuka równowagi między dwoma kosztami: kosztem złożenia zamówienia i kosztem utrzymania zapasu. Wzór Wilsona:
+Sklep papierniczy może zamówić papier raz na cały rok – zapłaci za jeden transport, ale zapełni magazyn. Może zamawiać co tydzień – magazyn będzie pusty, ale kurier przyjedzie 52 razy. Gdzie leży złoty środek?
+
+**[[Zarządzanie zapasami|Zarządzanie zapasami]]** szuka równowagi między dwoma kosztami: kosztem złożenia zamówienia i kosztem utrzymania zapasu. Odpowiedź daje wzór Wilsona:
 
 $ EOQ = √(2 · D · K / h)
 
@@ -35,10 +37,12 @@ Przy EOQ roczne koszty zamówień (8 · 50 = 400 zł) równają się kosztom mag
 
 ## Ile wart jest klient
 
-**[[Wartość klienta (CLV), lejek sprzedażowy i doświadczenie klienta|CLV]]** w najprostszej postaci:
+**[[Wartość klienta (CLV), lejek sprzedażowy i doświadczenie klienta|CLV]]** w najprostszej postaci to suma zdyskontowanych zysków z klienta:
 
 $ CLV = Σ zysk_t / (1 + r)^t
 
 > Przykład: klient przynosi 100 zł zysku rocznie przez 3 lata, stopa dyskontowa 10%. CLV = 100/1,1 + 100/1,21 + 100/1,331 ≈ 90,91 + 82,64 + 75,13 ≈ 248,7 zł. Wydanie 100 zł na jego pozyskanie się opłaca.
+
+> Uwaga: średni zapas przy EOQ to **połowa** zamówienia (Q/2), bo zapas spada od Q do zera.
 
 > Zapamiętaj: CLV mówi, ile maksymalnie warto wydać na pozyskanie klienta.

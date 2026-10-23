@@ -1,6 +1,6 @@
 # intro | W skrócie: dokąd zmierza firma i jak tam dotrze
 
-„Jeśli nie wiesz, dokąd płyniesz, żaden wiatr nie jest pomyślny” – pisał Seneka. Firma bez planu reaguje tylko na to, co się dzieje. Firma z planem wie, czego chce, i świadomie wybiera, na co wyda pieniądze i czas. Planowanie i strategia to odpowiedź na pytania: gdzie jesteśmy, dokąd chcemy dojść i jak tam dotrzeć.
+„Jeśli nie wiesz, dokąd płyniesz, żaden wiatr nie jest pomyślny” – pisał Seneka. Firma bez planu tylko reaguje na to, co się dzieje. Firma z planem wie, czego chce, i świadomie wybiera, na co wyda pieniądze i czas. Planowanie i strategia odpowiadają na trzy pytania: gdzie jesteśmy, dokąd chcemy dojść i jak tam dotrzeć.
 
 ## Cele
 
@@ -8,7 +8,7 @@ Dobry cel jest SMART: konkretny, mierzalny, osiągalny, istotny i określony w c
 
 ## Analiza
 
-Zanim wybierzesz strategię, musisz zrozumieć siebie i otoczenie. Służą temu narzędzia: SWOT (mocne i słabe strony, szanse i zagrożenia), pięć sił Portera (jak atrakcyjna jest branża), macierze BCG, GE i ADL (które biznesy rozwijać, a które wycofać), łańcuch wartości.
+Zanim wybierzesz strategię, musisz zrozumieć siebie i otoczenie. Służą temu SWOT (mocne i słabe strony, szanse i zagrożenia), pięć sił Portera (jak atrakcyjna jest branża), macierze BCG, GE i ADL (które biznesy rozwijać, a które wycofać) i łańcuch wartości.
 
 ## Wybór
 
@@ -27,48 +27,52 @@ Michael Porter mówi: konkuruj ceną (najniższe koszty), wyjątkowością (zró
 
 # zarz-strategia-1 | Cele i plany
 
-## Planowanie
+## Życzenie czy cel?
 
-**[[Planowanie|Planowanie]]** to wyznaczanie celów i sposobów ich osiągnięcia. Plany strategiczne (długookresowe, naczelne kierownictwo), taktyczne (średni szczebel) i operacyjne (krótkookresowe – programy, projekty, polityki, procedury). Planowanie różni się w **[[Krótki okres i długi okres|krótkim i długim okresie]]**.
+„W tym roku będę się lepiej uczyć” – ilu z nas to mówiło we wrześniu? A „do ferii poprawię matematykę z 3 na 4, ucząc się po pół godziny dziennie” – to już plan, który da się sprawdzić. Firmy działają tak samo.
 
-## Misja i wizja
+**[[Planowanie|Planowanie]]** to wyznaczanie celów i sposobów ich osiągnięcia. Plany bywają strategiczne (długookresowe, naczelne kierownictwo), taktyczne (średni szczebel) i operacyjne (krótkookresowe – programy, projekty, polityki, procedury). Planowanie wygląda inaczej w **[[Krótki okres i długi okres|krótkim i długim okresie]]**.
 
-**[[Misja i wizja|Misja]]** – po co istniejemy, komu służymy. **Wizja** – jaką firmą chcemy być za kilkanaście lat.
+## Po co i dokąd
 
-## Cele SMART
+**[[Misja i wizja|Misja]]** mówi, po co firma istnieje i komu służy. **Wizja** – jaką firmą chce być za kilkanaście lat.
 
-**[[Cele SMART|Cele SMART]]**: konkretne (Specific), mierzalne (Measurable), osiągalne (Achievable), istotne (Relevant), określone w czasie (Time-bound).
+## Cel, który da się sprawdzić
+
+**[[Cele SMART|Cele SMART]]** są konkretne (Specific), mierzalne (Measurable), osiągalne (Achievable), istotne (Relevant) i określone w czasie (Time-bound).
 
 > Przykład: „poprawić obsługę klienta” – nie SMART. „Skrócić średni czas odpowiedzi na reklamację z 7 do 3 dni do 30 czerwca” – SMART.
 
-## Zarządzanie przez cele
+## Zarządzać przez cele
 
-**[[Zarządzanie przez cele (MBO)|Zarządzanie przez cele]]** (Peter Drucker, 1954): przełożony i podwładny wspólnie ustalają cele, a ocena zależy od ich realizacji. Jasne cele działają też jak **[[Motywacja|motywator]]**.
+**[[Zarządzanie przez cele (MBO)|Zarządzanie przez cele]]** (Peter Drucker, 1954) polega na tym, że przełożony i podwładny wspólnie ustalają cele, a ocena zależy od ich realizacji. Jasne cele działają też jak **[[Motywacja|motywator]]**.
 
-**[[Zarządzanie przez wyjątki i przez partycypację|Zarządzanie przez wyjątki]]** – kierownik interweniuje tylko przy istotnych odchyleniach. **Przez partycypację** – pracownicy współdecydują.
+**[[Zarządzanie przez wyjątki i przez partycypację|Zarządzanie przez wyjątki]]** oznacza, że kierownik interweniuje tylko przy istotnych odchyleniach. **Przez partycypację** – że pracownicy współdecydują.
 
-## Strategia
+## Trzy piętra strategii
 
-**[[Strategia|Strategia]]** to kompleksowy plan osiągania długookresowych celów. Poziomy:
+**[[Strategia|Strategia]]** to kompleksowy plan osiągania długookresowych celów. Ma trzy poziomy:
 - **korporacyjna** – w jakich dziedzinach działać?
 - **biznesu** – jak konkurować w danej dziedzinie?
 - **funkcjonalne** – marketing, finanse, produkcja.
 
-## Twórcy
+**[[Porter Michael E.|Michael Porter]]** z Harvardu stworzył pięć sił, strategie ogólne i łańcuch wartości. **[[Kotler Philip|Philip Kotler]]** to najważniejszy teoretyk **[[Marketing|marketingu]]**.
 
-**[[Porter Michael E.|Michael Porter]]** z Harvardu – pięć sił, strategie ogólne, łańcuch wartości. **[[Kotler Philip|Philip Kotler]]** – teoria **[[Marketing|marketingu]]**.
+> Uwaga: strategia **korporacyjna** pyta „gdzie działać?”, strategia **biznesu** – „jak wygrać w tej dziedzinie?”.
+
+> Zapamiętaj: SMART – konkretny, mierzalny, osiągalny, istotny, określony w czasie.
 
 # zarz-strategia-1-cz2 | Decyzja i delegowanie w strategii
 
-Krótki rozdział o tym, jak strategia przekłada się na codzienne decyzje.
+## Strategia, która zostaje w szufladzie
 
-## Wybór strategii to decyzja
+Wiele firm ma piękne strategie zapisane w prezentacjach. Mniej firm je realizuje. Dlaczego? Bo strategia musi zamienić się w codzienne decyzje ludzi.
 
-Każda strategia to wynik **[[Podejmowanie decyzji|podejmowania decyzji]]**: rozpoznaj sytuację, znajdź alternatywy, oceń je, wybierz najlepszą, wdróż, obserwuj wyniki. Problem w tym, że decyzje strategiczne zapadają w warunkach dużej niepewności – nikt nie wie, jak za pięć lat będzie wyglądał rynek. Dlatego firmy używają scenariuszy i regularnie wracają do strategii.
+Każda strategia to wynik **[[Podejmowanie decyzji|podejmowania decyzji]]**: rozpoznaj sytuację, znajdź alternatywy, oceń je, wybierz najlepszą, wdróż i obserwuj wyniki. Kłopot w tym, że decyzje strategiczne zapadają w warunkach dużej niepewności – nikt nie wie, jak za pięć lat będzie wyglądał rynek. Dlatego firmy używają scenariuszy i regularnie wracają do strategii.
 
 ## Strategia schodzi w dół
 
-Naczelne kierownictwo ustala strategię, ale realizują ją ludzie na niższych szczeblach. Żeby to działało, potrzebne jest **[[Delegowanie uprawnień|delegowanie uprawnień]]**: dyrektor regionu musi mieć prawo decydować o lokalnej promocji, inaczej każdy drobiazg czeka na zgodę centrali, a okazje uciekają. Ostateczna odpowiedzialność zostaje jednak u przełożonego.
+Naczelne kierownictwo ustala strategię, ale realizują ją ludzie na niższych szczeblach. Potrzebne jest więc **[[Delegowanie uprawnień|delegowanie uprawnień]]**: dyrektor regionu musi mieć prawo decydować o lokalnej promocji, inaczej każdy drobiazg czeka na zgodę centrali, a okazje uciekają. Ostateczna odpowiedzialność zostaje jednak u przełożonego.
 
 > Przykład: strategia sieci kawiarni to „najlepsza obsługa w mieście”. Jeśli kierownik lokalu musi pytać centralę o zgodę na zwrot pieniędzy niezadowolonemu klientowi, strategia pozostaje na papierze. Jeśli może sam decydować do 50 zł – strategia ożywa.
 
@@ -76,36 +80,40 @@ Naczelne kierownictwo ustala strategię, ale realizują ją ludzie na niższych 
 
 # zarz-strategia-2 | Narzędzia analizy
 
-## SWOT
+## Piekarnia pod lupą
 
-**[[Analiza SWOT|Analiza SWOT]]**: mocne strony (Strengths), słabe strony (Weaknesses) – wewnątrz firmy; szanse (Opportunities), zagrożenia (Threats) – w otoczeniu.
+Właścicielka małej piekarni boi się nowego supermarketu za rogiem. Co powinna zrobić? Zanim cokolwiek zdecyduje, musi uczciwie spojrzeć na siebie i na otoczenie. Pomagają w tym proste narzędzia.
+
+**[[Analiza SWOT|Analiza SWOT]]** zestawia mocne strony (Strengths) i słabe strony (Weaknesses) – wewnątrz firmy – z szansami (Opportunities) i zagrożeniami (Threats) w otoczeniu.
 ::wykres macierz preset=swot | Analiza SWOT: czynniki wewnętrzne (mocne i słabe strony) i zewnętrzne (szanse i zagrożenia).
 
 > Przykład: lokalna piekarnia. S – tradycyjny przepis, lojalni klienci. W – mała skala, wysokie koszty. O – moda na zdrową żywność. T – supermarket z tanim pieczywem obok.
 
-## Pięć sił
+## Jak trudno zarabiać w branży
 
-**[[Pięć sił Portera|Pięć sił Portera]]** mówi, jak atrakcyjna jest branża: groźba nowych konkurentów, siła dostawców, siła nabywców, groźba **[[Substytuty|substytutów]]**, rywalizacja istniejących firm. Im silniejsze siły, tym trudniej zarabiać.
+**[[Pięć sił Portera|Pięć sił Portera]]** mówi, jak atrakcyjna jest branża: groźba nowych konkurentów, siła dostawców, siła nabywców, groźba **[[Substytuty|substytutów]]** i rywalizacja istniejących firm. Im silniejsze siły, tym trudniej zarabiać.
 
-## Strategie Portera
+## Jak wygrywać
 
-**[[Strategie konkurencji Portera|Strategie]]**: przywództwo kosztowe (najtaniej), zróżnicowanie (wyjątkowo), koncentracja (nisza). Porter ostrzegał przed „utknięciem pośrodku” – ani najtańszy, ani wyjątkowy.
+**[[Strategie konkurencji Portera|Strategie Portera]]** to przywództwo kosztowe (najtaniej), zróżnicowanie (wyjątkowo) i koncentracja (nisza). Porter ostrzegał przed „utknięciem pośrodku” – ani najtańszy, ani wyjątkowy.
 
-## Miles i Snow
+**[[Typologia strategii Milesa i Snowa|Typologia Milesa i Snowa]]** dzieli firmy na poszukiwaczy (innowacje, nowe rynki), obrońców (ochrona pozycji, efektywność), analityków (łączą oba) i reagujących (bez spójnej strategii).
 
-**[[Typologia strategii Milesa i Snowa|Typologia Milesa i Snowa]]**: poszukiwacz (innowacje, nowe rynki), obrońca (ochrona pozycji, efektywność), analityk (łączy oba), reagujący (bez spójnej strategii).
+## Które produkty rozwijać
 
-## Macierze portfelowe
-
-**[[Macierz BCG|Macierz BCG]]**: oś pionowa – wzrost rynku, pozioma – względny udział.
+**[[Macierz BCG|Macierz BCG]]** ma na osi pionowej wzrost rynku, a na poziomej – względny udział w rynku.
 - **gwiazdy** – duży udział, szybki wzrost;
 - **dojne krowy** – duży udział, wolny wzrost – dają gotówkę;
 - **znaki zapytania** – mały udział, szybki wzrost;
 - **psy** – mały udział, wolny wzrost.
 ::wykres macierz preset=bcg | Macierz BCG: produkty według tempa wzrostu rynku i względnego udziału w rynku.
 
-**[[Macierz GE (McKinseya)|Macierz GE]]** – siatka 3 × 3: atrakcyjność sektora i siła jednostki; uwzględnia więcej czynników niż BCG.
+**[[Macierz GE (McKinseya)|Macierz GE]]** to siatka 3 × 3: atrakcyjność sektora i siła jednostki. Uwzględnia więcej czynników niż BCG.
 ::wykres macierz preset=ge | Macierz GE (McKinseya): 9 pól – zielone inwestuj i rozwijaj, żółte selektywnie, czerwone zbieraj lub wycofaj się.
+
+> Uwaga: w SWOT mocne i słabe strony są **wewnątrz** firmy, a szanse i zagrożenia – **w otoczeniu**. Supermarket obok to zagrożenie, a nie słabość.
+
+> Zapamiętaj: dojne krowy finansują znaki zapytania, z których mają wyrosnąć gwiazdy.
 
 ## Na marginesie
 
@@ -113,52 +121,48 @@ Pojawiały się też: [[Wycena przedsiębiorstwa – metody|wycena przedsiębior
 
 # zarz-strategia-2-cz2 | Strategie wyłaniające się i twórcze myślenie
 
-Rozdział zbiorczy o tym, że strategia nie zawsze powstaje przy biurku.
-
-## Strategie emergentne
+## Plan swoje, życie swoje
 
 **[[Mintzberg Henry|Henry Mintzberg]]** zauważył, że wiele firm realizuje nie tę strategię, którą zaplanowały. Część planów upada, a w ich miejsce pojawiają się wzorce działania, które wyłaniają się z codziennych decyzji – strategie emergentne. Honda wchodziła na rynek USA z dużymi motocyklami, a sukces przyniosły jej małe skutery, którymi japońscy pracownicy jeździli po Los Angeles. Mądra firma potrafi takie okazje dostrzec.
 
-## Twórcze myślenie
+## Skąd brać pomysły
 
-Nowe pomysły strategiczne rodzą się dzięki **[[Metody twórczego rozwiązywania problemów|metodom twórczym]]**: burzy mózgów (Alex Osborn – najpierw zbieraj pomysły, oceniaj później), metodzie delfickiej (anonimowe ankiety ekspertów w kilku rundach), technice grupy nominalnej, dyskusji 66 (grupy po 6 osób przez 6 minut).
+Nowe pomysły strategiczne rodzą się dzięki **[[Metody twórczego rozwiązywania problemów|metodom twórczym]]**: burzy mózgów (Alex Osborn – najpierw zbieraj pomysły, oceniaj później), metodzie delfickiej (anonimowe ankiety ekspertów w kilku rundach), technice grupy nominalnej i dyskusji 66 (grupy po 6 osób przez 6 minut).
 
-## Otoczenie regulacyjne
+## Państwo zmienia reguły gry
 
 Strategia musi uwzględniać państwo. **[[Regulacja, deregulacja i przejęcie regulacyjne|Regulacje]]** mogą zamknąć rynek albo go otworzyć – deregulacja lotnictwa w Europie umożliwiła powstanie tanich linii. Na koszt kredytu wpływa **[[Bank centralny|bank centralny]]** – wysokie stopy zniechęcają do ryzykownej ekspansji.
+
+> Uwaga: w burzy mózgów **nie oceniamy** pomysłów w pierwszej fazie – krytyka zabija kreatywność.
 
 > Zapamiętaj: strategia zamierzona + strategia emergentna = strategia zrealizowana (Mintzberg).
 
 # zarz-strategia-3 | Jak rosnąć
 
-## Macierz Ansoffa
+## Cztery drogi wzrostu
 
-**[[Macierz Ansoffa (strategie rozwoju)|Macierz Ansoffa]]**:
+Firma produkująca rowery chce rosnąć. Może sprzedawać więcej rowerów dotychczasowym klientom, ruszyć z rowerami za granicę, zacząć robić hulajnogi – albo otworzyć hotel. Każda droga niesie inne ryzyko. **[[Macierz Ansoffa (strategie rozwoju)|Macierz Ansoffa]]** porządkuje te wybory:
 - **penetracja rynku** – obecny produkt, obecny rynek (więcej sprzedawać dotychczasowym klientom);
 - **rozwój rynku** – obecny produkt, nowy rynek (eksport);
 - **rozwój produktu** – nowy produkt, obecny rynek;
 - **dywersyfikacja** – nowy produkt, nowy rynek (najbardziej ryzykowna).
 ::wykres macierz preset=ansoff | Macierz Ansoffa: cztery strategie rozwoju – od najbezpieczniejszej penetracji rynku po najbardziej ryzykowną dywersyfikację.
 
-## Dywersyfikacja
+**[[Dywersyfikacja|Dywersyfikacja]]** bywa zależna – w pokrewne dziedziny (producent rowerów zaczyna robić hulajnogi) – albo niezależna, w odległe branże.
 
-**[[Dywersyfikacja|Dywersyfikacja]]** zależna – w pokrewne dziedziny (producent rowerów zaczyna robić hulajnogi); niezależna – w odległe branże.
+## Kupić dostawcę, kupić konkurenta
 
-## Integracja
+**[[Integracja pionowa i pozioma|Integracja pionowa]]** wstecz to przejęcie dostawców; w przód – przejęcie dystrybucji (własne sklepy producenta). **Pozioma** to połączenie z konkurentem. Służą temu **[[Fuzja i przejęcie (M&A)|fuzje i przejęcia]]**, które tworzą **[[Wartość firmy (goodwill)|wartość firmy]]** w bilansie. Bywają finansowane **[[Obligacje śmieciowe (high yield)|obligacjami śmieciowymi]]**.
 
-**[[Integracja pionowa i pozioma|Integracja pionowa]]** wstecz – przejęcie dostawców; w przód – przejęcie dystrybucji (własne sklepy producenta). **Pozioma** – połączenie z konkurentem. Służą temu **[[Fuzja i przejęcie (M&A)|fuzje i przejęcia]]**, które tworzą **[[Wartość firmy (goodwill)|wartość firmy]]** w bilansie. Bywają finansowane **[[Obligacje śmieciowe (high yield)|obligacjami śmieciowymi]]**.
+**[[Alians strategiczny i joint venture|Alians strategiczny]]** to porozumienie niezależnych firm, a **joint venture** – ich wspólna nowa spółka.
 
-## Współpraca
+## Uczyć się od najlepszych
 
-**[[Alians strategiczny i joint venture|Alians strategiczny]]** – porozumienie niezależnych firm. **Joint venture** – wspólna nowa spółka.
+**[[Benchmarking|Benchmarking]]** to porównywanie się z liderami i przejmowanie najlepszych praktyk. Cel jest jeden: **[[Przewaga konkurencyjna i konkurencyjność|przewaga konkurencyjna]]**, czyli zdolność osiągania lepszych wyników niż rywale. Model VRIO mówi, że trwałą przewagę dają zasoby wartościowe, rzadkie, trudne do naśladowania i wykorzystywane przez organizację.
 
-## Ucz się od najlepszych
+> Uwaga: integracja pionowa **w przód** idzie w stronę klienta (sklepy), **wstecz** – w stronę surowców (dostawcy).
 
-**[[Benchmarking|Benchmarking]]** – porównywanie się z liderami i przejmowanie najlepszych praktyk.
-
-## Przewaga
-
-**[[Przewaga konkurencyjna i konkurencyjność|Przewaga konkurencyjna]]** pozwala osiągać lepsze wyniki niż rywale. Model VRIO: zasoby wartościowe, rzadkie, trudne do naśladowania i wykorzystywane przez organizację.
+> Zapamiętaj: Ansoff – penetracja, rozwój rynku, rozwój produktu, dywersyfikacja.
 
 ## Na marginesie
 
@@ -166,33 +170,31 @@ Pojawiały się też: [[Podział pracy i specjalizacja|podział pracy]], [[Wynik
 
 # zarz-strategia-3-cz2 | Sieci, przejęcia i rynek
 
-Rozdział zbiorczy z pojęciami, które pojawiają się przy strategiach wzrostu.
+## Dlaczego wszyscy są na tym samym komunikatorze?
 
-## Efekt sieciowy
+Komunikator jest wart tyle, ilu twoich znajomych z niego korzysta. To **[[Efekt sieciowy (zewnętrzności sieciowe)|efekt sieciowy]]**: im więcej użytkowników, tym produkt cenniejszy dla każdego. Dlatego firmy technologiczne walczą o szybki wzrost, nawet ze stratą – kto pierwszy zdobędzie masę krytyczną, często bierze cały rynek.
 
-**[[Efekt sieciowy (zewnętrzności sieciowe)|Efekt sieciowy]]**: im więcej użytkowników, tym produkt cenniejszy dla każdego – jak komunikator, którym nikt nie chce się posługiwać, jeśli nie ma tam znajomych. Dlatego firmy technologiczne walczą o szybki wzrost, nawet ze stratą: kto pierwszy zdobędzie masę krytyczną, często bierze cały rynek.
+## Przejęcia: przyjazne i wrogie
 
-## Przejęcia
+**[[Łączenie spółek, wykupy LBO/MBO i synergia|Łączenie spółek]]** ma przynieść synergię. **[[Wrogie przejęcie i metody obrony|Wrogie przejęcie]]** odbywa się wbrew woli zarządu; obrona to m.in. pigułka zatruta, biały rycerz i złoty spadochron. Duże fuzje kontroluje **[[Urząd Ochrony Konkurencji i Konsumentów (UOKiK)|UOKiK]]**, a największe – Komisja Europejska (zob. **[[Instytucje UE|instytucje UE]]**).
 
-**[[Łączenie spółek, wykupy LBO/MBO i synergia|Łączenie spółek]]** ma przynieść synergię. **[[Wrogie przejęcie i metody obrony|Wrogie przejęcie]]** – wbrew woli zarządu; obrona: pigułka zatruta, biały rycerz, złoty spadochron. Duże fuzje kontroluje **[[Urząd Ochrony Konkurencji i Konsumentów (UOKiK)|UOKiK]]**, a największe – Komisja Europejska (zob. **[[Instytucje UE|instytucje UE]]**).
-
-## Rynek
+## Zanim wejdziesz na nowy rynek
 
 **[[Segmentacja, targetowanie, pozycjonowanie (STP)|STP]]**: podziel rynek na segmenty, wybierz docelowy, zajmij pozycję w umysłach klientów. Strategia wzrostu na nowe rynki zaczyna się od segmentacji.
 
 ## Ekonomia w tle
 
-Firmy płacą **[[Podatek|podatki]]** od zysków ze wzrostu; tworzą **[[Wartość dodana|wartość dodaną]]**, która składa się na PKB. A teoria konsumenta przypomina, że niektóre dobra są dla klientów **[[Dobro neutralne i dobro niechciane (antydobro)|neutralne lub niechciane]]** – dodanie do produktu funkcji, której nikt nie chce, nie zwiększy jego wartości.
+Firmy płacą **[[Podatek|podatki]]** od zysków ze wzrostu i tworzą **[[Wartość dodana|wartość dodaną]]**, która składa się na PKB. A teoria konsumenta przypomina, że niektóre dobra są dla klientów **[[Dobro neutralne i dobro niechciane (antydobro)|neutralne lub niechciane]]** – dodanie do produktu funkcji, której nikt nie chce, nie zwiększy jego wartości.
+
+> Uwaga: „biały rycerz” to przyjazny inwestor, który ratuje firmę przed wrogim przejęciem; „złoty spadochron” – wysoka odprawa dla zarządu, która podraża przejęcie.
+
+> Zapamiętaj: efekt sieciowy – wartość rośnie z liczbą użytkowników.
 
 # zarz-strategia-4 | Ceny, innowacje i schyłek
 
-## Outsourcing
+## Dlaczego drukarka jest tania, a tusz drogi?
 
-**[[Outsourcing|Outsourcing]]** – zlecanie części funkcji firmom zewnętrznym (IT, księgowość). Nie mylić z **[[Offshoring, outsourcing, nearshoring, reshoring|offshoringiem]]** – przeniesieniem działalności za granicę.
-
-## Strategie cenowe
-
-**[[Strategie cenowe|Strategie cenowe]]**:
+Bo producent zarabia na tuszu. To jedna z wielu **[[Strategie cenowe|strategii cenowych]]**:
 - **zbierania śmietanki** – wysoka cena na start (nowy smartfon);
 - **penetracji** – niska cena na start, żeby szybko zdobyć rynek;
 - **prestiżowe** – wysoka cena jako sygnał jakości;
@@ -201,29 +203,33 @@ Firmy płacą **[[Podatek|podatki]]** od zysków ze wzrostu; tworzą **[[Wartoś
 
 Ceny zależą od **[[Popyt|popytu]]**. Zbyt niskie ceny za granicą mogą zostać uznane za **[[Dumping|dumping]]**.
 
-## Dyfuzja innowacji
+## Zlecić na zewnątrz
 
-Everett Rogers opisał **[[Dyfuzja innowacji|dyfuzję innowacji]]**: innowatorzy (2,5%), wcześni użytkownicy, wczesna większość, późna większość, maruderzy.
+**[[Outsourcing|Outsourcing]]** to zlecanie części funkcji firmom zewnętrznym (IT, księgowość). Nie myl go z **[[Offshoring, outsourcing, nearshoring, reshoring|offshoringiem]]** – przeniesieniem działalności za granicę.
 
-## Macierz ADL
+## Kto kupuje pierwszy
 
-**[[Macierz ADL (Arthur D. Little)|Macierz ADL]]**: faza cyklu życia sektora (zarodkowa, wzrostu, dojrzałości, starzenia) i pozycja konkurencyjna (od dominującej do słabej).
+Everett Rogers opisał **[[Dyfuzja innowacji|dyfuzję innowacji]]**: najpierw kupują innowatorzy (2,5%), potem wcześni użytkownicy, wczesna większość, późna większość, a na końcu maruderzy.
 
-## Schyłek
+## Gdy branża się starzeje
 
-**[[Strategie wobec produktu w schyłku|Strategie wobec produktu w schyłku]]**: żniwa (wyciskaj gotówkę bez inwestycji), porzucenie, parasol (działaj w cieniu lidera).
+**[[Macierz ADL (Arthur D. Little)|Macierz ADL]]** łączy fazę cyklu życia sektora (zarodkowa, wzrostu, dojrzałości, starzenia) z pozycją konkurencyjną (od dominującej do słabej). **[[Strategie wobec produktu w schyłku|Strategie wobec produktu w schyłku]]** to żniwa (wyciskaj gotówkę bez inwestycji), porzucenie i parasol (działaj w cieniu lidera).
 
-## Kompetencje
+## W czym jesteśmy najlepsi
 
-**[[Kompetencje wyróżniające (kluczowe)|Kluczowe kompetencje]]** (Prahalad i Hamel) – to, w czym firma jest wyjątkowo dobra i na czym buduje przewagę.
+**[[Kompetencje wyróżniające (kluczowe)|Kluczowe kompetencje]]** (Prahalad i Hamel) to to, w czym firma jest wyjątkowo dobra i na czym buduje przewagę.
+
+> Uwaga: outsourcing może odbywać się w kraju (firma księgowa za rogiem); offshoring zawsze oznacza przeniesienie **za granicę**.
+
+> Zapamiętaj: zbieranie śmietanki – wysoko na start; penetracja – nisko na start.
 
 # zarz-strategia-5 | Zarządzanie strategiczne
 
-## Proces
+## Cały proces w jednym zdaniu
 
-**[[Zarządzanie strategiczne i analiza strategiczna|Zarządzanie strategiczne]]**: analiza otoczenia (PEST, pięć sił, scenariusze) i zasobów (łańcuch wartości, SWOT), wybór strategii, wdrożenie, kontrola.
+**[[Zarządzanie strategiczne i analiza strategiczna|Zarządzanie strategiczne]]** to cykl: analiza otoczenia (PEST, pięć sił, scenariusze) i zasobów (łańcuch wartości, SWOT), wybór strategii, wdrożenie i kontrola.
 
-## Łańcuch wartości
+## Gdzie firma dodaje wartość
 
 **[[Łańcuch wartości (M. Porter)|Łańcuch wartości]]** Portera dzieli działalność na:
 - **podstawowe** – logistyka wejściowa, produkcja, logistyka wyjściowa, marketing i sprzedaż, serwis;
@@ -231,21 +237,21 @@ Everett Rogers opisał **[[Dyfuzja innowacji|dyfuzję innowacji]]**: innowatorzy
 
 W każdym ogniwie można szukać przewagi – niższych kosztów albo wyjątkowości.
 
-## Scenariusze
+## Kilka wersji przyszłości
 
-**[[Planowanie scenariuszowe|Planowanie scenariuszowe]]**: kilka obrazów przyszłości (optymistyczny, pesymistyczny, najbardziej prawdopodobny) i strategia odporna na każdy. Słynny przykład: Shell w latach 70. był lepiej przygotowany na szok naftowy niż konkurenci.
+**[[Planowanie scenariuszowe|Planowanie scenariuszowe]]** tworzy kilka obrazów przyszłości (optymistyczny, pesymistyczny, najbardziej prawdopodobny) i szuka strategii odpornej na każdy. Słynny przykład: Shell w latach 70. był lepiej przygotowany na szok naftowy niż konkurenci.
 
-## Błękitny ocean
+## Ucieczka z czerwonego oceanu
 
-**[[Strategia błękitnego oceanu|Strategia błękitnego oceanu]]** (W. Chan Kim i Renée Mauborgne, 2005): zamiast walczyć w „czerwonym oceanie” z rekinami konkurencji, stwórz nowy rynek przez innowację wartości – połącz zróżnicowanie z niskimi kosztami.
+**[[Strategia błękitnego oceanu|Strategia błękitnego oceanu]]** (W. Chan Kim i Renée Mauborgne, 2005) radzi: zamiast walczyć w „czerwonym oceanie” z rekinami konkurencji, stwórz nowy rynek przez innowację wartości – połącz zróżnicowanie z niskimi kosztami. Źródłem sukcesu jest **[[Przewaga konkurencyjna i konkurencyjność|przewaga konkurencyjna]]**: koszty, wyróżniający się produkt, kluczowe kompetencje.
 
-## Przewaga
+## Za granicę – krok po kroku
 
-**[[Przewaga konkurencyjna i konkurencyjność|Przewaga konkurencyjna]]** – koszty, wyróżniający się produkt, kluczowe kompetencje.
+**[[Przedsiębiorczość międzynarodowa i modele internacjonalizacji|Model uppsalski]]** (Johanson i Vahlne, 1977) opisuje stopniowe wchodzenie za granicę: od sporadycznego eksportu, przez agentów i filie, do produkcji – najpierw na rynki bliskie kulturowo. Firmy „urodzone globalnie” (born global) od początku działają na wielu rynkach. Podstawą jest **[[Handel międzynarodowy|handel międzynarodowy]]**.
 
-## Ekspansja zagraniczna
+> Uwaga: w łańcuchu wartości zaopatrzenie i zarządzanie ludźmi to działania **pomocnicze**, a nie podstawowe.
 
-**[[Przedsiębiorczość międzynarodowa i modele internacjonalizacji|Model uppsalski]]** (Johanson i Vahlne, 1977): firmy wchodzą za granicę stopniowo – od sporadycznego eksportu, przez agentów i filie, do produkcji – najpierw na rynki bliskie kulturowo. Firmy „urodzone globalnie” (born global) od początku działają na wielu rynkach. Podstawą jest **[[Handel międzynarodowy|handel międzynarodowy]]**.
+> Zapamiętaj: błękitny ocean – nowy rynek bez konkurencji zamiast walki na starym.
 
 ## Na marginesie
 
@@ -253,28 +259,28 @@ Pojawiały się też: [[Ansoff Igor|Igor Ansoff]], [[Produkt – poziomy i asort
 
 # zarz-strategia-6 | Pozycja na rynku i ekspansja
 
-## Według pozycji
+## Lider, pretendent i reszta
 
-**[[Strategie konkurencyjne według pozycji rynkowej (Ph. Kotler)|Kotler]]**:
-- **lider** – broni udziału, poszerza cały rynek;
+Na każdym rynku jest ktoś pierwszy i ktoś, kto chce go dogonić. Kotler opisał **[[Strategie konkurencyjne według pozycji rynkowej (Ph. Kotler)|strategie według pozycji rynkowej]]**:
+- **lider** – broni udziału i poszerza cały rynek;
 - **pretendent** – atakuje lidera albo mniejszych rywali;
 - **naśladowca** – kopiuje taniej, bez otwartej walki;
 - **niszowiec** – specjalizuje się w wąskim segmencie.
 
-## Paradygmat OLI
+## Kiedy budować fabrykę za granicą
 
-**[[Biznes międzynarodowy i paradygmat eklektyczny (OLI)|Paradygmat eklektyczny]]** Dunninga: firma inwestuje za granicą, gdy ma przewagę własnościową (np. technologię), lokalizacyjną (np. tanią pracę) i internalizacyjną (bardziej opłaca się działać samemu niż sprzedać licencję).
+**[[Biznes międzynarodowy i paradygmat eklektyczny (OLI)|Paradygmat eklektyczny]]** Dunninga mówi, że firma inwestuje za granicą, gdy ma trzy przewagi: własnościową (np. technologię), lokalizacyjną (np. tanią pracę) i internalizacyjną (bardziej opłaca się działać samemu niż sprzedać licencję).
 
-## Polskie firmy za granicą
+## Polskie firmy w świecie
 
 **[[Inwestycje zagraniczne wychodzące (ekspansja zagraniczna polskich firm)|Inwestycje zagraniczne polskich firm]]** rosną po 2004 roku – polskie firmy kupują i budują filie w innych krajach. Badał to Marian Gorynia.
 
-## Konkurencyjność międzynarodowa
+**[[Konkurencyjność międzynarodowa przedsiębiorstwa i luka konkurencyjna|Konkurencyjność międzynarodowa]]** to ciąg: potencjał konkurencyjny → strategia → pozycja konkurencyjna. **Luka konkurencyjna** to dystans między firmą a liderami – do nadrobienia.
 
-**[[Konkurencyjność międzynarodowa przedsiębiorstwa i luka konkurencyjna|Konkurencyjność międzynarodowa]]**: potencjał konkurencyjny → strategia → pozycja konkurencyjna. **Luka konkurencyjna** to dystans między firmą a liderami – do nadrobienia.
+> Uwaga: w OLI litera **I** to internalizacja (robić samemu zamiast sprzedawać licencję), a nie „innowacja”.
+
+> Zapamiętaj: Kotler – lider, pretendent, naśladowca, niszowiec; Dunning – OLI.
 
 ## Na marginesie
 
 Pojawiały się też: [[Migracja zarobkowa (ekonomiczna)|migracja zarobkowa]] i [[Podaż|podaż]].
-
-> Zapamiętaj: Kotler – lider, pretendent, naśladowca, niszowiec; Dunning – OLI.
