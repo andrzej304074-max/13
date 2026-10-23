@@ -52,6 +52,7 @@ run g4.mjs
 run g5.mjs
 run g6.mjs
 run g7.mjs
+run g10.mjs
 run g11.mjs
 # bugs.mjs wyczerpuje dzienny limit zgłoszeń konta „drugi” – g12 wysyła własne
 $PSQL "DELETE FROM bug_reports WHERE text LIKE 'limit % test zgłoszenia'" >/dev/null

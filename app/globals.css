@@ -960,6 +960,9 @@ mark.hl { color: inherit; border-radius: 3px; padding: 0 1px; cursor: pointer; b
 .toast { position: fixed; z-index: 70; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom)); transform: translateX(-50%); padding: 12px 18px; border-radius: 12px; background: var(--text); color: var(--bg); box-shadow: var(--shadow); animation: page-in .2s var(--ease); max-width: calc(100vw - 32px); }
 body:has(.bottom-bar) .toast { bottom: calc(80px + env(safe-area-inset-bottom)); }
 .reader-next { display: grid; gap: 10px; margin-top: 24px; max-width: 66ch; }
+.reader-next-link { display: grid; gap: 2px; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--accent); text-decoration: none; color: var(--text); background: color-mix(in srgb, var(--accent) 7%, var(--surface)); }
+.reader-next-link strong { color: var(--accent); overflow-wrap: anywhere; }
+.reader-next-link:hover { background: color-mix(in srgb, var(--accent) 13%, var(--surface)); }
 @media (max-width: 640px) {
   .reader-head h1 { font-size: 1.55rem; }
   .reader-body { font-size: calc(1rem * var(--rscale)); line-height: 1.7; }

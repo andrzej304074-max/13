@@ -20,8 +20,13 @@ export default async function LessonArticlePage({ params }: { params: Promise<{ 
       <strong>Co dalej?</strong>
       <div className="row">
         <Link className="btn" href={`/nauka/lekcja/${lesson}?sub=2`} data-testid="go-practice">✍️ Przejdź do „Ćwicz”</Link>
-        {a.next && <Link className="btn secondary" href={`/nauka/podrecznik/${unit}/${a.next.lesson}`}>Następny rozdział →</Link>}
       </div>
+      {a.next && (
+        <Link className="reader-next-link" href={`/nauka/podrecznik/${a.next.unit}/${a.next.lesson}`} data-testid="read-next">
+          <span className="muted small">{a.next.unitTitle ? `Następny dział: ${a.next.unitTitle}` : "Następna lekcja"}</span>
+          <strong>Czytaj następną lekcję: {a.next.title} →</strong>
+        </Link>
+      )}
       <p className="muted small" style={{ margin: 0 }}>
         {a.prev && <><Link href={`/nauka/podrecznik/${unit}/${a.prev.lesson}`}>← {a.prev.title}</Link> · </>}
         <Link href={`/nauka/podrecznik/${unit}`}>Cały dział jako jeden artykuł</Link> · <Link href={`/nauka/${a.unit.topic.id}#${lesson}`}>Lekcja na ścieżce</Link>

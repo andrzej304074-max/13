@@ -68,10 +68,21 @@ export interface LessonArticle {
   no: number;
   of: number;
   prev: { lesson: string; title: string } | null;
-  next: { lesson: string; title: string } | null;
+  /** Następny rozdział – w tym dziale, a po ostatnim rozdziale pierwszy rozdział następnego działu (z `unit`). */
+  next: { lesson: string; title: string; unit: string; unitTitle?: string } | null;
 }
 
-/** Rozdział lekcji z sąsiadami (poprzedni/następny rozdział w dziale). */
+/** Następny dział z artykułem w kolejności kursu (także w kolejnym temacie). */
+export function nextUnit(unitId: string): { id: string; title: string; first: Chapter | null } | null {
+  const i = COURSE.units.findIndex((u) => u.id === unitId);
+  for (const u of COURSE.units.slice(i + 1)) {
+    const b = UNITS[u.id];
+    if (b && b.chapters.length) return { id: u.id, title: u.title, first: b.chapters[0] };
+  }
+  return null;
+}
+
+/** Rozdział lekcji z sąsiadami (poprzedni rozdział w dziale, następny – także przez granicę działu). */
 export function lessonArticle(lessonId: string): LessonArticle | null {
   const l = COURSE.lessons[lessonId];
   if (!l) return null;
@@ -80,7 +91,10 @@ export function lessonArticle(lessonId: string): LessonArticle | null {
   const i = a.chapters.findIndex((c) => c.lesson === lessonId);
   if (i < 0) return null;
   const pick = (c?: Chapter) => (c ? { lesson: c.lesson, title: c.title } : null);
-  return { unit: a.unit, chapter: a.chapters[i], no: i + 1, of: a.chapters.length, prev: pick(a.chapters[i - 1]), next: pick(a.chapters[i + 1]) };
+  const nu = i + 1 < a.chapters.length ? null : nextUnit(a.unit.id);
+  const next = a.chapters[i + 1] ? { ...pick(a.chapters[i + 1])!, unit: a.unit.id }
+    : nu?.first ? { lesson: nu.first.lesson, title: nu.first.title, unit: nu.id, unitTitle: nu.title } : null;
+  return { unit: a.unit, chapter: a.chapters[i], no: i + 1, of: a.chapters.length, prev: pick(a.chapters[i - 1]), next };
 }
 
 export function hasArticle(lessonId: string): boolean {
