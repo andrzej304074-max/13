@@ -1,0 +1,25 @@
+// G7: hasło XL w Słowniku – test „tylko z hasła” losuje pytania działu 15 (ręczne i algorytmiczne)
+import { chromium } from "playwright-core";
+const B = "http://localhost:3100";
+const browser = await chromium.launch({ executablePath: process.env.CHROMIUM ?? "/opt/pw-browsers/chromium-1194/chrome-linux/chrome" });
+let ok = 0; const fails = []; const errs = [];
+const check = (c, m) => (c ? ok++ : fails.push(m));
+const p = await (await browser.newContext({ viewport: { width: 390, height: 844 } })).newPage();
+p.on("pageerror", (e) => errs.push(e.message));
+await p.goto(`${B}/konto/logowanie`);
+await p.fill('input[name="email"]', "drugi@example.com"); await p.fill('input[name="password"]', "nowe-haslo-123");
+await p.click("form button.btn"); await p.waitForURL((u) => !u.pathname.startsWith("/konto"));
+const pula = await (await p.request.post(`${B}/api/tests/pula`, { data: { bank: "slownik", theme: "yes", section: 15 } })).json();
+check(pula.single >= 500, `dział 15, jednokrotne: ${pula.single}`);
+check(pula.multi >= 100, `dział 15, wielokrotne: ${pula.multi}`);
+const t = await (await p.request.post(`${B}/api/tests`, { data: { bank: "slownik", type: "single", count: 50, theme: "yes", section: 15 } })).json();
+check(t.questions.length === 50 && t.questions.every((q) => /dz\. 15|hasło XL/.test(q.edition)), "test z działu hasła XL");
+const auto = await (await p.request.post(`${B}/api/tests/pula`, { data: { bank: "slownik", theme: "yes", section: 15, origin: "auto" } })).json();
+check(auto.single > 150, `algorytmiczne i automatyczne z hasła: ${auto.single}`);
+await p.goto(`${B}/test/${t.id}`); await p.waitForSelector(".option");
+await p.locator(".option").first().click(); await p.click('[data-testid="check"]'); await p.waitForSelector(".feedback");
+check((await p.locator(".feedback").innerText()).length > 30, "wyjaśnienie po sprawdzeniu");
+await p.request.post(`${B}/api/tests/${t.id}/finish`);
+check(errs.length === 0, `błędy JS: ${errs.join(" | ")}`);
+await browser.close();
+console.log("OK:", ok, "błędów:", fails.length, JSON.stringify(fails, null, 1));

@@ -51,6 +51,7 @@ run g2.mjs
 run g4.mjs
 run g5.mjs
 run g6.mjs
+run g7.mjs
 run authsweep.mjs
 run security.mjs
 run crawl.mjs

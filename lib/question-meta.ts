@@ -8,6 +8,9 @@ import { kindOk, themeOk, type ItemMeta, type ThemeFilter } from "./owe-stats";
 
 /** Źródło pytania: Archiwum OWE, Pytania AI (sprawdzone), Słownik. */
 export type QSource = "owe" | "ai" | "slownik";
+
+/** Dział Słownika z pytaniami o hasło przewodnie bieżącej edycji (XL – „Gospodarka wobec wyzwań demograficznych”). */
+export const THEME_SECTION = 15;
 export const SOURCES: { id: QSource; label: string; hint: string }[] = [
   { id: "owe", label: "Archiwum OWE", hint: "prawdziwe pytania z olimpiad XXI–XXXIX" },
   { id: "ai", label: "Pytania AI", hint: "sprawdzone i poprawione, z wyjaśnieniami" },
@@ -47,8 +50,10 @@ function load() {
   if (cache) return cache;
   const meta = new Map<string, QMeta>();
   for (const r of OWE_STATS) meta.set(r.id, { src: "owe", ed: r.ed, st: r.st, topic: r.topic, items: r.items, calc: r.calc, th: r.th });
-  // Słownik: pytania działu demografii dotyczą hasła przewodniego XL edycji
-  for (const r of SLOWNIK_STATS) meta.set(r.id, { src: "slownik", topic: r.topic, items: r.items, calc: r.calc, th: r.topic === "demografia" ? 1 : undefined });
+  // Słownik: dział hasła przewodniego (15 – XL edycja) i pytania o hasła tematu demografii dotyczą hasła przewodniego
+  for (const r of SLOWNIK_STATS) {
+    meta.set(r.id, { src: "slownik", topic: r.topic, items: r.items, calc: r.calc, th: r.sec === THEME_SECTION || r.topic === "demografia" ? 1 : undefined });
+  }
   for (const r of AI_STATS) meta.set(r.id, { src: "ai", topic: r.topic, items: r.items, calc: r.calc, th: r.th });
   const items: Record<string, ItemMeta> = {};
   for (const [id, it] of Object.entries(COURSE.items)) items[id] = { title: it.t, kind: it.kind, topic: it.topic };

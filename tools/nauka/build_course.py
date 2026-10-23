@@ -203,7 +203,7 @@ def concepts(q, origin):
     """(main, all) – id haseł; pytania automatyczne niosą listę swoich pojęć (tytuły haseł)."""
     if origin == "auto":
         ids = list(dict.fromkeys(item_id(t) for t in q["pojecia"] if item_id(t) in items))
-        main = ids if q["id"].startswith("sl-C-") else ids[:1]
+        main = ids if q["id"].startswith(("sl-C-", "sl-TC-")) else ids[:1]
         return set(main), set(ids)
     a = matcher.analyze(q)
     return a["main"], a["all"]
@@ -303,8 +303,17 @@ def sl_record(q, origin, lid, main):
     sl_stats.append(rec)
 
 
+THEME_SECTION, THEME_TOPIC = 15, "demografia"  # dział słownika i temat kursu hasła przewodniego (XL edycja)
 for q, origin in bank:
     main, allc = concepts(q, origin)
+    if origin == "manual" and q.get("th"):
+        # pytania o hasło przewodnie z Planu II (m40+): tylko statystyki i testy Słownika – nie przestawiają lekcji kursu;
+        # pojęcia tylko z tematu hasła (w treści i odpowiedziach bywa słownictwo innych działów – szum dopasowania)
+        main = {i for i in main if items.get(i, {}).get("topic") == THEME_TOPIC} or main
+        allc = {i for i in allc if items.get(i, {}).get("topic") == THEME_TOPIC} or allc
+        main = {i for i in main if i in item_lessons} or {i for i in allc if i in item_lessons}
+        sl_record(q, origin, order[THEME_TOPIC][0], main)
+        continue
     main = {i for i in main if i in item_lessons} or {i for i in allc if i in item_lessons}
     if not main:
         # bez rozpoznanych haseł (np. pytanie o fakt spoza słownika): lekcja tematu działu słownika (pytania
@@ -392,6 +401,12 @@ for u in units:
 QSTATS = {"placed": sum(len(v) for v in placed.values()), "unplaced": unplaced, "parts": len(new_lessons)}
 
 os.makedirs(OUT, exist_ok=True)
+# Pytania algorytmiczne do hasła przewodniego (data/slownik/theme_auto.json) – tylko statystyki: łączą hasła różnych
+# tematów (np. „które hasło nie dotyczy demografii”), więc nie trafiają do lekcji kursu
+for q in json.load(open(os.path.join(ROOT, "data/slownik/theme_auto.json"))):
+    main, allc = concepts(q, "auto")
+    sl_record(q, "auto", order[THEME_TOPIC][0], {i for i in main if i in item_lessons} or {i for i in allc if i in item_lessons})
+
 # Pytania AI (sprawdzone) – data/ai/questions.json: tylko statystyki (dział, zagadnienie, pojęcia), bez przydziału do lekcji
 AI_TOPIC = {"Ekonomia": "mikro", "Demografia": "demografia", "Zarządzanie": "zarzadzanie", "Finanse": "finanse",
             "Finanse Przedsiębiorstw": "firma"}

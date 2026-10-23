@@ -68,6 +68,13 @@ Przy starcie testu można wybrać rodzaj pytań (ręczne, automatyczne lub oba) 
   (kolejność z `data/nauka/course.json`); każde pytanie ma pole `pojecia` (hasło pytania i hasła dystraktorów).
 - `data/slownik/manual.json` – pytania pisane ręcznie, składane z `tools/slownik/manual/m*.py`:
   `python3 -I tools/slownik/build_manual.py tools/slownik/manual data/slownik`.
+- **Hasło przewodnie XL** („Gospodarka wobec wyzwań demograficznych”) – dział 15 Słownika: ponad 500 pytań ręcznych
+  (`tools/slownik/manual/m15`, `m33`, `m40`–`m48`: mierniki i obliczenia, teorie, Polska, rynek pracy, polityka rodzinna,
+  migracje, świat i UE, emerytury i finanse publiczne) oraz pytania algorytmiczne `data/slownik/theme_auto.json`:
+  `python3 -I tools/slownik/gen_theme.py data/nauka/course.json data/slownik` – szablony T1–T4 (opis → hasło, hasło → opis,
+  „które hasło nie należy do tematu”, „które należą”) dla wszystkich haseł tematu kursu z dystraktorami z tego samego
+  tematu; przy nowym haśle przewodnim zmienia się stałą `THEME` w skrypcie. Nowe pytania (pole `th`) i pytania algorytmiczne liczą się
+  w testach Słownika, „Wszystkich pytaniach” i statystykach, ale nie przestawiają lekcji kursu (`build_course.py`).
 
 ## Pytania AI i zakładka „Wszystkie pytania”
 
