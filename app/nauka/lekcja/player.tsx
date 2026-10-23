@@ -1,5 +1,6 @@
 "use client";
 
+import { ItemFigure } from "@/app/components/item-figure";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { QuestionScratch } from "@/app/components/notes/question-scratch";
@@ -420,6 +421,7 @@ function Intro({ item, fromQuestions, onNext }: { item: CourseItem; fromQuestion
       <div className="card learn-intro">
         <h2 style={{ marginTop: 0 }}>{item.t}</h2>
         <ItemCard item={item} />
+        <ItemFigure f={item.f} />
       </div>
       <div className="learn-actions">
         <button className="btn" onClick={onNext} autoFocus>Dalej</button>

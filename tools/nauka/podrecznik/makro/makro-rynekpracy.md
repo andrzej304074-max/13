@@ -52,6 +52,7 @@ Pierwsze dwie grupy razem to **[[Ludność aktywna zawodowo (zasób siły robocz
 ## Trzy wskaźniki
 
 **[[Stopa bezrobocia|Stopa bezrobocia]]**:
+::wykres seria id=bezrobocie | Stopa bezrobocia BAEL w Polsce spadła poniżej średniej UE.
 
 $ u = bezrobotni / (pracujący + bezrobotni) × 100%
 
@@ -103,6 +104,7 @@ Częścią zabezpieczenia są obowiązkowe **[[Ubezpieczenia społeczne (ZUS)|ub
 ## Gdy umiejętności nie pasują
 
 Zamknięto kopalnię, a w mieście otwiera się firma programistyczna. Górnicy szukają pracy, firma szuka programistów – i jedni drugich nie znajdą. To **[[Bezrobocie strukturalne|bezrobocie strukturalne]]**: niedopasowanie kwalifikacji, zawodów albo miejsca zamieszkania do ofert. Jego odmianą jest bezrobocie technologiczne – gdy maszyny zastępują ludzi. Pomagają przekwalifikowanie i łatwiejsze przeprowadzki.
+::wykres beveridge przesun=1 | Bezrobocie strukturalne przesuwa krzywą Beveridge'a na zewnątrz: dużo wakatów i dużo bezrobotnych naraz.
 
 ## Gdy brakuje popytu
 
@@ -123,6 +125,7 @@ W przeludnionym gospodarstwie rolnym pięcioro ludzi robi to, co dałoby radę z
 ## Bezrobocie naturalne
 
 Bezrobocie frykcyjne i strukturalne nie znikają nawet przy dobrej koniunkturze. Razem tworzą **[[Naturalna stopa bezrobocia|naturalną stopę bezrobocia]]** – pojęcie Friedmana i Phelpsa. To bezrobocie przy produkcji potencjalnej.
+::wykres phillips dlugi=1 | W długim okresie krzywa Phillipsa jest pionowa przy naturalnej stopie bezrobocia u*.
 
 > Zapamiętaj: naturalne = frykcyjne + strukturalne. Cykliczne to odchylenie od naturalnego w czasie wahań koniunktury.
 
@@ -180,6 +183,7 @@ Niektóre firmy płacą więcej, niż muszą. **[[Płace efektywnościowe (motyw
 ## Oferty i bezrobotni
 
 **[[Krzywa Beveridge’a|Krzywa Beveridge’a]]** łączy stopę wolnych miejsc pracy ze stopą bezrobocia. W dobrych czasach ofert jest dużo, a bezrobotnych mało – i odwrotnie. Gdy krzywa przesuwa się na zewnątrz, mamy dużo ofert _i_ dużo bezrobotnych naraz – znak, że ludzie i oferty do siebie nie pasują.
+::wykres beveridge przesun=1 | Krzywa Beveridge'a; jej przesunięcie na zewnątrz (BC₂) oznacza gorsze dopasowanie na rynku pracy.
 
 > Uwaga: NAIRU to nie „zero bezrobocia” – to poziom, przy którym inflacja **nie przyspiesza**; obniżanie bezrobocia poniżej niego podkręca inflację.
 

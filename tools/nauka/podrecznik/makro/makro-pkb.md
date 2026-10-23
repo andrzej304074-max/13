@@ -48,6 +48,7 @@ Ten dział to fundament całej makroekonomii. Każdy kolejny – o wzroście, in
 - **wartość rynkowa** – sumujemy w złotówkach, bo jabłek i fryzjerów nie da się dodać inaczej;
 - **finalnych** – liczymy tylko to, co trafia do ostatecznego odbiorcy;
 - **na terytorium kraju** – liczy się miejsce, a nie narodowość właściciela fabryki.
+::wykres seria id=pkb | Realny PKB – roczne tempo wzrostu w Polsce i UE.
 
 ## Pułapka podwójnego liczenia
 
@@ -67,6 +68,7 @@ Najczęściej zapisuje się metodę wydatkową ([[PKB – metoda wydatkowa|metod
 $ PKB = C + I + G + (X − M)
 
 C to konsumpcja gospodarstw domowych, I – [[Inwestycje|inwestycje]] firm (maszyny, budynki, zapasy), G – zakupy państwa, a X − M to eksport netto, czyli [[Bilans handlowy|saldo handlowe]].
+::wykres fundusze | Inwestycje (popyt na fundusze) maleją ze stopą procentową.
 
 > Przykład: telefon wyprodukowany w Azji i kupiony w Polsce zwiększa C, ale też M. Odejmując import, usuwamy go z polskiego PKB – bo nie powstał w Polsce.
 
@@ -148,6 +150,7 @@ $ YD = C + S
 ## Prawdziwy wzrost czy tylko wyższe ceny?
 
 W 2023 roku PKB nominalny może wzrosnąć o 12%. Ale jeśli ceny wzrosły o 10%, realnie wyprodukowaliśmy tylko o około 2% więcej. Dlatego odróżniamy **[[PKB nominalny i realny|PKB nominalny i realny]]**. Nominalny liczymy w bieżących cenach, realny – w cenach roku bazowego.
+::wykres seria id=pkb | Wzrost realny – po odjęciu wpływu zmian cen.
 
 Do przeliczania służy **[[Deflator PKB|deflator PKB]]** – wskaźnik cen wszystkich dóbr wchodzących do PKB:
 
@@ -193,6 +196,7 @@ Część legalnej pracy jest ukrywana przed urzędami – remont „na czarno”
 ## Ile moglibyśmy produkować
 
 **[[Produkt potencjalny i luka PKB (popytowa)|Produkt potencjalny]]** to produkcja przy normalnym wykorzystaniu zasobów. Gdy rzeczywisty PKB jest od niego niższy, mamy ujemną lukę PKB – fabryki i ludzie stoją bezczynnie. Gdy wyższy – gospodarka się przegrzewa.
+::wykres cykl | Luka PKB: różnica między rzeczywistym PKB a trendem (produktem potencjalnym).
 
 > Uwaga: PKB per capita według **PSN** (parytetu siły nabywczej) lepiej porównuje poziom życia niż PKB per capita po kursie rynkowym.
 

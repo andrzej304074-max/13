@@ -44,6 +44,7 @@ Czy Polska i Portugalia powinny mieć wspólną walutę? A Teksas i Kalifornia? 
 ## Szok asymetryczny
 
 **[[Szok asymetryczny|Szok asymetryczny]]** dotyka członków unii walutowej w różnym stopniu. Gdy upada branża dominująca w jednym kraju, ten kraj potrzebuje niższych stóp i słabszej waluty – ale w unii walutowej ich nie ma. Zostaje spadek płac, emigracja albo transfery.
+::wykres adas AD=-1 | Szok asymetryczny: spadek popytu tylko w jednym kraju unii walutowej – bez własnej polityki pieniężnej trudniej się bronić.
 
 ## Koszty i korzyści euro
 
@@ -121,6 +122,7 @@ Béla Balassa opisał **[[Integracja gospodarcza – formy (Balassa)|formy integ
 ## Skutki unii celnej
 
 Unia celna ma **[[Efekty kreacji i przesunięcia handlu|dwa efekty]]** (Jacob Viner): kreację handlu – droższa produkcja krajowa ustępuje tańszemu importowi od partnera; i przesunięcie handlu – tańszy import spoza unii ustępuje droższemu od partnera. Zmieniają się też **[[Terms of trade (relacje wymiany)|terms of trade]]**.
+::wykres clo | Zniesienie cła w ugrupowaniu zwiększa handel (kreacja) albo przesuwa import od tańszych dostawców (przesunięcie).
 
 ## Historia UE
 

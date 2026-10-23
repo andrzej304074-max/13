@@ -38,6 +38,7 @@ Oszczędzanie jest dobre dla rodziny. Ale gdy wszyscy naraz zaczną oszczędzać
 ## Funkcja konsumpcji Keynesa
 
 Keynes zaproponował prosty model: wydatki zależą od bieżącego dochodu rozporządzalnego. To **[[Funkcja konsumpcji (keynesowska)|funkcja konsumpcji]]**:
+::wykres keynes | Konsumpcja rośnie z dochodem, ale wolniej (krańcowa skłonność do konsumpcji < 1).
 
 $ C = Ca + c · YD
 
@@ -56,6 +57,7 @@ $ MPC + MPS = 1
 ## Wydawanie przez całe życie
 
 Franco Modigliani zauważył, że ludzie planują na dekady. W młodości zarabiamy mało i często się zadłużamy. W wieku średnim zarabiamy dużo i oszczędzamy. Na emeryturze wydajemy oszczędności. To **[[Hipoteza cyklu życia|hipoteza cyklu życia]]**: ludzie wygładzają konsumpcję w ciągu życia.
+::wykres cyklzycia | Modigliani: konsumpcja wygładzona przez całe życie – oszczędzamy w wieku produkcyjnym, wydajemy na emeryturze.
 
 > Uwaga: w modelu Keynesa konsumpcja zależy od dochodu **bieżącego**, w modelu Modiglianiego – od dochodu z **całego życia**. Na olimpiadzie łatwo pomylić te podejścia.
 
@@ -105,6 +107,7 @@ Część tego zjawiska to **[[Efekt demonstracji|efekt demonstracji]]**: naślad
 ## Paradoks oszczędności
 
 Keynes zauważył coś zaskakującego. Gdy jedna rodzina oszczędza więcej, bogaci się. Gdy _wszyscy_ naraz zaczną oszczędzać więcej, sklepy sprzedadzą mniej, firmy obniżą produkcję i zwolnią ludzi. Dochody spadną – a łączne oszczędności mogą nawet nie wzrosnąć. To **[[Paradoks zapobiegliwości (oszczędności)|paradoks oszczędności]]**.
+::wykres keynes | Gdy wszyscy chcą oszczędzać więcej, AE spada, a z nim dochód – oszczędności nie rosną.
 
 > Uwaga: paradoks dotyczy krótkiego okresu i gospodarki z niewykorzystanymi zasobami. W długim okresie oszczędności finansują inwestycje i wzrost.
 
@@ -178,6 +181,7 @@ Rząd wydaje 100 mln zł na drogę. Robotnicy dostają pensje i przy MPC = 0,8 w
 $ k = 1 / (1 − MPC) = 1 / 0,2 = 5
 
 Dochód rośnie o 500 mln zł. To **[[Mnożnik (inwestycyjny, wydatkowy)|mnożnik wydatkowy]]**.
+::wykres keynes wzrost=1 | Wzrost wydatków autonomicznych podnosi dochód o więcej – o wielokrotność (mnożnik).
 
 Gdy uwzględnimy podatek proporcjonalny t, mnożnik słabnie:
 
@@ -254,6 +258,7 @@ $ MPI = ΔM / ΔY
 ## Krzyż Keynesa
 
 **[[Model Keynesa (krzyż keynesowski)|Model Keynesa]]** rysuje dwie linie. Linia 45° pokazuje punkty, w których wydatki równają się produkcji (Y = AE). Linia zagregowanych wydatków (C + I + G + NX) rośnie wolniej, bo nie każda dodatkowa złotówka zostaje wydana. Równowaga leży na przecięciu. Gdy wydatki autonomiczne rosną, linia wydatków podnosi się, a dochód rośnie o wielokrotność tej zmiany – to mnożnik na wykresie.
+::wykres keynes wzrost=1 | Krzyż keynesowski: wzrost wydatków przesuwa AE w górę i zwiększa dochód o mnożnik.
 
 ## Za mało albo za dużo wydatków
 
@@ -289,6 +294,7 @@ Harry Markowitz w 1952 roku pokazał, że inwestor nie powinien patrzeć tylko n
 ## Luka w produkcji, luka w zatrudnieniu
 
 Arthur Okun zauważył, że produkcja i bezrobocie poruszają się razem. **[[Prawo Okuna|Prawo Okuna]]** mówi, że każdy punkt procentowy bezrobocia ponad stopę naturalną odpowiada około 2–3% luki PKB:
+::wykres okun | Prawo Okuna: wzrost PKB powyżej potencjału obniża bezrobocie (ok. 0,5 pp. na 1 pp.).
 
 $ (Y − Y*)/Y* = −β · (u − u*)
 

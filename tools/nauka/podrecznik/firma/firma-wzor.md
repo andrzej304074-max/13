@@ -121,6 +121,7 @@ To pierwsze pytanie każdego, kto otwiera firmę. Próg rentowności dzieli kosz
 ## Próg rentowności
 
 **[[Próg rentowności – wzór|Próg rentowności]]**:
+::wykres bep | BEP = koszty stałe / (cena − jednostkowy koszt zmienny) = 40 000 / 20 = 2000 szt.
 
 $ Q = FC / (P − AVC)
 $ wartościowo: FC / (1 − AVC / P)

@@ -54,6 +54,7 @@ Co przesuwa IS w prawo? Wszystko, co zwiększa wydatki przy danej stopie: wyższ
 Czasem jedna z krzywych przybiera skrajny kształt.
 
 **[[Pułapka płynności|Pułapka płynności]]**: stopy są bliskie zera i dalej spaść nie mogą. Krzywa LM staje się pozioma. Dodatkowy pieniądz od banku centralnego nie obniża stóp – ludzie po prostu go trzymają. Polityka pieniężna przestaje działać, ale fiskalna zachowuje pełną siłę.
+::wykres pieniadz | Przy stopach bliskich zera dodatkowy pieniądz nie obniża już stopy procentowej.
 
 **[[Pułapka inwestycyjna|Pułapka inwestycyjna]]**: przedsiębiorcy są tak pesymistyczni, że nie inwestują bez względu na stopy. Krzywa IS staje się pionowa. Obniżka stóp nie zwiększa produkcji.
 
@@ -79,6 +80,7 @@ Rząd pożycza 50 mld zł na budowę dróg. Żeby znaleźć chętnych na swoje o
 ## Zagregowany popyt
 
 **[[Zagregowany popyt (AD)|Zagregowany popyt]]** to łączne wydatki całej gospodarki przy różnych poziomach cen:
+::wykres adas AD=+1 | Wzrost zagregowanego popytu: krótkookresowo więcej produkcji i wyższe ceny.
 
 $ AD = C + I + G + NX
 
@@ -100,6 +102,7 @@ Krzywa AD opada. Jednym z powodów jest **[[Efekt majątkowy (efekt Pigou, efekt
 ## Krzywa Phillipsa w tle
 
 Krótkookresowa AS łączy się z **[[Krzywa Phillipsa|krzywą Phillipsa]]**: gdy popyt rośnie, produkcja rośnie, bezrobocie spada, a inflacja przyspiesza. W długim okresie ta zależność znika.
+::wykres phillips dlugi=1 | Krótkookresowa krzywa Phillipsa: niższe bezrobocie przy wyższej inflacji; w długim okresie pionowa (u*).
 
 > Uwaga: efekt wypychania dotyczy **inwestycji prywatnych** wypieranych przez wyższe stopy – nie konsumpcji.
 
@@ -117,6 +120,7 @@ Klasycy wierzyli w **[[Prawo Saya|prawo Saya]]**: kto produkuje, ten zarabia, a 
 ## Równowaga w modelu AD-AS
 
 **[[Równowaga makroekonomiczna (model AD-AS)|Równowaga makroekonomiczna]]** ma dwa poziomy. Krótkookresowa leży na przecięciu AD z krótkookresową AS. Długookresowa – na pionowej długookresowej AS, czyli przy produkcji potencjalnej. Gdy szok wytrąci gospodarkę z równowagi, w długim okresie płace i ceny dostosowują się i produkcja wraca do potencjalnej.
+::wykres adas | Model AD–AS: poziom cen i produkcja wyznaczone przez zagregowany popyt i podaż.
 
 > Zapamiętaj: szok popytowy – ceny i produkcja zmieniają się w **tym samym** kierunku; szok podażowy – w **przeciwnych** (stagflacja).
 
@@ -148,6 +152,7 @@ Krzywa popytu na jeden towar opada, bo przy niższej cenie przerzucamy się z in
 - **efekt majątkowy (Pigou)** – niższe ceny zwiększają realną wartość oszczędności, więc rośnie konsumpcja;
 - **efekt stopy procentowej (Keynes)** – przy niższych cenach potrzebujemy mniej pieniędzy na zakupy, stopy spadają, a inwestycje rosną;
 - **efekt kursu walutowego (Mundell–Fleming)** – niższe stopy osłabiają walutę, a tańszy eksport zwiększa eksport netto.
+::wykres adas | AD opada: efekt bogactwa, stopy procentowej i kursu walutowego.
 
 **[[Efekt Pigou (efekt realnych zasobów pieniężnych)|Efekt Pigou]]** miał też ambitniejszą rolę. Pigou twierdził, że nawet w pułapce płynności spadające ceny w końcu przywrócą pełne zatrudnienie – bo ludzie poczują się bogatsi. Krytycy odpowiadali, że spadek cen może też zwiększyć realny ciężar długów i pogłębić kryzys.
 
@@ -166,6 +171,7 @@ Gregory Mankiw podsumowuje **[[Trzy fakty o wahaniach koniunktury|trzy fakty o w
 - wahania są nieregularne i nieprzewidywalne;
 - większość wielkości zmienia się razem, a inwestycje najsilniej;
 - gdy produkcja spada, bezrobocie rośnie.
+::wykres cykl | Wahania są nieregularne, wiele zmiennych zmienia się razem, a spadkowi produkcji towarzyszy wzrost bezrobocia.
 
 > Przykład: ceny spadają o 10%. Oszczędności w złotych mają większą siłę nabywczą (efekt majątkowy), stopy procentowe spadają (efekt stopy procentowej), a eksport tanieje (efekt kursowy). Z trzech powodów ludzie kupują więcej – dlatego AD opada.
 

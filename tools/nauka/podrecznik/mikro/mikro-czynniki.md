@@ -45,6 +45,7 @@ Wiele pytań z tego działu łączy się z makroekonomią – bezrobociem, płac
 ## Popyt z drugiej ręki
 
 Piekarnia zatrudnia piekarzy tylko dlatego, że ludzie chcą jeść chleb. Gdyby chleb wyszedł z mody, piekarze straciliby pracę. To **[[Popyt pochodny (na czynniki wytwórcze)|popyt pochodny]]** – popyt na czynnik produkcji wynika z popytu na produkty, które się z jego pomocą wytwarza.
+::wykres praca | Popyt na pracę wynika z popytu na produkty – maleje z płacą realną.
 
 ## Rachunek na pracownika
 
@@ -118,6 +119,7 @@ Decyzje o pracy zależą od płacy realnej, czyli od tego, ile za nią kupisz.
 ## Siła zbiorowa
 
 **[[Związki zawodowe a rynek pracy|Związki zawodowe]]** negocjują płace i warunki pracy w imieniu wielu pracowników. Mogą podnosić płace powyżej równowagi – kosztem zatrudnienia. Ale tam, gdzie pracodawca ma przewagę (monopson), mogą przywracać równowagę sił.
+::wykres cena typ=min | Płaca wynegocjowana powyżej równowagi działa jak cena minimalna – mniej etatów, więcej chętnych.
 
 ## Kapitał i jego nagroda
 
@@ -187,6 +189,7 @@ Gdy pracodawca płaci mniej komuś tylko z powodu płci, pochodzenia czy wieku, 
 ## Kto chce zatrudniać
 
 **[[Popyt na pracę|Popyt na pracę]]** to zapotrzebowanie firm na pracowników przy różnych płacach. Firma zatrudnia, dopóki przychód z krańcowego produktu pracy nie jest mniejszy od płacy. Krzywa przesuwa się, gdy zmienia się popyt na produkty, technologia albo ceny innych czynników.
+::wykres praca | Popyt na pracę maleje z płacą realną; podaż pracy rośnie.
 
 ## Kto liczy się do rynku pracy
 

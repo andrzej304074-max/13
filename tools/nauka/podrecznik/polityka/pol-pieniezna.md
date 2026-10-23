@@ -105,12 +105,14 @@ Gdy RPP podnosi stopę referencyjną, po kilku tygodniach rośnie rata kredytu m
 - **referencyjna** – najważniejsza; to oprocentowanie bonów pieniężnych w podstawowych operacjach;
 - **lombardowa** – oprocentowanie **[[Kredyt lombardowy|kredytu lombardowego]]**, który NBP udziela bankom na koniec dnia pod zastaw papierów; górna granica korytarza;
 - **depozytowa** – oprocentowanie lokaty overnight w NBP; dolna granica korytarza.
+::wykres pieniadz MS=-1 | Podwyżka stóp (mniej pieniądza w obiegu) podnosi stopę procentową rynku pieniężnego.
 
 Jest też stopa redyskontowa i dyskontowa weksli.
 
 ## Korytarz
 
 **[[Korytarz stóp procentowych|Korytarz stóp]]** wyznaczają stopa depozytowa (dół) i lombardowa (góra). Dlaczego stopy rynkowe nie wyjdą poza korytarz? Żaden bank nie pożyczy innemu taniej, niż dostałby w NBP na depozycie. I żaden nie zapłaci innemu drożej, niż zapłaciłby NBP za kredyt lombardowy.
+::wykres pieniadz | Stopy NBP wyznaczają korytarz, w którym porusza się krótkoterminowa stopa rynkowa.
 
 > Przykład: referencyjna 5,75%, lombardowa 6,25%, depozytowa 5,25%. Stopa overnight na rynku międzybankowym będzie się poruszać między 5,25% a 6,25%, najczęściej blisko 5,75%.
 
@@ -255,6 +257,7 @@ W 2009 i 2020 roku banki centralne obniżyły stopy prawie do zera, a gospodarka
 ## Kupowanie obligacji
 
 **[[Luzowanie ilościowe (QE)|Luzowanie ilościowe]]** to skup aktywów – obligacji skarbowych, papierów hipotecznych – na dużą skalę, za nowo wykreowany pieniądz. Celem jest obniżenie długoterminowych stóp, gdy krótkoterminowe są już przy zerze. Po kryzysie 2008 roku stosował je Fed, potem **[[Europejski Bank Centralny (EBC)|EBC]]**, a w pandemii także NBP. Bank centralny kupuje obligacje na **[[Rynek pierwotny i wtórny|rynku wtórnym]]** – od inwestorów, a nie bezpośrednio od rządu.
+::wykres pieniadz MS=+1 | QE zwiększa podaż pieniądza i obniża stopy procentowe (także długoterminowe).
 
 ## Wycofanie
 

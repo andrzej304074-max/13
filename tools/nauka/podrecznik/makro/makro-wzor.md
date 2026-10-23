@@ -173,6 +173,7 @@ $ dokładnie: 1 + i = (1 + r)(1 + πᵉ)
 ## Reguła 70
 
 **[[Reguła 70|Reguła 70]]**: czas podwojenia ≈ 70 / tempo wzrostu w %. Przy 5% – około 14 lat.
+::wykres procent | Reguła 70: przy 10% rocznie kapitał podwaja się mniej więcej co 7 lat.
 
 ## Import zmniejsza mnożnik
 
@@ -228,6 +229,7 @@ $ Y/L = A · F(1, K/L, H/L, N/L)
 ## Rachunek wzrostu
 
 **[[Rachunek wzrostu i łączna produktywność czynników (reszta Solowa)|Reszta Solowa]]** to ta część wzrostu, której nie wyjaśnia przyrost kapitału i pracy:
+::wykres solow | W modelu Solowa trwały wzrost dochodu na osobę daje tylko postęp techniczny.
 
 $ g_A = g_Y − α · g_K − (1 − α) · g_L
 
@@ -264,6 +266,7 @@ $ g_A = g_Y − α · g_K − (1 − α) · g_L
 ## Równowaga w modelu mnożnikowym
 
 **[[Równowaga w modelu mnożnikowym|Równowaga]]**: Y = C + I + G, gdzie C = Ca + c(Y − T). Po przekształceniu:
+::wykres keynes | Równowaga tam, gdzie wydatki AE równają się dochodowi Y (przecięcie z linią 45°).
 
 $ Y = (Ca − c · T + I + G) / (1 − c)
 
@@ -289,6 +292,7 @@ Ten rozdział zbiera najczęściej używane wzory w jednym miejscu.
 ## Ceny
 
 **[[Inflacja i indeksy cen|Inflacja]]**: π = (P₁ − P₀) / P₀ · 100%. Zmiana realna ≈ nominalna − inflacja.
+::wykres seria id=inflacja | Roczna stopa zmian HICP – zharmonizowany indeks cen w UE.
 
 > Przykład: indeks cen z 200 do 210. π = 10 / 200 = 5%. Płaca wzrosła o 8%, więc realnie o około 3%.
 
@@ -299,6 +303,7 @@ Ten rozdział zbiera najczęściej używane wzory w jednym miejscu.
 ## Rynek pracy
 
 **[[Stopa bezrobocia i wskaźniki rynku pracy|Wskaźniki rynku pracy]]** (P – pracujący, B – bezrobotni):
+::wykres seria id=bezrobocie | Bezrobocie według BAEL (definicja MOP) – porównywalne między krajami.
 
 $ u = B / (P + B)
 $ wskaźnik aktywności = (P + B) / ludność 15+
@@ -341,6 +346,7 @@ $ wskaźnik zatrudnienia = P / ludność 15+
 ## Gini
 
 **[[Współczynnik Giniego – wzór|Współczynnik Giniego]]**: G = A / (A + B), gdzie A to pole między linią równości a krzywą Lorenza, B – pole pod krzywą Lorenza.
+::wykres lorenz | Gini = pole A / (A + B) – od 0 (równość) do 1 (jedna osoba ma wszystko).
 
 > Przykład: A = 0,15, B = 0,35. G = 0,15 / 0,5 = 0,3.
 

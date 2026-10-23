@@ -47,10 +47,12 @@ Gospodarka raz przyspiesza tak, że ceny rosną z miesiąca na miesiąc, raz zwa
 ## Gaz i hamulec
 
 **[[Polityka ekspansywna i restrykcyjna|Polityka ekspansywna]]** pobudza popyt: wyższe wydatki, niższe podatki, niższe stopy procentowe. **Restrykcyjna** ogranicza popyt i inflację.
+::wykres adas AD=+1 | Polityka ekspansywna przesuwa AD w prawo: więcej produkcji, wyższe ceny.
 
 ## Autopilot
 
 Część stabilizacji dzieje się sama. **[[Automatyczne stabilizatory|Automatyczne stabilizatory]]** to elementy systemu podatkowego i socjalnego, które łagodzą wahania bez żadnej decyzji władz. W recesji ludzie zarabiają mniej, więc płacą mniej podatku – zwłaszcza przy **[[Podatek progresywny, proporcjonalny (liniowy) i regresywny|podatku progresywnym]]**. Rośnie liczba bezrobotnych, więc rosną wypłaty zasiłków. Pieniądze same płyną do gospodarki, kiedy najbardziej ich potrzebuje.
+::wykres cykl | Stabilizatory automatycznie łagodzą wahania wokół trendu (podatki i zasiłki).
 
 > Przykład: polski **[[Podatek dochodowy od osób fizycznych (PIT)|PIT]]** ma dwie stawki: 12% i 32% od nadwyżki ponad 120 000 zł. Gdy w recesji czyjś dochód spada poniżej progu, jego podatek spada bardziej niż proporcjonalnie.
 
@@ -165,6 +167,7 @@ Jan Tinbergen sformułował **[[Reguła Tinbergena|regułę]]**: żeby osiągną
 ## Przykłady narzędzi i celów
 
 **[[Płaca minimalna|Płaca minimalna]]** chroni najsłabiej zarabiających, ale ustalona za wysoko może zwiększać bezrobocie, bo narusza **[[Równowaga rynkowa|równowagę rynkową]]**. **[[Plan Marshalla|Plan Marshalla]]** (od 1948 roku) był przykładem pomocy zewnętrznej, która miała przyspieszyć **[[Wzrost gospodarczy|wzrost]]** w Europie. Integracja europejska – zob. **[[Unia Europejska – historia|historię UE]]** – to też strategia rozwoju. Teorię rynku, na której opierają się te narzędzia, zbudował m.in. **[[Marshall Alfred|Alfred Marshall]]**.
+::wykres cena typ=min | Płaca minimalna powyżej równowagi na rynku pracy: podaż pracy przewyższa popyt – bezrobocie.
 
 > Przykład: rząd chce obniżyć inflację i jednocześnie zmniejszyć bezrobocie. Stopą procentową (jedno narzędzie) może walczyć z inflacją, ale bezrobocie wymaga drugiego narzędzia – np. szkoleń i ulg za zatrudnienie.
 

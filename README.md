@@ -351,6 +351,23 @@ najsłabsze najpierw) – także w nauce talii. API `/api/fiszki/opanowanie`, `/
 - Limity konta: 1000 notatek i brudnopisów, łącznie 25 MB treści z rysunkami, 5000 podkreśleń.
 - Tabele `notes`, `stars`, `highlights`; API `/api/notatki`, `/api/notatki/[id]`, `/api/notatki/brudnopis`, `/api/gwiazdki`, `/api/podkreslenia`.
 
+## Wykresy (Podręcznik, kurs, „Zrozumienie”, fiszki, tabela pojęć, mapa myśli)
+
+- **Rysunki SVG** (`app/components/book-figure.tsx`, bez biblioteki wykresów): przesunięcia krzywych (popyt–podaż, AD–AS, IS–LM, rynek pracy,
+  pieniądza, walutowy, funduszy) i rysunki stałe – koszty, nadwyżki, podatek, cena maks./min., elastyczność, krzywe obojętności,
+  monopol, oligopol, konkurencja doskonała, LRAC, KMP, Laffer, Lorenz, Phillips, Beveridge, cykl koniunkturalny, krzywa dochodowości,
+  Solow, krzyż keynesowski, Engel, krzywa J, procent składany, portfel, CAPM (SML), opcje, stawki podatkowe, cło, próg rentowności,
+  NPV/IRR, WACC, cykl życia produktu, TP/AP/MP, Maslow, Okun, krzywa doświadczenia, hipoteza cyklu życia, piramidy wieku, przejście
+  demograficzne, macierze (BCG, Ansoff, GE, SWOT, dylemat więźnia), siatka Blake'a–Mouton.
+- **Wykresy z danych** (`data/wykresy/*.json`): dzietność, obciążenie osobami starszymi, inflacja HICP, bezrobocie, dług publiczny,
+  wzrost PKB, dalsze trwanie życia 65-latka (Polska i UE-27), piramida wieku Polski – pobierane z API Eurostatu
+  (`python3 -I tools/wykresy/pobierz.py`); w podpisie źródło z adresem zapytania i datą pobrania.
+- **Hasło → rysunek** (`tools/nauka/wykresy_hasel.txt`, `python3 -I tools/nauka/build_figures.py [--wstaw]` → `data/nauka/figures.json`):
+  `--wstaw` dodaje `::wykres` do Podręcznika pod akapitem z pierwszym odnośnikiem do hasła (najpierw w dziale tematu hasła, nie w
+  „Na marginesie”, najwyżej 3 rysunki na rozdział). Rysunek hasła pokazują: karta „Nowe hasło” w kursie, karty „Zrozumienie” mówiące
+  o powiązanym haśle, odwrót fiszki, tabela pojęć i mapa myśli (ładowany dopiero, gdy jest co pokazać). Rysunków nie ma w treści
+  zadań testowych ani zadań i esejów.
+
 ## Podręcznik (Nauka → Podręcznik, `/nauka/podrecznik`)
 
 Ręcznie pisane artykuły prostym językiem: dla każdego działu przegląd „W skrócie” i rozdziały – jeden na każdą zwykłą lekcję kursu

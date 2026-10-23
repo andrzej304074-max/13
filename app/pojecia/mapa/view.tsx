@@ -1,5 +1,6 @@
 "use client";
 
+import { ItemFigure } from "@/app/components/item-figure";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { AddToDeck } from "@/app/fiszki/add-to-deck";
@@ -236,6 +237,7 @@ function MindMapPage({ rows, topics, kinds, mapa }: { rows: Haslo[]; topics: Top
           </div>
           <p className="concept-def">{c.d}</p>
           {c.w && <pre className="formula">{c.w}</pre>}
+          <ItemFigure f={c.f} compact />
           <div className="row" style={{ flexWrap: "wrap", gap: 8 }}>
             <Link className="btn small secondary" href={`/pojecia?q=${encodeURIComponent(c.t)}`}>🔎 W tabeli pojęć</Link>
             {chapter && <Link className="btn small secondary" href={`/nauka/podrecznik/${chapter[0]}/${chapter[1]}`}>📖 W Podręczniku</Link>}

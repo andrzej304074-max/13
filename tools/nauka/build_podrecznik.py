@@ -89,8 +89,17 @@ FIGS = {
     "koszty": {}, "laffer": {}, "lorenz": {}, "przejscie": {}, "blake": {}, "monopol": {},
     "phillips": {"dlugi": {"1"}}, "kmp": {"punkty": {"1"}},
     "piramida": {"typ": {"progresywna", "ustabilizowana", "regresywna"}},
-    "macierz": {"preset": {"bcg", "ansoff", "ge", "swot"}},
+    "macierz": {"preset": {"bcg", "ansoff", "ge", "swot", "wiezien"}},
+    # H5: nowe rysunki i wykresy z danych (data/wykresy – tools/wykresy/pobierz.py)
+    "nadwyzka": {}, "podatek": {}, "elastycznosc": {}, "obojetnosc": {}, "oligopol": {}, "krzywaj": {}, "cykl": {},
+    "solow": {}, "engel": {}, "konkurencja": {}, "lrac": {},
+    "procent": {}, "portfel": {}, "sml": {}, "stawki": {}, "clo": {}, "bep": {}, "npv": {}, "wacc": {}, "zycie": {},
+    "produkt": {}, "maslow": {}, "okun": {}, "uczenie": {}, "cyklzycia": {}, "opcja": {"typ": {"straddle"}},
+    "cena": {"typ": {"max", "min"}}, "beveridge": {"przesun": {"1"}}, "keynes": {"wzrost": {"1"}},
+    "dochodowosc": {"typ": {"normalna", "odwrocona", "obie"}},
+    "seria": {"id": {os.path.basename(p)[:-5] for p in glob.glob(os.path.join(ROOT, "data", "wykresy", "*.json")) if not p.endswith("piramida-pl.json")}},
 }
+FIGS["piramida"]["dane"] = {"pl"}
 
 
 def figure(spec, ctx):

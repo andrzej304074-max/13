@@ -47,6 +47,7 @@ Twój starszy brat może trafić na rynek pracy w dobrym roku, gdy firmy szukaj�
 ## Cykl w czterech krokach
 
 **[[Cykl koniunkturalny|Cykl koniunkturalny]]** to powtarzające się wahania aktywności gospodarczej wokół długookresowego trendu. Wyobraź sobie linię, która generalnie idzie w górę (gospodarka z czasem rośnie), ale faluje: raz nad trendem, raz pod nim.
+::wykres cykl | Cykl koniunkturalny: PKB faluje wokół trendu – szczyt, recesja, dno, ożywienie.
 
 Fazy: ekspansja (ożywienie i rozkwit), szczyt (górny punkt zwrotny), recesja, dno (dolny punkt zwrotny).
 
@@ -123,6 +124,7 @@ Im dłużej trwa dobra koniunktura, tym więcej jest finansowania typu Ponziego.
 ## Jak mierzyć nastroje
 
 **[[Badania koniunktury GUS i indeks PMI|GUS co miesiąc bada nastroje]]** przedsiębiorców w przetwórstwie, budownictwie, handlu i usługach oraz nastroje konsumentów. Bardzo popularny jest też **indeks PMI**: ankieta wśród menedżerów zakupów. Wynik powyżej 50 punktów to sygnał ekspansji, poniżej 50 – kurczenia się przemysłu.
+::wykres cykl | Wskaźniki koniunktury (np. PMI) sygnalizują fazę cyklu wcześniej niż PKB.
 
 ## Teorie – przegląd
 
@@ -137,6 +139,7 @@ Im dłużej trwa dobra koniunktura, tym więcej jest finansowania typu Ponziego.
 ## Cykl życia produktu
 
 Raymond Vernon opisał **[[Teoria cyklu życia produktu w handlu (Vernon)|cykl życia produktu w handlu]]**. Nowy produkt powstaje w kraju innowacyjnym i jest stamtąd eksportowany. Gdy dojrzewa i staje się standardowy, produkcja przenosi się do krajów o niższych kosztach – a kraj wynalazca w końcu go importuje. Tak było z telewizorami czy elektroniką.
+::wykres zycie | Vernon: produkcję przenosi się za granicę w fazie dojrzałości i spadku.
 
 > Zapamiętaj: PMI > 50 – ekspansja, PMI < 50 – kurczenie się. Minsky: hedge → spekulacyjne → Ponzi.
 

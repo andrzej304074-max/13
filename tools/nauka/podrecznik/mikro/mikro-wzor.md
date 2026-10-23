@@ -311,6 +311,7 @@ Zadanie: popyt Q = 100 − 2P, podaż Q = 20 + 2P. Ile wynosi cena równowagi? T
 ## Liczenie równowagi
 
 **[[Równowaga rynkowa – obliczanie|Równowagę]]** znajdujesz, przyrównując popyt do podaży:
+::wykres sd | Równowaga tam, gdzie Qd = Qs – przecięcie krzywych popytu i podaży.
 
 $ Qd(P) = Qs(P)
 
@@ -319,6 +320,7 @@ $ Qd(P) = Qs(P)
 ## Elastyczności – wzory w praktyce
 
 **[[Elastyczność cenowa popytu – wzór|Elastyczność punktowa]]** dla liniowego popytu Q = a − bP wynosi:
+::wykres elastycznosc | Elastyczność = % zmiany ilości / % zmiany ceny – płaska krzywa to wysoka elastyczność.
 
 $ Ep = −b · P / Q
 
@@ -329,6 +331,7 @@ $ Ep = −b · P / Q
 ## Podatek na producentów
 
 **[[Podatek na producentów – nowa równowaga|Podatek kwotowy]]** t przesuwa krzywą podaży w górę o t. W funkcji podaży cenę P zastępujesz przez P − t.
+::wykres podatek | Podatek na producentów przesuwa podaż w górę o kwotę podatku (S → S + t).
 
 > Przykład: podatek 6 zł od sztuki. Nowa podaż: Qs = −20 + 4(P − 6) = −44 + 4P. Równowaga: 100 − 2P = −44 + 4P, więc P = 24 zł, Q = 52.
 > Kupujący płacą 24 zł (o 4 zł więcej), sprzedający dostają na rękę 18 zł (o 2 zł mniej). Wpływy z podatku = 6 · 52 = 312 zł. Konsumenci ponoszą 4 · 52 = 208 zł ciężaru, producenci 2 · 52 = 104 zł.
@@ -358,6 +361,7 @@ Przy liniowych krzywych nadwyżki i strata martwa to pola trójkątów. Wystarcz
 ## Nadwyżki jako trójkąty
 
 Przy liniowych krzywych **[[Nadwyżka konsumenta i producenta – wzór|nadwyżki]]** to pola trójkątów:
+::wykres nadwyzka | Obie nadwyżki to trójkąty: ½ · podstawa · wysokość.
 
 $ NK = ½ · Q* · (Pmax − P*);  NP = ½ · Q* · (P* − Pmin)
 
@@ -378,6 +382,7 @@ Utarg jest największy, gdy MR = 0, czyli przy Q = a/(2b) – w połowie krzywej
 ## Zależności kosztów
 
 **[[Koszty – zależności|Koszty]]** łączą się w prosty system:
+::wykres koszty | Zależności między krzywymi: MC przecina AVC i ATC w ich minimach.
 
 $ TC = FC + VC;  ATC = AFC + AVC;  MC = ΔTC/ΔQ
 
@@ -386,6 +391,7 @@ Gdy koszt krańcowy jest stały, VC = MC · Q.
 ## Monopol w liczbach
 
 **[[Maksymalizacja zysku – monopol|Monopolista]]**: ilość z MR = MC, cena z krzywej popytu, zysk = (P − ATC) · Q.
+::wykres monopol | Reguła MR = MC wyznacza ilość, a krzywa popytu – cenę monopolisty.
 
 ## Zysk ekonomiczny
 
@@ -438,6 +444,7 @@ $ P = MC / (1 + 1/Ed)
 ## Optimum konsumenta – podsumowanie
 
 **[[Równowaga konsumenta – wzory|Równowaga konsumenta]]** ma trzy równoważne zapisy:
+::wykres obojetnosc | W optimum MUx/Px = MUy/Py – nachylenia linii budżetu i krzywej obojętności są równe.
 
 $ MUx/Px = MUy/Py;  MRS = Px/Py;  Px·X + Py·Y = I
 

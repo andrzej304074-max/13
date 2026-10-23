@@ -76,6 +76,7 @@ Ekonomiczne tło marketingu to [[Preferencje konsumenta – założenia|preferen
 ## Co się stało z płytami CD?
 
 Twoi rodzice pewnie mają półkę z płytami CD. W latach 90. sprzedaż rosła błyskawicznie, na początku XXI wieku się ustabilizowała, a potem przyszły pliki MP3 i streaming. To typowy **[[Cykl życia produktu|cykl życia produktu]]**: wprowadzenie (mała sprzedaż, wysokie koszty), wzrost (sprzedaż szybko rośnie, wchodzą konkurenci), dojrzałość (sprzedaż się stabilizuje, walka cenowa) i schyłek. Koncepcję spopularyzował **[[Levitt Theodore|Theodore Levitt]]** w 1965 roku.
+::wykres zycie | Cykl życia produktu: wprowadzenie, wzrost, dojrzałość, spadek.
 
 Podobną logikę w handlu międzynarodowym opisuje **[[Teoria cyklu życia produktu w handlu (Vernon)|teoria Vernona]]**: produkcja dojrzałych wyrobów przenosi się do krajów o niższych kosztach.
 

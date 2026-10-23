@@ -40,6 +40,7 @@ Ekonomiści patrzą, ile ludzie są gotowi zapłacić za mniejsze ryzyko, na prz
 ## Dwie stawki podatku
 
 Zarabiasz 5000 zł i płacisz 600 zł podatku. Twoja stawka przeciętna to 12%. Ale ile zapłacisz od _kolejnej_ złotówki? To stawka krańcowa. **[[Krańcowa i przeciętna stawka podatkowa|Krańcowa i przeciętna stawka podatkowa]]** to dwie różne miary:
+::wykres stawki | Stawka przeciętna = podatek / dochód; w progresji rośnie wraz z dochodem.
 
 $ t_przeciętna = T / Y;  t_krańcowa = ΔT / ΔY
 

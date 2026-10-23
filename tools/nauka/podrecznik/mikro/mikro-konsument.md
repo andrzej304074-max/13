@@ -52,6 +52,7 @@ $ MUx / Px = MUy / Py
 ## Krzywe obojętności
 
 Zamiast liczyć „jednostki radości”, możemy narysować **[[Krzywa obojętności|krzywą obojętności]]** – zbiór koszyków, które cieszą cię tak samo. Na przykład 2 soki i 4 batoniki albo 4 soki i 2 batoniki. Krzywe opadają, są wypukłe do początku układu i nigdy się nie przecinają. Im wyżej leży krzywa, tym większa użyteczność. Wszystkie krzywe danej osoby tworzą **[[Mapa obojętności|mapę obojętności]]** – zapis jej gustu.
+::wykres obojetnosc | Mapa obojętności: U₁ < U₂ < U₃; konsument wybiera najwyższą osiągalną krzywą.
 
 ## Kurs wymiany w głowie
 
@@ -84,6 +85,7 @@ Pamiętaj z poprzedniej lekcji, że nie każde dobro na osi musi cieszyć. Gdy j
 ## Ścieżki wyborów
 
 Wyobraź sobie, że co miesiąc dostajesz większe kieszonkowe. Za każdym razem wybierasz najlepszy koszyk. Linia łącząca te wybory to **[[Ścieżka dochód–konsumpcja i krzywa Engla|ścieżka dochód–konsumpcja]]**. Gdy narysujemy zależność zakupów jednego dobra od dochodu, dostaniemy krzywą Engla. Dla dóbr normalnych rośnie, dla dóbr niższego rzędu opada.
+::wykres engel | Krzywe Engla: wydatki na dobra podstawowe rosną wolniej niż dochód, na luksusowe – szybciej.
 
 Gdy zamiast dochodu zmienia się cena jednego dobra, optima układają się w **[[Ścieżka cena–konsumpcja|ścieżkę cena–konsumpcja]]**. To z niej wyprowadza się indywidualną krzywą popytu.
 
@@ -139,6 +141,7 @@ Czy wolisz zagrać, czy dostać pewne 50 zł? Osoba z awersją do ryzyka wybierz
 ## Dziś czy jutro?
 
 Oszczędzanie to też wybór konsumenta – między konsumpcją dziś a w przyszłości. W **[[Wybór międzyokresowy (oszczędności a stopa procentowa)|wyborze międzyokresowym]]** cenę „jutra” wyznacza stopa procentowa. Gdy rośnie, przyszła konsumpcja tanieje i opłaca się oszczędzać (efekt substytucyjny). Ale oszczędzający staje się bogatszy, więc może wydać więcej już dziś (efekt dochodowy). Dlatego wpływ stopy procentowej na oszczędności jest niejednoznaczny.
+::wykres fundusze | Rynek funduszy pożyczkowych: oszczędności (S) i inwestycje (D) wyznaczają stopę procentową.
 
 > Przykład: ubezpieczenie roweru za 2000 zł kosztuje 150 zł rocznie, a szansa kradzieży to 5% (oczekiwana strata 100 zł). Osoba niechętna ryzyku zapłaci 150 zł, żeby nie martwić się stratą 2000 zł.
 

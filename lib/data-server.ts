@@ -3,9 +3,10 @@ import { brotliCompressSync, gzipSync, constants as zc } from "node:zlib";
 import { COURSE } from "@/data/nauka";
 import { oweCountByItem, oweStatsData } from "./owe-stats-data";
 import MAPA_JSON from "@/data/nauka/mapa.json";
+import type { FigSpec } from "./nauka-types";
 
 /** Hasło kursu w tabeli pojęć i fiszkach. */
-export interface Haslo { id: string; t: string; d: string; w: string | null; kind: string; topic: string; n: number }
+export interface Haslo { id: string; t: string; d: string; w: string | null; kind: string; topic: string; n: number; f?: FigSpec }
 
 export function hasla() {
   const owe = oweCountByItem();
@@ -16,7 +17,7 @@ export function hasla() {
     const it = COURSE.items[id];
     if (!it || it.kind === "zrozumienie" || seen.has(id)) continue;
     seen.add(id);
-    rows.push({ id, t: it.t, d: it.d, w: it.w ?? null, kind: it.kind, topic: it.topic, n: owe[id] ?? 0 });
+    rows.push({ id, t: it.t, d: it.d, w: it.w ?? null, kind: it.kind, topic: it.topic, n: owe[id] ?? 0, ...(it.f ? { f: it.f } : {}) });
   }
   return {
     rows,

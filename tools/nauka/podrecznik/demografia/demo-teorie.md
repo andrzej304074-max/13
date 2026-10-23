@@ -44,6 +44,7 @@ Z wykresu widać najważniejsze: przyrost naturalny jest największy wtedy, gdy 
 ## Gdy dzieci przestają być oczywistością
 
 Od lat 60. XX wieku w bogatych krajach dzietność spadła trwale poniżej 2,1 – poziomu, który zapewnia zastępowalność pokoleń. Dirk van de Kaa i Ron Lesthaeghe nazwali to w 1986 roku **[[Drugie przejście demograficzne|drugim przejściem demograficznym]]**. Tym razem przyczyną nie jest bieda, ale zmiana wartości: indywidualizm, samorealizacja, późniejsze śluby i rodzicielstwo, więcej związków nieformalnych.
+::wykres seria id=dzietnosc | Drugie przejście: dzietność trwale poniżej 2,1, późniejsze rodzicielstwo.
 
 > Uwaga: pierwsze przejście tłumaczymy spadkiem umieralności i rozwojem gospodarki, drugie – zmianą wartości. Na olimpiadzie łatwo je zamienić.
 
@@ -54,6 +55,7 @@ Zmienia się też to, na co umieramy. **[[Przejście epidemiologiczne i przejśc
 ## Okno, które otwiera się raz
 
 W trakcie przejścia zmienia się też wiek społeczeństwa. To **[[Przejście struktury wieku|przejście struktury wieku]]**: najpierw przybywa dzieci, potem rośnie udział osób w wieku produkcyjnym, a na końcu przychodzi szybkie starzenie się. Środkowa faza to okno demograficzne – dużo pracujących i mało osób na utrzymaniu. Gospodarka dostaje wtedy „dywidendę demograficzną”.
+::wykres piramida typ=regresywna | Po przejściu demograficznym piramida zmienia się w urnę – mniej dzieci, więcej seniorów.
 
 Może dostać i drugą. **[[Druga dywidenda demograficzna|Druga dywidenda]]** (Ronald Lee, Andrew Mason) pojawia się, gdy ludzie oszczędzają na starość, a te oszczędności stają się kapitałem, który podnosi wydajność pracy. Warunek: emerytury muszą być choć częściowo kapitałowe.
 
@@ -72,10 +74,12 @@ Brzmi to chłodno, ale ekonomiści pytają właśnie tak: co sprawia, że rodzin
 ## Pułapka sprzed epoki maszyn
 
 Pierwszą odpowiedź dał Thomas Malthus. Opisał **[[Pułapka maltuzjańska|pułapkę maltuzjańską]]**: w gospodarce przedprzemysłowej każdy wzrost produkcji żywności zwiększa liczbę ludności, aż dochód na osobę wraca do minimum egzystencji. Bogactwo zamieniało się w ludzi, a nie w wyższy poziom życia. Pułapkę przełamała rewolucja przemysłowa – postęp techniczny zaczął wyprzedzać przyrost ludności.
+::wykres przejscie | Przed przejściem demograficznym wysokie urodzenia równoważą wysokie zgony.
 
 ## Ile kosztuje godzina mamy
 
 **[[Ekonomiczna teoria płodności (G. Becker)|Gary Becker]]** potraktował dzieci jak „dobro trwałe”: rodzice wybierają i ich liczbę, i „jakość” – wykształcenie i zdrowie. Gdy płace kobiet rosną, rośnie koszt alternatywny wychowania, bo każdy rok poza pracą kosztuje więcej. Jednocześnie bardziej opłaca się inwestować w edukację. Wynik: mniej dzieci, ale lepiej wykształconych.
+::wykres seria id=dzietnosc | Wyższy koszt alternatywny czasu rodziców (płace, edukacja kobiet) wiąże się z niższą dzietnością.
 
 > Przykład: mama zarabia 6000 zł miesięcznie. Rok przerwy w pracy to 72 000 zł utraconego dochodu – to część „ceny” dziecka, której nie widać w sklepie.
 
@@ -117,6 +121,7 @@ Gdy dzietność spadnie bardzo nisko, zaczyna się sama podtrzymywać. Wolfgang 
 - **demograficznym** – mniej dzieci dziś to mniej matek jutro;
 - **socjologicznym** – kolejne pokolenia uznają małą rodzinę za normę;
 - **ekonomicznym** – aspiracje rosną szybciej niż dochody.
+::wykres seria id=dzietnosc | Dzietność poniżej 1,5 przez wiele lat – trudno wrócić do wyższego poziomu.
 
 > Przykład: przy dzietności 1,3 każde pokolenie jest o ok. 38% mniejsze od poprzedniego (1,3 / 2,1 ≈ 0,62). Po dwóch pokoleniach liczba urodzeń spada do ok. 38% wyjściowej (0,62 · 0,62 ≈ 0,38).
 

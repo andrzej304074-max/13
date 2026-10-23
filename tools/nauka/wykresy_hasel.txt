@@ -1,0 +1,213 @@
+# Hasło (tytuł jak w linku [[…]]) → rysunek: „rodzaj opcje | podpis”. Używa tools/nauka/build_figures.py
+# (rysunek pod pierwszym akapitem, który linkuje hasło w Podręczniku, i przy haśle w kursie, fiszkach i tabeli pojęć).
+Popyt = sd | Krzywa popytu (D) opada: im niższa cena, tym większa wielkość popytu; podaż (S) rośnie z ceną.
+Prawo popytu = sd | Prawo popytu: ruch wzdłuż krzywej D – niższa cena, większa kupowana ilość.
+Podaż = sd | Krzywa podaży (S) rośnie: wyższa cena zachęca producentów do większej sprzedaży.
+Prawo podaży = sd | Prawo podaży: ruch wzdłuż krzywej S – wyższa cena, większa oferowana ilość.
+Wielkość popytu a popyt = sd D=+1 | Zmiana popytu to przesunięcie całej krzywej (D → D₁), a nie ruch po niej.
+Czynniki kształtujące popyt (determinanty popytu) = sd D=+1 | Wzrost dochodów (dobro normalne) przesuwa popyt w prawo: rosną cena i ilość.
+Czynniki kształtujące podaż (determinanty podaży) = sd S=-1 | Wzrost kosztów produkcji przesuwa podaż w lewo: cena rośnie, ilość spada.
+Równowaga rynkowa – obliczanie = sd | Równowaga tam, gdzie Qd = Qs – przecięcie krzywych popytu i podaży.
+Analiza zmian równowagi – trzy etapy (statyka porównawcza) = sd D=+1 | Statyka porównawcza: która krzywa się przesuwa, w którą stronę, jak zmienia się równowaga.
+Nadwyżka (rynkowa) = cena typ=min | Cena powyżej równowagi: podaż przewyższa popyt – powstaje nadwyżka.
+Nadwyżka konsumenta = nadwyzka | Nadwyżka konsumenta: pole pod krzywą popytu, a nad ceną.
+Nadwyżka producenta = nadwyzka | Nadwyżka producenta: pole nad krzywą podaży, a pod ceną.
+Nadwyżka konsumenta i producenta – wzór = nadwyzka | Obie nadwyżki to trójkąty: ½ · podstawa · wysokość.
+Nadwyżka całkowita i efektywność rynku (planista społeczny) = nadwyzka | Nadwyżka całkowita (suma obu pól) jest największa w równowadze rynkowej.
+Cena maksymalna = cena typ=max | Cena maksymalna poniżej równowagi: chętnych jest więcej niż towaru – niedobór i kolejki.
+Cena minimalna = cena typ=min | Cena minimalna powyżej równowagi: sprzedawcy oferują więcej, niż kupujący chcą kupić – nadwyżka.
+Płaca minimalna = cena typ=min | Płaca minimalna powyżej równowagi na rynku pracy: podaż pracy przewyższa popyt – bezrobocie.
+Podatek akcyzowy (akcyza) = podatek | Akcyza podnosi cenę płaconą przez kupujących i obniża cenę otrzymywaną przez sprzedających.
+Podatek na producentów – nowa równowaga = podatek | Podatek na producentów przesuwa podaż w górę o kwotę podatku (S → S + t).
+Rozkład ciężaru podatku (incydencja podatkowa) = podatek | Ciężar podatku dzielą kupujący (P_k wyżej) i sprzedający (P_s niżej) – więcej ponosi strona mniej elastyczna.
+Klin podatkowy = podatek | Klin podatkowy: różnica między ceną płaconą przez kupującego a ceną otrzymywaną przez sprzedającego.
+Podatek Pigou = podatek | Podatek Pigou podnosi koszt produkcji szkodliwej – rynek produkuje mniej.
+Elastyczność cenowa popytu = elastycznosc | Ta sama zmiana ceny: przy popycie elastycznym ilość zmienia się mocno, przy nieelastycznym – słabo.
+Czynniki elastyczności popytu = elastycznosc | Substytuty, udział w budżecie i czas sprawiają, że popyt jest bardziej płaski (elastyczny).
+Popyt doskonale elastyczny / doskonale nieelastyczny = elastycznosc | Im bardziej płaski popyt, tym bardziej elastyczny; pionowy – doskonale nieelastyczny.
+Elastyczność a utarg = elastycznosc | Przy popycie nieelastycznym podwyżka ceny zwiększa utarg, przy elastycznym – zmniejsza.
+Elastyczność cenowa popytu – wzór = elastycznosc | Elastyczność = % zmiany ilości / % zmiany ceny – płaska krzywa to wysoka elastyczność.
+Krzywa obojętności = obojetnosc | Krzywe obojętności: każda łączy koszyki dające tę samą użyteczność; dalej od początku – wyższa.
+Mapa obojętności = obojetnosc | Mapa obojętności: U₁ < U₂ < U₃; konsument wybiera najwyższą osiągalną krzywą.
+Linia ograniczenia budżetowego = obojetnosc | Linia budżetu: wszystkie koszyki, na które stać konsumenta przy danym dochodzie i cenach.
+Równowaga konsumenta (II prawo Gossena) = obojetnosc | Optimum konsumenta E: linia budżetu styczna do najwyższej osiągalnej krzywej obojętności.
+Równowaga konsumenta – wzory = obojetnosc | W optimum MUx/Px = MUy/Py – nachylenia linii budżetu i krzywej obojętności są równe.
+Oligopol = oligopol | Model Sweezy'ego: konkurenci idą za obniżką ceny, a nie za podwyżką – popyt się załamuje przy P*.
+Załamana krzywa popytu (model Sweezy’ego) = oligopol | Luka w MR: koszt krańcowy może się zmieniać, a cena zostaje na poziomie P* – sztywność cen.
+Monopol = monopol | Monopol produkuje mniej (Qₘ, gdzie MR = MC) i drożej (Pₘ) niż rynek konkurencyjny – trójkąt to strata dobrobytu.
+Maksymalizacja zysku – monopol = monopol | Reguła MR = MC wyznacza ilość, a krzywa popytu – cenę monopolisty.
+Monopol naturalny = lrac | Monopol naturalny: przy dużych korzyściach skali jedna firma produkuje najtaniej.
+Konkurencja doskonała = konkurencja | Firma w konkurencji doskonałej przyjmuje cenę rynkową i produkuje tam, gdzie P = MC.
+Krzywa podaży firmy doskonale konkurencyjnej = konkurencja | Krzywa podaży firmy to część krzywej MC powyżej minimum AVC.
+Wejście i wyjście z rynku w długim okresie = konkurencja | Zysk ekonomiczny przyciąga nowe firmy; w długim okresie cena spada do minimum ATC.
+Korzyści skali (ekonomia skali) = lrac | Korzyści skali: przy większej produkcji koszt przeciętny maleje (lewa część LRAC).
+Krótkookresowe i długookresowe krzywe kosztów = lrac | LRAC to obwiednia krzywych krótkookresowych – każda dla innej wielkości zakładu.
+Przychody (efekty) skali = lrac | Rosnące przychody skali – LRAC maleje; malejące – LRAC rośnie.
+Koszt krańcowy (MC) = koszty | Koszt krańcowy MC przecina AVC i ATC w ich minimach.
+Koszt całkowity (TC) i przeciętny koszt całkowity (ATC) = koszty | Przeciętny koszt całkowity ATC ma kształt litery U.
+Koszty stałe (FC) = koszty | Przeciętny koszt stały AFC maleje bez końca – koszt stały rozkłada się na więcej sztuk.
+Koszty zmienne (VC) = koszty | Przeciętny koszt zmienny AVC najpierw maleje, potem rośnie (prawo malejących przychodów).
+Koszty – zależności = koszty | Zależności między krzywymi: MC przecina AVC i ATC w ich minimach.
+Krzywa możliwości produkcyjnych (granica możliwości produkcyjnych) = kmp punkty=1 | A – efektywnie, B – zasoby niewykorzystane, C – nieosiągalne bez wzrostu.
+Koszt alternatywny (koszt utraconych możliwości) = kmp | Koszt alternatywny: więcej dobra X oznacza rezygnację z części dobra Y – nachylenie KMP.
+Ścieżka dochód–konsumpcja i krzywa Engla = engel | Krzywe Engla: wydatki na dobra podstawowe rosną wolniej niż dochód, na luksusowe – szybciej.
+Elastyczność dochodowa popytu = engel | Dobra luksusowe: elastyczność dochodowa > 1; podstawowe: 0–1; niższego rzędu: < 0.
+Krzywa Laffera = laffer | Krzywa Laffera: powyżej stawki t* podwyżka podatku zmniejsza wpływy.
+Ekonomia podaży (supply-side economics) = laffer | Argument ekonomii podaży: zbyt wysokie stawki zniechęcają do pracy i zmniejszają wpływy.
+Współczynnik Giniego i krzywa Lorenza = lorenz | Im dalej krzywa Lorenza od przekątnej, tym większe nierówności; Gini = A / (A + B).
+Współczynnik Giniego – wzór = lorenz | Gini = pole A / (A + B) – od 0 (równość) do 1 (jedna osoba ma wszystko).
+Krzywa Phillipsa = phillips dlugi=1 | Krótkookresowa krzywa Phillipsa: niższe bezrobocie przy wyższej inflacji; w długim okresie pionowa (u*).
+Naturalna stopa bezrobocia = phillips dlugi=1 | W długim okresie krzywa Phillipsa jest pionowa przy naturalnej stopie bezrobocia u*.
+Inflacja oczekiwana i nieoczekiwana = phillips dlugi=1 | Gdy inflacja przestaje zaskakiwać, bezrobocie wraca do u* – zostaje tylko wyższa inflacja.
+Krzywa Beveridge’a = beveridge przesun=1 | Krzywa Beveridge'a; jej przesunięcie na zewnątrz (BC₂) oznacza gorsze dopasowanie na rynku pracy.
+Bezrobocie strukturalne = beveridge przesun=1 | Bezrobocie strukturalne przesuwa krzywą Beveridge'a na zewnątrz: dużo wakatów i dużo bezrobotnych naraz.
+Cykl koniunkturalny = cykl | Cykl koniunkturalny: PKB faluje wokół trendu – szczyt, recesja, dno, ożywienie.
+Cykle koniunkturalne – typy = cykl | Fazy cyklu: ekspansja do szczytu, recesja do dna i kolejne ożywienie.
+Trzy fakty o wahaniach koniunktury = cykl | Wahania są nieregularne, wiele zmiennych zmienia się razem, a spadkowi produkcji towarzyszy wzrost bezrobocia.
+Teorie cyklu koniunkturalnego = cykl | Teorie cyklu tłumaczą, skąd biorą się odchylenia PKB od trendu.
+Produkt potencjalny i luka PKB (popytowa) = cykl | Luka PKB: różnica między rzeczywistym PKB a trendem (produktem potencjalnym).
+Krzywa dochodowości = dochodowosc | Krzywa dochodowości: zwykle rośnie z terminem; odwrócona często zapowiada recesję.
+Rentowność do wykupu (YTM) = dochodowosc typ=normalna | Rentowność obligacji o różnych terminach tworzy krzywą dochodowości.
+Model Solowa = solow | Stan ustalony k*: oszczędności równoważą zużycie kapitału i przyrost ludności.
+Rachunek wzrostu i łączna produktywność czynników (reszta Solowa) = solow | W modelu Solowa trwały wzrost dochodu na osobę daje tylko postęp techniczny.
+Wzrost liczby ludności a wzrost gospodarczy = solow | Szybszy przyrost ludności (wyższe n) obniża kapitał na pracownika w stanie ustalonym.
+Mnożnik (inwestycyjny, wydatkowy) = keynes wzrost=1 | Wzrost wydatków autonomicznych podnosi dochód o więcej – o wielokrotność (mnożnik).
+Równowaga w modelu mnożnikowym = keynes | Równowaga tam, gdzie wydatki AE równają się dochodowi Y (przecięcie z linią 45°).
+Funkcja konsumpcji (keynesowska) = keynes | Konsumpcja rośnie z dochodem, ale wolniej (krańcowa skłonność do konsumpcji < 1).
+Mnożnik podatkowy = keynes wzrost=1 | Obniżka podatków zwiększa wydatki i dochód – efekt mnożnikowy, choć słabszy niż przy zakupach rządowych.
+Warunek Marshalla–Lernera i krzywa J = krzywaj | Krzywa J: po deprecjacji saldo najpierw się pogarsza, potem – gdy ilości się dostosują – poprawia.
+Aprecjacja i deprecjacja = waluta D=+1 | Wzrost popytu na euro: złoty traci na wartości (deprecjacja) – kurs PLN/EUR rośnie.
+Kurs walutowy = waluta | Kurs walutowy wyznacza popyt i podaż waluty na rynku walutowym.
+System kursu płynnego i stałego = waluta D=+1 | Przy kursie płynnym zmiana popytu na walutę zmienia kurs; przy stałym bank centralny musi interweniować.
+Równowaga makroekonomiczna (model AD-AS) = adas | Model AD–AS: poziom cen i produkcja wyznaczone przez zagregowany popyt i podaż.
+Zagregowany popyt (AD) = adas AD=+1 | Wzrost zagregowanego popytu: krótkookresowo więcej produkcji i wyższe ceny.
+Zagregowana podaż (AS) = adas | Krótkookresowa podaż rośnie z cenami; długookresowa jest pionowa przy produkcie potencjalnym.
+Szok podażowy i popytowy = adas SRAS=-1 | Negatywny szok podażowy (np. droższa energia): stagflacja – mniej produkcji i wyższe ceny.
+Inflacja popytowa i kosztowa = adas AD=+1 | Inflacja popytowa: AD w prawo; kosztowa: SRAS w lewo.
+Nachylenie krzywej zagregowanego popytu (trzy efekty) = adas | AD opada: efekt bogactwa, stopy procentowej i kursu walutowego.
+Krzywa IS = islm | Krzywa IS: równowaga rynku dóbr – niższa stopa procentowa, wyższy dochód.
+Krzywa LM = islm | Krzywa LM: równowaga rynku pieniądza – wyższy dochód, wyższa stopa procentowa.
+Polityka fiskalna (budżetowa) = islm IS=+1 | Ekspansja fiskalna przesuwa IS w prawo: rośnie dochód i stopa procentowa (wypieranie).
+Popyt na pieniądz (preferencja płynności) = pieniadz | Popyt na pieniądz maleje ze stopą procentową; podaż ustala bank centralny.
+Podaż pieniądza (nominalna i realna) = pieniadz MS=+1 | Wzrost podaży pieniądza obniża stopę procentową.
+Popyt na pracę = praca | Popyt na pracę maleje z płacą realną; podaż pracy rośnie.
+Podaż pracy (krzywa zakrzywiona do tyłu) = praca | Podaż pracy rośnie z płacą (efekt substytucyjny), choć przy bardzo wysokich płacach może się zakrzywić.
+Wybór międzyokresowy (oszczędności a stopa procentowa) = fundusze | Rynek funduszy pożyczkowych: oszczędności (S) i inwestycje (D) wyznaczają stopę procentową.
+Naturalna (neutralna) stopa procentowa = fundusze | Stopa równowagi rynku funduszy pożyczkowych – przy pełnym wykorzystaniu mocy.
+Przejście (transformacja) demograficzne = przejscie | Przejście demograficzne: najpierw spadają zgony, potem urodzenia.
+Przejście struktury wieku = piramida typ=regresywna | Po przejściu demograficznym piramida zmienia się w urnę – mniej dzieci, więcej seniorów.
+Piramida wieku = piramida dane=pl | Piramida wieku Polski – najliczniejsze roczniki 35–49 lat, wąska podstawa.
+Starzenie się ludności i jego miary = seria id=obciazenie | Współczynnik obciążenia osobami starszymi rośnie – w Polsce szybciej niż w UE.
+Współczynnik obciążenia demograficznego = seria id=obciazenie | Na 100 osób w wieku produkcyjnym przypada coraz więcej osób 65+.
+Skutki starzenia się dla rynku pracy i finansów publicznych = seria id=obciazenie | Coraz mniej pracujących przypada na jednego seniora.
+Podwójne starzenie się ludności = piramida dane=pl | Rośnie liczba osób 80+ – wierzchołek piramidy się poszerza.
+Współczynnik dzietności (TFR) = seria id=dzietnosc | Dzietność w Polsce od lat poniżej poziomu zastępowalności pokoleń (ok. 2,1).
+Pułapka niskiej dzietności = seria id=dzietnosc | Dzietność poniżej 1,5 przez wiele lat – trudno wrócić do wyższego poziomu.
+Drugie przejście demograficzne = seria id=dzietnosc | Drugie przejście: dzietność trwale poniżej 2,1, późniejsze rodzicielstwo.
+Prognoza ludności GUS = piramida dane=pl | Dzisiejsza struktura wieku wyznacza przyszłe roczniki rodziców i emerytów.
+Inflacja = seria id=inflacja | Inflacja HICP w Polsce i UE – szok 2022 r. i powrót w pobliże celu.
+Inflacja i indeksy cen = seria id=inflacja | Roczna stopa zmian HICP – zharmonizowany indeks cen w UE.
+Koszty inflacji = seria id=inflacja | Wysoka i zmienna inflacja (2022–2023) to koszty: utrata wartości oszczędności, niepewność.
+Stopa bezrobocia = seria id=bezrobocie | Stopa bezrobocia BAEL w Polsce spadła poniżej średniej UE.
+Stopa bezrobocia i wskaźniki rynku pracy = seria id=bezrobocie | Bezrobocie według BAEL (definicja MOP) – porównywalne między krajami.
+Bezrobocie rejestrowane i BAEL = seria id=bezrobocie | Stopa bezrobocia BAEL (badanie ankietowe) – Polska na tle UE.
+Dług publiczny = seria id=dlug | Dług sektora finansów publicznych w relacji do PKB – Polska poniżej średniej UE, ale rośnie.
+Progi ostrożnościowe i konstytucyjny limit długu = seria id=dlug | Konstytucyjny limit 60% PKB (inna, krajowa definicja długu) a dług według definicji UE.
+Deficyt budżetowy i deficyt sektora finansów publicznych = seria id=dlug | Deficyty zwiększają dług – w latach 2020 i 2023–2025 widać wzrost relacji długu do PKB.
+Wzrost gospodarczy = seria id=pkb | Realny wzrost PKB: Polska rośnie szybciej niż UE (konwergencja), spadek tylko w 2020 r.
+Produkt krajowy brutto (PKB) = seria id=pkb | Realny PKB – roczne tempo wzrostu w Polsce i UE.
+PKB nominalny i realny = seria id=pkb | Wzrost realny – po odjęciu wpływu zmian cen.
+Macierz BCG = macierz preset=bcg | Macierz BCG: gwiazdy, dojne krowy, znaki zapytania i psy.
+Macierz Ansoffa (strategie rozwoju) = macierz preset=ansoff | Cztery strategie rozwoju: penetracja, rozwój rynku, rozwój produktu, dywersyfikacja.
+Analiza SWOT = macierz preset=swot | SWOT: mocne i słabe strony (wewnątrz), szanse i zagrożenia (z otoczenia).
+Blake Robert, Mouton Jane = blake | Siatka kierownicza Blake'a i Mouton: styl 9.9 – wysoka troska o ludzi i o zadania.
+# finanse, firma, zarządzanie, demografia (H5 – druga partia)
+Procent prosty i składany = procent | Procent składany: odsetki od odsetek – kapitał rośnie wykładniczo, prosty – liniowo.
+Wartość pieniądza w czasie = procent | 1000 zł dziś to po 30 latach na 10% rocznie ok. 17 450 zł (składany) – stąd dyskontowanie.
+Reguła 70 = procent | Reguła 70: przy 10% rocznie kapitał podwaja się mniej więcej co 7 lat.
+Wartość pieniądza w czasie – wzory = procent | FV = PV·(1 + r)ⁿ – wzrost wykładniczy.
+Dywersyfikacja portfela = portfel | Dywersyfikacja usuwa ryzyko specyficzne; ryzyko systematyczne zostaje.
+Nowoczesna teoria portfela (Markowitz) = portfel | Łączenie aktywów o niedoskonałej korelacji obniża ryzyko portfela.
+Ryzyko systematyczne i specyficzne = portfel | Ryzyko systematyczne (rynkowe) zostaje nawet w dużym portfelu.
+Model CAPM = sml | CAPM: wymagana stopa zwrotu rośnie liniowo z betą – linia SML.
+Opcja = opcja | Kupujący opcję call traci najwyżej premię, a zyskuje, gdy cena przekroczy K + premia.
+Strategie opcyjne: straddle i strangle = opcja typ=straddle | Straddle (call + put z tym samym K) zarabia na dużym ruchu ceny w dowolną stronę.
+Podatek progresywny, proporcjonalny (liniowy) i regresywny = stawki | Przeciętna stawka: progresywny rośnie z dochodem, liniowy jest stały, regresywny maleje.
+Stawka nominalna, przeciętna i krańcowa = stawki | Przy progresji stawka krańcowa jest wyższa od przeciętnej – przeciętna rośnie z dochodem.
+Krańcowa i przeciętna stawka podatkowa = stawki | Stawka przeciętna = podatek / dochód; w progresji rośnie wraz z dochodem.
+Skala podatkowa PIT = stawki | Skala podatkowa: przeciętna stawka rośnie z dochodem (kwota wolna i dwa progi).
+Cło = clo | Cło podnosi cenę krajową: rośnie produkcja krajowa, spada import; dwa trójkąty to strata dobrobytu.
+Skutki cła = clo | Skutki cła: wygrywają producenci krajowi i budżet, tracą konsumenci – i to więcej, niż tamci zyskują.
+Kontyngent (kwota importowa) = clo | Kwota importowa działa jak cło, ale renta trafia do posiadaczy licencji, a nie do budżetu.
+Cena światowa a korzyści z handlu (eksporter i importer) = clo | Kraj importujący przy cenie światowej kupuje więcej, niż sam produkuje.
+Protekcjonizm = clo | Ochrona rynku cłem: wyższa cena, mniejszy import, strata dobrobytu.
+Efekty kreacji i przesunięcia handlu = clo | Zniesienie cła w ugrupowaniu zwiększa handel (kreacja) albo przesuwa import od tańszych dostawców (przesunięcie).
+Próg rentowności (BEP) = bep | Próg rentowności: przy 2000 sztuk przychód pokrywa koszty stałe i zmienne.
+Próg rentowności – wzór = bep | BEP = koszty stałe / (cena − jednostkowy koszt zmienny) = 40 000 / 20 = 2000 szt.
+Marża pokrycia (marża brutto) = bep | Każda sztuka ponad próg rentowności daje zysk równy marży jednostkowej.
+Utarg (przychód) całkowity, przeciętny i krańcowy = bep | W konkurencji doskonałej utarg całkowity rośnie liniowo z ilością.
+Wartość bieżąca netto (NPV) = npv | NPV maleje ze stopą dyskontową; projekt opłaca się, gdy NPV > 0 przy koszcie kapitału.
+Wewnętrzna stopa zwrotu (IRR) i MIRR = npv | IRR to stopa dyskontowa, przy której NPV = 0.
+Struktura kapitału i teorie jej wyboru = wacc | Teoria kompromisu: umiarkowany dług obniża WACC, zbyt duży – podnosi.
+Średni ważony koszt kapitału (WACC) = wacc | WACC – średnia kosztu długu (po podatku) i kapitału własnego, ważona strukturą.
+Cykl życia produktu = zycie | Cykl życia produktu: wprowadzenie, wzrost, dojrzałość, spadek.
+Teoria cyklu życia produktu w handlu (Vernon) = zycie | Vernon: produkcję przenosi się za granicę w fazie dojrzałości i spadku.
+Produkt całkowity, przeciętny i krańcowy = produkt | Produkt krańcowy przecina przeciętny w jego maksimum; TP rośnie coraz wolniej.
+Prawo malejących przychodów = produkt | Prawo malejących przychodów: po pewnym punkcie każdy kolejny pracownik dodaje mniej (MP spada).
+Produkcja (funkcja produkcji) = produkt | Funkcja produkcji w krótkim okresie: więcej pracy przy stałym kapitale.
+Fazy (stadia) produkcji = produkt | Racjonalna faza produkcji: między maksimum AP a zerowym MP.
+Hierarchia potrzeb Maslowa = maslow | Maslow: potrzeby wyższego rzędu motywują, gdy zaspokojone są niższe.
+Prawo Okuna = okun | Prawo Okuna: wzrost PKB powyżej potencjału obniża bezrobocie (ok. 0,5 pp. na 1 pp.).
+Krzywa doświadczenia (uczenia się) = uczenie | Krzywa doświadczenia 80%: podwojenie skumulowanej produkcji obniża koszt o 20%.
+Hipoteza cyklu życia = cyklzycia | Modigliani: konsumpcja wygładzona przez całe życie – oszczędzamy w wieku produkcyjnym, wydajemy na emeryturze.
+Dylemat więźnia = macierz preset=wiezien | Dylemat więźnia: zdrada jest strategią dominującą, choć obaj woleliby współpracę.
+Równowaga Nasha = macierz preset=wiezien | Równowaga Nasha (−5/−5): żaden gracz nie zyska, zmieniając strategię sam.
+Strategia dominująca = macierz preset=wiezien | Zdrada daje więcej niezależnie od ruchu drugiego gracza – strategia dominująca.
+Model Keynesa (krzyż keynesowski) = keynes wzrost=1 | Krzyż keynesowski: wzrost wydatków przesuwa AE w górę i zwiększa dochód o mnożnik.
+Luka inflacyjna i deflacyjna = keynes | Luka deflacyjna: równowaga Y poniżej produktu potencjalnego – za mało wydatków.
+Paradoks zapobiegliwości (oszczędności) = keynes | Gdy wszyscy chcą oszczędzać więcej, AE spada, a z nim dochód – oszczędności nie rosną.
+Efekt substytucyjny i efekt dochodowy = obojetnosc | Zmiana ceny przesuwa optimum: efekt substytucyjny (wzdłuż krzywej) i dochodowy (na inną krzywą).
+Elastyczność wzdłuż liniowej krzywej popytu = elastycznosc | Na liniowej krzywej popytu elastyczność maleje od góry (elastyczny) do dołu (nieelastyczny).
+Paradoks rolnictwa (dobra nowina dla rolnictwa – zła dla rolników) = sd S=+1 | Urodzaj (S w prawo) przy nieelastycznym popycie mocno obniża cenę – przychód rolników spada.
+Konkurencja monopolistyczna = monopol | W krótkim okresie firma w konkurencji monopolistycznej działa jak mały monopolista (MR = MC).
+Polityka ekspansywna i restrykcyjna = adas AD=+1 | Polityka ekspansywna przesuwa AD w prawo: więcej produkcji, wyższe ceny.
+Automatyczne stabilizatory = cykl | Stabilizatory automatycznie łagodzą wahania wokół trendu (podatki i zasiłki).
+Recesja i depresja = cykl | Recesja – spadek PKB od szczytu do dna; depresja – głęboka i długa recesja.
+Luzowanie ilościowe (QE) = pieniadz MS=+1 | QE zwiększa podaż pieniądza i obniża stopy procentowe (także długoterminowe).
+Operacje otwartego rynku = pieniadz MS=+1 | Zakup papierów przez bank centralny zwiększa podaż pieniądza i obniża stopę procentową.
+Pułapka płynności = pieniadz | Przy stopach bliskich zera dodatkowy pieniądz nie obniża już stopy procentowej.
+Sekularna stagnacja = fundusze D=-1 | Mniejszy popyt na inwestycje (D w lewo) obniża naturalną stopę procentową.
+Wskaźnik decylowy (kwintylowy) = lorenz | Im większe nierówności, tym dalej krzywa Lorenza od linii równości.
+Zastępowalność pokoleń = seria id=dzietnosc | Do zastępowalności pokoleń potrzeba ok. 2,1 dziecka na kobietę – Polska jest daleko poniżej.
+Ekonomiczna teoria płodności (G. Becker) = seria id=dzietnosc | Wyższy koszt alternatywny czasu rodziców (płace, edukacja kobiet) wiąże się z niższą dzietnością.
+Polityka ludnościowa (demograficzna) = seria id=dzietnosc | Dzietność w Polsce mimo programów wsparcia rodzin pozostaje niska.
+Instrumenty polityki rodzinnej w Polsce = seria id=dzietnosc | Krótkotrwały wzrost dzietności po 2016 r. i ponowny spadek.
+Pułapka maltuzjańska = przejscie | Przed przejściem demograficznym wysokie urodzenia równoważą wysokie zgony.
+Eksplozja i implozja demograficzna = przejscie | Eksplozja – faza II przejścia (zgony spadają, urodzenia wysokie); implozja – urodzenia poniżej zgonów.
+Okno demograficzne = piramida dane=pl | Okno demograficzne: najliczniejsze roczniki w wieku produkcyjnym – w Polsce właśnie się zamyka.
+System repartycyjny (PAYG) a kapitałowy = seria id=obciazenie | W PAYG emerytury płacą pracujący – im więcej seniorów na pracującego, tym trudniej.
+System emerytalny w Polsce (od 1999 r.) = seria id=obciazenie | Rosnące obciążenie osobami starszymi obniża przyszłą stopę zastąpienia.
+Dynamika długu publicznego (r − g) i pułapka zadłużenia = seria id=dlug | Gdy stopa procentowa przewyższa tempo wzrostu (r > g), dług rośnie bez nadwyżek pierwotnych.
+Przeciętne dalsze trwanie życia i tablice trwania życia = seria id=dlugosc-zycia | 65-latek w Polsce przeżyje średnio jeszcze ok. 18–19 lat – mniej niż średnio w UE.
+Wiek emerytalny a długość życia = seria id=dlugosc-zycia | Dłuższe życie po 65. roku to dłuższa wypłata emerytury – argument za wyższym wiekiem emerytalnym.
+Ryzyko długowieczności i renta dożywotnia = seria id=dlugosc-zycia | Dalsze trwanie życia rośnie – renta dożywotnia chroni przed „przeżyciem” oszczędności.
+# trzecia partia – rozdziały bez rysunku
+Przewaga komparatywna (względna) = kmp | Przewaga komparatywna: każdy kraj specjalizuje się tam, gdzie ma niższy koszt alternatywny (nachylenie KMP).
+Przewaga absolutna = kmp | Przewaga absolutna: kraj o „dalszej” KMP wytwarza więcej obu dóbr – handel opłaca się mimo to.
+PKB – metoda wydatkowa = seria id=pkb | PKB = C + I + G + NX – tempo realnego wzrostu w Polsce i UE.
+Metody liczenia PKB = seria id=pkb | Trzy metody (produkcyjna, dochodowa, wydatkowa) dają ten sam PKB – jego realne tempo wzrostu.
+Inwestycje = fundusze | Inwestycje (popyt na fundusze) maleją ze stopą procentową.
+Szok asymetryczny = adas AD=-1 | Szok asymetryczny: spadek popytu tylko w jednym kraju unii walutowej – bez własnej polityki pieniężnej trudniej się bronić.
+Deficyt strukturalny i cykliczny = cykl | Deficyt cykliczny rośnie w recesji (dno) i maleje w ożywieniu; strukturalny zostaje.
+Korytarz stóp procentowych = pieniadz | Stopy NBP wyznaczają korytarz, w którym porusza się krótkoterminowa stopa rynkowa.
+Stopy procentowe NBP = pieniadz MS=-1 | Podwyżka stóp (mniej pieniądza w obiegu) podnosi stopę procentową rynku pieniężnego.
+Siła rynkowa i wskaźnik Lernera = monopol | Wskaźnik Lernera (P − MC)/P mierzy, jak wysoko ponad kosztem krańcowym firma ustala cenę.
+Warunek maksymalizacji zysku = konkurencja | Zysk jest największy, gdy MR = MC (w konkurencji doskonałej: P = MC).
+Próg zamknięcia (punkt zamknięcia) = koszty | Próg zamknięcia: cena poniżej minimum AVC – lepiej przerwać produkcję.
+Popyt pochodny (na czynniki wytwórcze) = praca | Popyt na pracę wynika z popytu na produkty – maleje z płacą realną.
+Wartość krańcowego produktu pracy (VMPL) i przychód z krańcowego produktu (MRPL) = praca | Firma zatrudnia, dopóki VMPL ≥ płaca – stąd opadająca krzywa popytu na pracę.
+Związki zawodowe a rynek pracy = cena typ=min | Płaca wynegocjowana powyżej równowagi działa jak cena minimalna – mniej etatów, więcej chętnych.
+Dobro niższego rzędu (podrzędne) = engel | Dobro niższego rzędu: powyżej pewnego dochodu wydatki na nie spadają.
+Metoda punktu środkowego (elastyczność łukowa) = elastycznosc | Elastyczność łukowa liczona od średnich – ta sama wartość niezależnie od kierunku zmiany.
+Badania koniunktury GUS i indeks PMI = cykl | Wskaźniki koniunktury (np. PMI) sygnalizują fazę cyklu wcześniej niż PKB.
+Teoria ilościowa pieniądza (równanie wymiany Fishera) = seria id=inflacja | M·V = P·Y: szybki wzrost pieniądza ponad produkcję kończy się inflacją (2021–2023).

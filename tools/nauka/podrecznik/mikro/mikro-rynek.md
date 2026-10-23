@@ -46,6 +46,7 @@ Zwykle im drożej, tym kupujemy mniej. To **[[Prawo popytu|prawo popytu]]**, a k
 ## Ruch czy przesunięcie?
 
 Oto rozróżnienie, które pojawia się na olimpiadzie najczęściej: **[[Wielkość popytu a popyt|wielkość popytu a popyt]]**. Zmiana ceny pączka zmienia _wielkość popytu_ – poruszamy się po krzywej. Zmiana czegoś innego (kieszonkowego, mody na zdrowe jedzenie, ceny drożdżówek obok) zmienia _popyt_ – cała krzywa się przesuwa.
+::wykres sd D=+1 | Zmiana popytu to przesunięcie całej krzywej (D → D₁), a nie ruch po niej.
 
 > Uwaga: zdanie „wzrost ceny zmniejszył popyt” jest nieprecyzyjne. Poprawnie: wzrost ceny zmniejszył **wielkość** popytu.
 
@@ -110,6 +111,7 @@ Ten rozdział zagląda pod maskę: dlaczego krzywe mają taki kształt i co je p
 ## Co przesuwa krzywe
 
 Krzywą popytu przesuwają **[[Czynniki kształtujące popyt (determinanty popytu)|determinanty popytu]]**: dochód, ceny dóbr pokrewnych (substytutów i dóbr komplementarnych), gusty, oczekiwania i liczba nabywców. Krzywą podaży – **[[Czynniki kształtujące podaż (determinanty podaży)|determinanty podaży]]**: koszty czynników produkcji, technika, oczekiwania producentów, liczba sprzedawców, podatki i dotacje, a w rolnictwie nawet pogoda.
+::wykres sd D=+1 | Wzrost dochodów (dobro normalne) przesuwa popyt w prawo: rosną cena i ilość.
 
 > Przykład: gdy tanieją telefony, rośnie popyt na etui – to dobra komplementarne. Gdy drożeje kawa, rośnie popyt na herbatę – to substytuty.
 
@@ -174,12 +176,14 @@ Na koniec zależność, która rozpaliła spory ekonomistów: **[[Krzywa Phillip
 ## Nadwyżka i niedobór
 
 Wyobraź sobie piekarnię, która ustawiła cenę bułki wyżej niż cena równowagi. Bułek jest dużo, kupujących mało – pod koniec dnia półki są pełne. To **[[Nadwyżka (rynkowa)|nadwyżka]]**: podaż przewyższa popyt. Piekarz szybko obniży cenę. A gdy cena jest za niska, chętnych jest więcej niż bułek i robi się kolejka. To **[[Niedobór (rynkowy)|niedobór]]**. Wtedy cena rośnie. Tak rynek sam wraca do równowagi.
+::wykres cena typ=min | Cena powyżej równowagi: podaż przewyższa popyt – powstaje nadwyżka.
 
 ## Ceny ustalane przez państwo
 
 Czasem państwo nie pozwala cenie się dopasować.
 
 **[[Cena maksymalna|Cena maksymalna]]** to górny limit. Działa tylko wtedy, gdy jest _niższa_ od ceny równowagi – i wtedy wywołuje niedobór. Skoro cena nie rozdziela towaru, robi to coś innego: kolejka, losowanie, kartki, znajomości albo czarny rynek. Starsi pamiętają to z PRL.
+::wykres cena typ=max | Cena maksymalna poniżej równowagi: chętnych jest więcej niż towaru – niedobór i kolejki.
 
 **[[Cena minimalna|Cena minimalna]]** to dolny limit. Działa, gdy jest _wyższa_ od ceny równowagi – i wtedy wywołuje nadwyżkę. Klasyczny przykład to płaca minimalna: jeśli jest wysoka, część chętnych do pracy może jej nie znaleźć.
 
@@ -188,6 +192,7 @@ Czasem państwo nie pozwala cenie się dopasować.
 ## Kto zyskuje na transakcji?
 
 Załóżmy, że byłbyś gotów zapłacić za bilet na mecz 120 zł, a kosztuje 80 zł. Zyskujesz 40 zł „czystej radości”. To **[[Nadwyżka konsumenta|nadwyżka konsumenta]]** – na wykresie pole pod krzywą popytu, a nad ceną. Podobnie klub, który sprzedałby bilet nawet za 30 zł, zyskuje 50 zł nadwyżki. To **[[Nadwyżka producenta|nadwyżka producenta]]** – pole nad krzywą podaży, a pod ceną.
+::wykres nadwyzka | Nadwyżka konsumenta: pole pod krzywą popytu, a nad ceną.
 
 > Przykład: gdy państwo ustala cenę maksymalną, część nadwyżki przechodzi od producentów do szczęśliwców, którzy kupili tanio. Ale ci, którzy nie dostali towaru, tracą zupełnie.
 
@@ -209,6 +214,7 @@ Na wykresie ma kształt trójkąta między krzywymi popytu i podaży. Nazywa si�
 ## Kto naprawdę płaci podatek?
 
 Państwo nakłada akcyzę na papierosy i każe płacić ją producentom. Czy to producenci ponoszą koszt? Niekoniecznie. **[[Rozkład ciężaru podatku (incydencja podatkowa)|Rozkład ciężaru podatku]]** zależy od elastyczności, a nie od tego, kto przelewa pieniądze. Większy ciężar ponosi strona _mniej elastyczna_. Palacze trudno rezygnują z papierosów, więc to oni płacą większą część podatku w wyższej cenie.
+::wykres podatek | Ciężar podatku dzielą kupujący (P_k wyżej) i sprzedający (P_s niżej) – więcej ponosi strona mniej elastyczna.
 
 > Zapamiętaj: podatek obciąża bardziej tę stronę rynku, która mniej elastycznie reaguje na cenę.
 
@@ -272,6 +278,7 @@ Rolnik decyduje, ile ziemniaków posadzić, patrząc na zeszłoroczną cenę. Gd
 ## Przepis na każde zadanie
 
 Na olimpiadzie często padają pytania w stylu: „Co stanie się z ceną masła, gdy wzrosną ceny mleka, a lekarze ogłoszą, że masło jest zdrowe?”. Na takie zadania jest prosty przepis – **[[Analiza zmian równowagi – trzy etapy (statyka porównawcza)|analiza zmian równowagi w trzech krokach]]**:
+::wykres sd D=+1 | Statyka porównawcza: która krzywa się przesuwa, w którą stronę, jak zmienia się równowaga.
 
 - 1) ustal, którą krzywą przesuwa zdarzenie – popytu, podaży czy obie;
 - 2) określ kierunek przesunięcia;
@@ -288,6 +295,7 @@ Każdy kupujący ma swoją **[[Skłonność do płacenia (cena rezerwacji)|skło
 ## Rynek, którego nie poprawi planista
 
 Najważniejsza myśl tej lekcji: w równowadze konkurencyjnej **[[Nadwyżka całkowita i efektywność rynku (planista społeczny)|nadwyżka całkowita]]** jest największa. Dobra trafiają do tych, którzy cenią je najwyżej, a produkują je ci, którzy robią to najtaniej.
+::wykres nadwyzka | Nadwyżka całkowita (suma obu pól) jest największa w równowadze rynkowej.
 
 $ NC = NK + NP
 
@@ -300,6 +308,7 @@ Nawet życzliwy „planista społeczny” nie zrobiłby tego lepiej – pod waru
 ## Handel ze światem
 
 Gdy kraj otwiera się na handel, liczy się **[[Cena światowa a korzyści z handlu (eksporter i importer)|cena światowa]]**. Jeśli jest wyższa od krajowej, kraj eksportuje – producenci zyskują więcej, niż tracą konsumenci. Jeśli niższa – importuje, a konsumenci zyskują więcej, niż tracą producenci. W obu przypadkach nadwyżka całkowita rośnie. Gdy państwo nakłada [[Skutki cła|cło]], cena krajowa rośnie, import maleje i powstaje zbędna strata w postaci dwóch trójkątów.
+::wykres clo | Kraj importujący przy cenie światowej kupuje więcej, niż sam produkuje.
 
 > Przykład: drożeje mleko (podaż masła w lewo) i lekarze chwalą masło (popyt w prawo). Cena masła na pewno wzrośnie; ilość może wzrosnąć albo spaść – zależy, która zmiana była silniejsza.
 

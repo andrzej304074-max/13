@@ -64,6 +64,7 @@ Banknot 100 zł kosztuje w produkcji kilkadziesiąt groszy, a mimo to każdy go 
 ## Kto i ile
 
 **[[Emisja banknotów i monet w Polsce|Wyłącznym emitentem]]** pieniądza w Polsce jest NBP. Banknoty drukuje Polska Wytwórnia Papierów Wartościowych, monety bije Mennica Polska. Nominały banknotów: 10, 20, 50, 100, 200 i 500 zł. Ilość pieniądza w gospodarce mierzy **[[Podaż pieniądza (nominalna i realna)|podaż pieniądza]]**.
+::wykres pieniadz MS=+1 | Wzrost podaży pieniądza obniża stopę procentową.
 
 > Uwaga: funkcja **środka tezauryzacji** (przechowywania wartości) słabnie przy inflacji – dlatego w czasie wysokiej inflacji ludzie uciekają w dolary czy złoto.
 
@@ -199,6 +200,7 @@ r to stopa rezerw, g – stosunek gotówki do depozytów.
 ## Stopy
 
 **[[Stopa procentowa nominalna i realna|Stopa realna]]** ≈ nominalna − inflacja. Przy **[[Inflacja oczekiwana i nieoczekiwana|inflacji nieoczekiwanej]]** wierzyciele tracą, dłużnicy zyskują. **[[Naturalna (neutralna) stopa procentowa|Naturalna stopa procentowa]]** (Wicksell) to stopa, przy której gospodarka działa na poziomie potencjalnym, a inflacja jest stabilna. Nie da się jej zaobserwować – trzeba ją szacować.
+::wykres fundusze | Stopa równowagi rynku funduszy pożyczkowych – przy pełnym wykorzystaniu mocy.
 
 ## Pieniądz przyszłości
 

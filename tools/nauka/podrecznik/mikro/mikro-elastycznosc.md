@@ -40,6 +40,7 @@ Zadania z elastyczności to stały punkt olimpiady – często obliczeniowe. War
 ## Wzór, który mierzy reakcję
 
 Kino podnosi cenę biletu z 20 do 22 zł, czyli o 10%. Liczba sprzedanych biletów spada o 20%. **[[Elastyczność cenowa popytu|Elastyczność cenowa popytu]]** wynosi:
+::wykres elastycznosc | Ta sama zmiana ceny: przy popycie elastycznym ilość zmienia się mocno, przy nieelastycznym – słabo.
 
 $ Ep = (ΔQ/Q) / (ΔP/P) = −20% / 10% = −2
 
@@ -64,6 +65,7 @@ Właściciel kina chce wiedzieć jedno: czy podwyżka zwiększy przychody? Odpow
 ## Gdy rośnie dochód
 
 **[[Elastyczność dochodowa popytu|Elastyczność dochodowa]]** mówi, jak zakupy reagują na dochód:
+::wykres engel | Dobra luksusowe: elastyczność dochodowa > 1; podstawowe: 0–1; niższego rzędu: < 0.
 
 $ Ed = (ΔQ/Q) / (ΔY/Y)
 
@@ -86,6 +88,7 @@ Na koniec **[[Elastyczność cenowa podaży|elastyczność cenowa podaży]]** �
 ## Dwie skrajności
 
 Wyobraź sobie straganiarza na ogromnym targu, gdzie wszyscy sprzedają identyczne jabłka po 3 zł. Jeśli podniesie cenę choćby o grosz, nikt u niego nie kupi. Jego krzywa popytu jest pozioma – to **[[Popyt doskonale elastyczny / doskonale nieelastyczny|popyt doskonale elastyczny]]**. Druga skrajność to lek ratujący życie: chory kupi dokładnie tyle, ile potrzebuje, niezależnie od ceny. Krzywa jest pionowa – popyt doskonale nieelastyczny.
+::wykres elastycznosc | Im bardziej płaski popyt, tym bardziej elastyczny; pionowy – doskonale nieelastyczny.
 
 Pełna skala: 0 – doskonale nieelastyczny, od 0 do 1 – nieelastyczny, 1 – jednostkowy, powyżej 1 – elastyczny, nieskończoność – doskonale elastyczny.
 
@@ -110,6 +113,7 @@ Na większość dóbr wydajemy więcej, gdy rośnie dochód – to **[[Dobro nor
 ## Za kulisami: jak wybiera konsument
 
 Olimpiada łączyła tę lekcję z teorią konsumenta. Każda zmiana ceny działa dwutorowo – to [[Efekt substytucyjny i efekt dochodowy|efekt substytucyjny i efekt dochodowy]]. Konsument wybiera koszyk na swojej [[Linia ograniczenia budżetowego|linii budżetowej]], na najwyżej położonej [[Krzywa obojętności|krzywej obojętności]]. W optimum każda złotówka daje tyle samo zadowolenia, niezależnie od tego, na co ją wydasz – to [[Równowaga konsumenta (II prawo Gossena)|II prawo Gossena]].
+::wykres obojetnosc | Krzywe obojętności: każda łączy koszyki dające tę samą użyteczność; dalej od początku – wyższa.
 
 $ MUx / Px = MUy / Py
 
@@ -155,6 +159,7 @@ Każda transakcja to umowa. **[[Umowy w kodeksie cywilnym|Kodeks cywilny]]** opi
 ## Gdy bogacimy się – kupujemy mniej
 
 Zacznijmy od czegoś zwykłego. Gdy studentowi rośnie dochód, przestaje jeść najtańsze zupki w proszku. To **[[Dobro niższego rzędu (podrzędne)|dobro niższego rzędu]]** – popyt na nie spada, gdy dochód rośnie.
+::wykres engel | Dobro niższego rzędu: powyżej pewnego dochodu wydatki na nie spadają.
 
 ## Zagadka ziemniaków
 
@@ -195,12 +200,14 @@ Wtedy wynik jest ten sam w obu kierunkach.
 ## Nachylenie to nie elastyczność
 
 Prosta krzywa popytu ma wszędzie to samo nachylenie, ale **[[Elastyczność wzdłuż liniowej krzywej popytu|nie tę samą elastyczność]]**. W górnej części (wysoka cena, mała ilość) popyt jest elastyczny, w środku – jednostkowy, na dole – nieelastyczny. Dlaczego? Bo zmiana ceny o złotówkę przy cenie 2 zł to 50%, a przy cenie 20 zł tylko 5%.
+::wykres elastycznosc | Na liniowej krzywej popytu elastyczność maleje od góry (elastyczny) do dołu (nieelastyczny).
 
 > Uwaga: na olimpiadzie nie oceniaj elastyczności „na oko” po stromości wykresu. Licz procenty.
 
 ## Dobra wiadomość, zła wiadomość
 
 Naukowcy wyhodowali nową, bardziej wydajną odmianę pszenicy. Plony rosną o połowę. Czy rolnicy się cieszą? Niekoniecznie. Popyt na żywność jest nieelastyczny: nie zjemy o połowę więcej chleba tylko dlatego, że stanieje. Większa podaż obniża więc cenę bardziej, niż rośnie sprzedana ilość – i łączny przychód rolników maleje. To **[[Paradoks rolnictwa (dobra nowina dla rolnictwa – zła dla rolników)|paradoks rolnictwa]]**. Tłumaczy, dlaczego w bogatych krajach rolników jest coraz mniej.
+::wykres sd S=+1 | Urodzaj (S w prawo) przy nieelastycznym popycie mocno obniża cenę – przychód rolników spada.
 
 ## Wojna z narkotykami
 

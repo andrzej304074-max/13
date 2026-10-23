@@ -119,6 +119,7 @@ Obligacja ma kupon 5%, ale kupiłeś ją po 95 zł zamiast 100 zł. Ile zarobisz
 ## Rentowność do wykupu
 
 **[[Rentowność do wykupu (YTM)|Rentowność do wykupu]]** to stopa, przy której wartość bieżąca wszystkich przepływów z obligacji równa się jej cenie. Kluczowa zasada: cena i rentowność zmieniają się w przeciwnych kierunkach.
+::wykres dochodowosc typ=normalna | Rentowność obligacji o różnych terminach tworzy krzywą dochodowości.
 
 > Przykład: obligacja roczna z kuponem 5% i nominałem 100 zł kosztuje 98 zł. Za rok dostaniesz 105 zł. YTM = 105 / 98 − 1 ≈ 7,14%. Gdyby cena wzrosła do 101 zł, YTM spadłaby do około 3,96%.
 
@@ -131,6 +132,7 @@ Obligacja ma kupon 5%, ale kupiłeś ją po 95 zł zamiast 100 zł. Ile zarobisz
 ## Dyskontowanie
 
 Wszystko to opiera się na **[[Wartość pieniądza w czasie|wartości pieniądza w czasie]]**: przyszłe płatności trzeba sprowadzić do dziś. Analizując wpływ stopy na cenę, zakładamy **[[Ceteris paribus|ceteris paribus]]** – że reszta się nie zmienia. Ta sama logika służy do oceny **[[Inwestycje|inwestycji]]**.
+::wykres procent | 1000 zł dziś to po 30 latach na 10% rocznie ok. 17 450 zł (składany) – stąd dyskontowanie.
 
 > Uwaga: gdy stopy rynkowe rosną, **ceny obligacji spadają** – i odwrotnie. To najważniejsza zależność rynku długu.
 
@@ -151,6 +153,7 @@ Dwie obligacje z kuponem 5%: jedna na rok, druga na 30 lat. Stopy rosną o 1 p.p
 ## Krzywa dochodowości
 
 **[[Krzywa dochodowości|Krzywa dochodowości]]** to wykres rentowności obligacji o tym samym ryzyku w zależności od terminu wykupu. Normalnie rośnie – za dłuższy termin inwestorzy chcą więcej. Odwrócona (krótkie stopy wyższe od długich) często zapowiada recesję. Teorie: oczekiwań, preferencji płynności, segmentacji rynku.
+::wykres dochodowosc | Krzywa dochodowości: zwykle rośnie z terminem; odwrócona często zapowiada recesję.
 
 ## Ratingi
 
@@ -207,6 +210,7 @@ Wpłacasz 1000 zł na 10 lat na 5%. Przy procencie prostym dostaniesz 1500 zł, 
 ## Prosty czy składany
 
 **[[Procent prosty i składany|Procent prosty]]** – odsetki tylko od kapitału początkowego. **Składany** – odsetki dopisywane do kapitału i dalej oprocentowane.
+::wykres procent | Procent składany: odsetki od odsetek – kapitał rośnie wykładniczo, prosty – liniowo.
 
 $ prosty: FV = PV · (1 + r · n)
 $ składany: FV = PV · (1 + r)ⁿ

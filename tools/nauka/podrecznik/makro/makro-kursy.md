@@ -237,6 +237,7 @@ Każdy kraj chciałby mieć stały kurs, swobodny przepływ pieniędzy i niezale
 ## Krzywa J
 
 Po deprecjacji bilans handlowy najpierw się pogarsza (stare kontrakty, droższy import), a potem poprawia. Warunek: **[[Warunek Marshalla–Lernera i krzywa J|suma elastyczności]]** cenowych popytu na eksport i import większa od 1. Przypomnij sobie **[[Elastyczność cenowa popytu|elastyczność cenową popytu]]**.
+::wykres krzywaj | Krzywa J: deprecjacja złotego najpierw pogarsza saldo handlowe (stare kontrakty, droższy import), potem – gdy eksport i import zareagują – je poprawia.
 
 ## Kryzysy walutowe
 

@@ -53,6 +53,7 @@ Adam Smith mówił: jeśli Portugalia robi wino taniej niż Anglia, a Anglia suk
 ## Przewaga komparatywna
 
 A co, jeśli jeden kraj robi wszystko lepiej? David Ricardo w 1817 roku pokazał, że handel nadal się opłaca. Liczy się **[[Przewaga komparatywna (względna)|przewaga komparatywna]]** – niższy **[[Koszt alternatywny (koszt utraconych możliwości)|koszt alternatywny]]**.
+::wykres kmp | Przewaga komparatywna: każdy kraj specjalizuje się tam, gdzie ma niższy koszt alternatywny (nachylenie KMP).
 
 > Przykład: Ania w godzinę pisze 4 strony albo robi 8 pizz. Bartek – 1 stronę albo 4 pizze. Ania jest lepsza w obu. Ale koszt jednej strony dla Ani to 2 pizze, a dla Bartka – 4 pizze. Koszt pizzy: dla Ani pół strony, dla Bartka ćwierć strony. Ania ma przewagę komparatywną w pisaniu, Bartek – w pizzy. Oboje zyskają na specjalizacji i wymianie.
 
@@ -129,6 +130,7 @@ Wzrost ToT oznacza, że za jednostkę eksportu kupujemy więcej importu.
 ## Wolny handel i kurs
 
 **[[Wolny handel|Wolny handel]]** – bez ceł i barier – zwiększa efektywność dzięki specjalizacji. Kraje tworzą **[[Porozumienia regionalne|porozumienia regionalne]]**: USMCA (dawniej NAFTA), Mercosur, ASEAN, EFTA, CEFTA. Gdy waluta słabnie, bilans handlowy poprawia się nie od razu – **[[Warunek Marshalla–Lernera i krzywa J|krzywa J]]**: najpierw gorzej, potem lepiej, jeśli suma elastyczności popytu na eksport i import przekracza 1.
+::wykres krzywaj | Krzywa J: po deprecjacji saldo najpierw się pogarsza, potem – gdy ilości się dostosują – poprawia.
 
 > Uwaga: paradoks Leontiefa **nie obala** handlu – pokazuje, że prosta teoria Heckschera–Ohlina nie wyjaśnia wszystkiego (np. jakości pracy i kapitału ludzkiego).
 
@@ -176,6 +178,7 @@ W małym kraju cło podnosi cenę krajową o kwotę cła. **[[Skutki cła|Skutki
 - **produkcyjny** – krajowi producenci produkują więcej;
 - **budżetowy** – wpływy z cła = cło × import;
 - **redystrybucyjny** – część nadwyżki konsumentów przechodzi do producentów.
+::wykres clo | Skutki cła: wygrywają producenci krajowi i budżet, tracą konsumenci – i to więcej, niż tamci zyskują.
 
 Powstaje zbędna strata – dwa trójkąty na wykresie.
 

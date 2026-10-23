@@ -2,6 +2,7 @@
 
 import { useCallback, useState } from "react";
 import { Graph } from "@/app/components/graph";
+import { ItemFigure } from "@/app/components/item-figure";
 import { checkNumber, type Exercise } from "@/lib/nauka-logic";
 import { EXERCISE_LABELS, type ZSource } from "@/lib/nauka-types";
 import { CaseContext, CheckButton, useEnter, useNumberKeys, type OnResult } from "./ui";
@@ -39,7 +40,7 @@ export function ExplainCard({ ex, onNext }: { ex: Ex<"karta">; onNext: () => voi
       <div className="card learn-intro stack">
         <h2 style={{ margin: 0 }}>{ex.title}</h2>
         <p style={{ margin: 0 }}>{ex.text}</p>
-        {ex.g && <Graph spec={ex.g} />}
+        {ex.g ? <Graph spec={ex.g} /> : <ItemFigure f={ex.fig ?? ex.item.f} />}
         {ex.w && <pre className="formula">{ex.w}</pre>}
         {ex.p && <p className="muted" style={{ margin: 0 }}><strong>Przykład:</strong> {ex.p}</p>}
       </div>

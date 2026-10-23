@@ -201,6 +201,7 @@ Na olimpiadzie nie ma czasu na wyprowadzanie wzorów. Ten rozdział zbiera najwa
 ## Czas
 
 **[[Wartość pieniądza w czasie – wzory|Wzory]]**: FV = PV(1 + r)ⁿ; PV = FV / (1 + r)ⁿ; procent prosty FV = PV(1 + rn); stopa efektywna = (1 + r / m)ᵐ − 1.
+::wykres procent | FV = PV·(1 + r)ⁿ – wzrost wykładniczy.
 
 **[[YTM obligacji zerokuponowej|YTM obligacji zerokuponowej]]**:
 

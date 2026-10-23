@@ -34,6 +34,7 @@ W tym dziale poznasz też gospodarkę współdzielenia – wynajem mieszkań na 
 ## Dwa efekty każdej zmiany ceny
 
 Zacznijmy od klasyki. Gdy pizza tanieje, działają dwa mechanizmy. **[[Efekt substytucyjny i efekt dochodowy|Efekt substytucyjny]]**: pizza staje się atrakcyjniejsza od innych dań, więc jesz jej więcej. Efekt dochodowy: jesteś trochę bogatszy, bo za te same pieniądze kupisz więcej. Dla dóbr normalnych oba efekty działają w tę samą stronę. Dla dóbr niższego rzędu – w przeciwne.
+::wykres obojetnosc | Zmiana ceny przesuwa optimum: efekt substytucyjny (wzdłuż krzywej) i dochodowy (na inną krzywą).
 
 ## Wystarczająco dobrze
 

@@ -36,6 +36,7 @@ Zabezpieczenie społeczne to też ochrona zdrowia, zasiłki, świadczenia rodzin
 - **I filar** – ZUS (konto i subkonto);
 - **II filar** – OFE, od 2014 roku dobrowolne;
 - **III filar** – dobrowolne oszczędzanie: PPE, IKE, IKZE, a od 2019 roku PPK.
+::wykres seria id=obciazenie | Rosnące obciążenie osobami starszymi obniża przyszłą stopę zastąpienia.
 
 Emerytura zależy od zgromadzonego kapitału i dalszego trwania życia. Ale uwaga: konto w ZUS jest **[[System repartycyjny (PAYG) a kapitałowy|repartycyjne]]** – zapisane na nim pieniądze nie są nigdzie inwestowane; dzisiejsze składki od razu idą na dzisiejsze emerytury.
 

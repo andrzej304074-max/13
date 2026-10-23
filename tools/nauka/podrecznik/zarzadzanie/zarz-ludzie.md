@@ -33,6 +33,7 @@ W tej samej klasie, przy tym samym nauczycielu, jedni uczą się z zapałem, a i
 ## Piramida i jej uproszczenie
 
 **[[Hierarchia potrzeb Maslowa|Hierarchia potrzeb]]** Maslowa ma pięć pięter: fizjologiczne → bezpieczeństwa → przynależności → szacunku → samorealizacji. Wyższe potrzeby motywują dopiero po zaspokojeniu niższych.
+::wykres maslow | Maslow: potrzeby wyższego rzędu motywują, gdy zaspokojone są niższe.
 
 **[[Alderfer Clayton|Clayton Alderfer]]** uprościł Maslowa do trzech grup – **[[Teoria ERG (C. Alderfer)|ERG]]**: egzystencji, więzi i wzrostu. Potrzeby mogą działać jednocześnie, a przy frustracji wyższej potrzeby człowiek „cofa się” do niższej (regres).
 

@@ -40,6 +40,7 @@ Skąd Chiny brały tanich robotników? Ze wsi. **[[Punkt zwrotny Lewisa|Punkt zw
 ## A może stagnacja?
 
 Druga możliwość jest mniej dramatyczna, ale też niepokojąca. **[[Sekularna stagnacja|Sekularna stagnacja]]** to długotrwale niski wzrost i bardzo niska naturalna stopa procentowa. Pojęcie wymyślił Alvin Hansen (1938), a przywrócił Larry Summers (2013). Starzenie się może ją pogłębiać (mniej inwestycji) albo łagodzić (seniorzy wydają oszczędności). Od tego zależy **[[Stopa procentowa nominalna i realna|realna stopa procentowa]]**.
+::wykres fundusze D=-1 | Mniejszy popyt na inwestycje (D w lewo) obniża naturalną stopę procentową.
 
 > Uwaga: teza Goodharta i Pradhana przewiduje **wyższą** inflację i stopy, a sekularna stagnacja – **niskie** stopy. To dwa przeciwstawne scenariusze, nie jeden.
 
@@ -48,6 +49,7 @@ Druga możliwość jest mniej dramatyczna, ale też niepokojąca. **[[Sekularna 
 Seniorów przybywa – a więc i klientów. **[[Srebrna gospodarka|Srebrna gospodarka]]** to zdrowie i opieka, turystyka, mieszkania dostosowane do potrzeb starszych osób i gerontechnologie, np. opaski wzywające pomoc.
 
 Są też koszty. **[[Skutki starzenia się dla rynku pracy i finansów publicznych|Skutki starzenia się]]** to brak pracowników, rosnąca rola automatyzacji i imigracji oraz wyższe wydatki na emerytury i zdrowie przy mniejszej liczbie podatników. Rośnie też potrzeba **[[Opieka długoterminowa|opieki długoterminowej]]** – wsparcia osób niesamodzielnych: w domu, w ośrodkach dziennych, w zakładach opiekuńczo-leczniczych i domach pomocy społecznej.
+::wykres seria id=obciazenie | Coraz mniej pracujących przypada na jednego seniora.
 
 > Zapamiętaj: mniej pracowników to wyższa cena pracy – ale czy także wyższa inflacja, ekonomiści wciąż się spierają.
 
@@ -110,6 +112,7 @@ Wyobraź sobie miasto, w którym wszyscy chcą pożyczać innym pieniądze, a ma
 ## Matematyka długu
 
 Czy państwo musi spłacić dług, żeby przestał być groźny? Niekoniecznie – wystarczy, że gospodarka rośnie szybciej niż odsetki. **[[Dynamika długu publicznego (r − g) i pułapka zadłużenia|Dynamika długu]]** mówi, że relacja długu do PKB rośnie, gdy stopa procentowa od długu (r) przewyższa nominalne tempo wzrostu gospodarki (g), chyba że państwo ma nadwyżkę pierwotną (dochody większe niż wydatki bez odsetek).
+::wykres seria id=dlug | Gdy stopa procentowa przewyższa tempo wzrostu (r > g), dług rośnie bez nadwyżek pierwotnych.
 
 $ Δd ≈ (r − g) / (1 + g) · d − nadwyżka pierwotna
 

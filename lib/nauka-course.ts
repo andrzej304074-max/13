@@ -2,10 +2,28 @@ import { COURSE, ZROZUM } from "@/data/nauka";
 import { lessonArticle } from "./podrecznik";
 import { getQuestion } from "./questions";
 import type { Question } from "./types";
-import type { CourseItem, CourseLesson, CourseTopic, CourseUnit, LessonPayload } from "./nauka-types";
+import type { CourseItem, CourseLesson, CourseTopic, CourseUnit, LessonPayload, ZEx } from "./nauka-types";
 import { MAX_REPEATS, rankRepeats, shuffle, type RepeatStat } from "./nauka-logic";
 
 export { COURSE };
+
+/**
+ * Karty „Zrozumienie” bez własnego wykresu dostają rysunek powiązanego hasła lekcji, o którym mówią (nazwa hasła w tytule
+ * albo treści karty) – każdy rysunek najwyżej raz w pod-lekcji.
+ */
+export function withFigures(exs: ZEx[], refs: (CourseItem | undefined)[]): ZEx[] {
+  const cands = refs.filter((r): r is CourseItem => !!r?.f).map((r) => ({ r, keys: [r.s, ...r.al].filter((k) => k && k.length > 4).map((k) => k.toLowerCase()) }));
+  if (!cands.length) return exs;
+  const used = new Set<string>();
+  return exs.map((e) => {
+    if (e.t !== "karta" || e.g || e.fig) return e;
+    const text = `${e.title} ${e.text}`.toLowerCase();
+    const hit = cands.find((c) => !used.has(JSON.stringify(c.r.f)) && c.keys.some((k) => text.includes(k)));
+    if (!hit) return e;
+    used.add(JSON.stringify(hit.r.f));
+    return { ...e, fig: hit.r.f };
+  });
+}
 
 export function getTopic(id: string): CourseTopic | undefined {
   return COURSE.topics.find((t) => t.id === id);
@@ -64,7 +82,7 @@ export function lessonPayload(lessonId: string, sub: number): LessonPayload | nu
       items: lesson.items.map((i) => COURSE.items[i]),
       pool: [],
       questions: [],
-      zrozum: { goal: z.goal, sources: z.sources, refs: z.refs.map((i) => COURSE.items[i]), exercises: z.subs[sub - 1] ?? [] },
+      zrozum: { goal: z.goal, sources: z.sources, refs: z.refs.map((i) => COURSE.items[i]), exercises: withFigures(z.subs[sub - 1] ?? [], z.refs.map((i) => COURSE.items[i])) },
     };
   }
   const questions = lesson.questions.map(getQuestion).filter((q): q is Question => !!q);

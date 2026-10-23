@@ -33,6 +33,7 @@ Za każdą teorią zarządzania stoi ktoś, kto obserwował prawdziwe firmy: in�
 **[[Barnard Chester|Chester Barnard]]** był menedżerem, nie profesorem. W „Funkcjach kierownika” (1938) opisał organizację jako system współdziałania, a autorytet – jako coś, co podwładni muszą zaakceptować.
 
 **[[Blake Robert, Mouton Jane|Robert Blake i Jane Mouton]]** (1964) stworzyli siatkę kierowniczą: troska o ludzi i troska o produkcję, każda w skali 1–9. Ideał to styl 9.9.
+::wykres blake | Siatka kierownicza Blake'a i Mouton: styl 9.9 – wysoka troska o ludzi i o zadania.
 
 ## Statystyk, który nauczył Japonię jakości
 

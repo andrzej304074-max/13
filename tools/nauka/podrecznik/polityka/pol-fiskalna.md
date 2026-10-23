@@ -72,6 +72,7 @@ Wydawanie pieniędzy przynosi głosy, a podnoszenie podatków – wrogów. Bez z
 ## Polityka fiskalna
 
 **[[Polityka fiskalna (budżetowa)|Polityka fiskalna]]** to kształtowanie dochodów i wydatków publicznych. Musgrave wyróżnił jej funkcje: alokacyjną, redystrybucyjną i stabilizacyjną. Jej podstawowym narzędziem jest **[[Budżet państwa|budżet państwa]]** – roczny plan uchwalany jako ustawa.
+::wykres islm IS=+1 | Ekspansja fiskalna przesuwa IS w prawo: rośnie dochód i stopa procentowa (wypieranie).
 
 ## Wpływ na gospodarkę
 
@@ -80,6 +81,7 @@ Wydatki rządu są częścią **[[Zagregowany popyt (AD)|zagregowanego popytu]]*
 ## Konstytucyjny limit
 
 **[[Progi ostrożnościowe i konstytucyjny limit długu|Art. 216 ust. 5 Konstytucji]]**: państwowy dług publiczny nie może przekroczyć 3/5 PKB. **[[Ustawa o finansach publicznych (2009)|Ustawa o finansach publicznych]]** dodaje progi ostrożnościowe: po przekroczeniu 55% PKB rząd musi podjąć działania naprawcze.
+::wykres seria id=dlug | Konstytucyjny limit 60% PKB (inna, krajowa definicja długu) a dług według definicji UE.
 
 ## Reguła wydatkowa
 

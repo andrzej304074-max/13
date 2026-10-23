@@ -62,6 +62,7 @@ run h1.mjs
 run h2.mjs
 run h3.mjs
 run h4.mjs
+run h5.mjs
 run authsweep.mjs
 run security.mjs
 run crawl.mjs

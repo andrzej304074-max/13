@@ -1,6 +1,6 @@
 import type { Mastery } from "./mastery-core";
 import type { Question } from "./types";
-import type { AnswerLog, CourseItem, ExerciseType, GraphSpec, LessonPayload, ZEx } from "./nauka-types";
+import type { AnswerLog, CourseItem, ExerciseType, FigSpec, GraphSpec, LessonPayload, ZEx } from "./nauka-types";
 
 /* ---------- sprawdzanie wpisanych odpowiedzi ---------- */
 
@@ -118,7 +118,7 @@ export type Exercise =
   | { type: "kolejnosc"; items: CourseItem[]; shuffled: CourseItem[] }
   | { type: "fiszka"; item: CourseItem }
   | { type: "pytanie"; item: CourseItem; question: Question; ctx?: string; stat?: ExerciseType }
-  | { type: "karta"; item: CourseItem; title: string; text: string; w?: string; p?: string; g?: GraphSpec }
+  | { type: "karta"; item: CourseItem; title: string; text: string; w?: string; p?: string; g?: GraphSpec; fig?: FigSpec }
   | { type: "lancuch"; item: CourseItem; q: string; steps: string[]; shuffled: string[]; why?: string; ctx?: string; stat?: ExerciseType }
   | { type: "kategorie"; item: CourseItem; q: string; cats: string[]; entries: { text: string; cat: number }[]; why?: string; ctx?: string; stat?: ExerciseType }
   | { type: "liczba"; item: CourseItem; q: string; a: number; tol: number; unit?: string; steps: string[]; ctx?: string; stat?: ExerciseType }
@@ -159,7 +159,7 @@ export function buildZrozum(exs: ZEx[], item: CourseItem, rnd: () => number = Ma
   return exs.map((e): Exercise => {
     switch (e.t) {
       case "karta":
-        return { type: "karta", item, title: e.title, text: e.text, w: e.w, p: e.p, g: e.g };
+        return { type: "karta", item, title: e.title, text: e.text, w: e.w, p: e.p, g: e.g, fig: e.fig };
       case "wybor":
       case "multi": {
         const k = shuffleKeyed(e.opts, e.t === "wybor" ? [e.ok] : e.ok, rnd);

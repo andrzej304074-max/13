@@ -50,6 +50,7 @@ Ekonomiści dzielą czas na **[[Krótki okres i długi okres|krótki i długi ok
 $ AP = TP / L;  MP = ΔTP / ΔL
 
 To jest **[[Produkt całkowity, przeciętny i krańcowy|produkt całkowity, przeciętny i krańcowy]]**.
+::wykres produkt | Produkt krańcowy przecina przeciętny w jego maksimum; TP rośnie coraz wolniej.
 
 ## Prawo malejących przychodów
 
@@ -81,10 +82,12 @@ Ten rozdział łączy pojedynczą firmę z gospodarką jako całością. Olimpia
 ## Koszty, które wrócą w następnej lekcji
 
 Najpierw dwa pojęcia z teorii kosztów. **[[Koszty stałe (FC)|Koszty stałe]]** nie zależą od produkcji w krótkim okresie: czynsz, amortyzacja pieca, ochrona. Im więcej pizz, tym mniejszy koszt stały na sztukę. **[[Koszt krańcowy (MC)|Koszt krańcowy]]** to koszt jeszcze jednej pizzy – przyda się przy każdej decyzji o produkcji.
+::wykres koszty | Koszt krańcowy MC przecina AVC i ATC w ich minimach.
 
 ## Firma, która jest sama na rynku
 
 Gdy pizzeria jest jedyna w miasteczku, staje się **[[Monopol|monopolem]]**. Może podnieść cenę, ale wtedy sprzeda mniej. Monopolista produkuje mniej i drożej niż rynek konkurencyjny – o tym dokładnie w dziale o strukturach rynku.
+::wykres monopol | Monopol produkuje mniej (Qₘ, gdzie MR = MC) i drożej (Pₘ) niż rynek konkurencyjny – trójkąt to strata dobrobytu.
 
 ## Gospodarka w pełni sił
 
@@ -134,6 +137,7 @@ Podwajasz liczbę kucharzy _i_ pieców. Co z produkcją? To pytanie o **[[Przych
 ## Duży może taniej
 
 Gdy produkcja rośnie, koszt jednej sztuki często spada. To **[[Korzyści skali (ekonomia skali)|korzyści skali]]**: specjalizacja pracowników, hurtowe zakupy, wielkie maszyny, które opłacają się dopiero przy dużej produkcji. Ale przy zbyt wielkiej firmie pojawiają się niekorzyści skali – biurokracja i trudności w zarządzaniu.
+::wykres lrac | Korzyści skali: przy większej produkcji koszt przeciętny maleje (lewa część LRAC).
 
 Najmniejsza produkcja, przy której koszt przeciętny jest już najniższy, to **[[Minimalna skala efektywna (MES)|minimalna skala efektywna]]**. Gdy jest ogromna w stosunku do rynku – jak w produkcji samolotów – mieści się na nim tylko kilka firm.
 
@@ -229,6 +233,7 @@ Nawet zwykły zakup kosztuje więcej niż cena: szukasz dostawcy, negocjujesz, s
 ## Przychód i trzy rodzaje zysku
 
 Przychód ze sprzedaży to **[[Utarg (przychód) całkowity, przeciętny i krańcowy|utarg]]**: cena razy ilość. A zysk?
+::wykres bep | W konkurencji doskonałej utarg całkowity rośnie liniowo z ilością.
 
 - **[[Zysk księgowy|Zysk księgowy]]** – przychody minus koszty jawne (faktury, pensje, czynsz).
 - **[[Zysk ekonomiczny (nadzwyczajny)|Zysk ekonomiczny]]** – przychody minus _wszystkie_ koszty, także ukryte:
@@ -249,6 +254,7 @@ Pytano też o [[Logistyka i łańcuch dostaw (SCM)|logistykę i łańcuch dostaw
 ## Złota reguła zysku
 
 Pizzeria sprzedaje kolejne pizze. Każda dodatkowa przynosi przychód (utarg krańcowy MR) i kosztuje (koszt krańcowy MC). Dopóki MR jest większy od MC, kolejna pizza zwiększa zysk. Gdy MC przewyższa MR – zmniejsza go. Stąd **[[Warunek maksymalizacji zysku|warunek maksymalizacji zysku]]**:
+::wykres konkurencja | Zysk jest największy, gdy MR = MC (w konkurencji doskonałej: P = MC).
 
 $ MR = MC
 
@@ -257,6 +263,7 @@ To uniwersalna reguła dla każdej firmy – od straganu po koncern. W konkurenc
 ## Kiedy zaczynasz zarabiać
 
 Przy jakiej sprzedaży pizzeria wychodzi na zero? Odpowiedź daje **[[Próg rentowności (BEP)|próg rentowności]]**:
+::wykres bep | Próg rentowności: przy 2000 sztuk przychód pokrywa koszty stałe i zmienne.
 
 $ Q_BEP = FC / (P − AVC)
 
@@ -265,6 +272,7 @@ Jeśli czynsz i inne koszty stałe to 6000 zł, pizza kosztuje 30 zł, a składn
 ## Kiedy zgasić piec
 
 A jeśli ceny spadają i firma traci? W krótkim okresie czynsz i tak trzeba zapłacić. Dlatego **[[Próg zamknięcia (punkt zamknięcia)|próg zamknięcia]]** wypada przy cenie równej minimalnemu przeciętnemu kosztowi zmiennemu. Dopóki cena pokrywa koszty zmienne, produkcja zmniejsza stratę – bo każda pizza dokłada coś do czynszu. Gdy cena spada poniżej min AVC, lepiej przestać piec.
+::wykres koszty | Próg zamknięcia: cena poniżej minimum AVC – lepiej przerwać produkcję.
 
 > Uwaga: próg rentowności (zysk = 0) i próg zamknięcia (P = min AVC) to dwie różne rzeczy. Między nimi firma traci, ale nadal opłaca jej się produkować.
 
@@ -289,6 +297,7 @@ Neoklasycy mówią: tak. Ale istnieją inne **[[Cele przedsiębiorstwa i teorie 
 ## Krzywe kosztów w dwóch horyzontach
 
 W krótkim okresie pizzeria ma jeden piec. **[[Krótkookresowe i długookresowe krzywe kosztów|Krótkookresowa krzywa kosztu przeciętnego]]** ma kształt litery U. W długim okresie możesz wybrać wielkość lokalu: mały, średni albo duży. Dla każdego jest osobna krzywa krótkookresowa. Długookresowa krzywa kosztu przeciętnego (LAC) to ich obwiednia – pokazuje najniższy możliwy koszt przy optymalnej wielkości zakładu.
+::wykres lrac | LRAC to obwiednia krzywych krótkookresowych – każda dla innej wielkości zakładu.
 
 ## Ścieżka rozwoju
 
@@ -300,6 +309,7 @@ Wróćmy do kucharzy przy jednym piecu. Produkcja przechodzi przez **[[Fazy (sta
 - **I faza** – produkt przeciętny rośnie; za mało kucharzy, warto zatrudniać;
 - **II faza** – produkt przeciętny i krańcowy maleją, ale krańcowy jest dodatni; to faza racjonalna;
 - **III faza** – produkt krańcowy jest ujemny; kolejny kucharz przeszkadza i produkcja spada.
+::wykres produkt | Racjonalna faza produkcji: między maksimum AP a zerowym MP.
 
 > Uwaga: racjonalna firma nigdy nie produkuje w III fazie – zwolnienie pracownika zwiększyłoby wtedy produkcję.
 

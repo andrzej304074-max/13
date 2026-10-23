@@ -53,6 +53,7 @@ Fabryka nad rzeką zrzuca ścieki. Za produkcję płaci, ale za brudną rzekę �
 ## Jak to naprawić
 
 Rozwiązaniem jest **[[Internalizacja efektów zewnętrznych|internalizacja]]** – sprawienie, by sprawca uwzględnił pełne koszty w swoim rachunku. Najbardziej klasyczny sposób zaproponował Arthur Pigou: **[[Podatek Pigou|podatek Pigou]]** równy krańcowemu kosztowi zewnętrznemu. Gdy fabryka płaci za każdą tonę ścieków tyle, ile szkód wyrządza, sama ograniczy produkcję do poziomu efektywnego.
+::wykres podatek | Podatek Pigou podnosi koszt produkcji szkodliwej – rynek produkuje mniej.
 
 > Przykład: akcyza na paliwa częściowo działa jak podatek Pigou – jazda samochodem powoduje spaliny i korki, za które kierowca inaczej by nie płacił.
 

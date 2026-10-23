@@ -33,6 +33,7 @@ Wyobraź sobie młodą parę, która waha się, czy mieć drugie dziecko. Co prz
 - **pronatalistyczna** – świadczenia, ulgi, urlopy, żłobki, mieszkania;
 - **antynatalistyczna** – np. chińska polityka jednego dziecka (1980–2015);
 - **migracyjna i zdrowotna**.
+::wykres seria id=dzietnosc | Dzietność w Polsce mimo programów wsparcia rodzin pozostaje niska.
 
 Badania pokazują, że skuteczność samych transferów pieniężnych dla dzietności jest ograniczona.
 
@@ -45,6 +46,7 @@ Do tego dochodzą działania lokalne. **[[Regionalna polityka demograficzna|Regi
 ## Okno, które się zamyka
 
 Polityka rodzinna działa w konkretnym momencie historii. Przez ostatnie 25 lat Polska miała **[[Okno demograficzne|okno demograficzne]]** – dużo osób w wieku pracy i mało na utrzymaniu. Teraz to okno się zamyka: na emeryturę przechodzą roczniki wyżu, a do pracy wchodzą nieliczne roczniki niżu.
+::wykres piramida dane=pl | Okno demograficzne: najliczniejsze roczniki w wieku produkcyjnym – w Polsce właśnie się zamyka.
 
 ## Mniej ludzi, więcej mieszkań
 
@@ -79,6 +81,7 @@ Ludność zachowuje się jak rozpędzony pociąg: nie zatrzymuje się w miejscu 
 ## Starzenie się w dwóch krokach
 
 **[[Podwójne starzenie się ludności|Podwójne starzenie się]]** oznacza, że rośnie udział seniorów, a wśród nich najszybciej – osób 80+. To one najczęściej potrzebują opieki, więc koszty rosną szybciej niż sama liczba emerytów.
+::wykres piramida dane=pl | Rośnie liczba osób 80+ – wierzchołek piramidy się poszerza.
 
 ## Liczenie dzieci – w roku czy w życiu?
 
@@ -107,6 +110,7 @@ Dłuższe życie to jeden z największych sukcesów ludzkości. A jednak w wiado
 ## Od eksplozji do implozji
 
 Świat demograficzny ma dwa bieguny. **[[Eksplozja i implozja demograficzna|Eksplozja demograficzna]]** to gwałtowny wzrost ludności, gdy zgony już spadły, a urodzeń wciąż jest dużo – jak dziś w Nigrze czy Nigerii. Implozja to trwały ubytek naturalny i szybkie kurczenie się ludności – jak w Bułgarii czy na Łotwie.
+::wykres przejscie | Eksplozja – faza II przejścia (zgony spadają, urodzenia wysokie); implozja – urodzenia poniżej zgonów.
 
 ## Między dziećmi a rodzicami
 

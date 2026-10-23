@@ -54,6 +54,7 @@ Ekonomiści zwykle uważają, że aktywne narzędzia są skuteczniejsze na dłu�
 ## Klin podatkowy
 
 Pracodawca płaci za pracownika więcej niż pensja brutto (dochodzą jego składki), a pracownik dostaje na rękę mniej (odchodzą jego składki i podatek). Ta różnica to **[[Klin podatkowy|klin podatkowy]]**.
+::wykres podatek | Klin podatkowy: różnica między ceną płaconą przez kupującego a ceną otrzymywaną przez sprzedającego.
 
 > Przykład: całkowity koszt pracy 6 000 zł, pensja netto 4 300 zł. Klin = 1 700 zł, czyli około 28% kosztu pracy.
 

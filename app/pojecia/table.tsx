@@ -1,5 +1,7 @@
 "use client";
 
+import { ItemFigure } from "@/app/components/item-figure";
+import type { FigSpec } from "@/lib/nauka-types";
 import Link from "next/link";
 import { usePrefSync } from "@/lib/prefs-client";
 import { useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
@@ -21,6 +23,8 @@ export interface Row {
   topic: string;
   /** Liczba pytań OWE (XXI–XXXIX), w których pytano o hasło. */
   n: number;
+  /** Rysunek hasła (data/nauka/figures.json). */
+  f?: FigSpec;
 }
 
 type Topic = { id: string; title: string; emoji: string };
@@ -152,6 +156,7 @@ export function ConceptTable({ rows, topics, kinds }: { rows: Row[]; topics: Top
             <div className="concept-def" role="cell">
               {r.d}
               {r.w && <pre className="formula" style={{ marginTop: 8 }}>{r.w}</pre>}
+              <ItemFigure f={r.f} compact />
             </div>
           </div>
         ))}

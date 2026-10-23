@@ -61,6 +61,7 @@ Za bilet płacisz i dostajesz przejazd. Za podatek nic konkretnego w zamian nie 
 ## Skale i stawki
 
 **[[Skala podatkowa PIT|Skala PIT]]**: 12% do 120 000 zł dochodu, 32% od nadwyżki, kwota wolna 30 000 zł. Przedsiębiorcy mogą wybrać podatek liniowy 19%. **[[Podatek dochodowy od osób prawnych (CIT)|CIT]]**: 19%, a 9% dla małych. Skala PIT jest **[[Podatek progresywny, proporcjonalny (liniowy) i regresywny|progresywna]]**. Mniejsi przedsiębiorcy prowadzą **[[Uproszczone formy ewidencji|uproszczoną ewidencję]]**: księgę przychodów i rozchodów albo ewidencję ryczałtową.
+::wykres stawki | Przeciętna stawka: progresywny rośnie z dochodem, liniowy jest stały, regresywny maleje.
 
 > Uwaga: podatek jest **nieodpłatny** (bez świadczenia wzajemnego) – opłata za wydanie dokumentu czy parkowanie to nie podatek.
 
@@ -84,6 +85,7 @@ Rodzaj umowy też ma znaczenie. **[[Umowa o pracę i umowy cywilnoprawne|Umowa o
 ## Zakupy
 
 W cenie paliwa, alkoholu i papierosów jest **[[Podatek akcyzowy (akcyza)|akcyza]]**. To podatek, który ma też zniechęcać do szkodliwych zachowań – i przynosi budżetowi duże wpływy.
+::wykres podatek | Akcyza podnosi cenę płaconą przez kupujących i obniża cenę otrzymywaną przez sprzedających.
 
 ## Państwo oddaje
 
@@ -156,6 +158,7 @@ Skrajny przypadek to **[[Podatek zryczałtowany (kwotowy, pogłówny)|podatek po
 ## Stawki
 
 **[[Stawka nominalna, przeciętna i krańcowa|Stawka nominalna]]** – zapisana w ustawie. **Przeciętna** – podatek podzielony przez dochód. **Krańcowa** – podatek od dodatkowej złotówki.
+::wykres stawki | Przy progresji stawka krańcowa jest wyższa od przeciętnej – przeciętna rośnie z dochodem.
 
 > Przykład: dochód 150 000 zł. Podatek = 12% · 120 000 + 32% · 30 000 − 3 600 = 14 400 + 9 600 − 3 600 = 20 400 zł. Stawka przeciętna = 20 400 / 150 000 = 13,6%. Stawka krańcowa = 32%.
 
@@ -239,6 +242,7 @@ Spółka płaci podatek od swojego zysku. Ale gdy kupujesz w sklepie, w cenie je
 ## Akcyza i cło
 
 **[[Podatek akcyzowy (akcyza)|Akcyza]]** obciąża paliwa, alkohol, wyroby tytoniowe, energię i samochody. **[[Cło|Cło]]** pobiera się przy imporcie spoza UE; 75% wpływów trafia do budżetu UE.
+::wykres clo | Cło podnosi cenę krajową: rośnie produkcja krajowa, spada import; dwa trójkąty to strata dobrobytu.
 
 ## Rachunkowość i podatki
 
@@ -280,6 +284,7 @@ Podatki do zapłacenia to zobowiązania widoczne w **[[Bilans|bilansie]]** po st
 ## Podatki i budżet
 
 Wpływy podatkowe decydują o **[[Deficyt budżetowy i deficyt sektora finansów publicznych|deficycie]]**. Unia Europejska ma własny budżet – finansują go **[[Wspólny podatek UE i zasoby własne|zasoby własne]]**: cła, zasób oparty na VAT, zasób oparty na DNB, opłata plastikowa. Historię UE przypomina **[[Unia Europejska – historia|hasło o historii UE]]**.
+::wykres seria id=dlug | Deficyty zwiększają dług – w latach 2020 i 2023–2025 widać wzrost relacji długu do PKB.
 
 > Zapamiętaj: kto przelewa podatek ≠ kto go ponosi. Przy nieelastycznym popycie ciężar spada głównie na kupujących.
 

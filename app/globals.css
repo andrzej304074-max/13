@@ -1390,3 +1390,18 @@ body:has(.speech-bar) main.container { padding-bottom: 160px; }
 .qa-flag-trudne { background: color-mix(in srgb, #f59e0b 22%, transparent); }
 .qa-opt { padding: 4px 8px; border-radius: 8px; }
 .qa-opt.ok { background: color-mix(in srgb, var(--good, #16a34a) 15%, transparent); }
+/* nowe rysunki (H5): nadwyżki, przedziały, wykresy z danych */
+.bf-area.cs { fill: color-mix(in srgb, #2563eb 18%, transparent); }
+.bf-area.ps { fill: color-mix(in srgb, #059669 20%, transparent); }
+.bf-span { stroke: var(--text); stroke-width: 1.4; stroke-dasharray: 4 3; }
+.bf-txt.tiny { font-size: 8px; fill: var(--muted); }
+.bf-bar.c1 { fill: #2563eb; } .bf-bar.c2 { fill: #dc2626; }
+.bf-pt { stroke: none; }
+.bf-c1 .bf-pt { fill: #2563eb; } .bf-c2 .bf-pt { fill: #dc2626; }
+.book-fig figcaption a { color: inherit; }
+/* rysunek hasła (kurs, fiszki, tabela pojęć, mapa) */
+.item-fig { margin-top: 10px; }
+.item-fig .book-fig { margin: 0; }
+.item-fig.compact .book-fig svg { max-height: 210px; }
+.item-fig.compact figcaption { font-size: .8rem; }
+.fc-face .item-fig.compact .book-fig svg { max-height: 170px; }

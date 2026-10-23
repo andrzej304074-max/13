@@ -28,6 +28,7 @@ Można liczyć majątek, przyszłe przepływy (DCF) albo porównać firmę z pod
 ## Dlaczego 100 zł dziś to więcej niż 100 zł za rok?
 
 Bo dziś możesz je wpłacić na lokatę i za rok mieć więcej. Dlatego przyszłe pieniądze trzeba „przeliczyć” na dzisiejsze. **[[Wartość bieżąca netto (NPV)|NPV]]** to suma zdyskontowanych przepływów minus nakład:
+::wykres npv | NPV maleje ze stopą dyskontową; projekt opłaca się, gdy NPV > 0 przy koszcie kapitału.
 
 $ NPV = Σ CFₜ / (1 + r)ᵗ − I₀
 
@@ -66,6 +67,7 @@ Pojawiały się też: [[Koszty zmienne (VC)|koszty zmienne]], [[Q Tobina|q Tobin
 ## Dług czy akcje – czy to ma znaczenie?
 
 Pizza nie staje się większa, gdy pokroisz ją na 8 kawałków zamiast 4. Tak mniej więcej brzmi słynne twierdzenie o **[[Struktura kapitału i teorie jej wyboru|strukturze kapitału]]**. **[[Modigliani Franco, Miller Merton|Modigliani i Miller]]** (1958) pokazali, że bez podatków struktura nie wpływa na wartość firmy. Z podatkami dług zwiększa wartość dzięki tarczy podatkowej, bo odsetki zmniejszają podatek (zob. **[[Stawki CIT|stawki CIT]]**).
+::wykres wacc | Teoria kompromisu: umiarkowany dług obniża WACC, zbyt duży – podnosi.
 
 Teoria kompromisu mówi: zadłużaj się, dopóki korzyści podatkowe przewyższają koszty ryzyka bankructwa. Teoria hierarchii: najpierw zysk zatrzymany, potem dług, na końcu emisja akcji.
 

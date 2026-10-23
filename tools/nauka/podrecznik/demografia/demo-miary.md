@@ -46,6 +46,7 @@ $ przyrost rzeczywisty = przyrost naturalny + saldo migracji
 ## Ile dzieci na jedną kobietę
 
 **[[Współczynnik dzietności (TFR)|Współczynnik dzietności]]** to przeciętna liczba dzieci, które urodziłaby kobieta, gdyby przez całe życie miała płodność taką jak w danym roku. Liczymy go jako sumę cząstkowych współczynników płodności dla wieku 15–49 lat.
+::wykres seria id=dzietnosc | Dzietność w Polsce od lat poniżej poziomu zastępowalności pokoleń (ok. 2,1).
 
 > Przykład: w 7 grupach wieku (15–19, 20–24 … 45–49) roczna liczba urodzeń na kobietę wynosi 0,01; 0,05; 0,09; 0,08; 0,04; 0,01; 0,00. Suma = 0,28, a każda grupa obejmuje 5 lat, więc TFR = 0,28 · 5 = 1,4.
 
@@ -84,6 +85,7 @@ $ WO = (L₀₋₁₄ + L₆₅₊) / L₁₅₋₆₄ · 100
 ## Starzenie się od dołu i od góry
 
 **[[Starzenie się ludności i jego miary|Starzenie się ludności]]** ma dwa źródła: mniej urodzeń („od dołu” piramidy) i dłuższe życie („od góry”). Mierzymy je kilkoma liczbami: współczynnikiem starości (odsetek osób 65+; według ONZ populacja jest „stara” powyżej 7%), indeksem starości (osoby 65+ na 100 dzieci 0–14) i medianą wieku. Podwójne starzenie się to szybki wzrost liczby osób 80+.
+::wykres seria id=obciazenie | Współczynnik obciążenia osobami starszymi rośnie – w Polsce szybciej niż w UE.
 
 > Uwaga: współczynnik starości to **odsetek** seniorów w całej ludności, a indeks starości – seniorzy **na 100 dzieci**. Na olimpiadzie łatwo je pomylić.
 
@@ -114,6 +116,7 @@ Demografia ma jedną zaletę, której zazdroszczą jej inne nauki: dość dobrze
 ## Co nas czeka
 
 **[[Prognoza ludności GUS|Prognoza GUS]]** z 2024 roku mówi, że ludność Polski spadnie do ok. 30,9 mln w 2060 roku (o ok. 6,6 mln). Co roku ma się rodzić ok. 225 tys. dzieci i umierać blisko 490 tys. osób, a mediana wieku dojdzie do ok. 50 lat.
+::wykres piramida dane=pl | Dzisiejsza struktura wieku wyznacza przyszłe roczniki rodziców i emerytów.
 
 ## Gdzie ubywa ludzi
 

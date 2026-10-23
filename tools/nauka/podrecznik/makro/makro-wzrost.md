@@ -42,6 +42,7 @@ Sto lat temu Korea Południowa była biedniejsza od wielu krajów Afryki. Dziś 
 ## Wzrost a rozwój
 
 **[[Wzrost gospodarczy|Wzrost gospodarczy]]** to długookresowy wzrost realnego PKB (najlepiej per capita) i potencjału produkcyjnego. **[[Rozwój gospodarczy|Rozwój gospodarczy]]** to pojęcie szersze: obejmuje zmiany jakościowe – strukturę gospodarki, instytucje, edukację, zdrowie, poziom życia.
+::wykres seria id=pkb | Realny wzrost PKB: Polska rośnie szybciej niż UE (konwergencja), spadek tylko w 2020 r.
 
 ## Reguła 70
 
@@ -54,6 +55,7 @@ $ t ≈ 70 / g(%)
 ## Model Solowa
 
 Robert Solow w 1956 roku zbudował **[[Model Solowa|neoklasyczny model wzrostu]]**. Jego kluczowa obserwacja: kapitał ma malejące przychody. Pierwszy komputer w biurze bardzo zwiększa wydajność, dziesiąty na tym samym biurku – już nie. Dlatego gospodarka zmierza do stanu ustalonego, w którym dokładanie kapitału przestaje podnosić produkcję per capita. W długim okresie wzrost dochodu na głowę zależy tylko od postępu technicznego.
+::wykres solow | Stan ustalony k*: oszczędności równoważą zużycie kapitału i przyrost ludności.
 
 ## Doganianie
 
@@ -108,6 +110,7 @@ W latach 60. Holandia odkryła ogromne złoża gazu w Groningen. Eksport gazu pr
 **[[Współczynnik Giniego i krzywa Lorenza|Krzywa Lorenza]]** pokazuje, jaki udział dochodów ma kolejny odsetek ludności, od najbiedniejszych. Współczynnik Giniego to stosunek pola między krzywą a linią równości do całego pola pod tą linią: 0 – pełna równość, 1 – pełna nierówność.
 
 **[[Wskaźnik decylowy (kwintylowy)|Wskaźnik decylowy]]** jest prostszy: ile razy dochody najbogatszych 10% przewyższają dochody najbiedniejszych 10%. Wersja kwintylowa porównuje 20%.
+::wykres lorenz | Im większe nierówności, tym dalej krzywa Lorenza od linii równości.
 
 ## Ubóstwo w Polsce
 
@@ -254,6 +257,7 @@ Ludzie oszczędzają i inwestują, gdy wierzą, że nikt im tego nie odbierze. *
 ## Ludność
 
 **[[Wzrost liczby ludności a wzrost gospodarczy|Szybki przyrost ludności]]** działa w obie strony. Może obciążać zasoby (obawy Malthusa, które się nie sprawdziły) i rozrzedzać kapitał – te same szkoły i maszyny dzielą się na więcej ludzi. Ale może też przyspieszać postęp, bo więcej ludzi to więcej wynalazców.
+::wykres solow | Szybszy przyrost ludności (wyższe n) obniża kapitał na pracownika w stanie ustalonym.
 
 > Przykład: firma, która 10 lat temu kupowała części w Chinach, dziś przenosi część dostaw do Meksyku albo Polski – bliżej klientów i z mniejszym ryzykiem. To nearshoring, jeden z objawów „slowbalizacji”.
 

@@ -56,6 +56,7 @@ Fabryka zapłaciła w tym roku za materiały, pensje, prąd i czynsz. Teraz musi
 ## Pieniądze też kosztują
 
 Firma ma 70% kapitału od właścicieli i 30% z kredytu. Bank chce 8% odsetek, akcjonariusze oczekują 11% zwrotu. Ile musi zarobić firma, żeby wszyscy byli zadowoleni? Odpowiada **[[Średni ważony koszt kapitału (WACC)|WACC]]**:
+::wykres wacc | WACC – średnia kosztu długu (po podatku) i kapitału własnego, ważona strukturą.
 
 $ WACC = wE · kE + wD · kD · (1 − T)
 
@@ -72,6 +73,7 @@ $ WACC = wE · kE + wD · kD · (1 − T)
 ## Ile trzeba sprzedać
 
 **[[Marża pokrycia (marża brutto)|Marża pokrycia]]** = przychody − koszty zmienne. Jednostkowa = cena − jednostkowy koszt zmienny. To kwota, która pokrywa koszty stałe i daje zysk – podstawa progu rentowności.
+::wykres bep | Każda sztuka ponad próg rentowności daje zysk równy marży jednostkowej.
 
 > Przykład: cena 50 zł, koszt zmienny 30 zł, koszty stałe 40 000 zł. Marża jednostkowa = 20 zł. Próg rentowności = 40 000 / 20 = 2000 sztuk.
 

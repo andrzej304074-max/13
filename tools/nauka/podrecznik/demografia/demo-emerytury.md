@@ -35,6 +35,7 @@ O tych celach pisali **[[Samuelson Paul|Paul Samuelson]]** (model pokoleń), **[
 ## Dwa sposoby finansowania
 
 **[[System repartycyjny (PAYG) a kapitałowy|System repartycyjny]]** (pay-as-you-go) działa jak umowa między pokoleniami: dzisiejsze składki płacą dzisiejsze emerytury. Jest wrażliwy na demografię. System **kapitałowy** inwestuje składki, a emerytura pochodzi z uzbieranego majątku. Jest wrażliwy na kryzysy na rynkach i inflację.
+::wykres seria id=obciazenie | W PAYG emerytury płacą pracujący – im więcej seniorów na pracującego, tym trudniej.
 
 > Uwaga: przejście z systemu repartycyjnego na kapitałowy oznacza „podwójne obciążenie” – pokolenie przejściowe płaci na emerytury obecnych seniorów i jednocześnie oszczędza na własne.
 
@@ -56,6 +57,7 @@ O tych celach pisali **[[Samuelson Paul|Paul Samuelson]]** (model pokoleń), **[
 ## Żyć dłużej niż oszczędności
 
 **[[Ryzyko długowieczności i renta dożywotnia|Ryzyko długowieczności]]** to ryzyko, że pieniądze skończą się przed końcem życia. Chroni przed nim **renta dożywotnia** – wypłaty do śmierci w zamian za jednorazową wpłatę. Rynek prywatnych rent jest słaby, bo kupują je głównie ci, którzy spodziewają się długiego życia (negatywna selekcja).
+::wykres seria id=dlugosc-zycia | Dalsze trwanie życia rośnie – renta dożywotnia chroni przed „przeżyciem” oszczędności.
 
 > Zapamiętaj: w DB ryzyko ponosi płatnik, w DC – oszczędzający; dwa lata dłuższej pracy podnoszą emeryturę z obu stron ułamka.
 
@@ -80,6 +82,7 @@ Barr i Diamond rozprawiają się z **[[Mity reform emerytalnych|mitami reform em
 ## Pracować dłużej?
 
 **[[Wiek emerytalny a długość życia|Wiek emerytalny]]** to główna odpowiedź na starzenie się. W Polsce ustawa z 2012 roku podnosiła go stopniowo do 67 lat; od 1 października 2017 roku przywrócono 60 lat dla kobiet i 65 dla mężczyzn. Część krajów (Dania, Finlandia, Holandia) wiąże wiek emerytalny z długością życia – rośnie sam, gdy żyjemy dłużej.
+::wykres seria id=dlugosc-zycia | Dłuższe życie po 65. roku to dłuższa wypłata emerytury – argument za wyższym wiekiem emerytalnym.
 
 ## Dlaczego państwo każe oszczędzać
 

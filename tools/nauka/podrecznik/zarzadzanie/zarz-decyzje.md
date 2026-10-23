@@ -167,6 +167,7 @@ Każdy, kto zmieniał nawyk, wie, że najtrudniejszy jest początek i utrzymanie
 ## Im więcej robisz, tym taniej
 
 **[[Krzywa doświadczenia (uczenia się)|Krzywa doświadczenia]]**: przy podwojeniu skumulowanej produkcji koszt jednostkowy spada o 20–30%.
+::wykres uczenie | Krzywa doświadczenia 80%: podwojenie skumulowanej produkcji obniża koszt o 20%.
 
 > Przykład: pierwszy samolot kosztuje 100 mln, przy krzywej 80% drugi – 80 mln, czwarty – 64 mln, ósmy – 51,2 mln.
 

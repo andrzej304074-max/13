@@ -88,6 +88,7 @@ Nie stać cię na biurowiec, ale możesz kupić akcje spółki, która ma ich ki
 **[[Kontrakt terminowy (futures i forward)|Kontrakt terminowy]]** to umowa kupna lub sprzedaży w przyszłości po cenie ustalonej dziś. **Futures** są standaryzowane, notowane na giełdzie, z depozytem i codziennym rozliczeniem. **Forward** – indywidualny, pozagiełdowy.
 
 **[[Opcja|Opcja]]** daje prawo, ale nie obowiązek: **call** – do kupna, **put** – do sprzedaży, po cenie wykonania. Europejska – wykonywana tylko w dniu wygaśnięcia, amerykańska – w dowolnym momencie.
+::wykres opcja | Kupujący opcję call traci najwyżej premię, a zyskuje, gdy cena przekroczy K + premia.
 
 > Przykład: kupujesz opcję call na akcję z ceną wykonania 100 zł za 5 zł. W dniu wygaśnięcia akcja kosztuje 120 zł. Zysk = 120 − 100 − 5 = 15 zł. Gdyby kosztowała 90 zł – nie wykonujesz opcji, tracisz 5 zł.
 
@@ -109,6 +110,7 @@ Kupujesz za 5 zł prawo, żeby za miesiąc kupić akcję po 100 zł. Jeśli akcj
 ## Strategie opcyjne
 
 **[[Strategie opcyjne: straddle i strangle|Straddle i strangle]]**: kupujesz jednocześnie call i put. Zarabiasz, gdy cena mocno się ruszy – w górę lub w dół. To zakład na zmienność. Wystawienie obu opcji – odwrotnie: zarabiasz, gdy cena stoi w miejscu.
+::wykres opcja typ=straddle | Straddle (call + put z tym samym K) zarabia na dużym ruchu ceny w dowolną stronę.
 
 > Przykład: long straddle z ceną wykonania 100 zł, za call i put płacisz łącznie 8 zł. Zarabiasz, gdy cena wyniesie powyżej 108 zł albo poniżej 92 zł.
 
@@ -181,6 +183,7 @@ To stare przysłowie ma swoją matematykę. Harry Markowitz pokazał, że łącz
 ## Systematyczne i specyficzne
 
 **[[Ryzyko systematyczne i specyficzne|Ryzyko specyficzne]]** dotyczy jednej spółki – pożar fabryki, nieudany produkt. **Systematyczne** – całego rynku: recesja, wzrost stóp. Pierwsze można zmniejszyć **[[Dywersyfikacja portfela|dywersyfikacją]]**: „nie wkładaj wszystkich jajek do jednego koszyka”. Drugiego – nie.
+::wykres portfel | Dywersyfikacja usuwa ryzyko specyficzne; ryzyko systematyczne zostaje.
 
 ## Teoria portfela
 
@@ -189,6 +192,7 @@ To stare przysłowie ma swoją matematykę. Harry Markowitz pokazał, że łącz
 ## CAPM
 
 **[[Model CAPM|CAPM]]**:
+::wykres sml | CAPM: wymagana stopa zwrotu rośnie liniowo z betą – linia SML.
 
 $ E(R) = Rf + β · [E(Rm) − Rf]
 

@@ -1,5 +1,7 @@
 "use client";
 
+import { ItemFigure } from "@/app/components/item-figure";
+import type { FigSpec } from "@/lib/nauka-types";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { usePrefSync } from "@/lib/prefs-client";
 import { PreviewBanner } from "@/app/components/preview-banner";
@@ -21,7 +23,7 @@ import { hasloSpeech } from "@/lib/speech-catalog";
 import { isBackNav, savedNumber, saveNumber } from "@/app/components/back";
 import { LoadError } from "@/app/components/load-error";
 
-export interface Card { id: string; t: string; d: string; w: string | null; kind: string; topic: string; n: number; /** Własna fiszka konta (`u:…`). */ own?: boolean }
+export interface Card { id: string; t: string; d: string; w: string | null; kind: string; topic: string; n: number; /** Własna fiszka konta (`u:…`). */ own?: boolean; /** Rysunek hasła. */ f?: FigSpec }
 type Source = "" | "kurs" | "moje";
 type Topic = { id: string; title: string; emoji: string };
 type Kind = { id: string; title: string };
@@ -315,6 +317,7 @@ function Face({ c, back, topicName, m }: { c: Card; back: boolean; topicName: Re
       <div className="fc-title small">{c.t}</div>
       <p className="fc-def">{c.d}</p>
       {c.w && <pre className="formula">{c.w}</pre>}
+      <ItemFigure f={c.f} compact />
       <LevelNote m={m} />
     </div>
   ) : (

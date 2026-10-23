@@ -7,6 +7,7 @@ Wyobraź sobie zwykły wtorek. Masz w portfelu 40 zł, przed sobą wolny wieczó
 ## Każdy wybór ma swoją cenę
 
 Skoro trzeba wybierać, każda decyzja coś kosztuje – nawet wtedy, gdy nie płacisz ani złotówki. Godzina spędzona na serialu to godzina, której nie poświęcisz na naukę czy sen. Ekonomiści mówią o **[[Koszt alternatywny (koszt utraconych możliwości)|koszcie alternatywnym]]**: to wartość najlepszej rzeczy, z której zrezygnowałeś. To jedno z najważniejszych pojęć całego kursu – wróci do ciebie przy handlu, produkcji, czasie wolnym i polityce państwa.
+::wykres kmp | Koszt alternatywny: więcej dobra X oznacza rezygnację z części dobra Y – nachylenie KMP.
 
 ## Jak patrzy ekonomista
 
@@ -132,6 +133,7 @@ Ekonomiści dzielą czas na dwa okresy. **[[Krótki okres i długi okres|Krótki
 ## Popyt w pigułce
 
 **[[Popyt]]** to zależność między ceną a ilością, jaką ludzie chcą i mogą kupić. Zwykle im drożej, tym kupujemy mniej. Jak bardzo mniej – to mierzy **[[Elastyczność cenowa popytu|elastyczność cenowa popytu]]**:
+::wykres sd | Krzywa popytu (D) opada: im niższa cena, tym większa wielkość popytu; podaż (S) rośnie z ceną.
 
 $ Ep = (ΔQ/Q) / (ΔP/P)
 
@@ -142,6 +144,7 @@ Jeśli cena wzrośnie o 10%, a zakupy spadną o 20%, elastyczność wynosi 2 –
 ## Praca też ma swoją krzywą
 
 Gdy płaca rośnie, zwykle chcemy pracować więcej – czas wolny staje się „droższy”. Ale przy bardzo wysokich zarobkach bogatszy pracownik może zapragnąć więcej odpoczynku. Dlatego [[Podaż pracy (krzywa zakrzywiona do tyłu)|krzywa podaży pracy]] może zakręcać do tyłu.
+::wykres praca | Podaż pracy rośnie z płacą (efekt substytucyjny), choć przy bardzo wysokich płacach może się zakrzywić.
 
 ## Jak czytać wykres
 
@@ -314,6 +317,7 @@ Społeczeństwo stale wybiera między **[[Efektywność a sprawiedliwość (wymi
 **[[Ekonomista jako naukowiec i doradca polityki|Ekonomista]]** nosi dwie czapki. Jako naukowiec opisuje świat i sprawdza twierdzenia na danych. Jako doradca rządu mówi, co powinno się zrobić.
 
 > Przykład: przy tych zasadach olimpiada pytała też o [[Pieniądz|pieniądz]] i jego funkcje, [[Prawo popytu|prawo popytu]] oraz [[Ceny zaporowe (limit pricing) i ceny drapieżne|ceny zaporowe i drapieżne]] – czyli bodźce w praktyce rynkowej.
+::wykres sd | Prawo popytu: ruch wzdłuż krzywej D – niższa cena, większa kupowana ilość.
 
 > Uwaga: agregacja **upraszcza** – „poziom cen” to średnia tysięcy cen; pojedyncze ceny mogą iść w przeciwnym kierunku.
 

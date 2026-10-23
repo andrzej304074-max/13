@@ -3,8 +3,13 @@ import type { Question } from "./types";
 /** Rodzaj treści hasła w kursie. */
 export type ItemKind = "pojecie" | "wzor" | "osoba" | "instytucja" | "data" | "przepis" | "zrozumienie";
 
+/** Rysunek (app/components/book-figure.tsx): rodzaj, opcje, podpis. */
+export interface FigSpec { k: string; o?: Record<string, string | number>; cap?: string }
+
 export interface CourseItem {
   id: string;
+  /** Rysunek przy haśle (data/nauka/figures.json). */
+  f?: FigSpec;
   /** Pełny tytuł hasła, skrócony tytuł (bez nawiasów), definicja, wzór, przykład, uwaga. */
   t: string;
   s: string;
@@ -100,7 +105,7 @@ export interface GraphSpec {
 }
 
 export type ZEx =
-  | { t: "karta"; title: string; text: string; w?: string; p?: string; g?: GraphSpec }
+  | { t: "karta"; title: string; text: string; w?: string; p?: string; g?: GraphSpec; fig?: FigSpec }
   | { t: "wybor"; q: string; opts: string[]; ok: number; why: string; ctx?: string; stat: ExerciseType }
   | { t: "multi"; q: string; opts: string[]; ok: number[]; why: string; ctx?: string; stat: ExerciseType }
   | { t: "pf"; s: string; v: boolean; why: string; ctx?: string; stat: ExerciseType }

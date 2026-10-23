@@ -38,6 +38,7 @@ Inflacja oczekiwana jest mniej groźna – można ją wliczyć w płace i oproce
 ## Inflacja, czyli słabnący pieniądz
 
 **[[Inflacja]]** to proces ogólnego wzrostu cen. Gdy inflacja wynosi 10%, za 100 zł kupisz to, co rok wcześniej kosztowało około 91 zł. Spada **[[Siła nabywcza pieniądza|siła nabywcza pieniądza]]**.
+::wykres seria id=inflacja | Inflacja HICP w Polsce i UE – szok 2022 r. i powrót w pobliże celu.
 
 ## Trzy słowa, które łatwo pomylić
 
@@ -63,6 +64,7 @@ Progi podatkowe zapisane w złotówkach się nie zmieniają, a płace rosną raz
 ## Popytowa czy kosztowa?
 
 **[[Inflacja popytowa i kosztowa|Inflacja popytowa]]** pojawia się, gdy wydatki rosną szybciej niż możliwości produkcji – na przykład po dodruku pieniądza albo dużym wzroście wydatków rządu. Inflacja kosztowa – gdy drożeją surowce, energia albo praca. Rozróżnienie jest ważne: z popytową bank centralny walczy skutecznie stopami, z kosztową – trudniej, bo podwyżki stóp nie obniżą ceny ropy.
+::wykres adas AD=+1 | Inflacja popytowa: AD w prawo; kosztowa: SRAS w lewo.
 
 > Zapamiętaj: inflacja – wzrost cen; dezinflacja – spadek tempa wzrostu; deflacja – spadek cen; stagflacja – inflacja + stagnacja.
 
@@ -86,6 +88,7 @@ NBP ma jasno zapisany **[[Cel inflacyjny NBP|cel inflacyjny]]**: 2,5% z dopuszcz
 ## Szoki z zewnątrz
 
 Ceny ropy w dużej mierze kształtuje **[[OPEC]]** – kartel państw naftowych. Decyzje o limitach wydobycia w 1973 i 1979 roku wywołały szoki naftowe i stagflację. Na ceny wpływa też **[[Kurs walutowy|kurs walutowy]]**. **[[Aprecjacja i deprecjacja|Deprecjacja]]** złotego podnosi ceny importu i podsyca inflację, aprecjacja – ją hamuje.
+::wykres waluta D=+1 | Wzrost popytu na euro: złoty traci na wartości (deprecjacja) – kurs PLN/EUR rośnie.
 
 ## Jak chronić oszczędności
 
@@ -152,6 +155,7 @@ Ceny żywności i energii skaczą z powodu pogody czy wojen. Żeby zobaczyć trw
 ## Oczekiwana czy nieoczekiwana?
 
 Jeśli wszyscy wiedzą, że inflacja wyniesie 5%, wpisują to w umowy: płace rosną o 5%, a oprocentowanie lokat uwzględnia inflację. **[[Inflacja oczekiwana i nieoczekiwana|Inflacja nieoczekiwana]]** jest groźniejsza: przenosi bogactwo od wierzycieli do dłużników i od osób o stałych dochodach do pozostałych.
+::wykres phillips dlugi=1 | Gdy inflacja przestaje zaskakiwać, bezrobocie wraca do u* – zostaje tylko wyższa inflacja.
 
 > Przykład: pożyczyłeś koledze 1000 zł na rok bez odsetek. Gdy inflacja wyniesie 10%, oddane 1000 zł kupi tyle, co dziś około 909 zł. Zyskał dłużnik, straciłeś ty.
 
@@ -167,6 +171,7 @@ Raz rozpędzona inflacja trudno hamuje. Pracownicy żądają podwyżek, bo ceny 
 - **zniekształcenia podatkowe** – podatki od zysków, które są tylko inflacyjne;
 - **niepewność** – trudniej planować inwestycje;
 - **redystrybucja** – przypadkowe przesunięcia bogactwa.
+::wykres seria id=inflacja | Wysoka i zmienna inflacja (2022–2023) to koszty: utrata wartości oszczędności, niepewność.
 
 > Uwaga: inflacja **bazowa** nie obejmuje cen żywności i energii – jest stabilniejsza, ale nie mówi o kosztach życia tak dobrze jak CPI.
 
@@ -224,6 +229,7 @@ Oprócz cen w sklepach GUS mierzy ceny, po jakich firmy sprzedają swoje wyroby 
 ## Teoria ilościowa
 
 Irving Fisher zapisał zależność, która stała się podstawą monetaryzmu – **[[Teoria ilościowa pieniądza (równanie wymiany Fishera)|teorię ilościową pieniądza]]**:
+::wykres seria id=inflacja | M·V = P·Y: szybki wzrost pieniądza ponad produkcję kończy się inflacją (2021–2023).
 
 $ M · V = P · Y
 

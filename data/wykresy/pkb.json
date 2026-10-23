@@ -1,0 +1,152 @@
+{
+ "id": "pkb",
+ "title": "Realny wzrost PKB",
+ "unit": "% r/r",
+ "kind": "slupki",
+ "source": "Eurostat, nama_10_gdp (wolumen, zmiana r/r)",
+ "urls": [
+  "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?na_item=B1GQ&unit=CLV_PCH_PRE&geo=PL&sinceTimePeriod=2010&format=JSON&lang=EN",
+  "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?na_item=B1GQ&unit=CLV_PCH_PRE&geo=EU27_2020&sinceTimePeriod=2010&format=JSON&lang=EN"
+ ],
+ "fetched": "2026-10-23",
+ "lines": [
+  {
+   "name": "Polska",
+   "points": [
+    [
+     2010,
+     3.2
+    ],
+    [
+     2011,
+     5.3
+    ],
+    [
+     2012,
+     1.5
+    ],
+    [
+     2013,
+     0.7
+    ],
+    [
+     2014,
+     3.9
+    ],
+    [
+     2015,
+     4.4
+    ],
+    [
+     2016,
+     3.0
+    ],
+    [
+     2017,
+     5.2
+    ],
+    [
+     2018,
+     6.2
+    ],
+    [
+     2019,
+     4.6
+    ],
+    [
+     2020,
+     -2.0
+    ],
+    [
+     2021,
+     6.9
+    ],
+    [
+     2022,
+     5.3
+    ],
+    [
+     2023,
+     0.2
+    ],
+    [
+     2024,
+     3.2
+    ],
+    [
+     2025,
+     3.8
+    ]
+   ]
+  },
+  {
+   "name": "UE-27",
+   "points": [
+    [
+     2010,
+     2.1
+    ],
+    [
+     2011,
+     1.9
+    ],
+    [
+     2012,
+     -0.8
+    ],
+    [
+     2013,
+     0.0
+    ],
+    [
+     2014,
+     1.6
+    ],
+    [
+     2015,
+     2.4
+    ],
+    [
+     2016,
+     2.0
+    ],
+    [
+     2017,
+     2.9
+    ],
+    [
+     2018,
+     2.1
+    ],
+    [
+     2019,
+     1.9
+    ],
+    [
+     2020,
+     -5.5
+    ],
+    [
+     2021,
+     6.4
+    ],
+    [
+     2022,
+     3.6
+    ],
+    [
+     2023,
+     0.4
+    ],
+    [
+     2024,
+     1.4
+    ],
+    [
+     2025,
+     1.4
+    ]
+   ]
+  }
+ ]
+}

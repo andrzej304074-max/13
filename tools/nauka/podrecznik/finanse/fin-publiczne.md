@@ -190,6 +190,7 @@ Rząd ma deficyt 4% PKB. Czy to dużo? Zależy, ile z tego to odsetki, a ile wyn
 ## Rodzaje deficytu
 
 **[[Deficyt strukturalny i cykliczny|Deficyt cykliczny]]** wynika z koniunktury – zniknie, gdy gospodarka odbije. **Strukturalny** – oczyszczony z wpływu cyklu – pokazuje, czy państwo trwale żyje ponad stan. **[[Deficyt pierwotny|Deficyt pierwotny]]** – bez kosztów odsetek.
+::wykres cykl | Deficyt cykliczny rośnie w recesji (dno) i maleje w ożywieniu; strukturalny zostaje.
 
 > Przykład: deficyt 5% PKB, odsetki 2% PKB, część cykliczna 1% PKB. Deficyt pierwotny = 3%, strukturalny = 4%.
 
@@ -204,6 +205,7 @@ Rząd ma deficyt 4% PKB. Czy to dużo? Zależy, ile z tego to odsetki, a ile wyn
 ## Dług
 
 **[[Dług publiczny|Dług publiczny]]** – definicja krajowa różni się od unijnej (EDP). Limit: **[[Progi ostrożnościowe i konstytucyjny limit długu|3/5 PKB]]**, progi ostrożnościowe od 55%. **[[Reguła złotej zasady (finansów publicznych)|Złota zasada]]**: pożyczać tylko na inwestycje.
+::wykres seria id=dlug | Dług sektora finansów publicznych w relacji do PKB – Polska poniżej średniej UE, ale rośnie.
 
 > Uwaga: deficyty **bliźniacze** to deficyt budżetowy i deficyt na rachunku obrotów bieżących występujące jednocześnie.
 

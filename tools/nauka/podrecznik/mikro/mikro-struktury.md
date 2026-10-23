@@ -43,6 +43,7 @@ To jeden z najobszerniejszych i najczęściej pytanych działów olimpiady. Wart
 ## Konkurencja doskonała: nikt nie rządzi ceną
 
 Na wielkim targu dwadzieścia straganów sprzedaje identyczne jabłka. Wszyscy wiedzą, ile kosztują. Każdy może postawić nowy stragan. To **[[Konkurencja doskonała|konkurencja doskonała]]**. Pojedynczy sprzedawca jest cenobiorcą: jeśli podniesie cenę, klienci pójdą obok. Dla niego cena = utarg krańcowy (P = MR).
+::wykres konkurencja | Firma w konkurencji doskonałej przyjmuje cenę rynkową i produkuje tam, gdzie P = MC.
 
 W długim okresie wysoka cena przyciąga nowych sprzedawców, aż zysk ekonomiczny spada do zera, a cena do minimum kosztu przeciętnego. **[[Krzywa podaży firmy doskonale konkurencyjnej|Krzywą podaży firmy]]** jest rosnący fragment krzywej kosztu krańcowego – powyżej minimum AVC w krótkim okresie i powyżej minimum ATC w długim.
 
@@ -54,6 +55,7 @@ Na drugim końcu jest **[[Monopol|monopol]]** – jedna firma, produkt bez blisk
 ## Skąd się biorą monopole
 
 **[[Bariery wejścia|Bariery wejścia]]** to wszystko, co utrudnia nowym firmom start: patenty i licencje, kontrola rzadkich zasobów, ogromne koszty początkowe, lojalność wobec marki, przepisy. Szczególny przypadek to **[[Monopol naturalny|monopol naturalny]]**. Gdy korzyści skali są ogromne, jedna firma obsłuży rynek taniej niż kilka. Nikt rozsądny nie buduje w mieście trzech równoległych sieci wodociągowych.
+::wykres lrac | Monopol naturalny: przy dużych korzyściach skali jedna firma produkuje najtaniej.
 
 > Uwaga: monopol naturalny nie wynika z zakazu wejścia, tylko z kosztów. Dlatego zwykle się go reguluje, zamiast dzielić.
 
@@ -71,6 +73,7 @@ Ten rozdział to przedsmak struktur pośrednich – między konkurencją doskona
 ## Każda kawiarnia jest trochę inna
 
 W twoim mieście działają dziesiątki kawiarni. Każda ma inny wystrój, inną kawę, inną lokalizację. Możesz otworzyć własną. To **[[Konkurencja monopolistyczna|konkurencja monopolistyczna]]**: wiele firm i swobodne wejście jak w konkurencji doskonałej, ale produkty zróżnicowane jak trochę w monopolu. Każda kawiarnia ma więc odrobinę władzy nad ceną – stali klienci zapłacą o złotówkę więcej za ulubione latte.
+::wykres monopol | W krótkim okresie firma w konkurencji monopolistycznej działa jak mały monopolista (MR = MC).
 
 W długim okresie nowe kawiarnie odbierają klientów tym, które dobrze zarabiają, aż zysk ekonomiczny spada do zera. Różnica wobec konkurencji doskonałej: kawiarnie działają przy nadwyżce mocy – mogłyby obsłużyć więcej gości taniej. To cena, którą płacimy za różnorodność.
 
@@ -108,6 +111,7 @@ Przypomnienie: w **[[Konkurencja monopolistyczna|konkurencji monopolistycznej]]*
 ## Kilku wielkich
 
 **[[Oligopol]]** to rynek kilku dużych firm, które od siebie zależą. Gdy jedna sieć komórkowa obniża abonament, pozostałe muszą zareagować. Oligopoliści mogą się zmówić albo walczyć.
+::wykres oligopol | Model Sweezy'ego: konkurenci idą za obniżką ceny, a nie za podwyżką – popyt się załamuje przy P*.
 
 Oligopol z dwiema firmami to **[[Duopol|duopol]]**. Ekonomiści opisują go trzema klasycznymi modelami:
 - **[[Model Cournota|Cournot]]** – firmy jednocześnie wybierają, _ile_ produkować. Cena wypada wyżej niż w konkurencji, ale niżej niż w monopolu.
@@ -115,6 +119,7 @@ Oligopol z dwiema firmami to **[[Duopol|duopol]]**. Ekonomiści opisują go trze
 - **[[Model Stackelberga|Stackelberg]]** – lider decyduje pierwszy, a naśladowca odpowiada. Lider produkuje więcej i zarabia więcej niż w modelu Cournota.
 
 Wszystkie te modele opierają się na **[[Równowaga Nasha|równowadze Nasha]]**: sytuacji, w której żadna firma nie poprawi wyniku, zmieniając tylko własną decyzję.
+::wykres macierz preset=wiezien | Równowaga Nasha (−5/−5): żaden gracz nie zyska, zmieniając strategię sam.
 
 > Zapamiętaj: dyskryminacja cenowa I stopnia – każdy płaci swoją maksymalną cenę; II – zależnie od ilości; III – według grup klientów.
 
@@ -126,6 +131,7 @@ Pytano też o [[Kartel|kartele]], [[Monopson|monopson]] (jeden nabywca, np. jedy
 ## Dlaczego ceny w oligopolu stoją w miejscu
 
 Paul Sweezy zauważył, że oligopoliści rzadko zmieniają ceny. Wyjaśnił to **[[Załamana krzywa popytu (model Sweezy’ego)|załamaną krzywą popytu]]**. Gdy firma obniża cenę, rywale robią to samo, żeby nie stracić klientów – więc niewiele zyska. Gdy podnosi cenę, rywale _nie_ idą za nią – i traci klientów. Krzywa popytu ma „kolano” przy obecnej cenie, a ceny są sztywne.
+::wykres oligopol | Luka w MR: koszt krańcowy może się zmieniać, a cena zostaje na poziomie P* – sztywność cen.
 
 ## Zmowa
 
@@ -189,6 +195,7 @@ John Nash, matematyk i noblista, opisał sytuację, w której żaden gracz nie p
 ## Dylemat więźnia
 
 Dwóch wspólników zostaje złapanych. Śledczy proponuje każdemu z osobna: „Zeznaj przeciwko koledze, a wyjdziesz wolny. Jeśli obaj zeznacie, dostaniecie po 5 lat. Jeśli obaj będziecie milczeć – po roku”. Co robi racjonalny więzień? Niezależnie od decyzji kolegi, opłaca mu się zeznać. Obaj zeznają i dostają po 5 lat, choć milcząc, siedzieliby rok. To **[[Dylemat więźnia|dylemat więźnia]]**: indywidualna racjonalność prowadzi do wyniku gorszego dla obu.
+::wykres macierz preset=wiezien | Dylemat więźnia: zdrada jest strategią dominującą, choć obaj woleliby współpracę.
 
 > Przykład: dwie firmy wydają fortunę na reklamy, które się wzajemnie znoszą. Obu byłoby lepiej bez reklam, ale żadna nie odważy się przestać pierwsza. Tak samo członkowie kartelu potajemnie łamią limity – dlatego kartele są nietrwałe.
 
@@ -213,6 +220,7 @@ Dlaczego najlepszy piłkarz zarabia wielokrotnie więcej niż dziesiąty najleps
 ## Wskaźnik Lernera
 
 Jak bardzo firma może podnieść cenę ponad koszt? To jej siła rynkowa. Abba Lerner zaproponował prostą miarę – **[[Siła rynkowa i wskaźnik Lernera|wskaźnik Lernera]]**:
+::wykres monopol | Wskaźnik Lernera (P − MC)/P mierzy, jak wysoko ponad kosztem krańcowym firma ustala cenę.
 
 $ L = (P − MC) / P = 1 / |Ep|
 
@@ -291,6 +299,7 @@ Firma żyje nie tylko z zysku, ale i z płynności. **[[Należności i zobowiąz
 ## Rynek, który sam się wyrównuje
 
 W konkurencji doskonałej działa prosty mechanizm. Gdy firmy zarabiają więcej niż gdziekolwiek indziej (zysk ekonomiczny dodatni), przyciągają nowych chętnych. Podaż rośnie, cena spada. Gdy firmy tracą, część odchodzi i cena rośnie. To **[[Wejście i wyjście z rynku w długim okresie|wejście i wyjście z rynku]]**. Trwa, aż cena zrówna się z minimum kosztu przeciętnego, a zysk ekonomiczny spadnie do zera.
+::wykres konkurencja | Zysk ekonomiczny przyciąga nowe firmy; w długim okresie cena spada do minimum ATC.
 
 Na rynkach, gdzie wejście jest trudne, firmy często idą inną drogą – łączą się w trusty, koncerny i holdingi (te [[Formy monopolizacji (porozumienia i koncentracje)|formy monopolizacji]] opisaliśmy w poprzednim rozdziale). W konkurencji doskonałej takiej pokusy nie ma. Skoro firmy mogą wchodzić bez końca po tej samej cenie, **[[Długookresowa krzywa podaży gałęzi|długookresowa krzywa podaży gałęzi]]** jest pozioma. Może jednak rosnąć, gdy nowe firmy mają wyższe koszty albo gdy rozwój branży podnosi ceny rzadkich zasobów, na przykład gruntów.
 
