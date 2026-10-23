@@ -11,19 +11,37 @@ import type { Stage } from "@/lib/questions";
 import { LoadingPage } from "@/app/components/loading-page";
 import { LoadError } from "@/app/components/load-error";
 import { OpenStats } from "./open-stats";
+import { usePrefSync } from "@/lib/prefs-client";
+import { viewedUser } from "@/lib/client";
 
-const BLOCK_KEY = "owe:blockSize";
-const TYPE_KEY = "owe:statsType";
-const BANK_KEY = "owe:statsBank";
-const STAGE_KEY = "owe:statsStage";
 const STAGE_LABEL: Record<Stage, string> = { s: "szkolny", o: "okręgowy" };
 const STAGE_GEN: Record<Stage, string> = { s: "szkolnego", o: "okręgowego" };
 
-type Bank = "owe" | "slownik";
+type Bank = "owe" | "ai" | "slownik" | "mix";
 const BANKS: { value: Bank; label: string }[] = [
-  { value: "owe", label: "Pytania z olimpiad" },
-  { value: "slownik", label: "Pytania ze słownika" },
+  { value: "owe", label: "Archiwum OWE" },
+  { value: "ai", label: "Pytania AI" },
+  { value: "slownik", label: "Słownik" },
+  { value: "mix", label: "Wszystkie pytania" },
 ];
+const isBank = (v: string | null): v is Bank => v === "owe" || v === "ai" || v === "slownik" || v === "mix";
+const BANK_NOTE: Record<Bank, string> = {
+  owe: "Testy z zakładki Olimpiada – prawdziwe pytania z archiwum OWE.",
+  ai: "Testy z samych pytań AI (sprawdzonych) – rozwiązywanych w zakładce „Wszystkie pytania” ze źródłem „Pytania AI”.",
+  slownik: "Testy z zakładki Słownik – pytania o pojęcia, osoby, daty i wzory, w tym o haśle XL.",
+  mix: "Testy z zakładki „Wszystkie pytania” łączące kilka źródeł. Wynik każdego źródła osobno – w karcie „Według źródła pytań”.",
+};
+const SOURCE_LABEL = { owe: "Archiwum OWE", ai: "Pytania AI", slownik: "Słownik" } as const;
+
+/** „Skąd te liczby?” – krótkie wyjaśnienie pod kartą statystyk. */
+function Why({ children }: { children: React.ReactNode }) {
+  return (
+    <details className="why">
+      <summary>Skąd te liczby?</summary>
+      <div className="muted small">{children}</div>
+    </details>
+  );
+}
 
 type Filter = "all" | "single" | "multi";
 const FILTERS: { value: Filter; label: string }[] = [
@@ -49,29 +67,22 @@ export default function StatsPage() {
   const [bank, setBank] = useState<Bank | null>(null);
   const [stage, setStage] = useState<Stage | null>(null);
 
-  // Wybrany rozmiar bloku zapamiętywany lokalnie w przeglądarce.
+  // filtry: z adresu (?bank=…) albo zapamiętane na koncie (klucz „stats”), inaczej domyślne
+  const [explicit] = useState(() => typeof window !== "undefined" && new URLSearchParams(window.location.search).has("bank"));
   useEffect(() => {
-    let saved = DEFAULT_BLOCK_SIZE;
-    try {
-      const v = Number(localStorage.getItem(BLOCK_KEY));
-      if ((BLOCK_SIZES as readonly number[]).includes(v)) saved = v;
-    } catch {}
-    try {
-      const f = localStorage.getItem(TYPE_KEY);
-      if (f === "single" || f === "multi") setFilter(f);
-      const s = localStorage.getItem(STAGE_KEY);
-      if (s === "s" || s === "o") setStage(s);
-    } catch {}
-    // Baza z adresu (?bank=slownik) ma pierwszeństwo przed ostatnio oglądaną.
-    let b: Bank = "owe";
     const fromUrl = new URLSearchParams(window.location.search).get("bank");
-    try {
-      const v = fromUrl ?? localStorage.getItem(BANK_KEY);
-      if (v === "slownik") b = "slownik";
-    } catch {}
-    setBank(b);
-    setBlockSize(saved);
+    setBank(isBank(fromUrl) ? fromUrl : "owe");
+    setBlockSize(DEFAULT_BLOCK_SIZE);
   }, []);
+  const prefValue = bank && blockSize ? new URLSearchParams({ bank, typ: filter, ...(stage ? { etap: stage } : {}), blok: String(blockSize) }).toString() : null;
+  usePrefSync("stats", prefValue, (v) => {
+    const p = new URLSearchParams(v);
+    const b = p.get("bank"), t = p.get("typ"), e = p.get("etap"), n = Number(p.get("blok"));
+    if (isBank(b)) setBank(b);
+    if (t === "single" || t === "multi" || t === "all") setFilter(t);
+    setStage(e === "s" || e === "o" ? e : null);
+    if ((BLOCK_SIZES as readonly number[]).includes(n)) setBlockSize(n);
+  }, { load: explicit, save: !!viewedUser() });
 
   useEffect(() => {
     if (blockSize === null || bank === null) return;
@@ -80,34 +91,17 @@ export default function StatsPage() {
     api<Stats>(withUser(`/api/stats?bank=${bank}&block=${blockSize}${typeParam}${stageParam}`)).then(setStats).catch((e) => setError(e.message));
   }, [blockSize, filter, bank, stage]);
 
-  function chooseStage(s: Stage | null) {
-    setStage(s);
-    try {
-      localStorage.setItem(STAGE_KEY, s ?? "");
-    } catch {}
-  }
-
+  const chooseStage = (s: Stage | null) => setStage(s);
   function chooseBank(b: Bank) {
     setBank(b);
     try {
-      localStorage.setItem(BANK_KEY, b);
-      window.history.replaceState(null, "", `/stats?bank=${b}`);
+      const q = new URLSearchParams(window.location.search);
+      q.set("bank", b);
+      window.history.replaceState(null, "", `/stats?${q}`);
     } catch {}
   }
-
-  function chooseFilter(f: Filter) {
-    setFilter(f);
-    try {
-      localStorage.setItem(TYPE_KEY, f);
-    } catch {}
-  }
-
-  function chooseBlock(n: number) {
-    setBlockSize(n);
-    try {
-      localStorage.setItem(BLOCK_KEY, String(n));
-    } catch {}
-  }
+  const chooseFilter = (f: Filter) => setFilter(f);
+  const chooseBlock = (n: number) => setBlockSize(n);
 
   if (error) return <LoadError message={error} />;
   if (!stats) return <LoadingPage />;
@@ -123,21 +117,21 @@ export default function StatsPage() {
       <PreviewBanner />
       <h1>Statystyki</h1>
       <p className="muted" style={{ marginTop: -8 }}>Wyniki Twoich testów. Skuteczność według działów i pojęć: <Link href={`/stats/dzialy?bank=${bank}`}>Działy i pojęcia →</Link></p>
-      <div className="seg" role="group" aria-label="Baza pytań">
+      <div className="seg" role="group" aria-label="Źródło pytań" data-testid="stats-bank" style={{ flexWrap: "wrap" }}>
         {BANKS.map((b) => (
           <button
             key={b.value}
             className={b.value === bank ? "active" : ""}
             aria-pressed={b.value === bank}
             onClick={() => chooseBank(b.value)}
+            data-bank={b.value}
           >
             {b.label}
           </button>
         ))}
       </div>
-      <p className="muted">{bank === "slownik" ? "Pytania ze słownika pojęć – statystyki liczone osobno od pytań z olimpiad. " : ""}Procent poprawnych odpowiedzi ze wszystkich testów wszystkich użytkowników – w wielokrotnym wyborze – zdobyte punkty
-        z maks. 2 na pytanie (4 trafne pola A–D – 2 pkt, 3 trafne – 1 pkt, mniej – 0). W testach 30/50 pytań liczą się wszystkie pytania testu, w trybie „bez limitu” tylko sprawdzone
-        lub pominięte.</p>
+      <p className="muted">{BANK_NOTE[bank ?? "owe"]} Procent poprawnych odpowiedzi z Twoich testów – w wielokrotnym wyborze zdobyte punkty
+        z maks. 2 na pytanie (4 trafne pola A–D – 2 pkt, 3 trafne – 1 pkt, mniej – 0).</p>
       <div className="seg" role="group" aria-label="Typ pytań">
         {FILTERS.map((f) => (
           <button
@@ -165,6 +159,11 @@ export default function StatsPage() {
           {testsLabel(main.tests)}
         </p>
       </div>
+      <Why>
+        Liczymy tylko Twoje testy z wybranej zakładki: zakończone oraz rozpoczęte testy „bez limitu” z co najmniej jedną odpowiedzią.
+        W testach 30/50 pytań liczą się wszystkie pytania testu (bez odpowiedzi – jak błędne), w trybie „bez limitu” – tylko sprawdzone
+        lub pominięte. Sprawdzenie bez zaznaczenia odpowiedzi daje 0 pkt. „Poprawne” w jednokrotnym wyborze to pytania za 2 pkt.
+      </Why>
       {filter === "all" && (
         <div className="stat-grid">
           {(["single", "multi"] as const).map((t) => (
@@ -194,6 +193,28 @@ export default function StatsPage() {
         </div>
         <p className="muted small" style={{ margin: 0 }}>Liczone z pytań każdego etapu – także w testach „oba etapy”. Pytania bez odpowiedzi w teście 30/50 liczą się jako błędne.</p>
       </>}
+
+      <h2>Według źródła pytań</h2>
+      <div className="stat-grid" data-testid="source-stats">
+        {(["owe", "ai", "slownik"] as const).map((k) => {
+          const src = stats.bySource[k];
+          return (
+            <div className="stat" key={k} data-source={k}>
+              <div className="value">{src.answers ? fmtPct(src.percent) : "–"}</div>
+              <div className="label">
+                {SOURCE_LABEL[k]} · {src.answers} {src.answers === 1 ? "odpowiedź" : "odpowiedzi"}
+                {src.answers > 0 && <> · jedn. {src.byType.single.answers ? fmtPct(src.byType.single.percent) : "–"}, wielokr. {src.byType.multi.answers ? fmtPct(src.byType.multi.percent) : "–"}</>}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <Why>
+        Wszystkie Twoje testy naraz – także z zakładki „Wszystkie pytania”, gdzie w jednym teście mieszają się źródła. Każde pytanie
+        przypisujemy do źródła po jego pochodzeniu (Archiwum OWE, Pytania AI, Słownik). Liczymy sprawdzone i pominięte pytania:
+        jednokrotny wybór – trafione albo nie, wielokrotny – punkty / 2. Działy, rodzaje pojęć (np. wzory) i hasło XL – w zakładce
+        <Link href={`/stats/dzialy?bank=${bank === "slownik" ? "slownik" : "owe"}`}> Działy i pojęcia</Link>.
+      </Why>
 
       {bank === "owe" && <OpenStats />}
 

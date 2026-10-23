@@ -255,10 +255,19 @@ export interface Stats {
     total: number;
     percent: number;
   }[];
+  /**
+   * Skuteczność według źródła pytania (Archiwum OWE, Pytania AI, Słownik) – ze wszystkich testów użytkownika,
+   * także z zakładki „Wszystkie pytania”; liczone ze sprawdzonych i pominiętych pytań (dokładność 0–1 na pytanie).
+   */
+  bySource: Record<QSourceKey, SourceTotals>;
   /** Dokładność w kolejnych blokach po `blockSize` odpowiedzianych pytań (ostatni blok może być niepełny). */
   blockSize: number;
   blocks: { questions: number; percent: number }[];
 }
+
+export type QSourceKey = "owe" | "ai" | "slownik";
+export interface SourceTotals { answers: number; percent: number; byType: Record<QuestionType, { answers: number; percent: number }> }
+const emptySource = (): SourceTotals => ({ answers: 0, percent: 0, byType: { single: { answers: 0, percent: 0 }, multi: { answers: 0, percent: 0 } } });
 
 /** Testy liczone do statystyk: zakończone oraz rozpoczęte testy bez limitu z co najmniej jedną odpowiedzią. */
 const COUNTED = "(t.finished_at IS NOT NULL OR (t.mode = 'endless' AND t.max_score > 0))";
@@ -316,7 +325,7 @@ export async function getStats(
     [bank, userId],
   );
   // niezależne zapytania równolegle – jedna tura do bazy zamiast pięciu
-  const [{ rows: agg }, { rows: hist }, stageRows, { rows: blockRows }] = await Promise.all([
+  const [{ rows: agg }, { rows: hist }, stageRows, { rows: blockRows }, { rows: srcRows }] = await Promise.all([
     query<{ type: QuestionType; score: number; max_score: number; correct: number; total: string; tests: string }>(
       `SELECT type, SUM(score) AS score, SUM(max_score) AS max_score, SUM(correct) AS correct, SUM(total) AS total,
          COUNT(*) AS tests
@@ -345,7 +354,28 @@ export async function getStats(
        ) b ORDER BY block ASC`,
       [typeFilter, bank, userId],
     ),
+    // źródło pytania z prefiksu id (sl- – Słownik, ai- – Pytania AI, reszta – Archiwum OWE), niezależnie od banku testu
+    query<{ src: QSourceKey; type: QuestionType; n: string; acc: number }>(
+      `SELECT CASE WHEN a.question_id LIKE 'sl-%' THEN 'slownik' WHEN a.question_id LIKE 'ai-%' THEN 'ai' ELSE 'owe' END AS src,
+         t.type, COUNT(*) AS n,
+         AVG(CASE WHEN a.skipped THEN 0 WHEN t.type = 'single' THEN (a.points = 2)::int ELSE a.points / 2 END) AS acc
+       FROM answers a JOIN tests t ON t.id = a.test_id
+       WHERE t.user_id = $1 GROUP BY 1, 2`,
+      [userId],
+    ),
   ]);
+  const bySource: Record<QSourceKey, SourceTotals> = { owe: emptySource(), ai: emptySource(), slownik: emptySource() };
+  for (const r of srcRows) {
+    const s = bySource[r.src];
+    if (!s) continue;
+    const n = Number(r.n), acc = Number(r.acc);
+    s.byType[r.type] = { answers: n, percent: Math.round(acc * 1000) / 10 };
+  }
+  for (const s of Object.values(bySource)) {
+    const n = s.byType.single.answers + s.byType.multi.answers;
+    s.answers = n;
+    s.percent = n ? Math.round(((s.byType.single.percent * s.byType.single.answers + s.byType.multi.percent * s.byType.multi.answers) / n) * 10) / 10 : 0;
+  }
   const byStage = { s: emptyTotals(), o: emptyTotals() };
   (["s", "o"] as const).forEach((st, i) => {
     const r = stageRows?.[i].rows[0];
@@ -391,6 +421,7 @@ export async function getStats(
       total: Number(t.total),
       percent: pct(Number(t.correct), Number(t.total)),
     })),
+    bySource,
     blockSize,
     blocks: blockRows.map((b) => ({ questions: Number(b.questions), percent: Math.round(b.accuracy * 1000) / 10 })),
   };
