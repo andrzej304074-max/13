@@ -1,0 +1,384 @@
+#! Prognoza XL – zadania analityczne, etap centralny (zestawy 35–50), po 15 pkt. Dane umowne, o ile nie podano źródła.
+
+=== 35 | makro | th | Model Solowa przy malejącej liczbie ludności
+vars: s=0,25; d=0,05; n1=0,01; n2=-0,005; a=0,3333333333
+P: Gospodarkę opisuje model Solowa z funkcją produkcji na pracownika y = k^α, gdzie α = 1/3. Stopa oszczędności s = {{s:2}}, stopa amortyzacji δ = {{d:2}}. W stanie ustalonym s·y = (n + δ)·k, gdzie n to tempo zmian liczby pracowników.
+--- a | 3
+Q: Oblicz kapitał i produkt na pracownika w stanie ustalonym przy n = 1%.
+A: Kapitał na pracownika | k1 = (s/(n1+d))**(1/(1-a)) | | tol=0,01
+A: Produkt na pracownika | y1 = k1**a | | tol=0,005
+SF: k* = (s / (n + δ))^(1/(1−α)) = (0,25 / 0,06)^1,5 ≈ {{k1:3}};  y* = k*^(1/3) ≈ {{y1:4}}
+--- b | 3
+Q: Oblicz te wielkości przy n = −0,5% (liczba pracowników maleje).
+A: Kapitał na pracownika | k2 = (s/(n2+d))**(1/(1-a)) | | tol=0,01
+A: Produkt na pracownika | y2 = k2**a | | tol=0,005
+SF: k* = (0,25 / 0,045)^1,5 ≈ {{k2:3}};  y* ≈ {{y2:4}}
+--- c | 3
+Q: O ile procent wyższy jest produkt na pracownika w stanie ustalonym przy malejącej liczbie pracowników?
+A: Różnica | dy = (y2/y1-1)*100 | % | tol=0,05
+SF: {{y2:4}} / {{y1:4}} − 1 ≈ {{dy:2}}%
+--- d | 3
+Q: Oblicz konsumpcję na pracownika przy n = −0,5% dla s = {{s:2}} oraz dla stopy oszczędności złotej reguły (s = α).
+A: Konsumpcja przy s = 0,25 | c2 = (1-s)*y2 | | tol=0,005
+A: Konsumpcja przy złotej regule | cg = (a/(n2+d))**(a/(1-a))-(n2+d)*(a/(n2+d))**(1/(1-a)) | | tol=0,005
+let: kg = (a/(n2+d))**(1/(1-a))
+let: yg = kg**a
+SF: c = (1 − s) y* = 0,75 × {{y2:4}} ≈ {{c2:4}};  złota reguła: k = (1/3 / 0,045)^1,5 ≈ {{kg:2}}, y ≈ {{yg:4}}, c = y − (n + δ)k ≈ {{cg:4}}
+--- e | 3
+Q: Zinterpretuj wyniki. Czy malejąca liczba ludności jest w modelu Solowa korzystna dla dobrobytu?
+S: W modelu Solowa wolniejszy przyrost (lub spadek) liczby pracowników oznacza, że mniej oszczędności trzeba przeznaczyć na wyposażenie nowych pracowników w kapitał – rośnie kapitał i produkt na pracownika (o ok. {{dy:1}}%). Łączny PKB rośnie jednak wolniej (w stanie ustalonym w tempie n + g), a model nie uwzględnia struktury wieku: przy starzeniu maleje udział pracujących w ludności, więc PKB na mieszkańca może spadać mimo wyższego produktu na pracownika. Pomija też wpływ liczby ludności na innowacje (teorie endogeniczne – P. Romer) oraz koszty dostosowania (puste mieszkania, infrastruktura).
+
+=== 36 | polityka | th | Rachunkowość generacyjna i stopa zwrotu w systemie repartycyjnym
+vars: S=30000; B=45000; r=3; nS=40; nB=20; n=-1; g=2
+P: Przedstawiciel pokolenia 20-latków przez {{nS:0}} lat (od 21. do 60. roku życia) płaci podatki i składki netto {{S:0}} zł rocznie, a następnie przez {{nB:0}} lat otrzymuje świadczenia {{B:0}} zł rocznie (płatności na koniec roku, w cenach stałych). Realna stopa dyskontowa wynosi {{r:0}}% (dane umowne).
+let: q = 1+r/100
+--- a | 3
+Q: Oblicz wartość obecną płatności netto na rzecz państwa (na wiek 20 lat).
+A: PV płatności | pvs = S*(1-q**(-nS))/(r/100) | zł | tol=50
+SF: PV = {{S:0}} × (1 − 1,03⁻⁴⁰) / 0,03 ≈ {{pvs:0}} zł
+--- b | 3
+Q: Oblicz wartość obecną świadczeń (na wiek 20 lat).
+A: PV świadczeń | pvb = B*(1-q**(-nB))/(r/100)/q**nS | zł | tol=50
+let: pv60 = B*(1-q**(-nB))/(r/100)
+SF: na wiek 60 lat: {{B:0}} × (1 − 1,03⁻²⁰) / 0,03 ≈ {{pv60:0}} zł;  na wiek 20 lat: {{pv60:0}} / 1,03⁴⁰ ≈ {{pvb:0}} zł
+--- c | 3
+Q: Oblicz saldo netto (świadczenia − płatności) w wartości obecnej.
+A: Saldo netto | sal = pvb-pvs | zł | tol=100
+SF: {{pvb:0}} − {{pvs:0}} ≈ {{sal:0}} zł
+S: Ujemne saldo wynika z tego, że w zadaniu nie ma innych świadczeń (edukacja, zdrowie, transfery dla dzieci, dobra publiczne); w pełnej rachunkowości generacyjnej porównuje się salda kolejnych pokoleń.
+--- d | 3
+Q: W systemie repartycyjnym „stopa zwrotu” ze składek w długim okresie odpowiada tempu wzrostu sumy płac (P. Samuelson, H. Aaron): (1 + n)(1 + g) − 1, gdzie n – tempo zmian liczby pracujących, g – tempo wzrostu realnych płac. Oblicz ją dla n = {{n:0}}% i g = {{g:0}}%.
+A: Stopa zwrotu PAYG | rp = ((1+n/100)*(1+g/100)-1)*100 | % | tol=0,01
+SF: (1 − 0,01)(1 + 0,02) − 1 = {{rp:2}}%
+--- e | 3
+Q: Porównaj tę stopę ze stopą rynkową ({{r:0}}%) i wyjaśnij znaczenie wyniku dla sprawiedliwości międzypokoleniowej.
+S: Przy kurczącej się liczbie pracujących „stopa zwrotu” systemu repartycyjnego ({{rp:2}}%) jest niższa od rynkowej ({{r:0}}%), więc kolejne pokolenia dostają z systemu relatywnie mniej, niż wpłaciły. Pierwsze pokolenia systemu (oraz osoby, którym podniesiono świadczenia bez pokrycia, np. przez obniżenie wieku emerytalnego) zyskały kosztem następnych – to ukryty dług emerytalny. Sprawiedliwość międzypokoleniową wspierają: powiązanie świadczeń z długością życia, fundusze rezerwowe, reguły fiskalne i inwestycje zwiększające wzrost płac (g).
+
+=== 37 | polityka | th | Dynamika długu publicznego przy rosnących wydatkach na emerytury
+vars: d0=55; r=5; g=7; pd=3; r2=7
+P: Dług publiczny wynosi {{d0:0}}% PKB. Nominalna stopa procentowa od długu to {{r:0}}%, nominalne tempo wzrostu PKB – {{g:0}}%, a deficyt pierwotny (bez odsetek) – {{pd:0}}% PKB. Dynamikę długu opisuje równanie: dₜ = dₜ₋₁ × (1 + r) / (1 + g) + deficyt pierwotny (dane umowne).
+--- a | 3
+Q: Oblicz dług w relacji do PKB po roku.
+A: Dług po roku | d1 = d0*(1+r/100)/(1+g/100)+pd | % PKB | tol=0,02
+SF: d₁ = {{d0:0}} × 1,05 / 1,07 + {{pd:0}} ≈ {{d1:2}}% PKB
+--- b | 4
+Q: Oblicz saldo pierwotne, które ustabilizowałoby dług na poziomie {{d0:0}}% PKB.
+A: Saldo stabilizujące | pb = d0*(r-g)/100/(1+g/100) | % PKB | tol=0,01
+SF: saldo pierwotne* = d × (r − g) / (1 + g) = {{d0:0}} × (0,05 − 0,07) / 1,07 ≈ {{pb:2}}% PKB
+let: pbn = -pb
+S: Wynik ujemny oznacza, że dług się nie zwiększy nawet przy deficycie pierwotnym do ok. {{pbn:2}}% PKB – bo r < g.
+--- c | 4
+Q: Stopa procentowa rośnie do {{r2:0}}% (r = g). Oblicz dług po roku przy deficycie pierwotnym {{pd:0}}% PKB i saldo pierwotne stabilizujące.
+A: Dług po roku | d2 = d0*(1+r2/100)/(1+g/100)+pd | % PKB | tol=0,02
+A: Saldo stabilizujące | pb2 = d0*(r2-g)/100/(1+g/100) | % PKB | tol=0,01
+SF: d₁ = {{d0:0}} × 1,07 / 1,07 + {{pd:0}} = {{d2:0}}% PKB;  saldo stabilizujące = {{pb2:0}}
+--- d | 4
+Q: Wydatki emerytalne i zdrowotne będą rosły o ok. 0,15 pkt proc. PKB rocznie. Wyjaśnij, jak wpłynie to na dynamikę długu i jakie działania mogą ją ustabilizować.
+S: Rosnące wydatki związane z wiekiem zwiększają co roku deficyt pierwotny, więc nawet przy korzystnej relacji r < g dług rośnie, jeśli deficyt pierwotny przekracza poziom stabilizujący (≈ {{pbn:1}}% PKB). Gdy r zbliża się do g (wyższe stopy, wolniejszy wzrost z powodu kurczenia się zasobu pracy), margines znika i każdy deficyt pierwotny podnosi dług. Stabilizację przynoszą: konsolidacja (ograniczenie wydatków lub wyższe podatki), reformy zwiększające wzrost potencjalny (zatrudnienie, wydajność, imigracja), powiązanie świadczeń z długością życia oraz wiarygodne reguły fiskalne obniżające premię za ryzyko (r).
+
+=== 38 | finanse | th | Tablica trwania życia i wartość renty dożywotniej
+vars: l60=100000; l65=95000; l70=88000; l75=78000; l80=64000; l85=45000; l90=25000; R=60000; r=3
+P: Fragment tablicy trwania życia (liczba osób dożywających danego wieku z 100 000 osób w wieku 60 lat; dane umowne):
+H: Wiek | 60 | 65 | 70 | 75 | 80 | 85 | 90 | 95
+R: Liczba dożywających | {{l60:0}} | {{l65:0}} | {{l70:0}} | {{l75:0}} | {{l80:0}} | {{l85:0}} | {{l90:0}} | 0
+P: Ubezpieczyciel oferuje 60-latkowi rentę: wypłatę {{R:0}} zł w wieku 65, 70, 75, 80, 85 i 90 lat (każda wypłata odpowiada pięciu latom renty po 12 000 zł), pod warunkiem dożycia. Roczna stopa techniczna wynosi {{r:0}}%.
+let: v = 1/(1+r/100)**5
+--- a | 3
+Q: Oblicz prawdopodobieństwo, że 60-latek dożyje 65 lat, oraz prawdopodobieństwo, że 65-latek dożyje 80 lat.
+A: 60 → 65 | p1 = l65/l60 | | tol=0,001
+A: 65 → 80 | p2 = l80/l65 | | tol=0,001
+SF: {{l65:0}} / {{l60:0}} = {{p1:2}};  {{l80:0}} / {{l65:0}} ≈ {{p2:4}}
+--- b | 3
+Q: Jakie jest prawdopodobieństwo, że 60-latek umrze przed ukończeniem 85 lat?
+A: Prawdopodobieństwo zgonu | q = (1-l85/l60)*100 | % | tol=0,05
+SF: 1 − {{l85:0}} / {{l60:0}} = {{q:0}}%
+--- c | 5
+Q: Oblicz aktuarialną wartość obecną renty (jednorazową składkę netto) dla 60-latka.
+A: Wartość renty | apv = R*(l65*v+l70*v**2+l75*v**3+l80*v**4+l85*v**5+l90*v**6)/l60 | zł | tol=20
+SF: APV = R × Σ (lₓ / l₆₀) × vᵗ, v = 1 / 1,03⁵ ≈ {{v:4}}
+S: APV = {{R:0}} × (0,95v + 0,88v² + 0,78v³ + 0,64v⁴ + 0,45v⁵ + 0,25v⁶) ≈ {{apv:0}} zł.
+--- d | 4
+Q: Wskutek postępu medycyny liczba dożywających 85 i 90 lat wzrasta. Wyjaśnij, jak wpłynie to na cenę renty i na system emerytalny oraz czym jest ryzyko długowieczności.
+let: dapv = R*0.1*v**6
+S: Większe lₓ w starszym wieku zwiększa sumę zdyskontowanych wypłat – renta drożeje (np. wzrost l₉₀ do 35 000 podniósłby APV o {{R:0}} × 0,1 × v⁶ ≈ {{dapv:0}} zł). Ryzyko długowieczności to ryzyko, że populacja (a nie tylko pojedyncza osoba) będzie żyła dłużej, niż zakładają tablice – tego ryzyka nie da się zdywersyfikować w grupie ubezpieczonych. W systemie zdefiniowanej składki ZUS przenosi je częściowo na emerytów (dłuższe dalsze trwanie życia = niższa emerytura), a ubezpieczyciele zabezpieczają je reasekuracją lub obligacjami długowieczności.
+
+=== 39 | demografia | th | Projekcja ludności metodą kohortową
+vars: a0=10; a1=15; a2=12; f0=0,5; f1=0,2; s0=0,98; s1=0,85; s2=0,3
+P: Ludność kraju podzielono na trzy grupy wieku po 30 lat (w mln): 0–29 lat – {{a0:0}}, 30–59 lat – {{a1:0}}, 60+ – {{a2:0}}. Co 30 lat: nowa grupa 0–29 = {{f0:1}} × (0–29) + {{f1:1}} × (30–59) (urodzenia), grupa 30–59 = {{s0:2}} × poprzednia grupa 0–29 (przeżycie), grupa 60+ = {{s1:2}} × poprzednia grupa 30–59 + {{s2:1}} × poprzednia grupa 60+. Migracje pomijamy (dane umowne).
+let: b0 = f0*a0+f1*a1
+let: b1 = s0*a0
+let: b2 = s1*a1+s2*a2
+--- a | 3
+Q: Oblicz liczebność grup i całej ludności po 30 latach.
+A: Ludność po 30 latach | n30 = b0+b1+b2 | mln | tol=0,01
+SF: 0–29: {{f0:1}} × {{a0:0}} + {{f1:1}} × {{a1:0}} = {{b0:2}};  30–59: {{s0:2}} × {{a0:0}} = {{b1:2}};  60+: {{s1:2}} × {{a1:0}} + {{s2:1}} × {{a2:0}} = {{b2:2}};  razem {{n30:2}} mln
+--- b | 4
+Q: Oblicz liczbę ludności po 60 latach i udział osób 60+.
+A: Ludność po 60 latach | n60 = (f0*b0+f1*b1)+s0*b0+(s1*b1+s2*b2) | mln | tol=0,01
+A: Udział 60+ | u60 = (s1*b1+s2*b2)/n60*100 | % | tol=0,05
+let: c0 = f0*b0+f1*b1
+let: c1 = s0*b0
+let: c2 = s1*b1+s2*b2
+SF: 0–29: {{c0:2}};  30–59: {{c1:2}};  60+: {{c2:3}};  razem {{n60:3}} mln;  udział 60+ ≈ {{u60:1}}%
+--- c | 4
+Q: Oblicz relację liczby osób 60+ do osób w wieku 30–59 na początku i po 30 latach.
+A: Relacja początkowa | o0 = a2/a1 | | tol=0,005
+A: Relacja po 30 latach | o30 = b2/b1 | | tol=0,005
+SF: {{a2:0}} / {{a1:0}} = {{o0:2}};  {{b2:2}} / {{b1:2}} ≈ {{o30:3}}
+--- d | 4
+Q: Wyjaśnij, dlaczego liczba ludności maleje, i oceń, jak zmiana współczynników urodzeń lub migracje mogłyby zmienić wynik.
+S: Urodzenia na jedną osobę z grup w wieku rozrodczym są za niskie, by zastąpić pokolenie (z obecnych {{a0:0}} mln osób w wieku 0–29 lat za 30 lat w tej grupie będzie tylko {{b0:0}} mln), więc każda kolejna kohorta jest mniejsza – działa „ujemna inercja demograficzna”: nawet po wzroście dzietności ludność maleje jeszcze przez dekady, bo matek jest coraz mniej. Wyższe współczynniki f spowolniłyby spadek dopiero po ok. 30 latach. Dodatnie saldo migracji osób w wieku 20–40 lat natychmiast zwiększa grupy produkcyjne i (z opóźnieniem) liczbę urodzeń, ale imigranci po 30 latach przechodzą do grupy 60+.
+
+=== 40 | makro | th | Imigracja na rynku pracy – kto zyskuje?
+vars: a=200; b=2; c=-40; d=4; M=30
+P: Popyt na pracę w pewnym sektorze opisuje funkcja Ld = {{a:0}} − {{b:0}}w, a krajowa podaż pracy Ls = {{c:0}} + {{d:0}}w, gdzie w – płaca godzinowa (zł), L – zatrudnienie (tys. osób). Do kraju przybywa {{M:0}} tys. imigrantów gotowych pracować przy każdej płacy (podaż rośnie o {{M:0}} tys.; dane umowne).
+--- a | 3
+Q: Wyznacz płacę i zatrudnienie w równowadze przed napływem imigrantów.
+A: Płaca | w0 = (a-c)/(b+d) | zł | tol=0,01
+A: Zatrudnienie | L0 = a-b*w0 | tys. | tol=0,1
+SF: {{a:0}} − {{b:0}}w = {{c:0}} + {{d:0}}w ⇒ w = {{w0:0}} zł, L = {{L0:0}} tys.
+--- b | 3
+Q: Wyznacz nową płacę, zatrudnienie łączne i zatrudnienie pracowników krajowych.
+A: Płaca | w1 = (a-c-M)/(b+d) | zł | tol=0,01
+A: Zatrudnienie łączne | L1 = a-b*w1 | tys. | tol=0,1
+A: Zatrudnienie krajowych | Lk = c+d*w1 | tys. | tol=0,1
+SF: {{a:0}} − {{b:0}}w = {{c:0}} + {{M:0}} + {{d:0}}w ⇒ w = {{w1:0}} zł, L = {{L1:0}} tys., krajowi: {{c:0}} + {{d:0}} × {{w1:0}} = {{Lk:0}} tys.
+--- c | 4
+Q: Oblicz zmianę nadwyżki pracodawców i zmianę nadwyżki pracowników krajowych (w tys. zł na godzinę).
+let: wmax = a/b
+let: wmin = -c/d
+A: Zmiana nadwyżki pracodawców | dE = 0.5*(wmax-w1)*L1-0.5*(wmax-w0)*L0 | tys. zł | tol=0,5
+A: Zmiana nadwyżki pracowników krajowych | dW = 0.5*(w1-wmin)*Lk-0.5*(w0-wmin)*L0 | tys. zł | tol=0,5
+SF: pracodawcy: ½({{wmax:0}} − {{w1:0}}) × {{L1:0}} − ½({{wmax:0}} − {{w0:0}}) × {{L0:0}} = {{dE:0}};  pracownicy krajowi: ½({{w1:0}} − {{wmin:0}}) × {{Lk:0}} − ½({{w0:0}} − {{wmin:0}}) × {{L0:0}} = {{dW:0}}
+--- d | 2
+Q: Oblicz „nadwyżkę imigracyjną” – zmianę łącznej nadwyżki mieszkańców kraju.
+A: Nadwyżka imigracyjna | ns = dE+dW | tys. zł | tol=0,5
+SF: {{dE:0}} + ({{dW:0}}) = {{ns:0}}
+--- e | 3
+Q: Zinterpretuj wyniki i wskaż, dlaczego w gospodarce starzejącej się skutki imigracji dla płac mogą być mniejsze niż w modelu.
+S: W modelu imigracja obniża płacę (z {{w0:0}} do {{w1:0}} zł) i zatrudnienie krajowych pracowników, którzy tracą {{dW:0}} tys. zł nadwyżki, ale pracodawcy zyskują więcej ({{dE:0}}), więc kraj jako całość zyskuje ({{ns:0}}) – to redystrybucja od pracy do kapitału (G. Borjas). W rzeczywistości, przy niedoborach pracy wynikających ze starzenia, imigranci często uzupełniają, a nie zastępują pracowników krajowych (opieka, budownictwo, sezonowe prace), zwiększają też popyt na dobra i inwestycje (przesuwają popyt na pracę), a kapitał dostosowuje się w długim okresie – stąd badania zwykle pokazują niewielki wpływ imigracji na przeciętne płace.
+
+=== 41 | demografia | th | Gospodarstwa domowe i popyt na mieszkania
+vars: N1=37,5; h1=2,6; N2=35; h2=2,3; T=15; wyc=30
+P: Ludność kraju wynosi {{N1:1}} mln, a przeciętna liczba osób w gospodarstwie domowym – {{h1:1}}. Według prognozy (umownej) za {{T:0}} lat ludność spadnie do {{N2:0}} mln, a przeciętne gospodarstwo zmniejszy się do {{h2:1}} osoby (więcej osób starszych mieszkających samotnie). Każdego roku z zasobu ubywa {{wyc:0}} tys. mieszkań (wyburzenia, zmiana funkcji).
+--- a | 3
+Q: Oblicz obecną liczbę gospodarstw domowych.
+A: Gospodarstwa obecnie | g1 = N1/h1 | mln | tol=0,005
+SF: {{N1:1}} / {{h1:1}} ≈ {{g1:3}} mln
+--- b | 3
+Q: Oblicz liczbę gospodarstw za {{T:0}} lat i jej zmianę.
+A: Gospodarstwa za 15 lat | g2 = N2/h2 | mln | tol=0,005
+A: Zmiana | dg = g2-g1 | mln | tol=0,005
+SF: {{N2:0}} / {{h2:1}} ≈ {{g2:3}} mln;  zmiana ≈ {{dg:3}} mln
+--- c | 4
+Q: Ile mieszkań trzeba średnio budować rocznie, aby każde nowe gospodarstwo miało mieszkanie i aby zastąpić wycofywane lokale?
+A: Budowa roczna | bud = dg*1000/T+wyc | tys. | tol=0,5
+SF: {{dg:3}} mln / {{T:0}} lat + {{wyc:0}} tys. ≈ {{bud:1}} tys. mieszkań rocznie
+--- d | 5
+Q: Wyjaśnij, dlaczego popyt na mieszkania może rosnąć mimo spadku liczby ludności, i wskaż zróżnicowanie regionalne oraz konsekwencje starzenia się dla rynku mieszkań.
+S: O popycie decyduje liczba gospodarstw domowych, a nie ludności. Gdy przeciętne gospodarstwo się zmniejsza (samotni seniorzy, mniej dzieci, później zakładane rodziny), liczba gospodarstw może rosnąć mimo spadku ludności – tu o ok. {{dg:2}} mln. Popyt będzie jednak skupiony w dużych miastach (migracje wewnętrzne, praca), podczas gdy w małych miastach i na wsiach przybędzie pustostanów i spadną ceny. Starzenie zmienia strukturę popytu: mniejsze mieszkania bez barier architektonicznych, mieszkania z usługami opiekuńczymi; jednocześnie seniorzy zajmują duże mieszkania (niedopasowanie), co sprzyja rozwiązaniom takim jak zamiana mieszkań lub odwrócona hipoteka.
+
+=== 42 | makro | - | Reguła Taylora
+vars: rn=1; pi=5; pis=2,5; gap=1; pi2=3; gap2=-1
+P: Bank centralny ustala stopę procentową zgodnie z regułą Taylora: i = r* + π + 0,5(π − π*) + 0,5 × luka PKB, gdzie r* = {{rn:0}}% – naturalna realna stopa procentowa, π – inflacja, π* = {{pis:1}}% – cel inflacyjny, luka PKB w % PKB potencjalnego (dane umowne).
+--- a | 4
+Q: Oblicz stopę procentową wynikającą z reguły przy inflacji {{pi:0}}% i luce PKB +{{gap:0}}%.
+A: Stopa procentowa | i1 = rn+pi+0.5*(pi-pis)+0.5*gap | % | tol=0,01
+SF: i = 1 + 5 + 0,5 × (5 − 2,5) + 0,5 × 1 = {{i1:2}}%
+--- b | 3
+Q: Oblicz realną stopę procentową.
+A: Realna stopa | rr = i1-pi | % | tol=0,01
+SF: {{i1:2}} − {{pi:0}} = {{rr:2}}%
+--- c | 4
+Q: Oblicz stopę procentową, gdy inflacja spadnie do {{pi2:0}}%, a luka PKB stanie się ujemna ({{gap2:0}}%).
+A: Stopa procentowa | i2 = rn+pi2+0.5*(pi2-pis)+0.5*gap2 | % | tol=0,01
+SF: i = 1 + 3 + 0,5 × 0,5 + 0,5 × (−1) = {{i2:2}}%
+--- d | 4
+Q: Wyjaśnij zasadę Taylora (reakcja stopy na inflację większa niż 1:1) i wskaż ograniczenia reguły.
+S: Współczynnik przy inflacji wynosi łącznie 1,5: gdy inflacja rośnie o 1 pkt proc., stopa nominalna rośnie o 1,5 pkt proc., więc stopa realna rośnie – polityka staje się bardziej restrykcyjna i hamuje popyt. Gdyby stopa rosła słabiej niż inflacja, realna stopa by spadała i inflacja mogłaby się nakręcać. Ograniczenia: niepewność co do r* (zależy m.in. od demografii) i luki PKB (nieobserwowalne), opóźnienia transmisji, szoki podażowe (np. energia), dolna granica stóp procentowych; reguła jest punktem odniesienia, a nie automatem.
+
+=== 43 | mikro | - | Duopol Cournota i kartel
+vars: a=120; mc=30
+P: Na rynku działają dwie identyczne firmy. Popyt rynkowy: P = {{a:0}} − Q, gdzie Q = q₁ + q₂. Koszt krańcowy każdej firmy jest stały i wynosi {{mc:0}} zł, koszty stałe pomijamy (dane umowne).
+--- a | 4
+Q: Wyznacz równowagę Cournota: produkcję każdej firmy i cenę.
+A: Produkcja firmy | qc = (a-mc)/3 | szt. | tol=0,01
+A: Cena | pc = a-2*qc | zł | tol=0,01
+SF: funkcja reakcji: q₁ = (120 − 30 − q₂) / 2;  przy symetrii q = 90 / 3 = {{qc:0}};  P = 120 − 2 × {{qc:0}} = {{pc:0}} zł
+--- b | 3
+Q: Oblicz zysk każdej firmy w równowadze Cournota.
+A: Zysk | zc = (pc-mc)*qc | zł | tol=0,5
+SF: ({{pc:0}} − {{mc:0}}) × {{qc:0}} = {{zc:0}} zł
+--- c | 4
+Q: Firmy zawierają kartel i dzielą produkcję monopolisty po połowie. Oblicz produkcję łączną, cenę i zysk każdej firmy.
+A: Produkcja kartelu | qm = (a-mc)/2 | szt. | tol=0,01
+A: Cena | pm = a-qm | zł | tol=0,01
+A: Zysk firmy | zm = (pm-mc)*qm/2 | zł | tol=0,5
+SF: MR = 120 − 2Q = 30 ⇒ Q = {{qm:0}};  P = {{pm:0}} zł;  zysk firmy = ({{pm:0}} − {{mc:0}}) × {{qm:0}} / 2 = {{zm:1}} zł
+--- d | 4
+Q: Wyjaśnij, dlaczego kartel jest nietrwały, i porównaj wyniki z konkurencją doskonałą.
+let: qdev = (a-mc-qm/2)/2
+let: zdev = (a-qm/2-qdev-mc)*qdev
+S: Gdy partner produkuje {{qm:0}} / 2 = 22,5, opłaca się złamać umowę: najlepsza odpowiedź to q = (90 − 22,5)/2 = {{qdev:2}}, co daje zysk {{zdev:1}} zł > {{zm:1}} zł – sytuacja dylematu więźnia, więc kartel bez egzekwowania (lub bez powtarzalnej gry) się rozpada. W konkurencji doskonałej P = MC = {{mc:0}} zł i Q = 90; Cournot (P = {{pc:0}}) leży między konkurencją a monopolem ({{pm:0}}). Kartele są zakazane (UOKiK, KE), a program łagodzenia kar (leniency) wzmacnia bodźce do zdrady.
+
+=== 44 | mikro | - | Monopol i strata martwa
+vars: a=100; b=2; mc=10; fc=100
+P: Monopolista działa na rynku z popytem P = {{a:0}} − {{b:0}}Q. Koszt całkowity: TC = {{fc:0}} + {{mc:0}}Q (dane umowne).
+--- a | 3
+Q: Wyznacz produkcję i cenę maksymalizujące zysk.
+A: Produkcja | qm = (a-mc)/(2*b) | szt. | tol=0,01
+A: Cena | pm = a-b*qm | zł | tol=0,01
+SF: MR = {{a:0}} − 4Q = MC = {{mc:0}} ⇒ Q = {{qm:1}};  P = {{a:0}} − {{b:0}} × {{qm:1}} = {{pm:0}} zł
+--- b | 3
+Q: Oblicz zysk monopolisty.
+A: Zysk | zm = (pm-mc)*qm-fc | zł | tol=0,5
+SF: ({{pm:0}} − {{mc:0}}) × {{qm:1}} − {{fc:0}} = {{zm:1}} zł
+--- c | 3
+Q: Oblicz wskaźnik Lernera.
+A: Wskaźnik Lernera | ler = (pm-mc)/pm | | tol=0,001
+SF: L = (P − MC) / P = ({{pm:0}} − {{mc:0}}) / {{pm:0}} ≈ {{ler:3}}
+--- d | 3
+Q: Oblicz stratę martwą monopolu w porównaniu z konkurencją doskonałą.
+A: Strata martwa | dwl = 0.5*((a-mc)/b-qm)*(pm-mc) | zł | tol=0,5
+let: qk = (a-mc)/b
+SF: konkurencja: P = MC ⇒ Q = {{qk:0}};  DWL = ½ × ({{qk:0}} − {{qm:1}}) × ({{pm:0}} − {{mc:0}}) ≈ {{dwl:2}} zł
+--- e | 3
+Q: Wskaż sposoby ograniczania skutków władzy monopolistycznej.
+SL: polityka konkurencji – zakaz nadużywania pozycji dominującej, kontrola koncentracji (UOKiK, Komisja Europejska),
+SL: regulacja cen w monopolu naturalnym (np. taryfy URE dla sieci przesyłowych),
+SL: obniżanie barier wejścia (liberalizacja, otwarcie na import),
+SL: dyskryminacja cenowa pierwszego stopnia zmniejsza stratę martwą, ale przejmuje nadwyżkę konsumenta.
+
+=== 45 | makro | - | Parytet siły nabywczej
+vars: Ppl=100; Peu=40; S=4,30; ipl=5; ieu=2
+P: Ten sam koszyk dóbr kosztuje {{Ppl:0}} zł w Polsce i {{Peu:0}} EUR w strefie euro. Kurs rynkowy wynosi {{S:2}} zł/EUR. Oczekiwana inflacja: Polska {{ipl:0}}%, strefa euro {{ieu:0}}% (dane umowne).
+--- a | 4
+Q: Oblicz kurs wynikający z absolutnego parytetu siły nabywczej.
+A: Kurs PPP | sppp = Ppl/Peu | zł/EUR | tol=0,005
+SF: S_PPP = {{Ppl:0}} / {{Peu:0}} = {{sppp:2}} zł/EUR
+--- b | 4
+Q: Oblicz realny kurs walutowy (cena koszyka zagranicznego w złotych / cena koszyka krajowego).
+A: Realny kurs | q = S*Peu/Ppl | | tol=0,005
+SF: q = {{S:2}} × {{Peu:0}} / {{Ppl:0}} = {{q:2}}
+S: q > 1 – koszyk w strefie euro jest o ok. 72% droższy, złoty jest realnie „niedowartościowany” względem PPP.
+--- c | 4
+Q: Oblicz oczekiwany kurs za rok według względnego parytetu siły nabywczej.
+A: Oczekiwany kurs | s1 = S*(1+ipl/100)/(1+ieu/100) | zł/EUR | tol=0,002
+SF: {{S:2}} × 1,05 / 1,02 ≈ {{s1:4}} zł/EUR
+--- d | 3
+Q: Wyjaśnij, dlaczego w krajach doganiających kurs rynkowy trwale odbiega od PPP (efekt Balassy–Samuelsona).
+S: W krajach na niższym poziomie rozwoju ceny usług niehandlowanych (fryzjer, czynsze, usługi opiekuńcze) są niższe, bo płace są niższe. Gdy wydajność w sektorze dóbr handlowych rośnie szybciej niż w usługach, rosną płace w całej gospodarce, a z nimi ceny usług – następuje realna aprecjacja waluty (wyższa inflacja lub umocnienie kursu). Realny kurs ({{q:2}}) zbliża się wtedy do 1 wraz z konwergencją. PPP lepiej opisuje długi okres i dobra handlowe.
+
+=== 46 | finanse | - | Mnożnik kreacji pieniądza
+vars: B=400; rr=3,5; e=1,5; c=0,15; c2=0,10
+P: Baza monetarna wynosi {{B:0}} mld zł. Stopa rezerwy obowiązkowej to {{rr:1}}%, banki utrzymują dodatkowo rezerwy nadwyżkowe w wysokości {{e:1}}% depozytów, a relacja gotówki w obiegu do depozytów wynosi {{c:2}} (dane umowne).
+--- a | 4
+Q: Oblicz mnożnik kreacji pieniądza.
+A: Mnożnik | m = (1+c)/(c+rr/100+e/100) | | tol=0,01
+SF: m = (1 + c) / (c + r + e) = 1,15 / (0,15 + 0,035 + 0,015) = {{m:2}}
+--- b | 3
+Q: Oblicz podaż pieniądza (M = m × B).
+A: Podaż pieniądza | M1 = m*B | mld zł | tol=0,5
+SF: {{m:2}} × {{B:0}} = {{M1:0}} mld zł
+--- c | 4
+Q: Wskutek upowszechnienia płatności bezgotówkowych relacja gotówki do depozytów spada do {{c2:2}}. Oblicz nowy mnożnik i podaż pieniądza.
+A: Nowy mnożnik | m2 = (1+c2)/(c2+rr/100+e/100) | | tol=0,01
+A: Nowa podaż | M2 = m2*B | mld zł | tol=0,5
+SF: m = 1,10 / 0,15 ≈ {{m2:3}};  M = {{m2:3}} × {{B:0}} ≈ {{M2:0}} mld zł
+--- d | 4
+Q: Oceń ograniczenia mnożnikowego modelu kreacji pieniądza we współczesnej polityce pieniężnej.
+S: Model zakłada, że bank centralny kontroluje bazę monetarną, a banki „mnożą” rezerwy. Współcześnie banki centralne sterują stopą procentową, a nie ilością bazy: banki udzielają kredytów, gdy jest popyt i zdolność kredytowa, a rezerwy są dostarczane po ustalonej stopie (kredyt kreuje depozyt). Mnożnik jest więc niestabilny i wynikowy – np. po QE baza rosła wielokrotnie, a podaż pieniądza znacznie wolniej. Model nadal dobrze pokazuje, że rezerwy i preferencje dotyczące gotówki wpływają na relację między bazą a szerokim pieniądzem.
+
+=== 47 | makro | th | Rachunek wzrostu przy kurczącym się zasobie pracy
+vars: gY=4; gK=5; gL=-0,5; a=0,35; gL2=-1
+P: W gospodarce PKB rośnie w tempie {{gY:0}}% rocznie, zasób kapitału – {{gK:0}}%, a liczba przepracowanych godzin maleje o {{gL:1}}% rocznie. Udział kapitału w dochodzie α = {{a:2}} (funkcja Cobba–Douglasa; dane umowne).
+--- a | 4
+Q: Oblicz tempo wzrostu łącznej produktywności czynników (TFP) – reszty Solowa.
+A: Wzrost TFP | tfp = gY-a*gK-(1-a)*gL | % | tol=0,01
+SF: g_A = g_Y − α g_K − (1 − α) g_L = 4 − 0,35 × 5 − 0,65 × (−0,5) = {{tfp:3}}%
+--- b | 4
+Q: Oblicz wkład kapitału i pracy do wzrostu PKB (w pkt proc.) oraz udział TFP we wzroście.
+A: Wkład kapitału | wk = a*gK | pkt proc. | tol=0,01
+A: Wkład pracy | wl = (1-a)*gL | pkt proc. | tol=0,01
+A: Udział TFP | ut = tfp/gY*100 | % | tol=0,1
+SF: kapitał: 0,35 × 5 = {{wk:2}};  praca: 0,65 × (−0,5) = {{wl:3}};  TFP: {{tfp:3}} / 4 ≈ {{ut:1}}%
+--- c | 3
+Q: Ile wyniósłby wzrost PKB, gdyby nakład pracy malał o 1% rocznie, a pozostałe tempa się nie zmieniły?
+A: Wzrost PKB | gY2 = tfp+a*gK+(1-a)*gL2 | % | tol=0,01
+SF: {{tfp:3}} + {{wk:2}} + 0,65 × (−1) = {{gY2:3}}%
+--- d | 4
+Q: Jakie działania mogą przeciwdziałać spowolnieniu wzrostu wynikającemu ze spadku nakładu pracy?
+S: Spadek nakładu pracy o 1 pkt proc. obniża wzrost PKB o (1 − α) = 0,65 pkt proc. Rekompensatę dają: (1) wzrost TFP – innowacje, cyfryzacja, lepsza alokacja zasobów, jakość instytucji; (2) pogłębianie kapitału – inwestycje w maszyny i automatyzację (wyższe g_K); (3) zwiększenie nakładu pracy – aktywizacja kobiet i osób 55+, migracje, dłuższa praca; (4) kapitał ludzki – edukacja i kształcenie ustawiczne podnoszą jakość pracy (efektywny nakład pracy rośnie mimo spadku liczby godzin).
+
+=== 48 | mikro | - | Wybór konsumenta i zmiana ceny
+vars: al=0,4; I=1200; px=20; py=30; px2=25
+P: Użyteczność konsumenta opisuje funkcja U = x^{{al:1}} y^0,6. Dochód wynosi {{I:0}} zł, ceny: pₓ = {{px:0}} zł, pᵧ = {{py:0}} zł (dane umowne). Przy takiej funkcji konsument wydaje na każde dobro stały udział dochodu równy wykładnikowi.
+--- a | 4
+Q: Wyznacz optymalny koszyk konsumenta.
+A: Ilość x | x0 = al*I/px | szt. | tol=0,01
+A: Ilość y | y0 = (1-al)*I/py | szt. | tol=0,01
+SF: x = 0,4 × {{I:0}} / {{px:0}} = {{x0:0}};  y = 0,6 × {{I:0}} / {{py:0}} = {{y0:0}}
+--- b | 3
+Q: Cena x rośnie do {{px2:0}} zł. Oblicz nowy popyt na x.
+A: Nowa ilość x | x1 = al*I/px2 | szt. | tol=0,01
+SF: x = 0,4 × {{I:0}} / {{px2:0}} = {{x1:1}}
+--- c | 4
+Q: Oblicz dochód, który przy nowej cenie pozwoliłby konsumentowi osiągnąć pierwotny poziom użyteczności (zmienność kompensacyjna), oraz kwotę rekompensaty.
+A: Dochód kompensujący | I2 = I*(px2/px)**al | zł | tol=0,5
+A: Rekompensata | cv = I2-I | zł | tol=0,5
+SF: I′ = I × (p′ₓ / pₓ)^α = {{I:0}} × 1,25^0,4 ≈ {{I2:2}} zł;  rekompensata ≈ {{cv:2}} zł
+--- d | 4
+Q: Rozłóż zmianę popytu na x na efekt substytucyjny i dochodowy (Hicks) i zinterpretuj, odnosząc się do waloryzacji świadczeń.
+let: xh = al*I2/px2
+let: es = xh-x0
+let: ed = x1-xh
+S: Przy dochodzie kompensującym konsument kupiłby x = 0,4 × {{I2:1}} / 25 ≈ {{xh:2}}: efekt substytucyjny ≈ {{es:2}}, efekt dochodowy ≈ {{ed:2}} (razem {{x1:1}} − {{x0:0}} = −4,8). Rekompensata przywraca użyteczność, ale nie pierwotny koszyk – konsument zastępuje droższe dobro tańszym. Dlatego waloryzacja świadczeń o wskaźnik cen (np. CPI, z wagami z przeszłości) nieco przeszacowuje wzrost kosztów utrzymania (tzw. obciążenie substytucyjne indeksu cen).
+
+=== 49 | mikro | - | Dylemat reklamowy – teoria gier
+vars: aa=40; ab=70; ba=20; nn=60
+P: Dwie firmy decydują, czy prowadzić kampanię reklamową. Zyski (w mln zł; pierwsza liczba – firma A, druga – firma B; dane umowne):
+H: | B: reklama | B: brak reklamy
+R: A: reklama | {{aa:0}}; {{aa:0}} | {{ab:0}}; {{ba:0}}
+R: A: brak reklamy | {{ba:0}}; {{ab:0}} | {{nn:0}}; {{nn:0}}
+--- a | 4
+Q: Wskaż strategie dominujące i równowagę Nasha. Podaj łączny zysk obu firm w równowadze Nasha i w wariancie, w którym obie rezygnują z reklamy.
+A: Łączny zysk w równowadze Nasha | zn = 2*aa | mln zł | tol=0
+A: Łączny zysk bez reklamy | zk = 2*nn | mln zł | tol=0
+S: Dla A: gdy B się reklamuje, reklama daje {{aa:0}} > {{ba:0}}; gdy B się nie reklamuje, reklama daje {{ab:0}} > {{nn:0}} – reklama jest strategią dominującą (symetrycznie dla B). Równowaga Nasha: obie się reklamują, łączny zysk {{zn:0}} mln zł, choć bez reklamy mogłyby mieć {{zk:0}} mln zł – klasyczny dylemat więźnia.
+--- b | 4
+Q: Gra jest powtarzana w nieskończoność, a firmy stosują strategię „spustu”: nie reklamują się, dopóki rywal się nie reklamuje, a po zdradzie reklamują się zawsze. Wyznacz minimalny czynnik dyskontowy δ, przy którym współpraca jest opłacalna.
+A: Minimalne δ | dmin = (ab-nn)/(ab-aa) | | tol=0,005
+SF: {{nn:0}} / (1 − δ) ≥ {{ab:0}} + δ × {{aa:0}} / (1 − δ) ⇒ δ ≥ ({{ab:0}} − {{nn:0}}) / ({{ab:0}} − {{aa:0}}) = {{dmin:3}}
+--- c | 3
+Q: Oblicz zysk z jednorazowej zdrady w porównaniu ze współpracą oraz stratę w każdym kolejnym okresie.
+A: Zysk z jednorazowej zdrady | zz = ab-nn | mln zł | tol=0
+A: Strata w kolejnym okresie | st = nn-aa | mln zł | tol=0
+SF: {{ab:0}} − {{nn:0}} = {{zz:0}};  {{nn:0}} − {{aa:0}} = {{st:0}}
+--- d | 4
+Q: Podaj przykłady sytuacji ekonomicznych o strukturze dylematu więźnia i sposoby wyjścia z niego.
+SL: wyścig reklamowy i cenowy w oligopolu; kartele (zmowa cenowa – nielegalna),
+SL: wyścig zbrojeń; nadmierne połowy i inne dobra wspólne (tragedia wspólnego pastwiska),
+SL: konkurencja podatkowa między państwami (minimalny podatek CIT 15% OECD),
+SL: wyjście: powtarzalność gry i reputacja, umowy z egzekucją (regulacje, traktaty), zmiana wypłat (kary, podatki Pigou), komunikacja i budowanie zaufania (E. Ostrom).
+
+=== 50 | polityka | - | Krzywa Laffera
+vars: B0=1000; t1=0,3; t2=0,6; t3=0,7
+P: Podstawa opodatkowania zależy od stawki podatku t według wzoru B = {{B0:0}} × (1 − t) mld zł (wyższa stawka zniechęca do pracy i zwiększa unikanie podatku). Wpływy podatkowe T = t × B (dane umowne).
+--- a | 4
+Q: Oblicz wpływy przy stawkach {{t1:1}} i {{t2:1}}.
+A: Wpływy przy 30% | T1 = t1*B0*(1-t1) | mld zł | tol=0,1
+A: Wpływy przy 60% | T2 = t2*B0*(1-t2) | mld zł | tol=0,1
+SF: T = t × {{B0:0}} × (1 − t):  0,3 × 700 = {{T1:0}};  0,6 × 400 = {{T2:0}}
+--- b | 4
+Q: Wyznacz stawkę maksymalizującą wpływy i maksymalne wpływy.
+A: Stawka optymalna | tmax = 50 | % | tol=0,1
+A: Maksymalne wpływy | Tmax = 0.5*B0*0.5 | mld zł | tol=0,1
+SF: T = {{B0:0}}(t − t²), dT/dt = {{B0:0}}(1 − 2t) = 0 ⇒ t = 0,5;  T = 0,5 × 500 = {{Tmax:0}} mld zł
+--- c | 3
+Q: Oblicz zmianę wpływów po obniżce stawki z {{t3:1}} do {{t2:1}}.
+A: Zmiana wpływów | dT = T2-t3*B0*(1-t3) | mld zł | tol=0,1
+let: T3 = t3*B0*(1-t3)
+SF: przy 0,7: {{T3:0}};  przy 0,6: {{T2:0}};  zmiana = +{{dT:0}} mld zł
+--- d | 4
+Q: Zinterpretuj krzywą Laffera i wskaż, dlaczego argument „obniżka podatków zwiększy wpływy” jest często nadużywany.
+S: Krzywa Laffera pokazuje, że przy stawce 0 i 100% wpływy są zerowe, a maksimum leży pomiędzy. Obniżka stawki zwiększa wpływy tylko po prawej stronie maksimum (tu z 70% do 60%: +{{dT:0}} mld zł), a przy stawce 30% obniżka zmniejszyłaby wpływy. Położenie maksimum zależy od elastyczności podstawy opodatkowania, której nie znamy dokładnie; dla większości podatków w krajach rozwiniętych stawki leżą po lewej stronie krzywej. Ponadto podstawa reaguje inaczej w krótkim i długim okresie, a unikanie podatków zależy od szczelności systemu, nie tylko od stawki.

@@ -1,0 +1,230 @@
+{
+ "set": "prognoza-xl-10",
+ "ed": 40,
+ "stage": "s",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-10-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "demografia",
+   "th": true,
+   "topics": [
+    {
+     "title": "Czy automatyzacja i sztuczna inteligencja zrekompensują spadek liczby pracowników?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "wydajność pracy i postęp techniczny w funkcji produkcji (model Solowa)",
+        "substytucja pracy przez kapitał przy rosnących płacach",
+        "automatyzacja a zatrudnienie – efekt zastąpienia i efekt produktywności",
+        "kapitał ludzki i kwalifikacje (podnoszenie i zmiana kwalifikacji)",
+        "ryzyka: nierówności, koncentracja rynku"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "robotyzacja w Polsce na tle świata (IFR – roboty na 10 tys. pracowników)",
+        "przykłady AI w usługach i przemyśle",
+        "kraje starzejące się i automatyzacja (Japonia, Korea)",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – mniej pracowników, więcej maszyn",
+       "teoria – Solow, substytucja, efekty zatrudnienia",
+       "praktyka – robotyzacja, AI, Azja",
+       "zakończenie – częściowa rekompensata pod warunkiem inwestycji w kwalifikacje"
+      ],
+      "b": [
+       "zakładanie, że technologia automatycznie zastąpi każdą pracę",
+       "brak wątku wydajności",
+       "brak danych"
+      ],
+      "d": [
+       "Korea Płd. ma najwyższe na świecie nasycenie robotami przemysłowymi, Polska znacznie poniżej średniej UE (IFR, World Robotics)"
+      ]
+     }
+    },
+    {
+     "title": "Banki – po co są gospodarce?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "funkcje banków: pośrednictwo finansowe, kreacja pieniądza, płatności",
+        "ryzyko płynności i ryzyko kredytowe",
+        "regulacje: rezerwa obowiązkowa, wymogi kapitałowe, gwarantowanie depozytów",
+        "bank centralny jako pożyczkodawca ostatniej instancji",
+        "kryzysy bankowe i panika bankowa"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "polski system bankowy, BFG i gwarancja do 100 tys. euro",
+        "kryzys 2008 i upadki banków (SVB 2023)",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – banki w życiu codziennym",
+       "teoria – funkcje, ryzyka, regulacje",
+       "praktyka – BFG, kryzysy",
+       "zakończenie – banki niezbędne, ale wymagają nadzoru"
+      ],
+      "b": [
+       "twierdzenie, że bank pożycza tylko depozyty",
+       "brak regulacji",
+       "brak przykładów"
+      ],
+      "d": [
+       "BFG gwarantuje depozyty do równowartości 100 tys. euro na deponenta w banku (BFG)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-10-zadanie",
+  "title": "Zadanie z podstaw ekonomii – Popyt seniorów na usługi turystyczne",
+  "pts": 15,
+  "topic": "demografia",
+  "own": true,
+  "th": true,
+  "vars": {
+   "I0": 3000.0,
+   "I1": 3300.0,
+   "Q0": 200.0,
+   "Q1": 240.0,
+   "sen": 3.0,
+   "p0": 1500.0,
+   "p1": 1650.0,
+   "Q2": 228.0
+  },
+  "lets": [
+   [
+    "ei",
+    "((Q1-Q0)/Q0)/((I1-I0)/I0)"
+   ],
+   [
+    "q3",
+    "Q1*(1+sen/100)"
+   ],
+   [
+    "ep",
+    "((Q2-Q1)/Q1)/((p1-p0)/p0)"
+   ],
+   [
+    "tr",
+    "p1*Q2/1000"
+   ],
+   [
+    "tr0",
+    "p0*Q1/1000"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "W pewnym regionie przeciętny dochód seniorów wzrósł z 3 000 zł do 3 300 zł, a liczba wykupionych przez nich wyjazdów turystycznych – z 200 tys. do 240 tys. rocznie (dane umowne)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 4,
+    "prompt": "Oblicz dochodową elastyczność popytu na wyjazdy i określ rodzaj dobra.",
+    "answers": [
+     {
+      "label": "Elastyczność dochodowa",
+      "value": 2.0,
+      "calc": "((Q1-Q0)/Q0)/((I1-I0)/I0)",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "Eᵢ = (%ΔQ) / (%ΔI) = (240 − 200)/200 : (3 300 − 3 000)/3 000 = 20% : 10% = 2,0"
+     },
+     {
+      "t": "p",
+      "x": "Eᵢ > 1 – wyjazdy są dla seniorów dobrem wyższego rzędu (luksusowym): wydatki na nie rosną szybciej niż dochód."
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 3,
+    "prompt": "Liczba seniorów w regionie wzrośnie o 3% przy niezmienionym dochodzie i cenach. Ile wyjazdów kupią seniorzy, jeśli popyt na osobę się nie zmieni?",
+    "answers": [
+     {
+      "label": "Liczba wyjazdów",
+      "value": 247.2,
+      "calc": "Q1*(1+sen/100)",
+      "unit": "tys.",
+      "tol": 0.1
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "240 × 1,03 = 247,2 tys."
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 4,
+    "prompt": "Biuro podnosi cenę wyjazdu z 1 500 zł do 1 650 zł, a liczba wyjazdów spada z 240 tys. do 228 tys. Oblicz cenową elastyczność popytu oraz przychód biura po podwyżce (w mln zł).",
+    "answers": [
+     {
+      "label": "Elastyczność cenowa",
+      "value": -0.5,
+      "calc": "((Q2-Q1)/Q1)/((p1-p0)/p0)",
+      "tol": 0.01
+     },
+     {
+      "label": "Przychód po podwyżce",
+      "value": 376.2,
+      "calc": "p1*Q2/1000",
+      "unit": "mln zł",
+      "tol": 0.05
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "Eₚ = (−240 + 228)/240 : (1 650 − 1 500)/1 500 = −5% : 10% = −0,5;  przychód: 1 650 × 228 tys. = 376,2 mln zł (wcześniej 360 mln zł)"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "Zinterpretuj wyniki z punktów a–c z punktu widzenia firm z branży „srebrnej gospodarki”.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Popyt seniorów na turystykę jest dochodowo elastyczny (Eᵢ = 2,0) i cenowo nieelastyczny (|Eₚ| = −0,5 < 1). Dla firm oznacza to rosnący rynek: rośnie zarówno liczba seniorów, jak i ich dochody (np. waloryzacja emerytur), a podwyżka ceny zwiększa przychód. Ryzykiem jest silna zależność od dochodów – przy spadku realnych emerytur popyt spadnie szybciej niż dochód. Firmy mogą dostosować ofertę: wyjazdy poza sezonem, opieka medyczna, dostępność dla osób z ograniczeniami ruchowymi."
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -381,6 +381,21 @@ najsłabsze najpierw) – także w nauce talii. API `/api/fiszki/opanowanie`, `/
 - Plik pobierany osobno (`/api/dane/wiecej`, ETag) dopiero przy pierwszym rozwinięciu – nie powiększa `/api/dane/hasla`.
 - Karta fiszki to `div role="button"` (z przyciskiem w środku nie może być `<button>`); Enter odwraca kartę, w feedzie także Spacja.
 
+## Prognoza XL – własne eseje i zadania (Zadania / Eseje)
+
+- 50 zestawów `data/otwarte/sets/prognoza-xl-NN.json` (`ed: 40`, `src: "prognoza"`, `own: true`): jeden esej i jedno zadanie,
+  etapy jak w OWE – 01–17 szkolny (esej z dwoma tematami do wyboru, „Zadanie z podstaw ekonomii”), 18–34 okręgowy („Zadanie z analizy
+  finansowej”), 35–50 centralny („Zadanie analityczne”). Esej: 25 pkt (część teoretyczna 15 + praktyczna 10), zadanie: 15 pkt.
+  31 esejów i 27 zadań dotyczy hasła XL „Gospodarka wobec wyzwań demograficznych” (🎯 na liście), pozostałe – tematów prawdopodobnych
+  w 2026/27 (inflacja, finanse publiczne, energia, AI, handel, mieszkania, konkurencyjność UE, finanse osobiste).
+- Na listach z etykietą „🔮 Prognoza XL (własne)”, filtr **Źródło** (wszystkie / z kluczy OWE / Prognoza XL – zapisywany na koncie razem
+  z pozostałymi filtrami, uwzględniany przy losowaniu), osobne wiersze źródła w Statystykach zadań i esejów. Pozycje Prognozy nie trafiają
+  do statystyk tematów OWE (`openAll`). Po zakończeniu eseju: plan tego eseju, dane ze źródłami i typowe błędy.
+- Treści: `tools/otwarte/prognoza/*.txt` (format opisany w `tools/otwarte/build_prognoza.py`) → `python3 -I tools/otwarte/build_prognoza.py`
+  → `python3 -I tools/otwarte/build_index.py`. Każdy wynik liczbowy ma wyrażenie `calc` liczone z danych zadania (`vars`, `lets`);
+  `python3 -I tools/otwarte/sprawdz_prognoze.py` przelicza je niezależnie, sprawdza sumy punktów, unikalność tematów względem kluczy OWE
+  i podpowiedzi, i zapisuje raport `tools/otwarte/PROGNOZA.md`. Wersja publiczna zadania nie zawiera `vars`, `lets` ani `calc`.
+
 ## Podręcznik (Nauka → Podręcznik, `/nauka/podrecznik`)
 
 Ręcznie pisane artykuły prostym językiem: dla każdego działu przegląd „W skrócie” i rozdziały – jeden na każdą zwykłą lekcję kursu

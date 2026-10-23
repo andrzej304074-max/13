@@ -1,0 +1,170 @@
+{
+ "set": "prognoza-xl-42",
+ "ed": 40,
+ "stage": "c",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-42-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "zarzadzanie",
+   "th": true,
+   "topics": [
+    {
+     "title": "Strategie przedsiębiorstw wobec kurczącego się rynku pracy",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "zasoby ludzkie jako zasób strategiczny (podejście zasobowe – J. Barney)",
+        "employer branding i rynek pracownika",
+        "substytucja pracy kapitałem – automatyzacja procesów",
+        "outsourcing i offshoring",
+        "retencja pracowników i koszty rotacji"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "polskie firmy przemysłowe i usługowe – inwestycje w automatyzację",
+        "zatrudnianie cudzoziemców i agencje pracy",
+        "przykłady przenoszenia usług do centrów usług wspólnych (SSC/BPO)",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – rynek pracownika",
+       "teoria – RBV, employer branding, automatyzacja, outsourcing, retencja",
+       "praktyka – polskie przykłady",
+       "zakończenie – połączenie strategii"
+      ],
+      "b": [
+       "brak teorii zarządzania strategicznego",
+       "brak przykładów",
+       "brak kosztów rotacji"
+      ],
+      "d": [
+       "sektor nowoczesnych usług biznesowych w Polsce zatrudnia ok. 0,5 mln osób (ABSL, 2024)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-42-zadanie",
+  "title": "Zadanie analityczne – Reguła Taylora",
+  "pts": 15,
+  "topic": "makro",
+  "own": true,
+  "th": false,
+  "vars": {
+   "rn": 1.0,
+   "pi": 5.0,
+   "pis": 2.5,
+   "gap": 1.0,
+   "pi2": 3.0,
+   "gap2": -1.0
+  },
+  "lets": [
+   [
+    "i1",
+    "rn+pi+0.5*(pi-pis)+0.5*gap"
+   ],
+   [
+    "rr",
+    "i1-pi"
+   ],
+   [
+    "i2",
+    "rn+pi2+0.5*(pi2-pis)+0.5*gap2"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Bank centralny ustala stopę procentową zgodnie z regułą Taylora: i = r* + π + 0,5(π − π*) + 0,5 × luka PKB, gdzie r* = 1% – naturalna realna stopa procentowa, π – inflacja, π* = 2,5% – cel inflacyjny, luka PKB w % PKB potencjalnego (dane umowne)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 4,
+    "prompt": "Oblicz stopę procentową wynikającą z reguły przy inflacji 5% i luce PKB +1%.",
+    "answers": [
+     {
+      "label": "Stopa procentowa",
+      "value": 7.75,
+      "calc": "rn+pi+0.5*(pi-pis)+0.5*gap",
+      "unit": "%",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "i = 1 + 5 + 0,5 × (5 − 2,5) + 0,5 × 1 = 7,75%"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 3,
+    "prompt": "Oblicz realną stopę procentową.",
+    "answers": [
+     {
+      "label": "Realna stopa",
+      "value": 2.75,
+      "calc": "i1-pi",
+      "unit": "%",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "7,75 − 5 = 2,75%"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 4,
+    "prompt": "Oblicz stopę procentową, gdy inflacja spadnie do 3%, a luka PKB stanie się ujemna (−1%).",
+    "answers": [
+     {
+      "label": "Stopa procentowa",
+      "value": 3.75,
+      "calc": "rn+pi2+0.5*(pi2-pis)+0.5*gap2",
+      "unit": "%",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "i = 1 + 3 + 0,5 × 0,5 + 0,5 × (−1) = 3,75%"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "Wyjaśnij zasadę Taylora (reakcja stopy na inflację większa niż 1:1) i wskaż ograniczenia reguły.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Współczynnik przy inflacji wynosi łącznie 1,5: gdy inflacja rośnie o 1 pkt proc., stopa nominalna rośnie o 1,5 pkt proc., więc stopa realna rośnie – polityka staje się bardziej restrykcyjna i hamuje popyt. Gdyby stopa rosła słabiej niż inflacja, realna stopa by spadała i inflacja mogłaby się nakręcać. Ograniczenia: niepewność co do r* (zależy m.in. od demografii) i luki PKB (nieobserwowalne), opóźnienia transmisji, szoki podażowe (np. energia), dolna granica stóp procentowych; reguła jest punktem odniesienia, a nie automatem."
+     }
+    ]
+   }
+  ]
+ }
+}

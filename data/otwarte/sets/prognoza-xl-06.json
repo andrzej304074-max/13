@@ -1,0 +1,246 @@
+{
+ "set": "prognoza-xl-06",
+ "ed": 40,
+ "stage": "s",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-06-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "demografia",
+   "th": true,
+   "topics": [
+    {
+     "title": "Zdrowie jako czynnik rozwoju gospodarczego w starzejącym się społeczeństwie",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "zdrowie jako składnik kapitału ludzkiego (G. Becker, M. Grossman)",
+        "wpływ zdrowia na podaż pracy, wydajność i dochód",
+        "ekonomika ochrony zdrowia: asymetria informacji, pokusa nadużycia, dobra publiczne i efekty zewnętrzne",
+        "modele finansowania: ubezpieczeniowy (Bismarck), budżetowy (Beveridge), prywatny",
+        "wpływ starzenia na wydatki zdrowotne i opiekę długoterminową",
+        "profilaktyka jako inwestycja"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "wydatki na zdrowie w Polsce w relacji do PKB i ich wzrost (ustawa – cel 7% PKB)",
+        "kolejki, braki kadrowe, starzenie się lekarzy i pielęgniarek",
+        "przykład zagraniczny (np. Dania, Holandia)",
+        "własna ocena priorytetów"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – zdrowie a gospodarka",
+       "teoria – kapitał ludzki, ułomności rynku zdrowia, modele",
+       "praktyka – Polska: finansowanie, kadry, profilaktyka",
+       "zakończenie – profilaktyka i opieka długoterminowa jako priorytet"
+      ],
+      "b": [
+       "traktowanie wydatków na zdrowie wyłącznie jako kosztu",
+       "brak ułomności rynku",
+       "brak danych"
+      ],
+      "d": [
+       "ustawowy cel publicznych wydatków na zdrowie – 7% PKB (ustawa o świadczeniach opieki zdrowotnej, nowelizacja 2018)",
+       "przeciętne dalsze trwanie życia noworodka w Polsce ok. 74,7 r. (mężczyźni) i 82 lat (kobiety) w 2023 r. (GUS)"
+      ]
+     }
+    },
+    {
+     "title": "Reklama – informacja czy manipulacja?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "funkcje reklamy: informacyjna, perswazyjna, przypominająca",
+        "reklama a konkurencja (różnicowanie produktu, bariery wejścia, konkurencja monopolistyczna)",
+        "asymetria informacji i sygnalizowanie jakości",
+        "ekonomia behawioralna: heurystyki, efekt zakotwiczenia, presja społeczna",
+        "ochrona konsumenta i regulacje reklamy"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "reklama w internecie i mediach społecznościowych (influencerzy, profilowanie)",
+        "działania UOKiK wobec nieuczciwych praktyk",
+        "własna ocena: jak konsument może się bronić"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – wszechobecność reklamy",
+       "teoria – funkcje, konkurencja, sygnały, heurystyki",
+       "praktyka – internet, UOKiK",
+       "zakończenie – i informacja, i manipulacja – znaczenie edukacji"
+      ],
+      "b": [
+       "jednostronna ocena",
+       "brak teorii rynku",
+       "brak przykładu regulacji"
+      ],
+      "d": [
+       "UOKiK wydaje rekomendacje dotyczące oznaczania treści reklamowych przez influencerów (UOKiK, 2022)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-06-zadanie",
+  "title": "Zadanie z podstaw ekonomii – Zasoby pracy i aktywność zawodowa",
+  "pts": 15,
+  "topic": "demografia",
+  "own": true,
+  "th": true,
+  "vars": {
+   "N": 31.0,
+   "Pr": 17.2,
+   "B": 0.5,
+   "dP": 0.6
+  },
+  "lets": [
+   [
+    "wa",
+    "(Pr+B)/N*100"
+   ],
+   [
+    "sb",
+    "B/(Pr+B)*100"
+   ],
+   [
+    "wz",
+    "Pr/N*100"
+   ],
+   [
+    "wz2",
+    "(Pr+dP)/N*100"
+   ],
+   [
+    "wa2",
+    "(Pr+dP+B)/N*100"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Według badania aktywności ekonomicznej ludności (BAEL) w kraju jest 31,0 mln osób w wieku 15–89 lat, z czego 17,2 mln pracuje, a 0,5 mln to bezrobotni (dane przybliżone, zbliżone do Polski)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 3,
+    "prompt": "Oblicz współczynnik aktywności zawodowej.",
+    "answers": [
+     {
+      "label": "Współczynnik aktywności",
+      "value": 57.0968,
+      "calc": "(Pr+B)/N*100",
+      "unit": "%",
+      "tol": 0.1
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "(pracujący + bezrobotni) / ludność × 100 = (17,2 + 0,5) / 31,0 × 100 ≈ 57,10%"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 3,
+    "prompt": "Oblicz stopę bezrobocia.",
+    "answers": [
+     {
+      "label": "Stopa bezrobocia",
+      "value": 2.8249,
+      "calc": "B/(Pr+B)*100",
+      "unit": "%",
+      "tol": 0.05
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "bezrobotni / aktywni zawodowo × 100 = 0,5 / (17,2 + 0,5) × 100 ≈ 2,82%"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 3,
+    "prompt": "Oblicz wskaźnik zatrudnienia.",
+    "answers": [
+     {
+      "label": "Wskaźnik zatrudnienia",
+      "value": 55.4839,
+      "calc": "Pr/N*100",
+      "unit": "%",
+      "tol": 0.1
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "17,2 / 31,0 × 100 ≈ 55,48%"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 3,
+    "prompt": "Dzięki zachętom do dłuższej pracy pracę podejmuje dodatkowo 0,6 mln osób biernych zawodowo w wieku 55+. Oblicz nowy wskaźnik zatrudnienia i nowy współczynnik aktywności.",
+    "answers": [
+     {
+      "label": "Nowy wskaźnik zatrudnienia",
+      "value": 57.4194,
+      "calc": "(Pr+dP)/N*100",
+      "unit": "%",
+      "tol": 0.1
+     },
+     {
+      "label": "Nowy współczynnik aktywności",
+      "value": 59.0323,
+      "calc": "(Pr+dP+B)/N*100",
+      "unit": "%",
+      "tol": 0.1
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "(17,2 + 0,6) / 31,0 × 100 ≈ 57,42%;  (17,2 + 0,6 + 0,5) / 31,0 × 100 ≈ 59,03%"
+     }
+    ]
+   },
+   {
+    "label": "e",
+    "pts": 3,
+    "prompt": "Wyjaśnij, dlaczego bardzo niska stopa bezrobocia nie oznacza, że gospodarka ma duże rezerwy siły roboczej.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Stopa bezrobocia liczy tylko osoby aktywnie szukające pracy. Rezerwy pracy są głównie wśród biernych zawodowo (osoby starsze przed i po wieku emerytalnym, opiekunowie dzieci i osób starszych, osoby z niepełnosprawnościami, uczący się). Przy niskim bezrobociu wzrost zatrudnienia wymaga aktywizacji biernych albo imigracji, a przy spadającej liczbie ludności w wieku produkcyjnym zasób pracy maleje nawet przy pełnym zatrudnieniu."
+     }
+    ]
+   }
+  ]
+ }
+}

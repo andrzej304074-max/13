@@ -21,6 +21,8 @@ export interface Answer {
   unit?: string;
   /** Inne akceptowane wyniki (np. ścisłe rozwiązanie, gdy klucz przyjmuje uproszczenie). */
   alt?: number[];
+  /** Prognoza XL: wyrażenie, z którego policzono wynik (z `vars` zadania) – sprawdza tools/otwarte/sprawdz_prognoze.py. */
+  calc?: string;
 }
 export interface TaskPart {
   label: string;
@@ -34,21 +36,34 @@ export interface Task {
   id: string; title: string; pts: number; topic: string;
   /** Rozwiązanie opracowane w aplikacji – oficjalny klucz go nie zawiera. */
   own?: boolean;
+  /** Dotyczy hasła przewodniego edycji (Prognoza XL). */
+  th?: boolean;
+  /** Prognoza XL: dane zadania i wartości pośrednie (nazwa = wyrażenie) – do niezależnego przeliczenia wyników. */
+  vars?: Record<string, number>;
+  lets?: [string, string][];
   intro: Block[];
   parts: TaskPart[];
 }
 export interface SchemaSection { title: string; pts: number | null; points: string[] }
-export interface EssayTopic { title: string; schema: SchemaSection[] }
+/** Podpowiedzi do eseju Prognozy XL (po zakończeniu): s – struktura, b – typowe błędy, d – dane ze źródłami. */
+export interface EssayHints { s?: string[]; b?: string[]; d?: string[] }
+export interface EssayTopic { title: string; schema: SchemaSection[]; hints?: EssayHints }
 export interface Essay {
   id: string;
   /** „ogolne” – pytanie opisowe o charakterze ogólnym; „sponsor” – pytanie do wyboru od sponsora (bez schematu w kluczu). */
   kind: "ogolne" | "sponsor";
   /** Schemat opracowany w aplikacji – oficjalny klucz go nie zawiera. */
   own?: boolean;
+  /** Dotyczy hasła przewodniego edycji (Prognoza XL). */
+  th?: boolean;
   pts: number; topic: string;
   topics: EssayTopic[];
 }
-export interface OpenSet { set: string; ed: number; stage: Stage; essays: Essay[]; task: Task | null }
+/** Źródło zestawu: klucze OWE albo własna „Prognoza XL” (tools/otwarte/build_prognoza.py). */
+export type OpenSrc = "owe" | "prognoza";
+/** Etykieta Prognozy XL na listach i stronach zadań i esejów. */
+export const PROGNOZA_LABEL = "🔮 Prognoza XL (własne)";
+export interface OpenSet { set: string; ed: number; stage: Stage; src?: OpenSrc; essays: Essay[]; task: Task | null }
 
 /* ---------- liczby ---------- */
 
@@ -117,8 +132,8 @@ const round1 = (x: number) => Math.round(x * 10) / 10;
 
 /* ---------- wersje publiczne (bez kluczy) ---------- */
 
-export type PublicTask = Omit<Task, "parts"> & { parts: (Omit<TaskPart, "answers" | "solution"> & { answers: Pick<Answer, "label" | "unit">[] })[] };
-export const publicTask = (t: Task): PublicTask => ({
+export type PublicTask = Omit<Task, "parts" | "vars" | "lets"> & { parts: (Omit<TaskPart, "answers" | "solution"> & { answers: Pick<Answer, "label" | "unit">[] })[] };
+export const publicTask = ({ vars: _v, lets: _l, ...t }: Task): PublicTask => ({
   ...t, parts: t.parts.map(({ solution: _s, answers, ...p }) => ({ ...p, answers: answers.map((a) => ({ label: a.label, unit: a.unit })) })),
 });
 export type PublicEssay = Omit<Essay, "topics"> & { topics: { title: string; hasSchema: boolean }[] };
@@ -129,7 +144,8 @@ export const publicEssay = (e: Essay): PublicEssay => ({ ...e, topics: e.topics.
 export function validateSet(s: OpenSet, topics: string[]): string[] {
   const err: string[] = [];
   const where = (x: string) => `${s.set}: ${x}`;
-  if (!/^owe-\d{2}-(szkolne|okregowe|centralne)$/.test(s.set)) err.push(where("zły identyfikator zestawu"));
+  if (s.src === "prognoza" ? !/^prognoza-xl-\d{2}$/.test(s.set) || !s.essays.every((e) => e.own) || (s.task && !s.task.own)
+    : !/^owe-\d{2}-(szkolne|okregowe|centralne)$/.test(s.set)) err.push(where("zły identyfikator zestawu"));
   for (const e of s.essays) {
     if (!topics.includes(e.topic)) err.push(where(`esej ${e.id}: nieznany dział ${e.topic}`));
     if (!e.topics.length) err.push(where(`esej ${e.id}: brak tematu`));

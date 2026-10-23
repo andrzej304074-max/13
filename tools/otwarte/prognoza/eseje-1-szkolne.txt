@@ -1,0 +1,550 @@
+#! Prognoza XL – eseje, etap szkolny (zestawy 01–17): dwa tematy do wyboru, 25 pkt (teoria 15, praktyka 10).
+#! Liczby w „dane” są zaokrąglone – przed użyciem w eseju sprawdź najnowsze wydanie źródła.
+
+=== 01 | demografia | th
+T: Starzenie się społeczeństwa – zagrożenie czy szansa dla gospodarki Polski?
+## Część teoretyczna | 15
+- pojęcie starzenia się społeczeństwa (wzrost udziału osób 65+, wzrost mediany wieku) i jego mierniki
+- przyczyny: spadek dzietności poniżej poziomu zastępowalności pokoleń (ok. 2,1) i wydłużanie się trwania życia
+- przejście demograficzne – fazy i miejsce Polski w tym procesie
+- wpływ na podaż pracy i potencjalny PKB (funkcja produkcji: praca, kapitał, technologia)
+- wpływ na oszczędności i konsumpcję – hipoteza cyklu życia F. Modiglianiego
+- skutki dla finansów publicznych: emerytury, zdrowie, opieka długoterminowa
+- szanse: srebrna gospodarka, wzrost wydajności, automatyzacja, inwestycje w kapitał ludzki
+## Część praktyczna | 10
+- dane o dzietności, liczbie urodzeń i strukturze wieku ludności Polski (GUS)
+- prognoza ludności GUS i zmiana współczynnika obciążenia demograficznego
+- porównanie z krajami UE lub Japonią / Koreą Płd.
+- przykłady działań: aktywizacja zawodowa osób starszych i kobiet, migracje, polityka rodzinna
+- własna ocena: czy bilans jest negatywny i od czego zależy
+> struktura: wstęp – dane o dzietności i strukturze wieku jako punkt wyjścia; teoria – przyczyny (przejście demograficzne), kanały wpływu na gospodarkę (praca, oszczędności, finanse publiczne); praktyka – Polska na tle UE i Azji Wschodniej, przykłady polityk; zakończenie – teza: zagrożenie, które można częściowo zamienić w szansę przez wydajność i aktywizację
+> błędy: utożsamianie starzenia z samym spadkiem liczby ludności; pomijanie wydłużania się trwania życia jako przyczyny; ogólniki o „srebrnej gospodarce” bez przykładów rynków (opieka, zdrowie, turystyka, finanse)
+> dane: współczynnik dzietności w Polsce ok. 1,1 w 2024 r. (GUS); urodzenia ok. 250 tys. w 2024 r. wobec ok. 400 tys. w 2017 r. (GUS); udział osób 65+ ok. 20% (GUS, 2024); dzietność w UE ok. 1,4 (Eurostat, 2023)
+T: Czy inflacja zawsze szkodzi gospodarce?
+## Część teoretyczna | 15
+- pojęcie inflacji i jej mierniki (CPI, inflacja bazowa, deflator PKB)
+- przyczyny: popytowe, kosztowe, oczekiwania inflacyjne, ilościowa teoria pieniądza (MV = PY)
+- koszty inflacji: niepewność, koszty menu i „zdartych zelówek”, redystrybucja od wierzycieli do dłużników
+- koszty deflacji i argumenty za umiarkowaną, dodatnią inflacją (cel ok. 2%)
+- krzywa Phillipsa i jej krytyka (oczekiwania – M. Friedman, E. Phelps)
+- hiperinflacja – przyczyny i skutki
+## Część praktyczna | 10
+- przebieg inflacji w Polsce w latach 2021–2025 i jej źródła (energia, żywność, popyt)
+- reakcja NBP: stopy procentowe, cel inflacyjny 2,5% ± 1 pkt proc.
+- przykład hiperinflacji (Niemcy 1923, Zimbabwe, Wenezuela) lub deflacji (Japonia)
+- własna ocena: kiedy inflacja jest szkodliwa, a kiedy jej skutki są ograniczone
+> struktura: wstęp – definicja i krótki obraz ostatnich lat; teoria – przyczyny, koszty, krzywa Phillipsa; praktyka – Polska 2021–2025 i przykład skrajny; zakończenie – szkodzi inflacja wysoka i zmienna, niska i przewidywalna jest akceptowana przez banki centralne
+> błędy: mylenie wysokiego poziomu cen z inflacją; twierdzenie, że inflacja zawsze szkodzi wszystkim (dłużnicy zyskują); brak rozróżnienia inflacji oczekiwanej i nieoczekiwanej
+> dane: szczyt inflacji CPI w Polsce 18,4% r/r w lutym 2023 r. (GUS); cel inflacyjny NBP 2,5% ± 1 pkt proc. (NBP); cel EBC 2% w średnim okresie (EBC)
+
+=== 02 | demografia | th
+T: Jak niska dzietność wpływa na gospodarkę i co może zrobić państwo?
+## Część teoretyczna | 15
+- współczynnik dzietności i poziom zastępowalności pokoleń
+- ekonomiczne przyczyny niskiej dzietności: koszt alternatywny czasu (G. Becker – „jakość a liczba dzieci”), koszty mieszkania, niepewność zatrudnienia
+- kulturowe i społeczne przyczyny: późniejsze zawieranie małżeństw, edukacja, zmiana wartości
+- skutki dla rynku pracy, wzrostu gospodarczego i finansów publicznych
+- narzędzia polityki rodzinnej: transfery pieniężne, usługi (żłobki), urlopy, ulgi podatkowe, mieszkania
+- skuteczność transferów pieniężnych a usług – wnioski z badań
+## Część praktyczna | 10
+- zmiany dzietności w Polsce i liczby urodzeń (GUS)
+- polskie instrumenty: 800+, ulga na dzieci, program „Aktywny rodzic”, żłobki
+- przykład zagraniczny: Francja / kraje nordyckie (usługi) lub Węgry (ulgi), Korea Płd. (najniższa dzietność)
+- własna ocena: które narzędzia mają największą szansę zadziałać
+> struktura: wstęp – dzietność w Polsce poniżej poziomu zastępowalności; teoria – przyczyny ekonomiczne i społeczne, skutki; praktyka – polskie programy i przykłady zagraniczne; zakończenie – połączenie usług, mieszkań i stabilności pracy zamiast samych transferów
+> błędy: przypisywanie spadku dzietności jednej przyczynie; twierdzenie, że 800+ „podniosło” dzietność bez danych; pomijanie efektu mniejszej liczby kobiet w wieku rozrodczym
+> dane: dzietność w Polsce ok. 1,1 (2024, GUS); Korea Płd. ok. 0,7–0,75 (2023–2024, Statistics Korea); Francja ok. 1,6–1,7 (INSEE, 2023–2024)
+T: Czy wolny handel jest korzystny dla wszystkich?
+## Część teoretyczna | 15
+- przewaga absolutna (A. Smith) i komparatywna (D. Ricardo)
+- model Heckschera–Ohlina i obfitość czynników produkcji
+- korzyści z handlu: specjalizacja, skala, konkurencja, większy wybór dla konsumentów
+- przegrani handlu: branże konkurujące z importem, efekt Stolpera–Samuelsona
+- protekcjonizm: cła, kontyngenty, subsydia – skutki dla dobrobytu (strata martwa)
+- argument „przemysłu raczkującego” (F. List) i argument bezpieczeństwa
+## Część praktyczna | 10
+- Polska w jednolitym rynku UE – znaczenie eksportu
+- wojny celne i cła USA (2018–2025) – skutki dla gospodarki światowej
+- WTO i umowy handlowe UE (np. z Mercosurem – spór rolników)
+- własna ocena: korzyści netto a potrzeba wsparcia przegranych
+> struktura: wstęp – handel jako źródło dobrobytu i sporów; teoria – przewaga komparatywna, H–O, przegrani; praktyka – Polska w UE, cła USA, Mercosur; zakończenie – korzyści netto dodatnie, ale nie dla każdego, więc potrzebna polityka kompensacji
+> błędy: mylenie przewagi absolutnej z komparatywną; twierdzenie, że deficyt handlowy oznacza „przegraną” kraju; brak przykładu przegranych z handlu
+> dane: eksport towarów i usług Polski ok. 55–60% PKB (Bank Światowy, 2023); ponad 70% eksportu towarów Polski trafia do UE (GUS)
+
+=== 03 | demografia | th
+T: Czy Polska może zastąpić brakujących pracowników imigrantami?
+## Część teoretyczna | 15
+- migracje międzynarodowe – czynniki wypychające i przyciągające
+- wpływ imigracji na podaż pracy, płace i zatrudnienie (komplementarność a substytucyjność)
+- wpływ na finanse publiczne (podatki, składki, świadczenia)
+- „migracja zastępcza” – ile imigrantów musiałoby przybyć, by utrzymać strukturę wieku
+- integracja i kapitał ludzki imigrantów
+- emigracja z Polski i drenaż mózgów
+## Część praktyczna | 10
+- cudzoziemcy na polskim rynku pracy: Ukraińcy, Białorusini, pracownicy z Azji (ZUS, GUS)
+- uchodźcy z Ukrainy po 2022 r. – skutki gospodarcze
+- przykład Niemiec lub Kanady (system punktowy)
+- własna ocena: migracje łagodzą, ale nie rozwiązują problemu starzenia
+> struktura: wstęp – luka na rynku pracy; teoria – czynniki migracji, skutki dla płac i budżetu, migracja zastępcza; praktyka – cudzoziemcy w ZUS, Ukraina, Kanada/Niemcy; zakończenie – migracje jako część rozwiązania obok aktywizacji i wydajności
+> błędy: założenie, że imigranci zawsze obniżają płace; pomijanie tego, że imigranci też się starzeją; brak rozróżnienia migracji czasowej i osiedleńczej
+> dane: ok. 1,1–1,2 mln cudzoziemców ubezpieczonych w ZUS (2024, ZUS); ok. 1 mln obywateli Ukrainy z ochroną czasową w Polsce (2024, UdSC / Eurostat)
+T: Rola małych i średnich przedsiębiorstw w gospodarce
+## Część teoretyczna | 15
+- definicja MŚP (kryteria UE: zatrudnienie, obrót, suma bilansowa)
+- rola MŚP: zatrudnienie, innowacje, konkurencja, elastyczność
+- bariery rozwoju: dostęp do finansowania, skala, regulacje, koszty pracy
+- źródła finansowania: kapitał własny, kredyt, leasing, faktoring, fundusze UE, venture capital
+- przedsiębiorczość w teorii (J. Schumpeter – innowator, I. Kirzner – arbitraż)
+## Część praktyczna | 10
+- udział MŚP w PKB i zatrudnieniu w Polsce (PARP)
+- formy wsparcia: fundusze UE, BGK, ulgi (mały ZUS, estoński CIT)
+- przykład polskiej firmy, która wyrosła z MŚP
+- własna ocena: co najbardziej hamuje wzrost polskich firm
+> struktura: wstęp – MŚP jako kręgosłup gospodarki; teoria – definicja, rola, bariery, finansowanie, Schumpeter; praktyka – dane PARP, instrumenty wsparcia, przykład; zakończenie – skalowanie firm jako wyzwanie
+> błędy: mylenie mikro- i małych przedsiębiorstw; brak liczb; wymienianie barier bez propozycji rozwiązań
+> dane: MŚP to ponad 99% przedsiębiorstw w Polsce i ok. połowa PKB (PARP, raport o stanie sektora MŚP); mikroprzedsiębiorstwa – ok. 96–97% firm (PARP)
+
+=== 04 | demografia | th
+T: System emerytalny wobec starzenia się społeczeństwa
+## Część teoretyczna | 15
+- system repartycyjny (PAYG) a kapitałowy – zasady działania
+- system zdefiniowanego świadczenia a zdefiniowanej składki
+- wpływ starzenia na system repartycyjny: współczynnik obciążenia, stopa zastąpienia
+- możliwe reformy: podniesienie wieku, wyższe składki, niższe świadczenia, oszczędzanie dobrowolne
+- ryzyka systemu kapitałowego (rynkowe, inflacja, koszty zarządzania)
+- emerytura minimalna i ubóstwo osób starszych
+## Część praktyczna | 10
+- polski system: ZUS (I filar), OFE / IKE (II–III filar), PPK, reforma 1999 i zmiany 2011–2014
+- wiek emerytalny 60/65 i prognozy stopy zastąpienia (ZUS)
+- przykład zagraniczny: Szwecja (NDC) lub Chile (system kapitałowy)
+- własna ocena: co powinno się zmienić
+> struktura: wstęp – rosnąca liczba emerytów na jednego pracującego; teoria – PAYG vs kapitałowy, DB vs DC, skutki starzenia; praktyka – reforma 1999, OFE, PPK, wiek emerytalny; zakończenie – dłuższa aktywność i oszczędzanie dobrowolne jako uzupełnienie
+> błędy: twierdzenie, że system kapitałowy jest odporny na demografię; mylenie stopy zastąpienia z wysokością emerytury; brak opisu, kto płaci emerytury w PAYG
+> dane: wiek emerytalny w Polsce 60 lat (kobiety) i 65 lat (mężczyźni) od 2017 r. (ustawa); prognozy ZUS wskazują spadek stopy zastąpienia w drugiej połowie XXI w. (ZUS, Prognoza wpływów i wydatków FUS)
+T: Ekonomia współdzielenia – moda czy trwała zmiana?
+## Część teoretyczna | 15
+- pojęcie gospodarki współdzielenia i platform cyfrowych
+- efekty sieciowe i rynki dwustronne
+- obniżenie kosztów transakcyjnych (R. Coase) i problem zaufania (asymetria informacji, oceny)
+- skutki dla konkurencji, zatrudnienia (praca platformowa) i regulacji
+- efektywność wykorzystania zasobów
+## Część praktyczna | 10
+- przykłady platform w Polsce: przewozy, najem krótkoterminowy, wynajem rzeczy
+- spory regulacyjne: najem krótkoterminowy a ceny mieszkań, dyrektywa UE o pracy platformowej
+- własna ocena: które modele są trwałe
+> struktura: wstęp – definicja; teoria – koszty transakcyjne, efekty sieciowe, asymetria informacji; praktyka – platformy i regulacje; zakończenie – trwała zmiana wymagająca nowych regulacji
+> błędy: utożsamianie ekonomii współdzielenia z każdym sklepem internetowym; brak wątku regulacji; brak przykładów
+> dane: dyrektywa UE w sprawie poprawy warunków pracy za pośrednictwem platform internetowych przyjęta w 2024 r. (UE)
+
+=== 05 | demografia | th
+T: Srebrna gospodarka – jakie dobra i usługi zyskają na starzeniu się społeczeństwa?
+## Część teoretyczna | 15
+- pojęcie srebrnej gospodarki (popyt i podaż związane z osobami 50+ / 60+)
+- zmiana struktury konsumpcji w cyklu życia (zdrowie, opieka, usługi, czas wolny)
+- dochody i oszczędności seniorów – hipoteza cyklu życia
+- rynki: zdrowie, opieka długoterminowa, mieszkania dostosowane, turystyka, finanse, technologie (gerontechnologia)
+- seniorzy jako pracownicy i przedsiębiorcy
+- bariery: niskie emerytury, wykluczenie cyfrowe
+## Część praktyczna | 10
+- liczba seniorów w Polsce i jej prognoza (GUS)
+- przykłady firm i usług dla seniorów (teleopieka, domy opieki, turystyka)
+- polityka senioralna: 13. i 14. emerytura, bon senioralny, Uniwersytety Trzeciego Wieku
+- przykład Japonii
+- własna ocena perspektyw
+> struktura: wstęp – rosnąca grupa konsumentów 65+; teoria – cykl życia, struktura konsumpcji, rynki; praktyka – dane GUS, przykłady usług, polityka senioralna, Japonia; zakończenie – szansa dla firm, ale ograniczona niskimi dochodami części seniorów
+> błędy: ograniczenie srebrnej gospodarki do opieki zdrowotnej; brak danych o dochodach seniorów; pomijanie seniorów jako pracowników
+> dane: ok. 7,5–8 mln osób w wieku 65+ w Polsce (GUS, 2024); w Japonii osoby 65+ to ok. 29% ludności (Statistics Bureau of Japan, 2023)
+T: Czy warto oszczędzać i inwestować od młodości?
+## Część teoretyczna | 15
+- oszczędzanie a inwestowanie – różnice
+- wartość pieniądza w czasie, procent składany
+- ryzyko a oczekiwana stopa zwrotu, dywersyfikacja
+- instrumenty: lokaty, obligacje skarbowe, akcje, fundusze, ETF
+- inflacja a realna stopa zwrotu
+- błędy behawioralne inwestorów (nadmierna pewność siebie, awersja do strat)
+## Część praktyczna | 10
+- produkty dla Polaków: obligacje skarbowe (w tym indeksowane inflacją), IKE / IKZE, PPK
+- obliczenie przykładowej wartości oszczędności po 30 latach (procent składany)
+- kryzys lub krach jako lekcja (2008, 2020)
+- własna ocena: plan oszczędzania dla ucznia lub młodego pracownika
+> struktura: wstęp – czas jako sprzymierzeniec oszczędzającego; teoria – procent składany, ryzyko, inflacja, behawioralne pułapki; praktyka – IKE/IKZE/PPK, obliczenie, przykład kryzysu; zakończenie – regularność i dywersyfikacja
+> błędy: utożsamianie lokaty z inwestycją bez ryzyka realnego (inflacja); obiecywanie pewnych zysków z akcji; brak obliczeń
+> dane: dopłata państwa w PPK – 250 zł powitalne i 240 zł rocznie (ustawa o PPK); limity wpłat IKE i IKZE ustalane co roku (ustawa o IKE/IKZE)
+
+=== 06 | demografia | th
+T: Zdrowie jako czynnik rozwoju gospodarczego w starzejącym się społeczeństwie
+## Część teoretyczna | 15
+- zdrowie jako składnik kapitału ludzkiego (G. Becker, M. Grossman)
+- wpływ zdrowia na podaż pracy, wydajność i dochód
+- ekonomika ochrony zdrowia: asymetria informacji, pokusa nadużycia, dobra publiczne i efekty zewnętrzne
+- modele finansowania: ubezpieczeniowy (Bismarck), budżetowy (Beveridge), prywatny
+- wpływ starzenia na wydatki zdrowotne i opiekę długoterminową
+- profilaktyka jako inwestycja
+## Część praktyczna | 10
+- wydatki na zdrowie w Polsce w relacji do PKB i ich wzrost (ustawa – cel 7% PKB)
+- kolejki, braki kadrowe, starzenie się lekarzy i pielęgniarek
+- przykład zagraniczny (np. Dania, Holandia)
+- własna ocena priorytetów
+> struktura: wstęp – zdrowie a gospodarka; teoria – kapitał ludzki, ułomności rynku zdrowia, modele; praktyka – Polska: finansowanie, kadry, profilaktyka; zakończenie – profilaktyka i opieka długoterminowa jako priorytet
+> błędy: traktowanie wydatków na zdrowie wyłącznie jako kosztu; brak ułomności rynku; brak danych
+> dane: ustawowy cel publicznych wydatków na zdrowie – 7% PKB (ustawa o świadczeniach opieki zdrowotnej, nowelizacja 2018); przeciętne dalsze trwanie życia noworodka w Polsce ok. 74,7 r. (mężczyźni) i 82 lat (kobiety) w 2023 r. (GUS)
+T: Reklama – informacja czy manipulacja?
+## Część teoretyczna | 15
+- funkcje reklamy: informacyjna, perswazyjna, przypominająca
+- reklama a konkurencja (różnicowanie produktu, bariery wejścia, konkurencja monopolistyczna)
+- asymetria informacji i sygnalizowanie jakości
+- ekonomia behawioralna: heurystyki, efekt zakotwiczenia, presja społeczna
+- ochrona konsumenta i regulacje reklamy
+## Część praktyczna | 10
+- reklama w internecie i mediach społecznościowych (influencerzy, profilowanie)
+- działania UOKiK wobec nieuczciwych praktyk
+- własna ocena: jak konsument może się bronić
+> struktura: wstęp – wszechobecność reklamy; teoria – funkcje, konkurencja, sygnały, heurystyki; praktyka – internet, UOKiK; zakończenie – i informacja, i manipulacja – znaczenie edukacji
+> błędy: jednostronna ocena; brak teorii rynku; brak przykładu regulacji
+> dane: UOKiK wydaje rekomendacje dotyczące oznaczania treści reklamowych przez influencerów (UOKiK, 2022)
+
+=== 07 | demografia | th
+T: Wyludnianie się małych miast i wsi – przyczyny, skutki i możliwe działania
+## Część teoretyczna | 15
+- migracje wewnętrzne i suburbanizacja
+- nowa geografia ekonomiczna (P. Krugman) – aglomeracja i efekty skali
+- skutki dla rynku pracy, usług publicznych i finansów samorządów
+- dobra publiczne lokalne i koszty ich utrzymania przy malejącej liczbie mieszkańców
+- polityka regionalna – wyrównywanie czy wspieranie biegunów wzrostu
+## Część praktyczna | 10
+- regiony Polski tracące ludność (GUS – dane wojewódzkie i gminne)
+- przykłady działań: transport, praca zdalna, fundusze UE, specjalne strefy ekonomiczne
+- przykład wyludnionych regionów (np. Niemcy Wschodnie)
+- własna ocena: co realnie można zrobić
+> struktura: wstęp – nierówne skutki zmian demograficznych w przestrzeni; teoria – migracje, aglomeracja, dobra lokalne, polityka regionalna; praktyka – polskie regiony i przykłady działań; zakończenie – adaptacja zamiast walki z trendem
+> błędy: brak teorii aglomeracji; mylenie wyludniania z ogólnym spadkiem liczby ludności kraju; brak danych regionalnych
+> dane: woj. świętokrzyskie, opolskie i łódzkie należą do najszybciej tracących ludność, mazowieckie i pomorskie – do zyskujących (GUS, prognoza ludności dla województw)
+T: Czy praca zdalna zmieni rynek pracy?
+## Część teoretyczna | 15
+- elastyczne formy zatrudnienia
+- wpływ pracy zdalnej na wydajność i koszty firm
+- rynek pracy bez granic: konkurencja o pracowników, płace
+- skutki dla miast, nieruchomości, transportu
+- problemy: kontrola, samotność, nierówności
+## Część praktyczna | 10
+- przepisy o pracy zdalnej w Kodeksie pracy (2023)
+- dane o skali pracy zdalnej (GUS, Eurostat)
+- przykłady firm
+- własna ocena
+> struktura: wstęp – pandemia jako przyspieszenie; teoria – elastyczność, wydajność, rynek pracy; praktyka – przepisy, dane, przykłady; zakończenie – trwała hybryda w części zawodów
+> błędy: uogólnianie na wszystkie zawody; brak skutków przestrzennych; brak przepisów
+> dane: przepisy o pracy zdalnej w Kodeksie pracy obowiązują od 7 kwietnia 2023 r. (Dz.U.)
+
+=== 08 | demografia | th
+T: Rynek mieszkaniowy a decyzje o założeniu rodziny
+## Część teoretyczna | 15
+- popyt i podaż na rynku mieszkań; cena mieszkania a czynsz
+- dostępność mieszkań (relacja ceny do dochodu, zdolność kredytowa)
+- stopy procentowe a kredyty hipoteczne
+- mieszkanie a decyzje rodzinne – koszt alternatywny, niepewność
+- polityka mieszkaniowa: dopłaty do kredytów, budownictwo społeczne, najem
+## Część praktyczna | 10
+- ceny mieszkań w Polsce 2015–2025 (NBP, GUS)
+- programy: Mieszkanie dla Młodych, Bezpieczny Kredyt 2%, TBS / SIM
+- przykład Wiednia (mieszkania komunalne)
+- własna ocena: dopłaty do kredytów czy zwiększenie podaży
+> struktura: wstęp – mieszkanie jako bariera dla młodych; teoria – popyt i podaż, dostępność, stopy; praktyka – ceny, programy, Wiedeń; zakończenie – zwiększanie podaży ważniejsze od dopłat do popytu
+> błędy: brak elastyczności podaży w analizie; pomijanie najmu; ocena programów bez danych o cenach
+> dane: program Bezpieczny Kredyt 2% działał od lipca 2023 r. do początku 2024 r. (BGK); ceny transakcyjne mieszkań w dużych miastach wzrosły silnie w latach 2023–2024 (NBP, baza cen nieruchomości)
+T: Czy pieniądz gotówkowy zniknie?
+## Część teoretyczna | 15
+- funkcje pieniądza i jego formy
+- pieniądz bankowy a gotówka banku centralnego
+- płatności bezgotówkowe – zalety i ryzyka
+- cyfrowa waluta banku centralnego (CBDC) i kryptoaktywa
+- prywatność, inkluzja finansowa, odporność systemu
+## Część praktyczna | 10
+- popularność BLIK i kart w Polsce
+- prace nad cyfrowym euro (EBC)
+- przykład Szwecji
+- własna ocena
+> struktura: wstęp – szybki spadek użycia gotówki; teoria – funkcje i formy pieniądza; praktyka – BLIK, cyfrowe euro, Szwecja; zakończenie – gotówka jako rezerwa bezpieczeństwa
+> błędy: mylenie kryptowalut z CBDC; brak wątku prywatności; brak danych
+> dane: EBC prowadzi fazę przygotowawczą cyfrowego euro od listopada 2023 r. (EBC)
+
+=== 09 | demografia | th
+T: Aktywność zawodowa osób starszych – korzyści i bariery
+## Część teoretyczna | 15
+- współczynnik aktywności zawodowej i wskaźnik zatrudnienia
+- czynniki decyzji o przejściu na emeryturę (wiek emerytalny, zdrowie, zachęty finansowe)
+- kapitał ludzki osób starszych – doświadczenie a umiejętności cyfrowe
+- teza o „stałej ilości pracy” i jej krytyka (seniorzy nie zabierają pracy młodym)
+- korzyści: dochody, finanse publiczne, zdrowie
+## Część praktyczna | 10
+- wskaźnik zatrudnienia osób 55–64 w Polsce i UE (Eurostat)
+- zachęty: zerowy PIT dla pracujących seniorów („PIT dla seniora”), łączenie emerytury z pracą
+- przykład Szwecji / Danii
+- własna ocena
+> struktura: wstęp – dłuższe życie a wcześniejsza emerytura; teoria – decyzja o emeryturze, kapitał ludzki, mit stałej ilości pracy; praktyka – dane, ulgi, przykłady; zakończenie – elastyczne przejście na emeryturę
+> błędy: twierdzenie, że seniorzy zabierają pracę młodym; brak danych; brak barier zdrowotnych
+> dane: ulga „PIT dla seniora” – zwolnienie przychodów do 85 528 zł rocznie dla osób w wieku emerytalnym, które nie pobierają emerytury (ustawa o PIT, od 2022 r.)
+T: Konkurencja a monopol – co jest lepsze dla konsumenta?
+## Część teoretyczna | 15
+- konkurencja doskonała i monopol – cena, ilość, nadwyżki
+- strata martwa monopolu
+- monopol naturalny i jego regulacja
+- konkurencja monopolistyczna i oligopol
+- innowacje: argument Schumpetera za dużymi firmami
+## Część praktyczna | 10
+- UOKiK i Komisja Europejska – przykłady decyzji
+- monopole naturalne w Polsce (sieci przesyłowe)
+- giganci cyfrowi (Akt o rynkach cyfrowych)
+- własna ocena
+> struktura: wstęp – rynek jako arena konkurencji; teoria – modele rynku, strata martwa, monopol naturalny, Schumpeter; praktyka – UOKiK, KE, DMA; zakończenie – konkurencja korzystna, ale z wyjątkami
+> błędy: twierdzenie, że monopolista ustala dowolną cenę; brak monopolu naturalnego; brak przykładów
+> dane: Akt o rynkach cyfrowych (DMA) stosowany od maja 2023 r. (UE)
+
+=== 10 | demografia | th
+T: Czy automatyzacja i sztuczna inteligencja zrekompensują spadek liczby pracowników?
+## Część teoretyczna | 15
+- wydajność pracy i postęp techniczny w funkcji produkcji (model Solowa)
+- substytucja pracy przez kapitał przy rosnących płacach
+- automatyzacja a zatrudnienie – efekt zastąpienia i efekt produktywności
+- kapitał ludzki i kwalifikacje (podnoszenie i zmiana kwalifikacji)
+- ryzyka: nierówności, koncentracja rynku
+## Część praktyczna | 10
+- robotyzacja w Polsce na tle świata (IFR – roboty na 10 tys. pracowników)
+- przykłady AI w usługach i przemyśle
+- kraje starzejące się i automatyzacja (Japonia, Korea)
+- własna ocena
+> struktura: wstęp – mniej pracowników, więcej maszyn; teoria – Solow, substytucja, efekty zatrudnienia; praktyka – robotyzacja, AI, Azja; zakończenie – częściowa rekompensata pod warunkiem inwestycji w kwalifikacje
+> błędy: zakładanie, że technologia automatycznie zastąpi każdą pracę; brak wątku wydajności; brak danych
+> dane: Korea Płd. ma najwyższe na świecie nasycenie robotami przemysłowymi, Polska znacznie poniżej średniej UE (IFR, World Robotics)
+T: Banki – po co są gospodarce?
+## Część teoretyczna | 15
+- funkcje banków: pośrednictwo finansowe, kreacja pieniądza, płatności
+- ryzyko płynności i ryzyko kredytowe
+- regulacje: rezerwa obowiązkowa, wymogi kapitałowe, gwarantowanie depozytów
+- bank centralny jako pożyczkodawca ostatniej instancji
+- kryzysy bankowe i panika bankowa
+## Część praktyczna | 10
+- polski system bankowy, BFG i gwarancja do 100 tys. euro
+- kryzys 2008 i upadki banków (SVB 2023)
+- własna ocena
+> struktura: wstęp – banki w życiu codziennym; teoria – funkcje, ryzyka, regulacje; praktyka – BFG, kryzysy; zakończenie – banki niezbędne, ale wymagają nadzoru
+> błędy: twierdzenie, że bank pożycza tylko depozyty; brak regulacji; brak przykładów
+> dane: BFG gwarantuje depozyty do równowartości 100 tys. euro na deponenta w banku (BFG)
+
+=== 11 | makro | -
+T: Bezrobocie – czy da się je całkowicie wyeliminować?
+## Część teoretyczna | 15
+- definicja i mierniki bezrobocia (stopa bezrobocia BAEL i rejestrowanego)
+- rodzaje: frykcyjne, strukturalne, koniunkturalne, sezonowe
+- naturalna stopa bezrobocia i NAIRU
+- przyczyny według różnych szkół (klasycy, Keynes, monetaryści)
+- skutki bezrobocia: ekonomiczne i społeczne (prawo Okuna)
+- polityka rynku pracy: aktywna i pasywna
+## Część praktyczna | 10
+- bezrobocie w Polsce 2004–2025
+- niskie bezrobocie a niedobory pracowników
+- przykład Hiszpanii lub Grecji
+- własna ocena
+> struktura: wstęp – bezrobocie najniższe od lat; teoria – rodzaje, naturalna stopa, szkoły, skutki; praktyka – Polska i przykłady; zakończenie – całkowita eliminacja niemożliwa (frykcyjne)
+> błędy: mylenie stopy rejestrowanej i BAEL; twierdzenie, że bezrobocie zerowe jest możliwe i pożądane; brak przykładów
+> dane: stopa bezrobocia w Polsce wg Eurostatu ok. 3% (2024) – jedna z najniższych w UE (Eurostat); w 2003 r. bezrobocie rejestrowane przekraczało 20% (GUS)
+T: Państwo – lepszy czy gorszy przedsiębiorca niż prywatny właściciel?
+## Część teoretyczna | 15
+- argumenty za własnością prywatną: bodźce, problem pryncypała i agenta
+- zawodności rynku a interwencja państwa
+- zawodności państwa (teoria wyboru publicznego – J. Buchanan)
+- przedsiębiorstwa państwowe a monopole naturalne
+- prywatyzacja i nacjonalizacja
+## Część praktyczna | 10
+- spółki Skarbu Państwa w Polsce (energetyka, paliwa, banki)
+- prywatyzacja w latach 90.
+- przykład Norwegii (Equinor) lub Chin
+- własna ocena
+> struktura: wstęp – rola państwa jako właściciela; teoria – bodźce, zawodności rynku i państwa; praktyka – spółki SP, prywatyzacja, przykład; zakończenie – zależy od sektora i jakości nadzoru
+> błędy: jednostronność; brak teorii wyboru publicznego; brak przykładów
+> dane: spółki z udziałem Skarbu Państwa stanowią znaczną część kapitalizacji GPW (np. PKN Orlen, PKO BP, PZU) (GPW)
+
+=== 12 | polityka | -
+T: Podatki – ile i jak powinno pobierać państwo?
+## Część teoretyczna | 15
+- funkcje podatków: fiskalna, redystrybucyjna, stymulacyjna
+- zasady podatkowe A. Smitha
+- podatki bezpośrednie i pośrednie; progresja, proporcjonalność, regresja
+- krzywa Laffera
+- obciążenie podatkiem i strata martwa
+## Część praktyczna | 10
+- system podatkowy w Polsce: PIT, CIT, VAT, akcyza
+- luka VAT
+- porównanie obciążeń podatkowych w UE
+- własna ocena
+> struktura: wstęp – podatki jako cena cywilizacji; teoria – funkcje, zasady, rodzaje, Laffer, strata martwa; praktyka – polski system, luka VAT, UE; zakończenie – prostota i szczelność ważniejsze niż sama wysokość stawek
+> błędy: mylenie stawki z obciążeniem; nadużywanie krzywej Laffera; brak przykładów
+> dane: podstawowa stawka VAT w Polsce 23% (ustawa o VAT); luka VAT w Polsce wyraźnie spadła po 2015 r. (KE, raport VAT Gap)
+T: Czy gospodarka może się rozwijać bez wzrostu konsumpcji zasobów?
+## Część teoretyczna | 15
+- wzrost a rozwój gospodarczy
+- ograniczoność zasobów i zrównoważony rozwój
+- efekty zewnętrzne i dobra wspólne (tragedia wspólnego pastwiska)
+- oddzielenie wzrostu od emisji (decoupling)
+- narzędzia: podatek Pigou, handel uprawnieniami, gospodarka o obiegu zamkniętym
+## Część praktyczna | 10
+- emisje i PKB w UE i Polsce
+- EU ETS i Europejski Zielony Ład
+- własna ocena
+> struktura: wstęp – granice wzrostu; teoria – rozwój vs wzrost, efekty zewnętrzne, decoupling; praktyka – ETS, Zielony Ład; zakończenie – możliwe przy zmianie technologii i cen
+> błędy: mylenie wzrostu z rozwojem; brak efektów zewnętrznych; brak danych
+> dane: emisje gazów cieplarnianych UE w 2023 r. o ok. 37% niższe niż w 1990 r., przy wyraźnie wyższym PKB (Europejska Agencja Środowiska)
+
+=== 13 | makro | -
+T: Polityka pieniężna – jak bank centralny wpływa na gospodarkę?
+## Część teoretyczna | 15
+- cele i niezależność banku centralnego
+- instrumenty: stopy procentowe, operacje otwartego rynku, rezerwa obowiązkowa
+- mechanizm transmisji (kanał stopy procentowej, kursowy, kredytowy, oczekiwań)
+- strategia bezpośredniego celu inflacyjnego
+- niekonwencjonalna polityka pieniężna (QE)
+## Część praktyczna | 10
+- NBP i RPP – stopy w latach 2020–2025
+- EBC i Fed po pandemii
+- własna ocena
+> struktura: wstęp – rola stóp procentowych; teoria – cele, instrumenty, transmisja; praktyka – RPP 2020–2025, EBC/Fed; zakończenie – skuteczna, ale z opóźnieniem
+> błędy: mylenie polityki pieniężnej z fiskalną; brak opóźnień transmisji; brak danych
+> dane: stopa referencyjna NBP 0,1% w 2021 r. i 6,75% od września 2022 r. (NBP)
+T: Czy warto być przedsiębiorcą?
+## Część teoretyczna | 15
+- przedsiębiorczość i jej cechy
+- ryzyko i niepewność (F. Knight)
+- zysk ekonomiczny a księgowy, koszt alternatywny
+- formy prawne działalności
+- źródła finansowania
+## Część praktyczna | 10
+- zakładanie firmy w Polsce: CEIDG, ulgi (ulga na start, mały ZUS)
+- przykład polskiego przedsiębiorcy
+- własna ocena
+> struktura: wstęp – przedsiębiorczość jako wybór; teoria – ryzyko, zysk, formy, finansowanie; praktyka – procedury i ulgi, przykład; zakończenie – warto przy świadomości ryzyka
+> błędy: mylenie zysku księgowego z ekonomicznym; brak kosztu alternatywnego; brak przykładów
+> dane: „ulga na start” – 6 miesięcy bez składek społecznych dla nowego przedsiębiorcy (ustawa Prawo przedsiębiorców)
+
+=== 14 | polityka | -
+T: Transformacja energetyczna Polski – koszty i korzyści
+## Część teoretyczna | 15
+- efekty zewnętrzne emisji i podatek Pigou
+- handel uprawnieniami (EU ETS) – mechanizm
+- bezpieczeństwo energetyczne
+- koszt kapitału i inwestycje w OZE, atom
+- sprawiedliwa transformacja – regiony węglowe
+## Część praktyczna | 10
+- miks energetyczny Polski i jego zmiany
+- ceny energii i interwencje (mrożenie cen)
+- Śląsk i fundusz sprawiedliwej transformacji
+- własna ocena
+> struktura: wstęp – Polska jako gospodarka węglowa; teoria – efekty zewnętrzne, ETS, bezpieczeństwo; praktyka – miks, ceny, Śląsk; zakończenie – koszty krótkookresowe, korzyści długookresowe
+> błędy: brak wątku bezpieczeństwa; brak danych o miksie; jednostronność
+> dane: udział węgla w produkcji energii elektrycznej w Polsce spadł poniżej 60% w 2024 r., udział OZE ok. 30% (Forum Energii, PSE)
+T: Rola samorządu terytorialnego w gospodarce
+## Część teoretyczna | 15
+- decentralizacja i zasada pomocniczości
+- dochody i wydatki samorządu
+- lokalne dobra publiczne (C. Tiebout)
+- polityka rozwoju lokalnego
+- zadłużenie samorządów
+## Część praktyczna | 10
+- struktura samorządu w Polsce (gmina, powiat, województwo)
+- fundusze UE w samorządach
+- własna ocena
+> struktura: wstęp – samorząd bliżej obywatela; teoria – decentralizacja, Tiebout, finanse; praktyka – polska struktura, fundusze UE; zakończenie – większa samodzielność dochodowa
+> błędy: brak wątku dochodów; mylenie zadań gminy i powiatu; brak przykładów
+> dane: w Polsce jest 16 województw, 314 powiatów, 66 miast na prawach powiatu i 2477 gmin (GUS, TERYT)
+
+=== 15 | makro | -
+T: Dług publiczny – kiedy staje się problemem?
+## Część teoretyczna | 15
+- deficyt a dług publiczny
+- dynamika długu: relacja stopy procentowej do tempa wzrostu (r − g)
+- efekt wypychania
+- równoważność ricardiańska
+- kryzys zadłużenia i reguły fiskalne
+## Część praktyczna | 10
+- dług Polski w relacji do PKB, limit konstytucyjny 60%
+- procedura nadmiernego deficytu wobec Polski (2024)
+- Grecja 2010–2015
+- własna ocena
+> struktura: wstęp – dług rośnie po pandemii i wojnie; teoria – dynamika, wypychanie, Ricardo; praktyka – Polska, EDP, Grecja; zakończenie – problemem staje się, gdy r > g i brak wiarygodności
+> błędy: mylenie deficytu z długiem; brak relacji do PKB; brak przykładów
+> dane: dług sektora instytucji rządowych i samorządowych Polski ok. 55% PKB w 2024 r., deficyt ok. 6,6% PKB (Eurostat); procedura nadmiernego deficytu otwarta wobec Polski w lipcu 2024 r. (Rada UE)
+T: Etyka w biznesie – czy się opłaca?
+## Część teoretyczna | 15
+- społeczna odpowiedzialność biznesu (CSR) i ESG
+- spór M. Friedmana z koncepcją interesariuszy
+- reputacja jako kapitał
+- asymetria informacji i zaufanie
+- ład korporacyjny
+## Część praktyczna | 10
+- afery korporacyjne (Volkswagen, Enron)
+- raportowanie ESG w UE (CSRD)
+- własna ocena
+> struktura: wstęp – etyka a zysk; teoria – CSR, Friedman, reputacja; praktyka – afery, CSRD; zakończenie – opłaca się długookresowo
+> błędy: brak stanowiska Friedmana; brak przykładów; moralizowanie bez ekonomii
+> dane: dyrektywa CSRD obejmuje raportowaniem zrównoważonego rozwoju duże spółki od 2024 r. (UE)
+
+=== 16 | finanse | -
+T: Kredyt – szansa czy pułapka?
+## Część teoretyczna | 15
+- kredyt i pożyczka; oprocentowanie nominalne a RRSO
+- zdolność kredytowa
+- ryzyko stopy procentowej (stała a zmienna stopa)
+- nadmierne zadłużenie i spirala długu
+- kredyt w rozwoju gospodarki
+## Część praktyczna | 10
+- kredyty frankowe w Polsce
+- WIBOR i wakacje kredytowe
+- obliczenie raty
+- własna ocena
+> struktura: wstęp – kredyt w życiu codziennym; teoria – koszt, ryzyko, zdolność; praktyka – franki, wakacje kredytowe, przykład raty; zakończenie – szansa przy rozsądku
+> błędy: utożsamianie oprocentowania z RRSO; brak ryzyka stopy; brak przykładu liczbowego
+> dane: wakacje kredytowe dla kredytobiorców hipotecznych wprowadzono w 2022 r. (ustawa o finansowaniu społecznościowym, nowelizacja)
+T: Turystyka jako sektor gospodarki
+## Część teoretyczna | 15
+- usługi turystyczne i ich specyfika
+- mnożnik turystyczny
+- sezonowość i rynek pracy
+- efekty zewnętrzne (zatłoczenie, środowisko)
+- polityka turystyczna
+## Część praktyczna | 10
+- turystyka w Polsce (bon turystyczny)
+- overtourism w Europie (Barcelona, Wenecja)
+- własna ocena
+> struktura: wstęp – turystyka jako branża; teoria – usługi, mnożnik, efekty; praktyka – Polska, overtourism; zakończenie – zrównoważony rozwój turystyki
+> błędy: brak efektów zewnętrznych; brak danych; jednostronność
+> dane: Wenecja wprowadziła opłatę za wstęp dla turystów jednodniowych w 2024 r. (Comune di Venezia)
+
+=== 17 | mikro | -
+T: Ceny maksymalne i minimalne – czy pomagają?
+## Część teoretyczna | 15
+- cena równowagi i wpływ regulacji
+- cena maksymalna: niedobór, kolejki, czarny rynek
+- cena minimalna: nadwyżka, płaca minimalna
+- elastyczność a skutki regulacji
+- alternatywy: transfery dochodowe
+## Część praktyczna | 10
+- mrożenie cen energii w Polsce 2023–2025
+- płaca minimalna w Polsce
+- przykład kontroli czynszów
+- własna ocena
+> struktura: wstęp – państwo ustalające ceny; teoria – modele, elastyczność, alternatywy; praktyka – energia, płaca minimalna, czynsze; zakończenie – krótkookresowo osłona, długookresowo zniekształcenia
+> błędy: brak wykresu słownego (podaż–popyt); twierdzenie, że płaca minimalna zawsze powoduje bezrobocie; brak przykładów
+> dane: płaca minimalna w Polsce 4666 zł brutto od 1 stycznia 2025 r. (rozporządzenie RM)
+T: Wybory konsumenta – racjonalność czy emocje?
+## Część teoretyczna | 15
+- teoria użyteczności, krzywe obojętności, ograniczenie budżetowe
+- racjonalność ograniczona (H. Simon)
+- heurystyki i błędy poznawcze (D. Kahneman, A. Tversky)
+- architektura wyboru i „szturchanie” (R. Thaler)
+- ekonomia behawioralna w polityce publicznej
+## Część praktyczna | 10
+- automatyczny zapis do PPK i rola opcji domyślnej
+- promocje w sklepach („2 w cenie 3”, ceny kończące się na 99 gr) i zakupy pod wpływem emocji
+- ochrona konsumenta: prawo odstąpienia od umowy zawartej na odległość (14 dni) jako odpowiedź na pochopne decyzje
+- własna ocena: na ile decyzje konsumentów są racjonalne
+> struktura: wstęp – czy jesteśmy homo oeconomicus; teoria – użyteczność, Simon, Kahneman, Thaler; praktyka – PPK, promocje; zakończenie – racjonalność ograniczona
+> błędy: brak teorii klasycznej; brak przykładów; brak nazwisk
+> dane: w PPK pracownicy zapisywani są automatycznie i mogą zrezygnować deklaracją (ustawa o PPK) – przykład „szturchania”

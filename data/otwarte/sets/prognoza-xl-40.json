@@ -1,0 +1,246 @@
+{
+ "set": "prognoza-xl-40",
+ "ed": 40,
+ "stage": "c",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-40-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "polityka",
+   "th": true,
+   "topics": [
+    {
+     "title": "Wiek emerytalny – sztywny próg czy elastyczne przejście?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "decyzja o emeryturze w modelu cyklu życia",
+        "bodźce w systemie zdefiniowanej składki i zdefiniowanego świadczenia",
+        "powiązanie wieku emerytalnego z długością życia",
+        "nierówności w długości życia według wykształcenia i zawodu",
+        "ekonomia polityczna reform emerytalnych"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "Polska: reforma 2012 (67 lat) i jej odwrócenie w 2017 r.",
+        "Dania (powiązanie z długością życia), Francja (reforma 2023 i protesty)",
+        "skutki dla wysokości emerytur kobiet",
+        "własna propozycja"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – dłuższe życie, ten sam wiek emerytalny",
+       "teoria – decyzja, bodźce, powiązanie z długością życia, nierówności",
+       "praktyka – Polska, Dania, Francja",
+       "zakończenie – elastyczność z bodźcami do dłuższej pracy"
+      ],
+      "b": [
+       "brak wątku nierówności długości życia",
+       "brak przykładów",
+       "pomijanie kobiet"
+      ],
+      "d": [
+       "we Francji reforma z 2023 r. podnosi wiek emerytalny z 62 do 64 lat (Légifrance)",
+       "w Danii wiek emerytalny powiązano z oczekiwaną długością życia (ustawa z 2006 r.)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-40-zadanie",
+  "title": "Zadanie analityczne – Imigracja na rynku pracy – kto zyskuje?",
+  "pts": 15,
+  "topic": "makro",
+  "own": true,
+  "th": true,
+  "vars": {
+   "a": 200.0,
+   "b": 2.0,
+   "c": -40.0,
+   "d": 4.0,
+   "M": 30.0
+  },
+  "lets": [
+   [
+    "w0",
+    "(a-c)/(b+d)"
+   ],
+   [
+    "L0",
+    "a-b*w0"
+   ],
+   [
+    "w1",
+    "(a-c-M)/(b+d)"
+   ],
+   [
+    "L1",
+    "a-b*w1"
+   ],
+   [
+    "Lk",
+    "c+d*w1"
+   ],
+   [
+    "wmax",
+    "a/b"
+   ],
+   [
+    "wmin",
+    "-c/d"
+   ],
+   [
+    "dE",
+    "0.5*(wmax-w1)*L1-0.5*(wmax-w0)*L0"
+   ],
+   [
+    "dW",
+    "0.5*(w1-wmin)*Lk-0.5*(w0-wmin)*L0"
+   ],
+   [
+    "ns",
+    "dE+dW"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Popyt na pracę w pewnym sektorze opisuje funkcja Ld = 200 − 2w, a krajowa podaż pracy Ls = −40 + 4w, gdzie w – płaca godzinowa (zł), L – zatrudnienie (tys. osób). Do kraju przybywa 30 tys. imigrantów gotowych pracować przy każdej płacy (podaż rośnie o 30 tys.; dane umowne)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 3,
+    "prompt": "Wyznacz płacę i zatrudnienie w równowadze przed napływem imigrantów.",
+    "answers": [
+     {
+      "label": "Płaca",
+      "value": 40.0,
+      "calc": "(a-c)/(b+d)",
+      "unit": "zł",
+      "tol": 0.01
+     },
+     {
+      "label": "Zatrudnienie",
+      "value": 120.0,
+      "calc": "a-b*w0",
+      "unit": "tys.",
+      "tol": 0.1
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "200 − 2w = −40 + 4w ⇒ w = 40 zł, L = 120 tys."
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 3,
+    "prompt": "Wyznacz nową płacę, zatrudnienie łączne i zatrudnienie pracowników krajowych.",
+    "answers": [
+     {
+      "label": "Płaca",
+      "value": 35.0,
+      "calc": "(a-c-M)/(b+d)",
+      "unit": "zł",
+      "tol": 0.01
+     },
+     {
+      "label": "Zatrudnienie łączne",
+      "value": 130.0,
+      "calc": "a-b*w1",
+      "unit": "tys.",
+      "tol": 0.1
+     },
+     {
+      "label": "Zatrudnienie krajowych",
+      "value": 100.0,
+      "calc": "c+d*w1",
+      "unit": "tys.",
+      "tol": 0.1
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "200 − 2w = −40 + 30 + 4w ⇒ w = 35 zł, L = 130 tys., krajowi: −40 + 4 × 35 = 100 tys."
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 4,
+    "prompt": "Oblicz zmianę nadwyżki pracodawców i zmianę nadwyżki pracowników krajowych (w tys. zł na godzinę).",
+    "answers": [
+     {
+      "label": "Zmiana nadwyżki pracodawców",
+      "value": 625.0,
+      "calc": "0.5*(wmax-w1)*L1-0.5*(wmax-w0)*L0",
+      "unit": "tys. zł",
+      "tol": 0.5
+     },
+     {
+      "label": "Zmiana nadwyżki pracowników krajowych",
+      "value": -550.0,
+      "calc": "0.5*(w1-wmin)*Lk-0.5*(w0-wmin)*L0",
+      "unit": "tys. zł",
+      "tol": 0.5
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "pracodawcy: ½(100 − 35) × 130 − ½(100 − 40) × 120 = 625;  pracownicy krajowi: ½(35 − 10) × 100 − ½(40 − 10) × 120 = −550"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 2,
+    "prompt": "Oblicz „nadwyżkę imigracyjną” – zmianę łącznej nadwyżki mieszkańców kraju.",
+    "answers": [
+     {
+      "label": "Nadwyżka imigracyjna",
+      "value": 75.0,
+      "calc": "dE+dW",
+      "unit": "tys. zł",
+      "tol": 0.5
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "625 + (−550) = 75"
+     }
+    ]
+   },
+   {
+    "label": "e",
+    "pts": 3,
+    "prompt": "Zinterpretuj wyniki i wskaż, dlaczego w gospodarce starzejącej się skutki imigracji dla płac mogą być mniejsze niż w modelu.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "W modelu imigracja obniża płacę (z 40 do 35 zł) i zatrudnienie krajowych pracowników, którzy tracą −550 tys. zł nadwyżki, ale pracodawcy zyskują więcej (625), więc kraj jako całość zyskuje (75) – to redystrybucja od pracy do kapitału (G. Borjas). W rzeczywistości, przy niedoborach pracy wynikających ze starzenia, imigranci często uzupełniają, a nie zastępują pracowników krajowych (opieka, budownictwo, sezonowe prace), zwiększają też popyt na dobra i inwestycje (przesuwają popyt na pracę), a kapitał dostosowuje się w długim okresie – stąd badania zwykle pokazują niewielki wpływ imigracji na przeciętne płace."
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,211 @@
+{
+ "set": "prognoza-xl-44",
+ "ed": 40,
+ "stage": "c",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-44-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "polityka",
+   "th": true,
+   "topics": [
+    {
+     "title": "Polityka migracyjna Unii Europejskiej wobec wyzwań demograficznych",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "migracje zarobkowe, humanitarne i rodzinne",
+        "ekonomiczne skutki imigracji dla kraju przyjmującego",
+        "integracja imigrantów a ich wpływ na finanse publiczne",
+        "dobra publiczne na poziomie UE (ochrona granic) i problem gapowicza",
+        "migracja selektywna (np. Niebieska Karta UE)"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "Pakt o migracji i azylu UE (2024)",
+        "polityka migracyjna Polski (strategia 2025–2030)",
+        "przykład Kanady lub Niemiec",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – migracje jako temat polityczny i demograficzny",
+       "teoria – rodzaje, skutki, integracja, gapowicz",
+       "praktyka – Pakt, Polska, przykład",
+       "zakończenie – selektywność i integracja"
+      ],
+      "b": [
+       "mieszanie migracji zarobkowej z azylową",
+       "brak gapowicza",
+       "brak dokumentów"
+      ],
+      "d": [
+       "Pakt o migracji i azylu UE przyjęty w maju 2024 r., stosowany od 2026 r. (Rada UE)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-44-zadanie",
+  "title": "Zadanie analityczne – Monopol i strata martwa",
+  "pts": 15,
+  "topic": "mikro",
+  "own": true,
+  "th": false,
+  "vars": {
+   "a": 100.0,
+   "b": 2.0,
+   "mc": 10.0,
+   "fc": 100.0
+  },
+  "lets": [
+   [
+    "qm",
+    "(a-mc)/(2*b)"
+   ],
+   [
+    "pm",
+    "a-b*qm"
+   ],
+   [
+    "zm",
+    "(pm-mc)*qm-fc"
+   ],
+   [
+    "ler",
+    "(pm-mc)/pm"
+   ],
+   [
+    "dwl",
+    "0.5*((a-mc)/b-qm)*(pm-mc)"
+   ],
+   [
+    "qk",
+    "(a-mc)/b"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Monopolista działa na rynku z popytem P = 100 − 2Q. Koszt całkowity: TC = 100 + 10Q (dane umowne)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 3,
+    "prompt": "Wyznacz produkcję i cenę maksymalizujące zysk.",
+    "answers": [
+     {
+      "label": "Produkcja",
+      "value": 22.5,
+      "calc": "(a-mc)/(2*b)",
+      "unit": "szt.",
+      "tol": 0.01
+     },
+     {
+      "label": "Cena",
+      "value": 55.0,
+      "calc": "a-b*qm",
+      "unit": "zł",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "MR = 100 − 4Q = MC = 10 ⇒ Q = 22,5;  P = 100 − 2 × 22,5 = 55 zł"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 3,
+    "prompt": "Oblicz zysk monopolisty.",
+    "answers": [
+     {
+      "label": "Zysk",
+      "value": 912.5,
+      "calc": "(pm-mc)*qm-fc",
+      "unit": "zł",
+      "tol": 0.5
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "(55 − 10) × 22,5 − 100 = 912,5 zł"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 3,
+    "prompt": "Oblicz wskaźnik Lernera.",
+    "answers": [
+     {
+      "label": "Wskaźnik Lernera",
+      "value": 0.8182,
+      "calc": "(pm-mc)/pm",
+      "tol": 0.001
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "L = (P − MC) / P = (55 − 10) / 55 ≈ 0,818"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 3,
+    "prompt": "Oblicz stratę martwą monopolu w porównaniu z konkurencją doskonałą.",
+    "answers": [
+     {
+      "label": "Strata martwa",
+      "value": 506.25,
+      "calc": "0.5*((a-mc)/b-qm)*(pm-mc)",
+      "unit": "zł",
+      "tol": 0.5
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "konkurencja: P = MC ⇒ Q = 45;  DWL = ½ × (45 − 22,5) × (55 − 10) ≈ 506,25 zł"
+     }
+    ]
+   },
+   {
+    "label": "e",
+    "pts": 3,
+    "prompt": "Wskaż sposoby ograniczania skutków władzy monopolistycznej.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "ul",
+      "items": [
+       "polityka konkurencji – zakaz nadużywania pozycji dominującej, kontrola koncentracji (UOKiK, Komisja Europejska),",
+       "regulacja cen w monopolu naturalnym (np. taryfy URE dla sieci przesyłowych),",
+       "obniżanie barier wejścia (liberalizacja, otwarcie na import),",
+       "dyskryminacja cenowa pierwszego stopnia zmniejsza stratę martwą, ale przejmuje nadwyżkę konsumenta."
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

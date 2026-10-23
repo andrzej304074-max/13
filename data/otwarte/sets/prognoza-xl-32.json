@@ -1,0 +1,198 @@
+{
+ "set": "prognoza-xl-32",
+ "ed": 40,
+ "stage": "o",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-32-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "polityka",
+   "th": false,
+   "topics": [
+    {
+     "title": "Konkurencyjność gospodarki europejskiej – diagnoza i recepty",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "konkurencyjność kraju – pojęcie i mierniki",
+        "produktywność jako źródło wzrostu",
+        "innowacje, rynek kapitałowy, skala",
+        "polityka przemysłowa a konkurencja",
+        "koszty energii i regulacji"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "raport M. Draghiego (2024) – główne wnioski",
+        "luka produktywności UE–USA",
+        "Polska w tym kontekście",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – Europa w tyle za USA",
+       "teoria – produktywność, innowacje, polityka przemysłowa",
+       "praktyka – raport Draghiego, Polska",
+       "zakończenie – integracja rynków i inwestycje"
+      ],
+      "b": [
+       "brak definicji konkurencyjności",
+       "brak raportu Draghiego",
+       "brak liczb"
+      ],
+      "d": [
+       "raport M. Draghiego „The future of European competitiveness” – wrzesień 2024 r., potrzeba dodatkowych inwestycji ok. 750–800 mld euro rocznie (KE)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-32-zadanie",
+  "title": "Zadanie z analizy finansowej – Amortyzacja i tarcza podatkowa",
+  "pts": 15,
+  "topic": "firma",
+  "own": true,
+  "th": false,
+  "vars": {
+   "W": 100000.0,
+   "n": 5.0,
+   "wsp": 2.0,
+   "tx": 19.0
+  },
+  "lets": [
+   [
+    "sl",
+    "100/n"
+   ],
+   [
+    "sd",
+    "sl*wsp"
+   ],
+   [
+    "al",
+    "W/n"
+   ],
+   [
+    "ad1",
+    "W*sd/100"
+   ],
+   [
+    "ad2",
+    "(W-ad1)*sd/100"
+   ],
+   [
+    "tl",
+    "al*tx/100"
+   ],
+   [
+    "td",
+    "ad1*tx/100"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Firma kupuje maszynę za 100 000 zł o okresie użytkowania 5 lat. Rozważa amortyzację liniową lub degresywną (stawka liniowa × współczynnik 2). Stawka CIT wynosi 19% (dane umowne)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 3,
+    "prompt": "Oblicz roczny odpis amortyzacji liniowej.",
+    "answers": [
+     {
+      "label": "Odpis liniowy",
+      "value": 20000.0,
+      "calc": "W/n",
+      "unit": "zł",
+      "tol": 0.5
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "100 000 / 5 = 20 000 zł (stawka 20%)"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 4,
+    "prompt": "Oblicz odpisy amortyzacji degresywnej w pierwszym i drugim roku.",
+    "answers": [
+     {
+      "label": "Odpis w 1. roku",
+      "value": 40000.0,
+      "calc": "W*sd/100",
+      "unit": "zł",
+      "tol": 0.5
+     },
+     {
+      "label": "Odpis w 2. roku",
+      "value": 24000.0,
+      "calc": "(W-ad1)*sd/100",
+      "unit": "zł",
+      "tol": 0.5
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "stawka = 20% × 2 = 40%;  rok 1: 100 000 × 40% = 40 000 zł;  rok 2: (100 000 − 40 000) × 40% = 24 000 zł"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 4,
+    "prompt": "Oblicz tarczę podatkową z amortyzacji w pierwszym roku w obu metodach.",
+    "answers": [
+     {
+      "label": "Tarcza – liniowa",
+      "value": 3800.0,
+      "calc": "al*tx/100",
+      "unit": "zł",
+      "tol": 0.5
+     },
+     {
+      "label": "Tarcza – degresywna",
+      "value": 7600.0,
+      "calc": "ad1*tx/100",
+      "unit": "zł",
+      "tol": 0.5
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "liniowa: 20 000 × 19% = 3 800 zł;  degresywna: 40 000 × 19% = 7 600 zł"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "Wyjaśnij, dlaczego przedsiębiorstwo może preferować amortyzację degresywną, choć łączna kwota odpisów jest taka sama.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Łączne odpisy w obu metodach wynoszą 100 000 zł, ale amortyzacja degresywna przesuwa koszty (i tarczę podatkową) na pierwsze lata. Firma płaci niższy podatek wcześniej, a wyższy później – to jak nieoprocentowana pożyczka od państwa: dzięki wartości pieniądza w czasie wartość bieżąca tarczy jest wyższa. Ponadto odpisy lepiej odzwierciedlają szybszą utratę wartości maszyn w pierwszych latach. Wadą jest niższy zysk księgowy na początku."
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,209 @@
+{
+ "set": "prognoza-xl-20",
+ "ed": 40,
+ "stage": "o",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-20-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "demografia",
+   "th": true,
+   "topics": [
+    {
+     "title": "Dywidenda demograficzna – jak struktura wieku sprzyja lub szkodzi wzrostowi gospodarczemu?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "pojęcie dywidendy demograficznej (pierwsza i druga)",
+        "przejście demograficzne i okno demograficzne",
+        "warunki wykorzystania dywidendy: zatrudnienie, edukacja, oszczędności, instytucje",
+        "odwrócona dywidenda – „podatek demograficzny” w społeczeństwach starzejących się",
+        "rola kobiet i spadku dzietności w dywidendzie"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "Azja Wschodnia (Korea Płd., Chiny) – wykorzystana dywidenda",
+        "Afryka Subsaharyjska – szanse i ryzyka",
+        "Polska – okno demograficzne lat 1990–2015 i jego koniec",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – struktura wieku jako czynnik wzrostu",
+       "teoria – pierwsza i druga dywidenda, okno, warunki",
+       "praktyka – Azja, Afryka, Polska",
+       "zakończenie – dywidenda to szansa, nie automat"
+      ],
+      "b": [
+       "twierdzenie, że duża liczba młodych zawsze przyspiesza wzrost",
+       "brak warunków instytucjonalnych",
+       "brak przykładów"
+      ],
+      "d": [
+       "mediana wieku w Nigerii ok. 18 lat, w Polsce ok. 42–43 lat (ONZ, World Population Prospects 2024)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-20-zadanie",
+  "title": "Zadanie z analizy finansowej – Wartość oszczędności w PPK",
+  "pts": 15,
+  "topic": "finanse",
+  "own": true,
+  "th": true,
+  "vars": {
+   "w": 6000.0,
+   "sp": 2.0,
+   "sf": 1.5,
+   "dop": 240.0,
+   "pow": 250.0,
+   "r": 5.0,
+   "n": 35.0
+  },
+  "lets": [
+   [
+    "wr",
+    "w*12*(sp+sf)/100"
+   ],
+   [
+    "wr2",
+    "wr+dop"
+   ],
+   [
+    "fv",
+    "wr2*((1+r/100)**n-1)/(r/100)+pow*(1+r/100)**n"
+   ],
+   [
+    "fva",
+    "((1+r/100)**n-1)/(r/100)"
+   ],
+   [
+    "q",
+    "(1+r/100)**n"
+   ],
+   [
+    "wp",
+    "w*12*sp/100*n"
+   ],
+   [
+    "ud",
+    "wp/fv*100"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Pracownik zarabia 6 000 zł brutto miesięcznie i uczestniczy w PPK. Wpłata podstawowa pracownika wynosi 2%, a pracodawcy – 1,5% wynagrodzenia. Państwo wpłaca jednorazowo 250 zł na początku (wpłata powitalna) i 240 zł na koniec każdego roku (dopłata roczna). Dla uproszczenia przyjmij, że wpłaty z całego roku trafiają na rachunek na koniec roku, płaca się nie zmienia, a roczna stopa zwrotu wynosi 5% (dane umowne)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 3,
+    "prompt": "Oblicz roczną sumę wpłat pracownika i pracodawcy oraz roczną wpłatę łącznie z dopłatą państwa.",
+    "answers": [
+     {
+      "label": "Wpłaty pracownika i pracodawcy",
+      "value": 2520.0,
+      "calc": "w*12*(sp+sf)/100",
+      "unit": "zł",
+      "tol": 0.5
+     },
+     {
+      "label": "Łącznie z dopłatą",
+      "value": 2760.0,
+      "calc": "wr+dop",
+      "unit": "zł",
+      "tol": 0.5
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "6 000 × 12 × 3,5% = 2 520 zł;  + 240 zł = 2 760 zł"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 4,
+    "prompt": "Oblicz wartość oszczędności po 35 latach.",
+    "answers": [
+     {
+      "label": "Wartość po 35 latach",
+      "value": 250663.0521,
+      "calc": "wr2*((1+r/100)**n-1)/(r/100)+pow*(1+r/100)**n",
+      "unit": "zł",
+      "tol": 5.0
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "FV = 2 760 × [(1,05³⁵ − 1) / 0,05] + 250 × 1,05³⁵ = 2 760 × 90,320 + 250 × 5,5160 ≈ 250 663 zł"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 4,
+    "prompt": "Oblicz łączną kwotę wpłat pracownika oraz ich udział w wartości końcowej.",
+    "answers": [
+     {
+      "label": "Wpłaty pracownika",
+      "value": 50400.0,
+      "calc": "w*12*sp/100*n",
+      "unit": "zł",
+      "tol": 1.0
+     },
+     {
+      "label": "Udział",
+      "value": 20.1067,
+      "calc": "wp/fv*100",
+      "unit": "%",
+      "tol": 0.1
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "6 000 × 12 × 2% × 35 = 50 400 zł;  50 400 / 250 663 ≈ 20,1%"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "Wyjaśnij, dlaczego PPK może zwiększyć dochody na emeryturze bardziej niż samodzielne oszczędzanie tej samej kwoty, i wskaż dwa ryzyka.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Na każdą złotówkę wpłaconą przez pracownika (2%) przypada 0,75 zł od pracodawcy (1,5%) i dopłaty państwa, a całość pracuje przez dziesięciolecia dzięki procentowi składanemu. W zadaniu wpłaty pracownika stanowią tylko ok. 20% kapitału końcowego. Automatyczny zapis wykorzystuje inercję (ekonomia behawioralna) – oszczędza więcej osób."
+     },
+     {
+      "t": "ul",
+      "items": [
+       "ryzyko rynkowe: niższe stopy zwrotu, spadki na giełdzie tuż przed emeryturą (fundusze zdefiniowanej daty ograniczają ryzyko z wiekiem),",
+       "ryzyko inflacji oraz rezygnacji lub wcześniejszych wypłat (utrata części dopłat),",
+       "ryzyko regulacyjne – zmiana zasad przez państwo (doświadczenie OFE)."
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

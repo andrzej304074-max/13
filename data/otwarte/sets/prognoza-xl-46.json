@@ -1,0 +1,178 @@
+{
+ "set": "prognoza-xl-46",
+ "ed": 40,
+ "stage": "c",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-46-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "makro",
+   "th": false,
+   "topics": [
+    {
+     "title": "Inflacja po pandemii – czego nauczyły się banki centralne?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "źródła inflacji 2021–2023: szoki podażowe, popyt, polityka fiskalna",
+        "prognozowanie inflacji i błędy prognoz",
+        "reguła Taylora",
+        "oczekiwania inflacyjne i wiarygodność banku centralnego",
+        "koordynacja polityki pieniężnej i fiskalnej"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "Fed, EBC, NBP – tempo podwyżek stóp",
+        "inflacja w Polsce na tle UE",
+        "przegląd strategii Fed (2020) i EBC (2021)",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – powrót inflacji",
+       "teoria – źródła, Taylor, oczekiwania",
+       "praktyka – banki centralne",
+       "zakończenie – lekcje: szybsza reakcja, uwaga na podaż"
+      ],
+      "b": [
+       "brak reguły Taylora",
+       "brak porównania",
+       "brak danych"
+      ],
+      "d": [
+       "inflacja HICP w strefie euro osiągnęła 10,6% r/r w październiku 2022 r. (Eurostat)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-46-zadanie",
+  "title": "Zadanie analityczne – Mnożnik kreacji pieniądza",
+  "pts": 15,
+  "topic": "finanse",
+  "own": true,
+  "th": false,
+  "vars": {
+   "B": 400.0,
+   "rr": 3.5,
+   "e": 1.5,
+   "c": 0.15,
+   "c2": 0.1
+  },
+  "lets": [
+   [
+    "m",
+    "(1+c)/(c+rr/100+e/100)"
+   ],
+   [
+    "M1",
+    "m*B"
+   ],
+   [
+    "m2",
+    "(1+c2)/(c2+rr/100+e/100)"
+   ],
+   [
+    "M2",
+    "m2*B"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Baza monetarna wynosi 400 mld zł. Stopa rezerwy obowiązkowej to 3,5%, banki utrzymują dodatkowo rezerwy nadwyżkowe w wysokości 1,5% depozytów, a relacja gotówki w obiegu do depozytów wynosi 0,15 (dane umowne)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 4,
+    "prompt": "Oblicz mnożnik kreacji pieniądza.",
+    "answers": [
+     {
+      "label": "Mnożnik",
+      "value": 5.75,
+      "calc": "(1+c)/(c+rr/100+e/100)",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "m = (1 + c) / (c + r + e) = 1,15 / (0,15 + 0,035 + 0,015) = 5,75"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 3,
+    "prompt": "Oblicz podaż pieniądza (M = m × B).",
+    "answers": [
+     {
+      "label": "Podaż pieniądza",
+      "value": 2300.0,
+      "calc": "m*B",
+      "unit": "mld zł",
+      "tol": 0.5
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "5,75 × 400 = 2 300 mld zł"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 4,
+    "prompt": "Wskutek upowszechnienia płatności bezgotówkowych relacja gotówki do depozytów spada do 0,10. Oblicz nowy mnożnik i podaż pieniądza.",
+    "answers": [
+     {
+      "label": "Nowy mnożnik",
+      "value": 7.3333,
+      "calc": "(1+c2)/(c2+rr/100+e/100)",
+      "tol": 0.01
+     },
+     {
+      "label": "Nowa podaż",
+      "value": 2933.3333,
+      "calc": "m2*B",
+      "unit": "mld zł",
+      "tol": 0.5
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "m = 1,10 / 0,15 ≈ 7,333;  M = 7,333 × 400 ≈ 2 933 mld zł"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "Oceń ograniczenia mnożnikowego modelu kreacji pieniądza we współczesnej polityce pieniężnej.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Model zakłada, że bank centralny kontroluje bazę monetarną, a banki „mnożą” rezerwy. Współcześnie banki centralne sterują stopą procentową, a nie ilością bazy: banki udzielają kredytów, gdy jest popyt i zdolność kredytowa, a rezerwy są dostarczane po ustalonej stopie (kredyt kreuje depozyt). Mnożnik jest więc niestabilny i wynikowy – np. po QE baza rosła wielokrotnie, a podaż pieniądza znacznie wolniej. Model nadal dobrze pokazuje, że rezerwy i preferencje dotyczące gotówki wpływają na relację między bazą a szerokim pieniądzem."
+     }
+    ]
+   }
+  ]
+ }
+}

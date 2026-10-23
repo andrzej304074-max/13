@@ -1,0 +1,191 @@
+{
+ "set": "prognoza-xl-47",
+ "ed": 40,
+ "stage": "c",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-47-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "polityka",
+   "th": false,
+   "topics": [
+    {
+     "title": "Powrót polityki przemysłowej – szansa czy zagrożenie?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "argumenty za polityką przemysłową: efekty zewnętrzne, zawodności rynku",
+        "argumenty przeciw: wybieranie zwycięzców, pogoń za rentą",
+        "teoria przemysłu raczkującego",
+        "pomoc publiczna w UE",
+        "konkurencja subsydiów między państwami"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "Inflation Reduction Act i CHIPS Act w USA",
+        "European Chips Act i Net-Zero Industry Act",
+        "Polska – inwestycje zagraniczne i ulgi",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – zmiana paradygmatu",
+       "teoria – za i przeciw",
+       "praktyka – USA, UE, Polska",
+       "zakończenie – warunki skuteczności"
+      ],
+      "b": [
+       "jednostronność",
+       "brak teorii",
+       "brak przykładów"
+      ],
+      "d": [
+       "CHIPS and Science Act (USA, 2022) – ok. 52 mld USD na półprzewodniki (Kongres USA)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-47-zadanie",
+  "title": "Zadanie analityczne – Rachunek wzrostu przy kurczącym się zasobie pracy",
+  "pts": 15,
+  "topic": "makro",
+  "own": true,
+  "th": true,
+  "vars": {
+   "gY": 4.0,
+   "gK": 5.0,
+   "gL": -0.5,
+   "a": 0.35,
+   "gL2": -1.0
+  },
+  "lets": [
+   [
+    "tfp",
+    "gY-a*gK-(1-a)*gL"
+   ],
+   [
+    "wk",
+    "a*gK"
+   ],
+   [
+    "wl",
+    "(1-a)*gL"
+   ],
+   [
+    "ut",
+    "tfp/gY*100"
+   ],
+   [
+    "gY2",
+    "tfp+a*gK+(1-a)*gL2"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "W gospodarce PKB rośnie w tempie 4% rocznie, zasób kapitału – 5%, a liczba przepracowanych godzin maleje o −0,5% rocznie. Udział kapitału w dochodzie α = 0,35 (funkcja Cobba–Douglasa; dane umowne)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 4,
+    "prompt": "Oblicz tempo wzrostu łącznej produktywności czynników (TFP) – reszty Solowa.",
+    "answers": [
+     {
+      "label": "Wzrost TFP",
+      "value": 2.575,
+      "calc": "gY-a*gK-(1-a)*gL",
+      "unit": "%",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "g_A = g_Y − α g_K − (1 − α) g_L = 4 − 0,35 × 5 − 0,65 × (−0,5) = 2,575%"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 4,
+    "prompt": "Oblicz wkład kapitału i pracy do wzrostu PKB (w pkt proc.) oraz udział TFP we wzroście.",
+    "answers": [
+     {
+      "label": "Wkład kapitału",
+      "value": 1.75,
+      "calc": "a*gK",
+      "unit": "pkt proc.",
+      "tol": 0.01
+     },
+     {
+      "label": "Wkład pracy",
+      "value": -0.325,
+      "calc": "(1-a)*gL",
+      "unit": "pkt proc.",
+      "tol": 0.01
+     },
+     {
+      "label": "Udział TFP",
+      "value": 64.375,
+      "calc": "tfp/gY*100",
+      "unit": "%",
+      "tol": 0.1
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "kapitał: 0,35 × 5 = 1,75;  praca: 0,65 × (−0,5) = −0,325;  TFP: 2,575 / 4 ≈ 64,4%"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 3,
+    "prompt": "Ile wyniósłby wzrost PKB, gdyby nakład pracy malał o 1% rocznie, a pozostałe tempa się nie zmieniły?",
+    "answers": [
+     {
+      "label": "Wzrost PKB",
+      "value": 3.675,
+      "calc": "tfp+a*gK+(1-a)*gL2",
+      "unit": "%",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "2,575 + 1,75 + 0,65 × (−1) = 3,675%"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "Jakie działania mogą przeciwdziałać spowolnieniu wzrostu wynikającemu ze spadku nakładu pracy?",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Spadek nakładu pracy o 1 pkt proc. obniża wzrost PKB o (1 − α) = 0,65 pkt proc. Rekompensatę dają: (1) wzrost TFP – innowacje, cyfryzacja, lepsza alokacja zasobów, jakość instytucji; (2) pogłębianie kapitału – inwestycje w maszyny i automatyzację (wyższe g_K); (3) zwiększenie nakładu pracy – aktywizacja kobiet i osób 55+, migracje, dłuższa praca; (4) kapitał ludzki – edukacja i kształcenie ustawiczne podnoszą jakość pracy (efektywny nakład pracy rośnie mimo spadku liczby godzin)."
+     }
+    ]
+   }
+  ]
+ }
+}

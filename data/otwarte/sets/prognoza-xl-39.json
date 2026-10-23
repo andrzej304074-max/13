@@ -1,0 +1,217 @@
+{
+ "set": "prognoza-xl-39",
+ "ed": 40,
+ "stage": "c",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-39-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "demografia",
+   "th": true,
+   "topics": [
+    {
+     "title": "Globalna nierównowaga demograficzna – starzejąca się Północ i młode Południe",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "zróżnicowanie przejścia demograficznego na świecie",
+        "presja migracyjna i teoria migracji",
+        "przepływ kapitału i handel między starymi i młodymi gospodarkami",
+        "dywidenda demograficzna Afryki – warunki",
+        "globalne dobra publiczne i pomoc rozwojowa"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "prognozy ONZ: liczba ludności świata i Afryki do 2100 r.",
+        "migracje do UE przez Morze Śródziemne",
+        "Indie jako najludniejszy kraj świata",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – świat dwóch prędkości demograficznych",
+       "teoria – przejście, migracje, przepływy",
+       "praktyka – prognozy ONZ, migracje, Indie",
+       "zakończenie – współpraca zamiast izolacji"
+      ],
+      "b": [
+       "tylko perspektywa europejska",
+       "brak teorii migracji",
+       "brak danych ONZ"
+      ],
+      "d": [
+       "Indie wyprzedziły Chiny jako najludniejszy kraj świata w 2023 r. (ONZ)",
+       "ludność świata ma osiągnąć szczyt ok. 10,3 mld w połowie lat 80. XXI w. (ONZ, World Population Prospects 2024)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-39-zadanie",
+  "title": "Zadanie analityczne – Projekcja ludności metodą kohortową",
+  "pts": 15,
+  "topic": "demografia",
+  "own": true,
+  "th": true,
+  "vars": {
+   "a0": 10.0,
+   "a1": 15.0,
+   "a2": 12.0,
+   "f0": 0.5,
+   "f1": 0.2,
+   "s0": 0.98,
+   "s1": 0.85,
+   "s2": 0.3
+  },
+  "lets": [
+   [
+    "b0",
+    "f0*a0+f1*a1"
+   ],
+   [
+    "b1",
+    "s0*a0"
+   ],
+   [
+    "b2",
+    "s1*a1+s2*a2"
+   ],
+   [
+    "n30",
+    "b0+b1+b2"
+   ],
+   [
+    "n60",
+    "(f0*b0+f1*b1)+s0*b0+(s1*b1+s2*b2)"
+   ],
+   [
+    "u60",
+    "(s1*b1+s2*b2)/n60*100"
+   ],
+   [
+    "c0",
+    "f0*b0+f1*b1"
+   ],
+   [
+    "c1",
+    "s0*b0"
+   ],
+   [
+    "c2",
+    "s1*b1+s2*b2"
+   ],
+   [
+    "o0",
+    "a2/a1"
+   ],
+   [
+    "o30",
+    "b2/b1"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Ludność kraju podzielono na trzy grupy wieku po 30 lat (w mln): 0–29 lat – 10, 30–59 lat – 15, 60+ – 12. Co 30 lat: nowa grupa 0–29 = 0,5 × (0–29) + 0,2 × (30–59) (urodzenia), grupa 30–59 = 0,98 × poprzednia grupa 0–29 (przeżycie), grupa 60+ = 0,85 × poprzednia grupa 30–59 + 0,3 × poprzednia grupa 60+. Migracje pomijamy (dane umowne)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 3,
+    "prompt": "Oblicz liczebność grup i całej ludności po 30 latach.",
+    "answers": [
+     {
+      "label": "Ludność po 30 latach",
+      "value": 34.15,
+      "calc": "b0+b1+b2",
+      "unit": "mln",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "0–29: 0,5 × 10 + 0,2 × 15 = 8,00;  30–59: 0,98 × 10 = 9,80;  60+: 0,85 × 15 + 0,3 × 12 = 16,35;  razem 34,15 mln"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 4,
+    "prompt": "Oblicz liczbę ludności po 60 latach i udział osób 60+.",
+    "answers": [
+     {
+      "label": "Ludność po 60 latach",
+      "value": 27.035,
+      "calc": "(f0*b0+f1*b1)+s0*b0+(s1*b1+s2*b2)",
+      "unit": "mln",
+      "tol": 0.01
+     },
+     {
+      "label": "Udział 60+",
+      "value": 48.9551,
+      "calc": "(s1*b1+s2*b2)/n60*100",
+      "unit": "%",
+      "tol": 0.05
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "0–29: 5,96;  30–59: 7,84;  60+: 13,235;  razem 27,035 mln;  udział 60+ ≈ 49,0%"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 4,
+    "prompt": "Oblicz relację liczby osób 60+ do osób w wieku 30–59 na początku i po 30 latach.",
+    "answers": [
+     {
+      "label": "Relacja początkowa",
+      "value": 0.8,
+      "calc": "a2/a1",
+      "tol": 0.005
+     },
+     {
+      "label": "Relacja po 30 latach",
+      "value": 1.6684,
+      "calc": "b2/b1",
+      "tol": 0.005
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "12 / 15 = 0,80;  16,35 / 9,80 ≈ 1,668"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "Wyjaśnij, dlaczego liczba ludności maleje, i oceń, jak zmiana współczynników urodzeń lub migracje mogłyby zmienić wynik.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Urodzenia na jedną osobę z grup w wieku rozrodczym są za niskie, by zastąpić pokolenie (z obecnych 10 mln osób w wieku 0–29 lat za 30 lat w tej grupie będzie tylko 8 mln), więc każda kolejna kohorta jest mniejsza – działa „ujemna inercja demograficzna”: nawet po wzroście dzietności ludność maleje jeszcze przez dekady, bo matek jest coraz mniej. Wyższe współczynniki f spowolniłyby spadek dopiero po ok. 30 latach. Dodatnie saldo migracji osób w wieku 20–40 lat natychmiast zwiększa grupy produkcyjne i (z opóźnieniem) liczbę urodzeń, ale imigranci po 30 latach przechodzą do grupy 60+."
+     }
+    ]
+   }
+  ]
+ }
+}

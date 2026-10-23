@@ -1,0 +1,290 @@
+#! Prognoza XL – eseje, etap okręgowy (zestawy 18–34): jeden temat, 25 pkt (teoria 15, praktyka 10).
+
+=== 18 | polityka | th
+T: Finanse publiczne w starzejącym się społeczeństwie – jak utrzymać ich stabilność?
+## Część teoretyczna | 15
+- wydatki zależne od wieku: emerytury, zdrowie, opieka długoterminowa, edukacja
+- współczynnik obciążenia demograficznego i jego wpływ na bazę podatkową
+- dynamika długu publicznego (r − g, saldo pierwotne)
+- sprawiedliwość międzypokoleniowa i rachunkowość generacyjna (L. Kotlikoff)
+- narzędzia dostosowania: wiek emerytalny, indeksacja świadczeń, struktura podatków, wydajność
+- reguły fiskalne krajowe i unijne
+## Część praktyczna | 10
+- prognozy wydatków związanych z wiekiem w Polsce i UE (Ageing Report KE)
+- deficyt FUS i dotacja z budżetu, 13. i 14. emerytura
+- procedura nadmiernego deficytu i plan średniookresowy
+- własna propozycja pakietu zmian
+> struktura: wstęp – presja wydatków przy kurczącej się liczbie płatników; teoria – wydatki zależne od wieku, dynamika długu, rachunkowość generacyjna, narzędzia; praktyka – Ageing Report, FUS, EDP; zakończenie – połączenie wyższej aktywności zawodowej, indeksacji i reguł
+> błędy: ograniczenie analizy do emerytur; brak mechanizmu r − g; propozycje bez kosztu politycznego i społecznego
+> dane: dług sektora GG Polski ok. 55% PKB w 2024 r. (Eurostat); Komisja Europejska publikuje co 3 lata Ageing Report z projekcją wydatków związanych z wiekiem (KE, 2024 Ageing Report)
+
+=== 19 | demografia | th
+T: Kurczący się zasób pracy – jak gospodarka może odpowiedzieć na niedobór pracowników?
+## Część teoretyczna | 15
+- zasób pracy, ludność w wieku produkcyjnym, współczynnik aktywności zawodowej
+- źródła wzrostu podaży pracy: aktywizacja (kobiety, osoby 55+, osoby z niepełnosprawnościami), migracje, dłuższa praca
+- wydajność pracy jako alternatywa – kapitał, technologia, organizacja
+- płace realne przy niedoborze pracy – teoria produktywności krańcowej
+- niedopasowanie strukturalne (kwalifikacje, regiony) i krzywa Beveridge’a
+- rola edukacji i kształcenia ustawicznego
+## Część praktyczna | 10
+- zmiana liczby ludności w wieku produkcyjnym w Polsce (GUS)
+- wskaźnik zatrudnienia 20–64 w Polsce i cel UE (78% w 2030 r.)
+- wakaty i branże z niedoborami (barometr zawodów)
+- własna ocena: które źródło jest najważniejsze
+> struktura: wstęp – mniej osób w wieku produkcyjnym; teoria – zasób pracy, źródła podaży, wydajność, płace, Beveridge; praktyka – dane GUS i Eurostat, barometr zawodów; zakończenie – aktywizacja i wydajność ważniejsze niż sama imigracja
+> błędy: mylenie ludności w wieku produkcyjnym z pracującymi; brak wątku wydajności; ogólniki bez branż
+> dane: wskaźnik zatrudnienia 20–64 w Polsce ok. 78% (2024, Eurostat); cel UE na 2030 r. – co najmniej 78% (Europejski filar praw socjalnych)
+
+=== 20 | demografia | th
+T: Dywidenda demograficzna – jak struktura wieku sprzyja lub szkodzi wzrostowi gospodarczemu?
+## Część teoretyczna | 15
+- pojęcie dywidendy demograficznej (pierwsza i druga)
+- przejście demograficzne i okno demograficzne
+- warunki wykorzystania dywidendy: zatrudnienie, edukacja, oszczędności, instytucje
+- odwrócona dywidenda – „podatek demograficzny” w społeczeństwach starzejących się
+- rola kobiet i spadku dzietności w dywidendzie
+## Część praktyczna | 10
+- Azja Wschodnia (Korea Płd., Chiny) – wykorzystana dywidenda
+- Afryka Subsaharyjska – szanse i ryzyka
+- Polska – okno demograficzne lat 1990–2015 i jego koniec
+- własna ocena
+> struktura: wstęp – struktura wieku jako czynnik wzrostu; teoria – pierwsza i druga dywidenda, okno, warunki; praktyka – Azja, Afryka, Polska; zakończenie – dywidenda to szansa, nie automat
+> błędy: twierdzenie, że duża liczba młodych zawsze przyspiesza wzrost; brak warunków instytucjonalnych; brak przykładów
+> dane: mediana wieku w Nigerii ok. 18 lat, w Polsce ok. 42–43 lat (ONZ, World Population Prospects 2024)
+
+=== 21 | polityka | th
+T: Polityka rodzinna – transfery pieniężne czy usługi publiczne?
+## Część teoretyczna | 15
+- cele polityki rodzinnej: dzietność, ubóstwo dzieci, aktywność zawodowa rodziców
+- transfery pieniężne – efekt dochodowy i ewentualny wpływ na podaż pracy
+- usługi (żłobki, przedszkola, opieka) – koszt alternatywny czasu matek
+- urlopy rodzicielskie i rola ojców
+- efektywność wydatków i ocena skutków (ewaluacja polityk)
+## Część praktyczna | 10
+- 500+ / 800+ – skala wydatków i oceny skutków
+- żłobki i program „Aktywny rodzic”
+- Francja i kraje nordyckie – model usług; Węgry – model ulg
+- własna ocena i proponowana struktura wydatków
+> struktura: wstęp – rosnące wydatki i spadająca dzietność; teoria – cele i narzędzia, efekty dochodowe i substytucyjne; praktyka – Polska, przykłady zagraniczne; zakończenie – usługi i stabilność łatwiej przekładają się na decyzje niż transfery
+> błędy: ocenianie polityki tylko przez dzietność (pomijanie ubóstwa dzieci); brak efektu na podaż pracy; brak danych o wydatkach
+> dane: koszt programu 800+ ok. 60–65 mld zł rocznie (ustawa budżetowa 2024–2025); świadczenie wychowawcze 800 zł od stycznia 2024 r. (ZUS)
+
+=== 22 | demografia | th
+T: Opieka długoterminowa nad osobami starszymi – rynek, państwo czy rodzina?
+## Część teoretyczna | 15
+- ryzyko niesamodzielności jako ryzyko społeczne
+- zawodności rynku ubezpieczeń opiekuńczych: selekcja negatywna, pokusa nadużycia
+- opieka nieformalna i jej koszt alternatywny
+- modele finansowania: ubezpieczenie społeczne, budżet, prywatne
+- usługi opiekuńcze jako sektor zatrudnienia (rola migrantów)
+## Część praktyczna | 10
+- świadczenia w Polsce: zasiłek pielęgnacyjny, świadczenie pielęgnacyjne, bon senioralny, DPS
+- niemiecki model ubezpieczenia pielęgnacyjnego (Pflegeversicherung)
+- własna propozycja
+> struktura: wstęp – rosnąca liczba osób 80+; teoria – ryzyko, zawodności rynku, opieka nieformalna, modele; praktyka – Polska i Niemcy; zakończenie – połączenie ubezpieczenia i usług środowiskowych
+> błędy: pomijanie kosztu opieki rodzinnej; brak zawodności rynku; brak przykładu zagranicznego
+> dane: Niemcy mają obowiązkowe ubezpieczenie pielęgnacyjne od 1995 r. (Bundesministerium für Gesundheit); liczba osób w wieku 80+ w Polsce ma się wyraźnie zwiększyć do 2060 r. (GUS, prognoza ludności 2023–2060)
+
+=== 23 | makro | th
+T: Wpływ starzenia się społeczeństwa na inflację, stopy procentowe i politykę pieniężną
+## Część teoretyczna | 15
+- naturalna stopa procentowa i jej determinanty
+- oszczędności w cyklu życia – nadwyżka oszczędności w starzejących się gospodarkach
+- teza o sekularnej stagnacji (L. Summers)
+- argument przeciwny: niedobór pracy i wzrost płac jako czynnik inflacyjny (C. Goodhart, M. Pradhan)
+- skutki dla skuteczności polityki pieniężnej (dolna granica stóp)
+## Część praktyczna | 10
+- Japonia – dekady niskich stóp i deflacji
+- strefa euro po 2022 r. – powrót inflacji
+- Polska – płace i inflacja usługowa
+- własna ocena
+> struktura: wstęp – demografia jako „cichy” czynnik makro; teoria – r*, cykl życia, Summers vs Goodhart; praktyka – Japonia, strefa euro, Polska; zakończenie – kierunek zależy od relacji oszczędności i niedoboru pracy
+> błędy: przedstawienie tylko jednej tezy; brak naturalnej stopy; brak przykładu Japonii
+> dane: Bank Japonii utrzymywał ujemną stopę krótkoterminową od 2016 do marca 2024 r. (Bank of Japan)
+
+=== 24 | demografia | th
+T: Swoboda przepływu pracowników w UE – korzyści i koszty dla Polski
+## Część teoretyczna | 15
+- jednolity rynek i swoboda przepływu osób
+- migracja zarobkowa – model różnic płac i kosztów migracji
+- skutki dla kraju wysyłającego: przekazy pieniężne, drenaż mózgów, cyrkulacja mózgów
+- skutki dla kraju przyjmującego: podaż pracy, płace, finanse publiczne
+- migracje powrotne
+## Część praktyczna | 10
+- emigracja Polaków po 2004 r. (Wielka Brytania, Niemcy, Irlandia) i Brexit
+- przekazy pieniężne i ich znaczenie
+- Polska jako kraj imigracji po 2014 r.
+- własna ocena
+> struktura: wstęp – 2004 r. jako przełom; teoria – modele migracji, skutki dla obu stron; praktyka – fale emigracji, Brexit, imigracja do Polski; zakończenie – korzyści netto, ale z kosztami demograficznymi
+> błędy: ocena wyłącznie negatywna; brak przekazów pieniężnych; brak danych
+> dane: ok. 2 mln Polaków przebywało czasowo za granicą w latach 2016–2018 (GUS, informacja o rozmiarach emigracji)
+
+=== 25 | finanse | th
+T: Oszczędzanie na emeryturę – rola państwa i obywatela
+## Część teoretyczna | 15
+- motywy oszczędzania i hipoteza cyklu życia
+- krótkowzroczność i ekonomia behawioralna (automatyczny zapis, domyślne opcje)
+- filary systemu emerytalnego (Bank Światowy)
+- koszty i ryzyka oszczędzania kapitałowego
+- zachęty podatkowe i dopłaty
+## Część praktyczna | 10
+- PPK – partycypacja, dopłaty, rezygnacje
+- IKE / IKZE i ich wykorzystanie
+- przykład Wielkiej Brytanii (auto-enrolment) lub Australii (superannuation)
+- własna propozycja
+> struktura: wstęp – niska przyszła stopa zastąpienia; teoria – cykl życia, behawioralne bariery, filary; praktyka – PPK, IKE/IKZE, przykład zagraniczny; zakończenie – automatyczność i stabilność reguł
+> błędy: brak ekonomii behawioralnej; mylenie PPK z OFE; brak danych o partycypacji
+> dane: partycypacja w PPK ok. 50% uprawnionych (PFR Portal PPK, 2024); w Wielkiej Brytanii automatyczny zapis do programów emerytalnych od 2012 r. (The Pensions Regulator)
+
+=== 26 | demografia | th
+T: Kobiety na rynku pracy a decyzje prokreacyjne
+## Część teoretyczna | 15
+- aktywność zawodowa kobiet – trendy i przyczyny
+- koszt alternatywny wychowania dzieci, „kara za macierzyństwo” (motherhood penalty)
+- luka płacowa i jej przyczyny (C. Goldin)
+- zmiana zależności między zatrudnieniem kobiet a dzietnością w krajach rozwiniętych
+- polityki godzenia pracy i rodziny
+## Część praktyczna | 10
+- wskaźnik zatrudnienia kobiet w Polsce i UE
+- luka płacowa w Polsce (Eurostat)
+- kraje nordyckie a Europa Południowa
+- własna ocena
+> struktura: wstęp – czy praca kobiet obniża dzietność; teoria – koszt alternatywny, Goldin, zmiana zależności; praktyka – dane, porównania; zakończenie – godzenie ról, a nie wybór między nimi
+> błędy: twierdzenie, że praca kobiet obniża dzietność bez rozróżnienia krajów; brak C. Goldin; brak danych
+> dane: Claudia Goldin – Nagroda Nobla z ekonomii 2023 za badania nad rynkiem pracy kobiet (Nobel Prize); nieskorygowana luka płacowa w Polsce ok. 7–8% (Eurostat, 2022–2023)
+
+=== 27 | zarzadzanie | th
+T: Zarządzanie wiekiem w przedsiębiorstwie – jak firmy mogą wykorzystać pracowników w różnym wieku?
+## Część teoretyczna | 15
+- zarządzanie wiekiem (age management) – pojęcie i obszary
+- różnorodność pokoleniowa zespołów i transfer wiedzy (mentoring)
+- motywacja w różnych fazach kariery (teorie motywacji – A. Maslow, F. Herzberg)
+- ergonomia, zdrowie i elastyczne formy pracy
+- kapitał ludzki i kształcenie przez całe życie
+## Część praktyczna | 10
+- niedobór pracowników w polskich firmach i reakcje pracodawców
+- przykłady programów w firmach (mentoring, praca na część etatu)
+- dyskryminacja ze względu na wiek – przepisy
+- własna ocena
+> struktura: wstęp – firmy wobec starzejącej się siły roboczej; teoria – age management, transfer wiedzy, motywacja; praktyka – przykłady programów, przepisy; zakończenie – różnorodność wieku jako przewaga
+> błędy: stereotypy o pracownikach starszych; brak teorii motywacji; brak przykładów
+> dane: Kodeks pracy zakazuje dyskryminacji w zatrudnieniu m.in. ze względu na wiek (art. 18³ᵃ KP)
+
+=== 28 | demografia | th
+T: System edukacji w czasach niżu demograficznego
+## Część teoretyczna | 15
+- edukacja jako inwestycja w kapitał ludzki (T. Schultz, G. Becker)
+- stopa zwrotu z edukacji
+- koszty stałe szkół przy malejącej liczbie uczniów
+- jakość a ilość – możliwość podniesienia nakładów na ucznia
+- dopasowanie kształcenia do rynku pracy, kształcenie zawodowe
+## Część praktyczna | 10
+- spadek liczby uczniów i studentów w Polsce
+- reorganizacja sieci szkół i uczelni
+- wyniki PISA Polski
+- własna ocena
+> struktura: wstęp – mniej uczniów; teoria – kapitał ludzki, koszty stałe, jakość; praktyka – dane, sieć szkół, PISA; zakończenie – niż jako szansa na wyższą jakość
+> błędy: ograniczenie do zamykania szkół; brak teorii kapitału ludzkiego; brak danych
+> dane: liczba studentów w Polsce spadła z ok. 1,95 mln (2005) do ok. 1,2 mln (2023) (GUS, Szkolnictwo wyższe)
+
+=== 29 | polityka | -
+T: Nowe reguły fiskalne UE a rosnące wydatki na obronność
+## Część teoretyczna | 15
+- uzasadnienie reguł fiskalnych (niekonsekwencja czasowa, efekty zewnętrzne w unii walutowej)
+- Pakt stabilności i wzrostu: 3% deficytu i 60% długu
+- reforma 2024: ścieżka wydatków netto, plany średniookresowe
+- obronność jako dobro publiczne
+- finansowanie: podatki, dług, fundusze wspólne
+## Część praktyczna | 10
+- wydatki Polski na obronność (ponad 4% PKB)
+- klauzula wyjścia dla obronności (2025)
+- procedura nadmiernego deficytu wobec Polski
+- własna ocena
+> struktura: wstęp – bezpieczeństwo a dyscyplina fiskalna; teoria – reguły, reforma 2024, dobro publiczne; praktyka – Polska, klauzula, EDP; zakończenie – elastyczność reguł przy wiarygodnej ścieżce
+> błędy: brak opisu nowych reguł; brak argumentu dobra publicznego; brak danych
+> dane: wydatki Polski na obronność ok. 4,1% PKB w 2024 r. (NATO); nowe ramy zarządzania gospodarczego UE obowiązują od kwietnia 2024 r. (Rada UE)
+
+=== 30 | makro | -
+T: Sztuczna inteligencja a rynek pracy
+## Część teoretyczna | 15
+- technologia a zatrudnienie: efekt zastąpienia i efekt komplementarności
+- polaryzacja rynku pracy (D. Autor)
+- produktywność i paradoks Solowa
+- nierówności dochodowe a postęp techniczny
+- polityka: edukacja, przekwalifikowanie, sieć bezpieczeństwa
+## Część praktyczna | 10
+- zastosowania AI w usługach w Polsce
+- AI Act w UE
+- badania wpływu AI na zawody (OECD, MFW)
+- własna ocena
+> struktura: wstęp – nowa fala automatyzacji; teoria – efekty, polaryzacja, produktywność; praktyka – zastosowania, regulacje, badania; zakończenie – przemiana zawodów raczej niż ich koniec
+> błędy: wizja masowego bezrobocia bez argumentu; brak teorii; brak regulacji
+> dane: AI Act (rozporządzenie UE 2024/1689) wszedł w życie 1 sierpnia 2024 r. (UE); MFW szacuje, że AI dotyczy ok. 40% miejsc pracy na świecie (MFW, 2024)
+
+=== 31 | makro | -
+T: Fragmentacja handlu światowego – koniec globalizacji?
+## Część teoretyczna | 15
+- korzyści z handlu i globalne łańcuchy wartości
+- protekcjonizm – cła i ich skutki dla dobrobytu
+- friend-shoring, near-shoring, bezpieczeństwo dostaw
+- rola WTO i umów regionalnych
+- polityka przemysłowa w rywalizacji USA–Chiny
+## Część praktyczna | 10
+- cła USA na import (2018–2025) i odpowiedzi partnerów
+- przenoszenie produkcji do Europy Środkowej – szansa dla Polski
+- własna ocena
+> struktura: wstęp – rosnące bariery handlowe; teoria – korzyści, protekcjonizm, łańcuchy; praktyka – cła USA, near-shoring; zakończenie – zmiana globalizacji zamiast jej końca
+> błędy: brak teorii handlu; brak przykładów ceł; brak wątku Polski
+> dane: wymiana handlowa świata w relacji do PKB pozostaje bliska rekordów mimo napięć (WTO, World Trade Statistical Review)
+
+=== 32 | polityka | -
+T: Konkurencyjność gospodarki europejskiej – diagnoza i recepty
+## Część teoretyczna | 15
+- konkurencyjność kraju – pojęcie i mierniki
+- produktywność jako źródło wzrostu
+- innowacje, rynek kapitałowy, skala
+- polityka przemysłowa a konkurencja
+- koszty energii i regulacji
+## Część praktyczna | 10
+- raport M. Draghiego (2024) – główne wnioski
+- luka produktywności UE–USA
+- Polska w tym kontekście
+- własna ocena
+> struktura: wstęp – Europa w tyle za USA; teoria – produktywność, innowacje, polityka przemysłowa; praktyka – raport Draghiego, Polska; zakończenie – integracja rynków i inwestycje
+> błędy: brak definicji konkurencyjności; brak raportu Draghiego; brak liczb
+> dane: raport M. Draghiego „The future of European competitiveness” – wrzesień 2024 r., potrzeba dodatkowych inwestycji ok. 750–800 mld euro rocznie (KE)
+
+=== 33 | finanse | -
+T: Edukacja finansowa młodzieży – po co i jak?
+## Część teoretyczna | 15
+- wiedza finansowa a decyzje (oszczędzanie, zadłużenie, inwestowanie)
+- błędy behawioralne konsumentów
+- asymetria informacji na rynku usług finansowych
+- ochrona konsumenta a edukacja
+- wartość pieniądza w czasie
+## Część praktyczna | 10
+- badania wiedzy finansowej Polaków (OECD, NBP)
+- miejsce finansów osobistych w szkole (przedmiot „biznes i zarządzanie”)
+- oszustwa finansowe i piramidy
+- własna ocena
+> struktura: wstęp – codzienne decyzje finansowe; teoria – wiedza, błędy, asymetria; praktyka – badania, szkoła, oszustwa; zakończenie – edukacja jako tania profilaktyka
+> błędy: brak teorii; brak danych; brak przykładów oszustw
+> dane: przedmiot „biznes i zarządzanie” zastąpił podstawy przedsiębiorczości od 2023 r. (MEN)
+
+=== 34 | zarzadzanie | -
+T: Odporność łańcuchów dostaw – nowe wyzwanie zarządzania
+## Część teoretyczna | 15
+- łańcuch dostaw i logistyka
+- just-in-time a just-in-case
+- zarządzanie ryzykiem
+- dywersyfikacja dostawców
+- koszty i korzyści zapasów
+## Część praktyczna | 10
+- pandemia i kryzys półprzewodników
+- blokada Kanału Sueskiego (2021), Morze Czerwone (2024)
+- polskie firmy w łańcuchach dostaw
+- własna ocena
+> struktura: wstęp – przerwane łańcuchy; teoria – JIT/JIC, ryzyko, dywersyfikacja; praktyka – przykłady; zakończenie – równowaga kosztu i odporności
+> błędy: brak teorii zarządzania; brak przykładów; jednostronność
+> dane: kontenerowiec Ever Given zablokował Kanał Sueski na 6 dni w marcu 2021 r. (Suez Canal Authority)

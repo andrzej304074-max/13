@@ -1,0 +1,230 @@
+{
+ "set": "prognoza-xl-35",
+ "ed": 40,
+ "stage": "c",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-35-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "makro",
+   "th": true,
+   "topics": [
+    {
+     "title": "Czy wzrost gospodarczy jest możliwy przy kurczącej się liczbie ludności?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "dekompozycja wzrostu PKB: praca, kapitał, łączna produktywność czynników (rachunek wzrostu)",
+        "model Solowa – stan ustalony przy ujemnym tempie przyrostu ludności",
+        "endogeniczne teorie wzrostu (P. Romer) – liczba ludzi a liczba idei",
+        "PKB a PKB per capita – różne cele",
+        "kapitał ludzki i jakość instytucji",
+        "skutki popytowe: niższe inwestycje mieszkaniowe i infrastrukturalne"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "prognoza ludności Polski do 2060 r. (GUS) i potencjalny PKB (NBP, KE)",
+        "Japonia – wzrost PKB per capita mimo spadku ludności",
+        "kraje bałtyckie – szybki wzrost przy depopulacji",
+        "własna ocena i warunki"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – rozróżnienie PKB i PKB per capita",
+       "teoria – Solow, Romer, rachunek wzrostu",
+       "praktyka – prognozy dla Polski, Japonia, Bałtyk",
+       "zakończenie – wzrost per capita możliwy, łączny PKB trudniejszy"
+      ],
+      "b": [
+       "utożsamianie spadku ludności ze spadkiem dobrobytu",
+       "brak rachunku wzrostu",
+       "brak przykładów depopulacji z wzrostem"
+      ],
+      "d": [
+       "scenariusz bazowy GUS – ok. 30,9 mln mieszkańców Polski w 2060 r. (GUS, Prognoza ludności na lata 2023–2060)",
+       "ludność Japonii maleje od ok. 2010 r. (Statistics Bureau of Japan)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-35-zadanie",
+  "title": "Zadanie analityczne – Model Solowa przy malejącej liczbie ludności",
+  "pts": 15,
+  "topic": "makro",
+  "own": true,
+  "th": true,
+  "vars": {
+   "s": 0.25,
+   "d": 0.05,
+   "n1": 0.01,
+   "n2": -0.005,
+   "a": 0.3333333333
+  },
+  "lets": [
+   [
+    "k1",
+    "(s/(n1+d))**(1/(1-a))"
+   ],
+   [
+    "y1",
+    "k1**a"
+   ],
+   [
+    "k2",
+    "(s/(n2+d))**(1/(1-a))"
+   ],
+   [
+    "y2",
+    "k2**a"
+   ],
+   [
+    "dy",
+    "(y2/y1-1)*100"
+   ],
+   [
+    "c2",
+    "(1-s)*y2"
+   ],
+   [
+    "cg",
+    "(a/(n2+d))**(a/(1-a))-(n2+d)*(a/(n2+d))**(1/(1-a))"
+   ],
+   [
+    "kg",
+    "(a/(n2+d))**(1/(1-a))"
+   ],
+   [
+    "yg",
+    "kg**a"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Gospodarkę opisuje model Solowa z funkcją produkcji na pracownika y = k^α, gdzie α = 1/3. Stopa oszczędności s = 0,25, stopa amortyzacji δ = 0,05. W stanie ustalonym s·y = (n + δ)·k, gdzie n to tempo zmian liczby pracowników."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 3,
+    "prompt": "Oblicz kapitał i produkt na pracownika w stanie ustalonym przy n = 1%.",
+    "answers": [
+     {
+      "label": "Kapitał na pracownika",
+      "value": 8.5052,
+      "calc": "(s/(n1+d))**(1/(1-a))",
+      "tol": 0.01
+     },
+     {
+      "label": "Produkt na pracownika",
+      "value": 2.0412,
+      "calc": "k1**a",
+      "tol": 0.005
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "k* = (s / (n + δ))^(1/(1−α)) = (0,25 / 0,06)^1,5 ≈ 8,505;  y* = k*^(1/3) ≈ 2,0412"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 3,
+    "prompt": "Oblicz te wielkości przy n = −0,5% (liczba pracowników maleje).",
+    "answers": [
+     {
+      "label": "Kapitał na pracownika",
+      "value": 13.0946,
+      "calc": "(s/(n2+d))**(1/(1-a))",
+      "tol": 0.01
+     },
+     {
+      "label": "Produkt na pracownika",
+      "value": 2.357,
+      "calc": "k2**a",
+      "tol": 0.005
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "k* = (0,25 / 0,045)^1,5 ≈ 13,095;  y* ≈ 2,3570"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 3,
+    "prompt": "O ile procent wyższy jest produkt na pracownika w stanie ustalonym przy malejącej liczbie pracowników?",
+    "answers": [
+     {
+      "label": "Różnica",
+      "value": 15.4701,
+      "calc": "(y2/y1-1)*100",
+      "unit": "%",
+      "tol": 0.05
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "2,3570 / 2,0412 − 1 ≈ 15,47%"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 3,
+    "prompt": "Oblicz konsumpcję na pracownika przy n = −0,5% dla s = 0,25 oraz dla stopy oszczędności złotej reguły (s = α).",
+    "answers": [
+     {
+      "label": "Konsumpcja przy s = 0,25",
+      "value": 1.7678,
+      "calc": "(1-s)*y2",
+      "tol": 0.005
+     },
+     {
+      "label": "Konsumpcja przy złotej regule",
+      "value": 1.8144,
+      "calc": "(a/(n2+d))**(a/(1-a))-(n2+d)*(a/(n2+d))**(1/(1-a))",
+      "tol": 0.005
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "c = (1 − s) y* = 0,75 × 2,3570 ≈ 1,7678;  złota reguła: k = (1/3 / 0,045)^1,5 ≈ 20,16, y ≈ 2,7217, c = y − (n + δ)k ≈ 1,8144"
+     }
+    ]
+   },
+   {
+    "label": "e",
+    "pts": 3,
+    "prompt": "Zinterpretuj wyniki. Czy malejąca liczba ludności jest w modelu Solowa korzystna dla dobrobytu?",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "W modelu Solowa wolniejszy przyrost (lub spadek) liczby pracowników oznacza, że mniej oszczędności trzeba przeznaczyć na wyposażenie nowych pracowników w kapitał – rośnie kapitał i produkt na pracownika (o ok. 15,5%). Łączny PKB rośnie jednak wolniej (w stanie ustalonym w tempie n + g), a model nie uwzględnia struktury wieku: przy starzeniu maleje udział pracujących w ludności, więc PKB na mieszkańca może spadać mimo wyższego produktu na pracownika. Pomija też wpływ liczby ludności na innowacje (teorie endogeniczne – P. Romer) oraz koszty dostosowania (puste mieszkania, infrastruktura)."
+     }
+    ]
+   }
+  ]
+ }
+}

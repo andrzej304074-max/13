@@ -7,9 +7,10 @@ import { LoadError } from "@/app/components/load-error";
 import { QuestionScratch } from "@/app/components/notes/question-scratch";
 import { api, fmtPoints, withUser } from "@/lib/client";
 import type { OpenMeta } from "@/lib/otwarte";
-import type { PublicEssay, SchemaSection } from "@/lib/otwarte-core";
+import { PROGNOZA_LABEL, type EssayHints, type PublicEssay, type SchemaSection } from "@/lib/otwarte-core";
 
-type Checked = { score: number; max: number; topic: string; schema: SchemaSection[] };
+type Checked = { score: number; max: number; topic: string; schema: SchemaSection[]; hints?: EssayHints | null };
+const HINTS: [keyof EssayHints, string][] = [["s", "Plan tego eseju"], ["d", "Dane, które warto przywołać (ze źródłami)"], ["b", "Typowe błędy"]];
 const TIMES = [0, 30, 45, 60];
 
 /** Ogólna struktura eseju olimpijskiego – rama, w którą wstawia się punkty ze schematu odpowiedzi z klucza. */
@@ -74,9 +75,10 @@ export function EssayView({ id }: { id: string }) {
     <div className="stack essay">
       <nav className="muted small"><Link href="/eseje">← Eseje</Link></nav>
       <h1>{essay.kind === "sponsor" ? "Pytanie do wyboru (sponsor)" : "Pytanie opisowe o charakterze ogólnym"}</h1>
-      <p className="muted" style={{ marginTop: -8 }}>OWE {meta.edRoman} ({meta.year}) · etap {meta.stageName} · {essay.pts} pkt · hasło edycji: „{meta.theme}”</p>
+      <p className="muted" style={{ marginTop: -8 }}>{meta.src === "prognoza" ? <span className="open-src" data-testid="src-label">{PROGNOZA_LABEL}</span> : <>OWE {meta.edRoman}</>} ({meta.year}) · etap {meta.stageName} · {essay.pts} pkt · hasło edycji: „{meta.theme}”</p>
 
-      {essay.own && <p className="card open-own" role="note" data-testid="own-note">Oficjalny klucz zawiera tylko treść tego zestawu – schemat odpowiedzi opracowano w aplikacji. Traktuj je jako przykładowe, nie jako wzorzec jury.</p>}
+      {essay.own && meta.src === "prognoza" && <p className="card open-own" role="note" data-testid="own-note">Temat przygotowany w aplikacji jako prognoza na XL edycję OWE (2026/2027) – nie pochodzi z arkusza olimpiady. Schemat odpowiedzi, plan i dane opracowano w aplikacji jako materiał do ćwiczeń.</p>}
+      {essay.own && meta.src !== "prognoza" && <p className="card open-own" role="note" data-testid="own-note">Oficjalny klucz zawiera tylko treść tego zestawu – schemat odpowiedzi opracowano w aplikacji. Traktuj je jako przykładowe, nie jako wzorzec jury.</p>}
       {essay.topics.length > 1 && <p style={{ margin: 0 }}><strong>Wybierz jeden temat:</strong></p>}
       <div className="essay-topics" role={essay.topics.length > 1 ? "radiogroup" : undefined}>
         {essay.topics.map((t, i) => (
@@ -113,7 +115,7 @@ export function EssayView({ id }: { id: string }) {
             {STRUCTURE.map((s) => <li key={s.title}><strong>{s.title}</strong><span>{s.text}</span></li>)}
           </ol>
           {res.schema.length ? <>
-            <h2>Schemat odpowiedzi z klucza – samoocena</h2>
+            <h2>{meta.src === "prognoza" ? "Schemat odpowiedzi – samoocena" : "Schemat odpowiedzi z klucza – samoocena"}</h2>
             <p className="muted" style={{ margin: 0 }}>Odhacz punkty, które są w Twoim eseju (omówione, nie tylko wspomniane). Punkty części liczymy proporcjonalnie do odhaczonych.</p>
             {res.schema.map((sec, i) => (
               <fieldset key={i} className="card essay-section" data-testid="essay-section">
@@ -131,6 +133,12 @@ export function EssayView({ id }: { id: string }) {
                 <p className="muted" style={{ margin: 0 }}>Wynik szacunkowy według samooceny – zapisany w statystykach.</p></div>
             )}
           </> : <p className="muted card" style={{ margin: 0 }}>Klucz nie zawiera schematu odpowiedzi do tego tematu – porównaj esej z ogólną strukturą powyżej.</p>}
+          {res.hints && HINTS.filter(([k]) => res.hints![k]?.length).map(([k, title]) => (
+            <section key={k} className="stack" data-testid={`essay-hints-${k}`}>
+              <h2>{title}</h2>
+              <ul className="card olymp-list">{res.hints![k]!.map((x) => <li key={x}>{x}</li>)}</ul>
+            </section>
+          ))}
           <h2>Wskazówki</h2>
           <ul className="card olymp-list">{TIPS.map((t) => <li key={t}>{t}</li>)}</ul>
           <div className="row"><Link className="btn secondary" href={withUser("/eseje")}>Inne eseje</Link></div>

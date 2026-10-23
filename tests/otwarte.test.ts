@@ -80,3 +80,38 @@ describe("dane zadań i esejów z kluczy", () => {
     }
   });
 });
+
+describe("Prognoza XL", () => {
+  const topics = COURSE.topics.map((t) => t.id);
+  const prog = SETS.filter((s) => s.src === "prognoza");
+  it("50 zestawów XL edycji – jeden esej i jedno zadanie, wszystko oznaczone jako własne", () => {
+    expect(prog.length).toBe(50);
+    for (const s of prog) {
+      expect(s.ed).toBe(40);
+      expect(s.essays.length).toBe(1);
+      expect(s.task?.own && s.essays[0].own).toBe(true);
+      expect(s.essays[0].topics.length).toBe(s.stage === "s" ? 2 : 1);
+    }
+    expect(SETS.filter((s) => s.src !== "prognoza").every((s) => s.ed < 40)).toBe(true);
+  });
+  it("co najmniej 25 esejów i 25 zadań dotyczy hasła przewodniego, każdy temat ma podpowiedzi", () => {
+    expect(prog.filter((s) => s.essays[0].th).length).toBeGreaterThanOrEqual(25);
+    expect(prog.filter((s) => s.task?.th).length).toBeGreaterThanOrEqual(25);
+    for (const s of prog) for (const t of s.essays[0].topics) expect(t.hints?.s?.length && t.hints?.b?.length && t.hints?.d?.length, t.title).toBeTruthy();
+  });
+  it("każdy wynik liczbowy ma wyrażenie, a wersja publiczna nie zdradza danych pośrednich", () => {
+    for (const s of prog) {
+      for (const p of s.task!.parts) for (const a of p.answers) expect(a.calc, `${s.set} ${p.label}`).toBeTruthy();
+      const pub = JSON.stringify(publicTask(s.task!));
+      expect(pub).not.toContain("calc");
+      expect(pub).not.toContain('"lets"');
+      expect(pub).not.toContain('"vars"');
+    }
+  });
+  it("walidacja odrzuca zestaw prognozy bez oznaczenia jako własny lub ze złym identyfikatorem", () => {
+    const s = prog[0];
+    expect(validateSet({ ...s, set: "owe-40-szkolne" }, topics).length).toBeGreaterThan(0);
+    expect(validateSet({ ...s, task: { ...s.task!, own: false } }, topics).length).toBeGreaterThan(0);
+    expect(validateSet({ ...s, src: undefined }, topics).length).toBeGreaterThan(0);
+  });
+});

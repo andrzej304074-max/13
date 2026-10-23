@@ -1,0 +1,225 @@
+{
+ "set": "prognoza-xl-25",
+ "ed": 40,
+ "stage": "o",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-25-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "finanse",
+   "th": true,
+   "topics": [
+    {
+     "title": "Oszczędzanie na emeryturę – rola państwa i obywatela",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "motywy oszczędzania i hipoteza cyklu życia",
+        "krótkowzroczność i ekonomia behawioralna (automatyczny zapis, domyślne opcje)",
+        "filary systemu emerytalnego (Bank Światowy)",
+        "koszty i ryzyka oszczędzania kapitałowego",
+        "zachęty podatkowe i dopłaty"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "PPK – partycypacja, dopłaty, rezygnacje",
+        "IKE / IKZE i ich wykorzystanie",
+        "przykład Wielkiej Brytanii (auto-enrolment) lub Australii (superannuation)",
+        "własna propozycja"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – niska przyszła stopa zastąpienia",
+       "teoria – cykl życia, behawioralne bariery, filary",
+       "praktyka – PPK, IKE/IKZE, przykład zagraniczny",
+       "zakończenie – automatyczność i stabilność reguł"
+      ],
+      "b": [
+       "brak ekonomii behawioralnej",
+       "mylenie PPK z OFE",
+       "brak danych o partycypacji"
+      ],
+      "d": [
+       "partycypacja w PPK ok. 50% uprawnionych (PFR Portal PPK, 2024)",
+       "w Wielkiej Brytanii automatyczny zapis do programów emerytalnych od 2012 r. (The Pensions Regulator)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-25-zadanie",
+  "title": "Zadanie z analizy finansowej – Analiza Du Ponta sieci aptek",
+  "pts": 15,
+  "topic": "firma",
+  "own": true,
+  "th": true,
+  "vars": {
+   "P": 50.0,
+   "ZN": 2.0,
+   "A": 25.0,
+   "KW": 10.0,
+   "P2": 60.0,
+   "ZN2": 2.7,
+   "A2": 27.0,
+   "KW2": 11.0
+  },
+  "lets": [
+   [
+    "ros",
+    "ZN/P*100"
+   ],
+   [
+    "ra",
+    "P/A"
+   ],
+   [
+    "mk",
+    "A/KW"
+   ],
+   [
+    "roe",
+    "ros*ra*mk"
+   ],
+   [
+    "ros2",
+    "ZN2/P2*100"
+   ],
+   [
+    "roe2",
+    "ZN2/KW2*100"
+   ],
+   [
+    "ra2",
+    "P2/A2"
+   ],
+   [
+    "mk2",
+    "A2/KW2"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Sieć aptek, korzystająca z rosnącej liczby starszych klientów, osiągnęła przychody 50 mln zł i zysk netto 2 mln zł. Aktywa wynoszą 25 mln zł, a kapitał własny 10 mln zł (dane umowne)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 3,
+    "prompt": "Oblicz rentowność sprzedaży netto (ROS).",
+    "answers": [
+     {
+      "label": "ROS",
+      "value": 4.0,
+      "calc": "ZN/P*100",
+      "unit": "%",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "2 / 50 × 100 = 4%"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 3,
+    "prompt": "Oblicz rotację aktywów.",
+    "answers": [
+     {
+      "label": "Rotacja aktywów",
+      "value": 2.0,
+      "calc": "P/A",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "50 / 25 = 2"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 3,
+    "prompt": "Oblicz mnożnik kapitałowy (aktywa / kapitał własny) i ROE z trójczynnikowego modelu Du Ponta.",
+    "answers": [
+     {
+      "label": "Mnożnik kapitałowy",
+      "value": 2.5,
+      "calc": "A/KW",
+      "tol": 0.01
+     },
+     {
+      "label": "ROE",
+      "value": 20.0,
+      "calc": "ros*ra*mk",
+      "unit": "%",
+      "tol": 0.05
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "25 / 10 = 2,5;  ROE = 4% × 2 × 2,5 = 20%"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 3,
+    "prompt": "W kolejnym roku przychody wzrosły do 60 mln zł, zysk netto do 2,7 mln zł, aktywa do 27 mln zł, a kapitał własny do 11 mln zł. Oblicz nowe ROS i ROE.",
+    "answers": [
+     {
+      "label": "Nowe ROS",
+      "value": 4.5,
+      "calc": "ZN2/P2*100",
+      "unit": "%",
+      "tol": 0.01
+     },
+     {
+      "label": "Nowe ROE",
+      "value": 24.5455,
+      "calc": "ZN2/KW2*100",
+      "unit": "%",
+      "tol": 0.05
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "ROS = 2,7 / 60 = 4,5%;  ROE = 2,7 / 11 ≈ 24,55%"
+     }
+    ]
+   },
+   {
+    "label": "e",
+    "pts": 3,
+    "prompt": "Na podstawie modelu Du Ponta wskaż, które czynniki zdecydowały o zmianie ROE.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "ROE = ROS × rotacja aktywów × mnożnik kapitałowy. ROS wzrosło z 4,0% do 4,5% (lepsza marża – np. więcej usług farmaceutycznych i dermokosmetyków), rotacja aktywów z 2,00 do 2,22 (sprzedaż rosła szybciej niż aktywa), a mnożnik kapitałowy nieznacznie spadł z 2,50 do 2,45 (mniejsza dźwignia). Wzrost ROE wynika więc z poprawy rentowności i efektywności wykorzystania aktywów, a nie z większego zadłużenia – to korzystna struktura zmiany."
+     }
+    ]
+   }
+  ]
+ }
+}

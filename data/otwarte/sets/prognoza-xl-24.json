@@ -1,0 +1,173 @@
+{
+ "set": "prognoza-xl-24",
+ "ed": 40,
+ "stage": "o",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-24-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "demografia",
+   "th": true,
+   "topics": [
+    {
+     "title": "Swoboda przepływu pracowników w UE – korzyści i koszty dla Polski",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "jednolity rynek i swoboda przepływu osób",
+        "migracja zarobkowa – model różnic płac i kosztów migracji",
+        "skutki dla kraju wysyłającego: przekazy pieniężne, drenaż mózgów, cyrkulacja mózgów",
+        "skutki dla kraju przyjmującego: podaż pracy, płace, finanse publiczne",
+        "migracje powrotne"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "emigracja Polaków po 2004 r. (Wielka Brytania, Niemcy, Irlandia) i Brexit",
+        "przekazy pieniężne i ich znaczenie",
+        "Polska jako kraj imigracji po 2014 r.",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – 2004 r. jako przełom",
+       "teoria – modele migracji, skutki dla obu stron",
+       "praktyka – fale emigracji, Brexit, imigracja do Polski",
+       "zakończenie – korzyści netto, ale z kosztami demograficznymi"
+      ],
+      "b": [
+       "ocena wyłącznie negatywna",
+       "brak przekazów pieniężnych",
+       "brak danych"
+      ],
+      "d": [
+       "ok. 2 mln Polaków przebywało czasowo za granicą w latach 2016–2018 (GUS, informacja o rozmiarach emigracji)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-24-zadanie",
+  "title": "Zadanie z analizy finansowej – Obligacje skarbowe a koszt finansowania długu",
+  "pts": 15,
+  "topic": "finanse",
+  "own": true,
+  "th": true,
+  "vars": {
+   "N": 1000.0,
+   "k": 5.0,
+   "y1": 6.0,
+   "y2": 4.0,
+   "n": 5.0
+  },
+  "lets": [
+   [
+    "c",
+    "N*k/100"
+   ],
+   [
+    "p1",
+    "c*(1-(1+y1/100)**(-n))/(y1/100)+N/(1+y1/100)**n"
+   ],
+   [
+    "p2",
+    "c*(1-(1+y2/100)**(-n))/(y2/100)+N/(1+y2/100)**n"
+   ],
+   [
+    "cy",
+    "c/p1*100"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Ministerstwo Finansów emituje obligacje 5-letnie o wartości nominalnej 1 000 zł i kuponie 5% płatnym raz w roku, aby m.in. sfinansować dotację do Funduszu Ubezpieczeń Społecznych (dane umowne)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 4,
+    "prompt": "Oblicz cenę obligacji, jeśli rynkowa rentowność wynosi 6%.",
+    "answers": [
+     {
+      "label": "Cena przy 6%",
+      "value": 957.8764,
+      "calc": "c*(1-(1+y1/100)**(-n))/(y1/100)+N/(1+y1/100)**n",
+      "unit": "zł",
+      "tol": 0.1
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "P = 50 × (1 − 1,06⁻⁵) / 0,06 + 1000 / 1,06⁵ ≈ 957,88 zł"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 4,
+    "prompt": "Oblicz cenę obligacji przy rentowności 4%.",
+    "answers": [
+     {
+      "label": "Cena przy 4%",
+      "value": 1044.5182,
+      "calc": "c*(1-(1+y2/100)**(-n))/(y2/100)+N/(1+y2/100)**n",
+      "unit": "zł",
+      "tol": 0.1
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "P = 50 × (1 − 1,04⁻⁵) / 0,04 + 1000 / 1,04⁵ ≈ 1 044,52 zł"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 3,
+    "prompt": "Oblicz bieżącą stopę dochodu (kupon / cena) przy cenie z punktu a.",
+    "answers": [
+     {
+      "label": "Bieżąca stopa dochodu",
+      "value": 5.2199,
+      "calc": "c/p1*100",
+      "unit": "%",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "50 / 957,88 × 100 ≈ 5,22%"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "Wyjaśnij zależność między ceną obligacji a rentownością oraz jak rosnące wydatki związane ze starzeniem się społeczeństwa mogą wpływać na koszt obsługi długu.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Cena obligacji i jej rentowność zmieniają się w przeciwnych kierunkach: gdy rynkowe stopy rosną powyżej kuponu, obligacja tanieje poniżej nominału (957,88 zł), a gdy spadają – drożeje (1 044,52 zł). Rosnące wydatki na emerytury i zdrowie zwiększają potrzeby pożyczkowe państwa; jeśli inwestorzy uznają, że dług rośnie szybciej niż PKB, żądają wyższej premii za ryzyko – rośnie rentowność nowych emisji i koszt obsługi długu, co dodatkowo pogarsza deficyt. Wiarygodne reformy (wiek emerytalny, reguły fiskalne) obniżają tę premię."
+     }
+    ]
+   }
+  ]
+ }
+}

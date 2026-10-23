@@ -1,0 +1,261 @@
+{
+ "set": "prognoza-xl-14",
+ "ed": 40,
+ "stage": "s",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-14-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "polityka",
+   "th": false,
+   "topics": [
+    {
+     "title": "Transformacja energetyczna Polski – koszty i korzyści",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "efekty zewnętrzne emisji i podatek Pigou",
+        "handel uprawnieniami (EU ETS) – mechanizm",
+        "bezpieczeństwo energetyczne",
+        "koszt kapitału i inwestycje w OZE, atom",
+        "sprawiedliwa transformacja – regiony węglowe"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "miks energetyczny Polski i jego zmiany",
+        "ceny energii i interwencje (mrożenie cen)",
+        "Śląsk i fundusz sprawiedliwej transformacji",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – Polska jako gospodarka węglowa",
+       "teoria – efekty zewnętrzne, ETS, bezpieczeństwo",
+       "praktyka – miks, ceny, Śląsk",
+       "zakończenie – koszty krótkookresowe, korzyści długookresowe"
+      ],
+      "b": [
+       "brak wątku bezpieczeństwa",
+       "brak danych o miksie",
+       "jednostronność"
+      ],
+      "d": [
+       "udział węgla w produkcji energii elektrycznej w Polsce spadł poniżej 60% w 2024 r., udział OZE ok. 30% (Forum Energii, PSE)"
+      ]
+     }
+    },
+    {
+     "title": "Rola samorządu terytorialnego w gospodarce",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "decentralizacja i zasada pomocniczości",
+        "dochody i wydatki samorządu",
+        "lokalne dobra publiczne (C. Tiebout)",
+        "polityka rozwoju lokalnego",
+        "zadłużenie samorządów"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "struktura samorządu w Polsce (gmina, powiat, województwo)",
+        "fundusze UE w samorządach",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – samorząd bliżej obywatela",
+       "teoria – decentralizacja, Tiebout, finanse",
+       "praktyka – polska struktura, fundusze UE",
+       "zakończenie – większa samodzielność dochodowa"
+      ],
+      "b": [
+       "brak wątku dochodów",
+       "mylenie zadań gminy i powiatu",
+       "brak przykładów"
+      ],
+      "d": [
+       "w Polsce jest 16 województw, 314 powiatów, 66 miast na prawach powiatu i 2477 gmin (GUS, TERYT)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-14-zadanie",
+  "title": "Zadanie z podstaw ekonomii – Próg rentowności",
+  "pts": 15,
+  "topic": "firma",
+  "own": true,
+  "th": false,
+  "vars": {
+   "KS": 120000.0,
+   "p": 80.0,
+   "kz": 50.0,
+   "Q": 5500.0,
+   "kz2": 55.0
+  },
+  "lets": [
+   [
+    "bep",
+    "KS/(p-kz)"
+   ],
+   [
+    "bepw",
+    "bep*p"
+   ],
+   [
+    "z",
+    "(p-kz)*Q-KS"
+   ],
+   [
+    "mb",
+    "(Q-bep)/Q*100"
+   ],
+   [
+    "bep2",
+    "KS/(p-kz2)"
+   ],
+   [
+    "z2",
+    "(p-kz2)*Q-KS"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Firma produkuje jeden wyrób. Miesięczne koszty stałe wynoszą 120 000 zł, cena sprzedaży – 80 zł/szt., a jednostkowy koszt zmienny – 50 zł/szt. (dane umowne)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 3,
+    "prompt": "Oblicz ilościowy próg rentowności.",
+    "answers": [
+     {
+      "label": "Próg rentowności",
+      "value": 4000.0,
+      "calc": "KS/(p-kz)",
+      "unit": "szt.",
+      "tol": 0.5
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "BEP = KS / (p − kz) = 120 000 / (80 − 50) = 4 000 szt."
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 3,
+    "prompt": "Oblicz wartościowy próg rentowności.",
+    "answers": [
+     {
+      "label": "Próg wartościowy",
+      "value": 320000.0,
+      "calc": "bep*p",
+      "unit": "zł",
+      "tol": 1.0
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "4 000 × 80 = 320 000 zł"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 3,
+    "prompt": "Oblicz zysk przy sprzedaży 5 500 szt. miesięcznie.",
+    "answers": [
+     {
+      "label": "Zysk",
+      "value": 45000.0,
+      "calc": "(p-kz)*Q-KS",
+      "unit": "zł",
+      "tol": 1.0
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "(80 − 50) × 5 500 − 120 000 = 45 000 zł"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 3,
+    "prompt": "Oblicz margines bezpieczeństwa przy sprzedaży 5 500 szt.",
+    "answers": [
+     {
+      "label": "Margines bezpieczeństwa",
+      "value": 27.2727,
+      "calc": "(Q-bep)/Q*100",
+      "unit": "%",
+      "tol": 0.05
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "(5 500 − 4 000) / 5 500 × 100 ≈ 27,27%"
+     },
+     {
+      "t": "p",
+      "x": "Sprzedaż może spaść o ok. 27,3%, zanim firma zacznie ponosić stratę."
+     }
+    ]
+   },
+   {
+    "label": "e",
+    "pts": 3,
+    "prompt": "Wskutek wzrostu płac koszt zmienny rośnie do 55 zł/szt. Oblicz nowy próg rentowności i zysk przy 5 500 szt.",
+    "answers": [
+     {
+      "label": "Nowy próg",
+      "value": 4800.0,
+      "calc": "KS/(p-kz2)",
+      "unit": "szt.",
+      "tol": 0.5
+     },
+     {
+      "label": "Nowy zysk",
+      "value": 17500.0,
+      "calc": "(p-kz2)*Q-KS",
+      "unit": "zł",
+      "tol": 1.0
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "120 000 / (80 − 55) = 4 800 szt.;  zysk = 25 × 5 500 − 120 000 = 17 500 zł"
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -8,15 +8,17 @@ import { SkeletonRows } from "@/app/components/loading-page";
 import { LoadError } from "@/app/components/load-error";
 import { api, fmtPoints, viewedUser, withUser } from "@/lib/client";
 import type { OpenKind, OpenMeta } from "@/lib/otwarte";
+import { PROGNOZA_LABEL } from "@/lib/otwarte-core";
 
 type Row = OpenMeta & { best: number | null; attempts: number };
 const TOPIC: Record<string, string> = {
   mikro: "Mikroekonomia", makro: "Makroekonomia", polityka: "Polityka gospodarcza", finanse: "Podstawy finansów",
   firma: "Finanse przedsiębiorstw", zarzadzanie: "Zarządzanie", demografia: "Demografia",
 };
+const SRCS = [["", "wszystkie"], ["owe", "z kluczy OWE"], ["prognoza", "🔮 Prognoza XL"]] as const;
 const STAGES = [["", "wszystkie"], ["s", "szkolny"], ["o", "okręgowy"], ["c", "centralny"]] as const;
 
-/** Lista zadań obliczeniowych albo esejów z poprzednich edycji: filtry edycji, etapu, działu i stanu. */
+/** Lista zadań obliczeniowych albo esejów z poprzednich edycji i Prognozy XL: filtry źródła, edycji, etapu, działu i stanu. */
 export function OpenList({ kind }: { kind: OpenKind }) {
   const router = useRouter();
   const [rows, setRows] = useState<Row[] | null>(null);
@@ -25,26 +27,27 @@ export function OpenList({ kind }: { kind: OpenKind }) {
   const [topic, setTopic] = useState("");
   const [ed, setEd] = useState("");
   const [state, setState] = useState<"" | "todo" | "done">("");
+  const [src, setSrc] = useState("");
   useEffect(() => {
     const p = new URLSearchParams(window.location.search);
-    setStage(p.get("etap") ?? ""); setTopic(p.get("dzial") ?? ""); setEd(p.get("edycja") ?? ""); setState((p.get("stan") ?? "") as "" | "todo" | "done");
+    setSrc(p.get("zrodlo") ?? ""); setStage(p.get("etap") ?? ""); setTopic(p.get("dzial") ?? ""); setEd(p.get("edycja") ?? ""); setState((p.get("stan") ?? "") as "" | "todo" | "done");
     setParsed(true);
     api<Row[]>(withUser(`/api/otwarte?rodzaj=${kind}`)).then(setRows).catch((e) => setError(e.message));
   }, [kind]);
   const [explicit] = useState(() => typeof window !== "undefined" && window.location.search.length > 1);
   // dopóki adres nie jest wczytany – null: inaczej filtry z linku wyglądałyby jak zmiana użytkownika i nadpisały zapisane
   const [parsed, setParsed] = useState(false);
-  const qs = new URLSearchParams([...(stage ? [["etap", stage]] : []), ...(topic ? [["dzial", topic]] : []), ...(ed ? [["edycja", ed]] : []), ...(state ? [["stan", state]] : [])]).toString();
+  const qs = new URLSearchParams([...(src ? [["zrodlo", src]] : []), ...(stage ? [["etap", stage]] : []), ...(topic ? [["dzial", topic]] : []), ...(ed ? [["edycja", ed]] : []), ...(state ? [["stan", state]] : [])]).toString();
   useEffect(() => {
     window.history.replaceState(null, "", `${window.location.pathname}${qs ? `?${qs}` : ""}`);
   }, [qs]);
   // filtry zapamiętane na koncie (osobno zadania i eseje)
   usePrefSync(kind === "esej" ? "eseje" : "zadania", parsed ? qs : null, (v) => {
     const p = new URLSearchParams(v);
-    setStage(p.get("etap") ?? ""); setTopic(p.get("dzial") ?? ""); setEd(p.get("edycja") ?? ""); setState((p.get("stan") ?? "") as "" | "todo" | "done");
+    setSrc(p.get("zrodlo") ?? ""); setStage(p.get("etap") ?? ""); setTopic(p.get("dzial") ?? ""); setEd(p.get("edycja") ?? ""); setState((p.get("stan") ?? "") as "" | "todo" | "done");
   }, { load: explicit, save: !!viewedUser() });
-  const shown = useMemo(() => (rows ?? []).filter((r) => (!stage || r.stage === stage) && (!topic || r.topic === topic) && (!ed || String(r.ed) === ed)
-    && (!state || (state === "done") === r.attempts > 0)), [rows, stage, topic, ed, state]);
+  const shown = useMemo(() => (rows ?? []).filter((r) => (!src || r.src === src) && (!stage || r.stage === stage) && (!topic || r.topic === topic) && (!ed || String(r.ed) === ed)
+    && (!state || (state === "done") === r.attempts > 0)), [rows, src, stage, topic, ed, state]);
   if (error) return <LoadError message={error} />;
   const eds = [...new Set((rows ?? []).map((r) => r.ed))].sort((a, b) => b - a);
   const topics = [...new Set((rows ?? []).map((r) => r.topic))];
@@ -52,14 +55,17 @@ export function OpenList({ kind }: { kind: OpenKind }) {
   const base = kind === "zadanie" ? "/zadania" : "/eseje";
   return (
     <div className="stack">
-      <h1>{kind === "zadanie" ? "🧮 Zadania z poprzednich lat" : "✍️ Eseje z poprzednich lat"}</h1>
+      <h1>{kind === "zadanie" ? "🧮 Zadania" : "✍️ Eseje"}</h1>
       <p className="muted" style={{ marginTop: -8 }}>
         {kind === "zadanie"
-          ? "Zadania obliczeniowe z kluczy OWE: rozwiązujesz w brudnopisie, wpisujesz same wyniki – sprawdzamy każdy podpunkt i pokazujemy pełny tok obliczeń."
-          : "Pytania opisowe (eseje) z kluczy OWE: piszesz w brudnopisie, potem widzisz przykładową strukturę eseju i punkty z klucza do samooceny."}
+          ? "Zadania obliczeniowe z kluczy OWE i własne zadania „Prognoza XL” na XL edycję: rozwiązujesz w brudnopisie, wpisujesz same wyniki – sprawdzamy każdy podpunkt i pokazujemy pełny tok obliczeń."
+          : "Pytania opisowe (eseje) z kluczy OWE i własne tematy „Prognoza XL” na XL edycję: piszesz w brudnopisie, potem widzisz przykładową strukturę eseju i punkty schematu do samooceny."}
         {rows && ` Rozwiązane: ${done} z ${rows.length}.`}
       </p>
       <div className="card stack filters-card">
+        <div className="seg" role="group" aria-label="Źródło" style={{ flexWrap: "wrap" }}>
+          {SRCS.map(([v, l]) => <button key={v || "all"} className={src === v ? "active" : ""} aria-pressed={src === v} onClick={() => setSrc(v)} data-src={v}>{l}</button>)}
+        </div>
         <div className="seg" role="group" aria-label="Etap" style={{ flexWrap: "wrap" }}>
           {STAGES.map(([v, l]) => <button key={v || "all"} className={stage === v ? "active" : ""} aria-pressed={stage === v} onClick={() => setStage(v)} data-stage={v}>{l}</button>)}
         </div>
@@ -101,7 +107,7 @@ export function OpenList({ kind }: { kind: OpenKind }) {
           {shown.map((r) => (
             <li key={r.id}>
               <Link href={withUser(`${base}/${r.id}`)} className="card open-item" data-testid="open-item">
-                <span className="open-meta">OWE {r.edRoman} · {r.year} · etap {r.stageName} · {TOPIC[r.topic] ?? r.topic} · {r.pts} pkt{r.choose > 1 ? ` · ${r.choose} tematy do wyboru` : ""}</span>
+                <span className="open-meta">{r.src === "prognoza" ? <span className="open-src" data-testid="src-label">{PROGNOZA_LABEL}</span> : <>OWE {r.edRoman}</>} · {r.year} ·{r.th ? " 🎯 hasło edycji ·" : ""} etap {r.stageName} · {TOPIC[r.topic] ?? r.topic} · {r.pts} pkt{r.choose > 1 ? ` · ${r.choose} tematy do wyboru` : ""}</span>
                 <strong className="open-title">{r.title}</strong>
                 <span className={`open-state${r.attempts ? " done" : ""}`}>
                   {r.attempts ? `✓ najlepiej ${fmtPoints(r.best ?? 0)}/${r.pts} pkt · podejść: ${r.attempts}` : "nierozwiązane"}

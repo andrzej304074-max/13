@@ -1,0 +1,198 @@
+{
+ "set": "prognoza-xl-30",
+ "ed": 40,
+ "stage": "o",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-30-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "makro",
+   "th": false,
+   "topics": [
+    {
+     "title": "Sztuczna inteligencja a rynek pracy",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "technologia a zatrudnienie: efekt zastąpienia i efekt komplementarności",
+        "polaryzacja rynku pracy (D. Autor)",
+        "produktywność i paradoks Solowa",
+        "nierówności dochodowe a postęp techniczny",
+        "polityka: edukacja, przekwalifikowanie, sieć bezpieczeństwa"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "zastosowania AI w usługach w Polsce",
+        "AI Act w UE",
+        "badania wpływu AI na zawody (OECD, MFW)",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – nowa fala automatyzacji",
+       "teoria – efekty, polaryzacja, produktywność",
+       "praktyka – zastosowania, regulacje, badania",
+       "zakończenie – przemiana zawodów raczej niż ich koniec"
+      ],
+      "b": [
+       "wizja masowego bezrobocia bez argumentu",
+       "brak teorii",
+       "brak regulacji"
+      ],
+      "d": [
+       "AI Act (rozporządzenie UE 2024/1689) wszedł w życie 1 sierpnia 2024 r. (UE)",
+       "MFW szacuje, że AI dotyczy ok. 40% miejsc pracy na świecie (MFW, 2024)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-30-zadanie",
+  "title": "Zadanie z analizy finansowej – Przepływy pieniężne metodą pośrednią",
+  "pts": 15,
+  "topic": "firma",
+  "own": true,
+  "th": false,
+  "vars": {
+   "ZN": 500.0,
+   "AM": 200.0,
+   "dN": 80.0,
+   "dZ": 40.0,
+   "dZob": 60.0,
+   "CAP": 450.0,
+   "SM": 30.0,
+   "KR": 100.0,
+   "DYW": 150.0
+  },
+  "lets": [
+   [
+    "cfo",
+    "ZN+AM-dN-dZ+dZob"
+   ],
+   [
+    "cfi",
+    "SM-CAP"
+   ],
+   [
+    "cff",
+    "KR-DYW"
+   ],
+   [
+    "dg",
+    "cfo+cfi+cff"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Dane spółki za rok (tys. zł): zysk netto 500, amortyzacja 200, wzrost należności 80, wzrost zapasów 40, wzrost zobowiązań krótkoterminowych (bez kredytów) 60, wydatki inwestycyjne 450, wpływy ze sprzedaży majątku trwałego 30, zaciągnięty kredyt 100, wypłacona dywidenda 150 (dane umowne)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 4,
+    "prompt": "Oblicz przepływy pieniężne z działalności operacyjnej metodą pośrednią.",
+    "answers": [
+     {
+      "label": "Przepływy operacyjne",
+      "value": 640.0,
+      "calc": "ZN+AM-dN-dZ+dZob",
+      "unit": "tys. zł",
+      "tol": 0.5
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "CFO = 500 + 200 − 80 − 40 + 60 = 640"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 3,
+    "prompt": "Oblicz przepływy z działalności inwestycyjnej.",
+    "answers": [
+     {
+      "label": "Przepływy inwestycyjne",
+      "value": -420.0,
+      "calc": "SM-CAP",
+      "unit": "tys. zł",
+      "tol": 0.5
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "CFI = 30 − 450 = −420"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 3,
+    "prompt": "Oblicz przepływy z działalności finansowej.",
+    "answers": [
+     {
+      "label": "Przepływy finansowe",
+      "value": -50.0,
+      "calc": "KR-DYW",
+      "unit": "tys. zł",
+      "tol": 0.5
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "CFF = 100 − 150 = −50"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 2,
+    "prompt": "Oblicz zmianę stanu środków pieniężnych.",
+    "answers": [
+     {
+      "label": "Zmiana gotówki",
+      "value": 170.0,
+      "calc": "cfo+cfi+cff",
+      "unit": "tys. zł",
+      "tol": 0.5
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "640 + (−420) + (−50) = 170"
+     }
+    ]
+   },
+   {
+    "label": "e",
+    "pts": 3,
+    "prompt": "Wyjaśnij, dlaczego zysk netto różni się od przepływów operacyjnych.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Zysk netto jest liczony memoriałowo: zawiera koszty niepieniężne (amortyzacja – dodajemy) i przychody jeszcze nieopłacone (wzrost należności – odejmujemy). Zakup zapasów to wydatek, który nie jest jeszcze kosztem (odejmujemy), a wzrost zobowiązań oznacza koszty jeszcze niezapłacone (dodajemy). Firma może mieć zysk, a mimo to tracić płynność, jeśli należności i zapasy rosną szybciej niż zobowiązania."
+     }
+    ]
+   }
+  ]
+ }
+}

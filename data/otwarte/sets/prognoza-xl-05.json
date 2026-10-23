@@ -1,0 +1,231 @@
+{
+ "set": "prognoza-xl-05",
+ "ed": 40,
+ "stage": "s",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-05-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "demografia",
+   "th": true,
+   "topics": [
+    {
+     "title": "Srebrna gospodarka – jakie dobra i usługi zyskają na starzeniu się społeczeństwa?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "pojęcie srebrnej gospodarki (popyt i podaż związane z osobami 50+ / 60+)",
+        "zmiana struktury konsumpcji w cyklu życia (zdrowie, opieka, usługi, czas wolny)",
+        "dochody i oszczędności seniorów – hipoteza cyklu życia",
+        "rynki: zdrowie, opieka długoterminowa, mieszkania dostosowane, turystyka, finanse, technologie (gerontechnologia)",
+        "seniorzy jako pracownicy i przedsiębiorcy",
+        "bariery: niskie emerytury, wykluczenie cyfrowe"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "liczba seniorów w Polsce i jej prognoza (GUS)",
+        "przykłady firm i usług dla seniorów (teleopieka, domy opieki, turystyka)",
+        "polityka senioralna: 13. i 14. emerytura, bon senioralny, Uniwersytety Trzeciego Wieku",
+        "przykład Japonii",
+        "własna ocena perspektyw"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – rosnąca grupa konsumentów 65+",
+       "teoria – cykl życia, struktura konsumpcji, rynki",
+       "praktyka – dane GUS, przykłady usług, polityka senioralna, Japonia",
+       "zakończenie – szansa dla firm, ale ograniczona niskimi dochodami części seniorów"
+      ],
+      "b": [
+       "ograniczenie srebrnej gospodarki do opieki zdrowotnej",
+       "brak danych o dochodach seniorów",
+       "pomijanie seniorów jako pracowników"
+      ],
+      "d": [
+       "ok. 7,5–8 mln osób w wieku 65+ w Polsce (GUS, 2024)",
+       "w Japonii osoby 65+ to ok. 29% ludności (Statistics Bureau of Japan, 2023)"
+      ]
+     }
+    },
+    {
+     "title": "Czy warto oszczędzać i inwestować od młodości?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "oszczędzanie a inwestowanie – różnice",
+        "wartość pieniądza w czasie, procent składany",
+        "ryzyko a oczekiwana stopa zwrotu, dywersyfikacja",
+        "instrumenty: lokaty, obligacje skarbowe, akcje, fundusze, ETF",
+        "inflacja a realna stopa zwrotu",
+        "błędy behawioralne inwestorów (nadmierna pewność siebie, awersja do strat)"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "produkty dla Polaków: obligacje skarbowe (w tym indeksowane inflacją), IKE / IKZE, PPK",
+        "obliczenie przykładowej wartości oszczędności po 30 latach (procent składany)",
+        "kryzys lub krach jako lekcja (2008, 2020)",
+        "własna ocena: plan oszczędzania dla ucznia lub młodego pracownika"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – czas jako sprzymierzeniec oszczędzającego",
+       "teoria – procent składany, ryzyko, inflacja, behawioralne pułapki",
+       "praktyka – IKE/IKZE/PPK, obliczenie, przykład kryzysu",
+       "zakończenie – regularność i dywersyfikacja"
+      ],
+      "b": [
+       "utożsamianie lokaty z inwestycją bez ryzyka realnego (inflacja)",
+       "obiecywanie pewnych zysków z akcji",
+       "brak obliczeń"
+      ],
+      "d": [
+       "dopłata państwa w PPK – 250 zł powitalne i 240 zł rocznie (ustawa o PPK)",
+       "limity wpłat IKE i IKZE ustalane co roku (ustawa o IKE/IKZE)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-05-zadanie",
+  "title": "Zadanie z podstaw ekonomii – Projekcja liczby ludności",
+  "pts": 15,
+  "topic": "demografia",
+  "own": true,
+  "th": true,
+  "vars": {
+   "P0": 37.5,
+   "r": -0.4,
+   "ur": 250.0,
+   "zg": 410.0,
+   "mig": 40.0
+  },
+  "lets": [
+   [
+    "p10",
+    "P0*(1+r/100)**10"
+   ],
+   [
+    "t33",
+    "ln(33/P0)/ln(1+r/100)"
+   ],
+   [
+    "pn",
+    "(ur-zg)/(P0*1000)*1000"
+   ],
+   [
+    "dl",
+    "ur-zg+mig"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Ludność kraju wynosi 37,5 mln. Przyjmij (dane umowne), że liczba ludności zmienia się w stałym tempie −0,4% rocznie. W ostatnim roku urodziło się 250 tys. dzieci, zmarło 410 tys. osób, a saldo migracji wyniosło +40 tys. osób."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 3,
+    "prompt": "Oblicz liczbę ludności po 10 latach.",
+    "answers": [
+     {
+      "label": "Ludność po 10 latach",
+      "value": 36.0267,
+      "calc": "P0*(1+r/100)**10",
+      "unit": "mln",
+      "tol": 0.02
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "P₁₀ = 37,5 × (1 − 0,004)¹⁰ ≈ 36,03 mln"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 4,
+    "prompt": "Po ilu latach liczba ludności spadnie do 33 mln?",
+    "answers": [
+     {
+      "label": "Liczba lat",
+      "value": 31.8944,
+      "calc": "ln(33/P0)/ln(1+r/100)",
+      "unit": "lat",
+      "tol": 0.2
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "t = ln(33 / 37,5) / ln(0,996) ≈ 31,9 roku"
+     },
+     {
+      "t": "p",
+      "x": "Spadek do 33 mln nastąpi w 32. roku (po ok. 31,9 latach)."
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 4,
+    "prompt": "Oblicz współczynnik przyrostu naturalnego (w promilach) i łączną zmianę liczby ludności w ostatnim roku (w tys.).",
+    "answers": [
+     {
+      "label": "Przyrost naturalny",
+      "value": -4.2667,
+      "calc": "(ur-zg)/(P0*1000)*1000",
+      "unit": "‰",
+      "tol": 0.02
+     },
+     {
+      "label": "Zmiana liczby ludności",
+      "value": -120.0,
+      "calc": "ur-zg+mig",
+      "unit": "tys.",
+      "tol": 0.5
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "(250 − 410) / 37,5 mln × 1000 ≈ −4,27‰;  zmiana: 250 − 410 + 40 = −120 tys."
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "Wymień składniki zmiany liczby ludności i wyjaśnij, czy migracje mogą trwale zatrzymać spadek liczby ludności.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Zmiana liczby ludności = przyrost naturalny (urodzenia − zgony) + saldo migracji. Migracje mogą zrównoważyć ujemny przyrost naturalny, jeśli saldo jest dodatnie i wysokie (tu trzeba by ok. 160 tys. osób rocznie zamiast 40 tys.). Imigranci również się jednak starzeją, a ich dzietność z czasem upodabnia się do dzietności w kraju przyjmującym, więc migracje łagodzą, ale same nie odwracają starzenia się społeczeństwa. Potrzebna jest też skuteczna integracja."
+     }
+    ]
+   }
+  ]
+ }
+}

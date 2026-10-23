@@ -1,0 +1,225 @@
+{
+ "set": "prognoza-xl-38",
+ "ed": 40,
+ "stage": "c",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-38-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "makro",
+   "th": true,
+   "topics": [
+    {
+     "title": "Demografia jako bariera doganiania Europy Zachodniej przez Polskę",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "konwergencja absolutna i warunkowa (R. Barro)",
+        "pułapka średniego dochodu",
+        "źródła dotychczasowego wzrostu Polski: kapitał, praca, produktywność, integracja z UE",
+        "wpływ demografii na dalszą konwergencję",
+        "innowacyjność i kapitał ludzki jako warunki dalszego wzrostu"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "PKB per capita Polski w PPS względem średniej UE (Eurostat)",
+        "prognozy potencjalnego wzrostu (NBP, KE)",
+        "przykład Korei Płd. lub Irlandii",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – sukces konwergencji",
+       "teoria – konwergencja, pułapka, źródła wzrostu",
+       "praktyka – dane Eurostatu, prognozy, przykład",
+       "zakończenie – konwergencja możliwa przy wzroście produktywności"
+      ],
+      "b": [
+       "brak definicji konwergencji",
+       "brak danych PPS",
+       "brak warunków"
+      ],
+      "d": [
+       "PKB per capita Polski w PPS ok. 80% średniej UE w 2024 r., wobec ok. 50% w 2004 r. (Eurostat)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-38-zadanie",
+  "title": "Zadanie analityczne – Tablica trwania życia i wartość renty dożywotniej",
+  "pts": 15,
+  "topic": "finanse",
+  "own": true,
+  "th": true,
+  "vars": {
+   "l60": 100000.0,
+   "l65": 95000.0,
+   "l70": 88000.0,
+   "l75": 78000.0,
+   "l80": 64000.0,
+   "l85": 45000.0,
+   "l90": 25000.0,
+   "R": 60000.0,
+   "r": 3.0
+  },
+  "lets": [
+   [
+    "v",
+    "1/(1+r/100)**5"
+   ],
+   [
+    "p1",
+    "l65/l60"
+   ],
+   [
+    "p2",
+    "l80/l65"
+   ],
+   [
+    "q",
+    "(1-l85/l60)*100"
+   ],
+   [
+    "apv",
+    "R*(l65*v+l70*v**2+l75*v**3+l80*v**4+l85*v**5+l90*v**6)/l60"
+   ],
+   [
+    "dapv",
+    "R*0.1*v**6"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Fragment tablicy trwania życia (liczba osób dożywających danego wieku z 100 000 osób w wieku 60 lat; dane umowne):"
+   },
+   {
+    "t": "table",
+    "head": [
+     "Wiek",
+     "60",
+     "65",
+     "70",
+     "75",
+     "80",
+     "85",
+     "90",
+     "95"
+    ],
+    "rows": [
+     [
+      "Liczba dożywających",
+      "100 000",
+      "95 000",
+      "88 000",
+      "78 000",
+      "64 000",
+      "45 000",
+      "25 000",
+      "0"
+     ]
+    ]
+   },
+   {
+    "t": "p",
+    "x": "Ubezpieczyciel oferuje 60-latkowi rentę: wypłatę 60 000 zł w wieku 65, 70, 75, 80, 85 i 90 lat (każda wypłata odpowiada pięciu latom renty po 12 000 zł), pod warunkiem dożycia. Roczna stopa techniczna wynosi 3%."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 3,
+    "prompt": "Oblicz prawdopodobieństwo, że 60-latek dożyje 65 lat, oraz prawdopodobieństwo, że 65-latek dożyje 80 lat.",
+    "answers": [
+     {
+      "label": "60 → 65",
+      "value": 0.95,
+      "calc": "l65/l60",
+      "tol": 0.001
+     },
+     {
+      "label": "65 → 80",
+      "value": 0.6737,
+      "calc": "l80/l65",
+      "tol": 0.001
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "95 000 / 100 000 = 0,95;  64 000 / 95 000 ≈ 0,6737"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 3,
+    "prompt": "Jakie jest prawdopodobieństwo, że 60-latek umrze przed ukończeniem 85 lat?",
+    "answers": [
+     {
+      "label": "Prawdopodobieństwo zgonu",
+      "value": 55.0,
+      "calc": "(1-l85/l60)*100",
+      "unit": "%",
+      "tol": 0.05
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "1 − 45 000 / 100 000 = 55%"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 5,
+    "prompt": "Oblicz aktuarialną wartość obecną renty (jednorazową składkę netto) dla 60-latka.",
+    "answers": [
+     {
+      "label": "Wartość renty",
+      "value": 158832.2993,
+      "calc": "R*(l65*v+l70*v**2+l75*v**3+l80*v**4+l85*v**5+l90*v**6)/l60",
+      "unit": "zł",
+      "tol": 20.0
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "APV = R × Σ (lₓ / l₆₀) × vᵗ, v = 1 / 1,03⁵ ≈ 0,8626"
+     },
+     {
+      "t": "p",
+      "x": "APV = 60 000 × (0,95v + 0,88v² + 0,78v³ + 0,64v⁴ + 0,45v⁵ + 0,25v⁶) ≈ 158 832 zł."
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "Wskutek postępu medycyny liczba dożywających 85 i 90 lat wzrasta. Wyjaśnij, jak wpłynie to na cenę renty i na system emerytalny oraz czym jest ryzyko długowieczności.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Większe lₓ w starszym wieku zwiększa sumę zdyskontowanych wypłat – renta drożeje (np. wzrost l₉₀ do 35 000 podniósłby APV o 60 000 × 0,1 × v⁶ ≈ 2 472 zł). Ryzyko długowieczności to ryzyko, że populacja (a nie tylko pojedyncza osoba) będzie żyła dłużej, niż zakładają tablice – tego ryzyka nie da się zdywersyfikować w grupie ubezpieczonych. W systemie zdefiniowanej składki ZUS przenosi je częściowo na emerytów (dłuższe dalsze trwanie życia = niższa emerytura), a ubezpieczyciele zabezpieczają je reasekuracją lub obligacjami długowieczności."
+     }
+    ]
+   }
+  ]
+ }
+}

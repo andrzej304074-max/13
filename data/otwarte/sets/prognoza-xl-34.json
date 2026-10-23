@@ -1,0 +1,215 @@
+{
+ "set": "prognoza-xl-34",
+ "ed": 40,
+ "stage": "o",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-34-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "zarzadzanie",
+   "th": false,
+   "topics": [
+    {
+     "title": "Odporność łańcuchów dostaw – nowe wyzwanie zarządzania",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "łańcuch dostaw i logistyka",
+        "just-in-time a just-in-case",
+        "zarządzanie ryzykiem",
+        "dywersyfikacja dostawców",
+        "koszty i korzyści zapasów"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "pandemia i kryzys półprzewodników",
+        "blokada Kanału Sueskiego (2021), Morze Czerwone (2024)",
+        "polskie firmy w łańcuchach dostaw",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – przerwane łańcuchy",
+       "teoria – JIT/JIC, ryzyko, dywersyfikacja",
+       "praktyka – przykłady",
+       "zakończenie – równowaga kosztu i odporności"
+      ],
+      "b": [
+       "brak teorii zarządzania",
+       "brak przykładów",
+       "jednostronność"
+      ],
+      "d": [
+       "kontenerowiec Ever Given zablokował Kanał Sueski na 6 dni w marcu 2021 r. (Suez Canal Authority)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-34-zadanie",
+  "title": "Zadanie z analizy finansowej – Analiza dynamiki przychodów i kosztów",
+  "pts": 15,
+  "topic": "firma",
+  "own": true,
+  "th": false,
+  "vars": {
+   "P1": 80.0,
+   "P2": 92.0,
+   "K1": 70.0,
+   "K2": 82.0,
+   "inf": 3.6
+  },
+  "lets": [
+   [
+    "dn",
+    "(P2/P1-1)*100"
+   ],
+   [
+    "dr",
+    "((1+dn/100)/(1+inf/100)-1)*100"
+   ],
+   [
+    "m1",
+    "(P1-K1)/P1*100"
+   ],
+   [
+    "m2",
+    "(P2-K2)/P2*100"
+   ],
+   [
+    "dk",
+    "(K2/K1-1)*100"
+   ],
+   [
+    "dz",
+    "((P2-K2)/(P1-K1)-1)*100"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Spółka handlowa osiągnęła przychody 80 mln zł w 2023 r. i 92 mln zł w 2024 r., a koszty odpowiednio 70 i 82 mln zł. Inflacja CPI w 2024 r. wyniosła 3,6% (GUS)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 3,
+    "prompt": "Oblicz nominalną dynamikę przychodów (w procentach).",
+    "answers": [
+     {
+      "label": "Dynamika nominalna",
+      "value": 15.0,
+      "calc": "(P2/P1-1)*100",
+      "unit": "%",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "(92 / 80 − 1) × 100 = 15%"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 3,
+    "prompt": "Oblicz realną dynamikę przychodów.",
+    "answers": [
+     {
+      "label": "Dynamika realna",
+      "value": 11.0039,
+      "calc": "((1+dn/100)/(1+inf/100)-1)*100",
+      "unit": "%",
+      "tol": 0.02
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "1,15 / 1,036 − 1 ≈ 11,00%"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 3,
+    "prompt": "Oblicz marżę zysku (zysk / przychody) w obu latach.",
+    "answers": [
+     {
+      "label": "Marża 2023",
+      "value": 12.5,
+      "calc": "(P1-K1)/P1*100",
+      "unit": "%",
+      "tol": 0.02
+     },
+     {
+      "label": "Marża 2024",
+      "value": 10.8696,
+      "calc": "(P2-K2)/P2*100",
+      "unit": "%",
+      "tol": 0.02
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "(80 − 70) / 80 = 12,5%;  (92 − 82) / 92 ≈ 10,87%"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 3,
+    "prompt": "Oblicz dynamikę kosztów i dynamikę zysku.",
+    "answers": [
+     {
+      "label": "Dynamika kosztów",
+      "value": 17.1429,
+      "calc": "(K2/K1-1)*100",
+      "unit": "%",
+      "tol": 0.02
+     },
+     {
+      "label": "Dynamika zysku",
+      "value": 0.0,
+      "calc": "((P2-K2)/(P1-K1)-1)*100",
+      "unit": "%",
+      "tol": 0.02
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "koszty: 82 / 70 − 1 ≈ 17,14%;  zysk: 10 / 10 − 1 = 0%"
+     }
+    ]
+   },
+   {
+    "label": "e",
+    "pts": 3,
+    "prompt": "Oceń wyniki spółki i wyjaśnij, dlaczego analiza nominalna może wprowadzać w błąd.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Przychody wzrosły nominalnie o 15%, realnie o ok. 11% – nadal szybko. Koszty rosły jednak szybciej (17,1%), więc zysk się nie zmienił, a marża spadła z 12,5% do 10,9%; realnie zysk zmalał. Analiza nominalna w okresie inflacji zawyża wzrost – część „wzrostu” to tylko wyższe ceny. Spółka powinna sprawdzić przyczyny wzrostu kosztów (płace, czynsze, energia) i możliwość przeniesienia ich na ceny."
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -8,7 +8,7 @@ import { LoadError } from "@/app/components/load-error";
 import { QuestionScratch } from "@/app/components/notes/question-scratch";
 import { api, fmtPoints, withUser } from "@/lib/client";
 import type { OpenMeta } from "@/lib/otwarte";
-import type { Answer, Block, PartResult, PublicTask, SelfRating } from "@/lib/otwarte-core";
+import { PROGNOZA_LABEL, type Answer, type Block, type PartResult, type PublicTask, type SelfRating } from "@/lib/otwarte-core";
 
 type Checked = { parts: PartResult[]; score: number; max: number; attempt: string; given: Record<string, string[]>;
   solution: { label: string; answers: Answer[]; solution: Block[] }[] };
@@ -54,8 +54,9 @@ export function TaskView({ id }: { id: string }) {
     <div className="stack task">
       <nav className="muted small"><Link href="/zadania">← Zadania</Link></nav>
       <h1>{task.title}</h1>
-      <p className="muted" style={{ marginTop: -8 }}>OWE {meta.edRoman} ({meta.year}) · etap {meta.stageName} · {task.pts} pkt · hasło edycji: „{meta.theme}”</p>
-      {task.own && <p className="card open-own" role="note" data-testid="own-note">Oficjalny klucz zawiera tylko treść tego zestawu – wyniki i tok rozwiązania opracowano w aplikacji. Traktuj je jako przykładowe, nie jako wzorzec jury.</p>}
+      <p className="muted" style={{ marginTop: -8 }}>{meta.src === "prognoza" ? <span className="open-src" data-testid="src-label">{PROGNOZA_LABEL}</span> : <>OWE {meta.edRoman}</>} ({meta.year}) · etap {meta.stageName} · {task.pts} pkt · hasło edycji: „{meta.theme}”</p>
+      {task.own && meta.src === "prognoza" && <p className="card open-own" role="note" data-testid="own-note">Zadanie przygotowane w aplikacji jako prognoza na XL edycję OWE (2026/2027) – nie pochodzi z arkusza olimpiady. Wyniki przeliczono skryptem z danych zadania; dane liczbowe są przybliżone lub umowne, a źródła podano w treści.</p>}
+      {task.own && meta.src !== "prognoza" && <p className="card open-own" role="note" data-testid="own-note">Oficjalny klucz zawiera tylko treść tego zestawu – wyniki i tok rozwiązania opracowano w aplikacji. Traktuj je jako przykładowe, nie jako wzorzec jury.</p>}
       <div className="card stack task-body"><Blocks blocks={task.intro} /></div>
 
       <ol className="task-parts">

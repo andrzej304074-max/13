@@ -1,0 +1,321 @@
+{
+ "set": "prognoza-xl-01",
+ "ed": 40,
+ "stage": "s",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-01-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "demografia",
+   "th": true,
+   "topics": [
+    {
+     "title": "Starzenie się społeczeństwa – zagrożenie czy szansa dla gospodarki Polski?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "pojęcie starzenia się społeczeństwa (wzrost udziału osób 65+, wzrost mediany wieku) i jego mierniki",
+        "przyczyny: spadek dzietności poniżej poziomu zastępowalności pokoleń (ok. 2,1) i wydłużanie się trwania życia",
+        "przejście demograficzne – fazy i miejsce Polski w tym procesie",
+        "wpływ na podaż pracy i potencjalny PKB (funkcja produkcji: praca, kapitał, technologia)",
+        "wpływ na oszczędności i konsumpcję – hipoteza cyklu życia F. Modiglianiego",
+        "skutki dla finansów publicznych: emerytury, zdrowie, opieka długoterminowa",
+        "szanse: srebrna gospodarka, wzrost wydajności, automatyzacja, inwestycje w kapitał ludzki"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "dane o dzietności, liczbie urodzeń i strukturze wieku ludności Polski (GUS)",
+        "prognoza ludności GUS i zmiana współczynnika obciążenia demograficznego",
+        "porównanie z krajami UE lub Japonią / Koreą Płd.",
+        "przykłady działań: aktywizacja zawodowa osób starszych i kobiet, migracje, polityka rodzinna",
+        "własna ocena: czy bilans jest negatywny i od czego zależy"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – dane o dzietności i strukturze wieku jako punkt wyjścia",
+       "teoria – przyczyny (przejście demograficzne), kanały wpływu na gospodarkę (praca, oszczędności, finanse publiczne)",
+       "praktyka – Polska na tle UE i Azji Wschodniej, przykłady polityk",
+       "zakończenie – teza: zagrożenie, które można częściowo zamienić w szansę przez wydajność i aktywizację"
+      ],
+      "b": [
+       "utożsamianie starzenia z samym spadkiem liczby ludności",
+       "pomijanie wydłużania się trwania życia jako przyczyny",
+       "ogólniki o „srebrnej gospodarce” bez przykładów rynków (opieka, zdrowie, turystyka, finanse)"
+      ],
+      "d": [
+       "współczynnik dzietności w Polsce ok. 1,1 w 2024 r. (GUS)",
+       "urodzenia ok. 250 tys. w 2024 r. wobec ok. 400 tys. w 2017 r. (GUS)",
+       "udział osób 65+ ok. 20% (GUS, 2024)",
+       "dzietność w UE ok. 1,4 (Eurostat, 2023)"
+      ]
+     }
+    },
+    {
+     "title": "Czy inflacja zawsze szkodzi gospodarce?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "pojęcie inflacji i jej mierniki (CPI, inflacja bazowa, deflator PKB)",
+        "przyczyny: popytowe, kosztowe, oczekiwania inflacyjne, ilościowa teoria pieniądza (MV = PY)",
+        "koszty inflacji: niepewność, koszty menu i „zdartych zelówek”, redystrybucja od wierzycieli do dłużników",
+        "koszty deflacji i argumenty za umiarkowaną, dodatnią inflacją (cel ok. 2%)",
+        "krzywa Phillipsa i jej krytyka (oczekiwania – M. Friedman, E. Phelps)",
+        "hiperinflacja – przyczyny i skutki"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "przebieg inflacji w Polsce w latach 2021–2025 i jej źródła (energia, żywność, popyt)",
+        "reakcja NBP: stopy procentowe, cel inflacyjny 2,5% ± 1 pkt proc.",
+        "przykład hiperinflacji (Niemcy 1923, Zimbabwe, Wenezuela) lub deflacji (Japonia)",
+        "własna ocena: kiedy inflacja jest szkodliwa, a kiedy jej skutki są ograniczone"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – definicja i krótki obraz ostatnich lat",
+       "teoria – przyczyny, koszty, krzywa Phillipsa",
+       "praktyka – Polska 2021–2025 i przykład skrajny",
+       "zakończenie – szkodzi inflacja wysoka i zmienna, niska i przewidywalna jest akceptowana przez banki centralne"
+      ],
+      "b": [
+       "mylenie wysokiego poziomu cen z inflacją",
+       "twierdzenie, że inflacja zawsze szkodzi wszystkim (dłużnicy zyskują)",
+       "brak rozróżnienia inflacji oczekiwanej i nieoczekiwanej"
+      ],
+      "d": [
+       "szczyt inflacji CPI w Polsce 18,4% r/r w lutym 2023 r. (GUS)",
+       "cel inflacyjny NBP 2,5% ± 1 pkt proc. (NBP)",
+       "cel EBC 2% w średnim okresie (EBC)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-01-zadanie",
+  "title": "Zadanie z podstaw ekonomii – Struktura wieku i obciążenie demograficzne",
+  "pts": 15,
+  "topic": "demografia",
+  "own": true,
+  "th": true,
+  "vars": {
+   "m": 5.6,
+   "p": 23.9,
+   "s": 7.9,
+   "p50": 19.5,
+   "s50": 10.4,
+   "m50": 4.0
+  },
+  "lets": [
+   [
+    "wo",
+    "(m+s)/p*100"
+   ],
+   [
+    "ws",
+    "s/p*100"
+   ],
+   [
+    "wm",
+    "m/p*100"
+   ],
+   [
+    "u65",
+    "s/(m+p+s)*100"
+   ],
+   [
+    "n",
+    "m+p+s"
+   ],
+   [
+    "ws50",
+    "s50/p50*100"
+   ],
+   [
+    "dws",
+    "ws50-ws"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Ludność Polski według ekonomicznych grup wieku (dane przybliżone, zaokrąglone z GUS, 2024 r.) oraz scenariusz na 2050 r. (umowny, zbliżony do prognozy GUS):"
+   },
+   {
+    "t": "table",
+    "head": [
+     "Grupa wieku",
+     "2024 (mln)",
+     "2050 (mln)"
+    ],
+    "rows": [
+     [
+      "0–14 lat",
+      "5,6",
+      "4,0"
+     ],
+     [
+      "15–64 lata",
+      "23,9",
+      "19,5"
+     ],
+     [
+      "65 lat i więcej",
+      "7,9",
+      "10,4"
+     ]
+    ]
+   },
+   {
+    "t": "p",
+    "x": "Współczynnik obciążenia demograficznego to liczba osób w wieku nieprodukcyjnym przypadająca na 100 osób w wieku 15–64 lata."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 3,
+    "prompt": "Oblicz ogólny współczynnik obciążenia demograficznego w 2024 r.",
+    "answers": [
+     {
+      "label": "Współczynnik obciążenia",
+      "value": 56.4854,
+      "calc": "(m+s)/p*100",
+      "unit": "os./100",
+      "tol": 0.1
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "WO = (0–14 + 65+) / (15–64) × 100 = (5,6 + 7,9) / 23,9 × 100 ≈ 56,49"
+     },
+     {
+      "t": "p",
+      "x": "Na 100 osób w wieku produkcyjnym przypada ok. 56,5 osoby w wieku nieprodukcyjnym."
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 3,
+    "prompt": "Oblicz osobno współczynnik obciążenia osobami starszymi (65+) i młodymi (0–14) w 2024 r.",
+    "answers": [
+     {
+      "label": "Obciążenie osobami 65+",
+      "value": 33.0544,
+      "calc": "s/p*100",
+      "unit": "os./100",
+      "tol": 0.1
+     },
+     {
+      "label": "Obciążenie osobami 0–14",
+      "value": 23.431,
+      "calc": "m/p*100",
+      "unit": "os./100",
+      "tol": 0.1
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "65+: 7,9 / 23,9 × 100 ≈ 33,05;  0–14: 5,6 / 23,9 × 100 ≈ 23,43"
+     },
+     {
+      "t": "p",
+      "x": "Suma obu części daje współczynnik ogólny z punktu a."
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 3,
+    "prompt": "Jaki odsetek całej ludności stanowiły w 2024 r. osoby w wieku 65+?",
+    "answers": [
+     {
+      "label": "Udział 65+",
+      "value": 21.123,
+      "calc": "s/(m+p+s)*100",
+      "unit": "%",
+      "tol": 0.1
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "7,9 / 37,4 × 100 ≈ 21,12%"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 3,
+    "prompt": "Oblicz współczynnik obciążenia osobami starszymi w 2050 r. i jego zmianę w porównaniu z 2024 r. (w osobach na 100).",
+    "answers": [
+     {
+      "label": "Obciążenie 65+ w 2050 r.",
+      "value": 53.3333,
+      "calc": "s50/p50*100",
+      "unit": "os./100",
+      "tol": 0.1
+     },
+     {
+      "label": "Zmiana",
+      "value": 20.2789,
+      "calc": "ws50-ws",
+      "unit": "os./100",
+      "tol": 0.15
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "10,4 / 19,5 × 100 ≈ 53,33;  zmiana: 53,33 − 33,05 ≈ 20,28"
+     },
+     {
+      "t": "p",
+      "x": "Liczba starszych osób przypadających na 100 osób w wieku produkcyjnym wzrośnie o ok. 20, czyli o ok. 60%."
+     }
+    ]
+   },
+   {
+    "label": "e",
+    "pts": 3,
+    "prompt": "Wyjaśnij, jakie skutki dla repartycyjnego systemu emerytalnego ma wzrost współczynnika obciążenia osobami starszymi. Podaj dwa sposoby łagodzenia tych skutków.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "W systemie repartycyjnym składki pracujących finansują bieżące emerytury. Gdy na jednego pracującego przypada więcej emerytów, przy tej samej stopie składki spada relacja emerytury do płacy (stopa zastąpienia) albo rośnie deficyt funduszu, który pokrywa budżet."
+     },
+     {
+      "t": "ul",
+      "items": [
+       "wydłużenie aktywności zawodowej (wyższy efektywny wiek przejścia na emeryturę, zachęty do pracy po osiągnięciu wieku emerytalnego),",
+       "wzrost zatrudnienia (kobiety, osoby 55+, imigranci) – więcej płacących składki,",
+       "wzrost wydajności i płac – wyższa podstawa składek,",
+       "dodatkowe oszczędzanie (PPK, IKE, IKZE)."
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

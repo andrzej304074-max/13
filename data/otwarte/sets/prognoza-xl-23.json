@@ -1,0 +1,224 @@
+{
+ "set": "prognoza-xl-23",
+ "ed": 40,
+ "stage": "o",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-23-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "makro",
+   "th": true,
+   "topics": [
+    {
+     "title": "Wpływ starzenia się społeczeństwa na inflację, stopy procentowe i politykę pieniężną",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "naturalna stopa procentowa i jej determinanty",
+        "oszczędności w cyklu życia – nadwyżka oszczędności w starzejących się gospodarkach",
+        "teza o sekularnej stagnacji (L. Summers)",
+        "argument przeciwny: niedobór pracy i wzrost płac jako czynnik inflacyjny (C. Goodhart, M. Pradhan)",
+        "skutki dla skuteczności polityki pieniężnej (dolna granica stóp)"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "Japonia – dekady niskich stóp i deflacji",
+        "strefa euro po 2022 r. – powrót inflacji",
+        "Polska – płace i inflacja usługowa",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – demografia jako „cichy” czynnik makro",
+       "teoria – r*, cykl życia, Summers vs Goodhart",
+       "praktyka – Japonia, strefa euro, Polska",
+       "zakończenie – kierunek zależy od relacji oszczędności i niedoboru pracy"
+      ],
+      "b": [
+       "przedstawienie tylko jednej tezy",
+       "brak naturalnej stopy",
+       "brak przykładu Japonii"
+      ],
+      "d": [
+       "Bank Japonii utrzymywał ujemną stopę krótkoterminową od 2016 do marca 2024 r. (Bank of Japan)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-23-zadanie",
+  "title": "Zadanie z analizy finansowej – Dźwignia operacyjna i finansowa producenta sprzętu rehabilitacyjnego",
+  "pts": 15,
+  "topic": "firma",
+  "own": true,
+  "th": true,
+  "vars": {
+   "S": 20.0,
+   "VC": 12.0,
+   "FC": 5.0,
+   "I": 1.0,
+   "g": 10.0
+  },
+  "lets": [
+   [
+    "EBIT",
+    "S-VC-FC"
+   ],
+   [
+    "EBT",
+    "EBIT-I"
+   ],
+   [
+    "e0",
+    "EBIT"
+   ],
+   [
+    "dol",
+    "(S-VC)/EBIT"
+   ],
+   [
+    "dfl",
+    "EBIT/(EBIT-I)"
+   ],
+   [
+    "dtl",
+    "dol*dfl"
+   ],
+   [
+    "e1",
+    "S*(1+g/100)-VC*(1+g/100)-FC"
+   ],
+   [
+    "wzb",
+    "((e1-I)/(EBIT-I)-1)*100"
+   ],
+   [
+    "EBT1",
+    "e1-I"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Producent wózków i sprzętu rehabilitacyjnego osiąga przychody 20 mln zł, ponosi koszty zmienne 12 mln zł, koszty stałe 5 mln zł oraz odsetki 1 mln zł rocznie (dane umowne)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 3,
+    "prompt": "Oblicz zysk operacyjny (EBIT) i stopień dźwigni operacyjnej (DOL).",
+    "answers": [
+     {
+      "label": "EBIT",
+      "value": 3.0,
+      "calc": "EBIT",
+      "unit": "mln zł",
+      "tol": 0.01
+     },
+     {
+      "label": "DOL",
+      "value": 2.6667,
+      "calc": "(S-VC)/EBIT",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "EBIT = 20 − 12 − 5 = 3;  DOL = (S − VC) / EBIT = 2,67"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 3,
+    "prompt": "Oblicz stopień dźwigni finansowej (DFL).",
+    "answers": [
+     {
+      "label": "DFL",
+      "value": 1.5,
+      "calc": "EBIT/(EBIT-I)",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "DFL = EBIT / (EBIT − odsetki) = 3 / 2 = 1,50"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 3,
+    "prompt": "Oblicz stopień dźwigni całkowitej (DTL).",
+    "answers": [
+     {
+      "label": "DTL",
+      "value": 4.0,
+      "calc": "dol*dfl",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "DTL = DOL × DFL = 2,67 × 1,50 = 4,00"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 3,
+    "prompt": "Dzięki rosnącemu popytowi osób starszych sprzedaż rośnie o 10% (koszty zmienne proporcjonalnie). Oblicz nowy EBIT i procentowy wzrost zysku przed opodatkowaniem.",
+    "answers": [
+     {
+      "label": "Nowy EBIT",
+      "value": 3.8,
+      "calc": "S*(1+g/100)-VC*(1+g/100)-FC",
+      "unit": "mln zł",
+      "tol": 0.01
+     },
+     {
+      "label": "Wzrost zysku brutto",
+      "value": 40.0,
+      "calc": "((e1-I)/(EBIT-I)-1)*100",
+      "unit": "%",
+      "tol": 0.1
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "EBIT = 22 − 13,2 − 5 = 3,8;  zysk brutto: 2 → 2,8, wzrost = 40% = DTL × 10%"
+     }
+    ]
+   },
+   {
+    "label": "e",
+    "pts": 3,
+    "prompt": "Wyjaśnij znaczenie dźwigni dla ryzyka firmy w sytuacji zmian popytu.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Wysoka dźwignia (DTL = 4) oznacza, że każdy 1% zmiany sprzedaży zmienia zysk brutto o 4%. Przy rosnącym popycie (starzenie się społeczeństwa, refundacje) to korzyść, ale przy spadku sprzedaży – np. zmianie zasad refundacji NFZ – zysk szybko spada. Firma może ograniczać ryzyko, zamieniając część kosztów stałych na zmienne (outsourcing, leasing) albo zmniejszając zadłużenie."
+     }
+    ]
+   }
+  ]
+ }
+}

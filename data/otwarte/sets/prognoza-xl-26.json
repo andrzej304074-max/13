@@ -1,0 +1,212 @@
+{
+ "set": "prognoza-xl-26",
+ "ed": 40,
+ "stage": "o",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-26-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "demografia",
+   "th": true,
+   "topics": [
+    {
+     "title": "Kobiety na rynku pracy a decyzje prokreacyjne",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "aktywność zawodowa kobiet – trendy i przyczyny",
+        "koszt alternatywny wychowania dzieci, „kara za macierzyństwo” (motherhood penalty)",
+        "luka płacowa i jej przyczyny (C. Goldin)",
+        "zmiana zależności między zatrudnieniem kobiet a dzietnością w krajach rozwiniętych",
+        "polityki godzenia pracy i rodziny"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "wskaźnik zatrudnienia kobiet w Polsce i UE",
+        "luka płacowa w Polsce (Eurostat)",
+        "kraje nordyckie a Europa Południowa",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – czy praca kobiet obniża dzietność",
+       "teoria – koszt alternatywny, Goldin, zmiana zależności",
+       "praktyka – dane, porównania",
+       "zakończenie – godzenie ról, a nie wybór między nimi"
+      ],
+      "b": [
+       "twierdzenie, że praca kobiet obniża dzietność bez rozróżnienia krajów",
+       "brak C. Goldin",
+       "brak danych"
+      ],
+      "d": [
+       "Claudia Goldin – Nagroda Nobla z ekonomii 2023 za badania nad rynkiem pracy kobiet (Nobel Prize)",
+       "nieskorygowana luka płacowa w Polsce ok. 7–8% (Eurostat, 2022–2023)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-26-zadanie",
+  "title": "Zadanie z analizy finansowej – Cykl konwersji gotówki agencji opiekunek",
+  "pts": 15,
+  "topic": "firma",
+  "own": true,
+  "th": true,
+  "vars": {
+   "P": 36.0,
+   "N": 6.0,
+   "Z": 0.2,
+   "KS": 30.0,
+   "ZH": 2.5,
+   "d": 360.0,
+   "N45": 45.0
+  },
+  "lets": [
+   [
+    "rn",
+    "N/P*d"
+   ],
+   [
+    "rz",
+    "Z/KS*d"
+   ],
+   [
+    "rzo",
+    "ZH/KS*d"
+   ],
+   [
+    "ccc",
+    "rn+rz-rzo"
+   ],
+   [
+    "ug",
+    "(rn-N45)/d*P"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Agencja zatrudniająca opiekunki (w tym cudzoziemki) osób starszych ma roczne przychody 36 mln zł, koszt własny sprzedaży 30 mln zł, średnie należności 6 mln zł, zapasy 0,2 mln zł i zobowiązania handlowe 2,5 mln zł. Przyjmij rok = 360 dni (dane umowne)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 3,
+    "prompt": "Oblicz cykl rotacji należności w dniach.",
+    "answers": [
+     {
+      "label": "Rotacja należności",
+      "value": 60.0,
+      "calc": "N/P*d",
+      "unit": "dni",
+      "tol": 0.1
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "6 / 36 × 360 = 60 dni"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 3,
+    "prompt": "Oblicz cykl rotacji zapasów w dniach (w relacji do kosztu własnego sprzedaży).",
+    "answers": [
+     {
+      "label": "Rotacja zapasów",
+      "value": 2.4,
+      "calc": "Z/KS*d",
+      "unit": "dni",
+      "tol": 0.05
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "0,2 / 30 × 360 = 2,4 dnia"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 3,
+    "prompt": "Oblicz cykl rotacji zobowiązań handlowych w dniach (w relacji do kosztu własnego sprzedaży).",
+    "answers": [
+     {
+      "label": "Rotacja zobowiązań",
+      "value": 30.0,
+      "calc": "ZH/KS*d",
+      "unit": "dni",
+      "tol": 0.1
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "2,5 / 30 × 360 = 30 dni"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 3,
+    "prompt": "Oblicz cykl konwersji gotówki.",
+    "answers": [
+     {
+      "label": "Cykl konwersji gotówki",
+      "value": 32.4,
+      "calc": "rn+rz-rzo",
+      "unit": "dni",
+      "tol": 0.1
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "CCC = 60 + 2,4 − 30 = 32,4 dnia"
+     }
+    ]
+   },
+   {
+    "label": "e",
+    "pts": 3,
+    "prompt": "Agencja skraca terminy płatności klientów do 45 dni. Oblicz, ile gotówki zostanie uwolnione (w mln zł), i wyjaśnij znaczenie cyklu konwersji gotówki.",
+    "answers": [
+     {
+      "label": "Uwolniona gotówka",
+      "value": 1.5,
+      "calc": "(rn-N45)/d*P",
+      "unit": "mln zł",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "(60 − 45) / 360 × 36 = 1,5 mln zł"
+     },
+     {
+      "t": "p",
+      "x": "Cykl konwersji gotówki pokazuje, przez ile dni firma musi finansować działalność, zanim odzyska gotówkę. W agencji pracy wynagrodzenia wypłaca się co miesiąc, a klienci płacą później – długi cykl wymaga kredytu obrotowego. Skrócenie terminów płatności (lub faktoring) zmniejsza zapotrzebowanie na kapitał obrotowy i koszty odsetek."
+     }
+    ]
+   }
+  ]
+ }
+}

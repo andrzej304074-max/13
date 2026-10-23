@@ -1,0 +1,225 @@
+{
+ "set": "prognoza-xl-09",
+ "ed": 40,
+ "stage": "s",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-09-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "demografia",
+   "th": true,
+   "topics": [
+    {
+     "title": "Aktywność zawodowa osób starszych – korzyści i bariery",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "współczynnik aktywności zawodowej i wskaźnik zatrudnienia",
+        "czynniki decyzji o przejściu na emeryturę (wiek emerytalny, zdrowie, zachęty finansowe)",
+        "kapitał ludzki osób starszych – doświadczenie a umiejętności cyfrowe",
+        "teza o „stałej ilości pracy” i jej krytyka (seniorzy nie zabierają pracy młodym)",
+        "korzyści: dochody, finanse publiczne, zdrowie"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "wskaźnik zatrudnienia osób 55–64 w Polsce i UE (Eurostat)",
+        "zachęty: zerowy PIT dla pracujących seniorów („PIT dla seniora”), łączenie emerytury z pracą",
+        "przykład Szwecji / Danii",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – dłuższe życie a wcześniejsza emerytura",
+       "teoria – decyzja o emeryturze, kapitał ludzki, mit stałej ilości pracy",
+       "praktyka – dane, ulgi, przykłady",
+       "zakończenie – elastyczne przejście na emeryturę"
+      ],
+      "b": [
+       "twierdzenie, że seniorzy zabierają pracę młodym",
+       "brak danych",
+       "brak barier zdrowotnych"
+      ],
+      "d": [
+       "ulga „PIT dla seniora” – zwolnienie przychodów do 85 528 zł rocznie dla osób w wieku emerytalnym, które nie pobierają emerytury (ustawa o PIT, od 2022 r.)"
+      ]
+     }
+    },
+    {
+     "title": "Konkurencja a monopol – co jest lepsze dla konsumenta?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "konkurencja doskonała i monopol – cena, ilość, nadwyżki",
+        "strata martwa monopolu",
+        "monopol naturalny i jego regulacja",
+        "konkurencja monopolistyczna i oligopol",
+        "innowacje: argument Schumpetera za dużymi firmami"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "UOKiK i Komisja Europejska – przykłady decyzji",
+        "monopole naturalne w Polsce (sieci przesyłowe)",
+        "giganci cyfrowi (Akt o rynkach cyfrowych)",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – rynek jako arena konkurencji",
+       "teoria – modele rynku, strata martwa, monopol naturalny, Schumpeter",
+       "praktyka – UOKiK, KE, DMA",
+       "zakończenie – konkurencja korzystna, ale z wyjątkami"
+      ],
+      "b": [
+       "twierdzenie, że monopolista ustala dowolną cenę",
+       "brak monopolu naturalnego",
+       "brak przykładów"
+      ],
+      "d": [
+       "Akt o rynkach cyfrowych (DMA) stosowany od maja 2023 r. (UE)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-09-zadanie",
+  "title": "Zadanie z podstaw ekonomii – Koszt świadczenia na dziecko",
+  "pts": 15,
+  "topic": "demografia",
+  "own": true,
+  "th": true,
+  "vars": {
+   "sw": 800.0,
+   "dz": 6.9,
+   "pkb": 3600.0,
+   "inf": 4.0
+  },
+  "lets": [
+   [
+    "k",
+    "sw*12*dz*1e6/1e9"
+   ],
+   [
+    "u",
+    "k/pkb*100"
+   ],
+   [
+    "re",
+    "sw/(1+inf/100)**3"
+   ],
+   [
+    "sp",
+    "(1-re/sw)*100"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Państwo wypłaca miesięczne świadczenie w wysokości 800 zł na każde dziecko. Uprawnionych jest 6,9 mln dzieci, a nominalny PKB wynosi 3 600 mld zł (dane przybliżone, zbliżone do Polski 2024 r.)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 3,
+    "prompt": "Oblicz roczny koszt świadczenia w mld zł.",
+    "answers": [
+     {
+      "label": "Roczny koszt",
+      "value": 66.24,
+      "calc": "sw*12*dz*1e6/1e9",
+      "unit": "mld zł",
+      "tol": 0.05
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "800 zł × 12 × 6,9 mln ≈ 66,24 mld zł"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 3,
+    "prompt": "Jaki to odsetek PKB?",
+    "answers": [
+     {
+      "label": "Udział w PKB",
+      "value": 1.84,
+      "calc": "k/pkb*100",
+      "unit": "%",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "66,24 / 3 600 × 100 ≈ 1,84%"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 4,
+    "prompt": "Świadczenie nie jest waloryzowane. Oblicz jego realną wartość (w cenach z roku wprowadzenia) po 3 latach przy inflacji 4% rocznie oraz spadek siły nabywczej w procentach.",
+    "answers": [
+     {
+      "label": "Wartość realna",
+      "value": 711.1971,
+      "calc": "sw/(1+inf/100)**3",
+      "unit": "zł",
+      "tol": 0.5
+     },
+     {
+      "label": "Spadek siły nabywczej",
+      "value": 11.1004,
+      "calc": "(1-re/sw)*100",
+      "unit": "%",
+      "tol": 0.05
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "800 / 1,04³ ≈ 711,20 zł;  spadek ≈ 11,10%"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 5,
+    "prompt": "Przedstaw argumenty za i przeciw waloryzacji świadczenia oraz wskaż alternatywny sposób wydania tych środków na wsparcie rodzin.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Za waloryzacją: utrzymanie realnej wartości wsparcia, przewidywalność dla rodzin, skuteczniejsza walka z ubóstwem dzieci. Przeciw: rosnący koszt w budżecie przy deficycie, słabe dowody na trwały wpływ transferów na dzietność, możliwy niewielki spadek podaży pracy części rodziców (efekt dochodowy)."
+     },
+     {
+      "t": "p",
+      "x": "Alternatywa: część środków na usługi – żłobki i przedszkola, opiekę po lekcjach, mieszkania na wynajem dla młodych rodzin, elastyczne formy pracy. Badania z krajów nordyckich i Francji wskazują, że usługi ułatwiające godzenie pracy z rodzicielstwem lepiej wspierają zarówno zatrudnienie, jak i decyzje o dzieciach."
+     }
+    ]
+   }
+  ]
+ }
+}

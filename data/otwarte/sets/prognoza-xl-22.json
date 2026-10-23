@@ -1,0 +1,219 @@
+{
+ "set": "prognoza-xl-22",
+ "ed": 40,
+ "stage": "o",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-22-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "demografia",
+   "th": true,
+   "topics": [
+    {
+     "title": "Opieka długoterminowa nad osobami starszymi – rynek, państwo czy rodzina?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "ryzyko niesamodzielności jako ryzyko społeczne",
+        "zawodności rynku ubezpieczeń opiekuńczych: selekcja negatywna, pokusa nadużycia",
+        "opieka nieformalna i jej koszt alternatywny",
+        "modele finansowania: ubezpieczenie społeczne, budżet, prywatne",
+        "usługi opiekuńcze jako sektor zatrudnienia (rola migrantów)"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "świadczenia w Polsce: zasiłek pielęgnacyjny, świadczenie pielęgnacyjne, bon senioralny, DPS",
+        "niemiecki model ubezpieczenia pielęgnacyjnego (Pflegeversicherung)",
+        "własna propozycja"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – rosnąca liczba osób 80+",
+       "teoria – ryzyko, zawodności rynku, opieka nieformalna, modele",
+       "praktyka – Polska i Niemcy",
+       "zakończenie – połączenie ubezpieczenia i usług środowiskowych"
+      ],
+      "b": [
+       "pomijanie kosztu opieki rodzinnej",
+       "brak zawodności rynku",
+       "brak przykładu zagranicznego"
+      ],
+      "d": [
+       "Niemcy mają obowiązkowe ubezpieczenie pielęgnacyjne od 1995 r. (Bundesministerium für Gesundheit)",
+       "liczba osób w wieku 80+ w Polsce ma się wyraźnie zwiększyć do 2060 r. (GUS, prognoza ludności 2023–2060)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-22-zadanie",
+  "title": "Zadanie z analizy finansowej – Kredyt hipoteczny młodej rodziny",
+  "pts": 15,
+  "topic": "finanse",
+  "own": true,
+  "th": true,
+  "vars": {
+   "C": 600000.0,
+   "wk": 20.0,
+   "r": 7.5,
+   "r2": 9.5,
+   "n": 300.0,
+   "D": 12000.0
+  },
+  "lets": [
+   [
+    "K",
+    "C*(1-wk/100)"
+   ],
+   [
+    "i",
+    "r/100/12"
+   ],
+   [
+    "i2",
+    "r2/100/12"
+   ],
+   [
+    "kk",
+    "K"
+   ],
+   [
+    "rata",
+    "K*i/(1-(1+i)**(-n))"
+   ],
+   [
+    "ods",
+    "rata*n-K"
+   ],
+   [
+    "dsti",
+    "rata/D*100"
+   ],
+   [
+    "rata2",
+    "K*i2/(1-(1+i2)**(-n))"
+   ],
+   [
+    "dsti2",
+    "rata2/D*100"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Młoda rodzina kupuje mieszkanie za 600 000 zł z wkładem własnym 20%. Resztę finansuje kredytem na 25 lat (300 rat równych) oprocentowanym 7,5% w skali roku. Dochód netto gospodarstwa wynosi 12 000 zł miesięcznie (dane umowne)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 4,
+    "prompt": "Oblicz kwotę kredytu i miesięczną ratę.",
+    "answers": [
+     {
+      "label": "Kwota kredytu",
+      "value": 480000.0,
+      "calc": "K",
+      "unit": "zł",
+      "tol": 1.0
+     },
+     {
+      "label": "Rata",
+      "value": 3547.1577,
+      "calc": "K*i/(1-(1+i)**(-n))",
+      "unit": "zł",
+      "tol": 1.0
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "K = 600 000 × 0,8 = 480 000 zł;  R = K × i / (1 − (1 + i)⁻³⁰⁰), i = 7,5% / 12 = 0,625% ⇒ R ≈ 3 547,16 zł"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 3,
+    "prompt": "Oblicz łączną kwotę odsetek zapłaconych w całym okresie.",
+    "answers": [
+     {
+      "label": "Odsetki",
+      "value": 584147.296,
+      "calc": "rata*n-K",
+      "unit": "zł",
+      "tol": 50.0
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "3 547,16 × 300 − 480 000 ≈ 584 147 zł"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 4,
+    "prompt": "Oblicz relację raty do dochodu (DSTI) przy obecnym oprocentowaniu oraz po wzroście oprocentowania do 9,5%.",
+    "answers": [
+     {
+      "label": "DSTI obecnie",
+      "value": 29.5596,
+      "calc": "rata/D*100",
+      "unit": "%",
+      "tol": 0.05
+     },
+     {
+      "label": "Rata po wzroście stóp",
+      "value": 4193.744,
+      "calc": "K*i2/(1-(1+i2)**(-n))",
+      "unit": "zł",
+      "tol": 1.0
+     },
+     {
+      "label": "DSTI po wzroście stóp",
+      "value": 34.9479,
+      "calc": "rata2/D*100",
+      "unit": "%",
+      "tol": 0.05
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "3 547,16 / 12 000 ≈ 29,56%;  nowa rata ≈ 4 193,74 zł;  4 193,74 / 12 000 ≈ 34,95%"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "Oceń ryzyko kredytu ze zmienną stopą i wyjaśnij, jak koszty mieszkania mogą wpływać na decyzje o liczbie dzieci.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Wzrost stopy o 2 pkt proc. podnosi ratę o ok. 4 194 − 3 547 zł, a DSTI zbliża się do 35% – poziomu, przy którym banki i KNF uznają obciążenie za wysokie. Kredyt ze zmienną stopą przenosi ryzyko stopy procentowej na gospodarstwo; ochroną jest stała stopa (okresowo stała), bufor oszczędności i wyższy wkład własny."
+     },
+     {
+      "t": "p",
+      "x": "Wysoka rata i niepewność jej przyszłej wysokości ograniczają wydatki na inne cele i zwiększają koszt alternatywny kolejnego dziecka (większe mieszkanie, utrata części dochodu przy urlopie). Badania wskazują, że dostępność mieszkań wiąże się z wcześniejszym zakładaniem rodzin – stąd polityka mieszkaniowa (najem, budownictwo społeczne) jest elementem polityki demograficznej."
+     }
+    ]
+   }
+  ]
+ }
+}

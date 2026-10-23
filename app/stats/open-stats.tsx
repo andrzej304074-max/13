@@ -5,7 +5,8 @@ import { useEffect, useState } from "react";
 import { api, fmtPct, fmtPoints, withUser } from "@/lib/client";
 
 type Sum = { attempts: number; score: number; max: number; percent: number };
-type Part = { total: Sum & { items: number; available: number }; byStage: Record<string, Sum>; byTopic: Record<string, Sum> };
+type Part = { total: Sum & { items: number; available: number }; bySrc?: Record<string, Sum>; byStage: Record<string, Sum>; byTopic: Record<string, Sum> };
+const SRC: Record<string, string> = { owe: "z kluczy OWE", prognoza: "🔮 Prognoza XL" };
 const STAGE: Record<string, string> = { s: "szkolny", o: "okręgowy", c: "centralny" };
 const TOPIC: Record<string, string> = {
   mikro: "Mikroekonomia", makro: "Makroekonomia", polityka: "Polityka gosp.", finanse: "Podstawy finansów",
@@ -33,6 +34,7 @@ export function OpenStats() {
               </div>
               {Object.keys(p.byStage).length > 0 && (
                 <div className="open-breakdown small">
+                  {Object.entries(p.bySrc ?? {}).map(([s, v]) => <span key={s} data-src={s}>{SRC[s] ?? s}: {fmtPct(v.percent)} ({v.attempts})</span>)}
                   {Object.entries(p.byStage).map(([s, v]) => <span key={s}>etap {STAGE[s] ?? s}: {fmtPct(v.percent)}</span>)}
                   {Object.entries(p.byTopic).map(([t, v]) => <span key={t}>{TOPIC[t] ?? t}: {fmtPct(v.percent)}</span>)}
                 </div>

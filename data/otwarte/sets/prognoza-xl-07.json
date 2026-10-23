@@ -1,0 +1,246 @@
+{
+ "set": "prognoza-xl-07",
+ "ed": 40,
+ "stage": "s",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-07-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "demografia",
+   "th": true,
+   "topics": [
+    {
+     "title": "Wyludnianie się małych miast i wsi – przyczyny, skutki i możliwe działania",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "migracje wewnętrzne i suburbanizacja",
+        "nowa geografia ekonomiczna (P. Krugman) – aglomeracja i efekty skali",
+        "skutki dla rynku pracy, usług publicznych i finansów samorządów",
+        "dobra publiczne lokalne i koszty ich utrzymania przy malejącej liczbie mieszkańców",
+        "polityka regionalna – wyrównywanie czy wspieranie biegunów wzrostu"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "regiony Polski tracące ludność (GUS – dane wojewódzkie i gminne)",
+        "przykłady działań: transport, praca zdalna, fundusze UE, specjalne strefy ekonomiczne",
+        "przykład wyludnionych regionów (np. Niemcy Wschodnie)",
+        "własna ocena: co realnie można zrobić"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – nierówne skutki zmian demograficznych w przestrzeni",
+       "teoria – migracje, aglomeracja, dobra lokalne, polityka regionalna",
+       "praktyka – polskie regiony i przykłady działań",
+       "zakończenie – adaptacja zamiast walki z trendem"
+      ],
+      "b": [
+       "brak teorii aglomeracji",
+       "mylenie wyludniania z ogólnym spadkiem liczby ludności kraju",
+       "brak danych regionalnych"
+      ],
+      "d": [
+       "woj. świętokrzyskie, opolskie i łódzkie należą do najszybciej tracących ludność, mazowieckie i pomorskie – do zyskujących (GUS, prognoza ludności dla województw)"
+      ]
+     }
+    },
+    {
+     "title": "Czy praca zdalna zmieni rynek pracy?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "elastyczne formy zatrudnienia",
+        "wpływ pracy zdalnej na wydajność i koszty firm",
+        "rynek pracy bez granic: konkurencja o pracowników, płace",
+        "skutki dla miast, nieruchomości, transportu",
+        "problemy: kontrola, samotność, nierówności"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "przepisy o pracy zdalnej w Kodeksie pracy (2023)",
+        "dane o skali pracy zdalnej (GUS, Eurostat)",
+        "przykłady firm",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – pandemia jako przyspieszenie",
+       "teoria – elastyczność, wydajność, rynek pracy",
+       "praktyka – przepisy, dane, przykłady",
+       "zakończenie – trwała hybryda w części zawodów"
+      ],
+      "b": [
+       "uogólnianie na wszystkie zawody",
+       "brak skutków przestrzennych",
+       "brak przepisów"
+      ],
+      "d": [
+       "przepisy o pracy zdalnej w Kodeksie pracy obowiązują od 7 kwietnia 2023 r. (Dz.U.)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-07-zadanie",
+  "title": "Zadanie z podstaw ekonomii – Rynek usług opiekuńczych",
+  "pts": 15,
+  "topic": "demografia",
+  "own": true,
+  "th": true,
+  "vars": {
+   "a": 1200.0,
+   "a2": 1500.0,
+   "bd": 4.0,
+   "cs": -300.0,
+   "ds": 6.0,
+   "pmax": 160.0
+  },
+  "lets": [
+   [
+    "p1",
+    "(a-cs)/(bd+ds)"
+   ],
+   [
+    "q1",
+    "a-bd*p1"
+   ],
+   [
+    "p2",
+    "(a2-cs)/(bd+ds)"
+   ],
+   [
+    "q2",
+    "a2-bd*p2"
+   ],
+   [
+    "nd",
+    "(a2-bd*pmax)-(cs+ds*pmax)"
+   ],
+   [
+    "qd",
+    "a2-bd*pmax"
+   ],
+   [
+    "qs",
+    "cs+ds*pmax"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Na lokalnym rynku usług opiekuńczych dla osób starszych popyt opisuje funkcja Qd = 1 200 − 4P, a podaż Qs = −300 + 6P, gdzie Q to tysiące godzin opieki miesięcznie, a P – cena godziny w zł (dane umowne)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 3,
+    "prompt": "Wyznacz cenę i ilość równowagi.",
+    "answers": [
+     {
+      "label": "Cena równowagi",
+      "value": 150.0,
+      "calc": "(a-cs)/(bd+ds)",
+      "unit": "zł",
+      "tol": 0.1
+     },
+     {
+      "label": "Ilość równowagi",
+      "value": 600.0,
+      "calc": "a-bd*p1",
+      "unit": "tys. godz.",
+      "tol": 0.5
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "1 200 − 4P = −300 + 6P ⇒ P = 150 zł, Q = 600 tys. godzin"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 4,
+    "prompt": "Wskutek starzenia się mieszkańców popyt rośnie do Qd = 1 500 − 4P. Wyznacz nową równowagę.",
+    "answers": [
+     {
+      "label": "Nowa cena",
+      "value": 180.0,
+      "calc": "(a2-cs)/(bd+ds)",
+      "unit": "zł",
+      "tol": 0.1
+     },
+     {
+      "label": "Nowa ilość",
+      "value": 780.0,
+      "calc": "a2-bd*p2",
+      "unit": "tys. godz.",
+      "tol": 0.5
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "1 500 − 4P = −300 + 6P ⇒ P = 180 zł, Q = 780 tys. godzin"
+     },
+     {
+      "t": "p",
+      "x": "Przesunięcie popytu w prawo podnosi zarówno cenę, jak i ilość usług."
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 4,
+    "prompt": "Samorząd wprowadza cenę maksymalną 160 zł za godzinę (przy nowym popycie). Oblicz wielkość niedoboru.",
+    "answers": [
+     {
+      "label": "Niedobór",
+      "value": 200.0,
+      "calc": "(a2-bd*pmax)-(cs+ds*pmax)",
+      "unit": "tys. godz.",
+      "tol": 0.5
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "Qd = 1 500 − 4 × 160 = 860;  Qs = −300 + 6 × 160 = 660;  niedobór = 200 tys. godzin"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "Wskaż skutki ceny maksymalnej na tym rynku i zaproponuj inny sposób pomocy osobom starszym.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Cena maksymalna poniżej ceny równowagi powoduje niedobór: część osób nie otrzyma opieki, powstają kolejki, rośnie szara strefa (opieka „na czarno” po wyższej cenie), a firmy mają mniejszą zachętę do zatrudniania opiekunów. Lepszym rozwiązaniem jest dopłata do popytu najuboższych (np. bon senioralny) połączona ze wsparciem podaży – szkoleniem opiekunów, ułatwieniem zatrudniania cudzoziemców, finansowaniem usług środowiskowych."
+     }
+    ]
+   }
+  ]
+ }
+}

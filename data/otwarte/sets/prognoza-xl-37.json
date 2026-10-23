@@ -1,0 +1,188 @@
+{
+ "set": "prognoza-xl-37",
+ "ed": 40,
+ "stage": "c",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-37-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "makro",
+   "th": true,
+   "topics": [
+    {
+     "title": "Demografia a rynki finansowe – czy starzenie się społeczeństw obniży stopy zwrotu z kapitału?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "popyt na aktywa w cyklu życia: akumulacja i dekumulacja oszczędności",
+        "hipoteza „asset meltdown” – spadek cen aktywów przy wycofywaniu oszczędności",
+        "naturalna stopa procentowa a struktura wieku",
+        "międzynarodowy przepływ kapitału do młodszych gospodarek",
+        "zmiana preferencji ryzyka z wiekiem"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "Japonia – długotrwale niskie stopy i ceny aktywów",
+        "globalne fundusze emerytalne i ich alokacja",
+        "rynek nieruchomości w Polsce a demografia",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – oszczędności baby boomers",
+       "teoria – cykl życia, asset meltdown, r*, przepływy",
+       "praktyka – Japonia, fundusze, nieruchomości",
+       "zakończenie – efekt umiarkowany, łagodzony globalizacją kapitału"
+      ],
+      "b": [
+       "deterministyczne przewidywanie krachu",
+       "brak przepływów kapitału",
+       "brak przykładów"
+      ],
+      "d": [
+       "aktywa funduszy emerytalnych w krajach OECD przekraczają 30 bln USD (OECD, Pension Markets in Focus)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-37-zadanie",
+  "title": "Zadanie analityczne – Dynamika długu publicznego przy rosnących wydatkach na emerytury",
+  "pts": 15,
+  "topic": "polityka",
+  "own": true,
+  "th": true,
+  "vars": {
+   "d0": 55.0,
+   "r": 5.0,
+   "g": 7.0,
+   "pd": 3.0,
+   "r2": 7.0
+  },
+  "lets": [
+   [
+    "d1",
+    "d0*(1+r/100)/(1+g/100)+pd"
+   ],
+   [
+    "pb",
+    "d0*(r-g)/100/(1+g/100)"
+   ],
+   [
+    "pbn",
+    "-pb"
+   ],
+   [
+    "d2",
+    "d0*(1+r2/100)/(1+g/100)+pd"
+   ],
+   [
+    "pb2",
+    "d0*(r2-g)/100/(1+g/100)"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Dług publiczny wynosi 55% PKB. Nominalna stopa procentowa od długu to 5%, nominalne tempo wzrostu PKB – 7%, a deficyt pierwotny (bez odsetek) – 3% PKB. Dynamikę długu opisuje równanie: dₜ = dₜ₋₁ × (1 + r) / (1 + g) + deficyt pierwotny (dane umowne)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 3,
+    "prompt": "Oblicz dług w relacji do PKB po roku.",
+    "answers": [
+     {
+      "label": "Dług po roku",
+      "value": 56.972,
+      "calc": "d0*(1+r/100)/(1+g/100)+pd",
+      "unit": "% PKB",
+      "tol": 0.02
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "d₁ = 55 × 1,05 / 1,07 + 3 ≈ 56,97% PKB"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 4,
+    "prompt": "Oblicz saldo pierwotne, które ustabilizowałoby dług na poziomie 55% PKB.",
+    "answers": [
+     {
+      "label": "Saldo stabilizujące",
+      "value": -1.028,
+      "calc": "d0*(r-g)/100/(1+g/100)",
+      "unit": "% PKB",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "saldo pierwotne* = d × (r − g) / (1 + g) = 55 × (0,05 − 0,07) / 1,07 ≈ −1,03% PKB"
+     },
+     {
+      "t": "p",
+      "x": "Wynik ujemny oznacza, że dług się nie zwiększy nawet przy deficycie pierwotnym do ok. 1,03% PKB – bo r < g."
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 4,
+    "prompt": "Stopa procentowa rośnie do 7% (r = g). Oblicz dług po roku przy deficycie pierwotnym 3% PKB i saldo pierwotne stabilizujące.",
+    "answers": [
+     {
+      "label": "Dług po roku",
+      "value": 58.0,
+      "calc": "d0*(1+r2/100)/(1+g/100)+pd",
+      "unit": "% PKB",
+      "tol": 0.02
+     },
+     {
+      "label": "Saldo stabilizujące",
+      "value": 0.0,
+      "calc": "d0*(r2-g)/100/(1+g/100)",
+      "unit": "% PKB",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "d₁ = 55 × 1,07 / 1,07 + 3 = 58% PKB;  saldo stabilizujące = 0"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "Wydatki emerytalne i zdrowotne będą rosły o ok. 0,15 pkt proc. PKB rocznie. Wyjaśnij, jak wpłynie to na dynamikę długu i jakie działania mogą ją ustabilizować.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Rosnące wydatki związane z wiekiem zwiększają co roku deficyt pierwotny, więc nawet przy korzystnej relacji r < g dług rośnie, jeśli deficyt pierwotny przekracza poziom stabilizujący (≈ 1,0% PKB). Gdy r zbliża się do g (wyższe stopy, wolniejszy wzrost z powodu kurczenia się zasobu pracy), margines znika i każdy deficyt pierwotny podnosi dług. Stabilizację przynoszą: konsolidacja (ograniczenie wydatków lub wyższe podatki), reformy zwiększające wzrost potencjalny (zatrudnienie, wydajność, imigracja), powiązanie świadczeń z długością życia oraz wiarygodne reguły fiskalne obniżające premię za ryzyko (r)."
+     }
+    ]
+   }
+  ]
+ }
+}

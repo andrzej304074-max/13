@@ -1,0 +1,184 @@
+{
+ "set": "prognoza-xl-21",
+ "ed": 40,
+ "stage": "o",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-21-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "polityka",
+   "th": true,
+   "topics": [
+    {
+     "title": "Polityka rodzinna – transfery pieniężne czy usługi publiczne?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "cele polityki rodzinnej: dzietność, ubóstwo dzieci, aktywność zawodowa rodziców",
+        "transfery pieniężne – efekt dochodowy i ewentualny wpływ na podaż pracy",
+        "usługi (żłobki, przedszkola, opieka) – koszt alternatywny czasu matek",
+        "urlopy rodzicielskie i rola ojców",
+        "efektywność wydatków i ocena skutków (ewaluacja polityk)"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "500+ / 800+ – skala wydatków i oceny skutków",
+        "żłobki i program „Aktywny rodzic”",
+        "Francja i kraje nordyckie – model usług; Węgry – model ulg",
+        "własna ocena i proponowana struktura wydatków"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – rosnące wydatki i spadająca dzietność",
+       "teoria – cele i narzędzia, efekty dochodowe i substytucyjne",
+       "praktyka – Polska, przykłady zagraniczne",
+       "zakończenie – usługi i stabilność łatwiej przekładają się na decyzje niż transfery"
+      ],
+      "b": [
+       "ocenianie polityki tylko przez dzietność (pomijanie ubóstwa dzieci)",
+       "brak efektu na podaż pracy",
+       "brak danych o wydatkach"
+      ],
+      "d": [
+       "koszt programu 800+ ok. 60–65 mld zł rocznie (ustawa budżetowa 2024–2025)",
+       "świadczenie wychowawcze 800 zł od stycznia 2024 r. (ZUS)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-21-zadanie",
+  "title": "Zadanie z analizy finansowej – Wypłata kapitału emerytalnego w ratach",
+  "pts": 15,
+  "topic": "finanse",
+  "own": true,
+  "th": true,
+  "vars": {
+   "K": 300000.0,
+   "r": 4.0,
+   "n1": 240.0,
+   "n2": 300.0
+  },
+  "lets": [
+   [
+    "i",
+    "r/100/12"
+   ],
+   [
+    "a20",
+    "K*i/(1-(1+i)**(-n1))"
+   ],
+   [
+    "a25",
+    "K*i/(1-(1+i)**(-n2))"
+   ],
+   [
+    "a0",
+    "K/n1"
+   ],
+   [
+    "wz",
+    "(a20/a0-1)*100"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Emeryt ma na IKE 300 000 zł i chce wypłacać te środki w równych miesięcznych ratach (na koniec miesiąca). Pozostały kapitał jest oprocentowany 4% w skali roku, z miesięczną kapitalizacją (dane umowne)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 4,
+    "prompt": "Oblicz miesięczną wypłatę przy okresie wypłat 20 lat.",
+    "answers": [
+     {
+      "label": "Wypłata przez 20 lat",
+      "value": 1817.941,
+      "calc": "K*i/(1-(1+i)**(-n1))",
+      "unit": "zł",
+      "tol": 0.5
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "R = K × i / (1 − (1 + i)⁻ⁿ) = 300 000 × 0,003333 / (1 − 1,003333⁻²⁴⁰) ≈ 1 817,94 zł"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 4,
+    "prompt": "Oblicz miesięczną wypłatę przy okresie wypłat 25 lat.",
+    "answers": [
+     {
+      "label": "Wypłata przez 25 lat",
+      "value": 1583.5105,
+      "calc": "K*i/(1-(1+i)**(-n2))",
+      "unit": "zł",
+      "tol": 0.5
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "R = 300 000 × 0,003333 / (1 − 1,003333⁻³⁰⁰) ≈ 1 583,51 zł"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 3,
+    "prompt": "Ile wynosiłaby wypłata przez 20 lat, gdyby kapitał nie był oprocentowany? O ile procent oprocentowanie zwiększa wypłatę?",
+    "answers": [
+     {
+      "label": "Wypłata bez oprocentowania",
+      "value": 1250.0,
+      "calc": "K/n1",
+      "unit": "zł",
+      "tol": 0.5
+     },
+     {
+      "label": "Wzrost wypłaty",
+      "value": 45.4353,
+      "calc": "(a20/a0-1)*100",
+      "unit": "%",
+      "tol": 0.1
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "300 000 / 240 = 1 250 zł;  1 817,94 / 1 250 − 1 ≈ 45,4%"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "Wyjaśnij pojęcie ryzyka długowieczności i porównaj wypłaty ratalne z rentą dożywotnią.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Ryzyko długowieczności to ryzyko, że człowiek przeżyje swoje oszczędności – nie zna długości własnego życia. Przy wypłatach ratalnych na 20 lat emeryt, który dożyje np. 90 lat, zostanie bez środków; wydłużenie wypłat do 25 lat zmniejsza ratę o ok. 1 818 − 1 584 zł. Renta dożywotnia (np. emerytura z ZUS albo produkt ubezpieczyciela) przenosi to ryzyko na instytucję, która „uśrednia” je w dużej grupie: osoby żyjące krócej finansują dłużej żyjących. Wadą renty jest brak dziedziczenia i problem selekcji negatywnej (renty kupują częściej osoby oczekujące długiego życia, więc są droższe)."
+     }
+    ]
+   }
+  ]
+ }
+}

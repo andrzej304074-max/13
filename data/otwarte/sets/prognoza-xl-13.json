@@ -1,0 +1,227 @@
+{
+ "set": "prognoza-xl-13",
+ "ed": 40,
+ "stage": "s",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-13-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "makro",
+   "th": false,
+   "topics": [
+    {
+     "title": "Polityka pieniężna – jak bank centralny wpływa na gospodarkę?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "cele i niezależność banku centralnego",
+        "instrumenty: stopy procentowe, operacje otwartego rynku, rezerwa obowiązkowa",
+        "mechanizm transmisji (kanał stopy procentowej, kursowy, kredytowy, oczekiwań)",
+        "strategia bezpośredniego celu inflacyjnego",
+        "niekonwencjonalna polityka pieniężna (QE)"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "NBP i RPP – stopy w latach 2020–2025",
+        "EBC i Fed po pandemii",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – rola stóp procentowych",
+       "teoria – cele, instrumenty, transmisja",
+       "praktyka – RPP 2020–2025, EBC/Fed",
+       "zakończenie – skuteczna, ale z opóźnieniem"
+      ],
+      "b": [
+       "mylenie polityki pieniężnej z fiskalną",
+       "brak opóźnień transmisji",
+       "brak danych"
+      ],
+      "d": [
+       "stopa referencyjna NBP 0,1% w 2021 r. i 6,75% od września 2022 r. (NBP)"
+      ]
+     }
+    },
+    {
+     "title": "Czy warto być przedsiębiorcą?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "przedsiębiorczość i jej cechy",
+        "ryzyko i niepewność (F. Knight)",
+        "zysk ekonomiczny a księgowy, koszt alternatywny",
+        "formy prawne działalności",
+        "źródła finansowania"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "zakładanie firmy w Polsce: CEIDG, ulgi (ulga na start, mały ZUS)",
+        "przykład polskiego przedsiębiorcy",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – przedsiębiorczość jako wybór",
+       "teoria – ryzyko, zysk, formy, finansowanie",
+       "praktyka – procedury i ulgi, przykład",
+       "zakończenie – warto przy świadomości ryzyka"
+      ],
+      "b": [
+       "mylenie zysku księgowego z ekonomicznym",
+       "brak kosztu alternatywnego",
+       "brak przykładów"
+      ],
+      "d": [
+       "„ulga na start” – 6 miesięcy bez składek społecznych dla nowego przedsiębiorcy (ustawa Prawo przedsiębiorców)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-13-zadanie",
+  "title": "Zadanie z podstaw ekonomii – Lokata, podatek i inflacja",
+  "pts": 15,
+  "topic": "finanse",
+  "own": true,
+  "th": false,
+  "vars": {
+   "K": 10000.0,
+   "r": 5.0,
+   "pod": 19.0,
+   "inf": 3.5
+  },
+  "lets": [
+   [
+    "odn",
+    "K*r/100*(1-pod/100)"
+   ],
+   [
+    "odb",
+    "K*r/100"
+   ],
+   [
+    "rr",
+    "((1+odn/K)/(1+inf/100)-1)*100"
+   ],
+   [
+    "rn",
+    "odn/K*100"
+   ],
+   [
+    "k10",
+    "K*(1+odn/K)**10"
+   ],
+   [
+    "k10r",
+    "k10/(1+inf/100)**10"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Uczeń wpłaca 10 000 zł na roczną lokatę z oprocentowaniem 5% w skali roku i kapitalizacją roczną. Od odsetek pobierany jest podatek 19% („podatek Belki”). Inflacja wynosi 3,5% rocznie (dane umowne)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 3,
+    "prompt": "Oblicz odsetki netto po roku.",
+    "answers": [
+     {
+      "label": "Odsetki netto",
+      "value": 405.0,
+      "calc": "K*r/100*(1-pod/100)",
+      "unit": "zł",
+      "tol": 0.5
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "odsetki brutto = 10 000 × 5% = 500 zł;  netto = 500 × (1 − 0,19) = 405 zł"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 4,
+    "prompt": "Oblicz realną stopę zwrotu netto (wzór Fishera w wersji dokładnej).",
+    "answers": [
+     {
+      "label": "Realna stopa zwrotu",
+      "value": 0.5314,
+      "calc": "((1+odn/K)/(1+inf/100)-1)*100",
+      "unit": "%",
+      "tol": 0.02
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "nominalna stopa netto = 4,05%;  r = (1 + 0,0405) / (1 + 0,035) − 1 ≈ 0,53%"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 4,
+    "prompt": "Uczeń odnawia lokatę co roku przez 10 lat na tych samych warunkach. Oblicz końcową kwotę netto i jej wartość realną (w cenach dzisiejszych).",
+    "answers": [
+     {
+      "label": "Kwota nominalna",
+      "value": 14873.7626,
+      "calc": "K*(1+odn/K)**10",
+      "unit": "zł",
+      "tol": 1.0
+     },
+     {
+      "label": "Wartość realna",
+      "value": 10544.2901,
+      "calc": "k10/(1+inf/100)**10",
+      "unit": "zł",
+      "tol": 1.0
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "10 000 × 1,0405¹⁰ ≈ 14 873,76 zł;  realnie: 14 873,76 / 1,035¹⁰ ≈ 10 544,29 zł"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "Wyjaśnij znaczenie realnej stopy zwrotu i wskaż produkt, który chroni oszczędności przed inflacją.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Realna stopa zwrotu pokazuje przyrost siły nabywczej oszczędności. Tu jest bliska zera (0,53%) – po 10 latach realny przyrost wynosi tylko ok. 10 544 − 10 000 zł. Przy inflacji wyższej od stopy netto oszczędności realnie tracą. Ochronę dają m.in. obligacje skarbowe indeksowane inflacją (oprocentowanie = inflacja + marża), a w długim okresie – zdywersyfikowane inwestycje w akcje (z wyższym ryzykiem)."
+     }
+    ]
+   }
+  ]
+ }
+}

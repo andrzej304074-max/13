@@ -1,0 +1,252 @@
+{
+ "set": "prognoza-xl-04",
+ "ed": 40,
+ "stage": "s",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-04-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "demografia",
+   "th": true,
+   "topics": [
+    {
+     "title": "System emerytalny wobec starzenia się społeczeństwa",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "system repartycyjny (PAYG) a kapitałowy – zasady działania",
+        "system zdefiniowanego świadczenia a zdefiniowanej składki",
+        "wpływ starzenia na system repartycyjny: współczynnik obciążenia, stopa zastąpienia",
+        "możliwe reformy: podniesienie wieku, wyższe składki, niższe świadczenia, oszczędzanie dobrowolne",
+        "ryzyka systemu kapitałowego (rynkowe, inflacja, koszty zarządzania)",
+        "emerytura minimalna i ubóstwo osób starszych"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "polski system: ZUS (I filar), OFE / IKE (II–III filar), PPK, reforma 1999 i zmiany 2011–2014",
+        "wiek emerytalny 60/65 i prognozy stopy zastąpienia (ZUS)",
+        "przykład zagraniczny: Szwecja (NDC) lub Chile (system kapitałowy)",
+        "własna ocena: co powinno się zmienić"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – rosnąca liczba emerytów na jednego pracującego",
+       "teoria – PAYG vs kapitałowy, DB vs DC, skutki starzenia",
+       "praktyka – reforma 1999, OFE, PPK, wiek emerytalny",
+       "zakończenie – dłuższa aktywność i oszczędzanie dobrowolne jako uzupełnienie"
+      ],
+      "b": [
+       "twierdzenie, że system kapitałowy jest odporny na demografię",
+       "mylenie stopy zastąpienia z wysokością emerytury",
+       "brak opisu, kto płaci emerytury w PAYG"
+      ],
+      "d": [
+       "wiek emerytalny w Polsce 60 lat (kobiety) i 65 lat (mężczyźni) od 2017 r. (ustawa)",
+       "prognozy ZUS wskazują spadek stopy zastąpienia w drugiej połowie XXI w. (ZUS, Prognoza wpływów i wydatków FUS)"
+      ]
+     }
+    },
+    {
+     "title": "Ekonomia współdzielenia – moda czy trwała zmiana?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "pojęcie gospodarki współdzielenia i platform cyfrowych",
+        "efekty sieciowe i rynki dwustronne",
+        "obniżenie kosztów transakcyjnych (R. Coase) i problem zaufania (asymetria informacji, oceny)",
+        "skutki dla konkurencji, zatrudnienia (praca platformowa) i regulacji",
+        "efektywność wykorzystania zasobów"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "przykłady platform w Polsce: przewozy, najem krótkoterminowy, wynajem rzeczy",
+        "spory regulacyjne: najem krótkoterminowy a ceny mieszkań, dyrektywa UE o pracy platformowej",
+        "własna ocena: które modele są trwałe"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – definicja",
+       "teoria – koszty transakcyjne, efekty sieciowe, asymetria informacji",
+       "praktyka – platformy i regulacje",
+       "zakończenie – trwała zmiana wymagająca nowych regulacji"
+      ],
+      "b": [
+       "utożsamianie ekonomii współdzielenia z każdym sklepem internetowym",
+       "brak wątku regulacji",
+       "brak przykładów"
+      ],
+      "d": [
+       "dyrektywa UE w sprawie poprawy warunków pracy za pośrednictwem platform internetowych przyjęta w 2024 r. (UE)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-04-zadanie",
+  "title": "Zadanie z podstaw ekonomii – Emerytura w systemie zdefiniowanej składki",
+  "pts": 15,
+  "topic": "demografia",
+  "own": true,
+  "th": true,
+  "vars": {
+   "K60": 620000.0,
+   "S60": 90000.0,
+   "T60": 260.4,
+   "K65": 820000.0,
+   "S65": 105000.0,
+   "T65": 220.8,
+   "w": 9500.0
+  },
+  "lets": [
+   [
+    "e60",
+    "(K60+S60)/T60"
+   ],
+   [
+    "e65",
+    "(K65+S65)/T65"
+   ],
+   [
+    "sz60",
+    "e60/w*100"
+   ],
+   [
+    "sz65",
+    "e65/w*100"
+   ],
+   [
+    "wz",
+    "(e65/e60-1)*100"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "W polskim systemie zdefiniowanej składki emerytura to suma zwaloryzowanego kapitału na koncie i subkoncie w ZUS podzielona przez średnie dalsze trwanie życia (w miesiącach) w wieku przejścia na emeryturę. Pani Anna (dane umowne) ma ostatnie wynagrodzenie 9 500 zł brutto."
+   },
+   {
+    "t": "table",
+    "head": [
+     "Wiek przejścia",
+     "Konto (zł)",
+     "Subkonto (zł)",
+     "Dalsze trwanie życia (mies.)"
+    ],
+    "rows": [
+     [
+      "60 lat",
+      "620 000",
+      "90 000",
+      "260,4"
+     ],
+     [
+      "65 lat",
+      "820 000",
+      "105 000",
+      "220,8"
+     ]
+    ]
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 4,
+    "prompt": "Oblicz emeryturę pani Anny, jeśli przejdzie na emeryturę w wieku 60 lat.",
+    "answers": [
+     {
+      "label": "Emerytura w wieku 60 lat",
+      "value": 2726.5745,
+      "calc": "(K60+S60)/T60",
+      "unit": "zł",
+      "tol": 1.0
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "(620 000 + 90 000) / 260,4 ≈ 2 726,57 zł"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 4,
+    "prompt": "Oblicz emeryturę w wieku 65 lat.",
+    "answers": [
+     {
+      "label": "Emerytura w wieku 65 lat",
+      "value": 4189.3116,
+      "calc": "(K65+S65)/T65",
+      "unit": "zł",
+      "tol": 1.0
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "(820 000 + 105 000) / 220,8 ≈ 4 189,31 zł"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 3,
+    "prompt": "Oblicz stopę zastąpienia w obu wariantach.",
+    "answers": [
+     {
+      "label": "Stopa zastąpienia (60 lat)",
+      "value": 28.7008,
+      "calc": "e60/w*100",
+      "unit": "%",
+      "tol": 0.1
+     },
+     {
+      "label": "Stopa zastąpienia (65 lat)",
+      "value": 44.098,
+      "calc": "e65/w*100",
+      "unit": "%",
+      "tol": 0.1
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "2 727 / 9 500 ≈ 28,7%;  4 189 / 9 500 ≈ 44,1%"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "Wyjaśnij, dlaczego 5 lat dłuższej pracy zwiększa emeryturę o ponad połowę.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Emerytura wzrosła o ok. 54%. Działają dwa efekty naraz: (1) licznik – przez 5 lat wpływają nowe składki, a cały kapitał jest waloryzowany; (2) mianownik – średni okres pobierania emerytury jest krótszy (o ok. 260 − 221 miesięcy), więc kapitał dzieli się na mniej miesięcy. W systemie zdefiniowanej składki wcześniejsza emerytura nie jest „za darmo” – wypłata zostaje rozłożona na dłuższy okres."
+     }
+    ]
+   }
+  ]
+ }
+}

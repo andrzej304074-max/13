@@ -1,0 +1,201 @@
+{
+ "set": "prognoza-xl-19",
+ "ed": 40,
+ "stage": "o",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-19-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "demografia",
+   "th": true,
+   "topics": [
+    {
+     "title": "Kurczący się zasób pracy – jak gospodarka może odpowiedzieć na niedobór pracowników?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "zasób pracy, ludność w wieku produkcyjnym, współczynnik aktywności zawodowej",
+        "źródła wzrostu podaży pracy: aktywizacja (kobiety, osoby 55+, osoby z niepełnosprawnościami), migracje, dłuższa praca",
+        "wydajność pracy jako alternatywa – kapitał, technologia, organizacja",
+        "płace realne przy niedoborze pracy – teoria produktywności krańcowej",
+        "niedopasowanie strukturalne (kwalifikacje, regiony) i krzywa Beveridge’a",
+        "rola edukacji i kształcenia ustawicznego"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "zmiana liczby ludności w wieku produkcyjnym w Polsce (GUS)",
+        "wskaźnik zatrudnienia 20–64 w Polsce i cel UE (78% w 2030 r.)",
+        "wakaty i branże z niedoborami (barometr zawodów)",
+        "własna ocena: które źródło jest najważniejsze"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – mniej osób w wieku produkcyjnym",
+       "teoria – zasób pracy, źródła podaży, wydajność, płace, Beveridge",
+       "praktyka – dane GUS i Eurostat, barometr zawodów",
+       "zakończenie – aktywizacja i wydajność ważniejsze niż sama imigracja"
+      ],
+      "b": [
+       "mylenie ludności w wieku produkcyjnym z pracującymi",
+       "brak wątku wydajności",
+       "ogólniki bez branż"
+      ],
+      "d": [
+       "wskaźnik zatrudnienia 20–64 w Polsce ok. 78% (2024, Eurostat)",
+       "cel UE na 2030 r. – co najmniej 78% (Europejski filar praw socjalnych)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-19-zadanie",
+  "title": "Zadanie z analizy finansowej – Ocena inwestycji w dom seniora",
+  "pts": 15,
+  "topic": "firma",
+  "own": true,
+  "th": true,
+  "vars": {
+   "I0": 12.0,
+   "CF": 1.8,
+   "RV": 4.0,
+   "r": 8.0,
+   "r2": 10.0,
+   "n": 10.0
+  },
+  "lets": [
+   [
+    "pb",
+    "I0/CF"
+   ],
+   [
+    "npv",
+    "-I0+CF*(1-(1+r/100)**(-n))/(r/100)+RV/(1+r/100)**n"
+   ],
+   [
+    "fa",
+    "(1-(1+r/100)**(-n))/(r/100)"
+   ],
+   [
+    "pvrv",
+    "RV/(1+r/100)**n"
+   ],
+   [
+    "npv2",
+    "-I0+CF*(1-(1+r2/100)**(-n))/(r2/100)+RV/(1+r2/100)**n"
+   ],
+   [
+    "fa2",
+    "(1-(1+r2/100)**(-n))/(r2/100)"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Inwestor rozważa budowę domu seniora. Nakład początkowy wynosi 12 mln zł. Przez 10 lat dom ma przynosić przepływy pieniężne netto 1,8 mln zł rocznie (na koniec roku), a po 10 latach może zostać sprzedany za 4 mln zł. Koszt kapitału wynosi 8% (dane umowne)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 3,
+    "prompt": "Oblicz prosty okres zwrotu nakładów (bez uwzględnienia wartości końcowej).",
+    "answers": [
+     {
+      "label": "Okres zwrotu",
+      "value": 6.6667,
+      "calc": "I0/CF",
+      "unit": "lat",
+      "tol": 0.02
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "PP = 12 / 1,8 ≈ 6,67 roku"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 4,
+    "prompt": "Oblicz wartość bieżącą netto (NPV) inwestycji przy koszcie kapitału 8%.",
+    "answers": [
+     {
+      "label": "NPV",
+      "value": 1.9309,
+      "calc": "-I0+CF*(1-(1+r/100)**(-n))/(r/100)+RV/(1+r/100)**n",
+      "unit": "mln zł",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "NPV = −12 + 1,8 × 6,7101 + 4 / 1,08¹⁰ = −12 + 6,7101×1,8 + 1,853 ≈ 1,931 mln zł"
+     },
+     {
+      "t": "p",
+      "x": "Czynnik 6,7101 to współczynnik dyskontujący rentę: (1 − 1,08⁻¹⁰) / 0,08."
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 4,
+    "prompt": "Oblicz NPV przy koszcie kapitału 10%.",
+    "answers": [
+     {
+      "label": "NPV przy 10%",
+      "value": 0.6024,
+      "calc": "-I0+CF*(1-(1+r2/100)**(-n))/(r2/100)+RV/(1+r2/100)**n",
+      "unit": "mln zł",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "NPV = −12 + 1,8 × 6,1446 + 4 / 1,1¹⁰ ≈ 0,602 mln zł"
+     },
+     {
+      "t": "p",
+      "x": "NPV maleje wraz ze wzrostem kosztu kapitału, ale nadal jest dodatnie – wewnętrzna stopa zwrotu (IRR) przekracza 10%."
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "Oceń opłacalność inwestycji i wskaż czynniki demograficzne oraz ryzyka, które mogą zmienić przepływy pieniężne.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Inwestycja jest opłacalna (NPV > 0 przy obu stopach), choć okres zwrotu jest długi (6,7 roku), więc wynik zależy od wartości końcowej i stóp procentowych."
+     },
+     {
+      "t": "ul",
+      "items": [
+       "szansa: szybki wzrost liczby osób 80+ (GUS) i niewystarczająca liczba miejsc w DPS – wysokie obłożenie,",
+       "ryzyko: koszty pracy przy niedoborze opiekunów, ceny energii, wymogi standardów opieki,",
+       "ryzyko: zdolność płatnicza seniorów i rodzin (niskie emerytury), zmiany w finansowaniu publicznym,",
+       "ryzyko lokalizacji: odpływ ludności z małych miast – mniejszy popyt lokalny, trudności w rekrutacji."
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

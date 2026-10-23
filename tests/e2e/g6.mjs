@@ -12,7 +12,7 @@ await p.click("form button.btn"); await p.waitForURL((u) => !u.pathname.startsWi
 // 1. lista zadań z filtrem etapu centralnego
 await p.goto(`${B}/zadania?etap=c`); await p.waitForSelector('[data-testid="open-item"]');
 await p.click('[data-testid="open-random"]'); await p.waitForURL(/\/zadania\/.+/);
-check(/-centralne-/.test(p.url()), `losowe zadanie z etapu centralnego (${p.url()})`);
+check(/-centralne-|prognoza-xl-(3[5-9]|4\d|50)-/.test(p.url()), `losowe zadanie z etapu centralnego (${p.url()})`);
 // 2. eseje
 await p.goto(`${B}/eseje`); await p.waitForSelector('[data-testid="open-item"]');
 await p.click('[data-testid="open-random"]'); await p.waitForURL(/\/eseje\/.+/);

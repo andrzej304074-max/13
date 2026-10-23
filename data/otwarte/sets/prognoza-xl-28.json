@@ -1,0 +1,182 @@
+{
+ "set": "prognoza-xl-28",
+ "ed": 40,
+ "stage": "o",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-28-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "demografia",
+   "th": true,
+   "topics": [
+    {
+     "title": "System edukacji w czasach niżu demograficznego",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "edukacja jako inwestycja w kapitał ludzki (T. Schultz, G. Becker)",
+        "stopa zwrotu z edukacji",
+        "koszty stałe szkół przy malejącej liczbie uczniów",
+        "jakość a ilość – możliwość podniesienia nakładów na ucznia",
+        "dopasowanie kształcenia do rynku pracy, kształcenie zawodowe"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "spadek liczby uczniów i studentów w Polsce",
+        "reorganizacja sieci szkół i uczelni",
+        "wyniki PISA Polski",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – mniej uczniów",
+       "teoria – kapitał ludzki, koszty stałe, jakość",
+       "praktyka – dane, sieć szkół, PISA",
+       "zakończenie – niż jako szansa na wyższą jakość"
+      ],
+      "b": [
+       "ograniczenie do zamykania szkół",
+       "brak teorii kapitału ludzkiego",
+       "brak danych"
+      ],
+      "d": [
+       "liczba studentów w Polsce spadła z ok. 1,95 mln (2005) do ok. 1,2 mln (2023) (GUS, Szkolnictwo wyższe)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-28-zadanie",
+  "title": "Zadanie z analizy finansowej – Leasing czy zakup za gotówkę",
+  "pts": 15,
+  "topic": "firma",
+  "own": true,
+  "th": false,
+  "vars": {
+   "C": 200000.0,
+   "R": 6000.0,
+   "n": 36.0,
+   "W": 10000.0,
+   "i": 1.0
+  },
+  "lets": [
+   [
+    "pvr",
+    "R*(1-(1+i/100)**(-n))/(i/100)"
+   ],
+   [
+    "fa",
+    "(1-(1+i/100)**(-n))/(i/100)"
+   ],
+   [
+    "pvl",
+    "pvr+W/(1+i/100)**n"
+   ],
+   [
+    "pvw",
+    "W/(1+i/100)**n"
+   ],
+   [
+    "roz",
+    "C-pvl"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Firma może kupić maszynę za 200 000 zł gotówką albo wziąć ją w leasing: 36 miesięcznych rat po 6 000 zł (płatnych na koniec miesiąca) i wykup za 10 000 zł na koniec okresu. Miesięczny koszt kapitału wynosi 1%. Pomiń podatki (dane umowne)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 4,
+    "prompt": "Oblicz wartość bieżącą rat leasingowych.",
+    "answers": [
+     {
+      "label": "PV rat",
+      "value": 180645.0302,
+      "calc": "R*(1-(1+i/100)**(-n))/(i/100)",
+      "unit": "zł",
+      "tol": 2.0
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "PV = 6 000 × (1 − 1,01⁻³⁶) / 0,01 = 6 000 × 30,1075 ≈ 180 645 zł"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 4,
+    "prompt": "Oblicz wartość bieżącą wszystkich płatności leasingowych (z wykupem).",
+    "answers": [
+     {
+      "label": "PV leasingu",
+      "value": 187634.2797,
+      "calc": "pvr+W/(1+i/100)**n",
+      "unit": "zł",
+      "tol": 2.0
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "180 645 + 10 000 / 1,01³⁶ = 180 645 + 6 989 ≈ 187 634 zł"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 3,
+    "prompt": "Która forma finansowania jest tańsza i o ile (w wartości bieżącej)?",
+    "answers": [
+     {
+      "label": "Różnica",
+      "value": 12365.7203,
+      "calc": "C-pvl",
+      "unit": "zł",
+      "tol": 2.0
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "200 000 − 187 634 ≈ 12 366 zł na korzyść leasingu"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "Jakie inne czynniki należy uwzględnić przy wyborze między leasingiem a zakupem?",
+    "answers": [],
+    "solution": [
+     {
+      "t": "ul",
+      "items": [
+       "podatki – w leasingu operacyjnym raty są kosztem podatkowym, przy zakupie kosztem jest amortyzacja (różne rozłożenie tarczy podatkowej w czasie),",
+       "płynność – leasing nie wymaga jednorazowego wydatku, zachowuje gotówkę na inne cele,",
+       "ryzyko technologiczne i elastyczność – możliwość wymiany maszyny po okresie leasingu,",
+       "koszty dodatkowe (opłata wstępna, ubezpieczenie, serwis) i wpływ na wskaźniki zadłużenia."
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,176 @@
+{
+ "set": "prognoza-xl-33",
+ "ed": 40,
+ "stage": "o",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-33-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "finanse",
+   "th": false,
+   "topics": [
+    {
+     "title": "Edukacja finansowa młodzieży – po co i jak?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "wiedza finansowa a decyzje (oszczędzanie, zadłużenie, inwestowanie)",
+        "błędy behawioralne konsumentów",
+        "asymetria informacji na rynku usług finansowych",
+        "ochrona konsumenta a edukacja",
+        "wartość pieniądza w czasie"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "badania wiedzy finansowej Polaków (OECD, NBP)",
+        "miejsce finansów osobistych w szkole (przedmiot „biznes i zarządzanie”)",
+        "oszustwa finansowe i piramidy",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – codzienne decyzje finansowe",
+       "teoria – wiedza, błędy, asymetria",
+       "praktyka – badania, szkoła, oszustwa",
+       "zakończenie – edukacja jako tania profilaktyka"
+      ],
+      "b": [
+       "brak teorii",
+       "brak danych",
+       "brak przykładów oszustw"
+      ],
+      "d": [
+       "przedmiot „biznes i zarządzanie” zastąpił podstawy przedsiębiorczości od 2023 r. (MEN)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-33-zadanie",
+  "title": "Zadanie z analizy finansowej – Średni ważony koszt kapitału i decyzja inwestycyjna",
+  "pts": 15,
+  "topic": "firma",
+  "own": true,
+  "th": false,
+  "vars": {
+   "wE": 60.0,
+   "kE": 12.0,
+   "wD": 40.0,
+   "kD": 7.0,
+   "tx": 19.0,
+   "I": 1000.0,
+   "CF": 300.0,
+   "n": 5.0
+  },
+  "lets": [
+   [
+    "wacc",
+    "wE/100*kE+wD/100*kD*(1-tx/100)"
+   ],
+   [
+    "npv",
+    "-I+CF*(1-(1+wacc/100)**(-n))/(wacc/100)"
+   ],
+   [
+    "fa",
+    "(1-(1+wacc/100)**(-n))/(wacc/100)"
+   ],
+   [
+    "imax",
+    "CF*fa"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Struktura kapitału spółki: kapitał własny 60% (koszt 12%), dług 40% (koszt przed opodatkowaniem 7%), stawka podatku 19%. Spółka rozważa projekt z nakładem 1 000 tys. zł i przepływami 300 tys. zł rocznie przez 5 lat (dane umowne)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 4,
+    "prompt": "Oblicz średni ważony koszt kapitału (WACC).",
+    "answers": [
+     {
+      "label": "WACC",
+      "value": 9.468,
+      "calc": "wE/100*kE+wD/100*kD*(1-tx/100)",
+      "unit": "%",
+      "tol": 0.005
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "WACC = 0,6 × 12% + 0,4 × 7% × (1 − 0,19) = 9,468%"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 4,
+    "prompt": "Oblicz NPV projektu przy stopie dyskontowej równej WACC.",
+    "answers": [
+     {
+      "label": "NPV",
+      "value": 152.8623,
+      "calc": "-I+CF*(1-(1+wacc/100)**(-n))/(wacc/100)",
+      "unit": "tys. zł",
+      "tol": 0.5
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "NPV = −1 000 + 300 × 3,8429 ≈ 152,9 tys. zł"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 3,
+    "prompt": "Jaki maksymalny nakład spółka mogłaby ponieść, aby projekt pozostał opłacalny?",
+    "answers": [
+     {
+      "label": "Maksymalny nakład",
+      "value": 1152.8623,
+      "calc": "CF*fa",
+      "unit": "tys. zł",
+      "tol": 0.5
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "300 × 3,8429 ≈ 1 152,9 tys. zł (NPV = 0)"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "Wyjaśnij, dlaczego koszt długu uwzględnia się po opodatkowaniu i dlaczego zwiększanie udziału długu nie zawsze obniża WACC.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Odsetki są kosztem uzyskania przychodu, więc obniżają podatek – efektywny koszt długu to 7% × (1 − 0,19). Dług jest zwykle tańszy od kapitału własnego, ale wraz ze wzrostem zadłużenia rośnie ryzyko upadłości: wierzyciele żądają wyższych odsetek, a akcjonariusze – wyższej stopy zwrotu (teoria Modiglianiego–Millera z podatkami i kosztami trudności finansowych). Powyżej pewnego poziomu WACC zaczyna rosnąć."
+     }
+    ]
+   }
+  ]
+ }
+}

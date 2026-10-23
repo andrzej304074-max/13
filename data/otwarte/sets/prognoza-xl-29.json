@@ -1,0 +1,180 @@
+{
+ "set": "prognoza-xl-29",
+ "ed": 40,
+ "stage": "o",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-29-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "polityka",
+   "th": false,
+   "topics": [
+    {
+     "title": "Nowe reguły fiskalne UE a rosnące wydatki na obronność",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "uzasadnienie reguł fiskalnych (niekonsekwencja czasowa, efekty zewnętrzne w unii walutowej)",
+        "Pakt stabilności i wzrostu: 3% deficytu i 60% długu",
+        "reforma 2024: ścieżka wydatków netto, plany średniookresowe",
+        "obronność jako dobro publiczne",
+        "finansowanie: podatki, dług, fundusze wspólne"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "wydatki Polski na obronność (ponad 4% PKB)",
+        "klauzula wyjścia dla obronności (2025)",
+        "procedura nadmiernego deficytu wobec Polski",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – bezpieczeństwo a dyscyplina fiskalna",
+       "teoria – reguły, reforma 2024, dobro publiczne",
+       "praktyka – Polska, klauzula, EDP",
+       "zakończenie – elastyczność reguł przy wiarygodnej ścieżce"
+      ],
+      "b": [
+       "brak opisu nowych reguł",
+       "brak argumentu dobra publicznego",
+       "brak danych"
+      ],
+      "d": [
+       "wydatki Polski na obronność ok. 4,1% PKB w 2024 r. (NATO)",
+       "nowe ramy zarządzania gospodarczego UE obowiązują od kwietnia 2024 r. (Rada UE)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-29-zadanie",
+  "title": "Zadanie z analizy finansowej – Wycena akcji modelem Gordona",
+  "pts": 15,
+  "topic": "finanse",
+  "own": true,
+  "th": false,
+  "vars": {
+   "D0": 4.0,
+   "g": 3.0,
+   "k": 9.0,
+   "k2": 10.0
+  },
+  "lets": [
+   [
+    "d1",
+    "D0*(1+g/100)"
+   ],
+   [
+    "v",
+    "d1/(k/100-g/100)"
+   ],
+   [
+    "v2",
+    "d1/(k2/100-g/100)"
+   ],
+   [
+    "dv",
+    "(v2/v-1)*100"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Spółka wypłaciła ostatnio dywidendę 4 zł na akcję. Inwestorzy oczekują stałego wzrostu dywidend o 3% rocznie i wymagają stopy zwrotu 9% (dane umowne)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 3,
+    "prompt": "Oblicz oczekiwaną dywidendę w przyszłym roku.",
+    "answers": [
+     {
+      "label": "Dywidenda D1",
+      "value": 4.12,
+      "calc": "D0*(1+g/100)",
+      "unit": "zł",
+      "tol": 0.005
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "D₁ = 4 × 1,03 = 4,12 zł"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 4,
+    "prompt": "Oblicz wartość akcji.",
+    "answers": [
+     {
+      "label": "Wartość akcji",
+      "value": 68.6667,
+      "calc": "d1/(k/100-g/100)",
+      "unit": "zł",
+      "tol": 0.05
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "V = D₁ / (k − g) = 4,12 / (0,09 − 0,03) ≈ 68,67 zł"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 4,
+    "prompt": "Wymagana stopa zwrotu rośnie do 10% (np. wskutek wzrostu stóp procentowych). Oblicz nową wartość akcji i jej procentową zmianę.",
+    "answers": [
+     {
+      "label": "Nowa wartość",
+      "value": 58.8571,
+      "calc": "d1/(k2/100-g/100)",
+      "unit": "zł",
+      "tol": 0.05
+     },
+     {
+      "label": "Zmiana",
+      "value": -14.2857,
+      "calc": "(v2/v-1)*100",
+      "unit": "%",
+      "tol": 0.05
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "4,12 / 0,07 ≈ 58,86 zł;  zmiana ≈ −14,29%"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "Wyjaśnij założenia modelu Gordona i jego ograniczenia.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Model zakłada stałe tempo wzrostu dywidend w nieskończoność, stałą wymaganą stopę zwrotu i k > g. Jest bardzo wrażliwy na różnicę k − g: wzrost k o 1 pkt proc. obniżył wartość o ok. −14%. Nie nadaje się do spółek niewypłacających dywidend ani szybko rosnących (wtedy stosuje się modele wielofazowe lub przepływy pieniężne FCFF/FCFE)."
+     }
+    ]
+   }
+  ]
+ }
+}

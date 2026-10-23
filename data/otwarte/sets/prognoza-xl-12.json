@@ -1,0 +1,257 @@
+{
+ "set": "prognoza-xl-12",
+ "ed": 40,
+ "stage": "s",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-12-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "polityka",
+   "th": false,
+   "topics": [
+    {
+     "title": "Podatki – ile i jak powinno pobierać państwo?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "funkcje podatków: fiskalna, redystrybucyjna, stymulacyjna",
+        "zasady podatkowe A. Smitha",
+        "podatki bezpośrednie i pośrednie; progresja, proporcjonalność, regresja",
+        "krzywa Laffera",
+        "obciążenie podatkiem i strata martwa"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "system podatkowy w Polsce: PIT, CIT, VAT, akcyza",
+        "luka VAT",
+        "porównanie obciążeń podatkowych w UE",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – podatki jako cena cywilizacji",
+       "teoria – funkcje, zasady, rodzaje, Laffer, strata martwa",
+       "praktyka – polski system, luka VAT, UE",
+       "zakończenie – prostota i szczelność ważniejsze niż sama wysokość stawek"
+      ],
+      "b": [
+       "mylenie stawki z obciążeniem",
+       "nadużywanie krzywej Laffera",
+       "brak przykładów"
+      ],
+      "d": [
+       "podstawowa stawka VAT w Polsce 23% (ustawa o VAT)",
+       "luka VAT w Polsce wyraźnie spadła po 2015 r. (KE, raport VAT Gap)"
+      ]
+     }
+    },
+    {
+     "title": "Czy gospodarka może się rozwijać bez wzrostu konsumpcji zasobów?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "wzrost a rozwój gospodarczy",
+        "ograniczoność zasobów i zrównoważony rozwój",
+        "efekty zewnętrzne i dobra wspólne (tragedia wspólnego pastwiska)",
+        "oddzielenie wzrostu od emisji (decoupling)",
+        "narzędzia: podatek Pigou, handel uprawnieniami, gospodarka o obiegu zamkniętym"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "emisje i PKB w UE i Polsce",
+        "EU ETS i Europejski Zielony Ład",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – granice wzrostu",
+       "teoria – rozwój vs wzrost, efekty zewnętrzne, decoupling",
+       "praktyka – ETS, Zielony Ład",
+       "zakończenie – możliwe przy zmianie technologii i cen"
+      ],
+      "b": [
+       "mylenie wzrostu z rozwojem",
+       "brak efektów zewnętrznych",
+       "brak danych"
+      ],
+      "d": [
+       "emisje gazów cieplarnianych UE w 2023 r. o ok. 37% niższe niż w 1990 r., przy wyraźnie wyższym PKB (Europejska Agencja Środowiska)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-12-zadanie",
+  "title": "Zadanie z podstaw ekonomii – PKB metodą wydatkową",
+  "pts": 15,
+  "topic": "makro",
+  "own": true,
+  "th": false,
+  "vars": {
+   "C": 2100.0,
+   "I": 600.0,
+   "G": 650.0,
+   "X": 1950.0,
+   "M": 1850.0,
+   "pkbn": 3726.0,
+   "defl": 106.0
+  },
+  "lets": [
+   [
+    "pkb",
+    "C+I+G+X-M"
+   ],
+   [
+    "uc",
+    "C/pkb*100"
+   ],
+   [
+    "nx",
+    "X-M"
+   ],
+   [
+    "unx",
+    "nx/pkb*100"
+   ],
+   [
+    "g",
+    "(pkbn/(defl/100)/pkb-1)*100"
+   ],
+   [
+    "pkbr",
+    "pkbn/(defl/100)"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Dane o gospodarce kraju (mld zł, dane umowne): spożycie prywatne C = 2 100, inwestycje I = 600, spożycie publiczne G = 650, eksport X = 1 950, import M = 1 850."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 3,
+    "prompt": "Oblicz PKB metodą wydatkową.",
+    "answers": [
+     {
+      "label": "PKB",
+      "value": 3450.0,
+      "calc": "C+I+G+X-M",
+      "unit": "mld zł",
+      "tol": 0.5
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "PKB = C + I + G + (X − M) = 2 100 + 600 + 650 + (1 950 − 1 850) = 3 450 mld zł"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 3,
+    "prompt": "Oblicz udział spożycia prywatnego w PKB.",
+    "answers": [
+     {
+      "label": "Udział C",
+      "value": 60.8696,
+      "calc": "C/pkb*100",
+      "unit": "%",
+      "tol": 0.05
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "2 100 / 3 450 × 100 ≈ 60,87%"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 3,
+    "prompt": "Oblicz eksport netto i jego udział w PKB.",
+    "answers": [
+     {
+      "label": "Eksport netto",
+      "value": 100.0,
+      "calc": "X-M",
+      "unit": "mld zł",
+      "tol": 0.5
+     },
+     {
+      "label": "Udział w PKB",
+      "value": 2.8986,
+      "calc": "nx/pkb*100",
+      "unit": "%",
+      "tol": 0.05
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "1 950 − 1 850 = 100 mld zł;  100 / 3 450 × 100 ≈ 2,90%"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 3,
+    "prompt": "W kolejnym roku PKB nominalny wyniósł 3 726 mld zł, a deflator PKB (rok poprzedni = 100) – 106. Oblicz realne tempo wzrostu PKB.",
+    "answers": [
+     {
+      "label": "Realny wzrost",
+      "value": 1.8868,
+      "calc": "(pkbn/(defl/100)/pkb-1)*100",
+      "unit": "%",
+      "tol": 0.05
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "PKB realny = 3 726 / 1,06 ≈ 3 515,1 mld zł;  wzrost = 3 515,1 / 3 450 − 1 ≈ 1,89%"
+     }
+    ]
+   },
+   {
+    "label": "e",
+    "pts": 3,
+    "prompt": "Podaj trzy powody, dla których PKB nie jest pełną miarą dobrobytu.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "ul",
+      "items": [
+       "nie obejmuje produkcji domowej i wolontariatu (np. opieki nad dziećmi i osobami starszymi w rodzinie),",
+       "nie uwzględnia czasu wolnego, zdrowia ani stanu środowiska (degradacja nie jest odejmowana),",
+       "nie mówi o podziale dochodu – średnia może rosnąć przy rosnących nierównościach,",
+       "pomija szarą strefę, a wlicza wydatki „defensywne” (np. usuwanie skutków katastrof)."
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

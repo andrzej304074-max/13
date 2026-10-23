@@ -1,0 +1,179 @@
+{
+ "set": "prognoza-xl-31",
+ "ed": 40,
+ "stage": "o",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-31-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "makro",
+   "th": false,
+   "topics": [
+    {
+     "title": "Fragmentacja handlu światowego – koniec globalizacji?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "korzyści z handlu i globalne łańcuchy wartości",
+        "protekcjonizm – cła i ich skutki dla dobrobytu",
+        "friend-shoring, near-shoring, bezpieczeństwo dostaw",
+        "rola WTO i umów regionalnych",
+        "polityka przemysłowa w rywalizacji USA–Chiny"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "cła USA na import (2018–2025) i odpowiedzi partnerów",
+        "przenoszenie produkcji do Europy Środkowej – szansa dla Polski",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – rosnące bariery handlowe",
+       "teoria – korzyści, protekcjonizm, łańcuchy",
+       "praktyka – cła USA, near-shoring",
+       "zakończenie – zmiana globalizacji zamiast jej końca"
+      ],
+      "b": [
+       "brak teorii handlu",
+       "brak przykładów ceł",
+       "brak wątku Polski"
+      ],
+      "d": [
+       "wymiana handlowa świata w relacji do PKB pozostaje bliska rekordów mimo napięć (WTO, World Trade Statistical Review)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-31-zadanie",
+  "title": "Zadanie z analizy finansowej – Zabezpieczenie ryzyka walutowego eksportera",
+  "pts": 15,
+  "topic": "finanse",
+  "own": true,
+  "th": false,
+  "vars": {
+   "E": 2.0,
+   "S0": 4.3,
+   "iPL": 5.0,
+   "iEU": 2.5,
+   "S1": 4.15
+  },
+  "lets": [
+   [
+    "F",
+    "S0*(1+iPL/100/4)/(1+iEU/100/4)"
+   ],
+   [
+    "pz",
+    "E*F"
+   ],
+   [
+    "pb",
+    "E*S1"
+   ],
+   [
+    "roz",
+    "pz-pb"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Polski eksporter otrzyma za 3 miesiące 2 mln EUR. Obecny kurs wynosi 4,30 zł/EUR, trzymiesięczna stopa procentowa w Polsce – 5% w skali roku, a w strefie euro – 2,5% w skali roku (dane umowne)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 4,
+    "prompt": "Oblicz trzymiesięczny kurs terminowy (forward) z parytetu stóp procentowych.",
+    "answers": [
+     {
+      "label": "Kurs terminowy",
+      "value": 4.3267,
+      "calc": "S0*(1+iPL/100/4)/(1+iEU/100/4)",
+      "unit": "zł/EUR",
+      "tol": 0.0005
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "F = 4,30 × (1 + 0,05/4) / (1 + 0,025/4) ≈ 4,3267 zł/EUR"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 3,
+    "prompt": "Ile złotych otrzyma eksporter, jeśli zawrze kontrakt terminowy?",
+    "answers": [
+     {
+      "label": "Przychód zabezpieczony",
+      "value": 8.6534,
+      "calc": "E*F",
+      "unit": "mln zł",
+      "tol": 0.001
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "2 mln × 4,3267 ≈ 8,6534 mln zł"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 4,
+    "prompt": "Za 3 miesiące kurs spot wynosi 4,15 zł/EUR. Oblicz przychód bez zabezpieczenia i różnicę względem wariantu z kontraktem.",
+    "answers": [
+     {
+      "label": "Przychód bez zabezpieczenia",
+      "value": 8.3,
+      "calc": "E*S1",
+      "unit": "mln zł",
+      "tol": 0.001
+     },
+     {
+      "label": "Różnica",
+      "value": 0.3534,
+      "calc": "pz-pb",
+      "unit": "mln zł",
+      "tol": 0.001
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "2 × 4,15 = 8,30 mln zł;  różnica = 8,6534 − 8,30 ≈ 0,3534 mln zł"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "Oceń zalety i wady zabezpieczenia kontraktem terminowym.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Kontrakt terminowy eliminuje ryzyko kursowe – eksporter zna przychód w złotych z góry, co ułatwia planowanie. Tu uchronił go przed stratą ok. 0,35 mln zł. Wadą jest utrata potencjalnego zysku, gdyby złoty osłabł (kurs spot > F), oraz obowiązek realizacji kontraktu (inaczej niż w opcji, za którą płaci się premię). Kurs terminowy wyższy od spot wynika z różnicy stóp procentowych, a nie z prognozy kursu."
+     }
+    ]
+   }
+  ]
+ }
+}

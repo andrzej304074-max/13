@@ -1,0 +1,335 @@
+{
+ "set": "prognoza-xl-18",
+ "ed": 40,
+ "stage": "o",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-18-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "polityka",
+   "th": true,
+   "topics": [
+    {
+     "title": "Finanse publiczne w starzejącym się społeczeństwie – jak utrzymać ich stabilność?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "wydatki zależne od wieku: emerytury, zdrowie, opieka długoterminowa, edukacja",
+        "współczynnik obciążenia demograficznego i jego wpływ na bazę podatkową",
+        "dynamika długu publicznego (r − g, saldo pierwotne)",
+        "sprawiedliwość międzypokoleniowa i rachunkowość generacyjna (L. Kotlikoff)",
+        "narzędzia dostosowania: wiek emerytalny, indeksacja świadczeń, struktura podatków, wydajność",
+        "reguły fiskalne krajowe i unijne"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "prognozy wydatków związanych z wiekiem w Polsce i UE (Ageing Report KE)",
+        "deficyt FUS i dotacja z budżetu, 13. i 14. emerytura",
+        "procedura nadmiernego deficytu i plan średniookresowy",
+        "własna propozycja pakietu zmian"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – presja wydatków przy kurczącej się liczbie płatników",
+       "teoria – wydatki zależne od wieku, dynamika długu, rachunkowość generacyjna, narzędzia",
+       "praktyka – Ageing Report, FUS, EDP",
+       "zakończenie – połączenie wyższej aktywności zawodowej, indeksacji i reguł"
+      ],
+      "b": [
+       "ograniczenie analizy do emerytur",
+       "brak mechanizmu r − g",
+       "propozycje bez kosztu politycznego i społecznego"
+      ],
+      "d": [
+       "dług sektora GG Polski ok. 55% PKB w 2024 r. (Eurostat)",
+       "Komisja Europejska publikuje co 3 lata Ageing Report z projekcją wydatków związanych z wiekiem (KE, 2024 Ageing Report)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-18-zadanie",
+  "title": "Zadanie z analizy finansowej – Analiza wskaźnikowa prywatnego domu opieki",
+  "pts": 15,
+  "topic": "firma",
+  "own": true,
+  "th": true,
+  "vars": {
+   "AT": 4200.0,
+   "Z": 60.0,
+   "N": 340.0,
+   "G": 200.0,
+   "KW": 2400.0,
+   "ZD": 1800.0,
+   "ZK": 600.0,
+   "P": 3600.0,
+   "EBIT": 540.0,
+   "ODS": 120.0,
+   "tx": 19.0,
+   "KP": 1800.0
+  },
+  "lets": [
+   [
+    "AO",
+    "Z+N+G"
+   ],
+   [
+    "A",
+    "AT+AO"
+   ],
+   [
+    "ZN",
+    "(EBIT-ODS)*(1-tx/100)"
+   ],
+   [
+    "cr",
+    "AO/ZK"
+   ],
+   [
+    "qr",
+    "(AO-Z)/ZK"
+   ],
+   [
+    "zn",
+    "ZN"
+   ],
+   [
+    "ros",
+    "ZN/P*100"
+   ],
+   [
+    "roa",
+    "ZN/A*100"
+   ],
+   [
+    "roe",
+    "ZN/KW*100"
+   ],
+   [
+    "dr",
+    "(ZD+ZK)/A*100"
+   ],
+   [
+    "ic",
+    "EBIT/ODS"
+   ],
+   [
+    "ebit2",
+    "EBIT-0.1*KP"
+   ],
+   [
+    "ic2",
+    "ebit2/ODS"
+   ],
+   [
+    "roe2",
+    "(ebit2-ODS)*(1-tx/100)/KW*100"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Spółka prowadząca prywatny dom opieki dla osób starszych przedstawiła uproszczone sprawozdanie finansowe (tys. zł):"
+   },
+   {
+    "t": "table",
+    "head": [
+     "Aktywa",
+     "tys. zł",
+     "Pasywa",
+     "tys. zł"
+    ],
+    "rows": [
+     [
+      "Aktywa trwałe",
+      "4 200",
+      "Kapitał własny",
+      "2 400"
+     ],
+     [
+      "Zapasy",
+      "60",
+      "Zobowiązania długoterminowe",
+      "1 800"
+     ],
+     [
+      "Należności krótkoterminowe",
+      "340",
+      "Zobowiązania krótkoterminowe",
+      "600"
+     ],
+     [
+      "Środki pieniężne",
+      "200",
+      "",
+      ""
+     ]
+    ]
+   },
+   {
+    "t": "p",
+    "x": "Przychody ze sprzedaży wyniosły 3 600 tys. zł, zysk operacyjny (EBIT) – 540 tys. zł, odsetki – 120 tys. zł, stawka podatku dochodowego – 19%. Koszty wynagrodzeń stanowią 1 800 tys. zł rocznie."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 3,
+    "prompt": "Oblicz wskaźnik bieżącej płynności i wskaźnik szybkiej płynności.",
+    "answers": [
+     {
+      "label": "Bieżąca płynność",
+      "value": 1.0,
+      "calc": "AO/ZK",
+      "tol": 0.01
+     },
+     {
+      "label": "Szybka płynność",
+      "value": 0.9,
+      "calc": "(AO-Z)/ZK",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "aktywa obrotowe = 60 + 340 + 200 = 600;  CR = 600 / 600 = 1,00;  QR = (600 − 60) / 600 = 0,90"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 3,
+    "prompt": "Oblicz zysk netto oraz rentowność sprzedaży (ROS), aktywów (ROA) i kapitału własnego (ROE).",
+    "answers": [
+     {
+      "label": "Zysk netto",
+      "value": 340.2,
+      "calc": "ZN",
+      "unit": "tys. zł",
+      "tol": 0.1
+     },
+     {
+      "label": "ROS",
+      "value": 9.45,
+      "calc": "ZN/P*100",
+      "unit": "%",
+      "tol": 0.02
+     },
+     {
+      "label": "ROA",
+      "value": 7.0875,
+      "calc": "ZN/A*100",
+      "unit": "%",
+      "tol": 0.02
+     },
+     {
+      "label": "ROE",
+      "value": 14.175,
+      "calc": "ZN/KW*100",
+      "unit": "%",
+      "tol": 0.02
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "zysk netto = (540 − 120) × (1 − 0,19) = 340,2;  ROS = 340,2 / 3 600 ≈ 9,45%;  ROA = 340,2 / 4 800 ≈ 7,09%;  ROE = 340,2 / 2 400 ≈ 14,18%"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 3,
+    "prompt": "Oblicz wskaźnik ogólnego zadłużenia i wskaźnik pokrycia odsetek.",
+    "answers": [
+     {
+      "label": "Ogólne zadłużenie",
+      "value": 50.0,
+      "calc": "(ZD+ZK)/A*100",
+      "unit": "%",
+      "tol": 0.05
+     },
+     {
+      "label": "Pokrycie odsetek",
+      "value": 4.5,
+      "calc": "EBIT/ODS",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "(1 800 + 600) / 4 800 × 100 = 50%;  EBIT / odsetki = 540 / 120 = 4,5"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 3,
+    "prompt": "Z powodu niedoboru opiekunów wynagrodzenia rosną o 10%, a ceny usług się nie zmieniają. Oblicz nowy zysk operacyjny, wskaźnik pokrycia odsetek i ROE.",
+    "answers": [
+     {
+      "label": "Nowy EBIT",
+      "value": 360.0,
+      "calc": "EBIT-0.1*KP",
+      "unit": "tys. zł",
+      "tol": 0.5
+     },
+     {
+      "label": "Pokrycie odsetek",
+      "value": 3.0,
+      "calc": "ebit2/ODS",
+      "tol": 0.01
+     },
+     {
+      "label": "ROE",
+      "value": 8.1,
+      "calc": "(ebit2-ODS)*(1-tx/100)/KW*100",
+      "unit": "%",
+      "tol": 0.02
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "EBIT = 540 − 0,1 × 1 800 = 360;  pokrycie = 360 / 120 = 3,0;  ROE = (360 − 120) × 0,81 / 2 400 ≈ 8,10%"
+     }
+    ]
+   },
+   {
+    "label": "e",
+    "pts": 3,
+    "prompt": "Oceń sytuację finansową spółki i zaproponuj dwa działania, które ograniczą wpływ rosnących kosztów pracy.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Płynność jest na granicy bezpieczeństwa (CR = 1,0, QR = 0,9) – typowe dla usług bez zapasów, ale z niewielkim buforem. Zadłużenie umiarkowane (50%), pokrycie odsetek dobre. Spółka jest jednak wrażliwa na koszty pracy: 10% wzrostu płac obniża ROE z ok. 14% do ok. 8%."
+     },
+     {
+      "t": "ul",
+      "items": [
+       "stopniowe podnoszenie cen przy rosnącym popycie (starzenie się ludności – popyt na opiekę jest mało elastyczny),",
+       "technologie (teleopieka, czujniki, elektroniczna dokumentacja) zwiększające liczbę podopiecznych na opiekuna,",
+       "kontrakty z samorządami i NFZ, stabilizujące przychody,",
+       "programy retencji pracowników (szkolenia, ścieżki awansu) zmniejszające koszty rotacji."
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

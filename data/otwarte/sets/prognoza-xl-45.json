@@ -1,0 +1,172 @@
+{
+ "set": "prognoza-xl-45",
+ "ed": 40,
+ "stage": "c",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-45-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "polityka",
+   "th": false,
+   "topics": [
+    {
+     "title": "Koszty energii a konkurencyjność przemysłu w Europie",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "energia jako czynnik produkcji i koszt",
+        "cena uprawnień do emisji (EU ETS) i ucieczka emisji (carbon leakage)",
+        "mechanizm CBAM",
+        "bezpieczeństwo dostaw i dywersyfikacja",
+        "polityka przemysłowa i subsydia"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "kryzys energetyczny 2022 r. w Europie",
+        "przemysł energochłonny w Polsce",
+        "USA – Inflation Reduction Act",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – drożejąca energia w Europie",
+       "teoria – koszt, ETS, leakage, CBAM",
+       "praktyka – 2022, Polska, IRA",
+       "zakończenie – transformacja z ochroną konkurencyjności"
+      ],
+      "b": [
+       "brak CBAM",
+       "brak danych",
+       "jednostronność"
+      ],
+      "d": [
+       "CBAM – okres przejściowy od października 2023 r., pełne opłaty od 2026 r. (KE)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-45-zadanie",
+  "title": "Zadanie analityczne – Parytet siły nabywczej",
+  "pts": 15,
+  "topic": "makro",
+  "own": true,
+  "th": false,
+  "vars": {
+   "Ppl": 100.0,
+   "Peu": 40.0,
+   "S": 4.3,
+   "ipl": 5.0,
+   "ieu": 2.0
+  },
+  "lets": [
+   [
+    "sppp",
+    "Ppl/Peu"
+   ],
+   [
+    "q",
+    "S*Peu/Ppl"
+   ],
+   [
+    "s1",
+    "S*(1+ipl/100)/(1+ieu/100)"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Ten sam koszyk dóbr kosztuje 100 zł w Polsce i 40 EUR w strefie euro. Kurs rynkowy wynosi 4,30 zł/EUR. Oczekiwana inflacja: Polska 5%, strefa euro 2% (dane umowne)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 4,
+    "prompt": "Oblicz kurs wynikający z absolutnego parytetu siły nabywczej.",
+    "answers": [
+     {
+      "label": "Kurs PPP",
+      "value": 2.5,
+      "calc": "Ppl/Peu",
+      "unit": "zł/EUR",
+      "tol": 0.005
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "S_PPP = 100 / 40 = 2,50 zł/EUR"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 4,
+    "prompt": "Oblicz realny kurs walutowy (cena koszyka zagranicznego w złotych / cena koszyka krajowego).",
+    "answers": [
+     {
+      "label": "Realny kurs",
+      "value": 1.72,
+      "calc": "S*Peu/Ppl",
+      "tol": 0.005
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "q = 4,30 × 40 / 100 = 1,72"
+     },
+     {
+      "t": "p",
+      "x": "q > 1 – koszyk w strefie euro jest o ok. 72% droższy, złoty jest realnie „niedowartościowany” względem PPP."
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 4,
+    "prompt": "Oblicz oczekiwany kurs za rok według względnego parytetu siły nabywczej.",
+    "answers": [
+     {
+      "label": "Oczekiwany kurs",
+      "value": 4.4265,
+      "calc": "S*(1+ipl/100)/(1+ieu/100)",
+      "unit": "zł/EUR",
+      "tol": 0.002
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "4,30 × 1,05 / 1,02 ≈ 4,4265 zł/EUR"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 3,
+    "prompt": "Wyjaśnij, dlaczego w krajach doganiających kurs rynkowy trwale odbiega od PPP (efekt Balassy–Samuelsona).",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "W krajach na niższym poziomie rozwoju ceny usług niehandlowanych (fryzjer, czynsze, usługi opiekuńcze) są niższe, bo płace są niższe. Gdy wydajność w sektorze dóbr handlowych rośnie szybciej niż w usługach, rosną płace w całej gospodarce, a z nimi ceny usług – następuje realna aprecjacja waluty (wyższa inflacja lub umocnienie kursu). Realny kurs (1,72) zbliża się wtedy do 1 wraz z konwergencją. PPP lepiej opisuje długi okres i dobra handlowe."
+     }
+    ]
+   }
+  ]
+ }
+}

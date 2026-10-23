@@ -1,0 +1,282 @@
+{
+ "set": "prognoza-xl-03",
+ "ed": 40,
+ "stage": "s",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-03-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "demografia",
+   "th": true,
+   "topics": [
+    {
+     "title": "Czy Polska może zastąpić brakujących pracowników imigrantami?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "migracje międzynarodowe – czynniki wypychające i przyciągające",
+        "wpływ imigracji na podaż pracy, płace i zatrudnienie (komplementarność a substytucyjność)",
+        "wpływ na finanse publiczne (podatki, składki, świadczenia)",
+        "„migracja zastępcza” – ile imigrantów musiałoby przybyć, by utrzymać strukturę wieku",
+        "integracja i kapitał ludzki imigrantów",
+        "emigracja z Polski i drenaż mózgów"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "cudzoziemcy na polskim rynku pracy: Ukraińcy, Białorusini, pracownicy z Azji (ZUS, GUS)",
+        "uchodźcy z Ukrainy po 2022 r. – skutki gospodarcze",
+        "przykład Niemiec lub Kanady (system punktowy)",
+        "własna ocena: migracje łagodzą, ale nie rozwiązują problemu starzenia"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – luka na rynku pracy",
+       "teoria – czynniki migracji, skutki dla płac i budżetu, migracja zastępcza",
+       "praktyka – cudzoziemcy w ZUS, Ukraina, Kanada/Niemcy",
+       "zakończenie – migracje jako część rozwiązania obok aktywizacji i wydajności"
+      ],
+      "b": [
+       "założenie, że imigranci zawsze obniżają płace",
+       "pomijanie tego, że imigranci też się starzeją",
+       "brak rozróżnienia migracji czasowej i osiedleńczej"
+      ],
+      "d": [
+       "ok. 1,1–1,2 mln cudzoziemców ubezpieczonych w ZUS (2024, ZUS)",
+       "ok. 1 mln obywateli Ukrainy z ochroną czasową w Polsce (2024, UdSC / Eurostat)"
+      ]
+     }
+    },
+    {
+     "title": "Rola małych i średnich przedsiębiorstw w gospodarce",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "definicja MŚP (kryteria UE: zatrudnienie, obrót, suma bilansowa)",
+        "rola MŚP: zatrudnienie, innowacje, konkurencja, elastyczność",
+        "bariery rozwoju: dostęp do finansowania, skala, regulacje, koszty pracy",
+        "źródła finansowania: kapitał własny, kredyt, leasing, faktoring, fundusze UE, venture capital",
+        "przedsiębiorczość w teorii (J. Schumpeter – innowator, I. Kirzner – arbitraż)"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "udział MŚP w PKB i zatrudnieniu w Polsce (PARP)",
+        "formy wsparcia: fundusze UE, BGK, ulgi (mały ZUS, estoński CIT)",
+        "przykład polskiej firmy, która wyrosła z MŚP",
+        "własna ocena: co najbardziej hamuje wzrost polskich firm"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – MŚP jako kręgosłup gospodarki",
+       "teoria – definicja, rola, bariery, finansowanie, Schumpeter",
+       "praktyka – dane PARP, instrumenty wsparcia, przykład",
+       "zakończenie – skalowanie firm jako wyzwanie"
+      ],
+      "b": [
+       "mylenie mikro- i małych przedsiębiorstw",
+       "brak liczb",
+       "wymienianie barier bez propozycji rozwiązań"
+      ],
+      "d": [
+       "MŚP to ponad 99% przedsiębiorstw w Polsce i ok. połowa PKB (PARP, raport o stanie sektora MŚP)",
+       "mikroprzedsiębiorstwa – ok. 96–97% firm (PARP)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-03-zadanie",
+  "title": "Zadanie z podstaw ekonomii – Bilans repartycyjnego systemu emerytalnego",
+  "pts": 15,
+  "topic": "demografia",
+  "own": true,
+  "th": true,
+  "vars": {
+   "L": 16.0,
+   "w": 8000.0,
+   "c": 19.52,
+   "E": 6.3,
+   "b": 3800.0,
+   "L50": 13.0,
+   "E50": 8.5
+  },
+  "lets": [
+   [
+    "wpl",
+    "L*1e6*w*c/100/1e9"
+   ],
+   [
+    "wyd",
+    "E*1e6*b/1e9"
+   ],
+   [
+    "sal",
+    "wpl-wyd"
+   ],
+   [
+    "c0",
+    "wyd*1e9/(L*1e6*w)*100"
+   ],
+   [
+    "c50",
+    "E50*b/(L50*w)*100"
+   ],
+   [
+    "b50",
+    "L50*w*c/100/E50"
+   ],
+   [
+    "sz",
+    "b50/w*100"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Uproszczony repartycyjny system emerytalny (dane umowne, zbliżone do Polski): składkę emerytalną w wysokości 19,52% wynagrodzenia płaci 16 mln pracujących, a przeciętne wynagrodzenie wynosi 8 000 zł miesięcznie. Świadczenia pobiera 6,3 mln emerytów, a przeciętna emerytura wynosi 3 800 zł miesięcznie. Bieżące składki finansują bieżące emerytury."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 3,
+    "prompt": "Oblicz miesięczne wpływy ze składek emerytalnych (w mld zł).",
+    "answers": [
+     {
+      "label": "Wpływy",
+      "value": 24.9856,
+      "calc": "L*1e6*w*c/100/1e9",
+      "unit": "mld zł",
+      "tol": 0.05
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "16 mln × 8 000 zł × 19,52% ≈ 24,99 mld zł"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 3,
+    "prompt": "Oblicz miesięczne wydatki na emerytury (w mld zł) i saldo systemu.",
+    "answers": [
+     {
+      "label": "Wydatki",
+      "value": 23.94,
+      "calc": "E*1e6*b/1e9",
+      "unit": "mld zł",
+      "tol": 0.05
+     },
+     {
+      "label": "Saldo",
+      "value": 1.0456,
+      "calc": "wpl-wyd",
+      "unit": "mld zł",
+      "tol": 0.05
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "6,3 mln × 3 800 zł = 23,94 mld zł;  saldo: 24,99 − 23,94 ≈ 1,05 mld zł"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 3,
+    "prompt": "Jaka stopa składki zapewniłaby dokładną równowagę systemu?",
+    "answers": [
+     {
+      "label": "Stopa składki",
+      "value": 18.7031,
+      "calc": "wyd*1e9/(L*1e6*w)*100",
+      "unit": "%",
+      "tol": 0.05
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "c = (E × b) / (L × w) × 100 = 23,94 mld / (16 mln × 8 000) × 100 ≈ 18,70%"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 3,
+    "prompt": "W 2050 r. pracujących będzie 13 mln, a emerytów 8,5 mln. Jaka stopa składki byłaby wtedy potrzebna, przy niezmienionej realnej płacy i emeryturze?",
+    "answers": [
+     {
+      "label": "Stopa składki 2050",
+      "value": 31.0577,
+      "calc": "E50*b/(L50*w)*100",
+      "unit": "%",
+      "tol": 0.05
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "c = (8,5 × 3 800) / (13 × 8 000) × 100 ≈ 31,06%"
+     },
+     {
+      "t": "p",
+      "x": "Potrzebna składka rośnie, bo stosunek liczby emerytów do pracujących zwiększa się z ok. 0,39 do ok. 0,65."
+     }
+    ]
+   },
+   {
+    "label": "e",
+    "pts": 3,
+    "prompt": "Przy składce 19,52% i liczbach z 2050 r. system byłby w równowadze tylko przy niższej emeryturze. Oblicz ją i stopę zastąpienia (emerytura / wynagrodzenie).",
+    "answers": [
+     {
+      "label": "Emerytura",
+      "value": 2388.3294,
+      "calc": "L50*w*c/100/E50",
+      "unit": "zł",
+      "tol": 1.0
+     },
+     {
+      "label": "Stopa zastąpienia",
+      "value": 29.8541,
+      "calc": "b50/w*100",
+      "unit": "%",
+      "tol": 0.1
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "b = L × w × c / E = 13 × 8 000 × 19,52% / 8,5 ≈ 2 388 zł;  stopa zastąpienia ≈ 29,9%"
+     },
+     {
+      "t": "p",
+      "x": "Wynik pokazuje dylemat systemu repartycyjnego przy starzeniu: albo wyższe składki, albo niższe świadczenia w relacji do płac, albo więcej pracujących (aktywizacja, migracje, dłuższa praca)."
+     }
+    ]
+   }
+  ]
+ }
+}

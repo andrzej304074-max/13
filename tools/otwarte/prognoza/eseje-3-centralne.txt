@@ -1,0 +1,273 @@
+#! Prognoza XL – eseje, etap centralny (zestawy 35–50): jeden temat, 25 pkt (teoria 15, praktyka 10).
+
+=== 35 | makro | th
+T: Czy wzrost gospodarczy jest możliwy przy kurczącej się liczbie ludności?
+## Część teoretyczna | 15
+- dekompozycja wzrostu PKB: praca, kapitał, łączna produktywność czynników (rachunek wzrostu)
+- model Solowa – stan ustalony przy ujemnym tempie przyrostu ludności
+- endogeniczne teorie wzrostu (P. Romer) – liczba ludzi a liczba idei
+- PKB a PKB per capita – różne cele
+- kapitał ludzki i jakość instytucji
+- skutki popytowe: niższe inwestycje mieszkaniowe i infrastrukturalne
+## Część praktyczna | 10
+- prognoza ludności Polski do 2060 r. (GUS) i potencjalny PKB (NBP, KE)
+- Japonia – wzrost PKB per capita mimo spadku ludności
+- kraje bałtyckie – szybki wzrost przy depopulacji
+- własna ocena i warunki
+> struktura: wstęp – rozróżnienie PKB i PKB per capita; teoria – Solow, Romer, rachunek wzrostu; praktyka – prognozy dla Polski, Japonia, Bałtyk; zakończenie – wzrost per capita możliwy, łączny PKB trudniejszy
+> błędy: utożsamianie spadku ludności ze spadkiem dobrobytu; brak rachunku wzrostu; brak przykładów depopulacji z wzrostem
+> dane: scenariusz bazowy GUS – ok. 30,9 mln mieszkańców Polski w 2060 r. (GUS, Prognoza ludności na lata 2023–2060); ludność Japonii maleje od ok. 2010 r. (Statistics Bureau of Japan)
+
+=== 36 | polityka | th
+T: Sprawiedliwość międzypokoleniowa – kto zapłaci za starzenie się społeczeństwa?
+## Część teoretyczna | 15
+- kontrakt międzypokoleniowy w systemie repartycyjnym
+- rachunkowość generacyjna i ukryty dług emerytalny
+- równoważność ricardiańska i jej ograniczenia
+- dobra publiczne o długim horyzoncie (klimat, infrastruktura) a obciążenie przyszłych pokoleń
+- ekonomia polityczna: mediana wieku wyborcy a polityka (teoria wyboru publicznego)
+- instrumenty: fundusze rezerwowe, reguły, indeksacja świadczeń do długości życia
+## Część praktyczna | 10
+- polskie decyzje: obniżenie wieku emerytalnego 2017, 13. i 14. emerytura, Fundusz Rezerwy Demograficznej
+- Norwegia (fundusz państwowy), Szwecja (automatyczny stabilizator)
+- własna ocena i propozycja zasad
+> struktura: wstęp – rachunek odłożony w czasie; teoria – kontrakt, ukryty dług, Ricardo, wybór publiczny; praktyka – Polska, Norwegia, Szwecja; zakończenie – automatyczne mechanizmy zamiast decyzji ad hoc
+> błędy: pomijanie ukrytego długu emerytalnego; brak ekonomii politycznej; brak przykładów
+> dane: Fundusz Rezerwy Demograficznej utworzony w 1999 r. jako bufor FUS (ZUS); szwedzki system NDC z automatycznym mechanizmem równoważenia od 2001 r. (Pensionsmyndigheten)
+
+=== 37 | makro | th
+T: Demografia a rynki finansowe – czy starzenie się społeczeństw obniży stopy zwrotu z kapitału?
+## Część teoretyczna | 15
+- popyt na aktywa w cyklu życia: akumulacja i dekumulacja oszczędności
+- hipoteza „asset meltdown” – spadek cen aktywów przy wycofywaniu oszczędności
+- naturalna stopa procentowa a struktura wieku
+- międzynarodowy przepływ kapitału do młodszych gospodarek
+- zmiana preferencji ryzyka z wiekiem
+## Część praktyczna | 10
+- Japonia – długotrwale niskie stopy i ceny aktywów
+- globalne fundusze emerytalne i ich alokacja
+- rynek nieruchomości w Polsce a demografia
+- własna ocena
+> struktura: wstęp – oszczędności baby boomers; teoria – cykl życia, asset meltdown, r*, przepływy; praktyka – Japonia, fundusze, nieruchomości; zakończenie – efekt umiarkowany, łagodzony globalizacją kapitału
+> błędy: deterministyczne przewidywanie krachu; brak przepływów kapitału; brak przykładów
+> dane: aktywa funduszy emerytalnych w krajach OECD przekraczają 30 bln USD (OECD, Pension Markets in Focus)
+
+=== 38 | makro | th
+T: Demografia jako bariera doganiania Europy Zachodniej przez Polskę
+## Część teoretyczna | 15
+- konwergencja absolutna i warunkowa (R. Barro)
+- pułapka średniego dochodu
+- źródła dotychczasowego wzrostu Polski: kapitał, praca, produktywność, integracja z UE
+- wpływ demografii na dalszą konwergencję
+- innowacyjność i kapitał ludzki jako warunki dalszego wzrostu
+## Część praktyczna | 10
+- PKB per capita Polski w PPS względem średniej UE (Eurostat)
+- prognozy potencjalnego wzrostu (NBP, KE)
+- przykład Korei Płd. lub Irlandii
+- własna ocena
+> struktura: wstęp – sukces konwergencji; teoria – konwergencja, pułapka, źródła wzrostu; praktyka – dane Eurostatu, prognozy, przykład; zakończenie – konwergencja możliwa przy wzroście produktywności
+> błędy: brak definicji konwergencji; brak danych PPS; brak warunków
+> dane: PKB per capita Polski w PPS ok. 80% średniej UE w 2024 r., wobec ok. 50% w 2004 r. (Eurostat)
+
+=== 39 | demografia | th
+T: Globalna nierównowaga demograficzna – starzejąca się Północ i młode Południe
+## Część teoretyczna | 15
+- zróżnicowanie przejścia demograficznego na świecie
+- presja migracyjna i teoria migracji
+- przepływ kapitału i handel między starymi i młodymi gospodarkami
+- dywidenda demograficzna Afryki – warunki
+- globalne dobra publiczne i pomoc rozwojowa
+## Część praktyczna | 10
+- prognozy ONZ: liczba ludności świata i Afryki do 2100 r.
+- migracje do UE przez Morze Śródziemne
+- Indie jako najludniejszy kraj świata
+- własna ocena
+> struktura: wstęp – świat dwóch prędkości demograficznych; teoria – przejście, migracje, przepływy; praktyka – prognozy ONZ, migracje, Indie; zakończenie – współpraca zamiast izolacji
+> błędy: tylko perspektywa europejska; brak teorii migracji; brak danych ONZ
+> dane: Indie wyprzedziły Chiny jako najludniejszy kraj świata w 2023 r. (ONZ); ludność świata ma osiągnąć szczyt ok. 10,3 mld w połowie lat 80. XXI w. (ONZ, World Population Prospects 2024)
+
+=== 40 | polityka | th
+T: Wiek emerytalny – sztywny próg czy elastyczne przejście?
+## Część teoretyczna | 15
+- decyzja o emeryturze w modelu cyklu życia
+- bodźce w systemie zdefiniowanej składki i zdefiniowanego świadczenia
+- powiązanie wieku emerytalnego z długością życia
+- nierówności w długości życia według wykształcenia i zawodu
+- ekonomia polityczna reform emerytalnych
+## Część praktyczna | 10
+- Polska: reforma 2012 (67 lat) i jej odwrócenie w 2017 r.
+- Dania (powiązanie z długością życia), Francja (reforma 2023 i protesty)
+- skutki dla wysokości emerytur kobiet
+- własna propozycja
+> struktura: wstęp – dłuższe życie, ten sam wiek emerytalny; teoria – decyzja, bodźce, powiązanie z długością życia, nierówności; praktyka – Polska, Dania, Francja; zakończenie – elastyczność z bodźcami do dłuższej pracy
+> błędy: brak wątku nierówności długości życia; brak przykładów; pomijanie kobiet
+> dane: we Francji reforma z 2023 r. podnosi wiek emerytalny z 62 do 64 lat (Légifrance); w Danii wiek emerytalny powiązano z oczekiwaną długością życia (ustawa z 2006 r.)
+
+=== 41 | finanse | th
+T: Ryzyko długowieczności – wyzwanie dla ubezpieczycieli, funduszy i państwa
+## Część teoretyczna | 15
+- ryzyko długowieczności – indywidualne i zagregowane
+- renta dożywotnia (annuity) i problem selekcji negatywnej
+- tablice trwania życia i ich aktualizacja
+- instrumenty transferu ryzyka (obligacje długowieczności, reasekuracja)
+- rola państwa jako ubezpieczyciela ostatniej instancji
+## Część praktyczna | 10
+- dalsze trwanie życia 60-latków w Polsce (GUS)
+- wypłaty z PPK i IKE – brak obowiązkowej renty
+- przykład Wielkiej Brytanii (odejście od obowiązkowej annuity w 2015 r.)
+- własna ocena
+> struktura: wstęp – dożyć ponad oszczędności; teoria – ryzyko, annuity, selekcja, transfer ryzyka; praktyka – GUS, PPK/IKE, Wielka Brytania; zakończenie – podział ryzyka między państwo i rynek
+> błędy: mylenie ryzyka indywidualnego i zagregowanego; brak selekcji negatywnej; brak przykładów
+> dane: przeciętne dalsze trwanie życia 60-letniej kobiety w Polsce ok. 24–25 lat, mężczyzny ok. 19–20 lat (GUS, tablice trwania życia 2023)
+
+=== 42 | zarzadzanie | th
+T: Strategie przedsiębiorstw wobec kurczącego się rynku pracy
+## Część teoretyczna | 15
+- zasoby ludzkie jako zasób strategiczny (podejście zasobowe – J. Barney)
+- employer branding i rynek pracownika
+- substytucja pracy kapitałem – automatyzacja procesów
+- outsourcing i offshoring
+- retencja pracowników i koszty rotacji
+## Część praktyczna | 10
+- polskie firmy przemysłowe i usługowe – inwestycje w automatyzację
+- zatrudnianie cudzoziemców i agencje pracy
+- przykłady przenoszenia usług do centrów usług wspólnych (SSC/BPO)
+- własna ocena
+> struktura: wstęp – rynek pracownika; teoria – RBV, employer branding, automatyzacja, outsourcing, retencja; praktyka – polskie przykłady; zakończenie – połączenie strategii
+> błędy: brak teorii zarządzania strategicznego; brak przykładów; brak kosztów rotacji
+> dane: sektor nowoczesnych usług biznesowych w Polsce zatrudnia ok. 0,5 mln osób (ABSL, 2024)
+
+=== 43 | finanse | th
+T: Rynek nieruchomości mieszkaniowych w społeczeństwie, które się starzeje
+## Część teoretyczna | 15
+- popyt na mieszkania w cyklu życia i według struktury gospodarstw domowych
+- mieszkanie jako dobro konsumpcyjne i inwestycyjne
+- stopy procentowe, kredyt i ceny
+- podaż: grunty, regulacje, koszty budowy
+- odwrócona hipoteka – uwolnienie kapitału seniorów
+## Część praktyczna | 10
+- liczba gospodarstw domowych w Polsce a liczba mieszkań (GUS)
+- duże mieszkania zajmowane przez osoby starsze, małe przez rodziny
+- regiony z pustostanami a metropolie
+- własna ocena
+> struktura: wstęp – starzenie zmienia rynek mieszkań; teoria – cykl życia, dobro inwestycyjne, podaż, odwrócona hipoteka; praktyka – dane GUS, regiony; zakończenie – rynek bardziej zróżnicowany regionalnie
+> błędy: założenie spadku cen wszędzie; brak gospodarstw domowych; brak odwróconej hipoteki
+> dane: liczba mieszkań w Polsce ok. 15,7 mln (GUS, 2023); w Polsce działa ustawa o odwróconym kredycie hipotecznym z 2014 r. (Dz.U.)
+
+=== 44 | polityka | th
+T: Polityka migracyjna Unii Europejskiej wobec wyzwań demograficznych
+## Część teoretyczna | 15
+- migracje zarobkowe, humanitarne i rodzinne
+- ekonomiczne skutki imigracji dla kraju przyjmującego
+- integracja imigrantów a ich wpływ na finanse publiczne
+- dobra publiczne na poziomie UE (ochrona granic) i problem gapowicza
+- migracja selektywna (np. Niebieska Karta UE)
+## Część praktyczna | 10
+- Pakt o migracji i azylu UE (2024)
+- polityka migracyjna Polski (strategia 2025–2030)
+- przykład Kanady lub Niemiec
+- własna ocena
+> struktura: wstęp – migracje jako temat polityczny i demograficzny; teoria – rodzaje, skutki, integracja, gapowicz; praktyka – Pakt, Polska, przykład; zakończenie – selektywność i integracja
+> błędy: mieszanie migracji zarobkowej z azylową; brak gapowicza; brak dokumentów
+> dane: Pakt o migracji i azylu UE przyjęty w maju 2024 r., stosowany od 2026 r. (Rada UE)
+
+=== 45 | polityka | -
+T: Koszty energii a konkurencyjność przemysłu w Europie
+## Część teoretyczna | 15
+- energia jako czynnik produkcji i koszt
+- cena uprawnień do emisji (EU ETS) i ucieczka emisji (carbon leakage)
+- mechanizm CBAM
+- bezpieczeństwo dostaw i dywersyfikacja
+- polityka przemysłowa i subsydia
+## Część praktyczna | 10
+- kryzys energetyczny 2022 r. w Europie
+- przemysł energochłonny w Polsce
+- USA – Inflation Reduction Act
+- własna ocena
+> struktura: wstęp – drożejąca energia w Europie; teoria – koszt, ETS, leakage, CBAM; praktyka – 2022, Polska, IRA; zakończenie – transformacja z ochroną konkurencyjności
+> błędy: brak CBAM; brak danych; jednostronność
+> dane: CBAM – okres przejściowy od października 2023 r., pełne opłaty od 2026 r. (KE)
+
+=== 46 | makro | -
+T: Inflacja po pandemii – czego nauczyły się banki centralne?
+## Część teoretyczna | 15
+- źródła inflacji 2021–2023: szoki podażowe, popyt, polityka fiskalna
+- prognozowanie inflacji i błędy prognoz
+- reguła Taylora
+- oczekiwania inflacyjne i wiarygodność banku centralnego
+- koordynacja polityki pieniężnej i fiskalnej
+## Część praktyczna | 10
+- Fed, EBC, NBP – tempo podwyżek stóp
+- inflacja w Polsce na tle UE
+- przegląd strategii Fed (2020) i EBC (2021)
+- własna ocena
+> struktura: wstęp – powrót inflacji; teoria – źródła, Taylor, oczekiwania; praktyka – banki centralne; zakończenie – lekcje: szybsza reakcja, uwaga na podaż
+> błędy: brak reguły Taylora; brak porównania; brak danych
+> dane: inflacja HICP w strefie euro osiągnęła 10,6% r/r w październiku 2022 r. (Eurostat)
+
+=== 47 | polityka | -
+T: Powrót polityki przemysłowej – szansa czy zagrożenie?
+## Część teoretyczna | 15
+- argumenty za polityką przemysłową: efekty zewnętrzne, zawodności rynku
+- argumenty przeciw: wybieranie zwycięzców, pogoń za rentą
+- teoria przemysłu raczkującego
+- pomoc publiczna w UE
+- konkurencja subsydiów między państwami
+## Część praktyczna | 10
+- Inflation Reduction Act i CHIPS Act w USA
+- European Chips Act i Net-Zero Industry Act
+- Polska – inwestycje zagraniczne i ulgi
+- własna ocena
+> struktura: wstęp – zmiana paradygmatu; teoria – za i przeciw; praktyka – USA, UE, Polska; zakończenie – warunki skuteczności
+> błędy: jednostronność; brak teorii; brak przykładów
+> dane: CHIPS and Science Act (USA, 2022) – ok. 52 mld USD na półprzewodniki (Kongres USA)
+
+=== 48 | mikro | -
+T: Platformy cyfrowe i siła rynkowa – nowe wyzwanie dla polityki konkurencji
+## Część teoretyczna | 15
+- rynki dwustronne i efekty sieciowe
+- „zwycięzca bierze wszystko”
+- dane jako zasób i bariera wejścia
+- ceny zerowe a dobrobyt konsumenta
+- regulacja ex ante a ex post
+## Część praktyczna | 10
+- DMA i DSA w UE
+- sprawy antymonopolowe wobec dużych platform
+- własna ocena
+> struktura: wstęp – dominacja platform; teoria – efekty sieciowe, dane, ceny zerowe; praktyka – DMA, sprawy; zakończenie – regulacja ex ante
+> błędy: brak rynków dwustronnych; brak przykładów; brak regulacji
+> dane: Komisja Europejska wyznaczyła strażników dostępu (gatekeepers) na podstawie DMA we wrześniu 2023 r. (KE)
+
+=== 49 | makro | -
+T: Czy Polska powinna przyjąć euro?
+## Część teoretyczna | 15
+- teoria optymalnych obszarów walutowych (R. Mundell)
+- korzyści: koszty transakcyjne, wiarygodność, handel
+- koszty: utrata polityki pieniężnej i kursu walutowego
+- kryteria konwergencji z Maastricht
+- asymetryczne szoki i mechanizmy dostosowawcze
+## Część praktyczna | 10
+- spełnianie kryteriów przez Polskę
+- doświadczenia Słowacji, krajów bałtyckich, Chorwacji (2023)
+- kryzys strefy euro 2010–2012
+- własna ocena
+> struktura: wstęp – zobowiązanie traktatowe; teoria – OOW, korzyści, koszty, kryteria; praktyka – Polska, przykłady, kryzys; zakończenie – własna teza z uzasadnieniem
+> błędy: brak Mundella; brak kryteriów; brak przykładów
+> dane: Chorwacja przyjęła euro 1 stycznia 2023 r. (EBC)
+
+=== 50 | polityka | -
+T: Ekonomia bezpieczeństwa – wydatki na obronność a rozwój gospodarczy
+## Część teoretyczna | 15
+- obronność jako dobro publiczne
+- „armaty czy masło” – krzywa możliwości produkcyjnych
+- mnożnik wydatków zbrojeniowych
+- efekt wypychania i finansowanie wydatków
+- innowacje wojskowe a technologie cywilne
+## Część praktyczna | 10
+- wydatki na obronność Polski i NATO
+- Fundusz Wsparcia Sił Zbrojnych
+- przykład Izraela lub Korei Płd.
+- własna ocena
+> struktura: wstęp – bezpieczeństwo jako warunek rozwoju; teoria – dobro publiczne, KMP, mnożnik, wypychanie; praktyka – Polska, NATO, przykład; zakończenie – równowaga i efektywność wydatków
+> błędy: brak KMP; brak finansowania; brak przykładów
+> dane: cel NATO – 2% PKB na obronność (szczyt w Walii, 2014), w 2025 r. uzgodniono nowy cel 5% PKB do 2035 r. (NATO, szczyt w Hadze)

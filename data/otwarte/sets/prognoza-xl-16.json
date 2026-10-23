@@ -1,0 +1,256 @@
+{
+ "set": "prognoza-xl-16",
+ "ed": 40,
+ "stage": "s",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-16-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "finanse",
+   "th": false,
+   "topics": [
+    {
+     "title": "Kredyt – szansa czy pułapka?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "kredyt i pożyczka; oprocentowanie nominalne a RRSO",
+        "zdolność kredytowa",
+        "ryzyko stopy procentowej (stała a zmienna stopa)",
+        "nadmierne zadłużenie i spirala długu",
+        "kredyt w rozwoju gospodarki"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "kredyty frankowe w Polsce",
+        "WIBOR i wakacje kredytowe",
+        "obliczenie raty",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – kredyt w życiu codziennym",
+       "teoria – koszt, ryzyko, zdolność",
+       "praktyka – franki, wakacje kredytowe, przykład raty",
+       "zakończenie – szansa przy rozsądku"
+      ],
+      "b": [
+       "utożsamianie oprocentowania z RRSO",
+       "brak ryzyka stopy",
+       "brak przykładu liczbowego"
+      ],
+      "d": [
+       "wakacje kredytowe dla kredytobiorców hipotecznych wprowadzono w 2022 r. (ustawa o finansowaniu społecznościowym, nowelizacja)"
+      ]
+     }
+    },
+    {
+     "title": "Turystyka jako sektor gospodarki",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "usługi turystyczne i ich specyfika",
+        "mnożnik turystyczny",
+        "sezonowość i rynek pracy",
+        "efekty zewnętrzne (zatłoczenie, środowisko)",
+        "polityka turystyczna"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "turystyka w Polsce (bon turystyczny)",
+        "overtourism w Europie (Barcelona, Wenecja)",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – turystyka jako branża",
+       "teoria – usługi, mnożnik, efekty",
+       "praktyka – Polska, overtourism",
+       "zakończenie – zrównoważony rozwój turystyki"
+      ],
+      "b": [
+       "brak efektów zewnętrznych",
+       "brak danych",
+       "jednostronność"
+      ],
+      "d": [
+       "Wenecja wprowadziła opłatę za wstęp dla turystów jednodniowych w 2024 r. (Comune di Venezia)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-16-zadanie",
+  "title": "Zadanie z podstaw ekonomii – Produkt krańcowy i zatrudnienie",
+  "pts": 15,
+  "topic": "mikro",
+  "own": true,
+  "th": false,
+  "vars": {
+   "q1": 10.0,
+   "q2": 24.0,
+   "q3": 36.0,
+   "q4": 44.0,
+   "q5": 48.0,
+   "pr": 400.0,
+   "wg": 3000.0
+  },
+  "lets": [
+   [
+    "mp4",
+    "q4-q3"
+   ],
+   [
+    "ap5",
+    "q5/5"
+   ],
+   [
+    "vmp5",
+    "(q5-q4)*pr"
+   ],
+   [
+    "lopt",
+    "4"
+   ],
+   [
+    "vmp4",
+    "(q4-q3)*pr"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Mała piekarnia może zatrudnić od 1 do 5 pracowników. Dzienna produkcja (w koszach pieczywa) wynosi (dane umowne):"
+   },
+   {
+    "t": "table",
+    "head": [
+     "Liczba pracowników",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5"
+    ],
+    "rows": [
+     [
+      "Produkt całkowity",
+      "10",
+      "24",
+      "36",
+      "44",
+      "48"
+     ]
+    ]
+   },
+   {
+    "t": "p",
+    "x": "Cena kosza pieczywa (po odjęciu kosztu surowców) wynosi 400 zł miesięcznie przy codziennej produkcji, czyli każdy kosz dziennej produkcji daje 400 zł przychodu w miesiącu. Płaca pracownika wynosi 3 000 zł miesięcznie."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 3,
+    "prompt": "Oblicz produkt krańcowy czwartego pracownika.",
+    "answers": [
+     {
+      "label": "Produkt krańcowy",
+      "value": 8.0,
+      "calc": "q4-q3",
+      "unit": "kosze",
+      "tol": 0.0
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "MP₄ = 44 − 36 = 8"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 3,
+    "prompt": "Oblicz produkt przeciętny przy 5 pracownikach.",
+    "answers": [
+     {
+      "label": "Produkt przeciętny",
+      "value": 9.6,
+      "calc": "q5/5",
+      "unit": "kosze",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "AP₅ = 48 / 5 = 9,6"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 4,
+    "prompt": "Oblicz wartość produktu krańcowego piątego pracownika i optymalną liczbę pracowników.",
+    "answers": [
+     {
+      "label": "Wartość produktu krańcowego 5. pracownika",
+      "value": 1600.0,
+      "calc": "(q5-q4)*pr",
+      "unit": "zł",
+      "tol": 1.0
+     },
+     {
+      "label": "Optymalna liczba pracowników",
+      "value": 4.0,
+      "calc": "4",
+      "unit": "os.",
+      "tol": 0.0
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "VMP₄ = 8 × 400 = 3 200 zł > 3 000 zł;  VMP₅ = 4 × 400 = 1 600 zł < 3 000 zł"
+     },
+     {
+      "t": "p",
+      "x": "Firma zatrudnia, dopóki wartość produktu krańcowego jest nie mniejsza od płacy – optymalnie 4 pracowników."
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 5,
+    "prompt": "Sformułuj prawo malejących przychodów i wyjaśnij, jak wzrost płac (np. wskutek niedoboru pracowników) wpływa na decyzję o zatrudnieniu i zachętę do inwestycji w maszyny.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Prawo malejących przychodów: przy stałych pozostałych czynnikach (np. jednym piecu) każdy kolejny pracownik dodaje coraz mniej produkcji (14, 12, 8, 4 kosze). Wzrost płacy powyżej 3 200 zł sprawi, że opłacalne będzie zatrudnienie tylko 3 pracowników. Droższa praca zwiększa też opłacalność kapitału – np. drugiego pieca lub automatu – co przesuwa krzywą produktu krańcowego w górę i podnosi wydajność. To mechanizm, przez który niedobór rąk do pracy w starzejącej się gospodarce przyspiesza automatyzację."
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,202 @@
+{
+ "set": "prognoza-xl-48",
+ "ed": 40,
+ "stage": "c",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-48-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "mikro",
+   "th": false,
+   "topics": [
+    {
+     "title": "Platformy cyfrowe i siła rynkowa – nowe wyzwanie dla polityki konkurencji",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "rynki dwustronne i efekty sieciowe",
+        "„zwycięzca bierze wszystko”",
+        "dane jako zasób i bariera wejścia",
+        "ceny zerowe a dobrobyt konsumenta",
+        "regulacja ex ante a ex post"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "DMA i DSA w UE",
+        "sprawy antymonopolowe wobec dużych platform",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – dominacja platform",
+       "teoria – efekty sieciowe, dane, ceny zerowe",
+       "praktyka – DMA, sprawy",
+       "zakończenie – regulacja ex ante"
+      ],
+      "b": [
+       "brak rynków dwustronnych",
+       "brak przykładów",
+       "brak regulacji"
+      ],
+      "d": [
+       "Komisja Europejska wyznaczyła strażników dostępu (gatekeepers) na podstawie DMA we wrześniu 2023 r. (KE)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-48-zadanie",
+  "title": "Zadanie analityczne – Wybór konsumenta i zmiana ceny",
+  "pts": 15,
+  "topic": "mikro",
+  "own": true,
+  "th": false,
+  "vars": {
+   "al": 0.4,
+   "I": 1200.0,
+   "px": 20.0,
+   "py": 30.0,
+   "px2": 25.0
+  },
+  "lets": [
+   [
+    "x0",
+    "al*I/px"
+   ],
+   [
+    "y0",
+    "(1-al)*I/py"
+   ],
+   [
+    "x1",
+    "al*I/px2"
+   ],
+   [
+    "I2",
+    "I*(px2/px)**al"
+   ],
+   [
+    "cv",
+    "I2-I"
+   ],
+   [
+    "xh",
+    "al*I2/px2"
+   ],
+   [
+    "es",
+    "xh-x0"
+   ],
+   [
+    "ed",
+    "x1-xh"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Użyteczność konsumenta opisuje funkcja U = x^0,4 y^0,6. Dochód wynosi 1 200 zł, ceny: pₓ = 20 zł, pᵧ = 30 zł (dane umowne). Przy takiej funkcji konsument wydaje na każde dobro stały udział dochodu równy wykładnikowi."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 4,
+    "prompt": "Wyznacz optymalny koszyk konsumenta.",
+    "answers": [
+     {
+      "label": "Ilość x",
+      "value": 24.0,
+      "calc": "al*I/px",
+      "unit": "szt.",
+      "tol": 0.01
+     },
+     {
+      "label": "Ilość y",
+      "value": 24.0,
+      "calc": "(1-al)*I/py",
+      "unit": "szt.",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "x = 0,4 × 1 200 / 20 = 24;  y = 0,6 × 1 200 / 30 = 24"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 3,
+    "prompt": "Cena x rośnie do 25 zł. Oblicz nowy popyt na x.",
+    "answers": [
+     {
+      "label": "Nowa ilość x",
+      "value": 19.2,
+      "calc": "al*I/px2",
+      "unit": "szt.",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "x = 0,4 × 1 200 / 25 = 19,2"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 4,
+    "prompt": "Oblicz dochód, który przy nowej cenie pozwoliłby konsumentowi osiągnąć pierwotny poziom użyteczności (zmienność kompensacyjna), oraz kwotę rekompensaty.",
+    "answers": [
+     {
+      "label": "Dochód kompensujący",
+      "value": 1312.0345,
+      "calc": "I*(px2/px)**al",
+      "unit": "zł",
+      "tol": 0.5
+     },
+     {
+      "label": "Rekompensata",
+      "value": 112.0345,
+      "calc": "I2-I",
+      "unit": "zł",
+      "tol": 0.5
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "I′ = I × (p′ₓ / pₓ)^α = 1 200 × 1,25^0,4 ≈ 1 312,03 zł;  rekompensata ≈ 112,03 zł"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "Rozłóż zmianę popytu na x na efekt substytucyjny i dochodowy (Hicks) i zinterpretuj, odnosząc się do waloryzacji świadczeń.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Przy dochodzie kompensującym konsument kupiłby x = 0,4 × 1 312,0 / 25 ≈ 20,99: efekt substytucyjny ≈ −3,01, efekt dochodowy ≈ −1,79 (razem 19,2 − 24 = −4,8). Rekompensata przywraca użyteczność, ale nie pierwotny koszyk – konsument zastępuje droższe dobro tańszym. Dlatego waloryzacja świadczeń o wskaźnik cen (np. CPI, z wagami z przeszłości) nieco przeszacowuje wzrost kosztów utrzymania (tzw. obciążenie substytucyjne indeksu cen)."
+     }
+    ]
+   }
+  ]
+ }
+}

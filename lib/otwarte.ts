@@ -4,7 +4,7 @@ import themeMap from "@/data/olimpiada/theme.json";
 import { query } from "./db";
 import {
   publicEssay, publicTask, scoreEssay, scoreTask, STAGE_NAME,
-  type Essay, type OpenSet, type PublicEssay, type PublicTask, type SelfRating, type Stage, type Task,
+  type Essay, type OpenSet, type OpenSrc, type PublicEssay, type PublicTask, type SelfRating, type Stage, type Task,
 } from "./otwarte-core";
 import { HttpError } from "./tests";
 import { addXp } from "./xp";
@@ -18,6 +18,8 @@ export interface OpenMeta {
   title: string; pts: number; topic: string; theme: string; choose: number;
   /** Dotyczy hasła przewodniego swojej edycji (tools/otwarte/theme.py + ręczny przegląd). */
   th: boolean;
+  /** „prognoza” – własne zadania i eseje „🔮 Prognoza XL”, poza kluczami OWE. */
+  src: OpenSrc;
 }
 
 const THEME_OPEN = new Set(themeMap.open);
@@ -32,19 +34,19 @@ for (const s of SETS) {
   for (const e of s.essays) ESSAYS.set(e.id, { set: s, essay: e });
 }
 
-const meta = (kind: OpenKind, s: OpenSet, id: string, title: string, pts: number, topic: string, choose = 1): OpenMeta => ({
+const meta = (kind: OpenKind, s: OpenSet, id: string, title: string, pts: number, topic: string, choose = 1, th = false): OpenMeta => ({
   id, kind, set: s.set, ed: s.ed, edRoman: roman(s.ed), year: yearOf(s.ed), stage: s.stage, stageName: STAGE_NAME[s.stage],
-  title, pts, topic, theme: THEMES[s.ed - 1]?.theme ?? "", choose, th: THEME_OPEN.has(id),
+  title, pts, topic, theme: THEMES[s.ed - 1]?.theme ?? "", choose, th: th || THEME_OPEN.has(id), src: s.src ?? "owe",
 });
 const ALL: OpenMeta[] = [
-  ...[...TASKS.values()].map(({ set, task }) => meta("zadanie", set, task.id, task.title, task.pts, task.topic)),
+  ...[...TASKS.values()].map(({ set, task }) => meta("zadanie", set, task.id, task.title, task.pts, task.topic, 1, task.th)),
   ...[...ESSAYS.values()].map(({ set, essay }) => meta("esej", set, essay.id, essay.topics.length > 1 ? essay.topics.map((t) => t.title).join(" / ") : essay.topics[0].title,
-    essay.pts, essay.topic, essay.topics.length)),
+    essay.pts, essay.topic, essay.topics.length, essay.th)),
 ].sort((a, b) => b.ed - a.ed || "soc".indexOf(a.stage) - "soc".indexOf(b.stage));
 
 export const openMeta = (id: string) => ALL.find((m) => m.id === id) ?? null;
-/** Wszystkie eseje i zadania (metadane) – do statystyk tematów. */
-export const openAll = (): readonly OpenMeta[] => ALL;
+/** Eseje i zadania z kluczy OWE (metadane, bez Prognozy XL) – do statystyk tematów. */
+export const openAll = (): readonly OpenMeta[] => ALL.filter((m) => m.src === "owe");
 
 export function openCounts() {
   return { zadanie: TASKS.size, esej: ESSAYS.size };
@@ -135,14 +137,14 @@ export async function checkEssay(userId: string, id: string, body: Record<string
       [userId, id, e.set.stage, e.essay.topic, JSON.stringify({ topic, checks, chars }), res.score, res.max]);
     if (Number(rows[0].prev) === 0) await addXp(userId, "eseje", OPEN_XP.esej);
   }
-  return { ...res, topic: t.title, schema: t.schema };
+  return { ...res, topic: t.title, schema: t.schema, hints: t.hints ?? null };
 }
 
-/** Statystyki: osobno zadania i eseje (bez testów) – łącznie, wg etapu i wg działu. */
+/** Statystyki: osobno zadania i eseje (bez testów) – łącznie, wg źródła (OWE / Prognoza XL), etapu i działu. */
 export async function openStats(userId: string) {
-  const { rows } = await query<{ kind: OpenKind; stage: string; topic: string; n: string; items: string; score: number; max: number }>(
-    `SELECT kind, stage, topic, COUNT(*) AS n, COUNT(DISTINCT item_id) AS items, SUM(score) AS score, SUM(max) AS max
-     FROM open_attempts WHERE user_id = $1 GROUP BY kind, stage, topic`, [userId]);
+  const { rows } = await query<{ kind: OpenKind; stage: string; topic: string; src: OpenSrc; n: string; items: string; score: number; max: number }>(
+    `SELECT kind, stage, topic, CASE WHEN item_id LIKE 'prognoza-%' THEN 'prognoza' ELSE 'owe' END AS src, COUNT(*) AS n, COUNT(DISTINCT item_id) AS items, SUM(score) AS score, SUM(max) AS max
+     FROM open_attempts WHERE user_id = $1 GROUP BY 1, 2, 3, 4`, [userId]);
   const pct = (s: number, m: number) => (m > 0 ? Math.round((s / m) * 1000) / 10 : 0);
   const sum = (rs: typeof rows) => {
     const score = rs.reduce((a, r) => a + Number(r.score), 0), max = rs.reduce((a, r) => a + Number(r.max), 0);
@@ -150,8 +152,8 @@ export async function openStats(userId: string) {
   };
   const out = (kind: OpenKind) => {
     const rs = rows.filter((r) => r.kind === kind);
-    const by = (key: "stage" | "topic") => Object.fromEntries([...new Set(rs.map((r) => r[key]))].map((v) => [v, sum(rs.filter((r) => r[key] === v))]));
-    return { total: { ...sum(rs), items: Number(rs.reduce((a, r) => a + Number(r.items), 0)), available: kind === "zadanie" ? TASKS.size : ESSAYS.size }, byStage: by("stage"), byTopic: by("topic") };
+    const by = (key: "stage" | "topic" | "src") => Object.fromEntries([...new Set(rs.map((r) => r[key]))].map((v) => [v, sum(rs.filter((r) => r[key] === v))]));
+    return { total: { ...sum(rs), items: Number(rs.reduce((a, r) => a + Number(r.items), 0)), available: kind === "zadanie" ? TASKS.size : ESSAYS.size }, bySrc: by("src"), byStage: by("stage"), byTopic: by("topic") };
   };
   return { zadanie: out("zadanie"), esej: out("esej") };
 }

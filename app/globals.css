@@ -1413,3 +1413,4 @@ body:has(.speech-bar) main.container { padding-bottom: 160px; }
 .more-body p { margin: 0 0 8px; }
 .more-ex { color: var(--text); }
 .more-link { font-size: .9rem; }
+.open-src { color: var(--accent, #7c3aed); font-weight: 600; }

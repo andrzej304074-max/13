@@ -1,0 +1,208 @@
+{
+ "set": "prognoza-xl-43",
+ "ed": 40,
+ "stage": "c",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-43-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "finanse",
+   "th": true,
+   "topics": [
+    {
+     "title": "Rynek nieruchomości mieszkaniowych w społeczeństwie, które się starzeje",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "popyt na mieszkania w cyklu życia i według struktury gospodarstw domowych",
+        "mieszkanie jako dobro konsumpcyjne i inwestycyjne",
+        "stopy procentowe, kredyt i ceny",
+        "podaż: grunty, regulacje, koszty budowy",
+        "odwrócona hipoteka – uwolnienie kapitału seniorów"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "liczba gospodarstw domowych w Polsce a liczba mieszkań (GUS)",
+        "duże mieszkania zajmowane przez osoby starsze, małe przez rodziny",
+        "regiony z pustostanami a metropolie",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – starzenie zmienia rynek mieszkań",
+       "teoria – cykl życia, dobro inwestycyjne, podaż, odwrócona hipoteka",
+       "praktyka – dane GUS, regiony",
+       "zakończenie – rynek bardziej zróżnicowany regionalnie"
+      ],
+      "b": [
+       "założenie spadku cen wszędzie",
+       "brak gospodarstw domowych",
+       "brak odwróconej hipoteki"
+      ],
+      "d": [
+       "liczba mieszkań w Polsce ok. 15,7 mln (GUS, 2023)",
+       "w Polsce działa ustawa o odwróconym kredycie hipotecznym z 2014 r. (Dz.U.)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-43-zadanie",
+  "title": "Zadanie analityczne – Duopol Cournota i kartel",
+  "pts": 15,
+  "topic": "mikro",
+  "own": true,
+  "th": false,
+  "vars": {
+   "a": 120.0,
+   "mc": 30.0
+  },
+  "lets": [
+   [
+    "qc",
+    "(a-mc)/3"
+   ],
+   [
+    "pc",
+    "a-2*qc"
+   ],
+   [
+    "zc",
+    "(pc-mc)*qc"
+   ],
+   [
+    "qm",
+    "(a-mc)/2"
+   ],
+   [
+    "pm",
+    "a-qm"
+   ],
+   [
+    "zm",
+    "(pm-mc)*qm/2"
+   ],
+   [
+    "qdev",
+    "(a-mc-qm/2)/2"
+   ],
+   [
+    "zdev",
+    "(a-qm/2-qdev-mc)*qdev"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Na rynku działają dwie identyczne firmy. Popyt rynkowy: P = 120 − Q, gdzie Q = q₁ + q₂. Koszt krańcowy każdej firmy jest stały i wynosi 30 zł, koszty stałe pomijamy (dane umowne)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 4,
+    "prompt": "Wyznacz równowagę Cournota: produkcję każdej firmy i cenę.",
+    "answers": [
+     {
+      "label": "Produkcja firmy",
+      "value": 30.0,
+      "calc": "(a-mc)/3",
+      "unit": "szt.",
+      "tol": 0.01
+     },
+     {
+      "label": "Cena",
+      "value": 60.0,
+      "calc": "a-2*qc",
+      "unit": "zł",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "funkcja reakcji: q₁ = (120 − 30 − q₂) / 2;  przy symetrii q = 90 / 3 = 30;  P = 120 − 2 × 30 = 60 zł"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 3,
+    "prompt": "Oblicz zysk każdej firmy w równowadze Cournota.",
+    "answers": [
+     {
+      "label": "Zysk",
+      "value": 900.0,
+      "calc": "(pc-mc)*qc",
+      "unit": "zł",
+      "tol": 0.5
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "(60 − 30) × 30 = 900 zł"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 4,
+    "prompt": "Firmy zawierają kartel i dzielą produkcję monopolisty po połowie. Oblicz produkcję łączną, cenę i zysk każdej firmy.",
+    "answers": [
+     {
+      "label": "Produkcja kartelu",
+      "value": 45.0,
+      "calc": "(a-mc)/2",
+      "unit": "szt.",
+      "tol": 0.01
+     },
+     {
+      "label": "Cena",
+      "value": 75.0,
+      "calc": "a-qm",
+      "unit": "zł",
+      "tol": 0.01
+     },
+     {
+      "label": "Zysk firmy",
+      "value": 1012.5,
+      "calc": "(pm-mc)*qm/2",
+      "unit": "zł",
+      "tol": 0.5
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "MR = 120 − 2Q = 30 ⇒ Q = 45;  P = 75 zł;  zysk firmy = (75 − 30) × 45 / 2 = 1 012,5 zł"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "Wyjaśnij, dlaczego kartel jest nietrwały, i porównaj wyniki z konkurencją doskonałą.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Gdy partner produkuje 45 / 2 = 22,5, opłaca się złamać umowę: najlepsza odpowiedź to q = (90 − 22,5)/2 = 33,75, co daje zysk 1 139,1 zł > 1 012,5 zł – sytuacja dylematu więźnia, więc kartel bez egzekwowania (lub bez powtarzalnej gry) się rozpada. W konkurencji doskonałej P = MC = 30 zł i Q = 90; Cournot (P = 60) leży między konkurencją a monopolem (75). Kartele są zakazane (UOKiK, KE), a program łagodzenia kar (leniency) wzmacnia bodźce do zdrady."
+     }
+    ]
+   }
+  ]
+ }
+}

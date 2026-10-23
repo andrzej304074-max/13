@@ -1,0 +1,428 @@
+#! Prognoza XL – zadania z analizy finansowej, etap okręgowy (zestawy 18–34), po 15 pkt. Dane umowne.
+
+=== 18 | firma | th | Analiza wskaźnikowa prywatnego domu opieki
+vars: AT=4200; Z=60; N=340; G=200; KW=2400; ZD=1800; ZK=600; P=3600; EBIT=540; ODS=120; tx=19; KP=1800
+P: Spółka prowadząca prywatny dom opieki dla osób starszych przedstawiła uproszczone sprawozdanie finansowe (tys. zł):
+H: Aktywa | tys. zł | Pasywa | tys. zł
+R: Aktywa trwałe | {{AT:0}} | Kapitał własny | {{KW:0}}
+R: Zapasy | {{Z:0}} | Zobowiązania długoterminowe | {{ZD:0}}
+R: Należności krótkoterminowe | {{N:0}} | Zobowiązania krótkoterminowe | {{ZK:0}}
+R: Środki pieniężne | {{G:0}} | |
+P: Przychody ze sprzedaży wyniosły {{P:0}} tys. zł, zysk operacyjny (EBIT) – {{EBIT:0}} tys. zł, odsetki – {{ODS:0}} tys. zł, stawka podatku dochodowego – {{tx:0}}%. Koszty wynagrodzeń stanowią {{KP:0}} tys. zł rocznie.
+let: AO = Z+N+G
+let: A = AT+AO
+let: ZN = (EBIT-ODS)*(1-tx/100)
+--- a | 3
+Q: Oblicz wskaźnik bieżącej płynności i wskaźnik szybkiej płynności.
+A: Bieżąca płynność | cr = AO/ZK | | tol=0,01
+A: Szybka płynność | qr = (AO-Z)/ZK | | tol=0,01
+SF: aktywa obrotowe = {{Z:0}} + {{N:0}} + {{G:0}} = {{AO:0}};  CR = {{AO:0}} / {{ZK:0}} = {{cr:2}};  QR = ({{AO:0}} − {{Z:0}}) / {{ZK:0}} = {{qr:2}}
+--- b | 3
+Q: Oblicz zysk netto oraz rentowność sprzedaży (ROS), aktywów (ROA) i kapitału własnego (ROE).
+A: Zysk netto | zn = ZN | tys. zł | tol=0,1
+A: ROS | ros = ZN/P*100 | % | tol=0,02
+A: ROA | roa = ZN/A*100 | % | tol=0,02
+A: ROE | roe = ZN/KW*100 | % | tol=0,02
+SF: zysk netto = ({{EBIT:0}} − {{ODS:0}}) × (1 − 0,19) = {{zn:1}};  ROS = {{zn:1}} / {{P:0}} ≈ {{ros:2}}%;  ROA = {{zn:1}} / {{A:0}} ≈ {{roa:2}}%;  ROE = {{zn:1}} / {{KW:0}} ≈ {{roe:2}}%
+--- c | 3
+Q: Oblicz wskaźnik ogólnego zadłużenia i wskaźnik pokrycia odsetek.
+A: Ogólne zadłużenie | dr = (ZD+ZK)/A*100 | % | tol=0,05
+A: Pokrycie odsetek | ic = EBIT/ODS | | tol=0,01
+SF: ({{ZD:0}} + {{ZK:0}}) / {{A:0}} × 100 = {{dr:0}}%;  EBIT / odsetki = {{EBIT:0}} / {{ODS:0}} = {{ic:1}}
+--- d | 3
+Q: Z powodu niedoboru opiekunów wynagrodzenia rosną o 10%, a ceny usług się nie zmieniają. Oblicz nowy zysk operacyjny, wskaźnik pokrycia odsetek i ROE.
+A: Nowy EBIT | ebit2 = EBIT-0.1*KP | tys. zł | tol=0,5
+A: Pokrycie odsetek | ic2 = ebit2/ODS | | tol=0,01
+A: ROE | roe2 = (ebit2-ODS)*(1-tx/100)/KW*100 | % | tol=0,02
+SF: EBIT = {{EBIT:0}} − 0,1 × {{KP:0}} = {{ebit2:0}};  pokrycie = {{ebit2:0}} / {{ODS:0}} = {{ic2:1}};  ROE = ({{ebit2:0}} − {{ODS:0}}) × 0,81 / {{KW:0}} ≈ {{roe2:2}}%
+--- e | 3
+Q: Oceń sytuację finansową spółki i zaproponuj dwa działania, które ograniczą wpływ rosnących kosztów pracy.
+S: Płynność jest na granicy bezpieczeństwa (CR = {{cr:1}}, QR = {{qr:1}}) – typowe dla usług bez zapasów, ale z niewielkim buforem. Zadłużenie umiarkowane ({{dr:0}}%), pokrycie odsetek dobre. Spółka jest jednak wrażliwa na koszty pracy: 10% wzrostu płac obniża ROE z ok. {{roe:0}}% do ok. {{roe2:0}}%.
+SL: stopniowe podnoszenie cen przy rosnącym popycie (starzenie się ludności – popyt na opiekę jest mało elastyczny),
+SL: technologie (teleopieka, czujniki, elektroniczna dokumentacja) zwiększające liczbę podopiecznych na opiekuna,
+SL: kontrakty z samorządami i NFZ, stabilizujące przychody,
+SL: programy retencji pracowników (szkolenia, ścieżki awansu) zmniejszające koszty rotacji.
+
+=== 19 | firma | th | Ocena inwestycji w dom seniora
+vars: I0=12; CF=1,8; RV=4; r=8; r2=10; n=10
+P: Inwestor rozważa budowę domu seniora. Nakład początkowy wynosi {{I0:0}} mln zł. Przez {{n:0}} lat dom ma przynosić przepływy pieniężne netto {{CF:1}} mln zł rocznie (na koniec roku), a po {{n:0}} latach może zostać sprzedany za {{RV:0}} mln zł. Koszt kapitału wynosi {{r:0}}% (dane umowne).
+--- a | 3
+Q: Oblicz prosty okres zwrotu nakładów (bez uwzględnienia wartości końcowej).
+A: Okres zwrotu | pb = I0/CF | lat | tol=0,02
+SF: PP = {{I0:0}} / {{CF:1}} ≈ {{pb:2}} roku
+--- b | 4
+Q: Oblicz wartość bieżącą netto (NPV) inwestycji przy koszcie kapitału {{r:0}}%.
+A: NPV | npv = -I0+CF*(1-(1+r/100)**(-n))/(r/100)+RV/(1+r/100)**n | mln zł | tol=0,01
+let: fa = (1-(1+r/100)**(-n))/(r/100)
+let: pvrv = RV/(1+r/100)**n
+SF: NPV = −{{I0:0}} + {{CF:1}} × {{fa:4}} + {{RV:0}} / 1,08¹⁰ = −{{I0:0}} + {{fa:4}}×{{CF:1}} + {{pvrv:3}} ≈ {{npv:3}} mln zł
+S: Czynnik {{fa:4}} to współczynnik dyskontujący rentę: (1 − 1,08⁻¹⁰) / 0,08.
+--- c | 4
+Q: Oblicz NPV przy koszcie kapitału {{r2:0}}%.
+A: NPV przy 10% | npv2 = -I0+CF*(1-(1+r2/100)**(-n))/(r2/100)+RV/(1+r2/100)**n | mln zł | tol=0,01
+let: fa2 = (1-(1+r2/100)**(-n))/(r2/100)
+SF: NPV = −{{I0:0}} + {{CF:1}} × {{fa2:4}} + {{RV:0}} / 1,1¹⁰ ≈ {{npv2:3}} mln zł
+S: NPV maleje wraz ze wzrostem kosztu kapitału, ale nadal jest dodatnie – wewnętrzna stopa zwrotu (IRR) przekracza 10%.
+--- d | 4
+Q: Oceń opłacalność inwestycji i wskaż czynniki demograficzne oraz ryzyka, które mogą zmienić przepływy pieniężne.
+S: Inwestycja jest opłacalna (NPV > 0 przy obu stopach), choć okres zwrotu jest długi ({{pb:1}} roku), więc wynik zależy od wartości końcowej i stóp procentowych.
+SL: szansa: szybki wzrost liczby osób 80+ (GUS) i niewystarczająca liczba miejsc w DPS – wysokie obłożenie,
+SL: ryzyko: koszty pracy przy niedoborze opiekunów, ceny energii, wymogi standardów opieki,
+SL: ryzyko: zdolność płatnicza seniorów i rodzin (niskie emerytury), zmiany w finansowaniu publicznym,
+SL: ryzyko lokalizacji: odpływ ludności z małych miast – mniejszy popyt lokalny, trudności w rekrutacji.
+
+=== 20 | finanse | th | Wartość oszczędności w PPK
+vars: w=6000; sp=2; sf=1,5; dop=240; pow=250; r=5; n=35
+P: Pracownik zarabia {{w:0}} zł brutto miesięcznie i uczestniczy w PPK. Wpłata podstawowa pracownika wynosi {{sp:0}}%, a pracodawcy – {{sf:1}}% wynagrodzenia. Państwo wpłaca jednorazowo {{pow:0}} zł na początku (wpłata powitalna) i {{dop:0}} zł na koniec każdego roku (dopłata roczna). Dla uproszczenia przyjmij, że wpłaty z całego roku trafiają na rachunek na koniec roku, płaca się nie zmienia, a roczna stopa zwrotu wynosi {{r:0}}% (dane umowne).
+--- a | 3
+Q: Oblicz roczną sumę wpłat pracownika i pracodawcy oraz roczną wpłatę łącznie z dopłatą państwa.
+A: Wpłaty pracownika i pracodawcy | wr = w*12*(sp+sf)/100 | zł | tol=0,5
+A: Łącznie z dopłatą | wr2 = wr+dop | zł | tol=0,5
+SF: {{w:0}} × 12 × 3,5% = {{wr:0}} zł;  + {{dop:0}} zł = {{wr2:0}} zł
+--- b | 4
+Q: Oblicz wartość oszczędności po {{n:0}} latach.
+A: Wartość po 35 latach | fv = wr2*((1+r/100)**n-1)/(r/100)+pow*(1+r/100)**n | zł | tol=5
+let: fva = ((1+r/100)**n-1)/(r/100)
+let: q = (1+r/100)**n
+SF: FV = {{wr2:0}} × [(1,05³⁵ − 1) / 0,05] + {{pow:0}} × 1,05³⁵ = {{wr2:0}} × {{fva:3}} + {{pow:0}} × {{q:4}} ≈ {{fv:0}} zł
+--- c | 4
+Q: Oblicz łączną kwotę wpłat pracownika oraz ich udział w wartości końcowej.
+A: Wpłaty pracownika | wp = w*12*sp/100*n | zł | tol=1
+A: Udział | ud = wp/fv*100 | % | tol=0,1
+SF: {{w:0}} × 12 × 2% × {{n:0}} = {{wp:0}} zł;  {{wp:0}} / {{fv:0}} ≈ {{ud:1}}%
+--- d | 4
+Q: Wyjaśnij, dlaczego PPK może zwiększyć dochody na emeryturze bardziej niż samodzielne oszczędzanie tej samej kwoty, i wskaż dwa ryzyka.
+S: Na każdą złotówkę wpłaconą przez pracownika (2%) przypada 0,75 zł od pracodawcy (1,5%) i dopłaty państwa, a całość pracuje przez dziesięciolecia dzięki procentowi składanemu. W zadaniu wpłaty pracownika stanowią tylko ok. {{ud:0}}% kapitału końcowego. Automatyczny zapis wykorzystuje inercję (ekonomia behawioralna) – oszczędza więcej osób.
+SL: ryzyko rynkowe: niższe stopy zwrotu, spadki na giełdzie tuż przed emeryturą (fundusze zdefiniowanej daty ograniczają ryzyko z wiekiem),
+SL: ryzyko inflacji oraz rezygnacji lub wcześniejszych wypłat (utrata części dopłat),
+SL: ryzyko regulacyjne – zmiana zasad przez państwo (doświadczenie OFE).
+
+=== 21 | finanse | th | Wypłata kapitału emerytalnego w ratach
+vars: K=300000; r=4; n1=240; n2=300
+P: Emeryt ma na IKE {{K:0}} zł i chce wypłacać te środki w równych miesięcznych ratach (na koniec miesiąca). Pozostały kapitał jest oprocentowany {{r:0}}% w skali roku, z miesięczną kapitalizacją (dane umowne).
+let: i = r/100/12
+--- a | 4
+Q: Oblicz miesięczną wypłatę przy okresie wypłat 20 lat.
+A: Wypłata przez 20 lat | a20 = K*i/(1-(1+i)**(-n1)) | zł | tol=0,5
+SF: R = K × i / (1 − (1 + i)⁻ⁿ) = {{K:0}} × 0,003333 / (1 − 1,003333⁻²⁴⁰) ≈ {{a20:2}} zł
+--- b | 4
+Q: Oblicz miesięczną wypłatę przy okresie wypłat 25 lat.
+A: Wypłata przez 25 lat | a25 = K*i/(1-(1+i)**(-n2)) | zł | tol=0,5
+SF: R = {{K:0}} × 0,003333 / (1 − 1,003333⁻³⁰⁰) ≈ {{a25:2}} zł
+--- c | 3
+Q: Ile wynosiłaby wypłata przez 20 lat, gdyby kapitał nie był oprocentowany? O ile procent oprocentowanie zwiększa wypłatę?
+A: Wypłata bez oprocentowania | a0 = K/n1 | zł | tol=0,5
+A: Wzrost wypłaty | wz = (a20/a0-1)*100 | % | tol=0,1
+SF: {{K:0}} / 240 = {{a0:0}} zł;  {{a20:2}} / {{a0:0}} − 1 ≈ {{wz:1}}%
+--- d | 4
+Q: Wyjaśnij pojęcie ryzyka długowieczności i porównaj wypłaty ratalne z rentą dożywotnią.
+S: Ryzyko długowieczności to ryzyko, że człowiek przeżyje swoje oszczędności – nie zna długości własnego życia. Przy wypłatach ratalnych na 20 lat emeryt, który dożyje np. 90 lat, zostanie bez środków; wydłużenie wypłat do 25 lat zmniejsza ratę o ok. {{a20:0}} − {{a25:0}} zł. Renta dożywotnia (np. emerytura z ZUS albo produkt ubezpieczyciela) przenosi to ryzyko na instytucję, która „uśrednia” je w dużej grupie: osoby żyjące krócej finansują dłużej żyjących. Wadą renty jest brak dziedziczenia i problem selekcji negatywnej (renty kupują częściej osoby oczekujące długiego życia, więc są droższe).
+
+=== 22 | finanse | th | Kredyt hipoteczny młodej rodziny
+vars: C=600000; wk=20; r=7,5; r2=9,5; n=300; D=12000
+P: Młoda rodzina kupuje mieszkanie za {{C:0}} zł z wkładem własnym {{wk:0}}%. Resztę finansuje kredytem na 25 lat ({{n:0}} rat równych) oprocentowanym {{r:1}}% w skali roku. Dochód netto gospodarstwa wynosi {{D:0}} zł miesięcznie (dane umowne).
+let: K = C*(1-wk/100)
+let: i = r/100/12
+let: i2 = r2/100/12
+--- a | 4
+Q: Oblicz kwotę kredytu i miesięczną ratę.
+A: Kwota kredytu | kk = K | zł | tol=1
+A: Rata | rata = K*i/(1-(1+i)**(-n)) | zł | tol=1
+SF: K = {{C:0}} × 0,8 = {{kk:0}} zł;  R = K × i / (1 − (1 + i)⁻³⁰⁰), i = 7,5% / 12 = 0,625% ⇒ R ≈ {{rata:2}} zł
+--- b | 3
+Q: Oblicz łączną kwotę odsetek zapłaconych w całym okresie.
+A: Odsetki | ods = rata*n-K | zł | tol=50
+SF: {{rata:2}} × 300 − {{kk:0}} ≈ {{ods:0}} zł
+--- c | 4
+Q: Oblicz relację raty do dochodu (DSTI) przy obecnym oprocentowaniu oraz po wzroście oprocentowania do {{r2:1}}%.
+A: DSTI obecnie | dsti = rata/D*100 | % | tol=0,05
+A: Rata po wzroście stóp | rata2 = K*i2/(1-(1+i2)**(-n)) | zł | tol=1
+A: DSTI po wzroście stóp | dsti2 = rata2/D*100 | % | tol=0,05
+SF: {{rata:2}} / {{D:0}} ≈ {{dsti:2}}%;  nowa rata ≈ {{rata2:2}} zł;  {{rata2:2}} / {{D:0}} ≈ {{dsti2:2}}%
+--- d | 4
+Q: Oceń ryzyko kredytu ze zmienną stopą i wyjaśnij, jak koszty mieszkania mogą wpływać na decyzje o liczbie dzieci.
+S: Wzrost stopy o 2 pkt proc. podnosi ratę o ok. {{rata2:0}} − {{rata:0}} zł, a DSTI zbliża się do 35% – poziomu, przy którym banki i KNF uznają obciążenie za wysokie. Kredyt ze zmienną stopą przenosi ryzyko stopy procentowej na gospodarstwo; ochroną jest stała stopa (okresowo stała), bufor oszczędności i wyższy wkład własny.
+S: Wysoka rata i niepewność jej przyszłej wysokości ograniczają wydatki na inne cele i zwiększają koszt alternatywny kolejnego dziecka (większe mieszkanie, utrata części dochodu przy urlopie). Badania wskazują, że dostępność mieszkań wiąże się z wcześniejszym zakładaniem rodzin – stąd polityka mieszkaniowa (najem, budownictwo społeczne) jest elementem polityki demograficznej.
+
+=== 23 | firma | th | Dźwignia operacyjna i finansowa producenta sprzętu rehabilitacyjnego
+vars: S=20; VC=12; FC=5; I=1; g=10
+P: Producent wózków i sprzętu rehabilitacyjnego osiąga przychody {{S:0}} mln zł, ponosi koszty zmienne {{VC:0}} mln zł, koszty stałe {{FC:0}} mln zł oraz odsetki {{I:0}} mln zł rocznie (dane umowne).
+let: EBIT = S-VC-FC
+let: EBT = EBIT-I
+--- a | 3
+Q: Oblicz zysk operacyjny (EBIT) i stopień dźwigni operacyjnej (DOL).
+A: EBIT | e0 = EBIT | mln zł | tol=0,01
+A: DOL | dol = (S-VC)/EBIT | | tol=0,01
+SF: EBIT = {{S:0}} − {{VC:0}} − {{FC:0}} = {{e0:0}};  DOL = (S − VC) / EBIT = {{dol:2}}
+--- b | 3
+Q: Oblicz stopień dźwigni finansowej (DFL).
+A: DFL | dfl = EBIT/(EBIT-I) | | tol=0,01
+SF: DFL = EBIT / (EBIT − odsetki) = {{e0:0}} / {{EBT:0}} = {{dfl:2}}
+--- c | 3
+Q: Oblicz stopień dźwigni całkowitej (DTL).
+A: DTL | dtl = dol*dfl | | tol=0,01
+SF: DTL = DOL × DFL = {{dol:2}} × {{dfl:2}} = {{dtl:2}}
+--- d | 3
+Q: Dzięki rosnącemu popytowi osób starszych sprzedaż rośnie o {{g:0}}% (koszty zmienne proporcjonalnie). Oblicz nowy EBIT i procentowy wzrost zysku przed opodatkowaniem.
+A: Nowy EBIT | e1 = S*(1+g/100)-VC*(1+g/100)-FC | mln zł | tol=0,01
+A: Wzrost zysku brutto | wzb = ((e1-I)/(EBIT-I)-1)*100 | % | tol=0,1
+let: EBT1 = e1-I
+SF: EBIT = 22 − 13,2 − {{FC:0}} = {{e1:1}};  zysk brutto: {{EBT:0}} → {{EBT1:1}}, wzrost = {{wzb:0}}% = DTL × {{g:0}}%
+--- e | 3
+Q: Wyjaśnij znaczenie dźwigni dla ryzyka firmy w sytuacji zmian popytu.
+S: Wysoka dźwignia (DTL = {{dtl:0}}) oznacza, że każdy 1% zmiany sprzedaży zmienia zysk brutto o {{dtl:0}}%. Przy rosnącym popycie (starzenie się społeczeństwa, refundacje) to korzyść, ale przy spadku sprzedaży – np. zmianie zasad refundacji NFZ – zysk szybko spada. Firma może ograniczać ryzyko, zamieniając część kosztów stałych na zmienne (outsourcing, leasing) albo zmniejszając zadłużenie.
+
+=== 24 | finanse | th | Obligacje skarbowe a koszt finansowania długu
+vars: N=1000; k=5; y1=6; y2=4; n=5
+P: Ministerstwo Finansów emituje obligacje 5-letnie o wartości nominalnej {{N:0}} zł i kuponie {{k:0}}% płatnym raz w roku, aby m.in. sfinansować dotację do Funduszu Ubezpieczeń Społecznych (dane umowne).
+let: c = N*k/100
+--- a | 4
+Q: Oblicz cenę obligacji, jeśli rynkowa rentowność wynosi {{y1:0}}%.
+A: Cena przy 6% | p1 = c*(1-(1+y1/100)**(-n))/(y1/100)+N/(1+y1/100)**n | zł | tol=0,1
+SF: P = 50 × (1 − 1,06⁻⁵) / 0,06 + 1000 / 1,06⁵ ≈ {{p1:2}} zł
+--- b | 4
+Q: Oblicz cenę obligacji przy rentowności {{y2:0}}%.
+A: Cena przy 4% | p2 = c*(1-(1+y2/100)**(-n))/(y2/100)+N/(1+y2/100)**n | zł | tol=0,1
+SF: P = 50 × (1 − 1,04⁻⁵) / 0,04 + 1000 / 1,04⁵ ≈ {{p2:2}} zł
+--- c | 3
+Q: Oblicz bieżącą stopę dochodu (kupon / cena) przy cenie z punktu a.
+A: Bieżąca stopa dochodu | cy = c/p1*100 | % | tol=0,01
+SF: {{c:0}} / {{p1:2}} × 100 ≈ {{cy:2}}%
+--- d | 4
+Q: Wyjaśnij zależność między ceną obligacji a rentownością oraz jak rosnące wydatki związane ze starzeniem się społeczeństwa mogą wpływać na koszt obsługi długu.
+S: Cena obligacji i jej rentowność zmieniają się w przeciwnych kierunkach: gdy rynkowe stopy rosną powyżej kuponu, obligacja tanieje poniżej nominału ({{p1:2}} zł), a gdy spadają – drożeje ({{p2:2}} zł). Rosnące wydatki na emerytury i zdrowie zwiększają potrzeby pożyczkowe państwa; jeśli inwestorzy uznają, że dług rośnie szybciej niż PKB, żądają wyższej premii za ryzyko – rośnie rentowność nowych emisji i koszt obsługi długu, co dodatkowo pogarsza deficyt. Wiarygodne reformy (wiek emerytalny, reguły fiskalne) obniżają tę premię.
+
+=== 25 | firma | th | Analiza Du Ponta sieci aptek
+vars: P=50; ZN=2; A=25; KW=10; P2=60; ZN2=2,7; A2=27; KW2=11
+P: Sieć aptek, korzystająca z rosnącej liczby starszych klientów, osiągnęła przychody {{P:0}} mln zł i zysk netto {{ZN:0}} mln zł. Aktywa wynoszą {{A:0}} mln zł, a kapitał własny {{KW:0}} mln zł (dane umowne).
+--- a | 3
+Q: Oblicz rentowność sprzedaży netto (ROS).
+A: ROS | ros = ZN/P*100 | % | tol=0,01
+SF: {{ZN:0}} / {{P:0}} × 100 = {{ros:0}}%
+--- b | 3
+Q: Oblicz rotację aktywów.
+A: Rotacja aktywów | ra = P/A | | tol=0,01
+SF: {{P:0}} / {{A:0}} = {{ra:0}}
+--- c | 3
+Q: Oblicz mnożnik kapitałowy (aktywa / kapitał własny) i ROE z trójczynnikowego modelu Du Ponta.
+A: Mnożnik kapitałowy | mk = A/KW | | tol=0,01
+A: ROE | roe = ros*ra*mk | % | tol=0,05
+SF: {{A:0}} / {{KW:0}} = {{mk:1}};  ROE = {{ros:0}}% × {{ra:0}} × {{mk:1}} = {{roe:0}}%
+--- d | 3
+Q: W kolejnym roku przychody wzrosły do {{P2:0}} mln zł, zysk netto do {{ZN2:1}} mln zł, aktywa do {{A2:0}} mln zł, a kapitał własny do {{KW2:0}} mln zł. Oblicz nowe ROS i ROE.
+A: Nowe ROS | ros2 = ZN2/P2*100 | % | tol=0,01
+A: Nowe ROE | roe2 = ZN2/KW2*100 | % | tol=0,05
+SF: ROS = {{ZN2:1}} / {{P2:0}} = {{ros2:1}}%;  ROE = {{ZN2:1}} / {{KW2:0}} ≈ {{roe2:2}}%
+--- e | 3
+Q: Na podstawie modelu Du Ponta wskaż, które czynniki zdecydowały o zmianie ROE.
+let: ra2 = P2/A2
+let: mk2 = A2/KW2
+S: ROE = ROS × rotacja aktywów × mnożnik kapitałowy. ROS wzrosło z {{ros:1}}% do {{ros2:1}}% (lepsza marża – np. więcej usług farmaceutycznych i dermokosmetyków), rotacja aktywów z {{ra:2}} do {{ra2:2}} (sprzedaż rosła szybciej niż aktywa), a mnożnik kapitałowy nieznacznie spadł z {{mk:2}} do {{mk2:2}} (mniejsza dźwignia). Wzrost ROE wynika więc z poprawy rentowności i efektywności wykorzystania aktywów, a nie z większego zadłużenia – to korzystna struktura zmiany.
+
+=== 26 | firma | th | Cykl konwersji gotówki agencji opiekunek
+vars: P=36; N=6; Z=0,2; KS=30; ZH=2,5; d=360; N45=45
+P: Agencja zatrudniająca opiekunki (w tym cudzoziemki) osób starszych ma roczne przychody {{P:0}} mln zł, koszt własny sprzedaży {{KS:0}} mln zł, średnie należności {{N:0}} mln zł, zapasy {{Z:1}} mln zł i zobowiązania handlowe {{ZH:1}} mln zł. Przyjmij rok = {{d:0}} dni (dane umowne).
+--- a | 3
+Q: Oblicz cykl rotacji należności w dniach.
+A: Rotacja należności | rn = N/P*d | dni | tol=0,1
+SF: {{N:0}} / {{P:0}} × {{d:0}} = {{rn:0}} dni
+--- b | 3
+Q: Oblicz cykl rotacji zapasów w dniach (w relacji do kosztu własnego sprzedaży).
+A: Rotacja zapasów | rz = Z/KS*d | dni | tol=0,05
+SF: {{Z:1}} / {{KS:0}} × {{d:0}} = {{rz:1}} dnia
+--- c | 3
+Q: Oblicz cykl rotacji zobowiązań handlowych w dniach (w relacji do kosztu własnego sprzedaży).
+A: Rotacja zobowiązań | rzo = ZH/KS*d | dni | tol=0,1
+SF: {{ZH:1}} / {{KS:0}} × {{d:0}} = {{rzo:0}} dni
+--- d | 3
+Q: Oblicz cykl konwersji gotówki.
+A: Cykl konwersji gotówki | ccc = rn+rz-rzo | dni | tol=0,1
+SF: CCC = {{rn:0}} + {{rz:1}} − {{rzo:0}} = {{ccc:1}} dnia
+--- e | 3
+Q: Agencja skraca terminy płatności klientów do {{N45:0}} dni. Oblicz, ile gotówki zostanie uwolnione (w mln zł), i wyjaśnij znaczenie cyklu konwersji gotówki.
+A: Uwolniona gotówka | ug = (rn-N45)/d*P | mln zł | tol=0,01
+SF: ({{rn:0}} − {{N45:0}}) / {{d:0}} × {{P:0}} = {{ug:1}} mln zł
+S: Cykl konwersji gotówki pokazuje, przez ile dni firma musi finansować działalność, zanim odzyska gotówkę. W agencji pracy wynagrodzenia wypłaca się co miesiąc, a klienci płacą później – długi cykl wymaga kredytu obrotowego. Skrócenie terminów płatności (lub faktoring) zmniejsza zapotrzebowanie na kapitał obrotowy i koszty odsetek.
+
+=== 27 | firma | - | Zadłużenie dwóch spółek energetycznych
+vars: DA=8; EA=4; BA=2,5; OA=0,5; KA=12; DB=15; EB=4,5; BB=2,4; OB=1,2; KB=10
+P: Dwie spółki energetyczne inwestujące w transformację (dane umowne, mld zł):
+H: Pozycja | Spółka A | Spółka B
+R: Dług odsetkowy | {{DA:0}} | {{DB:0}}
+R: EBITDA | {{EA:0}} | {{EB:1}}
+R: EBIT | {{BA:1}} | {{BB:1}}
+R: Odsetki | {{OA:1}} | {{OB:1}}
+R: Kapitał własny | {{KA:0}} | {{KB:0}}
+--- a | 4
+Q: Oblicz wskaźnik dług / EBITDA dla obu spółek.
+A: Dług/EBITDA – A | da = DA/EA | | tol=0,01
+A: Dług/EBITDA – B | db = DB/EB | | tol=0,01
+SF: A: {{DA:0}} / {{EA:0}} = {{da:2}};  B: {{DB:0}} / {{EB:1}} ≈ {{db:2}}
+--- b | 4
+Q: Oblicz wskaźnik pokrycia odsetek (EBIT / odsetki).
+A: Pokrycie odsetek – A | pa = BA/OA | | tol=0,01
+A: Pokrycie odsetek – B | pb = BB/OB | | tol=0,01
+SF: A: {{BA:1}} / {{OA:1}} = {{pa:0}};  B: {{BB:1}} / {{OB:1}} = {{pb:0}}
+--- c | 3
+Q: Oblicz relację długu do kapitału własnego.
+A: Dług/kapitał – A | ka = DA/KA | | tol=0,01
+A: Dług/kapitał – B | kb = DB/KB | | tol=0,01
+SF: A: {{DA:0}} / {{KA:0}} ≈ {{ka:2}};  B: {{DB:0}} / {{KB:0}} = {{kb:2}}
+--- d | 4
+Q: Która spółka jest bardziej narażona na ryzyko finansowe? Jak wzrost stóp procentowych wpłynąłby na jej zdolność do finansowania inwestycji w OZE?
+S: Spółka B ma dwukrotnie wyższą dźwignię (dług/EBITDA ≈ {{db:1}} wobec {{da:1}}), słabsze pokrycie odsetek ({{pb:0}} wobec {{pa:0}}) i więcej długu niż kapitału własnego. Wzrost stóp procentowych podniesie jej koszty odsetkowe i obniży pokrycie odsetek poniżej bezpiecznego poziomu, co może naruszyć kowenanty kredytowe i podnieść koszt nowego kapitału. Ponieważ inwestycje w OZE i sieci są kapitałochłonne, a ich opłacalność silnie zależy od kosztu kapitału, spółka B może musieć ograniczyć inwestycje, wyemitować akcje albo szukać finansowania preferencyjnego (np. EBI, fundusze UE).
+
+=== 28 | firma | - | Leasing czy zakup za gotówkę
+vars: C=200000; R=6000; n=36; W=10000; i=1
+P: Firma może kupić maszynę za {{C:0}} zł gotówką albo wziąć ją w leasing: {{n:0}} miesięcznych rat po {{R:0}} zł (płatnych na koniec miesiąca) i wykup za {{W:0}} zł na koniec okresu. Miesięczny koszt kapitału wynosi {{i:0}}%. Pomiń podatki (dane umowne).
+--- a | 4
+Q: Oblicz wartość bieżącą rat leasingowych.
+A: PV rat | pvr = R*(1-(1+i/100)**(-n))/(i/100) | zł | tol=2
+let: fa = (1-(1+i/100)**(-n))/(i/100)
+SF: PV = {{R:0}} × (1 − 1,01⁻³⁶) / 0,01 = {{R:0}} × {{fa:4}} ≈ {{pvr:0}} zł
+--- b | 4
+Q: Oblicz wartość bieżącą wszystkich płatności leasingowych (z wykupem).
+A: PV leasingu | pvl = pvr+W/(1+i/100)**n | zł | tol=2
+let: pvw = W/(1+i/100)**n
+SF: {{pvr:0}} + {{W:0}} / 1,01³⁶ = {{pvr:0}} + {{pvw:0}} ≈ {{pvl:0}} zł
+--- c | 3
+Q: Która forma finansowania jest tańsza i o ile (w wartości bieżącej)?
+A: Różnica | roz = C-pvl | zł | tol=2
+SF: {{C:0}} − {{pvl:0}} ≈ {{roz:0}} zł na korzyść leasingu
+--- d | 4
+Q: Jakie inne czynniki należy uwzględnić przy wyborze między leasingiem a zakupem?
+SL: podatki – w leasingu operacyjnym raty są kosztem podatkowym, przy zakupie kosztem jest amortyzacja (różne rozłożenie tarczy podatkowej w czasie),
+SL: płynność – leasing nie wymaga jednorazowego wydatku, zachowuje gotówkę na inne cele,
+SL: ryzyko technologiczne i elastyczność – możliwość wymiany maszyny po okresie leasingu,
+SL: koszty dodatkowe (opłata wstępna, ubezpieczenie, serwis) i wpływ na wskaźniki zadłużenia.
+
+=== 29 | finanse | - | Wycena akcji modelem Gordona
+vars: D0=4; g=3; k=9; k2=10
+P: Spółka wypłaciła ostatnio dywidendę {{D0:0}} zł na akcję. Inwestorzy oczekują stałego wzrostu dywidend o {{g:0}}% rocznie i wymagają stopy zwrotu {{k:0}}% (dane umowne).
+--- a | 3
+Q: Oblicz oczekiwaną dywidendę w przyszłym roku.
+A: Dywidenda D1 | d1 = D0*(1+g/100) | zł | tol=0,005
+SF: D₁ = {{D0:0}} × 1,03 = {{d1:2}} zł
+--- b | 4
+Q: Oblicz wartość akcji.
+A: Wartość akcji | v = d1/(k/100-g/100) | zł | tol=0,05
+SF: V = D₁ / (k − g) = {{d1:2}} / (0,09 − 0,03) ≈ {{v:2}} zł
+--- c | 4
+Q: Wymagana stopa zwrotu rośnie do {{k2:0}}% (np. wskutek wzrostu stóp procentowych). Oblicz nową wartość akcji i jej procentową zmianę.
+A: Nowa wartość | v2 = d1/(k2/100-g/100) | zł | tol=0,05
+A: Zmiana | dv = (v2/v-1)*100 | % | tol=0,05
+SF: {{d1:2}} / 0,07 ≈ {{v2:2}} zł;  zmiana ≈ {{dv:2}}%
+--- d | 4
+Q: Wyjaśnij założenia modelu Gordona i jego ograniczenia.
+S: Model zakłada stałe tempo wzrostu dywidend w nieskończoność, stałą wymaganą stopę zwrotu i k > g. Jest bardzo wrażliwy na różnicę k − g: wzrost k o 1 pkt proc. obniżył wartość o ok. {{dv:0}}%. Nie nadaje się do spółek niewypłacających dywidend ani szybko rosnących (wtedy stosuje się modele wielofazowe lub przepływy pieniężne FCFF/FCFE).
+
+=== 30 | firma | - | Przepływy pieniężne metodą pośrednią
+vars: ZN=500; AM=200; dN=80; dZ=40; dZob=60; CAP=450; SM=30; KR=100; DYW=150
+P: Dane spółki za rok (tys. zł): zysk netto {{ZN:0}}, amortyzacja {{AM:0}}, wzrost należności {{dN:0}}, wzrost zapasów {{dZ:0}}, wzrost zobowiązań krótkoterminowych (bez kredytów) {{dZob:0}}, wydatki inwestycyjne {{CAP:0}}, wpływy ze sprzedaży majątku trwałego {{SM:0}}, zaciągnięty kredyt {{KR:0}}, wypłacona dywidenda {{DYW:0}} (dane umowne).
+--- a | 4
+Q: Oblicz przepływy pieniężne z działalności operacyjnej metodą pośrednią.
+A: Przepływy operacyjne | cfo = ZN+AM-dN-dZ+dZob | tys. zł | tol=0,5
+SF: CFO = {{ZN:0}} + {{AM:0}} − {{dN:0}} − {{dZ:0}} + {{dZob:0}} = {{cfo:0}}
+--- b | 3
+Q: Oblicz przepływy z działalności inwestycyjnej.
+A: Przepływy inwestycyjne | cfi = SM-CAP | tys. zł | tol=0,5
+SF: CFI = {{SM:0}} − {{CAP:0}} = {{cfi:0}}
+--- c | 3
+Q: Oblicz przepływy z działalności finansowej.
+A: Przepływy finansowe | cff = KR-DYW | tys. zł | tol=0,5
+SF: CFF = {{KR:0}} − {{DYW:0}} = {{cff:0}}
+--- d | 2
+Q: Oblicz zmianę stanu środków pieniężnych.
+A: Zmiana gotówki | dg = cfo+cfi+cff | tys. zł | tol=0,5
+SF: {{cfo:0}} + ({{cfi:0}}) + ({{cff:0}}) = {{dg:0}}
+--- e | 3
+Q: Wyjaśnij, dlaczego zysk netto różni się od przepływów operacyjnych.
+S: Zysk netto jest liczony memoriałowo: zawiera koszty niepieniężne (amortyzacja – dodajemy) i przychody jeszcze nieopłacone (wzrost należności – odejmujemy). Zakup zapasów to wydatek, który nie jest jeszcze kosztem (odejmujemy), a wzrost zobowiązań oznacza koszty jeszcze niezapłacone (dodajemy). Firma może mieć zysk, a mimo to tracić płynność, jeśli należności i zapasy rosną szybciej niż zobowiązania.
+
+=== 31 | finanse | - | Zabezpieczenie ryzyka walutowego eksportera
+vars: E=2; S0=4,30; iPL=5; iEU=2,5; S1=4,15
+P: Polski eksporter otrzyma za 3 miesiące {{E:0}} mln EUR. Obecny kurs wynosi {{S0:2}} zł/EUR, trzymiesięczna stopa procentowa w Polsce – {{iPL:0}}% w skali roku, a w strefie euro – {{iEU:1}}% w skali roku (dane umowne).
+--- a | 4
+Q: Oblicz trzymiesięczny kurs terminowy (forward) z parytetu stóp procentowych.
+A: Kurs terminowy | F = S0*(1+iPL/100/4)/(1+iEU/100/4) | zł/EUR | tol=0,0005
+SF: F = {{S0:2}} × (1 + 0,05/4) / (1 + 0,025/4) ≈ {{F:4}} zł/EUR
+--- b | 3
+Q: Ile złotych otrzyma eksporter, jeśli zawrze kontrakt terminowy?
+A: Przychód zabezpieczony | pz = E*F | mln zł | tol=0,001
+SF: {{E:0}} mln × {{F:4}} ≈ {{pz:4}} mln zł
+--- c | 4
+Q: Za 3 miesiące kurs spot wynosi {{S1:2}} zł/EUR. Oblicz przychód bez zabezpieczenia i różnicę względem wariantu z kontraktem.
+A: Przychód bez zabezpieczenia | pb = E*S1 | mln zł | tol=0,001
+A: Różnica | roz = pz-pb | mln zł | tol=0,001
+SF: {{E:0}} × {{S1:2}} = {{pb:2}} mln zł;  różnica = {{pz:4}} − {{pb:2}} ≈ {{roz:4}} mln zł
+--- d | 4
+Q: Oceń zalety i wady zabezpieczenia kontraktem terminowym.
+S: Kontrakt terminowy eliminuje ryzyko kursowe – eksporter zna przychód w złotych z góry, co ułatwia planowanie. Tu uchronił go przed stratą ok. {{roz:2}} mln zł. Wadą jest utrata potencjalnego zysku, gdyby złoty osłabł (kurs spot > F), oraz obowiązek realizacji kontraktu (inaczej niż w opcji, za którą płaci się premię). Kurs terminowy wyższy od spot wynika z różnicy stóp procentowych, a nie z prognozy kursu.
+
+=== 32 | firma | - | Amortyzacja i tarcza podatkowa
+vars: W=100000; n=5; wsp=2; tx=19
+P: Firma kupuje maszynę za {{W:0}} zł o okresie użytkowania {{n:0}} lat. Rozważa amortyzację liniową lub degresywną (stawka liniowa × współczynnik {{wsp:0}}). Stawka CIT wynosi {{tx:0}}% (dane umowne).
+let: sl = 100/n
+let: sd = sl*wsp
+--- a | 3
+Q: Oblicz roczny odpis amortyzacji liniowej.
+A: Odpis liniowy | al = W/n | zł | tol=0,5
+SF: {{W:0}} / {{n:0}} = {{al:0}} zł (stawka {{sl:0}}%)
+--- b | 4
+Q: Oblicz odpisy amortyzacji degresywnej w pierwszym i drugim roku.
+A: Odpis w 1. roku | ad1 = W*sd/100 | zł | tol=0,5
+A: Odpis w 2. roku | ad2 = (W-ad1)*sd/100 | zł | tol=0,5
+SF: stawka = {{sl:0}}% × {{wsp:0}} = {{sd:0}}%;  rok 1: {{W:0}} × {{sd:0}}% = {{ad1:0}} zł;  rok 2: ({{W:0}} − {{ad1:0}}) × {{sd:0}}% = {{ad2:0}} zł
+--- c | 4
+Q: Oblicz tarczę podatkową z amortyzacji w pierwszym roku w obu metodach.
+A: Tarcza – liniowa | tl = al*tx/100 | zł | tol=0,5
+A: Tarcza – degresywna | td = ad1*tx/100 | zł | tol=0,5
+SF: liniowa: {{al:0}} × 19% = {{tl:0}} zł;  degresywna: {{ad1:0}} × 19% = {{td:0}} zł
+--- d | 4
+Q: Wyjaśnij, dlaczego przedsiębiorstwo może preferować amortyzację degresywną, choć łączna kwota odpisów jest taka sama.
+S: Łączne odpisy w obu metodach wynoszą {{W:0}} zł, ale amortyzacja degresywna przesuwa koszty (i tarczę podatkową) na pierwsze lata. Firma płaci niższy podatek wcześniej, a wyższy później – to jak nieoprocentowana pożyczka od państwa: dzięki wartości pieniądza w czasie wartość bieżąca tarczy jest wyższa. Ponadto odpisy lepiej odzwierciedlają szybszą utratę wartości maszyn w pierwszych latach. Wadą jest niższy zysk księgowy na początku.
+
+=== 33 | firma | - | Średni ważony koszt kapitału i decyzja inwestycyjna
+vars: wE=60; kE=12; wD=40; kD=7; tx=19; I=1000; CF=300; n=5
+P: Struktura kapitału spółki: kapitał własny {{wE:0}}% (koszt {{kE:0}}%), dług {{wD:0}}% (koszt przed opodatkowaniem {{kD:0}}%), stawka podatku {{tx:0}}%. Spółka rozważa projekt z nakładem {{I:0}} tys. zł i przepływami {{CF:0}} tys. zł rocznie przez {{n:0}} lat (dane umowne).
+--- a | 4
+Q: Oblicz średni ważony koszt kapitału (WACC).
+A: WACC | wacc = wE/100*kE+wD/100*kD*(1-tx/100) | % | tol=0,005
+SF: WACC = 0,6 × 12% + 0,4 × 7% × (1 − 0,19) = {{wacc:3}}%
+--- b | 4
+Q: Oblicz NPV projektu przy stopie dyskontowej równej WACC.
+A: NPV | npv = -I+CF*(1-(1+wacc/100)**(-n))/(wacc/100) | tys. zł | tol=0,5
+let: fa = (1-(1+wacc/100)**(-n))/(wacc/100)
+SF: NPV = −{{I:0}} + {{CF:0}} × {{fa:4}} ≈ {{npv:1}} tys. zł
+--- c | 3
+Q: Jaki maksymalny nakład spółka mogłaby ponieść, aby projekt pozostał opłacalny?
+A: Maksymalny nakład | imax = CF*fa | tys. zł | tol=0,5
+SF: {{CF:0}} × {{fa:4}} ≈ {{imax:1}} tys. zł (NPV = 0)
+--- d | 4
+Q: Wyjaśnij, dlaczego koszt długu uwzględnia się po opodatkowaniu i dlaczego zwiększanie udziału długu nie zawsze obniża WACC.
+S: Odsetki są kosztem uzyskania przychodu, więc obniżają podatek – efektywny koszt długu to {{kD:0}}% × (1 − 0,19). Dług jest zwykle tańszy od kapitału własnego, ale wraz ze wzrostem zadłużenia rośnie ryzyko upadłości: wierzyciele żądają wyższych odsetek, a akcjonariusze – wyższej stopy zwrotu (teoria Modiglianiego–Millera z podatkami i kosztami trudności finansowych). Powyżej pewnego poziomu WACC zaczyna rosnąć.
+
+=== 34 | firma | - | Analiza dynamiki przychodów i kosztów
+vars: P1=80; P2=92; K1=70; K2=82; inf=3,6
+P: Spółka handlowa osiągnęła przychody {{P1:0}} mln zł w 2023 r. i {{P2:0}} mln zł w 2024 r., a koszty odpowiednio {{K1:0}} i {{K2:0}} mln zł. Inflacja CPI w 2024 r. wyniosła {{inf:1}}% (GUS).
+--- a | 3
+Q: Oblicz nominalną dynamikę przychodów (w procentach).
+A: Dynamika nominalna | dn = (P2/P1-1)*100 | % | tol=0,01
+SF: ({{P2:0}} / {{P1:0}} − 1) × 100 = {{dn:0}}%
+--- b | 3
+Q: Oblicz realną dynamikę przychodów.
+A: Dynamika realna | dr = ((1+dn/100)/(1+inf/100)-1)*100 | % | tol=0,02
+SF: 1,15 / 1,036 − 1 ≈ {{dr:2}}%
+--- c | 3
+Q: Oblicz marżę zysku (zysk / przychody) w obu latach.
+A: Marża 2023 | m1 = (P1-K1)/P1*100 | % | tol=0,02
+A: Marża 2024 | m2 = (P2-K2)/P2*100 | % | tol=0,02
+SF: ({{P1:0}} − {{K1:0}}) / {{P1:0}} = {{m1:1}}%;  ({{P2:0}} − {{K2:0}}) / {{P2:0}} ≈ {{m2:2}}%
+--- d | 3
+Q: Oblicz dynamikę kosztów i dynamikę zysku.
+A: Dynamika kosztów | dk = (K2/K1-1)*100 | % | tol=0,02
+A: Dynamika zysku | dz = ((P2-K2)/(P1-K1)-1)*100 | % | tol=0,02
+SF: koszty: {{K2:0}} / {{K1:0}} − 1 ≈ {{dk:2}}%;  zysk: 10 / 10 − 1 = {{dz:0}}%
+--- e | 3
+Q: Oceń wyniki spółki i wyjaśnij, dlaczego analiza nominalna może wprowadzać w błąd.
+S: Przychody wzrosły nominalnie o {{dn:0}}%, realnie o ok. {{dr:0}}% – nadal szybko. Koszty rosły jednak szybciej ({{dk:1}}%), więc zysk się nie zmienił, a marża spadła z {{m1:1}}% do {{m2:1}}%; realnie zysk zmalał. Analiza nominalna w okresie inflacji zawyża wzrost – część „wzrostu” to tylko wyższe ceny. Spółka powinna sprawdzić przyczyny wzrostu kosztów (płace, czynsze, energia) i możliwość przeniesienia ich na ceny.

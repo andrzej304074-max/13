@@ -56,7 +56,7 @@ await page.click('[data-testid="essay-save"]'); await page.waitForSelector('[dat
 check(/20 \/ 25 pkt/.test(await page.locator('[data-testid="essay-score"]').innerText()), `esej 15+5=20 (${await page.locator('[data-testid="essay-score"]').innerText()})`);
 await page.screenshot({ path: `${OUT}/esej-390.png`, fullPage: true });
 // 5. lista pokazuje wynik, statystyki osobno od testów
-await page.goto(`${B}/zadania`); await page.waitForSelector('[data-testid="open-item"]');
+await page.goto(`${B}/zadania?zrodlo=owe`); await page.waitForSelector('[data-testid="open-item"]');
 check(/najlepiej 10\/15/.test(await page.locator('[data-testid="open-item"]', { hasText: "analizy finansowej" }).first().innerText()), "lista: najlepszy wynik");
 await page.goto(`${B}/stats`); await page.waitForSelector('[data-testid="open-stats"]');
 const os = await page.locator('[data-testid="open-stats"]').innerText();
@@ -69,7 +69,8 @@ check((await page.request.post(`${B}/api/otwarte/${TID}/sprawdz`, { data: { atte
 const lt = await (await page.request.get(`${B}/api/otwarte?rodzaj=zadanie`)).json();
 const le = await (await page.request.get(`${B}/api/otwarte?rodzaj=esej`)).json();
 const nT = (lt.items ?? lt).length, nE = (le.items ?? le).length;
-check(nT === 54 && nE === 58, `54 zadania i 58 esejów (${nT}, ${nE})`);
+const own = (l) => (l.items ?? l).filter((x) => x.src === "owe").length;
+check(own(lt) === 54 && own(le) === 58 && nT === 104 && nE === 108, `54 zadania i 58 esejów z kluczy + po 50 Prognozy XL (${nT}, ${nE})`);
 await page.goto(`${B}/zadania/owe-36-okregowe-zadanie`); await page.waitForSelector('[data-testid="task-part"]');
 check(await page.locator('[data-testid="own-note"]').count() === 1, "36o: oznaczenie rozwiązania własnego");
 await page.goto(`${B}/zadania/${TID}`); await page.waitForSelector('[data-testid="task-part"]');

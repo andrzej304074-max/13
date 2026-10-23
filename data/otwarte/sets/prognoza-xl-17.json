@@ -1,0 +1,228 @@
+{
+ "set": "prognoza-xl-17",
+ "ed": 40,
+ "stage": "s",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-17-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "mikro",
+   "th": false,
+   "topics": [
+    {
+     "title": "Ceny maksymalne i minimalne – czy pomagają?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "cena równowagi i wpływ regulacji",
+        "cena maksymalna: niedobór, kolejki, czarny rynek",
+        "cena minimalna: nadwyżka, płaca minimalna",
+        "elastyczność a skutki regulacji",
+        "alternatywy: transfery dochodowe"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "mrożenie cen energii w Polsce 2023–2025",
+        "płaca minimalna w Polsce",
+        "przykład kontroli czynszów",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – państwo ustalające ceny",
+       "teoria – modele, elastyczność, alternatywy",
+       "praktyka – energia, płaca minimalna, czynsze",
+       "zakończenie – krótkookresowo osłona, długookresowo zniekształcenia"
+      ],
+      "b": [
+       "brak wykresu słownego (podaż–popyt)",
+       "twierdzenie, że płaca minimalna zawsze powoduje bezrobocie",
+       "brak przykładów"
+      ],
+      "d": [
+       "płaca minimalna w Polsce 4666 zł brutto od 1 stycznia 2025 r. (rozporządzenie RM)"
+      ]
+     }
+    },
+    {
+     "title": "Wybory konsumenta – racjonalność czy emocje?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "teoria użyteczności, krzywe obojętności, ograniczenie budżetowe",
+        "racjonalność ograniczona (H. Simon)",
+        "heurystyki i błędy poznawcze (D. Kahneman, A. Tversky)",
+        "architektura wyboru i „szturchanie” (R. Thaler)",
+        "ekonomia behawioralna w polityce publicznej"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "automatyczny zapis do PPK i rola opcji domyślnej",
+        "promocje w sklepach („2 w cenie 3”, ceny kończące się na 99 gr) i zakupy pod wpływem emocji",
+        "ochrona konsumenta: prawo odstąpienia od umowy zawartej na odległość (14 dni) jako odpowiedź na pochopne decyzje",
+        "własna ocena: na ile decyzje konsumentów są racjonalne"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – czy jesteśmy homo oeconomicus",
+       "teoria – użyteczność, Simon, Kahneman, Thaler",
+       "praktyka – PPK, promocje",
+       "zakończenie – racjonalność ograniczona"
+      ],
+      "b": [
+       "brak teorii klasycznej",
+       "brak przykładów",
+       "brak nazwisk"
+      ],
+      "d": [
+       "w PPK pracownicy zapisywani są automatycznie i mogą zrezygnować deklaracją (ustawa o PPK) – przykład „szturchania”"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-17-zadanie",
+  "title": "Zadanie z podstaw ekonomii – Mnożnik wydatków",
+  "pts": 15,
+  "topic": "polityka",
+  "own": true,
+  "th": false,
+  "vars": {
+   "c": 0.8,
+   "t": 0.2,
+   "m": 0.14,
+   "dG": 30.0
+  },
+  "lets": [
+   [
+    "k1",
+    "1/(1-c)"
+   ],
+   [
+    "k2",
+    "1/(1-c*(1-t)+m)"
+   ],
+   [
+    "dY",
+    "k2*dG"
+   ],
+   [
+    "dd",
+    "dG-t*dY"
+   ],
+   [
+    "dT",
+    "t*dY"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "W gospodarce krańcowa skłonność do konsumpcji wynosi 0,80, stopa podatku dochodowego – 0,20, a krańcowa skłonność do importu – 0,14 (dane umowne). Rząd zwiększa wydatki o 30 mld zł."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 4,
+    "prompt": "Oblicz mnożnik wydatków w gospodarce zamkniętej bez podatków.",
+    "answers": [
+     {
+      "label": "Mnożnik prosty",
+      "value": 5.0,
+      "calc": "1/(1-c)",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "k = 1 / (1 − c) = 1 / (1 − 0,80) = 5"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 4,
+    "prompt": "Oblicz mnożnik w gospodarce otwartej z podatkami.",
+    "answers": [
+     {
+      "label": "Mnożnik",
+      "value": 2.0,
+      "calc": "1/(1-c*(1-t)+m)",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "k = 1 / (1 − c(1 − t) + m) = 1 / (1 − 0,8 × 0,8 + 0,14) = 2,00"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 3,
+    "prompt": "Oblicz przyrost PKB po wzroście wydatków.",
+    "answers": [
+     {
+      "label": "Przyrost PKB",
+      "value": 60.0,
+      "calc": "k2*dG",
+      "unit": "mld zł",
+      "tol": 0.1
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "ΔY = 2,00 × 30 = 60 mld zł"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "O ile zmieni się deficyt budżetu, jeśli dodatkowe wpływy z podatku stanowią 0,20 przyrostu PKB? Wyjaśnij, dlaczego mnożnik w gospodarce otwartej jest mniejszy.",
+    "answers": [
+     {
+      "label": "Wzrost deficytu",
+      "value": 18.0,
+      "calc": "dG-t*dY",
+      "unit": "mld zł",
+      "tol": 0.1
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "ΔT = 0,2 × 60 = 12 mld zł;  wzrost deficytu = 30 − 12 = 18 mld zł"
+     },
+     {
+      "t": "p",
+      "x": "Część dodatkowego dochodu „wycieka” z obiegu – na podatki i na import (zakupy dóbr zagranicznych zwiększają produkcję za granicą). Im większe wycieki, tym mniejszy mnożnik."
+     }
+    ]
+   }
+  ]
+ }
+}

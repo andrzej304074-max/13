@@ -1,0 +1,236 @@
+{
+ "set": "prognoza-xl-27",
+ "ed": 40,
+ "stage": "o",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-27-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "zarzadzanie",
+   "th": true,
+   "topics": [
+    {
+     "title": "Zarządzanie wiekiem w przedsiębiorstwie – jak firmy mogą wykorzystać pracowników w różnym wieku?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "zarządzanie wiekiem (age management) – pojęcie i obszary",
+        "różnorodność pokoleniowa zespołów i transfer wiedzy (mentoring)",
+        "motywacja w różnych fazach kariery (teorie motywacji – A. Maslow, F. Herzberg)",
+        "ergonomia, zdrowie i elastyczne formy pracy",
+        "kapitał ludzki i kształcenie przez całe życie"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "niedobór pracowników w polskich firmach i reakcje pracodawców",
+        "przykłady programów w firmach (mentoring, praca na część etatu)",
+        "dyskryminacja ze względu na wiek – przepisy",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – firmy wobec starzejącej się siły roboczej",
+       "teoria – age management, transfer wiedzy, motywacja",
+       "praktyka – przykłady programów, przepisy",
+       "zakończenie – różnorodność wieku jako przewaga"
+      ],
+      "b": [
+       "stereotypy o pracownikach starszych",
+       "brak teorii motywacji",
+       "brak przykładów"
+      ],
+      "d": [
+       "Kodeks pracy zakazuje dyskryminacji w zatrudnieniu m.in. ze względu na wiek (art. 18³ᵃ KP)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-27-zadanie",
+  "title": "Zadanie z analizy finansowej – Zadłużenie dwóch spółek energetycznych",
+  "pts": 15,
+  "topic": "firma",
+  "own": true,
+  "th": false,
+  "vars": {
+   "DA": 8.0,
+   "EA": 4.0,
+   "BA": 2.5,
+   "OA": 0.5,
+   "KA": 12.0,
+   "DB": 15.0,
+   "EB": 4.5,
+   "BB": 2.4,
+   "OB": 1.2,
+   "KB": 10.0
+  },
+  "lets": [
+   [
+    "da",
+    "DA/EA"
+   ],
+   [
+    "db",
+    "DB/EB"
+   ],
+   [
+    "pa",
+    "BA/OA"
+   ],
+   [
+    "pb",
+    "BB/OB"
+   ],
+   [
+    "ka",
+    "DA/KA"
+   ],
+   [
+    "kb",
+    "DB/KB"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Dwie spółki energetyczne inwestujące w transformację (dane umowne, mld zł):"
+   },
+   {
+    "t": "table",
+    "head": [
+     "Pozycja",
+     "Spółka A",
+     "Spółka B"
+    ],
+    "rows": [
+     [
+      "Dług odsetkowy",
+      "8",
+      "15"
+     ],
+     [
+      "EBITDA",
+      "4",
+      "4,5"
+     ],
+     [
+      "EBIT",
+      "2,5",
+      "2,4"
+     ],
+     [
+      "Odsetki",
+      "0,5",
+      "1,2"
+     ],
+     [
+      "Kapitał własny",
+      "12",
+      "10"
+     ]
+    ]
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 4,
+    "prompt": "Oblicz wskaźnik dług / EBITDA dla obu spółek.",
+    "answers": [
+     {
+      "label": "Dług/EBITDA – A",
+      "value": 2.0,
+      "calc": "DA/EA",
+      "tol": 0.01
+     },
+     {
+      "label": "Dług/EBITDA – B",
+      "value": 3.3333,
+      "calc": "DB/EB",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "A: 8 / 4 = 2,00;  B: 15 / 4,5 ≈ 3,33"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 4,
+    "prompt": "Oblicz wskaźnik pokrycia odsetek (EBIT / odsetki).",
+    "answers": [
+     {
+      "label": "Pokrycie odsetek – A",
+      "value": 5.0,
+      "calc": "BA/OA",
+      "tol": 0.01
+     },
+     {
+      "label": "Pokrycie odsetek – B",
+      "value": 2.0,
+      "calc": "BB/OB",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "A: 2,5 / 0,5 = 5;  B: 2,4 / 1,2 = 2"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 3,
+    "prompt": "Oblicz relację długu do kapitału własnego.",
+    "answers": [
+     {
+      "label": "Dług/kapitał – A",
+      "value": 0.6667,
+      "calc": "DA/KA",
+      "tol": 0.01
+     },
+     {
+      "label": "Dług/kapitał – B",
+      "value": 1.5,
+      "calc": "DB/KB",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "A: 8 / 12 ≈ 0,67;  B: 15 / 10 = 1,50"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "Która spółka jest bardziej narażona na ryzyko finansowe? Jak wzrost stóp procentowych wpłynąłby na jej zdolność do finansowania inwestycji w OZE?",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Spółka B ma dwukrotnie wyższą dźwignię (dług/EBITDA ≈ 3,3 wobec 2,0), słabsze pokrycie odsetek (2 wobec 5) i więcej długu niż kapitału własnego. Wzrost stóp procentowych podniesie jej koszty odsetkowe i obniży pokrycie odsetek poniżej bezpiecznego poziomu, co może naruszyć kowenanty kredytowe i podnieść koszt nowego kapitału. Ponieważ inwestycje w OZE i sieci są kapitałochłonne, a ich opłacalność silnie zależy od kosztu kapitału, spółka B może musieć ograniczyć inwestycje, wyemitować akcje albo szukać finansowania preferencyjnego (np. EBI, fundusze UE)."
+     }
+    ]
+   }
+  ]
+ }
+}

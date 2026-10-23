@@ -1,0 +1,249 @@
+{
+ "set": "prognoza-xl-15",
+ "ed": 40,
+ "stage": "s",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-15-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "makro",
+   "th": false,
+   "topics": [
+    {
+     "title": "Dług publiczny – kiedy staje się problemem?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "deficyt a dług publiczny",
+        "dynamika długu: relacja stopy procentowej do tempa wzrostu (r − g)",
+        "efekt wypychania",
+        "równoważność ricardiańska",
+        "kryzys zadłużenia i reguły fiskalne"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "dług Polski w relacji do PKB, limit konstytucyjny 60%",
+        "procedura nadmiernego deficytu wobec Polski (2024)",
+        "Grecja 2010–2015",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – dług rośnie po pandemii i wojnie",
+       "teoria – dynamika, wypychanie, Ricardo",
+       "praktyka – Polska, EDP, Grecja",
+       "zakończenie – problemem staje się, gdy r > g i brak wiarygodności"
+      ],
+      "b": [
+       "mylenie deficytu z długiem",
+       "brak relacji do PKB",
+       "brak przykładów"
+      ],
+      "d": [
+       "dług sektora instytucji rządowych i samorządowych Polski ok. 55% PKB w 2024 r., deficyt ok. 6,6% PKB (Eurostat)",
+       "procedura nadmiernego deficytu otwarta wobec Polski w lipcu 2024 r. (Rada UE)"
+      ]
+     }
+    },
+    {
+     "title": "Etyka w biznesie – czy się opłaca?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "społeczna odpowiedzialność biznesu (CSR) i ESG",
+        "spór M. Friedmana z koncepcją interesariuszy",
+        "reputacja jako kapitał",
+        "asymetria informacji i zaufanie",
+        "ład korporacyjny"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "afery korporacyjne (Volkswagen, Enron)",
+        "raportowanie ESG w UE (CSRD)",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – etyka a zysk",
+       "teoria – CSR, Friedman, reputacja",
+       "praktyka – afery, CSRD",
+       "zakończenie – opłaca się długookresowo"
+      ],
+      "b": [
+       "brak stanowiska Friedmana",
+       "brak przykładów",
+       "moralizowanie bez ekonomii"
+      ],
+      "d": [
+       "dyrektywa CSRD obejmuje raportowaniem zrównoważonego rozwoju duże spółki od 2024 r. (UE)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-15-zadanie",
+  "title": "Zadanie z podstaw ekonomii – Inflacja z koszyka cen",
+  "pts": 15,
+  "topic": "makro",
+  "own": true,
+  "th": false,
+  "vars": {
+   "w1": 27.0,
+   "g1": 6.0,
+   "w2": 15.0,
+   "g2": 12.0,
+   "w3": 35.0,
+   "g3": 7.0,
+   "w4": 23.0,
+   "g4": 2.0,
+   "wn": 9.0
+  },
+  "lets": [
+   [
+    "cpi",
+    "(w1*g1+w2*g2+w3*g3+w4*g4)/100"
+   ],
+   [
+    "bz",
+    "(w1*g1+w3*g3+w4*g4)/(w1+w3+w4)"
+   ],
+   [
+    "rw",
+    "((1+wn/100)/(1+cpi/100)-1)*100"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Koszyk dóbr konsumpcyjnych i roczne zmiany cen jego składników (dane umowne):"
+   },
+   {
+    "t": "table",
+    "head": [
+     "Grupa",
+     "Waga w koszyku (%)",
+     "Wzrost cen (%)"
+    ],
+    "rows": [
+     [
+      "Żywność",
+      "27",
+      "6"
+     ],
+     [
+      "Energia",
+      "15",
+      "12"
+     ],
+     [
+      "Usługi",
+      "35",
+      "7"
+     ],
+     [
+      "Pozostałe towary",
+      "23",
+      "2"
+     ]
+    ]
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 4,
+    "prompt": "Oblicz wskaźnik inflacji CPI.",
+    "answers": [
+     {
+      "label": "Inflacja CPI",
+      "value": 6.33,
+      "calc": "(w1*g1+w2*g2+w3*g3+w4*g4)/100",
+      "unit": "%",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "π = Σ wᵢ × πᵢ = 0,27×6 + 0,15×12 + 0,35×7 + 0,23×2 = 6,33%"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 3,
+    "prompt": "Oblicz inflację z wyłączeniem cen energii (koszyk bez energii, wagi przeskalowane do 100%).",
+    "answers": [
+     {
+      "label": "Inflacja bez energii",
+      "value": 5.3294,
+      "calc": "(w1*g1+w3*g3+w4*g4)/(w1+w3+w4)",
+      "unit": "%",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "(0,27×6 + 0,35×7 + 0,23×2) / 0,85 ≈ 5,33%"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 4,
+    "prompt": "Nominalne wynagrodzenia wzrosły o 9%. Oblicz realny wzrost wynagrodzeń.",
+    "answers": [
+     {
+      "label": "Realny wzrost płac",
+      "value": 2.5111,
+      "calc": "((1+wn/100)/(1+cpi/100)-1)*100",
+      "unit": "%",
+      "tol": 0.02
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "(1 + 0,09) / (1 + 6,33%) − 1 ≈ 2,51%"
+     },
+     {
+      "t": "p",
+      "x": "Przybliżenie 9% − 6,33% daje podobny wynik."
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "Inflacja przekracza cel NBP. Opisz, jak Rada Polityki Pieniężnej może zareagować i przez jakie kanały działa ta reakcja.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Cel inflacyjny NBP to 2,5% z dopuszczalnym odchyleniem ±1 pkt proc. Przy inflacji ok. 6,3% RPP może podnieść stopy procentowe. Działa to przez: (1) kanał stopy procentowej – droższy kredyt, mniejsza konsumpcja i inwestycje; (2) kanał kursowy – aprecjacja złotego obniża ceny importu; (3) kanał oczekiwań – wiarygodny bank centralny hamuje oczekiwania inflacyjne i żądania płacowe. Gdy inflację napędza głównie energia (szok podażowy), bank centralny może reagować ostrożniej, obserwując inflację bazową (tu 5,33%)."
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,214 @@
+{
+ "set": "prognoza-xl-49",
+ "ed": 40,
+ "stage": "c",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-49-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "makro",
+   "th": false,
+   "topics": [
+    {
+     "title": "Czy Polska powinna przyjąć euro?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "teoria optymalnych obszarów walutowych (R. Mundell)",
+        "korzyści: koszty transakcyjne, wiarygodność, handel",
+        "koszty: utrata polityki pieniężnej i kursu walutowego",
+        "kryteria konwergencji z Maastricht",
+        "asymetryczne szoki i mechanizmy dostosowawcze"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "spełnianie kryteriów przez Polskę",
+        "doświadczenia Słowacji, krajów bałtyckich, Chorwacji (2023)",
+        "kryzys strefy euro 2010–2012",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – zobowiązanie traktatowe",
+       "teoria – OOW, korzyści, koszty, kryteria",
+       "praktyka – Polska, przykłady, kryzys",
+       "zakończenie – własna teza z uzasadnieniem"
+      ],
+      "b": [
+       "brak Mundella",
+       "brak kryteriów",
+       "brak przykładów"
+      ],
+      "d": [
+       "Chorwacja przyjęła euro 1 stycznia 2023 r. (EBC)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-49-zadanie",
+  "title": "Zadanie analityczne – Dylemat reklamowy – teoria gier",
+  "pts": 15,
+  "topic": "mikro",
+  "own": true,
+  "th": false,
+  "vars": {
+   "aa": 40.0,
+   "ab": 70.0,
+   "ba": 20.0,
+   "nn": 60.0
+  },
+  "lets": [
+   [
+    "zn",
+    "2*aa"
+   ],
+   [
+    "zk",
+    "2*nn"
+   ],
+   [
+    "dmin",
+    "(ab-nn)/(ab-aa)"
+   ],
+   [
+    "zz",
+    "ab-nn"
+   ],
+   [
+    "st",
+    "nn-aa"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Dwie firmy decydują, czy prowadzić kampanię reklamową. Zyski (w mln zł; pierwsza liczba – firma A, druga – firma B; dane umowne):"
+   },
+   {
+    "t": "table",
+    "head": [
+     "",
+     "B: reklama",
+     "B: brak reklamy"
+    ],
+    "rows": [
+     [
+      "A: reklama",
+      "40; 40",
+      "70; 20"
+     ],
+     [
+      "A: brak reklamy",
+      "20; 70",
+      "60; 60"
+     ]
+    ]
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 4,
+    "prompt": "Wskaż strategie dominujące i równowagę Nasha. Podaj łączny zysk obu firm w równowadze Nasha i w wariancie, w którym obie rezygnują z reklamy.",
+    "answers": [
+     {
+      "label": "Łączny zysk w równowadze Nasha",
+      "value": 80.0,
+      "calc": "2*aa",
+      "unit": "mln zł",
+      "tol": 0.0
+     },
+     {
+      "label": "Łączny zysk bez reklamy",
+      "value": 120.0,
+      "calc": "2*nn",
+      "unit": "mln zł",
+      "tol": 0.0
+     }
+    ],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Dla A: gdy B się reklamuje, reklama daje 40 > 20; gdy B się nie reklamuje, reklama daje 70 > 60 – reklama jest strategią dominującą (symetrycznie dla B). Równowaga Nasha: obie się reklamują, łączny zysk 80 mln zł, choć bez reklamy mogłyby mieć 120 mln zł – klasyczny dylemat więźnia."
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 4,
+    "prompt": "Gra jest powtarzana w nieskończoność, a firmy stosują strategię „spustu”: nie reklamują się, dopóki rywal się nie reklamuje, a po zdradzie reklamują się zawsze. Wyznacz minimalny czynnik dyskontowy δ, przy którym współpraca jest opłacalna.",
+    "answers": [
+     {
+      "label": "Minimalne δ",
+      "value": 0.3333,
+      "calc": "(ab-nn)/(ab-aa)",
+      "tol": 0.005
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "60 / (1 − δ) ≥ 70 + δ × 40 / (1 − δ) ⇒ δ ≥ (70 − 60) / (70 − 40) = 0,333"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 3,
+    "prompt": "Oblicz zysk z jednorazowej zdrady w porównaniu ze współpracą oraz stratę w każdym kolejnym okresie.",
+    "answers": [
+     {
+      "label": "Zysk z jednorazowej zdrady",
+      "value": 10.0,
+      "calc": "ab-nn",
+      "unit": "mln zł",
+      "tol": 0.0
+     },
+     {
+      "label": "Strata w kolejnym okresie",
+      "value": 20.0,
+      "calc": "nn-aa",
+      "unit": "mln zł",
+      "tol": 0.0
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "70 − 60 = 10;  60 − 40 = 20"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "Podaj przykłady sytuacji ekonomicznych o strukturze dylematu więźnia i sposoby wyjścia z niego.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "ul",
+      "items": [
+       "wyścig reklamowy i cenowy w oligopolu; kartele (zmowa cenowa – nielegalna),",
+       "wyścig zbrojeń; nadmierne połowy i inne dobra wspólne (tragedia wspólnego pastwiska),",
+       "konkurencja podatkowa między państwami (minimalny podatek CIT 15% OECD),",
+       "wyjście: powtarzalność gry i reputacja, umowy z egzekucją (regulacje, traktaty), zmiana wypłat (kary, podatki Pigou), komunikacja i budowanie zaufania (E. Ostrom)."
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

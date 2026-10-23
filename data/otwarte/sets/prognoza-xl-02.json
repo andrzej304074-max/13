@@ -1,0 +1,269 @@
+{
+ "set": "prognoza-xl-02",
+ "ed": 40,
+ "stage": "s",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-02-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "demografia",
+   "th": true,
+   "topics": [
+    {
+     "title": "Jak niska dzietność wpływa na gospodarkę i co może zrobić państwo?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "współczynnik dzietności i poziom zastępowalności pokoleń",
+        "ekonomiczne przyczyny niskiej dzietności: koszt alternatywny czasu (G. Becker – „jakość a liczba dzieci”), koszty mieszkania, niepewność zatrudnienia",
+        "kulturowe i społeczne przyczyny: późniejsze zawieranie małżeństw, edukacja, zmiana wartości",
+        "skutki dla rynku pracy, wzrostu gospodarczego i finansów publicznych",
+        "narzędzia polityki rodzinnej: transfery pieniężne, usługi (żłobki), urlopy, ulgi podatkowe, mieszkania",
+        "skuteczność transferów pieniężnych a usług – wnioski z badań"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "zmiany dzietności w Polsce i liczby urodzeń (GUS)",
+        "polskie instrumenty: 800+, ulga na dzieci, program „Aktywny rodzic”, żłobki",
+        "przykład zagraniczny: Francja / kraje nordyckie (usługi) lub Węgry (ulgi), Korea Płd. (najniższa dzietność)",
+        "własna ocena: które narzędzia mają największą szansę zadziałać"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – dzietność w Polsce poniżej poziomu zastępowalności",
+       "teoria – przyczyny ekonomiczne i społeczne, skutki",
+       "praktyka – polskie programy i przykłady zagraniczne",
+       "zakończenie – połączenie usług, mieszkań i stabilności pracy zamiast samych transferów"
+      ],
+      "b": [
+       "przypisywanie spadku dzietności jednej przyczynie",
+       "twierdzenie, że 800+ „podniosło” dzietność bez danych",
+       "pomijanie efektu mniejszej liczby kobiet w wieku rozrodczym"
+      ],
+      "d": [
+       "dzietność w Polsce ok. 1,1 (2024, GUS)",
+       "Korea Płd. ok. 0,7–0,75 (2023–2024, Statistics Korea)",
+       "Francja ok. 1,6–1,7 (INSEE, 2023–2024)"
+      ]
+     }
+    },
+    {
+     "title": "Czy wolny handel jest korzystny dla wszystkich?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "przewaga absolutna (A. Smith) i komparatywna (D. Ricardo)",
+        "model Heckschera–Ohlina i obfitość czynników produkcji",
+        "korzyści z handlu: specjalizacja, skala, konkurencja, większy wybór dla konsumentów",
+        "przegrani handlu: branże konkurujące z importem, efekt Stolpera–Samuelsona",
+        "protekcjonizm: cła, kontyngenty, subsydia – skutki dla dobrobytu (strata martwa)",
+        "argument „przemysłu raczkującego” (F. List) i argument bezpieczeństwa"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "Polska w jednolitym rynku UE – znaczenie eksportu",
+        "wojny celne i cła USA (2018–2025) – skutki dla gospodarki światowej",
+        "WTO i umowy handlowe UE (np. z Mercosurem – spór rolników)",
+        "własna ocena: korzyści netto a potrzeba wsparcia przegranych"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – handel jako źródło dobrobytu i sporów",
+       "teoria – przewaga komparatywna, H–O, przegrani",
+       "praktyka – Polska w UE, cła USA, Mercosur",
+       "zakończenie – korzyści netto dodatnie, ale nie dla każdego, więc potrzebna polityka kompensacji"
+      ],
+      "b": [
+       "mylenie przewagi absolutnej z komparatywną",
+       "twierdzenie, że deficyt handlowy oznacza „przegraną” kraju",
+       "brak przykładu przegranych z handlu"
+      ],
+      "d": [
+       "eksport towarów i usług Polski ok. 55–60% PKB (Bank Światowy, 2023)",
+       "ponad 70% eksportu towarów Polski trafia do UE (GUS)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-02-zadanie",
+  "title": "Zadanie z podstaw ekonomii – Współczynnik dzietności",
+  "pts": 15,
+  "topic": "demografia",
+  "own": true,
+  "th": true,
+  "vars": {
+   "f1": 8.0,
+   "f2": 40.0,
+   "f3": 75.0,
+   "f4": 70.0,
+   "f5": 30.0,
+   "f6": 6.0,
+   "f7": 0.5,
+   "dz": 0.485
+  },
+  "lets": [
+   [
+    "tfr",
+    "5*(f1+f2+f3+f4+f5+f6+f7)/1000"
+   ],
+   [
+    "suma",
+    "f1+f2+f3+f4+f5+f6+f7"
+   ],
+   [
+    "luka",
+    "(2.1-tfr)/2.1*100"
+   ],
+   [
+    "rb",
+    "tfr*dz"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Cząstkowe współczynniki płodności (liczba urodzeń żywych na 1000 kobiet w danej grupie wieku) w pewnym kraju (dane umowne):"
+   },
+   {
+    "t": "table",
+    "head": [
+     "Wiek kobiet",
+     "15–19",
+     "20–24",
+     "25–29",
+     "30–34",
+     "35–39",
+     "40–44",
+     "45–49"
+    ],
+    "rows": [
+     [
+      "Urodzenia na 1000 kobiet",
+      "8",
+      "40",
+      "75",
+      "70",
+      "30",
+      "6",
+      "0,5"
+     ]
+    ]
+   },
+   {
+    "t": "p",
+    "x": "Współczynnik dzietności (TFR) to przeciętna liczba dzieci urodzonych przez kobietę w ciągu okresu rozrodczego przy danych współczynnikach płodności. Grupy wieku są pięcioletnie."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 4,
+    "prompt": "Oblicz współczynnik dzietności.",
+    "answers": [
+     {
+      "label": "Współczynnik dzietności",
+      "value": 1.1475,
+      "calc": "5*(f1+f2+f3+f4+f5+f6+f7)/1000",
+      "unit": "dzieci",
+      "tol": 0.005
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "TFR = 5 × Σ fₓ / 1000 = 5 × 229,5 / 1000 ≈ 1,147"
+     },
+     {
+      "t": "p",
+      "x": "Mnożymy przez 5, bo każda kobieta spędza w każdej grupie wieku 5 lat; dzielimy przez 1000, bo współczynniki podano na 1000 kobiet."
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 3,
+    "prompt": "O ile procent współczynnik dzietności jest niższy od poziomu zastępowalności pokoleń (2,1)?",
+    "answers": [
+     {
+      "label": "Różnica",
+      "value": 45.3571,
+      "calc": "(2.1-tfr)/2.1*100",
+      "unit": "%",
+      "tol": 0.2
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "(2,1 − 1,147) / 2,1 × 100 ≈ 45,4%"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 4,
+    "prompt": "Oblicz współczynnik reprodukcji brutto (liczbę córek przypadających na jedną kobietę), jeśli dziewczynki stanowią 0,485 urodzeń. Zinterpretuj wynik.",
+    "answers": [
+     {
+      "label": "Współczynnik reprodukcji brutto",
+      "value": 0.5565,
+      "calc": "tfr*dz",
+      "unit": "córki",
+      "tol": 0.005
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "R = TFR × 0,485 ≈ 0,557"
+     },
+     {
+      "t": "p",
+      "x": "Wartość poniżej 1 oznacza, że pokolenie córek jest liczebnie mniejsze od pokolenia matek – bez migracji liczba ludności w długim okresie będzie maleć. (Współczynnik netto, uwzględniający umieralność, jest jeszcze nieco niższy)."
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "Podaj trzy ekonomiczne lub społeczne przyczyny niskiej dzietności w krajach rozwiniętych i jedną konsekwencję dla rynku pracy.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "ul",
+      "items": [
+       "rosnący koszt alternatywny czasu rodziców (zwłaszcza kobiet z wysokimi zarobkami) – teoria G. Beckera,",
+       "wysokie koszty mieszkania i niepewność zatrudnienia młodych,",
+       "późniejsze zawieranie związków i rodzenie pierwszego dziecka (dłuższa edukacja),",
+       "zmiana preferencji – mniejsza liczba dzieci, ale większe nakłady na każde (wybór „jakość zamiast liczby”)."
+      ]
+     },
+     {
+      "t": "p",
+      "x": "Konsekwencja: po ok. 20 latach na rynek pracy wchodzą mniej liczne roczniki – maleje zasób pracy, rosną płace i niedobory pracowników."
+     }
+    ]
+   }
+  ]
+ }
+}

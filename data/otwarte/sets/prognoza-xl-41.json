@@ -1,0 +1,181 @@
+{
+ "set": "prognoza-xl-41",
+ "ed": 40,
+ "stage": "c",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-41-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "finanse",
+   "th": true,
+   "topics": [
+    {
+     "title": "Ryzyko długowieczności – wyzwanie dla ubezpieczycieli, funduszy i państwa",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "ryzyko długowieczności – indywidualne i zagregowane",
+        "renta dożywotnia (annuity) i problem selekcji negatywnej",
+        "tablice trwania życia i ich aktualizacja",
+        "instrumenty transferu ryzyka (obligacje długowieczności, reasekuracja)",
+        "rola państwa jako ubezpieczyciela ostatniej instancji"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "dalsze trwanie życia 60-latków w Polsce (GUS)",
+        "wypłaty z PPK i IKE – brak obowiązkowej renty",
+        "przykład Wielkiej Brytanii (odejście od obowiązkowej annuity w 2015 r.)",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – dożyć ponad oszczędności",
+       "teoria – ryzyko, annuity, selekcja, transfer ryzyka",
+       "praktyka – GUS, PPK/IKE, Wielka Brytania",
+       "zakończenie – podział ryzyka między państwo i rynek"
+      ],
+      "b": [
+       "mylenie ryzyka indywidualnego i zagregowanego",
+       "brak selekcji negatywnej",
+       "brak przykładów"
+      ],
+      "d": [
+       "przeciętne dalsze trwanie życia 60-letniej kobiety w Polsce ok. 24–25 lat, mężczyzny ok. 19–20 lat (GUS, tablice trwania życia 2023)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-41-zadanie",
+  "title": "Zadanie analityczne – Gospodarstwa domowe i popyt na mieszkania",
+  "pts": 15,
+  "topic": "demografia",
+  "own": true,
+  "th": true,
+  "vars": {
+   "N1": 37.5,
+   "h1": 2.6,
+   "N2": 35.0,
+   "h2": 2.3,
+   "T": 15.0,
+   "wyc": 30.0
+  },
+  "lets": [
+   [
+    "g1",
+    "N1/h1"
+   ],
+   [
+    "g2",
+    "N2/h2"
+   ],
+   [
+    "dg",
+    "g2-g1"
+   ],
+   [
+    "bud",
+    "dg*1000/T+wyc"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Ludność kraju wynosi 37,5 mln, a przeciętna liczba osób w gospodarstwie domowym – 2,6. Według prognozy (umownej) za 15 lat ludność spadnie do 35 mln, a przeciętne gospodarstwo zmniejszy się do 2,3 osoby (więcej osób starszych mieszkających samotnie). Każdego roku z zasobu ubywa 30 tys. mieszkań (wyburzenia, zmiana funkcji)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 3,
+    "prompt": "Oblicz obecną liczbę gospodarstw domowych.",
+    "answers": [
+     {
+      "label": "Gospodarstwa obecnie",
+      "value": 14.4231,
+      "calc": "N1/h1",
+      "unit": "mln",
+      "tol": 0.005
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "37,5 / 2,6 ≈ 14,423 mln"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 3,
+    "prompt": "Oblicz liczbę gospodarstw za 15 lat i jej zmianę.",
+    "answers": [
+     {
+      "label": "Gospodarstwa za 15 lat",
+      "value": 15.2174,
+      "calc": "N2/h2",
+      "unit": "mln",
+      "tol": 0.005
+     },
+     {
+      "label": "Zmiana",
+      "value": 0.7943,
+      "calc": "g2-g1",
+      "unit": "mln",
+      "tol": 0.005
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "35 / 2,3 ≈ 15,217 mln;  zmiana ≈ 0,794 mln"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 4,
+    "prompt": "Ile mieszkań trzeba średnio budować rocznie, aby każde nowe gospodarstwo miało mieszkanie i aby zastąpić wycofywane lokale?",
+    "answers": [
+     {
+      "label": "Budowa roczna",
+      "value": 82.9543,
+      "calc": "dg*1000/T+wyc",
+      "unit": "tys.",
+      "tol": 0.5
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "0,794 mln / 15 lat + 30 tys. ≈ 83,0 tys. mieszkań rocznie"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 5,
+    "prompt": "Wyjaśnij, dlaczego popyt na mieszkania może rosnąć mimo spadku liczby ludności, i wskaż zróżnicowanie regionalne oraz konsekwencje starzenia się dla rynku mieszkań.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "O popycie decyduje liczba gospodarstw domowych, a nie ludności. Gdy przeciętne gospodarstwo się zmniejsza (samotni seniorzy, mniej dzieci, później zakładane rodziny), liczba gospodarstw może rosnąć mimo spadku ludności – tu o ok. 0,79 mln. Popyt będzie jednak skupiony w dużych miastach (migracje wewnętrzne, praca), podczas gdy w małych miastach i na wsiach przybędzie pustostanów i spadną ceny. Starzenie zmienia strukturę popytu: mniejsze mieszkania bez barier architektonicznych, mieszkania z usługami opiekuńczymi; jednocześnie seniorzy zajmują duże mieszkania (niedopasowanie), co sprzyja rozwiązaniom takim jak zamiana mieszkań lub odwrócona hipoteka."
+     }
+    ]
+   }
+  ]
+ }
+}

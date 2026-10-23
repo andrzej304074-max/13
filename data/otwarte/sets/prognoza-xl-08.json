@@ -1,0 +1,235 @@
+{
+ "set": "prognoza-xl-08",
+ "ed": 40,
+ "stage": "s",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-08-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "demografia",
+   "th": true,
+   "topics": [
+    {
+     "title": "Rynek mieszkaniowy a decyzje o założeniu rodziny",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "popyt i podaż na rynku mieszkań; cena mieszkania a czynsz",
+        "dostępność mieszkań (relacja ceny do dochodu, zdolność kredytowa)",
+        "stopy procentowe a kredyty hipoteczne",
+        "mieszkanie a decyzje rodzinne – koszt alternatywny, niepewność",
+        "polityka mieszkaniowa: dopłaty do kredytów, budownictwo społeczne, najem"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "ceny mieszkań w Polsce 2015–2025 (NBP, GUS)",
+        "programy: Mieszkanie dla Młodych, Bezpieczny Kredyt 2%, TBS / SIM",
+        "przykład Wiednia (mieszkania komunalne)",
+        "własna ocena: dopłaty do kredytów czy zwiększenie podaży"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – mieszkanie jako bariera dla młodych",
+       "teoria – popyt i podaż, dostępność, stopy",
+       "praktyka – ceny, programy, Wiedeń",
+       "zakończenie – zwiększanie podaży ważniejsze od dopłat do popytu"
+      ],
+      "b": [
+       "brak elastyczności podaży w analizie",
+       "pomijanie najmu",
+       "ocena programów bez danych o cenach"
+      ],
+      "d": [
+       "program Bezpieczny Kredyt 2% działał od lipca 2023 r. do początku 2024 r. (BGK)",
+       "ceny transakcyjne mieszkań w dużych miastach wzrosły silnie w latach 2023–2024 (NBP, baza cen nieruchomości)"
+      ]
+     }
+    },
+    {
+     "title": "Czy pieniądz gotówkowy zniknie?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "funkcje pieniądza i jego formy",
+        "pieniądz bankowy a gotówka banku centralnego",
+        "płatności bezgotówkowe – zalety i ryzyka",
+        "cyfrowa waluta banku centralnego (CBDC) i kryptoaktywa",
+        "prywatność, inkluzja finansowa, odporność systemu"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "popularność BLIK i kart w Polsce",
+        "prace nad cyfrowym euro (EBC)",
+        "przykład Szwecji",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – szybki spadek użycia gotówki",
+       "teoria – funkcje i formy pieniądza",
+       "praktyka – BLIK, cyfrowe euro, Szwecja",
+       "zakończenie – gotówka jako rezerwa bezpieczeństwa"
+      ],
+      "b": [
+       "mylenie kryptowalut z CBDC",
+       "brak wątku prywatności",
+       "brak danych"
+      ],
+      "d": [
+       "EBC prowadzi fazę przygotowawczą cyfrowego euro od listopada 2023 r. (EBC)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-08-zadanie",
+  "title": "Zadanie z podstaw ekonomii – Dywidenda demograficzna",
+  "pts": 15,
+  "topic": "demografia",
+  "own": true,
+  "th": true,
+  "vars": {
+   "y": 180000.0,
+   "e": 0.75,
+   "s": 0.64,
+   "y2": 216000.0,
+   "e2": 0.78,
+   "s2": 0.58
+  },
+  "lets": [
+   [
+    "pkb1",
+    "y*e*s"
+   ],
+   [
+    "pkb2",
+    "y2*e2*s2"
+   ],
+   [
+    "dz",
+    "(pkb2/pkb1-1)*100"
+   ],
+   [
+    "pkb3",
+    "y*e*s2"
+   ],
+   [
+    "sp",
+    "(1-pkb3/pkb1)*100"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "PKB na mieszkańca można zapisać jako iloczyn: Y/N = (Y/L) × (L/W) × (W/N), gdzie Y – PKB, L – pracujący, W – ludność w wieku produkcyjnym, N – cała ludność. W kraju X (dane umowne) wydajność pracy Y/L = 180 000 zł, wskaźnik zatrudnienia L/W = 0,75, a udział ludności w wieku produkcyjnym W/N = 0,64."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 3,
+    "prompt": "Oblicz PKB na mieszkańca.",
+    "answers": [
+     {
+      "label": "PKB per capita",
+      "value": 86400.0,
+      "calc": "y*e*s",
+      "unit": "zł",
+      "tol": 1.0
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "180 000 × 0,75 × 0,64 = 86 400 zł"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 4,
+    "prompt": "Po 10 latach udział ludności w wieku produkcyjnym spada do 0,58, wskaźnik zatrudnienia rośnie do 0,78, a wydajność do 216 000 zł. Oblicz nowy PKB na mieszkańca i jego zmianę w procentach.",
+    "answers": [
+     {
+      "label": "Nowy PKB per capita",
+      "value": 97718.4,
+      "calc": "y2*e2*s2",
+      "unit": "zł",
+      "tol": 1.0
+     },
+     {
+      "label": "Zmiana",
+      "value": 13.1,
+      "calc": "(pkb2/pkb1-1)*100",
+      "unit": "%",
+      "tol": 0.1
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "216 000 × 0,78 × 0,58 ≈ 97 718,4 zł;  zmiana ≈ 13,10%"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 4,
+    "prompt": "Oblicz, jak zmieniłby się PKB na mieszkańca, gdyby zmieniła się tylko struktura wieku (wydajność i wskaźnik zatrudnienia bez zmian). Podaj wynik w zł i spadek w procentach.",
+    "answers": [
+     {
+      "label": "PKB per capita (tylko demografia)",
+      "value": 78300.0,
+      "calc": "y*e*s2",
+      "unit": "zł",
+      "tol": 1.0
+     },
+     {
+      "label": "Spadek",
+      "value": 9.375,
+      "calc": "(1-pkb3/pkb1)*100",
+      "unit": "%",
+      "tol": 0.05
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "180 000 × 0,75 × 0,58 = 78 300 zł;  spadek = (1 − 0,58/0,64) × 100 ≈ 9,38%"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "Wyjaśnij pojęcie dywidendy demograficznej i jej odwrócenia. Jakie działania pozwalają zrekompensować niekorzystną zmianę struktury wieku?",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Dywidenda demograficzna to dodatkowy wzrost PKB na mieszkańca, gdy rośnie udział ludności w wieku produkcyjnym (spadek dzietności, a zanim ludność się zestarzeje). W starzejących się społeczeństwach działa odwrotnie – udział W/N maleje i obniża PKB na mieszkańca (w zadaniu o ok. 9,4%). Rekompensatą są: wzrost wydajności (kapitał, technologia, kapitał ludzki) i wzrost wskaźnika zatrudnienia (aktywizacja kobiet i osób starszych, migracje). W punkcie b oba czynniki z nawiązką zrównoważyły efekt demograficzny."
+     }
+    ]
+   }
+  ]
+ }
+}

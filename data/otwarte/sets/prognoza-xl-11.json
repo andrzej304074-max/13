@@ -1,0 +1,261 @@
+{
+ "set": "prognoza-xl-11",
+ "ed": 40,
+ "stage": "s",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-11-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "makro",
+   "th": false,
+   "topics": [
+    {
+     "title": "Bezrobocie – czy da się je całkowicie wyeliminować?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "definicja i mierniki bezrobocia (stopa bezrobocia BAEL i rejestrowanego)",
+        "rodzaje: frykcyjne, strukturalne, koniunkturalne, sezonowe",
+        "naturalna stopa bezrobocia i NAIRU",
+        "przyczyny według różnych szkół (klasycy, Keynes, monetaryści)",
+        "skutki bezrobocia: ekonomiczne i społeczne (prawo Okuna)",
+        "polityka rynku pracy: aktywna i pasywna"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "bezrobocie w Polsce 2004–2025",
+        "niskie bezrobocie a niedobory pracowników",
+        "przykład Hiszpanii lub Grecji",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – bezrobocie najniższe od lat",
+       "teoria – rodzaje, naturalna stopa, szkoły, skutki",
+       "praktyka – Polska i przykłady",
+       "zakończenie – całkowita eliminacja niemożliwa (frykcyjne)"
+      ],
+      "b": [
+       "mylenie stopy rejestrowanej i BAEL",
+       "twierdzenie, że bezrobocie zerowe jest możliwe i pożądane",
+       "brak przykładów"
+      ],
+      "d": [
+       "stopa bezrobocia w Polsce wg Eurostatu ok. 3% (2024) – jedna z najniższych w UE (Eurostat)",
+       "w 2003 r. bezrobocie rejestrowane przekraczało 20% (GUS)"
+      ]
+     }
+    },
+    {
+     "title": "Państwo – lepszy czy gorszy przedsiębiorca niż prywatny właściciel?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "argumenty za własnością prywatną: bodźce, problem pryncypała i agenta",
+        "zawodności rynku a interwencja państwa",
+        "zawodności państwa (teoria wyboru publicznego – J. Buchanan)",
+        "przedsiębiorstwa państwowe a monopole naturalne",
+        "prywatyzacja i nacjonalizacja"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "spółki Skarbu Państwa w Polsce (energetyka, paliwa, banki)",
+        "prywatyzacja w latach 90.",
+        "przykład Norwegii (Equinor) lub Chin",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – rola państwa jako właściciela",
+       "teoria – bodźce, zawodności rynku i państwa",
+       "praktyka – spółki SP, prywatyzacja, przykład",
+       "zakończenie – zależy od sektora i jakości nadzoru"
+      ],
+      "b": [
+       "jednostronność",
+       "brak teorii wyboru publicznego",
+       "brak przykładów"
+      ],
+      "d": [
+       "spółki z udziałem Skarbu Państwa stanowią znaczną część kapitalizacji GPW (np. PKN Orlen, PKO BP, PZU) (GPW)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-11-zadanie",
+  "title": "Zadanie z podstaw ekonomii – Podatek akcyzowy na rynku",
+  "pts": 15,
+  "topic": "mikro",
+  "own": true,
+  "th": false,
+  "vars": {
+   "a": 100.0,
+   "b": 2.0,
+   "c": -20.0,
+   "d": 2.0,
+   "t": 6.0
+  },
+  "lets": [
+   [
+    "p0",
+    "(a-c)/(b+d)"
+   ],
+   [
+    "q0",
+    "a-b*p0"
+   ],
+   [
+    "pk",
+    "(a-c+d*t)/(b+d)"
+   ],
+   [
+    "pp",
+    "pk-t"
+   ],
+   [
+    "q1",
+    "a-b*pk"
+   ],
+   [
+    "wpl",
+    "t*q1"
+   ],
+   [
+    "dwl",
+    "0.5*t*(q0-q1)"
+   ],
+   [
+    "udk",
+    "(pk-p0)/t*100"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Na rynku pewnego dobra popyt opisuje funkcja Qd = 100 − 2P, a podaż Qs = −20 + 2P (P w zł, Q w tys. sztuk; dane umowne). Państwo wprowadza podatek akcyzowy 6 zł od każdej sztuki, płacony przez producentów."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 3,
+    "prompt": "Wyznacz równowagę przed wprowadzeniem podatku.",
+    "answers": [
+     {
+      "label": "Cena",
+      "value": 30.0,
+      "calc": "(a-c)/(b+d)",
+      "unit": "zł",
+      "tol": 0.05
+     },
+     {
+      "label": "Ilość",
+      "value": 40.0,
+      "calc": "a-b*p0",
+      "unit": "tys. szt.",
+      "tol": 0.1
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "100 − 2P = −20 + 2P ⇒ P = 30 zł, Q = 40 tys. szt."
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 4,
+    "prompt": "Wyznacz cenę płaconą przez konsumentów, cenę otrzymywaną przez producentów i ilość po wprowadzeniu podatku.",
+    "answers": [
+     {
+      "label": "Cena konsumenta",
+      "value": 33.0,
+      "calc": "(a-c+d*t)/(b+d)",
+      "unit": "zł",
+      "tol": 0.05
+     },
+     {
+      "label": "Cena producenta",
+      "value": 27.0,
+      "calc": "pk-t",
+      "unit": "zł",
+      "tol": 0.05
+     },
+     {
+      "label": "Ilość",
+      "value": 34.0,
+      "calc": "a-b*pk",
+      "unit": "tys. szt.",
+      "tol": 0.1
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "Qs = −20 + 2(P − 6);  100 − 2P = −20 + 2P − 2×6 ⇒ P = 33 zł, producent otrzymuje 27 zł, Q = 34 tys. szt."
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 4,
+    "prompt": "Oblicz wpływy budżetu z podatku i stratę martwą (w tys. zł).",
+    "answers": [
+     {
+      "label": "Wpływy",
+      "value": 204.0,
+      "calc": "t*q1",
+      "unit": "tys. zł",
+      "tol": 0.1
+     },
+     {
+      "label": "Strata martwa",
+      "value": 18.0,
+      "calc": "0.5*t*(q0-q1)",
+      "unit": "tys. zł",
+      "tol": 0.1
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "wpływy = 6 × 34 = 204 tys. zł;  strata martwa = ½ × 6 × (40 − 34) = 18 tys. zł"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "Kto ponosi ciężar podatku? Od czego zależy podział tego ciężaru?",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Konsumenci płacą o 33 − 30 = 3 zł więcej, producenci otrzymują o 3 zł mniej – ciężar dzieli się po połowie (50% na konsumentów), bo nachylenia popytu i podaży są tu takie same. Ogólnie większą część podatku ponosi strona rynku mniej elastyczna (np. konsumenci przy sztywnym popycie na paliwo lub papierosy), niezależnie od tego, kto formalnie odprowadza podatek."
+     }
+    ]
+   }
+  ]
+ }
+}

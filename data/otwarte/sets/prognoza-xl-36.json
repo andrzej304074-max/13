@@ -1,0 +1,208 @@
+{
+ "set": "prognoza-xl-36",
+ "ed": 40,
+ "stage": "c",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-36-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "polityka",
+   "th": true,
+   "topics": [
+    {
+     "title": "Sprawiedliwość międzypokoleniowa – kto zapłaci za starzenie się społeczeństwa?",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "kontrakt międzypokoleniowy w systemie repartycyjnym",
+        "rachunkowość generacyjna i ukryty dług emerytalny",
+        "równoważność ricardiańska i jej ograniczenia",
+        "dobra publiczne o długim horyzoncie (klimat, infrastruktura) a obciążenie przyszłych pokoleń",
+        "ekonomia polityczna: mediana wieku wyborcy a polityka (teoria wyboru publicznego)",
+        "instrumenty: fundusze rezerwowe, reguły, indeksacja świadczeń do długości życia"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "polskie decyzje: obniżenie wieku emerytalnego 2017, 13. i 14. emerytura, Fundusz Rezerwy Demograficznej",
+        "Norwegia (fundusz państwowy), Szwecja (automatyczny stabilizator)",
+        "własna ocena i propozycja zasad"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – rachunek odłożony w czasie",
+       "teoria – kontrakt, ukryty dług, Ricardo, wybór publiczny",
+       "praktyka – Polska, Norwegia, Szwecja",
+       "zakończenie – automatyczne mechanizmy zamiast decyzji ad hoc"
+      ],
+      "b": [
+       "pomijanie ukrytego długu emerytalnego",
+       "brak ekonomii politycznej",
+       "brak przykładów"
+      ],
+      "d": [
+       "Fundusz Rezerwy Demograficznej utworzony w 1999 r. jako bufor FUS (ZUS)",
+       "szwedzki system NDC z automatycznym mechanizmem równoważenia od 2001 r. (Pensionsmyndigheten)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-36-zadanie",
+  "title": "Zadanie analityczne – Rachunkowość generacyjna i stopa zwrotu w systemie repartycyjnym",
+  "pts": 15,
+  "topic": "polityka",
+  "own": true,
+  "th": true,
+  "vars": {
+   "S": 30000.0,
+   "B": 45000.0,
+   "r": 3.0,
+   "nS": 40.0,
+   "nB": 20.0,
+   "n": -1.0,
+   "g": 2.0
+  },
+  "lets": [
+   [
+    "q",
+    "1+r/100"
+   ],
+   [
+    "pvs",
+    "S*(1-q**(-nS))/(r/100)"
+   ],
+   [
+    "pvb",
+    "B*(1-q**(-nB))/(r/100)/q**nS"
+   ],
+   [
+    "pv60",
+    "B*(1-q**(-nB))/(r/100)"
+   ],
+   [
+    "sal",
+    "pvb-pvs"
+   ],
+   [
+    "rp",
+    "((1+n/100)*(1+g/100)-1)*100"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Przedstawiciel pokolenia 20-latków przez 40 lat (od 21. do 60. roku życia) płaci podatki i składki netto 30 000 zł rocznie, a następnie przez 20 lat otrzymuje świadczenia 45 000 zł rocznie (płatności na koniec roku, w cenach stałych). Realna stopa dyskontowa wynosi 3% (dane umowne)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 3,
+    "prompt": "Oblicz wartość obecną płatności netto na rzecz państwa (na wiek 20 lat).",
+    "answers": [
+     {
+      "label": "PV płatności",
+      "value": 693443.1592,
+      "calc": "S*(1-q**(-nS))/(r/100)",
+      "unit": "zł",
+      "tol": 50.0
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "PV = 30 000 × (1 − 1,03⁻⁴⁰) / 0,03 ≈ 693 443 zł"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 3,
+    "prompt": "Oblicz wartość obecną świadczeń (na wiek 20 lat).",
+    "answers": [
+     {
+      "label": "PV świadczeń",
+      "value": 205235.6261,
+      "calc": "B*(1-q**(-nB))/(r/100)/q**nS",
+      "unit": "zł",
+      "tol": 50.0
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "na wiek 60 lat: 45 000 × (1 − 1,03⁻²⁰) / 0,03 ≈ 669 486 zł;  na wiek 20 lat: 669 486 / 1,03⁴⁰ ≈ 205 236 zł"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 3,
+    "prompt": "Oblicz saldo netto (świadczenia − płatności) w wartości obecnej.",
+    "answers": [
+     {
+      "label": "Saldo netto",
+      "value": -488207.5331,
+      "calc": "pvb-pvs",
+      "unit": "zł",
+      "tol": 100.0
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "205 236 − 693 443 ≈ −488 208 zł"
+     },
+     {
+      "t": "p",
+      "x": "Ujemne saldo wynika z tego, że w zadaniu nie ma innych świadczeń (edukacja, zdrowie, transfery dla dzieci, dobra publiczne); w pełnej rachunkowości generacyjnej porównuje się salda kolejnych pokoleń."
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 3,
+    "prompt": "W systemie repartycyjnym „stopa zwrotu” ze składek w długim okresie odpowiada tempu wzrostu sumy płac (P. Samuelson, H. Aaron): (1 + n)(1 + g) − 1, gdzie n – tempo zmian liczby pracujących, g – tempo wzrostu realnych płac. Oblicz ją dla n = −1% i g = 2%.",
+    "answers": [
+     {
+      "label": "Stopa zwrotu PAYG",
+      "value": 0.98,
+      "calc": "((1+n/100)*(1+g/100)-1)*100",
+      "unit": "%",
+      "tol": 0.01
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "(1 − 0,01)(1 + 0,02) − 1 = 0,98%"
+     }
+    ]
+   },
+   {
+    "label": "e",
+    "pts": 3,
+    "prompt": "Porównaj tę stopę ze stopą rynkową (3%) i wyjaśnij znaczenie wyniku dla sprawiedliwości międzypokoleniowej.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Przy kurczącej się liczbie pracujących „stopa zwrotu” systemu repartycyjnego (0,98%) jest niższa od rynkowej (3%), więc kolejne pokolenia dostają z systemu relatywnie mniej, niż wpłaciły. Pierwsze pokolenia systemu (oraz osoby, którym podniesiono świadczenia bez pokrycia, np. przez obniżenie wieku emerytalnego) zyskały kosztem następnych – to ukryty dług emerytalny. Sprawiedliwość międzypokoleniową wspierają: powiązanie świadczeń z długością życia, fundusze rezerwowe, reguły fiskalne i inwestycje zwiększające wzrost płac (g)."
+     }
+    ]
+   }
+  ]
+ }
+}

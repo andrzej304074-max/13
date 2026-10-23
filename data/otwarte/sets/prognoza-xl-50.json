@@ -1,0 +1,194 @@
+{
+ "set": "prognoza-xl-50",
+ "ed": 40,
+ "stage": "c",
+ "src": "prognoza",
+ "essays": [
+  {
+   "id": "prognoza-xl-50-esej",
+   "kind": "ogolne",
+   "own": true,
+   "pts": 25,
+   "topic": "polityka",
+   "th": false,
+   "topics": [
+    {
+     "title": "Ekonomia bezpieczeństwa – wydatki na obronność a rozwój gospodarczy",
+     "schema": [
+      {
+       "title": "Część teoretyczna",
+       "pts": 15,
+       "points": [
+        "obronność jako dobro publiczne",
+        "„armaty czy masło” – krzywa możliwości produkcyjnych",
+        "mnożnik wydatków zbrojeniowych",
+        "efekt wypychania i finansowanie wydatków",
+        "innowacje wojskowe a technologie cywilne"
+       ]
+      },
+      {
+       "title": "Część praktyczna",
+       "pts": 10,
+       "points": [
+        "wydatki na obronność Polski i NATO",
+        "Fundusz Wsparcia Sił Zbrojnych",
+        "przykład Izraela lub Korei Płd.",
+        "własna ocena"
+       ]
+      }
+     ],
+     "hints": {
+      "s": [
+       "wstęp – bezpieczeństwo jako warunek rozwoju",
+       "teoria – dobro publiczne, KMP, mnożnik, wypychanie",
+       "praktyka – Polska, NATO, przykład",
+       "zakończenie – równowaga i efektywność wydatków"
+      ],
+      "b": [
+       "brak KMP",
+       "brak finansowania",
+       "brak przykładów"
+      ],
+      "d": [
+       "cel NATO – 2% PKB na obronność (szczyt w Walii, 2014), w 2025 r. uzgodniono nowy cel 5% PKB do 2035 r. (NATO, szczyt w Hadze)"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "task": {
+  "id": "prognoza-xl-50-zadanie",
+  "title": "Zadanie analityczne – Krzywa Laffera",
+  "pts": 15,
+  "topic": "polityka",
+  "own": true,
+  "th": false,
+  "vars": {
+   "B0": 1000.0,
+   "t1": 0.3,
+   "t2": 0.6,
+   "t3": 0.7
+  },
+  "lets": [
+   [
+    "T1",
+    "t1*B0*(1-t1)"
+   ],
+   [
+    "T2",
+    "t2*B0*(1-t2)"
+   ],
+   [
+    "tmax",
+    "50"
+   ],
+   [
+    "Tmax",
+    "0.5*B0*0.5"
+   ],
+   [
+    "dT",
+    "T2-t3*B0*(1-t3)"
+   ],
+   [
+    "T3",
+    "t3*B0*(1-t3)"
+   ]
+  ],
+  "intro": [
+   {
+    "t": "p",
+    "x": "Podstawa opodatkowania zależy od stawki podatku t według wzoru B = 1 000 × (1 − t) mld zł (wyższa stawka zniechęca do pracy i zwiększa unikanie podatku). Wpływy podatkowe T = t × B (dane umowne)."
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "pts": 4,
+    "prompt": "Oblicz wpływy przy stawkach 0,3 i 0,6.",
+    "answers": [
+     {
+      "label": "Wpływy przy 30%",
+      "value": 210.0,
+      "calc": "t1*B0*(1-t1)",
+      "unit": "mld zł",
+      "tol": 0.1
+     },
+     {
+      "label": "Wpływy przy 60%",
+      "value": 240.0,
+      "calc": "t2*B0*(1-t2)",
+      "unit": "mld zł",
+      "tol": 0.1
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "T = t × 1 000 × (1 − t):  0,3 × 700 = 210;  0,6 × 400 = 240"
+     }
+    ]
+   },
+   {
+    "label": "b",
+    "pts": 4,
+    "prompt": "Wyznacz stawkę maksymalizującą wpływy i maksymalne wpływy.",
+    "answers": [
+     {
+      "label": "Stawka optymalna",
+      "value": 50.0,
+      "calc": "50",
+      "unit": "%",
+      "tol": 0.1
+     },
+     {
+      "label": "Maksymalne wpływy",
+      "value": 250.0,
+      "calc": "0.5*B0*0.5",
+      "unit": "mld zł",
+      "tol": 0.1
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "T = 1 000(t − t²), dT/dt = 1 000(1 − 2t) = 0 ⇒ t = 0,5;  T = 0,5 × 500 = 250 mld zł"
+     }
+    ]
+   },
+   {
+    "label": "c",
+    "pts": 3,
+    "prompt": "Oblicz zmianę wpływów po obniżce stawki z 0,7 do 0,6.",
+    "answers": [
+     {
+      "label": "Zmiana wpływów",
+      "value": 30.0,
+      "calc": "T2-t3*B0*(1-t3)",
+      "unit": "mld zł",
+      "tol": 0.1
+     }
+    ],
+    "solution": [
+     {
+      "t": "f",
+      "x": "przy 0,7: 210;  przy 0,6: 240;  zmiana = +30 mld zł"
+     }
+    ]
+   },
+   {
+    "label": "d",
+    "pts": 4,
+    "prompt": "Zinterpretuj krzywą Laffera i wskaż, dlaczego argument „obniżka podatków zwiększy wpływy” jest często nadużywany.",
+    "answers": [],
+    "solution": [
+     {
+      "t": "p",
+      "x": "Krzywa Laffera pokazuje, że przy stawce 0 i 100% wpływy są zerowe, a maksimum leży pomiędzy. Obniżka stawki zwiększa wpływy tylko po prawej stronie maksimum (tu z 70% do 60%: +30 mld zł), a przy stawce 30% obniżka zmniejszyłaby wpływy. Położenie maksimum zależy od elastyczności podstawy opodatkowania, której nie znamy dokładnie; dla większości podatków w krajach rozwiniętych stawki leżą po lewej stronie krzywej. Ponadto podstawa reaguje inaczej w krótkim i długim okresie, a unikanie podatków zależy od szczelności systemu, nie tylko od stawki."
+     }
+    ]
+   }
+  ]
+ }
+}
