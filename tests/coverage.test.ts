@@ -90,8 +90,8 @@ describe("moje statystyki i opanowanie", () => {
     expect(m.a).toMatchObject({ c: 4.5, t: 7 });
     expect(m.c).toMatchObject({ c: 0.5, t: 2 });
   });
-  it("pytania słownikowe: 5324 rekordy (w tym 400 ręcznych i 238 algorytmicznych o haśle XL), każdy z działem i zagadnieniem", () => {
-    expect(SLOWNIK_STATS.length).toBe(5324);
+  it("pytania słownikowe: 5340 rekordów (w tym 400 ręcznych i 254 algorytmicznych o haśle XL), każdy z działem i zagadnieniem", () => {
+    expect(SLOWNIK_STATS.length).toBe(5340);
     expect(SLOWNIK_STATS.every((r) => r.topic && r.unit)).toBe(true);
     expect(SLOWNIK_STATS.filter((r) => r.items.length).length).toBeGreaterThan(4600);
   });

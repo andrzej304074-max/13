@@ -104,6 +104,21 @@ UNITS = {
 
 # Ręczne przypisania hasła do działu (tytuł → id działu), gdy wzorce działów się mylą
 UNIT_OVERRIDES = {
+    # uzupełnienie hasła XL (Plan II, G8) – nowe lekcje na końcu działu, bez przestawiania istniejących
+    "Okno demograficzne": "demo-polityka",
+    "Inercja demograficzna (momentum)": "demo-polityka",
+    "Podwójne starzenie się ludności": "demo-polityka",
+    "Migracja łańcuchowa": "demo-polityka",
+    "Efekt tempa i dzietność kohortowa": "demo-polityka",
+    "Współczynnik reprodukcji brutto i netto": "demo-polityka",
+    "Współczynnik feminizacji i maskulinizacji": "demo-polityka",
+    "Eksplozja i implozja demograficzna": "demo-polityka",
+    "Pokolenie kanapkowe (sandwich generation)": "demo-polityka",
+    "Aktywne starzenie się": "demo-polityka",
+    "Ochrona czasowa (dyrektywa 2001/55/WE)": "demo-polityka",
+    "Repatriacja": "demo-polityka",
+    "Gerontechnologia": "demo-polityka",
+
     "Program leniency (łagodzenia kar)": "pol-sektorowa",
     "Klasyczne podejście do zarządzania": "zarz-podstawy",
     "Papiery dyskontowe": "fin-obligacje",

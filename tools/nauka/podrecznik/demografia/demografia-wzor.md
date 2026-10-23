@@ -65,6 +65,14 @@ $ E = (składki + kapitał początkowy) / średnie dalsze trwanie życia (mies.)
 
 > Przykład: 450 000 zł / 250 miesięcy = 1800 zł miesięcznie.
 
+## Reprodukcja
+
+**[[Współczynnik reprodukcji brutto i netto|Współczynnik reprodukcji]]** liczy tylko córki – to one urodzą następne pokolenie:
+
+$ GRR ≈ TFR × 0,487;  NRR = GRR skorygowany o zgony dziewcząt przed wiekiem matki
+
+> Przykład: TFR = 1,2 → GRR ≈ 0,58. Nawet bez zgonów pokolenie córek byłoby o ok. 40% mniej liczne niż pokolenie matek.
+
 ## Aaron
 
 **[[Warunek Aarona (paradoks Aarona–Samuelsona)|Warunek Aarona]]**:

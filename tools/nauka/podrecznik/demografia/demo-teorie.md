@@ -30,7 +30,7 @@ Dlaczego bogatsi mają mniej dzieci? Gary Becker odpowiadał: dziecko kosztuje t
 
 **[[Przejście (transformacja) demograficzne|Przejście demograficzne]]** (Frank Notestein, 1945) ma cztery fazy:
 1. dużo urodzeń i dużo zgonów – ludność rośnie powoli;
-2. spadają zgony, urodzeń wciąż dużo – eksplozja demograficzna;
+2. spadają zgony, urodzeń wciąż dużo – [[Eksplozja i implozja demograficzna|eksplozja demograficzna]];
 3. spadają urodzenia;
 4. mało urodzeń i mało zgonów – stabilizacja albo spadek.
 

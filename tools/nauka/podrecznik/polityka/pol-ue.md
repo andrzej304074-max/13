@@ -315,6 +315,10 @@ UE to nie jedyny blok handlowy. **[[Porozumienia regionalne|Porozumienia regiona
 
 **[[Brexit|Brexit]]**: referendum 23 czerwca 2016 roku, wyjście 31 stycznia 2020 roku, okres przejściowy do końca 2020 roku. To pierwsze wyjście państwa członkowskiego z UE.
 
+## Gdy przychodzi fala uchodźców
+
+W 2022 roku UE po raz pierwszy uruchomiła **[[Ochrona czasowa (dyrektywa 2001/55/WE)|ochronę czasową]]** z dyrektywy z 2001 roku. Osoby uciekające z Ukrainy dostały od razu prawo pobytu i pracy – bez długich procedur azylowych w każdym kraju osobno.
+
 ## Zasady
 
 **[[Struktura instytucjonalna i zasady funkcjonowania UE|Zasady funkcjonowania UE]]**: subsydiarność, proporcjonalność, pierwszeństwo prawa unijnego.

@@ -75,6 +75,11 @@ Przy starcie testu można wybrać rodzaj pytań (ręczne, automatyczne lub oba) 
   „które hasło nie należy do tematu”, „które należą”) dla wszystkich haseł tematu kursu z dystraktorami z tego samego
   tematu; przy nowym haśle przewodnim zmienia się stałą `THEME` w skrypcie. Nowe pytania (pole `th`) i pytania algorytmiczne liczą się
   w testach Słownika, „Wszystkich pytaniach” i statystykach, ale nie przestawiają lekcji kursu (`build_course.py`).
+- **Jakość definicji**: `python3 -I tools/slownik/quality.py` → `tools/slownik/JAKOSC.md` (za krótkie, ogólnikowe,
+  powtarzające nazwę, bez przykładu). Przykłady i uzupełnienia definicji są w `tools/slownik/glossary/przyklady_s15.py`
+  (hasło XL) i `przyklady_ogolne.py`; nanosi je `python3 -I tools/slownik/glossary/apply_examples.py` (bezpieczne do
+  ponownego uruchomienia). Nowe hasła tematu mogą trafić do istniejącej lekcji przez `UNIT_OVERRIDES` w
+  `tools/nauka/curriculum.py` – reszta kursu się nie przestawia.
 
 ## Pytania AI i zakładka „Wszystkie pytania”
 
