@@ -1,6 +1,6 @@
 # intro | W skrócie: twórcy finansów przedsiębiorstw
 
-Finanse przedsiębiorstw jako nauka powstały w XX wieku. Wcześniej menedżerowie podejmowali decyzje intuicyjnie. Potem przyszli ekonomiści, którzy zapytali: czy struktura kapitału ma znaczenie? Ile jest warta akcja? Jak przewidzieć bankructwo? Ich odpowiedzi do dziś stosują analitycy na całym świecie.
+Finanse przedsiębiorstw jako nauka powstały w XX wieku. Wcześniej menedżerowie podejmowali decyzje głównie intuicyjnie. Potem przyszli ekonomiści, którzy zapytali: czy struktura kapitału ma znaczenie? Ile jest warta akcja? Jak przewidzieć bankructwo? Ich odpowiedzi do dziś stosują analitycy na całym świecie.
 
 ## Bohaterowie
 
@@ -36,5 +36,7 @@ W prawdziwym świecie są podatki – odsetki obniżają podatek, więc dług zw
 ## Jak przewidzieć bankructwo?
 
 **[[Altman Edward|Edward Altman]]** w 1968 roku zastosował analizę dyskryminacyjną do danych firm, które zbankrutowały i które przetrwały. Wyłonił pięć wskaźników i połączył je w jedną liczbę – Z-score. Model okazał się zaskakująco trafny i jest używany do dziś, a na jego wzór powstały modele dla polskich firm.
+
+> Uwaga: w hierarchii Myersa emisja akcji jest **ostatnia**, a nie pierwsza – bo wysyła rynkowi zły sygnał.
 
 > Zapamiętaj: MM – struktura kapitału; Myers – pecking order; Gordon – wycena dywidend; Altman – Z-score.

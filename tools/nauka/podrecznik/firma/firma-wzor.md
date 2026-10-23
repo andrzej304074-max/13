@@ -20,6 +20,10 @@ Prowadzenie firmy to ciągłe liczenie. Ile sprzedać, żeby wyjść na zero? Cz
 
 # firma-wzor-1 | Amortyzacja, rentowność i koszt kapitału
 
+## Wzór to skrót myślenia
+
+Każdy wzór w tym rozdziale odpowiada na jedno pytanie przedsiębiorcy: ile kosztuje zużycie maszyny, ile zarabia kapitał, ile kosztują pieniądze, czy inwestycja coś dodaje. Zanim podstawisz liczby, powiedz sobie to pytanie słowami.
+
 ## Amortyzacja
 
 **[[Metody amortyzacji|Amortyzacja liniowa]]**: odpis roczny = wartość początkowa × stawka, albo (WP − wartość końcowa) / okres.
@@ -52,7 +56,15 @@ Prowadzenie firmy to ciągłe liczenie. Ile sprzedać, żeby wyjść na zero? Cz
 
 > Przykład: NOPAT 800 000 zł, kapitał 10 mln zł, WACC 9%. EVA = 800 000 − 900 000 = −100 000 zł – firma niszczy wartość, choć jest zyskowna.
 
+> Uwaga: w koszcie kapitału obcego mnożymy przez (1 − T), bo odsetki obniżają podatek; w koszcie kapitału własnego – nie.
+
+> Zapamiętaj: NPV > 0 i EVA > 0 – firma tworzy wartość; EVA < 0 – niszczy ją, nawet przy zysku księgowym.
+
 # firma-wzor-2 | Gordon, cykle i marże
+
+## Ile warta jest akcja, ile trwa obieg gotówki?
+
+Te wzory łączą dwa światy: inwestora, który wycenia akcję z dywidend, i księgowego, który liczy, ile dni pieniądze są zamrożone w zapasach i należnościach.
 
 ## Model Gordona
 
@@ -86,7 +98,15 @@ Prowadzenie firmy to ciągłe liczenie. Ile sprzedać, żeby wyjść na zero? Cz
 
 > Przykład: przychody 500 000 zł, koszty zmienne 300 000 zł. MP = 200 000 zł, wskaźnik marży = 40%.
 
+> Uwaga: w modelu Gordona mianownik to k − g; gdy g zbliża się do k, wynik rośnie bez ograniczeń – model przestaje mieć sens.
+
+> Zapamiętaj: CKG = zapasy + należności − zobowiązania; reguła bankowa – majątek długoterminowy finansuj kapitałem długoterminowym.
+
 # firma-wzor-3 | Gotówka, odsetki i opłacalność
+
+## Ile sprzedać, żeby wyjść na zero?
+
+To pierwsze pytanie każdego, kto otwiera firmę. Próg rentowności dzieli koszty stałe przez to, ile zostaje z każdej sprzedanej sztuki.
 
 ## Wydajność gotówkowa
 
@@ -123,7 +143,15 @@ $ wartościowo: FC / (1 − AVC / P)
 
 > Przykład: odsetki 50 000 zł, CIT 9%. Tarcza = 4 500 zł.
 
+> Uwaga: próg rentowności dzielimy przez **marżę jednostkową** (P − AVC), a nie przez cenę.
+
+> Zapamiętaj: Q* = FC / (P − AVC); tarcza podatkowa = odsetki × stawka CIT.
+
 # firma-wzor-4 | Amortyzacja, zapasy i dźwignie
+
+## Maszyna traci wartość, magazyn kosztuje
+
+Amortyzacja rozkłada koszt maszyny na lata, EOQ mówi, ile towaru zamawiać naraz, a dźwignie pokazują, jak bardzo zysk reaguje na zmianę sprzedaży.
 
 ## Amortyzacja degresywna
 
@@ -167,7 +195,15 @@ $ DTL = DOL · DFL
 
 > Przykład: I₀ = 200 000 zł, PV wpływów = 230 000 zł. PI = 1,15 – projekt opłacalny.
 
+> Uwaga: w amortyzacji degresywnej stawkę mnożymy przez współczynnik (np. 2), ale liczymy ją od **wartości netto**, a nie początkowej.
+
+> Zapamiętaj: DOL = marża pokrycia / EBIT; DFL = EBIT / (EBIT − odsetki); DTL = DOL · DFL.
+
 # firma-wzor-5 | Bankructwo, wycena i majątek
+
+## Czy firmie grozi upadek i ile jest warta?
+
+Z-score łączy pięć wskaźników w jedną ocenę ryzyka, a DCF wycenia firmę jako sumę przyszłych przepływów sprowadzonych do dziś.
 
 ## Z-score
 
@@ -206,7 +242,15 @@ $ TV = FCFₙ₊₁ / (WACC − g)
 
 **[[Zapasy i należności – wskaźniki szczegółowe|Szczegółowe wskaźniki]]**: udział zapasów w aktywach obrotowych, rotacja zapasów, relacja dynamik należności i przychodów.
 
+> Uwaga: w DCF wartość rezydualną (po okresie prognozy) też trzeba zdyskontować na dziś – częsty błąd to dodanie jej bez dyskontowania.
+
+> Zapamiętaj: Z-score Altmana: im wyższy, tym bezpieczniej; DCF = suma zdyskontowanych FCF + zdyskontowana wartość rezydualna.
+
 # firma-wzor-6 | Kapitał, analiza czynnikowa i dynamika
+
+## Skąd ta zmiana?
+
+Sprzedaż wzrosła – ale dzięki cenie czy ilości? Analiza czynnikowa rozkłada zmianę na przyczyny, a indeksy dynamiki pokazują jej tempo.
 
 ## Struktura kapitału
 
@@ -238,3 +282,7 @@ $ średnie tempo: (yₙ / y₀)^(1/n) − 1
 **[[Wskaźniki obsługi zadłużenia – wzory|Wskaźniki obsługi zadłużenia]]**: TIE = EBIT / odsetki; DSCR = (zysk netto + amortyzacja + odsetki) / (raty + odsetki); dług netto / EBITDA.
 
 > Przykład: dług netto 900, EBITDA 300. Dług netto / EBITDA = 3 – firma spłaciłaby dług z EBITDA w trzy lata.
+
+> Uwaga: indeks **łańcuchowy** porównuje z poprzednim okresem, **jednopodstawowy** – zawsze z tym samym okresem bazowym.
+
+> Zapamiętaj: metoda kolejnych podstawień: zmieniaj czynniki po kolei, w ustalonej kolejności.

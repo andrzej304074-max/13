@@ -31,6 +31,10 @@ Prawo chroni konsumentów (14 dni na zwrot zakupu internetowego), wynalazców (p
 
 # firma-prawo-1 | Formy prowadzenia firmy
 
+## Kto zapłaci, gdy firma upadnie?
+
+Dwóch kolegów zakłada firmę. Jeśli interes się nie uda, czy komornik zapuka do ich domów? Odpowiedź zależy od jednej decyzji podjętej na samym początku – wyboru formy prawnej.
+
 ## Przedsiębiorca
 
 **[[Przedsiębiorca i działalność gospodarcza|Działalność gospodarcza]]** to zorganizowana działalność zarobkowa wykonywana we własnym imieniu i w sposób ciągły (Prawo przedsiębiorców z 6 marca 2018 roku). Drobną działalność można prowadzić bez rejestracji – jeśli przychód nie przekracza ustawowego limitu (od 2026 roku liczonego kwartalnie).
@@ -50,6 +54,8 @@ Wszystkie spółki handlowe reguluje **[[Kodeks spółek handlowych (2000)|Kodek
 
 > Przykład: dwaj koledzy założyli spółkę z o.o. z kapitałem 5 000 zł. Firma zbankrutowała z długiem 200 000 zł. Co do zasady wierzyciele nie mogą sięgnąć do prywatnych majątków wspólników – w spółce cywilnej mogliby.
 
+> Uwaga: spółka cywilna **nie jest** spółką handlową ani osobą prawną – reguluje ją kodeks cywilny, a przedsiębiorcami są wspólnicy.
+
 ## Spółdzielczość w finansach
 
 Formę spółdzielczą mają **[[Bank spółdzielczy|banki spółdzielcze]]** i **[[SKOK|SKOK-i]]**; depozyty w nich chroni **[[Gwarancja depozytów BFG|gwarancja BFG]]**.
@@ -60,7 +66,9 @@ Pojawiała się też [[Płaca minimalna w Polsce|płaca minimalna]] – od niej 
 
 # firma-prawo-1-cz2 | Osoby, wspólnicy i instytucje
 
-Rozdział zbiorczy o tym, kim są uczestnicy obrotu gospodarczego.
+## Kto może zawrzeć umowę?
+
+Umowę podpisuje człowiek, ale czasem w imieniu spółki, fundacji czy państwa. Prawo musi więc odpowiedzieć: kto właściwie jest stroną?
 
 ## Osoby
 
@@ -69,6 +77,8 @@ Rozdział zbiorczy o tym, kim są uczestnicy obrotu gospodarczego.
 ## Wspólnicy
 
 **[[Spółki osobowe i kapitałowe – wspólnicy|W spółce komandytowej]]** komplementariusz odpowiada za zobowiązania całym majątkiem, a komandytariusz – tylko do sumy komandytowej. Dlatego często komplementariuszem jest spółka z o.o. – tak powstaje „spółka z o.o. sp. k.”.
+
+> Uwaga: spółki osobowe to **ułomne** osoby prawne – nie mają osobowości, ale mogą zawierać umowy i pozywać we własnym imieniu.
 
 ## Finanse w różnych formach
 
@@ -83,6 +93,10 @@ Wolność gospodarczą przywróciła w Polsce ustawa Wilczka z 1988 roku – zob
 Państwo wpływa na rynek **[[Subsydium do produkcji – skutki rynkowe|subsydiami]]** (przesuwają podaż w dół i obniżają cenę dla kupujących) i ogólnymi zasadami podatkowymi z **[[Ordynacja podatkowa|Ordynacji podatkowej]]**.
 
 # firma-prawo-2 | Kto działa w imieniu firmy
+
+## Kto podpisuje umowę za spółkę?
+
+Spółka to nie człowiek – nie ma rąk, żeby podpisać umowę. Robią to za nią konkretne osoby: członkowie zarządu albo prokurent.
 
 ## Spółka akcyjna
 
@@ -105,11 +119,17 @@ Państwo wpływa na rynek **[[Subsydium do produkcji – skutki rynkowe|subsydia
 
 > Przykład: 15-latek może sam kupić bilet czy zeszyt (drobne sprawy życia codziennego), ale poważniejsza umowa – np. zakup laptopa na raty – wymaga zgody rodziców.
 
+> Zapamiętaj: zdolność do czynności prawnych – brak do 13 lat, ograniczona 13–18, pełna od 18.
+
 ## Na marginesie
 
 Pojawiały się też: [[Ministerstwo Finansów (MF)|Ministerstwo Finansów]], [[Koszty i korzyści przyjęcia euro|koszty i korzyści euro]] i [[Ustawa o finansach publicznych (2009)|ustawa o finansach publicznych]].
 
 # firma-prawo-3 | Umowy i praca
+
+## Najem, dzierżawa czy użyczenie?
+
+Pożyczasz koledze rower za darmo, wynajmujesz pokój, wydzierżawiasz pole. Wszystkie trzy sytuacje wyglądają podobnie, ale prawo traktuje je inaczej – i od nazwy umowy zależą twoje prawa.
 
 ## Non-profit
 
@@ -135,13 +155,17 @@ Pojawiały się też: [[Ministerstwo Finansów (MF)|Ministerstwo Finansów]], [[
 
 **[[Sygnalista|Sygnalista]]** zgłasza naruszenia prawa w organizacji. Od 25 września 2024 roku chroni go ustawa – pracodawca nie może go za to ukarać.
 
+> Uwaga: umowa **zlecenie** – staranne działanie (np. opieka nad dzieckiem); umowa o **dzieło** – konkretny rezultat (np. namalowany portret).
+
 ## Na marginesie
 
 Pojawiały się też [[Role kierownicze (H. Mintzberg)|role kierownicze Mintzberga]].
 
 # firma-prawo-3-cz2 | Instytucje finansowe świata
 
-Krótki rozdział o dwóch międzynarodowych instytucjach, których działalność wpływa na otoczenie prawne firm.
+## Dlaczego bank w Bazylei wpływa na twój kredyt?
+
+Bo ustala zasady, które przejmuje prawo unijne i polskie. Dwie międzynarodowe instytucje kształtują otoczenie prawne firm, choć żaden przedsiębiorca nie podpisuje z nimi umów.
 
 ## BIS i standardy bankowe
 
@@ -154,6 +178,10 @@ Krótki rozdział o dwóch międzynarodowych instytucjach, których działalnoś
 > Zapamiętaj: BIS – Bazylea, od 1930 r., Komitet Bazylejski; Bank Światowy – Bretton Woods, 1944 r.
 
 # firma-prawo-4 | Klienci, konkurenci i pomysły
+
+## Kupione w internecie, nie pasuje
+
+Zamówiłeś buty przez internet i są za małe. Możesz je odesłać bez podania przyczyny – masz na to 14 dni. To jedno z wielu praw, które chronią konsumenta, bo w sporze z firmą jest zwykle słabszą stroną.
 
 ## Prawa konsumenta
 
@@ -184,13 +212,17 @@ Patenty udziela **[[Urząd Patentowy RP|Urząd Patentowy RP]]**. Patent to **[[M
 
 **[[Hipoteka|Hipoteka]]** – prawo obciążające nieruchomość dla zabezpieczenia długu; wpisywana do księgi wieczystej. **[[Weksel|Weksel]]** – papier z przyrzeczeniem zapłaty.
 
+> Zapamiętaj: 14 dni na zwrot zakupu przez internet; rękojmia 2 lata; patent 20 lat.
+
 ## Na marginesie
 
 Pojawiały się też: [[Instrument pochodny (derywat)|instrumenty pochodne]] i [[Promocja (komunikacja marketingowa)|promocja]].
 
 # firma-prawo-4-cz2 | Firma od środka
 
-Krótki rozdział o tym, co prawo nie reguluje, a co decyduje o sukcesie firmy.
+## Czego nie napiszesz w statucie?
+
+Dwie firmy działają według tych samych przepisów, a jedna kwitnie, druga upada. Różnicę często robią rzeczy, których żaden kodeks nie reguluje.
 
 ## Kultura
 
@@ -207,6 +239,10 @@ Krótki rozdział o tym, co prawo nie reguluje, a co decyduje o sukcesie firmy.
 > Zapamiętaj: Schein – artefakty, wartości, założenia podstawowe.
 
 # firma-prawo-5 | Własność, odpowiedzialność i ład
+
+## Skąd wiesz, że sprzedający jest właścicielem?
+
+Kupujesz działkę. Sprzedający pokazuje klucze do furtki – ale czy to wystarczy? Nie. Trzeba zajrzeć do publicznego rejestru, w którym zapisano, do kogo należy nieruchomość i czy nie ciąży na niej hipoteka.
 
 ## Nieruchomości
 
@@ -230,11 +266,17 @@ Krótki rozdział o tym, co prawo nie reguluje, a co decyduje o sukcesie firmy.
 
 > Przykład: dajesz 5 000 zł zadatku na mieszkanie. Rezygnujesz – tracisz 5 000 zł. Sprzedający się wycofuje – oddaje ci 10 000 zł.
 
+> Uwaga: **zadatek** przepada albo wraca podwójnie; **zaliczka** zawsze wraca w tej samej kwocie, gdy umowa nie dojdzie do skutku.
+
 ## Ład korporacyjny
 
 **[[Corporate governance (ład korporacyjny)|Corporate governance]]** to zasady nadzoru i zarządzania spółkami, które chronią akcjonariuszy. Na GPW obowiązują „Dobre Praktyki Spółek Notowanych” według zasady „stosuj albo wyjaśnij”. Szczególnie ważne w **[[Korporacja transnarodowa (międzynarodowa)|korporacjach transnarodowych]]**.
 
 # firma-prawo-6 | Dane, wielkość firmy i wspólnicy
+
+## Dlaczego sklep pyta o zgodę na newsletter?
+
+Bo twój adres e-mail to dana osobowa, a firma może ją przetwarzać tylko na podstawie prawa. Prawo rozróżnia też firmy według wielkości – mała firma ma inne obowiązki i inne ulgi niż korporacja.
 
 ## RODO
 

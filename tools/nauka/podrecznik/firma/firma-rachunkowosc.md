@@ -33,6 +33,10 @@ Rachunkowość ma swoje zasady: memoriałową (koszty i przychody w okresie, kt�
 
 # firma-rachunkowosc-1 | Bilans – zdjęcie firmy
 
+## Zdjęcie firmy w jednym dniu
+
+Jak opisać firmę w jednym zdaniu? Co ma i skąd to ma. Bilans robi dokładnie to – w dniu bilansowym pokazuje majątek (aktywa) i źródła jego finansowania (pasywa).
+
 ## Rachunkowość
 
 **[[Rachunkowość|Rachunkowość]]** to system ewidencjonowania i prezentowania operacji gospodarczych. Reguluje ją ustawa o rachunkowości z 29 września 1994 roku. **Finansowa** – dla odbiorców zewnętrznych (banki, inwestorzy, urząd skarbowy). **Zarządcza** – dla kierownictwa.
@@ -67,13 +71,18 @@ $ KON = aktywa obrotowe − zobowiązania krótkoterminowe
 
 > Przykład: aktywa obrotowe 120 000 zł, zobowiązania krótkoterminowe 80 000 zł. KON = 40 000 zł – firma ma bufor bezpieczeństwa.
 
+> Uwaga: kapitał obrotowy netto to aktywa obrotowe **minus zobowiązania krótkoterminowe**, a nie minus wszystkie zobowiązania.
+
+> Zapamiętaj: aktywa = pasywa; aktywa – co firma ma, pasywa – skąd to ma.
+
 ## Na marginesie
 
 Pojawiały się też: [[Pozycja walutowa|pozycja walutowa]], [[Wynik finansowy – poziomy|poziomy wyniku finansowego]] i [[Należności i zobowiązania|należności i zobowiązania]].
-
 # firma-rachunkowosc-1-cz2 | Kapitał długi i krótki
 
-Krótki rozdział o tym, z jakich pieniędzy firma finansuje swój majątek.
+## Pieniądze na długo i na krótko
+
+Maszyna pracuje dziesięć lat, a kredyt kupiecki trzeba spłacić za miesiąc. Rachunkowość pilnuje, żeby długi majątek nie był finansowany krótkim długiem.
 
 ## Kapitał stały
 
@@ -97,7 +106,15 @@ $ KON = kapitał stały − aktywa trwałe
 
 Firma z nadwyżką gotówki może kupić **[[Obligacje skarbowe (detaliczne i hurtowe)|obligacje skarbowe]]** – w bilansie pojawią się jako inwestycje krótko- lub długoterminowe.
 
+> Uwaga: rozliczenia międzyokresowe to nie gotówka – czynsz zapłacony z góry jest aktywem, bo dotyczy przyszłych miesięcy.
+
+> Zapamiętaj: kapitał stały = kapitał własny + zobowiązania długoterminowe.
+
 # firma-rachunkowosc-2 | Rachunek zysków i strat
+
+## Film zamiast zdjęcia
+
+Bilans to zdjęcie z jednego dnia. Rachunek zysków i strat to film z całego roku: ile firma zarobiła, ile wydała i co zostało.
 
 ## Złote reguły
 
@@ -133,13 +150,18 @@ Firma z nadwyżką gotówki może kupić **[[Obligacje skarbowe (detaliczne i hu
 
 Zysk netto może zostać w firmie albo zostać wypłacony jako **[[Dywidenda|dywidenda]]** posiadaczom **[[Akcja|akcji]]**.
 
+> Uwaga: zysk ze sprzedaży, operacyjny, brutto i netto to **różne** poziomy wyniku – pytania często pytają o konkretny.
+
+> Zapamiętaj: przychody − koszty = wynik; po podatku – wynik netto.
+
 ## Na marginesie
 
 Pojawiały się też: [[Narodowy Bank Polski (NBP)|NBP]] i [[Biznesplan|biznesplan]] – który zawiera prognozowany rachunek wyników.
-
 # firma-rachunkowosc-2-cz2 | Czytanie wyników
 
-Krótki rozdział o tym, jak ocenić wyniki firmy liczbami.
+## Co mówią liczby z rachunku wyników?
+
+Zysk 50 000 zł – dużo czy mało? Zależy, ile majątku i kapitału trzeba było zaangażować. Dlatego wyniki czytamy przez wskaźniki.
 
 ## Rentowność
 
@@ -164,7 +186,15 @@ Krótki rozdział o tym, jak ocenić wyniki firmy liczbami.
 
 Firmy, podobnie jak państwo, planują budżety. Część **[[Zasady budżetowe|zasad budżetowych]]** – zupełność, jawność, realizm – sprawdza się też w biznesie.
 
+> Uwaga: ROA dzieli zysk przez **aktywa**, ROE – przez **kapitał własny**. Przy zadłużeniu ROE jest wyższe niż ROA.
+
+> Zapamiętaj: rentowność = zysk / podstawa; struktura kapitału = własny vs obcy.
+
 # firma-rachunkowosc-3 | Gotówka, zasady i konta
+
+## Zysk to nie gotówka
+
+Firma może mieć zysk i pusty rachunek. Rachunek przepływów pieniężnych pokazuje, skąd naprawdę przyszły i dokąd poszły pieniądze.
 
 ## Przepływy pieniężne
 
@@ -198,13 +228,18 @@ Firmy, podobnie jak państwo, planują budżety. Część **[[Zasady budżetowe|
 
 **[[Wycena zapasów (rozchodu)|Wycena zapasów]]**: FIFO, LIFO, średnia ważona. **[[Wskaźniki rotacji (sprawności)|Wskaźniki rotacji]]** mierzą, jak szybko firma obraca aktywami, ściąga należności i sprzedaje zapasy.
 
+> Uwaga: zakup maszyny to przepływ **inwestycyjny**, a spłata kredytu – **finansowy**; operacyjne to bieżąca działalność.
+
+> Zapamiętaj: przepływy: operacyjne, inwestycyjne, finansowe; każda operacja zapisuje się na dwóch kontach (Wn i Ma).
+
 ## Na marginesie
 
 Pojawiały się też: [[Pieniądz gotówkowy i bezgotówkowy (bankowy)|pieniądz gotówkowy i bezgotówkowy]], [[Zarządzanie zasobami ludzkimi (HRM)|HRM]] i [[Fuzja i przejęcie (M&A)|fuzje i przejęcia]].
-
 # firma-rachunkowosc-3-cz2 | Dokumenty, pożyczki i prawdziwy zysk
 
-Krótki rozdział o trzech pojęciach z pogranicza rachunkowości i ekonomii.
+## Dokumenty, które mówią prawdę
+
+Każdy zapis w księgach musi mieć podstawę – fakturę, umowę, wyciąg. Bez dokumentu nie ma kosztu ani przychodu.
 
 ## Faktura
 
@@ -220,7 +255,15 @@ Księgowy liczy zysk jako przychody minus koszty zapisane w księgach. Ekonomist
 
 > Przykład: właściciel kawiarni ma zysk księgowy 80 000 zł rocznie. Gdyby pracował jako menedżer, zarabiałby 70 000 zł, a jego kapitał na lokacie dałby 15 000 zł. Zysk ekonomiczny = 80 000 − 70 000 − 15 000 = −5 000 zł. Księgowo zarabia, ekonomicznie – traci.
 
+> Uwaga: zysk **ekonomiczny** odejmuje też koszty alternatywne (np. pensję, którą właściciel mógłby zarobić gdzie indziej) – dlatego jest niższy od księgowego.
+
+> Zapamiętaj: pożyczka – pieniądze lub rzeczy, może udzielić każdy; kredyt – tylko pieniądze, tylko bank, na określony cel.
+
 # firma-rachunkowosc-4 | Majątek, spis i amortyzacja
+
+## Czy w magazynie jest to, co w księgach?
+
+Księgi mówią, że w magazynie leży 500 rowerów. Inwentaryzacja sprawdza, czy naprawdę tam są – i czy nikt się nie pomylił.
 
 ## Spis z natury
 
@@ -244,11 +287,18 @@ Księgowy liczy zysk jako przychody minus koszty zapisane w księgach. Ekonomist
 
 Przy **[[Leasing|leasingu]]** finansowym przedmiot amortyzuje korzystający, przy operacyjnym – finansujący.
 
+> Uwaga: wartość firmy (goodwill) powstaje tylko przy **zakupie** innej firmy – nie można jej wykazać za własną dobrą markę.
+
+> Zapamiętaj: goodwill = cena nabycia − wartość godziwa aktywów netto.
+
 ## Na marginesie
 
 Pojawiały się też: [[Produkt krajowy brutto (PKB)|PKB]] i [[Limity kapitału zakładowego spółek|limity kapitału zakładowego]].
-
 # firma-rachunkowosc-5 | Wycena, audyt i reguły finansowania
+
+## Ile jest warta maszyna po trzech latach?
+
+Wycena zależy od przyjętej metody. Ta sama maszyna może być w księgach warta różne kwoty – i to jest zgodne z prawem, jeśli firma stosuje metodę konsekwentnie.
 
 ## Metody amortyzacji
 
@@ -276,11 +326,18 @@ $ liniowa: odpis = (wartość początkowa − wartość końcowa) / okres
 
 **[[Złota reguła finansowania (bankowa)|Złota reguła finansowania]]** (Otto Hübner, 1854): majątek długoterminowy finansuj kapitałem długoterminowym. Kupowanie maszyny na 10 lat za kredyt na 3 miesiące to przepis na kłopoty.
 
+> Uwaga: FIFO przy rosnących cenach daje **wyższy** zysk (sprzedajesz najpierw tańsze zapasy), LIFO – niższy.
+
+> Zapamiętaj: amortyzacja liniowa – równe odpisy; degresywna – wyższe na początku.
+
 ## Na marginesie
 
 Pojawiały się też: [[Ustawa o rachunkowości (1994)|ustawa o rachunkowości]], [[Reklama – spory ekonomiczne i sygnał jakości|reklama]], [[Progi znacznych pakietów akcji (spółki publiczne)|progi znacznych pakietów]] i [[Samorząd terytorialny w Polsce|samorząd terytorialny]].
-
 # firma-rachunkowosc-6 | Gdy waluta się zmienia
+
+## Gdy kurs euro się zmienia
+
+Firma sprzedała towar za 5000 euro, a klient zapłaci za dwa miesiące. Przez ten czas kurs się zmieni – i ta sama faktura będzie warta inną kwotę w złotych.
 
 ## Różnice kursowe
 
@@ -299,3 +356,5 @@ Nadwyżka dodatnich różnic nad ujemnymi to przychód finansowy, a ujemnych nad
 Eksporterzy narażeni na różnice kursowe często zabezpieczają się kontraktami terminowymi. Firmy rozliczające się w **[[Euro|euro]]** z partnerami ze strefy euro zyskałyby na przyjęciu wspólnej waluty – różnice kursowe w tych transakcjach by zniknęły.
 
 > Zapamiętaj: zrealizowane – przy zapłacie; niezrealizowane – przy wycenie bilansowej.
+
+> Uwaga: różnice **niezrealizowane** liczy się na dzień bilansowy, **zrealizowane** – w dniu zapłaty.

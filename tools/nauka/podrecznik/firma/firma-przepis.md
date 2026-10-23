@@ -25,6 +25,10 @@ PIT – do 30 kwietnia. VAT – do 25. dnia następnego miesiąca. Wniosek o upa
 
 # firma-przepis-1 | Kodeksy i ustawy
 
+## Gdzie szukać odpowiedzi
+
+Klient nie zapłacił, pracownik chce odejść, wspólnik chce wyjść ze spółki. Każda z tych spraw ma swój kodeks. Nie trzeba znać ich na pamięć – wystarczy wiedzieć, gdzie szukać.
+
 ## Kodeksy
 
 - **[[Kodeks cywilny (1964)|Kodeks cywilny]]** – osoby, czynności prawne, własność, umowy, spadki; przedawnienie 6 lat (3 lata dla działalności gospodarczej i świadczeń okresowych);
@@ -40,7 +44,15 @@ PIT – do 30 kwietnia. VAT – do 25. dnia następnego miesiąca. Wniosek o upa
 
 > Przykład: pracodawca zawarł z pracownikiem trzy kolejne umowy na czas określony – łącznie 30 miesięcy. Czwarta umowa z mocy prawa będzie umową na czas nieokreślony.
 
+> Uwaga: ogólny termin przedawnienia to 6 lat, ale roszczenia z **działalności gospodarczej** przedawniają się po 3 latach.
+
+> Zapamiętaj: kodeks cywilny 1964, kodeks pracy 1974, KSH 2000, Prawo przedsiębiorców 2018.
+
 # firma-przepis-2 | Ochrona pomysłów i kapitał
+
+## Jak długo pomysł należy do ciebie
+
+Wymyśliłeś nowy rodzaj zamka do roweru. Konkurencja może go skopiować – chyba że zgłosisz patent. Ale ochrona nie trwa wiecznie: po jej wygaśnięciu każdy może z pomysłu korzystać. Tak prawo godzi nagrodę dla twórcy z korzyścią dla wszystkich.
 
 ## Własność przemysłowa
 
@@ -68,7 +80,15 @@ PIT – do 30 kwietnia. VAT – do 25. dnia następnego miesiąca. Wniosek o upa
 
 **[[Progi znacznych pakietów akcji (spółki publiczne)|Progi znacznych pakietów]]**: zawiadomienie KNF i spółki przy 5%, 10%, 15%, 20%, 25%, 33%, 33⅓%, 50%, 75%, 90% i 95% głosów. Wezwanie obowiązkowe po przekroczeniu 50% (od 2022 roku).
 
+> Uwaga: znak towarowy chroni się po 10 lat, ale można go **odnawiać bez końca**; patent – 20 lat i koniec.
+
+> Zapamiętaj: patent 20, wzór użytkowy 10, znak towarowy 10 (odnawialny), prawa autorskie 70 lat po śmierci twórcy.
+
 # firma-przepis-3 | Praca, podatki i dane
+
+## Ile trwa pożegnanie z pracą
+
+Pracownik po roku pracy dostaje wypowiedzenie. Kiedy kończy pracę? Odpowiedź zależy od stażu w tej firmie – im dłuższy, tym dłuższy okres ochronny.
 
 ## Wypowiedzenie
 
@@ -92,5 +112,7 @@ Umowa na okres próbny: 3 dni, 1 tydzień lub 2 tygodnie.
 ## Dane osobowe
 
 **[[Rozporządzenie RODO|RODO]]** – od 25 maja 2018 roku. Kary za naruszenia mogą sięgać 20 mln euro lub 4% światowego obrotu firmy – wybiera się wyższą kwotę.
+
+> Uwaga: do stażu **urlopowego** wlicza się naukę (np. studia – 8 lat), ale do okresu **wypowiedzenia** liczy się staż u danego pracodawcy.
 
 > Zapamiętaj: wypowiedzenie – 2 tygodnie / 1 miesiąc / 3 miesiące; RODO – do 20 mln euro lub 4% obrotu.

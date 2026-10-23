@@ -24,7 +24,9 @@ Urząd Patentowy chroni wynalazki i znaki towarowe. Sądy gospodarcze rozstrzyga
 
 # firma-instytucja-1 | Od rejestracji do sądu
 
-## Rejestry
+## Pierwszy urząd przedsiębiorcy
+
+Masz pomysł na firmę. Zanim sprzedasz pierwszy produkt, musisz się zarejestrować – a gdzie, zależy od formy działalności.
 
 **[[CEIDG i KRS|CEIDG]]** (Centralna Ewidencja i Informacja o Działalności Gospodarczej) to rejestr osób prowadzących jednoosobową działalność i wspólników spółek cywilnych. Wpis jest bezpłatny i można go zrobić przez internet. **KRS** (Krajowy Rejestr Sądowy) prowadzą sądy rejonowe; trafiają do niego spółki handlowe, fundacje i stowarzyszenia. Firma ma numery: NIP (podatkowy), REGON (statystyczny) i – w KRS – numer KRS.
 
@@ -45,5 +47,7 @@ Urząd Patentowy chroni wynalazki i znaki towarowe. Sądy gospodarcze rozstrzyga
 ## Spory
 
 **[[Sądy gospodarcze|Sądy gospodarcze]]** to wydziały gospodarcze sądów rejonowych i okręgowych. Rozstrzygają spory między przedsiębiorcami, prowadzą Krajowy Rejestr Sądowy i postępowania upadłościowe.
+
+> Uwaga: spółka **cywilna** nie trafia do KRS – w CEIDG rejestrują się jej wspólnicy. Do KRS trafiają spółki **handlowe**.
 
 > Zapamiętaj: CEIDG – osoby fizyczne; KRS – spółki handlowe (prowadzą go sądy).
