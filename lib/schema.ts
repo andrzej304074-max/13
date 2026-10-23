@@ -250,6 +250,8 @@ CREATE TABLE IF NOT EXISTS bug_reports (
 );
 CREATE INDEX IF NOT EXISTS bug_reports_user_idx ON bug_reports (user_id, created_at DESC);
 CREATE INDEX IF NOT EXISTS bug_reports_status_idx ON bug_reports (status, created_at DESC);
+ALTER TABLE bug_reports ADD COLUMN IF NOT EXISTS kind text NOT NULL DEFAULT 'techniczny' CHECK (kind IN ('merytoryczny', 'techniczny'));
+ALTER TABLE bug_reports ADD COLUMN IF NOT EXISTS section text;
 -- Podejścia do zadań obliczeniowych i esejów z kluczy OWE (lib/otwarte.ts); statystyki osobno od testów.
 CREATE TABLE IF NOT EXISTS open_attempts (
   id         uuid PRIMARY KEY DEFAULT gen_random_uuid(),

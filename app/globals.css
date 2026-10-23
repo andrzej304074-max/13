@@ -672,9 +672,10 @@ nav.sections a.active { color: var(--text); background: var(--surface); border-c
 .account-menu summary .email { display: none; }
 .account-menu[open] summary { border-color: var(--accent); }
 .account-panel { position: absolute; right: 0; top: calc(100% + 6px); z-index: 40; min-width: 220px; max-width: calc(100vw - 32px); display: grid; gap: 2px; padding: 8px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); animation: page-in .16s var(--ease); }
-.account-panel a, .account-panel .linkbtn { display: block; padding: 10px 12px; border-radius: 8px; text-decoration: none; color: var(--text); text-align: left; font-size: 1rem; }
-.account-panel a:hover, .account-panel .linkbtn:hover { background: var(--bg); }
+.account-panel a, .account-panel .linkbtn, .account-panel .account-link { display: block; padding: 10px 12px; border-radius: 8px; text-decoration: none; color: var(--text); text-align: left; font-size: 1rem; }
+.account-panel a:hover, .account-panel .linkbtn:hover, .account-panel .account-link:hover { background: var(--bg); }
 .account-panel .linkbtn { color: var(--bad); }
+.account-panel .account-link { border: 0; background: transparent; font: inherit; cursor: pointer; width: 100%; }
 .account-panel .email { padding: 6px 12px; color: var(--muted); font-size: .85rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .mobile-only { display: none; }
 @media (max-width: 640px) {
@@ -793,7 +794,15 @@ table.matrix th[scope="row"] { text-align: left; font-weight: 600; }
 .ne-canvas { position: relative; z-index: 2; display: block; width: 100%; touch-action: none; cursor: crosshair; }
 .tool-text .ne-canvas, .tool-scroll .ne-canvas, .tool-view .ne-canvas { pointer-events: none; }
 .tool-text .ne-text { cursor: text; }
-.tool-pen .ne-text, .tool-eraser .ne-text, .tool-scroll .ne-text { pointer-events: none; }
+.tool-pen .ne-text, .tool-eraser .ne-text, .tool-scroll .ne-text, .tool-line .ne-text, .tool-curve .ne-text { pointer-events: none; }
+.tool-line .ne-canvas, .tool-curve .ne-canvas { cursor: crosshair; }
+.ne-curve { position: absolute; z-index: 4; display: flex; gap: 6px; align-items: center; padding: 6px 8px; border-radius: 12px; background: var(--surface); border: 1px solid var(--border); box-shadow: var(--shadow); white-space: nowrap; }
+/* pełny ekran edytora: Fullscreen API albo nakładka (iPhone) */
+.notes-editor.ne-full { position: fixed; inset: 0; z-index: 100; margin: 0; max-width: none; overflow-y: auto; overscroll-behavior: contain;
+  background: var(--bg); padding: max(8px, env(safe-area-inset-top)) 12px max(12px, env(safe-area-inset-bottom)); }
+.notes-editor.ne-full .ne-tools { top: 0; }
+.notes-editor:fullscreen { background: var(--bg); overflow-y: auto; padding: 8px 12px; }
+html.ne-full-open, html.ne-full-open body { overflow: hidden; }
 .tool-eraser .ne-canvas { cursor: cell; }
 .ne-foot { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: .85rem; }
 .ne-status { color: var(--muted); min-height: 1.4em; }
@@ -847,6 +856,11 @@ table.matrix th[scope="row"] { text-align: left; font-weight: 600; }
   animation: qn-in .2s var(--ease);
 }
 .quick-notes.is-min { display: none; }
+.bug-popup { z-index: 46; }
+.bug-form.compact { gap: 12px; }
+.bug-kind { border: 0; padding: 0; margin: 0; display: grid; gap: 6px; }
+.bug-kind legend { padding: 0; margin-bottom: 6px; font-weight: 600; }
+.tag.bug-kind.merytoryczny { border-color: var(--accent); color: var(--accent); }
 @keyframes qn-in { from { opacity: 0; transform: translateY(-6px) scale(.98); } to { opacity: 1; transform: none; } }
 .qn-head { display: flex; align-items: center; gap: 4px; padding: 8px 8px 8px 14px; border-bottom: 1px solid var(--border); }
 .qn-title { font-weight: 650; }
@@ -1236,6 +1250,7 @@ body:has(.speech-bar) main.container { padding-bottom: 160px; }
 .lit-item { display: flex; flex-direction: column; gap: 6px; }
 .lit-links { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: baseline; }
 .lit-links a { overflow-wrap: anywhere; }
+.lit-note { border-left: 4px solid var(--accent, #2563eb); line-height: 1.5; }
 .tag.lit-free { border-color: var(--lv-good); color: var(--good); }
 
 /* zadania i eseje z poprzednich lat */

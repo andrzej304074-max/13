@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 import { LogoutButton } from "@/app/konto/forms";
+import { BUG_EVENT } from "./bug-popup";
 
 /** Menu konta (👤): e-mail, panel admina, ustawienia, wylogowanie; zamyka się po przejściu i kliknięciu obok. */
 export function AccountMenu({ email, isAdmin }: { email: string; isAdmin: boolean }) {
@@ -26,7 +27,8 @@ export function AccountMenu({ email, isAdmin }: { email: string; isAdmin: boolea
         <span className="email" title={email}>{email}</span>
         {isAdmin && <Link href="/admin">Panel admina</Link>}
         <Link href="/konto/ustawienia">Ustawienia</Link>
-        <Link href={`/zgloszenia?z=${encodeURIComponent(path)}`} data-testid="bug-link">🐞 Zgłoś błąd</Link>
+        <button type="button" className="account-link" onClick={() => { if (ref.current) ref.current.open = false; window.dispatchEvent(new Event(BUG_EVENT)); }}
+          data-testid="bug-link">🐞 Zgłoś błąd</button>
         <LogoutButton />
       </div>
     </details>

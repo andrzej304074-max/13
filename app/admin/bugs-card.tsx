@@ -4,22 +4,24 @@ import { useEffect, useState } from "react";
 import { SkeletonRows } from "@/app/components/loading-page";
 import { api } from "@/lib/client";
 import type { BugReport } from "@/lib/bugs";
-import { BUG_STATUSES, BUG_STATUS_LABEL, type BugStatus } from "@/lib/bugs-core";
+import { BUG_KINDS, BUG_KIND_LABEL, BUG_STATUSES, BUG_STATUS_LABEL, type BugKind, type BugStatus } from "@/lib/bugs-core";
 
 const fmt = (s: string) => new Date(s).toLocaleString("pl-PL", { dateStyle: "short", timeStyle: "short" });
 
 /** Karta „Zgłoszenia błędów” w panelu admina: kto, kiedy, z której strony, treść; status i odpowiedź dla zgłaszającego. */
 export function BugsCard() {
   const [filter, setFilter] = useState<BugStatus | "">("nowe");
+  const [kind, setKind] = useState<BugKind | "">("");
   const [data, setData] = useState<{ reports: BugReport[]; counts: Record<string, number> } | null>(null);
   const [notes, setNotes] = useState<Record<string, string>>({});
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
     setData(null);
-    api<{ reports: BugReport[]; counts: Record<string, number> }>(`/api/admin/zgloszenia${filter ? `?status=${filter}` : ""}`)
+    const q = new URLSearchParams({ ...(filter ? { status: filter } : {}), ...(kind ? { rodzaj: kind } : {}) }).toString();
+    api<{ reports: BugReport[]; counts: Record<string, number> }>(`/api/admin/zgloszenia${q ? `?${q}` : ""}`)
       .then((d) => { setData(d); setNotes(Object.fromEntries(d.reports.map((r) => [r.id, r.note ?? ""]))); })
       .catch((e) => setError(e.message));
-  }, [filter]);
+  }, [filter, kind]);
 
   async function update(r: BugReport, body: { status?: BugStatus; note?: string }) {
     setError(null);
@@ -45,18 +47,27 @@ export function BugsCard() {
           </button>
         ))}
       </div>
+      <div className="seg" role="group" aria-label="Rodzaj zgłoszeń" data-testid="bug-kind-filter">
+        {(["", ...BUG_KINDS] as const).map((k) => (
+          <button key={k || "all"} className={kind === k ? "active" : ""} aria-pressed={kind === k} onClick={() => setKind(k)} data-kind={k}>
+            {k ? BUG_KIND_LABEL[k] : "każdy rodzaj"}
+          </button>
+        ))}
+      </div>
       {error && <p className="error" role="alert" style={{ margin: 0 }}>{error}</p>}
       {!data ? <SkeletonRows rows={2} height={80} label="Ładowanie zgłoszeń" /> : data.reports.length === 0 ? (
-        <p className="muted" style={{ margin: 0 }}>Brak zgłoszeń{filter ? ` o statusie „${BUG_STATUS_LABEL[filter]}”` : ""}.</p>
+        <p className="muted" style={{ margin: 0 }}>Brak zgłoszeń{filter ? ` o statusie „${BUG_STATUS_LABEL[filter]}”` : ""}{kind ? ` (${BUG_KIND_LABEL[kind]})` : ""}.</p>
       ) : (
         <ul className="bug-list">
           {data.reports.map((r) => (
             <li key={r.id} className="bug-item admin" data-testid="bug-admin-item">
               <div className="row" style={{ gap: 8, flexWrap: "wrap", alignItems: "baseline" }}>
                 <strong className="bug-user">{r.email}</strong>
+                <span className={`tag bug-kind ${r.kind}`} data-testid="bug-admin-kind">{BUG_KIND_LABEL[r.kind]}</span>
                 <span className="muted small">{fmt(r.created_at)}</span>
                 {r.page && <a className="small" href={r.page} target="_blank" rel="noreferrer">{r.page}</a>}
               </div>
+              {r.section && <p className="small" style={{ margin: 0 }} data-testid="bug-admin-section">Sekcja: <strong>{r.section}</strong></p>}
               <p className="bug-text">{r.text}</p>
               {r.device && <p className="muted small" style={{ margin: 0 }}>{r.device}</p>}
               <div className="row" style={{ gap: 8, flexWrap: "wrap" }}>

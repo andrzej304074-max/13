@@ -5,6 +5,7 @@ import { currentUser, type User } from "@/lib/auth";
 import { AccountMenu } from "./components/account-menu";
 import { AnnounceBell, PinnedBar } from "./components/announce-bell";
 import { QuickNotes } from "./components/notes/quick-notes";
+import { BugPopup } from "./components/bug-popup";
 import { SectionNav, SubTabs } from "./components/nav";
 import { AccessGuard, AccessProvider } from "./components/access";
 import { ReaderBar } from "./components/speech/reader-bar";
@@ -58,6 +59,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           </main>
           {me?.active && <SectionNav variant="bottom" />}
           {me?.active && <ReaderBar />}
+          {me && <BugPopup />}
           {me?.active && <CopyGuard />}
           <ToTop />
         </AccessProvider>

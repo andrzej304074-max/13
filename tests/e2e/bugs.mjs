@@ -19,12 +19,16 @@ const u = await login(uctx, "drugi@example.com", "nowe-haslo-123");
 // 1. z menu konta – strona zapamiętana
 await u.goto(`${B}/fiszki`); await u.waitForSelector('[data-testid="reel"]').catch(() => {});
 await u.click(".account-menu summary"); await u.click('[data-testid="bug-link"]');
+await u.waitForSelector('[data-testid="bug-popup"]');
+await u.click('[data-testid="bug-full"]');
 await u.waitForURL(/\/zgloszenia/); await u.waitForSelector('[data-testid="bug-form"]');
 check((await u.inputValue('[data-testid="bug-page"]')) === "/fiszki", `strona z której zgłoszono (${await u.inputValue('[data-testid="bug-page"]')})`);
 check(/ekran \d+×\d+/.test(await u.locator('[data-testid="bug-form"]').innerText()), "urządzenie dołączone");
 check(await u.locator('[data-testid="bug-send"]').isDisabled(), "bez opisu przycisk nieaktywny");
 const txt = `Test zgłoszenia ${Date.now()}`;
 await u.fill('[data-testid="bug-text"]', txt);
+check(await u.locator('[data-testid="bug-send"]').isDisabled(), "bez rodzaju przycisk nieaktywny");
+await u.click('[data-testid="bug-kind-techniczny"]');
 await u.click('[data-testid="bug-send"]');
 await u.waitForSelector(".ok-msg");
 check((await u.locator('[data-testid="bug-mine"]').innerText()).includes(txt), "zgłoszenie na mojej liście");

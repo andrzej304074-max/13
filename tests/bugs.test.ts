@@ -6,7 +6,13 @@ describe("zgłoszenia błędów – walidacja", () => {
     expect(() => bugInput({ text: "  " })).toThrow(BugError);
     expect(() => bugInput({ text: "x".repeat(4001) })).toThrow(BugError);
     const v = bugInput({ text: "  Pusty ekran po Sprawdź  ", page: "/test/abc", device: "iOS · Safari" });
-    expect(v).toEqual({ text: "Pusty ekran po Sprawdź", page: "/test/abc", device: "iOS · Safari" });
+    expect(v).toEqual({ text: "Pusty ekran po Sprawdź", page: "/test/abc", device: "iOS · Safari", kind: "techniczny", section: null });
+  });
+  it("rodzaj (merytoryczny/techniczny) i sekcja strony", () => {
+    const v = bugInput({ text: "zła definicja PKB", kind: "merytoryczny", section: "  Produkt krajowy brutto  " });
+    expect(v).toMatchObject({ kind: "merytoryczny", section: "Produkt krajowy brutto" });
+    expect(() => bugInput({ text: "coś nie działa", kind: "inny" })).toThrow(BugError);
+    expect(bugInput({ text: "coś nie działa", section: "x".repeat(500) }).section).toHaveLength(200);
   });
   it("strona tylko jako ścieżka aplikacji", () => {
     expect(bugInput({ text: "coś nie działa", page: "https://evil.example" }).page).toBeNull();
