@@ -72,5 +72,5 @@ await a.goto(`${B}/stats/dzialy?bank=slownik`); await a.waitForSelector('[data-t
 check(await a.locator('[data-testid="theme-filter"]').count() === 0, "działy Słownik: bez filtra hasła (osobny dział słownika)");
 
 check(errs.length === 0, `błędy strony: ${errs.join(" | ")}`);
-console.log(`g14: ${ok}/${ok + fails.length}`); for (const f of fails) console.log("  ✗", f);
+console.log(`OK: ${ok} błędów: ${fails.length}`, fails);
 await browser.close(); process.exit(fails.length ? 1 : 0);

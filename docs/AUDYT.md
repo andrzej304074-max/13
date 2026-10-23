@@ -201,8 +201,8 @@ zgłoszenia w wyskakującym panelu, Literaturę i statystyki wg źródeł.
 
 ## Jak sprawdzano
 - **Przegląd kodu** (`/code-review`, poziom wysoki) zmian w `app/`, `lib/` i testach od G1 (bez danych i treści Podręcznika).
-- **Pełna regresja e2e** (`bash tests/e2e/run.sh`, w częściach ≤ 25 min): __REGRESJA__.
-- **Testy jednostkowe** (vitest): __VITEST__; `npm run validate-questions`, `build_podrecznik.py --strict`.
+- **Pełna regresja e2e** (`bash tests/e2e/run.sh`, w częściach ≤ 25 min): 42 skrypty, wszystkie bez błędów (nowe: `g14.mjs` – statystyki wg źródła, filtry statystyk na koncie, Działy i pojęcia z Pytaniami AI); crawl: 140 stron × 2 motywy × 2 szerokości, jedyny komunikat to brak kluczy Azure/R2 w panelu admina środowiska testowego (oczekiwane). Po aktualizacji Next.js ponowiono g1, g10–g14, security, tests_ui, nav, notes, book – bez błędów.
+- **Testy jednostkowe** (vitest): 192 testy bez błędów; `npm run validate-questions`, `build_podrecznik.py --strict`.
 - **Pomiar szybkości** (`perf3.mjs`, telefon z dławieniem CPU ×4 i siecią 9 Mb/s oraz komputer) – sekcja „Plan II” w `docs/RAPORT-WYDAJNOSCI.md`.
 
 ## Poprawione
@@ -225,6 +225,14 @@ zgłoszenia w wyskakującym panelu, Literaturę i statystyki wg źródeł.
    Zatwierdzone kreski są teraz w warstwie poza ekranem; ruch kopiuje warstwę i dorysowuje tylko podgląd.
 9. **Źródło pytania liczone w czterech miejscach** (SQL statystyk, Działy, znacznik w teście, brudnopis) – teraz jeden moduł
    `lib/question-source.ts`.
+
+10. **Podatności zależności** (`npm audit`): krytyczna w Next.js 16.0–16.4.0 (m.in. zdalne wykonanie kodu w optymalizacji
+    obrazów SVG i w funkcjach `use cache`) i wysoka w Vite (narzędzie testów). Aktualizacja do Next.js 16.4.2 i Vite 8.3.5,
+    minimalna wersja `next` w `package.json` podniesiona do 16.4.2; `npm audit` – 0 podatności.
+11. **Testy e2e:** `feat.mjs` nie znał pytań algorytmicznych hasła XL (`data/slownik/theme_auto.json`); `g14.mjs` wypisuje
+    wynik w formacie, który zbiera `run.sh`.
+12. **Działy i pojęcia – rozmiar danych:** ostatnie odpowiedzi przy pojęciach i treść pytań pobierane dopiero po rozwinięciu
+    pojęcia (459 → 146 kB dla aktywnego konta).
 
 ## Sprawdzone – świadomie bez zmian
 - **Statystyki OWE i Pokrycie** opisują archiwum olimpiad (jakie pojęcia padały w których edycjach) – pytań AI tam nie dokładamy,
