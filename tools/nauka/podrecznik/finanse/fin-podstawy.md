@@ -30,6 +30,10 @@ Jak dużo powinno wydawać państwo? Klasycy chcieli „taniego państwa” ze z
 
 # fin-podstawy-1 | Słownik finansisty i pieniądz w kieszeni
 
+## Czym zajmują się finanse?
+
+Kieszonkowe, lokata babci, podatek od pensji taty, kredyt na mieszkanie – wszystko to finanse. Ekonomiści porządkują te zjawiska w kategorie, żeby łatwiej było o nich mówić i je porównywać.
+
 ## Kategorie finansowe
 
 Stanisław Owsiak uporządkował **[[Kategorie finansowe|kategorie finansowe]]** w grupy:
@@ -71,7 +75,15 @@ Nie myl jej z monetyzacją długu – finansowaniem państwa przez bank centraln
 
 **[[Finanse behawioralne|Finanse behawioralne]]** łączą finanse z psychologią. Inwestorzy ulegają nadmiernej pewności siebie, owczemu pędowi, awersji do strat, księgowości mentalnej i efektowi zakotwiczenia. Stąd bańki i anomalie cenowe. Przedstawiciele: Shiller, Thaler, Kahneman, Tversky.
 
+> Uwaga: pożyczka może dotyczyć **pieniędzy lub rzeczy** i udzielić jej może każdy; kredyt – tylko **pieniędzy**, tylko **bank**, na określony cel.
+
+> Zapamiętaj: pożyczka – kodeks cywilny; kredyt – Prawo bankowe.
+
 # fin-podstawy-2 | Państwo, rynki i sektory
+
+## Dlaczego finanse rosną szybciej niż reszta gospodarki?
+
+Od lat 80. banki, fundusze i giełdy zarabiają coraz większą część dochodu narodowego, a ludzie i firmy mają coraz więcej długów. Ekonomiści spierają się, czy to dobrze.
 
 ## Finansjalizacja
 
@@ -104,3 +116,7 @@ Muszą być skoordynowane (policy mix). Ekspansywna polityka fiskalna przy restr
 - **S.2** – reszta świata.
 
 > Zapamiętaj: S.13 to sektor, od którego liczy się deficyt i dług według reguł UE.
+
+> Przykład: gospodarka ma PKB 1000 mld zł. Gdy kredyty dla firm i gospodarstw rosną z 500 do 800 mld zł, a PKB tylko do 1100 mld, relacja długu do PKB skacze z 50% do ok. 73% – to jeden z mierników finansjalizacji.
+
+> Uwaga: **polityka finansowa** państwa to szersze pojęcie niż polityka fiskalna – obejmuje też politykę pieniężną i nadzór nad rynkiem.

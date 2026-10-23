@@ -24,6 +24,10 @@ Marek Belka – minister finansów, premier i prezes NBP. Adam Glapiński – pr
 
 # finanse-osoba-1 | Ratownicy banków i wyceniający opcje
 
+## Kto ratuje banki i jak wycenić opcję?
+
+Część ekonomistów finansów zajmuje się kryzysami, inni – wyceną skomplikowanych instrumentów. Kilku z nich dostało Nobla za odpowiedzi, z których banki korzystają codziennie.
+
 ## Bagehot
 
 **[[Bagehot Walter|Walter Bagehot]]**, dziennikarz i redaktor „The Economist”, w „Lombard Street” (1873) sformułował zasady pożyczkodawcy ostatniej instancji: w panice bank centralny powinien pożyczać swobodnie, na wysoki procent, pod dobre zabezpieczenie.
@@ -42,7 +46,15 @@ Marek Belka – minister finansów, premier i prezes NBP. Adam Glapiński – pr
 
 **[[Cox John, Ross Stephen, Rubinstein Mark|John Cox, Stephen Ross i Mark Rubinstein]]** w 1979 roku stworzyli model dwumianowy – prostszy sposób wyceny opcji krok po kroku.
 
+> Uwaga: Douglas Diamond (Nobel 2022, model run na bank) to **inna osoba** niż Peter Diamond (emerytury, rynek pracy).
+
+> Zapamiętaj: Bagehot – pożyczkodawca ostatniej instancji; Bernanke, Diamond, Dybvig – Nobel 2022 za badania banków i kryzysów; Black, Scholes, Merton – wycena opcji.
+
 # finanse-osoba-2 | Od Kopernika do Greenspana
+
+## Od Kopernika do Greenspana
+
+Ekonomia pieniądza ma długą historię – od astronoma, który opisał psucie monety, po prezesa Fedu, który przez prawie dwadzieścia lat kierował najważniejszym bankiem świata.
 
 ## Rynek efektywny
 
@@ -62,7 +74,13 @@ Marek Belka – minister finansów, premier i prezes NBP. Adam Glapiński – pr
 
 > Przykład: gdy w obiegu są monety pełnowartościowe i „psute” (z mniejszą ilością srebra) o tej samej nominalnej wartości, ludzie płacą psutymi, a pełnowartościowe chowają.
 
+> Uwaga: Fama (rynek efektywny) i Shiller (bańki, irracjonalność) dostali Nobla **w tym samym roku 2013**, choć ich poglądy są przeciwne.
+
 # finanse-osoba-3 | Portfel, finanse publiczne i bańki
+
+## Teoretycy ryzyka, budżetu i baniek
+
+Jak rozłożyć oszczędności, ile państwo powinno wydawać i dlaczego powstają bańki? Na te pytania odpowiadali ekonomiści, których nazwiska wracają w zadaniach OWE.
 
 ## Portfel
 
@@ -86,7 +104,15 @@ Marek Belka – minister finansów, premier i prezes NBP. Adam Glapiński – pr
 
 **[[Nash John|John Nash]]** (Nobel 1994) – matematyk, twórca pojęcia równowagi Nasha. Jego historię opowiada film „Piękny umysł”. **[[Ostrom Elinor|Elinor Ostrom]]** (Nobel 2009) – pierwsza kobieta z ekonomicznym Noblem – pokazała, że społeczności potrafią same chronić zasoby wspólne.
 
+> Uwaga: podatek Tobina to podatek od **transakcji walutowych**, a q Tobina – wskaźnik wyceny firmy; obie idee pochodzą od tego samego ekonomisty.
+
+> Zapamiętaj: Markowitz 1952 – teoria portfela; Musgrave – funkcje finansów publicznych; Ostrom – dobra wspólne.
+
 # finanse-osoba-4 | Wizjonerzy pieniądza i polscy bankierzy
+
+## Wizjonerzy i bankierzy
+
+Niektórzy proponowali pieniądz, który traci wartość, jeśli się go nie wydaje. Inni budowali wielkie banki – także w Polsce.
 
 ## Pieniądz, który znika
 
@@ -103,3 +129,5 @@ Marek Belka – minister finansów, premier i prezes NBP. Adam Glapiński – pr
 **[[Glapiński Adam|Adam Glapiński]]** – członek RPP w latach 2010–2016, prezes NBP od 2016 roku.
 
 > Zapamiętaj: John Law – Kompania Missisipi, bańka 1720; Gesell – pieniądz zanikający.
+
+> Uwaga: pieniądz zanikający Gesella miał **zniechęcać do chomikowania** gotówki – to nie to samo co inflacja, choć działa podobnie.

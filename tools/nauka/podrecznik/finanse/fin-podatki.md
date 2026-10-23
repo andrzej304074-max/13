@@ -30,6 +30,10 @@ Dla firm podatki to element rachunku: odsetki i amortyzacja zmniejszają podatek
 
 # fin-podatki-1 | Czym jest podatek i kto dostaje wpływy
 
+## Czym podatek różni się od opłaty za bilet?
+
+Za bilet płacisz i dostajesz przejazd. Za podatek nic konkretnego w zamian nie dostajesz – płacisz, bo tak każe ustawa. Na tym polega różnica między podatkiem a opłatą.
+
 ## Definicja
 
 **[[Podatek|Podatek]]** według Ordynacji podatkowej (art. 6) to publicznoprawne, nieodpłatne, przymusowe i bezzwrotne świadczenie pieniężne na rzecz Skarbu Państwa, województwa, powiatu lub gminy, wynikające z ustawy.
@@ -58,13 +62,18 @@ Dla firm podatki to element rachunku: odsetki i amortyzacja zmniejszają podatek
 
 **[[Skala podatkowa PIT|Skala PIT]]**: 12% do 120 000 zł dochodu, 32% od nadwyżki, kwota wolna 30 000 zł. Przedsiębiorcy mogą wybrać podatek liniowy 19%. **[[Podatek dochodowy od osób prawnych (CIT)|CIT]]**: 19%, a 9% dla małych. Skala PIT jest **[[Podatek progresywny, proporcjonalny (liniowy) i regresywny|progresywna]]**. Mniejsi przedsiębiorcy prowadzą **[[Uproszczone formy ewidencji|uproszczoną ewidencję]]**: księgę przychodów i rozchodów albo ewidencję ryczałtową.
 
+> Uwaga: podatek jest **nieodpłatny** (bez świadczenia wzajemnego) – opłata za wydanie dokumentu czy parkowanie to nie podatek.
+
+> Zapamiętaj: podatek: publicznoprawny, nieodpłatny, przymusowy, bezzwrotny, pieniężny, wynikający z ustawy (art. 6 Ordynacji).
+
 ## Na marginesie
 
 Pojawiały się też: [[Polityka dochodowa i społeczna|polityka dochodowa]] i [[Mnożnik zrównoważonego budżetu (Haavelmo)|mnożnik zrównoważonego budżetu]].
-
 # fin-podatki-1-cz2 | Podatki w życiu ludzi i firm
 
-Ten rozdział pokazuje, jak podatki dotykają codziennych spraw – pensji, zakupów, kredytów.
+## Ile podatków płacisz w ciągu dnia?
+
+Kupujesz bułkę – płacisz VAT. Tankujesz – akcyzę. Twoi rodzice dostają pensję – płacą PIT i składki. Podatki są wszędzie, choć często ich nie widać.
 
 ## Twoja pensja
 
@@ -94,9 +103,15 @@ Podatki pobiera **[[Krajowa Administracja Skarbowa (KAS)|Krajowa Administracja S
 
 > Zapamiętaj: PIT – do 30 kwietnia; JPK_VAT – do 25. dnia następnego miesiąca.
 
+> Uwaga: pensja **brutto** to przed potrąceniem podatku i składek pracownika, **netto** – to, co trafia na konto.
+
 # fin-podatki-1-cz3 | Kontrolerzy, ekonomiści i nierówności
 
 Ten krótki rozdział zbiera instytucje kontroli i ekonomistów, którzy pojawiają się w dyskusjach o podatkach.
+
+## Kto pilnuje, żeby wszyscy płacili?
+
+System podatkowy działa tylko wtedy, gdy podatnicy wiedzą, że ktoś ich może skontrolować. A ekonomiści spierają się, czy podatki powinny zmniejszać nierówności, czy raczej jak najmniej przeszkadzać gospodarce.
 
 ## Kto kontroluje
 
@@ -121,7 +136,13 @@ Podatki zmieniają podział dochodów – mierzy to **[[Współczynnik Giniego i
 - **[[Okun Arthur|Arthur Okun]]** – prawo Okuna i wskaźnik niedoli; pisał też o kompromisie między równością a efektywnością („dziurawe wiadro”: przy przelewaniu dochodów od bogatych do biednych część po drodze się traci);
 - **[[Phillips Alban William|Alban William Phillips]]** – krzywa Phillipsa.
 
+> Uwaga: podatek **progresywny** zmniejsza nierówności dochodów po opodatkowaniu; VAT jest często **regresywny** wobec dochodu, bo biedniejsi wydają większą część dochodu.
+
 # fin-podatki-2 | Jak sprawiedliwie opodatkować
+
+## Sprawiedliwy podatek – czyli jaki?
+
+Czy sprawiedliwie jest, gdy każdy płaci tyle samo złotych? Ten sam procent? A może bogatsi wyższy procent? Ekonomiści i politycy kłócą się o to od wieków.
 
 ## Trzy rodzaje
 
@@ -156,13 +177,18 @@ Skrajny przypadek to **[[Podatek zryczałtowany (kwotowy, pogłówny)|podatek po
 
 Progresywny **[[Podatek dochodowy od osób fizycznych (PIT)|PIT]]** działa jak **[[Automatyczne stabilizatory|automatyczny stabilizator]]**: w recesji wpływy spadają bardziej niż dochody.
 
+> Uwaga: w podatku **progresywnym** rośnie **stawka przeciętna** wraz z dochodem; w liniowym stawka jest stała, choć kwota podatku rośnie.
+
+> Zapamiętaj: zasady Smitha: równość, pewność, dogodność, taniość poboru.
+
 ## Na marginesie
 
 Pojawiały się też: [[Składki na ubezpieczenia społeczne|składki na ubezpieczenia społeczne]], [[Podatek od gier i podatek tonażowy|podatek od gier]], [[Związki zawodowe a rynek pracy|związki zawodowe]] i [[Limity kapitału zakładowego spółek|limity kapitału spółek]].
-
 # fin-podatki-2-cz2 | Podatki w szerszym obrazie gospodarki
 
-Ten rozdział zbiorczy pokazuje, jak podatki łączą się z innymi częściami gospodarki.
+## Podatek zmienia zachowania
+
+Gdy rośnie podatek od papierosów, ludzie mniej palą. Gdy rośnie podatek od pracy, część osób przechodzi do szarej strefy. Podatek to nie tylko dochód państwa – to też bodziec.
 
 ## Podatki zmieniają rynek
 
@@ -184,7 +210,15 @@ Zyski z akcji spółek z **[[WIG20|WIG20]]** podlegają podatkowi Belki. **[[Rez
 
 **[[Smith Adam|Adam Smith]]** (1723–1790) – autor czterech zasad podatkowych. Niektóre **[[Branża (sektor)|branże]]** mają specjalne podatki – banki, gry hazardowe, żegluga.
 
+> Przykład: państwo nakłada 1 zł podatku na każdy litr napoju. Producent podnosi cenę o 0,60 zł, a 0,40 zł bierze na siebie. Ciężar dzieli się według elastyczności popytu i podaży, niezależnie od tego, kto przelewa podatek.
+
+> Uwaga: ciężar podatku ponosi bardziej ta strona rynku, która jest **mniej elastyczna**.
+
 # fin-podatki-3 | CIT, VAT, akcyza i cło
+
+## Podatki firm i podatki w cenie
+
+Spółka płaci podatek od swojego zysku. Ale gdy kupujesz w sklepie, w cenie jest jeszcze VAT, a przy paliwie – akcyza. Każdy z tych podatków działa inaczej.
 
 ## CIT
 
@@ -210,13 +244,18 @@ Zyski z akcji spółek z **[[WIG20|WIG20]]** podlegają podatkowi Belki. **[[Rez
 
 Podatek liczy się z ksiąg. **[[Metody amortyzacji|Amortyzacja]]** (liniowa, degresywna) zmniejsza zysk do opodatkowania. **[[Rozliczenia międzyokresowe|Rozliczenia międzyokresowe]]** przypisują koszty do właściwych okresów. Firmy mają **[[Należności i zobowiązania|należności i zobowiązania]]**, w tym wobec urzędu skarbowego.
 
+> Uwaga: VAT obciąża **konsumenta końcowego** – firma odlicza VAT naliczony od należnego i przelewa tylko różnicę.
+
+> Zapamiętaj: CIT 19% (9% dla małych); VAT 23/8/5/0%; split payment – podzielona płatność VAT.
+
 ## Na marginesie
 
 Pojawiały się też: [[Polityka fiskalna (budżetowa)|polityka fiskalna]] i [[Samorząd terytorialny w Polsce|samorząd terytorialny]].
-
 # fin-podatki-3-cz2 | Kto naprawdę płaci podatek
 
-Ten rozdział pokazuje, że ten, kto przelewa podatek do urzędu, nie zawsze go ponosi.
+## Kto naprawdę płaci podatek?
+
+Podatek bankowy płacą banki – ale czy na pewno? Jeśli podniosą opłaty dla klientów, część ciężaru przejdą na nas. Kto przelewa pieniądze do urzędu, nie zawsze ponosi koszt podatku.
 
 ## Przerzucanie podatku
 
@@ -244,9 +283,15 @@ Wpływy podatkowe decydują o **[[Deficyt budżetowy i deficyt sektora finansów
 
 > Zapamiętaj: kto przelewa podatek ≠ kto go ponosi. Przy nieelastycznym popycie ciężar spada głównie na kupujących.
 
+> Uwaga: **przerzucanie podatku** w przód – na nabywców (wyższe ceny), w tył – na dostawców lub pracowników (niższe ceny zakupu, płace).
+
 # fin-podatki-3-cz3 | Handel, faktury i oszczędzanie
 
 Ostatni rozdział zbiorczy przy VAT i CIT – o handlu zagranicznym, fakturach i ulgach na oszczędzanie.
+
+## Podatki, które pomagają oszczędzać
+
+Państwo nie tylko zabiera – czasem zachęca. Ulgi na IKE i IKZE mają skłonić ludzi do oszczędzania na emeryturę, a e-faktury ułatwiają pilnowanie VAT.
 
 ## Bariery w handlu
 
@@ -266,7 +311,13 @@ Cło to nie jedyna przeszkoda w handlu. Są też **[[Bariery pozataryfowe|barier
 
 Wpłaty i podatki przechodzą przez banki, które rozliczają się między sobą na **[[Rynek międzybankowy|rynku międzybankowym]]**.
 
+> Uwaga: IKE – zwolnienie z podatku Belki przy wypłacie na emeryturze; IKZE – dodatkowo **odliczenie wpłat** od dochodu, ale ryczałt 10% przy wypłacie.
+
 # fin-podatki-4 | Podatki od majątku i transakcji
+
+## Podatek od kupna roweru używanego?
+
+Kupujesz od kolegi używany rower za 1500 zł. Czy płacisz podatek? Tak – podatek od czynności cywilnoprawnych, jeśli wartość przekracza 1000 zł. Państwo opodatkowuje nie tylko dochody, ale i niektóre transakcje.
 
 ## Podatek od umów
 
@@ -292,7 +343,15 @@ James Tobin w 1972 roku zaproponował **[[Podatek Tobina|niewielki podatek od tr
 
 > Przykład: podatek za 2020 rok trzeba było zapłacić do 30 kwietnia 2021 roku. Przedawni się z końcem 2026 roku.
 
+> Uwaga: PCC przy sprzedaży płaci **kupujący**, a nie sprzedający.
+
+> Zapamiętaj: PCC – 2% przy sprzedaży rzeczy i nieruchomości; spadki i darowizny – trzy grupy podatkowe.
+
 # fin-podatki-5 | Granice optymalizacji
+
+## Płacić mniej – legalnie?
+
+Każdy może wybrać korzystniejszą formę opodatkowania albo skorzystać z ulgi. Ale gdzie kończy się sprytne planowanie, a zaczyna unikanie opodatkowania? Prawo stawia tu granice.
 
 ## Interpretacje
 
@@ -320,13 +379,18 @@ Przepisy podatkowe bywają niejasne. Podatnik może poprosić o **[[Interpretacj
 
 > Przykład: spółka zarobiła 100 zł. CIT 19% → zostaje 81 zł. Dywidenda 81 zł, podatek 19% → zostaje 65,61 zł. Łączne obciążenie ≈ 34,4%.
 
+> Uwaga: **optymalizacja** korzysta z przepisów zgodnie z ich celem; **unikanie** opodatkowania (sztuczne konstrukcje) i **uchylanie się** (ukrywanie dochodu) już nie – to ostatnie jest przestępstwem.
+
+> Zapamiętaj: interpretacja indywidualna chroni podatnika, który się do niej stosuje; umowy o unikaniu podwójnego opodatkowania.
+
 ## Na marginesie
 
 Pojawiały się też: [[Wartość nominalna, emisyjna, rynkowa i księgowa akcji|wartości akcji]], [[Spółki kapitałowe (KSH)|spółki kapitałowe]], [[Dystrybucja|dystrybucja]] i [[Rola państwa w gospodarce|rola państwa]].
-
 # fin-podatki-5-cz2 | Fakty a oceny w sporach o podatki
 
-Krótki rozdział o tym, jak rozmawiać o podatkach rzetelnie.
+## „Podatki są za wysokie” – fakt czy opinia?
+
+W sporach o podatki łatwo pomylić to, co jest, z tym, co powinno być. Rzetelna rozmowa zaczyna się od rozdzielenia faktów od ocen.
 
 ## Co jest, a co powinno być
 
@@ -345,6 +409,8 @@ Dobra debata oddziela jedno od drugiego. Ekonomista może powiedzieć, jakie bę
 **[[Handel międzynarodowy|Handel międzynarodowy]]** i cła: pytanie pozytywne – ile zapłacą konsumenci, ile zyskają producenci? Pytanie normatywne – czy ochrona miejsc pracy w jednej branży jest warta wyższych cen dla wszystkich?
 
 > Zapamiętaj: pozytywna – „jak jest” (sprawdzalna); normatywna – „jak powinno być” (wartościująca).
+
+> Przykład: „stawka CIT w Polsce wynosi 19%” – zdanie pozytywne, da się je sprawdzić. „Stawka CIT powinna być niższa” – zdanie normatywne, wyraża ocenę.
 
 # fin-podatki-6 | Podatki w decyzjach firm
 
@@ -375,6 +441,8 @@ $ dochód do opodatkowania = przychód − koszty uzyskania przychodów
 ## Budżet UE
 
 **[[Wspólny podatek UE i zasoby własne|Budżet UE]]** finansują zasoby własne: cła, zasób oparty na VAT, zasób oparty na DNB (główny) i od 2021 roku opłata od niepoddanych recyklingowi odpadów plastikowych.
+
+> Uwaga: tarcza podatkowa **nie zmniejsza** kosztu odsetek do zera – zmniejsza go o stawkę podatku (np. 100 zł odsetek kosztuje po CIT 19% realnie 81 zł).
 
 ## Na marginesie
 

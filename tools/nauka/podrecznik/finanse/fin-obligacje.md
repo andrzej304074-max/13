@@ -30,6 +30,10 @@ Za tym wszystkim stoi jedna idea: złotówka dziś jest warta więcej niż złot
 
 # fin-obligacje-1 | Obligacje, bony i ich emitenci
 
+## Pożyczyć pieniądze państwu
+
+Możesz pożyczyć pieniądze nie tylko koledze, ale i państwu, miastu albo wielkiej firmie. Dostajesz papier z obietnicą zwrotu i odsetek – to obligacja.
+
 ## Obligacja
 
 **[[Obligacja|Obligacja]]** to dłużny papier wartościowy: emitent zobowiązuje się wykupić ją w terminie i zwykle płacić odsetki (kupon). Rodzaje według emitenta: skarbowe, komunalne, korporacyjne. Według oprocentowania: stałokuponowe, zmiennokuponowe, zerokuponowe, indeksowane inflacją. W odróżnieniu od **[[Akcja|akcji]]** obligacja nie daje udziału w firmie – tylko prawo do zwrotu długu z odsetkami.
@@ -59,13 +63,18 @@ $ dokładnie: 1 + r = (1 + i) / (1 + π)
 
 > Przykład: obligacja daje 7%, inflacja 4%. Przybliżenie: r ≈ 3%. Dokładnie: 1,07 / 1,04 = 1,0288, czyli 2,88%.
 
+> Uwaga: obligacja to papier **dłużny** (jesteś wierzycielem), akcja – **udziałowy** (jesteś współwłaścicielem).
+
+> Zapamiętaj: emitenci: Skarb Państwa (skarbowe), samorządy (komunalne), firmy (korporacyjne).
+
 ## Na marginesie
 
 Pojawiały się też: [[Cena czysta i brudna obligacji|cena czysta i brudna]], [[Oszczędności narodowe (prywatne i publiczne)|oszczędności narodowe]] (z których finansuje się zakup obligacji), [[Rezydent i nierezydent|rezydent i nierezydent]] oraz [[Upadłość i restrukturyzacja|upadłość]] – ryzyko, które grozi posiadaczom obligacji firm.
-
 # fin-obligacje-1-cz2 | Instytucje i papiery rynku długu
 
-Ten rozdział zbiera instytucje i papiery wartościowe, które pojawiają się wokół obligacji.
+## Kto stoi za rynkiem długu?
+
+Gdy państwo sprzedaje obligacje, nie robi tego samo. Pomagają mu dealerzy, depozyt papierów, nadzór. Obok obligacji krążą też inne papiery dłużne – jedne zabezpieczone hipoteką, inne nie.
 
 ## Kto emituje i kto pilnuje
 
@@ -87,7 +96,13 @@ Obligacje są popularne wśród seniorów – bezpieczne i przewidywalne. To cz�
 
 > Zapamiętaj: list zastawny – obligacja banku hipotecznego zabezpieczona kredytami hipotecznymi.
 
+> Uwaga: list zastawny emituje **bank hipoteczny** i zabezpiecza go wierzytelnościami z kredytów hipotecznych – to nie zwykła obligacja korporacyjna.
+
 # fin-obligacje-2 | Rentowność, ryzyko i obligacje specjalne
+
+## Ile naprawdę zarabiasz na obligacji?
+
+Obligacja ma kupon 5%, ale kupiłeś ją po 95 zł zamiast 100 zł. Ile zarobisz rocznie? Więcej niż 5% – bo przy wykupie dostaniesz 100 zł. Liczy się rentowność do wykupu.
 
 ## Obligacje z dodatkiem
 
@@ -117,7 +132,15 @@ Obligacje są popularne wśród seniorów – bezpieczne i przewidywalne. To cz�
 
 Wszystko to opiera się na **[[Wartość pieniądza w czasie|wartości pieniądza w czasie]]**: przyszłe płatności trzeba sprowadzić do dziś. Analizując wpływ stopy na cenę, zakładamy **[[Ceteris paribus|ceteris paribus]]** – że reszta się nie zmienia. Ta sama logika służy do oceny **[[Inwestycje|inwestycji]]**.
 
+> Uwaga: gdy stopy rynkowe rosną, **ceny obligacji spadają** – i odwrotnie. To najważniejsza zależność rynku długu.
+
+> Zapamiętaj: cena brudna = cena czysta + narosłe odsetki.
+
 # fin-obligacje-3 | Duration, krzywa dochodowości i rating
+
+## Dlaczego długie obligacje są bardziej ryzykowne?
+
+Dwie obligacje z kuponem 5%: jedna na rok, druga na 30 lat. Stopy rosną o 1 p.p. Cena której spadnie bardziej? Długiej – bo dłużej będzie płacić „za mało” w porównaniu z nowymi obligacjami.
 
 ## Duration
 
@@ -141,13 +164,18 @@ Wszystko to opiera się na **[[Wartość pieniądza w czasie|wartości pieniądz
 
 **[[Ryzyko systematyczne i specyficzne|Ryzyko specyficzne]]** dotyczy konkretnego emitenta i można je zmniejszyć, kupując obligacje wielu firm. Ryzyka systematycznego – np. **[[Recesja i depresja|recesji]]** – nie da się zdywersyfikować. Uwaga: w zarządzaniu **[[Dywersyfikacja|dywersyfikacja]]** oznacza rozszerzenie działalności firmy na nowe dziedziny – to inne znaczenie słowa.
 
+> Uwaga: krzywa dochodowości **odwrócona** (krótkie stopy wyższe od długich) bywa zapowiedzią recesji.
+
+> Zapamiętaj: duration – wrażliwość ceny obligacji na stopy; rating – ocena ryzyka (AAA najlepszy, poniżej BBB− – śmieciowe).
+
 ## Na marginesie
 
 Pojawiały się też: [[Wartość pieniądza w czasie|wartość pieniądza w czasie]], [[Rachunek przepływów pieniężnych (cash flow)|rachunek przepływów pieniężnych]] i [[Instrument pochodny (derywat)|instrumenty pochodne]].
-
 # fin-obligacje-3-cz2 | Ubezpieczenie od bankructwa i spirala długu
 
-Ten rozdział łączy rynek obligacji z ryzykiem niewypłacalności i niestabilnością finansową.
+## Polisa na cudzy dług
+
+Możesz ubezpieczyć dom sąsiada od pożaru? W zwykłym ubezpieczeniu nie. Ale na rynku finansowym można kupić ochronę przed bankructwem firmy, której obligacji wcale się nie ma.
 
 ## Polisa na cudzy dług
 
@@ -168,7 +196,13 @@ Hyman Minsky opisał **[[Finansowanie zabezpieczone, spekulacyjne i Ponziego (Mi
 
 > Przykład: firma ma dług 10 mln zł, odsetki 6%, czyli 600 tys. zł rocznie, a zarabia 700 tys. zł. Pokrywa odsetki, ale nie spłaca kapitału – to finansowanie spekulacyjne. Gdy stopy wzrosną do 8%, odsetki (800 tys. zł) przewyższą dochody – firma staje się dłużnikiem typu Ponziego.
 
+> Uwaga: CDS to ubezpieczenie od **niewypłacalności** emitenta, a nie od spadku stóp procentowych.
+
 # fin-obligacje-4 | Procent, renty i papiery dyskontowe
+
+## Procent od procentu
+
+Wpłacasz 1000 zł na 10 lat na 5%. Przy procencie prostym dostaniesz 1500 zł, przy składanym – ok. 1629 zł. Różnica rośnie z każdym rokiem, bo odsetki zarabiają własne odsetki.
 
 ## Prosty czy składany
 
@@ -206,3 +240,5 @@ $ PV = C / r
 Obligacje i papiery dyskontowe kupują m.in. **[[Fundusz inwestycyjny otwarty (FIO) i zamknięty (FIZ)|fundusze inwestycyjne]]**. FIO zbywa i odkupuje jednostki na bieżąco, FIZ emituje certyfikaty i ma szerszy zakres lokat.
 
 > Zapamiętaj: im częstsza kapitalizacja, tym wyższa stopa efektywna.
+
+> Uwaga: stopa **efektywna** uwzględnia kapitalizację w ciągu roku – przy kapitalizacji miesięcznej jest wyższa od nominalnej.

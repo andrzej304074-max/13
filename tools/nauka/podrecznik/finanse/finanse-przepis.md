@@ -20,6 +20,10 @@ VAT: 23%, 8%, 5%, 0%. PIT: 12% i 32%, kwota wolna 30 000 zł. Składka emerytaln
 
 # finanse-przepis-1 | Ustawy finansowe i podatki
 
+## Ustawy, które rządzą pieniędzmi
+
+Ile może być długu, kto emituje pieniądz, ile kosztuje kredyt i ile podatku zapłacisz – wszystko to zapisano w ustawach. Warto znać kilka najważniejszych.
+
 ## Finanse publiczne
 
 **[[Ustawa o finansach publicznych (2009)|Ustawa o finansach publicznych]]** definiuje sektor finansów publicznych, zasady budżetu, deficytu i długu, procedury ostrożnościowe (od 55% PKB) i stabilizującą regułę wydatkową.
@@ -54,7 +58,15 @@ VAT: 23%, 8%, 5%, 0%. PIT: 12% i 32%, kwota wolna 30 000 zł. Składka emerytaln
 
 Danina solidarnościowa i wyższe stawki akcyzy często trafiają w **[[Dobro luksusowe (wyższego rzędu)|dobra luksusowe]]** – te, których udział w wydatkach rośnie z dochodem.
 
+> Uwaga: procedury ostrożnościowe ustawy o finansach publicznych zaczynają się od **55% PKB**, a konstytucyjny limit to **60%**.
+
+> Zapamiętaj: ustawa o finansach publicznych 2009; ustawa o NBP 1997; Prawo bankowe 1997.
+
 # finanse-przepis-2 | Składki, gwarancje i akcyza
+
+## Składki, gwarancje i akcyza w liczbach
+
+Z każdej pensji odchodzą składki, każdy depozyt ma gwarancję do określonej kwoty, a papierosy i paliwo mają w cenie akcyzę. Te liczby warto mieć w głowie.
 
 ## Składki ZUS
 
@@ -89,3 +101,7 @@ Danina solidarnościowa i wyższe stawki akcyzy często trafiają w **[[Dobro lu
 ## Polityka gospodarcza
 
 Wszystkie te przepisy to narzędzia **[[Polityka gospodarcza (ekonomiczna)|polityki gospodarczej]]** – państwo przez stawki i limity realizuje swoje cele.
+
+> Uwaga: gwarancja BFG to **100 000 euro** na deponenta w jednym banku – nie na każde konto osobno i nie w złotych.
+
+> Zapamiętaj: akcyza – na paliwa, alkohol, wyroby tytoniowe, energię; BFG – 100 000 euro.

@@ -60,13 +60,16 @@ Ubezpieczyciel nie wie, kto jest ostrożny, a kto nie (negatywna selekcja). A ub
 
 **[[Reasekuracja|Reasekuracja]]**: ubezpieczyciel przekazuje część ryzyka i składki reasekuratorowi. Gdy powódź zniszczy tysiące domów naraz, jeden ubezpieczyciel by nie wytrzymał – reasekuracja rozkłada ryzyko na cały świat.
 
+> Zapamiętaj: działy: I – na życie, II – majątkowe i pozostałe osobowe; OC komunikacyjne – obowiązkowe.
+
 ## Na marginesie
 
 Pojawiały się też: [[Gwarancja depozytów BFG|gwarancja depozytów]] – też rodzaj ubezpieczenia, [[Urząd Ochrony Konkurencji i Konsumentów (UOKiK)|UOKiK]] i [[Spółki osobowe i kapitałowe – wspólnicy|spółki i odpowiedzialność wspólników]].
-
 # fin-ubezpieczenia-1-cz2 | Dlaczego rynek ubezpieczeń jest trudny
 
-Ten rozdział wyjaśnia dwa problemy, z którymi zmaga się każdy ubezpieczyciel. Oba wynikają z asymetrii informacji – ubezpieczony wie o sobie więcej niż firma.
+## Dlaczego ubezpieczyciel pyta o tyle rzeczy?
+
+Przed zawarciem polisy zdrowotnej musisz wypełnić długą ankietę. Ubezpieczyciel nie jest wścibski – próbuje zmniejszyć problem, który ma każdy: wiesz o sobie więcej niż on.
 
 ## Negatywna selekcja
 
@@ -83,6 +86,10 @@ Jak się bronić? Badania lekarskie, ankiety, różne stawki dla różnych grup,
 Jak się bronić? Udział własny (franszyza redukcyjna), zniżki za bezszkodową jazdę, wyłączenia odpowiedzialności za rażące niedbalstwo.
 
 > Zapamiętaj: negatywna selekcja – przed umową (ukryte cechy); pokusa nadużycia – po umowie (ukryte działania).
+
+> Przykład: ubezpieczyciel ustala jedną składkę dla wszystkich – 1000 zł rocznie. Zdrowi uznają, że to za drogo, i rezygnują; zostają głównie chorzy. Firma musi podnieść składkę – i odchodzą kolejni zdrowsi. To spirala negatywnej selekcji.
+
+> Uwaga: **negatywna selekcja** – przed zawarciem umowy (kto się ubezpiecza); **pokusa nadużycia** – po zawarciu (jak się zachowuje ubezpieczony).
 
 # fin-ubezpieczenia-2 | Kto liczy, kto płaci, kto likwiduje
 
@@ -107,6 +114,10 @@ Jak się bronić? Udział własny (franszyza redukcyjna), zniżki za bezszkodow�
 ## Ubezpieczenia społeczne
 
 **[[Ubezpieczenia społeczne (ZUS)|ZUS]]** prowadzi obowiązkowe ubezpieczenia: emerytalne, rentowe, chorobowe i wypadkowe. Rolników ubezpiecza **[[Kasa Rolniczego Ubezpieczenia Społecznego (KRUS)|KRUS]]**, finansowana głównie z budżetu. Emerytury mogą być liczone różnie – **[[DB, DC i NDC – formuły emerytalne|formuły DB, DC i NDC]]**. Polska od 1999 roku stosuje NDC: składki zapisuje się na indywidualnym koncie, ale finansowanie pozostaje repartycyjne.
+
+> Uwaga: TUW należy do **ubezpieczonych** (członków), a zwykły zakład ubezpieczeń – do akcjonariuszy.
+
+> Zapamiętaj: aktuariusz – matematyka ubezpieczeń; tablice trwania życia – podstawa składek na życie i emerytur.
 
 ## Na marginesie
 

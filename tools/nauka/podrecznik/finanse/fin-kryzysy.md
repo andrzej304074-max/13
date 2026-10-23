@@ -26,6 +26,10 @@ Rynki są połączone, więc kryzysy przenoszą się błyskawicznie – to zara�
 
 # fin-kryzysy-1 | Bańki i sieć bezpieczeństwa
 
+## Gdy wszyscy chcą wypłacić pieniądze naraz
+
+Bank trzyma w gotówce tylko mały ułamek depozytów. Jeśli wszyscy klienci przyjdą tego samego dnia, nawet zdrowy bank nie wypłaci wszystkim. Strach może sam się spełnić.
+
 ## Czym jest kryzys
 
 **[[Kryzys finansowy – istota i rodzaje|Kryzys finansowy]]** to gwałtowne zaburzenie systemu finansowego: spadek cen aktywów, upadłości instytucji, utrata zaufania i płynności – przenoszące się na gospodarkę realną. Rodzaje: bankowy, walutowy, finansów publicznych i giełdowy. Typowe przesłanki: szybki wzrost kredytu, bańka cen aktywów, nadmierna dźwignia, niedopasowanie walutowe (długi w obcej walucie), słaby nadzór.
@@ -53,6 +57,10 @@ Rynki są połączone, więc kryzysy przenoszą się błyskawicznie – to zara�
 
 **[[Solvency II|Solvency II]]** to unijny system wypłacalności ubezpieczycieli, stosowany od 1 stycznia 2016 roku. Ma trzy filary: wymogi ilościowe (kapitał pozwalający przetrwać rok z prawdopodobieństwem 99,5%), zarządzanie ryzykiem i nadzór, sprawozdawczość. To odpowiednik Bazylei dla ubezpieczeń.
 
+> Uwaga: kryzys **walutowy** to gwałtowny spadek kursu, **bankowy** – upadki banków, **finansów publicznych** – niezdolność państwa do obsługi długu; często występują razem.
+
+> Zapamiętaj: mania tulipanowa – 1637; bańka Morza Południowego – 1720.
+
 # fin-kryzysy-2 | Kryzysy, które obiegły świat
 
 ## Efekt tequili
@@ -78,3 +86,5 @@ Rynki są połączone, więc kryzysy przenoszą się błyskawicznie – to zara�
 **[[EFSF i EFSM (tymczasowe mechanizmy strefy euro, 2010)|W 2010 roku]]** strefa euro utworzyła dwa tymczasowe mechanizmy: EFSM – pożyczki do około 60 mld euro gwarantowane budżetem UE; EFSF – spółkę państw strefy euro z możliwością pożyczek do 440 mld euro (finansowała m.in. Irlandię, Portugalię i Grecję). Od października 2012 roku nowe programy prowadzi stały Europejski Mechanizm Stabilności.
 
 > Zapamiętaj: Meksyk 1994 – efekt tequili; Tajlandia 1997 – kryzys azjatycki; EFSF/EFSM 2010 → EMS 2012.
+
+> Uwaga: „efekt tequili” to **zarażenie** innych krajów kryzysem meksykańskim, a nie nazwa samego kryzysu w Meksyku.

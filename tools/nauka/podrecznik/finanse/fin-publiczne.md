@@ -31,6 +31,10 @@ Gminy utrzymują szkoły podstawowe, drogi lokalne, wodociągi. Finansują się 
 
 # fin-publiczne-1 | Sektor i budżet
 
+## Skąd państwo ma pieniądze na szkoły?
+
+Każda szkoła, droga i szpital są opłacane z pieniędzy publicznych. Zanim zostaną wydane, muszą zostać zaplanowane w budżecie – ustawie, nad którą Sejm pracuje co jesień.
+
 ## Finanse publiczne
 
 **[[Finanse publiczne|Finanse publiczne]]** to gromadzenie i wydawanie środków publicznych przez państwo, samorządy i inne jednostki publiczne. Reguluje je ustawa o finansach publicznych z 27 sierpnia 2009 roku.
@@ -59,13 +63,20 @@ Gdy budżet nie jest gotowy, Sejm może uchwalić **[[Prowizorium budżetowe|pro
 
 **[[Rezerwa ogólna i rezerwy celowe budżetu państwa|Rezerwa ogólna]]** (do 0,2% wydatków) finansuje wydatki nieprzewidziane, np. skutki powodzi. **Rezerwy celowe** – wydatki, których podziału nie da się ustalić z góry.
 
+> Przykład: projekt budżetu przewiduje dochody 600 mld zł i wydatki 690 mld zł. Deficyt 90 mld zł trzeba sfinansować, emitując obligacje – i to zwiększa dług publiczny.
+
+> Uwaga: **prowizorium** budżetowe to tymczasowa ustawa, gdy budżet nie zostanie uchwalony na czas – nie mylić z budżetem na kolejny rok.
+
+> Zapamiętaj: ustawa o finansach publicznych – 27 sierpnia 2009 r.; projekt budżetu – do 30 września.
+
 ## Na marginesie
 
 Pojawiały się też: [[Polityka kursowa|polityka kursowa]], [[Sprawozdanie finansowe|sprawozdanie finansowe]], [[Efekty zewnętrzne (externalities)|efekty zewnętrzne]] (powód interwencji państwa), [[Ricardo David|David Ricardo]] i [[Cykl koniunkturalny|cykl koniunkturalny]].
-
 # fin-publiczne-1-cz2 | Dług, wydatki i instytucje non-profit
 
-Rozdział zbiorczy z pojęciami, które pojawiają się wokół budżetu.
+## Wokół budżetu
+
+Budżet to nie tylko dochody i wydatki ministerstw. Wokół niego krążą reguły wydatkowe, koszty obsługi długu, dopłaty do emerytur i pieniądze organizacji non-profit.
 
 ## Hamulec wydatków
 
@@ -89,7 +100,13 @@ Państwo finansuje **[[Działalność badawczo-rozwojowa (B+R)|badania i rozwój
 
 **[[Fundacja i stowarzyszenie|Fundacje i stowarzyszenia]]** wykonują wiele zadań publicznych – często za pieniądze z budżetu. Fundacja to majątek przeznaczony na cel, stowarzyszenie – zrzeszenie ludzi.
 
+> Uwaga: koszty **obsługi** długu to odsetki – nie spłata samego długu (rozchody).
+
 # fin-publiczne-2 | Zasady, dochody i wydatki
+
+## Budżet jak domowy – tylko większy
+
+Rodzina planuje: ile zarobi, ile wyda, czy odłoży, czy pożyczy. Państwo robi to samo, ale według zasad zapisanych w prawie – po to, by nikt nie mógł ukryć wydatków ani pieniędzy.
 
 ## Zasady budżetowe
 
@@ -121,9 +138,17 @@ Deficyt zmniejsza **[[Konsolidacja fiskalna|konsolidacja fiskalna]]**. UE pilnuj
 
 Wyższe stawki nie zawsze dają wyższe wpływy – **[[Krzywa Laffera|krzywa Laffera]]**. Wysoka inflacja zjada dochody – **[[Efekt Tanziego–Olivery|efekt Tanziego–Olivery]]**. Ekonomiści spierają się, ile państwo powinno wydawać – **[[Debaty o polityce makroekonomicznej (Mankiw)|debaty Mankiwa]]**.
 
+> Przykład: budżet ma wydatki 700 mld zł, z czego 500 mld to wydatki sztywne (emerytury, pensje, odsetki). Rząd może swobodnie zmieniać tylko 200 mld – dlatego tak trudno szybko ograniczyć deficyt.
+
+> Uwaga: zasada **jedności** – jeden budżet dla wszystkich dochodów i wydatków; zasada **zupełności** – dochody i wydatki ujmuje się w pełnych kwotach, bez kompensowania.
+
+> Zapamiętaj: deficyt – wydatki > dochody; nadwyżka – dochody > wydatki.
+
 # fin-publiczne-2-cz2 | Inflacja, wzrost państwa i transformacja
 
-Krótki rozdział o tym, jak finanse publiczne zmieniają się w czasie.
+## Państwo, które rośnie
+
+Sto lat temu państwa wydawały kilkanaście procent PKB, dziś – 40–50%. Dlaczego? I co inflacja robi z podatkami w kasie państwa?
 
 ## Inflacja a podatki
 
@@ -147,7 +172,13 @@ Deficyt budżetu często idzie w parze z deficytem w handlu – **[[Bilans handl
 
 **[[Transformacja systemowa i plan Balcerowicza|Plan Balcerowicza]]** zaczął od ograniczenia deficytu – w 1989 roku budżet był w głębokim dołku, a deficyt pokrywano drukiem pieniądza. Ważnym źródłem dochodów w latach 90. była **[[Nacjonalizacja i prywatyzacja|prywatyzacja]]**.
 
+> Uwaga: prawo Wagnera mówi o **wzroście udziału** wydatków publicznych w PKB, a nie tylko o wzroście kwot.
+
 # fin-publiczne-3 | Rodzaje deficytu i dług
+
+## Deficyt deficytowi nierówny
+
+Rząd ma deficyt 4% PKB. Czy to dużo? Zależy, ile z tego to odsetki, a ile wynika z recesji. Ekonomiści dzielą deficyt na części, żeby ocenić, czy państwo żyje ponad stan.
 
 ## Trzy funkcje
 
@@ -174,9 +205,15 @@ Deficyt budżetu często idzie w parze z deficytem w handlu – **[[Bilans handl
 
 **[[Dług publiczny|Dług publiczny]]** – definicja krajowa różni się od unijnej (EDP). Limit: **[[Progi ostrożnościowe i konstytucyjny limit długu|3/5 PKB]]**, progi ostrożnościowe od 55%. **[[Reguła złotej zasady (finansów publicznych)|Złota zasada]]**: pożyczać tylko na inwestycje.
 
+> Uwaga: deficyty **bliźniacze** to deficyt budżetowy i deficyt na rachunku obrotów bieżących występujące jednocześnie.
+
+> Zapamiętaj: deficyt pierwotny – bez odsetek; strukturalny – bez wpływu koniunktury.
+
 # fin-publiczne-3-cz2 | Finanse publiczne w szerokim kontekście
 
-Rozdział zbiorczy z pojęciami, które łączą finanse publiczne z resztą gospodarki.
+## Finanse publiczne łączą wszystko
+
+Budżet państwa dotyka inflacji, wzrostu, handlu z zagranicą i stóp procentowych. Żeby go zrozumieć, trzeba widzieć całą gospodarkę.
 
 ## Mierzenie
 
@@ -202,7 +239,13 @@ Gdy państwo nie może spłacić długów, negocjuje z wierzycielami. Polska zro
 
 Koordynacją polityki fiskalnej na świecie zajmuje się m.in. **[[Grupa G7 i G20|G20]]**.
 
+> Uwaga: dług publiczny liczony **według UE** (EDP) jest zwykle wyższy niż według definicji krajowej – obejmuje więcej instytucji i funduszy.
+
 # fin-publiczne-4 | Samorządy
+
+## Kto naprawia drogę przed szkołą?
+
+Gmina odpowiada za szkołę podstawową, powiat – za liceum, województwo – za regionalne drogi. Każdy szczebel ma swoje zadania i swoje pieniądze.
 
 ## Trzy szczeble
 
@@ -228,13 +271,20 @@ Koordynacją polityki fiskalnej na świecie zajmuje się m.in. **[[Grupa G7 i G2
 
 **[[Dyscyplina finansów publicznych|Dyscyplina finansów publicznych]]** – urzędnik, który przekroczy plan wydatków albo naruszy prawo zamówień publicznych, odpowiada przed komisją orzekającą.
 
+> Przykład: gmina ma 100 mln zł dochodów: 40 mln z udziału w PIT, 20 mln z podatku od nieruchomości, 30 mln subwencji oświatowej i 10 mln dotacji. Subwencję może wydać według uznania w ramach celu, dotację – tylko na konkretne zadanie.
+
+> Uwaga: **subwencja** jest ogólna (gmina decyduje), **dotacja** – celowa (na wskazane zadanie i z rozliczeniem).
+
+> Zapamiętaj: trzy szczeble od 1999 r.: gminy, powiaty, 16 województw; janosikowe – wpłaty bogatszych samorządów na rzecz biedniejszych.
+
 ## Na marginesie
 
 Pojawiały się też: [[Cena maksymalna|cena maksymalna]], [[Społeczna odpowiedzialność biznesu (CSR)|CSR]], [[Pomoc publiczna|pomoc publiczna]], [[Urbanizacja i suburbanizacja|urbanizacja]] (zmienia dochody gmin) i [[Warunek maksymalizacji zysku|warunek maksymalizacji zysku]].
-
 # fin-publiczne-4-cz2 | Ceny, cła i wyludnianie
 
-Krótki rozdział o trzech zjawiskach, które dotykają budżetów publicznych.
+## Gdy budżet spotyka rynek
+
+Ceny minimalne, cła i wyludnianie miejscowości to pozornie odległe sprawy. Wszystkie jednak zmieniają dochody lub wydatki publiczne.
 
 ## Cena minimalna
 
@@ -252,7 +302,13 @@ Krótki rozdział o trzech zjawiskach, które dotykają budżetów publicznych.
 
 > Zapamiętaj: cena minimalna powyżej równowagi → nadwyżka; maksymalna poniżej → niedobór.
 
+> Uwaga: cena minimalna działa tylko, gdy jest **powyżej** ceny równowagi – wtedy powstaje nadwyżka podaży.
+
 # fin-publiczne-5 | Zarządzanie pieniędzmi publicznymi
+
+## Jak wydać publiczne pieniądze uczciwie?
+
+Gdy miasto kupuje autobusy za 50 mln zł, nie może po prostu zadzwonić do znajomego producenta. Musi ogłosić przetarg – po to, żeby wygrał najlepszy, a nie najlepiej ustosunkowany.
 
 ## Zamówienia publiczne
 
@@ -279,3 +335,5 @@ Krótki rozdział o trzech zjawiskach, które dotykają budżetów publicznych.
 Finanse publiczne mierzy się w relacji do PKB, liczonego m.in. **[[PKB metodą produkcyjną i dochodową|metodą produkcyjną i dochodową]]**. Największą częścią PKB jest **[[Konsumpcja|konsumpcja]]** – dlatego VAT jest tak ważnym źródłem dochodów państwa.
 
 > Zapamiętaj: samorząd – wydatki bieżące ≤ dochody bieżące (zrównoważenie bieżące).
+
+> Uwaga: w przetargu nie musi wygrać **najniższa cena** – liczą się kryteria ogłoszone w zamówieniu (np. jakość, termin, koszty eksploatacji).

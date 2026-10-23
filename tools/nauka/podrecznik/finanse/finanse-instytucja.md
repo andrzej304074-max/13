@@ -21,6 +21,10 @@ EBC prowadzi politykę pieniężną strefy euro. EBA, ESMA i EIOPA nadzorują ry
 
 # finanse-instytucja-1 | NBP i jego organy
 
+## Kto pilnuje złotego?
+
+Na banknotach jest napis „Narodowy Bank Polski”. Ten bank jako jedyny może je emitować – i odpowiada za to, ile są warte.
+
 ## NBP
 
 **[[Narodowy Bank Polski (NBP)|NBP]]** to bank centralny RP (art. 227 Konstytucji, ustawa z 1997 roku). Ma wyłączne prawo emisji pieniądza, odpowiada za wartość polskiego pieniądza, prowadzi politykę pieniężną i zarządza rezerwami. Nie może finansować deficytu budżetowego.
@@ -37,7 +41,13 @@ EBC prowadzi politykę pieniężną strefy euro. EBA, ESMA i EIOPA nadzorują ry
 
 > Uwaga: RPP decyduje o stopach; Zarząd NBP – o interwencjach walutowych.
 
+> Zapamiętaj: organy NBP: prezes, RPP, Zarząd NBP; art. 227 Konstytucji.
+
 # finanse-instytucja-2 | Banki centralne świata i polska infrastruktura
+
+## Wielka czwórka banków centralnych
+
+Decyzje Fedu w Waszyngtonie czy EBC we Frankfurcie wpływają na kurs złotego i oprocentowanie twojej lokaty. Warto wiedzieć, kto nimi kieruje i jak działają.
 
 ## Fed
 
@@ -61,7 +71,15 @@ EBC prowadzi politykę pieniężną strefy euro. EBA, ESMA i EIOPA nadzorują ry
 
 > Przykład: dobra historia w BIK pomaga dostać kredyt na lepszych warunkach – bank widzi, że terminowo spłacałeś raty za telefon.
 
+> Uwaga: Fed ma **podwójny** mandat (ceny i zatrudnienie), EBC – przede wszystkim **stabilność cen**.
+
+> Zapamiętaj: Fed od 1913 r.; EBC od 1998 r. (euro od 1999 r.); Bank Anglii od 1694 r.
+
 # finanse-instytucja-3 | Gwarancje, ochrona klientów i kontrola
+
+## Kto pomoże, gdy sprawca wypadku nie ma OC?
+
+Ktoś uszkodził ci rower i uciekł albo nie miał ubezpieczenia. Czy zostaniesz bez pieniędzy? Nie – są instytucje, które wypłacają odszkodowania w takich sytuacjach i chronią klientów rynku finansowego.
 
 ## Ubezpieczenia
 
@@ -81,7 +99,13 @@ EBC prowadzi politykę pieniężną strefy euro. EBA, ESMA i EIOPA nadzorują ry
 
 > Zapamiętaj: NIK – państwo; RIO – samorządy.
 
+> Uwaga: UFG płaci, gdy sprawca **nie ma OC** lub jest **nieznany**; Rzecznik Finansowy pomaga klientom w sporach z instytucjami finansowymi.
+
 # finanse-instytucja-4 | Banki rozwoju, nadzór i wierzyciele
+
+## Banki, które finansują całe kraje
+
+Nie tylko firmy i ludzie biorą kredyty – państwa też. Niektóre banki istnieją po to, żeby finansować rozwój regionów, a nie zarabiać jak najwięcej.
 
 ## Banki rozwoju
 
@@ -103,7 +127,15 @@ EBC prowadzi politykę pieniężną strefy euro. EBA, ESMA i EIOPA nadzorują ry
 
 Pojawiały się też **[[Międzynarodowe instytucje ds. migracji|instytucje ds. migracji]]**: IOM, UNHCR, Frontex (z siedzibą w Warszawie).
 
+> Uwaga: EBOiR (Londyn, 1991) wspiera transformację w Europie Środkowo-Wschodniej; EBI (Luksemburg) to bank **Unii Europejskiej**.
+
+> Zapamiętaj: Klub Paryski – wierzyciele rządowi; Klub Londyński – banki komercyjne.
+
 # finanse-instytucja-5 | Rozliczenia, rolnicy i Europa
+
+## Jak przelew trafia z banku do banku?
+
+Wysyłasz koledze 50 zł z innego banku. Pieniądze nie podróżują w kopertach – przechodzą przez system rozliczeń, który obsługuje miliony przelewów dziennie.
 
 ## Rozliczenia
 
@@ -127,7 +159,13 @@ Pojawiały się też **[[Międzynarodowe instytucje ds. migracji|instytucje ds. 
 
 > Uwaga: NBP należy do ESBC, ale nie do Eurosystemu – bo Polska nie ma euro.
 
+> Zapamiętaj: KIR – Elixir i Express Elixir; NBP – SORBNET (duże płatności).
+
 # finanse-instytucja-6 | Globalni strażnicy
+
+## Strażnicy globalnych finansów
+
+Kryzys w jednym kraju potrafi w kilka dni przenieść się na drugi koniec świata. Dlatego są instytucje, które oceniają ryzyko, pożyczają w kryzysie i pilnują stabilności całego systemu.
 
 ## Fed
 
@@ -152,3 +190,5 @@ Pojawiały się też **[[Międzynarodowe instytucje ds. migracji|instytucje ds. 
 **[[Rada Stabilności Finansowej (FSB)|Rada Stabilności Finansowej]]** (siedziba w Bazylei przy BIS) koordynuje regulacje na świecie. Powstała w kwietniu 2009 roku na szczycie G20 w Londynie z przekształcenia Forum Stabilności Finansowej, utworzonego w 1999 roku po kryzysie azjatyckim.
 
 > Zapamiętaj: FSF (1999) → FSB (2009); ESRB – od 2010 r.
+
+> Uwaga: agencje ratingowe (S&P, Moody’s, Fitch) **oceniają** ryzyko, ale nie pożyczają pieniędzy – to robi np. MFW.

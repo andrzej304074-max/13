@@ -30,6 +30,10 @@ Historia rynków to historia baniek: tulipany w XVII-wiecznej Holandii, spółki
 
 # fin-inwestycje-1 | Fundusze i zabezpieczenie
 
+## Oszczędzać razem z innymi
+
+Masz 500 zł i chcesz zainwestować w akcje stu spółek. Sam nie dasz rady. Fundusz zbiera pieniądze od tysięcy ludzi, kupuje szeroki portfel i daje ci jego mały kawałek.
+
 ## Fundusz inwestycyjny
 
 **[[Fundusz inwestycyjny|Fundusz inwestycyjny]]** to wspólna kasa wielu inwestorów, zarządzana przez TFI pod nadzorem KNF. Koszty: opłata manipulacyjna przy zakupie i roczna opłata za zarządzanie.
@@ -56,11 +60,18 @@ Historia rynków to historia baniek: tulipany w XVII-wiecznej Holandii, spółki
 
 **[[Fundusze private equity i venture capital|Private equity]]** inwestuje w spółki nienotowane, żeby je rozwinąć i sprzedać z zyskiem. **Venture capital** to jego odmiana dla młodych firm z dużym potencjałem.
 
+> Uwaga: w **FIO** jednostki odkupuje sam fundusz na żądanie; w **FIZ** certyfikaty sprzedaje się na giełdzie albo w określonych terminach.
+
+> Zapamiętaj: fundusz zarządza TFI pod nadzorem KNF; koszty – opłata manipulacyjna i za zarządzanie.
+
 ## Na marginesie
 
 Pojawiały się też: [[Wycena zapasów (rozchodu)|wycena zapasów]] (FIFO, LIFO), [[Licencja i know-how|licencja i know-how]], [[Haircut (redukcja wartości)|haircut]] i [[System emerytalny w Polsce (od 1999 r.)|system emerytalny]].
-
 # fin-inwestycje-2 | Nieruchomości, startupy i derywaty
+
+## Biurowiec za 100 zł
+
+Nie stać cię na biurowiec, ale możesz kupić akcje spółki, która ma ich kilkadziesiąt. Takie instrumenty otwierają drogę do inwestycji, które kiedyś były tylko dla bogatych.
 
 ## REIT
 
@@ -84,11 +95,16 @@ Pojawiały się też: [[Wycena zapasów (rozchodu)|wycena zapasów]] (FIFO, LIFO
 
 **[[Dźwignia operacyjna i finansowa (DOL, DFL)|Dźwignia operacyjna]]** – koszty stałe sprawiają, że zysk reaguje silniej niż sprzedaż. **Finansowa** – dług sprawia, że ROE reaguje silniej niż zysk operacyjny.
 
+> Uwaga: private equity kupuje udziały w **niepublicznych** firmach; hedge fund stosuje agresywne strategie na rynkach publicznych – to różne fundusze.
+
 ## Na marginesie
 
 Pojawiały się też: [[Umowy w kodeksie cywilnym|umowy w kodeksie cywilnym]], [[Problem pryncypała i agenta (problem agencji)|problem agencji]] (zarządzający funduszem a inwestorzy) i [[Marka (brand) i rebranding|marka]].
-
 # fin-inwestycje-3 | Opcje, swapy i ich wycena
+
+## Prawo, nie obowiązek
+
+Kupujesz za 5 zł prawo, żeby za miesiąc kupić akcję po 100 zł. Jeśli akcja wzrośnie do 120 zł – skorzystasz i zarobisz. Jeśli spadnie – nie musisz kupować, tracisz tylko 5 zł. To opcja.
 
 ## Strategie opcyjne
 
@@ -110,13 +126,18 @@ Pojawiały się też: [[Umowy w kodeksie cywilnym|umowy w kodeksie cywilnym]], [
 
 **[[FRA|FRA]]** – kontrakt na przyszłą stopę procentową. **[[CDS (credit default swap)|CDS]]** – ubezpieczenie od niewypłacalności dłużnika. **[[Opcje binarne|Opcje binarne]]** – wszystko albo nic; zakazane dla klientów detalicznych w UE.
 
+> Uwaga: nabywca opcji **ma prawo**, wystawca – **obowiązek**; dlatego nabywca płaci premię, a ryzyko wystawcy może być nieograniczone.
+
+> Zapamiętaj: call – prawo kupna; put – prawo sprzedaży; swap – wymiana przepływów (np. stała stopa na zmienną).
+
 ## Na marginesie
 
 Pojawiały się też: [[Q Tobina|q Tobina]], [[Modigliani Franco, Miller Merton|Modigliani i Miller]] oraz [[Phelps Edmund|Edmund Phelps]].
-
 # fin-inwestycje-3-cz2 | Władza i model ryzyka
 
-Krótki rozdział o dwóch pojęciach z różnych dziedzin, które pojawiają się w kontekście inwestowania.
+## Ryzyko i władza w finansach
+
+Ile dodatkowego zysku należy się za ryzyko? I kto naprawdę decyduje w instytucjach finansowych? Na te pytania odpowiadają dwa pojęcia z różnych dziedzin.
 
 ## Sharpe i CAPM
 
@@ -137,7 +158,13 @@ Zarządzający funduszem zwykle ma władzę ekspercką – inwestorzy powierzaj�
 
 > Zapamiętaj: French i Raven – nagradzania, przymusu, prawomocna, ekspercka, odniesienia.
 
+> Uwaga: wskaźnik Sharpe’a dzieli nadwyżkę zwrotu przez **całkowite** ryzyko (odchylenie standardowe), a nie przez betę.
+
 # fin-inwestycje-4 | Ryzyko i jak je rozłożyć
+
+## Nie wkładaj wszystkich jajek do jednego koszyka
+
+To stare przysłowie ma swoją matematykę. Harry Markowitz pokazał, że łącząc różne inwestycje, można zmniejszyć ryzyko bez obniżania oczekiwanego zysku.
 
 ## CFD
 
@@ -169,11 +196,18 @@ $ E(R) = Rf + β · [E(Rm) − Rf]
 
 Beta > 1 – akcja waha się mocniej niż rynek; beta < 1 – słabiej.
 
+> Uwaga: dywersyfikacja usuwa ryzyko **specyficzne** (jednej spółki), ale nie **systematyczne** (całego rynku).
+
+> Zapamiętaj: Markowitz – teoria portfela; CAPM – zwrot = stopa wolna od ryzyka + beta × premia rynkowa.
+
 ## Na marginesie
 
 Pojawiały się też: [[Hipoteka|hipoteka]], [[Endogeniczne teorie wzrostu|endogeniczne teorie wzrostu]] i [[Model, teoria i prawo ekonomiczne|model, teoria i prawo ekonomiczne]].
-
 # fin-inwestycje-5 | Bańki, maklerzy i finansowanie należności
+
+## Kiedy ceny odrywają się od rzeczywistości
+
+W 1637 roku cebulka tulipana kosztowała tyle co dom. W 2000 roku firmy internetowe bez zysków były warte miliardy. Bańki powtarzają się w historii – i zawsze kończą się podobnie.
 
 ## CAPM
 
@@ -205,9 +239,15 @@ W handlu z zagranicą używa się **[[Akredytywa dokumentowa|akredytywy]]**, **[
 
 **[[Otwarte fundusze emerytalne (OFE)|OFE]]** – fundusze II filaru. W 2014 roku 51,5% ich aktywów przeniesiono do ZUS.
 
+> Uwaga: beta = 1 – akcja waha się jak rynek; beta > 1 – mocniej; beta < 1 – słabiej. Beta nie mierzy ryzyka specyficznego.
+
+> Zapamiętaj: faktoring – sprzedaż należności za gotówkę od ręki.
+
 # fin-inwestycje-5-cz2 | Psychologia inwestora
 
-Rozdział o tym, dlaczego inwestorzy podejmują nieracjonalne decyzje.
+## Dlaczego inwestorzy kupują drogo i sprzedają tanio?
+
+W teorii inwestor jest racjonalny. W praktyce kupuje, gdy wszyscy kupują, i sprzedaje w panice. Psychologowie pokazali, że to nie przypadek, tylko schematy myślenia.
 
 ## Kahneman i Tversky
 
@@ -226,13 +266,18 @@ Inwestor, który kupił akcję po 100 zł, nie chce jej sprzedać po 80 zł – 
 
 Model racjonalnego **[[Podejmowanie decyzji|podejmowania decyzji]]** zakłada: zdefiniuj problem, znajdź alternatywy, oceń je, wybierz najlepszą. Psychologia pokazuje, że w praktyce robimy skróty.
 
+> Przykład: ta sama inwestycja opisana jako „90% szans na zysk” albo „10% szans na stratę” – większość ludzi wybiera pierwszą wersję, choć to to samo. To efekt ramowania.
+
 ## Na marginesie
 
 Pojawiały się też: [[Monopson|monopson]], [[Teoria optymalnego obszaru walutowego|teoria optymalnego obszaru walutowego]] i [[Progi znacznych pakietów akcji (spółki publiczne)|progi znacznych pakietów akcji]] – psychologia stada sprawia, że rynek reaguje na każde ujawnienie dużego inwestora.
 
 > Zapamiętaj: Kahneman – Nobel 2002, teoria perspektywy; Thaler – Nobel 2017, księgowość mentalna i nudge.
-
 # fin-inwestycje-6 | Leasing, warranty i swapy
+
+## Używać zamiast kupować
+
+Firma potrzebuje samochodów dostawczych, ale nie chce wydać od razu miliona złotych. Leasing pozwala z nich korzystać za miesięczne raty – a czasem na końcu przejąć na własność.
 
 ## Leasing
 
@@ -262,11 +307,18 @@ $ S = (Rp − Rf) / σp
 
 > Przykład: zarobiłeś 2 000 zł w subfunduszu akcyjnym i przenosisz pieniądze do obligacyjnego w tym samym parasolu. Podatku nie płacisz teraz – dopiero gdy wypłacisz pieniądze z parasola.
 
+> Uwaga: w leasingu **finansowym** amortyzuje korzystający, w **operacyjnym** – finansujący (leasingodawca).
+
+> Zapamiętaj: warrant – papier dający prawo do kupna akcji po ustalonej cenie; swap procentowy – zamiana stopy stałej na zmienną.
+
 ## Na marginesie
 
 Pojawiały się też: [[Kredyt kupiecki (handlowy)|kredyt kupiecki]], [[Dumping|dumping]], [[Strategie wobec produktu w schyłku|strategie wobec produktu w schyłku]], [[Ustawa o kredycie konsumenckim (2011)|ustawa o kredycie konsumenckim]] i [[Środki trwałe|środki trwałe]].
-
 # fin-inwestycje-7 | Fundusze publiczne
+
+## Pieniądze poza budżetem
+
+Nie wszystkie publiczne pieniądze płyną przez budżet państwa. Część trafia do funduszy celowych, które finansują konkretne zadania – od zasiłków dla bezrobotnych po budowę dróg.
 
 ## Fundusze celowe
 
@@ -289,3 +341,5 @@ Pojawiały się też: [[Kredyt kupiecki (handlowy)|kredyt kupiecki]], [[Dumping|
 **[[Urlop wypoczynkowy i czas pracy|Urlop wypoczynkowy]]** to 20 dni przy stażu poniżej 10 lat i 26 dni przy co najmniej 10 latach (wliczając naukę). Czas pracy – do 8 godzin na dobę i przeciętnie 40 godzin w tygodniu.
 
 > Zapamiętaj: OFE – w 2014 r. 51,5% aktywów do ZUS; suwak – 10 lat przed wiekiem emerytalnym.
+
+> Uwaga: Fundusz Pracy finansuje m.in. zasiłki i aktywizację bezrobotnych; FGŚP – wypłaty pracownikom, gdy pracodawca jest **niewypłacalny**.

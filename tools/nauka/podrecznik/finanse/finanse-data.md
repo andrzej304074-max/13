@@ -24,6 +24,10 @@ Euro (1999, gotówka 2002), KNF (2006), NewConnect i kryzys subprime (2007), bit
 
 # finanse-data-1 | Od Kopernika do NBP
 
+## Pięć wieków pieniądza
+
+Historia pieniądza i banków zaczyna się w Polsce od Kopernika, a kończy na NBP. Po drodze powstały pierwsze banki centralne i zasady, którymi kierują się do dziś.
+
 ## 1526 – traktat o monecie
 
 **[[1526 – „Monetae cudendae ratio” M. Kopernika|Kopernik]]** w traktacie „Monetae cudendae ratio” opisał, jak pieniądz gorszy wypiera lepszy. Pisał go dla władz Prus Królewskich, zaniepokojony psuciem monety.
@@ -48,7 +52,15 @@ Euro (1999, gotówka 2002), KNF (2006), NewConnect i kryzys subprime (2007), bit
 
 **[[1945 – Narodowy Bank Polski|NBP]]** utworzono dekretem z 15 stycznia 1945 roku.
 
+> Uwaga: prawo Kopernika–Greshama: pieniądz **gorszy** wypiera **lepszy** – ludzie płacą gorszym, a lepszy chowają.
+
+> Zapamiętaj: 1526 Kopernik; 1694 Bank Anglii; 1873 „Lombard Street”; 1913 Fed; 1924 złoty Grabskiego; 1945 NBP.
+
 # finanse-data-2 | Od celu inflacyjnego do KNF
+
+## Nowy system finansowy Polski
+
+Po 1989 roku Polska zbudowała rynek finansowy od nowa: giełdę, indeksy, nadzór. W tym samym czasie świat uczył się nowej strategii banków centralnych – celu inflacyjnego.
 
 ## 1990 – cel inflacyjny
 
@@ -74,7 +86,15 @@ Euro (1999, gotówka 2002), KNF (2006), NewConnect i kryzys subprime (2007), bit
 
 **[[2006 – Komisja Nadzoru Finansowego|KNF]]** zastąpiła Komisję Papierów Wartościowych i Giełd oraz Komisję Nadzoru Ubezpieczeń; od 2008 roku przejęła też nadzór bankowy.
 
+> Uwaga: GPW wznowiła działalność w **1991 r.** (pierwsza sesja 16 kwietnia), a WIG20 wystartował w **1994 r.**
+
+> Zapamiętaj: 1990 Nowa Zelandia – cel inflacyjny; 1991 GPW; 1999 reformy (emerytury, samorządy); 2002 gotówka euro; 2006 KNF.
+
 # finanse-data-3 | Kryzys i nowe rynki
+
+## Kryzys i jego skutki
+
+Od 2007 do 2018 roku finanse świata przeszły kryzys, ratowanie banków i nową regulację. W Polsce w tym czasie powstały nowe rynki i zmieniły się zasady.
 
 ## 2007
 
@@ -100,6 +120,8 @@ Euro (1999, gotówka 2002), KNF (2006), NewConnect i kryzys subprime (2007), bit
 
 **[[2018 – Konstytucja biznesu i RODO|W 2018 roku]]** weszło Prawo przedsiębiorców („Konstytucja biznesu”, 30 kwietnia), RODO (25 maja) i Polska Strefa Inwestycji.
 
+> Uwaga: NewConnect (2007) to rynek **alternatywny** GPW dla małych spółek, a nie rynek regulowany.
+
 # finanse-data-4 | Bańki dawne i spółki nowe
 
 ## 2021 – P.S.A.
@@ -119,3 +141,5 @@ Euro (1999, gotówka 2002), KNF (2006), NewConnect i kryzys subprime (2007), bit
 **[[1844 – ustawa bankowa R. Peela (Bank Charter Act)|Bank Charter Act]]** – zwycięstwo szkoły obiegowej. Emisja banknotów Banku Anglii ponad ustalony limit wymagała pełnego pokrycia w złocie. Bank podzielono na departament emisyjny i bankowy. W kryzysach 1847, 1857 i 1866 roku przepisy zawieszano – bo sztywne reguły nie pozwalały ratować systemu.
 
 > Zapamiętaj: kolejność baniek – tulipany (1637), Missisipi i Morza Południowe (1720), internet (2000), nieruchomości (2008).
+
+> Uwaga: ustawa Peela (1844) dała Bankowi Anglii monopol emisyjny i powiązała emisję banknotów z rezerwą złota – to nie była reforma giełdy.

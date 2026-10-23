@@ -19,6 +19,10 @@ Finanse to dziedzina, w której liczby decydują o wszystkim. Ile odsetek przyni
 
 # finanse-wzor-1 | Pieniądz w liczbach
 
+## Pieniądz w kilku wzorach
+
+Ile pieniądza jest w gospodarce? Ile mogą stworzyć banki? Ile naprawdę zarabiasz na lokacie przy inflacji? Każde z tych pytań ma prosty wzór.
+
 ## Baza monetarna
 
 **[[Baza monetarna (M0, pieniądz wielkiej mocy)|Baza monetarna]]**:
@@ -54,7 +58,15 @@ $ M* = √(Y · F / (2i))
 
 > Przykład: Y = 36 000 zł rocznie, F = 5 zł, i = 4%. M* = √(36 000 · 5 / 0,08) = √2 250 000 = 1 500 zł.
 
+> Uwaga: stopa realna ≈ nominalna − inflacja to przybliżenie; dokładnie: (1 + i) / (1 + π) − 1.
+
+> Zapamiętaj: baza monetarna = gotówka + rezerwy banków; mnożnik = 1 / stopa rezerwy (najprostszy model).
+
 # finanse-wzor-2 | Monetyzacja, podaż pieniądza i akcje
+
+## Monetyzacja i giełda w liczbach
+
+Ile pieniądza przypada na złotówkę PKB? Ile wart jest papier, który nie płaci odsetek? Ile razy rynek płaci za roczny zysk spółki?
 
 ## Monetyzacja
 
@@ -94,7 +106,13 @@ $ wskaźnik wypłaty = dywidenda / zysk netto
 
 > Przykład: cena 84 zł, EPS 7 zł → P/E = 12.
 
+> Uwaga: obligacja zerokuponowa nie płaci odsetek, ale kupujesz ją **poniżej** nominału – zysk to różnica między ceną a wykupem.
+
 # finanse-wzor-3 | Wycena, ryzyko i czas
+
+## Wycena akcji, ryzyko i czas
+
+Inwestor pyta: czy ta akcja jest tania? Jaki zwrot należy mi się za ryzyko? Ile będą warte moje pieniądze za kilka lat? Trzy grupy wzorów, trzy odpowiedzi.
 
 ## P/BV i EPS
 
@@ -120,7 +138,15 @@ $ kapitalizacja m razy w roku: FV = PV · (1 + r / m)ᵐⁿ
 
 > Przykład: 5 000 zł na 2 lata, 6% rocznie, kapitalizacja kwartalna. FV = 5 000 · 1,015⁸ ≈ 5 000 · 1,1265 ≈ 5 632 zł. Przy procencie prostym: 5 000 · 1,12 = 5 600 zł.
 
+> Uwaga: w CAPM premia za ryzyko rynkowe to (Rm − Rf), a nie samo Rm.
+
+> Zapamiętaj: EPS = zysk / liczba akcji; P/BV = cena / wartość księgowa na akcję; CAPM: E(R) = Rf + β(Rm − Rf).
+
 # finanse-wzor-4 | Renty, Sharpe, podatki i Fisher
+
+## Renta wieczna i porównywanie inwestycji
+
+Ile jest wart papier, który płaci 100 zł rocznie na zawsze? Która inwestycja lepiej wynagradza ryzyko? Ile zostaje z zarobku po podatku? To pytania tego rozdziału.
 
 ## Perpetuita
 
@@ -152,9 +178,15 @@ $ kapitalizacja m razy w roku: FV = PV · (1 + r / m)ᵐⁿ
 
 > Przykład: r = 2%, π = 4%. 1,02 · 1,04 = 1,0608, więc i = 6,08%.
 
+> Uwaga: perpetuita PV = C / r ma **skończoną** wartość, choć płatności trwają wiecznie – bo dalekie płatności są warte prawie zero.
+
+> Zapamiętaj: perpetuita: PV = C / r; Sharpe = (R − Rf) / σ; równanie Fishera: i ≈ r + π.
+
 # finanse-wzor-5 | Ściąga ze wzorów finansowych
 
-Ten rozdział zbiera najważniejsze wzory w jednym miejscu.
+## Ściąga przed testem
+
+Na olimpiadzie nie ma czasu na wyprowadzanie wzorów. Ten rozdział zbiera najważniejsze w jednym miejscu – warto go przejrzeć dzień przed zawodami.
 
 ## Pieniądz
 
@@ -181,3 +213,5 @@ $ YTM = (N / P)^(1/n) − 1
 **[[Wskaźniki giełdowe – wzory|Wskaźniki giełdowe]]**: EPS = zysk netto / liczba akcji; P/E = cena / EPS; P/BV = cena / wartość księgowa na akcję; DPS = dywidenda / liczba akcji; stopa dywidendy = DPS / cena.
 
 > Zapamiętaj: wszystkie wskaźniki „na akcję” liczysz, dzieląc przez liczbę akcji – nie mieszaj kwot całkowitych z kwotami na akcję.
+
+> Uwaga: pilnuj jednostek: procenty zamieniaj na ułamki (5% = 0,05), a okresy – na lata, jeśli stopa jest roczna.

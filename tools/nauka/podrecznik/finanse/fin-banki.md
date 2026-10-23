@@ -31,6 +31,10 @@ Kupując mieszkanie na kredyt, porównujesz RRSO, wybierasz raty równe lub male
 
 # fin-banki-1 | Bank banków i rynek międzybankowy
 
+## Bank, w którym nie założysz konta
+
+W NBP nie otworzysz rachunku ani nie weźmiesz kredytu. Klientami banku centralnego są banki i państwo – a jego zadaniem jest pilnowanie pieniądza dla wszystkich.
+
 ## Bank centralny
 
 **[[Bank centralny|Bank centralny]]** emituje pieniądz, prowadzi politykę pieniężną, jest bankiem banków (przechowuje ich rezerwy, udziela kredytu refinansowego) i bankiem państwa. Zarządza rezerwami walutowymi. Jednym z najstarszych jest **[[Bank Anglii|Bank Anglii]]** – działa od 1694 roku.
@@ -55,13 +59,20 @@ Na **[[Rynek międzybankowy|rynku międzybankowym]]** banki pożyczają sobie pi
 
 **[[Punkt procentowy a procent|Punkt procentowy]]**: wzrost WIBOR-u z 2% do 3% to wzrost o 1 punkt procentowy (100 punktów bazowych), ale o 50%.
 
+> Przykład: bank komercyjny ma nagle za mało gotówki, bo klienci masowo wypłacają pieniądze. Nie jest niewypłacalny – ma dobre kredyty – ale potrzebuje płynności. Pożycza od banku centralnego jako pożyczkodawcy ostatniej instancji.
+
+> Uwaga: bank centralny to **bank banków i państwa**, a nie bank dla ludzi i firm.
+
+> Zapamiętaj: funkcje banku centralnego: emisyjna, bank banków, bank państwa, polityka pieniężna.
+
 ## Na marginesie
 
 Pojawiały się też: [[Outsourcing|outsourcing]] (banki zlecają np. IT firmom zewnętrznym) i [[Polityka rodzinna i mieszkaniowa; wykluczenie społeczne|polityka mieszkaniowa]] (dopłaty do kredytów).
-
 # fin-banki-1-cz2 | Narzędzia banku centralnego i ochrona depozytów
 
-Rozdział zbiorczy o tym, jak bank centralny i instytucje państwa dbają o system bankowy.
+## Co się stanie z pieniędzmi, gdy bank upadnie?
+
+Ten lęk ma każdy, kto trzyma oszczędności w banku. Dlatego istnieją instytucje, które gwarantują depozyty i pilnują, żeby dłużnicy nie oszukiwali banków.
 
 ## Narzędzia
 
@@ -79,15 +90,20 @@ Banki wiedzą mniej o klientach niż klienci o sobie – to **[[Asymetria inform
 
 **[[Bagehot Walter|Walter Bagehot]]** – reguła pożyczkodawcy ostatniej instancji. **[[Hayek Friedrich von|Friedrich von Hayek]]** proponował radykalną alternatywę: denacjonalizację pieniądza – niech prywatne banki emitują konkurujące waluty.
 
+> Przykład: masz 300 000 zł na lokacie w jednym banku, który upada. BFG zwróci ci równowartość 100 000 euro – reszta trafi do masy upadłościowej i może wrócić później lub wcale.
+
+> Uwaga: BFG chroni **depozyty**, ale nie inwestycje w fundusze, akcje czy polisolokaty.
+
 ## Na marginesie
 
 Pojawiały się też [[Unia Gospodarcza i Walutowa (UGW)|UGW]] i [[Wykresy w ekonomii: nachylenie i układ współrzędnych|nachylenie wykresów]] – przydatne przy krzywej dochodowości.
 
 > Zapamiętaj: BFG – 100 000 euro; od 2016 r. także przymusowa restrukturyzacja.
-
 # fin-banki-1-cz3 | Pieniądz, ceny i prawo bankowe
 
-Ten rozdział zbiera teorię pieniądza i prawo, w którym działają banki.
+## Prawo, w którym żyją banki
+
+Bank nie może robić wszystkiego, co chce. Prawo bankowe określa, kto może prowadzić bank, czego wolno mu robić i jak musi dbać o pieniądze klientów.
 
 ## Pieniądz w długim okresie
 
@@ -107,7 +123,13 @@ Banki działają w ramach kilku ustaw:
 
 > Zapamiętaj: cel NBP – stabilny poziom cen; wspieranie polityki rządu – tylko, gdy nie koliduje z celem podstawowym.
 
+> Uwaga: korytarz stóp to granice **dla rynku międzybankowego**, a nie dla oprocentowania kredytów dla ludzi.
+
 # fin-banki-2 | Rodzaje banków i ich bilans
+
+## Jeden bank czy wiele rodzajów banków?
+
+Bank w dużym mieście, bank spółdzielczy na wsi, bank hipoteczny, SKOK – wszystkie przyjmują lub pożyczają pieniądze, ale różnią się właścicielami, klientami i zasadami.
 
 ## Banki lokalne
 
@@ -137,7 +159,15 @@ Banki działają w ramach kilku ustaw:
 
 Wszystkie banki działają w otoczeniu, którego kotwicą jest **[[Cel inflacyjny NBP|cel inflacyjny NBP]]** – 2,5% ± 1 p.p.
 
+> Przykład: bank przyjął 100 mln zł depozytów (pasywa) i udzielił 80 mln zł kredytów (aktywa). Depozyty to jego zobowiązania wobec klientów, kredyty – jego majątek.
+
+> Zapamiętaj: operacje bierne – zbieranie pieniędzy (depozyty); czynne – ich wykorzystanie (kredyty); dla banku depozyt to pasywo, kredyt – aktywo.
+
 # fin-banki-3 | Bezpieczeństwo banków
+
+## Dlaczego bank musi mieć własne pieniądze?
+
+Bank pożycza głównie cudze pieniądze – depozyty. Jeśli część kredytów nie zostanie spłacona, ktoś musi pokryć straty. Najpierw robi to kapitał właścicieli banku – i dlatego musi go być wystarczająco dużo.
 
 ## Kapitał na czarną godzinę
 
@@ -165,11 +195,18 @@ Minimum to 8%, plus bufory. Aktywa ważone ryzykiem: kredyt dla państwa ma nisk
 
 **[[Zbyt duży, by upaść (too big to fail)|Too big to fail]]**: bank tak duży i powiązany, że jego upadek zagroziłby całemu systemowi. Państwo musi go ratować – a bank, wiedząc o tym, podejmuje większe ryzyko. To pokusa nadużycia.
 
+> Uwaga: współczynnik wypłacalności dzieli kapitał przez aktywa **ważone ryzykiem**, a nie przez wszystkie aktywa po równo.
+
+> Zapamiętaj: Bazylea I, II, III – standardy kapitałowe; too big to fail – pokusa nadużycia dużych banków.
+
 ## Na marginesie
 
 Pojawiał się też [[Dzień trzech wiedźm|dzień trzech wiedźm]] – trzeci piątek ostatniego miesiąca kwartału, gdy wygasają kontrakty terminowe i opcje.
-
 # fin-banki-4 | Kryzys 2008 i płatności
+
+## Rok, w którym banki przestały sobie ufać
+
+We wrześniu 2008 roku upadł Lehman Brothers. Nagle żaden bank nie wiedział, kto ma w bilansie toksyczne kredyty. Banki przestały sobie pożyczać – i kryzys finansowy zamienił się w gospodarczy.
 
 ## Zakleszczenie kredytowe
 
@@ -199,11 +236,20 @@ W październiku 2008 roku NBP ogłosił **[[Pakiet zaufania (NBP, 2008)|Pakiet z
 
 Udzielając kredytu, bank ocenia **[[Ryzyko, niepewność i wartość oczekiwana|wartość oczekiwaną]]** spłat. Efektywność portfela inwestycyjnego mierzy **[[Wskaźnik Sharpe’a|wskaźnik Sharpe’a]]**.
 
+> Przykład: bank udziela kredytu na dom osobie bez stałych dochodów, a potem sprzedaje ten kredyt w pakiecie innym inwestorom. Gdy ceny domów spadają, a dłużnicy przestają płacić, straty pojawiają się u inwestorów na całym świecie – tak rozlał się kryzys subprime.
+
+> Uwaga: credit crunch to ograniczenie kredytu **z powodu strachu i braku zaufania**, nie z powodu wysokich stóp.
+
+> Zapamiętaj: Lehman Brothers – 15 września 2008 r.; subprime – kredyty dla klientów o niskiej wiarygodności.
+
 ## Na marginesie
 
 Pojawiały się też: [[Mises Ludwig von|Ludwig von Mises]] i [[Prawo malejącej użyteczności krańcowej (I prawo Gossena)|I prawo Gossena]].
-
 # fin-banki-5 | Kredyt w praktyce
+
+## Dwa kredyty o tym samym oprocentowaniu – który tańszy?
+
+Bank A oferuje 8%, bank B też 8%. Ale A pobiera 5% prowizji, a B każe kupić ubezpieczenie. Który kredyt jest tańszy? Odpowiedź daje jedna liczba.
 
 ## RRSO
 
@@ -237,11 +283,18 @@ $ odsetki maksymalne = 2 · (stopa referencyjna NBP + 3,5 p.p.)
 
 **[[Lokata antybelkowa|Lokata antybelkowa]]**: lokaty jednodniowe z dzienną kapitalizacją, przy których odsetki były tak małe, że podatek zaokrąglał się do zera. Od 1 kwietnia 2012 roku przepisy to zlikwidowały.
 
+> Uwaga: RRSO obejmuje **wszystkie koszty** kredytu, a oprocentowanie nominalne – tylko odsetki. Porównuj RRSO.
+
+> Zapamiętaj: raty równe – stała rata, na początku głównie odsetki; malejące – stała część kapitału, rata spada z czasem.
+
 ## Na marginesie
 
 Pojawiał się też [[Fundusz inwestycyjny|fundusz inwestycyjny]].
-
 # fin-banki-6 | Bank i ubezpieczyciel pod jednym dachem
+
+## Bank, który sprzedaje ubezpieczenia
+
+Idziesz po lokatę, a wychodzisz z polisą. W bankach od lat sprzedaje się produkty ubezpieczeniowe – czasem z pożytkiem dla klienta, a czasem nie.
 
 ## Polisolokata
 
@@ -267,13 +320,20 @@ Pojawiał się też [[Fundusz inwestycyjny|fundusz inwestycyjny]].
 
 **[[Produkty bankowe dla klientów|Typowe produkty bankowe]]**: ROR, lokaty, debet, kredyty gotówkowe, ratalne, hipoteczne, karty kredytowe.
 
+> Przykład: klient wpłaca 10 000 zł na polisolokatę na 2 lata. Gdy chce wypłacić pieniądze po roku, płaci opłatę likwidacyjną – np. 20% – i dostaje mniej, niż wpłacił. Na zwykłej lokacie straciłby tylko odsetki.
+
+> Uwaga: polisolokata to **ubezpieczenie**, nie lokata – nie chroni jej BFG.
+
 ## Na marginesie
 
 Pojawiało się też [[Zarządzanie zasobami ludzkimi (HRM)|zarządzanie zasobami ludzkimi]].
 
 > Zapamiętaj: nostro – „nasz u was”; loro – „wasz u nas”.
-
 # fin-banki-7 | Kredyty, które warto znać
+
+## Kredyt, który rósł zamiast maleć
+
+Wielu Polaków wzięło kredyt na mieszkanie we frankach szwajcarskich, bo był tańszy. Po latach spłacania mieli do oddania więcej niż na początku. Jak to możliwe?
 
 ## Frankowicze
 
@@ -299,13 +359,20 @@ KNF wydaje **[[Rekomendacja S (KNF)|Rekomendację S]]** – zalecenia dla bankó
 
 Projekty w UE finansuje **[[Europejski Bank Inwestycyjny (EBI)|EBI]]**, a standardy bankowe ustala Komitet Bazylejski przy **[[Bank Rozrachunków Międzynarodowych (BIS)|BIS]]**.
 
+> Uwaga: kredyt **indeksowany** do franka wypłaca się w złotych, ale jego saldo przelicza się po kursie franka – ryzyko kursowe ponosi kredytobiorca.
+
+> Zapamiętaj: 15 stycznia 2015 r. – Szwajcarzy uwolnili kurs franka, który gwałtownie się umocnił.
+
 ## Na marginesie
 
 Pojawiał się też [[House Robert|Robert House]] – teoretyk przywództwa.
-
 # fin-banki-7-cz2 | Klasycy zarządzania w bankowości
 
 Banki to także duże organizacje – z tysiącami pracowników, procedurami i hierarchią. Ten krótki rozdział przypomina klasyków zarządzania, których idee wciąż widać w bankach.
+
+## Bank to też fabryka procedur
+
+W banku pracują tysiące ludzi, a każdy wniosek kredytowy przechodzi te same etapy. Idee klasyków zarządzania – standaryzacja i troska o ludzi – widać tu na każdym kroku.
 
 ## Standaryzacja
 
@@ -319,7 +386,13 @@ Banki to także duże organizacje – z tysiącami pracowników, procedurami i h
 
 > Zapamiętaj: Taylor – standaryzacja; Mayo – relacje; Follett – integracja interesów.
 
+> Uwaga: standaryzacja (Taylor) zwiększa sprawność, ale bez uwagi na ludzi (Mayo) spada motywacja – banki muszą łączyć obie rzeczy.
+
 # fin-banki-8 | Czynności bankowe i system płatności
+
+## Co wolno tylko bankom?
+
+Kantor może wymieniać pieniądze, firma pożyczkowa – pożyczać. Ale przyjmować depozyty i udzielać kredytów może tylko bank. Prawo wyraźnie wymienia czynności zastrzeżone dla banków.
 
 ## Co wolno tylko bankom
 
@@ -350,6 +423,12 @@ Banki to także duże organizacje – z tysiącami pracowników, procedurami i h
 ## Ryzyko firmy
 
 Firmy handlujące z zagranicą narażone są na **[[Ryzyko walutowe i stopy procentowej w przedsiębiorstwie|ryzyko walutowe i stopy procentowej]]**.
+
+> Przykład: przelew w systemie Express Elixir dociera w kilka sekund, zwykły Elixir – w ciągu dnia roboczego (sesje rozliczeniowe), a duże płatności między bankami idą przez SORBNET.
+
+> Uwaga: czynności bankowe **sensu stricto** (depozyty, kredyty) może wykonywać tylko bank; inne (np. poręczenia) – także inne podmioty.
+
+> Zapamiętaj: art. 5 Prawa bankowego – katalog czynności bankowych.
 
 ## Na marginesie
 

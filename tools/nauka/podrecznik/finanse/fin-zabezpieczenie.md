@@ -63,13 +63,18 @@ Składki co roku się **[[Indeksacja|indeksuje]]** (waloryzuje), żeby nie traci
 
 > Przykład: ostatnia pensja 6 000 zł, pierwsza emerytura 2 700 zł. Stopa zastąpienia = 45%.
 
+> Uwaga: stopa **zastąpienia** to relacja pierwszej emerytury do ostatniego wynagrodzenia – w systemie zdefiniowanej składki ma ona spadać w miarę starzenia się społeczeństwa.
+
+> Zapamiętaj: trzy filary: I – ZUS, II – OFE (dziś w ograniczonej roli), III – dobrowolne (IKE, IKZE, PPE, PPK).
+
 ## Na marginesie
 
 Pojawiały się też: [[Polityka inwestycyjna i prowzrostowa|polityka inwestycyjna]], [[Krzywa możliwości produkcyjnych (granica możliwości produkcyjnych)|krzywa możliwości produkcyjnych]] i [[Popyt na pracę|popyt na pracę]].
-
 # fin-zabezpieczenie-1-cz2 | Długie życie, cele i szturchnięcia
 
-Ten rozdział zbiera pojęcia, które pomagają zrozumieć, po co nam system emerytalny.
+## Dlaczego państwo każe oszczędzać na starość?
+
+Gdyby każdy sam odkładał na emeryturę, system byłby zbędny. Ale ludzie odkładają za mało i za późno. Ekonomia behawioralna tłumaczy, dlaczego – i jak lekko „szturchnąć” ich w dobrą stronę.
 
 ## Za długie życie?
 
@@ -89,10 +94,13 @@ Ludzie odkładają oszczędzanie na później. **[[Teoria szturchania (nudge)|Te
 
 Uwaga na podobne nazwy: **[[Teoria cyklu życia (Hersey i Blanchard)|teoria cyklu życia Herseya i Blancharda]]** to teoria przywództwa w zarządzaniu, a nie emerytur.
 
+> Przykład: w PPK pracownik jest zapisany automatycznie i musi sam złożyć deklarację, żeby zrezygnować. Przy takim domyślnym wyborze uczestniczy znacznie więcej osób niż wtedy, gdy trzeba się zapisać samemu.
+
+> Uwaga: nudge (szturchnięcie) **nie zakazuje** innych wyborów – tylko ustawia domyślną opcję tak, by łatwiej było wybrać dobrze.
+
 ## Na marginesie
 
 Pojawiały się też: [[Prawa i obowiązki pracownicze|prawa pracownicze]], [[Współczynnik dzietności (TFR)|współczynnik dzietności]], [[Rozwój gospodarczy|rozwój gospodarczy]], [[Dyskryminacja (różnicowanie) cenowa|dyskryminacja cenowa]] i [[Polityka cenowa państwa i ceny administrowane|ceny administrowane]].
-
 # fin-zabezpieczenie-2 | Zdrowie, świadczenia i ubóstwo
 
 ## Cztery modele ochrony zdrowia
@@ -124,3 +132,7 @@ GUS mierzy **[[Ubóstwo skrajne, relatywne i ustawowe (GUS)|ubóstwo]]**: skrajn
 Na emerytury i świadczenia pracuje **[[Ludność aktywna zawodowo (zasób siły roboczej)|ludność aktywna zawodowo]]**. Ostatecznie wszystkie świadczenia pochodzą z pracy **[[Czynniki wytwórcze (czynniki produkcji)|czynników wytwórczych]]** – dlatego zatrudnienie i produktywność są kluczowe dla systemu zabezpieczenia.
 
 > Zapamiętaj: Bismarck – składki (Polska); Beveridge – podatki (NHS).
+
+> Przykład: w modelu Beveridge’a (np. Wielka Brytania) ochronę zdrowia finansują podatki, w modelu Bismarcka (np. Niemcy, Polska) – składki ubezpieczeniowe.
+
+> Uwaga: model **Bismarcka** – składki i ubezpieczenia; **Beveridge’a** – podatki i narodowa służba zdrowia; **Siemaszki** – państwowy, centralnie planowany (dawne kraje socjalistyczne).

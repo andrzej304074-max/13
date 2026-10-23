@@ -31,6 +31,10 @@ Keynes wyróżnił trzy motywy: transakcyjny (na codzienne zakupy), przezornośc
 
 # fin-pieniadz-1 | Czym jest pieniądz
 
+## Dlaczego kawałek papieru ma wartość?
+
+Banknot 100 zł kosztuje w produkcji kilkadziesiąt groszy, a mimo to każdy go przyjmie. Dlaczego? Bo wszyscy wierzymy, że inni też go przyjmą. Na tym zaufaniu opiera się pieniądz.
+
 ## Cztery funkcje
 
 **[[Pieniądz|Pieniądz]]** to powszechnie akceptowany środek wymiany. Funkcje:
@@ -61,13 +65,18 @@ Keynes wyróżnił trzy motywy: transakcyjny (na codzienne zakupy), przezornośc
 
 **[[Emisja banknotów i monet w Polsce|Wyłącznym emitentem]]** pieniądza w Polsce jest NBP. Banknoty drukuje Polska Wytwórnia Papierów Wartościowych, monety bije Mennica Polska. Nominały banknotów: 10, 20, 50, 100, 200 i 500 zł. Ilość pieniądza w gospodarce mierzy **[[Podaż pieniądza (nominalna i realna)|podaż pieniądza]]**.
 
+> Uwaga: funkcja **środka tezauryzacji** (przechowywania wartości) słabnie przy inflacji – dlatego w czasie wysokiej inflacji ludzie uciekają w dolary czy złoto.
+
+> Zapamiętaj: funkcje pieniądza: środek wymiany, miernik wartości, środek tezauryzacji, środek płatniczy.
+
 ## Na marginesie
 
 Pojawiały się też: [[Specjalne prawa ciągnienia (SDR)|SDR]] – „pieniądz” MFW, [[Prezes NBP|prezes NBP]] (jego podpis jest na banknotach) i [[Papier wartościowy|papier wartościowy]].
-
 # fin-pieniadz-1-cz2 | Pieniądz w firmie i w gospodarce
 
-Ten rozdział łączy pieniądz z finansami firmy i miarami gospodarki.
+## Pieniądz w kasie firmy i w całej gospodarce
+
+Dla firmy pieniądz to płynność – czy starczy na pensje w piątek. Dla gospodarki to pytanie, czy więcej pieniądza oznacza więcej produkcji, czy tylko wyższe ceny.
 
 ## Gotówka w firmie
 
@@ -85,7 +94,13 @@ Pieniądz służy do mierzenia wartości produkcji. **[[Produkt krajowy brutto (
 
 > Zapamiętaj: pieniądz to miernik wartości – ale miernik, który sam się zmienia (inflacja). Dlatego porównania w czasie robimy w cenach stałych.
 
+> Uwaga: gotówka w kasie firmy to aktywo **obrotowe**; zbyt dużo gotówki obniża rentowność, za mało – grozi utratą płynności.
+
 # fin-pieniadz-2 | Nominały, kurs i tworzenie pieniądza
+
+## Skąd się bierze pieniądz?
+
+Większość pieniądza w gospodarce nie została wydrukowana. Powstała, gdy bank udzielił komuś kredytu i zapisał mu na koncie pieniądze, których wcześniej nie było.
 
 ## Skreślanie zer
 
@@ -120,13 +135,20 @@ $ B = gotówka w obiegu + rezerwy banków w banku centralnym
 
 **[[Kreacja pieniądza (system rezerwy cząstkowej)|Kreacja pieniądza]]**: bank przyjmuje depozyt, część trzyma jako rezerwę, resztę pożycza. Pożyczone pieniądze trafiają na konto w innym banku jako nowy depozyt – i proces się powtarza.
 
+> Przykład: w 1994 r. bochenek chleba kosztował np. 8000 zł. Po denominacji 1995 r. – 0,80 zł. Za tę samą pensję kupisz tyle samo chleba, tylko liczby są krótsze.
+
+> Zapamiętaj: denominacja – zmiana nominału bez zmiany wartości; dewaluacja – obniżenie kursu waluty; senioraż – zysk emitenta z emisji pieniądza.
+
 ## Na marginesie
 
 Pojawiały się też: [[Stopy procentowe NBP|stopy NBP]], [[Dług publiczny|dług publiczny]] i [[Rezerwy walutowe (oficjalne aktywa rezerwowe)|rezerwy walutowe]].
-
 # fin-pieniadz-2-cz2 | Pieniądz w historii i w Europie
 
 Ten krótki rozdział zbiera wydarzenia, które zmieniały pieniądz w Polsce i Europie.
+
+## Sto lat polskiego pieniądza
+
+Polski pieniądz przeszedł wiele: hiperinflację po I wojnie, reformę Grabskiego, długi PRL, inflację lat 80. i denominację. Każda z tych historii czegoś uczy.
 
 ## Złoty Grabskiego
 
@@ -148,7 +170,15 @@ $ π = (P₁ − P₀) / P₀ · 100%
 
 W Europie zachodniej poszła w innym kierunku: wiele walut zastąpiło jedno **[[Euro|euro]]** – od 1999 roku w obrocie bezgotówkowym, od 2002 roku jako gotówka. Polska na razie zachowuje złotego.
 
+> Uwaga: reforma Grabskiego (1924) **zatrzymała hiperinflację** i wprowadziła złotego; denominacja 1995 r. tylko skreśliła zera.
+
+> Zapamiętaj: 1924 – złoty Grabskiego; 1995 – denominacja; 1999/2002 – euro w UE.
+
 # fin-pieniadz-3 | Mnożnik, popyt na pieniądz i stopy
+
+## Jak z 1 zł robi się 10 zł?
+
+Wpłacasz 100 zł do banku. Bank zatrzymuje część jako rezerwę, a resztę pożycza. Pożyczone pieniądze trafiają do innego banku, który znowu pożycza część. Tak z jednej wpłaty powstaje dużo więcej pieniędzy na kontach.
 
 ## Mnożnik kreacji pieniądza
 
@@ -174,13 +204,18 @@ r to stopa rezerw, g – stosunek gotówki do depozytów.
 
 **[[Kryptowaluta|Kryptowaluty]]** – jak bitcoin (2009) – działają bez banku centralnego, na rozproszonym rejestrze. Banki centralne odpowiadają projektami **[[Waluta cyfrowa banku centralnego (CBDC)|CBDC]]** – cyfrowego pieniądza banku centralnego (np. cyfrowy juan, projekt cyfrowego euro).
 
+> Uwaga: mnożnik 1/r to **maksimum** teoretyczne – w praktyce jest niższy, bo ludzie trzymają część gotówki, a banki nadwyżki rezerw.
+
+> Zapamiętaj: mnożnik kreacji = 1 / stopa rezerwy (w najprostszym modelu); popyt na pieniądz (Keynes): transakcyjny, przezornościowy, spekulacyjny.
+
 ## Na marginesie
 
 Pojawiały się też: [[Efekt wypychania (crowding out)|efekt wypychania]], [[Mechanizm transmisji monetarnej|mechanizm transmisji]] i [[Brexit|brexit]].
-
 # fin-pieniadz-3-cz2 | Modele i ludzie pieniądza
 
-Rozdział zbiorczy: modele i ekonomiści, którzy kształtowali myślenie o pieniądzu.
+## Modele, które porządkują świat pieniądza
+
+Żeby zrozumieć, jak stopy procentowe wpływają na produkcję, ekonomiści zbudowali proste modele. Najsłynniejszy z nich łączy rynek dóbr i rynek pieniądza na jednym wykresie.
 
 ## Model IS-LM
 
@@ -200,13 +235,20 @@ Rozdział zbiorczy: modele i ekonomiści, którzy kształtowali myślenie o pien
 - **[[Friedman Milton|Friedman]]** – „inflacja jest zawsze i wszędzie zjawiskiem pieniężnym”;
 - **[[Galbraith John Kenneth|Galbraith]]** – napisał też popularną historię pieniądza: „Pieniądz. Skąd pochodzi, dokąd zmierza”.
 
+> Przykład: bank centralny zwiększa podaż pieniądza. Krzywa LM przesuwa się w prawo: stopa procentowa spada, inwestycje rosną, a dochód Y idzie w górę.
+
+> Uwaga: krzywa **IS** opisuje rynek dóbr, krzywa **LM** – rynek pieniądza; polityka pieniężna przesuwa LM, fiskalna – IS.
+
+> Zapamiętaj: IS-LM: Hicks (1937), na podstawie Keynesa.
+
 ## Na marginesie
 
 Pojawiały się też: [[Podaż|podaż]], [[Teoria gier|teoria gier]] i [[Teorie rynku dualnego, systemów światowych i sieci migracyjnych|teorie migracji]].
-
 # fin-pieniadz-3-cz3 | Banki centralne i ich teoretycy
 
-Ten rozdział przedstawia instytucje i ekonomistów związanych z bankowością centralną.
+## Kto pilnuje dolara?
+
+Najważniejszy bank centralny świata, amerykański Fed, ma inną budowę niż NBP. A wielu ekonomistów zbudowało kariery, tłumacząc, co banki centralne powinny robić.
 
 ## Fed
 
@@ -221,13 +263,16 @@ Ten rozdział przedstawia instytucje i ekonomistów związanych z bankowością 
 
 > Uwaga: Douglas Diamond (Nobel 2022, runy bankowe) to nie Peter Diamond (Nobel 2010, rynek pracy i emerytury).
 
+> Zapamiętaj: Fed – od 1913 r., FOMC ustala stopę federal funds; podwójny mandat: stabilne ceny i maksymalne zatrudnienie.
+
 ## Na marginesie
 
 Pojawiał się też [[Sektor finansów publicznych|sektor finansów publicznych]].
-
 # fin-pieniadz-3-cz4 | Stado, globalizacja i lepkie ceny
 
-Krótki rozdział o trzech zjawiskach, które wpływają na to, jak działa pieniądz.
+## Dlaczego pieniądz zmienia produkcję – ale tylko na chwilę?
+
+Gdy bank centralny dodrukuje pieniądze, w długim okresie wzrosną tylko ceny. Ale przez pierwsze miesiące ludzie mogą więcej kupować i firmy więcej produkować. Dlaczego?
 
 ## Owczy pęd
 
@@ -243,7 +288,13 @@ W długim okresie pieniądz jest neutralny – więcej pieniądza oznacza tylko 
 
 > Zapamiętaj: krótki okres – pieniądz wpływa na produkcję (lepkość); długi – tylko na ceny.
 
+> Uwaga: **lepkość cen** tłumaczy, dlaczego pieniądz działa w krótkim okresie; w długim ceny się dostosowują i zostaje tylko inflacja.
+
 # fin-pieniadz-4 | Kryptowaluty i pieniądz elektroniczny
+
+## Pieniądz bez banku centralnego?
+
+W 2009 roku ktoś pod pseudonimem Satoshi Nakamoto uruchomił walutę, której nikt nie emituje i nikt nie kontroluje. Czy bitcoin to pieniądz? Ekonomiści odpowiadają: na razie raczej nie.
 
 ## Bitcoin
 
@@ -267,11 +318,18 @@ W długim okresie pieniądz jest neutralny – więcej pieniądza oznacza tylko 
 
 Mimo kryptowalut i kart **[[Gotówka w obiegu|gotówki w obiegu]]** wciąż jest dużo. **[[Emisja banknotów i monet w Polsce|Emitentem]]** jest wyłącznie NBP. NBP ściąga nadmiar płynności z banków **[[Bony pieniężne NBP|bonami pieniężnymi]]**.
 
+> Uwaga: kryptowaluty słabo pełnią funkcję **miernika wartości** – ich kurs waha się zbyt mocno, by w nich liczyć ceny.
+
+> Zapamiętaj: bitcoin – limit 21 mln, halving co ok. 4 lata; blockchain – rozproszony rejestr transakcji.
+
 ## Na marginesie
 
 Pojawiały się też: [[System z Bretton Woods|system z Bretton Woods]] i [[Mała, średnia i mikrofirma (MŚP)|MŚP]].
-
 # fin-pieniadz-5 | Struktura pieniądza, kursy i monety
+
+## Gdzie jest twój pieniądz?
+
+Ile masz gotówki w portfelu, a ile na koncie? U większości ludzi na koncie jest dużo więcej. Tak samo w całej gospodarce: gotówka to mały kawałek pieniądza.
 
 ## Mało gotówki
 
@@ -296,6 +354,8 @@ NBP emituje **[[Monety kolekcjonerskie i obiegowe okolicznościowe|monety kolekc
 Słowo „pieniądz” pojawia się też w żargonie opcji. **[[Opcja w pieniądzu, przy pieniądzu, poza pieniądzem|Opcja „w pieniądzu”]]** (in the money) – natychmiastowe wykonanie dałoby zysk. **„Przy pieniądzu”** – cena rynkowa równa cenie wykonania. **„Poza pieniądzem”** – wykonanie nieopłacalne.
 
 > Przykład: opcja call z ceną wykonania 100 zł, akcja kosztuje 110 zł – opcja jest w pieniądzu. Przy cenie 90 zł – poza pieniądzem.
+
+> Uwaga: **nominalna** podaż pieniądza to złote, **realna** (M/P) – siła nabywcza; przy inflacji realna maleje, choć nominalna stoi w miejscu.
 
 ## Na marginesie
 

@@ -31,6 +31,10 @@ Ile jest warta akcja? Można patrzeć na zyski (P/E), na majątek (P/BV), na dyw
 
 # fin-rynek-1 | Mapa rynku finansowego
 
+## Gdzie spotykają się oszczędzający i pożyczający?
+
+Ktoś ma pieniądze i chce na nich zarobić, ktoś inny potrzebuje ich na fabrykę. Rynek finansowy ich łączy – przez banki, giełdę i dziesiątki innych instrumentów.
+
 ## Rynek finansowy
 
 **[[Rynek finansowy|Rynek finansowy]]** to rynek instrumentów finansowych. Dzieli się na:
@@ -58,11 +62,20 @@ Na rynku międzybankowym pożycza się na **[[Terminy transakcji międzybankowyc
 
 **[[Rzecznik Finansowy|Rzecznik Finansowy]]** (od 2015 roku) pomaga klientom banków, ubezpieczycieli i funduszy – rozpatruje skargi i prowadzi pozasądowe rozwiązywanie sporów.
 
+> Przykład: spółka sprzedaje nowe akcje inwestorom za 50 mln zł – to rynek pierwotny, pieniądze idą do spółki. Gdy jeden inwestor odsprzedaje akcje drugiemu na giełdzie – to rynek wtórny, spółka nic nie dostaje.
+
+> Uwaga: na rynku **wtórnym** pieniądze nie trafiają do emitenta – przechodzą tylko między inwestorami.
+
+> Zapamiętaj: rynek pieniężny – do roku; kapitałowy – powyżej roku; pierwotny – emisja; wtórny – obrót.
+
 ## Na marginesie
 
 Pojawiała się też [[OECD|OECD]], która publikuje porównania rynków finansowych krajów rozwiniętych.
-
 # fin-rynek-2 | Papiery wartościowe i akcje
+
+## Co właściwie kupujesz, kupując akcję?
+
+Kupując jedną akcję dużej spółki, stajesz się jej współwłaścicielem – malutkim, ale prawdziwym. Masz prawo głosu, prawo do dywidendy i ryzyko, że akcja straci na wartości.
 
 ## Papier, który nie musi być papierem
 
@@ -84,13 +97,16 @@ Pojawiała się też [[OECD|OECD]], która publikuje porównania rynków finanso
 
 > Przykład: spółka emituje 1 000 000 akcji o nominale 1 zł po cenie 15 zł. Kapitał zakładowy rośnie o 1 mln zł, a **[[Kapitał zakładowy, zapasowy i rezerwowy|kapitał zapasowy]]** – o 14 mln zł agio.
 
+> Uwaga: wartość **nominalna** akcji (z statutu) zwykle nie ma nic wspólnego z jej **rynkową** ceną na giełdzie.
+
 ## Na marginesie
 
 Pojawiały się też: [[Amortyzacja|amortyzacja]], [[Rynek walutowy (Forex)|rynek walutowy]], [[Wskaźniki wyprzedzające (barometry koniunktury)|wskaźniki wyprzedzające]] (ceny akcji często wyprzedzają koniunkturę) i [[Zabezpieczenia kredytu|zabezpieczenia kredytu]].
-
 # fin-rynek-2-cz2 | Finansowanie, nadzór i demografia rynków
 
-Rozdział zbiorczy o tym, kto finansuje firmy, kto pilnuje rynków i jak demografia zmienia finanse.
+## Skąd firmy biorą pieniądze na rozwój?
+
+Firma może pożyczyć w banku, wyemitować obligacje albo sprzedać akcje. Wybór zależy od kosztów, ryzyka i tego, czy właściciele chcą dzielić się kontrolą.
 
 ## Dług czy akcje
 
@@ -116,7 +132,13 @@ Rozdział zbiorczy o tym, kto finansuje firmy, kto pilnuje rynków i jak demogra
 
 Analizując rynki, łatwo pomylić **[[Korelacja a przyczynowość (zmienna pominięta, odwrócona przyczynowość)|korelację z przyczynowością]]**. To, że akcje rosną, gdy rosną sprzedaże lodów, nie znaczy, że lody napędzają giełdę – obie rzeczy mogą zależeć od dobrej koniunktury.
 
+> Uwaga: starzenie się społeczeństwa zmienia rynki: emeryci **sprzedają** aktywa, by żyć z oszczędności – co może obniżać ich ceny w długim okresie.
+
 # fin-rynek-3 | Nowe akcje, dywidendy i IPO
+
+## Wejście na giełdę
+
+Rodzinna firma rozrosła się i potrzebuje 100 mln zł na nową fabrykę. Bank nie chce pożyczyć tyle naraz. Rozwiązanie: sprzedać część firmy inwestorom przez giełdę – debiut, czyli IPO.
 
 ## Prawo poboru
 
@@ -152,13 +174,18 @@ $ P₀ = D₁ / (k − g)
 
 **[[Organy spółki akcyjnej|Organy spółki akcyjnej]]**: zarząd (prowadzi sprawy), rada nadzorcza (nadzór), walne zgromadzenie (najważniejsze decyzje).
 
+> Uwaga: split (podział akcji) **nie zmienia** wartości spółki ani majątku akcjonariusza – zmienia tylko liczbę akcji i ich cenę.
+
+> Zapamiętaj: prawo poboru – pierwszeństwo do nowych akcji; PDA – prawo do akcji przed rejestracją emisji.
+
 ## Na marginesie
 
 Pojawiały się też: [[Komitet Stabilności Finansowej (KSF)|KSF]], [[Opcja|opcja]] i [[Wezwanie|wezwanie]].
-
 # fin-rynek-3-cz2 | Drogo czy tanio?
 
-Krótki rozdział o dwóch najpopularniejszych wskaźnikach wyceny akcji.
+## Czy ta akcja jest droga?
+
+Akcja kosztuje 100 zł. Dużo? Zależy, ile spółka zarabia i ile ma majątku. Dwa wskaźniki pozwalają porównać ceny akcji różnych spółek.
 
 ## P/E
 
@@ -182,7 +209,13 @@ P/BV poniżej 1 oznacza, że rynek wycenia spółkę niżej niż wartość jej m
 
 > Zapamiętaj: P/E – cena za złotówkę zysku; P/BV – cena za złotówkę kapitału.
 
+> Uwaga: niskie P/E nie zawsze oznacza okazję – rynek może słusznie spodziewać się spadku zysków.
+
 # fin-rynek-4 | Spółki publiczne i walka o kontrolę
+
+## Kto rządzi spółką?
+
+W spółce publicznej akcje może kupić każdy. Ktoś, kto zbierze ich dość dużo, może przejąć kontrolę – nawet wbrew zarządowi. Prawo ustala, jak to się odbywa i jak chronić drobnych akcjonariuszy.
 
 ## Spółka publiczna
 
@@ -215,7 +248,15 @@ Ktoś chce przejąć kontrolę nad spółką? Po przekroczeniu 50% głosów musi
 
 > Zapamiętaj: wezwanie – próg 50%; squeeze-out – 95%.
 
+> Przykład: inwestor ma 49% głosów i chce kupić więcej. Przekroczenie 50% wymaga ogłoszenia wezwania – musi zaproponować odkupienie akcji pozostałym akcjonariuszom po cenie nie niższej niż ustawowe minimum.
+
+> Uwaga: **squeeze-out** (przymusowy wykup) to prawo dużego akcjonariusza do odkupienia akcji mniejszości; **sell-out** – prawo mniejszości do żądania wykupu.
+
 # fin-rynek-5 | Indeksy giełdowe
+
+## Jedna liczba, która mówi, jak idzie giełda
+
+W wiadomościach słyszysz: „WIG20 spadł o 2%”. Nikt nie wymienia cen dwudziestu spółek – indeks streszcza je w jednej liczbie.
 
 ## Termometr rynku
 
@@ -243,7 +284,15 @@ Ktoś chce przejąć kontrolę nad spółką? Po przekroczeniu 50% głosów musi
 
 **[[Zysk na akcję (EPS)|EPS]]** = zysk netto / liczba akcji. **[[Analiza fundamentalna i techniczna|Analiza fundamentalna]]** ocenia wartość spółki na podstawie wyników i sytuacji gospodarki; **techniczna** – prognozuje ceny z wykresów. Zaawansowane strategie stosują **[[Fundusz hedgingowy|fundusze hedgingowe]]**.
 
+> Uwaga: WIG20 jest indeksem **cenowym**, a WIG – **dochodowym** (uwzględnia dywidendy).
+
+> Zapamiętaj: hossa – byk, wzrosty; bessa – niedźwiedź, spadki.
+
 # fin-rynek-6 | Jak się handluje na giełdzie
+
+## Jak kupić akcję?
+
+Na giełdzie nie podchodzisz do sprzedawcy. Składasz zlecenie przez biuro maklerskie, a system kojarzy je z ofertami innych inwestorów. Od rodzaju zlecenia zależy, po jakiej cenie i kiedy kupisz.
 
 ## Zlecenia
 
@@ -276,7 +325,15 @@ Ktoś chce przejąć kontrolę nad spółką? Po przekroczeniu 50% głosów musi
 
 **[[Spekulacja|Spekulacja]]** – świadome podjęcie ryzyka dla zysku. **[[Hedging|Hedging]]** – zabezpieczenie się przed ryzykiem przeciwną pozycją. Obie strony często spotykają się na rynku kontraktów terminowych. W **[[Dzień trzech wiedźm|dniu trzech wiedźm]]** wygasają naraz kontrakty i opcje – zmienność rośnie.
 
+> Uwaga: **krótka sprzedaż** to zarabianie na spadkach: sprzedajesz pożyczone akcje, a potem odkupujesz taniej – strata może być nieograniczona, jeśli cena rośnie.
+
+> Zapamiętaj: zlecenie z limitem – określona cena; PKC – po każdej cenie; PCR – po cenie rynkowej.
+
 # fin-rynek-7 | Spekulanci, analitycy i wskaźniki
+
+## Czy da się pokonać rynek?
+
+Tysiące analityków próbuje przewidzieć, które akcje wzrosną. Jedni czytają raporty spółek, inni wykresy. Badania pokazują, że większości nie udaje się trwale wygrać z rynkiem.
 
 ## Krótkie horyzonty
 
@@ -303,13 +360,16 @@ $ WACC = wE · kE + wD · kD · (1 − T)
 
 > Przykład: 60% kapitału własnego kosztującego 12%, 40% długu po 8%, podatek 19%. WACC = 0,6 · 12 + 0,4 · 8 · 0,81 = 7,2 + 2,592 ≈ 9,79%.
 
+> Uwaga: analiza **fundamentalna** bada wartość spółki (zyski, majątek), **techniczna** – wykresy cen i wolumenu.
+
 ## Na marginesie
 
 Pojawiały się też: [[Keynesizm|keynesizm]] (Keynes porównywał giełdę do konkursu piękności, w którym zgaduje się, kogo wybiorą inni) i [[ERM II|ERM II]].
-
 # fin-rynek-7-cz2 | Liczby, które czyta inwestor
 
-Rozdział zbiorczy z pojęciami, które inwestor spotyka w raportach spółek i danych makro.
+## Co czyta inwestor przy porannej kawie?
+
+Raport kwartalny spółki, dane o inflacji, decyzja o stopach – inwestor śledzi dziesiątki liczb, bo każda może zmienić ceny akcji.
 
 ## Raporty spółek
 
@@ -327,7 +387,13 @@ Popyt na produkty spółki zależy od cen i dochodów. **[[Prawo popytu|Prawo po
 
 > Zapamiętaj: EBITDA = zysk operacyjny + amortyzacja.
 
+> Przykład: spółka ogłasza zysk 10% wyższy, niż oczekiwali analitycy. Kurs rośnie, choć wynik był dobry „tylko” wobec oczekiwań – rynek reaguje na niespodzianki, a nie na poziomy.
+
 # fin-rynek-8 | Wartość spółki, dźwignia i efektywność rynku
+
+## Ile jest warta cała spółka?
+
+Akcja kosztuje 50 zł, a spółka ma 10 milionów akcji. Ile jest warta? Rynek wycenia ją na 500 mln zł – to jej kapitalizacja.
 
 ## Kapitalizacja
 
@@ -357,11 +423,18 @@ Popyt na produkty spółki zależy od cen i dochodów. **[[Prawo popytu|Prawo po
 
 **[[Formacje analizy technicznej|Formacje analizy technicznej]]**: kontynuacji (flagi, trójkąty, kliny) i odwrócenia (głowa z ramionami, podwójny szczyt lub dno).
 
+> Uwaga: rynek **efektywny w formie słabej** – z wykresów nie da się trwale zarabiać; **półsilnej** – także z publicznych informacji; **silnej** – nawet z poufnych.
+
+> Zapamiętaj: kapitalizacja = liczba akcji × cena; insider trading – zakazany handel na informacjach poufnych.
+
 ## Na marginesie
 
 Pojawiały się też: [[Indeksy GPW – zestaw|indeksy GPW]], [[Wycena przedsiębiorstwa – metody|metody wyceny przedsiębiorstwa]] i [[Inflacja pełzająca, krocząca, galopująca|klasyfikacja inflacji]].
-
 # fin-rynek-9 | System finansowy jako całość
+
+## Krwiobieg gospodarki
+
+System finansowy działa jak krwiobieg: przenosi pieniądze tam, gdzie są potrzebne. Gdy się zatka, cierpi cały organizm – tak było w 2008 roku.
 
 ## Funkcje
 
@@ -383,11 +456,20 @@ Pojawiały się też: [[Indeksy GPW – zestaw|indeksy GPW]], [[Wycena przedsię
 
 **[[Nowoczesna teoria portfela (Markowitz)|Teoria portfela Markowitza]]** (1952, Nobel 1990): dobieraj aktywa, patrząc na zwrot, ryzyko i korelacje. Granica efektywna – portfele o najwyższym zwrocie przy danym ryzyku.
 
+> Przykład: ty masz 10 000 zł na rok, a firma potrzebuje 10 mln zł na 10 lat. Bank zbiera depozyty od tysiąca osób i udziela długiego kredytu – przekształca terminy i rozkłada ryzyko.
+
+> Uwaga: **window dressing** to upiększanie wyników na koniec okresu (np. przed raportem), a nie fałszowanie księgowości – choć bywa na granicy.
+
+> Zapamiętaj: funkcje systemu finansowego: przenoszenie środków, transformacja terminów i ryzyka, płatności, wycena.
+
 ## Na marginesie
 
 Pojawiały się też: [[Badania marketingowe|badania marketingowe]], [[Strategia bezpośredniego celu inflacyjnego (BCI)|strategia celu inflacyjnego]], [[Czynniki kształtujące podaż (determinanty podaży)|determinanty podaży]], [[Kalecki Michał|Michał Kalecki]] i [[Podatek Pigou|podatek Pigou]].
-
 # fin-rynek-10 | Instrumenty, pośrednicy i pozycja walutowa
+
+## Umowa, która ma dwie strony
+
+Każdy instrument finansowy to umowa: dla jednej strony to majątek, dla drugiej – zobowiązanie. Obligacja w twoim portfelu to dług w bilansie firmy.
 
 ## Instrument finansowy
 
@@ -416,3 +498,5 @@ Pojawiały się też: [[Badania marketingowe|badania marketingowe]], [[Strategia
 **[[Kwity depozytowe (ADR, GDR)|Kwity depozytowe]]** pozwalają handlować akcjami zagranicznej spółki na innej giełdzie. ADR – w USA, GDR – globalnie.
 
 > Zapamiętaj: pozycja długa – zysk przy aprecjacji waluty; krótka – przy deprecjacji.
+
+> Uwaga: pozycja walutowa **długa** – więcej aktywów niż zobowiązań w walucie (zyskasz na jej umocnieniu); **krótka** – odwrotnie.
