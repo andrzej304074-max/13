@@ -41,7 +41,9 @@ for p in sorted(glob.glob(os.path.join(SRC, "m*.py"))):
                 pos[idx[0]] += 1
             else:
                 ncorr[len(idx)] += 1
-        qid = f"sl-M-{h}"
+        # pytania o hasło przewodnie XL pisane w Planie II (m40+) to osobne źródło „Hasło XL” (prefiks xl-)
+        th = sec == 15 and int(os.path.basename(p)[1:3]) >= 40
+        qid = f"xl-M-{h}" if th else f"sl-M-{h}"
         assert qid not in seen, f"powtórzone pytanie {where}"
         seen.add(qid)
         out.append({
@@ -55,7 +57,7 @@ for p in sorted(glob.glob(os.path.join(SRC, "m*.py"))):
             "section": sec,
             "origin": "manual",
             # pytania o hasło przewodnie XL pisane w Planie II (m40+): dopasowanie haseł tylko w temacie hasła
-            **({"th": 1} if sec == 15 and int(os.path.basename(p)[1:3]) >= 40 else {}),
+            **({"th": 1} if th else {}),
         })
 json.dump(out, open(os.path.join(OUT, "manual.json"), "w"), ensure_ascii=False, separators=(",", ":"))
 print("nowe (m20+):", stats_new, "poprawna jednokrotna wg pozycji A–D:", pos, "wielokrotne wg liczby poprawnych 0–4:", ncorr)

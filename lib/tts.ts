@@ -5,7 +5,7 @@ import { del, put } from "@vercel/blob";
 import { AwsClient } from "aws4fetch";
 import { query, withTx } from "./db";
 import { QUESTIONS } from "@/data/questions";
-import { SLOWNIK_QUESTIONS } from "@/data/slownik";
+import { SLOWNIK_QUESTIONS, XL_QUESTIONS } from "@/data/slownik";
 import { hasla } from "./data-server";
 import { allArticleSections } from "./podrecznik";
 import { hasloSpeech, questionAnswer, questionAsk } from "./speech-catalog";
@@ -100,7 +100,7 @@ function paragraphs() {
       byArticle.set(unitId, articleSpeech(sections, true).items.map((it) => add(it.text, unitId)));
     }
     for (const h of hasla().rows) add(hasloSpeech(h).text, "haslo");
-    for (const [bank, list] of [["owe", QUESTIONS], ["slownik", SLOWNIK_QUESTIONS]] as const) {
+    for (const [bank, list] of [["owe", QUESTIONS], ["slownik", [...SLOWNIK_QUESTIONS, ...XL_QUESTIONS]]] as const) {
       for (const q of list) {
         add(questionAsk(q).text, bank);
         add(questionAnswer(q, q.correct, q.explanation).text, bank);

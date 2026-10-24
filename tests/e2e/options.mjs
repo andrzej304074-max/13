@@ -67,7 +67,7 @@ const visit = async (path) => { await p.goto(`${B}${path}`); await settle(); awa
 
 // tabela pojęć: zapamiętywane są dział i rodzaj (sprawdza g5.mjs), filtr gwiazdki – celowo nie
 const NOT_SAVED = new Set(["/pojecia"]);
-const PAGES = ["/", "/testy/wszystkie", "/zadania", "/eseje", "/fiszki", "/stats", "/stats/dzialy", "/stats/swiat", "/pojecia",
+const PAGES = ["/", "/zadania", "/eseje", "/fiszki", "/stats", "/stats/dzialy", "/stats/swiat", "/pojecia",
   "/pojecia/statystyki", "/pojecia/pokrycie", "/nauka/statystyki"];
 for (const path of PAGES) {
   await visit(path);

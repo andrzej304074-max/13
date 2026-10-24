@@ -14,7 +14,7 @@ for (const [name, vp] of [["430", { width: 430, height: 900 }], ["1280", { width
   await page.fill('input[name="email"]', "owner@example.com");
   await page.fill('input[name="password"]', "haslo-wlasciciela");
   await page.click("form button.btn"); await page.waitForTimeout(1500);
-  for (const [path, type, count, n] of [["/", "Jednokrotny wybór", "30 pytań", 4], ["/slownik", "Wielokrotny wybór", "Bez limitu", 3]]) {
+  for (const [path, type, count, n] of [["/", "Jednokrotny wybór", "30 pytań", 4], ["/?zrodlo=slownik", "Wielokrotny wybór", "Bez limitu", 3]]) {
     await page.goto(B + path); await page.waitForSelector("button.choice");
     await page.click(`button.choice:has-text("${type}")`);
     await page.click(`button.choice:has-text("${count}")`);
@@ -37,7 +37,7 @@ for (const [name, vp] of [["430", { width: 430, height: 900 }], ["1280", { width
     await page.click('button:has-text("Zakończ test")');
     await page.waitForSelector(".big", { timeout: 15000 });
     check(/%/.test(await page.textContent(".big")), `${name} ${path}: wynik testu`);
-    await page.screenshot({ path: `${OUT}/wynik-${name}-${path.replace("/", "") || "owe"}.png`, fullPage: true });
+    await page.screenshot({ path: `${OUT}/wynik-${name}-${path.replace(/[/?=]/g, "") || "wszystkie"}.png`, fullPage: true });
   }
   await page.goto(`${B}/stats`); await page.waitForSelector(".big");
   check(await page.$$eval("table tbody tr", (r) => r.length) > 0, `${name}: historia testów w statystykach`);

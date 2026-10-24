@@ -1414,3 +1414,5 @@ body:has(.speech-bar) main.container { padding-bottom: 160px; }
 .more-ex { color: var(--text); }
 .more-link { font-size: .9rem; }
 .open-src { color: var(--accent, #7c3aed); font-weight: 600; }
+.src-filter { border: 1px solid var(--border); border-radius: 12px; padding: 10px 12px 12px; margin: 0; display: grid; gap: 8px; min-width: 0; }
+.src-filter legend { font-weight: 600; padding: 0 6px; }

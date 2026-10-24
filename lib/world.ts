@@ -1,6 +1,6 @@
 import { query } from "./db";
 import { HttpError } from "./tests";
-import { sourceWhereSql } from "./question-source";
+import { isSource, sourceWhereSql } from "./question-source";
 import { computeStreak, todayWarsaw, weekOf } from "./xp-core";
 import {
   distribution, metricHasSource, MIN_ANSWERS, RANK_TOP, validRankName,
@@ -24,15 +24,15 @@ const ACC = "CASE WHEN a.skipped THEN 0 WHEN t.type = 'single' THEN (a.points = 
 const TEST_XP = "CASE WHEN a.skipped OR cardinality(a.selected) = 0 THEN 0 WHEN a.points >= 2 THEN 10 WHEN a.points > 0 THEN 5 ELSE 2 END";
 
 function testsWhere(src: WorldSource, p: WorldPeriod) {
-  const s = src === "owe" || src === "ai" || src === "slownik" ? ` AND ${sourceWhereSql("a.question_id", src)}` : "";
+  const s = isSource(src) ? ` AND ${sourceWhereSql("a.question_id", src)}` : "";
   return `t.user_id IS NOT NULL AND ${since("a.answered_at", p)}${s}`;
 }
 
 /** SQL zwracające (u, v) – wartość miary dla każdego konta z aktywnością. */
 function sqlFor(m: WorldMetric, src: WorldSource, p: WorldPeriod): string {
-  const tests = src === "testy" || src === "owe" || src === "ai" || src === "slownik";
+  const tests = src === "testy" || isSource(src);
   if (m === "xp") {
-    if (src === "owe" || src === "ai" || src === "slownik") {
+    if (isSource(src)) {
       return `SELECT t.user_id AS u, SUM(${TEST_XP}) AS v FROM answers a JOIN tests t ON t.id = a.test_id WHERE ${testsWhere(src, p)} GROUP BY 1`;
     }
     const col = src === "lacznie" ? "xp" : src === "kurs" ? "COALESCE((by->>'kurs')::int, 0) + COALESCE((by->>'czytanie')::int, 0)" : `COALESCE((by->>'${src}')::int, 0)`;

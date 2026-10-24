@@ -203,7 +203,7 @@ def concepts(q, origin):
     """(main, all) – id haseł; pytania automatyczne niosą listę swoich pojęć (tytuły haseł)."""
     if origin == "auto":
         ids = list(dict.fromkeys(item_id(t) for t in q["pojecia"] if item_id(t) in items))
-        main = ids if q["id"].startswith(("sl-C-", "sl-TC-")) else ids[:1]
+        main = ids if q["id"].startswith(("sl-C-", "sl-TC-", "xl-TC-")) else ids[:1]
         return set(main), set(ids)
     a = matcher.analyze(q)
     return a["main"], a["all"]

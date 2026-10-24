@@ -85,10 +85,12 @@ await put(`/api/admin/uzytkownicy/${uid}/dostep`, { blocked: [], mode: null });
 await U.p.goto(`${B}/notatki`); await U.p.waitForSelector('[data-testid="note-new"]');
 check(!U.p.url().includes("/zablokowane") && /Notatki/.test(await navTexts(U.p)), "po zdjęciu blokad Notatki wracają");
 check((await U.p.request.get(`${B}/api/notatki?rodzaj=note`)).status() === 200, "API notatek znowu 200");
-// test słownikowy przy zablokowanym Słowniku
-await put(`/api/admin/uzytkownicy/${uid}/dostep`, { blocked: ["/slownik"], mode: null });
-check((await U.p.request.post(`${B}/api/tests`, { data: { type: "single", count: 30, bank: "slownik" } })).status() === 403, "zablokowany Słownik: nowy test słownikowy → 403");
-check((await U.p.request.post(`${B}/api/tests`, { data: { type: "single", count: 30, bank: "owe" } })).status() === 201, "Olimpiada działa dalej");
+// nowy test przy zablokowanym formularzu „Pytania” (Zadania działają dalej)
+await put(`/api/admin/uzytkownicy/${uid}/dostep`, { blocked: ["/"], mode: null });
+check((await U.p.request.post(`${B}/api/tests`, { data: { type: "single", count: 30, sources: ["slownik"] } })).status() === 403, "zablokowane „Pytania”: nowy test → 403");
+check((await U.p.request.get(`${B}/api/otwarte?rodzaj=zadanie`)).status() === 200, "Zadania działają dalej");
+await put(`/api/admin/uzytkownicy/${uid}/dostep`, { blocked: [], mode: null });
+check((await U.p.request.post(`${B}/api/tests`, { data: { type: "single", count: 30, sources: ["owe"] } })).status() === 201, "po zdjęciu blokady test działa");
 await put(`/api/admin/uzytkownicy/${uid}/dostep`, { blocked: [], mode: null });
 console.log("OK:", ok, "błędów:", fails.length, JSON.stringify(fails, null, 1));
 console.log("konsola:", JSON.stringify(errs, null, 1));

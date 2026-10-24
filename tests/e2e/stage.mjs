@@ -17,7 +17,9 @@ check(s0.byStage && "s" in s0.byStage && "o" in s0.byStage, "statystyki mają po
 // 1. formularz: etapy w filtrach (szkolny / okręgowy / centralny)
 await page.goto(`${B}/`); await page.waitForSelector('[data-testid="test-filters"]');
 await page.evaluate(() => localStorage.removeItem("owe:testStart:owe")); await page.reload(); await page.waitForSelector('[data-testid="test-filters"]');
-await page.locator('details[data-testid="test-filters"] summary').click();
+// tylko Archiwum OWE, filtry źródła
+for (const s of ["ai", "slownik", "xl"]) await page.click(`[data-source="${s}"]`);
+await page.locator('details[data-testid="source-filters"] summary').click();
 check(await page.locator('[data-testid="stages"] button').count() === 3, "trzy etapy w filtrach");
 await page.locator(".choice", { hasText: "Jednokrotny wybór" }).click();
 await page.click('[data-testid="stages"] [data-stage="o"]'); await page.click('[data-testid="stages"] [data-stage="c"]');

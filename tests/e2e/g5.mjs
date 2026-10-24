@@ -14,7 +14,7 @@ async function device(w) {
   return p;
 }
 const a = await device(390), b = await device(1280);
-for (const k of ["pojecia-statystyki", "testy-mix", "zadania", "fiszki"]) await a.request.put(`${B}/api/ustawienia/filtry/${k}`, { data: { value: "" } });
+for (const k of ["pojecia-statystyki", "testy", "zadania", "fiszki"]) await a.request.put(`${B}/api/ustawienia/filtry/${k}`, { data: { value: "" } });
 
 // 1. Statystyki OWE: filtr ustawiony na telefonie
 await a.goto(`${B}/pojecia/statystyki`); await a.waitForSelector('[data-testid="owe-total"]');
@@ -33,10 +33,10 @@ await b.selectOption('[data-testid="theme-filter"]', "all"); await b.waitForTime
 prefs = await (await b.request.get(`${B}/api/ustawienia/filtry`)).json();
 check(prefs.prefs["pojecia-statystyki"] === undefined || prefs.prefs["pojecia-statystyki"] === "", `zmiana zapisana (domyślne = pusta wartość): ${JSON.stringify(prefs.prefs)}`);
 
-// 2. formularz „Wszystkie pytania”
-await a.goto(`${B}/testy/wszystkie`); await a.waitForSelector('[data-testid="sources"]'); await a.waitForTimeout(500);
+// 2. formularz „Pytania”
+await a.goto(`${B}/`); await a.waitForSelector('[data-testid="sources"]'); await a.waitForTimeout(500);
 await a.click('[data-source="slownik"]'); await a.waitForTimeout(1500);
-await b.goto(`${B}/testy/wszystkie`); await b.waitForSelector('[data-testid="sources"]'); await b.waitForTimeout(1000);
+await b.goto(`${B}/`); await b.waitForSelector('[data-testid="sources"]'); await b.waitForTimeout(1000);
 check(await b.locator('[data-source="slownik"]').getAttribute("aria-pressed") === "false"
   && await b.locator('[data-source="ai"]').getAttribute("aria-pressed") === "true", "źródła testu z konta");
 
@@ -55,7 +55,7 @@ const long = await a.request.put(`${B}/api/ustawienia/filtry/fiszki`, { data: { 
 check(long.status() === 400, `za długa wartość → 400 (${long.status()})`);
 const anon = await (await browser.newContext()).request.get(`${B}/api/ustawienia/filtry`);
 check(anon.status() === 401, `bez logowania → 401 (${anon.status()})`);
-for (const k of ["pojecia-statystyki", "testy-mix", "zadania"]) await a.request.put(`${B}/api/ustawienia/filtry/${k}`, { data: { value: "" } });
+for (const k of ["pojecia-statystyki", "testy", "zadania"]) await a.request.put(`${B}/api/ustawienia/filtry/${k}`, { data: { value: "" } });
 check(errs.length === 0, `błędy JS: ${errs.join(" | ")}`);
 await browser.close();
 console.log("OK:", ok, "błędów:", fails.length, JSON.stringify(fails, null, 1));

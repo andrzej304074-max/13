@@ -16,7 +16,7 @@ for (const [name, vp] of [["430", { width: 430, height: 900 }], ["1280", { width
   await page.fill('input[name="password"]', "haslo-wlasciciela");
   await page.click("form button.btn"); await page.waitForTimeout(1500);
   const navSel = name === "430" ? "nav.bottom-bar" : "nav.sections";
-  const sections = [["Testy", ["Olimpiada", "Słownik"]], ["Nauka", ["Kurs", "Podręcznik", "Fiszki", "Powtórka"]], ["Pojęcia", ["Tabela", "Statystyki OWE", "Pokrycie olimpiad"]], ["Notatki", ["Notatki", "Brudnopisy"]], ["Statystyki", ["Wyniki testów", "Działy i pojęcia", "Nauka"]]];
+  const sections = [["Testy", ["Pytania", "Zadania"]], ["Nauka", ["Kurs", "Podręcznik", "Fiszki", "Powtórka"]], ["Pojęcia", ["Tabela", "Statystyki OWE", "Pokrycie olimpiad"]], ["Notatki", ["Notatki", "Brudnopisy"]], ["Statystyki", ["Wyniki testów", "Działy i pojęcia", "Nauka"]]];
   for (const [sec, tabs] of sections) {
     await page.click(`${navSel} a:has-text("${sec}")`);
     await page.waitForTimeout(1200);

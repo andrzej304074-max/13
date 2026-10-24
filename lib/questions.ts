@@ -1,17 +1,22 @@
 import { QUESTIONS } from "@/data/questions";
-import { SLOWNIK_QUESTIONS } from "@/data/slownik";
+import { SLOWNIK_QUESTIONS, XL_QUESTIONS } from "@/data/slownik";
 import { AI_QUESTIONS } from "@/data/ai";
 import { metaOk, type MetaFilter } from "./question-meta";
+import { sourceOf } from "./question-source";
 import type { Bank, Origin, PublicQuestion, Question, QuestionType } from "./types";
 
-// „mix” – zakładka „Wszystkie pytania”: źródła wybiera filtr `sources`
+// „mix” – jeden formularz „Pytania” (od Planu IV wszystkie nowe testy): źródła wybiera filtr `sources`.
+// owe / slownik – banki starych testów (dolosowanie w trybie bez limitu); słownik obejmuje wtedy także Hasło XL.
 const banks: Record<Bank, Question[]> = {
-  owe: QUESTIONS, slownik: SLOWNIK_QUESTIONS, ai: AI_QUESTIONS, mix: [...QUESTIONS, ...AI_QUESTIONS, ...SLOWNIK_QUESTIONS],
+  owe: QUESTIONS, slownik: [...SLOWNIK_QUESTIONS, ...XL_QUESTIONS], ai: AI_QUESTIONS,
+  mix: [...QUESTIONS, ...AI_QUESTIONS, ...SLOWNIK_QUESTIONS, ...XL_QUESTIONS],
 };
-const byId = new Map([...QUESTIONS, ...SLOWNIK_QUESTIONS, ...AI_QUESTIONS].map((q) => [q.id, q]));
+const byId = new Map(banks.mix.map((q) => [q.id, q]));
 
-/** Zawężenie puli pytań słownikowych: pochodzenie (null – oba) i dział słownika (null – wszystkie). */
-/** Filtr losowania: pola słownika (pochodzenie, dział słownika), etap (stare testy) i filtry wspólne (MetaFilter). */
+/**
+ * Filtr losowania: filtry formularza (MetaFilter – w tym filtry poszczególnych źródeł), etap i pola starych testów Słownika
+ * (pochodzenie i dział – dla wszystkich pytań banku).
+ */
 export interface DrawFilter extends MetaFilter {
   origin?: Origin | null;
   section?: number | null;
@@ -41,15 +46,24 @@ export function getQuestion(id: string): Question | undefined {
 
 const hasMeta = (f: MetaFilter) => !!(f.sources?.length || f.edFrom || f.edTo || f.stages?.length || f.topic || f.kind || (f.theme && f.theme !== "all"));
 
+/** Filtry jednego źródła: rodzaj i dział Słownika, rodzaj Hasła XL (pytania innych źródeł przechodzą bez zmian). */
+function subOk(q: Question, f: DrawFilter): boolean {
+  if (!f.slOrigin && !f.slSection && !f.xlOrigin) return true;
+  const s = sourceOf(q.id);
+  if (s === "slownik") return (!f.slOrigin || q.origin === f.slOrigin) && (!f.slSection || q.section === f.slSection);
+  if (s === "xl") return !f.xlOrigin || q.origin === f.xlOrigin;
+  return true;
+}
+
 function pool(bank: Bank, type: QuestionType, f: DrawFilter = {}): Question[] {
   const meta = hasMeta(f);
   if (f.only) {
     const rank = new Map(f.only.map((id, i) => [id, i]));
-    return banks[bank].filter((q) => rank.has(q.id) && q.type === type && (!meta || metaOk(q.id, f)))
+    return banks[bank].filter((q) => rank.has(q.id) && q.type === type && subOk(q, f) && (!meta || metaOk(q.id, f)))
       .sort((a, b) => rank.get(a.id)! - rank.get(b.id)!);
   }
   return banks[bank].filter(
-    (q) => q.type === type && (!f.origin || q.origin === f.origin) && (!f.section || q.section === f.section) && (!f.stage || stageOf(q.id) === f.stage)
+    (q) => q.type === type && subOk(q, f) && (!f.origin || q.origin === f.origin) && (!f.section || q.section === f.section) && (!f.stage || stageOf(q.id) === f.stage)
       && (!meta || metaOk(q.id, f)),
   );
 }

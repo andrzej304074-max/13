@@ -11,7 +11,7 @@ pochodzą z tego samego tematu – w odróżnieniu od gen_questions.py, który d
   T2 (single) – hasło → który opis (opisy innych haseł tematu tego samego rodzaju);
   T3 (single) – które hasło NIE należy do tematu (3 hasła tematu, 1 spoza – podobne słownictwo);
   T4 (multi)  – które z haseł należą do tematu (0–4 hasła tematu, reszta spoza).
-Pytania mają pochodzenie „auto”, pole `pojecia` (tytuły haseł) i id `sl-T-…` (T1, T2) albo `sl-TC-…` (T3, T4).
+Pytania mają pochodzenie „auto”, pole `pojecia` (tytuły haseł) i id `xl-T-…` (T1, T2) albo `xl-TC-…` (T3, T4) – źródło „Hasło XL”.
 """
 import difflib, hashlib, json, os, random, re, sys
 
@@ -50,8 +50,8 @@ def similar(i, pool, k=3):
 
 def add(kind, qtype, question, options, correct, explanation, pojecia):
     h = hashlib.md5((kind + question + "|".join(options)).encode()).hexdigest()[:10]
-    # sl-TC-: pytanie o kilka haseł naraz (T3, T4) – w statystykach liczy się dla wszystkich; sl-T-: o pierwsze z `pojecia`
-    qid = f"sl-TC-{h}" if kind in ("T3", "T4") else f"sl-T-{h}"
+    # xl-TC-: pytanie o kilka haseł naraz (T3, T4) – w statystykach liczy się dla wszystkich; xl-T-: o pierwsze z `pojecia`
+    qid = f"xl-TC-{h}" if kind in ("T3", "T4") else f"xl-T-{h}"
     if qid in ids:
         return
     ids.add(qid)

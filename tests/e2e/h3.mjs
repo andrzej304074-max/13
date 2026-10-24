@@ -36,14 +36,14 @@ check(!m2.questions.some((x) => x.id === q.id), "po poprawnej odpowiedzi pytanie
 if (r2.ok()) await post(`/api/tests/${m2.id}/finish`);
 // 4. UI: link „Powtórz błędy” włącza przełącznik
 await p.goto(`${B}/stats`); await p.waitForSelector('[data-testid="retry-mistakes"]');
-await p.click('[data-testid="retry-mistakes"]'); await p.waitForURL(/\/testy\/wszystkie\?bledy=1/); await p.waitForSelector('[data-testid="mistakes"]');
+await p.click('[data-testid="retry-mistakes"]'); await p.waitForURL(/\/\?bledy=1/); await p.waitForSelector('[data-testid="mistakes"]');
 await p.waitForTimeout(800);
 check(await p.locator('[data-testid="mistakes"]').getAttribute("aria-pressed") === "true", "„Powtórz błędy” włącza „Tylko moje błędy”");
 check(/do powtórki/.test(await p.locator('[data-testid="mistakes"]').innerText()), "liczba pytań do powtórki");
 await p.screenshot({ path: `${OUT}/h3_mistakes_390.png` });
 // tryb błędów nie zostaje zapamiętany na koncie – zwykłe wejście do „Wszystkich pytań” go nie włącza
 await p.waitForTimeout(1500);
-await p.goto(`${B}/testy/wszystkie`); await p.waitForSelector('[data-testid="mistakes"]'); await p.waitForTimeout(800);
+await p.goto(`${B}/`); await p.waitForSelector('[data-testid="mistakes"]'); await p.waitForTimeout(800);
 check(await p.locator('[data-testid="mistakes"]').getAttribute("aria-pressed") === "false", "„Tylko moje błędy” nie zostaje zapamiętane");
 check(errs.length === 0, `błędy strony: ${errs.join(" | ")}`);
 console.log(`OK: ${ok} błędów: ${fails.length}`, fails);

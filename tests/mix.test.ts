@@ -5,7 +5,7 @@ import { metaOk, parseMetaFilter, questionMeta } from "@/lib/question-meta";
 describe("Wszystkie pytania: źródła i filtry", () => {
   it("pula „mix” = suma źródeł", () => {
     const all = countByType("single", "mix");
-    const parts = (["owe", "ai", "slownik"] as const).map((s) => countByType("single", "mix", { sources: [s] }));
+    const parts = (["owe", "ai", "slownik", "xl"] as const).map((s) => countByType("single", "mix", { sources: [s] }));
     expect(parts.reduce((a, b) => a + b, 0)).toBe(all);
     expect(parts[1]).toBeGreaterThan(400);
   });

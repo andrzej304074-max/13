@@ -5,7 +5,7 @@
 
 export const WORLD_METRICS = ["xp", "skutecznosc", "aktywnosc", "seria"] as const;
 export type WorldMetric = (typeof WORLD_METRICS)[number];
-export const WORLD_SOURCES = ["lacznie", "kurs", "testy", "owe", "ai", "slownik", "fiszki", "zadania", "eseje"] as const;
+export const WORLD_SOURCES = ["lacznie", "kurs", "testy", "owe", "ai", "slownik", "xl", "fiszki", "zadania", "eseje"] as const;
 export type WorldSource = (typeof WORLD_SOURCES)[number];
 export const WORLD_PERIODS = ["7d", "30d", "all"] as const;
 export type WorldPeriod = (typeof WORLD_PERIODS)[number];
@@ -13,7 +13,7 @@ export type WorldPeriod = (typeof WORLD_PERIODS)[number];
 export const METRIC_LABEL: Record<WorldMetric, string> = { xp: "XP", skutecznosc: "Skuteczność", aktywnosc: "Aktywność", seria: "Seria" };
 export const SOURCE_LABEL: Record<WorldSource, string> = {
   lacznie: "Łącznie", kurs: "Kurs (Duolingo)", testy: "Testy – wszystkie", owe: "Testy – Archiwum OWE", ai: "Testy – Pytania AI",
-  slownik: "Testy – Słownik", fiszki: "Fiszki", zadania: "Zadania", eseje: "Eseje",
+  slownik: "Testy – Słownik", xl: "Testy – Hasło XL", fiszki: "Fiszki", zadania: "Zadania", eseje: "Eseje",
 };
 export const PERIOD_LABEL: Record<WorldPeriod, string> = { "7d": "7 dni", "30d": "30 dni", all: "cały czas" };
 

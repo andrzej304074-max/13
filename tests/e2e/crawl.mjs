@@ -20,7 +20,7 @@ for (const scheme of ["light", "dark"]) for (const vp of [{ width: 390, height: 
   const t = await (await page.request.post(`${B}/api/tests`, { data: { type: "multi", count: 30 } })).json();
   const note = await (await page.request.post(`${B}/api/notatki`, { data: { kind: "note", title: "crawl" } })).json();
   const deck = await (await page.request.post(`${B}/api/talie`, { data: { name: "crawl" } })).json();
-  const routes = ["/", "/slownik", "/stats", "/stats/dzialy", `/test/${t.id}`, "/nauka", "/nauka/mikro", "/nauka/lekcja/mikro-rynek-1?sub=1",
+  const routes = ["/", "/?zrodlo=xl", "/stats", "/stats/dzialy", `/test/${t.id}`, "/nauka", "/nauka/mikro", "/nauka/lekcja/mikro-rynek-1?sub=1",
     "/nauka/powtorka", "/nauka/statystyki", "/nauka/podrecznik", "/nauka/podrecznik/mikro-podstawy", "/nauka/podrecznik/mikro-podstawy/mikro-podstawy-1", "/fiszki", "/fiszki?tryb=klasyczne", "/fiszki/talie",
     `/fiszki/talie/${deck.id}`, "/pojecia", "/pojecia/mapa", "/pojecia/mapa?q=i31c22b37a", "/pojecia/pokrycie", "/pojecia/statystyki", "/notatki",
     `/notatki/${note.id}`, "/notatki/brudnopisy", "/konto/ustawienia", "/admin",

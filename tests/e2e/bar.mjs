@@ -6,7 +6,7 @@ const ctx = await b.newContext({ viewport: { width: 430, height: 900 }, hasTouch
 const p = await ctx.newPage();
 await p.goto(B + "/konto/logowanie"); await p.fill('input[name="email"]', "owner@example.com"); await p.fill('input[name="password"]', "haslo-wlasciciela"); await p.click("form button.btn"); await p.waitForTimeout(1500);
 const barTop = async () => (await p.locator("nav.bottom-bar").boundingBox())?.y ?? null;
-for (const path of ["/", "/slownik", "/nauka", "/nauka/podrecznik", "/fiszki", "/pojecia", "/notatki", "/stats", "/admin", "/konto/ustawienia"]) {
+for (const path of ["/", "/zadania", "/nauka", "/nauka/podrecznik", "/fiszki", "/pojecia", "/notatki", "/stats", "/admin", "/konto/ustawienia"]) {
   await p.goto(B + path); await p.waitForLoadState("networkidle").catch(() => {});
   check(await p.locator("nav.bottom-bar").isVisible(), `pasek na ${path}`);
 }

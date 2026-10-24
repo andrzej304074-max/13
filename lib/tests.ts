@@ -67,7 +67,8 @@ export async function createTest(
   // filtr losowania zapamiętany przy teście (bez limitu – do dolosowania; etap – do historii)
   const draw = JSON.stringify({ origin: filter.origin ?? null, section: filter.section ?? null, stage: filter.stage ?? null,
     sources: filter.sources ?? null, edFrom: filter.edFrom ?? null, edTo: filter.edTo ?? null, stages: filter.stages ?? null,
-    topic: filter.topic ?? null, kind: filter.kind ?? null, theme: filter.theme ?? null, mistakes: filter.mistakes ?? null });
+    topic: filter.topic ?? null, kind: filter.kind ?? null, theme: filter.theme ?? null, mistakes: filter.mistakes ?? null,
+    slOrigin: filter.slOrigin ?? null, slSection: filter.slSection ?? null, xlOrigin: filter.xlOrigin ?? null });
   const { rows } = endless
     ? await query<TestRow>(
         `INSERT INTO tests (bank, type, mode, question_ids, deadline, max_score, user_id, draw)
@@ -298,8 +299,9 @@ const emptyTotals = (): StatsTotals => ({ score: 0, maxScore: 0, correct: 0, tot
 const pct = (score: number, max: number) => (max > 0 ? Math.round((score / max) * 1000) / 10 : 0);
 
 /**
- * @param bank – zakładka testów: Olimpiada (owe), Słownik, „Wszystkie pytania” (mix); „ai” – testy z zakładki
- *   „Wszystkie pytania” złożone wyłącznie z Pytań AI (zapisywane jako mix), mix – pozostałe testy tej zakładki.
+ * @param src – źródło pytań (Archiwum OWE, Pytania AI, Słownik, Hasło XL); null – wszystkie. Statystyki liczone z odpowiedzi
+ *   na pytania tego źródła we wszystkich testach (także starych z zakładek Olimpiada i Słownik i mieszanych z formularza
+ *   „Pytania”) – test bez pytań z tego źródła się nie liczy.
  * @param typeFilter – gdy podany, historia testów i wykres dokładności obejmują tylko pytania tego typu
  *   (podsumowania `overall`/`byType` są zawsze liczone dla obu typów).
  */
@@ -307,14 +309,11 @@ export async function getStats(
   userId: string,
   requestedBlockSize: number = DEFAULT_BLOCK_SIZE,
   typeFilter: QuestionType | null = null,
-  bank: Bank = "owe",
+  src: QSource | null = null,
   stageFilter: Stage | null = null,
 ): Promise<Stats> {
   // etap ma sens tylko dla pytań OWE jednokrotnego wyboru
-  const stage = bank === "owe" && typeFilter === "single" ? stageFilter : null;
-  const dbBank = bank === "ai" ? "mix" : bank;
-  const onlyAi = `(SELECT 1 FROM unnest(t.question_ids) x WHERE NOT (${sourceWhereSql("x", "ai")}))`;
-  const bankSql = (n: number) => `t.bank = $${n}${bank === "ai" ? ` AND NOT EXISTS ${onlyAi}` : bank === "mix" ? ` AND EXISTS ${onlyAi}` : ""}`;
+  const stage = src === "owe" && typeFilter === "single" ? stageFilter : null;
   await ensureRescored();
   const blockSize = (BLOCK_SIZES as readonly number[]).includes(requestedBlockSize) ? requestedBlockSize : DEFAULT_BLOCK_SIZE;
   // Domknij testy, którym minął czas (np. ktoś zamknął kartę).
@@ -323,47 +322,50 @@ export async function getStats(
        score = (SELECT COALESCE(SUM(points), 0) FROM answers a WHERE a.test_id = t.id)
      WHERE finished_at IS NULL AND deadline < now() - interval '5 seconds'`,
   );
+  // Warunek na id pytania: źródło i etap. Wzorce pochodzą z zamkniętych list (sourceWhereSql, stageRegex), więc mogą trafić wprost do SQL.
+  const cond = (col: string, s: QSource | null, st: Stage | null) =>
+    [s ? `(${sourceWhereSql(col, s)})` : null, st ? `${col} ~ '${stageRegex(st)}'` : null].filter(Boolean).join(" AND ");
   // Dla każdego liczonego testu: poprawne jednostki i liczba wszystkich jednostek (test 30/50 – całe pytania testu,
-  // bez limitu – tylko sprawdzone i pominięte).
-  // `st` – tylko pytania danego etapu w każdym teście (jednokrotny wybór; nieodpowiedziane w teście 30/50 liczą się jako błędne).
-  // Wzorzec etapu pochodzi z zamkniętej listy (stageRegex), więc może trafić wprost do SQL.
-  const perTest = (u: number, st: Stage | null = null) => {
-    const re = st ? `'${stageRegex(st)}'` : "";
-    const total = st
-      ? `(CASE WHEN t.mode = 'endless' THEN COUNT(a.question_id) ELSE cardinality(ARRAY(SELECT x FROM unnest(t.question_ids) x WHERE x ~ ${re})) END)`
-      : `(CASE WHEN t.mode = 'endless' THEN COUNT(a.question_id) ELSE cardinality(t.question_ids) END)
-        * (CASE WHEN t.type = 'single' THEN 1 ELSE 2 END)`;
+  // bez limitu – tylko sprawdzone i pominięte). Z warunkiem – tylko pytania spełniające warunek (nieodpowiedziane w teście
+  // 30/50 liczą się jako błędne); test bez takich pytań pomijamy.
+  const perTest = (u: number, s: QSource | null, st: Stage | null) => {
+    const c = cond("x", s, st), ca = cond("a.question_id", s, st);
+    const unit = "(CASE WHEN t.type = 'single' THEN 1 ELSE 2 END)";
+    const n = c
+      ? `(CASE WHEN t.mode = 'endless' THEN COUNT(a.question_id) ELSE cardinality(ARRAY(SELECT x FROM unnest(t.question_ids) x WHERE ${c})) END)`
+      : `(CASE WHEN t.mode = 'endless' THEN COUNT(a.question_id) ELSE cardinality(t.question_ids) END)`;
     return `
     SELECT t.id, t.type, t.mode, t.draw->>'stage' AS draw_stage, COALESCE(t.finished_at, t.started_at) AS at,
-      ${st ? "COALESCE(SUM(a.points), 0)" : "t.score"} AS score, ${st ? `2 * ${total}` : "t.max_score"} AS max_score,
+      ${c ? "COALESCE(SUM(a.points), 0)" : "t.score"} AS score, ${c ? `2 * ${n}` : "t.max_score"} AS max_score,
       COALESCE(SUM(CASE WHEN a.skipped THEN 0 WHEN t.type = 'single' THEN (a.points = 2)::int ELSE a.points END), 0)
         AS correct,
-      ${total} AS total
-    FROM tests t LEFT JOIN answers a ON a.test_id = t.id${st ? ` AND a.question_id ~ ${re}` : ""}
-    WHERE ${COUNTED} AND ${bankSql(1)} AND t.user_id = $${u}${st ? " AND t.type = 'single'" : ""}
-    GROUP BY t.id`;
+      ${n} * ${unit} AS total
+    FROM tests t LEFT JOIN answers a ON a.test_id = t.id${ca ? ` AND ${ca}` : ""}
+    WHERE ${COUNTED} AND t.user_id = $${u}${st ? " AND t.type = 'single'" : ""}
+    GROUP BY t.id${c ? ` HAVING ${n} > 0` : ""}`;
   };
   type PerTest = { id: string; type: QuestionType; mode: TestMode; draw_stage: string | null; score: number; max_score: number; at: Date; correct: number; total: string };
   type StageRow = { score: number | null; max_score: number | null; correct: string | null; total: string | null; tests: string };
   const stageQuery = (st: Stage) => query<StageRow>(
     `SELECT SUM(score) AS score, SUM(max_score) AS max_score, SUM(correct) AS correct, SUM(total) AS total, COUNT(*) AS tests
-     FROM (${perTest(2, st)}) p WHERE total > 0`,
-    [dbBank, userId],
+     FROM (${perTest(1, "owe", st)}) p WHERE total > 0`,
+    [userId],
   );
+  const ac = cond("a.question_id", src, stage);
   // niezależne zapytania równolegle – jedna tura do bazy zamiast pięciu
   const [{ rows: agg }, { rows: hist }, stageRows, { rows: blockRows }, { rows: srcRows }] = await Promise.all([
     query<{ type: QuestionType; score: number; max_score: number; correct: number; total: string; tests: string }>(
       `SELECT type, SUM(score) AS score, SUM(max_score) AS max_score, SUM(correct) AS correct, SUM(total) AS total,
          COUNT(*) AS tests
-       FROM (${perTest(2)}) p GROUP BY type`,
-      [dbBank, userId],
+       FROM (${perTest(1, src, null)}) p GROUP BY type`,
+      [userId],
     ),
     query<PerTest>(
-      `SELECT * FROM (SELECT * FROM (${perTest(3, stage)}) p WHERE ($2::text IS NULL OR type = $2)${stage ? " AND total > 0" : ""}
+      `SELECT * FROM (SELECT * FROM (${perTest(2, src, stage)}) p WHERE ($1::text IS NULL OR type = $1)${stage ? " AND total > 0" : ""}
        ORDER BY at DESC LIMIT 100) h ORDER BY at ASC`,
-      [dbBank, typeFilter, userId],
+      [typeFilter, userId],
     ),
-    bank === "owe" ? Promise.all((["s", "o"] as const).map(stageQuery)) : Promise.resolve(null),
+    src === "owe" ? Promise.all((["s", "o"] as const).map(stageQuery)) : Promise.resolve(null),
     // Każde sprawdzone/pominięte pytanie ma dokładność 0–1 (w wielokrotnym: punkty / 2), kolejność wg czasu odpowiedzi.
     query<{ questions: string; accuracy: number }>(
       `WITH q AS (
@@ -372,15 +374,15 @@ export async function getStats(
                      ELSE a.points / 2 END AS accuracy,
                 row_number() OVER (ORDER BY a.answered_at, a.test_id, a.question_id) - 1 AS rn
          FROM answers a JOIN tests t ON t.id = a.test_id
-         WHERE ${bankSql(2)} AND ($1::text IS NULL OR t.type = $1) AND t.user_id = $3${stage ? ` AND a.question_id ~ '${stageRegex(stage)}'` : ""}
+         WHERE ($1::text IS NULL OR t.type = $1) AND t.user_id = $2${ac ? ` AND ${ac}` : ""}
        )
        SELECT * FROM (
          SELECT rn / ${blockSize} AS block, COUNT(*) AS questions, AVG(accuracy) AS accuracy
          FROM q GROUP BY 1 ORDER BY 1 DESC LIMIT 100
        ) b ORDER BY block ASC`,
-      [typeFilter, dbBank, userId],
+      [typeFilter, userId],
     ),
-    // źródło pytania z prefiksu id (sl- – Słownik, ai- – Pytania AI, reszta – Archiwum OWE), niezależnie od banku testu
+    // źródło pytania z prefiksu id (sl- – Słownik, ai- – Pytania AI, xl- – Hasło XL, reszta – Archiwum OWE)
     query<{ src: QSourceKey; type: QuestionType; n: string; acc: number }>(
       `SELECT ${sourceCaseSql("a.question_id")} AS src,
          t.type, COUNT(*) AS n,
@@ -390,7 +392,7 @@ export async function getStats(
       [userId],
     ),
   ]);
-  const bySource: Record<QSourceKey, SourceTotals> = { owe: emptySource(), ai: emptySource(), slownik: emptySource() };
+  const bySource: Record<QSourceKey, SourceTotals> = { owe: emptySource(), ai: emptySource(), slownik: emptySource(), xl: emptySource() };
   for (const r of srcRows) {
     const s = bySource[r.src];
     if (!s) continue;

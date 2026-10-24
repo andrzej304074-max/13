@@ -17,6 +17,8 @@ export const ZROZUM = zrozum as unknown as Record<string, ZContent>;
 // Pytania dotyczące hasła przewodniego swojej edycji (tools/otwarte/theme.py + ręczne poprawki) – pole `th`.
 const THEME_Q = new Set(theme.questions);
 export const OWE_STATS = (oweStats as unknown as OweRec[]).map((r) => (THEME_Q.has(r.id) ? { ...r, th: 1 as const } : r));
-export const SLOWNIK_STATS = slownikStats as unknown as SlRec[];
+// slownik-stats.json obejmuje też pytania źródła „Hasło XL” (id `xl-…`) – rozdzielone tutaj
+export const SLOWNIK_STATS = (slownikStats as unknown as SlRec[]).filter((r) => !r.id.startsWith("xl-"));
+export const XL_STATS = (slownikStats as unknown as SlRec[]).filter((r) => r.id.startsWith("xl-"));
 // Pytania AI: dział z eksportu (dz), temat i pojęcia z dopasowania haseł; th – dział „Demografia” (hasło XL).
 export const AI_STATS = aiStats as unknown as AiRec[];

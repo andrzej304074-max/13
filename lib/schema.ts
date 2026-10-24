@@ -1,3 +1,27 @@
+import xlIds from "@/data/slownik/xl-ids.json";
+
+/**
+ * Plan IV: pytania o hasło XL pisane w aplikacji to osobne źródło – ich id zmieniły się z `sl-…` na `xl-…`
+ * (tools/slownik/wydziel_xl.py). Jednorazowo przenosimy stare id w odpowiedziach, testach i brudnopisach pytań oraz
+ * ustawienia formularza testu z dawnych zakładek na wspólny klucz `testy`.
+ */
+const XL_OLD = (xlIds as string[]).map((id) => `'sl-${id.slice(3)}'`).join(",");
+const XL_MIGRATION = `
+DO $xl$ DECLARE ids text[] := ARRAY[${XL_OLD}]::text[]; BEGIN
+  IF NOT EXISTS (SELECT 1 FROM settings WHERE key = 'xl_ids') THEN
+    UPDATE answers SET question_id = 'xl-' || substr(question_id, 4) WHERE question_id = ANY(ids);
+    UPDATE tests SET question_ids = ARRAY(
+      SELECT CASE WHEN x = ANY(ids) THEN 'xl-' || substr(x, 4) ELSE x END FROM unnest(question_ids) WITH ORDINALITY u(x, o) ORDER BY o)
+    WHERE question_ids && ids;
+    UPDATE notes SET ref = 'xl:xl-' || substr(ref, 12) WHERE kind = 'scratch' AND ref LIKE 'slownik:sl-%' AND substr(ref, 9) = ANY(ids);
+    INSERT INTO user_prefs (user_id, key, value) SELECT user_id, 'testy', value FROM user_prefs WHERE key = 'testy-mix' ON CONFLICT DO NOTHING;
+    INSERT INTO user_prefs (user_id, key, value) SELECT user_id, 'testy', value FROM user_prefs WHERE key = 'testy-owe' ON CONFLICT DO NOTHING;
+    INSERT INTO user_prefs (user_id, key, value) SELECT user_id, 'testy', value FROM user_prefs WHERE key = 'testy-slownik' ON CONFLICT DO NOTHING;
+    INSERT INTO settings (key, value) VALUES ('xl_ids', 'v1');
+  END IF;
+END $xl$;
+`;
+
 export const SCHEMA_SQL = `
 CREATE TABLE IF NOT EXISTS tests (
   id           uuid PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -383,4 +407,4 @@ DO $$ BEGIN
     INSERT INTO settings (key, value) VALUES ('xp_backfill', 'v1');
   END IF;
 END $$;
-`;
+${XL_MIGRATION}`;

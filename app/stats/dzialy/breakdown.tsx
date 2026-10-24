@@ -41,9 +41,9 @@ const ago = (t: number) => (t ? new Date(t).toLocaleDateString("pl-PL") : "–")
 /** Parametry adresu z filtrami (myFilterToParams) – jawny link z filtrami ma pierwszeństwo przed zapisanymi. */
 export const FILTER_KEYS = ["typ", "okres", "sort", "dzial", "rodzaj", "etap", "od", "do", "poch", "sekcja", "haslo"];
 
-const SRC_TEXT = { owe: "z Archiwum OWE", ai: "AI (sprawdzonych)", slownik: "ze Słownika" } as const;
+const SRC_TEXT = { owe: "z Archiwum OWE", ai: "AI (sprawdzonych)", slownik: "ze Słownika", xl: "o hasło XL" } as const;
 
-export function MyBreakdown({ bank }: { bank: "owe" | "ai" | "slownik" }) {
+export function MyBreakdown({ bank }: { bank: "owe" | "ai" | "slownik" | "xl" }) {
   const [f, setF] = useState<MyFilter | null>(null);
   const [data, setData] = useState<MyStatsPayload | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -56,7 +56,7 @@ export function MyBreakdown({ bank }: { bank: "owe" | "ai" | "slownik" }) {
     && FILTER_KEYS.some((k) => new URLSearchParams(window.location.search).has(k)));
   useEffect(() => setF(myFilterFromParams(new URLSearchParams(window.location.search))), []);
   // filtry zapamiętane na koncie (osobno dla pytań z olimpiad i ze słownika)
-  usePrefSync(bank === "owe" ? "stats-dzialy" : bank === "ai" ? "stats-dzialy-ai" : "stats-dzialy-slownik", f ? myFilterToParams(f) : null,
+  usePrefSync(bank === "owe" ? "stats-dzialy" : bank === "ai" ? "stats-dzialy-ai" : bank === "xl" ? "stats-dzialy-xl" : "stats-dzialy-slownik", f ? myFilterToParams(f) : null,
     (v) => setF(myFilterFromParams(new URLSearchParams(v))), { load: explicit, save: !!viewedUser() });
   useEffect(() => {
     if (!f) return;
@@ -107,11 +107,11 @@ export function MyBreakdown({ bank }: { bank: "owe" | "ai" | "slownik" }) {
       </Why>
       <div className="card stack filters-card">
         <OweFilterFields
-          f={f} set={set} editions={bank === "owe"} theme={bank !== "slownik"}
+          f={f} set={set} editions={bank === "owe"} theme={bank === "owe" || bank === "ai"}
           topics={Object.entries(N?.topics ?? {}).map(([id, name]) => ({ id, name }))}
           kinds={N?.kinds ?? []}
         >
-          {bank === "slownik" && <>
+          {(bank === "slownik" || bank === "xl") && <>
             <label className="filters">Pochodzenie
               <select className="select" value={f.origin ?? ""} onChange={(e) => set({ origin: (e.target.value || null) as MyFilter["origin"] })}>
                 <option value="">ręczne i automatyczne</option>
@@ -119,12 +119,12 @@ export function MyBreakdown({ bank }: { bank: "owe" | "ai" | "slownik" }) {
                 <option value="a">automatyczne</option>
               </select>
             </label>
-            <label className="filters">Dział słownika
+            {bank === "slownik" && <label className="filters">Dział słownika
               <select className="select" value={f.sec ?? ""} onChange={(e) => set({ sec: Number(e.target.value) || null })}>
                 <option value="">wszystkie</option>
                 {(N?.sections ?? []).map((s) => <option key={s.id} value={s.id}>{s.id}. {s.name}</option>)}
               </select>
-            </label>
+            </label>}
           </>}
           <label className="filters">Okres
             <select className="select" value={f.range} onChange={(e) => set({ range: e.target.value as MyFilter["range"] })}>

@@ -1,12 +1,14 @@
-import { AI_STATS, COURSE, OWE_STATS, SLOWNIK_STATS } from "@/data/nauka";
+import { AI_STATS, COURSE, OWE_STATS, SLOWNIK_STATS, XL_STATS } from "@/data/nauka";
+import { SLOWNIK_SECTIONS } from "@/data/slownik";
 import { kindOk, themeOk, type ItemMeta, type ThemeFilter } from "./owe-stats";
 
 /**
  * Opis każdego pytania do filtrów testów (wszystkie banki): źródło, edycja i etap (Archiwum OWE), dział (temat kursu),
- * pojęcia, pytanie obliczeniowe, hasło przewodnie. Dane: data/nauka/{owe,slownik,ai}-stats.json (build_course.py).
+ * pojęcia, pytanie obliczeniowe, hasło przewodnie. Dane: data/nauka/{owe,slownik,ai}-stats.json (build_course.py);
+ * Hasło XL – rekordy `xl-…` ze slownik-stats.json.
  */
 
-import { SOURCES, isSource, type QSource } from "./question-source";
+import { SOURCES, isSource, sourceOf, type QSource } from "./question-source";
 export { SOURCES, isSource, type QSource };
 
 /** Dział Słownika z pytaniami o hasło przewodnie bieżącej edycji (XL – „Gospodarka wobec wyzwań demograficznych”). */
@@ -36,7 +38,14 @@ export interface MetaFilter {
   topic?: string | null;
   kind?: string | null;
   theme?: ThemeFilter | null;
+  /** Słownik: ręcznie pisane / automatyczne i dział słownika – zawężają tylko pytania Słownika. */
+  slOrigin?: SubOrigin | null;
+  slSection?: number | null;
+  /** Hasło XL: pisane ręcznie (400) / skryptem (254) – zawęża tylko pytania Hasła XL. */
+  xlOrigin?: SubOrigin | null;
 }
+export type SubOrigin = "manual" | "auto";
+const isSubOrigin = (v: unknown): v is SubOrigin => v === "manual" || v === "auto";
 
 let cache: { meta: Map<string, QMeta>; items: Record<string, ItemMeta> } | null = null;
 
@@ -48,6 +57,8 @@ function load() {
   for (const r of SLOWNIK_STATS) {
     meta.set(r.id, { src: "slownik", topic: r.topic, items: r.items, calc: r.calc, th: r.sec === THEME_SECTION || r.topic === "demografia" ? 1 : undefined });
   }
+  // Hasło XL – całe źródło dotyczy hasła przewodniego
+  for (const r of XL_STATS) meta.set(r.id, { src: "xl", topic: r.topic, items: r.items, calc: r.calc, th: 1 });
   for (const r of AI_STATS) meta.set(r.id, { src: "ai", topic: r.topic, items: r.items, calc: r.calc, th: r.th });
   const items: Record<string, ItemMeta> = {};
   for (const [id, it] of Object.entries(COURSE.items)) items[id] = { title: it.t, kind: it.kind, topic: it.topic };
@@ -61,8 +72,8 @@ export const questionMeta = (id: string): QMeta | undefined => load().meta.get(i
 export function metaOk(id: string, f: MetaFilter): boolean {
   const { meta, items } = load();
   const m = meta.get(id);
+  if (f.sources?.length && !f.sources.includes(m?.src ?? sourceOf(id))) return false;
   if (!m) return !f.topic && !f.kind && (!f.theme || f.theme === "all");
-  if (f.sources?.length && !f.sources.includes(m.src)) return false;
   if (m.src === "owe") {
     if (f.edFrom && (m.ed ?? 0) < f.edFrom) return false;
     if (f.edTo && (m.ed ?? 0) > f.edTo) return false;
@@ -99,6 +110,15 @@ export function parseMetaFilter(o: Record<string, unknown>): MetaFilter {
     f[k] = o[k] as number;
   }
   if (f.edFrom && f.edTo && f.edFrom > f.edTo) throw new Error("Nieprawidłowy zakres edycji.");
+  for (const k of ["slOrigin", "xlOrigin"] as const) {
+    if (o[k] == null) continue;
+    if (!isSubOrigin(o[k])) throw new Error("Nieznany rodzaj pytań.");
+    f[k] = o[k] as SubOrigin;
+  }
+  if (o.slSection != null) {
+    if (!SLOWNIK_SECTIONS.some((s) => s.no === o.slSection)) throw new Error("Nieznany dział słownika.");
+    f.slSection = o.slSection as number;
+  }
   if (o.topic != null) {
     if (typeof o.topic !== "string" || !COURSE.topics.some((t) => t.id === o.topic)) throw new Error("Nieznany dział.");
     f.topic = o.topic;

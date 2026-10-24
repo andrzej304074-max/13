@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { OWE_STATS, SLOWNIK_STATS } from "@/data/nauka";
+import { OWE_STATS, SLOWNIK_STATS, XL_STATS } from "@/data/nauka";
 import { combineMastery } from "@/lib/mastery-core";
 import { aggregate, DEFAULT_MY_FILTER, myFilterFromParams, myFilterToParams, type MyAnswer } from "@/lib/my-stats-core";
 import { oweStatsData } from "@/lib/owe-stats-data";
@@ -101,9 +101,10 @@ describe("moje statystyki i opanowanie", () => {
     expect(m.a).toMatchObject({ c: 4.5, t: 7 });
     expect(m.c).toMatchObject({ c: 0.5, t: 2 });
   });
-  it("pytania słownikowe: 5340 rekordów (w tym 400 ręcznych i 254 algorytmicznych o haśle XL), każdy z działem i zagadnieniem", () => {
-    expect(SLOWNIK_STATS.length).toBe(5340);
-    expect(SLOWNIK_STATS.every((r) => r.topic && r.unit)).toBe(true);
-    expect(SLOWNIK_STATS.filter((r) => r.items.length).length).toBeGreaterThan(4600);
+  it("pytania słownikowe: 4686 rekordów + 654 Hasła XL (400 ręcznych i 254 algorytmicznych), każdy z działem i zagadnieniem", () => {
+    expect(SLOWNIK_STATS.length).toBe(4686);
+    expect(XL_STATS.length).toBe(654);
+    expect([...SLOWNIK_STATS, ...XL_STATS].every((r) => r.topic && r.unit)).toBe(true);
+    expect([...SLOWNIK_STATS, ...XL_STATS].filter((r) => r.items.length).length).toBeGreaterThan(4600);
   });
 });

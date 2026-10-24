@@ -1,4 +1,4 @@
-import { COURSE, OWE_STATS, SLOWNIK_STATS } from "@/data/nauka";
+import { COURSE, OWE_STATS, SLOWNIK_STATS, XL_STATS } from "@/data/nauka";
 import { query } from "./db";
 import { HttpError } from "./tests";
 import { addXp } from "./xp";
@@ -6,7 +6,7 @@ import { FLASH_DAILY_CAP, FLASH_XP } from "./xp-core";
 import { combineMastery, type Mastery } from "./mastery-core";
 import { loadAnswers } from "./my-stats";
 
-const REC_ITEMS = new Map<string, string[]>([...OWE_STATS, ...SLOWNIK_STATS].map((r) => [r.id, r.items]));
+const REC_ITEMS = new Map<string, string[]>([...OWE_STATS, ...SLOWNIK_STATS, ...XL_STATS].map((r) => [r.id, r.items]));
 
 export async function getMastery(userId: string): Promise<Record<string, Mastery>> {
   const [learn, flash, tests] = await Promise.all([

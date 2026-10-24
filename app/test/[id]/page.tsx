@@ -332,15 +332,15 @@ function Summary({ test }: { test: TestState }) {
         </table></div>
       </div>
       <div className="row">
-        <Link className="btn" href={test.bank === "slownik" ? "/slownik" : test.bank === "mix" ? "/testy/wszystkie" : "/"}>Nowy test</Link>
-        <Link className="btn secondary" href={`/stats?bank=${test.bank}`}>Statystyki</Link>
-        <Link className="btn secondary" href="/testy/wszystkie?bledy=1" data-testid="retry-mistakes">🔁 Powtórz błędy</Link>
+        <Link className="btn" href="/">Nowy test</Link>
+        <Link className="btn secondary" href="/stats">Statystyki</Link>
+        <Link className="btn secondary" href="/?bledy=1" data-testid="retry-mistakes">🔁 Powtórz błędy</Link>
       </div>
     </div>
   );
 }
 
-/** Źródło pytania w teście „Wszystkie pytania” (z prefiksu id). */
+/** Źródło pytania w teście (z prefiksu id). */
 function sourceLabel(id: string): string {
   const s = SOURCES.find((x) => x.id === sourceOf(id))!;
   return `${s.icon} ${s.label}`;

@@ -39,10 +39,8 @@ describe("blokady sekcji – łączenie i menu", () => {
     expect(isBlocked("/notatki/brudnopisy", ["notatki"])).toBe(true);
     expect(isBlocked("notatki", ["/notatki", "/notatki/brudnopisy"])).toBe(true);
     expect(isBlocked("notatki", ["/notatki"])).toBe(false);
-    // wspólne zasoby: test blokują Olimpiada + Wszystkie pytania + Słownik (Zadania i Eseje go nie odblokowują)
-    expect(isBlocked("testy", ["/", "/testy/wszystkie", "/slownik"])).toBe(true);
-    expect(isBlocked("testy", ["/", "/slownik"])).toBe(false);
-    expect(isBlocked("testy", ["/"])).toBe(false);
+    // wspólne zasoby: test blokuje formularz „Pytania” (Zadania i Eseje go nie odblokowują)
+    expect(isBlocked("testy", ["/"])).toBe(true);
     expect(isBlocked("testy", ["/zadania", "/eseje"])).toBe(false);
     expect(isBlocked("nauka", ["/nauka", "/nauka/podrecznik", "/fiszki", "/fiszki/talie", "/nauka/powtorka"])).toBe(true);
     expect(isBlocked("nauka", ["/nauka/olimpiada", "/nauka/literatura"])).toBe(false);

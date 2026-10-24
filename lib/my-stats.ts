@@ -1,4 +1,4 @@
-import { AI_STATS, COURSE, OWE_STATS, SLOWNIK_STATS } from "@/data/nauka";
+import { AI_STATS, COURSE, OWE_STATS, SLOWNIK_STATS, XL_STATS } from "@/data/nauka";
 import { query } from "./db";
 import { aggregate, type MyAnswer, type MyFilter, type MyStats } from "./my-stats-core";
 import type { ItemMeta } from "./owe-stats";
@@ -51,7 +51,7 @@ export interface MyItemAnswers {
   questions: Record<string, { edition: string; question: string }>;
 }
 
-const recsFor = (bank: QSource) => (bank === "owe" ? OWE_STATS : bank === "ai" ? AI_STATS : SLOWNIK_STATS);
+const recsFor = (bank: QSource) => (bank === "owe" ? OWE_STATS : bank === "ai" ? AI_STATS : bank === "xl" ? XL_STATS : SLOWNIK_STATS);
 
 /** Ostatnie odpowiedzi na pytania o jedno pojęcie (te same filtry co tabela) z treścią pytań. */
 export async function getMyItemAnswers(userId: string, bank: QSource, f: MyFilter, item: string): Promise<MyItemAnswers> {

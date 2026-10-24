@@ -65,7 +65,7 @@ export default function LiteraturaPage() {
             budowane pytania olimpijskie.</li>
           <li><strong>Rysuj wykresy i licz.</strong> Krzywe (popyt–podaż, koszty, AD–AS) i wzory przerabiaj sam w <Link href="/notatki">notatkach</Link> –
             samo czytanie nie wystarcza.</li>
-          <li><strong>Sprawdzaj się od razu.</strong> Po rozdziale zrób lekcję w <Link href="/nauka">kursie</Link>, test ze <Link href="/slownik">Słownika</Link> lub
+          <li><strong>Sprawdzaj się od razu.</strong> Po rozdziale zrób lekcję w <Link href="/nauka">kursie</Link>, test ze <Link href="/?zrodlo=slownik">Słownika</Link> lub
             z <Link href="/">archiwum OWE</Link>; błędne odpowiedzi wracają w <Link href="/fiszki">fiszkach</Link> i powtórkach.</li>
           <li><strong>Wracaj do trudnych miejsc</strong> po kilku dniach – rozłożone powtórki utrwalają lepiej niż jedno długie czytanie.</li>
         </ul>

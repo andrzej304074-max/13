@@ -1,3 +1,4 @@
+import type { QSource } from "./question-source";
 /**
  * Statystyki pytań dla admina (czysta logika): skuteczność wszystkich użytkowników, najczęściej wybierana błędna opcja
  * i flagi do przeglądu – „podejrzany klucz”, „za trudne”, „za łatwe”.
@@ -9,7 +10,7 @@ export const FLAG_LABEL: Record<QFlag, string> = { klucz: "podejrzany klucz", tr
 
 export interface QStatRow {
   id: string;
-  src: "owe" | "ai" | "slownik";
+  src: QSource;
   topic: string | null;
   type: "single" | "multi";
   question: string;

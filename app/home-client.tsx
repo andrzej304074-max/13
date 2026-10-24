@@ -6,10 +6,10 @@ import { useEffect, useState } from "react";
 import { api, ApiError, fmtPct, lastTest, rememberTest } from "@/lib/client";
 import { usePrefSync } from "@/lib/prefs-client";
 import { ROMAN } from "@/lib/owe-stats";
-import type { OweStage } from "@/lib/question-meta";
-import { SOURCES, type QSource } from "@/lib/question-source";
+import type { OweStage, SubOrigin } from "@/lib/question-meta";
+import { isSource, SOURCE_IDS, SOURCES, type QSource } from "@/lib/question-source";
 import type { Stats } from "@/lib/tests";
-import type { Origin, QuestionType, TestState } from "@/lib/types";
+import type { QuestionType, TestState } from "@/lib/types";
 
 const TYPES: { value: QuestionType; label: string; hint: string }[] = [
   { value: "single", label: "Jednokrotny wybór", hint: "1 poprawna odpowiedź · +2 / −1 pkt" },
@@ -20,10 +20,15 @@ const SIZES: { value: number | "endless"; label: string; hint: string }[] = [
   { value: 50, label: "50 pytań", hint: "60 minut" },
   { value: "endless", label: "Bez limitu", hint: "bez limitu czasu · bez cofania · liczą się tylko rozwiązane" },
 ];
-const ORIGINS: { value: Origin | null; label: string; hint: string }[] = [
-  { value: null, label: "Oba rodzaje", hint: "ręczne i automatyczne" },
-  { value: "manual", label: "Ręcznie pisane", hint: "zadania w stylu OWE: obliczenia, skutki, osoby" },
-  { value: "auto", label: "Automatyczne", hint: "definicja ↔ pojęcie, wzory, daty" },
+const SL_ORIGINS: { value: SubOrigin | null; label: string; hint: string }[] = [
+  { value: null, label: "oba rodzaje", hint: "ręcznie pisane i automatyczne" },
+  { value: "manual", label: "ręcznie pisane", hint: "zadania w stylu OWE: obliczenia, skutki, osoby" },
+  { value: "auto", label: "automatyczne", hint: "definicja ↔ pojęcie, wzory, daty" },
+];
+const XL_ORIGINS: { value: SubOrigin | null; label: string; hint: string }[] = [
+  { value: null, label: "wszystkie", hint: "pisane ręcznie i skryptem" },
+  { value: "manual", label: "pisane ręcznie", hint: "400 pytań w stylu OWE o demografii i gospodarce" },
+  { value: "auto", label: "ze skryptu", hint: "254 pytania układane algorytmem z haseł tematu" },
 ];
 const STAGES: { id: OweStage; label: string }[] = [
   { id: "s", label: "szkolny" },
@@ -32,56 +37,66 @@ const STAGES: { id: OweStage; label: string }[] = [
 ];
 const EDS = Array.from({ length: 19 }, (_, i) => 21 + i);
 
-export type StartBank = "owe" | "slownik" | "mix";
-
-/** Ustawienia formularza (zapamiętywane na koncie – osobno dla każdej zakładki). */
+/** Ustawienia formularza „Pytania” (zapamiętywane na koncie). */
 export interface StartPrefs {
   type: QuestionType;
   count: number | "endless";
   sources: QSource[];
+  /** Archiwum OWE: zakres edycji i etapy. */
   edFrom: number;
   edTo: number;
   stages: OweStage[];
+  /** Wspólne: dział kursu, rodzaj haseł, hasło przewodnie. */
   topic: string | null;
   kind: string | null;
   theme: "all" | "yes" | "no";
-  origin: Origin | null;
-  section: number | null;
-  /** „Wszystkie pytania”: tylko pytania, na które ostatnio odpowiedziano źle (ostatnie 90 dni). */
+  /** Słownik: ręcznie pisane / automatyczne i dział słownika. */
+  slOrigin: SubOrigin | null;
+  slSection: number | null;
+  /** Hasło XL: pisane ręcznie / ze skryptu. */
+  xlOrigin: SubOrigin | null;
+  /** Tylko pytania, na które ostatnio odpowiedziano źle (ostatnie 90 dni) – nie zapamiętywane. */
   mistakes: boolean;
 }
 export const DEFAULT_PREFS: StartPrefs = {
-  type: "single", count: 30, sources: ["owe", "ai", "slownik"], edFrom: 21, edTo: 39, stages: ["s", "o", "c"],
-  topic: null, kind: null, theme: "all", origin: null, section: null, mistakes: false,
+  type: "single", count: 30, sources: [...SOURCE_IDS], edFrom: 21, edTo: 39, stages: ["s", "o", "c"],
+  topic: null, kind: null, theme: "all", slOrigin: null, slSection: null, xlOrigin: null, mistakes: false,
 };
 
-interface Counts { single: number; multi: number; bySource: Record<QSource, { single: number; multi: number }> | null }
+type Pair = { single: number; multi: number };
+interface Counts extends Pair { bySource: Record<QSource, Pair> | null }
 
 export interface StartOptions {
   topics: { id: string; name: string }[];
   kinds: { id: string; title: string }[];
-  /** Tylko Słownik: działy słownika. */
-  sections?: { no: number; title: string }[];
+  sections: { no: number; title: string }[];
 }
 
-const TITLE: Record<StartBank, string> = { owe: "Nowy test", slownik: "Test ze słownika pojęć", mix: "Wszystkie pytania" };
-
-export default function HomeClient({ bank = "owe", counts: initial, options }: {
-  bank?: StartBank;
-  counts: { single: number; multi: number };
-  options: StartOptions;
-}) {
+/**
+ * Testy → Pytania: jeden formularz dla wszystkich źródeł (Archiwum OWE, Pytania AI, Słownik, Hasło XL) z filtrami
+ * każdego źródła i filtrami wspólnymi. `?zrodlo=<id>` – tylko to źródło (link z dawnych zakładek), `?bledy=1` – „Tylko moje błędy”.
+ */
+export default function HomeClient({ counts: initial, options }: { counts: Pair; options: StartOptions }) {
   const router = useRouter();
   const [p, setP] = useState<StartPrefs>(DEFAULT_PREFS);
   const set = (o: Partial<StartPrefs>) => setP((x) => ({ ...x, ...o }));
-  // link „Powtórz błędy” (?bledy=1) – włącza „Tylko moje błędy”, reszta ustawień z konta
+  // linki: „Powtórz błędy” (?bledy=1) i jedno źródło (?zrodlo=slownik – np. ze starego adresu /slownik)
   // (useSearchParams – przy przejściu linkiem adres w window.location zmienia się dopiero po pierwszym renderze)
   const search = useSearchParams();
-  const mistakesLink = bank === "mix" && search.get("bledy") === "1";
-  useEffect(() => { if (mistakesLink) set({ mistakes: true }); }, [mistakesLink]);
-  // ustawienia formularza zapamiętane na koncie (osobno dla każdej zakładki); „Tylko moje błędy” nie jest zapamiętywane –
-  // włącza je link albo przycisk na czas tej wizyty, żeby zwykły test później nie losował samych błędów
-  usePrefSync(`testy-${bank}`, JSON.stringify({ ...p, mistakes: false }), (v) => { try { setP({ ...DEFAULT_PREFS, ...JSON.parse(v), mistakes: mistakesLink }); } catch {} });
+  const mistakesLink = search.get("bledy") === "1";
+  const z = search.get("zrodlo");
+  const srcLink: QSource | null = isSource(z) ? z : null;
+  const fromLinks = (x: StartPrefs): StartPrefs => ({ ...x, mistakes: mistakesLink, ...(srcLink ? { sources: [srcLink] } : {}) });
+  useEffect(() => { if (mistakesLink || srcLink) setP(fromLinks); }, [mistakesLink, srcLink]); // eslint-disable-line react-hooks/exhaustive-deps
+  // ustawienia na koncie; „Tylko moje błędy” nie jest zapamiętywane – włącza je link albo przycisk na czas tej wizyty
+  usePrefSync("testy", JSON.stringify({ ...p, mistakes: false }), (v) => {
+    try {
+      const saved = { ...DEFAULT_PREFS, ...JSON.parse(v) } as StartPrefs;
+      saved.sources = (saved.sources ?? []).filter(isSource);
+      if (!saved.sources.length) saved.sources = [...SOURCE_IDS];
+      setP(fromLinks(saved));
+    } catch {}
+  });
   const [counts, setCounts] = useState<Counts>({ ...initial, bySource: null });
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -89,23 +104,23 @@ export default function HomeClient({ bank = "owe", counts: initial, options }: {
   const [resumeId, setResumeId] = useState<string | null>(null);
 
   useEffect(() => {
-    api<Stats>(`/api/stats?bank=${bank}`).then(setStats).catch(() => {});
+    api<Stats>("/api/stats").then(setStats).catch(() => {});
     const id = lastTest();
     if (id) {
       api<TestState>(`/api/tests/${id}`)
-        .then((t) => (t.finishedAt ? rememberTest(null) : t.bank === bank && setResumeId(t.id)))
+        .then((t) => (t.finishedAt ? rememberTest(null) : setResumeId(t.id)))
         .catch(() => rememberTest(null));
     }
-  }, [bank]);
+  }, []);
 
-  const oweOn = bank === "owe" || (bank === "mix" && p.sources.includes("owe"));
+  const on = (s: QSource) => p.sources.includes(s);
   const body = () => ({
-    bank,
-    ...(bank === "mix" ? { sources: p.sources } : {}),
-    ...(oweOn ? { edFrom: p.edFrom, edTo: p.edTo, stages: p.stages } : {}),
+    sources: p.sources,
+    ...(on("owe") ? { edFrom: p.edFrom, edTo: p.edTo, stages: p.stages } : {}),
+    ...(on("slownik") ? { slOrigin: p.slOrigin, slSection: p.slSection } : {}),
+    ...(on("xl") ? { xlOrigin: p.xlOrigin } : {}),
     topic: p.topic, kind: p.kind, theme: p.theme,
-    ...(bank === "slownik" ? { origin: p.origin, section: p.section } : {}),
-    ...(bank === "mix" && p.mistakes ? { mistakes: true } : {}),
+    ...(p.mistakes ? { mistakes: true } : {}),
   });
   const filterKey = JSON.stringify(body());
   // liczby pytań dla bieżących filtrów (z serwera – bez pobierania treści pytań)
@@ -119,7 +134,7 @@ export default function HomeClient({ bank = "owe", counts: initial, options }: {
         .catch((e) => {
           if (!live || !(e instanceof ApiError) || e.status !== 400) return;
           setCounts({ single: 0, multi: 0, bySource: null });
-          setP((x) => (x.topic || x.kind || x.section ? { ...x, topic: null, kind: null, section: null } : x));
+          setP((x) => (x.topic || x.kind || x.slSection ? { ...x, topic: null, kind: null, slSection: null } : x));
         });
     }, 200);
     return () => { live = false; clearTimeout(t); };
@@ -142,21 +157,17 @@ export default function HomeClient({ bank = "owe", counts: initial, options }: {
     const n = list.includes(v) ? list.filter((x) => x !== v) : [...list, v];
     return n.length ? all.filter((x) => n.includes(x)) : list;
   };
-  const filtered = p.topic || p.kind || p.theme !== "all" || (oweOn && (p.edFrom > 21 || p.edTo < 39 || p.stages.length < 3));
+  const filtered = p.topic || p.kind || p.theme !== "all";
+  const srcFiltered = (on("owe") && (p.edFrom > 21 || p.edTo < 39 || p.stages.length < 3)) || (on("slownik") && (p.slOrigin || p.slSection))
+    || (on("xl") && p.xlOrigin);
 
   return (
     <div className="stack">
-      <h1>{TITLE[bank]}</h1>
-      {bank === "slownik" && (
-        <p className="muted" style={{ marginTop: 0 }}>
-          Pytania ułożone na podstawie słownika pojęć OWE (docs/slownik-owe.pdf). Wyniki liczą się do osobnych statystyk.
-        </p>
-      )}
-      {bank === "mix" && (
-        <p className="muted" style={{ marginTop: 0 }}>
-          Jeden test z wybranych źródeł: prawdziwych pytań olimpijskich, sprawdzonych pytań AI i pytań ze słownika. Przy każdym pytaniu widać jego źródło.
-        </p>
-      )}
+      <h1>Pytania</h1>
+      <p className="muted" style={{ marginTop: 0 }}>
+        Jeden test z wybranych źródeł: prawdziwych pytań olimpijskich, Twoich pytań AI, pytań ze słownika pojęć i pytań o hasło XL
+        edycji. Każde źródło ma swoje filtry; przy każdym pytaniu w teście widać, skąd pochodzi.
+      </p>
       {resumeId && (
         <div className="card row">
           <span>Masz niedokończony test.</span>
@@ -164,62 +175,93 @@ export default function HomeClient({ bank = "owe", counts: initial, options }: {
           <Link className="btn secondary" href={`/test/${resumeId}`}>Kontynuuj</Link>
         </div>
       )}
-      {bank === "mix" && <>
-        <h2>Źródła pytań</h2>
-        <div className="choices three" data-testid="sources">
-          {SOURCES.map((s) => {
-            const on = p.sources.includes(s.id);
-            const n = counts.bySource?.[s.id];
-            return (
-              <button key={s.id} className={`choice ${on ? "active" : ""}`} aria-pressed={on} data-source={s.id}
-                onClick={() => set({ sources: toggle(p.sources, s.id, SOURCES.map((x) => x.id)) })}>
-                <strong>{on ? "✓ " : ""}{s.icon} {s.label}</strong>
-                <small>{s.hint}</small>
-                {n && <small>{n[p.type]} pytań</small>}
-              </button>
-            );
-          })}
-        </div>
-        <button className={`choice mistakes-choice ${p.mistakes ? "active" : ""}`} aria-pressed={p.mistakes} data-testid="mistakes"
-          onClick={() => set({ mistakes: !p.mistakes })}>
-          <strong>{p.mistakes ? "✓ " : ""}🔁 Tylko moje błędy</strong>
-          <small>pytania z wybranych źródeł, na które ostatnio odpowiedziałeś źle lub częściowo (90 dni) – od najdawniejszego;
-            poprawna odpowiedź usuwa pytanie z puli{p.mistakes ? ` · ${counts[p.type]} do powtórki` : ""}</small>
-        </button>
-      </>}
-      {bank === "slownik" && options.sections && <>
-        <h2>Rodzaj pytań</h2>
-        <div className="choices three">
-          {ORIGINS.map((o) => (
-            <button key={o.label} className={`choice ${p.origin === o.value ? "active" : ""}`} onClick={() => set({ origin: o.value })}>
-              <strong>{o.label}</strong>
-              <small>{o.hint}</small>
+      <h2>Źródła pytań</h2>
+      <div className="choices" data-testid="sources">
+        {SOURCES.map((s) => {
+          const n = counts.bySource?.[s.id];
+          return (
+            <button key={s.id} className={`choice ${on(s.id) ? "active" : ""}`} aria-pressed={on(s.id)} data-source={s.id}
+              onClick={() => set({ sources: toggle(p.sources, s.id, SOURCE_IDS) })}>
+              <strong>{on(s.id) ? "✓ " : ""}{s.icon} {s.label}</strong>
+              <small>{s.hint}</small>
+              {n && <small data-testid={`src-count-${s.id}`}>{n[p.type]} pytań{p.type === "multi" ? " wielokrotnego wyboru" : ""}</small>}
             </button>
-          ))}
-        </div>
-        <h2>Dział słownika</h2>
-        <select className="select" aria-label="Dział słownika" value={p.section ?? ""}
-          onChange={(e) => set({ section: e.target.value ? Number(e.target.value) : null })}>
-          <option value="">Wszystkie działy (losowo z całego słownika)</option>
-          {options.sections.map((s) => <option key={s.no} value={s.no}>{s.no}. {s.title}</option>)}
-        </select>
-      </>}
+          );
+        })}
+      </div>
+
+      {(on("owe") || on("slownik") || on("xl")) && (
+        <details className="card filters-card" open={!!srcFiltered} data-testid="source-filters">
+          <summary><strong>Filtry źródeł</strong>{srcFiltered ? <span className="muted"> · zawężone</span> : <span className="muted"> · bez zawężeń</span>}</summary>
+          <div className="stack" style={{ marginTop: 10 }}>
+            {on("owe") && (
+              <fieldset className="src-filter" data-testid="filters-owe">
+                <legend>📜 Archiwum OWE</legend>
+                <div className="filter-grid">
+                  <label className="filters">Edycje od
+                    <select className="select" value={p.edFrom} data-testid="ed-from" onChange={(e) => set({ edFrom: Math.min(Number(e.target.value), p.edTo) })}>
+                      {EDS.map((n) => <option key={n} value={n}>{ROMAN[n]} OWE</option>)}
+                    </select>
+                  </label>
+                  <label className="filters">do
+                    <select className="select" value={p.edTo} data-testid="ed-to" onChange={(e) => set({ edTo: Math.max(Number(e.target.value), p.edFrom) })}>
+                      {EDS.map((n) => <option key={n} value={n}>{ROMAN[n]} OWE</option>)}
+                    </select>
+                  </label>
+                </div>
+                <div className="filter-label">Etap zawodów</div>
+                <div className="chips" data-testid="stages">
+                  {STAGES.map((s) => (
+                    <button key={s.id} className={`chip ${p.stages.includes(s.id) ? "selected" : ""}`} aria-pressed={p.stages.includes(s.id)} data-stage={s.id}
+                      onClick={() => set({ stages: toggle(p.stages, s.id, STAGES.map((x) => x.id)) })}>
+                      {p.stages.includes(s.id) ? "✓ " : ""}{s.label}
+                    </button>
+                  ))}
+                </div>
+              </fieldset>
+            )}
+            {on("slownik") && (
+              <fieldset className="src-filter" data-testid="filters-slownik">
+                <legend>📘 Słownik</legend>
+                <div className="filter-label">Rodzaj pytań</div>
+                <div className="seg" role="group" aria-label="Rodzaj pytań Słownika" data-testid="sl-origin">
+                  {SL_ORIGINS.map((o) => (
+                    <button key={o.label} className={p.slOrigin === o.value ? "active" : ""} aria-pressed={p.slOrigin === o.value} title={o.hint}
+                      data-origin={o.value ?? "all"} onClick={() => set({ slOrigin: o.value })}>{o.label}</button>
+                  ))}
+                </div>
+                <label className="filters">Dział słownika
+                  <select className="select" value={p.slSection ?? ""} data-testid="sl-section"
+                    onChange={(e) => set({ slSection: e.target.value ? Number(e.target.value) : null })}>
+                    <option value="">wszystkie działy</option>
+                    {options.sections.map((s) => <option key={s.no} value={s.no}>{s.no}. {s.title}</option>)}
+                  </select>
+                </label>
+              </fieldset>
+            )}
+            {on("xl") && (
+              <fieldset className="src-filter" data-testid="filters-xl">
+                <legend>🎯 Hasło XL (własne)</legend>
+                <div className="filter-label">Jak powstały</div>
+                <div className="seg" role="group" aria-label="Rodzaj pytań o hasło XL" data-testid="xl-origin">
+                  {XL_ORIGINS.map((o) => (
+                    <button key={o.label} className={p.xlOrigin === o.value ? "active" : ""} aria-pressed={p.xlOrigin === o.value} title={o.hint}
+                      data-origin={o.value ?? "all"} onClick={() => set({ xlOrigin: o.value })}>{o.label}</button>
+                  ))}
+                </div>
+              </fieldset>
+            )}
+            <p className="muted small" style={{ margin: 0 }}>Filtry źródła zawężają tylko pytania z tego źródła.</p>
+            {srcFiltered && <button className="btn secondary" style={{ justifySelf: "start" }}
+              onClick={() => set({ edFrom: 21, edTo: 39, stages: ["s", "o", "c"], slOrigin: null, slSection: null, xlOrigin: null })}>Wyczyść filtry źródeł</button>}
+          </div>
+        </details>
+      )}
+
       <details className="card filters-card" open={!!filtered} data-testid="test-filters">
-        <summary><strong>Filtry</strong>{filtered ? <span className="muted"> · zawężone</span> : <span className="muted"> · wszystkie pytania</span>}</summary>
+        <summary><strong>Filtry wspólne</strong>{filtered ? <span className="muted"> · zawężone</span> : <span className="muted"> · wszystkie pytania</span>}</summary>
         <div className="stack" style={{ marginTop: 10 }}>
           <div className="filter-grid">
-            {oweOn && <>
-              <label className="filters">Edycje od
-                <select className="select" value={p.edFrom} data-testid="ed-from" onChange={(e) => set({ edFrom: Math.min(Number(e.target.value), p.edTo) })}>
-                  {EDS.map((n) => <option key={n} value={n}>{ROMAN[n]} OWE</option>)}
-                </select>
-              </label>
-              <label className="filters">do
-                <select className="select" value={p.edTo} data-testid="ed-to" onChange={(e) => set({ edTo: Math.max(Number(e.target.value), p.edFrom) })}>
-                  {EDS.map((n) => <option key={n} value={n}>{ROMAN[n]} OWE</option>)}
-                </select>
-              </label>
-            </>}
             <label className="filters">Dział
               <select className="select" value={p.topic ?? ""} data-testid="topic" onChange={(e) => set({ topic: e.target.value || null })}>
                 <option value="">wszystkie</option>
@@ -240,26 +282,19 @@ export default function HomeClient({ bank = "owe", counts: initial, options }: {
               </select>
             </label>
           </div>
-          {oweOn && (
-            <div>
-              <div className="filter-label">Etap zawodów{bank === "mix" ? " (Archiwum OWE)" : ""}</div>
-              <div className="chips" data-testid="stages">
-                {STAGES.map((s) => (
-                  <button key={s.id} className={`chip ${p.stages.includes(s.id) ? "selected" : ""}`} aria-pressed={p.stages.includes(s.id)} data-stage={s.id}
-                    onClick={() => set({ stages: toggle(p.stages, s.id, STAGES.map((x) => x.id)) })}>
-                    {p.stages.includes(s.id) ? "✓ " : ""}{s.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
           <p className="muted" style={{ margin: 0, fontSize: "0.85rem" }}>
-            Hasło przewodnie: pytania Archiwum o hasło swojej edycji; w pytaniach AI i Słownika – demografia (hasło XL edycji).
-            {bank === "mix" ? " Zakres edycji i etap dotyczą tylko Archiwum OWE." : ""}
+            Hasło przewodnie: pytania Archiwum o hasło swojej edycji, całe źródło „Hasło XL”, a w Pytaniach AI i Słowniku – demografia.
           </p>
-          {filtered && <button className="btn secondary" style={{ justifySelf: "start" }} onClick={() => set({ topic: null, kind: null, theme: "all", edFrom: 21, edTo: 39, stages: ["s", "o", "c"] })}>Wyczyść filtry</button>}
+          {filtered && <button className="btn secondary" style={{ justifySelf: "start" }} onClick={() => set({ topic: null, kind: null, theme: "all" })}>Wyczyść filtry</button>}
         </div>
       </details>
+
+      <button className={`choice mistakes-choice ${p.mistakes ? "active" : ""}`} aria-pressed={p.mistakes} data-testid="mistakes"
+        onClick={() => set({ mistakes: !p.mistakes })}>
+        <strong>{p.mistakes ? "✓ " : ""}🔁 Tylko moje błędy</strong>
+        <small>pytania z wybranych źródeł i filtrów, na które ostatnio odpowiedziałeś źle lub częściowo (90 dni) – od najdawniejszego;
+          poprawna odpowiedź usuwa pytanie z puli{p.mistakes ? ` · ${counts[p.type]} do powtórki` : ""}</small>
+      </button>
       <h2>Typ pytań</h2>
       <div className="choices">
         {TYPES.map((t) => (
@@ -286,13 +321,13 @@ export default function HomeClient({ bank = "owe", counts: initial, options }: {
       </div>
       {stats && stats.overall.tests > 0 && (
         <>
-          <h2>Wasz postęp</h2>
+          <h2>Twój postęp</h2>
           <div className="stat-grid">
             <div className="stat"><div className="value">{fmtPct(stats.overall.percent)}</div><div className="label">łącznie</div></div>
             <div className="stat"><div className="value">{fmtPct(stats.byType.single.percent)}</div><div className="label">jednokrotny</div></div>
             <div className="stat"><div className="value">{fmtPct(stats.byType.multi.percent)}</div><div className="label">wielokrotny</div></div>
           </div>
-          <Link href={`/stats?bank=${bank}`} className="muted">Pełne statystyki →</Link>
+          <Link href="/stats" className="muted">Pełne statystyki →</Link>
         </>
       )}
     </div>
