@@ -239,3 +239,59 @@ zgłoszenia w wyskakującym panelu, Literaturę i statystyki wg źródeł.
   bo nie pochodzą z olimpiad. Wyniki na pytaniach AI są w Statystykach (karta „Według źródła pytań”) i w „Działach i pojęciach”.
 - **Źródło „Wszystkie pytania” zapisane przez link** z podsumowania testu staje się domyślnym na koncie – to ostatnio oglądane
   źródło, a nie link od kogoś (statystyki są prywatne).
+
+# Debug końcowy – Plan III, etapy H0–H8 (październik 2026)
+
+Przegląd po rozbudowie o: wspólny cel dzienny i serię, statystyki świata z rankingiem opt-in, powtórki z błędów, statystyki
+pytań w panelu admina, wykresy w Podręczniku, kursie, fiszkach i tabeli pojęć, „Więcej” przy 1756 hasłach i Prognozę XL
+(50 esejów, 50 zadań).
+
+## Jak sprawdzano
+- **Przegląd kodu** (`/code-review`, poziom wysoki) zmian od `246bd1d` (koniec Planu II): 10 zgłoszeń, wszystkie poprawione.
+- **Nowy `options.mjs`** – każda opcja i filtr na 12 stronach (Testy, Wszystkie pytania, Zadania, Eseje, Fiszki, Statystyki,
+  Działy, Świat, Tabela pojęć, Statystyki OWE, Pokrycie, Statystyki nauki): po kolei każda wartość (przy długich listach –
+  pierwsze i ostatnie), brak błędów strony i odpowiedzi 5xx, zmiana treści, zapis na koncie, powrót do domyślnych; cel dzienny,
+  ranking (zapis i wypis), czytanie na głos, motyw ciemny wg systemu, telefon bez poziomego przewijania – 72/72.
+- **Pełna regresja e2e** (`bash tests/e2e/run.sh`): 50 skryptów; poza `speech.mjs` i `options.mjs` (niżej) bez błędów;
+  crawl: 140 stron × 2 motywy × 2 szerokości, jedyny komunikat to brak kluczy Azure/R2 w panelu admina środowiska testowego
+  (oczekiwane). Skrypty poprawione po regresji uruchomione ponownie osobno.
+- **Testy jednostkowe** (vitest): 218 testów; `validate-questions`, `build_podrecznik.py --strict`, `build_wiecej.py --strict`,
+  `sprawdz_prognoze.py` (241 wyników zadań przeliczonych niezależnie).
+- **Pomiar szybkości** przed i po na tej samej maszynie – sekcja „Plan III” w `docs/RAPORT-WYDAJNOSCI.md`.
+- **`npm audit`**: 6 podatności (1 umiarkowana, 5 wysokich) → 0.
+
+## Poprawione
+1. **Percentyl w statystykach świata** liczony z wartości zaokrąglonej do 0,1, a pozostali – z dokładnych: przy skuteczności
+   niecałkowitej konto liczyło samo siebie jako „gorsze” (np. „lepiej niż 20%” zamiast 0%). Teraz porównanie na dokładnych
+   wartościach, zaokrąglenie tylko do wyświetlenia.
+2. **Ranking:** równoczesny zapis tego samego pseudonimu przez dwie osoby kończył się błędem 500 (unikalny indeks) zamiast
+   komunikatu „pseudonim zajęty”. Filtr słów odrzucał zwykłe imiona zawierające fragment wulgaryzmu („Principal”) – krótkie
+   rdzenie sprawdzane są teraz tylko na początku słowa.
+3. **Fiszki klasyczne:** po kliknięciu „✓ Znam” / strzałek skróty przestawały działać, a Spacja „klikała” przycisk w fokusie –
+   kolejna karta była oceniana bez odwracania. Skróty działają teraz zawsze poza przyciskami w środku karty.
+4. **„Tylko moje błędy” zapisywało się na koncie** po linku „Powtórz błędy” – zwykły test później losował same błędy. Tryb
+   błędów nie jest już zapamiętywany.
+5. **Czas testu z błędów:** test z 3 wylosowanymi błędami dostawał pełne 40 min. Czas jest proporcjonalny do liczby pytań
+   (min. 5 min).
+6. **Podgląd admina (`?user=`) na stronie Nauki** pokazywał cel i serię admina, a przyciski celu zmieniały cel admina. Teraz
+   dane oglądanego konta, tylko do odczytu.
+7. **Wydajność:** XP z odpowiedzi w teście zapisywane równolegle z resztą zapisu; cel i seria pobierane jednym wspólnym
+   zapytaniem po zdarzeniu XP (wcześniej każde miejsce osobno, także po zmianie celu); podsumowanie kursu bez martwej starej
+   serii i tygodnia.
+8. **Panel admina pobierał od razu statystyki wszystkich pytań** (~0,8 MB) – teraz po kliknięciu „Pokaż statystyki pytań”,
+   wejście do panelu 896 → 92 kB.
+9. **Dymek zaznaczenia w Podręczniku** mógł wyjść poza ekran (zaznaczenie poza widokiem) – pozycja ograniczona do ekranu.
+10. **Zależności:** nodemailer 10.0.12 → 10.2.1 (parser adresów – podatność umiarkowana), wymuszone zod ≥ 4.6.6 i undici ≥ 6.29.1
+    (zależności `@vercel/blob`; wysokie – wyczerpanie pamięci i DoS). Po aktualizacji: typy, vitest, build, wysyłka e-maili
+    (`auth_e2e2.mjs`) i panel admina bez błędów.
+11. **Testy e2e:** `otwarte.mjs` i `g6.mjs` znały tylko zestawy OWE (doszła Prognoza XL); `speech.mjs` zaznaczał akapit poza
+    ekranem (po dodaniu rysunków) i czytał pierwszy wiersz tabeli przed ustaleniem wyników wyszukiwania; `options.mjs` w pełnej
+    regresji miał 8 błędów, których nie dało się powtórzyć osobno ani po poprzedzającym skrypcie – wypisuje teraz listę w jednej
+    linii, żeby `run.sh` ją pokazał.
+
+## Sprawdzone – świadomie bez zmian
+- **Filtr gwiazdki w Tabeli pojęć** nie jest zapamiętywany na koncie (zapamiętywane są dział i rodzaj) – gwiazdki to szybki
+  podgląd, a zapamiętany filtr ukrywałby hasła bez wyraźnego powodu.
+- **Statystyki pytań w panelu admina** po kliknięciu nadal pobierają ~0,8 MB (wszystkie pytania z odpowiedziami, filtrowanie
+  w przeglądarce) – strona tylko dla admina, na żądanie.
+- **Prognoza XL nie wchodzi do statystyk tematów OWE** (hasło przewodnie, pokrycie) – to materiał własny, nie archiwum olimpiad.
