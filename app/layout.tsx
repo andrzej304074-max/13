@@ -52,7 +52,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             {me?.active && !notesOff && <QuickNotes />}
             {me?.active && <StreakBadge />}
             {me?.active && <AnnounceBell />}
-            {me && <AccountMenu email={me.email} isAdmin={me.isAdmin} />}
+            {me && <AccountMenu email={me.email} isAdmin={me.isAdmin} isReviewer={me.isReviewer} />}
           </header>
           <main className="container">
             {me?.active && <PinnedBar />}

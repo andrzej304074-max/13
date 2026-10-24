@@ -7,7 +7,7 @@ import { LogoutButton } from "@/app/konto/forms";
 import { BUG_EVENT } from "./bug-popup";
 
 /** Menu konta (👤): e-mail, panel admina, ustawienia, wylogowanie; zamyka się po przejściu i kliknięciu obok. */
-export function AccountMenu({ email, isAdmin }: { email: string; isAdmin: boolean }) {
+export function AccountMenu({ email, isAdmin, isReviewer = false }: { email: string; isAdmin: boolean; isReviewer?: boolean }) {
   const ref = useRef<HTMLDetailsElement>(null);
   const path = usePathname();
   useEffect(() => {
@@ -26,6 +26,7 @@ export function AccountMenu({ email, isAdmin }: { email: string; isAdmin: boolea
       <div className="account-panel">
         <span className="email" title={email}>{email}</span>
         {isAdmin && <Link href="/admin">Panel admina</Link>}
+        {(isAdmin || isReviewer) && <Link href="/recenzja" data-testid="review-link">Recenzja treści</Link>}
         <Link href="/konto/ustawienia">Ustawienia</Link>
         <button type="button" className="account-link" onClick={() => { if (ref.current) ref.current.open = false; window.dispatchEvent(new Event(BUG_EVENT)); }}
           data-testid="bug-link">🐞 Zgłoś błąd</button>

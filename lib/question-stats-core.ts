@@ -1,4 +1,5 @@
 import type { QSource } from "./question-source";
+import type { Review } from "./review-core";
 /**
  * Statystyki pytań dla admina (czysta logika): skuteczność wszystkich użytkowników, najczęściej wybierana błędna opcja
  * i flagi do przeglądu – „podejrzany klucz”, „za trudne”, „za łatwe”.
@@ -26,6 +27,8 @@ export interface QStatRow {
   flags: QFlag[];
   /** Zgłoszenia błędów, w których pada id pytania. */
   reports: number;
+  /** Ocena recenzenta (I4) – dokładana w trasie panelu admina. */
+  review?: Review | null;
 }
 
 export function analyse(row: Omit<QStatRow, "topWrong" | "flags">): QStatRow {

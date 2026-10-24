@@ -1,6 +1,7 @@
 import { handle } from "@/lib/api";
 import { requireUser } from "@/lib/auth";
 import { questionStats } from "@/lib/question-stats";
+import { reviewsOf } from "@/lib/review";
 import { getQuestion } from "@/lib/questions";
 import { HttpError } from "@/lib/tests";
 
@@ -17,6 +18,8 @@ export async function GET(req: Request) {
       if (!q) throw new HttpError(404, "Nie ma takiego pytania.");
       return { id: q.id, edition: q.edition, question: q.question, options: q.options, correct: q.correct, explanation: q.explanation ?? null };
     }
-    return questionStats();
+    // z oceną recenzenta (tryb /recenzja)
+    const [s, rv] = await Promise.all([questionStats(), reviewsOf("pytanie")]);
+    return { ...s, rows: s.rows.map((r) => ({ ...r, review: rv.get(r.id) ?? null })) };
   });
 }

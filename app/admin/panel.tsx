@@ -191,7 +191,13 @@ export function AdminPanel({ meId }: { meId: string }) {
             onDelete={remove} />
 
           <h2>Użytkownicy <span className="muted">({regular.length})</span></h2>
-          <UserTable rows={regular} meId={meId} testid="users" onDelete={remove} {...accessProps} />
+          <UserTable rows={regular} meId={meId} testid="users" onDelete={remove} {...accessProps}
+            extra={(u) => u.active && (
+              <button className="btn small secondary" data-testid="reviewer-toggle"
+                onClick={() => act(u, u.isReviewer ? "odbierz-recenzenta" : "nadaj-recenzenta", u.isReviewer ? `Odebrać rolę recenzenta ${u.email}?` : `Nadać ${u.email} rolę recenzenta (panel /recenzja)?`)}>
+                {u.isReviewer ? "Odbierz recenzenta" : "Nadaj recenzenta"}
+              </button>
+            )} />
 
           {noCode.length > 0 && (
             <>
@@ -280,6 +286,7 @@ function UserTable({ rows, meId, testid, extra, onDelete, global, openId, setOpe
                 {u.email}
                 {u.isOwner && <span className="tag">właściciel</span>}
                 {u.adminRequested && <span className="tag">prosi o admina</span>}
+                {u.isReviewer && <span className="tag" data-testid="reviewer-tag">recenzent</span>}
                 {u.id === meId && <span className="tag">Ty</span>}
               </td>
               <td data-label="Założone">{fmtDate(u.createdAt)}</td>

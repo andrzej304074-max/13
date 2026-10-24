@@ -453,6 +453,17 @@ Konfiguracja maili (Vercel → Settings → Environment Variables, potem Redeplo
 
 Po pierwszym wdrożeniu od razu załóż swoje konto – pierwsze konto zostaje właścicielem.
 
+## Recenzja treści (`/recenzja`)
+
+- **Rola recenzenta** (`users.is_reviewer`) – nadaje i odbiera admin w panelu (lista użytkowników → „Nadaj recenzenta”); wpis w dzienniku działań.
+  Recenzent nie ma panelu admina; admin ma też dostęp do recenzji (z wymogiem MFA).
+- **Lista do przeglądu:** pytania z flagami statystyk (podejrzany klucz, za trudne, za łatwe) albo ze zgłoszeniami, zgłoszenia merytoryczne
+  bez rozstrzygnięcia (nowe / w toku) i 100 własnych zadań i esejów Prognozy XL. Podgląd pytania z kluczem i wyjaśnieniem.
+- **Ocena:** OK / do poprawy (z komentarzem) – tabela `content_reviews` (jedna, ostatnia ocena na pozycję). Status widać w kolumnie „Recenzja”
+  w statystykach pytań panelu admina.
+- **„Zgłoś nieaktualne”** pod każdym wykresem z danych (Podręcznik, hasła) – otwiera zgłoszenie merytoryczne z nazwą wykresu, źródłem i datą pobrania.
+- Kod: `lib/review.ts`, `lib/review-core.ts`, `app/recenzja/`; testy: `tests/review.test.ts`, e2e `i4.mjs`.
+
 ## Bezpieczeństwo i ochrona treści
 
 - **Logowanie:**

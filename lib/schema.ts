@@ -417,6 +417,17 @@ ALTER TABLE users ADD COLUMN IF NOT EXISTS totp_secret text;
 ALTER TABLE users ADD COLUMN IF NOT EXISTS totp_enabled_at timestamptz;
 ALTER TABLE users ADD COLUMN IF NOT EXISTS totp_backup text[] NOT NULL DEFAULT '{}';
 ALTER TABLE users ADD COLUMN IF NOT EXISTS totp_last bigint;
+-- Plan IV (I4): tryb recenzenta – rola i oceny treści (ostatnia ocena pozycji wygrywa)
+ALTER TABLE users ADD COLUMN IF NOT EXISTS is_reviewer boolean NOT NULL DEFAULT false;
+CREATE TABLE IF NOT EXISTS content_reviews (
+  kind text NOT NULL,
+  ref text NOT NULL,
+  status text NOT NULL CHECK (status IN ('ok', 'poprawa')),
+  comment text,
+  reviewer_id uuid REFERENCES users(id) ON DELETE SET NULL,
+  at timestamptz NOT NULL DEFAULT now(),
+  PRIMARY KEY (kind, ref)
+);
 ALTER TABLE users ADD COLUMN IF NOT EXISTS google_sub text;
 CREATE UNIQUE INDEX IF NOT EXISTS users_google_sub_idx ON users (google_sub) WHERE google_sub IS NOT NULL;
 -- lista aktywnych sesji w Ustawieniach (urządzenie, początek, ostatnie użycie)

@@ -9,8 +9,12 @@ import { createPortal } from "react-dom";
 /** Formularz ładowany dopiero przy pierwszym otwarciu. */
 const BugForm = dynamic(() => import("./bug-form").then((m) => m.BugForm), { ssr: false, loading: () => <div className="skeleton" style={{ height: 260 }} /> });
 
-/** Otwiera okienko zgłoszenia z dowolnego miejsca: `window.dispatchEvent(new Event(BUG_EVENT))`. */
+/**
+ * Otwiera okienko zgłoszenia z dowolnego miejsca: `window.dispatchEvent(new Event(BUG_EVENT))`; z wypełnionym rodzajem
+ * i początkiem opisu – `new CustomEvent(BUG_EVENT, { detail: { kind, text, section } })` (np. „Zgłoś nieaktualne” przy wykresie).
+ */
 export const BUG_EVENT = "owe:bug-report";
+export interface BugPreset { kind?: "merytoryczny" | "techniczny"; text?: string; section?: string }
 
 const clip = (s: string) => s.replace(/\s+/g, " ").trim().slice(0, 120);
 
@@ -38,14 +42,15 @@ export function pageSections(): { list: string[]; current: string } {
  */
 export function BugPopup() {
   const [open, setOpen] = useState(false);
-  const [ctx, setCtx] = useState<{ page: string; list: string[]; current: string }>({ page: "", list: [], current: "" });
+  const [ctx, setCtx] = useState<{ page: string; list: string[]; current: string; preset?: BugPreset }>({ page: "", list: [], current: "" });
   const [sent, setSent] = useState(false);
   const path = usePathname();
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    const h = () => {
+    const h = (e: Event) => {
       const s = pageSections();
-      setCtx({ page: window.location.pathname + window.location.search, ...s });
+      const preset = (e as CustomEvent<BugPreset | undefined>).detail;
+      setCtx({ page: window.location.pathname + window.location.search, ...s, current: preset?.section ?? s.current, preset });
       setSent(false);
       setOpen(true);
     };
@@ -72,7 +77,7 @@ export function BugPopup() {
         <button type="button" className="qn-icon" onClick={() => setOpen(false)} title="Zamknij (Esc)" aria-label="Zamknij" data-testid="bug-close">✕</button>
       </div>
       <div className="qn-body">
-        <BugForm compact page={ctx.page} sections={ctx.list} section={ctx.current} onSent={() => setSent(true)} />
+        <BugForm compact page={ctx.page} sections={ctx.list} section={ctx.current} kind={ctx.preset?.kind} text={ctx.preset?.text} onSent={() => setSent(true)} />
         {sent && <Link href="/zgloszenia" className="small" data-testid="bug-mine-link">Moje zgłoszenia i odpowiedzi →</Link>}
       </div>
     </div>,

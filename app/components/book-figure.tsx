@@ -1,4 +1,5 @@
 import { useId } from "react";
+import { ChartOutdated } from "./chart-outdated";
 import { Graph, GRAPHS } from "./graph";
 import { PYRAMID_PL, SERIES } from "@/data/wykresy";
 
@@ -910,7 +911,8 @@ export function BookFigure({ fig }: { fig: FigSpec }) {
           {fig.k === "seria" ? <SeriesChart id={String(o.id)} arrow={arrow} /> : <PyramidPL />}
         </svg>
         <figcaption>
-          {fig.cap ? `${fig.cap} ` : ""}<strong>{data.title}</strong> ({data.unit}). Źródło: <a href={data.urls[0]} target="_blank" rel="noopener noreferrer">{data.source}</a>, pobrano {data.fetched}.
+          {fig.cap ? `${fig.cap} ` : ""}<strong>{data.title}</strong> ({data.unit}). Źródło: <a href={data.urls[0]} target="_blank" rel="noopener noreferrer">{data.source}</a>, pobrano {data.fetched}.{" "}
+          <ChartOutdated title={data.title} source={data.source} fetched={data.fetched} />
         </figcaption>
       </figure>
     );

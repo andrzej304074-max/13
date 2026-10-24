@@ -69,6 +69,7 @@ run h7.mjs
 run i1.mjs
 run i2.mjs
 run i3.mjs "$LOG"
+run i4.mjs
 run options.mjs
 run authsweep.mjs
 run security.mjs

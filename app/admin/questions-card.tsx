@@ -5,6 +5,7 @@ import { SkeletonRows } from "@/app/components/loading-page";
 import { api, LETTERS } from "@/lib/client";
 import { SOURCES } from "@/lib/question-source";
 import { FLAG_LABEL, MIN_N, type QFlag, type QStatRow } from "@/lib/question-stats-core";
+import { REVIEW_STATUS_LABEL } from "@/lib/review-core";
 
 type Data = { rows: QStatRow[]; course: { item: string; title: string; exercise: string; n: number; pct: number }[] };
 type Full = { id: string; edition: string; question: string; options: string[]; correct: number[]; explanation: string | null };
@@ -93,7 +94,7 @@ export function QuestionsCard() {
         <p className="muted small" style={{ margin: 0 }} data-testid="qa-count">Pytań: {rows.length}</p>
         <div className="table-wrap">
           <table className="db-tables">
-            <thead><tr><th>Pytanie</th><th className="num">Odp.</th><th className="num">Poprawne</th><th>Najczęstszy błąd</th><th>Flagi</th></tr></thead>
+            <thead><tr><th>Pytanie</th><th className="num">Odp.</th><th className="num">Poprawne</th><th>Najczęstszy błąd</th><th>Flagi</th><th>Recenzja</th></tr></thead>
             <tbody>
               {rows.slice(0, limit).map((r) => (
                 <Fragment key={r.id}>
@@ -103,9 +104,10 @@ export function QuestionsCard() {
                     <td className="num">{r.pct.toLocaleString("pl-PL")}%</td>
                     <td>{r.topWrong ? `${LETTERS[r.topWrong.opt]} · ${r.topWrong.pct.toLocaleString("pl-PL")}%` : "–"}</td>
                     <td>{r.flags.map((f) => <span key={f} className={`tag qa-flag-${f}`}>{FLAG_LABEL[f].split(" (")[0]}</span>)}</td>
+                    <td data-testid="qa-review">{r.review ? <span className={`tag review-${r.review.status}`} title={r.review.comment ?? ""}>{REVIEW_STATUS_LABEL[r.review.status]}</span> : <span className="muted small">–</span>}</td>
                   </tr>
                   {open === r.id && (
-                    <tr><td colSpan={5}>
+                    <tr><td colSpan={6}>
                       {!full[r.id] ? <SkeletonRows rows={1} height={60} /> : (
                         <div className="stack" style={{ gap: 6 }} data-testid="qa-full">
                           <div className="muted small">{full[r.id].edition}</div>
@@ -116,6 +118,7 @@ export function QuestionsCard() {
                             </div>
                           ))}
                           {full[r.id].explanation && <div className="muted small">Wyjaśnienie: {full[r.id].explanation}</div>}
+                          {r.review && <div className="small" data-testid="qa-review-note">Recenzja ({r.review.by ?? "?"}): {REVIEW_STATUS_LABEL[r.review.status]}{r.review.comment ? ` – ${r.review.comment}` : ""}</div>}
                         </div>
                       )}
                     </td></tr>

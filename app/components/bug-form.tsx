@@ -23,8 +23,11 @@ const KIND_HINT: Record<BugKind, string> = {
  * Formularz zgłoszenia: rodzaj (merytoryczny / techniczny), sekcja strony (gdy podano listę nagłówków), opis, strona, urządzenie.
  * Używany w wyskakującym panelu (`BugPopup`) i na pełnej stronie `/zgloszenia`.
  */
-export function BugForm({ page: initialPage, sections, section: initialSection, compact, editablePage, onSent }: {
+export function BugForm({ page: initialPage, sections, section: initialSection, compact, editablePage, onSent, kind: initialKind, text: initialText }: {
   page: string;
+  /** Wstępnie wybrany rodzaj i początek opisu (np. „Zgłoś nieaktualne” przy wykresie). */
+  kind?: BugKind;
+  text?: string;
   /** Nagłówki bieżącej strony (bez „cała strona” – dodawana automatycznie). */
   sections?: string[];
   section?: string;
@@ -32,8 +35,8 @@ export function BugForm({ page: initialPage, sections, section: initialSection, 
   editablePage?: boolean;
   onSent: (r: BugReport) => void;
 }) {
-  const [kind, setKind] = useState<BugKind | null>(null);
-  const [text, setText] = useState("");
+  const [kind, setKind] = useState<BugKind | null>(initialKind ?? null);
+  const [text, setText] = useState(initialText ?? "");
   const [page, setPage] = useState(initialPage);
   const [section, setSection] = useState(initialSection ?? "");
   const [device, setDevice] = useState("");

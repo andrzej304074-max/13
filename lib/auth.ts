@@ -56,6 +56,8 @@ export interface User {
   mfa: boolean;
   /** Konto połączone z logowaniem Google. */
   google: boolean;
+  /** Recenzent treści (panel /recenzja) – nadaje admin. */
+  isReviewer: boolean;
 }
 
 interface UserRow {
@@ -75,6 +77,7 @@ interface UserRow {
   totp_enabled_at: Date | null;
   totp_backup: string[];
   google_sub: string | null;
+  is_reviewer: boolean;
 }
 
 const toUser = (r: UserRow): User => ({
@@ -84,6 +87,7 @@ const toUser = (r: UserRow): User => ({
   blocked: r.blocked ?? [], blockMode: isBlockMode(r.block_mode) ? r.block_mode : null,
   mfa: r.totp_enabled_at !== null,
   google: r.google_sub !== null,
+  isReviewer: r.is_reviewer,
 });
 
 const UUID = /^[0-9a-f-]{36}$/i;
@@ -140,10 +144,15 @@ async function blockedKey(u: User): Promise<string | null> {
 }
 
 /** Do tras API: 401 bez logowania, 403 bez aktywacji, roli admina albo gdy sekcja jest zablokowana. */
-export async function requireUser(opts: { admin?: boolean; active?: boolean } = {}): Promise<User> {
+export async function requireUser(opts: { admin?: boolean; active?: boolean; reviewer?: boolean } = {}): Promise<User> {
   const u = await currentUser();
   if (!u) throw new HttpError(401, "Zaloguj się.");
   if (opts.active !== false && !u.active) throw new HttpError(403, "Konto nie jest aktywne – wpisz kod aktywacji.");
+  // recenzja: recenzent albo admin (admin – z wymogiem MFA jak w panelu)
+  if (opts.reviewer && !u.isReviewer && !u.isAdmin) throw new HttpError(403, "Brak uprawnień recenzenta.");
+  if (opts.reviewer && !u.isReviewer && !u.mfa && adminMfaRequired()) {
+    throw new HttpError(403, "Panel administratora wymaga weryfikacji dwuetapowej – włącz ją w Ustawieniach konta.");
+  }
   if (opts.admin && !u.isAdmin) throw new HttpError(403, "Brak uprawnień administratora.");
   if (opts.admin && !u.mfa && adminMfaRequired()) {
     throw new HttpError(403, "Panel administratora wymaga weryfikacji dwuetapowej – włącz ją w Ustawieniach konta.");
@@ -160,10 +169,12 @@ export async function requireSection(u: User, key: string) {
 }
 
 /** Do stron (server components): przekierowania zamiast błędów. */
-export async function requirePageUser(opts: { admin?: boolean } = {}): Promise<User> {
+export async function requirePageUser(opts: { admin?: boolean; reviewer?: boolean } = {}): Promise<User> {
   const u = await currentUser();
   if (!u) redirect("/konto/logowanie");
   if (!u.active) redirect("/konto/aktywacja");
+  if (opts.reviewer && !u.isReviewer && !u.isAdmin) redirect("/");
+  if (opts.reviewer && !u.isReviewer && !u.mfa && adminMfaRequired()) redirect("/konto/ustawienia?mfa=wymagane");
   if (opts.admin && !u.isAdmin) redirect("/");
   if (opts.admin && !u.mfa && adminMfaRequired()) redirect("/konto/ustawienia?mfa=wymagane");
   const key = await blockedKey(u);
@@ -454,17 +465,18 @@ export interface AdminUserRow {
   lastActivity: string | null;
   blocked: string[];
   blockMode: BlockMode | null;
+  isReviewer: boolean;
 }
 
 export async function listUsers(): Promise<AdminUserRow[]> {
   const { rows } = await query<{
     id: string; email: string; is_admin: boolean; is_owner: boolean; activated_at: Date | null; created_at: Date;
     code_ok_at: Date | null; admin_requested_at: Date | null; blocked: string[] | null; block_mode: string | null;
-    last_login_at: Date | null; tests: string; score: number | null; max_score: number | null; ls: string; xp: string | null;
+    last_login_at: Date | null; is_reviewer: boolean; tests: string; score: number | null; max_score: number | null; ls: string; xp: string | null;
     last_t: Date | null; last_l: Date | null;
   }>(
     `SELECT u.id, u.email, u.is_admin, u.is_owner, u.activated_at, u.code_ok_at, u.admin_requested_at, u.created_at, u.last_login_at,
-       u.blocked, u.block_mode,
+       u.blocked, u.block_mode, u.is_reviewer,
        t.tests, t.score, t.max_score, t.last_t, l.ls, l.xp, l.last_l
      FROM users u
      LEFT JOIN LATERAL (SELECT COUNT(*) AS tests, SUM(score) AS score, SUM(max_score) AS max_score, MAX(finished_at) AS last_t
@@ -481,7 +493,7 @@ export async function listUsers(): Promise<AdminUserRow[]> {
       createdAt: r.created_at.toISOString(), lastLoginAt: r.last_login_at?.toISOString() ?? null,
       tests: Number(r.tests), testPercent: r.max_score ? Math.round((Number(r.score) / Number(r.max_score)) * 1000) / 10 : null,
       learnSessions: Number(r.ls), xp: Number(r.xp ?? 0), lastActivity: last?.toISOString() ?? null,
-      blocked: r.blocked ?? [], blockMode: isBlockMode(r.block_mode) ? r.block_mode : null,
+      blocked: r.blocked ?? [], blockMode: isBlockMode(r.block_mode) ? r.block_mode : null, isReviewer: r.is_reviewer,
     };
   });
 }
@@ -538,8 +550,8 @@ export async function revokeAdminCode(me: User, code: unknown) {
 
 /* ---------- zatwierdzanie i role ---------- */
 
-export type AdminAction = "zatwierdz" | "odrzuc" | "zatwierdz-admina" | "odrzuc-admina" | "odbierz-admina";
-export const ADMIN_ACTIONS: AdminAction[] = ["zatwierdz", "odrzuc", "zatwierdz-admina", "odrzuc-admina", "odbierz-admina"];
+export type AdminAction = "zatwierdz" | "odrzuc" | "zatwierdz-admina" | "odrzuc-admina" | "odbierz-admina" | "nadaj-recenzenta" | "odbierz-recenzenta";
+export const ADMIN_ACTIONS: AdminAction[] = ["zatwierdz", "odrzuc", "zatwierdz-admina", "odrzuc-admina", "odbierz-admina", "nadaj-recenzenta", "odbierz-recenzenta"];
 
 /** Zmiany kont przez admina. Właściciela i własnego konta nie da się odrzucić ani odebrać im roli. */
 export async function adminAction(me: User, id: string, action: AdminAction) {
@@ -572,6 +584,13 @@ export async function adminAction(me: User, id: string, action: AdminAction) {
     case "odbierz-admina":
       guard();
       await query("UPDATE users SET is_admin = false, admin_requested_at = NULL WHERE id = $1 AND NOT is_owner", [id]);
+      return;
+    case "nadaj-recenzenta":
+      if (!row.activated_at) throw new HttpError(400, "Najpierw zatwierdź konto użytkownika.");
+      await query("UPDATE users SET is_reviewer = true WHERE id = $1", [id]);
+      return;
+    case "odbierz-recenzenta":
+      await query("UPDATE users SET is_reviewer = false WHERE id = $1", [id]);
       return;
   }
 }
