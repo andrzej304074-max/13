@@ -144,7 +144,8 @@ export function Reader({ sections, unitId, heading, crumbs, footer, lessonMode =
     if (end <= a.off) { setPop(null); return; }
     const rect = range.getBoundingClientRect();
     setMarkPop(null);
-    setPop({ x: rect.left + rect.width / 2, y: rect.top, sec: a.sec, block: a.block, start: a.off, end, text: sel.toString().trim().slice(0, 1000) });
+    // dymek zawsze na ekranie (zaznaczenie mogło wyjść poza widok, np. po przewinięciu klawiaturą)
+    setPop({ x: rect.left + rect.width / 2, y: Math.min(Math.max(rect.top, 56), window.innerHeight - 56), sec: a.sec, block: a.block, start: a.off, end, text: sel.toString().trim().slice(0, 1000) });
   }, []);
 
   useEffect(() => {

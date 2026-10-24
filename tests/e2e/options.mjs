@@ -156,5 +156,5 @@ await dark.close();
 
 check(errs.length === 0, `błędy: ${errs.slice(0, 8).join(" | ")}`);
 await browser.close();
-console.log(`OK: ${ok} błędów: ${fails.length}`, fails);
+console.log(`OK: ${ok} błędów: ${fails.length}`, JSON.stringify(fails));
 process.exit(fails.length ? 1 : 0);

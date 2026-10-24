@@ -50,6 +50,7 @@ for (const vp of [{ width: 1280, height: 900 }, { width: 430, height: 900 }]) {
   if (tag === 1280) {
     const para = p.locator(".reader-body p").nth(2);
     const txt = (await para.textContent()).trim();
+    await para.scrollIntoViewIfNeeded();
     await para.evaluate((el) => {
       const t = el.querySelector("[data-o]").firstChild; const r = document.createRange(); r.setStart(t, 0); r.setEnd(t, Math.min(20, t.length));
       const s = getSelection(); s.removeAllRanges(); s.addRange(r);
@@ -66,7 +67,10 @@ for (const vp of [{ width: 1280, height: 900 }, { width: 430, height: 900 }]) {
 
   // 2. Tabela pojęć – wszystkie wg filtra, pojedyncze hasło
   await p.goto(`${B}/pojecia?q=elastyczność`); await p.waitForSelector('[data-testid="speak-all"]');
-  const firstTitle = (await p.locator(".concept-row:not(.head) strong").first().textContent()).trim();
+  // wyszukiwanie działa z opóźnieniem (useDeferredValue) – czekamy, aż liczba w przycisku przestanie się zmieniać
+  for (let prev = "", i = 0; i < 20; i++) { const t = await p.locator('[data-testid="speak-all"]').innerText(); if (t === prev) break; prev = t; await p.waitForTimeout(250); }
+  // tytuł z pierwszej linii wiersza (wiersze rodzaju „źródła” nie mają pogrubienia)
+  const firstTitle = (await p.locator(".concept-row:not(.head)").first().innerText()).split(/[\n\t]/)[0].trim();
   await p.evaluate(() => { window.__spoken = []; });
   await p.click('[data-testid="speak-all"]'); await p.waitForTimeout(300);
   sp = await spoken(p);

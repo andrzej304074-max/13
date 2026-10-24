@@ -14,7 +14,7 @@
     "@vercel/blob": "^2.8.1",
     "aws4fetch": "^1.0.20",
     "next": "^16.4.2",
-    "nodemailer": "10.0.12",
+    "nodemailer": "10.2.1",
     "pg": "^8.23.1",
     "react": "^19.3.0",
     "react-dom": "^19.3.0"
@@ -29,5 +29,9 @@
     "tsx": "^4.23.15",
     "typescript": "^7.0.2",
     "vitest": "^5.0.3"
+  },
+  "overrides": {
+    "zod": "^4.6.6",
+    "undici": "^6.29.1"
   }
 }
