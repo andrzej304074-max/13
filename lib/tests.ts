@@ -78,9 +78,15 @@ export async function createTest(
         `INSERT INTO tests (bank, type, question_ids, deadline, max_score, user_id, draw)
          VALUES ($1, $2, $3, now() + make_interval(mins => $4), $5, $6, $7)
          RETURNING *`,
-        [bank, type, drawn.map((q) => q.id), durationMinutes(count), drawn.length * MAX_POINTS_PER_QUESTION, userId, draw],
+        [bank, type, drawn.map((q) => q.id), testMinutes(count, drawn.length), drawn.length * MAX_POINTS_PER_QUESTION, userId, draw],
       );
   return toState(rows[0], []);
+}
+
+/** Czas testu; gdy wylosowano mniej pytań niż wybrano (np. „Tylko moje błędy”) – proporcjonalnie, co najmniej 5 minut. */
+export function testMinutes(count: TestSize, drawn: number): number {
+  const full = durationMinutes(count);
+  return drawn >= count ? full : Math.max(5, Math.ceil((full * drawn) / count));
 }
 
 /** `userId` – właściciel testu; null tylko przy podglądzie przez admina (dowolny test). */
@@ -192,7 +198,8 @@ export async function answerQuestion(userId: string, id: string, questionId: unk
     if (endless && Number(r.n) !== pos) throw new HttpError(409, "W trybie bez limitu nie można wracać ani przeskakiwać pytań.");
     throw new HttpError(409, "Na to pytanie już odpowiedziano.");
   }
-  await addXp(userId, "testy", testXp(points, skipped, sel.length === 0));
+  // XP równolegle z resztą zapisu (addXp sam łapie i loguje błędy) – bez dodatkowego czekania na bazę przy każdej odpowiedzi
+  const xp = addXp(userId, "testy", testXp(points, skipped, sel.length === 0));
   let answered = Number(r.n) + 1;
   // test 30/50: `prev` to stan sprzed zapisu – przy równoczesnym zapisie ostatnich odpowiedzi (dwie karty, ponowienie po błędzie
   // sieci) oba żądania widziałyby „jeszcze nie wszystkie”. Pod koniec testu liczymy więc odpowiedzi po zapisie
@@ -214,6 +221,7 @@ export async function answerQuestion(userId: string, id: string, questionId: unk
     }
   }
   if (answered >= t.question_ids.length) await finishRow(id);
+  await xp;
   const next = endless ? getQuestion(t.question_ids[answered] ?? "") : undefined;
   return {
     ...feedback({ question_id: questionId, selected: sel, points, skipped }),

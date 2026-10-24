@@ -45,7 +45,7 @@ export async function api<T>(url: string, init?: RequestInit): Promise<T> {
 }
 
 export const XP_EVENT = "xp:changed";
-const XP_URL = /\/api\/(tests\/[^/]+\/answer|fiszki\/ocena|nauka\/sessions\/[^/]+\/finish|otwarte\/[^/]+\/sprawdz|podrecznik\/przeczytane|cel)\b/;
+const XP_URL = /\/api\/(tests\/[^/]+\/answer|fiszki\/ocena|nauka\/sessions\/[^/]+\/finish|otwarte\/[^/]+\/sprawdz|podrecznik\/przeczytane)\b/;
 
 export const LETTERS = ["A", "B", "C", "D"];
 

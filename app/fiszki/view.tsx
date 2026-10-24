@@ -461,7 +461,9 @@ function Classic({ list, mastery, rate, preview, topicName, stars, onStar }: Pro
   }, [c, rate, go]);
   useEffect(() => {
     const k = (e: KeyboardEvent) => {
-      if ((e.target as HTMLElement)?.closest("input,select,textarea,button,a") || isTyping(e)) return;
+      // przyciski i linki w środku karty („Więcej”, Podręcznik) obsługują klawisze same; po kliknięciu „Znam”/strzałek skróty działają dalej
+      const t = e.target as HTMLElement | null;
+      if (t?.closest("input,select,textarea,[data-testid=\"classic-card\"] button,[data-testid=\"classic-card\"] a") || isTyping(e)) return;
       if (e.key === " ") { e.preventDefault(); setBack((b) => !b); }
       if (e.key === "ArrowRight") go(1);
       if (e.key === "ArrowLeft") go(-1);

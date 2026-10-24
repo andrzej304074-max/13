@@ -34,5 +34,12 @@ describe("statystyki świata", () => {
     expect(validRankName("jan@kowalski.pl")).not.toBeNull();
     expect(validRankName("Admin")).not.toBeNull();
     expect(validRankName("<script>")).not.toBeNull();
+    expect(validRankName("Principal")).toBeNull();
+    expect(validRankName("Huj_123")).not.toBeNull();
+  });
+  it("percentyl przy wartości niecałkowitej – siebie nie liczymy jako lepszego", () => {
+    const d = distribution("skutecznosc", [2 / 3 * 100, 70, 80, 90, 95], 2 / 3 * 100);
+    expect(d.better).toBe(0);
+    expect(d.me).toBe(66.7);
   });
 });

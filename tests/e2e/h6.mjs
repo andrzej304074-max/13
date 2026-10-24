@@ -48,6 +48,16 @@ if (await link.count()) {
   await link.click(); await p.waitForURL(/\/nauka\/podrecznik\//, { timeout: 10000 }).catch(() => {});
   check(/\/nauka\/podrecznik\/[^/]+\/[^/]+/.test(p.url()), `link do rozdziału Podręcznika (${p.url()})`);
 } else fails.push("klasyczne: brak linku do Podręcznika");
+// skróty po kliknięciu „Znam”: Spacja odwraca kartę, a nie ocenia ponownie
+await p.goto(`${B}/fiszki?tryb=klasyczne`); await p.waitForSelector('[data-testid="classic-card"]');
+const pos0 = await p.locator('[data-testid="classic-pos"]').innerText();
+await p.click('[data-testid="btn-known"]');
+const pos1 = await p.locator('[data-testid="classic-pos"]').innerText();
+await p.keyboard.press(" "); await p.waitForTimeout(200);
+check((await p.locator('[data-testid="classic-pos"]').innerText()) === pos1 && pos1 !== pos0, "Spacja po „Znam” nie przechodzi dalej");
+check((await p.getAttribute('[data-testid="classic-card"]', "class")).includes("back"), "Spacja po „Znam” odwraca kartę");
+await p.keyboard.press("ArrowLeft"); await p.waitForTimeout(200);
+check((await p.locator('[data-testid="classic-pos"]').innerText()) === pos0, "strzałka po kliknięciu przycisku działa");
 // 4. własna talia z hasłem kursu
 const hasla = await (await p.request.get(`${B}/api/dane/hasla`)).json();
 const lf = hasla.rows.find((r) => r.t === "Krzywa Laffera");

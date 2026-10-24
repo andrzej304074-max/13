@@ -2,17 +2,23 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { api, XP_EVENT } from "@/lib/client";
+import { api, viewedUser, withUser, XP_EVENT } from "@/lib/client";
 import type { XpSummary } from "@/lib/xp";
 import { DAILY_GOALS, XP_SOURCE_LABEL, XP_SOURCES } from "@/lib/xp-core";
 
-/** Wspólny stan celu i serii (🔥 w nagłówku, strona Nauki): jedno zapytanie na 30 s, odświeżane po akcjach dających XP. */
-let cache: { at: number; p: Promise<XpSummary> } | null = null;
+/**
+ * Wspólny stan celu i serii (🔥 w nagłówku, strona Nauki): jedno zapytanie na 30 s dla wszystkich miejsc naraz, odświeżane po akcjach
+ * dających XP (jedno wspólne zapytanie po zdarzeniu). Przy podglądzie admina (`?user=`) – dane oglądanego konta, tylko do odczytu.
+ */
+let cache: { at: number; url: string; fresh: boolean; p: Promise<XpSummary> } | null = null;
 const TTL = 30_000;
-function load(force = false): Promise<XpSummary> {
-  if (!force && cache && Date.now() - cache.at < TTL) return cache.p;
-  const p = api<XpSummary>("/api/cel");
-  cache = { at: Date.now(), p };
+const subs = new Set<(x: XpSummary) => void>();
+function load(fresh = false): Promise<XpSummary> {
+  const url = withUser("/api/cel");
+  // po zdarzeniu XP wszystkie zamontowane miejsca dzielą jedno świeże zapytanie
+  if (cache && cache.url === url && (fresh ? cache.fresh && Date.now() - cache.at < 2000 : Date.now() - cache.at < TTL)) return cache.p;
+  const p = api<XpSummary>(url);
+  cache = { at: Date.now(), url, fresh, p };
   p.catch(() => { cache = null; });
   return p;
 }
@@ -22,13 +28,16 @@ export function useXp(): [XpSummary | null, (s: XpSummary) => void] {
   const path = usePathname();
   useEffect(() => {
     let live = true;
-    const get = (force = false) => load(force).then((x) => live && setS(x)).catch(() => {});
+    const get = (fresh = false) => load(fresh).then((x) => live && setS(x)).catch(() => {});
     get();
-    const on = () => { cache = null; get(true); };
+    const on = () => get(true);
+    const sub = (x: XpSummary) => live && setS(x);
     window.addEventListener(XP_EVENT, on);
-    return () => { live = false; window.removeEventListener(XP_EVENT, on); };
+    subs.add(sub);
+    return () => { live = false; window.removeEventListener(XP_EVENT, on); subs.delete(sub); };
   }, [path]);
-  const set = (x: XpSummary) => { cache = { at: Date.now(), p: Promise.resolve(x) }; setS(x); };
+  // nowy stan z odpowiedzi PUT /api/cel – bez ponownego pobierania, dla wszystkich miejsc
+  const set = (x: XpSummary) => { cache = { at: Date.now(), url: withUser("/api/cel"), fresh: false, p: Promise.resolve(x) }; subs.forEach((f) => f(x)); };
   return [s, set];
 }
 
@@ -50,6 +59,9 @@ function Ring({ pct, size = 26 }: { pct: number; size?: number }) {
 /** Panel celu i serii – w okienku z nagłówka i na stronie Nauki. */
 export function XpPanel({ s, onChange }: { s: XpSummary; onChange: (x: XpSummary) => void }) {
   const [busy, setBusy] = useState(false);
+  // podgląd admina (`?user=`): cel oglądanego konta tylko do odczytu
+  const [preview, setPreview] = useState(false);
+  useEffect(() => setPreview(!!viewedUser()), []);
   const pct = s.goal ? (s.today.xp / s.goal) * 100 : 0;
   const max = Math.max(s.goal, ...s.week.map((d) => d.xp), 1);
   async function choose(goal: number) {
@@ -87,7 +99,7 @@ export function XpPanel({ s, onChange }: { s: XpSummary; onChange: (x: XpSummary
       </div>
       <div className="seg" role="group" aria-label="Cel dzienny" style={{ flexWrap: "wrap" }}>
         {DAILY_GOALS.map((g) => (
-          <button key={g.xp} className={g.xp === s.goal ? "active" : ""} aria-pressed={g.xp === s.goal} disabled={busy}
+          <button key={g.xp} className={g.xp === s.goal ? "active" : ""} aria-pressed={g.xp === s.goal} disabled={busy || preview}
             onClick={() => choose(g.xp)} data-goal={g.xp}>{g.label} · {g.xp}</button>
         ))}
       </div>

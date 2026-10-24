@@ -8,7 +8,6 @@ import { EXERCISE_LABELS, MAX_LEVEL, PASS_ACCURACY, type AnswerLog, type Exercis
 
 /** Dni (serie, XP dzienne) liczone w polskiej strefie czasowej. */
 const TZ = "Europe/Warsaw";
-const DAY = `(finished_at AT TIME ZONE '${TZ}')::date`;
 const MAX_DURATION_MS = 3 * 60 * 60 * 1000;
 const MAX_ANSWERS = 200;
 
@@ -133,49 +132,16 @@ export interface LessonProgress {
   partial?: Record<number, { pos: number; total: number; at: string }>;
 }
 
+/** XP i liczba sesji z kursu (cel dzienny i seria – wspólne dla całej aplikacji, w lib/xp.ts). */
 export interface Summary {
-  xpToday: number;
   xpTotal: number;
-  streak: number;
-  /** Czy dzisiejszy dzień już liczy się do serii. */
-  todayDone: boolean;
-  week: { day: string; xp: number }[];
   sessions: number;
 }
 
 export async function getSummary(userId: string): Promise<Summary> {
-  const { rows } = await query<{ day: string; xp: string; n: string }>(
-    `SELECT to_char(${DAY}, 'YYYY-MM-DD') AS day, SUM(xp) AS xp, COUNT(*) AS n
-     FROM learn_sessions WHERE user_id = $1 AND finished_at IS NOT NULL GROUP BY 1 ORDER BY 1 DESC`,
-    [userId],
-  );
-  // dzisiejsza data w strefie kursu – bez dodatkowego zapytania (en-CA daje format RRRR-MM-DD)
-  const todayStr = new Intl.DateTimeFormat("en-CA", { timeZone: TZ, year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
-  const byDay = new Map(rows.map((r) => [r.day, Number(r.xp)]));
-  const shift = (d: string, n: number) => {
-    const t = new Date(`${d}T12:00:00Z`);
-    t.setUTCDate(t.getUTCDate() + n);
-    return t.toISOString().slice(0, 10);
-  };
-  // seria: kolejne dni z ukończoną sesją, licząc od dziś (albo od wczoraj, jeśli dziś jeszcze nic)
-  let streak = 0;
-  let d = byDay.has(todayStr) ? todayStr : shift(todayStr, -1);
-  while (byDay.has(d)) {
-    streak++;
-    d = shift(d, -1);
-  }
-  const week = Array.from({ length: 7 }, (_, i) => {
-    const day = shift(todayStr, i - 6);
-    return { day, xp: byDay.get(day) ?? 0 };
-  });
-  return {
-    xpToday: byDay.get(todayStr) ?? 0,
-    xpTotal: rows.reduce((s, r) => s + Number(r.xp), 0),
-    streak,
-    todayDone: byDay.has(todayStr),
-    week,
-    sessions: rows.reduce((s, r) => s + Number(r.n), 0),
-  };
+  const { rows } = await query<{ xp: string; n: string }>(
+    "SELECT COALESCE(SUM(xp), 0) AS xp, COUNT(*) AS n FROM learn_sessions WHERE user_id = $1 AND finished_at IS NOT NULL", [userId]);
+  return { xpTotal: Number(rows[0].xp), sessions: Number(rows[0].n) };
 }
 
 export interface Progress {

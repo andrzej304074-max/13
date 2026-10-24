@@ -41,6 +41,10 @@ await p.waitForTimeout(800);
 check(await p.locator('[data-testid="mistakes"]').getAttribute("aria-pressed") === "true", "„Powtórz błędy” włącza „Tylko moje błędy”");
 check(/do powtórki/.test(await p.locator('[data-testid="mistakes"]').innerText()), "liczba pytań do powtórki");
 await p.screenshot({ path: `${OUT}/h3_mistakes_390.png` });
+// tryb błędów nie zostaje zapamiętany na koncie – zwykłe wejście do „Wszystkich pytań” go nie włącza
+await p.waitForTimeout(1500);
+await p.goto(`${B}/testy/wszystkie`); await p.waitForSelector('[data-testid="mistakes"]'); await p.waitForTimeout(800);
+check(await p.locator('[data-testid="mistakes"]').getAttribute("aria-pressed") === "false", "„Tylko moje błędy” nie zostaje zapamiętane");
 check(errs.length === 0, `błędy strony: ${errs.join(" | ")}`);
 console.log(`OK: ${ok} błędów: ${fails.length}`, fails);
 await browser.close(); process.exit(fails.length ? 1 : 0);

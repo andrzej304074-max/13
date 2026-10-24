@@ -53,7 +53,7 @@ function binEdges(metric: WorldMetric, max: number): number[] {
 
 export function distribution(metric: WorldMetric, values: number[], me: number | null): WorldDist {
   const n = values.length;
-  if (n < MIN_USERS) return { n, me, better: null, dist: null };
+  if (n < MIN_USERS) return { n, me: me === null ? null : round1(me), better: null, dist: null };
   const sorted = [...values].sort((a, b) => a - b);
   const mean = sorted.reduce((s, v) => s + v, 0) / n;
   const median = n % 2 ? sorted[(n - 1) / 2] : (sorted[n / 2 - 1] + sorted[n / 2]) / 2;
@@ -69,13 +69,15 @@ export function distribution(metric: WorldMetric, values: number[], me: number |
   const idx = (v: number) => Math.min(bins.length - 1, Math.max(0, bins.findIndex((b, i) => v < b.to || i === bins.length - 1)));
   for (const v of sorted) bins[idx(v)].n++;
   if (me !== null) bins[idx(me)].me = true;
-  return { n, me, better, dist: { mean: round1(mean), median: round1(median), bins } };
+  return { n, me: me === null ? null : round1(me), better, dist: { mean: round1(mean), median: round1(median), bins } };
 }
 
 /* ---------- ranking opt-in ---------- */
 
 export const RANK_TOP = 50;
-const BANNED = ["admin", "moderator", "kurw", "chuj", "pierd", "jeb", "huj", "pizd", "cipa", "fuck", "shit", "nazi", "hitler"];
+/** Rdzenie zakazane w dowolnym miejscu pseudonimu i krótkie – tylko na początku słowa (żeby nie odrzucać np. „Principal”). */
+const BANNED = ["admin", "moderator", "kurw", "chuj", "pierd", "pizd", "fuck", "shit", "nazi", "hitler"];
+const BANNED_WORD = ["jeb", "huj", "cipa", "cipk"];
 
 /** Pseudonim w rankingu: 3–20 znaków (litery, cyfry, spacja, _ . -), bez adresu e-mail i bez wulgaryzmów. */
 export function validRankName(v: unknown): string | null {
@@ -85,6 +87,7 @@ export function validRankName(v: unknown): string | null {
   if (!/^[\p{L}\p{N} _.-]+$/u.test(s)) return "Dozwolone są litery, cyfry, spacja i znaki _ . -";
   if (/@/.test(s)) return "Pseudonim nie może być adresem e-mail.";
   const low = s.toLowerCase().normalize("NFD").replace(/\p{M}/gu, "");
-  if (BANNED.some((b) => low.includes(b))) return "Wybierz inny pseudonim.";
+  const words = low.split(/[ _.\-\d]+/);
+  if (BANNED.some((b) => low.includes(b)) || words.some((w) => BANNED_WORD.some((b) => w.startsWith(b)))) return "Wybierz inny pseudonim.";
   return null;
 }

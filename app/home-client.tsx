@@ -79,8 +79,9 @@ export default function HomeClient({ bank = "owe", counts: initial, options }: {
   const search = useSearchParams();
   const mistakesLink = bank === "mix" && search.get("bledy") === "1";
   useEffect(() => { if (mistakesLink) set({ mistakes: true }); }, [mistakesLink]);
-  // ustawienia formularza zapamiętane na koncie (osobno dla każdej zakładki)
-  usePrefSync(`testy-${bank}`, JSON.stringify(p), (v) => { try { setP({ ...DEFAULT_PREFS, ...JSON.parse(v), ...(mistakesLink ? { mistakes: true } : {}) }); } catch {} });
+  // ustawienia formularza zapamiętane na koncie (osobno dla każdej zakładki); „Tylko moje błędy” nie jest zapamiętywane –
+  // włącza je link albo przycisk na czas tej wizyty, żeby zwykły test później nie losował samych błędów
+  usePrefSync(`testy-${bank}`, JSON.stringify({ ...p, mistakes: false }), (v) => { try { setP({ ...DEFAULT_PREFS, ...JSON.parse(v), mistakes: mistakesLink }); } catch {} });
   const [counts, setCounts] = useState<Counts>({ ...initial, bySource: null });
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);

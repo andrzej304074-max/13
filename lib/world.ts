@@ -90,7 +90,7 @@ export interface WorldStats extends WorldDist { metric: WorldMetric; source: Wor
 export async function getWorld(userId: string, m: WorldMetric, src: WorldSource, p: WorldPeriod): Promise<WorldStats> {
   const vals = await values(m, src, p);
   const me = vals.get(userId) ?? null;
-  return { metric: m, source: src, period: p, ...distribution(m, [...vals.values()], me === null ? null : Math.round(me * 10) / 10) };
+  return { metric: m, source: src, period: p, ...distribution(m, [...vals.values()], me) };
 }
 
 /* ---------- ranking tygodniowy (tylko zapisane osoby, pod pseudonimem) ---------- */
@@ -135,9 +135,11 @@ export async function setRanking(userId: string, on: unknown, name: unknown): Pr
     const err = validRankName(name);
     if (err) throw new HttpError(400, err);
     const nm = (name as string).trim().replace(/\s+/g, " ");
+    // NOT EXISTS łapie zwykły konflikt, unikalny indeks – równoczesne zapisy tego samego pseudonimu
     const { rowCount } = await query(
       `UPDATE users SET rank_opt = true, rank_name = $2 WHERE id = $1
-       AND NOT EXISTS (SELECT 1 FROM users o WHERE lower(o.rank_name) = lower($2) AND o.id <> $1)`, [userId, nm]);
+       AND NOT EXISTS (SELECT 1 FROM users o WHERE lower(o.rank_name) = lower($2) AND o.id <> $1)`, [userId, nm])
+      .catch((e: { code?: string }) => { if (e.code === "23505") return { rowCount: 0 }; throw e; });
     if (!rowCount) throw new HttpError(409, "Ten pseudonim jest już zajęty.");
   } else {
     await query("UPDATE users SET rank_opt = false WHERE id = $1", [userId]);
