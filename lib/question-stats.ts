@@ -24,7 +24,7 @@ export async function questionStats(): Promise<{ rows: QStatRow[]; course: { ite
     const q = getQuestion(r.q);
     if (!q) continue;
     out.push(analyse({
-      id: q.id, src: sourceOf(q.id), topic: questionMeta(q.id)?.topic ?? null, type: q.type, question: q.question,
+      id: q.id, src: sourceOf(q.id), topic: questionMeta(q.id)?.topic ?? null, type: q.type, question: q.question.length > 160 ? `${q.question.slice(0, 157)}…` : q.question,
       n: Number(r.n), pct: Math.round(Number(r.acc) * 1000) / 10,
       picks: [r.o0, r.o1, r.o2, r.o3].map(Number), correct: q.correct,
       reports: bugText.filter((t) => t.includes(q.id)).length,

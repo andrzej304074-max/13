@@ -200,3 +200,42 @@ API bez zmian (mediana): `/api/stats` 53 → 58 ms, `/api/stats/dzialy` 48 → 4
   pojęcia (`?pojecie=<id>`) – dla aktywnego konta odpowiedź **459 → 146 kB** (−68%).
 
 **Nadal warte zrobienia** (bez zmian względem etapu 7): region bazy i adres `-pooler`.
+
+## Plan III (H0–H8): pomiar przed i po (24.10.2026)
+
+**Metoda.** Jak w Planie II: `perf3.mjs` na serwerze produkcyjnym (`next start`) i lokalnej bazie, konto właściciela, telefon
+(CPU ×4, 9 Mb/s, 60 ms) i komputer, mediana z 3 wejść. Stan „przed” to commit `246bd1d` (koniec Planu II) zbudowany w osobnym
+katalogu na **tej samej maszynie**, mierzony między dwoma pomiarami „po” (podano oba – pokazują rozrzut).
+
+**Wynik.** Plan III nie spowolnił stron – różnice LCP mieszczą się w szumie; strony z nowymi elementami (🔥 w nagłówku, „Więcej”,
+wykresy, filtr źródła) są o kilka kB większe:
+
+| Strona (telefon) | LCP przed → po (2 pomiary) | Dane przed → po |
+|---|---:|---:|
+| `/` (Testy → Olimpiada) | 320 → 216 / 208 ms | 50 → 54 kB |
+| `/nauka` | 332 → 364 / 364 ms | 215 → 219 kB |
+| `/nauka/lekcja/…?sub=3` | 820 → 820 / 808 ms | 212 → 219 kB |
+| `/fiszki` | 1252 → 1252 / 1244 ms | 270 → 275 kB |
+| `/pojecia` | 980 → 1080 / 1124 ms | 244 → 248 kB |
+| `/stats` | 924 → 856 / 892 ms | 78 → 80 kB |
+| `/zadania` | 404 → 296 / 352 ms | 58 → 68 kB |
+| `/eseje` | 720 → 328 / 324 ms | 60 → 78 kB |
+| `/nauka/podrecznik/mikro-rynek` | 664 → 752 / 596 ms | 236 → 248 kB |
+| `/admin` | 332 → 388 / 360 ms | 39 → **896** kB → po poprawce 92 kB |
+
+API (mediana, komputer): `/api/stats` 36 → 32 ms, `/api/nauka/progress` 27 → 21 ms, `/api/stats/dzialy` 25 → 20 ms,
+`/api/dane/hasla` 574 → 600 kB (nowe hasła), `/api/otwarte?rodzaj=zadanie` 17 → 35 kB (+50 zadań Prognozy XL), nowe `/api/cel` 6 ms / 1 kB.
+
+**Znalezione i poprawione w pomiarze:**
+- **Panel admina pobierał od razu statystyki wszystkich pytań** (H4: ~0,8 MB przy bazie z wieloma odpowiedziami). Karta
+  „Pytania” wczytuje je dopiero po kliknięciu „Pokaż statystyki pytań”, a w liście idzie skrócona treść pytania (pełna – po
+  rozwinięciu wiersza). Wejście do panelu: 896 → 92 kB.
+
+**Co zrobiono w Planie III dla szybkości:**
+- **XP i seria** (H1): jeden `INSERT … ON CONFLICT` na zdarzenie, w odpowiedzi w teście wykonywany równolegle z resztą zapisu;
+  w przeglądarce jedno wspólne zapytanie `/api/cel` dla nagłówka i strony Nauki (pamięć 30 s, jedno odświeżenie po zdarzeniu XP).
+- **Statystyki świata** (H2): rozkłady liczone jednym zapytaniem agregującym, pamięć serwera 5 min.
+- **„Więcej”** (H6): osobny plik `/api/dane/wiecej` (~0,86 MB, ETag) pobierany dopiero przy pierwszym rozwinięciu – nie
+  powiększa `/api/dane/hasla`.
+- **Wykresy** (H5): lekkie SVG rysowane z opisu, bez biblioteki wykresów.
+- **Prognoza XL** (H7): zadania i eseje w tym samym indeksie co zestawy OWE; wersja publiczna bez danych pośrednich.

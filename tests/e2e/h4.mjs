@@ -18,7 +18,7 @@ const a = await login("owner@example.com", "haslo-wlasciciela");
 const d = await (await a.request.get(`${B}/api/admin/pytania`)).json();
 check(Array.isArray(d.rows) && d.rows.length > 0, `pytania z odpowiedziami: ${d.rows?.length}`);
 check(d.rows.every((r) => r.n >= 1 && r.pct >= 0 && r.pct <= 100 && r.picks.length === 4), "poprawne wiersze");
-await a.goto(`${B}/admin`); await a.waitForSelector('[data-testid="questions-admin"]');
+await a.goto(`${B}/admin`); await a.click('[data-testid="qa-load"]'); await a.waitForSelector('[data-testid="questions-admin"]');
 await a.locator('[data-testid="questions-admin"] select').nth(2).selectOption("1");
 await a.waitForSelector('[data-testid="qa-row"]');
 await a.locator('[data-testid="qa-row"]').first().click(); await a.waitForSelector('[data-testid="qa-full"]');

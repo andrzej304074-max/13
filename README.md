@@ -124,7 +124,8 @@ Trzy źródła pytań testowych: **📜 Archiwum OWE** (prawdziwe pytania z olim
 
 - Karta „Pytania – skuteczność i flagi do przeglądu” (`GET /api/admin/pytania`, tylko admin): dla każdego pytania z odpowiedziami –
   liczba odpowiedzi wszystkich użytkowników, % poprawnych, ile razy wybrano każdą opcję, najczęstsza błędna odpowiedź,
-  zgłoszenia błędów z id pytania.
+  zgłoszenia błędów z id pytania. Dane pobierane dopiero po kliknięciu „Pokaż statystyki pytań” (przy dużej bazie ~0,8 MB);
+  w liście skrócona treść, pełne pytanie z kluczem – po rozwinięciu wiersza (`?id=`).
 - **Flagi** (od 10 odpowiedzi): „podejrzany klucz” – błędna opcja wybierana częściej niż (najrzadziej wybierana) poprawna; „za trudne”
   (< 20%); „za łatwe” (> 95%). Filtry źródła, flagi, minimalnej liczby odpowiedzi, sortowanie; podgląd pytania z kluczem i wyjaśnieniem.
 - Zakładka „Ćwiczenia kursu” – 100 najtrudniejszych par hasło × typ ćwiczenia (logika `lib/question-stats-core.ts`).
@@ -631,7 +632,9 @@ Każdy kolejny push na gałąź produkcyjną (Settings → Git → Production Br
 - `npm test` — testy jednostkowe (vitest: punktacja, kurs, powtórki, statystyki, ogłoszenia, bezpieczeństwo i inne)
 - `npm run typecheck` — sprawdzenie typów
 - `npm run validate-questions` — walidacja bazy pytań
-- `bash tests/e2e/run.sh [katalog-na-zrzuty] [log-serwera]` — pełna regresja e2e (Playwright, 32 skrypty: konta, testy,
+- `bash tests/e2e/run.sh [katalog-na-zrzuty] [log-serwera]` — pełna regresja e2e (Playwright, 50 skryptów: konta, testy,
   nauka, notatki, fiszki, mapa, podręcznik, zadania i eseje, ogłoszenia, zgłoszenia, wydajność danych, bezpieczeństwo,
-  sondy wszystkich tras API, przejście po wszystkich stronach w obu motywach i szerokościach). **Tylko na lokalnej bazie
+  sondy wszystkich tras API, przejście po wszystkich stronach w obu motywach i szerokościach; `options.mjs` – każda opcja
+  i filtr na 12 stronach po kolei: brak błędów, zmiana treści, zapis na koncie i powrót do domyślnych, a także cel dzienny,
+  ranking, czytanie na głos i motyw ciemny). **Tylko na lokalnej bazie
   testowej** – na początku czyści konta. Wymaga serwera produkcyjnego na porcie 3100 (instrukcja w nagłówku skryptu).

@@ -26,7 +26,9 @@ export function QuestionsCard() {
   const [limit, setLimit] = useState(STEP);
   const [open, setOpen] = useState<string | null>(null);
   const [full, setFull] = useState<Record<string, Full>>({});
-  useEffect(() => { api<Data>("/api/admin/pytania").then(setData).catch((e) => setError(e.message)); }, []);
+  // dane (kilkaset kB przy dużej liczbie odpowiedzi) pobierane dopiero na żądanie – nie spowalniają wejścia do panelu
+  const [on, setOn] = useState(false);
+  useEffect(() => { if (on) api<Data>("/api/admin/pytania").then(setData).catch((e) => setError(e.message)); }, [on]);
   useEffect(() => {
     if (!open || full[open]) return;
     api<Full>(`/api/admin/pytania?id=${encodeURIComponent(open)}`).then((f) => setFull((m) => ({ ...m, [f.id]: f }))).catch(() => {});
@@ -43,6 +45,12 @@ export function QuestionsCard() {
     return c;
   }, [data]);
 
+  if (!on) return (
+    <div className="card row" style={{ flexWrap: "wrap", gap: 8 }}>
+      <span className="muted small">Skuteczność każdego pytania, najczęstsza błędna odpowiedź, flagi do przeglądu i ćwiczenia kursu.</span>
+      <button className="btn secondary" onClick={() => setOn(true)} data-testid="qa-load">Pokaż statystyki pytań</button>
+    </div>
+  );
   if (error) return <div className="card"><p className="error" style={{ margin: 0 }}>{error}</p></div>;
   if (!data) return <div className="card"><SkeletonRows rows={3} height={40} label="Ładowanie statystyk pytań" /></div>;
   return (
