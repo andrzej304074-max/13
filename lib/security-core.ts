@@ -22,9 +22,10 @@ export function crossSite(method: string, header: (name: string) => string | nul
 
 /**
  * CSP z jednorazowym nonce: skrypty tylko z tej aplikacji (Next.js dopisuje nonce do swoich znaczników),
- * bez osadzania w ramkach, bez wtyczek; dźwięk także z magazynu nagrań (https).
+ * bez osadzania w ramkach, bez wtyczek; dźwięk także z magazynu nagrań (https). Skrypt Turnstile ładuje się przez
+ * 'strict-dynamic' (wstawia go skrypt z nonce), jego ramka – przez frame-src.
  */
-export function csp(nonce: string, dev = false): string {
+export function csp(nonce: string, dev = false, turnstile = false): string {
   return [
     "default-src 'self'",
     `script-src 'self' 'nonce-${nonce}' 'strict-dynamic'${dev ? " 'unsafe-eval'" : ""}`,
@@ -37,5 +38,7 @@ export function csp(nonce: string, dev = false): string {
     "base-uri 'self'",
     "form-action 'self'",
     "frame-ancestors 'none'",
+    // Cloudflare Turnstile (rejestracja, reset hasła) – ramka widżetu, tylko gdy klucze są ustawione
+    ...(turnstile ? ["frame-src https://challenges.cloudflare.com"] : []),
   ].join("; ");
 }

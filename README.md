@@ -483,6 +483,36 @@ Po pierwszym wdrożeniu od razu załóż swoje konto – pierwsze konto zostaje 
   - **CSRF:** zapytania zmieniające dane z obcego `Origin` (albo `Sec-Fetch-Site: cross-site`) są odrzucane (403) – obok `SameSite` ciasteczka;
   - **rozmiar danych:** ciało zapytania JSON do 4 MB (413);
   - **zadanie cykliczne:** sekret porównywany w stałym czasie.
+- **Konto (Ustawienia):**
+  - **weryfikacja dwuetapowa (TOTP):** kod QR dla aplikacji uwierzytelniającej, 8 jednorazowych kodów zapasowych (w bazie tylko skróty),
+    kod przy logowaniu hasłem, przez Google i po resecie hasła (5 prób na bilet, 5 minut). Sekret w bazie szyfrowany AES-256-GCM kluczem z `AUTH_SECRET`.
+    **Panel admina i akcje admina wymagają włączonej weryfikacji** – admin bez niej trafia do Ustawień (`ADMIN_MFA=optional` wyłącza wymóg, np. w testach lokalnych);
+  - **klucze dostępu (passkeys, WebAuthn):** logowanie odciskiem palca / twarzą / PIN-em bez hasła (do 10 na konto), `lib/passkeys.ts`;
+  - **zalogowane urządzenia:** lista sesji (przeglądarka, system, sposób logowania), wylogowanie jednej albo „na wszystkich innych urządzeniach”;
+  - **Twoje dane:** zużycie limitów (notatki, talie, fiszki, podkreślenia – `LIMITS` w `lib/account.ts`), pobranie wszystkich danych (JSON, RODO art. 15 i 20),
+    usunięcie konta (hasło albo – przy koncie Google – e-mail, kod MFA, wpisanie „USUŃ”; nie właściciel i nie ostatni admin).
+- **Rejestracja:** rok urodzenia (min. 10 lat), akceptacja regulaminu i polityki prywatności (`/regulamin`, `/prywatnosc` – szkice do weryfikacji prawnej);
+  poniżej 16 lat oświadczenie o zgodzie rodzica / opiekuna i jego e-mail (wysyłana informacja o koncie).
+- **Logowanie Google (OIDC)** – `lib/google.ts`, `lib/google-login.ts`: przepływ „authorization code” z PKCE, `state` w ciasteczku przypiętym do przeglądarki,
+  `nonce`, podpis tokenu sprawdzany kluczami JWKS Google. Konto łączone po identyfikatorze Google albo potwierdzonym e-mailu; nowe konto uzupełnia rok urodzenia i zgody.
+- **Cloudflare Turnstile** na rejestracji i resecie hasła (`lib/turnstile.ts`); CSP dopuszcza ramkę Turnstile tylko przy ustawionych kluczach.
+- **Dziennik działań administratorów** (panel admina): zatwierdzenia, role, usunięcia kont, kody, blokady sekcji (konta i globalne), ogłoszenia, ankiety, statusy zgłoszeń, MFA adminów.
+- **CI** (`.github/workflows/ci.yml`): typy, vitest, walidacja pytań, build, `npm audit --omit=dev`; **Dependabot** – cotygodniowe aktualizacje.
+- **Zmienne środowiskowe bezpieczeństwa (Vercel → Settings → Environment Variables):**
+
+  | Zmienna | Co robi | Bez niej |
+  |---|---|---|
+  | `AUTH_SECRET` | klucz szyfrowania sekretów MFA (losowe ≥ 32 znaki) | sekrety zapisane jawnie (oznaczone `p:`) |
+  | `ADMIN_MFA` | `optional` – wyłącza wymóg MFA dla adminów | MFA wymagane |
+  | `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET` | logowanie Google (Google Cloud Console → Credentials → OAuth client ID „Web application”, przekierowanie `<APP_URL>/api/konto/google/callback`) | przycisk ukryty, trasy 404 |
+  | `TURNSTILE_SITE_KEY`, `TURNSTILE_SECRET` | Cloudflare Turnstile (dash.cloudflare.com → Turnstile → Add site) | bez sprawdzania |
+  | `APP_URL` | adres aplikacji – także domena kluczy dostępu (passkeys) | adres produkcyjny Vercel |
+
+- **Rotacja sekretów** (np. raz w roku albo po wycieku):
+  1. `CRON_SECRET`, `GOOGLE_CLIENT_SECRET`, `TURNSTILE_SECRET`, hasło bazy / SMTP, klucze Azure: wygeneruj nowy u dostawcy, podmień w Vercel (i w sekretach GitHub, jeśli używane), **Redeploy**, unieważnij stary.
+  2. `AUTH_SECRET`: zmiana unieważnia zapisane sekrety MFA – przed zmianą poproś adminów o wyłączenie weryfikacji, po zmianie o ponowne włączenie
+     (albo wyczyść `totp_secret`/`totp_enabled_at` w bazie dla wszystkich kont).
+  3. Po wycieku bazy: „Wyloguj wszędzie” nie wystarcza – usuń wszystkie wiersze `user_sessions` (wszyscy logują się ponownie).
 - **Gdzie w kodzie:** `proxy.ts` i `lib/security-core.ts` (CSRF, CSP), `lib/security.ts` (limity, dziennik), `next.config.ts` (nagłówki).
 - **Utrudnienie kopiowania** (`app/components/copy-guard.tsx`):
   - poza polami edycji (notatki, brudnopisy, formularze) nie da się zaznaczać ani kopiować tekstu; menu kontekstowe, przeciąganie i skróty Ctrl/Cmd+C/X/A/S/P/U są wyłączone;

@@ -19,9 +19,9 @@ export async function POST() {
 
 export async function DELETE(req: Request) {
   return handle(async () => {
-    await requireUser({ admin: true });
+    const me = await requireUser({ admin: true });
     const { code } = await readJson(req);
-    await revokeAdminCode(code);
+    await revokeAdminCode(me, code);
     return listAdminCodes();
   });
 }

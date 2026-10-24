@@ -408,6 +408,54 @@ DO $$ BEGIN
   END IF;
 END $$;
 ${XL_MIGRATION}
+-- Plan IV – bezpieczeństwo: wiek i zgoda rodzica, akceptacja regulaminu, weryfikacja dwuetapowa (TOTP), logowanie Google
+ALTER TABLE users ADD COLUMN IF NOT EXISTS birth_year int;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS parent_email text;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS parent_consent_at timestamptz;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS terms_at timestamptz;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS totp_secret text;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS totp_enabled_at timestamptz;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS totp_backup text[] NOT NULL DEFAULT '{}';
+ALTER TABLE users ADD COLUMN IF NOT EXISTS totp_last bigint;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS google_sub text;
+CREATE UNIQUE INDEX IF NOT EXISTS users_google_sub_idx ON users (google_sub) WHERE google_sub IS NOT NULL;
+-- lista aktywnych sesji w Ustawieniach (urządzenie, początek, ostatnie użycie)
+ALTER TABLE user_sessions ADD COLUMN IF NOT EXISTS id uuid NOT NULL DEFAULT gen_random_uuid();
+ALTER TABLE user_sessions ADD COLUMN IF NOT EXISTS created_at timestamptz NOT NULL DEFAULT now();
+ALTER TABLE user_sessions ADD COLUMN IF NOT EXISTS ua text;
+ALTER TABLE user_sessions ADD COLUMN IF NOT EXISTS via text;
+-- krótkotrwałe kroki logowania: druga weryfikacja (MFA), wyzwania kluczy dostępu, logowanie Google (state/nonce/PKCE)
+CREATE TABLE IF NOT EXISTS auth_flows (
+  id         uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  kind       text NOT NULL,
+  user_id    uuid REFERENCES users(id) ON DELETE CASCADE,
+  data       jsonb NOT NULL DEFAULT '{}'::jsonb,
+  attempts   int NOT NULL DEFAULT 0,
+  expires_at timestamptz NOT NULL
+);
+CREATE INDEX IF NOT EXISTS auth_flows_exp_idx ON auth_flows (expires_at);
+-- klucze dostępu (passkeys, WebAuthn)
+CREATE TABLE IF NOT EXISTS passkeys (
+  id           text PRIMARY KEY,
+  user_id      uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  public_key   bytea NOT NULL,
+  counter      bigint NOT NULL DEFAULT 0,
+  transports   text[] NOT NULL DEFAULT '{}',
+  name         text NOT NULL DEFAULT '',
+  created_at   timestamptz NOT NULL DEFAULT now(),
+  last_used_at timestamptz
+);
+CREATE INDEX IF NOT EXISTS passkeys_user_idx ON passkeys (user_id);
+-- dziennik działań administratorów
+CREATE TABLE IF NOT EXISTS admin_audit (
+  id       bigserial PRIMARY KEY,
+  at       timestamptz NOT NULL DEFAULT now(),
+  admin_id uuid REFERENCES users(id) ON DELETE SET NULL,
+  action   text NOT NULL,
+  target   text,
+  detail   jsonb
+);
+CREATE INDEX IF NOT EXISTS admin_audit_at_idx ON admin_audit (at DESC);
 -- Plan IV: XP w skali oszczędnej (lib/xp-core.ts) – XP przyznane za zadanie/esej przy podejściu, nowe cele (30/50/80/120)
 ALTER TABLE open_attempts ADD COLUMN IF NOT EXISTS xp int NOT NULL DEFAULT 0;
 ALTER TABLE users ALTER COLUMN daily_goal SET DEFAULT 50;

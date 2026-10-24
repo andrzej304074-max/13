@@ -7,7 +7,6 @@ export const dynamic = "force-dynamic";
 export async function PUT(req: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   return handle(async () => {
-    await requireUser({ admin: true });
-    return setUserAccess(id, await readJson(req));
+    return setUserAccess(await requireUser({ admin: true }), id, await readJson(req));
   });
 }

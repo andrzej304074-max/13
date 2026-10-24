@@ -3,9 +3,10 @@
 # na początku czyści konta, ustawienia, limity i dziennik bezpieczeństwa.
 #
 # Wymagania: Postgres na localhost (baza `owe`, hasło `dev`), `npx next build` i serwer na porcie 3100:
-#   DATABASE_URL=postgres://postgres:dev@localhost:5432/owe MAIL_TEST=1 APP_URL=http://localhost:3100 \
+#   DATABASE_URL=postgres://postgres:dev@localhost:5432/owe MAIL_TEST=1 ADMIN_MFA=optional APP_URL=http://localhost:3100 \
 #     npx next start -p 3100 > next.log 2>&1 &
 # Uruchomienie z katalogu repozytorium: bash tests/e2e/run.sh [katalog-na-zrzuty] [plik-logu-serwera]
+# ADMIN_MFA=optional – skrypty logują się do panelu admina bez weryfikacji dwuetapowej (sam wymóg sprawdza vitest: tests/auth-security.test.ts).
 # Chromium: zmienna CHROMIUM (domyślnie /opt/pw-browsers/chromium-1194/chrome-linux/chrome).
 set -u
 cd "$(dirname "$0")/../.."
@@ -67,6 +68,7 @@ run h6.mjs
 run h7.mjs
 run i1.mjs
 run i2.mjs
+run i3.mjs "$LOG"
 run options.mjs
 run authsweep.mjs
 run security.mjs

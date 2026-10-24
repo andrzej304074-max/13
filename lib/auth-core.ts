@@ -110,3 +110,33 @@ export function newToken(): string {
 export function hashToken(token: string): string {
   return createHash("sha256").update(token).digest("hex");
 }
+
+/* ---------- wiek, zgoda rodzica, regulamin (rejestracja) ---------- */
+
+/** Poniżej tego wieku potrzebna zgoda rodzica / opiekuna (RODO art. 8 – w Polsce 16 lat). */
+export const CONSENT_AGE = 16;
+export const MIN_AGE = 10;
+
+/** Wiek liczony konserwatywnie z samego roku urodzenia (w roku 16. urodzin – jeszcze „poniżej 16”, dopóki rok nie minie). */
+export const ageOf = (birthYear: number, now: Date) => now.getFullYear() - birthYear - 1;
+
+export interface Consent { birthYear: number; terms: boolean; parentConsent: boolean; parentEmail: string | null; minor: boolean }
+
+/** Dane zgód z formularza rejestracji: rok urodzenia, regulamin, a poniżej 16 lat – zgoda i e-mail rodzica. */
+export function consentFrom(body: Record<string, unknown>, now: Date): Consent | string {
+  const y = Number(body.birthYear);
+  const year = now.getFullYear();
+  if (!Number.isInteger(y) || y < year - 100 || y > year - MIN_AGE) return "Podaj rok urodzenia.";
+  if (body.terms !== true) return "Zaakceptuj regulamin i politykę prywatności.";
+  const minor = ageOf(y, now) < CONSENT_AGE;
+  if (!minor) return { birthYear: y, terms: true, parentConsent: false, parentEmail: null, minor };
+  if (body.parentConsent !== true) return "Poniżej 16 lat potrzebna jest zgoda rodzica lub opiekuna.";
+  const pe = normEmail(body.parentEmail);
+  const err = emailError(pe);
+  if (err) return "Podaj poprawny e-mail rodzica lub opiekuna.";
+  if (pe === normEmail(body.email)) return "E-mail rodzica musi być inny niż e-mail konta.";
+  return { birthYear: y, terms: true, parentConsent: true, parentEmail: pe, minor };
+}
+
+/** Panel admina wymaga weryfikacji dwuetapowej (TOTP), chyba że ADMIN_MFA=optional (np. lokalne testy). */
+export const adminMfaRequired = (env: Record<string, string | undefined> = process.env) => env.ADMIN_MFA !== "optional";

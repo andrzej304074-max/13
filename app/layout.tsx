@@ -58,6 +58,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             {me?.active && <PinnedBar />}
             {me?.active && <SubTabs />}
             {me?.active ? <AccessGuard>{children}</AccessGuard> : children}
+            <footer className="site-footer" data-testid="footer">
+              <Link href="/regulamin">Regulamin</Link> · <Link href="/prywatnosc">Polityka prywatności</Link>
+            </footer>
           </main>
           {me?.active && <SectionNav variant="bottom" />}
           {me?.active && <ReaderBar />}

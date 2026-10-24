@@ -25,7 +25,13 @@ import {
   verifyPassword,
   needsRehash,
   DUMMY_HASH,
+  adminMfaRequired,
+  consentFrom,
 } from "./auth-core";
+import { audit } from "./audit";
+import { open } from "./secret-box";
+import { normBackup, verifyTotp } from "./totp";
+import { verifyTurnstile } from "./turnstile";
 import { cleanup } from "./db-usage";
 import { accountLimit, loginAllowed, loginFailed, loginOk, loginUnlock } from "./security";
 import { isBlocked, isBlockMode, keyLabel, pathKey, sanitizeKeys, type BlockMode } from "./access-core";
@@ -46,6 +52,10 @@ export interface User {
   /** Blokady sekcji ustawione dla konta (bez blokad globalnych) i wygląd menu (null – jak dla wszystkich). */
   blocked: string[];
   blockMode: BlockMode | null;
+  /** Włączona weryfikacja dwuetapowa (TOTP). */
+  mfa: boolean;
+  /** Konto połączone z logowaniem Google. */
+  google: boolean;
 }
 
 interface UserRow {
@@ -61,6 +71,10 @@ interface UserRow {
   locked_until: Date | null;
   blocked: string[] | null;
   block_mode: string | null;
+  totp_secret: string | null;
+  totp_enabled_at: Date | null;
+  totp_backup: string[];
+  google_sub: string | null;
 }
 
 const toUser = (r: UserRow): User => ({
@@ -68,16 +82,21 @@ const toUser = (r: UserRow): User => ({
   pending: r.activated_at ? null : r.code_ok_at ? "approval" : "code",
   adminPending: !r.is_admin && r.admin_requested_at !== null,
   blocked: r.blocked ?? [], blockMode: isBlockMode(r.block_mode) ? r.block_mode : null,
+  mfa: r.totp_enabled_at !== null,
+  google: r.google_sub !== null,
 });
 
 const UUID = /^[0-9a-f-]{36}$/i;
 
 /* ---------- sesja ---------- */
 
-async function startSession(userId: string) {
+/** Nowa sesja; `via` – sposób logowania (hasło, klucz dostępu, Google), zapisany z urządzeniem do listy sesji w Ustawieniach. */
+export async function startSession(userId: string, via: "haslo" | "klucz" | "google" | "rejestracja" | "reset" = "haslo") {
   const token = newToken();
-  await query("INSERT INTO user_sessions (token_hash, user_id, expires_at) VALUES ($1, $2, now() + make_interval(days => $3))",
-    [hashToken(token), userId, SESSION_DAYS]);
+  let ua = "";
+  try { ua = ((await headers()).get("user-agent") ?? "").slice(0, 300); } catch {}
+  await query("INSERT INTO user_sessions (token_hash, user_id, expires_at, ua, via) VALUES ($1, $2, now() + make_interval(days => $3), $4, $5)",
+    [hashToken(token), userId, SESSION_DAYS, ua, via]);
   await query("UPDATE users SET last_login_at = now() WHERE id = $1", [userId]);
   (await cookies()).set(SESSION_COOKIE, token, {
     httpOnly: true,
@@ -126,6 +145,9 @@ export async function requireUser(opts: { admin?: boolean; active?: boolean } = 
   if (!u) throw new HttpError(401, "Zaloguj się.");
   if (opts.active !== false && !u.active) throw new HttpError(403, "Konto nie jest aktywne – wpisz kod aktywacji.");
   if (opts.admin && !u.isAdmin) throw new HttpError(403, "Brak uprawnień administratora.");
+  if (opts.admin && !u.mfa && adminMfaRequired()) {
+    throw new HttpError(403, "Panel administratora wymaga weryfikacji dwuetapowej – włącz ją w Ustawieniach konta.");
+  }
   const key = await blockedKey(u);
   if (key) throw new HttpError(403, `Sekcja „${keyLabel(key)}” jest wyłączona przez administratora.`);
   return u;
@@ -143,18 +165,20 @@ export async function requirePageUser(opts: { admin?: boolean } = {}): Promise<U
   if (!u) redirect("/konto/logowanie");
   if (!u.active) redirect("/konto/aktywacja");
   if (opts.admin && !u.isAdmin) redirect("/");
+  if (opts.admin && !u.mfa && adminMfaRequired()) redirect("/konto/ustawienia?mfa=wymagane");
   const key = await blockedKey(u);
   if (key) redirect(`/zablokowane?sekcja=${encodeURIComponent(key)}`);
   return u;
 }
 
 /** Blokady sekcji konta ustawiane przez admina. */
-export async function setUserAccess(id: string, body: Record<string, unknown>) {
+export async function setUserAccess(me: User, id: string, body: Record<string, unknown>) {
   if (!UUID.test(id) || !(await loadRow("id = $1", id))) throw new HttpError(404, "Nie ma takiego użytkownika.");
   const blocked = sanitizeKeys(body.blocked);
   const mode = body.mode === null || body.mode === "" ? null : isBlockMode(body.mode) ? body.mode : undefined;
   if (mode === undefined) throw new HttpError(400, "Nieprawidłowy tryb blokady.");
   await query("UPDATE users SET blocked = $2, block_mode = $3 WHERE id = $1", [id, blocked, mode]);
+  await audit(me.id, "blokady-konta", id, { blocked, mode });
   return { blocked, mode };
 }
 
@@ -183,6 +207,7 @@ export async function getActivationCode(): Promise<string | null> {
 
 /** Sprawdza blokady (konta i ogólną) przed porównaniem kodu; po błędzie zapisuje próbę. */
 async function checkCode(row: UserRow, ok: (code: string) => Promise<boolean>, code: string) {
+  await accountLimit("kod");
   const now = new Date();
   const locked = lockMessage(row.locked_until, now);
   if (locked) throw new HttpError(429, locked);
@@ -213,12 +238,21 @@ async function activateRow(row: UserRow, rawCode: unknown) {
 
 /* ---------- rejestracja, logowanie, aktywacja ---------- */
 
-export async function register(rawEmail: unknown, pass: unknown, code: unknown): Promise<User> {
-  const email = normEmail(rawEmail);
+/**
+ * Rejestracja: e-mail, hasło, rok urodzenia i akceptacja regulaminu (poniżej 16 lat – zgoda i e-mail rodzica), opcjonalnie
+ * kod aktywacji; Cloudflare Turnstile, gdy skonfigurowany. `google` – konto z logowania Google (bez hasła, e-mail potwierdzony).
+ */
+export async function register(body: Record<string, unknown>, google: { sub: string; email: string } | null = null): Promise<User> {
+  const email = google ? google.email : normEmail(body.email);
+  const pass = google ? newToken() : body.password;
   const err = emailError(email) ?? passwordError(pass);
   if (err) throw new HttpError(400, err);
+  const consent = consentFrom({ ...body, email }, new Date());
+  if (typeof consent === "string") throw new HttpError(400, consent);
   await accountLimit("rejestracja");
+  if (!google) await verifyTurnstile(body.turnstile);
   const hash = await hashPassword(pass as string);
+  const code = body.code;
   const row = await withTx(async (q) => {
     // blokada tabeli: dwie rejestracje naraz nie mogą obie zostać „pierwszym kontem”
     await q("LOCK TABLE users IN SHARE ROW EXCLUSIVE MODE");
@@ -227,9 +261,9 @@ export async function register(rawEmail: unknown, pass: unknown, code: unknown):
     }
     const first = (await q("SELECT 1 FROM users LIMIT 1")).rowCount === 0;
     const { rows } = await q<UserRow>(
-      `INSERT INTO users (email, pass_hash, is_admin, is_owner, activated_at)
-       VALUES ($1, $2, $3, $3, CASE WHEN $3 THEN now() END) RETURNING *`,
-      [email, hash, first],
+      `INSERT INTO users (email, pass_hash, is_admin, is_owner, activated_at, birth_year, parent_email, parent_consent_at, terms_at, google_sub)
+       VALUES ($1, $2, $3, $3, CASE WHEN $3 THEN now() END, $4, $5, CASE WHEN $6 THEN now() END, now(), $7) RETURNING *`,
+      [email, hash, first, consent.birthYear, consent.parentEmail, consent.parentConsent, google?.sub ?? null],
     );
     if (first) {
       // pierwsze konto przejmuje wyniki testów i postęp nauki sprzed wprowadzenia kont
@@ -239,7 +273,14 @@ export async function register(rawEmail: unknown, pass: unknown, code: unknown):
     }
     return rows[0];
   });
-  await startSession(row.id);
+  await startSession(row.id, google ? "google" : "rejestracja");
+  if (consent.parentEmail && mailConfigured()) {
+    // informacja dla rodzica – bez blokowania rejestracji, gdy wysyłka się nie uda
+    await sendMail(consent.parentEmail, "Testy OWE – konto dziecka",
+      `Ktoś (zapewne Twoje dziecko) założył konto w aplikacji Testy OWE na adres ${email}, wskazując Cię jako rodzica lub opiekuna i potwierdzając Twoją zgodę.\n\n` +
+      `Aplikacja służy do nauki do Olimpiady Wiedzy Ekonomicznej. Zapisujemy wyniki testów i postęp nauki; nie wyświetlamy reklam i nie sprzedajemy danych. ` +
+      `Szczegóły: ${appUrl()}/prywatnosc\n\nJeśli nie wyrażasz zgody albo konto nie powinno istnieć, odpisz na tę wiadomość – usuniemy je.`).catch((e) => console.error("mail rodzica", e));
+  }
   if (!row.activated_at && normCode(code)) {
     // błędny kod nie cofa rejestracji – konto czeka na aktywację
     try {
@@ -252,7 +293,50 @@ export async function register(rawEmail: unknown, pass: unknown, code: unknown):
   return toUser((await loadRow("id = $1", row.id))!);
 }
 
-export async function login(rawEmail: unknown, pass: unknown): Promise<User> {
+/** Drugi krok logowania: konto z weryfikacją dwuetapową dostaje bilet (5 min, 5 prób) zamiast sesji. */
+export interface MfaChallenge { mfa: true; ticket: string }
+const MFA_TICKET_MIN = 5;
+export async function mfaTicket(userId: string, via: "haslo" | "google"): Promise<MfaChallenge> {
+  const { rows } = await query<{ id: string }>(
+    "INSERT INTO auth_flows (kind, user_id, data, expires_at) VALUES ('mfa', $1, $2, now() + make_interval(mins => $3)) RETURNING id",
+    [userId, JSON.stringify({ via }), MFA_TICKET_MIN]);
+  return { mfa: true, ticket: rows[0].id };
+}
+
+/** Kod z aplikacji uwierzytelniającej albo jednorazowy kod zapasowy (zużywany). */
+export async function checkSecondFactor(row: UserRow, code: unknown): Promise<boolean> {
+  if (!row.totp_secret || !row.totp_enabled_at) return false;
+  const w = verifyTotp(open(row.totp_secret), code);
+  if (w !== null) {
+    // ten sam kod (to samo okno 30 s albo wcześniejsze) nie przejdzie drugi raz – ochrona przed podejrzeniem i powtórzeniem
+    const { rowCount } = await query("UPDATE users SET totp_last = $2 WHERE id = $1 AND (totp_last IS NULL OR totp_last < $2)", [row.id, w]);
+    return rowCount === 1;
+  }
+  const b = normBackup(code);
+  if (b.length !== 8) return false;
+  const h = hashToken(b);
+  const { rowCount } = await query("UPDATE users SET totp_backup = array_remove(totp_backup, $2) WHERE id = $1 AND $2 = ANY(totp_backup)", [row.id, h]);
+  return rowCount === 1;
+}
+
+export async function completeMfaLogin(ticket: unknown, code: unknown): Promise<User> {
+  if (typeof ticket !== "string" || !UUID.test(ticket)) throw new HttpError(400, "Logowanie wygasło – zaloguj się ponownie.");
+  const { rows } = await query<{ user_id: string; attempts: number; data: { via?: "haslo" | "google" } }>(
+    "UPDATE auth_flows SET attempts = attempts + 1 WHERE id = $1 AND kind = 'mfa' AND expires_at > now() RETURNING user_id, attempts, data", [ticket]);
+  const f = rows[0];
+  if (!f) throw new HttpError(400, "Logowanie wygasło – zaloguj się ponownie.");
+  if (f.attempts > 5) {
+    await query("DELETE FROM auth_flows WHERE id = $1", [ticket]);
+    throw new HttpError(429, "Za dużo błędnych kodów – zaloguj się ponownie.");
+  }
+  const row = await loadRow("id = $1", f.user_id);
+  if (!row || !(await checkSecondFactor(row, code))) throw new HttpError(400, "Nieprawidłowy kod.");
+  await query("DELETE FROM auth_flows WHERE id = $1", [ticket]);
+  await startSession(row.id, f.data.via === "google" ? "google" : "haslo");
+  return toUser(row);
+}
+
+export async function login(rawEmail: unknown, pass: unknown): Promise<User | MfaChallenge> {
   const email = normEmail(rawEmail).slice(0, 320);
   // blokada po zbyt wielu nieudanych próbach (na konto i na IP) – sprawdzana przed hasłem
   await loginAllowed(email);
@@ -265,6 +349,7 @@ export async function login(rawEmail: unknown, pass: unknown): Promise<User> {
   }
   await loginOk(email);
   if (needsRehash(row.pass_hash)) await query("UPDATE users SET pass_hash = $2 WHERE id = $1", [row.id, await hashPassword(pass as string)]);
+  if (row.totp_enabled_at) return mfaTicket(row.id, "haslo");
   await startSession(row.id);
   // sprzątanie bazy (wygasłe sesje itp.) najwyżej raz na dobę – nie opóźnia logowania przy błędzie
   await cleanup().catch(() => null);
@@ -307,12 +392,13 @@ export async function changePassword(me: User, oldPass: unknown, newPass: unknow
   await query("DELETE FROM user_sessions WHERE user_id = $1 AND token_hash <> $2", [me.id, hashToken(token)]);
 }
 
-export async function requestReset(rawEmail: unknown) {
+export async function requestReset(rawEmail: unknown, turnstile: unknown = null) {
   const email = normEmail(rawEmail);
   const err = emailError(email);
   if (err) throw new HttpError(400, err);
   if (!mailConfigured()) throw new HttpError(503, "Wysyłka maili nie jest skonfigurowana – poproś administratora o pomoc.");
   await accountLimit("reset");
+  await verifyTurnstile(turnstile);
   const row = await loadRow("email = $1", email);
   if (!row) return; // ta sama odpowiedź dla nieznanego adresu
   const token = newToken();
@@ -324,7 +410,7 @@ export async function requestReset(rawEmail: unknown) {
     `Aby ustawić nowe hasło, otwórz link (ważny ${RESET_MINUTES} minut):\n\n${link}\n\nJeśli to nie Ty prosiłeś o zmianę hasła, zignoruj tę wiadomość.`);
 }
 
-export async function confirmReset(token: unknown, newPass: unknown) {
+export async function confirmReset(token: unknown, newPass: unknown): Promise<MfaChallenge | null> {
   const err = passwordError(newPass);
   if (err) throw new HttpError(400, err);
   if (typeof token !== "string" || !token) throw new HttpError(400, "Nieprawidłowy link.");
@@ -341,7 +427,10 @@ export async function confirmReset(token: unknown, newPass: unknown) {
   // nowe hasło zdejmuje blokadę logowania konta
   const row = await loadRow("id = $1", userId);
   if (row) await loginUnlock(row.email);
-  await startSession(userId);
+  // reset hasła nie omija weryfikacji dwuetapowej
+  if (row?.totp_enabled_at) return mfaTicket(userId, "haslo");
+  await startSession(userId, "reset");
+  return null;
 }
 
 /* ---------- panel admina ---------- */
@@ -409,13 +498,15 @@ export async function deleteUser(me: User, id: string) {
   if (!row) throw new HttpError(404, "Nie ma takiego użytkownika.");
   if (row.is_owner) throw new HttpError(400, "Pierwszego konta (właściciela) nie można usunąć.");
   await query("DELETE FROM users WHERE id = $1 AND NOT is_owner", [id]);
+  await audit(me.id, "usuniecie-konta", row.email);
 }
 
-export async function newActivationCode(): Promise<string> {
+export async function newActivationCode(me: User): Promise<string> {
   const code = genActivationCode();
   await query(
     `INSERT INTO settings (key, value) VALUES ('activation_code', $1)
      ON CONFLICT (key) DO UPDATE SET value = EXCLUDED.value, updated_at = now()`, [code]);
+  await audit(me.id, "nowy-kod-aktywacji");
   return code;
 }
 
@@ -428,6 +519,7 @@ export async function newAdminCode(me: User): Promise<string> {
   const code = genAdminCode();
   await query("INSERT INTO admin_codes (code, created_by, expires_at) VALUES ($1, $2, now() + make_interval(hours => $3))",
     [code, me.id, ADMIN_CODE_HOURS]);
+  await audit(me.id, "nowy-kod-admina");
   return code;
 }
 
@@ -439,8 +531,9 @@ export async function listAdminCodes() {
   return rows.map((r) => ({ code: r.code, createdAt: r.created_at.toISOString(), expiresAt: r.expires_at.toISOString(), createdBy: r.email }));
 }
 
-export async function revokeAdminCode(code: unknown) {
-  await query("DELETE FROM admin_codes WHERE code = $1 AND used_at IS NULL", [normCode(code)]);
+export async function revokeAdminCode(me: User, code: unknown) {
+  const { rowCount } = await query("DELETE FROM admin_codes WHERE code = $1 AND used_at IS NULL", [normCode(code)]);
+  if (rowCount) await audit(me.id, "uniewaznienie-kodu-admina");
 }
 
 /* ---------- zatwierdzanie i role ---------- */
@@ -456,6 +549,7 @@ export async function adminAction(me: User, id: string, action: AdminAction) {
     if (row.is_owner) throw new HttpError(400, "Tej operacji nie można wykonać na koncie właściciela.");
     if (row.id === me.id) throw new HttpError(400, "Tej operacji nie można wykonać na własnym koncie.");
   };
+  await audit(me.id, `konto-${action}`, row.email);
   switch (action) {
     case "zatwierdz":
       if (row.activated_at) return;

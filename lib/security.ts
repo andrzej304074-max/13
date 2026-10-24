@@ -109,9 +109,9 @@ export async function loginUnlock(email: string): Promise<void> {
 }
 
 /** Rejestracja, reset hasła, kody: limit na IP. */
-export async function accountLimit(kind: "rejestracja" | "reset" | "kod"): Promise<void> {
+export async function accountLimit(kind: "rejestracja" | "reset" | "kod" | "klucz" | "google"): Promise<void> {
   const ip = await clientIp();
-  await limit(`acct:${kind}:${ip}`, kind === "reset" ? 20 : 30, 3600, null, "prób");
+  await limit(`acct:${kind}:${ip}`, kind === "reset" ? 20 : kind === "klucz" || kind === "google" ? 60 : 30, 3600, null, "prób");
 }
 
 /* ---------- treść (ochrona przed zczytywaniem bazy pytań) ---------- */

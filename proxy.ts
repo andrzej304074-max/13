@@ -2,16 +2,19 @@ import { NextResponse, type NextRequest } from "next/server";
 import { csp, crossSite } from "./lib/security-core";
 
 /**
- * Bez ciasteczka sesji dostępne są tylko ekrany konta (/konto/*), ich API (/api/konto/*) i zadania cykliczne (/api/cron/*).
+ * Bez ciasteczka sesji dostępne są tylko ekrany konta (/konto/*), ich API (/api/konto/*), regulamin i polityka prywatności
+ * oraz zadania cykliczne (/api/cron/*).
  * Proxy sprawdza tylko obecność ciasteczka – ważność sesji, aktywację, rolę admina i blokady sekcji
  * sprawdzają strony (lib/auth.ts: requirePageUser) i trasy API (requireUser); proxy przekazuje im ścieżkę (x-path).
  */
+const PUBLIC = new Set(["/prywatnosc", "/regulamin"]);
+
 export function proxy(req: NextRequest) {
   const { pathname, search } = req.nextUrl;
   if (pathname.startsWith("/api/") && !pathname.startsWith("/api/cron/") && crossSite(req.method, (n) => req.headers.get(n), req.nextUrl.host)) {
     return NextResponse.json({ error: "Zapytanie z obcej strony zostało odrzucone." }, { status: 403 });
   }
-  if (pathname.startsWith("/konto") || pathname.startsWith("/api/konto/") || req.cookies.has("owe_session")) {
+  if (pathname.startsWith("/konto") || pathname.startsWith("/api/konto/") || PUBLIC.has(pathname) || req.cookies.has("owe_session")) {
     // ścieżka żądania dla sprawdzania blokad sekcji (lib/auth.ts: requireUser / requirePageUser);
     // zawsze nadpisywana, żeby klient nie mógł podać własnej
     const h = new Headers(req.headers);
@@ -20,7 +23,7 @@ export function proxy(req: NextRequest) {
     if (pathname.startsWith("/api/")) return NextResponse.next({ request: { headers: h } });
     // strony: nonce w nagłówku żądania – Next.js dopisuje go do swoich skryptów
     const nonce = btoa(crypto.randomUUID());
-    const policy = csp(nonce, process.env.NODE_ENV !== "production");
+    const policy = csp(nonce, process.env.NODE_ENV !== "production", !!(process.env.TURNSTILE_SITE_KEY && process.env.TURNSTILE_SECRET));
     h.set("x-nonce", nonce);
     h.set("content-security-policy", policy);
     const res = NextResponse.next({ request: { headers: h } });

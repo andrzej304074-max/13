@@ -5,8 +5,8 @@ export const dynamic = "force-dynamic";
 
 export async function POST(req: Request) {
   return handle(async () => {
-    const { email } = await readJson(req);
-    await requestReset(email);
+    const { email, turnstile } = await readJson(req);
+    await requestReset(email, turnstile);
     return { ok: true };
   });
 }

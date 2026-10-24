@@ -1,5 +1,6 @@
 import { handle, readJson } from "@/lib/api";
 import { requireUser } from "@/lib/auth";
+import { audit } from "@/lib/audit";
 import { getAccessSettings, saveAccessSettings } from "@/lib/access";
 
 export const dynamic = "force-dynamic";
@@ -14,7 +15,9 @@ export async function GET() {
 
 export async function PUT(req: Request) {
   return handle(async () => {
-    await requireUser({ admin: true });
-    return saveAccessSettings(await readJson(req));
+    const me = await requireUser({ admin: true });
+    const saved = await saveAccessSettings(await readJson(req));
+    await audit(me.id, "dostep-globalny", null, saved as unknown as Record<string, unknown>);
+    return saved;
   });
 }

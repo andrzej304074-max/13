@@ -11,11 +11,14 @@
     "validate-questions": "tsx scripts/validate-questions.ts"
   },
   "dependencies": {
+    "@simplewebauthn/browser": "^13.3.0",
+    "@simplewebauthn/server": "^13.3.3",
     "@vercel/blob": "^2.8.1",
     "aws4fetch": "^1.0.20",
     "next": "^16.4.2",
     "nodemailer": "10.2.1",
     "pg": "^8.23.1",
+    "qrcode": "^1.5.4",
     "react": "^19.3.0",
     "react-dom": "^19.3.0"
   },
@@ -23,6 +26,7 @@
     "@types/node": "^26.6.4",
     "@types/nodemailer": "^8.0.2",
     "@types/pg": "^8.23.1",
+    "@types/qrcode": "^1.5.5",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "playwright-core": "^1.64.0",

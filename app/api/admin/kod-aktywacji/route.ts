@@ -12,8 +12,7 @@ export async function GET() {
 
 export async function POST() {
   return handle(async () => {
-    await requireUser({ admin: true });
-    await newActivationCode();
+    await newActivationCode(await requireUser({ admin: true }));
     return activationCodeInfo();
   });
 }

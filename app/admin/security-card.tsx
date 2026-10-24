@@ -51,3 +51,34 @@ export function SecurityCard() {
     </div>
   );
 }
+
+type Audit = { id: number; at: string; admin: string | null; action: string; target: string | null; detail: Record<string, unknown> | null };
+
+/** Dziennik działań administratorów (zatwierdzenia, role, usunięcia, kody, blokady, ogłoszenia). */
+export function AuditCard() {
+  const [log, setLog] = useState<Audit[] | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  useEffect(() => { api<{ log: Audit[] }>("/api/admin/dziennik").then((r) => setLog(r.log)).catch((e) => setError(e.message)); }, []);
+  return (
+    <div className="card stack" data-testid="audit-admin">
+      {error && <p className="error" role="alert" style={{ margin: 0 }}>{error}</p>}
+      {!log ? <SkeletonRows rows={2} height={40} label="Ładowanie dziennika" /> : log.length === 0 ? (
+        <p className="muted" style={{ margin: 0 }}>Brak wpisów.</p>
+      ) : (
+        <div className="table-wrap">
+          <table className="db-tables sec-log">
+            <thead><tr><th>Kiedy</th><th>Kto</th><th>Działanie</th><th>Czego dotyczy</th><th>Szczegóły</th></tr></thead>
+            <tbody>
+              {log.map((a) => (
+                <tr key={a.id} data-action={a.action}>
+                  <td>{fmt(a.at)}</td><td>{a.admin ?? "–"}</td><td>{a.action}</td><td>{a.target ?? ""}</td>
+                  <td className="muted">{a.detail ? JSON.stringify(a.detail).slice(0, 160) : ""}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+    </div>
+  );
+}

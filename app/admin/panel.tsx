@@ -8,7 +8,7 @@ import { api, fmtPct } from "@/lib/client";
 import type { AdminUserRow } from "@/lib/auth";
 import { SkeletonRows } from "@/app/components/loading-page";
 import { TtsCard } from "./tts-card";
-import { SecurityCard } from "./security-card";
+import { AuditCard, SecurityCard } from "./security-card";
 import { QuestionsCard } from "./questions-card";
 import { GlobalAccess, UserAccess } from "./access-editor";
 import type { AccessSettings, BlockMode } from "@/lib/access-core";
@@ -213,6 +213,8 @@ export function AdminPanel({ meId }: { meId: string }) {
 
       <h2>Bezpieczeństwo</h2>
       <SecurityCard />
+      <h2>Dziennik działań administratorów</h2>
+      <AuditCard />
 
       <h2>Dostęp do sekcji</h2>
       <GlobalAccess onChange={setAccess} />
