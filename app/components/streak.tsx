@@ -106,9 +106,11 @@ export function XpPanel({ s, onChange }: { s: XpSummary; onChange: (x: XpSummary
       <details className="why">
         <summary>Jak zdobywam XP?</summary>
         <div className="muted small">
-          Kurs – XP z lekcji; test – 10 za poprawną odpowiedź, 5 za częściową, 2 za błędną; fiszki – 2 za ocenę (do 100 dziennie);
-          zadanie – 30, esej – 50 (pierwsze podejście danego dnia); przeczytany rozdział Podręcznika – 10. Dzień liczy się do serii,
-          gdy zbierzesz cel. Raz w tygodniu jeden dzień bez celu nie przerywa serii (🧊 zamrożenie zużywa się samo).
+          Kurs – 2 za poprawną odpowiedź, +5 za ukończoną pod-lekcję i +3 bez błędu (premia raz dziennie za tę samą pod-lekcję);
+          test – 2 za poprawną, 1 za częściową, 0 za błędną (za to samo pytanie raz dziennie); fiszki – 1 za ocenę (do 20 dziennie);
+          zadanie – 20, esej – 30 (przy wyniku co najmniej 30%, raz dziennie); rozdział Podręcznika – 5 (po co najmniej 2 min czytania,
+          raz dziennie). Dzień liczy się do serii, gdy zbierzesz cel. Raz w tygodniu jeden dzień bez celu nie przerywa serii
+          (🧊 zamrożenie zużywa się samo).
         </div>
       </details>
     </div>

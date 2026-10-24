@@ -407,4 +407,58 @@ DO $$ BEGIN
     INSERT INTO settings (key, value) VALUES ('xp_backfill', 'v1');
   END IF;
 END $$;
-${XL_MIGRATION}`;
+${XL_MIGRATION}
+-- Plan IV: XP w skali oszczędnej (lib/xp-core.ts) – XP przyznane za zadanie/esej przy podejściu, nowe cele (30/50/80/120)
+ALTER TABLE open_attempts ADD COLUMN IF NOT EXISTS xp int NOT NULL DEFAULT 0;
+ALTER TABLE users ALTER COLUMN daily_goal SET DEFAULT 50;
+ALTER TABLE xp_days ALTER COLUMN goal SET DEFAULT 50;
+-- jednorazowe przeliczenie historii według nowych zasad: cele na ten sam poziom, XP sesji kursu (2 za poprawną, premia
+-- 5 + 3 tylko za pierwszą ukończoną sesję pod-lekcji danego dnia), rozdziałów (5 po ≥ 2 min, raz na rozdział dziennie),
+-- zadań i esejów (20 / 30 przy wyniku ≥ 30%, raz na pozycję dziennie), testów (2/1/0 za pierwszą odpowiedź na pytanie
+-- danego dnia) i fiszek (1 za ocenę, maks. 20 dziennie); xp_days od nowa z tych samych źródeł
+DO $xp2$ BEGIN
+  IF NOT EXISTS (SELECT 1 FROM settings WHERE key = 'xp_backfill' AND value = 'v2') THEN
+    UPDATE users SET daily_goal = CASE daily_goal WHEN 50 THEN 30 WHEN 100 THEN 50 WHEN 200 THEN 80 WHEN 300 THEN 120 ELSE 50 END;
+    UPDATE xp_days SET goal = CASE goal WHEN 50 THEN 30 WHEN 100 THEN 50 WHEN 200 THEN 80 WHEN 300 THEN 120 ELSE 50 END;
+    WITH r AS (
+      SELECT id, row_number() OVER (PARTITION BY user_id, lesson, sub, (finished_at AT TIME ZONE 'Europe/Warsaw')::date ORDER BY finished_at) AS rn
+      FROM learn_sessions WHERE finished_at IS NOT NULL AND mode IS DISTINCT FROM 'artykul')
+    UPDATE learn_sessions s SET xp = 2 * s.correct + CASE WHEN r.rn = 1 AND s.total > 0 THEN 5 + CASE WHEN s.correct = s.total THEN 3 ELSE 0 END ELSE 0 END
+    FROM r WHERE r.id = s.id;
+    UPDATE learn_sessions SET xp = 0 WHERE mode = 'artykul';
+    WITH r AS (
+      SELECT id, row_number() OVER (PARTITION BY user_id, lesson, (finished_at AT TIME ZONE 'Europe/Warsaw')::date ORDER BY finished_at) AS rn
+      FROM learn_sessions WHERE mode = 'artykul' AND finished_at IS NOT NULL AND duration_ms >= 120000)
+    UPDATE learn_sessions s SET xp = 5 FROM r WHERE r.id = s.id AND r.rn = 1;
+    UPDATE open_attempts SET xp = 0;
+    WITH r AS (
+      SELECT id, row_number() OVER (PARTITION BY user_id, item_id, (created_at AT TIME ZONE 'Europe/Warsaw')::date ORDER BY created_at) AS rn
+      FROM open_attempts WHERE max > 0 AND score >= 0.3 * max)
+    UPDATE open_attempts a SET xp = CASE WHEN a.kind = 'esej' THEN 30 ELSE 20 END FROM r WHERE r.id = a.id AND r.rn = 1;
+    UPDATE xp_days SET xp = 0, by = '{}'::jsonb;
+    INSERT INTO xp_days (user_id, day, xp, by, goal)
+    SELECT e.u, e.d, SUM(e.x), jsonb_object_agg(e.s, e.x), MAX(us.daily_goal)
+    FROM (
+      SELECT u, d, s, SUM(x)::int AS x FROM (
+        SELECT DISTINCT ON (t.user_id, (a.answered_at AT TIME ZONE 'Europe/Warsaw')::date, a.question_id)
+          t.user_id AS u, (a.answered_at AT TIME ZONE 'Europe/Warsaw')::date AS d, 'testy' AS s,
+          CASE WHEN a.skipped OR cardinality(a.selected) = 0 THEN 0 WHEN a.points >= 2 THEN 2 WHEN a.points > 0 THEN 1 ELSE 0 END AS x
+        FROM answers a JOIN tests t ON t.id = a.test_id WHERE t.user_id IS NOT NULL
+        ORDER BY t.user_id, (a.answered_at AT TIME ZONE 'Europe/Warsaw')::date, a.question_id, a.answered_at
+      ) q GROUP BY 1, 2, 3
+      UNION ALL
+      SELECT user_id, (finished_at AT TIME ZONE 'Europe/Warsaw')::date, CASE WHEN mode = 'artykul' THEN 'czytanie' ELSE 'kurs' END, SUM(xp)::int
+      FROM learn_sessions WHERE finished_at IS NOT NULL AND user_id IS NOT NULL GROUP BY 1, 2, 3
+      UNION ALL
+      SELECT user_id, (at AT TIME ZONE 'Europe/Warsaw')::date, 'fiszki', LEAST(COUNT(*), 20)::int FROM flash_ratings GROUP BY 1, 2
+      UNION ALL
+      SELECT user_id, (created_at AT TIME ZONE 'Europe/Warsaw')::date, CASE WHEN kind = 'esej' THEN 'eseje' ELSE 'zadania' END, SUM(xp)::int
+      FROM open_attempts GROUP BY 1, 2, 3
+    ) e JOIN users us ON us.id = e.u
+    WHERE e.x > 0
+    GROUP BY e.u, e.d
+    ON CONFLICT (user_id, day) DO UPDATE SET xp = EXCLUDED.xp, by = EXCLUDED.by;
+    INSERT INTO settings (key, value) VALUES ('xp_backfill', 'v2') ON CONFLICT (key) DO UPDATE SET value = 'v2', updated_at = now();
+  END IF;
+END $xp2$;
+`;

@@ -110,11 +110,11 @@ for (const path of PAGES) {
 // cel dzienny – zapis na koncie i powrót
 await p.goto(`${B}/nauka`); await p.waitForSelector('[data-testid="xp-panel"]');
 const goal0 = await p.locator('[data-testid="xp-panel"] [data-goal][aria-pressed="true"]').getAttribute("data-goal");
-await p.click('[data-testid="xp-panel"] [data-goal="200"]'); await p.waitForTimeout(800);
+await p.click('[data-testid="xp-panel"] [data-goal="80"]'); await p.waitForTimeout(800);
 const cel = await (await p.request.get(`${B}/api/cel`)).json();
-check(cel.goal === 200, `cel dzienny zapisany (${cel.goal})`);
+check(cel.goal === 80, `cel dzienny zapisany (${cel.goal})`);
 await p.reload(); await p.waitForSelector('[data-testid="xp-panel"]');
-check(await p.locator('[data-testid="xp-panel"] [data-goal="200"]').getAttribute("aria-pressed") === "true", "cel dzienny po odświeżeniu");
+check(await p.locator('[data-testid="xp-panel"] [data-goal="80"]').getAttribute("aria-pressed") === "true", "cel dzienny po odświeżeniu");
 await p.click(`[data-testid="xp-panel"] [data-goal="${goal0}"]`); await p.waitForTimeout(800);
 check((await (await p.request.get(`${B}/api/cel`)).json()).goal === Number(goal0), "cel dzienny przywrócony");
 

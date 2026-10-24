@@ -142,13 +142,18 @@ Trzy źródła pytań testowych: **📜 Archiwum OWE** (prawdziwe pytania z olim
 
 ## Cel dzienny i seria 🔥 (wspólne dla całej aplikacji)
 
-- **XP dnia** (strefa Europe/Warsaw, tabela `xp_days`, rozbicie na źródła) zbierają wszystkie aktywności:
-  - kurs – XP lekcji;
-  - test – 10 za poprawną odpowiedź, 5 za częściową, 2 za błędną (pominięte i bez zaznaczenia – 0);
-  - fiszki – 2 za ocenę, do 100 dziennie;
-  - zadanie – 30, esej – 50 (pierwsze podejście do danej pozycji tego dnia);
-  - przeczytany rozdział Podręcznika – 10.
-- **Cel dzienny** 50/100/200/300 XP na koncie (`users.daily_goal`, `PUT /api/cel`) – obowiązuje od dziś; przeszłe dni zachowują swój cel.
+- **XP dnia** (strefa Europe/Warsaw, tabela `xp_days`, rozbicie na źródła) zbierają wszystkie aktywności – skala oszczędna
+  (Plan IV), XP za naukę, nie za klikanie:
+  - kurs – 2 za poprawną odpowiedź, +5 za ukończoną pod-lekcję, +3 bez błędu (premia tylko za pierwsze ukończenie danej
+    pod-lekcji tego dnia);
+  - test – 2 za poprawną odpowiedź, 1 za częściową, 0 za błędną, pominiętą i bez zaznaczenia; za to samo pytanie raz dziennie;
+  - fiszki – 1 za ocenę, do 20 dziennie;
+  - zadanie – 20, esej – 30: przy wyniku co najmniej 30%, raz na pozycję dziennie (zadanie – także gdy próg da dopiero samoocena);
+  - rozdział Podręcznika – 5 po co najmniej 2 min na stronie, raz na rozdział dziennie.
+- **Cel dzienny** 30/50/80/120 XP (domyślnie 50 ≈ 25 poprawnych odpowiedzi w teście albo 2–3 pod-lekcje) na koncie
+  (`users.daily_goal`, `PUT /api/cel`) – obowiązuje od dziś; przeszłe dni zachowują swój cel. Przy przejściu na nową skalę cele
+  przeszły na ten sam poziom (50→30, 100→50, 200→80, 300→120), a historia XP została przeliczona według nowych zasad
+  (`xp_backfill = v2` w `lib/schema.ts`).
 - **Seria** – kolejne dni z osiągniętym celem. Dziś bez celu jeszcze jej nie przerywa. Raz w tygodniu (pn.–niedz.) jeden dzień
   bez celu nie przerywa serii (🧊 zamrożenie zużywa się samo). Rekord – najdłuższa seria w historii. Logika: `lib/xp-core.ts`
   (testy `tests/xp.test.ts`), zapis jednym zapytaniem w istniejących ścieżkach (`addXp`, `lib/xp.ts`).
@@ -181,7 +186,7 @@ Kurs zbudowany z haseł słownika (`docs/slownik-owe.pdf`) i wszystkich banków 
   Błędnie rozwiązane ćwiczenie wraca na koniec pod-lekcji.
 - **Bez blokad:** każdy temat, lekcja i pod-lekcja jest dostępna od razu.
 - **Grywalizacja:**
-  - XP: 10 za poprawną odpowiedź, +5 co 5 z rzędu, +10 za ukończenie, +10 bez błędu;
+  - XP: 2 za poprawną odpowiedź, +5 za ukończenie, +3 bez błędu (premia raz dziennie za tę samą pod-lekcję);
   - wspólny cel dzienny i seria 🔥 dla całej aplikacji (niżej, „Cel dzienny i seria”);
   - korony 0–5 dla lekcji: koronę daje zaliczenie (≥ 80%) każdej z 4 pod-lekcji, wyższy poziom oznacza więcej wpisywania.
 - **Powtórka słabych haseł:** hasła ze skutecznością poniżej 80%.

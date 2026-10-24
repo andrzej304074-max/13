@@ -10,24 +10,38 @@ export const XP_SOURCE_LABEL: Record<XpSource, string> = {
   kurs: "Kurs", testy: "Testy", fiszki: "Fiszki", zadania: "Zadania", eseje: "Eseje", czytanie: "Podręcznik",
 };
 
+/**
+ * Skala XP (Plan IV – „oszczędna”): XP za faktyczną naukę, nie za klikanie. Cel 50 XP ≈ 25 poprawnych odpowiedzi w teście
+ * albo 2–3 pod-lekcje kursu.
+ */
 export const DAILY_GOALS = [
-  { xp: 50, label: "Luźno" },
-  { xp: 100, label: "Normalnie" },
-  { xp: 200, label: "Poważnie" },
-  { xp: 300, label: "Intensywnie" },
+  { xp: 30, label: "Luźno" },
+  { xp: 50, label: "Normalnie" },
+  { xp: 80, label: "Poważnie" },
+  { xp: 120, label: "Intensywnie" },
 ] as const;
-export const DEFAULT_GOAL = 100;
+export const DEFAULT_GOAL = 50;
+/** Cele sprzed Planu IV → ten sam poziom w nowej skali (migracja w lib/schema.ts). */
+export const OLD_GOAL_MAP: Record<number, number> = { 50: 30, 100: 50, 200: 80, 300: 120 };
 export const isGoal = (v: unknown): v is number => DAILY_GOALS.some((g) => g.xp === v);
 
-/** XP za sprawdzone pytanie testu (pominięte i bez zaznaczenia – 0). Punkty: 0–2 (jednokrotny 0/2, wielokrotny 0/1/2). */
+/**
+ * XP za sprawdzone pytanie testu: poprawna 2, częściowa 1, błędna / pominięta / bez zaznaczenia 0. Punkty pytania: 0–2
+ * (jednokrotny 0/2, wielokrotny 0/1/2). Za to samo pytanie XP liczy się raz dziennie (lib/tests.ts).
+ */
 export function testXp(points: number, skipped: boolean, empty: boolean): number {
   if (skipped || empty) return 0;
-  return points >= 2 ? 10 : points > 0 ? 5 : 2;
+  return points >= 2 ? 2 : points > 0 ? 1 : 0;
 }
-export const FLASH_XP = 2;
+export const FLASH_XP = 1;
 /** Fiszki: najwyżej tyle XP dziennie (ocenianie bez czytania nie nabija celu). */
-export const FLASH_DAILY_CAP = 100;
-export const OPEN_XP = { zadanie: 30, esej: 50 } as const;
+export const FLASH_DAILY_CAP = 20;
+/** Zadanie i esej: XP przy wyniku co najmniej `OPEN_MIN` maksimum, raz na pozycję dziennie. */
+export const OPEN_XP = { zadanie: 20, esej: 30 } as const;
+export const OPEN_MIN = 0.3;
+/** Rozdział Podręcznika: XP po co najmniej 2 min na stronie, raz na rozdział dziennie. */
+export const READ_XP = 5;
+export const READ_MIN_MS = 120_000;
 
 export interface XpDay { day: string; xp: number; goal: number }
 

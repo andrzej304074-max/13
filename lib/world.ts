@@ -21,7 +21,8 @@ const sinceDay = (p: WorldPeriod) => (p === "all" ? "TRUE" : `day > (now() AT TI
 const ACTIVE = "JOIN users us ON us.id = x.u AND us.activated_at IS NOT NULL";
 /** Dokładność odpowiedzi w teście 0–1 (jak w statystykach testów). */
 const ACC = "CASE WHEN a.skipped THEN 0 WHEN t.type = 'single' THEN (a.points = 2)::int ELSE a.points / 2 END";
-const TEST_XP = "CASE WHEN a.skipped OR cardinality(a.selected) = 0 THEN 0 WHEN a.points >= 2 THEN 10 WHEN a.points > 0 THEN 5 ELSE 2 END";
+/** XP testu jak w lib/xp-core.ts testXp (bez warunku „raz dziennie na pytanie” – przybliżenie dla rozkładu po źródle). */
+const TEST_XP = "CASE WHEN a.skipped OR cardinality(a.selected) = 0 THEN 0 WHEN a.points >= 2 THEN 2 WHEN a.points > 0 THEN 1 ELSE 0 END";
 
 function testsWhere(src: WorldSource, p: WorldPeriod) {
   const s = isSource(src) ? ` AND ${sourceWhereSql("a.question_id", src)}` : "";

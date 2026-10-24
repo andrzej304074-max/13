@@ -82,23 +82,19 @@ export function checkTyped(typed: string, item: CourseItem): boolean {
 
 /* ---------- XP ---------- */
 
-export const XP_CORRECT = 10;
+export const XP_CORRECT = 2;
+/** Seria poprawnych z rzędu pokazywana w lekcji (bez premii XP). */
 export const XP_COMBO_EVERY = 5;
-export const XP_COMBO_BONUS = 5;
-export const XP_FINISH = 10;
-export const XP_PERFECT = 10;
+export const XP_FINISH = 5;
+export const XP_PERFECT = 3;
 
-/** XP za pod-lekcję: 10 za poprawną odpowiedź, +5 co 5 poprawnych z rzędu, +10 za ukończenie, +10 bez błędu. */
-export function computeXp(correct: boolean[], finished = true): number {
-  let xp = 0, combo = 0;
-  for (const c of correct) {
-    if (c) {
-      xp += XP_CORRECT;
-      combo++;
-      if (combo % XP_COMBO_EVERY === 0) xp += XP_COMBO_BONUS;
-    } else combo = 0;
-  }
-  if (finished && correct.length > 0) {
+/**
+ * XP za pod-lekcję: 2 za poprawną odpowiedź, +5 za ukończenie i +3 bez błędu. `bonus = false` – ta sama pod-lekcja
+ * była już dziś ukończona: tylko XP za poprawne odpowiedzi.
+ */
+export function computeXp(correct: boolean[], finished = true, bonus = true): number {
+  let xp = correct.filter(Boolean).length * XP_CORRECT;
+  if (finished && bonus && correct.length > 0) {
     xp += XP_FINISH;
     if (correct.every(Boolean)) xp += XP_PERFECT;
   }

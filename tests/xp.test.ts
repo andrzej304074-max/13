@@ -42,10 +42,30 @@ describe("wspólny cel dzienny i seria", () => {
     expect(s.record).toBe(5);
   });
   it("XP za odpowiedź w teście", () => {
-    expect(testXp(2, false, false)).toBe(10);
-    expect(testXp(1, false, false)).toBe(5);
-    expect(testXp(0, false, false)).toBe(2);
+    expect(testXp(2, false, false)).toBe(2);
+    expect(testXp(1, false, false)).toBe(1);
+    expect(testXp(0, false, false)).toBe(0);
+    expect(testXp(-1, false, false)).toBe(0);
     expect(testXp(0, false, true)).toBe(0);
     expect(testXp(0, true, false)).toBe(0);
+  });
+});
+
+describe("skala XP (Plan IV)", () => {
+  it("cele 30/50/80/120, domyślnie 50; stare cele przechodzą na ten sam poziom", async () => {
+    const { DAILY_GOALS, DEFAULT_GOAL, OLD_GOAL_MAP } = await import("@/lib/xp-core");
+    expect(DAILY_GOALS.map((g) => g.xp)).toEqual([30, 50, 80, 120]);
+    expect(DEFAULT_GOAL).toBe(50);
+    expect(Object.values(OLD_GOAL_MAP)).toEqual([30, 50, 80, 120]);
+  });
+  it("cel „Normalnie” wymaga realnej nauki: ok. 25 poprawnych odpowiedzi w teście albo 2–3 pod-lekcji", async () => {
+    const { DEFAULT_GOAL, FLASH_DAILY_CAP, FLASH_XP, READ_XP } = await import("@/lib/xp-core");
+    const { computeXp } = await import("@/lib/nauka-logic");
+    expect(Math.ceil(DEFAULT_GOAL / testXp(2, false, false))).toBe(25);
+    const lesson = computeXp(Array(10).fill(true)); // typowa pod-lekcja bez błędu
+    expect(Math.ceil(DEFAULT_GOAL / lesson)).toBeGreaterThanOrEqual(2);
+    // same fiszki ani samo czytanie nie dają celu
+    expect(FLASH_XP * 1000 > FLASH_DAILY_CAP && FLASH_DAILY_CAP < DEFAULT_GOAL).toBe(true);
+    expect(READ_XP * 5).toBeLessThan(DEFAULT_GOAL);
   });
 });

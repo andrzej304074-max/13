@@ -199,8 +199,18 @@ export async function answerQuestion(userId: string, id: string, questionId: unk
     if (endless && Number(r.n) !== pos) throw new HttpError(409, "W trybie bez limitu nie można wracać ani przeskakiwać pytań.");
     throw new HttpError(409, "Na to pytanie już odpowiedziano.");
   }
-  // XP równolegle z resztą zapisu (addXp sam łapie i loguje błędy) – bez dodatkowego czekania na bazę przy każdej odpowiedzi
-  const xp = addXp(userId, "testy", testXp(points, skipped, sel.length === 0));
+  // XP równolegle z resztą zapisu (addXp sam łapie i loguje błędy) – bez dodatkowego czekania na bazę przy każdej odpowiedzi.
+  // Za to samo pytanie XP liczy się raz dziennie (powtarzanie znanych pytań nie nabija celu).
+  const xp = (async () => {
+    const v = testXp(points, skipped, sel.length === 0);
+    if (!v) return;
+    const { rows: seen } = await query(
+      `SELECT 1 FROM tests t JOIN answers a ON a.test_id = t.id AND a.question_id = $2
+       WHERE t.user_id = $1 AND t.id <> $3 AND t.started_at > now() - interval '2 days'
+         AND (a.answered_at AT TIME ZONE 'Europe/Warsaw')::date = (now() AT TIME ZONE 'Europe/Warsaw')::date LIMIT 1`,
+      [userId, questionId, id]);
+    if (!seen.length) await addXp(userId, "testy", v);
+  })().catch((e) => console.error("xp", e));
   let answered = Number(r.n) + 1;
   // test 30/50: `prev` to stan sprzed zapisu – przy równoczesnym zapisie ostatnich odpowiedzi (dwie karty, ponowienie po błędzie
   // sieci) oba żądania widziałyby „jeszcze nie wszystkie”. Pod koniec testu liczymy więc odpowiedzi po zapisie

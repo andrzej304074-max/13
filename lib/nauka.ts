@@ -3,6 +3,7 @@ import { query, withTx } from "./db";
 import { HttpError } from "./tests";
 import { COURSE, getItem, getLesson } from "./nauka-course";
 import { computeXp } from "./nauka-logic";
+import { READ_MIN_MS, READ_XP } from "./xp-core";
 import { addXp } from "./xp";
 import { EXERCISE_LABELS, MAX_LEVEL, PASS_ACCURACY, type AnswerLog, type ExerciseType, type ItemKind } from "./nauka-types";
 
@@ -68,7 +69,13 @@ export async function finishSession(userId: string, id: string, rawAnswers: unkn
   if (!/^[0-9a-f-]{36}$/i.test(id)) throw new HttpError(404, "Nie ma takiej sesji.");
   const answers = parseAnswers(rawAnswers);
   const correct = answers.filter((a) => a.correct).length;
-  const xp = computeXp(answers.map((a) => a.correct));
+  // premia za ukończenie tylko za pierwszą ukończoną tego dnia sesję tej pod-lekcji (powtarzanie nie nabija celu)
+  const { rows: first } = await query<{ bonus: boolean }>(
+    `SELECT NOT EXISTS (SELECT 1 FROM learn_sessions o WHERE o.user_id = s.user_id AND o.lesson = s.lesson AND o.sub = s.sub
+       AND o.id <> s.id AND o.finished_at IS NOT NULL AND o.mode IS DISTINCT FROM 'artykul'
+       AND (o.finished_at AT TIME ZONE '${TZ}')::date = (now() AT TIME ZONE '${TZ}')::date) AS bonus
+     FROM learn_sessions s WHERE s.id = $1 AND s.user_id = $2`, [id, userId]);
+  const xp = computeXp(answers.map((a) => a.correct), true, first[0]?.bonus ?? true);
   // zakończenie sesji i jej odpowiedzi razem – przerwane połączenie nie zostawia sesji „zakończonej” bez odpowiedzi
   const { lesson, level: levelBefore, duration_ms } = await withTx(async (q) => {
     const { rows } = await q<{ lesson: string; level: number; duration_ms: number }>(
@@ -361,11 +368,10 @@ export async function getNaukaStats(userId: string, f: StatsFilter): Promise<Nau
 
 /* ---------- Podręcznik ---------- */
 
-const READ_XP = 10;
-
 /**
  * Przeczytany artykuł: zapis w article_reads; rozdział lekcji dodatkowo zalicza „Poznaj” (sesja w trybie „artykuł”,
- * najwyżej raz na 10 minut na lekcję, żeby odświeżanie strony nie nabijało koron).
+ * najwyżej raz na 10 minut na lekcję, żeby odświeżanie strony nie nabijało koron). XP (READ_XP) – po co najmniej
+ * READ_MIN_MS na stronie, raz na rozdział dziennie.
  */
 export async function markRead(userId: string, ref: unknown, ms: unknown): Promise<{ ok: true; credited: boolean; level?: number }> {
   if (typeof ref !== "string" || !ref) throw new HttpError(400, "Brak artykułu.");
@@ -375,14 +381,17 @@ export async function markRead(userId: string, ref: unknown, ms: unknown): Promi
   await query("INSERT INTO article_reads (user_id, ref) VALUES ($1, $2) ON CONFLICT (user_id, ref) DO UPDATE SET at = now()", [userId, ref]);
   if (!lesson) return { ok: true, credited: false };
   const dur = Number.isFinite(ms) ? Math.min(Math.max(Math.round(ms as number), 0), MAX_DURATION_MS) : 0;
-  const { rows } = await query<{ id: string }>(
+  const { rows } = await query<{ id: string; xp: number }>(
     `INSERT INTO learn_sessions (topic, unit, lesson, sub, kind, level, user_id, mode, finished_at, duration_ms, correct, total, xp)
-     SELECT $1, $2, $3, 1, $4, 0, $5, 'artykul', now(), $6, 0, 0, $7
+     SELECT $1, $2, $3, 1, $4, 0, $5, 'artykul', now(), $6, 0, 0,
+       CASE WHEN $6 >= ${READ_MIN_MS} AND NOT EXISTS (SELECT 1 FROM learn_sessions WHERE user_id = $5 AND lesson = $3 AND mode = 'artykul' AND xp > 0
+         AND (finished_at AT TIME ZONE '${TZ}')::date = (now() AT TIME ZONE '${TZ}')::date) THEN $7 ELSE 0 END
      WHERE NOT EXISTS (SELECT 1 FROM learn_sessions WHERE user_id = $5 AND lesson = $3 AND mode = 'artykul' AND finished_at > now() - interval '10 minutes')
-     RETURNING id`,
+     RETURNING id, xp`,
     [lesson.topic, lesson.unit, lesson.id, lesson.kind, userId, dur, READ_XP],
   );
-  const [lv] = await Promise.all([lessonLevels(userId, [lesson.id]), rows.length ? addXp(userId, "czytanie", READ_XP) : null]);
+  const xp = rows[0]?.xp ?? 0;
+  const [lv] = await Promise.all([lessonLevels(userId, [lesson.id]), xp > 0 ? addXp(userId, "czytanie", xp) : null]);
   return { ok: true, credited: rows.length > 0, level: lv[lesson.id] ?? 0 };
 }
 

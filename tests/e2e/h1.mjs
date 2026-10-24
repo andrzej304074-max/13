@@ -15,27 +15,28 @@ async function device(w) {
 }
 const a = await device(390), b = await device(1280);
 const cel = async (p) => (await p.request.get(`${B}/api/cel`)).json();
-await a.request.put(`${B}/api/cel`, { data: { goal: 100 } });
+await a.request.put(`${B}/api/cel`, { data: { goal: 80 } });
 const s0 = await cel(a);
 
-// 1. test: odpowiedź daje XP (2/5/10), puste zaznaczenie – 0
+// 1. test: odpowiedź daje XP (2/1/0 – za pierwszą odpowiedź na pytanie danego dnia), puste zaznaczenie – 0
 const t = await (await a.request.post(`${B}/api/tests`, { data: { bank: "owe", type: "single", count: 30 } })).json();
 const st = await (await a.request.get(`${B}/api/tests/${t.id}`)).json();
 await a.request.post(`${B}/api/tests/${t.id}/answer`, { data: { questionId: st.questions[0].id, selected: [0] } });
 const s1 = await cel(a);
 const dTest = (s1.today.by.testy ?? 0) - (s0.today.by.testy ?? 0);
-check(dTest === 10 || dTest === 2, `XP za odpowiedź: +${dTest}`);
+check(dTest === 2 || dTest === 0, `XP za odpowiedź: +${dTest}`);
 await a.request.post(`${B}/api/tests/${t.id}/answer`, { data: { questionId: st.questions[1].id, selected: [] } });
 check((await cel(a)).today.by.testy === s1.today.by.testy, "puste zaznaczenie – 0 XP");
 await a.request.post(`${B}/api/tests/${t.id}/finish`);
 
-// 2. fiszka: +2 XP
+// 2. fiszka: +1 XP (do 20 dziennie)
 const items = await (await a.request.get(`${B}/api/dane/hasla`)).json();
 const itemId = items.rows[0].id;
 const s2 = await cel(a);
 const r = await a.request.post(`${B}/api/fiszki/ocena`, { data: { item: itemId, known: true } });
 check(r.ok(), `ocena fiszki ${r.status()}`);
-check(((await cel(a)).today.by.fiszki ?? 0) - (s2.today.by.fiszki ?? 0) === 2, "fiszka +2 XP");
+const dF = ((await cel(a)).today.by.fiszki ?? 0) - (s2.today.by.fiszki ?? 0);
+check(dF === 1 || (dF === 0 && s2.today.by.fiszki === 20), `fiszka +1 XP (${dF}, dziś ${s2.today.by.fiszki ?? 0})`);
 
 // 3. cel na koncie: zmiana na telefonie widoczna na komputerze
 await a.goto(`${B}/nauka`); await a.waitForSelector('[data-testid="xp-panel"]');
@@ -48,11 +49,12 @@ const today = (await cel(b)).today.xp;
 check(/\d/.test(await b.locator('[data-testid="xp-today"]').innerText()) && (await b.locator('[data-testid="xp-today"]').innerText()).includes(String(today)), "XP dziś w panelu");
 await b.screenshot({ path: `${OUT}/h1_panel_1280.png` });
 // 4. seria: cel osiągnięty dziś → seria ≥ 1 (dociągamy XP odpowiedziami)
+await a.request.put(`${B}/api/cel`, { data: { goal: 30 } });
 let s = await cel(a);
 if (!s.todayMet) {
   const t2 = await (await a.request.post(`${B}/api/tests`, { data: { bank: "owe", type: "single", count: "endless" } })).json();
   let cur = t2;
-  for (let i = 0; i < 30 && !(await cel(a)).todayMet; i++) {
+  for (let i = 0; i < 150 && !(await cel(a)).todayMet; i++) {
     const q = cur.questions[i];
     if (!q) break;
     const res = await (await a.request.post(`${B}/api/tests/${t2.id}/answer`, { data: { questionId: q.id, selected: [0] } })).json();
@@ -67,8 +69,9 @@ check(/🔥/.test(await a.locator('[data-testid="xp-badge"]').innerText()), "�
 check(await a.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), "telefon: bez poziomego przewijania");
 await a.click('[data-testid="xp-badge"]'); await a.waitForSelector('.xp-pop');
 await a.screenshot({ path: `${OUT}/h1_pop_390.png` });
-await a.request.put(`${B}/api/cel`, { data: { goal: 100 } });
+await a.request.put(`${B}/api/cel`, { data: { goal: 50 } });
 check((await a.request.put(`${B}/api/cel`, { data: { goal: 77 } })).status() === 400, "zły cel → 400");
+check((await a.request.put(`${B}/api/cel`, { data: { goal: 100 } })).status() === 400, "stary cel 100 → 400");
 check(errs.length === 0, `błędy strony: ${errs.join(" | ")}`);
 console.log(`OK: ${ok} błędów: ${fails.length}`, fails);
 await browser.close(); process.exit(fails.length ? 1 : 0);

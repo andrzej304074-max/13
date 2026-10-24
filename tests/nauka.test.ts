@@ -18,8 +18,12 @@ describe("wpisywanie odpowiedzi", () => {
 
 describe("XP", () => {
   it("10 za poprawną, bonus za combo, ukończenie i brak błędów", () => {
-    expect(computeXp([true, true, true, true, true])).toBe(50 + 5 + 10 + 10);
-    expect(computeXp([true, false, true])).toBe(20 + 10);
+    // skala oszczędna: 2 za poprawną, +5 za ukończenie, +3 bez błędu, bez premii za serię
+    expect(computeXp([true, true, true, true, true])).toBe(10 + 5 + 3);
+    expect(computeXp([true, false, true])).toBe(4 + 5);
+    // ta sama pod-lekcja ukończona już dziś – tylko poprawne odpowiedzi
+    expect(computeXp([true, true, true, true, true], true, false)).toBe(10);
+    expect(computeXp([], true)).toBe(0);
   });
 });
 
